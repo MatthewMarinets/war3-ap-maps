@@ -1,0 +1,450 @@
+﻿STRING 0
+{
+Orc08
+}
+
+STRING 1
+{
+1
+}
+
+STRING 2
+{
+Chapter Eight: By Demons Be Driven
+}
+
+STRING 3
+{
+Blizzard Entertainment
+}
+
+STRING 4
+{
+Chapter Eight
+}
+
+STRING 5
+{
+By Demons Be Driven
+}
+
+STRING 6
+{
+Three days later, near the edge of the Barrens...
+}
+
+STRING 17
+{
+Infernal Summoner
+}
+
+STRING 33
+{
+|cffffcc00MAIN QUEST|r
+Hellscream
+  - Capture Grom in the Soul Gem
+  - Bring Grom to Jaina's Ritual Circle
+}
+
+STRING 34
+{
+|cffffcc00MAIN QUEST|r
+Hellscream
+  - Capture Grom in the Soul Gem
+  - Bring Grom to Jaina's Ritual Circle
+}
+
+STRING 36
+{
+|cffffcc00MAIN QUEST|r
+Hellscream
+  - Capture Grom in the Soul Gem
+  - Bring Grom to Jaina's Ritual Circle
+}
+
+STRING 39
+{
+Cairne Bloodhoof
+}
+
+STRING 40
+{
+If the prophet was correct, then the Warsong encampment lies just over the ridge. We should ready ourselves for battle.
+}
+
+STRING 41
+{
+Thrall
+}
+
+STRING 44
+{
+I know, Cairne. It's just that I never thought I'd live to see the day... when I had to fight my own people.
+}
+
+STRING 45
+{
+Jaina Proudmoore
+}
+
+STRING 46
+{
+Just remember, Thrall, with this soul gem you can capture your friend Hellscream's spirit without hurting him. But you need to bring it back to my base immediately, so we can free Grom from the demons' control.
+}
+
+STRING 47
+{
+Thrall
+}
+
+STRING 48
+{
+I... appreciate your help, Miss Proudmoore. Yet another day I thought I'd never live to see.
+}
+
+STRING 49
+{
+Jaina Proudmoore
+}
+
+STRING 51
+{
+That makes two of us. I'll return to my base and aid you as best I can. Good luck... gentlemen.
+}
+
+STRING 52
+{
+Cairne Bloodhoof
+}
+
+STRING 53
+{
+The spirits rage around you, young warchief. They sense your anguish... your grief. 
+}
+
+STRING 54
+{
+Thrall
+}
+
+STRING 55
+{
+Hellscream is like a brother to me, Cairne. But he and his clan have fallen under the demons' influence. If I can't save him, then my people might be damned for all time.
+}
+
+STRING 68
+{
+Thrall
+}
+
+STRING 69
+{
+Spirits help me... We'll have to go back and try to capture Hellscream again!
+}
+
+STRING 72
+{
+Chaos Grunt
+}
+
+STRING 73
+{
+You are the humans' lapdog! We serve only the Legion now!
+}
+
+STRING 87
+{
+Grom Hellscream
+}
+
+STRING 88
+{
+Ha! You'll have to do better than that, little brother!
+}
+
+STRING 89
+{
+Grom Hellscream
+}
+
+STRING 90
+{
+Thrall... I see clearly now. I'm... sorry. I am so sorry.
+}
+
+STRING 91
+{
+Thrall
+}
+
+STRING 92
+{
+Grom?
+}
+
+STRING 93
+{
+Thrall
+}
+
+STRING 94
+{
+To hell with your apologies! Right now, I need you to help me save our people!
+}
+
+STRING 97
+{
+Thrall
+}
+
+STRING 98
+{
+Then let's go. I don't want to keep the bastard waiting.
+}
+
+STRING 162
+{
+Chaos Grunt
+}
+
+STRING 163
+{
+Chaos shall reign!
+}
+
+STRING 164
+{
+Grom Hellscream
+}
+
+STRING 165
+{
+Mannoroth... We must face Mannoroth in the canyon.
+}
+
+STRING 206
+{
+Hellscream
+}
+
+STRING 207
+{
+Hellscream has given himself over to the Legion's control. You must find him and trap his spirit within Jaina's Soul Gem. Bring the Soul Gem to Jaina's Ritual Circle, where a combined effort might save Grom from the Demons' influence.
+}
+
+STRING 208
+{
+Capture Grom in the Soul Gem
+}
+
+STRING 209
+{
+Bring Grom to Jaina's Ritual Circle
+}
+
+STRING 213
+{
+Orcish Horde
+}
+
+STRING 214
+{
+Warsong Clan
+}
+
+STRING 216
+{
+Ritual Circle
+}
+
+STRING 217
+{
+Defeat!
+}
+
+STRING 375
+{
+Jaina Proudmoore
+}
+
+STRING 376
+{
+The demons are back! Send reinforcements, quick!
+}
+
+STRING 377
+{
+Jaina Proudmoore
+}
+
+STRING 378
+{
+We're being overrun! Help us, please!
+}
+
+STRING 397
+{
+Jaina Proudmoore
+}
+
+STRING 398
+{
+We're under heavy attack! We need help immediately!
+}
+
+STRING 417
+{
+Grom Hellscream
+}
+
+STRING 418
+{
+Ha! You'll have to do better than that, little brother!
+}
+
+STRING 441
+{
+NonBuilding
+}
+
+STRING 442
+{
+Bestiary
+}
+
+STRING 443
+{
+Mil'janza
+}
+
+STRING 444
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Hellscream
+}
+
+STRING 445
+{
+Defeat!
+}
+
+STRING 446
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Hellscream
+  - |cff808080Capture Grom in the Soul Gem (Completed)|r
+  - Bring Grom to Jaina's Ritual Circle
+}
+
+STRING 447
+{
+Thrall
+}
+
+STRING 448
+{
+Grom! You've got to come with me!
+}
+
+STRING 449
+{
+Grom Hellscream
+}
+
+STRING 450
+{
+And where would you lead me, boy? Destiny is at hand! Lord Mannoroth is our master now.
+}
+
+STRING 451
+{
+Thrall
+}
+
+STRING 452
+{
+Who? You're not talking sense!
+}
+
+STRING 453
+{
+Grom Hellscream
+}
+
+STRING 454
+{
+Ah, Thrall. You always believed that the demons corrupted our race, but that's only half true. We gave ourselves up willingly on Draenor! The other chieftains and I... we drank Mannoroth's blood, Thrall. We brought this curse upon ourselves!
+}
+
+STRING 455
+{
+Thrall
+}
+
+STRING 456
+{
+You did this... to our people... knowingly? Arrrgghhh!
+}
+
+STRING 463
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 511
+{
+|cffffcc00MISSION FAILED|r
+Jaina and all of her essential buildings have been destroyed.
+}
+
+STRING 512
+{
+Defeat!
+}
+
+STRING 527
+{
+Burning Legion
+}
+
+STRING 528
+{
+Human Expedition
+}
+
+STRING 530
+{
+|cff32cd32HINT|r - Use the Soul Gem to capture Grom. It is the only way to save him.
+}
+
+STRING 531
+{
+Thrall
+}
+
+STRING 532
+{
+This is no natural storm! Blessed ancestors... Everyone brace yourselves!
+}
+
+STRING 533
+{
+Jaina
+}
+
+STRING 534
+{
+Thrall! The skies are burning!
+}
+
+STRING 535
+{
+Thrall
+}
+
+STRING 536
+{
+Fight on, my warriors! We must reach Hellscream before it's too late!
+}
+

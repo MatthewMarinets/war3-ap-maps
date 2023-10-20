@@ -1,0 +1,353 @@
+﻿STRING 0
+{
+Undead08
+}
+
+STRING 1
+{
+1
+}
+
+STRING 2
+{
+Chapter Eight: Under the Burning Sky
+}
+
+STRING 3
+{
+Blizzard Entertainment
+}
+
+STRING 4
+{
+Chapter Eight
+}
+
+STRING 5
+{
+Under the Burning Sky
+}
+
+STRING 7
+{
+Archimonde
+}
+
+STRING 8
+{
+The hour of Archimonde's arrival has come! You must defend Kel'Thuzad as he chants the volatile, intricate spell of summoning. 
+}
+
+STRING 16
+{
+Arthas
+}
+
+STRING 17
+{
+The circle of power has been prepared per your instructions, lich. Are you ready to begin the summoning?
+}
+
+STRING 19
+{
+One hour later, on a hill overlooking Dalaran...
+}
+
+STRING 20
+{
+Kel'Thuzad
+}
+
+STRING 21
+{
+Nearly. I've been reading through Medivh's spellbook. His knowledge of demons alone is staggering. I suspect that he was far more powerful than anyone ever realized.
+}
+
+STRING 25
+{
+Kel'Thuzad must survive for 30 minutes
+}
+
+STRING 26
+{
+Kirin Tor
+}
+
+STRING 27
+{
+Acquire the Goblin Land Mines
+}
+
+STRING 28
+{
+Goblin Land Mines
+}
+
+STRING 29
+{
+Your scouts have discovered a cache of Goblin Land Mines. The crafty devices may be useful when strategically placed for base defense.
+}
+
+STRING 30
+{
+Undead Scourge
+}
+
+STRING 35
+{
+Tichondrius
+}
+
+STRING 40
+{
+Not powerful enough to escape death, that is for certain. Suffice to say, the work he began, we will finish... today. Let the summoning commence!  
+}
+
+STRING 57
+{
+Summoning
+}
+
+STRING 76
+{
+Kel'Thuzad
+}
+
+STRING 77
+{
+Come forth, Lord Archimonde! Enter this world and let us bask in your power!
+}
+
+STRING 78
+{
+Archimonde
+}
+
+STRING 79
+{
+Tremble, mortals, and despair! Doom has come to this world!
+}
+
+STRING 80
+{
+Archimonde
+}
+
+STRING 81
+{
+You have done well, little lich. My plan worked perfectly.
+}
+
+STRING 86
+{
+Tichondrius
+}
+
+STRING 87
+{
+Lord Archimonde, all the preparations have been made. 
+}
+
+STRING 88
+{
+Archimonde
+}
+
+STRING 89
+{
+Very well, Tichondrius. Since the Lich King is of no further use to me, you dreadlords will now command the Scourge.
+}
+
+STRING 90
+{
+Tichondrius
+}
+
+STRING 91
+{
+As you wish, Lord Archimonde.
+}
+
+STRING 92
+{
+Archimonde
+}
+
+STRING 93
+{
+Soon, I will order the invasion to begin. But first, I will make an example of these paltry wizards... by crushing their city into the ashes of history.
+}
+
+STRING 96
+{
+Arthas
+}
+
+STRING 97
+{
+This has got to be a joke! What happens to us now?
+}
+
+STRING 98
+{
+Kel'Thuzad
+}
+
+STRING 99
+{
+Be patient, young death knight. The Lich King foresaw this as well. You may yet have a part to play in his grand design.
+}
+
+STRING 101
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Goblin Land Mines
+}
+
+STRING 104
+{
+|cffffcc00MAIN QUEST|r
+Archimonde
+  - Kel'Thuzad must survive for 30 minutes
+}
+
+STRING 105
+{
+|cffffcc00MISSION FAILED|r
+Kel'Thuzad has been slain.
+}
+
+STRING 106
+{
+Defeat!
+}
+
+STRING 107
+{
+|cffffcc00MAIN QUEST|r
+Archimonde
+  - Kel'Thuzad must survive for 30 minutes
+}
+
+STRING 118
+{
+Kel'Thuzad
+}
+
+STRING 119
+{
+The Legion's fury scorches the sky! The barriers between the worlds are weakening! 
+}
+
+STRING 120
+{
+Kel'Thuzad
+}
+
+STRING 121
+{
+The Legion has sent hellhounds to aid us! The beasts are yours to command, death knight!
+}
+
+STRING 122
+{
+Kel'Thuzad
+}
+
+STRING 123
+{
+The Legion has sent hellhounds to aid us! The beasts are yours to command, death knight!
+}
+
+STRING 124
+{
+Kel'Thuzad
+}
+
+STRING 125
+{
+The Legion has sent hellhounds to aid us! The beasts are yours to command, death knight!
+}
+
+STRING 126
+{
+Kel'Thuzad
+}
+
+STRING 127
+{
+At last! The mighty infernals have been sent to aid us! Rally them quickly, death knight! They are yours to command!
+}
+
+STRING 128
+{
+|cff32CD32HINT|r - Use the Fountains to replenish health and mana.
+}
+
+STRING 134
+{
+Mages' Guild
+}
+
+STRING 137
+{
+Defeat!
+}
+
+STRING 138
+{
+Sorcerers' League
+}
+
+STRING 144
+{
+|cff32CD32WARNING|r - Kel'Thuzad is under attack!
+}
+
+STRING 145
+{
+Necromancer
+}
+
+STRING 146
+{
+Lord Arthas, our scouts have found a cache of goblin land mines!
+}
+
+STRING 149
+{
+|cffffcc00OPTIONAL QUEST|r 
+Goblin Land Mines
+  - Acquire the Goblin Land Mines
+}
+
+STRING 164
+{
+Arthas
+}
+
+STRING 165
+{
+Excellent! We will make good use of them.
+}
+
+STRING 190
+{
+Arthas
+}
+
+STRING 191
+{
+Defend Kel'Thuzad at all costs! The summoning must not be disrupted! 
+}
+
+STRING 216
+{
+Arthas
+}
+
+STRING 217
+{
+Hold your ground! Kel'Thuzad must be defended! This is the hour of our victory!
+}
+

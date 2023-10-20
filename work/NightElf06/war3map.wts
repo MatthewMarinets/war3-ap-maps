@@ -1,0 +1,443 @@
+﻿STRING 3
+{
+Tichondrius
+}
+
+STRING 5
+{
+Illidan Stormrage
+}
+
+STRING 6
+{
+That is where the Skull of Gul'dan is kept! These paltry demons will not prevent me from claiming it!
+}
+
+STRING 7
+{
+Skull of Gul'dan
+}
+
+STRING 8
+{
+Illidan Stormrage
+}
+
+STRING 9
+{
+Now at least the demons will no longer corrupt the forests. But, if I destroy the skull and claim its powers as my own, I will become stronger than any of Archimonde's lieutenants.
+}
+
+STRING 10
+{
+Illidan Stormrage
+}
+
+STRING 12
+{
+I'm through toying with you, night elf! Begone from my sight!
+}
+
+STRING 13
+{
+NightElf06
+}
+
+STRING 14
+{
+1
+}
+
+STRING 15
+{
+Chapter Six: A Destiny of Flame and Sorrow
+}
+
+STRING 16
+{
+Blizzard Entertainment
+}
+
+STRING 17
+{
+The following evening, deep in the corrupted forests of Felwood...
+}
+
+STRING 18
+{
+Illidan Stormrage
+}
+
+STRING 20
+{
+Illidan Stormrage
+}
+
+STRING 21
+{
+I am free after ten thousand years, yet still my own brother thinks I am a villain! I'll show him my true power! I'll show him that the demons have no hold over me!
+}
+
+STRING 22
+{
+Arthas
+}
+
+STRING 23
+{
+Are you certain of that, demon hunter? Are you certain your will is your own?
+}
+
+STRING 24
+{
+Yes... the power should be mine!
+}
+
+STRING 25
+{
+Illidan Stormrage
+}
+
+STRING 26
+{
+Illidan Stormrage
+}
+
+STRING 27
+{
+You reek of death, human. You'll regret approaching me.
+}
+
+STRING 28
+{
+Arthas
+}
+
+STRING 29
+{
+Come then. You'll find that we're evenly matched.
+}
+
+STRING 30
+{
+Illidan Stormrage
+}
+
+STRING 31
+{
+We could go on fighting like this forever. What is it you truly want?
+}
+
+STRING 32
+{
+Arthas
+}
+
+STRING 33
+{
+The dreadlord who commands this undead army is called Tichondrius. He controls a powerful warlock artifact called the Skull of Gul'dan.
+}
+
+STRING 34
+{
+Arthas
+}
+
+STRING 35
+{
+It is responsible for corrupting these forests.
+}
+
+STRING 36
+{
+Illidan Stormrage
+}
+
+STRING 37
+{
+And you wish for me to steal it. Why?
+}
+
+STRING 38
+{
+Arthas
+}
+
+STRING 39
+{
+Let's just say that I have no love for Tichondrius, and the lord I serve would... benefit from the Legion's downfall.
+}
+
+STRING 40
+{
+Illidan Stormrage
+}
+
+STRING 41
+{
+Why should I believe anything you say, little human?
+}
+
+STRING 42
+{
+Arthas
+}
+
+STRING 43
+{
+My master sees all, demon hunter. He knows that you've sought power your whole life. Now it lies within your grasp! Seize it, and your enemies will be undone.
+}
+
+STRING 46
+{
+Now I am complete!
+}
+
+STRING 47
+{
+Let's see how confident you are against one of your own kind, dreadlord!
+}
+
+STRING 48
+{
+Tichondrius
+}
+
+STRING 49
+{
+What? Who are... you?
+}
+
+STRING 52
+{
+Chapter Six
+}
+
+STRING 53
+{
+A Destiny of Flame and Sorrow
+}
+
+STRING 57
+{
+Furion Stormrage
+}
+
+STRING 58
+{
+Foul demon! What have you done with my brother? 
+}
+
+STRING 59
+{
+Illidan Stormrage
+}
+
+STRING 60
+{
+It is I, Furion. This is what I've become.
+}
+
+STRING 61
+{
+Tyrande Whisperwind
+}
+
+STRING 62
+{
+No! Illidan, how could you?
+}
+
+STRING 63
+{
+Furion Stormrage
+}
+
+STRING 64
+{
+At the cost of your soul? You are no brother of mine! Begone from this place, and never set foot in our lands again!
+}
+
+STRING 65
+{
+Illidan Stormrage
+}
+
+STRING 66
+{
+The leader of the undead has been destroyed, and the forests will heal in time.
+}
+
+STRING 67
+{
+Illidan Stormrage
+}
+
+STRING 68
+{
+So be it... brother.
+}
+
+STRING 88
+{
+Defeat!
+}
+
+STRING 89
+{
+Corrupted Ancients
+}
+
+STRING 91
+{
+Satyr
+}
+
+STRING 92
+{
+Come no further, weakling. Lord Tichondrius commanded us to kill anyone attempting to enter this place, and we shall.
+}
+
+STRING 94
+{
+|cff32cd32HINT|r - Illidan has the Immolation ability. Immolation engulfs the Demon Hunter in flames, causing damage to nearby enemy land units. 
+}
+
+STRING 95
+{
+|cff87ceebNEW UNIT AVAILABLE|r
+Druid of the Claw - You may now build Druids of the Claw from the Ancient of Lore.  These Druids have the ability to transform into powerful bears.
+}
+
+STRING 105
+{
+|cffffcc00MAIN QUEST|r
+The Skull of Gul'dan
+  - Destroy the Demon Gate guarding the Skull
+  - Bring Illidan to the Skull of Gul'dan
+}
+
+STRING 112
+{
+Skeleton King
+}
+
+STRING 114
+{
+|cffffcc00MAIN QUEST|r
+The Skull of Gul'dan
+  - Destroy the Demon Gate guarding the Skull
+  - Bring Illidan to the Skull of Gul'dan
+}
+
+STRING 115
+{
+Demon Elite Guard
+}
+
+STRING 116
+{
+|cffffcc00MAIN QUEST UPDATE|r
+The Skull of Gul'dan
+  - |cff808080Destroy the Demon Gate guarding the Skull (Completed)|r
+  - Bring Illidan to the Skull of Gul'dan
+}
+
+STRING 118
+{
+Burning Legion
+}
+
+STRING 119
+{
+Sentinels
+}
+
+STRING 120
+{
+|cffffcc00MISSION FAILED|R
+All of your buildings have been destroyed.
+}
+
+STRING 121
+{
+Defeat!
+}
+
+STRING 122
+{
+The Skull of Gul'dan
+}
+
+STRING 123
+{
+You must retrieve the Skull of Gul'dan from the Demons. It is the source of Ashenvale's corruption, and its potent Warlock energies augment Tichondrius' already considerable powers.
+}
+
+STRING 124
+{
+Destroy the Demon Gate guarding the Skull
+}
+
+STRING 125
+{
+Destroy Tichondrius
+}
+
+STRING 126
+{
+If the Undead Scourge is to be stopped and the Demons' plans thwarted, the Dreadlord Tichondrius must die. You must use all of your burgeoning powers to destroy him once and for all. 
+}
+
+STRING 127
+{
+Destroy Tichondrius
+}
+
+STRING 128
+{
+Bring Illidan to the Skull of Gul'dan
+}
+
+STRING 129
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Destroy Tichondrius
+}
+
+STRING 139
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+The Skull of Gul'dan
+}
+
+STRING 141
+{
+|cff32cd32HINT|r - Only the Demonic powers that Illidan now commands can harm Tichondrius.
+}
+
+STRING 142
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+The Skull of Gul'dan
+}
+
+STRING 143
+{
+|cffffcc00MAIN QUEST|r
+Destroy Tichondrius
+  - Destroy Tichondrius with your newfound power
+}
+
+STRING 144
+{
+|cff32cd32HINT|r - The chaotic forces that Illidan now commands can more easily damage Tichondrius.
+}
+
+STRING 145
+{
+|cffffcc00MAIN QUEST|r
+Destroy Tichondrius
+  - Destroy Tichondrius with your newfound power
+}
+

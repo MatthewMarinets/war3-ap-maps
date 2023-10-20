@@ -1,0 +1,802 @@
+﻿STRING 1
+{
+UndeadX07a
+}
+
+STRING 2
+{
+1
+}
+
+STRING 3
+{
+Chapter Seven, Part One: Into the Shadow Web Caverns
+}
+
+STRING 4
+{
+Blizzard Entertainment
+}
+
+STRING 6
+{
+Force 1
+}
+
+STRING 9
+{
+Force 2
+}
+
+STRING 10
+{
+Anub'arak
+}
+
+STRING 11
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AAnubarak02.mp3
+{
+I left many of my warriors at Icecrown before I came to find you, death knight. They will hold the line for as long as they are able.
+}
+
+STRING 15
+{
+The Old Kingdom
+}
+
+STRING 16
+{
+Deep within the tunnels of ice lies the Old Kingdom. Only through its ancient doors will you be able to find your way to the Frozen Throne. Let nothing stop you from finding the Old Kingdom's entrance.
+}
+
+STRING 17
+{
+Locate the entrance to the Old Kingdom
+}
+
+STRING 18
+{
+|cffffcc00MAIN QUEST|r
+The Old Kingdom
+  - Locate the entrance to the Old Kingdom
+  - Kill Baelgun
+  - Bring the Blood Key to the Old Kingdom Lock
+  - Arthas and Anub'arak must survive
+}
+
+STRING 19
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+The Old Kingdom
+}
+
+STRING 20
+{
+Find the Gold Stashes
+}
+
+STRING 21
+{
+Gold Coins have been hidden throughout these underground chambers. Find them for an increase of your gold coffers. This would be useful the next time you require gold to sustain and build your forces.
+}
+
+STRING 22
+{
+Find the five gold stashes (1 of 5 found)
+}
+
+STRING 24
+{
+|cffffcc00OPTIONAL QUEST|r
+Find the Gold Stashes
+  - Find the five gold stashes  (1 of 5 found)
+}
+
+STRING 26
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Find the Gold Stashes
+}
+
+STRING 28
+{
+|cffffcc00MISSION FAILED|r
+Arthas has been slain.
+}
+
+STRING 29
+{
+|cffff8c00NOTICE|r - The Spike Trap has been deactivated.
+}
+
+STRING 33
+{
+Defeat!
+}
+
+STRING 38
+{
+King Arthas
+}
+
+STRING 39
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AArthas01.mp3
+{
+We've been walking for hours. We've got to quicken our pace. The Lich King is defenseless without us.
+}
+
+STRING 42
+{
+King Arthas
+}
+
+STRING 43
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AArthas03.mp3
+{
+Tell me, where are all of your people? Shouldn't there be nerubians around here--undead or otherwise?
+}
+
+STRING 44
+{
+Anub'arak
+}
+
+STRING 45
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AAnubarak04.mp3
+{
+I've been wondering about that myself. Something must have driven them all off.
+}
+
+STRING 48
+{
+Dwarf
+}
+
+STRING 49
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AAxeman05.mp3
+{
+We did, ye rotting bastards! We been watching ye all along!
+}
+
+STRING 50
+{
+King Arthas
+}
+
+STRING 51
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AArthas06.mp3
+{
+Muradin's dwarves! Impossible... Doesn't anyone stay dead anymore?
+}
+
+STRING 52
+{
+Dwarf
+}
+
+STRING 53
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AAxeman07.mp3
+{
+We've been wandering this forsaken land ever since you killed Muradin and left us to rot, Arthas. Our leader, Baelgun, led us into the ruined city to survive.
+}
+
+STRING 54
+{
+Dwarf
+}
+
+STRING 55
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AAxeman08.mp3
+{
+But there's no way we're letting you in!
+}
+
+STRING 56
+{
+King Arthas
+}
+
+STRING 57
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AArthas09.mp3
+{
+We have no time for these games!
+}
+
+STRING 58
+{
+King Arthas
+}
+
+STRING 59
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AArthas10.mp3
+{
+Sapphiron, attack!
+}
+
+STRING 64
+{
+Sapphiron
+}
+
+STRING 107
+{
+Nerubians
+}
+
+STRING 109
+{
+Force 3
+}
+
+STRING 110
+{
+Force 4
+}
+
+STRING 111
+{
+Chapter Seven, Part One
+}
+
+STRING 112
+{
+Into the Shadow Web Caverns
+}
+
+STRING 113
+{
+At that same moment in Northrend, King Arthas and Anub'arak march into the dark, forgotten halls of Azjol-Nerub.
+}
+
+STRING 134
+{
+King Arthas
+}
+
+STRING 135
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AArthas11.mp3
+{
+Well done, mighty Sapphiron. I wish we could take you with us, but the confines of the dark earth are no place for you.
+}
+
+STRING 136
+{
+Anub'arak
+}
+
+STRING 137
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AAnubarak12.mp3
+{
+The Lich King's time is running short--we must hurry.
+}
+
+STRING 138
+{
+Rifleman
+}
+
+STRING 139
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07ARifleman24.mp3
+{
+Set off the charges! Blow the bridge before they get across!
+}
+
+STRING 150
+{
+King Arthas
+}
+
+STRING 151
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AArthas25.mp3
+{
+No! Stop them before they--
+}
+
+STRING 156
+{
+Baelgun
+}
+
+STRING 157
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07ARifleman26.mp3
+{
+That was for Muradin! Now you'll never get across!
+}
+
+STRING 158
+{
+Anub'arak
+}
+
+STRING 159
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AAnubarak28.mp3
+{
+There are other passages through the labyrinth, death knight. We will find another way.
+}
+
+STRING 160
+{
+King Arthas
+}
+
+STRING 161
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AArthas29.mp3
+{
+This place looks like an old storage silo. It's a dead end, Anub'arak.
+}
+
+STRING 165
+{
+Dwarven Axeman
+}
+
+STRING 166
+{
+Defeat!
+}
+
+STRING 167
+{
+Muradin's Dwarves
+}
+
+STRING 168
+{
+Undead Scourge
+}
+
+STRING 169
+{
+Rifleman
+}
+
+STRING 170
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07ARifleman15.mp3
+{
+It's them--blast 'em.
+}
+
+STRING 171
+{
+Rifleman
+}
+
+STRING 172
+{
+A pint for every ghoul ye blast!
+}
+
+STRING 173
+{
+King Arthas
+}
+
+STRING 174
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AArthas22.mp3
+{
+These nerubians are your kin. Why are they hostile to us?
+}
+
+STRING 179
+{
+Anub'arak
+}
+
+STRING 180
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AAnubarak36.mp3
+{
+This is an ancient nerubian hoarding cell. We kept most of our treasures hidden in chambers like this. The passage to the lower depths lies just beyond this room.
+}
+
+STRING 185
+{
+Rifleman
+}
+
+STRING 186
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AAxeman38.mp3
+{
+Don't even try it, ye bastard! That there treasure belongs to the dwarves!
+}
+
+STRING 199
+{
+King Arthas
+}
+
+STRING 200
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AArthas50.mp3
+{
+The air smells awful in here. Something doesn't feel right.
+}
+
+STRING 201
+{
+Anub'arak
+}
+
+STRING 202
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AAnubarak51.mp3
+{
+If the dwarf's story was true, there's no telling what awaits us in the darkness.
+}
+
+STRING 203
+{
+Anub'arak
+}
+
+STRING 204
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AAnubarak52.mp3
+{
+This stairwell leads into the heart of the old nerubian empire. We must be cautious.
+}
+
+STRING 205
+{
+King Arthas
+}
+
+STRING 206
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AArthas53.mp3
+{
+By all means. You first.
+}
+
+STRING 207
+{
+Arthas and Anub'arak must survive
+}
+
+STRING 210
+{
+|cffffcc00MISSION FAILED|r
+Anub'arak has been slain.
+}
+
+STRING 211
+{
+|cff32cd32Old Kingdom Door|r - The Blood Key is required to enter the depths of The Faceless Ones.
+}
+
+STRING 253
+{
+Dwarf
+}
+
+STRING 254
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AAxeman19.mp3
+{
+For Khaz Modan!
+}
+
+STRING 255
+{
+Nerubian Vault
+}
+
+STRING 266
+{
+Rifleman
+}
+
+STRING 267
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07ARifleman14.mp3
+{
+Damned undead! Slay 'em all!
+}
+
+STRING 270
+{
+Rifleman
+}
+
+STRING 271
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07ARifleman17.mp3
+{
+Shoot anything that shuffles or skitters!
+}
+
+STRING 280
+{
+Baelgun
+}
+
+STRING 281
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07ABaelgun46.mp3
+{
+I remember you, evil prince. You're the one that killed poor Muradin!
+}
+
+STRING 282
+{
+King Arthas
+}
+
+STRING 283
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AArthas47.mp3
+{
+Get over it already.
+}
+
+STRING 284
+{
+Baelgun
+}
+
+STRING 285
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07ABaelgun48.mp3
+{
+I won't let ye through this door, traitor. The recent quakes have awakened dark things under the ice... ancient, horrid things. We've vowed to keep them locked where they are.
+}
+
+STRING 286
+{
+King Arthas
+}
+
+STRING 287
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AArthas49.mp3
+{
+We'll take our chances, dwarf. We're going through that door one way or another.
+}
+
+STRING 289
+{
+Gold Stashes Found  |cffffffff1/5|r
+}
+
+STRING 290
+{
+Fragments Found  |cffffffff2/10|r
+}
+
+STRING 291
+{
+Fragments Found  |cffffffff3/10|r
+}
+
+STRING 292
+{
+Fragments Found  |cffffffff4/10|r
+}
+
+STRING 293
+{
+Fragments Found  |cffffffff5/10|r
+}
+
+STRING 294
+{
+Fragments Found  |cffffffff6/10|r
+}
+
+STRING 295
+{
+Fragments Found  |cffffffff7/10|r
+}
+
+STRING 296
+{
+Fragments Found  |cffffffff8/10|r
+}
+
+STRING 297
+{
+Fragments Found  |cffffffff9/10|r
+}
+
+STRING 298
+{
+Fragments Found  |cffffffff10/10|r
+}
+
+STRING 301
+{
+Gold Stashes
+}
+
+STRING 302
+{
+Kill Baelgun
+}
+
+STRING 303
+{
+Bring the Blood Key to the Old Kingdom Lock
+}
+
+STRING 306
+{
+Defeat!
+}
+
+STRING 313
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Find the Gold Stashes
+  - Find the five gold stashes  (2 of 5 found)
+}
+
+STRING 319
+{
+Find the five gold stashes (2 of 5 found)
+}
+
+STRING 320
+{
+Find the five gold stashes (3 of 5 found)
+}
+
+STRING 321
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Find the Gold Stashes
+  - Find the five gold stashes  (3 of 5 found)
+}
+
+STRING 328
+{
+|cffffcc00MAIN QUEST UPDATE|r
+The Old Kingdom
+  - |cff808080Locate the entrance to the Old Kingdom (Completed)|r
+  - Kill Baelgun
+  - Bring the Blood Key to the Old Kingdom Lock
+  - Arthas and Anub'arak must survive
+}
+
+STRING 329
+{
+|cffffcc00MAIN QUEST UPDATE|r
+The Old Kingdom
+  - |cff808080Locate the entrance to the Old Kingdom(Completed)|r
+  - |cff808080Kill Baelgun(Completed)|r
+  - Bring the Blood Key to the Old Kingdom Lock
+  - Arthas and Anub'arak must survive
+}
+
+STRING 331
+{
+Find the five gold stashes (4 of 5 found)
+}
+
+STRING 332
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Find the Gold Stashes
+  - Find the five gold stashes  (4 of 5 found)
+}
+
+STRING 335
+{
+King Arthas
+}
+
+STRING 336
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AArthas43.mp3
+{
+Gold! We should take this with us!
+}
+
+STRING 339
+{
+Find the five gold stashes
+}
+
+STRING 340
+{
+Ancient Gate
+}
+
+STRING 341
+{
+Old Kingdom Door
+}
+
+STRING 342
+{
+|cff32cd32HINT|r - Use Arthas’ Death Pact ability on Carrion Beetles to restore his health.
+}
+
+STRING 351
+{
+King Arthas
+}
+
+STRING 352
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AArthas44.mp3
+{
+More gold! This might help us later!
+}
+
+STRING 353
+{
+King Arthas
+}
+
+STRING 354
+// Sound\Dialogue\UndeadExpCamp\Undead07Ax\L07AArthas45.mp3
+{
+More gold! Take all you can carry!
+}
+
+STRING 357
+{
+Dwarf
+}
+
+STRING 358
+{
+Kill 'em all twice, that's what I say!
+}
+
+STRING 361
+{
+Dwarf
+}
+
+STRING 362
+{
+This is for Muradin, ye bastards!
+}
+
+STRING 363
+{
+Old Kingdom Lock
+}
+
+STRING 364
+{
+200!
+}
+
+STRING 365
+{
+Queen Nezar'Azret
+}
+
+STRING 366
+{
+Fountain of Restoration
+}
+
+STRING 368
+{
+Anub'arak
+}
+
+STRING 369
+{
+There must be a hidden passage somewhere. We nerubians were crafty engineers in our time.
+}
+
+STRING 370
+{
+Anub'arak
+}
+
+STRING 371
+{
+Many of us who fell during the War of the Spider were brought back to serve the Lich King. These warriors, however, never died. Foolishly, they still fight to liberate Nerub from the Scourge.
+}
+
+STRING 372
+{
+King Arthas
+}
+
+STRING 373
+{
+Great. As long as we're here, we can take some of these items with us.
+}
+
+STRING 374
+{
+Anub'arak
+}
+
+STRING 375
+{
+This treasure belongs to the Lich King, little creature! We, his servants, shall take what we will.
+}
+

@@ -1,0 +1,697 @@
+﻿STRING 3
+{
+HumanX02
+}
+
+STRING 4
+{
+1
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 7
+{
+Chapter Two
+}
+
+STRING 10
+{
+Alliance of Lordaeron
+}
+
+STRING 11
+{
+Undead Scourge
+}
+
+STRING 96
+{
+A Dark Covenant
+}
+
+STRING 159
+{
+The next day, at the Alliance base camp, Prince Kael'thas and his men ready themselves to move out.
+}
+
+STRING 166
+{
+Guard Dog
+}
+
+STRING 203
+{
+Ruined Tower 2
+}
+
+STRING 278
+{
+Defeat!
+}
+
+STRING 284
+{
+Crush and Destroy
+}
+
+STRING 285
+{
+From the shadows, Dalvengyr commands his Undead Scourge to surround your encampment. Seek out Dalvengyr, destroy him, slay his troops, and raze every last one of his buildings to the ground!
+}
+
+STRING 286
+{
+Destroy the green Undead base
+}
+
+STRING 288
+{
+|cffffcc00MAIN QUEST|r
+Crush and Destroy
+  - Destroy the green Undead base
+}
+
+STRING 290
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Crush and Destroy
+}
+
+STRING 291
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 292
+{
+|cffffcc00MISSION FAILED|r
+Maiev has been slain.
+}
+
+STRING 294
+{
+|cff87ceebNEW UNIT AVAILABLE|r
+Dragonhawk Riders - You may now build Dragonhawk Riders from the Gryphon Aviary. They have the Aerial Shackles ability, which allows them to immobilize and disarm enemy air units temporarily.
+}
+
+STRING 296
+{
+Defeat!
+}
+
+STRING 324
+{
+Prince Kael'thas
+}
+
+STRING 325
+// Sound\Dialogue\HumanExpCamp\Human02x\A02Kael12.mp3
+{
+They've begun their attack! We must push them back and advance on their blasted citadels!
+}
+
+STRING 336
+{
+Dalvengyr
+}
+
+STRING 349
+{
+Chapter Two: A Dark Covenant
+}
+
+STRING 350
+{
+Alliance Remnants
+}
+
+STRING 351
+{
+(Special)
+}
+
+STRING 354
+{
+ (FAST BUILD)
+}
+
+STRING 355
+{
+Emissary
+}
+
+STRING 356
+// Sound\Dialogue\HumanExpCamp\Human02x\A02Emissary01.mp3
+{
+Greetings, Prince Kael. I bring word from Grand Marshal Garithos.
+}
+
+STRING 357
+{
+Prince Kael'thas
+}
+
+STRING 358
+// Sound\Dialogue\HumanExpCamp\Human02x\A02Kael02.mp3
+{
+What news from the front?
+}
+
+STRING 359
+{
+Emissary
+}
+
+STRING 360
+// Sound\Dialogue\HumanExpCamp\Human02x\A02Emissary03.mp3
+{
+Apparently the observatories you repaired detected a large undead force massing nearby. Lord Garithos has commanded that you crush the undead before they can march on Dalaran.
+}
+
+STRING 361
+{
+Prince Kael'thas
+}
+
+STRING 362
+// Sound\Dialogue\HumanExpCamp\Human02x\A02Kael04.mp3
+{
+That doesn't sound too difficult.
+}
+
+STRING 363
+{
+Emissary
+}
+
+STRING 364
+// Sound\Dialogue\HumanExpCamp\Human02x\A02Emissary05.mp3
+{
+Unfortunately, your forces may be a little thinned. You see, Lord Garithos has also ordered that all foot soldiers, cavalry and support teams report to the front lines immediately. You men, move out!
+}
+
+STRING 365
+{
+Prince Kael'thas
+}
+
+STRING 366
+// Sound\Dialogue\HumanExpCamp\Human02x\A02Kael06.mp3
+{
+This is preposterous! Am I to assault the undead with nothing but sticks and harsh language?
+}
+
+STRING 367
+{
+Emissary
+}
+
+STRING 368
+// Sound\Dialogue\HumanExpCamp\Human02x\A02Emissary07.mp3
+{
+The grand marshal has great confidence in your... abilities. Be creative.
+}
+
+STRING 369
+{
+Prince Kael'thas
+}
+
+STRING 370
+// Sound\Dialogue\HumanExpCamp\Human02x\A02Kael08.mp3
+{
+Garithos... I'm starting to hate that man.
+}
+
+STRING 377
+{
+Lady Vashj
+}
+
+STRING 378
+// Sound\Dialogue\HumanExpCamp\Human02x\A02LadyVashj13.mp3
+{
+Ishnu-dal-dieb, Prince Kael. We've come to join your fight against the vile dead.
+}
+
+STRING 379
+{
+Prince Kael'thas
+}
+
+STRING 380
+// Sound\Dialogue\HumanExpCamp\Human02x\A02Kael14.mp3
+{
+Greetings, Lady Vashj. I would welcome your aid gladly, but the commander I serve does not approve of your kind.
+}
+
+STRING 381
+{
+Lady Vashj
+}
+
+STRING 382
+// Sound\Dialogue\HumanExpCamp\Human02x\A02LadyVashj15.mp3
+{
+I do not see him here, sharing your peril. Let me bolster your forces with my own. If not, you and your brethren will surely fall.
+}
+
+STRING 383
+{
+Prince Kael'thas
+}
+
+STRING 384
+// Sound\Dialogue\HumanExpCamp\Human02x\A02Kael16.mp3
+{
+What you say is true. But... I... I accept your offer, Vashj.
+}
+
+STRING 385
+{
+Lady Vashj
+}
+
+STRING 386
+// Sound\Dialogue\HumanExpCamp\Human02x\A02LadyVashj17.mp3
+{
+Good. Let's get to it, then.
+}
+
+STRING 387
+{
+Prince Kael'thas
+}
+
+STRING 388
+// Sound\Dialogue\HumanExpCamp\Human02x\A02Kael20.mp3
+{
+You have my thanks, Lady. This victory would not have been possible without your aid, though I fear I may have doomed myself by accepting it.
+}
+
+STRING 389
+{
+Lady Vashj
+}
+
+STRING 390
+// Sound\Dialogue\HumanExpCamp\Human02x\A02LadyVashj21.mp3
+{
+The human you serve trusts no race but his own. His sense of honor runs no deeper than his tolerance.
+}
+
+STRING 391
+{
+Prince Kael'thas
+}
+
+STRING 392
+// Sound\Dialogue\HumanExpCamp\Human02x\A02Kael22.mp3
+{
+It is loyalty and duty that bind me to him and to this... failing Alliance. But now those tenets seem as distant as our ruined homeland. All I know is that my brethren and I hunger for something more.
+}
+
+STRING 393
+{
+Lady Vashj
+}
+
+STRING 394
+// Sound\Dialogue\HumanExpCamp\Human02x\A02LadyVashj23.mp3
+{
+Then perhaps, young Kael, it is time to find a new path... to power and glory.
+}
+
+STRING 411
+{
+Steel Arrowheads
+}
+
+STRING 412
+{
+Further increases the damage of Archers.
+}
+
+STRING 413
+{
+Increases the damage of Archers.
+}
+
+STRING 414
+{
+Upgrade to Advanced Steel A|cffffcc00r|rrowheads
+}
+
+STRING 415
+{
+Upgrade to Improved Steel A|cffffcc00r|rrowheads
+}
+
+STRING 416
+{
+Upgrade to Steel A|cffffcc00r|rrowheads
+}
+
+STRING 417
+{
+Advanced Steel Arrowheads
+}
+
+STRING 418
+{
+Improved Steel Arrowheads
+}
+
+STRING 421
+{
+Increases the Archer's attack range.
+}
+
+STRING 422
+{
+R
+}
+
+STRING 425
+{
+TOP= NO UNIT
+}
+
+STRING 428
+{
+BOTTOM= NO UNIT
+}
+
+STRING 429
+{
+Sells boats.
+}
+
+STRING 430
+{
+Spell Breaker
+}
+
+STRING 431
+// Sound\Dialogue\HumanExpCamp\Human02x\A02SpellBreaker10.mp3
+{
+Prince Kael, they've taken over our outlying bases. We're completely surrounded! 
+}
+
+STRING 432
+{
+Prince Kael'thas
+}
+
+STRING 433
+// Sound\Dialogue\HumanExpCamp\Human02x\A02Kael11.mp3
+{
+Those bases are lost. We'll just have to improvise.
+}
+
+STRING 436
+{
+|cff32cd32HINT|r - Dragonhawk Riders have the Cloud ability, which creates a small cloud that stops buildings with ranged attacks from attacking.
+}
+
+STRING 437
+{
+|cff32cd32HINT|r - Naga units are amphibious, which means they can walk over land and water and do not need to use boats.
+}
+
+STRING 438
+{
+No blight for joo!
+}
+
+STRING 439
+{
+Blizzy in da hizzy.
+}
+
+STRING 440
+{
+Primary troop production building. Trains Swordsmen and Archers. |nAlso contains the Defend, Long Bows, and Strength of the Blood upgrades.
+}
+
+STRING 441
+{
+Increases damage of Archers by <Remk,base1>.
+}
+
+STRING 442
+{
+Prince Kael'thas
+}
+
+STRING 443
+// Sound\Dialogue\HumanExpCamp\Human02xInterlude\A02Kael24.mp3
+{
+I can't explain it exactly, but ever since our homeland was destroyed, my brethren and I have felt empty... almost drained of our spirit.
+}
+
+STRING 444
+{
+Prince Kael'thas
+}
+
+STRING 445
+// Sound\Dialogue\HumanExpCamp\Human02xInterlude\A02Kael25.mp3
+{
+There is a hunger now that has... hardened our hearts.
+}
+
+STRING 446
+{
+Lady Vashj
+}
+
+STRING 447
+// Sound\Dialogue\HumanExpCamp\Human02xInterlude\A02LadyVashj26.mp3
+{
+I know this hunger, Kael. Like us, your people are addicted to magic!
+}
+
+STRING 448
+{
+Lady Vashj
+}
+
+STRING 449
+// Sound\Dialogue\HumanExpCamp\Human02xInterlude\A02LadyVashj27.mp3
+{
+It flowed through your veins for over ten thousand years. And now, with the corruption of your land and the Sunwell that empowered you...
+}
+
+STRING 450
+{
+Prince Kael'thas
+}
+
+STRING 451
+// Sound\Dialogue\HumanExpCamp\Human02xInterlude\A02Kael28.mp3
+{
+We have been cut off from our power, from our birthright! Without a new source of magic, my people will surely die.
+}
+
+STRING 452
+{
+Lady Vashj
+}
+
+STRING 453
+// Sound\Dialogue\HumanExpCamp\Human02xInterlude\A02LadyVashj29.mp3
+{
+There are other founts of power in this world, Kael. Demons, for instance.
+}
+
+STRING 454
+{
+Prince Kael'thas
+}
+
+STRING 455
+// Sound\Dialogue\HumanExpCamp\Human02xInterlude\A02Kael30.mp3
+{
+You speak of madness, my lady. We will never be that desperate.
+}
+
+STRING 456
+{
+Lady Vashj
+}
+
+STRING 457
+// Sound\Dialogue\HumanExpCamp\Human02xInterlude\A02LadyVashj31.mp3
+{
+Your aversion is understandable. But still--
+}
+
+STRING 458
+{
+Spell Breaker
+
+}
+
+STRING 459
+// Sound\Dialogue\HumanExpCamp\Human02xInterlude\A02SpellBreaker32.mp3
+{
+Prince Kael! Grand Marshal Garithos has arrived. He's brought a full battalion with him.
+}
+
+STRING 460
+{
+Prince Kael'thas
+}
+
+STRING 461
+// Sound\Dialogue\HumanExpCamp\Human02xInterlude\A02Kael33.mp3
+{
+Damn. Vashj, you'd best leave. I cannot guarantee your people's safety.
+}
+
+STRING 462
+{
+Knight
+
+}
+
+STRING 463
+// Sound\Dialogue\HumanExpCamp\Human02xInterlude\A02Knight34.mp3
+{
+Naga warriors! 
+}
+
+STRING 464
+{
+Grand Marshal Garithos
+}
+
+STRING 465
+// Sound\Dialogue\HumanExpCamp\Human02xInterlude\A02Garithos35.mp3
+{
+Forget about them!
+}
+
+STRING 466
+{
+Grand Marshal Garithos
+}
+
+STRING 467
+// Sound\Dialogue\HumanExpCamp\Human02xInterlude\A02Garithos36.mp3
+{
+So, Kael, you've shown your true colors at last. I knew you were in league with those serpents. Now I have all the proof I need to execute every traitorous one of you!
+}
+
+STRING 468
+{
+Prince Kael'thas
+}
+
+STRING 469
+// Sound\Dialogue\HumanExpCamp\Human02xInterlude\A02Kael37.mp3
+{
+Please, milord, spare my men! It was my decision to--
+}
+
+STRING 470
+{
+Grand Marshal Garithos
+}
+
+STRING 471
+// Sound\Dialogue\HumanExpCamp\Human02xInterlude\A02Garithos38.mp3
+{
+Save your breath. I never trusted you vainglorious elves. It was a mistake to accept you into the Alliance in the first place. Now, at long last, you'll be dealt with appropriately. Take them away!
+}
+
+STRING 472
+{
+Prince Kael'thas
+}
+
+STRING 473
+// Sound\Dialogue\HumanExpCamp\Human02x\A02Kael20.mp3
+{
+You have my thanks, Lady. This victory would not have been possible without your aid, though I fear I may have doomed myself by accepting it.
+}
+
+STRING 474
+{
+Lady Vashj
+}
+
+STRING 475
+// Sound\Dialogue\HumanExpCamp\Human02x\A02LadyVashj21.mp3
+{
+The human you serve trusts no race but his own. His sense of honor runs no deeper than his tolerance.
+}
+
+STRING 476
+{
+Prince Kael'thas
+}
+
+STRING 477
+// Sound\Dialogue\HumanExpCamp\Human02x\A02Kael22.mp3
+{
+It is loyalty and duty that bind me to him and to this... failing Alliance. But now those tenets seem as distant as our ruined homeland. All I know is that my brethren and I hunger for something more.
+}
+
+STRING 478
+{
+Lady Vashj
+}
+
+STRING 479
+// Sound\Dialogue\HumanExpCamp\Human02x\A02LadyVashj23.mp3
+{
+Then perhaps, young Kael, it is time to find a new path... to power and glory.
+}
+
+STRING 480
+{
+|cff87ceebNEW UNIT ACQUIRED|r
+Naga Royal Guard - Incredibly powerful melee unit. Has the Submerge ability, Resistant Skin, Frost Bolt, Crushing Wave, and Summon Sea Elemental skills.
+}
+
+STRING 481
+{
+Acquire Gold Mine
+}
+
+STRING 482
+{
+The devastating Undead counterattack has left you in the precarious position of not having a ready supply of gold. You must secure an additional gold mine by destroying a nearby Undead base and establishing a Town Hall over the base's ashes. Dragonhawk Riders will prove valuable in this effort, as their Cloud spell can prevent enemy towers from attacking your troops.
+}
+
+STRING 483
+{
+Secure a gold mine and build a Town Hall
+}
+
+STRING 484
+{
+|cffffcc00OPTIONAL QUEST|r 
+Acquire Gold Mine
+  - Secure a gold mine and build a Town Hall
+  - (Hint - Use the Dragonhawk Rider's Cloud spell to disarm enemy towers)
+}
+
+STRING 485
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Acquire Gold Mine
+}
+
+STRING 486
+{
+(Hint - Use the Dragonhawk Rider's Cloud spell to disarm enemy towers)
+}
+

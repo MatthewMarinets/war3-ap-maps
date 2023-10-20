@@ -1,0 +1,499 @@
+﻿STRING 0
+{
+Plagued Villagers
+}
+
+STRING 1
+{
+Arthas
+}
+
+STRING 4
+{
+Human06
+}
+
+STRING 5
+{
+Mal'Ganis
+}
+
+STRING 6
+{
+I live once more!
+}
+
+STRING 7
+{
+1
+}
+
+STRING 8
+{
+Chapter Six: The Culling
+}
+
+STRING 9
+{
+Blizzard Entertainment
+}
+
+STRING 10
+{
+Chapter Six
+}
+
+STRING 11
+{
+The Culling
+}
+
+STRING 13
+{
+Early the next morning, on the outskirts of Stratholme...
+}
+
+STRING 17
+{
+CONVERSIONMAN
+}
+
+STRING 19
+{
+Mal'Ganis
+}
+
+STRING 20
+{
+Arthas
+}
+
+STRING 21
+{
+Glad you could make it, Uther.
+}
+
+STRING 22
+{
+Uther the Lightbringer
+}
+
+STRING 23
+{
+The Culling
+}
+
+STRING 24
+{
+Mal'Ganis seeks to turn Stratholme's citizens into his Undead slaves. If he is successful, his armies will be unstoppable. You must destroy their homes and put the plagued wretches out of their misery before Mal'Ganis can claim their souls.  
+}
+
+STRING 25
+{
+Kill 100 zombies
+}
+
+STRING 26
+{
+Stop Mal'Ganis from claiming 100 zombies
+}
+
+STRING 28
+{
+Plagued Male Villager
+}
+
+STRING 29
+{
+Plagued Female Villager
+}
+
+STRING 30
+{
+Plagued Child Villager
+}
+
+STRING 31
+{
+Zombie of Mal'Ganis
+}
+
+STRING 32
+{
+Mal'Ganis
+}
+
+STRING 34
+{
+Conversion Man
+}
+
+STRING 36
+{
+Villagers
+}
+
+STRING 38
+{
+Force 4
+}
+
+STRING 39
+{
+Force 5
+}
+
+STRING 40
+{
+Force 6
+}
+
+STRING 41
+{
+As you can see, your people are now mine. I will now turn this city household by household, until the flame of life has been snuffed out... forever.
+}
+
+STRING 42
+{
+Arthas
+}
+
+STRING 43
+{
+I won't allow it, Mal'Ganis! Better that these people die by my hand than serve as your slaves in death!
+}
+
+STRING 44
+{
+Mal'Ganis
+}
+
+STRING 49
+{
+Watch your tone with me, boy. You may be the prince, but I'm still your superior as a paladin!
+}
+
+STRING 50
+{
+Revive Conversion Man
+}
+
+STRING 53
+{
+Arthas
+}
+
+STRING 54
+{
+As if I could forget. Listen, Uther, there's something about the plague you should know....
+}
+
+STRING 55
+{
+Arthas
+}
+
+STRING 56
+{
+Oh, no. We're too late. These people have all been infected! They may look fine now, but it's just a matter of time before they turn into the undead!
+}
+
+STRING 57
+{
+Uther the Lightbringer
+}
+
+STRING 58
+{
+Arthas
+}
+
+STRING 60
+{
+What?
+}
+
+STRING 61
+{
+Arthas
+}
+
+STRING 62
+{
+This entire city must be purged.
+}
+
+STRING 63
+{
+Uther the Lightbringer
+}
+
+STRING 64
+{
+How can you even consider that? There's got to be some other way.
+}
+
+STRING 65
+{
+Arthas
+}
+
+STRING 66
+{
+Damn it, Uther! As your future king, I order you to purge this city!
+}
+
+STRING 67
+{
+Uther the Lightbringer
+}
+
+STRING 68
+{
+You are not my king yet, boy! Nor would I obey that command even if you were!
+}
+
+STRING 69
+{
+Arthas
+}
+
+STRING 70
+{
+Then I must consider this an act of treason.
+}
+
+STRING 71
+{
+Uther the Lightbringer
+}
+
+STRING 72
+{
+Treason? Have you lost your mind, Arthas?
+}
+
+STRING 73
+{
+Arthas
+}
+
+STRING 74
+{
+Have I? Lord Uther, by my right of succession and the sovereignty of my crown, I hereby relieve you of your command and suspend your paladins from service.
+}
+
+STRING 75
+{
+Jaina Proudmoore
+}
+
+STRING 76
+{
+Arthas! You can't just--
+}
+
+STRING 77
+{
+Arthas
+}
+
+STRING 78
+{
+It's done! Those of you who have the will to save this land, follow me! The rest of you... get out of my sight!
+}
+
+STRING 79
+{
+Uther the Lightbringer
+}
+
+STRING 80
+{
+You've just crossed a terrible threshold, Arthas.
+}
+
+STRING 81
+{
+Arthas
+}
+
+STRING 82
+{
+Jaina?
+}
+
+STRING 83
+{
+Jaina Proudmoore
+}
+
+STRING 84
+{
+I'm sorry, Arthas. I can't watch you do this.
+}
+
+STRING 85
+{
+Arthas
+}
+
+STRING 86
+{
+We're going to finish this right now, Mal'Ganis. Just you and me.
+}
+
+STRING 87
+{
+Mal'Ganis
+}
+
+STRING 88
+{
+Brave words. Unfortunately for you, it won't end here. Your journey has just begun, young prince.
+}
+
+STRING 89
+{
+Mal'Ganis
+}
+
+STRING 90
+{
+Gather your forces and meet me in the arctic land of Northrend. It is there that we shall settle the score between us. It is there that your true destiny will unfold.
+}
+
+STRING 91
+{
+Arthas
+}
+
+STRING 92
+{
+I'll hunt you to the ends of the earth if I have to! Do you hear me? To the ends of the earth!
+}
+
+STRING 93
+{
+Mal'Ganis
+}
+
+STRING 94
+{
+Obviously, you are not as strong as the Dark Lord believed. Now, feel the wrath of the Scourge as you drown under the flood of the living dead!
+}
+
+STRING 96
+{
+Plagued Villager Buildings
+}
+
+STRING 99
+{
+Father, forgive me for what I must do.
+}
+
+STRING 100
+{
+|cffffcc00MAIN QUEST|r
+The Culling
+  - Destroy plagued villager houses
+  - Kill 100 zombies
+  - Stop Mal'Ganis from claiming 100 zombies
+}
+
+STRING 101
+{
+Mal'Ganis
+}
+
+STRING 102
+{
+I've been waiting for you, young prince. I am Mal'Ganis.
+}
+
+STRING 103
+{
+Filson the Rat
+}
+
+STRING 104
+{
+|cff32cd32HINT|r - The plagued villagers are hiding inside the city buildings. Destroy the buildings to get to the plagued villagers.
+}
+
+STRING 107
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+The Culling
+}
+
+STRING 108
+{
+|cffffcc00MAIN QUEST FAILED|r
+The Culling
+}
+
+STRING 113
+{
+Zoo Animals
+}
+
+STRING 114
+{
+Destroy plagued villager houses
+}
+
+STRING 123
+{
+Mal'Ganis Revival
+}
+
+STRING 235
+{
+Defeat!
+}
+
+STRING 236
+{
+Defeat!
+}
+
+STRING 237
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 238
+{
+Defeat!
+}
+
+STRING 240
+{
+Undead Scourge
+}
+
+STRING 241
+{
+Undead Elite Guard
+}
+
+STRING 242
+{
+Alliance Forces
+}
+
+STRING 243
+{
+The Silver Hand
+}
+
+STRING 245
+{
+|cff87ceebNEW UNIT AVAILABLE|r 
+Knight - You may now build Knights from the Barracks. They are powerful mounted warriors.
+
+}
+

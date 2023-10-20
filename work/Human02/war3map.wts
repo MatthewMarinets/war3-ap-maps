@@ -1,0 +1,671 @@
+﻿STRING 0
+{
+Human02
+}
+
+STRING 1
+{
+1
+}
+
+STRING 2
+{
+Chapter Two: Blackrock and Roll
+}
+
+STRING 3
+{
+Blizzard Entertainment
+}
+
+STRING 4
+{
+Chapter Two
+}
+
+STRING 5
+{
+Blackrock and Roll
+}
+
+STRING 6
+{
+Twenty minutes later, at Uther's encampment near the Blackrock clan village...
+}
+
+STRING 7
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 11
+{
+|cffffcc00MAIN QUEST|r
+Blademaster
+  - Defeat the Blademaster
+}
+
+STRING 12
+{
+|cffffcc00MAIN QUEST|r
+Blademaster
+  - Defeat the Blademaster
+}
+
+STRING 15
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Establish Base
+}
+
+STRING 16
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Searinox
+  - |cff808080Slay Searinox, the Black Dragon (Completed)|r
+  - Bring the Heart of Searinox to Feranor Steeltoe
+}
+
+STRING 17
+{
+|cffffcc00MAIN QUEST|r
+Establish a Base
+  - Construct a Barracks
+  - Construct 2 Farms
+  - Train 6 Footmen
+}
+
+STRING 18
+{
+|cffffcc00MAIN QUEST|r
+Establish a Base
+  - Construct a Barracks
+  - Construct 2 Farms
+  - Train 6 Footmen
+}
+
+STRING 19
+{
+|cffffcc00OPTIONAL QUEST|r
+Searinox
+  - Slay Searinox, the Black Dragon
+  - Bring the Heart of Searinox to Feranor Steeltoe
+}
+
+STRING 20
+{
+|cff87CEEBNEW UNIT AVAILABLE|r
+Rifleman - You may now build Dwarven Riflemen from the Barracks. Riflemen are highly skilled sharpshooters effective against air units.
+}
+
+STRING 21
+{
+|cffffcc00OPTIONAL QUEST FAILED|r
+Searinox
+}
+
+STRING 22
+{
+|cffffcc00OPTIONAL QUEST FAILED|r
+Searinox
+}
+
+STRING 25
+{
+|cff32CD32HINT|r - Arthas can be revived at an Altar of Kings.
+}
+
+STRING 26
+{
+|cff32CD32HINT|r - Press the Call to Arms button on your Town Hall in order to change your Peasants to Militia.
+}
+
+STRING 27
+{
+|cff32CD32HINT|r - You can speed up construction by selecting additional Peasants and right-clicking on a building that is in progress.
+}
+
+STRING 28
+{
+|cff32CD32HINT|r - Scout Towers can be upgraded to Guard Towers. This upgrade enables them to defend against enemy attackers.
+}
+
+STRING 29
+{
+Defeat!
+}
+
+STRING 35
+{
+Uther the Lightbringer
+}
+
+STRING 36
+{
+Ah, good timing, lad. I sent two of my best knights in to parley with the orc leader. They should be returning shortly.
+}
+
+STRING 37
+{
+Uther the Lightbringer
+}
+
+STRING 38
+{
+Damn. These orcs will never surrender.
+}
+
+STRING 39
+{
+Blackrock Clan
+}
+
+STRING 45
+{
+Footmen Trained |cffffffff3/6|r
+}
+
+STRING 47
+{
+Dragon Hunter
+}
+
+STRING 48
+{
+Footmen Trained |cffffffff2/6|r
+}
+
+STRING 53
+{
+Footmen Trained |cffffffff4/6|r
+}
+
+STRING 54
+{
+(Fire Upgrade)
+}
+
+STRING 56
+{
+Arthas
+}
+
+STRING 57
+{
+Dwarven Workshop
+}
+
+STRING 58
+{
+Then let's get in there and destroy the beasts!
+}
+
+STRING 59
+{
+Uther the Lightbringer
+}
+
+STRING 60
+{
+Feranor Steeltoe
+}
+
+STRING 61
+{
+Black Dragon Whelp
+}
+
+STRING 64
+{
+Remember, Arthas, we are paladins. Vengeance cannot be a part of what we must do. If we allow our passions to turn to bloodlust, then we will become as vile as the orcs.
+}
+
+STRING 65
+{
+Arthas
+}
+
+STRING 66
+{
+Yes, Uther.
+}
+
+STRING 67
+{
+Uther the Lightbringer
+}
+
+STRING 68
+{
+Now, if you're feeling up to it, I want you to lead the attack.
+}
+
+STRING 69
+{
+Arthas
+}
+
+STRING 70
+{
+Me? Well, of course!
+}
+
+STRING 71
+{
+Uther the Lightbringer
+}
+
+STRING 72
+{
+I'll remain here and ensure that none of the loathsome beasts threaten the camp.
+}
+
+STRING 73
+{
+Arthas
+}
+
+STRING 74
+{
+I won't fail you.
+}
+
+STRING 75
+{
+Uther the Lightbringer
+}
+
+STRING 76
+{
+I know you won't, lad.
+}
+
+STRING 77
+{
+Searinox
+}
+
+STRING 78
+{
+The rogue Black Dragon, Searinox, has been ravaging the local farmsteads for weeks. The Dwarven hunters, who have come to claim the Dragon's heart, report that the gargantuan beast has fled back to his lair and may be vulnerable to a surprise attack.
+}
+
+STRING 79
+{
+Slay Searinox, the Black Dragon
+}
+
+STRING 81
+{
+Establish Base
+}
+
+STRING 82
+{
+To ensure that the Orc threat is dealt with effectively, you must establish a base camp and bolster your forces. Only when the camp is prepared can the area be considered properly garrisoned. 
+}
+
+STRING 85
+{
+Footmen Trained |cffffffff5/6|r
+}
+
+STRING 109
+{
+Blademaster
+}
+
+STRING 110
+{
+The Blackrock clan appears to have re-embraced its Demon-worshipping heritage. Slay the clan's evil Blademaster before he has the chance to commune with his Demon masters!
+}
+
+STRING 114
+{
+Construct a Barracks
+}
+
+STRING 115
+{
+Construct 2 Farms
+}
+
+STRING 116
+{
+Train 6 Footmen
+}
+
+STRING 118
+{
+Defeat the Blademaster
+}
+
+STRING 183
+{
+Bring the Heart of Searinox to Feranor Steeltoe
+}
+
+STRING 201
+{
+
+}
+
+STRING 202
+{
+Footmen
+}
+
+STRING 204
+{
+Footmen Trained  |cffffffff0/6|r
+}
+
+STRING 222
+{
+Blademaster of Blackrock Clan
+}
+
+STRING 223
+{
+Paladin fool! The warlocks of the Blackrock clan have spoken! Soon, demons will rain from the sky, and this wretched world will burn!
+}
+
+STRING 224
+{
+Uther the Lightbringer
+}
+
+STRING 225
+{
+Yes, I've heard this rhetoric before. You orcs will never learn!
+}
+
+STRING 226
+{
+Uther the Lightbringer
+}
+
+STRING 227
+{
+It was only a mirror image. Damn it, what are these curs up to?
+}
+
+STRING 228
+{
+Blademaster
+}
+
+STRING 229
+{
+The hour of doom approaches! Let this paltry sacrifice appease our demon masters!
+}
+
+STRING 230
+{
+Unlucky Footman
+}
+
+STRING 231
+{
+You sick bastards! You'll never get away with--
+}
+
+STRING 235
+{
+Feranor Steeltoe
+}
+
+STRING 236
+{
+Well met, good human! Have you come to join in our hunt?
+}
+
+STRING 239
+{
+Feranor Steeltoe
+}
+
+STRING 240
+{
+We're hunting black drakes. It's said that drakes' blood can bestow fiery enchantments upon weapons.
+}
+
+STRING 243
+{
+Feranor Steeltoe
+}
+
+STRING 244
+{
+The name of the beast we're hunting is Searinox. With your aid, the monster won't stand a chance!
+}
+
+STRING 247
+{
+Feranor Steeltoe
+}
+
+STRING 248
+{
+Now, I will reforge your weapons to strike with searing heat!
+}
+
+STRING 251
+{
+Searinox
+}
+
+STRING 252
+{
+You dare challenge me? You mortals become more reckless with every generation!
+}
+
+STRING 253
+{
+Arthas
+}
+
+STRING 254
+{
+Let's bring this heart back to the dwarves.
+}
+
+STRING 261
+{
+Footman
+}
+
+STRING 262
+{
+If our town comes under attack, a militia can be summoned by ringing the bell on the town hall. The peasants will run to the town center and arm themselves for battle!
+}
+
+STRING 293
+{
+Alliance of Lordaeron
+}
+
+STRING 294
+{
+Dragon Hunters
+}
+
+STRING 317
+{
+Footmen Trained |cffffffff1/6|r
+}
+
+STRING 390
+{
+Defeat!
+}
+
+STRING 391
+{
+The Silver Hand
+}
+
+STRING 392
+{
+Alliance Forces
+}
+
+STRING 393
+{
+Villagers
+}
+
+STRING 398
+{
+Arthas
+}
+
+STRING 399
+{
+Slay the orcs! Slay them all!
+}
+
+STRING 424
+{
+Arthas
+}
+
+STRING 425
+{
+What are you dwarves hunting in this region?
+}
+
+STRING 444
+{
+Arthas
+}
+
+STRING 445
+{
+The fiery enchantments you seek could prove useful.
+}
+
+STRING 484
+{
+Footmen Trained |cffffffff6/6|r
+}
+
+STRING 507
+{
+Uther the Lightbringer
+}
+
+STRING 508
+{
+You've done well, lad. This was a sound victory.
+}
+
+STRING 509
+{
+Arthas
+}
+
+STRING 510
+{
+I don't know, Uther. The orcs were sacrificing townsfolk. I think they were trying to summon demons.
+}
+
+STRING 511
+{
+Uther the Lightbringer
+}
+
+STRING 512
+{
+Have faith, lad. These orcs are trying to hold on to dying traditions. We defeated their demons a long time ago. Let's head for home. It's been a long day.
+}
+
+STRING 515
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Blademaster
+}
+
+STRING 525
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Establish a Base
+  - |cff808080Construct a Barracks (Completed)|r
+  - |cff808080Construct 2 Farms (Completed)|r
+  - Train 6 Footmen
+}
+
+STRING 530
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Establish a Base
+  - Construct a Barracks
+  - |cff808080Construct 2 Farms (Completed)|r
+  - Train 6 Footmen
+}
+
+STRING 535
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Establish a Base
+  - |cff808080Construct a Barracks (Completed)|r
+  - |cff808080Construct 2 Farms (Completed)|r
+  - Train 6 Footmen
+}
+
+STRING 540
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Establish a Base
+  - |cff808080Construct a Barracks (Completed)|r
+  - Construct 2 Farms
+  - Train 6 Footmen
+}
+
+STRING 543
+{
+|cff87ceebNEW ITEM RECEIVED|r - Orb of Fire
+}
+
+STRING 544
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Searinox
+}
+
+STRING 547
+{
+|cff87ceebNEW ITEM RECEIVED|r - Orb of Fire
+}
+
+STRING 548
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Searinox
+}
+
+STRING 549
+{
+|cff32CD32HINT|r - When Heroes such as Arthas die, their spirits persist and can be revived at an altar.
+}
+
+STRING 556
+{
+Footman
+}
+
+STRING 557
+{
+Murlocs? Here? They must have an encampment nearby!
+}
+
+STRING 564
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Establish a Base
+  - |cff808080Construct a Barracks (Completed)|r
+  - Construct 2 Farms
+  - |cff808080Train 6 Footmen (Completed)|r
+}
+

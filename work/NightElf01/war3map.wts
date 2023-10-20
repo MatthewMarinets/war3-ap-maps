@@ -1,0 +1,721 @@
+﻿STRING 0
+{
+NightElf01
+}
+
+STRING 1
+{
+1
+}
+
+STRING 2
+{
+Chapter One: Enemies at the Gate
+}
+
+STRING 3
+{
+Blizzard Entertainment
+}
+
+STRING 4
+{
+Chapter One
+}
+
+STRING 5
+{
+Enemies at the Gate
+}
+
+STRING 6
+{
+With the heroic sacrifice of Grom Hellscream, the pit lord Mannoroth was slain, and the demon curse that had plagued the orcs was put to an end. However, the combined human and orc forces have moved deeper into Ashenvale Forest to ascertain whether a demonic threat still lingers in the land. 
+
+Tyrande Whisperwind, the leader of the night elf Sentinels, believes that the outlanders will bring only doom to her enchanted homeland.
+}
+
+STRING 7
+{
+|cffffcc00MAIN QUEST|r
+Night Elf Base
+  - Entangle a gold mine
+  - Construct a Moon Well
+  - Construct an Ancient of War
+  - Train 5 Archers
+}
+
+STRING 8
+{
+Tyrande Whisperwind
+}
+
+STRING 9
+{
+With the heroic sacrifice of Grom Hellscream, the pit lord Mannoroth was slain, and the demon curse that had plagued the orcs was put to an end. However, the combined human and orc forces have moved deeper into Ashenvale Forest to ascertain whether a demonic threat still lingers in the land. Tyrande Whisperwind, the leader of the night elf Sentinels, believes that the outlanders will bring only doom to her enchanted homeland.
+}
+
+STRING 10
+{
+|cff32CD32HINT|r - The Elder Furbolg wishes to speak with Tyrande.
+}
+
+STRING 13
+{
+Force 1
+}
+
+STRING 14
+{
+Force 2
+}
+
+STRING 18
+{
+Shandris Feathermoon
+}
+
+STRING 19
+{
+Pardon, Priestess, but you've been staring out across Ashenvale for hours.
+}
+
+STRING 20
+{
+Tyrande Whisperwind
+}
+
+STRING 21
+{
+I sense something dark stirring within the forests, Shandris. It feels as if it's heading this way. 
+}
+
+STRING 22
+{
+Shandris Feathermoon
+}
+
+STRING 23
+{
+The greenskins who killed Cenarius?
+}
+
+STRING 24
+{
+Tyrande Whisperwind
+}
+
+STRING 25
+{
+Perhaps. Perhaps something more.
+}
+
+STRING 26
+{
+Duke Lionheart
+}
+
+STRING 27
+{
+Put your backs into it! Jaina and the orc warchief expect this base to be built swiftly!
+}
+
+STRING 28
+{
+Footman
+}
+
+STRING 29
+{
+Bah! We shouldn't even be here! Or siding with the orcs.
+}
+
+STRING 30
+{
+Grunt
+}
+
+STRING 31
+{
+We're here to hunt the remaining demons, human. You're lucky our goals are the same.
+}
+
+STRING 32
+{
+Duke Lionheart
+}
+
+STRING 33
+{
+All right, you men! Mind your business! Back to work! 
+}
+
+STRING 34
+{
+Tyrande Whisperwind
+}
+
+STRING 35
+{
+So, these orcs and humans presume to run rampant through our lands? They will regret ever stepping foot into Ashenvale. We will establish a base and deal with these outlanders as they deserve. 
+}
+
+STRING 37
+{
+|cffffcc00OPTIONAL QUEST|r 
+Furbolg Village
+  - Locate 10 Missing Furbolgs
+}
+
+STRING 38
+{
+Night Elf Base
+}
+
+STRING 39
+{
+Night Elf bases are more than mere trees:  they are living, extended organisms that can uproot and move through the forests when attacked.
+}
+
+STRING 40
+{
+Invaders
+}
+
+STRING 41
+{
+The Orcs and Humans have set up a base in the Ashenvale Forest. Tyrande Whisperwind, protector of the Night Elves, has sworn to destroy all that enter the forest uninvited.
+}
+
+STRING 43
+{
+The tree of life is the heart of our night elf villages. Use the tree's ability to entangle the gold mine. After entangling the mine, send wisps in to extract gold.
+}
+
+STRING 47
+{
+Tyrande Whisperwind
+}
+
+STRING 48
+{
+
+}
+
+STRING 49
+{
+Sir Henery Lionshield
+}
+
+STRING 50
+{
+|cff32CD32HINT|r - The Tree of Life is used to entangle gold mines. Select the Tree of Life and then right-click on a mine.
+}
+
+STRING 51
+{
+Tyrande Whisperwind
+}
+
+STRING 52
+{
+Wisps are friendly spirits that harvest gold and lumber for our villages. They also create the structures that allow us to train more warriors.
+}
+
+STRING 55
+{
+Bandu thoribas, mortals! You will pay for defiling these lands! 
+}
+
+STRING 68
+{
+Defeat!
+}
+
+STRING 69
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 81
+{
+Tyrande Whisperwind
+}
+
+STRING 82
+{
+The moon wells are the source of our nourishment and strength. You can build additional moon wells to nourish more troops.
+}
+
+STRING 84
+{
+Grunt
+}
+
+STRING 85
+{
+It's the undead! Defend yourselves!
+}
+
+STRING 86
+{
+Footman
+}
+
+STRING 87
+{
+They must have followed us from Lordaeron!
+}
+
+STRING 88
+{
+Force 3
+}
+
+STRING 90
+{
+Tyrande Whisperwind
+}
+
+STRING 91
+{
+Quickly, my sisters, back to the trees! We are no match for a force this vast.
+}
+
+STRING 95
+{
+Furbolg Village
+}
+
+STRING 96
+{
+The Furbolgs are moving deeper into the forests of Ashenvale. Their tribal elder senses something evil spreading through the land. Before the tribe can leave, all of the wandering Furbolgs need to be escorted back to their village.
+}
+
+STRING 97
+{
+Locate 10 Missing Furbolgs
+}
+
+STRING 99
+{
+Construct an Ancient of War
+}
+
+STRING 100
+{
+Construct a Moon Well
+}
+
+STRING 101
+{
+Slay the Paladin
+}
+
+STRING 107
+{
+Tyrande Whisperwind
+}
+
+STRING 109
+{
+To train more troops, construct an ancient of war.
+}
+
+STRING 111
+{
+Orcish Horde
+}
+
+STRING 113
+{
+Undead Scourge
+}
+
+STRING 116
+{
+Furbolg Shaman
+}
+
+STRING 117
+{
+Many thanks, Priestess! Now we can evacuate the village. Please accept the aid of our champion. He will protect your life with his own.
+
+}
+
+STRING 118
+{
+Tyrande Whisperwind
+}
+
+STRING 119
+{
+Your offer is a generous one. May Elune light your path to safety.
+
+}
+
+STRING 124
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r 
+Furbolg Village
+  - Furbolgs located
+}
+
+STRING 129
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Furbolg Village
+}
+
+STRING 130
+{
+|cff87CEEBNEW UNIT ACQUIRED|r 
+Furbolg - Medium melee unit that can attack ground units.
+Furbolg Champion - Heavy melee unit that can attack ground units.
+
+}
+
+STRING 132
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r 
+Furbolg Village
+  - |cff808080Locate 10 Missing Furbolgs (Completed)|r
+  - Return Tyrande to the Furbolg Shaman
+}
+
+STRING 134
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r 
+Furbolg Village
+  - Furbolgs located
+}
+
+STRING 135
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r 
+Furbolg Village
+  - Furbolg located
+}
+
+STRING 136
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r 
+Furbolg Village
+  - Furbolgs located
+}
+
+STRING 137
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r 
+Furbolg Village
+  - Furbolgs located
+}
+
+STRING 143
+{
+|cff32CD32HINT|r - You can build more Wisps from the Tree of Life. 
+}
+
+STRING 144
+{
+|cff32CD32HINT|r  - Wisps can attach themselves to trees and return lumber resources without leaving or damaging the tree.
+}
+
+STRING 145
+{
+Train 5 Archers
+}
+
+STRING 150
+{
+|cff32CD32HINT|r - At nighttime, many Night Elf units can Shadowmeld and hide automatically while stationary.
+}
+
+STRING 152
+{
+
+}
+
+STRING 153
+{
+Archers Trained |cffffffff0/5|r
+}
+
+STRING 157
+{
+Furbolgs Located |cffffffff0/10|r
+}
+
+STRING 242
+{
+|cffffcc00MAIN QUEST|r
+Invaders
+  - Slay the Paladin
+}
+
+STRING 252
+{
+|cffffcc00MAIN QUEST COMPLETED|r 
+Night Elf Base
+}
+
+STRING 255
+{
+
+}
+
+STRING 341
+{
+|cff32CD32HINT|r  - Moon Wells can be used to replenish the life energies and mana of any friendly units that drink from their tranquil waters.
+}
+
+STRING 342
+{
+|cff32CD32HINT|r - The summoned scout can detect invisible units or be used to scout an enemy base.
+}
+
+STRING 355
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r 
+Furbolg Village
+  - Furbolgs located
+}
+
+STRING 416
+{
+|cff32CD32HINT|r - When uprooted, an Ancient can use the Eat Tree ability to regain health.
+}
+
+STRING 418
+{
+|cff32CD32HINT|r - Construct a new Tree of Life near a gold mine to entangle, or uproot your Tree of Life to entangle the gold mine.
+}
+
+STRING 419
+{
+|cff32CD32HINT|r - The Wisp is a Night Elf spirit that is consumed when constructing an Ancient.
+}
+
+STRING 482
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Invaders
+}
+
+STRING 483
+{
+Defeat!
+}
+
+STRING 484
+{
+Entangle a gold mine
+}
+
+STRING 520
+{
+|cffffcc00MAIN QUEST UPDATE|r 
+Night Elf Base
+  - |cff808080Entangle a gold mine (Completed)|r
+  - Construct a Moon Well
+  - Construct an Ancient of War
+  - Train 5 Archers
+}
+
+STRING 527
+{
+|cff32CD32HINT|r - Place Wisps in the Entangled Gold Mine to begin harvesting.
+}
+
+STRING 529
+{
+Elune save us! The dead advance in waves!
+}
+
+STRING 530
+{
+Archer
+}
+
+STRING 612
+{
+Sentinels
+}
+
+STRING 613
+{
+Human Expedition
+}
+
+STRING 614
+{
+Felwood Furbolgs
+}
+
+STRING 627
+{
+Furbolg Shaman
+}
+
+STRING 628
+{
+We are preparing to leave this place, Priestess. There is a terrible evil corrupting these lands, and I will not allow it to consume my people. Unfortunately, we cannot leave until the rest of our tribe has been accounted for.
+}
+
+STRING 711
+{
+Tyrande
+}
+
+STRING 712
+{
+Do not fear, old one. I will find your tribesmen and lead them back to you. 
+}
+
+STRING 719
+{
+Furbolg Shaman
+}
+
+STRING 720
+{
+Thank you, Priestess. We will reward you when you return.
+}
+
+STRING 724
+{
+Archers Trained |cffffffff1/5|r
+}
+
+STRING 729
+{
+Archers Trained |cffffffff2/5|r
+}
+
+STRING 734
+{
+Archers Trained |cffffffff3/5|r
+}
+
+STRING 739
+{
+Archers Trained |cffffffff4/5|r
+}
+
+STRING 744
+{
+Archers Trained |cffffffff5/5|r
+}
+
+STRING 749
+{
+Furbolgs Located |cffffffff1/10|r
+}
+
+STRING 754
+{
+Furbolgs Located |cffffffff2/10|r
+}
+
+STRING 759
+{
+Furbolgs Located |cffffffff3/10|r
+}
+
+STRING 764
+{
+Furbolgs Located |cffffffff4/10|r
+}
+
+STRING 769
+{
+Furbolgs Located |cffffffff5/10|r
+}
+
+STRING 774
+{
+Furbolgs Located |cffffffff6/10|r
+}
+
+STRING 779
+{
+Furbolgs Located |cffffffff7/10|r
+}
+
+STRING 784
+{
+Furbolgs Located |cffffffff8/10|r
+}
+
+STRING 789
+{
+Furbolgs Located |cffffffff9/10|r
+}
+
+STRING 794
+{
+Furbolgs Located |cffffffff10/10|r
+}
+
+STRING 797
+{
+|cffffcc00OPTIONAL QUEST FAILED|r
+Furbolg Village
+}
+
+STRING 801
+{
+|cffffcc00MAIN QUEST UPDATE|r 
+Night Elf Base
+  - |cff808080Entangle a gold mine (Completed)|r
+  - Construct a Moon Well
+  - |cff808080Construct an Ancient of War (Completed)|r
+  - Train 5 Archers
+}
+
+STRING 806
+{
+|cffffcc00MAIN QUEST UPDATE|r 
+Night Elf Base
+  - |cff808080Entangle a gold mine (Completed)|r
+  - |cff808080Construct a Moon Well (Completed)|r
+  - |cff808080Construct an Ancient of War (Completed)|r
+  - Train 5 Archers
+}
+
+STRING 811
+{
+|cffffcc00MAIN QUEST UPDATE|r 
+Night Elf Base
+  - |cff808080Entangle a gold mine (Completed)|r
+  - |cff808080Construct a Moon Well (Completed)|r
+  - Construct an Ancient of War
+  - Train 5 Archers
+}
+
+STRING 816
+{
+|cffffcc00MAIN QUEST UPDATE|r 
+Night Elf Base
+  - |cff808080Entangle a gold mine (Completed)|r
+  - |cff808080Construct a Moon Well (Completed)|r
+  - |cff808080Construct an Ancient of War (Completed)|r
+  - Train 5 Archers
+}
+
+STRING 826
+{
+|cffffcc00MAIN QUEST UPDATE|r 
+Night Elf Base
+  - |cff808080Entangle a gold mine (Completed)|r
+  - Construct a Moon Well
+  - |cff808080Construct an Ancient of War (Completed)|r
+  - |cff808080Train 5 Archers (Completed)|r
+}
+
+STRING 827
+{
+Return Tyrande to the Furbolg Shaman
+}
+

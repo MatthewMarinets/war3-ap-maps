@@ -1,0 +1,680 @@
+﻿STRING 1
+{
+NightElfX07
+}
+
+STRING 2
+{
+1
+}
+
+STRING 4
+{
+Blizzard Entertainment
+}
+
+STRING 6
+{
+Force 1
+}
+
+STRING 11
+{
+Maiev Shadowsong
+}
+
+STRING 12
+// Sound\Dialogue\NightElfExpCamp\NightElf07x\S07Maiev02.mp3
+{
+I am sorry, Shan'do, but the priestess has fallen. We aided a band of Alliance warriors against the undead. The priestess fought valiantly, but I saw her torn apart with my own eyes.
+}
+
+STRING 15
+{
+Defeat!
+}
+
+STRING 21
+{
+Save the Paladin
+}
+
+STRING 22
+{
+There is a Paladin being held behind the Naga. Break him free of his cage, and he may aid you in the destruction of Illidan's forces.
+}
+
+STRING 23
+{
+Free the Paladin
+}
+
+STRING 25
+{
+|cffffcc00OPTIONAL QUEST|r
+Save the Paladin
+  - Free the Paladin
+}
+
+STRING 27
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Save the Paladin
+}
+
+STRING 28
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 30
+{
+|cff87CEEBNEW UNIT AVAILABLE|r
+Faerie Dragons - You may now build Faerie Dragons at the Ancient of Wind. Faerie Dragons are small flying creatures adept at harming spellcasters and avoiding damage. Can also use Mana Flare to damage the Naga Summoners.
+}
+
+STRING 33
+{
+Defeat!
+}
+
+STRING 39
+{
+Force 2
+}
+
+STRING 41
+{
+Chapter Seven
+}
+
+STRING 42
+{
+The Ruins of Dalaran
+}
+
+STRING 43
+{
+Spell of Destruction
+}
+
+STRING 44
+{
+Illidan's Summoners have begun channeling a powerful spell through the Eye of Sargeras that threatens to tear the planet asunder. Time is running out as they come ever closer to finishing their diabolical chanting. You must slay all four Summoners before time runs out, but they have turned ethereal and can only be harmed by magic. Use one of the following to damage the Summoners.
+Faerie Dragon - Mana Flare
+Chimaeras - Attack
+Druid of the Talon - Attack
+Maiev's Fan of Knives or Shadow Strike Spells
+Malfurion's Entangling Roots Spell
+}
+
+STRING 45
+{
+Destroy the Summoners before time runs out
+}
+
+STRING 46
+{
+|cffffcc00MAIN QUEST|r
+Spell of Destruction
+  - Destroy the Summoners before time runs out
+  - Spells and Magic attacks kill the Summoners
+  - (Example - Chimaeras have a magical attack)
+}
+
+STRING 47
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Spell of Destruction
+}
+
+STRING 50
+{
+Eye of Sargeras
+}
+
+STRING 53
+{
+Malfurion Stormrage
+}
+
+STRING 54
+// Sound\Dialogue\NightElfExpCamp\NightElf07x\S07Furion01.mp3
+{
+Maiev! We've got to move quickly. Illidan is weaving a spell that is splitting apart the roof of the world! We must... Wait--where is Tyrande?
+}
+
+STRING 55
+{
+Malfurion Stormrage
+}
+
+STRING 56
+// Sound\Dialogue\NightElfExpCamp\NightElf07x\S07Furion03.mp3
+{
+Torn apart? Tyrande, my heart... I should have been there.
+}
+
+STRING 57
+{
+Maiev Shadowsong
+}
+
+STRING 58
+// Sound\Dialogue\NightElfExpCamp\NightElf07x\S07Maiev04.mp3
+{
+You can still avenge her, Shan'do! Let us attack Illidan together! He is the reason we even came to this forsaken place. He is the reason for your loss.
+}
+
+STRING 59
+{
+Maiev Shadowsong
+}
+
+STRING 60
+// Sound\Dialogue\NightElfExpCamp\NightElf07x\S07Maiev05.mp3
+{
+Shan'do, this is Prince Kael'thas, the ally I spoke of.
+}
+
+STRING 61
+{
+Prince Kael'thas
+}
+
+STRING 62
+// Sound\Dialogue\NightElfExpCamp\NightElf07x\S07Kael06.mp3
+{
+Greetings, great druid. My scouts have confirmed that this Illidan and his vile snakes are based at the ruined city of Dalaran. They are using a gem-like artifact to perform some strange ritual.
+}
+
+STRING 63
+{
+Maiev Shadowsong
+}
+
+STRING 64
+// Sound\Dialogue\NightElfExpCamp\NightElf07x\S07Maiev07.mp3
+{
+They must be using the Eye of Sargeras! But why would they strike at the roof of the world?
+}
+
+STRING 65
+{
+Malfurion Stormrage
+}
+
+STRING 66
+// Sound\Dialogue\NightElfExpCamp\NightElf07x\S07Furion08.mp3
+{
+It doesn't matter. They won't live long enough to finish their spell. Illidan must be stopped once and for all!
+}
+
+STRING 87
+{
+Maiev Shadowsong
+}
+
+STRING 88
+{
+We've broken through their lines! Fight on, my friends! Illidan cannot evade us forever!
+}
+
+STRING 89
+{
+Maiev Shadowsong
+}
+
+STRING 90
+{
+Their defenses are broken! Illidan shall be mine!
+}
+
+STRING 125
+{
+Prince Kael'thas
+}
+
+STRING 126
+// Sound\Dialogue\NightElfExpCamp\NightElf07x\S07Kael50.mp3
+{
+The naga have captured some human paladins! If we could free them, they might aid us against Illidan.
+}
+
+STRING 141
+{
+Malfurion Stormrage
+}
+
+STRING 142
+{
+I feel their spell ripping through the roof of the world! We must end this! 
+}
+
+STRING 143
+{
+Malfurion Stormrage
+}
+
+STRING 144
+{
+Arrghhh... The Eye is... fracturing the earth! The pain is excruciating! 
+}
+
+STRING 145
+{
+Malfurion Stormrage
+}
+
+STRING 146
+{
+The land is heaving, even here! We must put an end to their spell!
+}
+
+STRING 149
+{
+Prince Kael'thas
+}
+
+STRING 150
+{
+We'll hold the naga back for as long as we can! For Quel'Thalas!
+}
+
+STRING 155
+{
+Prince Kael'thas
+}
+
+STRING 156
+{
+Be wary! The vile naga are regrouping!
+}
+
+STRING 157
+{
+Prince Kael'thas
+}
+
+STRING 158
+{
+Push on! The naga lines are weakening!
+}
+
+STRING 159
+{
+Illidan Stormrage
+}
+
+STRING 160
+{
+My victory draws near!
+}
+
+STRING 162
+{
+Soon my enemies will burn! 
+}
+
+STRING 164
+{
+Turn back, and tend to your own affairs! You cannot stop the inevitable!
+}
+
+STRING 166
+{
+I will not be denied! The spell must be completed!
+}
+
+STRING 173
+{
+Paladin
+}
+
+STRING 174
+// Sound\Dialogue\NightElfExpCamp\NightElf07x\S07Paladin51.mp3
+{
+Our righteous might will always overcome the forces of darkness! We shall aid you against these unholy beasts.
+}
+
+STRING 177
+{
+Later that evening, at the night elves' base camp, Malfurion returns to warn Maiev and Tyrande of his brother's dangerous sorcery.
+}
+
+STRING 179
+{
+Force 3
+}
+
+STRING 180
+{
+Time Remaining
+}
+
+STRING 181
+{
+Defeat!
+}
+
+STRING 182
+{
+|cffffcc00MISSION FAILED|r
+You didn't stop Illidan quickly enough.
+}
+
+STRING 183
+{
+Dungeon Tree Wall Small
+}
+
+STRING 195
+{
+Dungeon Tree Wall Large
+}
+
+STRING 196
+{
+Summoner
+}
+
+STRING 198
+{
+|cff32cd32HINT|r – Use Mana Flare to damage the Naga Summoners.
+}
+
+STRING 199
+{
+Naga Summoner
+}
+
+STRING 200
+{
+Lady Serpentra
+}
+
+STRING 201
+{
+|cffff0000WARNING|r -  TWO MINUTES UNTIL SUMMONING IS FINISHED
+
+}
+
+STRING 202
+{
+|cffff0000WARNING|r - ONE MINUTE UNTIL SUMMONING IS FINISHED
+}
+
+STRING 231
+{
+|cff32cd32HINT|r – Use Mana Flare to utterly destroy enemy spellcasters. Mana Flare can be found on Faerie Dragons.
+}
+
+STRING 234
+{
+Paladin
+}
+
+STRING 235
+// Sound\Dialogue\NightElfExpCamp\NightElf07x\S07Paladin51.mp3
+{
+The might of the righteous will always overcome the forces of darkness! We shall aid you against these unholy beasts.
+}
+
+STRING 236
+{
+Chapter Seven: The Ruins of Dalaran
+}
+
+STRING 239
+{
+Illidan Stormrage
+}
+
+STRING 240
+// Sound\Dialogue\NightElfExpCamp\NightElf07x\S07Illidan33.mp3
+{
+No! The spell is not done! It is not done!
+}
+
+STRING 242
+{
+Malfurion Stormrage
+}
+
+STRING 243
+// Sound\Dialogue\NightElfExpCamp\NightElf07x\S07Furion34.mp3
+{
+It is over, brother. Your vile schemes end here.
+}
+
+STRING 244
+{
+Maiev Shadowsong
+}
+
+STRING 245
+// Sound\Dialogue\NightElfExpCamp\NightElf07x\S07Maiev35.mp3
+{
+Illidan Stormrage, for recklessly endangering countless lives and threatening the very balance of the world, I hereby sentence you to death!
+}
+
+STRING 246
+{
+Malfurion Stormrage
+}
+
+STRING 247
+// Sound\Dialogue\NightElfExpCamp\NightElf07xInterlude\S07Furion36.mp3
+{
+Too much blood has been spilled on your account, Illidan. Even now I can feel the lands of Northrend reeling from the spell you cast. Imprisonment will not be enough this time.
+}
+
+STRING 248
+{
+Maiev Shadowsong
+}
+
+STRING 249
+// Sound\Dialogue\NightElfExpCamp\NightElf07xInterlude\S07Maiev37.mp3
+{
+I will execute him myself!
+}
+
+STRING 252
+{
+Malfurion Stormrage
+}
+
+STRING 253
+// Sound\Dialogue\NightElfExpCamp\NightElf07xInterlude\S07Furion39.mp3
+{
+At no heed to the cost? Because of you, Tyrande is dead!
+}
+
+STRING 254
+{
+Illidan Stormrage
+}
+
+STRING 255
+// Sound\Dialogue\NightElfExpCamp\NightElf07xInterlude\S07Illidan40.mp3
+{
+What?
+}
+
+STRING 256
+{
+Prince Kael'thas
+}
+
+STRING 257
+// Sound\Dialogue\NightElfExpCamp\NightElf07xInterlude\S07Kael41.mp3
+{
+Your pardon, Lord Stormrage, but the priestess may still be alive! She was swept downriver, but it's premature to simply assume that--
+}
+
+STRING 258
+{
+Maiev Shadowsong
+}
+
+STRING 259
+// Sound\Dialogue\NightElfExpCamp\NightElf07xInterlude\S07Maiev42.mp3
+{
+Silence, Kael!
+}
+
+STRING 260
+{
+Malfurion Stormrage
+}
+
+STRING 261
+// Sound\Dialogue\NightElfExpCamp\NightElf07xInterlude\S07Furion43.mp3
+{
+You told me she was torn apart! You lied to me.
+}
+
+STRING 262
+{
+Maiev Shadowsong
+}
+
+STRING 263
+// Sound\Dialogue\NightElfExpCamp\NightElf07xInterlude\S07Maiev44.mp3
+{
+The Betrayer's capture was our primary concern, Shan'do. I needed your help. I knew you would go to her and we would lose our chance! I...
+}
+
+STRING 264
+{
+Malfurion Stormrage
+}
+
+STRING 265
+// Sound\Dialogue\NightElfExpCamp\NightElf07xInterlude\S07Furion45.mp3
+{
+Just who is the betrayer now, woman? I must go to her immediately.
+}
+
+STRING 266
+{
+Illidan Stormrage
+}
+
+STRING 267
+// Sound\Dialogue\NightElfExpCamp\NightElf07xInterlude\S07Illidan46.mp3
+{
+Believe me, brother, despite all our differences, you know that I would never lead Tyrande to harm. Let me help you. My naga can scour the river for us! Let me do this, at least.
+}
+
+STRING 268
+{
+Malfurion Stormrage
+}
+
+STRING 269
+// Sound\Dialogue\NightElfExpCamp\NightElf07xInterlude\S07Furion47.mp3
+{
+Very well.
+}
+
+STRING 270
+{
+Maiev Shadowsong
+}
+
+STRING 271
+// Sound\Dialogue\NightElfExpCamp\NightElf07xInterlude\S07Maiev48.mp3
+{
+What? After all he's done, you would trust this traitor to--
+}
+
+STRING 272
+{
+Malfurion Stormrage
+}
+
+STRING 273
+// Sound\Dialogue\NightElfExpCamp\NightElf07xInterlude\S07Furion49.mp3
+{
+Silence! I will deal with you later. Let's go--brother.
+}
+
+STRING 274
+{
+Rock Chunks Trevor
+}
+
+STRING 275
+{
+Illidan (Evil) Trev
+}
+
+STRING 276
+{
+|cff32cd32HINT|r – Naga Summoners are ethereal and can only be hurt by magical attacks and damage dealing spells.
+}
+
+STRING 277
+{
+Illidan Stormrage
+}
+
+STRING 278
+// Sound\Dialogue\NightElfExpCamp\NightElf07xInterlude\S07Illidan38.mp3
+{
+Fools! Can you not see? The spell we channeled was meant to strike at the undead--our common enemy! My mission was to destroy the Lich King's stronghold of Icecrown!
+}
+
+STRING 284
+{
+ (Autocast) (Neutral Hostile)naga)
+}
+
+STRING 285
+{
+Alliance Remnants
+}
+
+STRING 286
+{
+Sentinels
+}
+
+STRING 287
+{
+Illidan's Naga
+}
+
+STRING 288
+{
+Undead Scourge
+}
+
+STRING 295
+{
+Eye Pedestal 2
+}
+
+STRING 296
+{
+Eye Pedestal
+}
+
+STRING 297
+{
+Spells and Magic attacks kill the Summoners
+}
+
+STRING 299
+{
+Regenerates the health and mana of all non-mechanical units nearby.
+}
+
+STRING 300
+{
+Fountain of Restoration
+}
+

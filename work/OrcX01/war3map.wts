@@ -1,0 +1,2979 @@
+﻿STRING 0
+{
+Rexxar
+}
+
+STRING 1
+{
+Defeat!
+}
+
+STRING 2
+{
+Watch Post Barracks
+}
+
+STRING 3
+{
+OrcX01
+}
+
+STRING 4
+{
+1
+}
+
+STRING 5
+{
+Orgrimmar Armory
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 7
+{
+Act One
+}
+
+STRING 8
+{
+Human Forces
+}
+
+STRING 9
+{
+Neeloc's Outpost
+}
+
+STRING 10
+{
+Goblin Storehouse
+}
+
+STRING 11
+{
+Aicila's Marketplace
+}
+
+STRING 12
+{
+Loading Wall
+}
+
+STRING 13
+{
+Humans
+}
+
+STRING 14
+{
+Chaplain
+}
+
+STRING 15
+{
+Hydromancer
+}
+
+STRING 16
+{
+Drek'Thar
+}
+
+STRING 17
+// Sound\Dialogue\OrcExpCamp\OrcQuest02x\D02DrekThar01.mp3
+{
+Ah, you're one of the Mok'Nathal! I am Drek'Thar. I fought alongside your elders on Draenor many years ago. Still, if you've come to help, I do have a simple task for you.
+}
+
+STRING 18
+{
+Chen Stormstout
+}
+
+STRING 19
+// Sound\Dialogue\OrcExpCamp\RandomOrcQuest02x\DR02Chen01.mp3
+{
+Ah, greetings, my friend. I am Chen Stormstout, humble brewmaster of Pandaria. I have traveled the wide world searching for rare, exotic ingredients to use in my special brews! After all, good ale can solve all the problems of this world, don't you agree?
+}
+
+STRING 20
+{
+Drek'Thar
+}
+
+STRING 21
+{
+|cff32cd32HINT|r - When your Hero dies, he will automatically revive at a Resurrection Stone like this one.  Although there are many Resurrection Stones, only one can be active at a time.  To activate a Resurrection Stone, simply approach it until the magical inscriptions begin to glow.
+}
+
+STRING 22
+{
+Zeppelin to Echo Isles
+}
+
+STRING 23
+{
+Pack Beast
+}
+
+STRING 24
+{
+Centaur Deathcaller
+}
+
+STRING 25
+{
+Rexxar
+}
+
+STRING 26
+// Sound\Dialogue\OrcExpCamp\OrcQuest10x\D10Rexxar15.mp3
+{
+Tell me who sent you, human! Was it Jaina?
+}
+
+STRING 27
+{
+Emissary
+}
+
+STRING 28
+// Sound\Dialogue\OrcExpCamp\OrcQuest10x\D10Emissary16.mp3
+{
+Foolish beast... you have no idea... what's coming for you. It is only... just beginning.
+}
+
+STRING 29
+{
+Thrall
+}
+
+STRING 30
+// Sound\Dialogue\OrcExpCamp\OrcQuest10x\D10Thrall17.mp3
+{
+You were right, Rexxar. I should have trusted your instincts. Still, I can't believe Jaina would try something like this. Perhaps it's time we took a more direct approach.
+}
+
+STRING 31
+{
+Thrall
+}
+
+STRING 32
+// Sound\Dialogue\OrcExpCamp\OrcQuest11x\D11Thrall01.mp3
+{
+Rexxar, I've written a letter to Jaina Proudmoore asking her to account for all this madness. I want you to infiltrate her base on Theramore Isle and deliver it to her personally.
+}
+
+STRING 33
+{
+Rexxar
+}
+
+STRING 34
+// Sound\Dialogue\OrcExpCamp\OrcQuest11x\D11Rexxar02.mp3
+{
+You can count on me, Thrall. But, I may need help bypassing the humans' defenses.
+}
+
+STRING 35
+{
+Thrall
+}
+
+STRING 36
+// Sound\Dialogue\OrcExpCamp\OrcQuest10x\D10Thrall01.mp3
+{
+I'm glad you returned safely, Rexxar. You've done well. My scouts have informed me that the Darkspear trolls have landed further down the coast. They'll be much safer under the Horde's protection.
+}
+
+STRING 37
+{
+Thrall
+}
+
+STRING 38
+// Sound\Dialogue\OrcExpCamp\OrcQuest10x\D10Thrall01A.mp3
+{
+Still, the situation with the humans has intensified. I've received word that they're sending an emissary to parley with me. We're to meet at Razor Hill around midnight.
+}
+
+STRING 39
+{
+Chen Stormstout
+}
+
+STRING 40
+// Sound\Dialogue\OrcExpCamp\RandomOrcQuest02x\DR02Chen01A.mp3
+{
+Say, if you're free, I could use your help in locating some special ingredients for my latest brew! If you find the items on this list and bring them back to me, I'll let you sample my masterpiece!
+}
+
+STRING 41
+{
+Rexxar
+}
+
+STRING 42
+// Sound\Dialogue\OrcExpCamp\OrcQuest10x\D10Rexxar02.mp3
+{
+I don't know, Thrall. It sounds like a trap to me. Let me go in your place.
+}
+
+STRING 43
+{
+Thrall
+}
+
+STRING 44
+{
+Orcish Horde
+}
+
+STRING 45
+// Sound\Dialogue\OrcExpCamp\OrcQuest10x\D10Thrall03.mp3
+{
+I can't imagine that Jaina Proudmoore would ever set me up, Rexxar. Even so, I'm not one to run from a fight.
+}
+
+STRING 46
+{
+Rexxar
+}
+
+STRING 47
+// Sound\Dialogue\OrcExpCamp\OrcQuest10x\D10Rexxar04.mp3
+{
+Just trust me. If you're right, we'll have lost nothing.
+}
+
+STRING 48
+{
+Rexxar
+}
+
+STRING 49
+// Sound\Dialogue\OrcExpCamp\OrcQuest10x\D10Rexxar07.mp3
+{
+This is it. The meeting place lies just beyond.
+}
+
+STRING 50
+{
+Rexxar
+}
+
+STRING 51
+// Sound\Dialogue\OrcExpCamp\OrcQuest10x\D10Rexxar08.mp3
+{
+Greetings, humans. It's about time you showed up.
+}
+
+STRING 52
+{
+Emissary
+}
+
+STRING 53
+// Sound\Dialogue\OrcExpCamp\OrcQuest02x\D02DrekThar01A.mp3
+{
+I've been concocting a special potion that will aid our warriors in battle. However, I'm missing a key ingredient. I require shimmerweed, but the rare herb can only be found in the valley known as Thunder Ridge.
+}
+
+STRING 54
+{
+Drek'Thar
+}
+
+STRING 55
+{
+Allows you to hire various troops.
+}
+
+STRING 56
+// Sound\Dialogue\OrcExpCamp\OrcQuest02x\D02DrekThar01B.mp3
+{
+Normally, I would gather the herbs myself, but the thunder lizards, for whom the valley is named, have become increasingly hostile of late. If you retrieve six bushels for me, I will reward you handsomely.
+}
+
+STRING 57
+{
+Engineer Gazlowe
+}
+
+STRING 58
+// Sound\Dialogue\OrcExpCamp\OrcQuest03x\D03Gazlowe01.mp3
+{
+Ah, new guy, huh? I'm Gazlowe, chief engineer around these parts. But enough about me. We got work to do, buddy!
+}
+
+STRING 59
+{
+Engineer Gazlowe
+}
+
+STRING 60
+// Sound\Dialogue\OrcExpCamp\OrcQuest03x\D03Gazlowe01A.mp3
+{
+You see, me and my boys have been dredging out tunnels beneath the city, looking for underground wells. Problem is, we dug straight into a den of kobolds. Now those rat-freaks are running willy-nilly all over our tunnels!
+}
+
+STRING 61
+// Sound\Dialogue\OrcExpCamp\OrcQuest10x\D10Emissary09.mp3
+{
+What is the meaning of this? This... ogre cannot be the orc warchief!
+}
+
+STRING 62
+{
+Dying Wish
+}
+
+STRING 63
+{
+Rexxar
+}
+
+STRING 64
+{
+Engineer Gazlowe
+}
+
+STRING 65
+{
+Orgrimmar Fortress
+}
+
+STRING 66
+{
+Orgrimmar Watch Tower
+}
+
+STRING 67
+{
+Orgrimmar Barracks
+}
+
+STRING 68
+// Sound\Dialogue\OrcExpCamp\OrcQuest03x\D03Gazlowe01B.mp3
+{
+I need you to hook up with my boys and seal those kobolds back in their hole. Yeah, just find the tunnel entrance outside of town, and my boys will set you straight.
+}
+
+STRING 69
+{
+To Tame a Land
+}
+
+STRING 70
+{
+Morg Wolfsong
+}
+
+STRING 71
+{
+Thunder Phoenix
+}
+
+STRING 72
+{
+Hire Centaur Deathcaller
+}
+
+STRING 73
+{
+Lesser Thunder Phoenix
+}
+
+STRING 74
+{
+Greater Thunder Phoenix
+}
+
+STRING 75
+{
+Hire |cffffcc00T|rroll Berserker
+}
+
+STRING 76
+{
+Hire |cffffcc00G|rrunt
+}
+
+STRING 77
+{
+Goblin Observatory
+}
+
+STRING 78
+{
+N
+}
+
+STRING 79
+{
+Hire Stormreaver |cffffcc00N|recrolyte
+}
+
+STRING 80
+{
+J
+}
+
+STRING 81
+{
+Purchase |cffffcc00J|rade Ring
+}
+
+STRING 82
+{
+R
+}
+
+STRING 83
+{
+Purchase Ring of |cffffcc00R|regeneration
+}
+
+STRING 84
+{
+M
+}
+
+STRING 85
+{
+Purchase |cffffcc00M|rana Stone
+}
+
+STRING 86
+{
+Purchase S|cffffcc00c|rroll of Speed
+}
+
+STRING 87
+{
+Purchase |cffffcc00M|raul of Strength
+}
+
+STRING 88
+{
+T
+}
+
+STRING 89
+{
+Purchase Minds|cffffcc00t|raff
+}
+
+STRING 90
+{
+S
+}
+
+STRING 91
+{
+Purchase |cffffcc00S|rkull Shield
+}
+
+STRING 92
+{
+G
+}
+
+STRING 93
+{
+Purchase |cffffcc00G|rauntlets of Ogre Strength +3
+}
+
+STRING 94
+{
+C
+}
+
+STRING 95
+{
+|cff32cd32HINT|r - Thrall has provided Rexxar with a place to store excess equipment. Rexxar's Stash can hold up to six items, carrying them into future missions.
+}
+
+STRING 96
+{
+H
+}
+
+STRING 97
+{
+|cffffcc00TO BE CONTINUED...
+
+
+|r
+}
+
+STRING 98
+{
+Purchase |cffffcc00H|rood of Cunning
+}
+
+STRING 99
+{
+Hire |cffffcc00P|rack Beast
+}
+
+STRING 100
+{
+P
+}
+
+STRING 101
+{
+Centaur Marauder
+}
+
+STRING 102
+{
+Engineer Gazlowe
+}
+
+STRING 103
+// Sound\Dialogue\OrcExpCamp\OrcQuest03x\D03Gazlowe02.mp3
+{
+Hey, c'mon, pal. I'm not paying ya by the hour.
+}
+
+STRING 104
+{
+Mine Cart Empty NOPATHING
+}
+
+STRING 105
+{
+Rexxar
+}
+
+STRING 106
+// Sound\Dialogue\OrcExpCamp\OrcQuest03x\D03Rexxar03.mp3
+{
+You are not paying me at all, little goblin.
+}
+
+STRING 107
+{
+Engineer Gazlowe
+}
+
+STRING 108
+{
+For the sake of honor, you must complete Mogrin's final task. Seek out the city of Orgrimmar and deliver Mogrin's Report to the Orc warchief, Thrall.
+}
+
+STRING 109
+{
+Deliver Mogrin's Report to Thrall
+}
+
+STRING 110
+// Sound\Dialogue\OrcExpCamp\OrcQuest03x\D03Gazlowe09.mp3
+{
+So they blew themselves up, you say? Now that's occupational commitment! Anyway, ya done good, kid. Take these items. It's the least I can do to repay ya.
+}
+
+STRING 111
+{
+Drek'Thar
+}
+
+STRING 112
+// Sound\Dialogue\OrcExpCamp\OrcQuest02x\D02DrekThar05.mp3
+{
+Hmm. It sounds like something or someone is riling up those lizards. I'll look into it myself. Well, at least my potion is complete. Here, take a few vials of it! It'll serve you well.
+}
+
+STRING 113
+{
+Drek'Thar
+}
+
+STRING 114
+// Sound\Dialogue\OrcExpCamp\OrcQuest02x\D02DrekThar02.mp3
+{
+Back so soon? Were the thunder lizards too much for you, lad?
+}
+
+STRING 115
+{
+Nazgrel
+}
+
+STRING 116
+// Sound\Dialogue\OrcExpCamp\OrcQuest01x\D01Nazgrel02.mp3
+{
+Time is short, warrior. You must destroy the harpies before they attack another caravan!
+}
+
+STRING 117
+{
+Nazgrel
+}
+
+STRING 118
+// Sound\Dialogue\OrcExpCamp\OrcQuest01x\D01Nazgrel06.mp3
+{
+Ah, the caravans are safe at last! You've done well, warrior. The Horde owes you a great debt. Go to the armory down the way, and tell them I sent you. They'll give you a choice of exotic items.
+}
+
+STRING 119
+{
+Soon the saga will continue with two FREE episodes--
+|cffffcc00Act II - Old Hatreds|r
+|cffffcc00Act III - A Blaze of Glory|r
+When they are available, log onto Battle.net or visit |cffffcc00www.blizzard.com|r
+}
+
+STRING 120
+{
+Versatile spear-thrower, effective against air units. Has the Berserk ability, which allows it to deal more damage, but take more damage when attacked. |n|n|cffffcc00Cannot leave Durotar.|r |n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 121
+{
+Centaur Firecaller
+}
+
+STRING 122
+{
+Hire Centaur Firecaller
+}
+
+STRING 123
+{
+Razormane Spirit Chanter
+}
+
+STRING 124
+{
+Murloc Ritualist
+}
+
+STRING 125
+{
+Wildkin Earthcaster
+}
+
+STRING 126
+{
+Brutish Orc warrior. |n|n|cffffcc00Cannot leave Durotar.|r |n|cffffcc00Attacks land units.|r
+}
+
+STRING 127
+{
+|cffffcc00MAIN QUEST|r
+Dying Wish
+  - Deliver Mogrin's Report to Thrall
+}
+
+STRING 128
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Dying Wish
+}
+
+STRING 129
+{
+Purchase Ring of |cffffcc00P|rrotection +3
+}
+
+STRING 130
+{
+Purchase |cffffcc00T|ralisman of Evasion
+}
+
+STRING 131
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Rexxar17.mp3
+{
+A warrior city. I have not seen its like in many years.
+}
+
+STRING 132
+// Sound\Dialogue\OrcExpCamp\OrcQuest10x\D10Rexxar10.mp3
+{
+And you are not Jaina Proudmoore.
+}
+
+STRING 133
+{
+Emissary
+}
+
+STRING 134
+{
+Rexxar
+}
+
+STRING 135
+// Sound\Dialogue\OrcExpCamp\OrcQuest01x\D01Rexxar03.mp3
+{
+This must be one of the caravans Nazgrel told me about.
+}
+
+STRING 136
+{
+Rexxar
+}
+
+STRING 137
+{
+Thrall
+}
+
+STRING 138
+// Sound\Dialogue\OrcExpCamp\OrcQuest04Ax\D04AThrall01.mp3
+{
+Ah, throm-ka, Rexxar. The others tell me you've been a great help to them. I appreciate all you've done for us.
+}
+
+STRING 139
+{
+Thrall
+}
+
+STRING 140
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Thrall20.mp3
+{
+Shore up those supports! When the razorwinds kick up again, they'll tear those roofs right off!
+}
+
+STRING 141
+{
+Peon
+}
+
+STRING 142
+{
+Orc Pig Farm
+}
+
+STRING 143
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Peon21.mp3
+{
+Yes, Warchief!
+}
+
+STRING 144
+{
+Orc Barracks
+}
+
+STRING 145
+{
+Orc Altar
+}
+
+STRING 146
+{
+Orc War Mill
+}
+
+STRING 147
+{
+Orc Watch Tower
+}
+
+STRING 148
+{
+Barrel 03
+}
+
+STRING 149
+{
+Barrel 01
+}
+
+STRING 150
+{
+Barrel 02
+}
+
+STRING 151
+{
+Loading Runes
+}
+
+STRING 152
+{
+Orc Spirit Lodge
+}
+
+STRING 153
+{
+Noggrin Onetooth
+}
+
+STRING 154
+{
+In the months following the Battle of Mount Hyjal, Warchief Thrall led the Horde back into the central Barrens of Kalimdor. Freed at last from generations of demonic corruption, the orcs looked forward to building a new homeland for themselves in Kalimdor. They settled in a harsh, rugged land near the Barrens' eastern shore. Thrall named the new nation Durotar--in honor of his heroic father.
+}
+
+STRING 155
+{
+Goblin Engineers
+}
+
+STRING 156
+{
+Rexxar
+}
+
+STRING 157
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Rexxar22.mp3
+{
+A moment, Warchief. I come to deliver a message.
+}
+
+STRING 158
+{
+Thrall
+}
+
+STRING 159
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Thrall23.mp3
+{
+How did you come by this report? Where is Mogrin?
+}
+
+STRING 160
+{
+Rexxar
+}
+
+STRING 161
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Rexxar24.mp3
+{
+He fell in the wilds. His last wish was that you receive this message.
+}
+
+STRING 162
+{
+Thrall
+}
+
+STRING 163
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Thrall25.mp3
+{
+Who are you, warrior?
+}
+
+STRING 164
+{
+Rexxar
+}
+
+STRING 165
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Rexxar26.mp3
+{
+I am Rexxar, last son of the Mok'Nathal.
+}
+
+STRING 166
+{
+Thrall
+}
+
+STRING 167
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Thrall27.mp3
+{
+Mok'Nathal. I've heard tales of your people. They had both orc and ogre blood in their veins. It is an honor. We've built this kingdom--Durotar--for all of our kind. Durotar is as much your home as it is mine, Rexxar. Stay awhile. Accept what hospitality we can offer. It is the least we can do.
+}
+
+STRING 168
+{
+Rexxar
+}
+
+STRING 169
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Rexxar28.mp3
+{
+Perhaps I have spent too long in the wilds. Your offer is kind, Thrall, but I must carry my own weight. Just show me what needs doing, and I'll earn my keep.
+}
+
+STRING 170
+{
+Thrall
+}
+
+STRING 171
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Thrall29.mp3
+{
+I understand. Founding a nation is tiresome work, and there are many around here that could use your help. Simply talk to them, and they will point you in the right direction.
+}
+
+STRING 172
+{
+Nazgrel
+}
+
+STRING 173
+// Sound\Dialogue\OrcExpCamp\OrcQuest01x\D01Nazgrel01.mp3
+{
+Greetings, warrior. I am Nazgrel, captain of the warchief's security force. We've been having problems with the indigenous creatures attacking our borders. Perhaps you can help?
+}
+
+STRING 174
+{
+Zone Enabled Rune
+}
+
+STRING 175
+{
+Zone Disabled Rune
+}
+
+STRING 176
+{
+Act One: To Tame a Land
+}
+
+STRING 177
+{
+Nazgrel
+}
+
+STRING 178
+// Sound\Dialogue\OrcExpCamp\OrcQuest01x\D01Nazgrel01A.mp3
+{
+The harpies of the northern foothills have been ransacking our supply caravans for weeks. If you can find their lair and put an end to their rampage, I'll see to it that you're rewarded.
+}
+
+STRING 179
+{
+Purchase |cffffcc00H|realth Stone
+}
+
+STRING 180
+{
+I
+}
+
+STRING 181
+{
+Nazgrel
+}
+
+STRING 182
+// Sound\Dialogue\OrcExpCamp\OrcQuest07Ax\D07ANazgrel01.mp3
+{
+Throm-Ka, Rexxar. I spoke to Thrall about the humans encroaching on our lands. I, for one, don't trust them at all. I'd like you to report to our outlying watch post and meet with my lieutenant, Gar'thok. I need to know if they've spotted any suspicious activity along the border.
+}
+
+STRING 183
+{
+Purchase Tome of |cffffcc00I|rntelligence
+}
+
+STRING 184
+{
+(Cinematic)
+}
+
+STRING 185
+{
+Stay close to me, Misha.
+}
+
+STRING 186
+{
+Grunt
+}
+
+STRING 187
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00GruntGuard18.mp3
+{
+You've got the look of an ogre, halfbreed. What's your business here?
+}
+
+STRING 188
+{
+Rexxar
+}
+
+STRING 189
+{
+I carry a message for your warchief. I'll not stay long.
+}
+
+STRING 190
+{
+Gar'thok
+}
+
+STRING 191
+// Sound\Dialogue\OrcExpCamp\OrcQuest07Ax\D07AGarthok02.mp3
+{
+Throm-Ka, warrior. We haven't seen any signs of human activity, but the local quillboars have been getting bolder. There is an observatory nearby that helps us spot potential threats. You might want to check it out. But be warned, the quillboars roam the entire area. Gol'kosh! If only there was a way to root them out, we could end their threat once and for all!
+}
+
+STRING 192
+{
+Rexxar
+}
+
+STRING 193
+// Sound\Dialogue\OrcExpCamp\OrcQuest08x\D08Rexxar05.mp3
+{
+No! We're too late. The camp's already been razed! There are human tracks everywhere. They lead back towards the coast.
+}
+
+STRING 194
+{
+Rexxar
+}
+
+STRING 195
+// Sound\Dialogue\OrcExpCamp\OrcQuest07Ax\D07ARexxar03.mp3
+{
+Now I can activate the telescope and survey the surrounding lands. 
+}
+
+STRING 196
+{
+Bloodfeather
+}
+
+STRING 197
+// Sound\Dialogue\OrcExpCamp\OrcQuest01x\D01Bloodfeather04.mp3
+{
+It was foolish of you to come here. We are not afraid of you orcs. We won't let you chase us out of our lands!
+}
+
+STRING 198
+{
+Rexxar
+}
+
+STRING 199
+{
+I never intended to chase you out. I intend to bury you here.
+}
+
+STRING 200
+{
+Choose |cffffcc00F|rirehand Gauntlets
+}
+
+STRING 201
+{
+|cff00ff00Quest Reward|r|nIncreases armor by <AId5,DataA1> and attack rate by <AIs2,DataA1,%>% when worn.
+}
+
+STRING 202
+{
+Rexxar
+}
+
+STRING 203
+// Sound\Dialogue\OrcExpCamp\OrcQuest07Ax\D07ARexxar04.mp3
+{
+Blast! It looks like the beginnings of an invasion! There's far too many of them for me to handle alone.
+}
+
+STRING 204
+{
+Thrall
+}
+
+STRING 205
+// Sound\Dialogue\OrcExpCamp\OrcQuest07Ax\D07AThrall05.mp3
+{
+Are you certain of what you saw, Rexxar? I can't imagine that Jaina would send troops so close to our border. This does not bode well at all. Pact or no pact, I won't allow anything to jeopardize the security of our nation.
+}
+
+STRING 206
+{
+Nazgrel
+}
+
+STRING 207
+// Sound\Dialogue\OrcExpCamp\OrcQuest08x\D08Nazgrel01.mp3
+{
+I heard about the human ships, Warchief. What are your orders?
+}
+
+STRING 208
+{
+Thrall
+}
+
+STRING 209
+// Sound\Dialogue\OrcExpCamp\OrcQuest08x\D08Thrall02.mp3
+{
+I want you both to head back to that watch post and keep an eye on the humans. We can't let this situation escalate out of control.
+}
+
+STRING 210
+{
+Nazgrel
+}
+
+STRING 211
+{
+Rexxar
+}
+
+STRING 212
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Rexxar01.mp3
+{
+I have wandered alone for many years, little Misha. Yet sometimes, even I grow weary of this endless solitude.
+}
+
+STRING 213
+{
+Rexxar
+}
+
+STRING 214
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Rexxar02.mp3
+{
+I have watched the other races. I have seen their squabbling, their ruthlessness. Their wars do nothing but scar the land and drive the wild things to extinction.
+}
+
+STRING 215
+{
+Rexxar
+}
+
+STRING 216
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Rexxar03.mp3
+{
+No, they cannot be trusted. Only beasts are above deceit.
+}
+
+STRING 217
+{
+Rexxar
+}
+
+STRING 218
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Rexxar04.mp3
+{
+A battle!
+}
+
+STRING 219
+{
+Mogrin
+}
+
+STRING 220
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Mogrin05.mp3
+{
+Come, you mongrels! Taste the steel of Mogrin's axe!
+}
+
+STRING 221
+{
+Rexxar
+}
+
+STRING 222
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Rexxar06.mp3
+{
+Hold fast, stranger! You shall not stand alone!
+}
+
+STRING 223
+{
+Mogrin
+}
+
+STRING 224
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Mogrin07.mp3
+{
+Damned... cowards.
+}
+
+STRING 225
+{
+Rexxar
+}
+
+STRING 226
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Rexxar08.mp3
+{
+Your stomach's been split open. I can do little to ease your pain.
+}
+
+STRING 227
+{
+Mogrin
+}
+
+STRING 228
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Mogrin09.mp3
+{
+I know. This... would be a good death, if not for my failure.
+}
+
+STRING 229
+{
+Rexxar
+}
+
+STRING 230
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Rexxar10.mp3
+{
+Failure?
+}
+
+STRING 231
+{
+Mogrin
+}
+
+STRING 232
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Mogrin11.mp3
+{
+I was to deliver... a crucial report... to my chieftain in the lands below. But now...
+}
+
+STRING 233
+{
+Mogrin
+}
+
+STRING 234
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Mogrin12.mp3
+{
+I have... failed him. I have lost my... honor.
+}
+
+STRING 235
+{
+Rexxar
+}
+
+STRING 236
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Rexxar13.mp3
+{
+I will deliver your message, old one. For the sake of honor, I will uphold your charge.
+}
+
+STRING 237
+{
+Mogrin
+}
+
+STRING 238
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Mogrin14.mp3
+{
+Aka'magosh, warrior. Thank you. Seek out the city... of Orgrimmar. Find... Warchief... Thrall. Tell him--
+}
+
+STRING 239
+{
+Rexxar
+}
+
+STRING 240
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Rexxar15.mp3
+{
+May the winds bear you swiftly to your ancestors, warrior.
+}
+
+STRING 241
+{
+Rexxar
+}
+
+STRING 242
+// Sound\Dialogue\OrcExpCamp\OrcQuest00x\D00Rexxar16.mp3
+{
+Well, Misha, it seems we'll be seeing civilization after all. Let's get moving.
+}
+
+STRING 243
+// Sound\Dialogue\OrcExpCamp\OrcQuest08x\D08Nazgrel03.mp3
+{
+What if they're hostile, Warchief?
+}
+
+STRING 244
+{
+Thrall
+}
+
+STRING 245
+// Sound\Dialogue\OrcExpCamp\OrcQuest10x\D10Emissary11.mp3
+{
+Jaina? Why would you think she would be... bah! Enough of this drivel! We'd hoped to corner your wretched warchief, but you will have to suffice! Strike!
+}
+
+STRING 246
+{
+Rexxar
+}
+
+STRING 247
+{
+Thrall
+}
+
+STRING 248
+// Sound\Dialogue\OrcExpCamp\OrcQuest06Ax\D06AThrall01.mp3
+{
+Looking for Drek'Thar? Before he left, he said something about investigating the lizards out near Thunder Ridge. If you hurry, you might catch up to him.
+}
+
+STRING 249
+{
+Rexxar
+}
+
+STRING 250
+// Sound\Dialogue\OrcExpCamp\OrcQuest08x\D08Rexxar11.mp3
+{
+This anchor emblem on their shields... have you ever seen it before?
+}
+
+STRING 251
+{
+Visit the armory for your reward
+}
+
+STRING 252
+{
+Track the Humans back to their base
+}
+
+STRING 253
+{
+Earning Your Keep
+}
+
+STRING 254
+{
+To repay Thrall's hospitality, you have offered your services to the warchief. Fortunately, there is plenty of work for someone with your talents. Talk to Nazgrel, Drek'Thar, and Gazlowe, and help them complete their tasks.
+}
+
+STRING 255
+{
+Slaughter the Human encampment
+}
+
+STRING 256
+{
+Return to Thrall
+}
+
+STRING 257
+{
+Kill the Human assassins
+}
+
+STRING 258
+{
+Return to Thrall with news of the treachery
+}
+
+STRING 259
+{
+Destroy the rampaging Thunder Lizards
+}
+
+STRING 260
+{
+Report the Human sighting to Thrall
+}
+
+STRING 261
+{
+Reach the Observatory
+}
+
+STRING 262
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Survey the Border
+  - |cff808080Speak with Gar'thok at the watch post (Completed)|r
+  - |cff808080Follow the tunnel through the Beast Den (Completed)|r
+  - Reach the Observatory
+  - Return to Thrall
+}
+
+STRING 263
+// Sound\Dialogue\OrcExpCamp\OrcQuest08x\D08Thrall04.mp3
+{
+I'd prefer that the humans remain unharmed. But, if they prove hostile in any way, you have my permission to slaughter them.
+}
+
+STRING 264
+{
+Footman
+}
+
+STRING 265
+// Sound\Dialogue\OrcExpCamp\OrcQuest08x\D08Footman08.mp3
+{
+Orcs! We've been followed! To arms, men! To arms!
+}
+
+STRING 266
+// Sound\Dialogue\OrcExpCamp\OrcQuest10x\D10Rexxar12.mp3
+{
+Assassins! I knew this was a trap!
+}
+
+STRING 267
+{
+Thrall
+}
+
+STRING 268
+{
+Nazgrel
+}
+
+STRING 269
+{
+Come, human dogs! Taste the wrath of the Horde!
+}
+
+STRING 270
+// Sound\Dialogue\OrcExpCamp\OrcQuest11x\D11Thrall03.mp3
+{
+I've chartered this zeppelin to take you to the Darkspear tribe's new village. Once you get there, Vol'jin will see that you get all the help you'll need.
+}
+
+STRING 271
+{
+Thrall
+}
+
+STRING 272
+// Sound\Dialogue\OrcExpCamp\OrcQuest11x\D11Thrall04.mp3
+{
+Good luck, Rexxar. The future of Durotar is in your hands.
+}
+
+STRING 273
+{
+Resurrection Stone
+}
+
+STRING 274
+{
+Thrall
+}
+
+STRING 275
+// Sound\Dialogue\OrcExpCamp\OrcQuest04Ax\D04AThrall01A.mp3
+{
+This is Rokhan of the Darkspear tribe. He is one of my best scouts.
+}
+
+STRING 276
+{
+Thrall
+}
+
+STRING 277
+// Sound\Dialogue\OrcExpCamp\OrcQuest08x\D08Thrall13.mp3
+{
+You did all you could, my warriors. Above all else, you kept Durotar safe. Yet, this anchor sigil you describe does seem oddly familiar. I just can't place it.
+}
+
+STRING 278
+{
+Rokhan
+}
+
+STRING 279
+// Sound\Dialogue\OrcExpCamp\OrcQuest08x\D08Rokhan14.mp3
+{
+Pardon, boss-man, but if the humans be comin' from the sea, my tribe on the Echo Isles could be deep in the danger, too!
+}
+
+STRING 280
+{
+Thrall
+}
+
+STRING 281
+// Sound\Dialogue\OrcExpCamp\OrcQuest08x\D08Thrall15.mp3
+{
+Don't worry, Rokhan. You have my word that I won't let anything happen to your people.
+}
+
+STRING 282
+{
+Rexxar
+}
+
+STRING 283
+{
+No doubt about it: those are the same ships I saw from the observatory.
+}
+
+STRING 284
+{
+Thrall
+}
+
+STRING 285
+// Sound\Dialogue\OrcExpCamp\OrcQuest06Ax\D06AThrall12.mp3
+{
+You say the humans were deforesting Thunder Ridge? What could Jaina be thinking? It's not like her to be so reckless. I'll look into this matter, Rexxar. You have my word.
+}
+
+STRING 286
+{
+Thrall
+}
+
+STRING 287
+{
+Solve Gazlowe's problem
+}
+
+STRING 288
+// Sound\Dialogue\OrcExpCamp\OrcQuest09Ax\D09AThrall01.mp3
+{
+I have an urgent mission for you, Rexxar. That human fleet poses a serious threat to the trolls that live on the Echo Isles. I need you to take a zeppelin to the isles and warn the trolls about what's happening. If you can, try to convince them to join us on the mainland.
+}
+
+STRING 289
+{
+Rokhan
+}
+
+STRING 290
+// Sound\Dialogue\OrcExpCamp\OrcQuest04Ax\D04ARokhan02.mp3
+{
+How you doin', mon?
+}
+
+STRING 291
+{
+B
+}
+
+STRING 292
+{
+Morg Wolfsong
+}
+
+STRING 293
+{
+Complete Drek'Thar's task
+}
+
+STRING 294
+// Sound\Dialogue\OrcExpCamp\RandomOrcQuest01x\DR01Morg01.mp3
+{
+Listen, stranger... for my time is short. We shaman were attacked... by a band of renegade warlocks--our own kin, still loyal... to the Burning Legion.
+}
+
+STRING 295
+{
+Morg Wolfsong
+}
+
+STRING 296
+// Sound\Dialogue\OrcExpCamp\RandomOrcQuest01x\DR01Morg01A.mp3
+{
+The warlocks stole... one of our sacred artifacts... then fled back into the hills. No doubt... they have a secret coven nearby. Avenge the ghosts of my murdered brethren... and recover the stolen artifact. There's no telling... what evil they might unleash with... its power.
+}
+
+STRING 297
+{
+Morg Wolfsong
+}
+
+STRING 298
+// Sound\Dialogue\OrcExpCamp\RandomOrcQuest01x\DR01Morg05.mp3
+{
+The ghosts of my brethren... now lie silent. Thank you, warrior. You have rid the world... of a terrible evil. I feel my death... approaching. 
+}
+
+STRING 299
+{
+Complete Nazgrel's assignment
+}
+
+STRING 300
+{
+Return to Thrall
+}
+
+STRING 301
+{
+|cffffcc00MAIN QUEST|r
+Earning Your Keep
+  - Solve Gazlowe's problem
+  - Complete Drek'Thar's task
+  - Complete Nazgrel's assignment
+  - Return to Thrall
+}
+
+STRING 302
+{
+Morg Wolfsong
+}
+
+STRING 303
+// Sound\Dialogue\OrcExpCamp\RandomOrcQuest01x\DR01Morg05A.mp3
+{
+Take the artifact... and the rest of our items. Use them to bring glory to the Horde. I will rest easier... knowing that they lie... in honorable hands.
+}
+
+STRING 304
+{
+Rexxar
+}
+
+STRING 305
+// Sound\Dialogue\OrcExpCamp\RandomOrcQuest01x\DR01Rexxar02.mp3
+{
+This place reeks of evil. It must be where the warlocks are hiding.
+}
+
+STRING 306
+{
+Warlock
+}
+
+STRING 307
+// Sound\Dialogue\OrcExpCamp\RandomOrcQuest01x\DR01Warlock04.mp3
+{
+An outsider! Slay him, brothers, quickly!
+}
+
+STRING 308
+{
+Purchase Scroll of the |cffffcc00B|reast
+}
+
+STRING 310
+{
+Centaur Ravager
+}
+
+STRING 311
+{
+Murloc Tidestalker
+}
+
+STRING 312
+{
+Rexxar
+}
+
+STRING 313
+// Sound\Dialogue\OrcExpCamp\OrcQuest07Bx\D07BRexxar01.mp3
+{
+This must be the entrance to the quillboars' den. It smells foul enough. I don't even want to imagine what they're cooking in there.
+}
+
+STRING 314
+{
+Quillboar Ranger
+}
+
+STRING 315
+{
+Razormane Champion
+}
+
+STRING 316
+{
+Spider Crab Leviathan
+}
+
+STRING 317
+{
+Harpy Thief
+}
+
+STRING 318
+{
+Heavy ranged unit with Bloodlust and Chain Lightning. |n|n|cffffcc00Cannot leave Durotar.|r |n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 319
+{
+|cff32cd32HINT|r - Crossing a shimmering zone boundary will transition your heroes to a new area. Summoned units and mercenaries will remain behind until you return.
+}
+
+STRING 320
+{
+Lumbering beast equipped with many storage packs, allowing it to carry 6 items. |n|n|cffffcc00Cannot leave Durotar.|r
+}
+
+STRING 321
+{
+Rexxar's Stash
+}
+
+STRING 322
+{
+Dwarven Axeman
+}
+
+STRING 323
+{
+Build more Farms to continue unit production.,Unable to hire additional mercenaries.,Summon more Ziggurats to continue unit production.,Create more Moon Wells to continue unit production.
+}
+
+STRING 324
+{
+A hulking, brutish Ogre warrior. Has a defensive aura, and can cast Shockwave.  |n|n|cffffcc00Cannot leave Durotar.|r |n|cffffcc00Attacks land units.|r
+}
+
+STRING 325
+{
+|cff87ceebNEW UNIT ACQUIRED|r
+Chen Stormstout - This hearty wanderer needs nothing but a mug of good ale in his hand and a loyal friend by his side. He is eager to accompany Rexxar on his journey, anticipating future opportunities to brew the spirits of which he is so fond.
+}
+
+STRING 326
+{
+|cff87ceebNEW UNIT ACQUIRED|r
+Nazgrel - Captain of the Orgrimmar security forces, this grizzled Wolf Rider has an eager glint in his eye at the thought of battle. Thrall has asked him to aid Rexxar in the task of defending Durotar from its enemies.
+}
+
+STRING 327
+{
+|cff87ceebNEW UNIT ACQUIRED|r
+Rokhan - Hailing from the Darkspear tribe on the Echo Isles, this Troll tracker is Thrall's best scout and will serve as a loyal companion to Rexxar.
+}
+
+STRING 328
+{
+Nazgrel
+}
+
+STRING 329
+{
+The human scum will pay dearly for this! Blood for blood. Life for life. Lok-Tar Ogar!
+}
+
+STRING 330
+{
+Choose |cffffcc00A|rrcanite Shield
+}
+
+STRING 331
+{
+|cff00ff00Quest Reward|r|nReduces damage from ranged attacks to <AIdd,DataA1,%>%. Also increases the Hero's armor by <AId5,DataA1> when worn.
+}
+
+STRING 332
+{
+Choose Bladebane |cffffcc00A|rrmor
+}
+
+STRING 333
+{
+|cff00ff00Quest Reward|r|nGrants nearby units <AIad,DataA1> bonus defense. Enhances the Hero's armor by <AId7,DataA1>.
+}
+
+STRING 347
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Earning Your Keep
+}
+
+STRING 349
+{
+  - |cff808080Solve Gazlowe's problem (Completed)|r
+}
+
+STRING 356
+{
+  - Return to Thrall
+}
+
+STRING 357
+{
+  - Solve Gazlowe's problem
+}
+
+STRING 358
+{
+  - Complete Drek'Thar's task
+}
+
+STRING 362
+{
+  - |cff808080Complete Drek'Thar's task (Completed)|r
+}
+
+STRING 363
+{
+  - Complete Nazgrel's assignment
+}
+
+STRING 365
+{
+  - |cff808080Complete Nazgrel's assignment (Completed)|r
+}
+
+STRING 366
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Earning Your Keep
+}
+
+STRING 368
+{
+Chen Stormstout
+}
+
+STRING 369
+// Sound\Dialogue\OrcExpCamp\RandomOrcQuest02x\DR02Chen03.mp3
+{
+Perfect, perfect! These are just what I needed! Here, try a sample of my latest creation.
+}
+
+STRING 370
+{
+Rexxar
+}
+
+STRING 371
+// Sound\Dialogue\OrcExpCamp\RandomOrcQuest02x\DR02Rexxar04.mp3
+{
+What the hell is that stuff? Are you trying to kill me?
+}
+
+STRING 372
+{
+Chen Stormstout
+}
+
+STRING 373
+// Sound\Dialogue\OrcExpCamp\RandomOrcQuest02x\DR02Chen05.mp3
+{
+Ah, perhaps it needs some refinement. After all, we must learn to crawl before we can run, don't you agree? Well, now that my brew is complete, I can experience more of this strange, rugged land. Would you mind if I tagged along with you, warrior?
+}
+
+STRING 374
+{
+Rexxar
+}
+
+STRING 375
+// Sound\Dialogue\OrcExpCamp\RandomOrcQuest02x\DR02Rexxar06.mp3
+{
+Not at all, Chen. But my path is a perilous one.
+}
+
+STRING 376
+{
+Harpy Threat
+}
+
+STRING 377
+{
+Nazgrel has informed you that the vile Harpies are ransacking the Horde's supply caravans. He wants you to put an end to their threat by killing the Harpy leader, Bloodfeather.
+}
+
+STRING 378
+{
+Kill Bloodfeather
+}
+
+STRING 379
+{
+Return to Nazgrel
+}
+
+STRING 380
+{
+Chen Stormstout
+}
+
+STRING 381
+{
+|cffffcc00MAIN QUEST|r
+Harpy Threat
+  - Kill Bloodfeather
+  - Return to Nazgrel
+}
+
+STRING 382
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Harpy Threat
+  - |cff808080Kill Bloodfeather (Completed)|r
+  - Return to Nazgrel
+}
+
+STRING 383
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Harpy Threat
+  - |cff808080Kill Bloodfeather (Completed)|r
+  - |cff808080Return to Nazgrel (Completed)|r
+  - Visit the armory for your reward
+}
+
+STRING 384
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Harpy Threat
+}
+
+STRING 385
+// Sound\Dialogue\OrcExpCamp\RandomOrcQuest02x\DR02Chen07.mp3
+{
+Ah, my friend, I've found that no path is too perilous when doused with strong drink. Off we go!
+}
+
+STRING 386
+{
+Chen Stormstout
+}
+
+STRING 387
+// Sound\Dialogue\OrcExpCamp\RandomOrcQuest02x\DR02Chen02.mp3
+{
+Ah, I see you've returned empty-handed. Don't be afraid, my friend. Strong ale should be nothing to fear for one of your size!
+}
+
+STRING 388
+{
+Return to Thrall
+}
+
+STRING 389
+{
+|cffffcc00MAIN QUEST UPDATE|r
+The Signal Pyres
+  - |cff808080Light the Signal Braziers (Completed)|r
+  - Return to Thrall
+}
+
+STRING 414
+{
+Seal the Tunnel
+}
+
+STRING 415
+{
+Gazlowe's efforts to secure a reliable water source for Orgrimmar have hit a snag. The Goblin mining teams have accidentally tunneled into a Kobold den. This opening must be sealed before the Kobolds can cause any serious damage.
+}
+
+STRING 416
+{
+Enter the Goblin tunnels beneath Orgrimmar
+}
+
+STRING 418
+{
+Destroy the Support Columns
+}
+
+STRING 419
+{
+Report your success to Gazlowe
+}
+
+STRING 420
+{
+|cffffcc00MAIN QUEST|r
+Seal the Tunnel
+  - Enter the Goblin tunnels beneath Orgrimmar
+  - Destroy the Support Columns
+  - Report your success to Gazlowe
+}
+
+STRING 421
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Seal the Tunnel
+  - |cff808080Enter the Goblin tunnels beneath Orgrimmar (Completed)|r
+  - Destroy the Support Columns
+  - Report your success to Gazlowe
+}
+
+STRING 423
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Seal the Tunnel
+  - |cff808080Enter the Goblin tunnels beneath Orgrimmar (Completed)|r
+  - |cff808080Destroy the Support Columns (Completed)|r
+  - Report your success to Gazlowe
+}
+
+STRING 424
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Seal the Tunnel
+}
+
+STRING 599
+{
+Survey the Border
+}
+
+STRING 600
+{
+Nazgrel is suspicious of the Humans who are appearing near Durotar's borders, and has asked you to meet with his lieutenant, Gar'thok, at the outlying watch post. Report any strange Human military activity directly to Thrall.
+}
+
+STRING 601
+{
+Speak with Gar'thok at the watch post
+}
+
+STRING 604
+{
+Follow the tunnel through the Beast Den
+}
+
+STRING 605
+{
+Return to Thrall
+}
+
+STRING 606
+{
+|cffffcc00MAIN QUEST|r
+Survey the Border
+  - Speak with Gar'thok at the watch post
+  - Follow the tunnel through the Beast Den
+  - Reach the Observatory
+  - Return to Thrall
+}
+
+STRING 607
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Survey the Border
+  - |cff808080Speak with Gar'thok at the watch post (Completed)|r
+  - Follow the tunnel through the Beast Den
+  - Reach the Observatory
+  - Return to Thrall
+}
+
+STRING 608
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Survey the Border
+  - |cff808080Speak with Gar'thok at the watch post (Completed)|r
+  - |cff808080Follow the tunnel through the Beast Den (Completed)|r
+  - |cff808080Reach the Observatory (Completed)|r
+  - Return to Thrall
+}
+
+STRING 609
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Survey the Border
+}
+
+STRING 610
+{
+Thunder Herb
+}
+
+STRING 611
+{
+Drek'Thar has sent you to Thunder Ridge to collect 6 Shimmerweed herbs for a potion he is brewing. The normally docile Thunder Lizards have shown unprecedented hostility lately, making your fighting abilities a necessity for the herbs' retrieval.
+}
+
+STRING 612
+{
+Collect six Shimmerweed herbs (0 of 6 Collected)
+}
+
+STRING 613
+{
+Return to Drek'Thar
+}
+
+STRING 631
+{
+|cffffcc00MAIN QUEST|r
+Thunder Herb
+  - Collect six Shimmerweed herbs (0 of 6 Collected)
+  - Return to Drek'Thar
+}
+
+STRING 632
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Thunder Herb
+  - Collect six Shimmerweed herbs (1 of 6 Collected)
+  - Return to Drek'Thar
+}
+
+STRING 633
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Thunder Herb
+  - Collect six Shimmerweed herbs (2 of 6 Collected)
+  - Return to Drek'Thar
+}
+
+STRING 634
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Thunder Herb
+  - Collect six Shimmerweed herbs (3 of 6 Collected)
+  - Return to Drek'Thar
+}
+
+STRING 635
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Thunder Herb
+  - Collect six Shimmerweed herbs (4 of 6 Collected)
+  - Return to Drek'Thar
+}
+
+STRING 636
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Thunder Herb
+  - Collect six Shimmerweed herbs (5 of 6 Collected)
+  - Return to Drek'Thar
+}
+
+STRING 637
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Thunder Herb
+  - |cff808080Collect six Shimmerweed herbs (Completed)|r
+  - Return to Drek'Thar
+}
+
+STRING 638
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Thunder Herb
+}
+
+STRING 639
+{
+Protect the Border
+}
+
+STRING 640
+{
+Thrall has ordered you to return to the watch post with Nazgrel and maintain surveillance on the Humans. Thrall does not wish the situation to escalate out of control, but if the Humans attack, then they are to be neutralized.
+}
+
+STRING 641
+{
+Return to the watch post
+}
+
+STRING 645
+{
+|cffffcc00MAIN QUEST|r
+Protect the Border
+  - Return to the watch post
+}
+
+STRING 646
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Protect the Border
+  - |cff808080Return to the watch post (Completed)|r
+  - Track the Humans back to their base
+  - Slaughter the Human encampment
+  - Return to Thrall
+}
+
+STRING 647
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Protect the Border
+  - |cff808080Return to the watch post (Completed)|r
+  - |cff808080Track the Humans back to their base (Completed)|r
+  - Slaughter the Human encampment
+  - Return to Thrall
+}
+
+STRING 648
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Protect the Border
+  - |cff808080Return to the watch post (Completed)|r
+  - |cff808080Track the Humans back to their base (Completed)|r
+  - |cff808080Slaughter the Human encampment (Completed)|r
+  - Return to Thrall
+}
+
+STRING 649
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Protect the Border
+}
+
+STRING 650
+{
+Warn the Trolls
+}
+
+STRING 651
+{
+The Human fleet poses a serious threat to the Darkspear Trolls on the Echo Isles. Thrall asks that you warn them of the immediate danger posed by the reckless Humans.
+}
+
+STRING 652
+{
+Take the Zeppelin to the Echo Isles
+}
+
+STRING 653
+{
+Meet up with Vol'jin
+}
+
+STRING 654
+{
+|cffffcc00MAIN QUEST|r
+Warn the Trolls
+  - Take the Zeppelin to the Echo Isles
+  - Meet up with Vol'jin
+}
+
+STRING 655
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Warn the Trolls
+  - |cff808080Take the Zeppelin to the Echo Isles (Completed)|r
+  - Meet up with Vol'jin
+}
+
+STRING 656
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Warn the Trolls
+}
+
+STRING 657
+{
+Sink the Fleet
+}
+
+STRING 658
+{
+Before the Darkspear tribe can safely evacuate the Echo Isles, the Human Battleships bombarding its villages must be destroyed. Lead the Troll Batriders in a strike against the Human navy.
+}
+
+STRING 659
+{
+Destroy the Human Battleships (0 of 5 Destroyed)
+}
+
+STRING 660
+{
+Return to Vol'jin
+}
+
+STRING 668
+{
+|cffffcc00MAIN QUEST|r
+Sink the Fleet
+  - Destroy the Human Battleships (0 of 5 Destroyed)
+  - Return to Vol'jin
+}
+
+STRING 669
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Sink the Fleet
+  - Destroy the Human Battleships (1 of 5 Destroyed)
+  - Return to Vol'jin
+}
+
+STRING 670
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Sink the Fleet
+  - Destroy the Human Battleships (2 of 5 Destroyed)
+  - Return to Vol'jin
+}
+
+STRING 671
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Sink the Fleet
+  - Destroy the Human Battleships (3 of 5 Destroyed)
+  - Return to Vol'jin
+}
+
+STRING 672
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Sink the Fleet
+  - Destroy the Human Battleships (4 of 5 Destroyed)
+  - Return to Vol'jin
+}
+
+STRING 673
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Sink the Fleet
+  - |cff808080Destroy the Human Battleships (Completed)|r
+  - Return to Vol'jin
+}
+
+STRING 674
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Sink the Fleet
+}
+
+STRING 680
+{
+The Signal Pyres
+}
+
+STRING 681
+{
+Now that the Human fleet has been driven back, the Darkspear tribe is ready to set sail for the mainland. Five Signal Braziers have been placed across the island, and you must light each one to signal the evacuation's commencement.
+}
+
+STRING 682
+{
+Light the Signal Braziers (0 of 5 Lit)
+}
+
+STRING 704
+{
+|cffffcc00MAIN QUEST|r
+The Signal Pyres
+  - Light the Signal Braziers (0 of 5 Lit)
+  - Return to Thrall
+}
+
+STRING 705
+{
+|cffffcc00MAIN QUEST UPDATE|r
+The Signal Pyres
+  - Light the Signal Braziers (1 of 5 Lit)
+  - Return to Thrall
+}
+
+STRING 707
+{
+|cffffcc00MAIN QUEST UPDATE|r
+The Signal Pyres
+  - Light the Signal Braziers (2 of 5 Lit)
+  - Return to Thrall
+}
+
+STRING 708
+{
+|cffffcc00MAIN QUEST UPDATE|r
+The Signal Pyres
+  - Light the Signal Braziers (3 of 5 Lit)
+  - Return to Thrall
+}
+
+STRING 710
+{
+|cffffcc00MAIN QUEST UPDATE|r
+The Signal Pyres
+  - Light the Signal Braziers (4 of 5 Lit)
+  - Return to Thrall
+}
+
+STRING 713
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+The Signal Pyres
+}
+
+STRING 726
+{
+Collect six Shimmerweed herbs (1 of 6 Collected)
+}
+
+STRING 727
+{
+Collect six Shimmerweed herbs (2 of 6 Collected)
+}
+
+STRING 728
+{
+Collect six Shimmerweed herbs (3 of 6 Collected)
+}
+
+STRING 729
+{
+Collect six Shimmerweed herbs (4 of 6 Collected)
+}
+
+STRING 730
+{
+Collect six Shimmerweed herbs (5 of 6 Collected)
+}
+
+STRING 731
+{
+Collect six Shimmerweed herbs
+}
+
+STRING 732
+{
+Destroy the Human Battleships (1 of 5 Destroyed)
+}
+
+STRING 737
+{
+Destroy the Human Battleships (2 of 5 Destroyed)
+}
+
+STRING 741
+{
+Destroy the Human Battleships (3 of 5 Destroyed)
+}
+
+STRING 744
+{
+Destroy the Human Battleships (4 of 5 Destroyed)
+}
+
+STRING 746
+{
+Destroy the Human Battleships
+}
+
+STRING 751
+{
+Light the Signal Braziers
+}
+
+STRING 752
+{
+Light the Signal Braziers (1 of 5 Lit)
+}
+
+STRING 756
+{
+Light the Signal Braziers (2 of 5 Lit)
+}
+
+STRING 759
+{
+Light the Signal Braziers (3 of 5 Lit)
+}
+
+STRING 761
+{
+Light the Signal Braziers (4 of 5 Lit)
+}
+
+STRING 762
+{
+The Summit
+}
+
+STRING 763
+{
+The Humans have offered to meet with the Orc warchief, but you are suspicious of their motives. Go to the meeting in Thrall's place and sniff out any traps to protect Thrall from harm.
+}
+
+STRING 764
+{
+Travel to Razor Hill
+}
+
+STRING 767
+{
+|cffffcc00MAIN QUEST|r
+The Summit
+  - Travel to Razor Hill
+}
+
+STRING 769
+{
+|cffffcc00MAIN QUEST UPDATE|r
+The Summit
+  - |cff808080Travel to Razor Hill (Completed)|r
+  - Kill the Human assassins
+  - Return to Thrall with news of the treachery
+}
+
+STRING 770
+{
+|cffffcc00MAIN QUEST UPDATE|r
+The Summit
+  - |cff808080Travel to Razor Hill (Completed)|r
+  - |cff808080Kill the Human assassins (Completed)|r
+  - Return to Thrall with news of the treachery
+}
+
+STRING 772
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+The Summit
+}
+
+STRING 773
+{
+Secure the Wells
+}
+
+STRING 774
+{
+Gazlowe needs additional help to secure a working water supply for Orgrimmar. A Kobold Geomancer has been filling in the water wells with dirt, so Gazlowe has provided you with an Earth-Borer to dig out the sabotaged wells. You will need to clean out five wells to reestablish the city's water supply
+}
+
+STRING 775
+{
+Drill five wells (0 of 5 Drilled)
+}
+
+STRING 776
+{
+Return to Gazlowe
+}
+
+STRING 777
+{
+Drill five wells (1 of 5 Drilled)
+}
+
+STRING 782
+{
+Drill five wells (2 of 5 Drilled)
+}
+
+STRING 786
+{
+Drill five wells (3 of 5 Drilled)
+}
+
+STRING 789
+{
+Drill five wells (4 of 5 Drilled)
+}
+
+STRING 791
+{
+Drill five wells
+}
+
+STRING 792
+{
+|cffffcc00OPTIONAL QUEST|r
+Secure the Wells
+  - Drill five wells (0 of 5 Drilled)
+  - Return to Gazlowe
+}
+
+STRING 794
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Secure the Wells
+  - Drill five wells (1 of 5 Drilled)
+  - Return to Gazlowe
+}
+
+STRING 795
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Secure the Wells
+  - Drill five wells (2 of 5 Drilled)
+  - Return to Gazlowe
+}
+
+STRING 797
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Secure the Wells
+  - Drill five wells (3 of 5 Drilled)
+  - Return to Gazlowe
+}
+
+STRING 798
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Secure the Wells
+  - Drill five wells (4 of 5 Drilled)
+  - Return to Gazlowe
+}
+
+STRING 800
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Secure the Wells
+  - |cff808080Drill five wells (Completed)|r
+  - Return to Gazlowe
+}
+
+STRING 801
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Secure the Wells
+}
+
+STRING 802
+{
+Thunder Lizards
+}
+
+STRING 803
+{
+Investigate Thunder Ridge with Drek'Thar to determine what has agitated the Thunder Lizards and caused them to migrate out of the valley.
+}
+
+STRING 805
+{
+Discover the cause of the Lizard migration
+}
+
+STRING 808
+{
+|cffffcc00OPTIONAL QUEST|r
+Thunder Lizards
+  - Discover the cause of the Lizard migration
+}
+
+STRING 809
+{
+|cffffcc00OPTIONAL QUEST|r
+Thunder Lizards
+  - |cff808080Discover the cause of the Lizard migration (Completed)|r
+  - Destroy the rampaging Thunder Lizards
+  - Report the Human sighting to Thrall
+}
+
+STRING 811
+{
+|cffffcc00OPTIONAL QUEST|r
+Thunder Lizards
+  - |cff808080Discover the cause of the Lizard migration (Completed)|r
+  - |cff808080Destroy the rampaging Thunder Lizards (Completed)|r
+  - Report the Human sighting to Thrall
+}
+
+STRING 812
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Thunder Lizards
+}
+
+STRING 893
+{
+Collect Lizard Eggs
+}
+
+STRING 894
+{
+Drek'Thar would like the chance to study the Thunder Lizards' ecology. Collect three Thunder Lizard Eggs for his research efforts.
+}
+
+STRING 895
+{
+Collect Thunder Lizard Eggs (0 of 3 Collected)
+}
+
+STRING 896
+{
+Collect Thunder Lizard Eggs (1 of 3 Collected)
+}
+
+STRING 901
+{
+Collect Thunder Lizard Eggs (2 of 3 Collected)
+}
+
+STRING 903
+{
+Collect Thunder Lizard Eggs
+}
+
+STRING 904
+{
+|cffffcc00OPTIONAL QUEST|r
+Collect Lizard Eggs
+  - Collect Thunder Lizard Eggs (0 of 3 Collected)
+}
+
+STRING 906
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Collect Lizard Eggs
+  - Collect Thunder Lizard Eggs (1 of 3 Collected)
+}
+
+STRING 907
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Collect Lizard Eggs
+  - Collect Thunder Lizard Eggs (2 of 3 Collected)
+}
+
+STRING 909
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Collect Lizard Eggs
+}
+
+STRING 910
+{
+Slay the Quillboars
+}
+
+STRING 911
+{
+The path to the Observatory leads through a verdant underground grotto. Its winding caves teem with wildlife, including a local tribe of Quillboars. Recently, these beasts have begun ambushing Orc patrols that travel between the watch post and the Observatory. Slay all of the Quillboars to eliminate this threat.
+}
+
+STRING 913
+{
+Locate the Beast Den
+}
+
+STRING 914
+{
+Slay all of the Quillboars
+}
+
+STRING 917
+{
+|cffffcc00OPTIONAL QUEST|r
+Slay the Quillboars
+  - Locate the Beast Den
+  - Slay all of the Quillboars
+}
+
+STRING 919
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Slay the Quillboars
+  - |cff808080Locate the Beast Den (Completed)|r
+  - Slay all of the Quillboars
+}
+
+STRING 937
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Slay the Quillboars
+}
+
+STRING 938
+{
+Warlock Coven
+}
+
+STRING 939
+{
+A group of renegade Orc Warlocks--still loyal to the Burning Legion--has ambushed a caravan of Shaman and stolen their Sacred Relic. Avenge the fallen Shaman by destroying the Warlocks' secret coven and recovering the stolen artifact.
+}
+
+STRING 940
+{
+Slay the Warlock coven
+}
+
+STRING 941
+{
+Recover the Sacred Relic
+}
+
+STRING 942
+{
+Return to Morg Wolfsong
+}
+
+STRING 943
+{
+|cffffcc00OPTIONAL QUEST|r
+Warlock Coven
+  - Slay the Warlock coven
+  - Recover the Sacred Relic
+  - Return to Morg Wolfsong
+}
+
+STRING 945
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Warlock Coven
+  - |cff808080Slay the Warlock coven (Completed)|r
+  - Recover the Sacred Relic
+  - Return to Morg Wolfsong
+}
+
+STRING 946
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Warlock Coven
+  - |cff808080Slay the Warlock coven (Completed)|r
+  - |cff808080Recover the Sacred Relic (Completed)|r
+  - Return to Morg Wolfsong
+}
+
+STRING 948
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Warlock Coven
+}
+
+STRING 951
+{
+Strange Brew
+}
+
+STRING 952
+{
+A wandering Pandaren Brewmaster by the name of Chen Stormstout is seeking rare, exotic ingredients for a special brew. Locate the special ingredients for the Brewmaster, and he will let you sample his masterpiece!
+}
+
+STRING 973
+{
+Thrall
+}
+
+STRING 974
+// Sound\Dialogue\OrcExpCamp\OrcQuest06Ax\D06AThrall02.mp3
+{
+I'm sorry, Rexxar. I still haven't heard from the old shaman.
+}
+
+STRING 975
+{
+Obtain a Keg of Thunderwater
+}
+
+STRING 976
+{
+Obtain a Thunderbloom Bulb
+}
+
+STRING 977
+{
+Obtain a Thunder Phoenix Egg
+}
+
+STRING 978
+{
+Return to Chen Stormstout
+}
+
+STRING 979
+{
+|cffffcc00OPTIONAL QUEST|r
+Strange Brew
+  - Obtain a Keg of Thunderwater
+  - Obtain a Thunderbloom Bulb
+  - Obtain a Thunder Phoenix Egg
+  - Return to Chen Stormstout
+}
+
+STRING 981
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Strange Brew
+}
+
+STRING 989
+{
+  - |cff808080Obtain a Keg of Thunderwater (Completed)|r
+}
+
+STRING 990
+{
+  - Obtain a Keg of Thunderwater
+}
+
+STRING 992
+{
+  - |cff808080Obtain a Thunderbloom Bulb (Completed)|r
+}
+
+STRING 993
+{
+  - Obtain a Thunderbloom Bulb
+}
+
+STRING 997
+{
+Drek'Thar
+}
+
+STRING 998
+// Sound\Dialogue\OrcExpCamp\OrcQuest06Bx\D06BDrekThar01.mp3
+{
+Ah, well done, lad. Studying these eggs will help me understand the thunder lizards' ecology. They could be the key to ensuring that nothing like this ever happens again.
+}
+
+STRING 1000
+{
+  - |cff808080Obtain a Thunder Phoenix Egg (Completed)|r
+}
+
+STRING 1001
+{
+  - Obtain a Thunder Phoenix Egg
+}
+
+STRING 1002
+{
+  - Return to Chen Stormstout
+}
+
+STRING 1003
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Strange Brew
+}
+
+STRING 1004
+{
+Orc Beastiary
+}
+
+STRING 1045
+{
+Thrall
+}
+
+STRING 1046
+// Sound\Dialogue\OrcExpCamp\OrcQuest10x\D10Thrall05.mp3
+{
+Getting cold feet already? I thought you weren't worried.
+}
+
+STRING 1047
+{
+Rexxar
+}
+
+STRING 1048
+// Sound\Dialogue\OrcExpCamp\OrcQuest10x\D10Rexxar06.mp3
+{
+Worried? Bah! I'm just... biding my time.
+}
+
+STRING 1061
+{
+Grunt
+}
+
+STRING 1062
+// Sound\Dialogue\OrcExpCamp\OrcQuest10x\D10Grunt13.mp3
+{
+Lok-Tar, Rexxar! The warchief said you might need help!
+}
+
+STRING 1063
+{
+Rexxar
+}
+
+STRING 1064
+// Sound\Dialogue\OrcExpCamp\OrcQuest10x\D10Rexxar14.mp3
+{
+You're just in time, brothers! I saved a few of them for you!
+}
+

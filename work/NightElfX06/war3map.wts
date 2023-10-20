@@ -1,0 +1,1024 @@
+﻿STRING 1
+{
+Defeat!
+}
+
+STRING 3
+{
+NightElfX06
+}
+
+STRING 4
+{
+1
+}
+
+STRING 5
+{
+Chapter Six: Shards of the Alliance
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 7
+{
+Chapter Six
+}
+
+STRING 10
+{
+Alliance of Lordaeron
+}
+
+STRING 11
+{
+Undead Scourge
+}
+
+STRING 19
+{
+|cffffcc00MISSION FAILED|r
+Too many Supply Wagons have been lost.
+}
+
+STRING 20
+{
+Defeat!
+}
+
+STRING 29
+{
+Maiev Shadowsong
+}
+
+STRING 30
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Maiev01.mp3
+{
+Our forces will be ready to move out soon, although we still know next to nothing about this strange land Illidan has run to.
+}
+
+STRING 31
+{
+Malfurion Stormrage
+}
+
+STRING 32
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Furion02.mp3
+{
+This land is called Lordaeron, Maiev. It is the homeland of the Alliance that aided us at the Battle of Mount Hyjal. I was told that its kingdoms--both human and elven--were consumed by the undead Scourge.
+}
+
+STRING 42
+{
+Escort Kael'thas and His Caravan
+}
+
+STRING 43
+{
+Escort Kael'thas and his supply caravan across the River Arevass.
+}
+
+STRING 44
+{
+Lead the caravan across the river
+}
+
+STRING 45
+{
+At least two Supply Wagons must survive
+}
+
+STRING 46
+{
+Tyrande, Maiev, and Kael must survive
+}
+
+STRING 48
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Escort Kael'thas and His Caravan
+}
+
+STRING 52
+{
+|cffffcc00MISSION FAILED|r
+Kael has been killed.
+}
+
+STRING 53
+{
+|cffffcc00MISSION FAILED|r
+Tyrande has been killed.
+}
+
+STRING 54
+{
+|cffffcc00MISSION FAILED|r
+Maiev has been killed.
+}
+
+STRING 71
+{
+Retrieve Supplies
+}
+
+STRING 72
+{
+Kael'thas has stashed some gold and lumber nearby. Retrieve the hidden resources to allow the purchase of mercenaries and other supplies.
+}
+
+STRING 73
+{
+Recover the gold caches (0 of 3 Found)
+}
+
+STRING 78
+{
+Defeat!
+}
+
+STRING 79
+{
+Defeat!
+}
+
+STRING 82
+{
+Malfurion Stormrage
+}
+
+STRING 83
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Furion03.mp3
+{
+These forests have suffered grievously. I must leave you both for a time. I will enter the woods and attempt to commune with the land itself.
+}
+
+STRING 84
+{
+Maiev Shadowsong
+}
+
+STRING 85
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Maiev04.mp3
+{
+While you're gone, we'll set out and try to pick up Illidan's trail.
+}
+
+STRING 86
+{
+Malfurion Stormrage
+}
+
+STRING 87
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Furion05.mp3
+{
+I expect you both to stay focused on your task. You can settle your personal dispute after we've found my brother.
+}
+
+STRING 88
+{
+Maiev Shadowsong
+}
+
+STRING 89
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Maiev06.mp3
+{
+Of course, Shan'do. We'd best get moving.
+}
+
+STRING 90
+{
+Tyrande Whisperwind
+}
+
+STRING 91
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Tyrande07.mp3
+{
+This was an Alliance encampment. The attack must have come recently.
+}
+
+STRING 92
+{
+Blood Elven Swordsman
+}
+
+STRING 93
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Footman08.mp3
+{
+Strangers, milord! They don't appear to be undead, but...
+}
+
+STRING 94
+{
+Prince Kael'thas
+}
+
+STRING 95
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael09.mp3
+{
+Ishnu-alah, night elves. I am Prince Kael'thas. I must admit, I'm surprised to see your kind here. But, whatever your business, I fear you will find only death and shadow in this cursed land.
+}
+
+STRING 96
+{
+Maiev Shadowsong
+}
+
+STRING 97
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Maiev10.mp3
+{
+Ishnu-dal-dieb, Kael'thas. I am Maiev Shadowsong, and this is Tyrande Whisperwind. We are hunting a powerful demon that arrived here recently.
+}
+
+STRING 98
+{
+Prince Kael'thas
+}
+
+STRING 99
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael11.mp3
+{
+Curious. I don't know about any demon, but something's riled the undead based at Dalaran. They've been hounding us day and night. We were about to abandon this post and seek refuge on the other side of the River Arevass.
+}
+
+STRING 102
+{
+Tyrande Whisperwind
+}
+
+STRING 103
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Tyrande12.mp3
+{
+Hmmm. Then we shall lend you our aid, young Kael.
+}
+
+STRING 106
+{
+Maiev Shadowsong
+}
+
+STRING 107
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Maiev13.mp3
+{
+Wait--we have no time for this.
+}
+
+STRING 108
+{
+Tyrande Whisperwind
+}
+
+STRING 109
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Tyrande14.mp3
+{
+Perhaps once your people are safe, you will help us hunt the demon we seek?
+}
+
+STRING 110
+{
+Prince Kael'thas
+}
+
+STRING 111
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael15.mp3
+{
+It would be an honor, milady.
+}
+
+STRING 112
+{
+Shards of the Alliance
+}
+
+STRING 113
+{
+Prince Kael'thas
+}
+
+STRING 114
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael18.mp3
+{
+The undead are attacking! The caravan must be protected!
+}
+
+STRING 117
+{
+|cffffcc00MAIN QUEST|r
+Escort Kael'thas and His Caravan
+  - Lead the caravan across the river
+  - At least two Supply Wagons must survive
+  - Tyrande, Maiev, and Kael must survive
+}
+
+STRING 120
+{
+Prince Kael'thas
+}
+
+STRING 121
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael32.mp3
+{
+Ah, a mercenary camp! We could hire some of them to aid us, but we'll need to retrieve some of our hidden gold caches in order to pay them.
+}
+
+STRING 132
+{
+|cffffcc00OPTIONAL QUEST|r
+Retrieve Supplies
+  - Recover the gold caches (0 of 3 Found)
+}
+
+STRING 133
+{
+Prince Kael'thas
+}
+
+STRING 134
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael25.mp3
+{
+The caravan is under attack!
+}
+
+STRING 135
+{
+Prince Kael'thas
+}
+
+STRING 136
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael26.mp3
+{
+Protect the caravan at all costs!
+}
+
+STRING 137
+{
+Prince Kael'thas
+}
+
+STRING 138
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael27.mp3
+{
+The undead have returned! Defend the caravan!
+}
+
+STRING 139
+{
+Prince Kael'thas
+}
+
+STRING 140
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael20.mp3
+{
+We'll stop here for provisions.
+}
+
+STRING 141
+{
+Prince Kael'thas
+}
+
+STRING 142
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael21.mp3
+{
+Sadly, I have only a few warriors left. The Scourge has pressed us hard these last few months.
+}
+
+STRING 143
+{
+Maiev Shadowsong
+}
+
+STRING 144
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Maiev22.mp3
+{
+Kael, where are your high elven brethren? Do they not fight the undead as you do?
+}
+
+STRING 145
+{
+Prince Kael'thas
+}
+
+STRING 146
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael23.mp3
+{
+The Scourge devoured our ancient homeland of Quel'Thalas. The once-proud bloodline of my people is nearly spent. The few of us that remain now call ourselves blood elves, in homage to our murdered people.
+}
+
+STRING 147
+{
+Tyrande Whisperwind
+}
+
+STRING 148
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Tyrande24.mp3
+{
+I grieve for your people, Kael. But you must not allow rage and despair to poison your heart. You may yet lead your people to a brighter future.
+}
+
+STRING 149
+{
+Prince Kael'thas
+}
+
+STRING 150
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael28.mp3
+{
+The caravan is nearly destroyed! We must hold them back!
+}
+
+STRING 151
+{
+Prince Kael'thas
+}
+
+STRING 152
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael29.mp3
+{
+We've nearly lost the caravan! It must be defended!
+}
+
+STRING 153
+{
+Maiev Shadowsong
+}
+
+STRING 154
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Maiev16.mp3
+{
+We are wasting time here, Tyrande. We should be out looking for Illidan!
+}
+
+STRING 157
+{
+Prince Kael'thas
+}
+
+STRING 158
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael30.mp3
+{
+This is one of our last holdouts on this side of the river. We will rest here for a spell and gather reinforcements.
+}
+
+STRING 159
+{
+Maiev Shadowsong
+}
+
+STRING 160
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Maiev36.mp3
+{
+This is where Kael buried his gold. Let's claim it quickly.
+}
+
+STRING 161
+{
+Maiev Shadowsong
+}
+
+STRING 162
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Maiev37.mp3
+{
+Ah, more of the Alliance's treasury. Let's take it and be gone.
+}
+
+STRING 163
+{
+Pathing Blocker 2x2
+}
+
+STRING 164
+{
+Pathing Blocker
+}
+
+STRING 166
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael39.mp3
+{
+We stand at a crossroads, my friends.
+}
+
+STRING 168
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Maiev40.mp3
+{
+Both routes will be dangerous, nonetheless. Let us choose quickly and be on our way.
+}
+
+STRING 169
+{
+Longer Path (Left)
+}
+
+STRING 170
+{
+Through Undead Bastion (Right)
+}
+
+STRING 171
+{
+Choose the Caravan's Path
+}
+
+STRING 176
+{
+ (Village) C
+}
+
+STRING 177
+{
+ (Village) A
+}
+
+STRING 178
+{
+ (Village) B
+}
+
+STRING 181
+{
+Maiev Shadowsong
+}
+
+STRING 182
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Maiev42.mp3
+{
+Undead flyers! We must find a way to repel them!
+}
+
+STRING 183
+{
+Prince Kael'thas
+}
+
+STRING 184
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael43.mp3
+{
+Ah, Pyrewood Village! The River Arevass lies just beyond.
+}
+
+STRING 185
+{
+Maiev Shadowsong
+}
+
+STRING 186
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Maiev44.mp3
+{
+Something doesn't feel right.
+}
+
+STRING 187
+{
+Tyrande Whisperwind
+}
+
+STRING 188
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Tyrande45.mp3
+{
+Yes. Perhaps we should keep the caravan moving?
+}
+
+STRING 189
+{
+Prince Kael'thas
+}
+
+STRING 190
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael46.mp3
+{
+Damn! They were waiting for us! Protect the caravan at all costs!
+}
+
+STRING 191
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Retrieve Supplies
+  - Recover the gold caches (1 of 3 Found)
+}
+
+STRING 193
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Retrieve Supplies
+  - Recover the gold caches (2 of 3 Found)
+}
+
+STRING 194
+{
+Maiev Shadowsong
+}
+
+STRING 195
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Maiev38.mp3
+{
+More of the buried gold. This will help our cause greatly.
+}
+
+STRING 197
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Retrieve Supplies
+}
+
+STRING 200
+{
+Prince Kael'thas
+}
+
+STRING 201
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael41.mp3
+{
+This is the bastion I told you about. It must be destroyed if the caravan is to make it through.
+}
+
+STRING 202
+{
+Tyrande Whisperwind
+}
+
+STRING 203
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Tyrande47.mp3
+{
+Their numbers are limitless!
+}
+
+STRING 204
+{
+Tyrande Whisperwind
+}
+
+STRING 205
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Tyrande48.mp3
+{
+They just keep coming!
+}
+
+STRING 207
+{
+Maiev Shadowsong
+}
+
+STRING 208
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Maiev50.mp3
+{
+We've driven them back, but the second wave is advancing!
+}
+
+STRING 209
+{
+Prince Kael'thas
+}
+
+STRING 210
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael51.mp3
+{
+We've run out of time! The caravan will not survive another assault!
+}
+
+STRING 211
+{
+Tyrande Whisperwind
+}
+
+STRING 212
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Tyrande52.mp3
+{
+Kael, get your caravan moving across the river! I will stay behind and hold the bridge!
+}
+
+STRING 213
+{
+Maiev Shadowsong
+}
+
+STRING 214
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Maiev53.mp3
+{
+That's very noble of you, Priestess, but you're no match for a force that vast!
+}
+
+STRING 215
+{
+Tyrande Whisperwind
+}
+
+STRING 216
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Tyrande54.mp3
+{
+The goddess is my shield, warden. Elune will grant me the strength.
+}
+
+STRING 219
+{
+Prince Kael'thas
+}
+
+STRING 220
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael56.mp3
+{
+It's working! She's holding them back!
+}
+
+STRING 221
+{
+Tyrande Whisperwind
+}
+
+STRING 222
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Tyrande57.mp3
+{
+Merciful goddess!
+}
+
+STRING 223
+{
+Prince Kael'thas
+}
+
+STRING 224
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael58.mp3
+{
+We must hurry to save her! That current will take her straight into the heart of the undead lands!
+}
+
+STRING 225
+{
+Maiev Shadowsong
+}
+
+STRING 226
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Maiev59.mp3
+{
+No, Kael. Tyrande is a soldier; she knew the risks she took. We have a greater mission to accomplish now, and our time grows short.
+}
+
+STRING 227
+{
+Maiev Shadowsong
+}
+
+STRING 228
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Maiev60.mp3
+{
+Your people are now safe. You will uphold your end of the bargain and help me hunt the demon I seek.
+}
+
+STRING 229
+{
+Prince Kael'thas
+}
+
+STRING 230
+{
+The village is under attack! We can't risk moving the caravan until the undead have been driven back.
+}
+
+STRING 231
+{
+Three days later, on the western coast of Lordaeron, the night elves venture cautiously into the shifting shadows of Silverpine Forest.
+}
+
+STRING 232
+{
+|cff32cd32HINT|r - Use the Mountain Giant's Taunt ability to force nearby enemy units to attack the Mountain Giant.
+}
+
+STRING 233
+{
+|cff32cd32HINT|r - Pick up a tree with the Mountain Giant's War Club ability to give the Giant Siege damage, and increased attack range.
+}
+
+STRING 236
+{
+FLAMESTRIKE BEING CAST
+}
+
+STRING 237
+{
+SIPHON MANA BEING CAST
+}
+
+STRING 238
+{
+|cffff8c00NOTICE|r - You have chosen the longer path to the left.
+}
+
+STRING 239
+{
+|cffff8c00NOTICE|r - You have chosen the path to the right, close to an Undead bastion.
+}
+
+STRING 241
+{
+Prince Kael'thas
+}
+
+STRING 242
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael39A.mp3
+{
+There is a shorter path to our destination, but it will take us perilously close to an undead bastion.
+}
+
+STRING 243
+{
+Prince Kael'thas
+}
+
+STRING 244
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael39B.mp3
+{
+The other route is safer, but it will take us longer to cross the river.
+}
+
+STRING 245
+{
+Alliance Remnants
+}
+
+STRING 246
+{
+Sentinels
+}
+
+STRING 247
+{
+Gold Cache
+}
+
+STRING 248
+{
+|cffff8c00NOTICE|r - Tyrande's Scout spell is not available.
+}
+
+STRING 257
+{
+Prince Kael'thas
+}
+
+STRING 258
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael43.mp3
+{
+Ah, Pyrewood Village! The River Arevass lies just beyond.
+}
+
+STRING 259
+{
+Maiev Shadowsong
+}
+
+STRING 260
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Maiev44.mp3
+{
+Something doesn't feel right.
+}
+
+STRING 261
+{
+Tyrande Whisperwind
+}
+
+STRING 262
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Tyrande45.mp3
+{
+Yes. Perhaps we should keep the caravan moving?
+}
+
+STRING 267
+{
+Prince Kael'thas
+}
+
+STRING 268
+// Sound\Dialogue\NightElfExpCamp\NightElf06x\S06Kael46.mp3
+{
+Damn! They were waiting for us! Protect the caravan at all costs!
+}
+
+STRING 269
+{
+(priest)
+}
+
+STRING 274
+{
+Gold Cache Location
+}
+
+STRING 275
+{
+Steel Arrowheads
+}
+
+STRING 276
+{
+Improved Steel Arrowheads
+}
+
+STRING 277
+{
+Advanced Steel Arrowheads
+}
+
+STRING 278
+{
+Increases the damage of Archers.
+}
+
+STRING 279
+{
+Further increases the damage of Archers.
+}
+
+STRING 280
+{
+Swordsman
+}
+
+STRING 281
+{
+Train |cffffcc00S|rwordsman
+}
+
+STRING 282
+{
+Archer
+}
+
+STRING 284
+{
+Train A|cffffcc00r|rcher
+}
+
+STRING 285
+{
+Recover the gold caches (1 of 3 Found)
+}
+
+STRING 286
+{
+Recover the gold caches (2 of 3 Found)
+}
+
+STRING 287
+{
+Recover the gold caches
+}
+
+STRING 288
+{
+Defeat!
+}
+
+STRING 289
+{
+Tyrande Whisperwind
+}
+
+STRING 290
+{
+These people need our help, Maiev! Their brethren aided us against the Legion. We will honor that debt now.
+}
+
+STRING 291
+{
+Maiev Shadowsong
+}
+
+STRING 292
+{
+Do not fear, Kael. Our mountain giants are more than capable of handling these wretched curs. Their stony hides are nearly impervious to their clumsy attacks.
+}
+
+STRING 293
+{
+Maiev Shadowsong
+}
+
+STRING 294
+{
+You've hidden your gold?
+}
+
+STRING 295
+{
+Prince Kael'thas
+}
+
+STRING 296
+{
+We're fighting a losing war here, milady. The undead close in around us daily. It's necessary to keep our assets hidden, yet accessible. We have caches secreted throughout the wilderness.
+}
+
+STRING 297
+{
+Maiev Shadowsong
+}
+
+STRING 298
+{
+Then we shall retrieve them for you.
+}
+

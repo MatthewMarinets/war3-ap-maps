@@ -1,0 +1,555 @@
+﻿STRING 3
+{
+Blademaster
+}
+
+STRING 4
+{
+We orcs are the true servants of the Burning Legion! These mindless undead are weak... impure! 
+}
+
+STRING 5
+{
+Undead06
+}
+
+STRING 6
+{
+1
+}
+
+STRING 7
+{
+The next morning, on the outskirts of the Blackrock clan village...
+}
+
+STRING 8
+{
+Orc Heroes
+}
+
+STRING 9
+{
+In order to win through to the Demon Gate, the Orc heroes of each Blackrock village must be destroyed. Each vile Hero carries a magical Tome that will aid you with your dire mission. 
+}
+
+STRING 10
+{
+Kel'Thuzad
+}
+
+STRING 11
+{
+I call upon thee, Archimonde! Your humble servant seeks an audience!
+}
+
+STRING 12
+{
+Archimonde
+}
+
+STRING 13
+{
+You called my name, puny lich, and I have come. You are Kel'Thuzad, are you not? 
+}
+
+STRING 14
+{
+Kel'Thuzad
+}
+
+STRING 15
+{
+Blizzard Entertainment
+}
+
+STRING 17
+{
+Yes, great one. I am the summoner.
+}
+
+STRING 18
+{
+Archimonde
+}
+
+STRING 19
+{
+Very well, then. There is a special tome you must find... the only remaining spellbook of Medivh, the Last Guardian. Only his lost incantations are powerful enough to bring me into your world.
+}
+
+STRING 20
+{
+Kel'Thuzad
+}
+
+STRING 21
+{
+Where should we search for it, great one?
+}
+
+STRING 22
+{
+Archimonde
+}
+
+STRING 23
+{
+Seek out the mortal city of Dalaran. It is there that the tome is kept. At twilight, three days from now, you will begin the summoning. 
+}
+
+STRING 25
+{
+|cffffcc00MAIN QUEST|r
+Demon Gate
+  - Destroy the Orc base protecting the Demon Gate
+}
+
+STRING 27
+{
+Demon Gate
+}
+
+STRING 29
+{
+Kel'Thuzad must reach the Demon Gate to commune with the mysterious Demon lord. In order to reach the mystical gate, the adjacent Orc village must be destroyed.  
+}
+
+STRING 30
+{
+Destroy the Orc base protecting the Demon Gate
+}
+
+STRING 32
+{
+Orc Heroes
+}
+
+STRING 34
+{
+Chapter Six
+}
+
+STRING 35
+{
+Blackrock & Roll, Too!
+}
+
+STRING 36
+{
+|cffffcc00MAIN QUEST|r
+Demon Gate
+  - Destroy the Orc base protecting the Demon Gate
+}
+
+STRING 37
+{
+In order to win through to the Demon Gate, the Orc champions of each Blackrock village must be destroyed. Each vile champion carries a magical Tome that will aid you with your dire mission.
+}
+
+STRING 38
+{
+Arthas
+}
+
+STRING 39
+{
+Defeat!
+}
+
+STRING 40
+{
+I've encountered these demon-worshipping orcs before. How do they fit into all this? 
+}
+
+STRING 41
+{
+Orc Warlock
+}
+
+STRING 42
+{
+The Legion has sent the dead to test us! Victory to the Blackrock clan!
+}
+
+STRING 49
+{
+Arthas
+}
+
+STRING 50
+{
+He dropped a large tome. Is it magical?
+}
+
+STRING 55
+{
+Kel'Thuzad
+}
+
+STRING 56
+{
+It is a tome of demon lore. No doubt his comrades carry it as well.
+}
+
+STRING 59
+{
+Kel'Thuzad
+}
+
+STRING 60
+{
+That, young one, is a very complicated matter. Suffice it to say they no longer hold any favor with the Legion.
+
+}
+
+STRING 65
+{
+Arthas
+}
+
+STRING 66
+{
+Understood.
+}
+
+STRING 72
+{
+Arthas
+}
+
+STRING 73
+{
+Isn't it time you told me about the second phase of the plan, lich?
+}
+
+STRING 74
+{
+Kel'Thuzad
+}
+
+STRING 75
+{
+Certainly. The first phase of the Lich King's plan was to engineer the Scourge, which would eradicate any group that might resist the Legion's arrival.   
+}
+
+STRING 76
+{
+Arthas
+}
+
+STRING 77
+{
+Like the forces of Lordaeron... and the high elves.
+}
+
+STRING 78
+{
+Kel'Thuzad
+}
+
+STRING 79
+{
+Exactly. The second phase is to actually summon the demon lord who will spark the invasion. 
+}
+
+STRING 80
+{
+Arthas
+}
+
+STRING 81
+{
+So, where are we going now?
+}
+
+STRING 82
+{
+Kel'Thuzad
+}
+
+STRING 83
+{
+There is a nearby encampment of Blackrock orcs who maintain a functional demon gate. I must use the gate to commune with the demon lord and receive his instructions.
+}
+
+STRING 86
+{
+Train |cffffcc00W|rarlock
+}
+
+STRING 87
+{
+W
+}
+
+STRING 89
+{
+Train |cffffcc00D|rragon
+}
+
+STRING 90
+{
+D
+}
+
+STRING 91
+{
+Train Goblin |cffffcc00S|rapper
+}
+
+STRING 92
+{
+Demon Gate
+}
+
+STRING 93
+{
+Kel'Thuzad must reach the Demon Gate to commune with the mysterious Demon lord. In order to reach the mystical gate, the adjacent Orc village must be destroyed.  
+}
+
+STRING 94
+{
+Train Goblin |cffffcc00Z|reppelin
+}
+
+STRING 95
+{
+Train O|cffffcc00g|rre Magi
+}
+
+STRING 96
+{
+ 
+}
+
+STRING 97
+{
+Arthas
+}
+
+STRING 98
+{
+The brutes have been slain. The demon gate is yours, lich.
+}
+
+STRING 107
+{
+Arthas
+}
+
+STRING 108
+{
+The brutes have been slain. The demon gate is yours, lich.
+}
+
+STRING 131
+{
+Kel'Thuzad
+}
+
+STRING 132
+{
+This camp guards the demon gate! Defeat these orcs quickly so that I can contact the demon lord!
+}
+
+STRING 149
+{
+Blackrock Clan
+}
+
+STRING 150
+{
+Undead Scourge
+}
+
+STRING 157
+{
+(Blue)
+}
+
+STRING 189
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Demon Gate
+}
+
+STRING 222
+{
+(Brown)
+}
+
+STRING 223
+{
+(Teal)
+}
+
+STRING 224
+{
+(Orange)
+}
+
+STRING 225
+{
+(Light Blue)
+}
+
+STRING 226
+{
+(Red)
+}
+
+STRING 304
+{
+Destroy the Orc base protecting the Demon Gate
+}
+
+STRING 383
+{
+Khanzo
+}
+
+STRING 384
+{
+Genjuros
+}
+
+STRING 385
+{
+Haomarush
+}
+
+STRING 386
+{
+Throk'Feroth
+}
+
+STRING 387
+{
+Mazrigos
+}
+
+STRING 388
+{
+Jubei'Thos
+}
+
+STRING 649
+{
+Remaining Orc Heroes
+}
+
+STRING 816
+{
+Blackrock Warlocks
+}
+
+STRING 817
+{
+Blackrock Scouts
+}
+
+STRING 818
+{
+Blackrock Raiders
+}
+
+STRING 819
+{
+Blackrock Slavers
+}
+
+STRING 820
+{
+Blackrock Warriors
+}
+
+STRING 821
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Kill Orc Heroes
+}
+
+STRING 921
+{
+Dragon Camps
+}
+
+STRING 933
+{
+|cffffcc00OPTIONAL QUEST|r 
+Kill Orc Heroes
+  - Throk'Feroth
+  - Mazrigos
+  - Khanzo
+  - Genjuros
+  - Jubei'Thos
+}
+
+STRING 934
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 935
+{
+Defeat!
+}
+
+STRING 936
+{
+Chapter Six: Blackrock & Roll, Too!
+}
+
+STRING 937
+{
+Kel'Thuzad
+}
+
+STRING 938
+{
+Behold, the Frost Wyrm! These undead dragons are the Lich King's favored pets. This one shall serve us well.
+}
+
+STRING 939
+{
+|cff87ceebNEW UNIT AVAILABLE|r
+Frost Wyrm - You may now build Frost Wyrms from the Boneyard. They are flying heavy assault creatures and can learn the Freezing Breath ability.
+}
+
+STRING 940
+{
+Kill Throk'Feroth
+}
+
+STRING 941
+{
+Kill Mazrigos
+}
+
+STRING 942
+{
+Kill Khanzo
+}
+
+STRING 943
+{
+Kill Genjuros
+}
+
+STRING 944
+{
+Kill Jubei'Thos
+}
+
+STRING 993
+{
+Kel'Thuzad
+}
+
+STRING 994
+{
+Your people failed their task, savage. You, too, must be scourged from the world. 
+}
+

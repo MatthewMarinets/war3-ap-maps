@@ -1,0 +1,567 @@
+﻿STRING 1
+{
+Jaina Proudmoore
+}
+
+STRING 2
+{
+Hearthglen, finally! I could use some rest!
+}
+
+STRING 3
+{
+Arthas
+}
+
+STRING 4
+{
+Grain Caravan
+}
+
+STRING 7
+{
+It looks like they're preparing for battle.
+}
+
+STRING 8
+{
+Prince Arthas! During the night, a vast army of undead warriors emerged and began attacking villages at random!
+}
+
+STRING 10
+{
+Footman
+}
+
+STRING 11
+{
+Now, it's heading this way!
+}
+
+STRING 12
+{
+Undead Scourge
+}
+
+STRING 13
+{
+Footman
+}
+
+STRING 14
+{
+Damn it. Jaina, I'll stay here to protect the village. Go as quickly as you can and tell Lord Uther what's happened.
+}
+
+STRING 15
+{
+Arthas
+}
+
+STRING 16
+{
+But--
+}
+
+STRING 17
+{
+Jaina Proudmoore
+}
+
+STRING 18
+{
+Go, Jaina! Every second counts!
+}
+
+STRING 19
+{
+Arthas
+}
+
+STRING 20
+{
+Defend Hearthglen
+}
+
+STRING 21
+{
+An Undead army has arisen overnight and marched against Hearthglen. You must defend the town until Jaina returns with Lord Uther and his reinforcements.  
+}
+
+STRING 25
+{
+Arthas
+}
+
+STRING 26
+{
+|cffffcc00MAIN QUEST|r
+Defend Hearthglen
+  - Survive for 30 minutes
+}
+
+STRING 27
+{
+Wait--what did those crates contain?
+}
+
+STRING 28
+{
+Just a grain shipment from Andorhal. There's no need to worry, milord. It's already been distributed amongst the villagers.
+}
+
+STRING 29
+{
+Footman
+}
+
+STRING 30
+{
+Oh no.
+}
+
+STRING 31
+{
+Arthas
+}
+
+STRING 32
+{
+Arthas
+}
+
+STRING 33
+{
+The plague was never meant to simply kill my people. It was meant to turn them... into the undead! Defend yourselves!
+}
+
+STRING 35
+{
+Mark
+}
+
+STRING 40
+{
+Defeat!
+}
+
+STRING 41
+{
+Hearthglen Building
+}
+
+STRING 53
+{
+Footman
+}
+
+STRING 54
+{
+Prince Arthas, we've spotted an undead caravan carrying a large load of plagued grain.
+}
+
+STRING 57
+{
+Survive for 30 minutes
+}
+
+STRING 60
+{
+Destroy the grain caravan before it gets to last village
+}
+
+STRING 63
+{
+Uther the Lightbringer
+}
+
+STRING 64
+{
+For Lordaeron! For the king!
+}
+
+STRING 70
+{
+Defeat!
+}
+
+STRING 80
+{
+Uther's Return:
+}
+
+STRING 81
+{
+Grain Caravan
+}
+
+STRING 84
+{
+The Undead have constructed a caravan to distribute plagued grain to the neighboring villages. If the caravan reaches them, it will transform them into Undead outposts. Intercept and destroy the caravan before your forces are hopelessly outnumbered. 
+}
+
+STRING 90
+{
+|cffffcc00OPTIONAL QUEST FAILED|r
+The Grain Caravan
+}
+
+STRING 92
+{
+Uther the Lightbringer
+}
+
+STRING 93
+{
+I'm surprised that you kept things together as long as you did, lad. If I hadn't arrived just then--
+}
+
+STRING 94
+{
+Arthas
+}
+
+STRING 95
+{
+Look, I did the best I could, Uther! If I'd had a legion of knights riding at my back, I would've--
+}
+
+STRING 96
+{
+Uther the Lightbringer
+}
+
+STRING 97
+{
+Now is not the time to be choking on pride! What we faced here was only the beginning. The undead ranks are bolstered every time one of our warriors falls in battle.
+}
+
+STRING 98
+{
+Arthas
+}
+
+STRING 99
+{
+Uther, your timing couldn't have been better.
+}
+
+STRING 100
+{
+Uther the Lightbringer
+}
+
+STRING 102
+{
+Don't celebrate yet, son. This battle's far from over!
+}
+
+STRING 103
+{
+Arthas
+}
+
+STRING 104
+{
+Then we should strike at their leader! I'll go to Stratholme and kill Mal'Ganis myself if I have to!
+}
+
+STRING 105
+{
+Uther the Lightbringer
+}
+
+STRING 106
+{
+Easy, lad. Brave as you are, you can't hope to defeat a man who commands the dead all by yourself.
+}
+
+STRING 107
+{
+Arthas
+}
+
+STRING 108
+{
+Then feel free to tag along, Uther. I'm going. With or without you.
+}
+
+STRING 109
+{
+Human05
+}
+
+STRING 110
+{
+1
+}
+
+STRING 111
+{
+Chapter Five: March of the Scourge
+}
+
+STRING 112
+{
+Blizzard Entertainment
+}
+
+STRING 113
+{
+Chapter Five
+}
+
+STRING 114
+{
+March of the Scourge
+}
+
+STRING 115
+{
+Early the next morning, Arthas and Jaina approach the village of Hearthglen.
+}
+
+STRING 116
+{
+Footman
+}
+
+STRING 117
+{
+Prince Arthas, the caravan has infected the second village.
+}
+
+STRING 118
+{
+Footman
+}
+
+STRING 121
+{
+Milord, the third village has been infected!
+}
+
+STRING 122
+{
+Footman
+}
+
+STRING 123
+{
+Prince Arthas, we've failed to stop the caravan! It's reached the final town and turned it into an undead bastion!
+}
+
+STRING 125
+{
+Undead Caravan
+}
+
+STRING 126
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+The Grain Caravan
+}
+
+STRING 127
+{
+Acolyte
+}
+
+STRING 128
+{
+Faster, my brethren! If we lose the shipment, the master will have our hides!
+}
+
+STRING 129
+{
+|cff32CD32HINT|r - Use the Scroll of Town Portal on a friendly town hall to teleport Arthas and any of his nearby troops there.
+}
+
+STRING 133
+{
+|cff32CD32HINT|r - 10 more minutes until Uther's arrival.
+}
+
+STRING 134
+{
+Villager
+}
+
+STRING 135
+{
+We'll fight for Lordaeron! Get your swords!
+}
+
+STRING 145
+{
+Special MalGanis
+}
+
+STRING 146
+{
+Special Malganis
+}
+
+STRING 148
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 180
+{
+Arthas
+}
+
+STRING 181
+{
+This is a nightmare!
+}
+
+STRING 216
+{
+Arthas
+}
+
+STRING 217
+{
+This is impossible. Their numbers seem limitless.
+}
+
+STRING 218
+{
+Footman
+}
+
+STRING 219
+{
+Ogres have moved down from the hills. It appears they're looking for a fight.
+}
+
+STRING 252
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Defend Hearthglen
+}
+
+STRING 257
+{
+Arthas
+}
+
+STRING 258
+{
+That caravan must be stopped before it reaches the outer villages!
+}
+
+STRING 265
+{
+Arthas
+}
+
+STRING 266
+{
+I just pray that the grain hasn't reached any more villages.
+}
+
+STRING 275
+{
+Arthas
+}
+
+STRING 276
+{
+Hold your ground! We are the Chosen of the Light. We shall not fall!
+}
+
+STRING 279
+{
+Alliance Forces
+}
+
+STRING 280
+{
+Undead Ravagers
+}
+
+STRING 281
+{
+Undead Pillagers
+}
+
+STRING 282
+{
+Hearthglen Militia
+}
+
+STRING 283
+{
+The Silver Hand
+}
+
+STRING 284
+{
+Local Farmers
+}
+
+STRING 285
+{
+Prince Arthas, the undead forces have arrived!
+}
+
+STRING 286
+{
+Footman
+}
+
+STRING 289
+{
+|cff87ceebNEW ITEM RECEIVED|R - Boots of Speed.
+}
+
+STRING 293
+{
+Arthas
+}
+
+STRING 294
+{
+Light, give me strength!
+
+}
+
+STRING 296
+{
+|cff87ceebNEW UNIT AVAILABLE|r
+Sorceress - You may now build Sorceresses from the Arcane Sanctum. They
+can initially cast Slow, which decreases the movement and attack speed
+of enemy units.
+}
+
+STRING 297
+{
+Mark
+}
+
+STRING 298
+{
+Thank you for helping me.
+}
+
+STRING 299
+{
+Mark
+}
+
+STRING 300
+{
+Please, take this item.
+}
+
+STRING 303
+{
+|cffffcc00OPTIONAL QUEST|r
+The Grain Caravan
+  - Destroy the grain caravan before it gets to last village
+}
+

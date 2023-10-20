@@ -1,0 +1,575 @@
+﻿STRING 0
+{
+NightElf07
+}
+
+STRING 1
+{
+1
+}
+
+STRING 2
+{
+Chapter Seven: Twilight of the Gods
+}
+
+STRING 3
+{
+Blizzard Entertainment
+}
+
+STRING 4
+{
+Chapter Seven
+}
+
+STRING 5
+{
+Twilight of the Gods
+}
+
+STRING 6
+{
+The next morning, near Hyjal Summit.
+The night elves, orcs and humans gather to plan their defense of the mountain...
+}
+
+STRING 12
+{
+Jaina Proudmoore
+}
+
+STRING 13
+{
+I'm sorry I'm late. It's just as we feared, Archimonde and his doom guard are making their way towards the summit! He'll be here any moment.
+}
+
+STRING 14
+{
+Furion Stormrage
+}
+
+STRING 15
+{
+Ten thousand years ago we night elves defeated the Burning Legion. Though the rest of the world was shattered, we were left free to live out our immortal lives in peace, bound to the World Tree. 
+}
+
+STRING 16
+{
+Archimonde
+}
+
+STRING 20
+{
+Jaina Proudmoore
+}
+
+STRING 21
+{
+If you can provide our bases with support and keep us from being overwhelmed, Thrall and I will delay Archimonde's ascent!
+}
+
+STRING 22
+{
+Tyrande Whisperwind
+}
+
+STRING 23
+{
+Your plan is a bold one, girl. Perhaps I have misjudged you outlanders. May Elune shine upon you!
+}
+
+STRING 40
+{
+|cffffcc00MAIN QUEST|r
+Delay Archimonde
+  - Delay Archimonde for 45 minutes
+  - Archimonde must not reach the mountain summit
+}
+
+STRING 77
+{
+Sentinels
+}
+
+STRING 80
+{
+Orcish Horde
+}
+
+STRING 84
+{
+Delay Archimonde
+}
+
+STRING 85
+{
+You must attempt to slow Archimonde's ascent to Hyjal Summit by throwing everything you can at him and his elite forces. By doing this, you will buy Furion the time he needs to implement his mysterious plan for the World Tree's defense. Though many of your brethren may fall, their sacrifice will secure the future of the world itself.
+}
+
+STRING 86
+{
+Delay Archimonde for 45 minutes
+}
+
+STRING 105
+{
+Time Remaining
+}
+
+STRING 106
+{
+Archimonde
+}
+
+STRING 107
+{
+At last! The way to the World Tree is clear! Witness the end, you mortals! The final hour has come!
+}
+
+STRING 108
+{
+Tyrande Whisperwind
+}
+
+STRING 109
+{
+The outlanders held him back as long as they could. Were you successful in planning the summit's defense?
+
+}
+
+STRING 110
+{
+Furion Stormrage
+}
+
+STRING 111
+{
+Yes. Now our victory is assured.
+}
+
+STRING 118
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Archimonde's Ascent
+}
+
+STRING 125
+{
+|cffffcc00MAIN QUEST FAILED|r
+Archimonde's Ascent
+}
+
+STRING 126
+{
+Defeat!
+}
+
+STRING 153
+{
+Archimonde
+}
+
+STRING 154
+{
+You are very brave to stand against me, little human. If only your countrymen had been as bold, I would have had more fun scouring your wretched nations from the world!
+}
+
+STRING 155
+{
+Jaina Proudmoore
+}
+
+STRING 156
+{
+Is talking all you demons do?
+}
+
+STRING 157
+{
+Archimonde
+}
+
+STRING 158
+{
+Stormrage! Show yourself! Or do you intend to have mortal girls do all your fighting for you?
+}
+
+STRING 170
+{
+Archimonde
+}
+
+STRING 171
+{
+You orcs are weak and hardly worth the effort! I wonder why Mannoroth even bothered with you!
+}
+
+STRING 172
+{
+Thrall
+}
+
+STRING 173
+{
+Our spirit is stronger than you know, demon! If we are to fall, then so be it! At least now... we are free!
+}
+
+STRING 174
+{
+Archimonde
+}
+
+STRING 175
+{
+The wretched little whelp actually hurt me... Are there none left to stand against the Legion?
+}
+
+STRING 187
+{
+Undead Scourge
+}
+
+STRING 190
+{
+Barkskin Furbolgs
+}
+
+STRING 191
+{
+Human Expedition
+}
+
+STRING 194
+{
+Great Alliance
+}
+
+STRING 195
+{
+Burning Legion
+}
+
+STRING 196
+{
+Jaina's Castle
+}
+
+STRING 197
+{
+Anetheron
+}
+
+STRING 198
+{
+Rage Winterchill
+}
+
+STRING 199
+{
+Azgalor
+}
+
+STRING 200
+{
+Thrall's Fortress
+}
+
+STRING 201
+{
+(AI Buildable Version)
+}
+
+STRING 202
+{
+(Goblin Landmines Only)
+}
+
+STRING 203
+{
+ (Furbolgs Only)
+}
+
+STRING 204
+{
+ShadowTooth Clan
+}
+
+STRING 205
+{
+Dark Troll Den
+}
+
+STRING 207
+{
+Archimonde
+}
+
+STRING 208
+{
+Come, you night elves! Where is the fire and the passion with which you fought so long ago?
+}
+
+STRING 209
+{
+Archimonde
+}
+
+STRING 210
+{
+This is almost too easy! If I'd known that this mortal resistance would be so weak, I would have launched this invasion centuries ago!
+}
+
+STRING 219
+{
+|cffffcc00MAIN QUEST FAILED|r
+Archimonde's Ascent
+}
+
+STRING 227
+{
+|cff32cd32HINT|r - Thrall has defended his base with Goblin Land Mines.  Land Mines can be purchased from the nearby Goblin Merchant.
+}
+
+STRING 228
+{
+|cff32cd32HINT|r - Your allies have stockpiled valuable supplies in crates.
+}
+
+STRING 231
+{
+Archimonde must not reach the World Tree
+}
+
+STRING 235
+{
+(BIG Version)
+}
+
+STRING 236
+{
+(Flying Version)
+}
+
+STRING 237
+{
+Ancestral Spirits
+}
+
+STRING 247
+{
+Tyrande Whisperwind
+}
+
+STRING 248
+{
+You realize that we will age as these mortals do. Our powers over nature will wane in time.
+}
+
+STRING 249
+{
+Furion Stormrage
+}
+
+STRING 250
+{
+If pride gives us pause, my love, then perhaps we have lived long enough already. I will proceed to the summit and prepare our defenses there. Whatever comes, my love, remember...our bond is eternal.
+}
+
+STRING 251
+{
+Furion Stormrage
+}
+
+STRING 252
+{
+We are its protectors, and through it we were granted immortality and power over nature. Now, at last, it is time we gave that power back.
+}
+
+STRING 253
+{
+Archimonde
+}
+
+STRING 254
+{
+Hear me, night elves! The time for reckoning has come!
+}
+
+STRING 257
+{
+|cff87ceebNEW UNIT AVAILABLE|r
+Hippogryph - You may now build Hippogryphs from the Ancient of the Wind.
+Archers can be mounted on Hippogryphs to create Hippogryph Riders,
+combining the ranged attack of the Archer with the fast airborne
+maneuverability of the Hippogryph.
+}
+
+STRING 258
+{
+Archimonde
+}
+
+STRING 259
+{
+At last! The way to the World Tree is clear! Witness the end, you mortals! The final hour has come!
+}
+
+STRING 262
+{
+Huntress
+}
+
+STRING 263
+{
+Priestess, the undead have constructed a new settlement. They are mustering new forces to send at us!
+}
+
+STRING 264
+{
+Huntress
+}
+
+STRING 265
+{
+Priestess, the undead have constructed a final settlement! They are mustering new forces with every passing moment!
+}
+
+STRING 272
+{
+|cffffcc00MAIN QUEST|r
+Delay Archimonde
+  - Delay Archimonde for 45 minutes
+  - Archimonde must not reach the mountain summit
+}
+
+STRING 273
+{
+Furion Stormrage
+}
+
+STRING 274
+{
+To arms, my brethren! To arms, brave orcs and humans! Twilight falls -- and the enemy awaits!
+}
+
+STRING 275
+{
+Furion Stormrage
+}
+
+STRING 276
+{
+To arms, my brethren! To arms, brave orcs and humans! Twilight falls -- and the enemy awaits!
+}
+
+STRING 279
+{
+Furion Stormrage
+}
+
+STRING 280
+{
+Archimonde's victory here has made him overconfident. He will not see the trap that I laid for him until it is too late.
+}
+
+STRING 283
+{
+ (Fake Target)
+}
+
+STRING 284
+{
+Littler Timmy
+}
+
+STRING 285
+{
+Jaina Proudmoore
+}
+
+STRING 286
+{
+The undead are attacking! Send help!
+}
+
+STRING 287
+{
+Jaina Proudmoore
+}
+
+STRING 288
+{
+We're getting swamped here! We could use some backup!
+}
+
+STRING 289
+{
+Jaina Proudmoore
+}
+
+STRING 290
+{
+The undead have breached our defenses! We need help immediately!
+}
+
+STRING 291
+{
+Thrall
+}
+
+STRING 292
+{
+We're under attack! Send reinforcements quickly!
+}
+
+STRING 293
+{
+Thrall
+}
+
+STRING 294
+{
+We need help immediately!
+}
+
+STRING 295
+{
+Thrall
+}
+
+STRING 296
+{
+Fight on, my warriors! They cannot stop the Horde!
+}
+
+STRING 297
+{
+Shandris Feathermoon
+}
+
+STRING 298
+{
+Priestess Tyrande, the undead have begun to construct a new settlement! It won't be long before they start attacking our allies!
+}
+
+STRING 299
+{
+Little Timmy
+}
+
+STRING 300
+{
+(Low Fake Target)
+}
+
+STRING 301
+{
+(High Fake Target)
+}
+
+STRING 302
+{
+ (Trolls Only)
+}
+

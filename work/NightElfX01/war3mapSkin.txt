@@ -1,0 +1,3 @@
+[CustomSkin]
+ScoreScreenPlayerOrc=UI\Glues\ScoreScreen\scorescreen-player-naga.tga
+

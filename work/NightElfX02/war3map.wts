@@ -1,0 +1,661 @@
+﻿STRING 1
+{
+NightElfX02
+}
+
+STRING 2
+{
+1
+}
+
+STRING 3
+{
+Chapter Two: The Broken Isles
+}
+
+STRING 4
+{
+Blizzard Entertainment
+}
+
+STRING 7
+{
+Force 1
+}
+
+STRING 8
+{
+Chapter Two
+}
+
+STRING 9
+{
+The Broken Isles
+}
+
+STRING 10
+{
+The next day, on the shores of a mysterious island chain, Maiev and her Watchers inspect some ancient, yet strangely familiar ruins.
+}
+
+STRING 11
+{
+Force 2
+}
+
+STRING 13
+{
+Maiev Shadowsong
+}
+
+STRING 14
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Maiev02.mp3
+{
+I suspected as much. These islands must have been formed only recently.
+}
+
+STRING 17
+{
+Defeat!
+}
+
+STRING 18
+{
+Locate Illidan
+}
+
+STRING 19
+{
+Illidan and his forces are based somewhere on this chain of islands. Hunt him down and put an end to this chase.
+}
+
+STRING 20
+{
+Locate Illidan
+}
+
+STRING 21
+{
+|cffffcc00MAIN QUEST|r
+Locate Illidan
+  - Locate Illidan
+}
+
+STRING 22
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Locate Illidan
+}
+
+STRING 23
+{
+Silence the Ghosts
+}
+
+STRING 24
+{
+Drak'thul is haunted by the ghosts of his betrayed comrades. You must find and destroy the pits from which the ghosts spawn. Within one of them lies the artifact that first raised the Orc remains. Bring the artifact to Drak'thul to show him that the curse has ended. 
+}
+
+STRING 25
+{
+Destroy all three Summoning Pits
+}
+
+STRING 26
+{
+Return the Skeletal Artifact to Drak'thul
+}
+
+STRING 27
+{
+|cffffcc00OPTIONAL QUEST|r
+Silence the Ghosts
+  - Destroy all three Summoning Pits
+  - Return the Skeletal Artifact to Drak'thul
+}
+
+STRING 28
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Silence the Ghosts
+  - |cff808080Destroy all three Summoning Pits (Completed)|r
+  - Return the Skeletal Artifact to Drak'thul
+}
+
+STRING 29
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Silence the Ghosts
+}
+
+STRING 30
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 32
+{
+|cff32cd32HINT|r - Don't do drugs.
+}
+
+STRING 34
+{
+Defeat!
+}
+
+STRING 36
+{
+Hermit
+}
+
+STRING 37
+{
+Force 3
+}
+
+STRING 42
+{
+Maiev Shadowsong
+}
+
+STRING 43
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Maiev04.mp3
+{
+The ruins all around us, Naisha... I recognize them.
+}
+
+STRING 44
+{
+Maiev Shadowsong
+}
+
+STRING 45
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Maiev05.mp3
+{
+This was once the great city of Suramar, built before our civilization was blasted beneath the sea ten thousand years ago.
+}
+
+STRING 48
+{
+Maiev Shadowsong
+}
+
+STRING 49
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Maiev07.mp3
+{
+Perhaps, though there are few powers left in the world capable of raising islands from the deeps. Regardless, it's a mystery we'll have to solve later. We'd best head inland and set up a base camp. Once we're situated, we'll pick up Illidan's trail.
+}
+
+STRING 57
+{
+Naisha
+}
+
+STRING 58
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Naisha06.mp3
+{
+But how could... Are you suggesting that these islands were somehow raised from the seafloor?
+}
+
+STRING 59
+{
+Naisha
+}
+
+STRING 60
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Naisha03.mp3
+{
+What makes you say that?
+}
+
+STRING 61
+{
+Naisha
+}
+
+STRING 62
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Naisha01.mp3
+{
+Mistress, we followed Illidan's course due east as you asked, but these strange islands do not appear on any of our maps.
+}
+
+STRING 63
+{
+Drak'thul
+}
+
+STRING 64
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Drakthul25.mp3
+{
+Rest easy, stranger. This old wanderer has no quarrel with you or your kin. I am Drak'thul, once a powerful warlock of the Stormreaver clan. Now I am the last of my kind.
+}
+
+STRING 65
+{
+Maiev Shadowsong
+}
+
+STRING 66
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Maiev24.mp3
+{
+An orc! I smell the stench of demons about him.
+}
+
+STRING 67
+{
+Maiev Shadowsong
+}
+
+STRING 68
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Maiev26.mp3
+{
+What are you doing here?
+}
+
+STRING 69
+{
+Drak'thul
+}
+
+STRING 70
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Drakthul27.mp3
+{
+Your pardon, lady, but I am hunted by restless ghosts. They've chased me day and night for nearly twenty years. Perhaps if you silence them for me, I will tell you my tale.
+}
+
+STRING 71
+{
+Maiev Shadowsong
+}
+
+STRING 72
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Maiev28.mp3
+{
+I'll consider it.
+}
+
+STRING 74
+{
+Jungle Beast
+}
+
+STRING 75
+{
+Summon Jungle Beast
+}
+
+STRING 76
+{
+Medium melee unit. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 77
+{
+|cff32cd32HINT|r - Naval vessels can be purchased from Goblin Shipyards.
+}
+
+STRING 78
+{
+Naga Guardians
+}
+
+STRING 79
+{
+The Betrayer has escaped into the Tomb of Sargeras, and you must follow. To gain entrance, you must eliminate Illidan's Naga minions from the Tomb's entrance. 
+}
+
+STRING 80
+{
+Kill the Naga guarding the Tomb of Sargeras
+}
+
+STRING 81
+{
+|cffffcc00MAIN QUEST|r
+Naga Guardians
+  - Kill the Naga guarding the Tomb of Sargeras
+}
+
+STRING 97
+{
+Maiev Shadowsong
+}
+
+STRING 98
+{
+Great trees once stood in this place, twin aspens called the Boughs of Azshara. To look upon them was to know true peace, true fulfillment. Now they are gone, along with the hopes and dreams of a generation.
+}
+
+STRING 99
+{
+Maiev Shadowsong
+}
+
+STRING 100
+{
+I remember this place. It was once the great Library of Izal-Shurah. There is no knowledge left here, only nightmares and the shadows of regret.
+}
+
+STRING 107
+{
+Maiev Shadowsong
+}
+
+STRING 108
+{
+Naga! Careful, sisters. There's no telling what the creatures have in store for us.
+}
+
+STRING 109
+{
+Maiev Shadowsong
+}
+
+STRING 110
+{
+More naga! Slay them, sisters!
+}
+
+STRING 113
+{
+Maiev Shadowsong
+}
+
+STRING 114
+{
+Naga! Their presence here is a sacrilege to nature!
+}
+
+STRING 115
+{
+Naga Myrmidon
+}
+
+STRING 116
+{
+Night elves! Kill them all in the empress' name!
+}
+
+STRING 117
+{
+Naga Myrmidon
+}
+
+STRING 118
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Naga16.mp3
+{
+Land-walkers! Destroy them quickly!
+}
+
+STRING 119
+{
+Maiev Shadowsong
+}
+
+STRING 120
+{
+More of the vile serpents! Let none survive!
+}
+
+STRING 121
+{
+Naga
+}
+
+STRING 122
+{
+Ash-thero-sauguine! Ba'anthalso-dorei!
+}
+
+STRING 123
+{
+Maiev Shadowsong
+}
+
+STRING 124
+{
+There--those must be the ghosts the old orc spoke of! They seem to be re-living their last battle. They're every bit as brutal and bloodthirsty as they were in life.
+}
+
+STRING 129
+{
+Maiev Shadowsong
+}
+
+STRING 130
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Maiev30.mp3
+{
+The dead will trouble you no more, old orc.
+}
+
+STRING 131
+{
+Drak'thul
+}
+
+STRING 132
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Drakthul31.mp3
+{
+Thank you, stranger. Now, hear my tale. Nearly twenty years ago, the great warlock Gul'dan raised these islands from the deeps. He sought to unearth an ancient vault that held the remains of the Dark Titan.
+}
+
+STRING 133
+{
+Maiev Shadowsong
+}
+
+STRING 134
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Maiev32.mp3
+{
+Sargeras! You speak of the Legion's creator!
+}
+
+STRING 135
+{
+Drak'thul
+}
+
+STRING 136
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Drakthul33.mp3
+{
+The same. After Sargeras' defeat, ages ago, his remains were locked away in an undersea tomb. Gul'dan believed that opening the tomb would grant him the Dark Titan's power. For his pride, he and the rest of our clan were torn to shreds by crazed demons.
+}
+
+STRING 137
+{
+Maiev Shadowsong
+}
+
+STRING 138
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Maiev35.mp3
+{
+Your tale is as intriguing as it is dire, Drak'thul. It's a shame your ghosts lie silent. You deserve far worse than their company for what you set loose in this place.
+}
+
+STRING 139
+{
+Drak'thul
+}
+
+STRING 140
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Drakthul34.mp3
+{
+I have wandered these isles ever since, haunted by the ghosts of my slaughtered comrades.
+}
+
+STRING 163
+{
+Illidan Stormrage
+}
+
+STRING 164
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Illidan45.mp3
+{
+At last! The Tomb of Sargeras is found!
+}
+
+STRING 167
+{
+Illidan Stormrage
+}
+
+STRING 168
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Illidan45A.mp3
+{
+You, my trusted servants, must remain here and guard the entrance. If that wretched warden managed to reach this island, she'll certainly try to follow us.
+}
+
+STRING 169
+{
+Naisha
+}
+
+STRING 170
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Naisha46.mp3
+{
+Illidan! I knew we'd find him! We'll have to fight our way through the naga's defenses in order to follow him!
+}
+
+STRING 171
+{
+Maiev Shadowsong
+}
+
+STRING 172
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Maiev47.mp3
+{
+We locked Illidan beneath the earth long ago. I intend to do so again.
+}
+
+STRING 173
+{
+Maiev Shadowsong
+}
+
+STRING 174
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Maiev48.mp3
+{
+Now quickly, my sisters! Illidan must be stopped at all costs!
+}
+
+STRING 175
+{
+Summoning Pit
+}
+
+STRING 176
+{
+A blackened pit that spawns Skeletal Orc warriors.
+}
+
+STRING 177
+{
+Build Summoning Pit
+}
+
+STRING 178
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Naga Guardians
+}
+
+STRING 180
+{
+Force 4
+}
+
+STRING 190
+// Sound\Dialogue\NightElfExpCamp\NightElf02x\S02Maiev08.mp3
+{
+Here, sisters. Let's establish a base so we can continue our hunt for Illidan.
+}
+
+STRING 216
+{
+Drak'thul's Hut
+}
+
+STRING 217
+{
+Build Mur'gul Hut
+}
+
+STRING 218
+{
+Mur'gul Hut
+}
+
+STRING 219
+{
+|cffffcc00SECRET FOUND|r
+Hidden Tomes of the Ancients
+}
+
+STRING 228
+{
+|cff87ceebNEW BUILDING AVAILABLE|r
+Ancient of Wonders - You may now purchase items from the Ancient of Wonders.
+}
+
+STRING 229
+{
+|cff32cd32HINT|r - Any unit can hire troops from Mercenary Camps and Goblin Shipyards.
+}
+
+STRING 230
+{
+|cff87ceebNEW ITEM RECEIVED|r - Robe of the Magi
+}
+
+STRING 231
+{
+Illidan's Naga
+}
+
+STRING 232
+{
+Watchers
+}
+
+STRING 233
+{
+Blackrock Clan
+}
+
+STRING 234
+{
+Stormreaver Clan
+}
+
+STRING 235
+{
+Twilight's Hammer Clan
+}
+
+STRING 236
+{
+|cff32cd32HINT|r - Naval vessels can be purchased from Goblin Shipyards.
+}
+
+STRING 237
+{
+|cff32cd32HINT|r - Naval vessels can be purchased from Goblin Shipyards.
+}
+
+STRING 238
+{
+Naga Strikeforce
+}
+
+STRING 239
+{
+Illidan's Escort
+}
+
+STRING 240
+{
+(Diagonal 2 WITH PATHING)
+}
+

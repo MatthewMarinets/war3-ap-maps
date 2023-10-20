@@ -1,0 +1,931 @@
+﻿STRING 0
+{
+Arthas
+}
+
+STRING 1
+{
+What the hell is that?
+}
+
+STRING 2
+{
+Acolyte
+}
+
+STRING 3
+{
+This crude contraption will allow you to transport the remains of our master.
+}
+
+STRING 4
+{
+Undead02
+}
+
+STRING 5
+{
+Arthas
+}
+
+STRING 6
+{
+Can you not simply raise the remains when we find them?
+}
+
+STRING 7
+{
+Acolyte
+}
+
+STRING 8
+{
+Pardon, Lord, but a being of Kel'Thuzad's power can only be reanimated at a nexus of powerful ley-energies, and there are no such places in this land.
+}
+
+STRING 9
+{
+Arthas
+}
+
+STRING 10
+{
+Very well, then. Let's move out.
+}
+
+STRING 11
+{
+Gavinrad the Dire
+}
+
+STRING 12
+{
+Arthas! Stop this madness before it's too late!
+}
+
+STRING 13
+{
+Arthas
+}
+
+STRING 14
+{
+Stand aside, brother. I've come to collect some old bones, and I don't wish to be disturbed.
+}
+
+STRING 15
+{
+Establish a Base
+}
+
+STRING 17
+{
+Champions of Light
+}
+
+STRING 18
+{
+Gavinrad the Dire
+}
+
+STRING 19
+{
+I can't believe that we ever called you brother! I knew it was a mistake to accept a spoiled prince into our order! You've made a mockery of the Silver Hand!
+}
+
+STRING 20
+{
+Tichondrius
+}
+
+STRING 23
+{
+Tichondrius
+}
+
+STRING 24
+{
+It took you long enough. These remains are badly decomposed. They will never survive the trip to Quel'Thalas.
+}
+
+STRING 25
+{
+Arthas
+}
+
+STRING 26
+{
+Quel'Thalas?
+}
+
+STRING 27
+{
+1
+}
+
+STRING 28
+{
+Tichondrius
+}
+
+STRING 29
+{
+Chapter Two: Digging up the Dead
+}
+
+STRING 30
+{
+Yes. Only the energies of the high elves' sunwell can bring Kel'Thuzad back to life.
+}
+
+STRING 31
+{
+Arthas
+}
+
+STRING 32
+{
+Then what must be done?
+}
+
+STRING 33
+{
+Tichondrius
+}
+
+STRING 34
+{
+You must steal a very special urn from the paladins' keeping. Place the necromancer's remains within it, and he will be well protected for the journey.
+}
+
+STRING 35
+{
+Arthas
+}
+
+STRING 36
+{
+As you wish.
+}
+
+STRING 38
+{
+Sage Truthbearer
+}
+
+STRING 40
+{
+The Silver Hand
+}
+
+STRING 42
+{
+|cffffcc00MAIN QUEST|r
+Recover Remains
+  - Kill the Paladin guarding the graveyard
+  - Bring Arthas to Kel'Thuzad's tomb
+  - Arthas must survive
+}
+
+STRING 44
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Recover Remains
+  - |cff808080Kill the Paladin guarding the graveyard (Completed)|r
+  - Bring Arthas to Kel'Thuzad's tomb
+  - Arthas must survive
+}
+
+STRING 45
+{
+Arthas
+}
+
+STRING 46
+{
+The Paladins maintain a strong hold over the surrounding area. You must establish a base and bolster your forces. Only aided by Ghouls and Meat Wagons will you be able to break through the Paladins' defenses. 
+}
+
+STRING 48
+{
+Claim the Urn
+}
+
+STRING 49
+{
+The special Urn required to hold Kel'Thuzad's remains is also guarded by the Knights of the Silver Hand. You must slay the remaining Paladins and recover the Urn before your journey to Quel'Thalas can begin.
+}
+
+STRING 51
+{
+What the hell is that?
+}
+
+STRING 52
+{
+Kill the Paladin
+}
+
+STRING 53
+{
+Recover Remains
+}
+
+STRING 54
+{
+Ballador the Bright
+}
+
+STRING 55
+{
+Bring Arthas to Kel'Thuzad's tomb
+}
+
+STRING 56
+{
+Arthas
+}
+
+STRING 57
+{
+Come along now, necromancer. The powers that you once served have need of you again.
+}
+
+STRING 60
+{
+Blizzard Entertainment
+}
+
+STRING 61
+{
+Chapter Two
+}
+
+STRING 63
+{
+You must recover the horribly decayed remains of Kel'Thuzad. The Necromancer's remains lie within a guarded cemetery, watched over by the stoic Knights of the Silver Hand. The holy knights must be dealt with before the remains can be exhumed.
+}
+
+STRING 64
+{
+Uther the Lightbringer
+}
+
+STRING 65
+{
+Your father ruled this land for seventy years, and you've ground it to dust in a matter of days.
+}
+
+STRING 66
+{
+Arthas
+}
+
+STRING 67
+{
+Very dramatic, Uther. Give me the urn, and I'll make sure you die quickly.
+}
+
+STRING 68
+{
+Uther the Lightbringer
+}
+
+STRING 69
+{
+The urn holds your father's ashes, Arthas! What, were you hoping to piss on them one last time before you left his kingdom to rot?
+}
+
+STRING 70
+{
+Arthas
+}
+
+STRING 71
+{
+I didn't know what it held. Nor does it matter. I'll take what I came for one way or another.
+}
+
+STRING 73
+{
+Ballador the Bright
+}
+
+STRING 74
+{
+Paladins Remaining
+}
+
+STRING 75
+{
+Paladins To Kill
+}
+
+STRING 76
+{
+Vile betrayer! You are not fit enough to even carry your father's name! Why Uther ever vouched for you is beyond me. You've stripped him of his honor by casting yours to the winds! You deserve a gruesome death, boy!
+}
+
+STRING 77
+{
+Sage Truthbearer
+}
+
+STRING 78
+{
+Light have mercy on you! Your betrayal has broken Uther's heart, boy. He would have given his life for yours in a second, and this is how you repay his loyalty?
+}
+
+STRING 82
+{
+Digging up the Dead
+}
+
+STRING 83
+{
+The next morning, on the outskirts of Andorhal...
+}
+
+STRING 84
+{
+Sasquatch
+}
+
+STRING 85
+{
+Female Villager
+}
+
+STRING 86
+{
+Male Villager
+}
+
+STRING 87
+{
+Kel'Thuzad
+}
+
+STRING 89
+{
+Joseph
+}
+
+STRING 90
+{
+|cff808080<Translated to English>|r
+What the hell is that!?
+}
+
+STRING 91
+{
+Uther the Lightbringer
+}
+
+STRING 92
+{
+I dearly hope that there's a special place in hell waiting for you, Arthas.
+}
+
+STRING 93
+{
+Necromancer
+}
+
+STRING 94
+{
+Elder Sasquatch
+}
+
+STRING 95
+{
+|cff808080<Translated to English>|r
+I don't know, but it can't be good. We should destroy them before they tell others about our secret society of Sasquatch, which lives out here in these ancient woods. None may know the incredible secrets that our race has withheld from the rest of the world....
+}
+
+STRING 97
+{
+Blight is created when undead structures are summoned. Buildings can only be summoned on to blight with the exception of the Necropolis.
+}
+
+STRING 99
+{
+Villager Child
+}
+
+STRING 106
+{
+|cffffcc00SECRET FOUND|r
+Pandaren relaxation area.
+}
+
+STRING 109
+{
+Kill the Paladins
+}
+
+STRING 110
+{
+Recover the Urn
+}
+
+STRING 113
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Recover Remains
+}
+
+STRING 114
+{
+Ai
+}
+
+STRING 117
+{
+Kenshin
+}
+
+STRING 118
+{
+|cff32CD32HINT|r - Select an Acolyte and tell him to build a Haunted Gold Mine.
+}
+
+STRING 119
+{
+Garak
+}
+
+STRING 122
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Recover Remains
+}
+
+STRING 123
+{
+|cffffcc00MAIN QUEST|r
+Claim the Urn
+  - Kill the Paladins
+  - Recover the Urn
+}
+
+STRING 133
+{
+Build a Necropolis
+}
+
+STRING 135
+{
+Haunt a gold mine
+}
+
+STRING 136
+{
+|cff32CD32HINT|r - Build Graveyards near trees so that Ghouls can harvest lumber faster. 
+}
+
+STRING 138
+{
+Build a Crypt
+}
+
+STRING 139
+{
+Build 3 Ziggurats
+}
+
+STRING 140
+{
+Build a Graveyard
+}
+
+STRING 147
+{
+|cff32CD32HINT|r - Once a building begins summoning in, the Acolyte can move on to other tasks.
+}
+
+STRING 148
+{
+|cff32CD32HINT|r - Build Ghouls from the Crypt for harvesting lumber, and as your basic attack unit.
+}
+
+STRING 149
+{
+|cff32CD32HINT|r - Acolytes can now harvest gold from the Haunted Gold Mine.
+}
+
+STRING 152
+{
+Necromancer
+}
+
+STRING 153
+{
+Summoning a graveyard will supply the undead army with fresh corpses.
+}
+
+STRING 156
+{
+|cffffcc00MAIN QUEST|r
+Claim the Urn
+  - Kill the Paladins
+  - Recover the Urn
+}
+
+STRING 157
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Claim the Urn
+  - |cff808080Kill the Paladins (Completed)|r
+  - Recover the Urn
+}
+
+STRING 160
+{
+Necromancer
+}
+
+STRING 161
+{
+Ghouls harvest lumber for the undead army.
+}
+
+STRING 165
+{
+Kel'Thuzad
+}
+
+STRING 166
+{
+Told you my death would mean little.
+}
+
+STRING 167
+{
+Arthas
+}
+
+STRING 168
+{
+What the... Am I hearing ghosts now?
+}
+
+STRING 169
+{
+Kel'Thuzad
+}
+
+STRING 170
+{
+It is I, Kel'Thuzad. I was right about you, Prince Arthas.
+}
+
+STRING 173
+{
+Necromancer
+}
+
+STRING 174
+{
+When standing on blight, wounded undead units regenerate faster.
+}
+
+STRING 179
+{
+Recover Remains
+}
+
+STRING 183
+{
+You must recover the horribly decayed remains of Kel'Thuzad. The Necromancer's remains lie within a guarded cemetery, watched over by the stoic Knights of the Silver Hand. The holy knights must be dealt with before the remains can be exhumed.
+}
+
+STRING 184
+{
+Kill the Paladin
+}
+
+STRING 185
+{
+Bring Arthas to Kel'Thuzad's tomb
+}
+
+STRING 186
+{
+Necromancer
+}
+
+STRING 187
+{
+The undead must haunt a gold mine before the acolytes can begin harvesting gold.
+}
+
+STRING 190
+{
+Claim the Urn
+}
+
+STRING 191
+{
+The special Urn required to hold Kel'Thuzad's remains is also guarded by the Knights of the Silver Hand. You must slay the remaining Paladins and recover the Urn before your journey to Quel'Thalas can begin.
+}
+
+STRING 192
+{
+Kill the Paladins
+}
+
+STRING 193
+{
+Recover the Urn
+}
+
+STRING 194
+{
+Establish a Base
+}
+
+STRING 195
+{
+The Paladins maintain a strong hold over the surrounding area. You must establish a base and bolster your forces. Only aided by Ghouls and Meat Wagons will you be able to break through the Paladins' defenses. 
+}
+
+STRING 196
+{
+Build a Necropolis
+}
+
+STRING 197
+{
+Haunt a gold mine
+}
+
+STRING 198
+{
+Build a Crypt
+}
+
+STRING 199
+{
+Build 3 Ziggurats
+}
+
+STRING 200
+{
+Build a Graveyard
+}
+
+STRING 201
+{
+Tichondrius
+}
+
+STRING 202
+{
+I must feast on souls!
+}
+
+STRING 203
+{
+Tichondrius
+}
+
+STRING 204
+{
+I grow tired of waiting.
+}
+
+STRING 442
+{
+Hebon
+}
+
+STRING 443
+{
+Helena
+}
+
+STRING 444
+{
+Balcor
+}
+
+STRING 445
+{
+Dirk
+}
+
+STRING 446
+{
+Liana
+}
+
+STRING 447
+{
+Defeat!
+}
+
+STRING 448
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 449
+{
+|cffffcc00MISSION FAILED|r
+Your units have been killed.
+}
+
+STRING 450
+{
+Defeat!
+}
+
+STRING 451
+{
+|cffffcc00MISSION FAILED|r
+Arthas has been slain.
+}
+
+STRING 452
+{
+Defeat!
+}
+
+STRING 456
+{
+Defeat!
+}
+
+STRING 458
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Claim the Urn
+  - |cff808080Kill the Paladins (Completed)|r
+  - |cff808080Recover the Urn (Completed)|r
+}
+
+STRING 465
+{
+|cff32CD32HINT|r - Build a Crypt to create Ghouls.
+}
+
+STRING 497
+{
+|cff32CD32HINT|r - Build 3 Ziggurats to increase your food and allow you to build more units.
+}
+
+STRING 512
+{
+Champions of Truth
+}
+
+STRING 513
+{
+Undead Scourge
+}
+
+STRING 514
+{
+Champions of Peace
+}
+
+STRING 543
+{
+|cff32CD32HINT|r - Summon a Necropolis to create Blight for other buildings to be summoned upon.
+}
+
+STRING 589
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Build a Base
+}
+
+STRING 590
+{
+|cffffcc00MAIN QUEST|r
+Establish a Base
+}
+
+STRING 604
+{
+  - |cff808080Summon a Haunted Gold Mine|r
+}
+
+STRING 605
+{
+  - Summon a Haunted Gold Mine
+}
+
+STRING 616
+{
+  - |cff808080Build a Necropolis|r
+}
+
+STRING 617
+{
+  - Build a Necropolis
+}
+
+STRING 630
+{
+  - |cff808080Build a Crypt|r
+}
+
+STRING 631
+{
+  - Build a Crypt
+}
+
+STRING 644
+{
+  - |cff808080Build a Graveyard|r
+}
+
+STRING 645
+{
+  - Build a Graveyard
+}
+
+STRING 657
+{
+  - |cff808080Build 3 Ziggurats|r
+}
+
+STRING 658
+{
+  - Build 3 Ziggurats
+}
+
+STRING 661
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Build a Base
+}
+
+STRING 662
+{
+Arthas must survive
+}
+
+STRING 663
+{
+Arthas must survive
+}
+
+STRING 665
+{
+Paladins
+}
+
+STRING 700
+{
+Arthas
+}
+
+STRING 701
+{
+We may never know, Uther. I intend to live forever.
+}
+
+STRING 702
+{
+Tichondrius
+}
+
+STRING 703
+{
+Excellent work. Now, your journey to Quel'Thalas can begin.
+}
+
+STRING 704
+{
+Kel'Thuzad
+}
+
+STRING 705
+{
+Tell him nothing! Only you can hear me. The dreadlords cannot be trusted. They are the Lich King's jailors! I will tell you all... when I walk this world again.
+}
+
+STRING 706
+{
+|cff87ceebNEW UNIT ACQUIRED|r
+Meat Wagon - Meat Wagons can be used to store corpses for later use.
+}
+
+STRING 707
+{
+|cff32CD32HINT|r - Meat Wagons are the siege weapons of the Undead. Use them to quickly destroy buildings.
+}
+
+STRING 708
+{
+|cffffcc00MAIN QUEST|r
+Recover Remains
+  - Kill the Paladin guarding the graveyard
+  - Bring Arthas to Kel'Thuzad's tomb
+  - Arthas must survive
+}
+

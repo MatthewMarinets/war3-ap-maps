@@ -1,0 +1,1190 @@
+﻿STRING 6
+{
+Art Director
+
+}
+
+STRING 10
+{
+Player 1
+}
+
+STRING 11
+{
+Force 1
+}
+
+STRING 378
+{
+WarCraft III Credits
+}
+
+STRING 381
+{
+Blizzard Entertainment
+}
+
+STRING 389
+{
+Current player has completed the singleplayer campaign.
+}
+
+STRING 390
+{
+Current player has completed the singleplayer campaign on Hard difficulty.
+}
+
+STRING 434
+{
+Team Lead
+
+}
+
+STRING 435
+{
+Frank Pearce
+
+}
+
+STRING 436
+{
+Art Director
+
+}
+
+STRING 437
+{
+Samwise Didier
+
+
+}
+
+STRING 438
+{
+Lead Designer
+}
+
+STRING 439
+{
+Rob Pardo
+
+
+}
+
+STRING 440
+{
+Lead Technical Artist
+}
+
+STRING 441
+{
+Rob McNaughton
+
+
+}
+
+STRING 442
+{
+Producer
+
+}
+
+STRING 443
+{
+Chris Sigaty
+
+
+}
+
+STRING 444
+{
+Technology Lead
+}
+
+STRING 445
+{
+Jay Patel
+
+}
+
+STRING 446
+{
+Programming
+}
+
+STRING 447
+{
+Andy Bond, Carl Chimes, Jeff Chow, Alan Dabiri, Bob Fitch, Monte Krol, Dave Lawrence, Graham Madarasz, Collin Murray, Jay Patel, Frank Pearce, Andrea Pessino, Brett Wood
+
+}
+
+STRING 448
+{
+Battle.net Programming
+}
+
+STRING 449
+{
+James Anhalt, Robert Bridenbecker, Brian Fitzgerald, Tony Tribelli, Matthew Versluys
+
+}
+
+STRING 450
+{
+Additional Programming
+}
+
+STRING 451
+{
+Robert Barris, John Cash, Brian Fitzgerald, Mike Heiberg, Sam Lantinga, Mike Morhaime, John Stiles, Tim Truesdale, Matthew Versluys, Jeremy Wood
+
+}
+
+STRING 452
+{
+Macintosh Programming
+}
+
+STRING 453
+{
+John Stiles
+
+}
+
+STRING 454
+{
+Additional Macintosh Programming
+}
+
+STRING 455
+{
+Robert Barris, John Mikros, Brett Wood
+
+}
+
+STRING 456
+{
+Artists
+}
+
+STRING 457
+{
+Dave Berggren, Samwise Didier, Allen Dilling, Trevor Jacobs, Roman Kenney, Rob McNaughton, Micky Neilson, Matt Oursbourn, Ted Park, Stu Rose, Ru Weerasuriya
+
+}
+
+STRING 458
+{
+Additional Art
+}
+
+STRING 459
+{
+Kevin Beardslee, Adam Byrne, Brandon Idol, Kyle Harrison, Eric Henze, Brian Hsu, Solomon Lee, Justin Thavirat
+
+}
+
+STRING 460
+{
+Senior Designer
+}
+
+STRING 461
+{
+Allen Adham
+
+}
+
+STRING 462
+{
+Writer & Creative Director
+
+}
+
+STRING 463
+{
+Chris Metzen
+
+}
+
+STRING 464
+{
+Campaign Design & Layout
+}
+
+STRING 465
+{
+Tim Campbell, David Fried, Dave Hale, Michael Heiberg, Scott Mercer, Matt Morris, Rob Pardo, Dean Shipley
+
+}
+
+STRING 466
+{
+Story Concept
+}
+
+STRING 467
+{
+Samwise Didier, Chris Metzen, Rob Pardo
+
+}
+
+STRING 468
+{
+Script & Text Editing
+}
+
+STRING 469
+{
+Micky Neilson, Susan Sams, Ru Weerasuriya
+
+}
+
+STRING 470
+{
+Associate Producers
+}
+
+STRING 471
+{
+Frank Gilson, Chris Millar
+
+}
+
+STRING 472
+{
+Cinematic Director
+}
+
+STRING 473
+{
+Nicholas S. Carpenter
+
+}
+
+STRING 474
+{
+Cinematic Executive Producer
+}
+
+STRING 475
+{
+Matt Samia
+
+}
+
+STRING 476
+{
+Cinematic Producer
+}
+
+STRING 477
+{
+Scott Abeyta
+
+}
+
+STRING 478
+{
+Cinematic Editor
+}
+
+STRING 479
+{
+Joeyray Hall
+
+}
+
+STRING 480
+{
+Cinematic Script Writers
+
+}
+
+STRING 481
+{
+Nicholas S. Carpenter, Chris Metzen
+
+}
+
+STRING 482
+{
+Cinematic Artists
+
+}
+
+STRING 483
+{
+Scott Abeyta, John Burnett, Nicholas S. Carpenter, John Chalfant, Jeff Chamberlain, Aaron Chan, Ben Dai, Joe Frayne, Jay Hathaway, Harley D. Huggins II, Jared Keller, Jon Lanz, James McCoy, Matthew Mead, Dennis Price, Matt Samia, Mark Skelton, Patrick Thomas, Seth Thompson, Ru Weerasuriya, Kenson Yu
+
+}
+
+STRING 484
+{
+Cinematic Technical Artists & Tools Development
+}
+
+STRING 485
+{
+Scott Abeyta, John Burnett, Jeff Chamberlain, Aaron Chan, Joe Frayne, Steeg Haskell, Jared Keller, Jon Lanz, Alen Lapidis
+}
+
+STRING 486
+{
+Additional Cinematic Work
+
+}
+
+STRING 487
+{
+Dan Burke, Paul Hormis, Brit Snyder, Tharyn Valavanis
+
+}
+
+STRING 488
+{
+Audio Director
+
+}
+
+STRING 489
+{
+Glenn Stafford
+
+}
+
+STRING 490
+{
+Music
+}
+
+STRING 491
+{
+Tracy W. Bush, Derek Duke, Jason Hayes, Glenn Stafford
+}
+
+STRING 492
+{
+Sound Design
+}
+
+STRING 493
+{
+Tracy W. Bush, Tami Donner Harrison, Derek Duke, Brian Farr, Glenn Stafford
+
+}
+
+STRING 494
+{
+Voice Direction & Internal Casting
+}
+
+STRING 495
+{
+Tracy W. Bush, Nicholas S. Carpenter, Tami Donner Harrison, Jason Hayes, Chris Metzen, Micky Neilson
+
+}
+
+STRING 496
+{
+Voice Editing
+}
+
+STRING 497
+{
+Tami Donner Harrison
+
+}
+
+STRING 498
+{
+Outside Voice Casting
+}
+
+STRING 499
+{
+Donald Paul Pemrick, Dean E. Fronk
+
+}
+
+STRING 500
+{
+Outside Voice Casting Assistants
+}
+
+STRING 501
+{
+Amanda Fenster, Greg Sacks
+
+}
+
+STRING 502
+{
+Voice Acting
+}
+
+STRING 503
+{
+Michael Barken, Richard Barnes, Michael Bradberry, Fredrick Bloggs, Tracy W. Bush, Piera Coppola, Jackson Daniels, Samwise Didier, Tami Donner Harrison, Derek Duke, Alex Dumas, Richard George, Carrie Gordon Lowrey, Michael McConnohie
+}
+
+STRING 504
+{
+Voice Acting
+}
+
+STRING 505
+{
+Michael Gough, Justin Gross, Tiffany Hayes, Thomas Jung, Matthew King, Monte Krol, Abe Lasser, Rob McNaughton, Chris Metzen, Lani Minella, Calab Moody, Bob Papenbrook, Gary Platner, Bill Roper, Stu Rose, Glenn Stafford, Kai Vilhelmsen, Ted Whitney
+}
+
+STRING 506
+{
+Additional Game Review
+}
+
+STRING 507
+{
+Allen Adham, Kevin Beardslee, Adam Byrne, Zach Callanan, Jeff Chamberlain, Samwise Didier, Eric Dodds, Bob Fitch, Geoff Fraizer, Eric Henze, Trevor Jacobs, Solomon Lee, Chris Millar, Mike Morhaime, Jamie Neveaux, Ted Park, Chris Sigaty, Ian Welke, Blaine Whittle, Beau Yarbrough
+}
+
+STRING 508
+{
+Multiplayer Maps
+}
+
+STRING 509
+{
+Andrew Brownell, Zach Callanan, Tim Campbell, Jeremy Cargilo, Eric Dodds, Dave Fried, Ron Frybarger, Dave Hale, Edward Hanes, Dana Jan, Derek Johnstone, Mike Kramer, Nicholas Lawson, Jonathan Mankin, Scott Mercer, Kaeo Milker, Matt Morris, Michael Nguyen, Nicholas Pisani, Dean Shipley, Evelyn Smith, John Yoo
+}
+
+STRING 510
+{
+Manual Development and Editing
+}
+
+STRING 511
+{
+Eli Catalan, Elliott Chin, Melissa Edwards, Dave Fried, Jason Hutchins, Scott Mercer, Chris Metzen, Susan Sams, Mikey Schaefer, Evelyn Smith, Peter Underwood
+
+}
+
+STRING 512
+{
+Manual Artwork
+}
+
+STRING 513
+{
+Samwise Didier, Chris Metzen, Ted Park, Ru Weerasuriya
+
+}
+
+STRING 542
+{
+Quality Assurance Management
+}
+
+STRING 543
+{
+Christopher Manley, Mark Moser, Ian Welke
+
+}
+
+STRING 544
+{
+QA Lead Tester
+}
+
+STRING 545
+{
+Ed Kang
+
+}
+
+STRING 546
+{
+QA Assistant Lead Tester
+}
+
+STRING 547
+{
+Kelly Chun
+
+}
+
+STRING 548
+{
+QA Technical Engineer
+}
+
+STRING 549
+{
+Evelyn Smith
+
+}
+
+STRING 550
+{
+QA Team Leads
+}
+
+STRING 551
+{
+Zach Allen, Michael Backus, Ilya Berelson, Zach Callanan, James Chadwick, Michael Chu, Les Douglas, Robert Foote, Ron Frybarger, Gary Gibson, Manny Gonzales, Ray Laubach, Dean Lee, Matt Lee, Brian Love, Jonathan Mankin, Sean McCrea, Michael Murphy, Justin Parker, Michael Schaefer, Emilio Segura, Dean Shimonishi, Stan Wang
+}
+
+STRING 552
+{
+Game Testers
+}
+
+STRING 553
+{
+Aaron Adams, Michael Barken, Andrew Brownell, Edward Bui, Jeremy Cargilo, Shane Cargilo, Charles Carter, Bryan Chen, Jack Chen, Michelle Elbert, Jason Fader, Christopher Fisher, Arthur Fong, Derek Johnstone, Dennis Lam, Jonas Laster
+}
+
+STRING 554
+{
+Game Testers
+}
+
+STRING 555
+{
+ Nicholas Lawson, Allen Lin, John Meyers, Kaeo Milker, Brian Mitchell, Danny Nguyen, Nick Pisani, William Roseman, Lloyd Tullues, Brian Urquhart, John Wick, Stephen Wong, John Yoo
+
+}
+
+STRING 556
+{
+Additional Testers
+}
+
+STRING 557
+{
+Jose Aello, Carlo Arellano, Ted Barken, Bo Bell, Jesse Blomberg, Jeanette Clausen, David Dooley, Mark Downie, Roger Eberhart, Tod Fay, Carlos Guerrero, Scott Hartin, Josh Hillborn, Kevin Jordan, Jeffrey Kaplan, Aaron Keller, Mark Kern, Joshua Kurtz
+}
+
+STRING 558
+{
+Additional Testers
+}
+
+STRING 559
+{
+Cameron Lamprecht, Twain Martin, Jeff Mclean, Matt Mocarski, Dan Moore, Bill Petras, David Ray, Joe Rumsey, Matt Sanders, Samuel Schrimsher, Jamin Shoulet, John Staats, Eric Strauss, Cosmo Taormina
+}
+
+STRING 560
+{
+Technical Support Management
+}
+
+STRING 561
+{
+Thor Biafore, John Schwartz
+
+}
+
+STRING 562
+{
+Online Support
+}
+
+STRING 563
+{
+Timothy Fox, Edward Hanes, Chad Jones, Mike Kramer, Alen Lapidis, David Nguyen, Michael Nguyen, Collin Smith, Martin Tande, Kenny Zigler
+}
+
+STRING 564
+{
+Technical Support
+}
+
+STRING 565
+{
+Geoff Goodman, Norman Harms, John Hsieh, Kris Nedrebo, Christopher Roberts, Richard Sanford, Adam Slack, Jason Stilwell
+
+}
+
+STRING 566
+{
+Support File Development & Editing
+}
+
+STRING 567
+{
+Michael Backus, Michael Chu, Edward Hanes, Edward Kang, Mike Kramer, Ray Laubach, Dean Lee, Jonathan Mankin, Collin Smith, Evelyn Smith, John Stiles
+
+}
+
+STRING 568
+{
+Technical Support Tools
+}
+
+STRING 569
+{
+David Nguyen
+
+}
+
+STRING 570
+{
+Localization & Macintosh Producer
+}
+
+STRING 571
+{
+Jason Hutchins
+}
+
+STRING 572
+{
+Globalization Producer
+}
+
+STRING 573
+{
+Flavie Gufflet
+}
+
+STRING 574
+{
+Localization Project Manager
+}
+
+STRING 575
+{
+Barry Kehoe
+}
+
+STRING 576
+{
+Localization Project Leads
+}
+
+STRING 577
+{
+Caitriona Finlay, David Hickey, Padraig McCaul
+}
+
+STRING 578
+{
+Localization Lead Engineer
+}
+
+STRING 579
+{
+Damien Monaghan
+}
+
+STRING 580
+{
+Localization Engineers
+}
+
+STRING 581
+{
+Attila Edelenyi, Jason King, Monte Krol, Brendan O' Mahony, Stuart Nolan
+
+}
+
+STRING 582
+{
+Localization QA Leads
+}
+
+STRING 583
+{
+Jesus Baquedano Ferrer, David Hickey
+
+}
+
+STRING 584
+{
+Localization QA
+}
+
+STRING 585
+{
+Francis" Frux" Courchinoux, Nelly Dietrich, Andrew Hagger, Franchesco Musso, J.C. Pastor "pAsh"
+
+}
+
+STRING 586
+{
+International Web Teams
+}
+
+STRING 587
+{
+Sebastien Gernault, Steve Martin, Georges Martins, Stefanie Pranz, Myriam Santoso
+
+}
+
+STRING 588
+{
+Business Development
+}
+
+STRING 589
+{
+Paul W. Sams
+
+}
+
+STRING 590
+{
+Additional Business Development & Operations
+}
+
+STRING 591
+{
+Elaine Di Iorio, Melissa Edwards, Isaac Matarasso
+
+}
+
+STRING 592
+{
+Battle.net Producer
+}
+
+STRING 593
+{
+John Lagrave
+
+}
+
+STRING 594
+{
+Battle.net Network Engineers
+}
+
+STRING 595
+{
+Adrian Luff, Hung Nguyen
+
+}
+
+STRING 596
+{
+Information Technologies
+}
+
+STRING 597
+{
+Mike Hale, Kris Mackey, Kirk Mahony, Isaac Matarasso, Hung Nguyen, Jeremy Smith, Robert Van Dusen
+
+}
+
+STRING 598
+{
+Office Administration
+}
+
+STRING 599
+{
+Christina Cade, Jamie Neveaux, Lisa Schoner
+
+}
+
+STRING 600
+{
+Financial Management
+}
+
+STRING 601
+{
+David Gee, Paul W. Sams
+
+}
+
+STRING 602
+{
+Public Relations
+}
+
+STRING 603
+{
+Lisa Bucek, Susan Sams, Gil Shif, Beau Yarbrough
+
+}
+
+STRING 604
+{
+Web Team
+}
+
+STRING 605
+{
+Elaine Di Iorio, Geoff Fraizer, Mike Hein, Ted Park, Blaine Whittle
+
+}
+
+STRING 606
+{
+Legal Counsel
+}
+
+STRING 607
+{
+Kevin Crook, Will Glenn (in loving memory), Bob Marafioti, Rob Rigole, Eric Roeder, Patrick Sweeney
+
+}
+
+STRING 608
+{
+Global Brand Management
+}
+
+STRING 609
+{
+Neal Hubbard
+
+}
+
+STRING 610
+{
+Marketing & Creative Services
+}
+
+STRING 611
+{
+Kathy Carter, Jessica Drossin, Elisabeth Miller, Steven Parker, Hayley Sumner, Bill Watt, Stewart Weiss
+
+}
+
+STRING 612
+{
+Box Cover Artwork
+}
+
+STRING 613
+{
+Justin Thavirat
+
+}
+
+STRING 614
+{
+North American Sales
+}
+
+STRING 615
+{
+Philip O'Neil, Bruce Slywka
+
+}
+
+STRING 616
+{
+International Sales, Marketing, & PR
+}
+
+STRING 617
+{
+Chris Ansell, Michael Fuller, Hubert Larenaudie, Cyril Marchal, Cedric Marechal, Christophe Ramboz, Stephane Vallet, Mark Warburton, Kim Watt
+
+}
+
+STRING 618
+{
+Direct Sales
+}
+
+STRING 619
+{
+Rob Beatie, Kim Bridenbecker
+
+}
+
+STRING 620
+{
+Manufacturing
+}
+
+STRING 621
+{
+Tom Bryan, Jaime Chavez, Bob Wharton
+
+}
+
+STRING 622
+{
+Recruiting
+}
+
+STRING 623
+{
+Pat Nagle, Derek Simmons, Jack Sterling, Bernie Wilkins
+
+}
+
+STRING 624
+{
+Global Launch Team
+}
+
+STRING 625
+{
+Lisa Bucek, Gerry Carty, Melissa Edwards, Lang Fredrickson, Michael Fuller, Flavie Gufflet, Neal Hubbard, Jason Hutchins, Hubert Larenaudie, Cyril Marchal, Cedric Marechal, Mike Morhaime, Philip O'Neil, Christophe Ramboz, Paul W. Sams, Chris Sigaty, Bruce Slywka, Luc Vanhal, Steve Voorma, Mark Warburton, Bob Wharton, Edward Zinser
+
+}
+
+STRING 626
+{
+Battle.net Hosting Partners
+}
+
+STRING 627
+{
+AT&T, DACOM/KIDC, Telia
+
+}
+
+STRING 628
+{
+Dunsel Specialist
+}
+
+STRING 629
+{
+Shane Dabiri
+
+}
+
+STRING 630
+{
+Thanks To
+}
+
+STRING 631
+{
+Jean-Marie Messier, Eric Licoys, Agnes Touraine, Ken Cron, Edward Zinser, Jay Meschel, Sandy Gunn, Cameron Buschardt, The Warcraft III Beta Testers, Adrian Bourke, John Funnell, Darrius Thompson, Bart Farkas, Wade Farrell
+}
+
+STRING 632
+{
+Thanks To
+}
+
+STRING 633
+{
+Mike O'Brien, Jeff Strain, Pat Wyatt, Paula Duffy, Danny Kearns, Todd Coyle, Ralph Becker, Mark Kern, Ian & Rosemary Gilson, Celeste Aviva, Ronald J. Millar Sr., Susan Krol, Garrett & Tori Fitch, House Madarasz, Kenneth and Veronica Pessino
+}
+
+STRING 634
+{
+Thanks To
+}
+
+STRING 635
+{
+The Sigaty Family, Jamie Neveaux, Lisa Pearce, Raf Cecco, Xabier Abaroa, The Bond Family, Diana Smallwood, Pamina Elgueta, Tiffany Neilson, Carin & Madisyn Jacobs, Amy Dilling, Christy Goddess, Tracy Park, Tracey "Minxey" McNaughton
+
+}
+
+STRING 636
+{
+Thanks To
+}
+
+STRING 637
+{
+Alicia Campbell, Maye McGowan-Hale, Jennifer Deem, Sydney Pardo, The Heiberg Family, Nikita Mikros, Petros Melissakis, William Hutchins, Jon Ritman, Walter Takata, Pamela & Traver Campbell, Hector Fried, Ghost Platoon (Black Sheep), Strada, Donik the Irritable Narwhal
+}
+
+STRING 638
+{
+Thanks To
+}
+
+STRING 639
+{
+E:OS, Rush, Legacy of Steel, ME, Shaq, Inner Loop, Tenacious D, John Carpenter,  Ripper Owens, Shmoo, The Parasite, Ferrari, Lamborghini, Porsche, Mucho Hot Chicken, Bruce Lee, Samurai Shodown II, thursday Karaoke Nights, Ray the Soda Guy, Edwin Braun
+
+}
+
+STRING 640
+{
+Thanks To
+}
+
+STRING 641
+{
+John and Gai Burnett, Amanda Sabo, Daisy Campbell, Lisa Carden, Jo Anne, David, and Jason Carpenter, Brad Chamberlain, Laura Clifton, Stacy Frayne, the Griffith Clan, Jason and Damian Hall, the Henderson Clan, Melissa "Chagirl" Huggins, Peter Jackson, Barbara and Tilden Keller, Debbie Lanz, Henry Luvert, the McCoy Clan
+}
+
+STRING 642
+{
+Thanks To
+}
+
+STRING 643
+{
+Shelly "Saucy" Mead, Mummsy Mead, Judah Mehler, Sheryl Narahara, Don and Becky Price, Amma and Thaththa, Saranga, Stephanie, Ryan, David, and Christopher Samia, Elizabeth and Jessica Skelton, Tara and Jacob Thomas, Randal and Debra Thompson, Sin Li, Wai Kien, and Kerwin Yu
+}
+
+STRING 644
+{
+Thanks To
+}
+
+STRING 645
+{
+Susan, Ethan, Quinn and Aaron Stafford, Kyle Harrison, Tracy Farr, Tiffany Hayes, Alison and Madeline Jane Bush, Susan, Matthew, and Michael Sams, Megan Wooley, Steve and Vicky Oglesby, Jim and Kay Sams
+}
+
+STRING 646
+{
+Thanks To
+}
+
+STRING 647
+{
+The Schoenfeld Clan, Amos, David and Cameron Di Iorio, The Oh Family, John and Kathy Hein, Amy Attal, The Cade Family, Skyler and Ethan Kelley, Tracy and Eric Getz, Lynn Neveaux, Holly & Riley, Deana Segal, Dominos, Mike Boyko, Ceredwynn, Mooguel, Kellin, Aggranor, Aurrius, and Jarvis
+}
+
+STRING 648
+{
+Thanks To
+}
+
+STRING 649
+{
+Nicole Numbers, Crystal Chweh, Joe "Vargen" Biafore, Ed Silveira, Nathan Lutsock, Sarah Le, Anja Moser, Jamie Wood, Joseph Holley, Margie Bridegam, Taylor Scherer, LA Lakers
+}
+
+STRING 650
+{
+Special Thanks
+}
+
+STRING 651
+{
+Blizzard North, Luc Vanhal, Bob & Jan Davidson
+
+}
+
+STRING 652
+{
+
+}
+
+STRING 653
+{
+We want to extend a very special thanks to all our families. Your never-ending patience and understanding made it all possible. We love you!
+}
+
+STRING 654
+{
+(c) 2002 Blizzard Entertainment. All rights reserved.
+}
+
+STRING 655
+{
+Reign of Chaos is a trademark and Battle.net, Blizzard Entertainment, Diablo, StarCraft and Warcraft are trademarks or registered trademarks of Blizzard Entertainment in the U.S. and/or other countries.
+}
+
+STRING 656
+{
+
+}
+
+STRING 657
+{
+Windows is a registered trademark of Microsoft Corporation. Pentium is a registered trademark of Intel Corporation. Macintosh is a registered trademark of Apple Computer, Inc. Dolby and the double-D symbol are trademarks of Dolby Laboratory.
+}
+
+STRING 658
+{
+
+}
+
+STRING 659
+{
+Uses the Thorndale font. Thorndale is a trademark of Agfa Monotype Corporation. DFK Gothic, DF Li Hei, DF Maru Gothic, DF Song, and Ang Thong are trademarks or registered trademarks of Bitstream, Inc. or DynaLab, Inc. All other trademarks are the property of their respective owners.
+}
+
+STRING 660
+{
+
+}
+
+STRING 661
+{
+Uses Miles Sound System. Copyright (c) 1991-2002 by RAD Game Tools, Inc. All rights reserved.
+}
+
+STRING 662
+{
+
+}
+
+STRING 663
+{
+Uses high-quality DivX video. Copyright (c) 1999-2002 by DivXNetworks, Inc. DivX is a trademark of DivXNetworks, Inc. All rights reserved.
+}
+
+STRING 664
+{
+
+}
+
+STRING 665
+{
+Uses the FreeType 2.0 library. The FreeType Project is copyrighted (c) 1996-2002 by David Turner, Robert Wilhelm, and Werner Lemberg. All rights reserved.
+}
+
+STRING 666
+{
+
+}
+
+STRING 667
+{
+Uses 'zlib' general-purpose compression library. Copyright (c) 1995-2002 Jean-loup Gailly and Mark Adler. All rights reserved.
+}
+
+STRING 668
+{
+
+}
+
+STRING 669
+{
+No vertices were harmed during the making of this game.
+}
+
+STRING 674
+{
+Game Design
+}
+
+STRING 675
+{
+Blizzard Entertainment
+
+}
+
+STRING 676
+{
+Executive Producer
+}
+
+STRING 677
+{
+Mike Morhaime
+}
+
+STRING 678
+{
+Blizzard North Game Review
+}
+
+STRING 679
+{
+Chris Arretche, Dave Brevik, Jeff Gates, Matt Householder, Steve Librande, Bill Roper, Mike Scandizzo, Erich Schaefer, Max Schaefer, Tyler Thompson, Ken Williams
+}
+

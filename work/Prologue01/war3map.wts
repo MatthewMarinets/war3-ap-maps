@@ -1,0 +1,680 @@
+﻿STRING 0
+{
+Prologue01
+}
+
+STRING 1
+{
+1
+}
+
+STRING 2
+{
+Chapter One: Chasing Visions
+}
+
+STRING 3
+{
+Blizzard Entertainment
+}
+
+STRING 5
+{
+Force 1
+}
+
+STRING 8
+{
+ (Medivh)
+}
+
+STRING 9
+{
+Thrall
+}
+
+STRING 10
+{
+What kind of nightmare was that?
+}
+
+STRING 11
+{
+The Prophet
+}
+
+STRING 12
+{
+It was not a nightmare, young warchief, but a vision. Follow me, and I will reveal what your future holds.
+}
+
+STRING 13
+{
+Thrall
+}
+
+STRING 14
+{
+I don't know what this is all about, but I'll play along.
+}
+
+STRING 16
+{
+Chapter One
+}
+
+STRING 23
+{
+Chasing Visions
+}
+
+STRING 24
+{
+Somewhere in the Arathi Highlands, Thrall, the young warchief of the orcish Horde, wakes from his troubling dream.
+}
+
+STRING 212
+{
+Defeat!
+}
+
+STRING 213
+{
+Orcish Horde
+}
+
+STRING 214
+{
+Find The Prophet
+}
+
+STRING 215
+{
+The troubling dreams that have awakened Thrall foretell of a dark presence. Find The Prophet to quell Thrall's worries.
+}
+
+STRING 216
+{
+Follow the narrator's directions
+}
+
+STRING 217
+{
+Find The Prophet
+}
+
+STRING 218
+{
+|cffffcc00MAIN QUEST|r
+Find The Prophet
+  - Follow the narrator's directions
+  - Find The Prophet
+}
+
+STRING 219
+{
+The Prophet
+}
+
+STRING 220
+{
+Greetings, son of Durotan. I knew you'd find your way.
+}
+
+STRING 221
+{
+Thrall
+}
+
+STRING 222
+{
+It was you I saw in the vision. Who are you? How do you know me?
+}
+
+STRING 223
+{
+The Prophet
+}
+
+STRING 224
+{
+I know many things, young warchief, about you and your people. My identity, at this time, is unimportant. What is important is that you rally your people and leave these shores immediately.
+}
+
+STRING 225
+{
+Thrall
+}
+
+STRING 226
+{
+Leave? What's this all about, human?
+}
+
+STRING 227
+{
+The Prophet
+}
+
+STRING 228
+{
+Human? I left my humanity behind long ago. I am something... different now. Know that I have seen the future and beheld the great burning shadow that is coming to consume this world. You sense it as well, don't you?
+}
+
+STRING 229
+{
+Thrall
+}
+
+STRING 230
+{
+The demons... are returning.
+}
+
+STRING 231
+{
+The Prophet
+}
+
+STRING 232
+{
+Yes. And only by leading your people across the sea, to the distant lands of Kalimdor, will you have a chance to stand against them!
+}
+
+STRING 233
+{
+Thrall
+}
+
+STRING 234
+{
+But how can we--
+}
+
+STRING 235
+{
+The Prophet
+}
+
+STRING 236
+{
+I will answer all of your questions in time, young warchief. For now, rally your warriors and prepare to leave this land. We will speak again.
+}
+
+STRING 237
+{
+Thrall
+}
+
+STRING 238
+{
+None of this makes sense, but the spirits tell me... that I should trust him.
+}
+
+STRING 239
+{
+Narrator
+}
+
+STRING 240
+{
+First, select Thrall. To do this, |cff64ff64LEFT-CLICK|r on Thrall in the main window.
+}
+
+STRING 244
+{
+Narrator
+}
+
+STRING 245
+{
+Excellent. You seem eager to be on your way.
+}
+
+STRING 246
+{
+Narrator
+}
+
+STRING 247
+{
+However, you must first learn how to give orders to Thrall.
+}
+
+STRING 248
+{
+Narrator
+}
+
+STRING 249
+{
+Try ordering Thrall to move down the path towards the nearby banner. To do this, |cff64ff64CLICK|r the |cff64ff64MOVE|r button in the bottom-right corner of your screen, and then |cff64ff64CLICK|r on the banner.
+}
+
+STRING 261
+{
+Narrator
+}
+
+STRING 262
+{
+Skillfully done. However, the orc encampment is still far off. In order to reach the next banner, scroll the screen to the north by moving your mouse to the top edge of the screen.
+}
+
+STRING 268
+{
+Narrator
+}
+
+STRING 269
+{
+Very good. The path to the next banner leads through a black area. This black area represents terrain that has not been discovered yet.
+}
+
+STRING 275
+{
+Narrator
+}
+
+STRING 276
+{
+Notice how the black area shrinks as Thrall moves through it. This reflects areas you have explored.
+}
+
+STRING 279
+{
+Narrator
+}
+
+STRING 280
+{
+Select Thrall and order him to move to the banner in the middle of the encampment.
+}
+
+STRING 281
+{
+|cff32cd32HINT|r - Move commands can also be issued by selecting your units, then |cff64ff64RIGHT-CLICKING|r on their destination.
+}
+
+STRING 282
+{
+|cff32cd32HINT|r - Scrolling the screen in this manner allows you to see different parts of the map.
+}
+
+STRING 283
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Find The Prophet
+}
+
+STRING 288
+{
+Thrall
+}
+
+STRING 289
+{
+Lok-Tar, my warriors!
+}
+
+STRING 290
+{
+Grunt
+}
+
+STRING 291
+{
+We are yours to command, Warchief!
+}
+
+STRING 296
+{
+Narrator
+}
+
+STRING 297
+{
+In order to have Thrall and his troops move together, you must first select all of them.
+}
+
+STRING 300
+{
+|cff32cd32HINT|r - |cff64ff64LEFT-CLICK|r on the ground, hold down the mouse button, then drag the cursor across the units you want to select.
+}
+
+STRING 303
+{
+Narrator
+}
+
+STRING 304
+{
+Now that your troops are all selected, order them to move to the next banner.
+}
+
+STRING 309
+{
+Narrator
+}
+
+STRING 310
+{
+To order Thrall's forces to defeat this foul creature, select all of your troops, |cff64ff64CLICK|r on the |cff64ff64ATTACK|r button and then |cff64ff64CLICK|r on the gnoll.
+}
+
+STRING 311
+{
+|cff32cd32HINT|r - You can also issue attack commands by selecting your troops, then |cff64ff64RIGHT-CLICKING|r on the enemy.
+}
+
+STRING 320
+{
+|cff32cd32HINT|r - Attack move commands can also be issued by selecting your troops, pressing the "|cff64ff64A|r" key, then |cff64ff64LEFT-CLICKING|r on their destination.
+}
+
+STRING 325
+{
+Narrator
+}
+
+STRING 326
+{
+Good job. Notice that Thrall gained a level from the experience that he earned in combat. Only heroes can acquire experience, allowing them to become incredibly powerful over time.
+}
+
+STRING 331
+{
+Narrator
+}
+
+STRING 332
+{
+Heroes gain a hero point whenever they advance in level. These points can be used to acquire new abilities or to improve previously learned ones.
+}
+
+STRING 333
+{
+Narrator
+}
+
+STRING 334
+{
+To spend Thrall's hero point, select him and |cff64ff64CLICK|r on the |cff64ff64HERO ABILITIES|r button in the bottom-right corner of your screen.
+}
+
+STRING 335
+{
+|cff32cd32HINT|r - The Hero icon in the top-left corner of your screen blinks red when the Hero is under attack, and displays a number if that Hero has unspent Hero points.
+}
+
+STRING 336
+{
+|cff32cd32HINT|r - Units that are given attack move commands will automatically engage enemy units encountered along the way.
+}
+
+STRING 341
+{
+Narrator
+}
+
+STRING 342
+{
+Whenever you |cff64ff64CLICK|r on the |cff64ff64HERO ABILITIES|r button, the bottom-right corner of your screen changes to show what abilities can be learned.
+}
+
+STRING 343
+{
+Narrator
+}
+
+STRING 344
+{
+To spend Thrall's hero point and learn chain lightning, |cff64ff64CLICK|r on the |cff64ff64CHAIN LIGHTNING|r button in the bottom-right corner of your screen.
+}
+
+STRING 349
+{
+Grunt
+}
+
+STRING 350
+{
+Warchief, we've discovered a group of murloc raiders in the nearby river!
+}
+
+STRING 358
+{
+Narrator
+}
+
+STRING 359
+{
+Some monsters drop treasure when they are defeated. Treasure chests hold powerful magic items that can only be picked up by heroes, such as Thrall.
+}
+
+STRING 360
+{
+|cff32cd32HINT|r - To pick up an item, select Thrall and |cff64ff64RIGHT-CLICK|r on the Treasure Chest.
+}
+
+STRING 363
+{
+Narrator
+}
+
+STRING 364
+{
+This particular treasure chest contained a useful potion of mana. Notice that the potion now occupies one of Thrall's inventory slots near the bottom middle of your screen.
+}
+
+STRING 365
+{
+|cff32cd32HINT|r - To see what a particular item does, move your cursor over the item in your Hero's inventory.
+}
+
+STRING 366
+{
+Narrator
+}
+
+STRING 367
+{
+Potions of mana can be used to replenish a hero's mana, the magic energies that allow the casting of spells, such as chain lightning.
+}
+
+STRING 368
+{
+|cff32cd32HINT|r - A unit's current/maximum mana level is found beneath the unit portrait near the bottom-left corner of your screen.
+}
+
+STRING 373
+{
+Narrator
+}
+
+STRING 374
+{
+Order Thrall's forces to explore up the river, following the banners.
+}
+
+STRING 381
+{
+Defeat!
+}
+
+STRING 382
+{
+|cffffcc00MISSION FAILED|r
+Thrall has been slain.
+}
+
+STRING 385
+{
+Narrator
+}
+
+STRING 386
+{
+The murlocs would make excellent targets for your new chain lightning spell. To have Thrall use his new ability, |cff64ff64CLICK|r on the |cff64ff64CHAIN LIGHTNING|r button, and then |cff64ff64LEFT-CLICK|r on one of the murlocs.
+}
+
+STRING 391
+{
+Narrator
+}
+
+STRING 392
+{
+Thrall is currently low on mana. Use the potion of mana to refresh Thrall and provide him with sufficient mana to cast additional spells.
+}
+
+STRING 394
+{
+|cff32cd32HINT|r - Use the Potion of Mana by |cff64ff64LEFT-CLICKING|r on its icon in Thrall's inventory.
+}
+
+STRING 403
+{
+|cff32cd32HINT|r - Units cannot see as far at night as they can during the day.
+}
+
+STRING 404
+{
+Narrator
+}
+
+STRING 405
+{
+The wolf howl signifies that night has begun.
+}
+
+STRING 411
+{
+|cff32cd32HINT|r - Unexplored areas often contain secrets or surprises that can be very useful.
+}
+
+STRING 416
+{
+Thrall
+}
+
+STRING 417
+{
+An ogre! We'd have a fierce battle on our hands if the beast weren't sleeping!
+}
+
+STRING 420
+{
+|cff32cd32HINT|r - Sleeping monsters wake up when they are attacked.
+}
+
+STRING 423
+{
+Thrall
+}
+
+STRING 424
+{
+A golem! Watch yourselves, my brethren:  those creatures do not sleep at night!
+}
+
+STRING 427
+{
+Narrator
+}
+
+STRING 428
+{
+Excellent. Thrall has found a magic ring. Rings are very useful because they provide a constant, passive benefit as long as they are carried.
+}
+
+STRING 431
+{
+Thrall
+}
+
+STRING 432
+{
+Forest trolls! I still can't believe they were ever a part of the Horde.
+}
+
+STRING 436
+{
+|cff32cd32HINT|r - To see the difficulty level of a particular monster, move your cursor over it. Monsters range in difficulty from level 1 to level 10.
+}
+
+STRING 439
+{
+Narrator
+}
+
+STRING 440
+{
+Very good. That treasure chest held a magic tome that can be used to give Thrall a permanent benefit.
+}
+
+STRING 442
+{
+|cff32cd32HINT|r - Tomes disappear after being used, freeing up inventory slots for holding other items.
+}
+
+STRING 445
+{
+Thrall
+}
+
+STRING 446
+{
+Be wary, my warriors. Don't let nightfall dull your senses.
+}
+
+STRING 447
+{
+Thrall
+}
+
+STRING 448
+{
+Prepare yourselves! I sense a gnoll ahead!
+}
+
+STRING 449
+{
+Thrall
+}
+
+STRING 450
+{
+This was only a scout. But the gnolls' camp lies just ahead.
+}
+
+STRING 453
+{
+Stone Golem
+}
+
+STRING 454
+{
+Scurvy Pirate
+}
+
+STRING 457
+{
+Narrator
+}
+
+STRING 458
+{
+Order your troops to perform an aggressive attack move into the enemy encampment. To do this, select all of your troops, |cff64ff64CLICK|r the |cff64ff64ATTACK|r button, and then |cff64ff64LEFT-CLICK|r on the ground in the middle of the gnoll camp.
+}
+
+STRING 459
+{
+|cff32cd32HINT|r - You can also scroll the screen using the |cff64ff64UP|r, |cff64ff64DOWN|r, |cff64ff64LEFT|r, and |cff64ff64RIGHT|r arrow keys.
+}
+
+STRING 460
+{
+|cff32cd32HINT|r - To see a list of messages displayed during your game, |cff64ff64CLICK|r on the |cff64ff64LOG|r button at the top of your screen.
+}
+

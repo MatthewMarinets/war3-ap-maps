@@ -1,0 +1,786 @@
+﻿STRING 1
+{
+Defeat!
+}
+
+STRING 2
+{
+Illidan is Paused
+}
+
+STRING 3
+{
+HumanX05
+}
+
+STRING 4
+{
+1
+}
+
+STRING 5
+{
+Chapter Five: Gates of the Abyss
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 7
+{
+Chapter Five
+}
+
+STRING 10
+{
+Alliance of Lordaeron
+}
+
+STRING 12
+{
+Draenei
+}
+
+STRING 19
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 20
+{
+Defeat!
+}
+
+STRING 25
+{
+Purchase Book of Beards
+}
+
+STRING 27
+{
+A book.
+}
+
+STRING 28
+{
+This book is full of beard styles and trimming techniques.
+}
+
+STRING 29
+{
+Illidan Stormrage
+}
+
+STRING 30
+// Sound\Dialogue\HumanExpCamp\Human06x\A06Illidan01.mp3
+{
+Long ago, after Draenor's explosion, a brutal Pit Lord named Magtheridon rallied the surviving orcs and took control of Outland. Since then, his forces have grown strong.
+}
+
+STRING 31
+{
+Prince Kael'thas
+}
+
+STRING 32
+// Sound\Dialogue\HumanExpCamp\Human06x\A06Kael02.mp3
+{
+How, master? If most of the orcs were killed when this world exploded, how has he bolstered his ranks?
+}
+
+STRING 35
+{
+Dimensional Gates
+}
+
+STRING 36
+{
+A brutal Pit Lord named Magtheridon commands a vast army that pours through the Dimensional Gates daily. Only Illidan has the power to close each Gate by stepping onto the Dimensional Nexus. Kael will need to protect Lord Illidan while he works his magic for 3 minutes.
+}
+
+STRING 37
+{
+Close each Dimensional Gate (0 of 4)
+}
+
+STRING 39
+{
+|cffffcc00MAIN QUEST|r
+Dimensional Gates
+  - Close each Dimensional Gate (0 of 4)
+  - Bring Illidan to each Dimensional Nexus (0 of 4)
+  - Illidan must survive 3 minutes per Gate
+}
+
+STRING 40
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Dimensional Gates
+}
+
+STRING 49
+{
+Gates of the Abyss
+}
+
+STRING 51
+{
+Burning Legion
+}
+
+STRING 53
+{
+Bring Illidan to each Dimensional Nexus (0 of 4)
+}
+
+STRING 54
+{
+Illidan must survive 3 minutes per Gate
+}
+
+STRING 58
+{
+Book of Beards
+}
+
+STRING 59
+{
+Illidan Stormrage
+}
+
+STRING 60
+// Sound\Dialogue\HumanExpCamp\Human06x\A06Illidan03.mp3
+{
+By using the very portals that tore the planet apart. Many of Ner'zhul's dimensional gates still stand, young prince. Magtheridon lures scores of hapless demons through them daily.
+}
+
+STRING 61
+{
+Prince Kael'thas
+}
+
+STRING 62
+// Sound\Dialogue\HumanExpCamp\Human06x\A06Kael04.mp3
+{
+Then we must seal them permanently.
+}
+
+STRING 63
+{
+Illidan Stormrage
+}
+
+STRING 64
+// Sound\Dialogue\HumanExpCamp\Human06x\A06Illidan05.mp3
+{
+Yes. We will seek out each of the gates and I will close them myself. Once they have been sealed, we will move against Magtheridon's Black Citadel, and claim Outland as our own.
+}
+
+STRING 71
+{
+
+}
+
+STRING 73
+{
+Gate Closing
+}
+
+STRING 75
+{
+
+}
+
+STRING 76
+{
+Dimensional Gates |cffffffff0/4|r
+}
+
+STRING 77
+{
+Dimensional Gates |cffffffff1/4|r
+}
+
+STRING 78
+{
+Dimensional Gates |cffffffff2/4|r
+}
+
+STRING 79
+{
+Dimensional Gates |cffffffff3/4|r
+}
+
+STRING 80
+{
+Dimensional Gates |cffffffff4/4|r
+}
+
+STRING 87
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Dimensional Gates
+  - Close each Dimensional Gate (2 of 4 Completed)
+  - Bring Illidan to each Dimensional Nexus (2 of 4 Completed)
+  - Illidan must survive 3 minutes per Gate
+}
+
+STRING 88
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Dimensional Gates
+  - Close each Dimensional Gate (3 of 4 Completed)
+  - Bring Illidan to each Dimensional Nexus (3 of 4 Completed)
+  - Illidan must survive 3 minutes per Gate
+}
+
+STRING 90
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Dimensional Gates
+  - Close each Dimensional Gate (1 of 4 Completed)
+  - Bring Illidan to each Dimensional Nexus (1 of 4 Completed)
+  - Illidan must survive 3 minutes per Gate
+}
+
+STRING 91
+{
+Prince Kael'thas
+}
+
+STRING 92
+{
+Master, Magtheridon must have discovered us! His orcs have already begun their assault!
+}
+
+STRING 93
+{
+Illidan Stormrage
+}
+
+STRING 94
+{
+Our forces must hold them back while we search for the dimensional gates!
+}
+
+STRING 97
+{
+Illidan Stormrage
+}
+
+STRING 98
+{
+I'll get to work on this gate. Kael, I'll need you to defend me just as before.
+}
+
+STRING 99
+{
+Illidan Stormrage
+}
+
+STRING 100
+{
+Kael, cover me while I attempt to close this gate.
+}
+
+STRING 101
+{
+Prince Kael'thas
+}
+
+STRING 102
+{
+Master, the final dimensional gate is surrounded by demons! We're going to have a serious fight on our hands.
+}
+
+STRING 103
+{
+Illidan Stormrage
+}
+
+STRING 104
+{
+Do not fear the demons, Kael. In time, they will call you master!
+}
+
+STRING 106
+{
+It's working. Illidan is closing the portal! We've got to buy him more time!
+}
+
+STRING 107
+{
+Prince Kael'thas
+}
+
+STRING 108
+{
+The gate is closing. Fight on, my warriors!
+}
+
+STRING 109
+{
+Prince Kael'thas
+}
+
+STRING 110
+{
+The gate is collapsing. Defend Lord Illidan!
+}
+
+STRING 111
+{
+Prince Kael'thas
+}
+
+STRING 112
+{
+The gate is nearly closed. We must stand fast!
+}
+
+STRING 115
+{
+Dimensional Gate
+}
+
+STRING 117
+{
+Prince Kael'thas
+}
+
+STRING 118
+{
+Lord Illidan is under attack! We must defend him!
+}
+
+STRING 119
+{
+Prince Kael'thas
+}
+
+STRING 120
+{
+Illidan needs our help!
+}
+
+STRING 121
+{
+Prince Kael'thas
+}
+
+STRING 122
+{
+Protect Lord Illidan at all costs!
+}
+
+STRING 123
+{
+Prince Kael'thas
+}
+
+STRING 124
+{
+The master is weakening! We must rush to aid him!
+}
+
+STRING 125
+{
+Prince Kael'thas
+}
+
+STRING 126
+{
+Be wary, master! More demons are emerging from the gate!
+}
+
+STRING 127
+{
+Prince Kael'thas
+}
+
+STRING 128
+{
+Magtheridon has called in his reinforcements!
+}
+
+STRING 129
+{
+Prince Kael'thas
+}
+
+STRING 130
+{
+The gate is opening! More demons are charging through!
+}
+
+STRING 131
+{
+Prince Kael'thas
+}
+
+STRING 132
+// Sound\Dialogue\HumanExpCamp\Human06x\A06Kael30.mp3
+{
+We've done it, master! The dimensional gates are all sealed. There's no way for Magtheridon to call reinforcements now.
+}
+
+STRING 133
+{
+Illidan Stormrage
+}
+
+STRING 134
+// Sound\Dialogue\HumanExpCamp\Human06x\A06Illidan31.mp3
+{
+True, but his standing forces are still considerable. Assaulting his Black Citadel will not be easy, Kael.
+}
+
+STRING 135
+{
+Prince Kael'thas
+}
+
+STRING 136
+// Sound\Dialogue\HumanExpCamp\Human06x\A06Kael32.mp3
+{
+I wouldn't have it any other way.
+}
+
+STRING 141
+{
+Draenei Warrior
+}
+
+STRING 142
+{
+Thank you, strangers. The wretched orcs nearly had us this time. If you seek to put an end to them, then our bravest warriors will assist you.
+}
+
+STRING 143
+{
+Draenei Warrior
+}
+
+STRING 144
+{
+Old Akama told us of your exploits. We will aid you in Lord Illidan's name!
+}
+
+STRING 145
+{
+Draenei Warrior
+}
+
+STRING 146
+{
+You saved our lives. We are yours to command, blood elf.
+}
+
+STRING 147
+{
+|cff87ceebNEW ALLY ACQUIRED|r
+Draenei - The Draenei have joined Illidan's cause to help rid Outland of Magtheridon's forces.
+}
+
+STRING 148
+{
+Two days later, upon the desolate plains of Outland, Illidan and Prince Kael'thas prepare to assault Magtheridon's dimensional gateways.
+}
+
+STRING 149
+{
+Draenei Warriors Hall
+}
+
+STRING 150
+{
+Primary troop production building. Trains Draenei Warriors.
+}
+
+STRING 151
+{
+Draenei Sorcerer Den
+}
+
+STRING 152
+{
+Trains Draenei Disciple, Draenei Harbinger, and Draenei Seer.
+}
+
+STRING 156
+{
+R
+}
+
+STRING 158
+{
+Increases the Archer's attack range.
+}
+
+STRING 159
+{
+Magtheridon's Forces
+}
+
+STRING 160
+{
+Draenei Village
+}
+
+STRING 161
+{
+For centuries the Draenei have been battling the Fel Orcs, but in the last hundred years the Draenei have been slowly losing. With the help of Illidan and Kael the Draenei would be able to turn the balance in their favor and rid themselves of the Fel Orcs once and for all.
+}
+
+STRING 162
+{
+Destroy the Orange Fel Orc base
+}
+
+STRING 166
+{
+|cffffcc00OPTIONAL QUEST|r 
+Draenei Village
+  - Destroy the Orange Fel Orc base
+}
+
+STRING 167
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Draenei Village
+}
+
+STRING 168
+{
+|cffffcc00OPTIONAL QUEST FAILED|r
+Draenei Village
+}
+
+STRING 179
+{
+Prince Kael'thas
+}
+
+STRING 180
+// Sound\Dialogue\HumanExpCamp\Human06x\A06Kael23.mp3
+{
+Magtheridon's forces have besieged that Draenei village! If we drive them back, the Draenei will join us in our fight!
+}
+
+STRING 181
+{
+Gate 01
+}
+
+STRING 182
+{
+Gate 02
+}
+
+STRING 183
+{
+Gate 03
+}
+
+STRING 184
+{
+Gate 04
+}
+
+STRING 188
+{
+Channeling
+}
+
+STRING 192
+{
+Increases the damage of Archers.
+}
+
+STRING 193
+{
+Further increases the damage of Archers.
+}
+
+STRING 201
+{
+Dimensional Nexus
+}
+
+STRING 202
+{
+Gorgosh
+}
+
+STRING 203
+{
+Mizgill
+}
+
+STRING 204
+{
+Steel Arrowheads
+}
+
+STRING 205
+{
+Improved Steel Arrowheads
+}
+
+STRING 206
+{
+Advanced Steel Arrowheads
+}
+
+STRING 207
+{
+Upgrade to Steel A|cffffcc00r|rrowheads
+}
+
+STRING 208
+{
+Upgrade to Improved Steel A|cffffcc00r|rrowheads
+}
+
+STRING 209
+{
+Upgrade to Advanced Steel A|cffffcc00r|rrowheads
+}
+
+STRING 210
+{
+Illidan is Not Paused
+}
+
+STRING 211
+{
+Close each Dimensional Gate (1 of 4 Completed)
+}
+
+STRING 212
+{
+Bring Illidan to each Dimensional Nexus (1 of 4 Completed)
+}
+
+STRING 213
+{
+Close each Dimensional Gate (2 of 4 Completed)
+}
+
+STRING 214
+{
+Bring Illidan to each Dimensional Nexus (2 of 4 Completed)
+}
+
+STRING 215
+{
+Close each Dimensional Gate (3 of 4 Completed)
+}
+
+STRING 216
+{
+Bring Illidan to each Dimensional Nexus (3 of 4 Completed)
+}
+
+STRING 217
+{
+Close each Dimensional Gate
+}
+
+STRING 218
+{
+Bring Illidan to each Dimensional Nexus
+}
+
+STRING 219
+{
+|cff87ceebNEW UNIT ACQUIRED|r
+Draenei - These Draenei are very effective against their bitter enemies, the Fel Orcs.
+}
+
+STRING 221
+{
+A
+}
+
+STRING 222
+{
+Swordsman
+}
+
+STRING 223
+{
+Train |cffffcc00S|rwordsman
+}
+
+STRING 224
+{
+Archer
+}
+
+STRING 225
+{
+Train |cffffcc00Ar|rcher
+}
+
+STRING 226
+{
+Increases damage of Archers by <Remk,base1>.
+}
+
+STRING 227
+{
+Akama
+}
+
+STRING 228
+// Sound\Dialogue\HumanExpCamp\Human05x\A05Akama11.mp3
+{
+I am Akama, Elder Sage of the draenei. Lord Illidan promised to rid us of our ancient enemies in exchange for our loyalty. These cursed orcs serve Magtheridon--a terrible lord whose Black Citadel lies to the west. Under his command, the orcs hunted us to the brink of extinction. But now, with Lord Illidan behind us, we will fight back and retake our ancestral lands.
+}
+
+STRING 229
+{
+Lady Vashj
+}
+
+STRING 230
+// Sound\Dialogue\HumanExpCamp\Human05x\A05LadyVashj12.mp3
+{
+We also serve Illidan, old one.
+}
+
+STRING 231
+{
+Akama
+}
+
+STRING 232
+// Sound\Dialogue\HumanExpCamp\Human05x\A05Akama13.mp3
+{
+Very well, stranger.
+}
+
+STRING 233
+{
+Illidan's Force
+}
+
+STRING 236
+{
+Burrow
+}
+
+STRING 239
+{
+Illidan Stormrage
+}
+
+STRING 240
+{
+The final gateway is closing! Hold fast, my warriors! Our victory is at hand!
+}
+

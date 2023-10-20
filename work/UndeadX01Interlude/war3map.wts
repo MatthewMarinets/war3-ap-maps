@@ -1,0 +1,209 @@
+﻿STRING 1
+{
+Player 1
+}
+
+STRING 2
+{
+Force 1
+}
+
+STRING 9
+{
+UndeadX01Interlude
+}
+
+STRING 10
+{
+Blizzard Entertainment
+}
+
+STRING 41
+{
+Balnazzar
+}
+
+STRING 42
+// Sound\Dialogue\UndeadExpCamp\Undead01xInterlude\L01Balnazzar47.mp3
+{
+Lady Sylvanas. We are pleased that you came.
+}
+
+STRING 43
+{
+1
+}
+
+STRING 44
+{
+Interlude: A Kingdom Divided
+}
+
+STRING 45
+{
+Interlude
+}
+
+STRING 46
+{
+A Kingdom Divided
+}
+
+STRING 48
+{
+Sylvanas Windrunner
+}
+
+STRING 49
+// Sound\Dialogue\UndeadExpCamp\Undead01xInterlude\L01Sylvanas48.mp3
+{
+How could I not? For some reason I no longer hear the Lich King's voice in my head. My will is my own once again.
+}
+
+STRING 50
+{
+Sylvanas Windrunner
+}
+
+STRING 51
+// Sound\Dialogue\UndeadExpCamp\Undead01xInterlude\L01Sylvanas49.mp3
+{
+You dreadlords seem to know why. 
+}
+
+STRING 52
+{
+Varimathras
+}
+
+STRING 53
+// Sound\Dialogue\UndeadExpCamp\Undead01xInterlude\L01Varimathras50.mp3
+{
+We've discovered that the Lich King is losing his power! As it wanes, so too does his ability to command undead such as you.
+}
+
+STRING 54
+{
+Sylvanas Windrunner
+}
+
+STRING 55
+// Sound\Dialogue\UndeadExpCamp\Undead01xInterlude\L01Sylvanas51.mp3
+{
+And what of King Arthas? What about his powers?  
+}
+
+STRING 56
+{
+Balnazzar
+}
+
+STRING 57
+// Sound\Dialogue\UndeadExpCamp\Undead01xInterlude\L01Balnazzar52.mp3
+{
+Though his runeblade, Frostmourne, carries powerful enchantments, Arthas' own powers will fade in time. It is inevitable. 
+}
+
+STRING 58
+{
+Sylvanas Windrunner
+}
+
+STRING 59
+// Sound\Dialogue\UndeadExpCamp\Undead01xInterlude\L01Sylvanas53.mp3
+{
+You seek to overthrow him, and you want my help to do it.  
+}
+
+STRING 60
+{
+Detheroc
+}
+
+STRING 61
+// Sound\Dialogue\UndeadExpCamp\Undead01xInterlude\L01Detheroc54.mp3
+{
+The Legion may be defeated, but we are the Nathrezim! We'll not let some upstart human get the best of us! Arthas must fall!
+}
+
+STRING 62
+{
+Balnazzar
+}
+
+STRING 63
+// Sound\Dialogue\UndeadExpCamp\Undead01xInterlude\L01Balnazzar55.mp3
+{
+The lich, Kel'Thuzad, is far too loyal to betray his master. But you, on the other hand...
+}
+
+STRING 66
+{
+Sylvanas Windrunner
+}
+
+STRING 67
+// Sound\Dialogue\UndeadExpCamp\Undead01xInterlude\L01Sylvanas56.mp3
+{
+Hate him. I have my own reasons for seeking vengeance. Arthas murdered my people and turned me into this... monstrosity.
+}
+
+STRING 68
+{
+Sylvanas Windrunner
+}
+
+STRING 69
+// Sound\Dialogue\UndeadExpCamp\Undead01xInterlude\L01Sylvanas57.mp3
+{
+I may take part in your bloody coup, but I will do so in my own way. 
+}
+
+STRING 70
+{
+Player 6
+}
+
+STRING 71
+{
+Player 7
+}
+
+STRING 72
+{
+Balnazzar
+}
+
+STRING 73
+// Sound\Dialogue\UndeadExpCamp\Undead01xInterlude\L01Balnazzar58.mp3
+{
+I, for one, do not trust her. Her heart is still elven. She will never side with us. 
+}
+
+STRING 74
+{
+Varimathras
+}
+
+STRING 75
+// Sound\Dialogue\UndeadExpCamp\Undead01xInterlude\L01Varimathras59.mp3
+{
+Don't be too hasty. She has great spirit, but her hatred for Arthas will ultimately serve our cause. 
+}
+
+STRING 76
+{
+Detheroc
+}
+
+STRING 77
+// Sound\Dialogue\UndeadExpCamp\Undead01xInterlude\L01Detheroc60.mp3
+{
+Agreed. Well, if that's settled--let the festivities commence. 
+}
+
+STRING 78
+{
+The next evening, somewhere in the Tirisfal Glades, the banshee Sylvanas arrives at a secret meeting.
+}
+

@@ -1,0 +1,543 @@
+﻿STRING 1
+{
+Defeat!
+}
+
+STRING 3
+{
+HumanX04
+}
+
+STRING 4
+{
+1
+}
+
+STRING 5
+{
+Chapter Four: The Search for Illidan
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 7
+{
+Chapter Four
+}
+
+STRING 12
+{
+Escort Illidan
+}
+
+STRING 13
+{
+Though free from the Warden's grasp, Illidan remains weak, and the enchantments on the cage cannot be broken easily. You must escort Illidan's cage to the Blood Elf base, where the protection of Kael's army will give you time to break the magical locks.
+}
+
+STRING 14
+{
+Bring Illidan's cage to the Blood Elf base.
+}
+
+STRING 16
+{
+|cffffcc00MAIN QUEST|r
+Escort Illidan
+  - Bring Illidan's cage to the Blood Elf base
+}
+
+STRING 17
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Escort Illidan
+}
+
+STRING 19
+{
+|cffffcc00MISSION FAILED|r
+Maiev has escorted Illidan's cage back to her base.
+}
+
+STRING 39
+{
+|cffffcc00MAIN QUEST|r
+The Demon Within
+  - Use your Heroes to recapture Illidan's cage
+  - The cage must not reach the Night Elf base
+}
+
+STRING 49
+{
+The Search for Illidan
+}
+
+STRING 50
+{
+After three days of fruitless searching, Prince Kael'thas and Lady Vashj realize they are lost in the barren wilderness of the Hellfire Peninsula.
+}
+
+STRING 52
+{
+Blood Elves
+}
+
+STRING 54
+{
+Watchers
+}
+
+STRING 95
+{
+Illidan Stormrage
+}
+
+STRING 96
+// Sound\Dialogue\HumanExpCamp\Human05x\A05Illidan44.mp3
+{
+Lady Vashj, your rescue was most timely. The thought of spending another ten thousand years in Maiev's prison was not a pleasant one.
+}
+
+STRING 97
+{
+Lady Vashj
+}
+
+STRING 98
+// Sound\Dialogue\HumanExpCamp\Human05x\A05LadyVashj45.mp3
+{
+We could not forsake you, Lord Illidan. But you owe your freedom to them.
+}
+
+STRING 99
+{
+Illidan Stormrage
+}
+
+STRING 100
+// Sound\Dialogue\HumanExpCamp\Human05x\A05Illidan46.mp3
+{
+Who are they, Vashj? The young elf looks familiar, but...
+}
+
+STRING 101
+{
+Lady Vashj
+}
+
+STRING 102
+// Sound\Dialogue\HumanExpCamp\Human05x\A05LadyVashj47.mp3
+{
+They call themselves the blood elves, my lord. They are the last mortal descendents of the Highborne who served you long ago.
+}
+
+STRING 103
+{
+Lady Vashj
+}
+
+STRING 104
+// Sound\Dialogue\HumanExpCamp\Human05x\A05LadyVashj48.mp3
+{
+This is Prince Kael'thas. He and his brethren have come to bask in your wisdom--and pledge themselves to your will.
+}
+
+STRING 149
+{
+Followers of Illidan
+}
+
+STRING 151
+{
+The Demon Within
+}
+
+STRING 152
+{
+Lord Illidan has been captured by the cunning Warden in a cage of magical enchantments. Slay the guardians of the cage and take it from the Night Elves before they reach the safety of their base.
+}
+
+STRING 153
+{
+Use your Heroes to recapture Illidan's cage
+}
+
+STRING 154
+{
+Defeat!
+}
+
+STRING 155
+{
+The cage must not reach the Night Elf base
+}
+
+STRING 163
+{
+|cffffcc00MAIN QUEST UPDATE|r
+The Demon Within
+  - |cdd808080Use your Heroes to recapture Illidan's cage (Completed)|r
+  - The cage must not reach the Night Elf base
+}
+
+STRING 178
+{
+Prince Kael'thas
+}
+
+STRING 179
+{
+Damn. We've lost the cage!
+}
+
+STRING 180
+{
+Lady Vashj
+}
+
+STRING 181
+{
+There is still time, Kael. If we move quickly, we can reclaim it before the night elves reach sanctuary.
+}
+
+STRING 182
+{
+Prince Kael'thas
+}
+
+STRING 183
+{
+They've retaken the cage! We must get it back!
+}
+
+STRING 184
+{
+Prince Kael'thas
+}
+
+STRING 185
+{
+The cage is lost! We've got to follow them and reclaim it!
+}
+
+STRING 186
+{
+Prince Kael'thas
+}
+
+STRING 187
+{
+They're getting away with Illidan! Move quickly, my warriors!
+}
+
+STRING 188
+{
+Maiev Shadowsong
+}
+
+STRING 189
+{
+I grow tired of these games! Illidan will be mine!
+}
+
+STRING 190
+{
+Maiev Shadowsong
+}
+
+STRING 191
+{
+Death to all who side with the Betrayer!
+}
+
+STRING 192
+{
+Maiev Shadowsong
+}
+
+STRING 193
+{
+Blood elves and naga! Your bastard races are an affront to everything the night elves stand for!
+}
+
+STRING 209
+{
+Prince Kael'thas
+}
+
+STRING 210
+// Sound\Dialogue\HumanExpCamp\Human05x\A05Kael17.mp3
+{
+There! Illidan lies chained in that cage! The night elves must be taking him to their stronghold.
+}
+
+STRING 211
+{
+Lady Vashj
+}
+
+STRING 212
+// Sound\Dialogue\HumanExpCamp\Human05x\A05LadyVashj18.mp3
+{
+Then we must rescue him before they reach safety.
+}
+
+STRING 213
+{
+Lady Vashj
+}
+
+STRING 214
+// Sound\Dialogue\HumanExpCamp\Human05x\A05LadyVashj15.mp3
+{
+Night elves! What could they be doing here?
+}
+
+STRING 215
+{
+Prince Kael'thas
+}
+
+STRING 216
+// Sound\Dialogue\HumanExpCamp\Human05x\A05Kael16.mp3
+{
+The warden, Maiev, swore to capture Illidan at any cost. She must have brought her warriors here to hunt him!
+}
+
+STRING 221
+{
+|cff32cd32HINT|r - Dead Heroes automatically revive at an Altar in the Blood Elf base.
+}
+
+STRING 223
+{
+Prince Kael'thas
+}
+
+STRING 224
+{
+Illidan is unconscious, and this magical lock will take too long to open out here!
+}
+
+STRING 227
+{
+|cff32cd32HINT|r - Buy additional items for Lady Vashj and Prince Kael'thas at the Arcane Vault.
+}
+
+STRING 228
+{
+|cffff8c00NOTICE|r - You are only able to control Prince Kael'thas and Lady Vashj while attempting to retrieve Lord Illidan. The rest of your army will automatically engage Maiev's forces.
+}
+
+STRING 233
+{
+R
+}
+
+STRING 234
+{
+Steel Arrowheads
+}
+
+STRING 235
+{
+Improved Steel Arrowheads
+}
+
+STRING 236
+{
+Advanced Steel Arrowheads
+}
+
+STRING 237
+{
+Upgrade to Steel A|cffffcc00r|rrowheads
+}
+
+STRING 238
+{
+Upgrade to Improved Steel A|cffffcc00r|rrowheads
+}
+
+STRING 239
+{
+Upgrade to Advanced Steel A|cffffcc00r|rrowheads
+}
+
+STRING 240
+{
+Increases the damage of Archers.
+}
+
+STRING 241
+{
+Further increases the damage of Archers.
+}
+
+STRING 242
+{
+Increases damage of Archers by <Remk,base1>.
+}
+
+STRING 243
+{
+Increases the Archer's attack range.
+}
+
+STRING 244
+{
+|cffffcc00MAIN QUEST UPDATE|r
+The Demon Within
+  - Use your Heroes to recapture Illidan's cage
+  - The cage must not reach the Night Elf base
+}
+
+STRING 245
+{
+|cff32cd32HINT|r - While Maiev is away, you can seize control of Illidan's cage by moving Prince Kael'thas or Lady Vashj near the cage.
+}
+
+STRING 246
+{
+Prince Kael'thas
+}
+
+STRING 247
+{
+We've rescued Illidan, but we've got to get him to safety!
+}
+
+STRING 248
+{
+Regenerates the mana and health of all non-mechanical units nearby.
+}
+
+STRING 249
+{
+Build Fountain of Power
+}
+
+STRING 251
+{
+Prince Kael'thas
+}
+
+STRING 252
+{
+I'm waiting.
+}
+
+STRING 253
+{
+Lady Vashj
+}
+
+STRING 254
+{
+I stand ready.
+}
+
+STRING 255
+{
+Defeat!
+}
+
+STRING 256
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 257
+{
+|cFF1CE6B9Maiev|r |cFFFFCC00controls the cage.|r
+}
+
+STRING 258
+{
+|cFFFE8A0EKael|r |cFFFFCC00controls the cage.|r
+}
+
+STRING 259
+{
+|cFF1CE6B9Maiev|r |cFFFFCC00controls the cage.|r
+}
+
+STRING 260
+{
+Swordsman
+}
+
+STRING 261
+{
+Train |cffffcc00S|rwordsman
+}
+
+STRING 262
+{
+Archer
+}
+
+STRING 263
+{
+Train |cffffcc00A|rrcher
+}
+
+STRING 264
+{
+Primary troop production building. Trains Swordsmen and Archers.|n Also contains the Defend upgrade.
+}
+
+STRING 265
+{
+Trains Naga Myrmidons, Snap Dragons, and Naga Sirens. Also contains the Ensnare, Coral Blades, and Coral Scales upgrades.
+}
+
+STRING 266
+{
+Sentinels
+}
+
+STRING 267
+{
+Maiev Goal
+}
+
+STRING 268
+{
+Blood Elf Goal
+}
+
+STRING 269
+{
+Lady Vashj
+}
+
+STRING 270
+// Sound\Dialogue\HumanExpCamp\Human05x\A05LadyVashj02.mp3
+{
+We aren't. I caught the scent just as the wind shifted...
+}
+
+STRING 271
+{
+Prince Kael'thas
+}
+
+STRING 272
+// Sound\Dialogue\HumanExpCamp\Human05x\A05Kael01.mp3
+{
+This place is unnerving. We've marched for three days and seen no 
+signs of life. Still, I can't shake the feeling that we're not alone out here.
+
+}
+
+STRING 273
+{
+|cff86ceebNEW UNIT ACQUIRED|r
+Pandaren Brewmaster - This warrior Hero is available to you on this mission as a reward for defeating all 30 waves of the Secret Mission.
+}
+

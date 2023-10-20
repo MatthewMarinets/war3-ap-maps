@@ -1,0 +1,513 @@
+﻿STRING 1
+{
+Defeat
+}
+
+STRING 2
+{
+Force 1
+}
+
+STRING 3
+{
+NightElfX04
+}
+
+STRING 4
+{
+1
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 8
+{
+Illidan's Naga
+}
+
+STRING 9
+{
+Force 2
+}
+
+STRING 11
+// Sound\Dialogue\NightElfExpCamp\NightElf04x\S04Maiev02.mp3
+{
+They are lost. Illidan claimed the Eye of Sargeras--and used its power to bury our sisters alive! Now he intends to finish the rest of us off! We have no choice but to sail back to Kalimdor and warn Shan'do Stormrage of what his brother intends.
+}
+
+STRING 12
+{
+Naga Excavators
+}
+
+STRING 13
+{
+Your Watcher scouts have spotted several Naga excavation crews working on strange caves in the surrounding ruins. Kill the Excavators to deny Illidan the use of any powerful artifacts that they might hold.
+}
+
+STRING 14
+{
+Kill the Naga Excavators (0 of 4 Slain)
+}
+
+STRING 16
+{
+|cffffcc00OPTIONAL QUEST|r
+Naga Excavators
+ - Kill the Naga Excavators (1 of 4 Slain)
+}
+
+STRING 19
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 20
+{
+Defeat!
+}
+
+STRING 35
+{
+The Runner's Transport
+}
+
+STRING 36
+{
+The pressure of Illidan's Naga forces bears down heavily on Maiev's base. You must get to the Night Elf Transports quickly so that you can bring the Runner through the next leg of the journey out to sea. Protect the Runner at all costs; she is your only hope.
+}
+
+STRING 37
+{
+Rescue the Night Elf Transports
+}
+
+STRING 39
+{
+|cffffcc00MAIN QUEST|r
+The Runner's Transport
+ - Rescue the Night Elf Transports
+ - The Runner must survive
+ - Your base must survive
+}
+
+STRING 40
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+The Runner's Transport
+}
+
+STRING 59
+{
+|cffffcc00MISSION FAILED|r
+The Runner has been slain.
+}
+
+STRING 60
+{
+Defeat!
+}
+
+STRING 62
+{
+Chapter Four
+}
+
+STRING 63
+{
+Wrath of the Betrayer
+}
+
+STRING 64
+{
+Hours later, suffering from grievous wounds and exhaustion, Maiev stumbles back to the relative safety of her base camp.
+}
+
+STRING 184
+// Sound\Dialogue\NightElfExpCamp\NightElf04x\S04Huntress03.mp3
+{
+It's too late, mistress! Illidan's forces have arrived!
+}
+
+STRING 187
+{
+|cff32cd32HINT|r - The Runner's group cannot be reinforced by ground units from your base.
+}
+
+STRING 219
+{
+Escape to the Sea
+}
+
+STRING 220
+{
+Only a few Naga defenses lie between the Runner and the open sea. Protect the Transport vessels as they pass through the dilapidated ruins, and get the Runner through the Pillars of Aszune. Once she has reached the safety of the ocean, Elune will see that she reaches Malfurion in time.
+}
+
+STRING 222
+{
+Bring the Runner in a Transport out to sea
+}
+
+STRING 273
+{
+The Runner must survive
+}
+
+STRING 274
+{
+The Runner must survive
+}
+
+STRING 275
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Escape to Sea
+}
+
+STRING 276
+{
+|cffffcc00MAIN QUEST|r
+Escape to Sea
+ - Bring the Runner in a Transport out to sea
+ - The Runner must survive
+ - Your base must survive
+}
+
+STRING 277
+{
+Trunk of Gold
+}
+
+STRING 278
+{
+Gives 300 gold to the player when used.
+}
+
+STRING 279
+{
+Trove of Gold
+}
+
+STRING 280
+{
+Gives 500 gold to the player when used.
+}
+
+STRING 310
+{
+Infernal Ancient
+}
+
+STRING 332
+{
+AncientInferno
+}
+
+STRING 334
+{
+Huntress
+}
+
+STRING 335
+// Sound\Dialogue\NightElfExpCamp\NightElf04x\S04WatcherOne01.mp3
+{
+What happened, mistress? Where are Naisha and the others?
+}
+
+STRING 336
+{
+Maiev Shadowsong
+}
+
+STRING 337
+// Sound\Dialogue\NightElfExpCamp\NightElf04x\S04Maiev04.mp3
+{
+We cannot escape, but perhaps we can send for reinforcements. Summon the runner! She must reach the shoreline and sail back to Kalimdor.
+}
+
+STRING 338
+{
+Maiev Shadowsong
+}
+
+STRING 339
+// Sound\Dialogue\NightElfExpCamp\NightElf04x\S04Maiev05.mp3
+{
+With any luck, Shan'do Stormrage will reach us before we're overrun! Be swift, sister!
+}
+
+STRING 353
+{
+Massive Ruins Pillars
+}
+
+STRING 354
+// Sound\Dialogue\NightElfExpCamp\NightElf04x\S04Maiev20.mp3
+{
+Damn! The runner has been slain! There's no way to call for reinforcements now!
+}
+
+STRING 357
+{
+Praise Elune! The runner made it. She's reached the shore!
+}
+
+STRING 358
+{
+Harbor Defenses
+}
+
+STRING 359
+{
+Mistress, we've discovered a dig site. Perhaps it holds an artifact from our ancient kingdom.
+}
+
+STRING 361
+{
+Scour the dig site! We'll take whatever it holds for our own. Goddess willing, we'll find something to aid us against Illidan and his serpents.
+}
+
+STRING 364
+{
+Force 3
+}
+
+STRING 366
+{
+Superior Deflection
+}
+
+STRING 367
+{
+Power Deflection
+}
+
+STRING 376
+{
+Maiev Shadowsong
+}
+
+STRING 377
+{
+Maiev Shadowsong
+}
+
+STRING 381
+{
+Maiev Shadowsong
+}
+
+STRING 382
+// Sound\Dialogue\NightElfExpCamp\NightElf04x\S04Maiev23.mp3
+{
+Elune grant that she reaches Shan'do Stormrage in time. If not, Illidan may never be stopped.
+}
+
+STRING 383
+{
+|cff32cd32HINT|r - Gather the Gold Coins from the temple ruins to build more defenders at your base.
+}
+
+STRING 384
+{
+Viny Plant No Pathing
+}
+
+STRING 385
+{
+Maiev Shadowsong
+}
+
+STRING 387
+{
+Grank the Rat
+}
+
+STRING 390
+{
+|cff32cd32HINT|r - Destroy the explosive barrels near large trees to knock them down.
+}
+
+STRING 391
+{
+Tree Bridge No Path
+}
+
+STRING 392
+{
+|cffffcc00SECRET FOUND|r
+Brewmaster drinking area.
+}
+
+STRING 393
+{
+|cffffcc00SECRET FOUND|r
+Keeper of storms shrine.
+}
+
+STRING 395
+{
+Chapter Four: Wrath of the Betrayer
+}
+
+STRING 397
+{
+|cff32cd32HINT|r - Maiev can use the Staff of Teleportation to easily travel between her base and the Runner.
+}
+
+STRING 398
+{
+Serena Scarscale
+}
+
+STRING 399
+{
+Watchers
+}
+
+STRING 400
+{
+Naga
+}
+
+STRING 401
+{
+Kil'jaeden's Seekers
+}
+
+STRING 403
+{
+|cff32cd32HINT|r - The Well Spring upgrade is now available at the Hunters Hall. Well Spring increases the mana capacity and mana regeneration rate of Moon Wells.
+}
+
+STRING 405
+{
+Huntress
+}
+
+STRING 406
+// Sound\Dialogue\NightElfExpCamp\NightElf04x\S04Huntress17.mp3
+{
+The Runner is in trouble! Protect her!
+}
+
+STRING 407
+{
+Maiev Shadowsong
+}
+
+STRING 408
+// Units\NightElf\Maiev\MaievWarcry1.wav
+{
+Tor ilisar'thera'nal!
+}
+
+STRING 409
+{
+FREE
+}
+
+STRING 410
+{
+Spawns Sentinels DO NOT TRANSLATE
+}
+
+STRING 411
+{
+ANCIENT SPAWNER
+}
+
+STRING 412
+{
+Defeat!
+}
+
+STRING 413
+{
+|cffffcc00MISSION FAILED|r
+All of your Transports have been destroyed.
+}
+
+STRING 414
+{
+|cffffcc00MAIN QUEST|r
+Escape to Sea
+ - Bring the Runner in a Transport out to sea
+ - A Transport must survive
+ - The Runner must survive
+ - Your base must survive
+}
+
+STRING 416
+{
+A Transport must survive
+}
+
+STRING 417
+{
+Runner Destination
+}
+
+STRING 419
+{
+|cffffcc00OPTIONAL QUEST|r
+Naga Excavators
+ - Kill the Naga Excavators (1 of 4 Slain)
+}
+
+STRING 420
+{
+Kill the Naga Excavators (1 of 4 Slain)
+}
+
+STRING 421
+{
+Kill the Naga Excavators (2 of 4 Slain)
+}
+
+STRING 422
+{
+|cffffcc00OPTIONAL QUEST|r
+Naga Excavators
+ - Kill the Naga Excavators (2 of 4 Slain)
+}
+
+STRING 423
+{
+Kill the Naga Excavators (3 of 4 Slain)
+}
+
+STRING 424
+{
+|cffffcc00OPTIONAL QUEST|r
+Naga Excavators
+ - Kill the Naga Excavators (3 of 4 Slain)
+}
+
+STRING 425
+{
+Kill the Naga Excavators
+}
+
+STRING 426
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Naga Excavators
+}
+
+STRING 427
+{
+Your base must survive
+}
+
+STRING 428
+{
+Your base must survive
+}
+

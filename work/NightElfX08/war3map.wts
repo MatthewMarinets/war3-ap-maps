@@ -1,0 +1,573 @@
+﻿STRING 1
+{
+Player 2
+}
+
+STRING 5
+{
+Force 1
+}
+
+STRING 6
+{
+NightElfX08
+}
+
+STRING 7
+{
+1
+}
+
+STRING 8
+{
+Chapter Eight: The Brothers Stormrage
+}
+
+STRING 9
+{
+Blizzard Entertainment
+}
+
+STRING 11
+{
+Elite Huntress
+}
+
+STRING 19
+{
+|cffffcc00MISSION FAILED|r
+All of Malfurion's buildings have been destroyed.
+}
+
+STRING 24
+{
+|cffffcc00MISSION FAILED|r
+Tyrande has been slain.
+}
+
+STRING 34
+{
+|cffff8c00NOTICE|r - You control both Malfurion's and Illidan's bases. Both bases are completely separate, including their own resources and upkeep levels.
+}
+
+STRING 35
+{
+Illidan and Malfurion must work together to save the woman they love from the clutches of the Undead. Malfurion must hold out against the Undead forces, while Illidan must crush the massive Undead base surrounding Tyrande. Only then can she be brought to safety.
+}
+
+STRING 36
+{
+Use Illidan's forces to destroy the red Undead base
+}
+
+STRING 38
+{
+|cffffcc00MAIN QUEST|r
+Tyrande's Rescue
+ - Use Illidan's forces to destroy the red Undead base
+ - Use Malfurion's forces to defend the Night Elf base
+}
+
+STRING 40
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Tyrande's Rescue
+}
+
+STRING 43
+{
+Elite Druid of the Claw (Bear Form)
+}
+
+STRING 44
+{
+Elite Bear Form
+}
+
+STRING 47
+{
+Force 2
+}
+
+STRING 50
+{
+Chapter Eight
+}
+
+STRING 51
+{
+The Brothers Stormrage
+}
+
+STRING 52
+{
+Hours later, along the banks of the River Arevass, Malfurion and Illidan work together to pick up Tyrande's trail. Moving quickly through the woods, their skills and senses start working in unison--their twin wills bent on finding their beloved priestess before it's too late.
+}
+
+STRING 53
+{
+Elite Archer
+}
+
+STRING 55
+{
+SentinelSpawner
+}
+
+STRING 56
+{
+FREESentinel
+}
+
+STRING 57
+{
+Sentinels
+}
+
+STRING 83
+{
+We shall see.
+}
+
+STRING 87
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Illidan39.mp3
+{
+No, Tyrande. You must believe me. I've come to save you!
+}
+
+STRING 89
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Illidan41.mp3
+{
+Hurry! This is our last chance!
+}
+
+STRING 91
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Illidan44.mp3
+{
+Whatever I may be--whatever I may become in this world--know that I will always look out for you, Tyrande.
+}
+
+STRING 93
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Illidan48.mp3
+{
+We have had much strife between us, my brother. I have known only ages of hate for you. But, for my part, I wish it to end. From this day forward, let there be peace between us.
+}
+
+STRING 97
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Tyrande19.mp3
+{
+Fight on, my warriors! We must hold on to hope!
+}
+
+STRING 99
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Tyrande20.mp3
+{
+Another wave! We must hold out!
+}
+
+STRING 101
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Tyrande21.mp3
+{
+They come again! They'll not find us easy prey! Attack!
+}
+
+STRING 103
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Tyrande22.mp3
+{
+Their numbers are limitless! We must hold on!
+}
+
+STRING 105
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Tyrande23.mp3
+{
+We've got to keep fighting! It cannot end this way!
+}
+
+STRING 107
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Tyrande24.mp3
+{
+Goddess, if this is to be the end, let us die with your name on our lips!
+}
+
+STRING 109
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Tyrande25.mp3
+{
+Keep fighting, my warriors! They may be our end, but they will never defeat our spirit!
+}
+
+STRING 111
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Tyrande38.mp3
+{
+Illidan! What trickery is this? Have you come to finish me off personally?
+}
+
+STRING 113
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Tyrande40.mp3
+{
+Save me?
+}
+
+STRING 115
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Tyrande43.mp3
+{
+You... risked your life for me. I don't understand.
+}
+
+STRING 117
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Tyrande46.mp3
+{
+I knew you would not forsake me!
+}
+
+STRING 131
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Furion42.mp3
+{
+Where could they be? He should have brought her back by now!
+}
+
+STRING 132
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Furion45.mp3
+{
+Tyrande!
+}
+
+STRING 133
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Furion47.mp3
+{
+I thought I'd lost you forever, my love. If not for Illidan's aid, I may well have.
+}
+
+STRING 146
+{
+Illidan Stormrage
+}
+
+STRING 158
+{
+Tyrande Whisperwind
+}
+
+STRING 174
+{
+Malfurion Stormrage
+}
+
+STRING 188
+{
+Illidan Stormrage
+}
+
+STRING 189
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Illidan01.mp3
+{
+Prince Kael'thas said he last saw Tyrande being swept down this river. If she is alive, my naga will find her.
+}
+
+STRING 190
+{
+Malfurion Stormrage
+}
+
+STRING 191
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Furion02.mp3
+{
+They had best return with good news, brother. The very sight of them makes my stomach turn. Where did you ever find such loathsome creatures?
+}
+
+STRING 192
+{
+Illidan Stormrage
+}
+
+STRING 193
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Illidan03.mp3
+{
+Believe me, brother, you do not want to know.
+}
+
+STRING 194
+{
+Naga Myrmidon
+}
+
+STRING 195
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Naga04.mp3
+{
+Lord Illidan, we have found your missing priestess. She and her warriors fight on against the undead, but I doubt they can hold out much longer.
+}
+
+STRING 198
+{
+Tyrande Whisperwind
+}
+
+STRING 199
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Tyrande05.mp3
+{
+Come forth, you mindless wretches, and taste the wrath of the Sentinels! Elune's light shall never falter!
+}
+
+STRING 200
+{
+Naga Myrmidon
+}
+
+STRING 201
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Naga06.mp3
+{
+You'd best hurry if you're to save her!
+}
+
+STRING 202
+{
+Illidan Stormrage
+}
+
+STRING 203
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Illidan07.mp3
+{
+An undead strike force! But they're completely ignoring us! What could--
+}
+
+STRING 206
+{
+Malfurion Stormrage
+}
+
+STRING 207
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Furion08.mp3
+{
+Tyrande...
+}
+
+STRING 208
+{
+Illidan Stormrage
+}
+
+STRING 209
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Illidan09.mp3
+{
+Their flying horrors fill the sky! It would be folly to send your flyers against them!
+}
+
+STRING 210
+{
+Malfurion Stormrage
+}
+
+STRING 211
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Furion10.mp3
+{
+We cannot depend on them now! Illidan, you must hold the undead here and prevent them from assaulting Tyrande's encampment. I will journey downriver and--
+}
+
+STRING 212
+{
+Illidan Stormrage
+}
+
+STRING 213
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Illidan11.mp3
+{
+No, brother. The naga and I can reach her faster! I will go.
+}
+
+STRING 214
+{
+Malfurion Stormrage
+}
+
+STRING 215
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Furion12.mp3
+{
+What you say is true, but I risk much by trusting you, Illidan.
+}
+
+STRING 216
+{
+Illidan Stormrage
+}
+
+STRING 217
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Illidan13.mp3
+{
+I swear on my life that I will bring her back, my brother.
+}
+
+STRING 218
+{
+Malfurion Stormrage
+}
+
+STRING 219
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Furion14.mp3
+{
+I... believe you. Ande'thoras-ethil, brother.
+}
+
+STRING 220
+{
+Waterfall FLAT
+}
+
+STRING 227
+{
+Dam Trolls
+}
+
+STRING 228
+{
+The Trolls have constructed several dams and set up homes up the river, blocking you from easily striking at the Undead army guarding Tyrande. Slay the Trolls and their Chieftain Krag'jin to open more paths for attacks on the Undead.
+}
+
+STRING 229
+{
+Slay the Trolls and their Chieftain
+}
+
+STRING 231
+{
+|cffffcc00OPTIONAL QUEST|r
+Dam Trolls
+ - Slay the Trolls and their Chieftain
+}
+
+STRING 232
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Dam Trolls
+}
+
+STRING 237
+{
+Naga Myrmidon
+}
+
+STRING 238
+// Sound\Dialogue\NightElfExpCamp\NightElf08x\S08Naga35.mp3
+{
+Lord Illidan, we've discovered a dam blocking one of the river's tributaries. The dam is guarded by forest trolls, but the stream beyond it might provide us a faster route to your friend.
+}
+
+STRING 239
+{
+(Tyrande's)
+}
+
+STRING 240
+{
+River Golem
+}
+
+STRING 242
+{
+|cffffcc00MISSION FAILED|r
+All of Illidan's buildings have been destroyed.
+}
+
+STRING 243
+{
+Defeat!
+}
+
+STRING 244
+{
+Defeat!
+}
+
+STRING 246
+{
+Use Malfurion's forces to defend the Night Elf base
+}
+
+STRING 247
+{
+Defeat!
+}
+
+STRING 248
+{
+Shadowglen Berserker
+}
+
+STRING 250
+{
+Shadowglen High Priest
+}
+
+STRING 251
+{
+Shadowglen Healer
+}
+
+STRING 252
+{
+Tyrande's
+}
+
+STRING 253
+{
+Krag'jin
+}
+
+STRING 255
+{
+Shadowglen Trolls
+}
+
+STRING 256
+{
+Illidan's Naga
+}
+
+STRING 259
+{
+Tyrande's Rescue
+}
+
+STRING 260
+{
+Malfurion's Force
+}
+
+STRING 261
+{
+|cff32cd32HINT|r - Parasite, a spell cast by your Naga Sirens, causes Watery Minions to spawn from dying enemies.
+}
+
+STRING 264
+{
+Shadowglen Dark Priest
+}
+
+STRING 265
+{
+Shadowglen Dark Healer
+}
+
+STRING 266
+{
+Undead Scourge
+}
+
+STRING 267
+{
+Murloc Riverlord
+}
+
+STRING 268
+{
+Terrordar,Nerothos,Bleakill,Necros,Fearoth,Dethecus,Maldibion,Nochthitus,Rashgarroth,Aramachus,Zilfallon,Lorthiras,Zenedar,Mullioch,Algammon,Banehallow,Ven'Gyr
+}
+
+STRING 269
+{
+Build more Farms to continue unit production.,Create more Moon Wells to continue unit production.,Summon more Ziggurats to continue unit production.,Create more Coral Beds to continue unit production.
+}
+
+STRING 270
+{
+Must target friendly Town Hall.,Must target friendly Great Hall.,Must target friendly Town Hall.,Must target friendly Town Hall.
+}
+

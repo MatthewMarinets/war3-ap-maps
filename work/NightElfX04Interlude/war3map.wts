@@ -1,0 +1,211 @@
+﻿STRING 3
+{
+NightElfX04Interlude
+}
+
+STRING 4
+{
+1
+}
+
+STRING 5
+{
+Interlude: Unfinished Business
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 7
+{
+Interlude
+}
+
+STRING 10
+{
+Alliance of Lordaeron
+}
+
+STRING 11
+{
+Undead Scourge
+}
+
+STRING 12
+{
+Book of Beards
+}
+
+STRING 24
+{
+Kargin Ironknee
+}
+
+STRING 25
+{
+Purchase Book of Beards
+}
+
+STRING 27
+{
+A book.
+}
+
+STRING 28
+{
+This book is full of beard styles and trimming techniques.
+}
+
+STRING 29
+{
+Malfurion Stormrage
+}
+
+STRING 30
+// Sound\Dialogue\NightElfExpCamp\NightElf04xInterlude\S04Furion24.mp3
+{
+Nordrassil's roots seem to be healing well. I wish I could say the same for Felwood. I fear the Legion's corruption will scar the glade permanently.
+}
+
+STRING 49
+{
+Player 1
+}
+
+STRING 50
+{
+Player 2
+}
+
+STRING 51
+{
+Player 3
+}
+
+STRING 52
+{
+Unfinished Business
+}
+
+STRING 53
+{
+Tyrande Whisperwind
+}
+
+STRING 54
+// Sound\Dialogue\NightElfExpCamp\NightElf04xInterlude\S04Tyrande25.mp3
+{
+Your druids will think of something. Perhaps Ysera or Alexstrasza could lend their--
+}
+
+STRING 55
+{
+Druid of the Claw
+}
+
+STRING 56
+// Sound\Dialogue\NightElfExpCamp\NightElf04xInterlude\S04DruidOfTheClaw26.mp3
+{
+Your pardon, Shan'do Stormrage--Priestess Tyrande--but she insisted that she be allowed to see you.
+}
+
+STRING 57
+{
+Tyrande Whisperwind
+}
+
+STRING 58
+// Sound\Dialogue\NightElfExpCamp\NightElf04xInterlude\S04Tyrande27.mp3
+{
+Who are you, girl? What is so urgent? 
+}
+
+STRING 59
+{
+Runner
+}
+
+STRING 60
+// Sound\Dialogue\NightElfExpCamp\NightElf04xInterlude\S04Runner28.mp3
+{
+I am a servant of the Warden, Maiev Shadowsong--she who pledged to hunt down the Betrayer, Illidan.
+}
+
+STRING 61
+{
+Malfurion Stormrage
+}
+
+STRING 62
+// Sound\Dialogue\NightElfExpCamp\NightElf04xInterlude\S04Furion29.mp3
+{
+Illidan? Explain yourself!
+}
+
+STRING 63
+{
+Runner
+}
+
+STRING 64
+// Sound\Dialogue\NightElfExpCamp\NightElf04xInterlude\S04Runner30.mp3
+{
+Your pardon, Shan'do, but your brother has raised a dark army from the sea and stolen a powerful demonic artifact! Even now, my mistress battles him on the broken isles! She requires immediate reinforcements!
+}
+
+STRING 65
+{
+Tyrande Whisperwind
+}
+
+STRING 66
+// Sound\Dialogue\NightElfExpCamp\NightElf04xInterlude\S04Tyrande31.mp3
+{
+I will go. I will lead the Sentinels there myself. 
+}
+
+STRING 67
+{
+Malfurion Stormrage
+}
+
+STRING 68
+// Sound\Dialogue\NightElfExpCamp\NightElf04xInterlude\S04Furion32.mp3
+{
+No, my love. The druids and I can handle--
+}
+
+STRING 69
+{
+Tyrande Whisperwind
+}
+
+STRING 70
+// Sound\Dialogue\NightElfExpCamp\NightElf04xInterlude\S04Tyrande33.mp3
+{
+I am the one who set him free. The responsibility is mine.
+}
+
+STRING 71
+{
+Malfurion Stormrage
+}
+
+STRING 72
+// Sound\Dialogue\NightElfExpCamp\NightElf04xInterlude\S04Furion34.mp3
+{
+Then we shall both go. If this girl's tale is true, Maiev will need all the help she can get.
+}
+
+STRING 73
+{
+Player 5
+}
+
+STRING 74
+{
+Late that evening, in the secluded Moonglade, Malfurion Stormrage and Tyrande Whisperwind discuss the aftermath of the Legion's invasion.
+}
+

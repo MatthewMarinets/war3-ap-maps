@@ -1,0 +1,199 @@
+﻿STRING 1
+{
+Player 1
+}
+
+STRING 2
+{
+Force 1
+}
+
+STRING 11
+{
+Illidan Stormrage
+}
+
+STRING 12
+// Sound\Dialogue\HumanExpCamp\Human05xInterlude\A05Illidan49.mp3
+{
+You were right to come to me, Kael. I share the pain of your addiction--your hunger for magic.
+}
+
+STRING 15
+{
+Prince Kael'thas
+}
+
+STRING 16
+// Sound\Dialogue\HumanExpCamp\Human05xInterlude\A05Kael50.mp3
+{
+Can you help us, Lord Illidan? Can you cure us?
+}
+
+STRING 17
+{
+Illidan Stormrage
+}
+
+STRING 18
+// Sound\Dialogue\HumanExpCamp\Human05xInterlude\A05Illidan51.mp3
+{
+There is no cure, young one. But there are ways to feed the hunger. Follow me, and I will grant your people more magic than they can imagine.
+}
+
+STRING 20
+// Sound\Dialogue\HumanExpCamp\Human05xInterlude\A05Kael52.mp3
+{
+So be it. Lord Illidan, my fellow blood elves and I humbly pledge ourselves to your service.
+}
+
+STRING 29
+{
+HumanX04Interlude
+}
+
+STRING 30
+{
+1
+}
+
+STRING 31
+{
+Interlude: Illidan's Task
+}
+
+STRING 32
+{
+Blizzard Entertainment
+}
+
+STRING 33
+{
+Interlude
+}
+
+STRING 34
+{
+Illidan's Task
+}
+
+STRING 35
+{
+Player 4
+}
+
+STRING 36
+{
+Illidan Stormrage
+}
+
+STRING 37
+// Sound\Dialogue\HumanExpCamp\Human05xInterlude\A05Illidan53.mp3
+{
+Then arise, young Kael. You shall be my right hand and the harbinger of my wrath. 
+}
+
+STRING 38
+{
+Prince Kael'thas
+}
+
+STRING 39
+// Sound\Dialogue\HumanExpCamp\Human05xInterlude\A05Kael54.mp3
+{
+What of your plans, master? 
+}
+
+STRING 40
+{
+Illidan Stormrage
+}
+
+STRING 41
+// Sound\Dialogue\HumanExpCamp\Human05xInterlude\A05Illidan55.mp3
+{
+Hmm. Many months after the Legion’s defeat at the Battle of Mount Hyjal, I was visited by one of the last great demonlords--Kil’jaeden. 
+}
+
+STRING 42
+{
+Kil'jaeden
+}
+
+STRING 43
+// Sound\Dialogue\HumanExpCamp\Human05xInterlude\A05Kiljaeden56.mp3
+{
+Illidan, in the past you have been both friend and foe to the Burning Legion. But, by consuming the Skull of Gul'dan, you sealed our defeat in this world. I come to offer you a second chance to serve us. 
+}
+
+STRING 44
+{
+Illidan Stormrage
+}
+
+STRING 45
+// Sound\Dialogue\HumanExpCamp\Human05xInterlude\A05Illidan57.mp3
+{
+What would you have me do, great one?
+}
+
+STRING 48
+{
+Kil'jaeden
+}
+
+STRING 49
+// Sound\Dialogue\HumanExpCamp\Human05xInterlude\A05Kiljaeden58.mp3
+{
+My creation, the Lich King, has betrayed me. He dared to break the pact that binds him to my will, but his spirit still lies trapped inside the Frozen Throne of Icecrown. Destroy it for me, and I will grant you your heart's desire.
+}
+
+STRING 50
+{
+Illidan Stormrage
+}
+
+STRING 51
+// Sound\Dialogue\HumanExpCamp\Human05xInterlude\A05Illidan59.mp3
+{
+It shall be done, great one. It shall be done.
+}
+
+STRING 52
+{
+Illidan Stormrage
+}
+
+STRING 53
+// Sound\Dialogue\HumanExpCamp\Human05xInterlude\A05Illidan60.mp3
+{
+At Dalaran, I attempted to use the Eye of Sargeras to melt away the polar icecaps surrounding the Icecrown Glacier. If the spell had succeeded, the Lich King would have been vanquished forever.
+}
+
+STRING 54
+{
+Lady Vashj
+}
+
+STRING 55
+// Sound\Dialogue\HumanExpCamp\Human05xInterlude\A05LadyVashj61.mp3
+{
+But the cursed night elves intervened.
+}
+
+STRING 56
+{
+Illidan Stormrage
+}
+
+STRING 57
+// Sound\Dialogue\HumanExpCamp\Human05xInterlude\A05Illidan62.mp3
+{
+And the spell went awry. Given my failure, I fled to this desolate place to evade Kil'jaeden's wrath. Now, if I am to remain here in exile, we will need to ensure that Kil'jaeden's agents have been cleansed from the land.
+}
+
+STRING 58
+{
+Hours later, at Illidan's base camp, Prince Kael'thas finally approaches the former demon hunter and asks for his aid.
+}
+

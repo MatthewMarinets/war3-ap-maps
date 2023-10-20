@@ -1,0 +1,875 @@
+﻿STRING 3
+{
+NightElfX01
+}
+
+STRING 4
+{
+1
+}
+
+STRING 5
+{
+Chapter One: Rise of the Naga
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 29
+{
+|cff32cd32HINT|r - Runes are items that activate once touched. This particular Rune heals nearby wounded units.
+}
+
+STRING 37
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01Maiev01.mp3
+{
+These tracks are fresh, but they split off in opposite directions. Illidan must be getting help from someone.
+}
+
+STRING 38
+{
+Watcher
+}
+
+STRING 39
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01WatcherOne03.mp3
+{
+Your orders, mistress? 
+}
+
+STRING 41
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01Maiev04.mp3
+{
+You Watchers split up into two parties. Scour the woods. Find what you can. We'll meet you further up the coast.
+}
+
+STRING 43
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01Maiev06.mp3
+{
+Remember, sisters--if you find Illidan, do not attempt to take him without the rest of us. He is far too dangerous to tackle alone.
+}
+
+STRING 44
+{
+Watcher
+}
+
+STRING 45
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01WatcherOne05.mp3
+{
+Yes, mistress.
+}
+
+STRING 61
+{
+Chapter One
+}
+
+STRING 63
+{
+Defeat!
+}
+
+STRING 65
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01Maiev07.mp3
+{
+The rest of you, follow me.
+}
+
+STRING 66
+{
+The Demon's Trail
+}
+
+STRING 67
+{
+Illidan has sewn a path of destruction along the coastline. Hunt the Demon down and recapture him before he harms any more innocent civilians. 
+}
+
+STRING 68
+{
+Follow Illidan's trail
+}
+
+STRING 69
+{
+|cffffcc00MAIN QUEST|r
+The Demon's Trail
+  - Follow Illidan's trail
+  - Maiev must survive
+}
+
+STRING 70
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+The Demon's Trail
+}
+
+STRING 71
+{
+Burning Ships
+}
+
+STRING 72
+{
+Illidan has taken to the sea, and you must follow. His Naga minions have begun to set fire to the few boats that are left. You must save at least 2 ships, or you will not have a sufficient force to give chase.
+}
+
+STRING 73
+{
+Save at least two ships
+}
+
+STRING 74
+{
+|cffffcc00MAIN QUEST|r
+Burning Ships
+  - Save at least two ships
+  - Maiev must survive
+}
+
+STRING 75
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Burning Ships
+}
+
+STRING 76
+{
+Enraged Beast
+}
+
+STRING 77
+{
+The animals of the wild have gone berserk due to Illidan's presence. One animal in particular is causing a great deal of trouble--a fearsome Wildkin. Put the creature to rest so that it can do no more harm.
+}
+
+STRING 78
+{
+Slay the Wildkin
+}
+
+STRING 79
+{
+|cffffcc00OPTIONAL QUEST|r
+Enraged Beast
+  - Slay the Wildkin
+}
+
+STRING 80
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Enraged Beast
+}
+
+STRING 81
+{
+|cffffcc00MISSION FAILED|r
+Maiev has been slain.
+}
+
+STRING 118
+{
+Naga
+}
+
+STRING 119
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01NagaOne44.mp3
+{
+Quickly, you fools! The ships must be burned. The master doesn't wish to be followed.
+}
+
+STRING 144
+{
+Furbolg Trailblazer
+}
+
+STRING 191
+{
+Maiev must survive
+}
+
+STRING 192
+{
+Maiev must survive
+}
+
+STRING 203
+{
+Archer
+}
+
+STRING 204
+{
+There, mistress! Those must be the creatures we're after.
+}
+
+STRING 208
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01Maiev39.mp3
+{
+Naga? Many craven races have tempted our wrath over the centuries. None have survived!
+}
+
+STRING 217
+{
+Defeat!
+}
+
+STRING 223
+{
+Maiev Shadowsong
+}
+
+STRING 224
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01Maiev45.mp3
+{
+I cannot allow Illidan to escape again! We must slay those naga before they burn the ships.
+}
+
+STRING 225
+{
+Naga
+}
+
+STRING 226
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01NagaOne46.mp3
+{
+You are too late, little warden. The master has already set sail for distant shores. However, he wished to thank you for the hospitality you provided during his imprisonment. He asked us to repay you... in kind.
+}
+
+STRING 227
+{
+Maiev Shadowsong
+}
+
+STRING 228
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01Maiev47.mp3
+{
+You're certainly welcome to try, monster!
+}
+
+STRING 229
+{
+Search and Rescue
+}
+
+STRING 230
+{
+The vile Satyrs have captured several members of Maiev's scout party. Find the Satyrs, and destroy the cages to free your sisters from the Satyrs' vile clutches.
+}
+
+STRING 231
+{
+Search and Rescue
+}
+
+STRING 232
+{
+|cffffcc00OPTIONAL QUEST|r
+Search and Rescue
+  - Rescue the imprisoned Night Elves
+}
+
+STRING 233
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Search and Rescue
+}
+
+STRING 249
+{
+Two Ships must survive
+}
+
+STRING 250
+{
+Ships Remaining
+}
+
+STRING 265
+{
+Archer
+}
+
+STRING 266
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01WatcherTwo18.mp3
+{
+Mistress! The furbolgs have succumbed to the forest's corruption! It's as if they've lost themselves to mindless rage! 
+}
+
+STRING 268
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01Maiev19.mp3
+{
+Their tribes suffered greatly during the Legion's invasion. They cannot be saved.
+}
+
+STRING 312
+{
+Huntress
+}
+
+STRING 313
+{
+Mistress Shadowsong! We're lucky to have found you!
+}
+
+STRING 314
+{
+Maiev Shadowsong
+}
+
+STRING 315
+{
+Report!
+}
+
+STRING 324
+{
+Huntress
+}
+
+STRING 325
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01WatcherOne22.mp3
+{
+My party was attacked by a bloodthirsty Wildkin. Apparently Illidan's passing drove the creature mad. There's no telling how many more innocents it might harm!
+}
+
+STRING 327
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01Maiev23.mp3
+{
+This madness must end! We will find the creature... and put it down.
+}
+
+STRING 329
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01Maiev29.mp3
+{
+Illidan's new minions struck here as well. They're bloodthirsty and fearless, whoever they are.
+}
+
+STRING 331
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01Maiev26.mp3
+{
+Ambush! The satyrs are attacking! Drive the foul brutes back!
+}
+
+STRING 332
+{
+Satyr
+}
+
+STRING 333
+{
+Wretched fools! You cannot stop the master. His is the hand of glory! His will shall be done!
+}
+
+STRING 335
+{
+So, Illidan sent you foul satyrs to slow us down? He must be getting desperate.
+}
+
+STRING 345
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01Maiev41.mp3
+{
+These poor folk were slain just like the others. Illidan has much to answer for. He'll wish he were still chained in his cell when I get through with him.
+}
+
+STRING 346
+{
+Naisha
+}
+
+STRING 347
+{
+But these wrecks... Why would they destroy ships?
+}
+
+STRING 349
+{
+I don't know. Wait--he may have taken to the sea. Hurry, sisters! The port of Nendis lies to the north. Perhaps there we can find a ship and set sail after Illidan.
+}
+
+STRING 350
+{
+Wildkin Nest
+}
+
+STRING 352
+{
+You will release my warriors immediately.
+}
+
+STRING 353
+{
+Satyr
+}
+
+STRING 354
+{
+Bah, night elf Watchers! I knew there were more of them skulking around out there.
+}
+
+STRING 357
+{
+Satyr
+}
+
+STRING 358
+{
+I think not, woman. The master tires of your games. The chase ends here.
+}
+
+STRING 359
+{
+Maiev Shadowsong
+}
+
+STRING 360
+{
+Maiev Shadowsong
+}
+
+STRING 361
+{
+Maiev Shadowsong
+}
+
+STRING 362
+{
+Maiev Shadowsong
+}
+
+STRING 363
+{
+Maiev Shadowsong
+}
+
+STRING 364
+{
+Maiev Shadowsong
+}
+
+STRING 365
+{
+Maiev Shadowsong
+}
+
+STRING 368
+{
+Maiev Shadowsong
+}
+
+STRING 369
+{
+Maiev Shadowsong
+}
+
+STRING 370
+{
+Maiev Shadowsong
+}
+
+STRING 371
+{
+Maiev Shadowsong
+}
+
+STRING 372
+{
+Maiev Shadowsong
+}
+
+STRING 373
+{
+Maiev Shadowsong
+}
+
+STRING 374
+{
+Maiev Shadowsong
+}
+
+STRING 375
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01Maiev25.mp3
+{
+As I suspected, their whole race has gone mad. Slay them all!
+}
+
+STRING 376
+{
+Archer
+}
+
+STRING 377
+{
+The bodies have been mutilated. Do you suppose demons did this? 
+}
+
+STRING 378
+{
+Maiev Shadowsong
+}
+
+STRING 379
+{
+Illidan's stench hangs heavily over this place, but those tracks were not made by any demons I know of. Be wary, my sisters. There's no telling what horrors Illidan has called to his side.
+}
+
+STRING 380
+{
+Archer
+}
+
+STRING 381
+{
+That village has been razed!
+}
+
+STRING 384
+{
+Maiev Shadowsong
+}
+
+STRING 385
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01Maiev17.mp3
+{
+The Legion's corruption still grips the land.
+}
+
+STRING 396
+{
+Maiev Shadowsong
+}
+
+STRING 397
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01Maiev24.mp3
+{
+That's the creature we're after! Slay it quickly and put it out of its misery.
+}
+
+STRING 400
+{
+Maiev Shadowsong
+}
+
+STRING 401
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01Maiev08.mp3
+{
+We're getting close. I smell something vile upon the wind.
+}
+
+STRING 404
+{
+Defeat!
+}
+
+STRING 405
+{
+|cffffcc00MISSION FAILED|r
+Two ships have not been saved.
+}
+
+STRING 412
+{
+Naisha
+}
+
+STRING 413
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01Huntress14.mp3
+{
+Mistress, do you believe we can we defeat Illidan even if we find him?
+}
+
+STRING 416
+{
+Archer
+}
+
+STRING 417
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01Naisha48.mp3
+{
+Mistress, why would the naga harbor so much hatred for us?
+}
+
+STRING 418
+{
+Maiev Shadowsong
+}
+
+STRING 419
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01Maiev49.mp3
+{
+We must trust time to reveal all things. Now hurry. Illidan has a considerable lead on us. We must capture him before he causes any more harm.
+}
+
+STRING 420
+{
+Maiev Shadowsong
+}
+
+STRING 421
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01Maiev15.mp3
+{
+Illidan has grown powerful: of that, there is no doubt. He consumed the energies of the Skull of Gul'dan. Now he is neither night elf nor demon, but something more.
+}
+
+STRING 422
+{
+Furbolg Hermit
+}
+
+STRING 423
+{
+Mur'gul Clam Trapper
+}
+
+STRING 424
+{
+Mur'gul Shell Sucker
+}
+
+STRING 425
+{
+Huntress
+}
+
+STRING 426
+{
+Mistress Shadowsong, thank Elune! A band of satyrs captured the rest of my party. The twisted brutes are holding them in the nearby woods. 
+}
+
+STRING 427
+{
+Maiev Shadowsong
+}
+
+STRING 428
+{
+We will find them.
+}
+
+STRING 429
+{
+Prisoners
+}
+
+STRING 430
+{
+Naga Guard
+}
+
+STRING 432
+{
+Illidan
+}
+
+STRING 433
+{
+Though the demonlord, Archimonde, and the Burning Legion were finally defeated at the Battle of Mount Hyjal, much of Ashenvale Forest remains tainted by foul, demonic energies. The combined efforts of both the druids and the Sentinels have brought a tenuous peace to the northlands, but dark creatures still lurk within the shadowed woods. In this perilous time, Maiev Shadowsong, the warden who once guarded Illidan’s barrow prison, has come forth to hunt her dangerous prey--and chain him once again beneath the cold earth.
+}
+
+STRING 434
+{
+Rise of the Naga
+}
+
+STRING 435
+{
+Watchers
+}
+
+STRING 437
+{
+Illidan's Naga
+}
+
+STRING 438
+{
+Illidan's Servitors
+}
+
+STRING 439
+{
+Ferocious Beasts
+}
+
+STRING 440
+{
+Wild Mur'guls
+}
+
+STRING 441
+{
+Force 1
+}
+
+STRING 442
+{
+Force 2
+}
+
+STRING 443
+{
+Naisha
+}
+
+STRING 444
+{
+Look there, at the shoreline.
+}
+
+STRING 445
+{
+Maiev Shadowsong
+}
+
+STRING 446
+{
+Move!
+}
+
+STRING 449
+{
+Maiev Shadowsong
+}
+
+STRING 450
+{
+The forest is too still. Nothing stirs. The creatures we hunt must be terrifying indeed to cow the very breath of nature.
+}
+
+STRING 451
+{
+Naisha
+}
+
+STRING 452
+{
+The tracks lead off into the sea and then reappear back on land. What are these creatures?
+}
+
+STRING 453
+{
+Maiev Shadowsong
+}
+
+STRING 454
+{
+We'll find out soon enough. Let's move.
+}
+
+STRING 455
+{
+Leader
+}
+
+STRING 456
+{
+Mur'gul Clam Shucker
+}
+
+STRING 461
+{
+|cffff0000WARNING|r - A ship has been destroyed.
+}
+
+STRING 462
+{
+|cffff0000WARNING|r - A ship has been destroyed.
+}
+
+STRING 463
+{
+|cffff0000WARNING|r - A ship has been destroyed.
+}
+
+STRING 464
+{
+|cffff0000WARNING|r - A ship has been destroyed.
+}
+
+STRING 465
+{
+|cffff0000WARNING|r - A ship has been destroyed.
+}
+
+STRING 466
+{
+|cffff0000WARNING|r - A ship has been destroyed.
+}
+
+STRING 467
+{
+|cff32cd32HINT|r - Runes are items that activate once touched. This particular Rune replenishes the mana of nearby units.
+}
+
+STRING 468
+{
+|cff32cd32HINT|r - Runes are items that activate once touched.
+}
+
+STRING 469
+{
+|cffffcc00OPTIONAL QUEST FAILED|r
+Search and Rescue
+}
+
+STRING 472
+{
+Archer
+}
+
+STRING 473
+{
+There, mistress! Those must be the creatures we're after.
+}
+
+STRING 474
+{
+Naisha
+}
+
+STRING 475
+{
+But these wrecks... Why would they destroy ships?
+}
+
+STRING 476
+{
+Naisha
+}
+
+STRING 477
+{
+But these wrecks... Why would they destroy ships?
+}
+
+STRING 478
+{
+Night Elf Villagers
+}
+
+STRING 479
+{
+Naga
+}
+
+STRING 480
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01NagaOne38.mp3
+{
+Wretched night elves, you are no match for the naga!
+}
+
+STRING 481
+{
+Naga
+}
+
+STRING 482
+// Sound\Dialogue\NightElfExpCamp\NightElf01x\S01NagaOne40.mp3
+{
+Wretched woman. We will retake the surface world and put an end to your vile race once and for all.
+}
+

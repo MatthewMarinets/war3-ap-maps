@@ -1,0 +1,651 @@
+﻿STRING 3
+{
+HumanX03Secret
+}
+
+STRING 4
+{
+1
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 16
+{
+Secret Level
+}
+
+STRING 17
+{
+The Crossing
+}
+
+STRING 19
+{
+Prince Kael'thas
+}
+
+STRING 20
+// Sound\Dialogue\HumanExpCamp\Human04x\A04Kael01.mp3
+{
+Quickly, my brethren, take your positions. Garithos' forces will be here any moment.
+}
+
+STRING 21
+{
+Lady Vashj
+}
+
+STRING 23
+{
+Defeat!
+}
+
+STRING 24
+{
+Defend the Portal
+}
+
+STRING 25
+{
+Garithos is sending his men on a suicide mission to destroy the Portal. You need only hold out long enough for all of the Blood Elves to get through to Outland. Place defensive towers in strategic locations to stop Garithos' army from reaching and destroying the Portal. Defend the Portal from Garithos' troops while the rest of the Blood Elves escape.
+}
+
+STRING 26
+{
+Build towers to stop Garithos' men
+}
+
+STRING 27
+{
+|cffffcc00MAIN QUEST|r
+Defend the Portal
+  - Build towers to stop Garithos' men
+  - The Portal must survive
+}
+
+STRING 28
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Defend the Portal
+}
+
+STRING 36
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 38
+{
+|cff32cd32HINT|r - Build and upgrade your towers to defend against the attackers.
+}
+
+STRING 41
+{
+Defeat!
+}
+
+STRING 43
+{
+|cffffcc00MAIN QUEST FAILED|r
+Defend the Portal
+}
+
+STRING 45
+{
+Time Left
+}
+
+STRING 56
+{
+Portal to Outland
+}
+
+STRING 60
+// Sound\Dialogue\HumanExpCamp\Human04x\A04LadyVashj22.mp3
+{
+Kael, nearly half of our forces are through! You've got to hold Garithos at bay!
+}
+
+STRING 63
+{
+Lady Vashj
+}
+
+STRING 64
+// Sound\Dialogue\HumanExpCamp\Human04x\A04LadyVashj25.mp3
+{
+Nearly everyone is through! Just a while longer, and we'll have done it!
+}
+
+STRING 66
+{
+The portal is under attack! Defend it at all costs!
+}
+
+STRING 68
+{
+Protect the portal!
+}
+
+STRING 70
+{
+They're attacking the portal! It must be defended!
+}
+
+STRING 72
+{
+Train Blood Elf |cffffcc00E|rngineer
+}
+
+STRING 118
+{
+This artifact will help us greatly.
+}
+
+STRING 120
+{
+I won't allow the humans to get their hands on this.
+}
+
+STRING 122
+{
+I claim this for the Kirin Tor. The humans have no rights to it.
+}
+
+STRING 123
+{
+Engineer
+}
+
+STRING 124
+// Sound\Dialogue\HumanExpCamp\Human04x\A04EngineerOne02.mp3
+{
+Prince Kael, the other engineers and I helped to build Dalaran's original defenses. We could salvage materials from these ruins and construct whatever defensive towers you need.
+}
+
+STRING 125
+{
+Prince Kael'thas
+}
+
+STRING 126
+// Sound\Dialogue\HumanExpCamp\Human04x\A04Kael03.mp3
+{
+Glad to hear it. You'd best get moving.
+}
+
+STRING 127
+{
+Grand Marshal Garithos
+}
+
+STRING 128
+// Sound\Dialogue\HumanExpCamp\Human04x\A04Garithos05.mp3
+{
+Blasted elves, I knew they'd try something like this. Forget about those damned towers--I want that portal destroyed! Those traitors aren't going anywhere.
+}
+
+STRING 129
+{
+Lady Vashj
+}
+
+STRING 130
+// Sound\Dialogue\HumanExpCamp\Human04x\A04LadyVashj06.mp3
+{
+We've done it. The portal is open. Let the exodus begin!
+}
+
+STRING 131
+{
+Prince Kael'thas
+}
+
+STRING 132
+// Sound\Dialogue\HumanExpCamp\Human04x\A04Kael07.mp3
+{
+Well done, Vashj. If we build more strategic towers, we should be able to hold off Garithos' forces long enough for our people to get through.
+}
+
+STRING 133
+{
+Lady Vashj
+}
+
+STRING 134
+// Sound\Dialogue\HumanExpCamp\Human04x\A04LadyVashj08.mp3
+{
+You'd better be right. If the portal falls, none of us will survive!
+}
+
+STRING 135
+{
+Prince Kael'thas
+}
+
+STRING 136
+// Sound\Dialogue\HumanExpCamp\Human04x\A04Kael32.mp3
+{
+All right, men! Pull back! Back to the portal!
+}
+
+STRING 137
+{
+Lady Vashj
+}
+
+STRING 138
+// Sound\Dialogue\HumanExpCamp\Human04x\A04LadyVashj33.mp3
+{
+Now, young prince, we take one final step... towards destiny.
+}
+
+STRING 139
+{
+Lady Vashj
+}
+
+STRING 140
+// Sound\Dialogue\HumanExpCamp\Human04x\A04LadyVashj31.mp3
+{
+Kael, everyone is through! Fall back and we'll close the portal behind us!
+}
+
+STRING 166
+{
+(Kael)
+}
+
+STRING 173
+{
+Prince Kael, we've completed a new type of defense tower.
+}
+
+STRING 178
+{
+Blood Elf
+}
+
+STRING 179
+{
+(Custom)
+}
+
+STRING 181
+{
+(Male) (Kael)
+}
+
+STRING 194
+{
+ (Custom)
+}
+
+STRING 202
+{
+(Wave)
+}
+
+STRING 203
+{
+Royal Guard
+}
+
+STRING 205
+{
+Train |cffffcc00R|royal Guard
+}
+
+STRING 206
+{
+R
+}
+
+STRING 215
+{
+|cff32cd32HINT|r - You can train additional Engineers at your Town Hall.
+}
+
+STRING 217
+{
+(2nd) (Wave)
+}
+
+STRING 218
+{
+
+}
+
+STRING 219
+{
+Portal Life %
+}
+
+STRING 230
+{
+Moments later, as the allied blood elves and naga spill into the back alleys of Dalaran...
+}
+
+STRING 232
+{
+DEBUG - Enabling all tower types.
+}
+
+STRING 233
+{
+Ruined Leaning Tower
+}
+
+STRING 253
+{
+Prince Kael'thas
+}
+
+STRING 254
+{
+Prince Kael'thas
+}
+
+STRING 255
+{
+Prince Kael'thas
+}
+
+STRING 262
+// Sound\Dialogue\HumanExpCamp\Human04x\A04Garithos44.mp3
+{
+Whoever destroys the portal will be a hero!
+}
+
+STRING 270
+{
+The Portal must survive
+}
+
+STRING 274
+{
+Grand Marshal Garithos
+}
+
+STRING 275
+// Sound\Dialogue\HumanExpCamp\Human04x\A04Garithos47.mp3
+{
+Release the experiments!
+}
+
+STRING 276
+{
+Grand Marshal Garithos
+}
+
+STRING 277
+// Sound\Dialogue\HumanExpCamp\Human04x\A04Garithos46.mp3
+{
+Bust open the cages! We'll need all the beasts we can use.
+}
+
+STRING 278
+{
+Grand Marshal Garithos
+}
+
+STRING 279
+// Sound\Dialogue\HumanExpCamp\Human04x\A04Garithos43.mp3
+{
+Use these explosives on the portal!
+}
+
+STRING 280
+{
+Prince Kael, the plans are complete for this new tower.
+}
+
+STRING 281
+{
+Prince Kael, this new tower is our final and ultimate creation.
+}
+
+STRING 286
+{
+|cff87ceebNEW BUILDING AVAILABLE|r
+Flame Tower - Your Engineers may now build Flame Towers.
+}
+
+STRING 287
+{
+|cff87ceebNEW BUILDING AVAILABLE|r
+Cold Tower - Your Engineers may now build Cold Towers.
+}
+
+STRING 288
+{
+|cff87ceebNEW BUILDING AVAILABLE|r
+Death Tower - Your Engineers may now build Death Towers.
+}
+
+STRING 289
+{
+Blood Elves
+}
+
+STRING 290
+{
+Garithos' Elite Guard
+}
+
+STRING 291
+{
+Force 1
+}
+
+STRING 292
+{
+Force 2
+}
+
+STRING 293
+{
+Secret Level: The Crossing
+}
+
+STRING 294
+{
+Lady Vashj
+}
+
+STRING 295
+// Sound\Dialogue\HumanExpCamp\Human04x\A04LadyVashj04.mp3
+{
+We have reached the portal, Kael. Now we'll attempt to open it!
+}
+
+STRING 296
+{
+Waves Remaining
+}
+
+STRING 297
+{
+Easy
+}
+
+STRING 298
+{
+__________________
+}
+
+STRING 299
+{
+Normal
+}
+
+STRING 301
+{
+Easy Completed!
+}
+
+STRING 302
+{
+Normal Completed!
+}
+
+STRING 303
+{
+Hard Completed!
+}
+
+STRING 304
+{
+Hard
+}
+
+STRING 306
+{
+|cffff0000WARNING|r - A new wave of creatures has been unleashed!
+}
+
+STRING 307
+{
+|cffffcc00Waves Survived:|r
+}
+
+STRING 310
+{
+High Scores
+}
+
+STRING 311
+{
+|cffffcc00NEW HIGH SCORE|r
+}
+
+STRING 312
+{
+|cffffcc00NEW HIGH SCORE|r
+}
+
+STRING 314
+{
+|cffffcc00NEW HIGH SCORE|r
+}
+
+STRING 315
+{
+Please play again!
+}
+
+STRING 316
+{
+20
+}
+
+STRING 317
+{
+Dazzling Gold Coins
+}
+
+STRING 318
+{
+Shiny Gold Coins
+}
+
+STRING 319
+{
+Sparkling Gold Coins
+}
+
+STRING 320
+{
+Level 4
+}
+
+STRING 321
+{
+Level 1
+}
+
+STRING 322
+{
+Level 2
+}
+
+STRING 323
+{
+Level 3
+}
+
+STRING 324
+{
+YOU LOSE!
+}
+
+STRING 325
+{
+YOU WIN!
+}
+
+STRING 326
+{
+Ring of Protection +10
+}
+
+STRING 327
+{
+Ring of Protection +8
+}
+
+STRING 328
+{
+Periapt of Vitality +3000
+}
+
+STRING 329
+{
+Periapt of Vitality +800
+}
+
+STRING 330
+{
+Periapt of Vitality +500
+}
+
+STRING 331
+{
+Periapt of Vitality +400
+}
+
+STRING 332
+{
+Periapt of Vitality +300
+}
+
+STRING 333
+{
+Item Life Bonus (500)
+}
+
+STRING 334
+{
+Item Life Bonus (3000)
+}
+
+STRING 335
+{
+Item Life Bonus (800)
+}
+
+STRING 336
+{
+Item Life Bonus (400)
+}
+
+STRING 337
+{
+Item Life Bonus (300)
+}
+

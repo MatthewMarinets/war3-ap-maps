@@ -1,0 +1,3 @@
+[CustomSkin]
+ScoreScreenPlayerHuman=UI\Glues\ScoreScreen\scorescreen-player-bloodelf.tga
+

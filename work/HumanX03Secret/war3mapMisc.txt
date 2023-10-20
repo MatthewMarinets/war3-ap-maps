@@ -1,0 +1,4 @@
+[Misc]
+MaxHeroLevel=15
+MinUnitSpeed=100.0
+

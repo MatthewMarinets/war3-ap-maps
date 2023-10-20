@@ -1,0 +1,1096 @@
+﻿STRING 1
+{
+Defeat!
+}
+
+STRING 3
+{
+NightElfX03
+}
+
+STRING 4
+{
+1
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 7
+{
+Chapter Three
+}
+
+STRING 19
+{
+|cffffcc00MISSION FAILED|r
+Maiev has been slain.
+}
+
+STRING 22
+{
+|cff32cd32HINT|r - Use Maiev's Blink ability to get past pits and barriers.
+}
+
+STRING 29
+{
+Naisha
+}
+
+STRING 30
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Naisha01.mp3
+{
+I have a bad feeling about this, mistress. It's too quiet. It feels as if we're walking into a trap.
+}
+
+STRING 31
+{
+Maiev Shadowsong
+}
+
+STRING 32
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev02.mp3
+{
+Still, we must press on, Naisha. If Illidan finds whatever it is he's seeking, he could-- Wait! Look there!
+}
+
+STRING 35
+{
+The Search for Illidan
+}
+
+STRING 36
+{
+Illidan's nefarious plans have led him deep into the Tomb of Sargeras. You must find the Betrayer and discover what he's up to.
+}
+
+STRING 37
+{
+Find Illidan
+}
+
+STRING 39
+{
+|cffffcc00MAIN QUEST|r
+The Search for Illidan
+  - Find Illidan
+  - Maiev must survive
+}
+
+STRING 40
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+The Search for Illidan
+}
+
+STRING 42
+{
+The Tomb of Sargeras
+}
+
+STRING 44
+{
+Tomb Guardians
+}
+
+STRING 45
+{
+The Tomb of Sargeras
+}
+
+STRING 46
+{
+With the walls of the tomb beginning to crumble, time is running out. Maiev must use her Blink ability to reach the surface and escape before the crumbling tomb becomes her own.
+}
+
+STRING 47
+{
+Bring Maiev to the tomb entrance
+}
+
+STRING 48
+{
+Maiev must survive
+}
+
+STRING 49
+{
+Maiev must survive
+}
+
+STRING 50
+{
+|cffffcc00MAIN QUEST|r
+Escape from the Tomb
+  - Bring Maiev to the tomb entrance
+  - Maiev must survive
+}
+
+STRING 51
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Escape from the Tomb
+}
+
+STRING 81
+{
+Maiev Shadowsong
+}
+
+STRING 82
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev03.mp3
+{
+Strange... these are orcish runes! They were written by Gul'dan when he first opened this tomb twenty years ago.
+}
+
+STRING 83
+{
+Naisha
+}
+
+STRING 84
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Naisha04.mp3
+{
+What do they say?
+}
+
+STRING 85
+{
+Maiev Shadowsong
+}
+
+STRING 86
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev05.mp3
+{
+Apparently, he logged his journey through the Tomb's depths. These runes seem to depict that history.
+}
+
+STRING 87
+{
+Maiev Shadowsong
+}
+
+STRING 88
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev09.mp3
+{
+There's no telling what Gul'dan and his lackeys awoke in this foul place. We must be cautious.
+}
+
+STRING 89
+{
+Gul'dan
+}
+
+STRING 90
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Guldan06.mp3
+{
+Quickly, you fools--fan out and search for the primary passageway! We must reach the Chamber of the Eye before the tomb's guardians awaken!
+}
+
+STRING 91
+{
+Gul'dan
+}
+
+STRING 92
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Guldan07.mp3
+{
+Spineless cowards! I said move!
+}
+
+STRING 93
+{
+Gul'dan
+}
+
+STRING 94
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Guldan08.mp3
+{
+Now, Sargeras, I will claim whatever's left of your power--and bring this wretched world to its knees!
+}
+
+STRING 98
+{
+|cffffcc00MAIN QUEST FAILED|r
+Escape from the Tomb
+}
+
+STRING 101
+{
+Coral Elemental
+}
+
+STRING 102
+{
+Slime Flinger
+}
+
+STRING 103
+{
+Slime Hurler
+}
+
+STRING 107
+{
+Skeletal Guardian
+}
+
+STRING 115
+{
+Barriers
+}
+
+STRING 116
+{
+Your Night Elf brethren have found several passageways that lead into the Tomb of Sargeras. There are only a few rock barriers remaining between Maiev and her warriors. Destroy the rock barriers so she can rendezvous with her troops.
+}
+
+STRING 117
+{
+Destroy the rock barriers
+}
+
+STRING 119
+{
+|cffffcc00OPTIONAL QUEST|r
+Barriers
+  - Destroy the rock barriers
+}
+
+STRING 120
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Barriers
+}
+
+STRING 126
+{
+Skeletal Orc Archer
+}
+
+STRING 137
+{
+Overlord
+}
+
+STRING 138
+{
+Maiev Shadowsong
+}
+
+STRING 139
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev46.mp3
+{
+You have much to pay for, Illidan. I'm taking you back to your cell.
+}
+
+STRING 140
+{
+Illidan Stormrage
+}
+
+STRING 141
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Illidan45.mp3
+{
+So, Warden Shadowsong, you've made it at last. I knew you would.
+}
+
+STRING 142
+{
+Illidan Stormrage
+}
+
+STRING 143
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Illidan47.mp3
+{
+Naivete does not suit you. When I consumed the power of Gul'dan's skull, I inherited his memories, especially those of this place... and the dark prize he coveted.
+}
+
+STRING 144
+{
+Maiev Shadowsong
+}
+
+STRING 145
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev48.mp3
+{
+Yes, the power of Sargeras. You would claim it as your own!
+}
+
+STRING 146
+{
+Illidan Stormrage
+}
+
+STRING 147
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Illidan49.mp3
+{
+That power is beyond my reach, little warden. But this--
+}
+
+STRING 148
+{
+Illidan Stormrage
+}
+
+STRING 149
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Illidan50.mp3
+{
+--the Eye of Sargeras--contains all the power I'll need to rid this wretched world of my enemies once and for all. Ironic that you should be its first victim.
+}
+
+STRING 150
+{
+Maiev Shadowsong
+}
+
+STRING 151
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev51.mp3
+{
+You're insane!
+}
+
+STRING 152
+{
+Illidan Stormrage
+}
+
+STRING 153
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Illidan52.mp3
+{
+Isolation can do that to the mind. Now, after all the long centuries you kept me chained in darkness, it is only fitting that I bury you in turn.
+}
+
+STRING 154
+{
+Maiev Shadowsong
+}
+
+STRING 155
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev53.mp3
+{
+Damn! I must reach Shan'do Stormrage and warn him of his brother's treachery. My power will allow me to escape, but I fear there is no way out for the rest of you.
+}
+
+STRING 156
+{
+Naisha
+}
+
+STRING 157
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Naisha54.mp3
+{
+Go, mistress! The goddess will light our path to the hereafter.
+}
+
+STRING 160
+{
+Maiev Shadowsong
+}
+
+STRING 161
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev55.mp3
+{
+I will not forget you, my sisters. You will be avenged. I swear it!
+}
+
+STRING 162
+{
+Maiev Shadowsong
+}
+
+STRING 163
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev56.mp3
+{
+Now, I've got to find a way out before this cursed tomb is drowned by the seas!
+}
+
+STRING 164
+{
+Maiev Shadowsong
+}
+
+STRING 165
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev32.mp3
+{
+What would you know of us or our justice, naga witch?
+}
+
+STRING 166
+{
+Lady Vashj
+}
+
+STRING 167
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03LadyVashj31.mp3
+{
+You've come far enough, little warden. Your vaunted night elf justice has no jurisdiction here.
+}
+
+STRING 168
+{
+Lady Vashj
+}
+
+STRING 169
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03LadyVashj33.mp3
+{
+Why, my dear, we naga were once night elves!
+}
+
+STRING 170
+{
+Maiev Shadowsong
+}
+
+STRING 171
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev35.mp3
+{
+Impossible...
+}
+
+STRING 172
+{
+Lady Vashj
+}
+
+STRING 173
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03LadyVashj36.mp3
+{
+Cursed, transformed... we have waited ten thousand years to retake our rightful place in the world. And now, with Lord Illidan's help, we shall!
+}
+
+STRING 174
+{
+Maiev Shadowsong
+}
+
+STRING 175
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev37.mp3
+{
+Not while I draw breath!
+}
+
+STRING 176
+{
+Lady Vashj
+}
+
+STRING 177
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03LadyVashj38.mp3
+{
+Your courage is commendable, but it shall avail you nothing.
+}
+
+STRING 178
+{
+Maiev Shadowsong
+}
+
+STRING 179
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev16.mp3
+{
+There--more of Gul'dan's glyphs! Interesting. They continue the warlock's tale.
+}
+
+STRING 180
+{
+Gul'dan
+}
+
+STRING 181
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Guldan17.mp3
+{
+Blasted, feeble-minded weaklings! They're all likely dead by now!
+}
+
+STRING 182
+{
+Gul'dan
+}
+
+STRING 183
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Guldan18.mp3
+{
+Still, I must press on. My power alone should be enough to--
+}
+
+STRING 184
+{
+Gul'dan
+}
+
+STRING 185
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Guldan19.mp3
+{
+That laughter... Is that you, Sargeras? You seek to mock me? We'll see who laughs last, demon, when I claim your burning eye for my own!
+}
+
+STRING 186
+{
+Naisha
+}
+
+STRING 187
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Naisha20.mp3
+{
+Again, he referenced this mysterious 'eye'. What could it be?
+}
+
+STRING 188
+{
+Maiev Shadowsong
+}
+
+STRING 189
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev21.mp3
+{
+An artifact, no doubt. It must have contained tremendous demonic power to lure Gul'dan as it did.
+}
+
+STRING 192
+{
+Maiev Shadowsong
+}
+
+STRING 193
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev40.mp3
+{
+Yes, Gul'dan's script seems to grow more desperate. It reads that he was...
+}
+
+STRING 194
+{
+Naisha
+}
+
+STRING 195
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Naisha39.mp3
+{
+Look, mistress--more of Gul'dan's glyphs.
+}
+
+STRING 198
+{
+Gul'dan
+}
+
+STRING 199
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Guldan42.mp3
+{
+If my servants... had not abandoned me, I could have claimed the Eye and--
+}
+
+STRING 202
+{
+Maiev Shadowsong
+}
+
+STRING 203
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev44.mp3
+{
+This is as far as he got. The runes simply trail off. I cannot imagine what horrors Gul'dan faced in his final moments.
+}
+
+STRING 220
+{
+Maiev Shadowsong
+}
+
+STRING 221
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev26.mp3
+{
+Strange. It's a statue of Azshara, the great queen of old; she led our people to ruin by consorting with Sargeras and his Burning Legion. Only... I don't recall her ever having a tail.
+}
+
+STRING 222
+{
+Naisha
+}
+
+STRING 223
+{
+She looks more like a naga than one of us. Would those foul serpents have any reason to worship our queen?
+}
+
+STRING 226
+{
+Maiev Shadowsong
+}
+
+STRING 227
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev13.mp3
+{
+I can hear our comrades' voices from the other side of this barrier! If we destroy it, they'll be able to get inside and help us hunt for Illidan.
+}
+
+STRING 230
+{
+Maiev Shadowsong
+}
+
+STRING 231
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev15.mp3
+{
+Destroy that barrier so our forces outside can join us!
+}
+
+STRING 232
+{
+Pit Lord
+}
+
+STRING 233
+{
+|cff32cd32HINT|r - Use Maiev's Blink ability to avoid danger and escape more quickly.
+}
+
+STRING 237
+{
+|cffffcc00OPTIONAL QUEST FAILED|r
+Barriers
+}
+
+STRING 239
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03OverlordOne10.mp3
+{
+Turn back, you mortals. None may defile the Tomb of Sargeras!
+}
+
+STRING 243
+{
+More undead orcs!
+}
+
+STRING 245
+{
+Gul'dan led them blindly to their deaths. Still, they hunger for revenge.
+}
+
+STRING 327
+{
+The Shadow Orb
+}
+
+STRING 328
+{
+As Gul'dan's wretched body was ripped to pieces by the Tomb's Demonic guardians, his most coveted artifact was shattered. The Shadow Orb, the artifact imbued by the Shadow Council itself, was broken into 10 Fragments. Locate the missing Fragments, and reassemble the Orb. With each remnant found, the Orb's power will increase.
+}
+
+STRING 329
+{
+Find the Shadow Orb Fragments (1 of 10 Found)
+}
+
+STRING 330
+{
+|cffffcc00OPTIONAL QUEST|r
+The Shadow Orb
+  - Find the Shadow Orb Fragments (1 of 10 Found)
+}
+
+STRING 331
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+The Shadow Orb
+}
+
+STRING 333
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+The Shadow Orb
+  - Find the Shadow Orb Fragments (2 of 10 Found)
+}
+
+STRING 334
+{
+Find the Shadow Orb Fragments (2 of 10 Found)
+}
+
+STRING 335
+{
+Find the Shadow Orb Fragments (3 of 10 Found)
+}
+
+STRING 336
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+The Shadow Orb
+  - Find the Shadow Orb Fragments (3 of 10 Found)
+}
+
+STRING 337
+{
+Find the Shadow Orb Fragments (4 of 10 Found)
+}
+
+STRING 338
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+The Shadow Orb
+  - Find the Shadow Orb Fragments (4 of 10 Found)
+}
+
+STRING 339
+{
+Find the Shadow Orb Fragments (5 of 10 Found)
+}
+
+STRING 340
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+The Shadow Orb
+  - Find the Shadow Orb Fragments (5 of 10 Found)
+}
+
+STRING 341
+{
+Find the Shadow Orb Fragments (6 of 10 Found)
+}
+
+STRING 342
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+The Shadow Orb
+  - Find the Shadow Orb Fragments (6 of 10 Found)
+}
+
+STRING 343
+{
+Find the Shadow Orb Fragments (7 of 10 Found)
+}
+
+STRING 344
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+The Shadow Orb
+  - Find the Shadow Orb Fragments (7 of 10 Found)
+}
+
+STRING 345
+{
+Find the Shadow Orb Fragments (8 of 10 Found)
+}
+
+STRING 346
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+The Shadow Orb
+  - Find the Shadow Orb Fragments (8 of 10 Found)
+}
+
+STRING 347
+{
+Find the Shadow Orb Fragments (9 of 10 Found)
+}
+
+STRING 348
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+The Shadow Orb
+  - Find the Shadow Orb Fragments (9 of 10 Found)
+}
+
+STRING 349
+{
+Find the Shadow Orb Fragments
+}
+
+STRING 354
+{
+Maiev Shadowsong
+}
+
+STRING 355
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev61.mp3
+{
+This is a piece of Gul'dan's Shadow Orb. He must have shattered it by accident. If we can find the other missing pieces, we could reassemble the Orb and use its powers to aid us.
+}
+
+STRING 387
+{
+Lady Vashj
+}
+
+STRING 388
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03LadyVashj34.mp3
+{
+We were Azshara's chosen, the Highborne--banished beneath the cruel seas when the Well of Eternity imploded around us!
+}
+
+STRING 401
+{
+Archway (City) NEW PATHING
+}
+
+STRING 402
+{
+Archway (City) NOPATHING
+}
+
+STRING 403
+{
+Summon Overlord
+}
+
+STRING 404
+{
+Moments later, just inside the entrance of the shadowed tomb, Maiev and her Watchers brace themselves for an ambush.
+}
+
+STRING 407
+{
+Naisha
+}
+
+STRING 408
+{
+Maiev Shadowsong
+}
+
+STRING 410
+{
+
+}
+
+STRING 411
+{
+Fragments Found  |cffffffff1/10|r
+}
+
+STRING 413
+{
+Fragments Found  |cffffffff2/10|r
+}
+
+STRING 414
+{
+Fragments Found  |cffffffff3/10|r
+}
+
+STRING 415
+{
+Fragments Found  |cffffffff4/10|r
+}
+
+STRING 418
+{
+Fragments Found  |cffffffff5/10|r
+}
+
+STRING 419
+{
+Fragments Found  |cffffffff6/10|r
+}
+
+STRING 420
+{
+Fragments Found  |cffffffff7/10|r
+}
+
+STRING 421
+{
+Fragments Found  |cffffffff8/10|r
+}
+
+STRING 422
+{
+Fragments Found  |cffffffff9/10|r
+}
+
+STRING 423
+{
+Fragments Found  |cffffffff10/10|r
+}
+
+STRING 424
+{
+Chapter Three: The Tomb of Sargeras
+}
+
+STRING 425
+{
+Wall Stone (Horizontal)CINEMATIC
+}
+
+STRING 426
+{
+Wall Stone (Diagonal 2)CINEMATIC
+}
+
+STRING 427
+{
+Wall Stone (Diagonal 1)CINEMATIC
+}
+
+STRING 428
+{
+Viny Plant NO PATHING
+}
+
+STRING 430
+{
+|cff32cd32HINT|r - Maiev can use her Blink ability to cross this river.
+}
+
+STRING 431
+{
+Watchers
+}
+
+STRING 432
+{
+Illidan's Naga
+}
+
+STRING 433
+{
+Force 1
+}
+
+STRING 434
+{
+Force 2
+}
+
+STRING 435
+{
+Force 3
+}
+
+STRING 436
+{
+Wall Stone NO PATHING
+}
+
+STRING 437
+{
+Death Guard Epic
+}
+
+STRING 442
+{
+GuldanStaggerUnit
+}
+
+STRING 443
+{
+Gul'dan
+}
+
+STRING 444
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Guldan43.mp3
+{
+Damn you, Sargeras! I won't be beaten like this! I am Gul'dan! I am darkness incarnate! It cannot end... like this.
+}
+
+STRING 445
+{
+Gul'dan
+}
+
+STRING 446
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Guldan41.mp3
+{
+Ambushed... by the guardians... I am... dying.
+}
+
+STRING 449
+{
+Maiev Shadowsong
+}
+
+STRING 450
+{
+I don't know, Naisha, but her image chills me to the core.
+}
+
+STRING 451
+{
+Eye of Sargeras
+}
+
+STRING 452
+{
+Train |cffffcc00e|rye of Sargeras
+}
+
+STRING 453
+{
+E
+}
+
+STRING 454
+{
+The Eye!
+}
+
+STRING 457
+{
+|cff87ceebNEW ITEM RECEIVED|r - The Shadow Orb
+This artifact increases in power as you find each of the Fragments hidden in this tomb.
+}
+
+STRING 458
+{
+Summons a Furbolg.
+}
+
+STRING 459
+{
+Rune of the Wild
+}
+
+STRING 460
+{
+Purchase Rune of the |cffffcc00W|rild
+}
+
+STRING 461
+{
+Summons a Furbolg Warrior. The Furbolg lasts <AIuw,Dur1> seconds.
+}
+
+STRING 462
+{
+Maiev Shadowsong
+}
+
+STRING 463
+// Sound\Dialogue\NightElfExpCamp\NightElf03x\S03Maiev63.mp3
+{
+I hear dark whispering beyond this gate. It could be Illidan and his minions.
+}
+
+STRING 464
+{
+Archway Stone NOPATHING
+}
+
+STRING 468
+{
+Time Remaining
+}
+
+STRING 472
+{
+Defeat!
+}
+
+STRING 473
+{
+Maiev Shadowsong
+}
+
+STRING 474
+{
+Finally, the last piece of the Shadow Orb! Now we'll use Gul'dan's own artifact to discover what he could not.
+}
+
+STRING 475
+{
+Coral (CUSTOM)
+}
+

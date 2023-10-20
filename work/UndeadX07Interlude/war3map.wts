@@ -1,0 +1,217 @@
+﻿STRING 3
+{
+UndeadX07Interlude
+}
+
+STRING 4
+{
+1
+}
+
+STRING 5
+{
+Interlude: Boiling Point
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 7
+{
+Interlude
+}
+
+STRING 10
+{
+Alliance of Lordaeron
+}
+
+STRING 11
+{
+Undead Scourge
+}
+
+STRING 12
+{
+Book of Beards
+}
+
+STRING 24
+{
+Kargin Ironknee
+}
+
+STRING 25
+{
+Purchase Book of Beards
+}
+
+STRING 27
+{
+A book.
+}
+
+STRING 28
+{
+This book is full of beard styles and trimming techniques.
+}
+
+STRING 29
+{
+King Arthas
+}
+
+STRING 30
+// Sound\Dialogue\UndeadExpCamp\Undead07CxInterlude\L07CArthas41.mp3
+{
+We've made it, Anub'arak. Our forces are already assembled and waiting.
+}
+
+STRING 49
+{
+Player 1
+}
+
+STRING 50
+{
+Player 2
+}
+
+STRING 51
+{
+Player 3
+}
+
+STRING 52
+{
+Boiling Point
+}
+
+STRING 53
+{
+Hours later, near the base of the Icecrown Glacier, King Arthas and Anub'arak finally reach the main stronghold of the Scourge.
+}
+
+STRING 54
+{
+Necromancer
+}
+
+STRING 55
+// Sound\Dialogue\UndeadExpCamp\Undead07CxInterlude\L07CNecromancer42.mp3
+{
+Greetings, King Arthas. You've arrived just in time. Illidan's naga and blood elf forces have taken up positions at the base of the glacier and--
+}
+
+STRING 56
+{
+King Arthas
+}
+
+STRING 57
+// Sound\Dialogue\UndeadExpCamp\Undead07CxInterlude\L07CArthas43.mp3
+{
+Aarrghh...
+}
+
+STRING 58
+{
+The Lich King
+}
+
+STRING 59
+// Sound\Dialogue\UndeadExpCamp\Undead07CxInterlude\L07CLichKing44.mp3
+{
+Arthas, my champion. You have come at last.
+}
+
+STRING 60
+{
+King Arthas
+}
+
+STRING 61
+// Sound\Dialogue\UndeadExpCamp\Undead07CxInterlude\L07CArthas45.mp3
+{
+Master?
+}
+
+STRING 62
+{
+The Lich King
+}
+
+STRING 63
+// Sound\Dialogue\UndeadExpCamp\Undead07CxInterlude\L07CLichKing46.mp3
+{
+There is a fracture in my prison, the Frozen Throne, and my energies are seeping from it. That is why your powers have diminished.
+}
+
+STRING 64
+{
+King Arthas
+}
+
+STRING 65
+// Sound\Dialogue\UndeadExpCamp\Undead07CxInterlude\L07CArthas47.mp3
+{
+But how?
+}
+
+STRING 66
+{
+The Lich King
+}
+
+STRING 67
+// Sound\Dialogue\UndeadExpCamp\Undead07CxInterlude\L07CLichKing48.mp3
+{
+The runeblade, Frostmourne, was once locked inside the Throne as well. I thrust it from the ice so that it would find its way to you... and then lead you to me. 
+}
+
+STRING 68
+{
+The Lich King
+}
+
+STRING 69
+// Sound\Dialogue\UndeadExpCamp\Undead07CxInterlude\L07CLichKing49.mp3
+{
+And so it has.
+}
+
+STRING 70
+{
+The Lich King
+}
+
+STRING 71
+// Sound\Dialogue\UndeadExpCamp\Undead07CxInterlude\L07CLichKing50.mp3
+{
+For now we face a grave danger. My creator, the demonlord Kil'jaeden, sent his agents here to destroy me.
+}
+
+STRING 74
+{
+The Lich King
+}
+
+STRING 75
+// Sound\Dialogue\UndeadExpCamp\Undead07CxInterlude\L07CLichKing51.mp3
+{
+If they should reach the Frozen Throne before you, all will be lost. The Scourge will be undone. Now hurry! I will grant you all the power I can spare. 
+}
+
+STRING 80
+{
+King Arthas
+}
+
+STRING 81
+// Sound\Dialogue\UndeadExpCamp\Undead07CxInterlude\L07CArthas52.mp3
+{
+I saw another vision of the Lich King. He has restored my powers! I know now what I must do. It's time to end the game... once and for all.
+}
+

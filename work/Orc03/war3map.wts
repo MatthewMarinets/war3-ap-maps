@@ -1,0 +1,483 @@
+﻿STRING 0
+{
+Archmage
+}
+
+STRING 1
+{
+Wretched orcs! How dare you follow us to this land!
+}
+
+STRING 2
+{
+Grom Hellscream
+}
+
+STRING 3
+{
+Save your breath, human! You'll need it to scream when I start tearing off your limbs!
+}
+
+STRING 5
+{
+Chapter Three
+}
+
+STRING 6
+{
+Cry of the Warsong
+}
+
+STRING 10
+{
+Defeat!
+}
+
+STRING 12
+{
+Grunt
+}
+
+STRING 13
+{
+Warchief, we've been trudging through this wasteland for a week with nothing to fight but centaurs and pig-men! We need real enemies to test our mettle!
+}
+
+STRING 14
+{
+Thrall
+}
+
+STRING 15
+{
+Yes, boredom and the beating sun have put us all on edge. But we must push on! All will be made clear once we meet the Oracle.
+}
+
+STRING 16
+{
+Grunt
+}
+
+STRING 17
+{
+As you say, Warchief.
+}
+
+STRING 18
+{
+Grunt
+}
+
+STRING 19
+{
+Look! It's the Warsong clan! And they're battling humans!
+}
+
+STRING 20
+{
+Thrall
+}
+
+STRING 21
+{
+What? Lok-Tar, warriors! Hellscream needs help!
+}
+
+STRING 25
+{
+Thrall must survive
+}
+
+STRING 31
+{
+Establish a Base
+}
+
+STRING 32
+{
+Establish a Base over the remains of the Human settlement by building a Great Hall.
+}
+
+STRING 33
+{
+Secure Zeppelins
+}
+
+STRING 34
+{
+In order to safely reach the pass that leads to the north, you must purchase two Goblin Zeppelins and return them to your main base.
+}
+
+STRING 49
+{
+Build a Great Hall
+}
+
+STRING 53
+{
+Orc03
+}
+
+STRING 54
+{
+1
+}
+
+STRING 55
+{
+Chapter Three: Cry of the Warsong
+}
+
+STRING 56
+{
+Blizzard Entertainment
+}
+
+STRING 57
+{
+Five days later, near the foothills of the Stonetalon Mountains...
+}
+
+STRING 60
+{
+Warsong Clan
+}
+
+STRING 62
+{
+Destroy all hostile units at the Laboratory
+}
+
+STRING 109
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 127
+{
+|cffffcc00MISSION FAILED|r
+Thrall has been slain.
+}
+
+STRING 149
+{
+|cffffcc00MAIN QUEST|r
+Establish a Base
+  - Build a Great Hall
+  - Thrall must survive
+}
+
+STRING 158
+{
+Grom Hellscream
+}
+
+STRING 159
+{
+I can wait no longer. The humans must be slaughtered!
+}
+
+STRING 160
+{
+Grunt
+}
+
+STRING 161
+{
+Warchief, the Warsong clan is attacking the humans, despite your orders!
+}
+
+STRING 210
+{
+|cff32CD32HINT|r - Orc Burrows provide food, which increases the maximum number of units that can be trained.
+}
+
+STRING 211
+{
+|cff32CD32HINT|r - Peons can garrison inside Orc Burrows to attack enemy units.
+}
+
+STRING 212
+{
+|cff32CD32HINT|r - The Barracks is the primary troop production building for the Orcs.
+}
+
+STRING 213
+{
+|cff32CD32HINT|r - The War Mill serves as a drop-off point for harvested lumber, and contains weapon and armor upgrades for your units.
+}
+
+STRING 215
+{
+|cff87CEEBNEW UNIT AVAILABLE|r
+Kodo Beast - You may now build Kodo Beasts from the Beastiary. They are lumbering war beasts, mounted by an Orcish drummer. Kodo Beasts have the War Drums and Devour abilities.
+}
+
+STRING 216
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Establish a Base
+}
+
+STRING 219
+{
+Thrall
+}
+
+STRING 220
+{
+Interesting. If we can reach the goblins without incident, we can hire their zeppelins to fly us above the pass.
+}
+
+STRING 221
+{
+|cffffcc00MAIN QUEST|r
+Secure Zeppelins
+  - Destroy all hostile units at the Laboratory
+  - Return two Goblin Zeppelins to your base
+}
+
+STRING 223
+{
+Thrall
+}
+
+STRING 224
+{
+Damn it! There's nothing to do now but fight! Tighten our defenses! I'll deal with Hellscream later.
+}
+
+STRING 225
+{
+Grunt
+}
+
+STRING 226
+{
+Warchief, the Warsong clan is attacking another human encampment!
+}
+
+STRING 227
+{
+Thrall
+}
+
+STRING 228
+{
+Perhaps this is our destiny... to go on fighting the humans forever.
+}
+
+STRING 229
+{
+Headhunter
+}
+
+STRING 230
+{
+Hey, boss-man, we spotted multiple human encampments nearby. There also be a goblin laboratory protected by a base to the north.
+}
+
+STRING 265
+{
+Thrall
+}
+
+STRING 266
+{
+Grom, what was this about? And how the hell did these humans get here, anyway?
+}
+
+STRING 293
+{
+Grom Hellscream
+}
+
+STRING 294
+{
+Same way we did, little brother. Apparently, a frail girl named Proudmoore leads them. Her forces have cordoned off the pass that leads to the north.
+}
+
+STRING 319
+{
+Thrall
+}
+
+STRING 320
+{
+Well, we must make it through the pass, despite her. I'll send our hunters to scout the area while we establish a base. Until then, the humans are not to be touched!
+}
+
+STRING 335
+{
+Grom Hellscream
+}
+
+STRING 336
+{
+Whatever you say, Warchief.
+}
+
+STRING 347
+{
+Return two Goblin Zeppelins to your base
+}
+
+STRING 356
+{
+Pacify Humans
+}
+
+STRING 357
+{
+Hellscream has attacked the humans against your direct orders. Now the humans are attacking your base in retaliation, leaving no choice but to fight your bitter enemies once more. Destroy the human settlements to halt their attacks against your forces.
+}
+
+STRING 358
+{
+Destroy the Human bases
+}
+
+STRING 359
+{
+No Selling
+}
+
+STRING 360
+{
+Can Sell
+}
+
+STRING 361
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Secure Zeppelin
+  - |cff808080Destroy all hostile units at the Laboratory (Completed)|r
+  - Return two Goblin Zeppelins to your base
+}
+
+STRING 362
+{
+|cffffcc00OPTIONAL QUEST|r
+Pacify Humans
+  - Destroy the Human bases
+}
+
+STRING 363
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Pacify Humans
+}
+
+STRING 374
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Secure Zeppelin
+}
+
+STRING 375
+{
+Thrall
+}
+
+STRING 376
+{
+With these, we can reach Stonetalon Peak by morning.
+}
+
+STRING 377
+{
+Grom Hellscream
+}
+
+STRING 378
+{
+A true warrior would simply take the pass from the humans.
+}
+
+STRING 379
+{
+Thrall
+}
+
+STRING 380
+{
+Have you lost what's left of your mind, Grom? I gave you a direct order to leave the humans alone! What the hell is wrong with you?
+}
+
+STRING 381
+{
+Grom Hellscream
+}
+
+STRING 382
+{
+Don't lecture me, pup! The wretches deserved death! Don't you feel it, Thrall? It's like the old days... like the demons are near.
+}
+
+STRING 383
+{
+Thrall
+}
+
+STRING 384
+{
+I don't know what's come over you and your men, but this bloodlust is a liability that I can't afford.
+}
+
+STRING 385
+{
+Grom Hellscream
+}
+
+STRING 386
+{
+I'm sorry, Thrall. You're right. I... I can handle it.
+}
+
+STRING 387
+{
+Thrall
+}
+
+STRING 388
+{
+I can't take that chance, Grom. Take your clan into the northern forest and build us a settlement. I'll come and find you after we've reached the Oracle.
+}
+
+STRING 390
+{
+Orcish Horde
+}
+
+STRING 391
+{
+Human Expedition
+}
+
+STRING 392
+{
+Gilneas Brigade
+}
+
+STRING 393
+{
+Lordaeron Corps
+}
+
+STRING 394
+{
+Kul Tiras Elite Corps
+}
+
+STRING 395
+{
+Stromgarde Brigade
+}
+
+STRING 396
+{
+|cffffcc00MISSION FAILED|r
+All of your units have been destroyed.
+}
+

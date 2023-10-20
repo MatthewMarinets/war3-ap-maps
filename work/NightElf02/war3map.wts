@@ -1,0 +1,442 @@
+﻿STRING 0
+{
+NightElf02
+}
+
+STRING 1
+{
+1
+}
+
+STRING 2
+{
+Chapter Two: Daughters of the Moon
+}
+
+STRING 3
+{
+Blizzard Entertainment
+}
+
+STRING 4
+{
+Chapter Two
+}
+
+STRING 5
+{
+Daughters of the Moon
+}
+
+STRING 7
+{
+Three hours later, somewhere in the foothills of Mount Hyjal...
+}
+
+STRING 10
+{
+Archimonde
+}
+
+STRING 11
+{
+Fools! You let her slip away!
+}
+
+STRING 18
+{
+Archer
+}
+
+STRING 19
+{
+The undead are tireless. There's no way to outrun them!
+}
+
+STRING 24
+{
+Archimonde
+}
+
+STRING 25
+{
+Find her, damn you! Find her and kill her!
+}
+
+STRING 26
+{
+Tyrande Whisperwind
+}
+
+STRING 27
+{
+The day we have long feared has finally come. The Burning Legion has returned! I must cross the river and warn the rest of my sisters before all is lost! 
+}
+
+STRING 32
+{
+Tichondrius
+}
+
+STRING 33
+{
+You see, Lord Archimonde? We need not fear the night elves. The Scourge can--
+}
+
+STRING 34
+{
+Archimonde
+}
+
+STRING 35
+{
+The Legion has returned to consume this world, woman. And this time, your troublesome race will not stop us.
+}
+
+STRING 36
+{
+Tyrande Whisperwind
+}
+
+STRING 37
+{
+Archimonde... After ten thousand years, how is it possible?
+}
+
+STRING 58
+{
+Escape into Shadow
+}
+
+STRING 59
+{
+The Burning Legion has invaded Ashenvale and placed the land under a terrible pall. You must make your way, undetected, through the Demon patrols and reach the distant Night Elf village where Shandris and the rest of the Sentinels await you.
+}
+
+STRING 69
+{
+Shandris Feathermoon
+}
+
+STRING 74
+{
+Tyrande! Praise Elune, you've made it! The undead appeared out of nowhere and attacked our village without warning! 
+}
+
+STRING 75
+{
+Tyrande Whisperwind
+}
+
+STRING 76
+{
+Ishnu-dal-dieb, Shandris. We have a greater problem. The undead were sent here by the Burning Legion, our ancient enemies of old. Against such might we have only one option. We must awaken the druids.
+}
+
+STRING 83
+{
+Bring Tyrande to the Night Elf town
+}
+
+STRING 85
+{
+Orcish Horde
+}
+
+STRING 87
+{
+Sentinels
+}
+
+STRING 98
+{
+Defeat!
+}
+
+STRING 99
+{
+Tyrande Whisperwind
+}
+
+STRING 100
+{
+I must avoid being seen.
+}
+
+STRING 101
+{
+|cffffcc00MAIN QUEST|r
+Escape into Shadow
+  - Bring Tyrande to the Night Elf town
+  - Hide from the patrolling Doom Guards
+  - Tyrande must survive
+}
+
+STRING 103
+{
+Doom Guard
+}
+
+STRING 104
+{
+These damned night elves cannot escape us! Lord Archimonde wants them found!
+}
+
+STRING 153
+{
+Hide from the patrolling Doom Guards
+}
+
+STRING 154
+{
+Tyrande must survive
+}
+
+STRING 155
+{
+|cffffcc00MAIN QUEST|r
+Escape into Shadow
+  - Bring Tyrande to the Night Elf town
+  - Hide from the patrolling Doom Guards
+  - Tyrande must survive
+}
+
+STRING 181
+{
+Burning Legion
+}
+
+STRING 182
+{
+Shadowleaves
+}
+
+STRING 183
+{
+Undead Scourge
+}
+
+STRING 184
+{
+Human Expedition
+}
+
+STRING 185
+{
+Orcs & Humans
+}
+
+STRING 186
+{
+|cff32CD32HINT|r - Use the Hide command to force Tyrande to Shadowmeld to avoid being seen by the Doom Guard.
+}
+
+STRING 193
+{
+|cff87ceebNEW UNIT ACQUIRED|r
+Ballista - Ballistae are powerful siege weapons, which may be used effectively against buildings.
+}
+
+STRING 195
+{
+Doom Guard
+}
+
+STRING 196
+{
+Lord Archimonde wishes us to corrupt this forest, and we shall!
+}
+
+STRING 197
+{
+Tyrande Whisperwind
+}
+
+STRING 198
+{
+Foul humans! You cannot evade the goddess' wrath!
+}
+
+STRING 199
+{
+Archer
+}
+
+STRING 200
+{
+Elune-adore, Priestess. We are yours to command.
+}
+
+STRING 201
+{
+|cff32CD32HINT|r - Archers also have the Shadowmeld and Hide abilities, which can be used to remain hidden at night while not moving.
+}
+
+STRING 204
+{
+Tyrande Whisperwind
+}
+
+STRING 205
+{
+Clearly the humans have no love for the undead. But I dare not trust them.
+}
+
+STRING 206
+{
+Tyrande Whisperwind
+}
+
+STRING 207
+{
+Those orcs appear to be guarding some magical treasure. Hmm... it might prove useful to me.
+}
+
+STRING 208
+{
+Doom Guard
+}
+
+STRING 209
+{
+The trees must be poisoned and cursed. Only then will the night elves' power weaken.
+}
+
+STRING 210
+{
+Doom Guard
+}
+
+STRING 211
+{
+I see you, little one. You should have fled with your sisters.
+}
+
+STRING 212
+{
+Doom Guard
+}
+
+STRING 213
+{
+Silly night elf, you cannot hide from us!
+}
+
+STRING 214
+{
+Doom Guard
+}
+
+STRING 215
+{
+Your shadow powers will not hide you from our sight.
+}
+
+STRING 216
+{
+Archer
+}
+
+STRING 217
+{
+Fandu-dath-belore? 
+}
+
+STRING 218
+{
+Archer
+}
+
+STRING 219
+{
+Ishnu-alah, sisters! It is I, Tyrande. 
+}
+
+STRING 220
+{
+Huntress
+}
+
+STRING 221
+{
+Elune-adore, Priestess. Be wary. The doom guards command shades that can see us, even when we meld with the shadows. We'd best stay away from them. 
+}
+
+STRING 222
+{
+|cff87ceebNEW UNIT ACQUIRED|r
+Huntress - Huntresses are excellent short range fighters with the ability to cast the Sentinel spell.
+}
+
+STRING 223
+{
+|cff32CD32HINT|r - Huntresses also have the Shadowmeld and Hide abilities, which can be used to remain hidden at night while not moving.
+}
+
+STRING 224
+{
+|cff32cd32HINT|r - The Scout and Sentinel spells may be used to see hidden Shades.
+}
+
+STRING 225
+{
+Tyrande Whisperwind
+}
+
+STRING 226
+{
+Ah, these abandoned ballistas will help me break through the undead fortifications. 
+}
+
+STRING 227
+{
+|cff87ceebNEW UNIT ACQUIRED|r
+Ballista - Ballistae are powerful siege weapons, which may be used effectively against buildings.
+}
+
+STRING 228
+{
+Tyrande Whisperwind
+}
+
+STRING 229
+{
+I must reach the river before the dawn breaks. I cannot remain hidden during the day.  
+}
+
+STRING 230
+{
+Tyrande Whisperwind
+}
+
+STRING 231
+{
+The dawn has come. I can no longer rely upon Elune's power to keep me hidden. 
+}
+
+STRING 236
+{
+Footman
+}
+
+STRING 237
+{
+Ambush! Run for your lives! We'll regroup in the clearing ahead!
+}
+
+STRING 238
+{
+|cffffcc00MISSION FAILED|r
+Tyrande has been slain.
+}
+
+STRING 239
+{
+Defeat!
+}
+
+STRING 242
+{
+|cff32CD32HINT|r - Press the "i" key to force Tyrande to HIDE
+}
+

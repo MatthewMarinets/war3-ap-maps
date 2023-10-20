@@ -1,0 +1,778 @@
+﻿STRING 2
+{
+Force 1
+}
+
+STRING 3
+{
+Illidan's Forces
+}
+
+STRING 5
+{
+Magtheridon's Forces
+}
+
+STRING 6
+{
+Force 2
+}
+
+STRING 7
+{
+Force 3
+}
+
+STRING 8
+{
+HumanX06
+}
+
+STRING 9
+{
+1
+}
+
+STRING 10
+{
+Chapter Six: Lord of Outland
+}
+
+STRING 11
+{
+Blizzard Entertainment
+}
+
+STRING 12
+{
+Post Lantern CINEMATIC
+}
+
+STRING 13
+{
+Reinforced Tower
+}
+
+STRING 14
+{
+Doom Tower
+}
+
+STRING 15
+{
+Blasted Stone Tower
+}
+
+STRING 16
+{
+Chapter Six
+}
+
+STRING 17
+{
+Lord of Outland
+}
+
+STRING 18
+{
+Later that day, at the base of Magtheridon's Black Citadel, Illidan marshals his forces for their final strike.
+}
+
+STRING 20
+{
+Fel Orc Warlock
+}
+
+STRING 21
+// Sound\Dialogue\HumanExpCamp\Human07x\A07OrcWarlock01.mp3
+{
+Our enemies draw near, Lord Magtheridon.
+}
+
+STRING 22
+{
+Magtheridon
+}
+
+STRING 23
+// Sound\Dialogue\HumanExpCamp\Human07x\A07Magtheridon02.mp3
+{
+These upstarts are tiresome gnats, nothing more. The might of Magtheridon cannot be denied! I am the Lord of Outland! Those who dispute my rule will soon regret their folly.
+}
+
+STRING 24
+{
+Illidan Stormrage
+}
+
+STRING 25
+// Sound\Dialogue\HumanExpCamp\Human07x\A07Illidan03.mp3
+{
+Magtheridon has grown strong over the years, but he has had few real foes to contend with. He has become decadent and complacent. The boisterous cur cannot match our cunning or our will.
+}
+
+STRING 26
+{
+Prince Kael'thas
+}
+
+STRING 27
+// Sound\Dialogue\HumanExpCamp\Human07x\A07Kael04.mp3
+{
+This will be a glorious battle, master. Though Magtheridon's forces vastly outnumber ours, your warriors are prepared to fight to the end.
+}
+
+STRING 28
+{
+Illidan Stormrage
+}
+
+STRING 29
+// Sound\Dialogue\HumanExpCamp\Human07x\A07Illidan05.mp3
+{
+I am pleased by your people's zeal, young Kael. Their spirits and powers have been honed in this harsh wilderness. Their courage alone may be enough to...
+}
+
+STRING 30
+{
+Lady Vashj
+}
+
+STRING 31
+// Sound\Dialogue\HumanExpCamp\Human07x\A07LadyVashj06.mp3
+{
+Lord Illidan, new arrivals come to greet you.
+}
+
+STRING 32
+{
+Akama
+}
+
+STRING 33
+// Sound\Dialogue\HumanExpCamp\Human07x\A07Akama07.mp3
+{
+We draenei have fought the orcs and their demon masters for generations. Now, at last, we will end their curse forever. We are yours to command, Lord Illidan.
+}
+
+STRING 34
+{
+Illidan Stormrage
+}
+
+STRING 35
+// Sound\Dialogue\HumanExpCamp\Human07x\A07Illidan08.mp3
+{
+As I promised, your people shall have their vengeance, Akama. By night's end, we will all be drunk with it. Vashj, Kael--give the final order to strike. The hour of wrath has come!
+}
+
+STRING 36
+{
+Defeat!
+}
+
+STRING 37
+{
+Slay Magtheridon
+}
+
+STRING 38
+{
+The gates to Magtheridon's throne chamber have been thrown wide open, leaving the Pit Lord vulnerable to attack. Destroy Magtheridon so that Lord Illidan can claim power over Outland and take the Citadel as his fortress.
+}
+
+STRING 39
+{
+Slay the mighty Pit Lord Magtheridon
+}
+
+STRING 41
+{
+|cffffcc00MAIN QUEST|r
+Slay Magtheridon
+  - Slay the mighty Pit Lord Magtheridon
+
+}
+
+STRING 42
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Slay Magtheridon
+}
+
+STRING 43
+{
+Siege Bastion
+}
+
+STRING 44
+{
+Within the many halls of the Black Citadel lie old armaments of now-forgotten wars. Find and seize the old Chaos Orc Demolishers so that you can bring them to bear against Magtheridon's defenses.
+}
+
+STRING 45
+{
+Slay the Demolisher guards
+}
+
+STRING 47
+{
+|cffffcc00OPTIONAL QUEST|r
+Siege Bastion
+  - Slay the Demolisher guards
+}
+
+STRING 61
+{
+|cff32cd32HINT|r - Lady Vashj and her Naga forces have entered the Black Citadel's aqueduct system. Use them to assault the Fel Orc strongholds that guard the Mistress of Torment.
+}
+
+STRING 68
+{
+Illidan Stormrage
+}
+
+STRING 69
+// Sound\Dialogue\HumanExpCamp\Human07x\A07Illidan11.mp3
+{
+The nearby bastion holds many of the orcs' demonic siege weapons. We must crush the compound's defenders and claim the weapons for our own!
+}
+
+STRING 70
+{
+Illidan Stormrage
+}
+
+STRING 71
+// Sound\Dialogue\HumanExpCamp\Human07x\A07Illidan12.mp3
+{
+The orcs' siege machines are ours! We'll use Magtheridon's own weapons against him.
+}
+
+STRING 76
+{
+Greater Doom Beast
+}
+
+STRING 77
+{
+Doom Beast
+}
+
+STRING 78
+{
+(Gate Version)
+}
+
+STRING 82
+{
+|cff32cd32HINT|r - With the Generator destroyed, the gate's tower defenses are no longer able to fire.
+}
+
+STRING 83
+{
+Draenei Elite Assassin
+}
+
+STRING 84
+{
+Draenei Saboteur
+}
+
+STRING 85
+{
+|cff32cd32HINT|r - To destroy the fortifications that defend this gate, locate and destroy the Generator that powers them.
+}
+
+STRING 86
+{
+Skull GIANT NOPATHING
+}
+
+STRING 88
+{
+Wall Barred Small NOPATHING
+}
+
+STRING 89
+{
+Archway Stone REDVERSION
+}
+
+STRING 90
+{
+Archway Angled Stone REDVERSION
+}
+
+STRING 91
+{
+Butcher
+}
+
+STRING 93
+{
+Shadowkeys
+}
+
+STRING 94
+{
+The Pit Lord Magtheridon rules with the absolute power of the Black Citadel and its regime of Demonic minions. Slaughter Magtheridon's two dark lieutenants, the Master of Pain and the Mistress of Torment, in order to seize their Shadowkeys and gain access to his throne chamber.
+}
+
+STRING 95
+{
+Slay the Master of Pain
+}
+
+STRING 96
+{
+Slay the Mistress of Torment
+}
+
+STRING 97
+{
+|cffffcc00MAIN QUEST|r
+Shadowkeys
+  - Slay the Master of Pain
+  - Slay the Mistress of Torment
+}
+
+STRING 101
+{
+Mistress of Torment
+}
+
+STRING 103
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Shadowkeys
+  - |cff808080Slay the Master of Pain (Completed)|r
+  - Slay the Mistress of Torment
+}
+
+STRING 105
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Shadowkeys
+  - Slay the Master of Pain
+  - |cff808080Slay the Mistress of Torment (Completed)|r
+}
+
+STRING 106
+{
+Magtheridon's Gate
+}
+
+STRING 107
+{
+Defeat!
+}
+
+STRING 111
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Shadowkeys
+}
+
+STRING 129
+{
+|cffffcc00MISSION FAILED|r
+Illidan's forces have been defeated.
+}
+
+STRING 134
+{
+Stops the unit from auto-acquiring enemies, allowing it to disappear into the shadows and remain hidden for long stretches of time.
+}
+
+STRING 135
+{
+Hide
+}
+
+STRING 138
+{
+Fel Orc Grunt
+}
+
+STRING 139
+{
+Fel Orc Peon
+}
+
+STRING 140
+{
+Fel Orc Raider
+}
+
+STRING 141
+{
+Fel Orc Warchief
+}
+
+STRING 142
+{
+Fel Orc Juggernaught
+}
+
+STRING 143
+{
+Fel Orc Frigate
+}
+
+STRING 144
+{
+Fel Orc Transport Ship
+}
+
+STRING 145
+{
+Master of Pain
+}
+
+STRING 146
+{
+Blood Lodge
+}
+
+STRING 150
+{
+Fel Orc Kodo Beast
+}
+
+STRING 151
+{
+Cage of Discipline
+}
+
+STRING 152
+{
+Citadel Gate
+}
+
+STRING 153
+{
+Shard of Summoning
+}
+
+STRING 154
+{
+Summons a mysteriously fleshy creature to aid you.
+}
+
+STRING 155
+{
+Item Flesh Golem Summon
+}
+
+STRING 156
+{
+Bloody Shadowkey
+}
+
+STRING 157
+{
+One of the two Shadowkeys that are required to open the gate to Magtheridon's throne chamber.
+}
+
+STRING 159
+{
+Ghostly Shadowkey
+}
+
+STRING 161
+{
+These keys allow access to Magtheridon's throne chamber.
+}
+
+STRING 162
+{
+Pried from the still-twitching hands of the Master of Pain and the Mistress of Torment, these keys offer access to Magtheridon's throne chamber.
+}
+
+STRING 163
+{
+Cage of Agony
+}
+
+STRING 164
+{
+Captives
+}
+
+STRING 167
+{
+Lady Vashj
+}
+
+STRING 168
+// Sound\Dialogue\HumanExpCamp\Human07x\A07LadyVashj21.mp3
+{
+You've done it, Lord Illidan! Their defenses are broken! Only Magtheridon and his lackeys stand before us!
+}
+
+STRING 169
+{
+Magtheridon
+}
+
+STRING 170
+// Sound\Dialogue\HumanExpCamp\Human07x\A07Magtheridon22.mp3
+{
+I do not know you, stranger, but your power is vast. Are you an agent of the Legion? Have you been sent to test me?
+}
+
+STRING 171
+{
+Illidan Stormrage
+}
+
+STRING 172
+// Sound\Dialogue\HumanExpCamp\Human07x\A07Illidan23.mp3
+{
+I have come to replace you. You're a relic, Magtheridon, a ghost of a past age. The future is mine. From this moment on, Outland and all of its denizens will bow to me.
+}
+
+STRING 173
+{
+Illidan Stormrage
+}
+
+STRING 174
+// Sound\Dialogue\HumanExpCamp\Human07x\A07Illidan24.mp3
+{
+Hear me now, you trembling mortals! I am your lord and master! Illidan reigns supreme!
+}
+
+STRING 177
+{
+Legion of Anguish
+}
+
+STRING 178
+{
+Horde of Pain
+}
+
+STRING 179
+{
+Legion of Torment
+}
+
+STRING 180
+{
+Horde of Agony
+}
+
+STRING 181
+{
+Disable Defenses
+}
+
+STRING 182
+{
+The seemingly impenetrable defenses of Magtheridon's Black Citadel are powered by a series of magical Generators. If someone could sneak past the guardians and destroy the Generators, each layer of defenses could be negated, allowing easy access to the rest of the stronghold. Perhaps Akama and his Draenei followers would be up to the task.
+}
+
+STRING 183
+{
+Destroy the Power Generators (0 of 4 Destroyed)
+}
+
+STRING 186
+{
+|cffffcc00OPTIONAL QUEST|r
+Disable Defenses
+  - Destroy the Power Generators (0 of 4 Destroyed)
+  - |cff32cd32HINT|r - Use the Draenei to destroy the Generators
+}
+
+STRING 187
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Disable Defenses
+  - Destroy the Power Generators (1 of 4 Destroyed)
+  - |cff32cd32HINT|r - Use the Draenei to destroy the Generators
+}
+
+STRING 188
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Disable Defenses
+}
+
+STRING 189
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Disable Defenses
+  - Destroy the Power Generators (2 of 4 Destroyed)
+  - |cff32cd32HINT|r - Use the Draenei to destroy the Generators
+}
+
+STRING 190
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Disable Defenses
+  - Destroy the Power Generators (3 of 4 Destroyed)
+  - |cff32cd32HINT|r - Use the Draenei to destroy the Generators
+}
+
+STRING 193
+{
+Destroy the Power Generators
+}
+
+STRING 196
+{
+|cff87ceebNEW UNITS ACQUIRED|r
+Draenei - Deadly assassins and saboteurs who excel at stealthy movement. They are permanently invisible, except while casting or attacking.
+
+}
+
+STRING 198
+{
+Primary troop production building. Trains Blood Elven Swordsmen and Blood Elven Archers.
+}
+
+STRING 199
+{
+|cff32cd32HINT|r - To destroy the fortifications that defend this gate, locate and destroy the Generator that powers them.
+}
+
+STRING 200
+{
+|cff32cd32HINT|r - To destroy the fortifications that defend this gate, locate and destroy the Generator that powers them.
+}
+
+STRING 201
+{
+|cff32cd32HINT|r - To destroy the fortifications that defend this gate, locate and destroy the Generator that powers them.
+}
+
+STRING 202
+{
+Fel Orc Blademaster
+}
+
+STRING 203
+{
+Rend
+}
+
+STRING 204
+{
+Maim
+}
+
+STRING 205
+{
+Sagra'nel
+}
+
+STRING 206
+{
+Nera'thor
+}
+
+STRING 209
+{
+|cffff8c00NOTICE|r - Kael's Phoenix spell is disabled during this mission.
+}
+
+STRING 210
+{
+Bonethirst
+}
+
+STRING 211
+{
+Bloodgrin
+}
+
+STRING 212
+{
+Butcher
+}
+
+STRING 213
+// Sound\Dialogue\HumanExpCamp\Human06x\BUTCHER.WAV
+{
+Fresh meat!
+}
+
+STRING 214
+{
+|cff32cd32HINT|r - With the Generator destroyed, the gate's tower defenses are no longer able to fire.
+}
+
+STRING 215
+{
+|cff32cd32HINT|r - With the Generator destroyed, the gate's tower defenses are no longer able to fire.
+}
+
+STRING 216
+{
+|cff32cd32HINT|r - With the Generator destroyed, the gate's tower defenses are no longer able to fire.
+}
+
+STRING 218
+{
+|cff32cd32HINT|r - Find gold coins to fund reinforcements. Your workers are unable to construct additional buildings within the Black Citadel, so whatever coins you find will be your only source of income.
+}
+
+STRING 223
+{
+Generator
+}
+
+STRING 224
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Siege Bastion
+}
+
+STRING 225
+{
+Drenched in the Master of Pain's blood, this Shadowkey is one of the two that are required to unlock the gate to Magtheridon's throne chamber.
+}
+
+STRING 226
+{
+This ghostly key was guarded by the Mistress of Torment until her death just a short time ago. Enchanted with sinister magics, it is one of two Shadowkeys that are required to unlock the gate to Magtheridon's throne chamber.
+}
+
+STRING 228
+{
+Destroy the Power Generators (1 of 4 Destroyed)
+}
+
+STRING 229
+{
+Destroy the Power Generators (2 of 4 Destroyed)
+}
+
+STRING 230
+{
+Destroy the Power Generators (3 of 4 Destroyed)
+}
+
+STRING 231
+{
+Destroy the Power Generators
+}
+
+STRING 232
+{
+Fel Orc Demolisher
+}
+
+STRING 233
+{
+(Easy)
+}
+
+STRING 234
+{
+ (Neutral Hostile EASY)
+}
+

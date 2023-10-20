@@ -1,0 +1,522 @@
+﻿STRING 1
+{
+UndeadX07b
+}
+
+STRING 2
+{
+1
+}
+
+STRING 3
+{
+Chapter Seven, Part Two: The Forgotten Ones
+}
+
+STRING 4
+{
+Blizzard Entertainment
+}
+
+STRING 6
+{
+Force 1
+}
+
+STRING 43
+{
+Defeat!
+}
+
+STRING 59
+{
+Force 2
+}
+
+STRING 60
+{
+Undead Scourge
+}
+
+STRING 62
+{
+Nerubians
+}
+
+STRING 63
+{
+Faceless Ones
+}
+
+STRING 72
+{
+Defeat!
+}
+
+STRING 74
+{
+Anub'arak
+}
+
+STRING 75
+// Sound\Dialogue\UndeadExpCamp\Undead07Bx\L07BAnubarak01.mp3
+{
+We have entered the Old Kingdom. Be wary, death knight. Whatever scared the dwarves still lurks down here somewhere.
+}
+
+STRING 76
+{
+The Old Kingdom
+}
+
+STRING 77
+{
+The ice cracks, and horrific noises erupt from the depths of the Old Kingdom. Though the horrors within this place are fierce you must fight your way through to the exit. Let nothing stand in your way.
+}
+
+STRING 78
+{
+Locate the exit of the Old Kingdom
+}
+
+STRING 79
+{
+Arthas and Anub'arak must survive
+}
+
+STRING 80
+{
+|cffffcc00MAIN QUEST|r
+The Old Kingdom
+  - Locate the exit of the Old Kingdom
+  - Arthas and Anub'arak must survive
+}
+
+STRING 81
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+The Old Kingdom
+}
+
+STRING 89
+{
+|cffffcc00MISSION FAILED|r
+Arthas has been slain.
+}
+
+STRING 90
+{
+|cffffcc00MISSION FAILED|r
+Anub'arak has been slain.
+}
+
+STRING 125
+{
+Anub'arak
+}
+
+STRING 126
+// Sound\Dialogue\UndeadExpCamp\Undead07Bx\L07BAnubarak09.mp3
+{
+Wait--the towers on either side are rigged to fire bolts of frost. This hallway is a deathtrap.
+}
+
+STRING 127
+{
+King Arthas
+}
+
+STRING 128
+{
+Can't we disable them?
+}
+
+STRING 129
+{
+Anub'arak
+}
+
+STRING 130
+{
+The circular hatch in the far wall is an aqueduct plug. If we can open it, the water might flood the firing mechanisms and disable the entire trap.
+}
+
+STRING 131
+{
+Nerubian
+}
+
+STRING 132
+// Sound\Dialogue\UndeadExpCamp\Undead07Bx\L07BNerubian14.mp3
+{
+Look, brothers! The traitor king!
+}
+
+STRING 133
+{
+King Arthas
+}
+
+STRING 134
+{
+Who, me?
+}
+
+STRING 135
+{
+Anub'arak
+}
+
+STRING 136
+{
+He is referring to me, death knight. These nerubians will stop at nothing to destroy us!
+}
+
+STRING 139
+{
+Anub'arak
+}
+
+STRING 140
+// Sound\Dialogue\UndeadExpCamp\Undead07Bx\L07BAnubarak44.mp3
+{
+We cannot take them all! Hurry, death knight--up the stairwell! Hurry!
+}
+
+STRING 142
+{
+Extended Duration
+}
+
+STRING 143
+{
+Rescue the Crypt Fiends
+}
+
+STRING 144
+{
+The rebel spiders captured several Crypt Fiends! They're being held in a nearby chamber. Release them, and they will be yours to command.
+}
+
+STRING 145
+{
+Find and release the Crypt Fiends
+}
+
+STRING 148
+{
+|cffffcc00OPTIONAL QUEST|r
+Rescue the Crypt Fiends
+  - Find and release the Crypt Fiends
+}
+
+STRING 149
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Rescue the Crypt Fiends
+}
+
+STRING 226
+{
+Chapter Seven, Part Two
+}
+
+STRING 227
+{
+The Forgotten Ones
+}
+
+STRING 228
+{
+Moments later, within the Inner Kingdom...
+}
+
+STRING 229
+{
+Blue Crab
+}
+
+STRING 230
+{
+Red Crab
+}
+
+STRING 237
+{
+King Arthas
+}
+
+STRING 238
+{
+The guardians are activating! Defend yourselves!
+}
+
+STRING 241
+{
+King Arthas
+}
+
+STRING 242
+{
+That's done it! Let's move.
+}
+
+STRING 261
+{
+King Arthas
+}
+
+STRING 262
+{
+You were right--they're definitely hostile! We've got to destroy the breeding pods!
+}
+
+STRING 269
+{
+Anub'arak
+}
+
+STRING 270
+{
+We could also seal the doors to shut the hatchlings in!
+}
+
+STRING 275
+{
+King Arthas
+}
+
+STRING 276
+// Sound\Dialogue\UndeadExpCamp\Undead07Bx\L07BArthas33.mp3
+{
+What the hell are they?
+}
+
+STRING 277
+{
+Anub'arak
+}
+
+STRING 278
+{
+They are the faceless ones...
+}
+
+STRING 279
+{
+Anub'arak
+}
+
+STRING 280
+// Sound\Dialogue\UndeadExpCamp\Undead07Bx\L07BAnubarak42.mp3
+{
+It cannot be...
+}
+
+STRING 281
+{
+Anub'arak
+}
+
+STRING 282
+// Sound\Dialogue\UndeadExpCamp\Undead07Bx\L07BAnubarak43.mp3
+{
+A forgotten one. Look to your defenses, death knight! Fight as you've never fought before!
+}
+
+STRING 283
+{
+King Arthas
+}
+
+STRING 284
+{
+What?
+}
+
+STRING 285
+{
+Anub'arak
+}
+
+STRING 286
+{
+They are the horrors the dwarves spoke of. I thought they were only legends.
+}
+
+STRING 301
+{
+Defeat!
+}
+
+STRING 307
+{
+Find the Gold Stashes
+}
+
+STRING 308
+{
+Gold Coins have been hidden throughout these underground chambers. Find them for an increase of your gold coffers. This would be useful the next time you require gold to sustain and build your forces.
+}
+
+STRING 309
+{
+Find the five gold stashes (1 of 5 found)
+}
+
+STRING 310
+{
+|cffffcc00OPTIONAL QUEST|r
+Find the Gold Stashes
+  - Find the five gold stashes  (1 of 5 found)
+}
+
+STRING 311
+{
+Find the five gold stashes
+}
+
+STRING 312
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Find the Gold Stashes
+}
+
+STRING 313
+{
+Find the five gold stashes (2 of 5 found)
+}
+
+STRING 314
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Find the Gold Stashes
+  - Find the five gold stashes  (2 of 5 found)
+}
+
+STRING 315
+{
+Find the five gold stashes (3 of 5 found)
+}
+
+STRING 316
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Find the Gold Stashes
+  - Find the five gold stashes  (3 of 5 found)
+}
+
+STRING 317
+{
+Find the five gold stashes (4 of 5 found)
+}
+
+STRING 318
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Find the Gold Stashes
+  - Find the five gold stashes  (4 of 5 found)
+}
+
+STRING 323
+{
+King Arthas
+}
+
+STRING 324
+// Sound\Dialogue\UndeadExpCamp\Undead07Bx\L07BArthas23.mp3
+{
+Gold! We should take this with us!
+}
+
+STRING 327
+{
+Crypt Fiend
+}
+
+STRING 328
+// Sound\Dialogue\UndeadExpCamp\Undead07Bx\L07BCryptFiend22.mp3
+{
+Thank you, great one. The rebel spiders captured my comrades as well! They're being held in a nearby chamber. Release them, and they will be yours to command.
+}
+
+STRING 335
+{
+Nerubian
+}
+
+STRING 336
+{
+Drive the foul undead back to the surface!
+}
+
+STRING 339
+{
+Nerubian
+}
+
+STRING 340
+{
+Slay the intruders!
+}
+
+STRING 343
+{
+Nerubian
+}
+
+STRING 344
+{
+Death to the servants of Ner'zhul!
+}
+
+STRING 345
+{
+Anub'arak
+}
+
+STRING 346
+// Sound\Dialogue\UndeadExpCamp\Undead07Bx\L07BAnubarak29.mp3
+{
+The eggs of our young are incubated within those breeding pods. There's no telling how many vicious hatchlings they hold.
+}
+
+STRING 347
+{
+The Forgotten One
+}
+
+STRING 348
+{
+Bursting forth from the ice, an unfathomable horror of a long forgotten time has emerged to block your passage. Destroy it and break free of the Old Kingdom.
+}
+
+STRING 349
+{
+Kill the Forgotten One
+}
+
+STRING 350
+{
+Arthas and Anub'arak must survive
+}
+
+STRING 351
+{
+|cffffcc00MAIN QUEST|r
+The Forgotten One
+  - Kill the Forgotten One
+  - Arthas and Anub'arak must survive
+}
+
+STRING 352
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+The Forgotten One
+}
+
+STRING 353
+{
+(Normal)
+}
+

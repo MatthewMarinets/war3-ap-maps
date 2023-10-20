@@ -1,0 +1,5 @@
+[Misc]
+MaxHeroLevel=15
+PawnItemRate=0.25
+HeroFactorXP=80,70,60,50
+

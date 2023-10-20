@@ -1,0 +1,970 @@
+﻿STRING 1
+{
+Defeat!
+}
+
+STRING 3
+{
+UndeadX03
+}
+
+STRING 4
+{
+1
+}
+
+STRING 5
+{
+Chapter Three: The Dark Lady
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 7
+{
+Chapter Three
+}
+
+STRING 12
+{
+Ogre Warlord
+}
+
+STRING 13
+{
+Mug'thol the Warlord is preparing his Ogres for battle in the hills. Find Mug'thol and possess his soul so that his war preparations are not wasted on the wrong enemy.
+}
+
+STRING 16
+{
+|cffffcc00OPTIONAL QUEST|r
+Ogre Warlord
+  - Possess the warlord Ogre Mug'thol
+}
+
+STRING 17
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Ogre Warlord
+}
+
+STRING 19
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 20
+{
+Defeat!
+}
+
+STRING 29
+{
+Sylvanas Windrunner
+}
+
+STRING 30
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Sylvanas02.mp3
+{
+Aren't you, sister? Only days ago we were the Lich King's slaves. We existed only to slaughter in his name. And now we are... free.
+}
+
+STRING 35
+{
+Varimathras
+}
+
+STRING 36
+{
+Varimathras has been dispatched here to lure Sylvanas to the three Dreadlords' cause. Sylvanas has her own plans for Arthas and will take Lordaeron for herself without the help of these pathetic Demons. Destroy Varimathras and his Undead army.
+}
+
+STRING 37
+{
+Destroy the Red Undead Base
+}
+
+STRING 39
+{
+|cffffcc00MAIN QUEST|r
+Varimathras
+  - Destroy the Red Undead Base
+}
+
+STRING 40
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Varimathras
+}
+
+STRING 44
+{
+The Dark Lady
+}
+
+STRING 45
+{
+Sylvanas
+}
+
+STRING 46
+{
+Varimathras Undead
+}
+
+STRING 53
+{
+Banshee
+}
+
+STRING 54
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Banshee01.mp3
+{
+You seem troubled, mistress.
+}
+
+STRING 55
+{
+Banshee
+}
+
+STRING 56
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Banshee03.mp3
+{
+I don't understand, mistress. I thought you'd be overjoyed.
+}
+
+STRING 57
+{
+Sylvanas Windrunner
+}
+
+STRING 58
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Sylvanas04.mp3
+{
+What joy is there in this curse? We are still undead, sister--still monstrosities. What are we if not slaves to this torment?
+}
+
+STRING 59
+{
+Varimathras
+}
+
+STRING 60
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Varimathras05.mp3
+{
+Greetings, Lady Sylvanas. My brothers and I appreciate the role you played in overthrowing Arthas. I've come to offer you a formal invitation to join our new order.
+}
+
+STRING 61
+{
+Sylvanas Windrunner
+}
+
+STRING 62
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Sylvanas06.mp3
+{
+Varimathras. My only interest was in seeing Arthas dead. I have no time for your petty politics or power mongering.
+}
+
+STRING 63
+{
+Varimathras
+}
+
+STRING 64
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Varimathras07.mp3
+{
+Careful, milady. It would be unwise to incur our wrath. We are the future of these... Plaguelands. You can either join us and rule or be cast aside.
+}
+
+STRING 65
+{
+Sylvanas Windrunner
+}
+
+STRING 66
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Sylvanas08.mp3
+{
+I lived as a slave long enough, dreadlord. I won't relinquish my freedom by shackling myself to you fools!
+}
+
+STRING 67
+{
+Varimathras
+}
+
+STRING 68
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Varimathras09.mp3
+{
+So be it. Our reply will come soon.
+}
+
+STRING 71
+{
+Sylvanas Windrunner
+}
+
+STRING 72
+{
+Be ready. Varimathras will attack soon. With only our sister banshees and a few ghouls to aid us, it will be difficult to fend him off.
+}
+
+STRING 78
+{
+Sylvanas Windrunner
+}
+
+STRING 79
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Sylvanas40.mp3
+{
+Those mangy gnolls could bolster our forces.
+}
+
+STRING 82
+{
+Murloc Puddle Lord
+}
+
+STRING 87
+{
+Bandit Lord
+}
+
+STRING 88
+{
+With Lordaeron in ashes, the few remaining Humans have turned on each other. The ruthless Bandit Lord in this region could prove to be an invaluable asset. Find this Bandit Lord and possess him to further bolster your forces.
+}
+
+STRING 90
+{
+|cffffcc00OPTIONAL QUEST|r
+Bandit Lord
+  - Possess Blackthorn the Bandit Lord
+}
+
+STRING 91
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Bandit Lord
+}
+
+STRING 109
+{
+Sylvanas Windrunner
+}
+
+STRING 110
+{
+These curs were hardly worth the effort.
+}
+
+STRING 111
+{
+Banshee
+}
+
+STRING 112
+{
+Perhaps, mistress. But there are more of them out there. If we could lure them to our side, they would be a great help against Varimathras' forces.
+}
+
+STRING 114
+{
+How very clever of you, sister. Possessing these lowly creatures could turn the tide in our favor! We'll start with their leader. Once we have him, subverting his warriors will be child's play.
+}
+
+STRING 158
+{
+Alliance of Lordaeron
+}
+
+STRING 160
+{
+Possess the warlord Ogre Mug'thol
+}
+
+STRING 163
+{
+Possess Blackthorn the Bandit Lord
+}
+
+STRING 170
+{
+Snarlmane
+}
+
+STRING 171
+{
+Back, you dead! No one trespasses on our territory!
+}
+
+STRING 173
+{
+Will someone please steal his mind and be done with it?
+}
+
+STRING 189
+{
+Sylvanas Windrunner
+}
+
+STRING 190
+{
+These ogres are exactly what we need to defeat Varimathras.
+}
+
+STRING 191
+{
+Ogre
+}
+
+STRING 192
+{
+Ogres no work for no dead!
+}
+
+STRING 197
+{
+Sylvanas Windrunner
+}
+
+STRING 198
+{
+You are overzealous, my warriors. You destroyed him before we could lure him to our side!
+}
+
+STRING 199
+{
+|cffffcc00OPTIONAL QUEST FAILED|r
+Ogre Warlord
+}
+
+STRING 201
+{
+Sylvanas Windrunner
+}
+
+STRING 202
+{
+That brute must be Zul'rogg, the troll chieftain.
+}
+
+STRING 208
+{
+Sylvanas Windrunner
+}
+
+STRING 209
+{
+Forest trolls! I hate them even more than those cursed dreadlords. Slaughter them all!
+}
+
+STRING 210
+{
+Forest Troll
+}
+
+STRING 211
+{
+You'll never get us all, witch! Chieftain Zul'rogg will hunt you down and avenge us!
+}
+
+STRING 212
+{
+Sylvanas Windrunner
+}
+
+STRING 213
+{
+He's welcome to try, savage!
+}
+
+STRING 227
+{
+Sylvanas Windrunner
+}
+
+STRING 228
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Sylvanas48.mp3
+{
+These slimy wretches could serve us well!
+}
+
+STRING 229
+{
+Sylvanas Windrunner
+}
+
+STRING 230
+{
+That ugly toad is the creature we seek! Once we claim his tiny mind, his minions will serve our cause!
+}
+
+STRING 242
+{
+|cffffcc00OPTIONAL QUEST FAILED|r
+Bandit Lord
+}
+
+STRING 247
+{
+Sylvanas Windrunner
+}
+
+STRING 248
+{
+These bandits will serve me well. Let's find their ringleader and steal his mind.
+}
+
+STRING 249
+{
+Blackthorn
+}
+
+STRING 251
+{
+Sylvanas Windrunner
+}
+
+STRING 252
+{
+Damn. He never had a chance to serve me.
+}
+
+STRING 258
+{
+Ogre Brute
+}
+
+STRING 259
+{
+Ogre War Mage
+}
+
+STRING 260
+{
+Hire O|cffffcc00g|rre War Mage
+}
+
+STRING 261
+{
+Hire Ogre |cffffcc00B|rrute
+}
+
+STRING 262
+{
+B
+}
+
+STRING 263
+{
+The standard brute of the Ogre Legion. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 264
+{
+Ogre Woundmaster
+}
+
+STRING 267
+{
+Allows you to hire various mercenaries.
+}
+
+STRING 268
+{
+Build Mercenary Camp
+}
+
+STRING 269
+{
+W
+}
+
+STRING 270
+{
+Hire Ogre |cffffcc00W|roundmaster
+}
+
+STRING 272
+{
+Shockwave (MugThol)
+}
+
+STRING 285
+{
+Mercenary Camp
+}
+
+STRING 287
+{
+|cff32cd32HINT|r - You can now purchase Ogres from the Mercenary Camp. These heavily muscled fighters are more brawn than brain, but they can absorb and inflict a lot of punishment.
+}
+
+STRING 289
+{
+|cff32cd32HINT|r - You can now purchase Bandits from the Mercenary Camp. These unscrupulous troops are at their best when attacking from a safe distance, preferably from behind.
+}
+
+STRING 290
+{
+|cff87ceebNEW UNIT AVAILABLE|r
+Obsidian Statue - You may now build Obsidian Statues from the Slaughterhouse. Activate Spirit Touch to replenish mana in nearby friendly units.
+}
+
+STRING 291
+{
+|cff32cd32HINT|r - Sylvanas can use Silence to prevent enemies in a target area from casting spells.
+}
+
+STRING 292
+{
+Sylvanas Windrunner
+}
+
+STRING 293
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Sylvanas65.mp3
+{
+Any final words, demon?
+}
+
+STRING 294
+{
+Varimathras
+}
+
+STRING 295
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Varimathras66.mp3
+{
+Sylvanas, spare my life. I beg you! I can be of service--I swear it!
+}
+
+STRING 296
+{
+Sylvanas Windrunner
+}
+
+STRING 297
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Sylvanas67.mp3
+{
+Just like a demon. You'd sell your brethren out just to save your own skin. I'm listening.
+}
+
+STRING 300
+{
+Varimathras
+}
+
+STRING 301
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Varimathras68.mp3
+{
+I know what my brothers' plans are. I know where their forces are based. Just let me serve you, and I'll help you defeat them!
+}
+
+STRING 302
+{
+Sylvanas Windrunner
+}
+
+STRING 303
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Sylvanas69.mp3
+{
+All right, Varimathras. I'll let you prove your loyalty to me. But be warned--I'm keeping you on a short leash.
+}
+
+STRING 304
+{
+Two days later, at her base camp in the newly formed Plaguelands, Sylvanas ponders her newfound freedom and her future as one of the cursed undead.
+}
+
+STRING 311
+{
+Heavy melee unit with Shadowmeld and Devotion Aura. Can throw Storm Hammers. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 312
+{
+Sylvanas Windrunner
+}
+
+STRING 313
+{
+No? Perhaps we'll just ask your lord and see what he thinks about it.
+}
+
+STRING 314
+{
+Zul'Rogg
+}
+
+STRING 315
+{
+Plague Cloud
+}
+
+STRING 316
+{
+Sylvanas' Forces
+}
+
+STRING 317
+{
+Dreadlord Insurgents
+}
+
+STRING 318
+{
+Varimathras' Forces
+}
+
+STRING 319
+{
+|cff32cd32HINT|r - Deactivate Curse to conserve your Banshees' mana for Possession.
+}
+
+STRING 372
+{
+Sylvanas Windrunner
+}
+
+STRING 373
+{
+You underestimated me, dreadlord. Now you're going to pay.
+}
+
+STRING 374
+{
+Sylvanas Windrunner
+}
+
+STRING 375
+{
+Your scheming brothers can't help you now, Varimathras!
+}
+
+STRING 376
+{
+Sylvanas Windrunner
+}
+
+STRING 377
+{
+Come and face me, dreadlord! Are you afraid?
+}
+
+STRING 378
+{
+Sylvanas Windrunner
+}
+
+STRING 379
+{
+You'll pay for all the suffering you've caused, Varimathras! I swear it!
+}
+
+STRING 380
+{
+Varimathras
+}
+
+STRING 381
+{
+Foolish banshee! You think you can match the might of a dreadlord?
+}
+
+STRING 382
+{
+Varimathras
+}
+
+STRING 383
+{
+You should have joined us, Sylvanas. Your refusal will cost you dearly!
+}
+
+STRING 384
+{
+Varimathras
+}
+
+STRING 385
+{
+Is that all you've got, Sylvanas? I expected more from you!
+}
+
+STRING 386
+{
+Varimathras
+}
+
+STRING 387
+{
+Come, little archer. I'll reunite you with your slaughtered countrymen!
+}
+
+STRING 388
+{
+Game Placed
+}
+
+STRING 389
+{
+Mercenary
+}
+
+STRING 390
+{
+Stonemaul Ogre
+}
+
+STRING 395
+{
+Sylvanas Windrunner
+}
+
+STRING 396
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Sylvanas34.mp3
+{
+Feel any better, Mug'thol?
+}
+
+STRING 397
+{
+Mug'thol
+}
+
+STRING 398
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03MugThol35.mp3
+{
+Me serve pretty ghost now. Mug'thol's warriors serve too.
+}
+
+STRING 399
+{
+Sylvanas Windrunner
+}
+
+STRING 400
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Sylvanas36.mp3
+{
+Glad to hear it. Let's move out!
+}
+
+STRING 405
+{
+Blackthorn
+}
+
+STRING 406
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Ringleader74.mp3
+{
+Lady Sylvanas is master here. We fight for her, brothers!
+}
+
+STRING 407
+{
+Sylvanas Windrunner
+}
+
+STRING 408
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Sylvanas75.mp3
+{
+Hmm... my own band of assassins. Intriguing.
+}
+
+STRING 409
+{
+|cff32cd32HINT|r - Sylvanas can auto-cast Black Arrow on enemy units. If a unit dies while affected by Black Arrow, a Dark Minion will spawn from the corpse to serve her.
+}
+
+STRING 418
+{
+Mug'thol
+}
+
+STRING 419
+{
+Me warlord Mug'thol! Me crush weak dead!
+}
+
+STRING 424
+{
+Sylvanas Windrunner
+}
+
+STRING 425
+{
+I think not.
+}
+
+STRING 430
+{
+Sylvanas Windrunner
+}
+
+STRING 431
+{
+You may as well surrender now, cretin. You'll be my slave one way or another.
+}
+
+STRING 432
+{
+Blackthorn
+}
+
+STRING 433
+{
+Never!
+}
+
+STRING 476
+{
+Ogre
+}
+
+STRING 477
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Ogre38.mp3
+{
+We follow Dark Lady!
+}
+
+STRING 479
+{
+Custom
+}
+
+STRING 480
+{
+Village
+}
+
+STRING 481
+{
+Ogre
+}
+
+STRING 482
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Ogre39.mp3
+{
+Pretty ghost find enemies to kill.
+}
+
+STRING 483
+{
+Ogre
+}
+
+STRING 484
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Ogre37.mp3
+{
+To war! Mug'thol lead to war!
+}
+
+STRING 485
+{
+Bandit
+}
+
+STRING 486
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Bandit76.mp3
+{
+For Lady Sylvanas!
+}
+
+STRING 487
+{
+Bandit
+}
+
+STRING 488
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Bandit77.mp3
+{
+Kill, maim and steal!
+}
+
+STRING 489
+{
+Bandit
+}
+
+STRING 490
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Bandit78.mp3
+{
+Plunder for the Dark Lady!
+}
+
+STRING 515
+{
+Banshee
+}
+
+STRING 516
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Banshee11.mp3
+{
+Mistress, we're under attack!
+}
+
+STRING 523
+{
+Banshee
+}
+
+STRING 524
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Banshee12.mp3
+{
+The dreadlords' forces have arrived!
+}
+
+STRING 525
+{
+Banshee
+}
+
+STRING 526
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Banshee13.mp3
+{
+The enemy has returned!
+}
+
+STRING 527
+{
+Banshee
+}
+
+STRING 528
+// Sound\Dialogue\UndeadExpCamp\Undead03x\L03Banshee14.mp3
+{
+Our base is under attack! We must bolster our defenses!
+}
+
+STRING 529
+{
+|cff87ceebNEW UNIT AVAILABLE|r
+Nerubian Tower - A Ziggurat can now be upgraded into this tower, which damages and slows enemy units.
+}
+
+STRING 530
+{
+Light melee unit. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 531
+{
+Medium ranged unit that fires envenomed bolts. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 532
+{
+Light melee unit with Evasion. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 533
+{
+|cff32cd32HINT|r - Attack the rock wall to reach Mug'thol the Ogre Warlord.
+}
+

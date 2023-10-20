@@ -1,0 +1,1214 @@
+﻿STRING 0
+{
+Sentinels
+}
+
+STRING 2
+{
+NightElf05
+}
+
+STRING 3
+{
+1
+}
+
+STRING 4
+{
+Chapter Five: Brothers in Blood
+}
+
+STRING 5
+{
+Blizzard Entertainment
+}
+
+STRING 6
+{
+Illidan Stormrage
+}
+
+STRING 18
+{
+Awaken Druids
+}
+
+STRING 19
+{
+The Druids of the Claw have been asleep in the depths of these caverns for thousands of years. They must be found and awakened if the darkness spreading aboveground is to be defeated.
+}
+
+STRING 20
+{
+Free Illidan
+}
+
+STRING 21
+{
+Though Illidan's release could prove costly, his aid against the Demons would be invaluable. You must plumb the depths of his ancient prison and release him before all is lost.		
+}
+
+STRING 22
+{
+Discover the location of the Barrow Deeps
+}
+
+STRING 46
+{
+Furion Stormrage
+}
+
+STRING 47
+{
+My powers cannot open the door. Though it grieves me to leave her, I must press on.
+}
+
+STRING 48
+{
+Keeper of the Grove
+}
+
+STRING 49
+{
+Hold, Priestess! This place is forbidden, even to one such as you. There is a terrible evil here that must remain chained beneath the earth.
+}
+
+STRING 50
+{
+Watcher
+}
+
+STRING 52
+{
+Tyrande Whisperwind
+}
+
+STRING 53
+{
+The treants move to block my path! Only a powerful druid could command such creatures!
+}
+
+STRING 54
+{
+Tyrande Whisperwind
+}
+
+STRING 55
+{
+These explosive devices look to be of goblin design. The wily creatures must have hidden them here long ago. No matter, I'll make good use of them.
+}
+
+STRING 57
+{
+Tyrande Whisperwind
+}
+
+STRING 58
+{
+Illidan was considered a great hero once. I believe he will become one again.
+}
+
+STRING 59
+{
+Keeper of the Grove
+}
+
+STRING 60
+{
+Madness! You would doom us all by freeing the Betrayer!
+}
+
+STRING 61
+{
+Tyrande Whisperwind
+}
+
+STRING 62
+{
+Illidan! Is that you?
+}
+
+STRING 63
+{
+Illidan Stormrage
+}
+
+STRING 64
+{
+Tyrande... it is your voice! After all these ages spent in darkness, your voice is like the pure light of the moon upon my mind.
+}
+
+STRING 65
+{
+Tyrande Whisperwind
+}
+
+STRING 66
+{
+The Legion has returned, Illidan. Your people have need of you once more. 
+}
+
+STRING 67
+{
+Illidan Stormrage
+}
+
+STRING 68
+{
+Because I once cared for you, Tyrande, I will hunt down the demons. But I will never owe our people anything!
+}
+
+STRING 69
+{
+Tyrande Whisperwind
+}
+
+STRING 70
+{
+Then let us hurry back to the surface! The demons' corruption spreads with every second we waste!  
+}
+
+STRING 73
+{
+The next morning, within the subterranean Barrow Deeps of Mount Hyjal...
+}
+
+STRING 74
+{
+Mystic
+}
+
+STRING 75
+{
+Stone Guardian
+}
+
+STRING 76
+{
+Archer TEST
+}
+
+STRING 78
+{
+Sylvanas Windrunner TEST
+}
+
+STRING 79
+{
+Huntress TEST
+}
+
+STRING 80
+{
+Locate Illidan's prison
+}
+
+STRING 81
+{
+Defeat the Watchers
+}
+
+STRING 82
+{
+|cff32CD32HINT|r - Activate both Circles of Power to open this gate.
+}
+
+STRING 83
+{
+|cff32CD32HINT|r - The gate has been opened.
+}
+
+STRING 85
+{
+Sleepers
+}
+
+STRING 86
+{
+Watcher
+}
+
+STRING 87
+{
+Death to the intruders!
+}
+
+STRING 90
+{
+ (Owlbear)
+}
+
+STRING 91
+{
+Elder Watcher
+}
+
+STRING 92
+{
+ (Enraged Owlbear)
+}
+
+STRING 93
+{
+ (Berserk Owlbear)
+}
+
+STRING 98
+{
+Ancient Watcher
+}
+
+STRING 99
+{
+Defeat!
+}
+
+STRING 100
+{
+Druids of the Claw
+}
+
+STRING 105
+{
+Defeat!
+}
+
+STRING 110
+{
+Defeat!
+}
+
+STRING 122
+{
+Druid of the Claw
+}
+
+STRING 123
+{
+Shan'do Stormrage! I don't know what came over us. It's been so long since we remembered who we were.
+}
+
+STRING 136
+{
+Chapter Five
+}
+
+STRING 137
+{
+Brothers in Blood
+}
+
+STRING 138
+{
+Furion Stormrage
+}
+
+STRING 139
+{
+All is well, thero-shan. I have need of you and your mighty brethren once again. After these many ages, the Burning Legion has returned, and only our combined strength can drive them back.
+}
+
+STRING 140
+{
+Druid of the Claw
+}
+
+STRING 141
+{
+Then we druids of the claw are yours to command, Shan'do Stormrage.
+}
+
+STRING 161
+{
+Sick Furbolg
+}
+
+STRING 162
+{
+The Largest Panda Ever
+}
+
+STRING 163
+{
+Jimmy the Seal
+}
+
+STRING 164
+{
+Defeat!
+}
+
+STRING 165
+{
+Furbolg Chieftain
+}
+
+STRING 166
+{
+Hold, Priestess! We need your help! Our shaman was bitten by a strange spider and has become deathly ill. Our tribesmen have run off, leaving us to fend for ourselves.
+}
+
+STRING 167
+{
+Tyrande
+}
+
+STRING 168
+{
+What would you have us do?
+}
+
+STRING 169
+{
+Furbolg Chieftain
+}
+
+STRING 170
+{
+The waters of the nearby fountain of life can save him, but we dare not leave him in this state. If you can fill this vial with its waters and return it to us, our shaman's life will be saved.
+}
+
+STRING 171
+{
+Tyrande
+}
+
+STRING 172
+{
+If his wisdom will prevent you from turning feral like your tribesmen, I will gladly save your shaman.
+}
+
+STRING 173
+{
+|cffffcc00OPTIONAL QUEST|r
+Bear Necessities
+  - Get water from the Fountain of Life
+  - Return the filled vial to the Furbolgs
+}
+
+STRING 174
+{
+Bear Necessities
+}
+
+STRING 175
+{
+The Furbolg Shaman has fallen ill with a terrible disease. His only hope lies in an uncorrupted font of healing waters. Using the special vial the Furbolgs have given you, retrieve some of the sacred water and return it to the ailing Shaman. 
+}
+
+STRING 176
+{
+Get water from the Fountain of Life
+}
+
+STRING 177
+{
+Return the filled vial to the Furbolgs
+}
+
+STRING 187
+{
+|cffffcc00OPTIONAL QUEST|r
+Bear Necessities
+  - Get water from the Fountain of Life
+  - Return the filled vial to the Furbolgs
+}
+
+STRING 190
+{
+|cffffcc00OPTIONAL QUEST UPDATE|R
+Bear Necessities
+  - |cff808080Get water from the Fountain of Life (Completed)|r
+  - Return the filled vial to the Furbolgs
+}
+
+STRING 191
+{
+Fountain of Life
+}
+
+STRING 192
+{
+Furbolg Chieftain
+}
+
+STRING 193
+{
+Elune be praised, Priestess. Truthfully, we doubted that you'd return. Now, our shaman has a chance.
+}
+
+STRING 196
+{
+Furbolg Shaman
+}
+
+STRING 197
+{
+Again, I must thank you for your help. Take this talisman. Should you require our aid, it will summon us to fight at your side.
+}
+
+STRING 200
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Bear Necessities
+}
+
+STRING 202
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Bear Necessities
+}
+
+STRING 216
+{
+|cff32cd32HINT|r - Use Entangling Roots and Cyclone to prevent the feral bear Druids from attacking you.
+}
+
+STRING 219
+{
+|cffffcc00MISSION FAILED|r
+Furion has been slain.
+}
+
+STRING 220
+{
+|cffffcc00MISSION FAILED|r
+Tyrande has been slain.
+}
+
+STRING 221
+{
+|cffffcc00MAIN QUEST FAILED|r
+Awaken Druids
+}
+
+STRING 222
+{
+Tyrande Whisperwind must survive
+}
+
+STRING 225
+{
+Druid of the Claw
+}
+
+STRING 226
+{
+Shan'do Stormrage! I don't know what came over us. It's been so long since we remembered who we were.
+}
+
+STRING 227
+{
+Furion Stormrage
+}
+
+STRING 228
+{
+All is well, thero-shan. I have need of you and your mighty brethren once again. After these many ages, the Burning Legion has returned, and only our combined strength can drive them back.
+}
+
+STRING 229
+{
+Druid of the Claw
+}
+
+STRING 230
+{
+Then we druids of the claw are yours to command, Shan'do Stormrage.
+}
+
+STRING 232
+{
+Belanova
+}
+
+STRING 233
+{
+Target
+}
+
+STRING 234
+{
+Elite Bowmaster
+}
+
+STRING 237
+{
+Tyrande Whisperwind
+}
+
+STRING 238
+{
+There is nothing to fear in this place. The only enemy that has ever given me pause is now corrupting the lands above us. Let us be done with this business and get back to the surface.
+}
+
+STRING 241
+{
+Furion Stormrage
+}
+
+STRING 242
+{
+Agreed. Just be careful. There is no telling how the druids of the claw will react to us after all this time.
+}
+
+STRING 243
+{
+Furion Stormrage must survive
+}
+
+STRING 244
+{
+Tyrande Whisperwind must survive
+}
+
+STRING 245
+{
+Awaken Druids
+}
+
+STRING 246
+{
+The Druids of the Claw have been asleep in the depths of these caverns for thousands of years. They must be found and awakened if the darkness spreading aboveground is to be defeated.
+}
+
+STRING 247
+{
+Discover the location of the Barrow Deeps
+}
+
+STRING 249
+{
+Furion Stormrage must survive
+}
+
+STRING 250
+{
+Free Illidan
+}
+
+STRING 251
+{
+Though Illidan's release could prove costly, his aid against the Demons would be invaluable. You must plumb the depths of his ancient prison and release him before all is lost.
+}
+
+STRING 252
+{
+Locate Illidan's prison
+}
+
+STRING 254
+{
+Tyrande Whisperwind must survive
+}
+
+STRING 277
+{
+Defeat the Watchers
+}
+
+STRING 278
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Free Illidan
+  - |cff808080Locate Illidan's prison (Completed)|r
+  - Defeat the Watchers
+  - Tyrande Whisperwind must survive
+}
+
+STRING 279
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Free Illidan
+}
+
+STRING 286
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Awaken Druids
+}
+
+STRING 287
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Awaken Druids
+}
+
+STRING 314
+{
+Tyrande Whisperwind
+}
+
+STRING 315
+{
+A cache of the Watchers' weapons! These should help us considerably!
+}
+
+STRING 332
+{
+Defeat the Watchers
+}
+
+STRING 333
+{
+|cff87ceebNEW ITEM RECEIVED|r - The Talisman of the Wild can be used three times to temporarily summon a Furbolg to aid you.
+}
+
+STRING 335
+{
+|cff87ceebNEW ITEM RECEIVED|r - Empty Vial
+}
+
+STRING 336
+{
+|cff87ceebNEW ITEM RECEIVED|r - Empty Vial
+}
+
+STRING 337
+{
+|cff87ceebSECRET DISCOVERED|r - You have found the Shrine of the Uberfish.
+}
+
+STRING 340
+{
+Locate Illidan's prison
+}
+
+STRING 342
+{
+Tyrande Whisperwind must survive
+}
+
+STRING 343
+{
+Free Illidan
+}
+
+STRING 344
+{
+Though Illidan's release could prove costly, his aid against the Demons would be invaluable. You must plumb the depths of his ancient prison and release him before all is lost.
+}
+
+STRING 345
+{
+|cffffcc00MAIN QUEST|r
+Awaken Druids
+  - Discover the location of the Barrow Deeps
+  - Tyrande must survive
+  - Furion must survive
+}
+
+STRING 346
+{
+|cffffcc00MAIN QUEST|r
+Awaken Druids
+  - Discover the location of the Barrow Deeps
+  - Tyrande must survive
+  - Furion must survive
+}
+
+STRING 347
+{
+Califax
+}
+
+STRING 350
+{
+|cff87ceebNEW ITEM RECEIVED|r - The Talisman of the Wild can be used three times to temporarily summon a Furbolg to aid you.
+}
+
+STRING 351
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Awaken Druids
+}
+
+STRING 352
+{
+|cffffcc00MAIN QUEST|r
+Free Illidan
+  - Locate Illidan's prison
+  - Tyrande Whisperwind must survive
+}
+
+STRING 354
+{
+Furion Stormrage
+}
+
+STRING 355
+{
+Foul spawn of Deathwing! I should have known that you loathsome  beasts would take refuge within the flames of the earth!
+}
+
+STRING 356
+{
+Elder Watcher
+}
+
+STRING 357
+{
+Turn back! You are unworthy to bask in the bear gods' presence!
+}
+
+STRING 358
+{
+Furion Stormrage
+}
+
+STRING 359
+{
+Bear gods?
+}
+
+STRING 363
+{
+|cffffcc00MAIN QUEST|r
+Free Illidan
+  - Locate Illidan's prison
+  - Tyrande Whisperwind must survive
+}
+
+STRING 382
+{
+DruidEndBig
+}
+
+STRING 385
+{
+Furion Stormrage
+}
+
+STRING 386
+{
+These Barrow Deeps have remained untouched for nearly three thousand years. Still, there is no telling what creatures may have taken up residence after we sealed these tunnels shut.
+}
+
+STRING 387
+{
+Watchers
+}
+
+STRING 388
+{
+Prisoners
+}
+
+STRING 389
+{
+Dungeon Denizens
+}
+
+STRING 396
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Bear Necessities
+}
+
+STRING 397
+{
+|cff87ceebNEW ITEM RECEIVED|r - The Talisman of the Wild can be used three times to temporarily summon a Furbolg to aid you.
+}
+
+STRING 398
+{
+Cave Center
+}
+
+STRING 399
+{
+Furion Stormrage
+}
+
+STRING 400
+{
+These cave spiders are enormous!
+}
+
+STRING 401
+{
+Tyrande Whisperwind
+}
+
+STRING 402
+{
+I sense a strange darkness tainting them. They have been transformed by a great evil! 
+}
+
+STRING 403
+{
+|cff87ceebNEW UNIT ACQUIRED|r
+Druid of the Talon - Powerful Druid who can cast Faerie Fire and Cyclone.
+}
+
+STRING 404
+{
+|cffff8c00NOTICE|r - Tyrande's Scout ability cannot be used in underground caverns.
+}
+
+STRING 405
+{
+(With Spells)
+}
+
+STRING 406
+{
+Tyrande Whisperwind
+}
+
+STRING 407
+{
+The pathway cuts off to the south, but this doorway looks promising. 
+}
+
+STRING 408
+{
+Furion Stormrage
+}
+
+STRING 409
+{
+Oh, no. How could I have forgotten?
+}
+
+STRING 410
+{
+Tyrande Whisperwind
+}
+
+STRING 411
+{
+What is behind this door that worries you, my love?
+}
+
+STRING 412
+{
+Furion Stormrage
+}
+
+STRING 413
+{
+This door leads to Illidan's prison, Tyrande. We should go... now!
+}
+
+STRING 414
+{
+Tyrande Whisperwind
+}
+
+STRING 415
+{
+Illidan? It's been ten thousand years! Could he still be alive? We should free him, Furion! He would be the perfect ally against the undead and their demon masters!
+}
+
+STRING 416
+{
+Furion Stormrage
+}
+
+STRING 417
+{
+No, Tyrande! That beast must never be set free!
+}
+
+STRING 418
+{
+Tyrande Whisperwind
+}
+
+STRING 419
+{
+But he is your brother!
+}
+
+STRING 420
+{
+Furion Stormrage
+}
+
+STRING 421
+{
+Be that as it may, he is far too... dangerous. I forbid it.
+}
+
+STRING 422
+{
+Tyrande Whisperwind
+}
+
+STRING 423
+{
+Only the goddess may forbid me anything. I will free Illidan whether you like it or not.
+}
+
+STRING 424
+{
+Awaken Druids
+}
+
+STRING 425
+{
+The Druids of the Claw have been asleep in the depths of these caverns for thousands of years. They must be found and awakened if the darkness spreading aboveground is to be defeated.
+}
+
+STRING 426
+{
+Discover the location of the Barrow Deeps
+}
+
+STRING 427
+{
+Furion Stormrage must survive
+}
+
+STRING 428
+{
+Free Illidan
+}
+
+STRING 429
+{
+Though Illidan's release could prove costly, his aid against the Demons would be invaluable. You must plumb the depths of his ancient prison and release him before all is lost.
+}
+
+STRING 430
+{
+Locate Illidan's prison
+}
+
+STRING 431
+{
+Tyrande Whisperwind must survive
+}
+
+STRING 432
+{
+Tyrande Whisperwind
+}
+
+STRING 433
+{
+Demon bile! This must be what cursed the spiders!
+}
+
+STRING 434
+{
+Furion Stormrage
+}
+
+STRING 435
+{
+If the corruption can do this to these simple creatures, I dare not imagine what it could do to the beasts who live above!
+}
+
+STRING 436
+{
+Tyrande Whisperwind
+}
+
+STRING 437
+{
+We must put an end to this corruption, no matter the cost!
+}
+
+STRING 438
+{
+|cff32CD32HINT|r - Your Huntresses have acquired magical Glaives. Their attacks will now ricochet between multiple targets.
+}
+
+STRING 441
+{
+Furion Stormrage
+}
+
+STRING 442
+{
+Let me pass! The Arch-Druid of the Moonglade demands passage!
+}
+
+STRING 445
+{
+Furion Stormrage
+}
+
+STRING 446
+{
+Ah... the druids of the claw are awake already! Come, my brothers! We have much to do!
+}
+
+STRING 447
+{
+Furion Stormrage
+}
+
+STRING 448
+{
+What in... They have lost themselves to their animal aspects! They are mindless and feral!
+}
+
+STRING 449
+{
+Druid of the Talon
+}
+
+STRING 450
+{
+In the raven's name!
+}
+
+STRING 451
+{
+Furion Stormrage
+}
+
+STRING 452
+{
+The horn's call might work, but it would reach only a few of them in this part of the cavern.
+}
+
+STRING 453
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Awaken Druids
+  - |cff808080Discover the location of the Barrow Deeps (Completed)|r
+  - Bring Furion Stormrage to the Cave Center Circle of Power
+  - All Druids of the Claw must survive
+  - Furion Stormrage must survive
+}
+
+STRING 454
+{
+Tyrande
+}
+
+STRING 455
+{
+This must be the fountain of life. I need only place the vial in the fountain's waters.
+}
+
+STRING 458
+{
+Tyrande Whisperwind
+}
+
+STRING 459
+{
+I cannot go back. Goddess grant that Furion was wrong.
+}
+
+STRING 460
+{
+Elder Watcher
+}
+
+STRING 461
+{
+Your quest is foolhardy! Even your goddess has condemned the one you seek to free!
+}
+
+STRING 462
+{
+Loki
+}
+
+STRING 463
+{
+Furion Stormrage must survive
+}
+
+STRING 466
+{
+Tyrande Whisperwind
+}
+
+STRING 467
+{
+Furion!
+}
+
+STRING 468
+{
+Illidan Stormrage
+}
+
+STRING 469
+{
+It has been an eternity, brother. An eternity spent in darkness!
+}
+
+STRING 470
+{
+Furion Stormrage
+}
+
+STRING 471
+{
+Illidan! You were sentenced to pay for your sins, nothing more!
+}
+
+STRING 472
+{
+Illidan Stormrage
+}
+
+STRING 473
+{
+And who were you to judge me? We fought the demons side by side, if you recall!
+}
+
+STRING 474
+{
+Tyrande Whisperwind
+}
+
+STRING 475
+{
+Enough of this, both of you! What is done is done! My love, with Illidan's help, we will drive the demons back once again and save what is left of our beloved land!
+}
+
+STRING 476
+{
+Furion Stormrage
+}
+
+STRING 477
+{
+Have you even considered the cost, Tyrande? This betrayer's aid may doom us all before the end. I will have nothing to do with this.
+}
+
+STRING 481
+{
+Bring Furion to the Cave Center Circle of Power
+}
+
+STRING 483
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Awaken Druids
+  - |cff808080Discover the location of the Barrow Deeps (Completed)|r
+  - Bring Furion Stormrage to the Cave Center Circle of Power
+  - All Druids of the Claw must survive
+  - Furion Stormrage must survive
+}
+
+STRING 494
+{
+|cffffcc00OPTIONAL QUEST FAILED|r
+Bear Necessities
+}
+
+STRING 495
+{
+Furion Stormrage
+}
+
+STRING 496
+{
+Perhaps the creature was referring to the sleeping druids of the claw. But why would he call them bear gods when they appear as I do?
+}
+
+STRING 497
+{
+All Druids of the Claw must survive
+}
+

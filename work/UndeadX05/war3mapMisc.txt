@@ -1,0 +1,3 @@
+[Misc]
+DayLength=1080.0
+

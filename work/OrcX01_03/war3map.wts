@@ -1,0 +1,1366 @@
+﻿STRING 1
+{
+Defeat!
+}
+
+STRING 3
+{
+OrcX01_03
+}
+
+STRING 4
+{
+1
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 44
+{
+Orcish Horde
+}
+
+STRING 64
+{
+Rexxar
+}
+
+STRING 84
+{
+Beast Den
+}
+
+STRING 85
+{
+Beast Den
+}
+
+STRING 405
+{
+Vicious and territorial, the quillboars are not an enemy to be trifled with. It is said among the orcs that only the suicidal would fight the quillboars in their own home.
+}
+
+STRING 406
+{
+Pig God
+}
+
+STRING 407
+{
+Quillboar Hut
+}
+
+STRING 408
+{
+A hollowed-out log that some Quillboars call home.
+}
+
+STRING 409
+{
+Build Quillboar Hut
+}
+
+STRING 411
+{
+Corpse Impaled NO PATHING
+}
+
+STRING 412
+{
+Dying Wish
+}
+
+STRING 413
+{
+For the sake of honor, you must complete Mogrin's final task. Seek out the city of Orgrimmar and deliver Mogrin's Report to the Orc warchief, Thrall.
+}
+
+STRING 414
+{
+Deliver Mogrin's Report to Thrall
+}
+
+STRING 415
+{
+|cffffcc00MAIN QUEST|r
+Dying Wish
+  - Deliver Mogrin's Report to Thrall
+}
+
+STRING 416
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Dying Wish
+}
+
+STRING 417
+{
+Earning Your Keep
+}
+
+STRING 418
+{
+To repay Thrall's hospitality, you have offered your services to the warchief. Fortunately, there is plenty of work for someone with your talents. Talk to Nazgrel, Drek'Thar, and Gazlowe, and help them complete their tasks.
+}
+
+STRING 419
+{
+Solve Gazlowe's problem
+}
+
+STRING 420
+{
+Complete Drek'Thar's task
+}
+
+STRING 421
+{
+Complete Nazgrel's assignment
+}
+
+STRING 422
+{
+Return to Thrall
+}
+
+STRING 423
+{
+|cffffcc00MAIN QUEST|r
+Earning Your Keep
+  - Solve Gazlowe's problem
+  - Complete Drek'Thar's task
+  - Complete Nazgrel's assignment
+  - Return to Thrall
+}
+
+STRING 424
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Earning Your Keep
+}
+
+STRING 425
+{
+  - Solve Gazlowe's problem
+}
+
+STRING 426
+{
+  - |cff808080Solve Gazlowe's problem (Completed)|r
+}
+
+STRING 427
+{
+  - |cff808080Complete Drek'Thar's task (Completed)|r
+}
+
+STRING 428
+{
+  - Complete Drek'Thar's task
+}
+
+STRING 429
+{
+  - |cff808080Complete Nazgrel's assignment (Completed)|r
+}
+
+STRING 430
+{
+  - Complete Nazgrel's assignment
+}
+
+STRING 431
+{
+  - Return to Thrall
+}
+
+STRING 432
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Earning Your Keep
+}
+
+STRING 433
+{
+Harpy Threat
+}
+
+STRING 434
+{
+Nazgrel has informed you that the vile Harpies are ransacking the Horde's supply caravans. He wants you to put an end to their threat by killing the Harpy leader, Bloodfeather.
+}
+
+STRING 435
+{
+Kill Bloodfeather
+}
+
+STRING 436
+{
+Return to Nazgrel
+}
+
+STRING 437
+{
+Visit the armory for your reward
+}
+
+STRING 438
+{
+|cffffcc00MAIN QUEST|r
+Harpy Threat
+  - Kill Bloodfeather
+  - Return to Nazgrel
+}
+
+STRING 439
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Harpy Threat
+  - |cff808080Kill Bloodfeather (Completed)|r
+  - Return to Nazgrel
+}
+
+STRING 440
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Harpy Threat
+  - |cff808080Kill Bloodfeather (Completed)|r
+  - |cff808080Return to Nazgrel (Completed)|r
+  - Visit the armory for your reward
+}
+
+STRING 441
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Harpy Threat
+}
+
+STRING 442
+{
+Thunder Herb
+}
+
+STRING 443
+{
+Drek'Thar has sent you to Thunder Ridge to collect 6 Shimmerweed herbs for a potion he is brewing. The normally docile Thunder Lizards have shown unprecedented hostility lately, making your fighting abilities a necessity for the herbs' retrieval.
+}
+
+STRING 444
+{
+Collect six Shimmerweed herbs (0 of 6 Collected)
+}
+
+STRING 445
+{
+Return to Drek'Thar
+}
+
+STRING 446
+{
+|cffffcc00MAIN QUEST|r
+Thunder Herb
+  - Collect six Shimmerweed herbs (0 of 6 Collected)
+  - Return to Drek'Thar
+}
+
+STRING 447
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Thunder Herb
+  - Collect six Shimmerweed herbs (1 of 6 Collected)
+  - Return to Drek'Thar
+}
+
+STRING 448
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Thunder Herb
+  - Collect six Shimmerweed herbs (2 of 6 Collected)
+  - Return to Drek'Thar
+}
+
+STRING 449
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Thunder Herb
+  - Collect six Shimmerweed herbs (3 of 6 Collected)
+  - Return to Drek'Thar
+}
+
+STRING 450
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Thunder Herb
+  - Collect six Shimmerweed herbs (4 of 6 Collected)
+  - Return to Drek'Thar
+}
+
+STRING 451
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Thunder Herb
+  - Collect six Shimmerweed herbs (5 of 6 Collected)
+  - Return to Drek'Thar
+}
+
+STRING 452
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Thunder Herb
+  - |cff808080Collect six Shimmerweed herbs (Completed)|r
+  - Return to Drek'Thar
+}
+
+STRING 453
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Thunder Herb
+}
+
+STRING 454
+{
+Collect six Shimmerweed herbs (1 of 6 Collected)
+}
+
+STRING 455
+{
+Collect six Shimmerweed herbs (2 of 6 Collected)
+}
+
+STRING 456
+{
+Collect six Shimmerweed herbs (3 of 6 Collected)
+}
+
+STRING 457
+{
+Collect six Shimmerweed herbs (4 of 6 Collected)
+}
+
+STRING 458
+{
+Collect six Shimmerweed herbs (5 of 6 Collected)
+}
+
+STRING 459
+{
+Collect six Shimmerweed herbs
+}
+
+STRING 460
+{
+Seal the Tunnel
+}
+
+STRING 461
+{
+Gazlowe's efforts to secure a reliable water source for Orgrimmar have hit a snag. The Goblin mining teams have accidentally tunneled into a Kobold den. This opening must be sealed before the Kobolds can cause any serious damage.
+}
+
+STRING 462
+{
+Enter the Goblin tunnels beneath Orgrimmar
+}
+
+STRING 463
+{
+Destroy the Support Columns
+}
+
+STRING 464
+{
+Report your success to Gazlowe
+}
+
+STRING 465
+{
+|cffffcc00MAIN QUEST|r
+Seal the Tunnel
+  - Enter the Goblin tunnels beneath Orgrimmar
+  - Destroy the Support Columns
+  - Report your success to Gazlowe
+}
+
+STRING 466
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Seal the Tunnel
+  - |cff808080Enter the Goblin tunnels beneath Orgrimmar (Completed)|r
+  - Destroy the Support Columns
+  - Report your success to Gazlowe
+}
+
+STRING 467
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Seal the Tunnel
+  - |cff808080Enter the Goblin tunnels beneath Orgrimmar (Completed)|r
+  - |cff808080Destroy the Support Columns (Completed)|r
+  - Report your success to Gazlowe
+}
+
+STRING 468
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Seal the Tunnel
+}
+
+STRING 469
+{
+Survey the Border
+}
+
+STRING 470
+{
+Nazgrel is suspicious of the Humans who are appearing near Durotar's borders, and has asked you to meet with his lieutenant, Gar'thok, at the outlying watch post. Report any strange Human military activity directly to Thrall.
+}
+
+STRING 471
+{
+Speak with Gar'thok at the watch post
+}
+
+STRING 472
+{
+Follow the tunnel through the Beast Den
+}
+
+STRING 473
+{
+Reach the Observatory
+}
+
+STRING 474
+{
+Return to Thrall
+}
+
+STRING 475
+{
+|cffffcc00MAIN QUEST|r
+Survey the Border
+  - Speak with Gar'thok at the watch post
+  - Follow the tunnel through the Beast Den
+  - Reach the Observatory
+  - Return to Thrall
+}
+
+STRING 476
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Survey the Border
+  - |cff808080Speak with Gar'thok at the watch post (Completed)|r
+  - Follow the tunnel through the Beast Den
+  - Reach the Observatory
+  - Return to Thrall
+}
+
+STRING 477
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Survey the Border
+  - |cff808080Speak with Gar'thok at the watch post (Completed)|r
+  - |cff808080Follow the tunnel through the Beast Den (Completed)|r
+  - Reach the Observatory
+  - Return to Thrall
+}
+
+STRING 478
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Survey the Border
+  - |cff808080Speak with Gar'thok at the watch post (Completed)|r
+  - |cff808080Follow the tunnel through the Beast Den (Completed)|r
+  - |cff808080Reach the Observatory (Completed)|r
+  - Return to Thrall
+}
+
+STRING 479
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Survey the Border
+}
+
+STRING 480
+{
+Protect the Border
+}
+
+STRING 481
+{
+Thrall has ordered you to return to the watch post with Nazgrel and maintain surveillance on the Humans. Thrall does not wish the situation to escalate out of control, but if the Humans attack, then they are to be neutralized.
+}
+
+STRING 482
+{
+Return to the watch post
+}
+
+STRING 483
+{
+Track the Humans back to their base
+}
+
+STRING 484
+{
+Slaughter the Human encampment
+}
+
+STRING 485
+{
+Return to Thrall
+}
+
+STRING 486
+{
+|cffffcc00MAIN QUEST|r
+Protect the Border
+  - Return to the watch post
+}
+
+STRING 487
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Protect the Border
+  - |cff808080Return to the watch post (Completed)|r
+  - Track the Humans back to their base
+  - Slaughter the Human encampment
+  - Return to Thrall
+}
+
+STRING 488
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Protect the Border
+  - |cff808080Return to the watch post (Completed)|r
+  - |cff808080Track the Humans back to their base (Completed)|r
+  - Slaughter the Human encampment
+  - Return to Thrall
+}
+
+STRING 489
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Protect the Border
+  - |cff808080Return to the watch post (Completed)|r
+  - |cff808080Track the Humans back to their base (Completed)|r
+  - |cff808080Slaughter the Human encampment (Completed)|r
+  - Return to Thrall
+}
+
+STRING 490
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Protect the Border
+}
+
+STRING 491
+{
+Warn the Trolls
+}
+
+STRING 492
+{
+The Human fleet poses a serious threat to the Darkspear Trolls on the Echo Isles. Thrall asks that you warn them of the immediate danger posed by the reckless Humans.
+}
+
+STRING 493
+{
+Take the Zeppelin to the Echo Isles
+}
+
+STRING 494
+{
+Meet up with Vol'jin
+}
+
+STRING 495
+{
+|cffffcc00MAIN QUEST|r
+Warn the Trolls
+  - Take the Zeppelin to the Echo Isles
+  - Meet up with Vol'jin
+}
+
+STRING 496
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Warn the Trolls
+  - |cff808080Take the Zeppelin to the Echo Isles (Completed)|r
+  - Meet up with Vol'jin
+}
+
+STRING 497
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Warn the Trolls
+}
+
+STRING 498
+{
+Sink the Fleet
+}
+
+STRING 499
+{
+Before the Darkspear tribe can safely evacuate the Echo Isles, the Human Battleships bombarding its villages must be destroyed. Lead the Troll Batriders in a strike against the Human navy.
+}
+
+STRING 500
+{
+Destroy the Human Battleships (0 of 5 Destroyed)
+}
+
+STRING 501
+{
+Return to Vol'jin
+}
+
+STRING 502
+{
+|cffffcc00MAIN QUEST|r
+Sink the Fleet
+  - Destroy the Human Battleships (0 of 5 Destroyed)
+  - Return to Vol'jin
+}
+
+STRING 503
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Sink the Fleet
+  - Destroy the Human Battleships (1 of 5 Destroyed)
+  - Return to Vol'jin
+}
+
+STRING 504
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Sink the Fleet
+  - Destroy the Human Battleships (2 of 5 Destroyed)
+  - Return to Vol'jin
+}
+
+STRING 505
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Sink the Fleet
+  - Destroy the Human Battleships (3 of 5 Destroyed)
+  - Return to Vol'jin
+}
+
+STRING 506
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Sink the Fleet
+  - Destroy the Human Battleships (4 of 5 Destroyed)
+  - Return to Vol'jin
+}
+
+STRING 507
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Sink the Fleet
+  - |cff808080Destroy the Human Battleships (Completed)|r
+  - Return to Vol'jin
+}
+
+STRING 508
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Sink the Fleet
+}
+
+STRING 509
+{
+Destroy the Human Battleships (1 of 5 Destroyed)
+}
+
+STRING 510
+{
+Destroy the Human Battleships (2 of 5 Destroyed)
+}
+
+STRING 511
+{
+Destroy the Human Battleships (3 of 5 Destroyed)
+}
+
+STRING 512
+{
+Destroy the Human Battleships (4 of 5 Destroyed)
+}
+
+STRING 513
+{
+Destroy the Human Battleships
+}
+
+STRING 514
+{
+The Signal Pyres
+}
+
+STRING 515
+{
+Now that the Human fleet has been driven back, the Darkspear tribe is ready to set sail for the mainland. Five Signal Braziers have been placed across the island, and you must light each one to signal the evacuation's commencement.
+}
+
+STRING 516
+{
+Light the Signal Braziers (0 of 5 Lit)
+}
+
+STRING 517
+{
+|cffffcc00MAIN QUEST|r
+The Signal Pyres
+  - Light the Signal Braziers (0 of 5 Lit)
+  - Return to Thrall
+}
+
+STRING 518
+{
+|cffffcc00MAIN QUEST UPDATE|r
+The Signal Pyres
+  - Light the Signal Braziers (1 of 5 Lit)
+  - Return to Thrall
+}
+
+STRING 519
+{
+|cffffcc00MAIN QUEST UPDATE|r
+The Signal Pyres
+  - Light the Signal Braziers (2 of 5 Lit)
+  - Return to Thrall
+}
+
+STRING 520
+{
+|cffffcc00MAIN QUEST UPDATE|r
+The Signal Pyres
+  - Light the Signal Braziers (3 of 5 Lit)
+  - Return to Thrall
+}
+
+STRING 521
+{
+|cffffcc00MAIN QUEST UPDATE|r
+The Signal Pyres
+  - Light the Signal Braziers (4 of 5 Lit)
+  - Return to Thrall
+}
+
+STRING 522
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+The Signal Pyres
+}
+
+STRING 523
+{
+Light the Signal Braziers (1 of 5 Lit)
+}
+
+STRING 524
+{
+Light the Signal Braziers (2 of 5 Lit)
+}
+
+STRING 525
+{
+Light the Signal Braziers (3 of 5 Lit)
+}
+
+STRING 526
+{
+Light the Signal Braziers (4 of 5 Lit)
+}
+
+STRING 527
+{
+Light the Signal Braziers
+}
+
+STRING 528
+{
+The Summit
+}
+
+STRING 529
+{
+The Humans have offered to meet with the Orc warchief, but you are suspicious of their motives. Go to the meeting in Thrall's place and sniff out any traps to protect Thrall from harm.
+}
+
+STRING 530
+{
+Travel to Razor Hill
+}
+
+STRING 531
+{
+Kill the Human assassins
+}
+
+STRING 532
+{
+Return to Thrall with news of the treachery
+}
+
+STRING 533
+{
+|cffffcc00MAIN QUEST|r
+The Summit
+  - Travel to Razor Hill
+}
+
+STRING 534
+{
+|cffffcc00MAIN QUEST UPDATE|r
+The Summit
+  - |cff808080Travel to Razor Hill (Completed)|r
+  - Kill the Human assassins
+  - Return to Thrall with news of the treachery
+}
+
+STRING 535
+{
+|cffffcc00MAIN QUEST UPDATE|r
+The Summit
+  - |cff808080Travel to Razor Hill (Completed)|r
+  - |cff808080Kill the Human assassins (Completed)|r
+  - Return to Thrall with news of the treachery
+}
+
+STRING 536
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+The Summit
+}
+
+STRING 537
+{
+Secure the Wells
+}
+
+STRING 538
+{
+Gazlowe needs additional help to secure a working water supply for Orgrimmar. A Kobold Geomancer has been filling in the water wells with dirt, so Gazlowe has provided you with an Earth-Borer to dig out the sabotaged wells. You will need to clean out five wells to reestablish the city's water suppl
+}
+
+STRING 539
+{
+Drill five wells (0 of 5 Drilled)
+}
+
+STRING 540
+{
+Return to Gazlowe
+}
+
+STRING 541
+{
+|cffffcc00OPTIONAL QUEST|r
+Secure the Wells
+  - Drill five wells (0 of 5 Drilled)
+  - Return to Gazlowe
+}
+
+STRING 542
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Secure the Wells
+  - Drill five wells (1 of 5 Drilled)
+  - Return to Gazlowe
+}
+
+STRING 543
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Secure the Wells
+  - Drill five wells (2 of 5 Drilled)
+  - Return to Gazlowe
+}
+
+STRING 544
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Secure the Wells
+  - Drill five wells (3 of 5 Drilled)
+  - Return to Gazlowe
+}
+
+STRING 545
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Secure the Wells
+  - Drill five wells (4 of 5 Drilled)
+  - Return to Gazlowe
+}
+
+STRING 546
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Secure the Wells
+  - |cff808080Drill five wells (Completed)|r
+  - Return to Gazlowe
+}
+
+STRING 547
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Secure the Wells
+}
+
+STRING 548
+{
+Drill five wells (1 of 5 Drilled)
+}
+
+STRING 549
+{
+Drill five wells (2 of 5 Drilled)
+}
+
+STRING 550
+{
+Drill five wells (3 of 5 Drilled)
+}
+
+STRING 551
+{
+Drill five wells (4 of 5 Drilled)
+}
+
+STRING 552
+{
+Drill five wells
+}
+
+STRING 553
+{
+Thunder Lizards
+}
+
+STRING 554
+{
+Investigate Thunder Ridge with Drek'Thar to determine what has agitated the Thunder Lizards and caused them to migrate out of the valley.
+}
+
+STRING 555
+{
+Discover the cause of the Lizard migration
+}
+
+STRING 556
+{
+Destroy the rampaging Thunder Lizards
+}
+
+STRING 557
+{
+Report the Human sighting to Thrall
+}
+
+STRING 558
+{
+|cffffcc00OPTIONAL QUEST|r
+Thunder Lizards
+  - Discover the cause of the Lizard migration
+}
+
+STRING 559
+{
+|cffffcc00OPTIONAL QUEST|r
+Thunder Lizards
+  - |cff808080Discover the cause of the Lizard migration (Completed)|r
+  - Destroy the rampaging Thunder Lizards
+  - Report the Human sighting to Thrall
+}
+
+STRING 560
+{
+|cffffcc00OPTIONAL QUEST|r
+Thunder Lizards
+  - |cff808080Discover the cause of the Lizard migration (Completed)|r
+  - |cff808080Destroy the rampaging Thunder Lizards (Completed)|r
+  - Report the Human sighting to Thrall
+}
+
+STRING 561
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Thunder Lizards
+}
+
+STRING 562
+{
+Collect Lizard Eggs
+}
+
+STRING 563
+{
+Drek'Thar would like the chance to study the Thunder Lizards' ecology. Collect three Thunder Lizard Eggs for his research efforts.
+}
+
+STRING 564
+{
+Collect Thunder Lizard Eggs (0 of 3 Collected)
+}
+
+STRING 565
+{
+|cffffcc00OPTIONAL QUEST|r
+Collect Lizard Eggs
+  - Collect Thunder Lizard Eggs (0 of 3 Collected)
+}
+
+STRING 566
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Collect Lizard Eggs
+  - Collect Thunder Lizard Eggs (1 of 3 Collected)
+}
+
+STRING 567
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Collect Lizard Eggs
+  - Collect Thunder Lizard Eggs (2 of 3 Collected)
+}
+
+STRING 568
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Collect Lizard Eggs
+}
+
+STRING 569
+{
+Collect Thunder Lizard Eggs (1 of 3 Collected)
+}
+
+STRING 570
+{
+Collect Thunder Lizard Eggs (2 of 3 Collected)
+}
+
+STRING 571
+{
+Collect Thunder Lizard Eggs
+}
+
+STRING 572
+{
+Slay the Quillboars
+}
+
+STRING 573
+{
+The path to the Observatory leads through a verdant underground grotto. Its winding caves teem with wildlife, including a local tribe of Quillboars. Recently, these beasts have begun ambushing Orc patrols that travel between the watch post and the Observatory. Slay all of the Quillboars to eliminate this threat.
+}
+
+STRING 574
+{
+Locate the Beast Den
+}
+
+STRING 575
+{
+Slay all of the Quillboars
+}
+
+STRING 576
+{
+|cffffcc00OPTIONAL QUEST|r
+Slay the Quillboars
+  - Locate the Beast Den
+  - Slay all of the Quillboars
+}
+
+STRING 577
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Slay the Quillboars
+  - |cff808080Locate the Beast Den (Completed)|r
+  - Slay all of the Quillboars
+}
+
+STRING 578
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Slay the Quillboars
+}
+
+STRING 579
+{
+Warlock Coven
+}
+
+STRING 580
+{
+A group of renegade Orc Warlocks--still loyal to the Burning Legion--has ambushed a caravan of Shaman and stolen their Sacred Relic. Avenge the fallen Shaman by destroying the Warlocks' secret coven and recovering the stolen artifact.
+}
+
+STRING 581
+{
+Slay the Warlock coven
+}
+
+STRING 582
+{
+Recover the Sacred Relic
+}
+
+STRING 583
+{
+Return to Morg Wolfsong
+}
+
+STRING 584
+{
+|cffffcc00OPTIONAL QUEST|r
+Warlock Coven
+  - Slay the Warlock coven
+  - Recover the Sacred Relic
+  - Return to Morg Wolfsong
+}
+
+STRING 585
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Warlock Coven
+  - |cff808080Slay the Warlock coven (Completed)|r
+  - Recover the Sacred Relic
+  - Return to Morg Wolfsong
+}
+
+STRING 586
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Warlock Coven
+  - |cff808080Slay the Warlock coven (Completed)|r
+  - |cff808080Recover the Sacred Relic (Completed)|r
+  - Return to Morg Wolfsong
+}
+
+STRING 587
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Warlock Coven
+}
+
+STRING 588
+{
+Strange Brew
+}
+
+STRING 589
+{
+A wandering Pandaren Brewmaster by the name of Chen Stormstout is seeking rare, exotic ingredients for a special brew. Locate the special ingredients for the Brewmaster, and he will let you sample his masterpiece!
+}
+
+STRING 590
+{
+Obtain a Keg of Thunderwater
+}
+
+STRING 591
+{
+Obtain a Thunderbloom Bulb
+}
+
+STRING 592
+{
+Obtain a Thunder Phoenix Egg
+}
+
+STRING 593
+{
+Return to Chen Stormstout
+}
+
+STRING 594
+{
+|cffffcc00OPTIONAL QUEST|r
+Strange Brew
+  - Obtain a Keg of Thunderwater
+  - Obtain a Thunderbloom Bulb
+  - Obtain a Thunder Phoenix Egg
+  - Return to Chen Stormstout
+}
+
+STRING 595
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Strange Brew
+}
+
+STRING 596
+{
+  - Obtain a Keg of Thunderwater
+}
+
+STRING 597
+{
+  - |cff808080Obtain a Keg of Thunderwater (Completed)|r
+}
+
+STRING 598
+{
+  - Obtain a Thunderbloom Bulb
+}
+
+STRING 599
+{
+  - |cff808080Obtain a Thunderbloom Bulb (Completed)|r
+}
+
+STRING 600
+{
+  - Obtain a Thunder Phoenix Egg
+}
+
+STRING 601
+{
+  - |cff808080Obtain a Thunder Phoenix Egg (Completed)|r
+}
+
+STRING 602
+{
+  - Return to Chen Stormstout
+}
+
+STRING 603
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Strange Brew
+}
+
+STRING 604
+{
+Hire Quillboar Brute
+}
+
+STRING 605
+{
+Quillboar Brute
+}
+
+STRING 606
+{
+Hire Quillboar Scout
+}
+
+STRING 607
+{
+Quillboar Scout
+}
+
+STRING 608
+{
+Quillboar Medicine Man
+}
+
+STRING 609
+{
+Hire Quillboar Medicine |cffffcc00M|ran
+}
+
+STRING 610
+{
+Quillboar Chieftain
+}
+
+STRING 611
+{
+Hire Quillboar Chieftain
+}
+
+STRING 612
+{
+Quillboar Spirit Caller
+}
+
+STRING 613
+{
+Hire Quillboar Wild One
+}
+
+STRING 614
+{
+Quillboar Wild One
+}
+
+STRING 615
+{
+
+}
+
+STRING 616
+{
+Quillboars Remaining
+}
+
+STRING 617
+{
+Quillboars Remaining
+}
+
+STRING 621
+{
+Rexxar
+}
+
+STRING 622
+// Sound\Dialogue\OrcExpCamp\OrcQuest07Bx\D07BRexxar02.mp3
+{
+It appears that they worship some kind of primitive boar god. Interesting.
+}
+
+STRING 623
+{
+Quillboar
+}
+
+STRING 624
+{
+Quillboar Tribe
+}
+
+STRING 625
+{
+|cff87ceebBONUS HERO POINT RECEIVED|r - Your heroes now have an additional hero point to spend.
+}
+
+STRING 626
+{
+Loading Runes
+}
+
+STRING 627
+{
+Loading Wall
+}
+
+STRING 628
+{
+Resurrection Stone
+}
+
+STRING 631
+{
+|cffffcc00MAIN QUEST UPDATE|r
+The Signal Pyres
+  - |cff808080Light the Signal Braziers (Completed)|r
+  - Return to Thrall
+}
+
+STRING 632
+{
+Return to Thrall
+}
+

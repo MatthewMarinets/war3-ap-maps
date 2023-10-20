@@ -1,0 +1,572 @@
+﻿STRING 0
+{
+Undead01
+}
+
+STRING 1
+{
+1
+}
+
+STRING 2
+{
+Chapter One: Trudging through the Ashes
+}
+
+STRING 3
+{
+Blizzard Entertainment
+}
+
+STRING 5
+{
+Train |cffffcc00R|robert
+}
+
+STRING 9
+{
+Acolyte
+}
+
+STRING 10
+{
+Local Populace
+}
+
+STRING 11
+{
+Defeat!
+}
+
+STRING 12
+{
+Arthas
+}
+
+STRING 13
+{
+Congratulate me?
+}
+
+STRING 14
+{
+Chapter One
+}
+
+STRING 15
+{
+Trudging through the Ashes
+}
+
+STRING 16
+{
+The Lich King's plague of undeath has spread through the Capital City and into the outskirts of Lordaeron. Shocked and disheartened by the loss of their beloved king, the forces of Lordaeron were scattered by the ravenous undead warriors. Now, Lordaeron is but a shadow of its former glory - and Prince Arthas has yet to be seen...
+}
+
+STRING 17
+{
+Seek out the local graveyards. Those buried there will serve you well.
+}
+
+STRING 18
+{
+Robert-Paul's son is slow and lumbering, but he makes up for this with great vitality and a mean left hook. |n|cffff8c00Attacks land units.|r
+}
+
+STRING 19
+{
+R
+}
+
+STRING 20
+{
+Arthas
+}
+
+STRING 21
+{
+Yes. I've damned everyone and everything I've ever loved in his name, and I still feel no remorse. No shame. No pity.
+}
+
+STRING 22
+{
+Tichondrius
+}
+
+STRING 23
+{
+By killing your own father and delivering this land to the Scourge, you have passed your first test. The Lich King is pleased with your... enthusiasm.
+}
+
+STRING 24
+{
+Tichondrius
+}
+
+STRING 25
+{
+The runeblade that you carry was forged by the Lich King and empowered to steal souls. Yours was the first one it claimed.
+}
+
+STRING 26
+{
+Arthas
+}
+
+STRING 27
+{
+Then I'll make do without one. What is the Lich King's will?
+}
+
+STRING 28
+{
+Tichondrius
+}
+
+STRING 29
+{
+The Cult of the Damned must be rallied once again. Many of the acolytes have been in hiding amongst the populace. Once you've rallied them, I will give you further instructions.
+}
+
+STRING 30
+{
+Arthas
+}
+
+STRING 31
+{
+What trickery is this?
+}
+
+STRING 32
+{
+Arthas
+}
+
+STRING 33
+{
+Mal'Ganis! I don't know how you survived, but I will--
+}
+
+STRING 34
+{
+Tichondrius
+}
+
+STRING 35
+{
+Calm yourself, Prince Arthas. I am Tichondrius. Like Mal'Ganis, I am a dreadlord, but I am not your enemy. In truth, I've come to congratulate you.
+}
+
+STRING 36
+{
+Undead Scourge
+}
+
+STRING 39
+{
+Acolyte
+}
+
+STRING 40
+{
+Greetings, great lord. Our master, Kel'Thuzad, told us that you would come.
+}
+
+STRING 41
+{
+Arthas
+}
+
+STRING 44
+{
+Knight
+}
+
+STRING 45
+{
+Kel'Thuzad? How could he have known that--
+}
+
+STRING 46
+{
+Train |cffffcc00T|ryler
+}
+
+STRING 47
+{
+T
+}
+
+STRING 48
+{
+Acolyte
+}
+
+STRING 49
+{
+Be wary. If the townsfolk see your undead minions, they'll call the local guards to stop you.
+}
+
+STRING 50
+{
+Arthas must survive
+}
+
+STRING 51
+{
+Rescue 20 Acolytes
+}
+
+STRING 52
+{
+How could you murder your own father?
+}
+
+STRING 54
+{
+Tyler Durd inevitably resorts to using his agility and patience to wear down opponents with a constant barrage of light blows. |n|cffff8c00Attacks land units.|r
+}
+
+STRING 57
+{
+Arthas
+}
+
+STRING 58
+{
+I'm in luck. These graves were dug recently.
+}
+
+STRING 59
+{
+Acolyte In Hiding
+}
+
+STRING 60
+{
+ 
+}
+
+STRING 61
+{
+Arthas
+}
+
+STRING 62
+{
+Arise in the name of the Lich King.
+}
+
+STRING 63
+{
+|cff32cd32HINT|r - Ghouls can use their Cannibalize ability to consume corpses and heal themselves.
+}
+
+STRING 64
+{
+Defeat!
+}
+
+STRING 65
+{
+
+}
+
+STRING 66
+{
+Acolytes Rescued
+}
+
+STRING 67
+{
+Defeat!
+}
+
+STRING 68
+{
+Tichondrius
+}
+
+STRING 69
+{
+Well done, death knight. The Cult is nearly assembled.
+}
+
+STRING 70
+{
+Arthas
+}
+
+STRING 71
+{
+Lordaeron lies in ashes. What good are these cultists to us now?
+}
+
+STRING 72
+{
+Tichondrius
+}
+
+STRING 73
+{
+They will aid you in your next undertaking.
+}
+
+STRING 74
+{
+Arthas
+}
+
+STRING 75
+{
+And what's that?
+}
+
+STRING 76
+{
+Tichondrius
+}
+
+STRING 77
+{
+You will go to Andorhal and recover the remains of the acolytes' former master, the necromancer, Kel'Thuzad.
+}
+
+STRING 80
+{
+Find the Graveyard
+}
+
+STRING 81
+{
+The newly dead await you in the local cemetery. You need only approach and call out to them, and they will serve as your loyal warriors in the Lich King's name.
+}
+
+STRING 82
+{
+Bring Arthas to the Graveyard
+}
+
+STRING 83
+{
+Rescue Acolytes
+}
+
+STRING 84
+{
+The Acolytes of the Cult of the Damned are hiding amongst the local populace disguised as simple villagers. You must rescue them and be careful not to alert the local guards to your presence.
+}
+
+STRING 86
+{
+Footman
+}
+
+STRING 87
+{
+Kill them all!
+}
+
+STRING 88
+{
+Arthas must survive
+}
+
+STRING 89
+{
+Tyler
+}
+
+STRING 90
+{
+Knight
+}
+
+STRING 91
+{
+You've betrayed us all!
+}
+
+STRING 92
+{
+Knight
+}
+
+STRING 93
+{
+You should burn in hell!
+}
+
+STRING 94
+{
+Robert
+}
+
+STRING 100
+{
+Rescue 20 Acolytes
+}
+
+STRING 143
+{
+|cffffcc00OPTIONAL QUEST|r
+Find the Graveyard
+  - Bring Arthas to the Graveyard
+  - Arthas must survive
+}
+
+STRING 144
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Find the Graveyard
+  - |cff808080Bring Arthas to the Graveyard (Completed)|r
+  - |cff808080Arthas must survive (Completed)|r
+}
+
+STRING 146
+{
+ (Floating)
+}
+
+STRING 147
+{
+|cff32cd32HINT|r - You can use Arthas' Death Coil ability to damage enemy units, or to heal your own troops.
+}
+
+STRING 148
+{
+|cff32cd32HINT|r - Approach red Acolytes with Arthas to rescue them. However, use caution. Any townsfolk who see you will alert the guards.
+}
+
+STRING 149
+{
+|cff87ceebNEW UNIT ACQUIRED|r
+Shade - This invisible scout is useful for tracking the movement of enemy troops.  It is often best to avoid combat when outnumbered.
+}
+
+STRING 150
+{
+|cff32cd32HINT|r - You can attack gates to destroy them.
+}
+
+STRING 164
+{
+Arthas
+}
+
+STRING 165
+{
+I cannot afford to lose any more acolytes.
+}
+
+STRING 178
+{
+Villager
+}
+
+STRING 179
+{
+ (Harvester)
+}
+
+STRING 180
+{
+Acolytes in Hiding
+}
+
+STRING 219
+{
+|cff87ceebNEW UNIT ACQUIRED|r
+Ghoul - This basic attacking unit for the Undead has the ability to Cannibalize corpses to regain lost health.
+}
+
+STRING 220
+{
+Town Guard
+}
+
+STRING 221
+{
+Undead Elite Guard
+}
+
+STRING 226
+{
+|cffffcc00MAIN QUEST|r
+Rescue Acolytes
+  - Rescue 20 Acolytes
+  - Arthas must survive
+}
+
+STRING 231
+{
+|cffffcc00MAIN QUEST|r
+Rescue Acolytes
+  - Rescue 20 Acolytes
+  - Arthas must survive
+}
+
+STRING 252
+{
+|cffffcc00MAIN QUEST FAILED|r
+Rescue Acolytes
+}
+
+STRING 254
+{
+|cffffcc00MISSION FAILED|r
+Arthas has been slain.
+}
+
+STRING 259
+{
+Footman
+}
+
+STRING 260
+{
+Prince Arthas? Arm yourselves!
+}
+
+STRING 261
+{
+Footman
+}
+
+STRING 262
+{
+You bastard!
+}
+
+STRING 268
+{
+Rescue 24 Acolytes
+}
+
+STRING 275
+{
+|cffffcc00MAIN QUEST|r
+Rescue Acolytes
+  - Rescue 24 Acolytes
+  - Arthas must survive
+}
+
+STRING 281
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Rescue Acolytes
+}
+
+STRING 286
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Rescue Acolytes
+}
+
+STRING 291
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Rescue Acolytes
+}
+

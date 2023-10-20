@@ -1,0 +1,4 @@
+[CustomSkin]
+ScoreScreenPlayerOrc=UI\Glues\ScoreScreen\scorescreen-player-naga.tga
+ScoreScreenPlayerHuman=UI\Glues\ScoreScreen\scorescreen-player-bloodelf.tga
+

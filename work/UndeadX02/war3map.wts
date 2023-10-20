@@ -1,0 +1,499 @@
+﻿STRING 1
+{
+UndeadX02
+}
+
+STRING 2
+{
+1
+}
+
+STRING 3
+{
+Chapter Two: The Flight from Lordaeron
+}
+
+STRING 4
+{
+Blizzard Entertainment
+}
+
+STRING 12
+{
+Defeat!
+}
+
+STRING 13
+{
+The King's Exit
+}
+
+STRING 14
+{
+With the Dreadlords' forces closing in, Arthas must make a quick retreat from the city.
+}
+
+STRING 15
+{
+Bring Arthas to the city exit
+}
+
+STRING 16
+{
+|cffffcc00MAIN QUEST|r
+The King's Exit
+  - Bring Arthas to the city exit
+  - Arthas must survive
+}
+
+STRING 17
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+The King's Exit
+}
+
+STRING 25
+{
+|cffffcc00MISSION FAILED|r
+Arthas has been slain.
+}
+
+STRING 27
+{
+|cff32cd32HINT|r - Don't do drugs.
+}
+
+STRING 29
+{
+Defeat!
+}
+
+STRING 33
+{
+Chapter Two
+}
+
+STRING 36
+{
+The Flight from Lordaeron
+}
+
+STRING 38
+{
+Zombie Master
+}
+
+STRING 39
+{
+Lesser Zombie
+}
+
+STRING 40
+{
+Kel'Thuzad
+}
+
+STRING 41
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02KelThuzad01.mp3
+{
+So the seizures have been getting worse?
+}
+
+STRING 42
+{
+Wall Fountain NO PATHING
+}
+
+STRING 46
+{
+Archway (City) NO PATHING
+}
+
+STRING 49
+{
+Fence Long TILTING
+}
+
+STRING 50
+{
+Bloodfeast
+}
+
+STRING 52
+{
+King Arthas
+}
+
+STRING 53
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02Arthas02.mp3
+{
+Yes. With my powers drained, I can barely command my own warriors. The Lich King warned me that if I didn't reach Northrend soon, all could be lost.
+}
+
+STRING 55
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02KelThuzad03.mp3
+{
+Fear not, my king. Everything has been prepared for your departure. The ships are waiting at the coast and--
+}
+
+STRING 56
+{
+Detheroc
+}
+
+STRING 57
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02Detheroc04.mp3
+{
+There's been a change of plans, King Arthas. You're not going anywhere.
+}
+
+STRING 59
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02KelThuzad05.mp3
+{
+Assassins! It's a trap!
+}
+
+STRING 60
+{
+Balnazzar
+}
+
+STRING 61
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02Balnazzar06.mp3
+{
+You should never have returned, human. Weakened as you are, we have assumed control over the majority of your warriors. It seems your reign was short lived.
+}
+
+STRING 63
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02KelThuzad07.mp3
+{
+There are too many of them, my king! Flee--escape from the city. I'll find my own way out and meet you in the wilderness.
+}
+
+STRING 65
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02Arthas08.mp3
+{
+All right, lich. Good luck.
+}
+
+STRING 81
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02Arthas16.mp3
+{
+I have need of you warriors. Come with me.
+}
+
+STRING 87
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02Arthas19.mp3
+{
+I have need of your abilities, little shade. Will you help me?
+}
+
+STRING 88
+{
+Shade
+}
+
+STRING 89
+{
+I live only to serve you, King Arthas.
+}
+
+STRING 124
+{
+Crypt Fiend
+}
+
+STRING 125
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02CryptFiend38.mp3
+{
+By Nerub, the rebels nearly had us, King Arthas.
+}
+
+STRING 127
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02Arthas39.mp3
+{
+I would not leave my subjects to be slaughtered by this rabble.
+}
+
+STRING 129
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02CryptFiend40.mp3
+{
+Then we shall stand by you till the end.
+}
+
+STRING 151
+{
+Arthas must survive
+}
+
+STRING 162
+{
+Meat Wagon Surprise
+}
+
+STRING 163
+{
+The towers are proving quite difficult to get through without heavy casualties. Break into the armory and seize the Meat Wagons there to quicken the destruction of the towers.
+}
+
+STRING 164
+{
+Kill the armory guards
+}
+
+STRING 165
+{
+Rescue the Meat Wagons
+}
+
+STRING 166
+{
+|cffffcc00OPTIONAL QUEST|r
+Meat Wagon Surprise
+  - Kill the armory guards
+  - Rescue the Meat Wagons
+}
+
+STRING 167
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Meat Wagon Surprise
+}
+
+STRING 168
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Meat Wagon Surprise
+  - |cff808080Kill the armory guards (Completed)|r
+  - Rescue the Meat Wagons
+}
+
+STRING 182
+{
+The next morning, on the palace grounds, King Arthas and his majordomo, Kel'Thuzad, discuss the Lich King's dire warnings.
+}
+
+STRING 192
+{
+Necromancer
+}
+
+STRING 193
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02Necromancer11.mp3
+{
+Our master, Kel'Thuzad, sent us to aid you. Our new skeletal mages will make short work of the rebels.
+}
+
+STRING 194
+{
+King Arthas
+}
+
+STRING 195
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02Arthas12.mp3
+{
+Very good. We'll need to move quickly and find any others still loyal to me. We're going to need all the support we can get.
+}
+
+STRING 197
+{
+Low Wall (Vertical) WALKABLE
+}
+
+STRING 199
+{
+|cffffcc00SECRET FOUND|r
+}
+
+STRING 200
+{
+Undead Scourge
+}
+
+STRING 201
+{
+Sylvanas' Forces
+}
+
+STRING 202
+{
+Dreadlord Insurgents
+}
+
+STRING 203
+{
+Force 1
+}
+
+STRING 204
+{
+Force 2
+}
+
+STRING 207
+{
+King Arthas
+}
+
+STRING 208
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02Arthas24.mp3
+{
+Finally some firepower. These will help us with the main gate's defenses!
+}
+
+STRING 209
+{
+King Arthas
+}
+
+STRING 210
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02Arthas23.mp3
+{
+The dreadlords' guards are stationed outside that armory! If we can fight our way past them, we could commandeer the meat wagons held inside.
+}
+
+STRING 211
+{
+Rune of the Revenant
+}
+
+STRING 212
+{
+Purchase Rune of the Revenant
+}
+
+STRING 237
+{
+Lesser Flesh Golem
+}
+
+STRING 238
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Meat Wagon Surprise
+  - Kill the armory guards
+  - |cff808080Rescue the Meat Wagons (Completed)|r
+}
+
+STRING 239
+{
+King Arthas
+}
+
+STRING 240
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02Arthas18.mp3
+{
+These piles of corpses will serve us well. We can reanimate the bodies and bolster our forces as we move.
+}
+
+STRING 241
+{
+(CUSTOM)
+}
+
+STRING 242
+{
+(Custom)
+}
+
+STRING 243
+{
+Arch Necromancer
+}
+
+STRING 244
+{
+(Custom Nopathing)
+}
+
+STRING 245
+{
+(Custom Can)
+}
+
+STRING 246
+{
+City Gate
+}
+
+STRING 247
+{
+King Arthas
+}
+
+STRING 248
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02Arthas37.mp3
+{
+We have no time for this! We must find our way out quickly!
+}
+
+STRING 249
+{
+King Arthas
+}
+
+STRING 250
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02Arthas26.mp3
+{
+You have my thanks, ladies. But where is your mistress? Where is Sylvanas?
+}
+
+STRING 251
+{
+Banshee
+}
+
+STRING 252
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02Banshee27.mp3
+{
+She sent us to find you, great king. We've come to escort you across the river. Once we cross it, we'll take refuge in the wilderness.
+}
+
+STRING 261
+{
+Bloodfeast
+}
+
+STRING 262
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02Abomination25.mp3
+{
+Small king no escape. Slay! Rend! Feast!
+}
+
+STRING 263
+{
+(Horizontal) NO PATHING
+}
+
+STRING 264
+{
+City Exit
+}
+
+STRING 269
+{
+King Arthas
+}
+
+STRING 270
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02Arthas14.mp3
+{
+You there--will you not stand by your king?
+}
+
+STRING 273
+{
+King Arthas
+}
+
+STRING 274
+// Sound\Dialogue\UndeadExpCamp\Undead02x\L02Arthas15.mp3
+{
+I call upon your loyalty. Will you serve me?
+}
+
+STRING 276
+{
+Stone Pedestal
+}
+

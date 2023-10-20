@@ -1,0 +1,221 @@
+﻿STRING 1
+{
+Player 1
+}
+
+STRING 2
+{
+Force 1
+}
+
+STRING 9
+{
+UndeadX02Interlude
+}
+
+STRING 10
+{
+Blizzard Entertainment
+}
+
+STRING 11
+{
+Banshee
+}
+
+STRING 12
+// Sound\Dialogue\UndeadExpCamp\Undead02xInterlude\L02Banshee51.mp3
+{
+This is the place, sisters. We'll rest here, great king.
+}
+
+STRING 13
+{
+King Arthas
+}
+
+STRING 14
+// Sound\Dialogue\UndeadExpCamp\Undead02xInterlude\L02Arthas52.mp3
+{
+Why here? We've got to find Kel'Thuzad before we-- Aarrghh!
+}
+
+STRING 15
+{
+The Lich King
+}
+
+STRING 16
+// Sound\Dialogue\UndeadExpCamp\Undead02xInterlude\L02LichKing53.mp3
+{
+You have been deceived! Come to my side at once! Obey!
+}
+
+STRING 17
+{
+King Arthas
+}
+
+STRING 18
+// Sound\Dialogue\UndeadExpCamp\Undead02xInterlude\L02Arthas54.mp3
+{
+What is... happening here?
+}
+
+STRING 19
+{
+King Arthas
+}
+
+STRING 20
+// Sound\Dialogue\UndeadExpCamp\Undead02xInterlude\L02Arthas55.mp3
+{
+Sylvanas!
+}
+
+STRING 21
+{
+Sylvanas Windrunner
+}
+
+STRING 22
+// Sound\Dialogue\UndeadExpCamp\Undead02xInterlude\L02Sylvanas56.mp3
+{
+You walked right into this one, Arthas. It's time to even the scales.
+}
+
+STRING 23
+{
+King Arthas
+}
+
+STRING 24
+// Sound\Dialogue\UndeadExpCamp\Undead02xInterlude\L02Arthas57.mp3
+{
+Traitor! What have you done to me?
+}
+
+STRING 25
+{
+Sylvanas Windrunner
+}
+
+STRING 26
+// Sound\Dialogue\UndeadExpCamp\Undead02xInterlude\L02Sylvanas58.mp3
+{
+It's a special poisoned arrow I made just for you. The paralysis you're experiencing now is but a fraction of the agony you've caused me.
+}
+
+STRING 27
+{
+Sylvanas Windrunner
+}
+
+STRING 28
+// Sound\Dialogue\UndeadExpCamp\Undead02xInterlude\L02Sylvanas60.mp3
+{
+A quick death... like the one you gave me? No. You're going to suffer as I did. Thanks to my arrow, you can't even run.
+}
+
+STRING 29
+{
+King Arthas
+}
+
+STRING 30
+// Sound\Dialogue\UndeadExpCamp\Undead02xInterlude\L02Arthas59.mp3
+{
+Finish me, then.
+}
+
+STRING 31
+{
+Sylvanas Windrunner
+}
+
+STRING 32
+// Sound\Dialogue\UndeadExpCamp\Undead02xInterlude\L02Sylvanas61.mp3
+{
+Give my regards to hell, you son of a bitch.
+}
+
+STRING 33
+{
+Kel'Thuzad
+}
+
+STRING 34
+// Sound\Dialogue\UndeadExpCamp\Undead02xInterlude\L02KelThuzad62.mp3
+{
+Back, you mindless ones! You shall not fall today, my king.
+}
+
+STRING 35
+{
+Sylvanas Windrunner
+}
+
+STRING 36
+// Sound\Dialogue\UndeadExpCamp\Undead02xInterlude\L02Sylvanas63.mp3
+{
+This isn't over, Arthas! I'll never stop hunting you!
+}
+
+STRING 37
+{
+Kel'Thuzad
+}
+
+STRING 38
+// Sound\Dialogue\UndeadExpCamp\Undead02xInterlude\L02KelThuzad64.mp3
+{
+The effects of her arrow will wear off in time. All the preparations for your journey to Northrend have been made.
+}
+
+STRING 39
+{
+King Arthas
+}
+
+STRING 40
+// Sound\Dialogue\UndeadExpCamp\Undead02xInterlude\L02Arthas65.mp3
+{
+You have been a loyal friend, Kel'Thuzad. I don't know what the future holds, or if I'll even return, but I want you to watch over this land. See to it that my legacy endures.
+}
+
+STRING 41
+{
+Kel'Thuzad
+}
+
+STRING 42
+// Sound\Dialogue\UndeadExpCamp\Undead02xInterlude\L02KelThuzad66.mp3
+{
+I shall, King Arthas. I shall.
+}
+
+STRING 43
+{
+1
+}
+
+STRING 44
+{
+Interlude: Sylvanas' Farewell
+}
+
+STRING 45
+{
+Interlude
+}
+
+STRING 46
+{
+Sylvanas' Farewell
+}
+
+STRING 47
+{
+Moments later, in Tirisfal Glades, King Arthas and his banshee escorts stop to regain their strength.
+}
+

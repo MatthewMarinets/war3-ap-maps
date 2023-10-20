@@ -1,0 +1,100 @@
+
+h1 {
+    color: #ffff00;
+    font-size: 18px
+}
+
+h2 {
+    color: #ffd802;
+    font-size: 17px
+}
+
+h3 {
+    color: #ffb104;
+    font-size: 16px
+}
+
+h4 {
+    color: #ff8a06;
+    font-size: 15px
+}
+
+h5 {
+    color: #ff6309;
+    font-size: 14.5px
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Comic Sans MS';
+}
+
+strong, dfn {
+	font-weight: 700;
+	color: #6b2;
+}
+em, dfn {
+	font-style: italic;
+    font-weight: 400;
+    color: #EE4400
+}
+
+a {
+    font-weight: 540;
+    color: #EE1155;
+}
+a:hover {
+    font-weight: 530;
+    color: #FF2255;
+}
+
+blockquote {
+    border-color: #E59400aa;
+    background-color: #1a1a1a;
+    color: #ecc;
+}
+
+.vscode-dark pre {
+    background-color: #0a0005;
+}
+
+pre {
+    background-color: #0a0005;
+    border: 1px solid #770044;
+}
+
+code:not(:where(pre) code) {
+    color: #ed6;
+    background-color: #0a0005;
+    border: 1px solid #770044;
+    padding: 2px;
+}
+
+/* code block highlighting */
+.hljs-keyword {
+    color: #da7a2c;
+}
+.hljs-title {
+    color: #fc6;
+}
+.hljs-params {
+    color: #c660cd;
+}
+.hljs-attr {
+    color: #c660cd;
+}
+.hljs-string {
+    color: #6c1;
+}
+.hljs-number {
+    color: #ef4665;
+}
+.hljs-comment {
+    color: #199;
+}
+.hljs-meta {
+    color: #cf1fbe;
+}
+.hljs-built_in {
+    color: #cf1fbe;
+}

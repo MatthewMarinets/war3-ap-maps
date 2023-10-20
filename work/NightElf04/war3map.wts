@@ -1,0 +1,537 @@
+﻿STRING 9
+{
+NightElf04
+}
+
+STRING 10
+{
+1
+}
+
+STRING 12
+{
+Blizzard Entertainment
+}
+
+STRING 13
+{
+Chapter Four
+}
+
+STRING 14
+{
+The Druids Arise
+}
+
+STRING 16
+{
+Two days later, deep in the Winterspring Valley...
+}
+
+STRING 27
+{
+Huntress
+}
+
+STRING 28
+{
+Be careful, Priestess! These woods are overrun by the dead!
+}
+
+STRING 34
+{
+Furion Stormrage
+}
+
+STRING 35
+{
+It has been a thousand years since I last looked upon you, Tyrande. I thought of you every moment I roamed through the Emerald Dream.
+}
+
+STRING 36
+{
+Tyrande Whisperwind
+}
+
+STRING 37
+{
+My heart rejoices to see you again, Furion. But I would not have awakened you unless the need was urgent.
+}
+
+STRING 38
+{
+ (2)
+}
+
+STRING 39
+{
+ (3)
+}
+
+STRING 40
+{
+Furion Stormrage
+}
+
+STRING 41
+{
+In the Dream, I felt our land being corrupted, just as if it were my own body. You were right to awaken me.
+}
+
+STRING 42
+{
+Tyrande Whisperwind
+}
+
+STRING 43
+{
+The Burning Legion has returned, Furion. Cenarius is dead, and outlanders roam freely through our most sacred vales.
+}
+
+STRING 44
+{
+Furion Stormrage
+}
+
+STRING 45
+{
+As was foretold...
+}
+
+STRING 46
+{
+Furion Stormrage
+}
+
+STRING 47
+{
+No doubt Archimonde will make his way to Hyjal Summit and attack the World Tree. If he succeeds in draining the tree's energies, this world will be doomed.
+}
+
+STRING 48
+{
+Tyrande Whisperwind
+}
+
+STRING 49
+{
+My only thought was to awaken you and the rest of the druids. The druids of the talon reside within Barrow Dens at the end of this valley. If we can reach them, we may have a chance to stop Archimonde and his demons!
+}
+
+STRING 82
+{
+Furion Stormrage
+}
+
+STRING 83
+{
+Come forth, druids of the talon! Let the storm crows fly once again upon the winds of war!
+}
+
+STRING 84
+{
+Druid of the Talon
+}
+
+STRING 85
+{
+We are yours to command, Shan'do Stormrage.
+}
+
+STRING 88
+{
+Furion Stormrage
+}
+
+STRING 89
+{
+Ishnu-alah, my brethren. Kalimdor has need of your powers once again, for the hour of doom is at hand.
+}
+
+STRING 90
+{
+Furion Stormrage
+}
+
+STRING 91
+{
+Now, we must delve into the earth and rouse the ferocious druids of the claw from their slumber.
+}
+
+STRING 115
+{
+Dark Forest Troll Hut
+}
+
+STRING 118
+{
+Satyr
+}
+
+STRING 119
+{
+Come no further, weakling! Lord Tichondrius commanded us to kill anyone attempting to enter this place, and we shall!
+}
+
+STRING 120
+{
+Furion Stormrage
+}
+
+STRING 121
+{
+Pathetic wretches! It pains me that you once called yourselves night elves!
+}
+
+STRING 214
+{
+Furbolg Warlord
+}
+
+STRING 215
+{
+Death Revenant
+}
+
+STRING 216
+{
+Tyrande Whisperwind
+}
+
+STRING 217
+{
+Our resources are depleting fast! We must find another gold mine and muster our forces! Only then will we be able to reach the Barrow Dens.
+}
+
+STRING 221
+{
+Warlord's Hut
+}
+
+STRING 224
+{
+Orcish Horde
+}
+
+STRING 225
+{
+Sentinels
+}
+
+STRING 226
+{
+Undead Scourge
+}
+
+STRING 227
+{
+Corrupted Ancients
+}
+
+STRING 228
+{
+Human Expedition
+}
+
+STRING 229
+{
+Orcs & Humans
+}
+
+STRING 232
+{
+Tyrande Whisperwind
+}
+
+STRING 233
+{
+Wait! I know those furbolgs! They escaped from Ashenvale when the corruption started to spread.
+}
+
+STRING 234
+{
+Furion Stormrage
+}
+
+STRING 235
+{
+Perhaps they did not escape the corruption after all.
+}
+
+STRING 240
+{
+Chapter Four: The Druids Arise
+}
+
+STRING 241
+{
+Ancient Storm Wyrm
+}
+
+STRING 242
+{
+Summon Ancient Storm Wyrm
+}
+
+STRING 244
+{
+Furion Stormrage
+}
+
+STRING 245
+{
+You've changed, Tyrande. There is little mercy left in you.
+}
+
+STRING 246
+{
+Tyrande Whisperwind
+}
+
+STRING 247
+{
+Long ago, I swore to protect this land, Furion. I never had the luxury of sleeping through times of great peril.
+}
+
+STRING 248
+{
+Furion Stormrage
+}
+
+STRING 249
+{
+If your endless vigil has hardened you, my love, it must be part of your goddess' plan.
+}
+
+STRING 250
+{
+Defeat!
+}
+
+STRING 285
+{
+Furion Stormrage
+}
+
+STRING 286
+{
+I've never seen the creatures so... aggressive before.
+}
+
+STRING 287
+{
+Tyrande Whisperwind
+}
+
+STRING 288
+{
+Then I will put an end to their curse! Andu-falah-dor!
+}
+
+STRING 341
+{
+Defeat!
+}
+
+STRING 342
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 349
+{
+Furion Stormrage
+}
+
+STRING 350
+{
+So, the outlanders battle against the undead as well? They could prove to be powerful allies against Archimonde and his ilk.  
+}
+
+STRING 351
+{
+Tyrande Whisperwind
+}
+
+STRING 352
+{
+They are mongrels and nothing more! They are responsible for Cenarius' death! I will be damned before I stand with them.
+}
+
+STRING 353
+{
+Furion Stormrage
+}
+
+STRING 354
+{
+Perhaps you are right, my love. We will establish our new settlement here. Keep your sentries alert. I doubt that we have seen the last of the outlanders or the undead.
+}
+
+STRING 355
+{
+Huntress
+}
+
+STRING 356
+{
+There is danger ahead, Priestess. You must proceed with caution!
+}
+
+STRING 357
+{
+Tyrande Whisperwind
+}
+
+STRING 358
+{
+No! The outpost has been corrupted, and the treants have been driven mad! They do not deserve this cruel fate!
+}
+
+STRING 366
+{
+Footman
+}
+
+STRING 367
+{
+That did it, boys! We've driven them off! Let's regroup back at the base and tend to our wounded.
+}
+
+STRING 368
+{
+|cffffcc00MAIN QUEST|r
+Awaken Druids
+  - Reach the Barrow Dens
+}
+
+STRING 369
+{
+|cff32cd32HINT|r - Ancients can attack and walk while they are uprooted.
+}
+
+STRING 370
+{
+Destroy the corrupted Night Elf base
+}
+
+STRING 371
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Awaken Druids
+  - |cff808080Reach the Barrow Dens (Completed)|r
+  - Destroy the corrupted Night Elf base
+}
+
+STRING 374
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Awaken Druids
+}
+
+STRING 375
+{
+|cff32cd32HINT|r - Sometimes it is better to move your Ancients to a new location rather than rebuild a new town.
+}
+
+STRING 376
+{
+Awaken Druids
+}
+
+STRING 377
+{
+The Druids of the Talon, who sleep within the Barrow Dens, can only be awakened by the call of Cenarius' Horn. You must bring the Horn to the Dens' entrance and awaken the mighty Druids from their ancient slumber.
+}
+
+STRING 378
+{
+Reach the Barrow Dens
+}
+
+STRING 379
+{
+|cff32cd32HINT|r - Be careful of Ghosts. They can possess your units and turn them against you.
+}
+
+STRING 380
+{
+|cffffcc00OPTIONAL QUEST|r 
+Cursed Glade
+  - Kill the Death Revenant to restore the forest
+}
+
+STRING 381
+{
+Crazed Furbolgs
+}
+
+STRING 382
+{
+A local Furbolg Warlord has gone quite mad and turned his otherwise peaceful brethren into brutal killers. You must hunt down the crazed Warlord and end his tribe's rampage before more innocents are harmed. 
+}
+
+STRING 383
+{
+Kill the Furbolg Warlord
+}
+
+STRING 384
+{
+Cursed Glade
+}
+
+STRING 385
+{
+An ancient elemental spirit has arisen in a nearby glade and placed the land under a dark pall. You must confront the wicked Death Revenant and banish it from the world. Only then will the dark spirits of this once-tranquil glade be laid to rest.
+}
+
+STRING 386
+{
+Kill the Death Revenant to restore the forest
+}
+
+STRING 391
+{
+|cffffcc00OPTIONAL QUEST|r 
+Crazed Furbolgs
+  - Kill the Furbolg Warlord
+}
+
+STRING 392
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Crazed Furbolgs
+}
+
+STRING 401
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Cursed Glade
+}
+
+STRING 407
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Awaken Druids
+  - |cff808080Reach the Barrow Dens (Completed)|r
+  - |cff808080Destroy the corrupted Night Elf base (Completed)|r
+  - Bring Furion to the Barrow Dens
+}
+
+STRING 415
+{
+Tyrande Whisperwind
+}
+
+STRING 416
+{
+Hopefully, the land will heal itself of this cursed blight. We should get moving. The Barrow Dens lie within the valley just ahead of us.
+}
+
+STRING 417
+{
+Bring Furion to the Barrow Dens
+}
+

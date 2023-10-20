@@ -1,0 +1,4 @@
+[CustomSkin]
+IdlePeon=ReplaceableTextures\CommandButtons\BTNBloodElfPeasant.tga
+ScoreScreenPlayerHuman=UI\Glues\ScoreScreen\scorescreen-player-bloodelf.tga
+

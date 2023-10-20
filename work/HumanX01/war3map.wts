@@ -1,0 +1,751 @@
+﻿STRING 1
+{
+Defeat!
+}
+
+STRING 3
+{
+HumanX01
+}
+
+STRING 4
+{
+1
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 7
+{
+Chapter One
+}
+
+STRING 10
+{
+Alliance of Lordaeron
+}
+
+STRING 11
+{
+Undead Scourge
+}
+
+STRING 19
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 20
+{
+Defeat!
+}
+
+STRING 25
+{
+Purchase Book of Beards
+}
+
+STRING 27
+{
+A book.
+}
+
+STRING 28
+{
+This book is full of beard styles and trimming techniques.
+}
+
+STRING 29
+{
+Grand Marshal Garithos
+}
+
+STRING 30
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Garithos01.mp3
+{
+You are late, Prince Kael'thas. I thought you elves prided yourselves on punctuality.
+
+}
+
+STRING 33
+{
+|cff32cd32HINT|r - Don't do drugs.
+}
+
+STRING 34
+{
+|cff32cd32HINT|r - Remember, the Undead are not nice.
+}
+
+STRING 35
+{
+Observatory Repair
+}
+
+STRING 36
+{
+The Observatories in this area served Lordaeron well when they were in operation. Repair them to reveal vision of the area to your army and comply with Garithos' command.
+}
+
+STRING 39
+{
+|cffffcc00MAIN QUEST|r
+Observatory Repair
+  - Find and Repair the Observatories (0 of 3 Repaired)
+}
+
+STRING 40
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Observatory Repair
+}
+
+STRING 45
+{
+Book of Beards
+}
+
+STRING 55
+{
+Hidden Caches
+}
+
+STRING 56
+{
+There are several hidden caches of gold, lumber and items hidden around this area. Find them all to bolster your resources and power.
+}
+
+STRING 58
+{
+|cffffcc00OPTIONAL QUEST|r
+Hidden Caches
+    - Find the Hidden Caches (0 of 4 Found)
+}
+
+STRING 59
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Hidden Caches
+}
+
+STRING 60
+{
+Lady Vashj
+}
+
+STRING 61
+// Sound\Dialogue\HumanExpCamp\Human01x\A01LadyVashj18.mp3
+{
+We are on our own now, good prince. I am called Lady Vashj. My brethren and I come in peace, to offer you our aid.
+}
+
+STRING 62
+{
+Resources For Repair
+}
+
+STRING 63
+{
+Gold
+}
+
+STRING 64
+{
+Lumber
+}
+
+STRING 66
+{
+Burned shipyard
+}
+
+STRING 68
+{
+Prince Kael'thas
+}
+
+STRING 69
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Kael02.mp3
+{
+It could not be helped, Lord Garithos. We ran into a group of night elves from across the sea, and --
+}
+
+STRING 70
+{
+Grand Marshal Garithos
+}
+
+STRING 71
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Garithos03.mp3
+{
+I am not interested in your fanciful excuses! You elves are here to 
+serve the Alliance: thus, you will obey my commands to the letter! Is that clear?
+
+}
+
+STRING 72
+{
+Prince Kael'thas
+}
+
+STRING 73
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Kael04.mp3
+{
+Yes, Lord Garithos.
+}
+
+STRING 76
+{
+Grand Marshal Garithos
+}
+
+STRING 77
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Garithos05.mp3
+{
+Now, the undead have begun a new offensive to retake Dalaran. Their primary strike force marched south through Silverpine, but we managed to halt its advance at the base of the mountains.
+}
+
+STRING 78
+{
+Prince Kael'thas
+}
+
+STRING 79
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Kael06.mp3
+{
+My men are ready to fight, milord! When shall we leave for the front?
+}
+
+STRING 80
+{
+Grand Marshal Garithos
+}
+
+STRING 81
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Garithos07.mp3
+{
+We will be leaving immediately. But, your people will be staying here. 
+Our scouts report that a second strike force may be heading this way from the east. I need you to repair the outlying observatories so that we can monitor that region.
+
+}
+
+STRING 82
+{
+Prince Kael'thas
+}
+
+STRING 83
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Kael08.mp3
+{
+But, milord, we are warriors, not--
+}
+
+STRING 84
+{
+Grand Marshal Garithos
+}
+
+STRING 85
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Garithos09.mp3
+{
+You have your orders, Prince Kael'thas. I trust your elven ears heard 
+them clearly enough. Move out!
+
+}
+
+STRING 86
+{
+Prince Kael'thas
+}
+
+STRING 87
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Kael10.mp3
+{
+Insolent son of a… Let's get this over with!
+}
+
+STRING 88
+{
+Prince Kael'thas
+}
+
+STRING 89
+{
+Months ago, we buried a number of supply caches in this area. Perhaps it's time we dug them up. We'll need all the resources we can get our hands on. 
+}
+
+STRING 91
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Kael11.mp3
+{
+The gold mines in this area are nearly spent. We'll need to search the outlying area and find more resource nodes.  
+}
+
+STRING 92
+{
+Potted Plant
+}
+
+STRING 96
+{
+Misconceptions
+}
+
+STRING 111
+{
+Prince Kael'thas
+}
+
+STRING 112
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Kael16.mp3
+{
+Damn. We'll have to find a way across the lake to reach the outlying goldmine.
+}
+
+STRING 113
+{
+Prince Kael'thas
+}
+
+STRING 114
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Kael17.mp3
+{
+Naga! You fought for the demon Illidan!
+}
+
+STRING 115
+{
+Prince Kael'thas
+}
+
+STRING 116
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Kael19.mp3
+{
+You have nothing I need, witch.
+}
+
+STRING 117
+{
+Lady Vashj
+}
+
+STRING 118
+// Sound\Dialogue\HumanExpCamp\Human01x\A01LadyVashj20.mp3
+{
+Is that so? I thought you might require boats to reach the observatories you seek.
+}
+
+STRING 119
+{
+Prince Kael'thas
+}
+
+STRING 120
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Kael21.mp3
+{
+And you would give these freely? Why should I trust you, my lady? 
+}
+
+STRING 121
+{
+Lady Vashj
+}
+
+STRING 122
+// Sound\Dialogue\HumanExpCamp\Human01x\A01LadyVashj22.mp3
+{
+Our two races share a common ancestry, Kael. Now, against the undead, we share a common peril. These boats are merely a gesture of goodwill.
+}
+
+STRING 123
+{
+Prince Kael'thas
+}
+
+STRING 124
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Kael23.mp3
+{
+Then I accept your offer. Thank you.
+}
+
+STRING 125
+{
+Defeat!
+}
+
+STRING 126
+{
+|cffffcc00MISSION FAILED|r
+An Observatory has been destroyed.
+}
+
+STRING 149
+{
+Prince Kael'thas
+}
+
+STRING 150
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Kael30.mp3
+{
+Hail, Lord Garithos. The observatories have been repaired as you requested. We were just about to--
+}
+
+STRING 153
+{
+Grand Marshal Garithos
+}
+
+STRING 154
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Garithos31.mp3
+{
+I received ill news from the front line. Is it true that you've consorted with the vile naga?
+}
+
+STRING 155
+{
+Prince Kael'thas
+}
+
+STRING 156
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Kael32.mp3
+{
+Well, yes, milord. They helped us cross the lake. I assure you they pose no threat to us or to--
+}
+
+STRING 157
+{
+Grand Marshal Garithos
+}
+
+STRING 158
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Garithos33.mp3
+{
+They are inhuman and must be crushed like any other enemy! Be careful where you place your loyalties, blood elf. I will not tolerate treason in my ranks. Now I must return to the front. You will remain here and wait for further orders. 
+}
+
+STRING 159
+{
+At Grand Marshal Garithos' base camp, near the outskirts of Dalaran, Kael'thas and his warriors arrive bearing ill news.
+}
+
+STRING 161
+{
+ 3
+}
+
+STRING 163
+{
+Table with Map
+}
+
+STRING 165
+{
+Moss Covered Granite Golem
+}
+
+STRING 166
+{
+Guard Dog
+}
+
+STRING 167
+{
+Guardian Golem
+}
+
+STRING 169
+{
+Hidden Caches Found (0 of 4 Found)
+}
+
+STRING 170
+{
+Hidden Caches Found (1 of 4 Found)
+}
+
+STRING 171
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Hidden Caches
+  - Hidden Caches Found (1 of 4 Found)
+}
+
+STRING 172
+{
+Hidden Caches Found (2 of 4 Found)
+}
+
+STRING 173
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Hidden Caches
+  - Hidden Caches Found (2 of 4 Found)
+}
+
+STRING 174
+{
+Hidden Caches Found (3 of 4 Found)
+}
+
+STRING 175
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Hidden Caches
+  - Hidden Caches Found (3 of 4 Found)
+}
+
+STRING 178
+{
+Hidden Caches Found
+}
+
+STRING 187
+{
+Ogre Brute
+}
+
+STRING 189
+{
+Defeat!
+}
+
+STRING 190
+{
+|cffffcc00MISSION FAILED|r
+All units are dead.
+}
+
+STRING 191
+{
+Defender Golem
+}
+
+STRING 192
+{
+Felbeast
+}
+
+STRING 193
+{
+Small Bundle of Lumber
+}
+
+STRING 195
+{
+|cff32cd32HINT|r - Use Control Magic to take command of enemy summoned units.
+}
+
+STRING 196
+{
+Tiny Lumber Mill
+}
+
+STRING 197
+{
+Tiny Barrack
+}
+
+STRING 198
+{
+Tiny Blacksmith
+}
+
+STRING 200
+{
+Tiny Altar
+}
+
+STRING 201
+{
+Prince Kael'thas
+}
+
+STRING 202
+// Sound\Dialogue\HumanExpCamp\Human01x\A01Kael26.mp3
+{
+That's done it. The observatory has been repaired. Let's move quickly and get to work on the others. 
+}
+
+STRING 203
+{
+Ruined Tower 2
+}
+
+STRING 204
+{
+|cff87CEEBNEW UNIT AVAILABLE|r
+Spell Breakers - Elven warriors trained to destroy spellcasters. Initially has Spell Steal which will transfer spells from enemy units to yours.
+}
+
+STRING 206
+{
+Creates a Town Hall.
+}
+
+STRING 210
+{
+Find and Repair the Observatories (1 of 3 Repaired)
+}
+
+STRING 211
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Observatory Repairs
+ - Find and Repair the Observatories (1 of 3 Repaired)
+}
+
+STRING 212
+{
+Find and Repair the Observatories (0 of 3 Repaired)
+}
+
+STRING 213
+{
+Find and Repair the Observatories (2 of 3 Repaired)
+}
+
+STRING 214
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Observatory Repairs
+ - Find and Repair the Observatories (2 of 3 Repaired)
+}
+
+STRING 215
+{
+Find and Repair the Observatories
+}
+
+STRING 218
+{
+Gnoll Warlord
+}
+
+STRING 219
+{
+|cff32cd32HINT|r - Use the Tiny Castle in your Hero’s inventory to quickly create a Town Hall near a gold mine.
+}
+
+STRING 220
+{
+|cff32cd32HINT|r - Flamestrike can destroy many things, like the trees near these mystical runes.
+}
+
+STRING 221
+{
+Tiny Castle
+}
+
+STRING 222
+{
+Creates a Town Hall at a target location.
+}
+
+STRING 223
+{
+|cff32cd32HINT|r - Use Flamestrike to destroy the trees near these mystical runes.
+}
+
+STRING 224
+{
+|cff32cd32HINT|r – Spell Steal, a spell cast by your Spell Breakers, will take positive buffs from enemies and place them on your units, and take negative buffs from your units and place them on enemies.
+}
+
+STRING 225
+{
+Blood Wizard
+}
+
+STRING 226
+{
+Chapter One: Misconceptions
+}
+
+STRING 227
+{
+Alliance Remnants
+}
+
+STRING 229
+{
+Ogre Warchief
+}
+
+STRING 230
+{
+Ogre Apprentice
+}
+
+STRING 234
+{
+Prince Kael'thas
+}
+
+STRING 235
+{
+This observatory is repaired. We need to move on to the next one.  
+}
+
+STRING 237
+{
+|cff32cd32HINT|r - A new peasant has arrived.
+}
+
+STRING 238
+{
+|cff32cd32HINT|r - The Observatory has revealed much of the surrounding terrain, including a nearby gold mine.  You should build a base there.
+}
+
+STRING 253
+{
+Prince Kael'thas
+}
+
+STRING 254
+{
+Ah, the hidden supplies! This will prove useful!
+}
+
+STRING 255
+{
+Prince Kael'thas
+}
+
+STRING 256
+{
+We've discovered more hidden supplies.
+}
+
+STRING 257
+{
+Prince Kael'thas
+}
+
+STRING 258
+{
+Another supply cache. We'd best retrieve it quickly. 
+}
+
+STRING 259
+{
+Prince Kael'thas
+}
+
+STRING 260
+{
+We've discovered more hidden supplies.
+}
+
+STRING 261
+{
+Hidden Cache
+}
+
+STRING 262
+{
+Snarlmane the Bloodgorger
+}
+

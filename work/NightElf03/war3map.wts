@@ -1,0 +1,389 @@
+﻿STRING 0
+{
+NightElf03
+}
+
+STRING 1
+{
+1
+}
+
+STRING 2
+{
+Chapter Three: The Awakening of Stormrage
+}
+
+STRING 3
+{
+Blizzard Entertainment
+}
+
+STRING 4
+{
+The next day, near the outskirts of the sacred Moonglade...
+}
+
+STRING 5
+{
+Chapter Three
+}
+
+STRING 6
+{
+The Awakening of Stormrage
+}
+
+STRING 7
+{
+Orcish Horde
+}
+
+STRING 10
+{
+Tyrande Whisperwind
+}
+
+STRING 11
+{
+With Cenarius dead, it falls to us to awaken the druids. We must recover the demigod's horn from the sacred Moonglade Isle. Only its clarion call can awaken the druids from their slumber.
+}
+
+STRING 12
+{
+But, Priestess, the orcs have established a crude settlement upon the isle. We'll need to fight our way through them to reach Cenarius' horn!
+}
+
+STRING 13
+{
+Archer
+}
+
+STRING 32
+{
+Undead Scourge
+}
+
+STRING 50
+{
+Tyrande Whisperwind
+}
+
+STRING 51
+{
+At last! The horn of Cenarius! Now we can awaken Furion!
+}
+
+STRING 53
+{
+Dryad
+}
+
+STRING 54
+{
+Priestess, the undead have surged forward! The Barrow Den has fallen!
+}
+
+STRING 55
+{
+Tyrande Whisperwind
+}
+
+STRING 56
+{
+Furion, my love, I wasn't fast enough to save you. I have failed us all. 
+}
+
+STRING 58
+{
+Furion Stormrage
+}
+
+STRING 59
+{
+The horn has sounded, and I have come as promised! I smell the stench of decay and corruption in our land. That angers me greatly.
+}
+
+STRING 60
+{
+Furion Stormrage
+}
+
+STRING 61
+{
+Come forth, you defenders of old! Crush these invaders as you did in ages past!
+}
+
+STRING 77
+{
+Bring Tyrande to the Horn of Cenarius
+}
+
+STRING 119
+{
+Defeat!
+}
+
+STRING 120
+{
+Defeat!
+}
+
+STRING 121
+{
+Defeat!
+}
+
+STRING 122
+{
+|cffffcc00MAIN QUEST FAILED|r
+Furion Stormrage
+}
+
+STRING 166
+{
+Furion Stormrage
+}
+
+STRING 167
+{
+The Undead are about to encroach upon the Barrow Den of the slumbering Furion Stormrage. Tyrande cannot reach the Undead to stop them; she must go past the Orc base and retrieve the Horn of Cenarius from the Primal Guardians to awaken the Arch-Druid.
+}
+
+STRING 169
+{
+Lightning Protector
+}
+
+STRING 171
+{
+Fire Protector
+}
+
+STRING 174
+{
+Ice Protector
+}
+
+STRING 177
+{
+Huntress
+}
+
+STRING 178
+{
+Priestess Tyrande, thank Elune we found you. The undead are advancing upon the nearby Barrow Dens! The Dens seem abandoned, but--
+}
+
+STRING 179
+{
+Tyrande Whisperwind
+}
+
+STRING 180
+{
+There is one druid sleeping within them, sister... Furion Stormrage. He is the wisest and most powerful of all the druids. He must be warned that the Legion has returned!
+}
+
+STRING 181
+{
+Huntress
+}
+
+STRING 182
+{
+Then we'd better hurry. If the undead overtake his Den before he's awakened...
+}
+
+STRING 183
+{
+Tyrande Whisperwind
+}
+
+STRING 184
+{
+Let us make haste, my sisters! All our hopes rest on Furion's awakening!
+}
+
+STRING 185
+{
+Dryad
+}
+
+STRING 186
+{
+Priestess, the undead draw near the Barrow Den! Shan'do Stormrage will be defenseless!
+}
+
+STRING 187
+{
+Dryad
+}
+
+STRING 188
+{
+Priestess, the undead have nearly reached the Barrow Den! You must hurry and recover the horn!
+}
+
+STRING 189
+{
+|cffffcc00MAIN QUEST FAILED|r
+Furion Stormrage
+}
+
+STRING 192
+{
+Slay the Primal Guardians
+}
+
+STRING 193
+{
+Slumbering Furion Stormrage must survive
+}
+
+STRING 194
+{
+Guardian
+}
+
+STRING 196
+{
+|cff87ceebNEW UNIT AVAILABLE|r
+Dryad - You may now build Dryads from the Ancient of Lore. Dryads are ranged attackers that are immune to all spells and have a poison attack that slows enemy units.
+}
+
+STRING 198
+{
+|cffffcc00MAIN QUEST|r
+Furion Stormrage
+  - Reach Moonglade Isle behind the Orc base
+  - Slay the Primal Guardians
+  - Bring Tyrande to the Horn of Cenarius
+  - Slumbering Furion Stormrage must survive
+}
+
+STRING 201
+{
+Trees Protecting Furion
+}
+
+STRING 202
+{
+Trees Remaining:
+}
+
+STRING 205
+{
+|cff32cd32HINT|r - The Dryad's Abolish Magic and Spell Immunity abilities are very useful versus enemy spellcasters.
+}
+
+STRING 210
+{
+Raider
+}
+
+STRING 211
+{
+Strike fast! Ensnare them all before they regroup!
+}
+
+STRING 230
+{
+Horn of Cenarius
+}
+
+STRING 231
+{
+Ancient Guardian
+}
+
+STRING 232
+{
+Ancient  Guardian
+}
+
+STRING 235
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Furion Stormrage
+}
+
+STRING 252
+{
+Grunt
+}
+
+STRING 253
+{
+Lok-Tar Ogar! For Warchief Thrall!
+}
+
+STRING 270
+{
+Grunt
+}
+
+STRING 271
+{
+These... elves are stronger than we thought!
+}
+
+STRING 305
+{
+Sentinels
+}
+
+STRING 306
+{
+Primal Guardians
+}
+
+STRING 307
+{
+Shadowleaves
+}
+
+STRING 334
+{
+|cff32cd32HINT|r - You must slay all the Primal Guardians before retrieving the Horn of Cenarius.
+}
+
+STRING 337
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Furion Stormrage
+  - |cff808080Reach Moonglade Isle behind the Orc base (Completed)|r
+  - |cff808080Slay the Primal Guardians (Completed)|r
+  - Bring Tyrande to the Horn of Cenarius
+  - Slumbering Furion Stormrage must survive
+}
+
+STRING 338
+{
+Defeat!
+}
+
+STRING 339
+{
+Reach Moonglade Isle behind the Orc base
+}
+
+STRING 340
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Furion Stormrage
+  - |cff808080Reach Moonglade Isle behind the Orc base (Completed)|r
+  - Slay the Primal Guardians
+  - Bring Tyrande to the Horn of Cenarius
+  - Slumbering Furion Stormrage must survive
+}
+
+STRING 341
+{
+Priestess, the undead have surged forward! The Barrow Den has fallen!
+}
+
+STRING 342
+{
+Dryad
+}
+

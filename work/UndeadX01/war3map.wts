@@ -1,0 +1,932 @@
+﻿STRING 1
+{
+UndeadX01
+}
+
+STRING 2
+{
+1
+}
+
+STRING 3
+{
+Chapter One: King Arthas
+}
+
+STRING 4
+{
+Blizzard Entertainment
+}
+
+STRING 6
+{
+Force 1
+}
+
+STRING 10
+{
+Force 2
+}
+
+STRING 16
+{
+Defeat!
+}
+
+STRING 17
+{
+Slaughter Human Refugees
+}
+
+STRING 18
+{
+There are several bands of Human refugees attempting to escape to the recently captured city of Dalaran. Rout them and burn down their pathetic villages and encampments to show them the folly of trying to escape Arthas' wrath.
+}
+
+STRING 19
+{
+Destroy the refugee towns (0 of 9 Obliterated)
+}
+
+STRING 20
+{
+|cffffcc00MAIN QUEST|r
+Slaughter Human Refugees
+  - Destroy the refugee towns (0 of 9 Obliterated)
+  - No more than 20 Humans may get through the canyons
+}
+
+STRING 22
+{
+Slay the Paladins
+}
+
+STRING 23
+{
+The Paladin order has emerged again from the rubble of the Lordaeron Empire. Destroy the Altars of the three Paladins that have set up camps here.
+}
+
+STRING 24
+{
+Destroy the three Altars
+}
+
+STRING 26
+{
+|cffffcc00MAIN QUEST|r
+Slay the Paladins
+  - Destroy the three Altars
+}
+
+STRING 27
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Slay the Paladins
+}
+
+STRING 29
+{
+|cffffcc00MISSION FAILED|r
+More than 20 Humans escaped through the canyons. Ner'zhul is not pleased.
+}
+
+STRING 30
+{
+|cff32cd32HINT|r - You can purchase scrolls of healing at your Tomb of Relics to heal wounded units you possess.
+}
+
+STRING 126
+{
+Militia Spearman
+}
+
+STRING 127
+{
+Militia Captain
+}
+
+STRING 135
+{
+Chapter One
+}
+
+STRING 136
+{
+King Arthas
+}
+
+STRING 137
+{
+At the capital city of Lordaeron, near the ruined Palace Gardens, Archimonde's pet dreadlords discuss their current plans for the Scourge.
+}
+
+STRING 138
+{
+No more than 20 refugees may escape
+}
+
+STRING 146
+{
+Force 3
+}
+
+STRING 147
+{
+Force 4
+}
+
+STRING 148
+{
+Cinematic Units
+}
+
+STRING 149
+{
+Force 5
+}
+
+STRING 150
+{
+Detheroc
+}
+
+STRING 151
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Detheroc01.mp3
+{
+It's been months since we last heard from Lord Archimonde. I grow tired of watching over these rotting undead! What are we still doing here? 
+}
+
+STRING 152
+{
+Balnazzar
+}
+
+STRING 153
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Balnazzar02.mp3
+{
+We were charged with overseeing this land, Detheroc. It is our duty to remain here and ensure that the Scourge is ready for action. 
+}
+
+STRING 154
+{
+Varimathras
+}
+
+STRING 155
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Varimathras03.mp3
+{
+True. Though we should have received some kind of orders by now. 
+}
+
+STRING 156
+{
+Sylvanas Windrunner
+}
+
+STRING 157
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Sylvanas04.mp3
+{
+The Legion was defeated months ago. How could they not know? 	
+}
+
+STRING 160
+{
+Kel'Thuzad
+}
+
+STRING 161
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01KelThuzad05.mp3
+{
+Impossible to say. But the longer they remain in command, the more they run the Scourge into the ground.  
+}
+
+STRING 162
+{
+Sylvanas Windrunner
+}
+
+STRING 163
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Sylvanas06.mp3
+{
+What? Who could possibly...
+}
+
+STRING 164
+{
+King Arthas
+}
+
+STRING 165
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Arthas07.mp3
+{
+Greetings, dreadlords. I should thank you for looking after my kingdom during my absence. However, I won't be requiring your services any longer. 
+}
+
+STRING 166
+{
+Varimathras
+}
+
+STRING 167
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Varimathras08.mp3
+{
+Prince Arthas!
+}
+
+STRING 168
+{
+Balnazzar
+}
+
+STRING 169
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Balnazzar09.mp3
+{
+This land is ours. The Scourge belongs to the Legion!
+}
+
+STRING 170
+{
+King Arthas
+}
+
+STRING 171
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Arthas10.mp3
+{
+Not anymore, demon. Your masters have been defeated. The Legion is undone. Your deaths will complete the circle. 
+}
+
+STRING 172
+{
+Detheroc
+}
+
+STRING 173
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Detheroc11.mp3
+{
+Never! 
+}
+
+STRING 174
+{
+Detheroc
+}
+
+STRING 175
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Detheroc12.mp3
+{
+This isn't over, human.  
+}
+
+STRING 176
+{
+Kel'Thuzad
+}
+
+STRING 177
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01KelThuzad13.mp3
+{
+We knew you would return to us, Prince Arthas.  
+}
+
+STRING 178
+{
+Militia Commander
+}
+
+STRING 179
+{
+Little Timmy
+}
+
+STRING 180
+{
+King Arthas
+}
+
+STRING 181
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Arthas14.mp3
+{
+I have returned, lich, but you will now address me as King. This is, after all, my land.  
+}
+
+STRING 182
+{
+(Arthas)
+}
+
+STRING 183
+{
+(Sylvanas and Kelthuzad)
+}
+
+STRING 184
+{
+King Arthas
+}
+
+STRING 185
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Arthas15.mp3
+{
+Now, we must secure the kingdom by scouring the last remnants of humanity from it!  
+}
+
+STRING 186
+{
+Kel'Thuzad
+}
+
+STRING 187
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01KelThuzad16.mp3
+{
+But, my king, the humans have begun to abandon their villages.
+}
+
+STRING 188
+{
+Kel'Thuzad
+}
+
+STRING 189
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01KelThuzad17.mp3
+{
+They're fleeing to the canyon passes! If they escape into the mountains, it will be impossible to hunt them all down. 	
+}
+
+STRING 190
+{
+King Arthas
+}
+
+STRING 191
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Arthas18.mp3
+{
+Then we must slaughter them before they escape! Their deaths will be a fitting tribute to Ner'zhul!  
+}
+
+STRING 192
+{
+
+}
+
+STRING 193
+{
+Villagers Escaped:
+}
+
+STRING 194
+{
+Arthas' Scourge
+}
+
+STRING 196
+{
+Sylvanas' Forces
+}
+
+STRING 197
+{
+Human Refugees
+}
+
+STRING 198
+{
+Circle of Holy Light
+}
+
+STRING 200
+{
+Defenders of Justice
+}
+
+STRING 205
+{
+Halahk the Lifebringer
+}
+
+STRING 206
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01PaladinOne21.mp3
+{
+Arthas, you wear your father's crown as if you earned it. You may kill me, but my brethren will never stop hounding you!
+}
+
+STRING 207
+{
+King Arthas
+}
+
+STRING 208
+{
+I can't believe that any of you survived the first purge. No matter. After today, your self-righteous order will cease to exist.
+}
+
+STRING 211
+{
+Magroth the Defender
+}
+
+STRING 212
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01PaladinTwo24.mp3
+{
+We will never abandon Lordaeron, Arthas! We will never give up!
+}
+
+STRING 213
+{
+Dagren the Orcslayer
+}
+
+STRING 214
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01PaladinThree25.mp3
+{
+Come, traitor, and taste the wrath of the holy Light!
+}
+
+STRING 215
+{
+Defeat!
+}
+
+STRING 216
+{
+|cffffcc00MISSION FAILED|r
+All of Arthas' buildings have been destroyed.
+}
+
+STRING 217
+{
+|cffffcc00MISSION FAILED|r
+All of Kel'Thuzad's buildings have been destroyed.
+}
+
+STRING 218
+{
+|cffffcc00MISSION FAILED|r
+All of Sylvanas' buildings have been destroyed.
+}
+
+STRING 219
+{
+Jennalla Deemspring
+}
+
+STRING 220
+{
+ArthasVillagersA
+}
+
+STRING 221
+{
+ArthasVillagersB
+}
+
+STRING 222
+{
+ArthasVillagersC
+}
+
+STRING 223
+{
+ArthasVillagersD
+}
+
+STRING 224
+{
+KelzVillagerA
+}
+
+STRING 225
+{
+KelzVillagerB
+}
+
+STRING 226
+{
+KelzVillagerC
+}
+
+STRING 227
+{
+KelzVillagerD
+}
+
+STRING 228
+{
+SylvanasVillagersA
+}
+
+STRING 229
+{
+SylvanasVillagersB
+}
+
+STRING 230
+{
+SylvanasVillagersC
+}
+
+STRING 231
+{
+SylvanasVillagersD
+}
+
+STRING 232
+{
+Ability Boost
+}
+
+STRING 233
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Slaughter Human Refugees
+  - Destroy the refugee towns (1 of 9 Obliterated)
+  - No more than 20 refugees may escape
+}
+
+STRING 234
+{
+Destroy the refugee towns (1 of 9 Obliterated)
+}
+
+STRING 235
+{
+Destroy the refugee towns (2 of 9 Obliterated)
+}
+
+STRING 236
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Slaughter Human Refugees
+  - Destroy the refugee towns (2 of 9 Obliterated)
+  - No more than 20 refugees may escape
+}
+
+STRING 237
+{
+Destroy the refugee towns (3 of 9 Obliterated)
+}
+
+STRING 238
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Slaughter Human Refugees
+  - Destroy the refugee towns (3 of 9 Obliterated)
+  - No more than 20 refugees may escape
+}
+
+STRING 239
+{
+Destroy the refugee towns (4 of 9 Obliterated)
+}
+
+STRING 240
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Slaughter Human Refugees
+  - Destroy the refugee towns (4 of 9 Obliterated)
+  - No more than 20 refugees may escape
+}
+
+STRING 241
+{
+Destroy the refugee towns (5 of 9 Obliterated)
+}
+
+STRING 242
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Slaughter Human Refugees
+  - Destroy the refugee towns (5 of 9 Obliterated)
+  - No more than 20 refugees may escape
+}
+
+STRING 243
+{
+Destroy the refugee towns (6 of 9 Obliterated)
+}
+
+STRING 244
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Slaughter Human Refugees
+  - Destroy the refugee towns (6 of 9 Obliterated)
+  - No more than 20 refugees may escape
+}
+
+STRING 245
+{
+Destroy the refugee towns (7 of 9 Obliterated)
+}
+
+STRING 246
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Slaughter Human Refugees
+  - Destroy the refugee towns (7 of 9 Obliterated)
+  - No more than 20 refugees may escape
+}
+
+STRING 247
+{
+Destroy the refugee towns (8 of 9 Obliterated)
+}
+
+STRING 248
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Slaughter Human Refugees
+  - Destroy the refugee towns (8 of 9 Obliterated)
+  - No more than 20 refugees may escape
+}
+
+STRING 249
+{
+Destroy the refugee towns
+}
+
+STRING 250
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Slaughter Human Refugees
+}
+
+STRING 251
+{
+Kel'Thuzad
+}
+
+STRING 252
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01KelThuzad32.mp3
+{
+The humans are nearing the pass! Stop them.
+}
+
+STRING 255
+{
+Kel'Thuzad
+}
+
+STRING 256
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01KelThuzad33.mp3
+{
+We cannot allow the humans to escape!
+}
+
+STRING 259
+{
+Kel'Thuzad
+}
+
+STRING 260
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01KelThuzad34.mp3
+{
+Stop them before they reach the pass!
+}
+
+STRING 263
+{
+Kel'Thuzad
+}
+
+STRING 264
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01KelThuzad35.mp3
+{
+Slaughter the humans before they escape!
+}
+
+STRING 267
+{
+Sylvanas Windrunner
+}
+
+STRING 268
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Sylvanas36.mp3
+{
+The humans are escaping!
+}
+
+STRING 273
+{
+Sylvanas Windrunner
+}
+
+STRING 274
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Sylvanas37.mp3
+{
+Another human has made it through the pass!
+}
+
+STRING 277
+{
+Sylvanas Windrunner
+}
+
+STRING 278
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Sylvanas38.mp3
+{
+They're getting away!
+}
+
+STRING 281
+{
+Sylvanas Windrunner
+}
+
+STRING 282
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Sylvanas39.mp3
+{
+Don't allow them to escape!
+}
+
+STRING 285
+{
+King Arthas
+}
+
+STRING 286
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Arthas26.mp3
+{
+Aarrghh... The pain is unbearable. What is happening to me?  
+}
+
+STRING 287
+{
+The Lich King
+}
+
+STRING 288
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01LichKing27.mp3
+{
+Danger draws near! Power is fading. Time is running out! 
+}
+
+STRING 289
+{
+Kel'Thuzad
+}
+
+STRING 290
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01KelThuzad28.mp3
+{
+King Arthas, do you need assistance? 
+}
+
+STRING 291
+{
+King Arthas
+}
+
+STRING 292
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Arthas29.mp3
+{
+No. The pain has passed, but my powers are diminished. Something is terribly wrong here.
+}
+
+STRING 293
+{
+Kel'Thuzad
+}
+
+STRING 294
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01KelThuzad30.mp3
+{
+Shall we recall our forces? 
+}
+
+STRING 295
+{
+King Arthas
+}
+
+STRING 296
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Arthas31.mp3
+{
+No. I will finish the hunt. We'll solve this mystery once our business is done. 
+}
+
+STRING 297
+{
+Kel'Thuzad's Scourge
+}
+
+STRING 298
+{
+Kel'Thuzad
+}
+
+STRING 299
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01KelThuzad40.mp3
+{
+King Arthas, the humans have made it through the pass. Now there's no way to stop them from reaching sanctuary. 
+}
+
+STRING 300
+{
+King Arthas
+}
+
+STRING 301
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Arthas41.mp3
+{
+Then we've failed, lich. Return to the capital. Someone will pay dearly for this!
+}
+
+STRING 302
+{
+King Arthas
+}
+
+STRING 303
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Arthas42.mp3
+{
+At last, the Alliance is finished! Once we round up the last stragglers, we should be-- 
+}
+
+STRING 304
+{
+King Arthas
+}
+
+STRING 305
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Arthas43.mp3
+{
+Aarrghh... Not again!
+}
+
+STRING 306
+{
+The Lich King
+}
+
+STRING 307
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01LichKing44.mp3
+{
+It is I, the Lich King. Danger draws near the Frozen Throne! You must return to Northrend immediately! Obey!
+}
+
+STRING 308
+{
+Kel'Thuzad
+}
+
+STRING 309
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01KelThuzad45.mp3
+{
+My king, you are not well. 
+}
+
+STRING 310
+{
+King Arthas
+}
+
+STRING 311
+// Sound\Dialogue\UndeadExpCamp\Undead01x\L01Arthas46.mp3
+{
+Take me back to the capital. I have a long journey ahead of me. 
+}
+
+STRING 312
+{
+Defeat!
+}
+
+STRING 313
+{
+Escape Route
+}
+
+STRING 314
+{
+Defeat!
+}
+
+STRING 315
+{
+Crippling Force
+}
+
+STRING 316
+{
+Reduces all attacks on the unit by 5 damage. Attacks cannot be reduced below <Ansk,DataB1> damage.
+}
+
+STRING 317
+{
+|cff32cd32HINT|r - You control three different sides. Arthas in the bottom left, Kel'Thuzad in the top right, and Sylvanas in the bottom right. Villagers can escape through any of these passes.
+}
+
+STRING 318
+{
+|cffff0000WARNING|r - Five villagers have escaped!
+}
+
+STRING 319
+{
+|cffff0000WARNING|r - Ten villagers have escaped!
+}
+
+STRING 320
+{
+|cffff0000WARNING|r - Fifteen villagers have escaped!
+}
+

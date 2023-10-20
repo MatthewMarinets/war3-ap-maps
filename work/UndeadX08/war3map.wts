@@ -1,0 +1,644 @@
+﻿STRING 3
+{
+UndeadX08
+}
+
+STRING 4
+{
+1
+}
+
+STRING 5
+{
+Chapter Eight: A Symphony of Frost and Flame
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 9
+{
+King Arthas
+}
+
+STRING 10
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Arthas01.mp3
+{
+Time's running out, Anub'arak. We've got to get inside the Throne Chamber before Illidan does.
+}
+
+STRING 11
+{
+Anub'arak
+}
+
+STRING 12
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Anubarak02.mp3
+{
+The Throne Chamber lies within the frozen peak at the center of the valley. It can only be opened by activating the four enchanted obelisks that surround it.
+}
+
+STRING 13
+{
+Defeat!
+}
+
+STRING 14
+{
+The Frozen Throne
+}
+
+STRING 15
+{
+The key to Ner’zhul’s tomb is controlling the four ancient Obelisks surrounding Icecrown Glacier. Illidan’s forces already vie for their control. Destroy the forces guarding the Obelisks, and bring Arthas to the nearby Obelisk Circles to capture them.
+}
+
+STRING 16
+{
+Capture the four Obelisks
+}
+
+STRING 17
+{
+|cffffcc00MAIN QUEST|r
+The Frozen Throne
+  - Capture the four Obelisks
+  - Stop Illidan from capturing all four Obelisks
+}
+
+STRING 18
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+The Frozen Throne
+}
+
+STRING 26
+{
+|cffffcc00MISSION FAILED|r
+The Frozen Throne
+}
+
+STRING 27
+{
+|cff32cd32HINT|r - Use the Sacrificial Skulls to create Blight, which allows you to construct defensive structures. More Sacrificial Skulls can be purchased from the Tomb of Relics.
+}
+
+STRING 30
+{
+Defeat!
+}
+
+STRING 34
+{
+Undead
+}
+
+STRING 35
+{
+Demon Hunter
+}
+
+STRING 36
+{
+Anub'arak
+}
+
+STRING 37
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Anubarak03.mp3
+{
+Illidan's forces have already entrenched themselves near two of them.
+}
+
+STRING 38
+{
+Anub'arak
+}
+
+STRING 39
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Anubarak04.mp3
+{
+We'll need to drive them back and reactivate the obelisks ourselves.
+}
+
+STRING 40
+{
+Lady Vashj
+}
+
+STRING 41
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08LadyVashj05.mp3
+{
+We're sorry to interrupt your meditation, master, but all our forces are in place.
+}
+
+STRING 42
+{
+Illidan Stormrage
+}
+
+STRING 43
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Illidan07.mp3
+{
+Then the hour has come at last. After today, the Scourge will meet its end. Can you hear me out there, Arthas? Its end!
+}
+
+STRING 46
+{
+Prince Kael'thas
+}
+
+STRING 47
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Kael06.mp3
+{
+Once the chamber is opened, we will destroy the Frozen Throne as promised!
+}
+
+STRING 48
+{
+King Arthas
+}
+
+STRING 49
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Arthas08.mp3
+{
+Illidan has mocked the Scourge long enough. It's time we put the fear of death back in him.
+}
+
+STRING 51
+{
+Obelisk Control
+}
+
+STRING 52
+{
+King Arthas
+}
+
+STRING 53
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Arthas09.mp3
+{
+I've reached the first obelisk! It will take me a few moments to activate it. I'll need protection while I work.
+}
+
+STRING 54
+{
+King Arthas
+}
+
+STRING 55
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Arthas35.mp3
+{
+We've done it, Anub'arak! The Throne Chamber is open! This is the hour of the Scourge!
+}
+
+STRING 57
+{
+King Arthas
+}
+
+STRING 58
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Arthas12.mp3
+{
+This obelisk has been activated! We've got to push on!
+}
+
+STRING 59
+{
+Obelisks Controlled
+}
+
+STRING 60
+{
+Arthas
+}
+
+STRING 68
+{
+Chapter Eight
+}
+
+STRING 69
+{
+A Symphony of Frost and Flame
+}
+
+STRING 70
+{
+Moments later, at the Scourge stronghold, King Arthas and Anub'arak make their final plans to defend the Lich King's Throne Chamber.
+}
+
+STRING 129
+{
+Illidan Summoning
+}
+
+STRING 136
+{
+Illidan
+}
+
+STRING 138
+{
+Defeat!
+}
+
+STRING 150
+{
+AI COP 01 Dead
+}
+
+STRING 151
+{
+AI COP 02 Dead
+}
+
+STRING 152
+{
+AI COP 03 Dead
+}
+
+STRING 153
+{
+AI COP 04 Dead
+}
+
+STRING 154
+{
+AI COP 01 Lost
+}
+
+STRING 155
+{
+AI COP 02 Lost
+}
+
+STRING 156
+{
+AI COP 03 Lost
+}
+
+STRING 158
+{
+AI COP 01 Gained
+}
+
+STRING 159
+{
+AI COP 02 Gained
+}
+
+STRING 160
+{
+AI COP 03 Gained
+}
+
+STRING 161
+{
+AI COP 04 Gained
+}
+
+STRING 162
+{
+|cffffcc00MISSION FAILED|r
+All of your units have been lost.
+}
+
+STRING 163
+{
+AI COP 04 Lost
+}
+
+STRING 172
+{
+Occupied
+}
+
+STRING 173
+{
+Empty
+}
+
+STRING 182
+{
+Illidan Stormrage
+}
+
+STRING 183
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Illidan33.mp3
+{
+You're out of your league, old king. You should have stayed hidden underground.
+}
+
+STRING 184
+{
+Illidan Stormrage
+}
+
+STRING 185
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Illidan26.mp3
+{
+Foolish undead, this obelisk belongs to me!
+}
+
+STRING 188
+{
+Prince Kael'thas
+}
+
+STRING 189
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Kael31.mp3
+{
+You've taken everything I ever cared for, Arthas. Vengeance is all I have left.
+}
+
+STRING 192
+{
+Illidan Stormrage
+}
+
+STRING 193
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Illidan23.mp3
+{
+This obelisk is mine!
+}
+
+STRING 196
+{
+Illidan Stormrage
+}
+
+STRING 197
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Illidan25.mp3
+{
+I've reactivated this obelisk! The Frozen Throne is nearly ours!
+}
+
+STRING 200
+{
+Illidan Stormrage
+}
+
+STRING 201
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Illidan27.mp3
+{
+Hello, Arthas.
+}
+
+STRING 204
+{
+Illidan Stormrage
+}
+
+STRING 205
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Illidan29.mp3
+{
+You and your Lich King duped me once, but now I have the upper hand.
+}
+
+STRING 208
+{
+King Arthas
+}
+
+STRING 209
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Arthas34.mp3
+{
+The third obelisk has been activated! Only one more remains! Rise up, my warriors!
+}
+
+STRING 212
+{
+King Arthas
+}
+
+STRING 213
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Arthas14.mp3
+{
+Another obelisk has been activated!
+}
+
+STRING 216
+{
+Undead Scourge
+}
+
+STRING 217
+{
+Illidan's Forces
+}
+
+STRING 218
+{
+Naga
+}
+
+STRING 219
+{
+Blood Elves
+}
+
+STRING 220
+{
+Obelisk Control
+}
+
+STRING 221
+{
+Obelisk Control
+}
+
+STRING 222
+{
+Obelisk Control
+}
+
+STRING 223
+{
+Steel Arrowheads
+}
+
+STRING 224
+{
+Improved Steel Arrowheads
+}
+
+STRING 225
+{
+Advanced Steel Arrowheads
+}
+
+STRING 226
+{
+King Arthas
+}
+
+STRING 227
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Arthas36.mp3
+{
+The Frozen Throne is mine, demon. Step aside.
+}
+
+STRING 228
+{
+Illidan Stormrage
+
+}
+
+STRING 229
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Illidan37.mp3
+{
+I have sworn to destroy it, Arthas. It must be done!
+}
+
+STRING 232
+{
+King Arthas
+}
+
+STRING 233
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Arthas40.mp3
+{
+Leave this world and never return. If you do, I'll be waiting.
+}
+
+STRING 234
+{
+King Arthas
+}
+
+STRING 235
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Arthas38.mp3
+{
+Never!
+}
+
+STRING 237
+{
+Defeat!
+}
+
+STRING 238
+{
+|cffffcc00MISSION FAILED|r
+Arthas has been slain and cannot be revived.
+}
+
+STRING 239
+{
+Defeat!
+}
+
+STRING 240
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 242
+{
+|cff32cd32HINT|r - A new Acolyte has arrived.
+}
+
+STRING 243
+{
+Obelisk Circle
+}
+
+STRING 248
+{
+King Arthas
+}
+
+STRING 249
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Arthas30.mp3
+{
+Are you still upset that I stole Jaina from you, Kael?
+}
+
+STRING 250
+{
+Prince Kael'thas
+}
+
+STRING 251
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Kael31.mp3
+{
+You've taken everything I ever cared for, Arthas. Vengeance is all I have left.
+}
+
+STRING 256
+{
+King Arthas
+}
+
+STRING 257
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Arthas12.mp3
+{
+This obelisk has been activated! We've got to push on!
+}
+
+STRING 258
+{
+King Arthas
+}
+
+STRING 259
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Arthas28.mp3
+{
+You look different, Illidan. I guess the Skull of Gul'dan didn't agree with you.
+}
+
+STRING 262
+{
+Illidan Stormrage
+}
+
+STRING 263
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Illidan24.mp3
+{
+What's the matter, Arthas? Can't you hold one small patch of ground?
+}
+
+STRING 266
+{
+Anub'arak
+}
+
+STRING 267
+// Sound\Dialogue\UndeadExpCamp\Undead08x\L08Anubarak11.mp3
+{
+The obelisk is now active and under our control. However, Illidan will likely try to take it from us. We must defend this point at all costs!
+}
+
+STRING 268
+{
+Stop Illidan from capturing all four Obelisks
+}
+
+STRING 269
+{
+|cffff0000WARNING|r - Illidan has taken an Obelisk.
+}
+
+STRING 273
+{
+COP 01 Building
+}
+
+STRING 274
+{
+COP 02 Building
+}
+
+STRING 275
+{
+COP 03 Building
+}
+
+STRING 276
+{
+COP 04 Building
+}
+

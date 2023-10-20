@@ -1,0 +1,831 @@
+﻿STRING 1
+{
+Defeat!
+}
+
+STRING 3
+{
+UndeadX05
+}
+
+STRING 4
+{
+1
+}
+
+STRING 5
+{
+Chapter Five: Dreadlord's Fall
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 7
+{
+Chapter Five
+}
+
+STRING 19
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 20
+{
+Defeat!
+}
+
+STRING 29
+{
+Sylvanas Windrunner
+}
+
+STRING 30
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Sylvanas01.mp3
+{
+You've done well, Varimathras. You've led us straight to Detheroc's stronghold. But tell me, who are those humans?
+}
+
+STRING 31
+{
+Varimathras
+}
+
+STRING 32
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Varimathras02.mp3
+{
+Detheroc used his telepathy to enslave a top-ranking human warlord. I believe his name was Garabon or Gilithos or something. Human names all sound the same to me.
+}
+
+STRING 35
+{
+Detheroc
+}
+
+STRING 36
+{
+Detheroc cowers within the walls of the city, believing his pet Human, Garithos, will keep him safe. Show him the foolishness of trusting others to guard him by crushing them both.
+}
+
+STRING 37
+{
+Destroy Detheroc's base
+}
+
+STRING 39
+{
+|cffffcc00MAIN QUEST|r
+Detheroc
+  - Destroy Detheroc's base
+  - Destroy Garithos' base
+}
+
+STRING 40
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Detheroc
+}
+
+STRING 49
+{
+Dreadlord's Fall
+}
+
+STRING 53
+{
+Varimathras
+}
+
+STRING 54
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Varimathras03.mp3
+{
+Instead of stamping it out, Detheroc has taken control of the last pocket of human resistance. They maintain their own army within the keep.
+}
+
+STRING 55
+{
+Sylvanas Windrunner
+}
+
+STRING 56
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Sylvanas04.mp3
+{
+Your brother is more clever than I thought. His defenses are considerable.
+}
+
+STRING 57
+{
+Varimathras
+}
+
+STRING 58
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Varimathras05.mp3
+{
+Yes, and with this paltry force you've mustered, a direct assault on his walls would be suicide!
+}
+
+STRING 59
+{
+Sylvanas Windrunner
+}
+
+STRING 60
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Sylvanas06.mp3
+{
+I have no intention of assaulting the walls.
+}
+
+STRING 61
+{
+Varimathras
+}
+
+STRING 62
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Varimathras07.mp3
+{
+Then let's go before he---
+}
+
+STRING 63
+{
+Sylvanas Windrunner
+}
+
+STRING 64
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Sylvanas08.mp3
+{
+My banshees will possess those hapless humans. We'll use them to open the gates for us.
+}
+
+STRING 65
+{
+Varimathras
+}
+
+STRING 66
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Varimathras09.mp3
+{
+You realize we'll have only a short amount of time before he discovers what we're up to?
+}
+
+STRING 67
+{
+Sylvanas Windrunner
+}
+
+STRING 68
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Sylvanas10.mp3
+{
+Of course. If we strike quickly enough, Detheroc will never know what hit him.
+}
+
+STRING 69
+{
+Sylvanas Windrunner
+}
+
+STRING 70
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Sylvanas18.mp3
+{
+We can attack either of the two bases with impunity, but it's only a matter of time before the other is alerted to our presence.
+}
+
+STRING 73
+{
+Time remaining
+}
+
+STRING 74
+{
+Varimathras
+}
+
+STRING 75
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Varimathras30.mp3
+{
+We're out of time! Both bases have been alerted to our presence. We've got to bolster our defenses before they launch their counterattack!
+}
+
+STRING 76
+{
+At that same moment, back in the Plaguelands, Sylvanas and her loyal minions plan their next surgical strike against the dreadlords' power.
+}
+
+STRING 77
+{
+Fountain (Small)
+}
+
+STRING 78
+{
+Fountain (Large)
+}
+
+STRING 79
+{
+Shrub (Black)
+}
+
+STRING 80
+{
+Low Wall (Horizontal NO PATHING)
+}
+
+STRING 81
+{
+Banshee
+}
+
+STRING 82
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Banshee11.mp3
+{
+Whom do you serve, human?
+}
+
+STRING 83
+{
+Footman
+}
+
+STRING 84
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Footman12.mp3
+{
+The Dark Lady. I am hers to command.
+}
+
+STRING 85
+{
+Necromancer
+}
+
+STRING 86
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Necromancer15.mp3
+{
+The patrol has returned! Open the gates!
+}
+
+STRING 87
+{
+Sylvanas Windrunner
+}
+
+STRING 88
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Sylvanas16.mp3
+{
+Ready yourselves. The moment is upon us!
+}
+
+STRING 89
+{
+Sylvanas Windrunner
+}
+
+STRING 90
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Sylvanas17.mp3
+{
+Now, my warriors--strike!
+}
+
+STRING 91
+{
+Varimathras
+}
+
+STRING 92
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Varimathras26.mp3
+{
+We must hurry. Time is running out!
+}
+
+STRING 93
+{
+Varimathras
+}
+
+STRING 94
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Varimathras29.mp3
+{
+We're nearly out of time!
+}
+
+STRING 95
+{
+|cff32cd32HINT|r - Use Banshees to possess Mortar Teams.
+
+}
+
+STRING 96
+{
+Grand Marshal Garithos
+}
+
+STRING 97
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Garithos53.mp3
+{
+The spell has been lifted. Is the nightmare finally over?
+}
+
+STRING 98
+{
+Sylvanas Windrunner
+}
+
+STRING 99
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Sylvanas54.mp3
+{
+Stand down, humans. I have no quarrel with you.
+}
+
+STRING 100
+{
+Grand Marshal Garithos
+}
+
+STRING 101
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Garithos55.mp3
+{
+What is it you want, elf witch?
+}
+
+STRING 104
+{
+Sylvanas Windrunner
+}
+
+STRING 105
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Sylvanas56.mp3
+{
+We have a common enemy. The last dreadlord, Balnazzar, currently controls the capital city of your kingdom. If you help me kill him, I'll see to it that you get your lands back.
+}
+
+STRING 106
+{
+Grand Marshal Garithos
+}
+
+STRING 107
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Garithos57.mp3
+{
+Why should we trust you? You're part of the Scourge that drove us out in the first place!
+}
+
+STRING 110
+{
+Sylvanas Windrunner
+}
+
+STRING 111
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Sylvanas58.mp3
+{
+Not anymore. My only interest here is vengeance.
+}
+
+STRING 112
+{
+Grand Marshal Garithos
+}
+
+STRING 113
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Garithos59.mp3
+{
+Very well. I'll rally what's left of my forces and meet you outside the gates.
+}
+
+STRING 114
+{
+Varimathras
+}
+
+STRING 115
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Varimathras60.mp3
+{
+Come now, you have no intention of giving them their lands back.
+}
+
+STRING 116
+{
+Sylvanas Windrunner
+}
+
+STRING 117
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Sylvanas61.mp3
+{
+Of course not. The humans are simply a means to an end.
+}
+
+STRING 118
+{
+Varimathras
+}
+
+STRING 119
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Varimathras62.mp3
+{
+You sound more like one of us with every passing day, my lady.
+}
+
+STRING 120
+{
+Sylvanas Windrunner
+}
+
+STRING 121
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Sylvanas63.mp3
+{
+Watch it, dreadlord.
+}
+
+STRING 124
+{
+Footman
+}
+
+STRING 125
+{
+Slay them for the master!
+}
+
+STRING 126
+{
+Footman
+}
+
+STRING 127
+{
+Uh... who are we supposed to be fighting again?
+}
+
+STRING 128
+{
+Footman
+}
+
+STRING 129
+{
+For Lord Garith--Lord Detheroc!
+}
+
+STRING 130
+{
+Necromancer
+}
+
+STRING 131
+{
+Slay the upstarts in Detheroc's name!
+}
+
+STRING 132
+{
+Necromancer
+}
+
+STRING 133
+{
+The Dark Lady is here! We must push her forces back!
+}
+
+STRING 134
+{
+Necromancer
+}
+
+STRING 135
+{
+We're under attack!
+}
+
+STRING 136
+{
+Sylvanas Windrunner
+}
+
+STRING 137
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Sylvanas39.mp3
+{
+Strike fast, my warriors! Detheroc must fall!
+}
+
+STRING 138
+{
+Sylvanas Windrunner
+}
+
+STRING 139
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Sylvanas40.mp3
+{
+Spare no one! The dreadlord's forces must not escape!
+}
+
+STRING 140
+{
+Sylvanas Windrunner
+}
+
+STRING 141
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Sylvanas41.mp3
+{
+Fight on, my warriors! Victory draws near!
+}
+
+STRING 142
+{
+Sylvanas Windrunner
+}
+
+STRING 143
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Sylvanas42.mp3
+{
+Let none survive!
+}
+
+STRING 144
+{
+Detheroc
+}
+
+STRING 145
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Detheroc43.mp3
+{
+Come and face me, little banshee!
+}
+
+STRING 146
+{
+Detheroc
+}
+
+STRING 147
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Detheroc44.mp3
+{
+You are clever, Sylvanas, but you are no match for me.
+}
+
+STRING 148
+{
+Detheroc
+}
+
+STRING 149
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Detheroc45.mp3
+{
+You rebels rush headlong to your deaths!
+}
+
+STRING 150
+{
+Detheroc
+}
+
+STRING 151
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Detheroc46.mp3
+{
+I am Nathrezim! My will cannot be denied!
+}
+
+STRING 152
+{
+Grand Marshal Garithos
+}
+
+STRING 153
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Garithos47.mp3
+{
+Victory to Lord Detheroc!
+}
+
+STRING 154
+{
+Grand Marshal Garithos
+}
+
+STRING 155
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Garithos48.mp3
+{
+Slay the rebels before they regroup!
+}
+
+STRING 156
+{
+Grand Marshal Garithos
+}
+
+STRING 157
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Garithos49.mp3
+{
+The master's victory draws near!
+}
+
+STRING 158
+{
+Grand Marshal Garithos
+}
+
+STRING 159
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Garithos50.mp3
+{
+Hold the line, you dogs! Fight on!
+}
+
+STRING 160
+{
+Sylvanas Windrunner
+}
+
+STRING 161
+{
+The humans' destruction gives me a certain amount of satisfaction. But Detheroc is the true threat here. It's not over till he lies dead at my feet.
+}
+
+STRING 166
+{
+Sylvanas Windrunner
+}
+
+STRING 167
+// Sound\Dialogue\UndeadExpCamp\Undead05x\L05Sylvanas31.mp3
+{
+Detheroc will send his forces soon. We must be ready!
+}
+
+STRING 176
+{
+Sleep Always (Special)
+}
+
+STRING 177
+{
+Footman
+}
+
+STRING 178
+// Units\Human\Footman\FootmanYesAttack3.wav
+{
+To arms!
+}
+
+STRING 203
+{
+Sylvanas Windrunner
+}
+
+STRING 204
+{
+You must be the human in command of this rabble.
+}
+
+STRING 207
+{
+Grand Marshal Garithos
+}
+
+STRING 208
+{
+I am Garithos. I have sworn to defend the master with my life!
+}
+
+STRING 211
+{
+Sylvanas Windrunner
+}
+
+STRING 212
+{
+You poor, confused creature.
+}
+
+STRING 213
+{
+Detheroc
+}
+
+STRING 214
+{
+Traitor! How could you betray us like this? We could have ruled this land together!
+}
+
+STRING 215
+{
+Varimathras
+}
+
+STRING 216
+{
+Sylvanas has greater strength than you know, brother. I'll take my chances with her.
+}
+
+STRING 217
+{
+Footman
+}
+
+STRING 218
+{
+Glory to Lord Detheroc!
+}
+
+STRING 219
+{
+(Detheroc)
+}
+
+STRING 220
+{
+Destroy Garithos' base
+}
+
+STRING 221
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Detheroc
+  - |cff808080Destroy Detheroc's base (Completed)|r
+  - Destroy Garithos' base
+}
+
+STRING 222
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Detheroc
+  - Destroy Detheroc's base
+  - |cff808080Destroy Garithos' base (Completed)|r
+}
+
+STRING 223
+{
+|cff32cd32HINT|r - Build additional units to reinforce your attack.
+
+}
+
+STRING 224
+{
+|cff32cd32HINT|r - Use Banshees to possess Mortar Teams.
+
+}
+
+STRING 280
+{
+|cff32cd32HINT|r - Use Varimathras' Scroll of Town Portal to teleport your forces back to your base.
+}
+
+STRING 281
+{
+Enemy forces are asleep.
+}
+
+STRING 282
+{
+|cffff0000Enemy forces are awake!|r
+}
+
+STRING 283
+{
+Sneak Attack
+}
+
+STRING 284
+{
+Detheroc and Garithos' forces slumber, giving you the opportunity to strike their bases without fear of reinforcements. Act quickly and decimate as much of the enemy as possible before the entire stronghold is alerted to your presence.
+}
+
+STRING 285
+{
+Destroy the sleeping enemy forces
+}
+
+STRING 286
+{
+|cffffcc00MAIN QUEST|r
+Sneak Attack
+  - Destroy the sleeping enemy forces
+}
+
+STRING 287
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Sneak Attack
+}
+
+STRING 288
+{
+Alliance
+}
+
+STRING 289
+{
+Sylvanas' Forces
+}
+
+STRING 290
+{
+Detheroc's Forces
+}
+
+STRING 291
+{
+Sylvanas
+}
+

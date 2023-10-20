@@ -1,0 +1,561 @@
+﻿STRING 0
+{
+Orc02
+}
+
+STRING 1
+{
+1
+}
+
+STRING 2
+{
+Chapter Two: The Long March
+}
+
+STRING 3
+{
+Blizzard Entertainment
+}
+
+STRING 4
+{
+Chapter Two
+}
+
+STRING 5
+{
+The Long March
+}
+
+STRING 6
+{
+Grunt
+}
+
+STRING 7
+{
+Two days later, upon the desolate plains of the Barrens...
+}
+
+STRING 8
+{
+Warchief, we've spotted a herd of marauders bearing down on us! 
+}
+
+STRING 10
+{
+Thrall
+}
+
+STRING 11
+{
+This land is rugged and beautiful, much like the place from which my people originally come. 
+}
+
+STRING 12
+{
+Cairne Bloodhoof
+}
+
+STRING 13
+{
+Yes. We tauren have always held a great respect for the works of the Earth Mother. There are far worse fates than living freely upon the open plains, young warchief.
+}
+
+STRING 14
+{
+Thrall
+}
+
+STRING 15
+{
+Perhaps. But my people deserve a land to call their own, Cairne.
+}
+
+STRING 18
+{
+Lead the caravan to the first oasis
+}
+
+STRING 19
+{
+Lead the caravan to the second oasis
+}
+
+STRING 20
+{
+Lead the caravan to the third oasis
+}
+
+STRING 21
+{
+Three Oases
+}
+
+STRING 22
+{
+There are three oases along the caravan's route. Clear a path to them so that the burdened Kodos can stop and rest briefly before continuing their journey.
+}
+
+STRING 25
+{
+Defeat!
+}
+
+STRING 27
+{
+Thrall
+}
+
+STRING 28
+{
+Cairne, the kodos are overburdened and must rest. Why don't you remain here and protect the caravan while we search for a suitable oasis?
+}
+
+STRING 29
+{
+Cairne Bloodhoof
+}
+
+STRING 30
+{
+Ha! There's no need to coddle me, boy. I may be old, but I'm not helpless.
+}
+
+STRING 42
+{
+Defeat!
+}
+
+STRING 56
+{
+Defeat!
+}
+
+STRING 57
+{
+|cffffcc00MISSION FAILED|r
+Thrall has been slain.
+}
+
+STRING 58
+{
+|cffffcc00MISSION FAILED|r
+Cairne has been slain.
+}
+
+STRING 59
+{
+|cffffcc00MISSION FAILED|r
+3 Kodo Beasts have been slain.
+}
+
+STRING 60
+{
+Cairne Bloodhoof
+}
+
+STRING 61
+{
+They will trouble us no more. And you, young warchief, are free to continue your quest.
+}
+
+STRING 62
+{
+Thrall
+}
+
+STRING 63
+{
+To the Oracle. What is it?
+}
+
+STRING 64
+{
+Cairne Bloodhoof
+}
+
+STRING 65
+{
+Legends say that it saw the strands of fate as they were woven by the Earth Mother. It alone can show you your destiny.
+}
+
+STRING 66
+{
+Thrall
+}
+
+STRING 67
+{
+Where will I find it?
+}
+
+STRING 68
+{
+Cairne Bloodhoof
+}
+
+STRING 69
+{
+Far to the north, near the shadowy base of Mount Hyjal, lies Stonetalon Peak. You will find the Oracle within the peak's hollow. I will send my finest kodos to aid you in your journey.
+}
+
+STRING 70
+{
+Thrall
+}
+
+STRING 71
+{
+Thank you, Cairne. I will not forget you.
+}
+
+STRING 72
+{
+Cairne Bloodhoof
+}
+
+STRING 73
+{
+Go with honor, young warchief. May the Earth Mother smile upon you.
+}
+
+STRING 75
+{
+Warsong Clan
+}
+
+STRING 131
+{
+The Caravan
+}
+
+STRING 132
+{
+You must protect the Tauren caravan from attack by the merciless Centaur herds.
+}
+
+STRING 133
+{
+Protect the caravan
+}
+
+STRING 134
+{
+At least 2 Kodo Beasts must survive
+}
+
+STRING 147
+{
+Thrall
+}
+
+STRING 148
+{
+Cairne! The caravan will never make it in time! 
+}
+
+STRING 149
+{
+Cairne Bloodhoof
+}
+
+STRING 150
+{
+Let the fury of the Earth Mother deal with these wretches as they deserve! 
+}
+
+STRING 163
+{
+Rest Time Remaining
+}
+
+STRING 173
+{
+Rest Time Remaining
+}
+
+STRING 177
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Three Oases
+  - |cff808080Lead the caravan to the first oasis (Completed)|r
+  - Lead the caravan to the second oasis
+  - Lead the caravan to the third oasis
+  - Thrall must survive
+}
+
+STRING 179
+{
+|cffffcc00MAIN QUEST|r
+Three Oases
+  - Lead the caravan to the first oasis
+  - Lead the caravan to the second oasis
+  - Lead the caravan to the third oasis
+  - Thrall, Cairne and the caravan must survive
+}
+
+STRING 180
+{
+Thrall, Cairne and the caravan must survive
+}
+
+STRING 181
+{
+Cairne must survive
+}
+
+STRING 182
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Three Oases
+  - |cff808080Lead the caravan to the first oasis (Completed)|r
+  - |cff808080Lead the caravan to the second oasis (Completed)|r
+  - Lead the caravan to the third oasis
+  - Thrall must survive
+}
+
+STRING 183
+{
+|cff32CD32WARNING|r - A Kodo Beast has been slain.
+}
+
+STRING 241
+{
+|cffffcc00MAIN QUEST|r
+Three Oases
+  - Lead the caravan to the first oasis
+  - Lead the caravan to the second oasis
+  - Lead the caravan to the third oasis
+  - Thrall, Cairne and the caravan must survive
+}
+
+STRING 242
+{
+Raider
+}
+
+STRING 243
+{
+Hail, Warchief! How may we serve you?
+}
+
+STRING 244
+{
+|cff87CEEBNEW UNIT ACQUIRED|r
+Raider - Highly mobile wolf rider. Effective against buildings. Can use the Ensnare ability to immobolize enemy units.
+}
+
+STRING 245
+{
+|cff32CD32HINT|r - Scrolls of Healing can be used to heal allied units.
+}
+
+STRING 246
+{
+Thrall
+}
+
+STRING 247
+{
+Throm-Ka, warrior. You're from the Warsong, are you not?
+}
+
+STRING 248
+{
+Warsong Orc
+}
+
+STRING 249
+{
+Yes, Warchief. Hellscream sent our party to find you, but we were separated when the horse men attacked.
+}
+
+STRING 250
+{
+Thrall
+}
+
+STRING 251
+{
+Don't worry. We'll find them. For now, drink from the pool. The spirits of this place will replenish your strength.
+}
+
+STRING 252
+{
+Thrall
+}
+
+STRING 253
+{
+Warsong catapults! Those could be useful.
+}
+
+STRING 254
+{
+|cff87CEEBNEW UNIT ACQUIRED|r
+Catapults - The siege weapons of the Orcish horde.
+}
+
+STRING 255
+{
+Thrall
+}
+
+STRING 256
+{
+The oasis at last!
+}
+
+STRING 257
+{
+Thrall
+}
+
+STRING 258
+{
+Assume defensive positions! Lok-Tar Ogar! Let none stand in our way!
+}
+
+STRING 259
+{
+Cairne Bloodhoof
+}
+
+STRING 260
+{
+This pass leads straight to Mulgore, but I fear the caravan will be overrun before it reaches the other side.
+}
+
+STRING 261
+{
+|cff32cd32HINT|r - Catapults are the siege weapon of the Orcs. Use them to effectively destroy enemy buildings and towers.
+}
+
+STRING 262
+{
+Harpy Queen
+}
+
+STRING 263
+{
+Come, sisters! It's been too long since we feasted on outlander flesh!
+}
+
+STRING 264
+{
+Thrall
+}
+
+STRING 265
+{
+I wouldn't advise it, ladies. Once my wolf riders bring you to the ground, you'll have little chance against us!
+}
+
+STRING 266
+{
+Cairne Bloodhoof
+}
+
+STRING 267
+{
+Hold your formations! The kodos must be protected!
+}
+
+STRING 268
+{
+|cffffcc00MAIN QUEST|r
+The Caravan
+  - Protect the caravan
+  - At least 2 Kodo Beasts must survive
+  - Cairne must survive
+}
+
+STRING 269
+{
+Cairne Bloodhoof
+}
+
+STRING 270
+{
+The centaur have returned! We're under attack!
+}
+
+STRING 271
+{
+Cairne Bloodhoof
+}
+
+STRING 272
+{
+The marauders attack again! Stand and fight, my brethren!
+}
+
+STRING 273
+{
+Cairne Bloodhoof
+}
+
+STRING 274
+{
+Hold your formations! The kodos must be protected!
+}
+
+STRING 275
+{
+Cairne Bloodhoof
+}
+
+STRING 276
+{
+They shall not catch the tauren unprepared! 
+}
+
+STRING 279
+{
+Thrall
+}
+
+STRING 280
+{
+The oasis at last!
+}
+
+STRING 283
+{
+|cff32CD32HINT|r - Use your Raider's Ensnare ability to bring enemy air units to the ground.
+}
+
+STRING 284
+{
+Defeat!
+}
+
+STRING 285
+{
+Orcish Horde
+}
+
+STRING 286
+{
+Bloodhoof Tauren
+}
+
+STRING 287
+{
+Centaur Marauders
+}
+
+STRING 289
+{
+|cffffcc00MAIN QUEST COMPLETE|r
+The Caravan
+}
+
+STRING 290
+{
+|cffffcc00MAIN QUEST COMPLETE|r
+Three Oases
+}
+

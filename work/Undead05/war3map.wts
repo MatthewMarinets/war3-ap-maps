@@ -1,0 +1,524 @@
+﻿STRING 0
+{
+Moments later, on the outskirts of the elves' capital of Silvermoon...
+}
+
+STRING 2
+{
+Undead05
+}
+
+STRING 3
+{
+1
+}
+
+STRING 4
+{
+The Fall of Silvermoon
+}
+
+STRING 5
+{
+Blizzard Entertainment
+}
+
+STRING 6
+{
+Chapter Five
+}
+
+STRING 8
+{
+|cffffcc00MAIN QUEST|r
+The Sunwell
+  - Defeat the Sunwell's Guardians
+}
+
+STRING 11
+{
+Tichondrius
+}
+
+STRING 12
+{
+You've done well... so far. But the true test still lies before you.
+}
+
+STRING 13
+{
+Arthas
+}
+
+STRING 14
+{
+I was wondering when you'd show up.
+}
+
+STRING 15
+{
+Tichondrius
+}
+
+STRING 16
+{
+I am here to ensure that you do your job, little human. Not do it for you.
+}
+
+STRING 17
+{
+Arthas
+}
+
+STRING 18
+{
+I will reach the Sunwell on my own, dreadlord.
+}
+
+STRING 19
+{
+Tichondrius
+}
+
+STRING 20
+{
+Be warned. It is a pool of mystical energy from which the elves draw their immortal powers. They will not give it up easily.
+}
+
+STRING 21
+{
+Arthas
+}
+
+STRING 22
+{
+Do you think that he suspects that you've been aiding me, necromancer?
+}
+
+STRING 25
+{
+Kel'Thuzad
+}
+
+STRING 26
+{
+I'm sure he suspects quite a bit. It is his nature to assume the worst. Now steel yourself. The hour of my rebirth draws near.
+}
+
+STRING 29
+{
+The Sunwell
+}
+
+STRING 30
+{
+The time for Kel'Thuzad's rebirth is at hand! You must place the Urn containing the Necromancer's remains within the Sunwell's sacred waters. Only then will Kel'Thuzad live again, to serve the Lich King.  
+}
+
+STRING 31
+{
+Sylvanas Windrunner
+}
+
+STRING 32
+{
+Sylvanas Windrunner, the Elves' Ranger-General, has harried your efforts long enough. The time has come to deal with the Elf-woman as she deserves. Hunt her down and put an end to her defiance!
+}
+
+STRING 34
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 35
+{
+Defeat the Sunwell's Guardians
+}
+
+STRING 36
+{
+Sunwell Guardians
+}
+
+STRING 37
+{
+Destroy Sylvanas' Base
+}
+
+STRING 40
+{
+Silvermoon Runners
+}
+
+STRING 41
+{
+Sylvanas intends to warn Silvermoon of your approach. If any of her runners reach the city, the Elves will be alerted to your presence and attack. You must use your Gargoyles to intercept her runners before they reach the capital. 
+}
+
+STRING 42
+{
+Eliminate every runner Sylvanas sends
+}
+
+STRING 48
+{
+Arthas
+}
+
+STRING 49
+{
+I salute your bravery, elf, but the chase is over.
+}
+
+STRING 58
+{
+|cffffcc00MAIN QUEST|r
+The Sunwell
+  - Defeat the Sunwell's Guardians
+}
+
+STRING 59
+{
+Runner
+}
+
+STRING 62
+{
+Sylvanas Windrunner
+}
+
+STRING 63
+{
+Then I'll make my stand here, butcher. Anar'alah belore.
+}
+
+STRING 64
+{
+Sylvanas Windrunner
+}
+
+STRING 65
+{
+Finish it! I deserve... a clean death.
+}
+
+STRING 66
+{
+Arthas
+}
+
+STRING 67
+{
+After all you've put me through, woman, the last thing I'll give you is the peace of death.
+}
+
+STRING 68
+{
+Sylvanas Windrunner
+}
+
+STRING 69
+{
+No! You wouldn't dare!
+}
+
+STRING 73
+{
+Arthas
+}
+
+STRING 74
+{
+Citizens of Silvermoon! I have given you ample opportunities to surrender, but you have stubbornly refused! Know that today, your entire race and your ancient heritage will end! Death itself has come to claim the high home of the elves!
+}
+
+STRING 80
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Sylvanas Windrunner
+}
+
+STRING 81
+{
+Arthas
+}
+
+STRING 84
+{
+Elven Defenders
+}
+
+STRING 85
+{
+Defeat!
+}
+
+STRING 87
+{
+Now, arise, Kel'Thuzad, and serve the Lich King once again!
+}
+
+STRING 88
+{
+Kel'Thuzad
+}
+
+STRING 89
+{
+I am reborn, as promised! The Lich King has granted me eternal life!
+}
+
+STRING 90
+{
+Arthas
+}
+
+STRING 91
+{
+I've upheld my end of the bargain, lich. Are you ready to tell me about the dreadlords now?
+}
+
+STRING 92
+{
+Kel'Thuzad
+}
+
+STRING 93
+{
+Certainly. But not here. They have eyes and ears everywhere. We'll talk where it's safe.
+}
+
+STRING 97
+{
+Arthas
+}
+
+STRING 99
+{
+The gargoyles we brought back from Northrend could be useful here. The beasts can spot their runners along the main road.
+}
+
+STRING 100
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Sylvanas Windrunner
+}
+
+STRING 102
+{
+Elven Protectors
+}
+
+STRING 111
+{
+Do not alert Silvermoon to your presence
+}
+
+STRING 113
+{
+|cff87ceebNEW UNIT AVAILABLE|r
+Gargoyle - You may now build Gargoyles from the Crypt. These fast flying creatures can use the Stone Form ability to heal their own wounds.
+}
+
+STRING 114
+{
+Sylvanas Windrunner
+}
+
+STRING 115
+{
+Did you forget about us, you wretches? Bash'a no falor talah!
+}
+
+STRING 116
+{
+Kel'Thuzad
+}
+
+STRING 117
+{
+She is persistent. Reminds me of you, death knight.
+}
+
+STRING 118
+{
+Arthas
+}
+
+STRING 119
+{
+Shut up, you damned ghost.
+}
+
+STRING 124
+{
+Necromancer
+}
+
+STRING 125
+{
+Lord Arthas, the elf woman will likely attempt to summon reinforcements.
+}
+
+STRING 126
+{
+Arthas
+}
+
+STRING 127
+{
+Then watch for her runners! None of them must get through!
+
+
+}
+
+STRING 130
+{
+|cffffcc00OPTIONAL QUEST|r
+Sylvanas Windrunner
+  - Destroy Sylvanas' Base
+}
+
+STRING 131
+{
+|cffffcc00OPTIONAL QUEST|r
+Silvermoon Runners
+  - Eliminate every runner Sylvanas sends
+  - Do not alert Silvermoon to your presence
+}
+
+STRING 132
+{
+Necromancer
+}
+
+STRING 133
+{
+Lord Arthas, Sylvanas has sent a runner to Silvermoon. The elves are sure to send more forces at us!
+}
+
+STRING 142
+{
+Necromancer
+}
+
+STRING 143
+{
+Sylvanas has sent out another runner! It must be stopped!
+}
+
+STRING 144
+{
+Necromancer
+}
+
+STRING 145
+{
+Lord Arthas, Sylvanas has sent a runner to Silvermoon.
+}
+
+STRING 154
+{
+Necromancer
+}
+
+STRING 155
+{
+Lord Arthas, the messenger has reached the city! We should expect an attack soon!
+}
+
+STRING 156
+{
+|cffffcc00OPTIONAL QUEST FAILED|r
+Silvermoon Runners
+}
+
+STRING 157
+{
+Necromancer
+}
+
+STRING 158
+{
+Lord Arthas, the messenger has reached the city! We should expect an attack soon!
+}
+
+STRING 159
+{
+|cffffcc00OPTIONAL QUEST FAILED|r
+Silvermoon Runners
+}
+
+STRING 160
+{
+|cff87ceebNEW UNIT AVAILABLE|r
+Banshee - You may now build Banshees from the Temple of the Damned. They are supporting casters that can initially cast Curse, which causes enemy units to occasionally miss in combat.
+}
+
+STRING 161
+{
+Bring Arthas to the Sunwell
+}
+
+STRING 162
+{
+|cffffcc00MAIN QUEST UPDATE|r
+The Sunwell
+  - Bring Arthas to the Sunwell
+  - |cff808080Defeat the Sunwell's Guardians (Completed)|r
+}
+
+STRING 163
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+The Sunwell
+}
+
+STRING 164
+{
+A Runner is on its way!
+}
+
+STRING 167
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Silvermoon Runners
+}
+
+STRING 169
+{
+Next runner in 
+}
+
+STRING 170
+{
+Undead Elite Guard
+}
+
+STRING 171
+{
+Elven Ranger Corps
+}
+
+STRING 172
+{
+Silvermoon Guard
+}
+
+STRING 173
+{
+Undead Scourge
+}
+
+STRING 174
+{
+Chapter Five: The Fall of Silvermoon
+}
+
+STRING 175
+{
+|cffffcc00OPTIONAL QUEST FAILED|r
+Silvermoon Runners
+}
+

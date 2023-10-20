@@ -1,0 +1,648 @@
+﻿STRING 1
+{
+Orc07
+}
+
+STRING 2
+{
+1
+}
+
+STRING 3
+{
+Chapter Seven: The Oracle
+}
+
+STRING 4
+{
+Blizzard Entertainment
+}
+
+STRING 5
+{
+Chapter Seven
+}
+
+STRING 6
+{
+The Oracle
+}
+
+STRING 7
+{
+Cairne Bloodhoof
+}
+
+STRING 8
+{
+Aszune
+}
+
+STRING 12
+{
+Cairne Bloodhoof
+}
+
+STRING 13
+{
+The path cuts off in different directions.
+}
+
+STRING 14
+{
+I am Aszune, ancient princess of the moon-children. None may pass until my heart is returned to me.
+}
+
+STRING 16
+{
+Twenty minutes later, inside the caverns of Stonetalon Peak...
+}
+
+STRING 17
+{
+Heart of Aszune
+}
+
+STRING 18
+{
+Thrall
+}
+
+STRING 19
+{
+Either of those caverns could stretch for miles. Perhaps we should split up?
+}
+
+STRING 20
+{
+Cairne Bloodhoof
+}
+
+STRING 21
+{
+Very well. Be careful, young one. There's no telling what ancient creatures lie within the mountain's depths.
+}
+
+STRING 22
+{
+Thrall
+}
+
+STRING 23
+{
+I will, Cairne. Good luck.
+}
+
+STRING 28
+{
+The Oracle
+}
+
+STRING 29
+{
+Legends hold that the ancient Oracle of central Kalimdor lived within the caverns of Stonetalon Peak. You must seek out the Oracle and request that it show the Horde the path to its true destiny. 
+}
+
+STRING 30
+{
+If the legends are correct, then this should be the Spirits' Bridge. But the spirit stone that powers it has been lost. Perhaps we should return to the quillboars' pit and retrieve the gemstone we saw there.
+}
+
+STRING 32
+{
+Thrall
+}
+
+STRING 35
+{
+Those harpies have nearly killed that wretched creature! It looks as if they're after its treasure! Kill them all, and we'll take what's left for ourselves!
+}
+
+STRING 41
+{
+Thrall
+}
+
+STRING 42
+{
+Here is your heart, Aszune. Now, grant us passage to the Oracle.
+}
+
+STRING 43
+{
+Cairne Bloodhoof
+}
+
+STRING 44
+{
+Ah, the Spirits' Bridge... Just as the legends described it. Now, young warchief, the path to the Oracle is revealed!
+}
+
+STRING 47
+{
+Thrall
+}
+
+STRING 48
+{
+Apparently, this is some kind of spectral bridge. But the enchanted gemstone that powers it is missing. With any luck, Cairne will find it for us.
+}
+
+STRING 49
+{
+Long ago, the Night Elf princess, Aszune, mocked the Oracle's wisdom. As punishment, she was transformed into living stone. Now, only the retrieval of her gemstone heart can end the curse and allow passage to the Oracle's domicile.  
+}
+
+STRING 50
+{
+Enchanted Gemstone
+}
+
+STRING 51
+{
+The spectral bridge that leads to the Oracle's domicile is powered by an enchanted gemstone. You must recover the enchanted stone before the bridge's magics can be activated.		
+}
+
+STRING 57
+{
+Footman
+}
+
+STRING 58
+{
+Orcs! Arm yourselves!
+}
+
+STRING 59
+{
+Thrall
+}
+
+STRING 60
+{
+That's strange. I don't recall seeing any sheep in this land.
+}
+
+STRING 61
+{
+Sorceress
+}
+
+STRING 62
+{
+He's fairly bright for an orc! 
+}
+
+STRING 63
+{
+Thrall
+}
+
+STRING 64
+{
+It's a trap! Defend yourselves!
+}
+
+STRING 65
+{
+Jaina Proudmoore
+}
+
+STRING 66
+{
+Orcs. I knew that we were being followed. Defend yourselves!
+}
+
+STRING 67
+{
+The Prophet
+}
+
+STRING 68
+{
+Stop! There will be no violence in this place.
+}
+
+STRING 69
+{
+Thrall
+}
+
+STRING 70
+{
+That voice. You're no oracle! You're the prophet!
+}
+
+STRING 73
+{
+Thrall
+}
+
+STRING 74
+{
+The great beast was protecting a magical amulet. I'd better hold on to this.
+}
+
+STRING 94
+{
+Defeat!
+}
+
+STRING 95
+{
+Defeat!
+}
+
+STRING 96
+{
+|cffffcc00MAIN QUEST|r
+The Heart of Aszune
+  - Find the Heart of Aszune
+  - Return the Heart to Aszune
+}
+
+STRING 97
+{
+|cffffcc00MISSION FAILED|r
+Cairne has been slain.
+}
+
+STRING 98
+{
+|cffffcc00MISSION FAILED|r
+Thrall has been slain.
+}
+
+STRING 101
+{
+Find the Heart of Aszune
+}
+
+STRING 103
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Heart of Aszune
+}
+
+STRING 104
+{
+|cffffcc00MAIN QUEST|r
+Enchanted Gemstone
+  - Find the Enchanted Gemstone
+  - Bring the Enchanted Gemstone to the Spectral Bridge
+  - Cairne must survive
+}
+
+STRING 105
+{
+Find the Enchanted Gemstone
+}
+
+STRING 106
+{
+Bring the Enchanted Gemstone to the Spectral Bridge
+}
+
+STRING 109
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Enchanted Gemstone
+}
+
+STRING 110
+{
+Return the Heart to Aszune
+}
+
+STRING 112
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Enchanted Gemstone
+  - |cff808080Find the Enchanted Gemstone (Completed)|r
+  - Bring the Enchanted Gemstone to the Spectral Bridge
+  - Cairne Bloodhoof must survive
+}
+
+STRING 113
+{
+Thrall must survive
+}
+
+STRING 114
+{
+Cairne Bloodhoof must survive
+}
+
+STRING 115
+{
+Orcish Horde
+}
+
+STRING 119
+{
+TEST
+}
+
+STRING 120
+{
+Skeleton Lord
+}
+
+STRING 122
+{
+Seek out the Oracle
+}
+
+STRING 126
+{
+|cffffcc00MAIN QUEST|r
+The Oracle
+  - Seek out the Oracle
+  - Thrall must survive
+}
+
+STRING 127
+{
+|cffffcc00MAIN QUEST|r
+The Oracle
+  - Seek out the Oracle
+  - Thrall must survive
+}
+
+STRING 128
+{
+Footman
+}
+
+STRING 129
+{
+Let's get the hell out of here!
+}
+
+STRING 130
+{
+Footman
+}
+
+STRING 131
+{
+No, not that way!
+}
+
+STRING 142
+{
+Footman
+}
+
+STRING 143
+{
+I've had it with skulking in these caves!
+}
+
+STRING 146
+{
+Cairne Bloodhoof
+}
+
+STRING 147
+{
+The spiked pit is filled with quillboars. It looks as if they're protecting some kind of gemstone.
+}
+
+STRING 148
+{
+Cairne Bloodhoof
+}
+
+STRING 149
+{
+This must activate the trap mechanism.
+}
+
+STRING 152
+{
+Cairne Bloodhoof
+}
+
+STRING 153
+{
+A gruesome death.
+}
+
+STRING 163
+{
+Cairne Bloodhoof
+}
+
+STRING 164
+{
+The gemstone has an inscription on its base. Ah... this is the spirit stone of Stonetalon Chasm. If the legends are true, then this will activate the spirit bridge that leads to the Oracle!
+}
+
+STRING 165
+{
+Cairne Bloodhoof
+}
+
+STRING 166
+{
+The statues are coming to life! Defend yourselves!
+}
+
+STRING 167
+{
+Defeat!
+}
+
+STRING 170
+{
+|cffff8c00NOTICE|r - Thrall's Far Sight spell is not available for use in undergound caverns.
+}
+
+STRING 171
+{
+|cffff8c00NOTICE|r - Thrall's Far Sight spell is not available for use in undergound caverns.
+}
+
+STRING 183
+{
+Kobold Mastermind
+}
+
+STRING 184
+{
+The Prophet
+}
+
+STRING 185
+{
+Very perceptive, son of Durotan. I am the prophet. And, now that I've lured you all here, I will tell you what destiny holds.
+}
+
+STRING 186
+{
+Thrall
+}
+
+STRING 187
+{
+What the hell is going on here?
+}
+
+STRING 188
+{
+The Prophet
+}
+
+STRING 189
+{
+Thrall, this is Jaina Proudmoore, leader of the survivors of Lordaeron. 
+}
+
+STRING 190
+{
+Thrall
+}
+
+STRING 191
+{
+Survivors? What are you talking about?
+}
+
+STRING 192
+{
+The Prophet
+}
+
+STRING 193
+{
+The invasion of the Burning Legion has begun! Lordaeron has already fallen, and now the demons come to invade Kalimdor! Only together, united against the shadow, will you be able to save this world from the flame. 
+}
+
+STRING 194
+{
+Jaina Proudmoore
+}
+
+STRING 195
+{
+Unite with them? Are you mad?
+}
+
+STRING 196
+{
+The Prophet
+}
+
+STRING 197
+{
+Have you heard nothing that I've said? The Legion comes to undo history and end all life! Thrall, your friend Hellscream has already fallen under the demons' influence. Soon he and your whole race will be lost forever!
+
+}
+
+STRING 198
+{
+Thrall
+}
+
+STRING 199
+{
+No... I'll die before I let that happen!
+}
+
+STRING 200
+{
+The Prophet
+}
+
+STRING 201
+{
+Then you must rescue him immediately! He is the key to the destiny I promised you. However, you will need help. 
+}
+
+STRING 202
+{
+Jaina Proudmoore
+}
+
+STRING 203
+{
+Wait! This is insane! You can't possibly expect me to--
+}
+
+STRING 204
+{
+The Prophet
+}
+
+STRING 205
+{
+Destiny is at hand, young sorceress. The time to choose has come. For the fate of all who live, humanity must join forces with the Horde.
+}
+
+STRING 206
+{
+|cff32cd32KING'S DOOR|r - The door to the treasure room is locked.
+}
+
+STRING 207
+{
+Human Expedition
+}
+
+STRING 208
+{
+Captive Orcs
+}
+
+STRING 209
+{
+Ancient Dead
+}
+
+STRING 210
+{
+Stonetalon Beasts
+}
+
+STRING 211
+{
+Dungeon Dwellers
+}
+
+STRING 212
+{
+Hungry Hungry Lizard
+}
+
+STRING 254
+{
+|cff32cd32DOOR|r - The door is locked.
+}
+
+STRING 370
+{
+|cffffcc00MAIN QUEST|r
+The Heart of Aszune
+  - |cff808080Find the Heart of Aszune (Completed)|r
+  - Return the Heart to Aszune
+}
+
+STRING 382
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Heart of Aszune
+  - |cff808080Find the Heart of Aszune (Completed)|r
+  - Bring the Heart to Aszune
+}
+
+STRING 397
+{
+Thrall
+}
+
+STRING 398
+{
+The statue's magic has created an impassable barrier. I wonder what it means by its heart?
+}
+

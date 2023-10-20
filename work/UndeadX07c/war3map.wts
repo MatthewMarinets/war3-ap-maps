@@ -1,0 +1,528 @@
+﻿STRING 1
+{
+Player 1
+}
+
+STRING 2
+{
+Force 1
+}
+
+STRING 3
+{
+UndeadX07c
+}
+
+STRING 4
+{
+1
+}
+
+STRING 5
+{
+Chapter Seven, Part Three: Ascent to the Upper Kingdom
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 19
+{
+Escape the Caverns
+}
+
+STRING 20
+{
+The death of the Forgotten One has stirred the depths of the Old Kingdom, and it has begun to crumble in on itself. You must quickly make your way out of the cavern before it callapses upon you.
+}
+
+STRING 21
+{
+Escape before the timer expires
+}
+
+STRING 22
+{
+Arthas must survive
+}
+
+STRING 23
+{
+|cffffcc00MAIN QUEST|r
+Escape the Caverns
+  - Escape before the timer expires
+  - Arthas must survive
+}
+
+STRING 24
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Escape the Caverns
+}
+
+STRING 37
+{
+|cffffcc00MISSION FAILED|r
+Arthas has been slain.
+}
+
+STRING 38
+{
+|cffffcc00MISSION FAILED|r
+Anub'arak has been slain.
+}
+
+STRING 51
+{
+Defeat!
+}
+
+STRING 55
+{
+Defeat!
+}
+
+STRING 134
+{
+Chapter Seven, Part Three
+}
+
+STRING 135
+{
+Ascent to the Upper Kingdom
+}
+
+STRING 136
+{
+Moments later, at the entrance to the Upper Kingdom...
+}
+
+STRING 142
+{
+Force 2
+}
+
+STRING 143
+{
+King Arthas
+}
+
+STRING 144
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CArthas02.mp3
+{
+We're running out of time, Anub'arak. How far are we from the exit?
+}
+
+STRING 147
+{
+Anub'arak
+}
+
+STRING 148
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CAnubarak03.mp3
+{
+Not far. We have entered the Upper Kingdom. The exit should lead us to the base of the glacier itself. However, there are still hidden traps and pitfalls to account for.
+}
+
+STRING 149
+{
+Faceless Ones
+}
+
+STRING 150
+{
+Anub'arak
+}
+
+STRING 151
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CAnubarak38.mp3
+{
+Now, quickly--head through that door! The exit to the surface lies just beyond!
+}
+
+STRING 152
+{
+Anub'arak
+}
+
+STRING 153
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CAnubarak40.mp3
+{
+Remember--Illidan and the true battle still await us in the world above. Hopefully, our trek through the dark earth bought us the precious time we needed.
+}
+
+STRING 154
+{
+King Arthas
+}
+
+STRING 155
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CArthas39.mp3
+{
+It'll be good to see the sun again.
+}
+
+STRING 156
+{
+Find the Gold Stashes
+}
+
+STRING 157
+{
+Gold Coins have been hidden throughout these underground chambers. Find them for an increase of your gold coffers. This would be useful the next time you require gold to sustain and build your forces.
+}
+
+STRING 158
+{
+Find the three gold stashes (1 of 3 found)
+}
+
+STRING 159
+{
+|cffffcc00OPTIONAL QUEST|r
+Find the Gold Stashes
+  - Find the three gold stashes  (1 of 3 found)
+}
+
+STRING 160
+{
+Find the three gold stashes
+}
+
+STRING 161
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Find the Gold Stashes
+}
+
+STRING 162
+{
+Find the three gold stashes (2 of 3 found)
+}
+
+STRING 163
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Find the Gold Stashes
+  - Find the three gold stashes  (2 of 3 found)
+}
+
+STRING 164
+{
+Find the five gold stashes (3 of 5 found)
+}
+
+STRING 165
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Find the Gold Stashes
+  - Find the five gold stashes  (3 of 5 found)
+}
+
+STRING 168
+{
+King Arthas
+}
+
+STRING 169
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CArthas25.mp3
+{
+Take cover!
+}
+
+STRING 170
+{
+Anub'arak
+}
+
+STRING 171
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CAnubarak26.mp3
+{
+Arthas!
+}
+
+STRING 172
+{
+King Arthas
+}
+
+STRING 173
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CArthas27.mp3
+{
+The entire passage collapsed! There's no time to dig through this. I'll have to move quickly and find my own way out! Hopefully Anub'arak and the others survived.
+}
+
+STRING 174
+{
+Cavern Collapses
+}
+
+STRING 175
+{
+Find the five gold stashes (4 of 5 found)
+}
+
+STRING 176
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Find the Gold Stashes
+  - Find the five gold stashes  (4 of 5 found)
+}
+
+STRING 187
+{
+King Arthas
+}
+
+STRING 188
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CArthas30.mp3
+{
+I'll be singed if I get too close to those flames.
+}
+
+STRING 199
+{
+King Arthas
+}
+
+STRING 200
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CArthas05.mp3
+{
+Time is running out! Where is that damned exit?
+}
+
+STRING 203
+{
+King Arthas
+}
+
+STRING 204
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CArthas22.mp3
+{
+Another quake!
+}
+
+STRING 207
+{
+King Arthas
+}
+
+STRING 208
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CArthas28.mp3
+{
+More of the nerubians' blasted mechanisms! I'll have to time this perfectly.
+}
+
+STRING 211
+{
+King Arthas
+}
+
+STRING 212
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CArthas06.mp3
+{
+This whole place is crumbling. We've got to move fast!
+}
+
+STRING 221
+{
+King Arthas
+}
+
+STRING 222
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CArthas31.mp3
+{
+I must find a way across this strange obstacle.
+}
+
+STRING 223
+{
+King Arthas
+}
+
+STRING 224
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CArthas34.mp3
+{
+Anub'arak! You made it!
+}
+
+STRING 225
+{
+Anub'arak
+}
+
+STRING 226
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CAnubarak35.mp3
+{
+I see now why the Lich King chose you as his champion, death knight. Few men could have survived this labyrinth alone.
+}
+
+STRING 229
+{
+Anub'arak
+}
+
+STRING 230
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CAnubarak37.mp3
+{
+They're blocking the way to the exit! We'll have to fight our way through them to reach it!
+}
+
+STRING 233
+{
+King Arthas
+}
+
+STRING 234
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CArthas36.mp3
+{
+Something's breaking through! Defensive positions!
+}
+
+STRING 235
+{
+Shield Wall Power
+}
+
+STRING 238
+{
+Anub'arak
+}
+
+STRING 239
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CAnubarak20.mp3
+{
+Another earthquake. We must hurry, death knight.
+}
+
+STRING 240
+{
+Faceless One Mage
+}
+
+STRING 241
+{
+Defeat!
+}
+
+STRING 242
+{
+|cffffcc00MISSION FAILED|r
+Escape the Caverns
+}
+
+STRING 246
+{
+Anub'arak must survive
+}
+
+STRING 247
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Escape the Caverns
+  - Escape before the timer expires
+  - Arthas must survive
+  - Anub'arak must survive
+}
+
+STRING 248
+{
+(1 CUSTOM)
+}
+
+STRING 249
+{
+Unbroken Darkfinder
+}
+
+STRING 252
+{
+Anub'arak
+}
+
+STRING 253
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CAnubarak07.mp3
+{
+We're running out of time. We must find the exit!
+}
+
+STRING 254
+{
+King Arthas
+}
+
+STRING 255
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CArthas14.mp3
+{
+I'll need this gold for when I reach the glacier.
+}
+
+STRING 256
+{
+King Arthas
+}
+
+STRING 257
+// Sound\Dialogue\UndeadExpCamp\Undead07Cx\L07CArthas11.mp3
+{
+More gold! This might help us later!
+}
+
+STRING 259
+{
+|cffffcc00SECRET FOUND|r
+Access granted.
+}
+
+STRING 262
+{
+150!
+}
+
+STRING 267
+{
+200!
+}
+
+STRING 268
+{
+50!
+}
+
+STRING 269
+{
+75!
+}
+
+STRING 270
+{
+Faceless One Fleshling
+}
+
+STRING 271
+{
+Faceless One Annihilator
+}
+
+STRING 272
+{
+|cffff0000WARNING|r - Five minutes remaining.
+}
+
+STRING 274
+{
+|cffff0000WARNING|r - Two minutes remaining.
+}
+
+STRING 275
+{
+Fake Anubarak
+}
+
+STRING 276
+{
+Defeat!
+}
+

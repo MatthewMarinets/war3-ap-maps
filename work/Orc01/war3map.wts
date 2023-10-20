@@ -1,0 +1,665 @@
+﻿STRING 0
+{
+Orc01
+}
+
+STRING 1
+{
+1
+}
+
+STRING 2
+{
+Chapter One: Landfall
+}
+
+STRING 3
+{
+Blizzard Entertainment
+}
+
+STRING 4
+{
+Following the mysterious Prophet's instructions, Thrall led the Horde across the Great Sea. Now, after weeks of traversing the raging seas, the orcish Horde has landed upon the savage shores of Kalimdor. With their stolen ships broken and drowned, the orcs cautiously venture inland, wary of the unseen dangers lurking within the crags of the desolate land...
+}
+
+STRING 5
+{
+Chapter One
+}
+
+STRING 6
+{
+Landfall
+}
+
+STRING 7
+{
+Protect Cairne
+}
+
+STRING 8
+{
+Cairne Bloodhoof possesses knowledge of a distant Oracle that might be able to help the Horde find its destiny.  He must be protected from harm so that you can learn more of the Oracle.
+}
+
+STRING 9
+{
+Follow Cairne to the Tauren village
+}
+
+STRING 10
+{
+Grunt
+}
+
+STRING 11
+{
+Warchief, our ship sustained heavy damage when we passed through the raging maelstrom. It's unsalvageable.
+}
+
+STRING 12
+{
+Thrall
+}
+
+STRING 13
+{
+Rally the Horde
+}
+
+STRING 14
+{
+The Orcs' ships were separated and broken along the coasts of Kalimdor. You must explore the rocky coastline and reunite your scattered warriors. The Horde must be rallied before it can find its destiny in this new land.
+}
+
+STRING 15
+{
+Discover where the other ships have landed
+}
+
+STRING 17
+{
+Stranded Orcs
+}
+
+STRING 19
+{
+Orcish Horde
+}
+
+STRING 21
+{
+I knew it. Can we confirm our location? Is this Kalimdor?
+}
+
+STRING 22
+{
+Grunt
+}
+
+STRING 23
+{
+We traveled due west, as you instructed. This should be it.
+}
+
+STRING 24
+{
+Thrall
+}
+
+STRING 25
+{
+Very well. Has there been any sign of Grom Hellscream or the other ships?
+}
+
+STRING 26
+{
+Grunt
+}
+
+STRING 27
+{
+No, Warchief. Not since we got separated.
+}
+
+STRING 28
+{
+Thrall
+}
+
+STRING 29
+{
+Hmm. Prepare to move out. If our comrades did make it here, we should be able to find them along the coast.
+}
+
+STRING 30
+{
+|cffffcc00MAIN QUEST|r
+Rally the Horde
+  - Discover where the other ships landed
+  - Thrall must survive
+}
+
+STRING 43
+{
+Tauren Youngblood
+}
+
+STRING 44
+{
+Tauren War Priest
+}
+
+STRING 52
+{
+Grunt
+}
+
+STRING 53
+{
+Throm-Ka, Warchief.
+}
+
+STRING 54
+{
+Thrall
+}
+
+STRING 55
+{
+Well met, warrior. Has there been any sign of--
+}
+
+STRING 56
+{
+Cairne Bloodhoof
+}
+
+STRING 57
+{
+Arrghh! We could use some help, friends!
+}
+
+STRING 59
+{
+Troll Headhunter
+}
+
+STRING 60
+{
+The horse men are charging! Defend yourselves!
+}
+
+STRING 63
+{
+Thrall
+}
+
+STRING 64
+{
+Lok-Tar! Lok-Tar!
+}
+
+STRING 65
+{
+Cairne Bloodhoof
+}
+
+STRING 66
+{
+I am Cairne, chief of the Bloodhoof tauren. You greenskins fight with both savagery and valor. I am intrigued.
+}
+
+STRING 67
+{
+Thrall
+}
+
+STRING 68
+{
+I am Thrall, and these are my brethren, the orcs. We've come seeking the destiny promised to us.
+}
+
+STRING 69
+{
+Cairne Bloodhoof
+}
+
+STRING 70
+{
+Seeking destiny? Hmm. It will find you in time, young one. However, there is an Oracle far to the north which might be able to--
+}
+
+STRING 71
+{
+Thrall
+}
+
+STRING 72
+{
+North? But there's an army of the horse men marching north.
+}
+
+STRING 73
+{
+Cairne Bloodhoof
+}
+
+STRING 74
+{
+What? No! My village is in danger!
+}
+
+STRING 75
+{
+Thrall
+}
+
+STRING 76
+{
+I must know more about this Oracle! Follow them! Protect Cairne at all costs!
+}
+
+STRING 77
+{
+Bloodhoof Tauren
+}
+
+STRING 80
+{
+|cffffcc00MAIN QUEST FAILED|r
+Thrall has been slain.
+}
+
+STRING 81
+{
+Cairne Bloodhoof must survive
+}
+
+STRING 82
+{
+Thrall must survive
+}
+
+STRING 86
+{
+Defeat!
+}
+
+STRING 88
+{
+Cairne Bloodhoof
+}
+
+STRING 89
+{
+We've arrived in time! The next wave is advancing!
+}
+
+STRING 90
+{
+Thrall
+}
+
+STRING 91
+{
+Lok-Narash! Here they come again!
+}
+
+STRING 92
+{
+Thrall
+}
+
+STRING 93
+{
+I must know more about this Oracle! Follow them! Protect Cairne at all costs!
+}
+
+STRING 94
+{
+Centaur Champion
+}
+
+STRING 95
+{
+Cairne Bloodhoof
+}
+
+STRING 96
+{
+Ah, they've brought a champion with them this time!
+}
+
+STRING 101
+{
+Cairne Bloodhoof
+}
+
+STRING 102
+{
+Thanks to you, young warchief. But the centaur drove off all the game in this region, and I cannot allow my people to starve. Soon, we must head north to the verdant grasslands of Mulgore.
+}
+
+STRING 103
+{
+Thrall
+}
+
+STRING 104
+{
+Your tribe is safe, old one.
+}
+
+STRING 105
+{
+Cairne Bloodhoof
+}
+
+STRING 106
+{
+Yes. The devils' speed cannot be matched upon the plains. 
+}
+
+STRING 107
+{
+Thrall
+}
+
+STRING 108
+{
+Well, if you tell us how to reach the Oracle you spoke of, then my brethren and I will escort you on your march.
+}
+
+STRING 110
+{
+Troll Headhunter
+}
+
+STRING 111
+{
+Thanks for saving us, mon. We should hurry. The pig-men say there were other ships nearby!
+}
+
+STRING 119
+{
+Thrall
+}
+
+STRING 120
+{
+And you fear the marauders will overtake you.
+}
+
+STRING 121
+{
+Cairne Bloodhoof
+}
+
+STRING 122
+{
+I am intrigued by you and your people, young Thrall. You are more than welcome to join us.
+}
+
+STRING 131
+{
+Protect Cairne from his enemies
+}
+
+STRING 132
+{
+|cffffcc00MAIN QUEST|r
+Rally the Horde
+  - Discover where the other ships landed
+  - Thrall must survive
+}
+
+STRING 136
+{
+|cffffcc00MAIN QUEST|r
+Protect Cairne
+  - Follow Cairne to the Tauren village
+  - Protect Cairne from his enemies
+  - Cairne Bloodhoof must survive
+  - Thrall must survive
+}
+
+STRING 137
+{
+|cffffcc00MAIN QUEST|r
+Protect Cairne
+  - Follow Cairne to the Tauren village
+  - Protect Cairne from his enemies
+  - Cairne Bloodhoof must survive
+  - Thrall must survive
+}
+
+STRING 139
+{
+|cffffcc00MAIN QUEST FAILED|r
+Cairne Bloodhoof has been slain.
+}
+
+STRING 140
+{
+Defeat!
+}
+
+STRING 142
+{
+|cff32CD32HINT|r - Healing Wards can be placed on the ground in order to heal nearby friendly units.
+}
+
+STRING 144
+{
+ (1)
+}
+
+STRING 145
+{
+ (2)
+}
+
+STRING 146
+{
+ (3)
+}
+
+STRING 147
+{
+Native Hut
+}
+
+STRING 151
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Protect Cairne
+  - |cff808080Follow Cairne to the Tauren village (Completed)|r
+  - Protect Cairne from his enemies
+  - Cairne Bloodhoof must survive
+  - Thrall must survive
+}
+
+STRING 152
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Protect Cairne
+}
+
+STRING 153
+{
+Thrall must survive
+}
+
+STRING 154
+{
+Defeat!
+}
+
+STRING 155
+{
+Centaur Marauders
+}
+
+STRING 156
+{
+|cff87ceebNEW UNIT ACQUIRED|r
+Troll Headhunter - A versatile spear-thrower, who is effective at attacking from range and combating flying units.
+}
+
+STRING 157
+{
+Thrall
+}
+
+STRING 158
+{
+Those hideous creatures have the bodies of horses! Lok-Tar Ogar!
+}
+
+STRING 159
+{
+Thrall
+}
+
+STRING 160
+{
+Those pig creatures are unlike anything I've ever seen before.
+}
+
+STRING 161
+{
+Grunt
+}
+
+STRING 162
+{
+At least they're prettier than the humans. 
+}
+
+STRING 163
+{
+Thrall
+}
+
+STRING 164
+{
+The horse men are slaughtering those bull creatures! I led us here to escape senseless conflict. Now, it seems, we're surrounded by it.
+}
+
+STRING 165
+{
+Grunt
+}
+
+STRING 166
+{
+A great battle took place here. The clay is red with fresh blood.  
+}
+
+STRING 167
+{
+Thrall
+}
+
+STRING 168
+{
+Is there nothing in this land but dust and carnage?
+}
+
+STRING 169
+{
+Thrall
+}
+
+STRING 170
+{
+The horse men look as if they're dressed for war.
+}
+
+STRING 171
+{
+Grunt
+}
+
+STRING 172
+{
+Throm-Ka, Warchief. We knew you'd find us!
+}
+
+STRING 173
+{
+Thrall
+}
+
+STRING 174
+{
+Throm-Ka, warrior. I'm glad you're all safe. Were you part of Hellscream's group?
+}
+
+STRING 175
+{
+Grunt
+}
+
+STRING 176
+{
+No, Warchief. We were separated in the storm. We only just arrived.
+}
+
+STRING 177
+{
+Grunt
+}
+
+STRING 178
+{
+Warchief! There's another of our ships!
+}
+
+STRING 179
+{
+Thrall
+}
+
+STRING 180
+{
+These cliffs are too steep. We'll need to head inland and swing back around to reach it. 
+}
+
+STRING 181
+{
+Grunt
+}
+
+STRING 182
+{
+Chieftain, this wreck has been abandoned for quite some time. Perhaps the crew has survived and is around here someplace.
+}
+
+STRING 185
+{
+Grunt
+}
+
+STRING 186
+{
+This is one of our ships, Warchief. It must have been smashed against the rocks in the storm.
+}
+
+STRING 187
+{
+Grunt
+}
+
+STRING 188
+{
+We should check these crates for valuable supplies!
+}
+
+STRING 189
+{
+|cff32CD32HINT|r - Thrall can cast the Chain Lightning spell, which is devastating against groups of enemy units.
+}
+

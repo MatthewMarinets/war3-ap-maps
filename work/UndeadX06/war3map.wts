@@ -1,0 +1,894 @@
+﻿STRING 1
+{
+Defeat!
+}
+
+STRING 2
+{
+DEBUG Dwarf
+}
+
+STRING 3
+{
+UndeadX06
+}
+
+STRING 4
+{
+1
+}
+
+STRING 5
+{
+Chapter Six: A New Power in Lordaeron
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 7
+{
+Chapter Six
+}
+
+STRING 10
+{
+Alliance of Lordaeron
+}
+
+STRING 11
+{
+Undead Scourge
+}
+
+STRING 12
+{
+Ironforge Dwarves
+}
+
+STRING 13
+{
+Unlike the rest of Garithos' troops, the Dwarven contingent seems to have gone astray during the march to Lordaeron. If they could be located, their assistance in laying siege to the city would be invaluable.
+}
+
+STRING 14
+{
+Locate the missing Dwarves
+}
+
+STRING 16
+{
+|cffffcc00OPTIONAL QUEST|r
+Ironforge Dwarves
+  - Locate the missing Dwarves
+}
+
+STRING 17
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Ironforge Dwarves
+}
+
+STRING 19
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 20
+{
+Defeat!
+}
+
+STRING 22
+{
+|cff32cd32HINT|r - You are able to control Garithos and his army of Humans.
+}
+
+STRING 24
+{
+Kargin Ironknee
+}
+
+STRING 25
+{
+Purchase Book of Beards
+}
+
+STRING 27
+{
+A book.
+}
+
+STRING 28
+{
+This book is full of beard styles and trimming techniques.
+}
+
+STRING 35
+{
+Balnazzar
+}
+
+STRING 36
+{
+Balnazzar, the most powerful of the Dreadlords, holds Lordaeron in an iron grip. Only with the help of Garithos' army can Sylvanas hope to overthrow the mighty Dreadlord's rule and bring him to his knees, thus establishing her freedom from the Scourge once and for all.
+}
+
+STRING 37
+{
+Destroy Balnazzar's purple base
+}
+
+STRING 39
+{
+|cffffcc00MAIN QUEST|r
+Balnazzar
+  - Destroy Balnazzar's purple base 
+}
+
+STRING 40
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Balnazzar
+}
+
+STRING 44
+{
+A New Power in Lordaeron
+}
+
+STRING 45
+{
+The next day, on the outskirts of Lordaeron's capital city, Sylvanas and her allies prepare to lay siege to Balnazzar's formidable defenses.
+}
+
+STRING 46
+{
+King's Throne Angle
+}
+
+STRING 47
+{
+Lordaeron City Stash
+}
+
+STRING 179
+{
+Dreadlord Insurgents
+}
+
+STRING 180
+{
+Sylvanas' Forces
+}
+
+STRING 181
+{
+Alliance
+}
+
+STRING 184
+{
+Book of Beards
+}
+
+STRING 185
+{
+Varimathras
+}
+
+STRING 186
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Varimathras01.mp3
+{
+The capital city is heavily defended. Balnazzar is no fool, my lady. This battle can be won only through attrition.
+}
+
+STRING 187
+{
+Grand Marshal Garithos
+}
+
+STRING 188
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Garithos02.mp3
+{
+What's the matter, demon? Are you afraid?
+}
+
+STRING 189
+{
+Varimathras
+}
+
+STRING 190
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Varimathras03.mp3
+{
+Watch your tongue, human dog. Your hollow bravado does not impress--
+}
+
+STRING 191
+{
+Sylvanas Windrunner
+}
+
+STRING 192
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Sylvanas04.mp3
+{
+Stand down, gentlemen! Save your anger for Balnazzar. Garithos, I'll lead my forces in a frontal assault while you attack the city from the rear.
+}
+
+STRING 193
+{
+Grand Marshal Garithos
+}
+
+STRING 194
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Garithos05.mp3
+{
+An aggressive ploy, milady. So long as we get our capital back, I'll stick to whatever strategy you wish.
+}
+
+STRING 195
+{
+Sylvanas Windrunner
+}
+
+STRING 196
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Sylvanas06.mp3
+{
+Give the order. Let the attack commence.
+}
+
+STRING 197
+{
+Footman
+}
+
+STRING 198
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Footman17.mp3
+{
+Lord Garithos, our scouts have found the missing band of dwarves! They appear to be lost in the wilderness nearby.
+}
+
+STRING 199
+{
+Grand Marshal Garithos
+}
+
+STRING 200
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Garithos18.mp3
+{
+Those brainless dwarves are almost more trouble then they're worth! However, we'll need them on the front lines. I'll have to lead them myself.
+}
+
+STRING 213
+{
+Grand Marshal Garithos
+}
+
+STRING 214
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Garithos19.mp3
+{
+Can't you idiots follow simple orders? There's a war on, and you louts are off having a picnic! Get this column rolling immediately!
+}
+
+STRING 215
+{
+Rifleman
+}
+
+STRING 216
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Rifleman20.mp3
+{
+Right away, Lord Garithos! Move 'em out, lads!
+}
+
+STRING 217
+{
+Rifleman
+}
+
+STRING 218
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Rifleman21.mp3
+{
+They don't pay us enough to put up with that asshole.
+}
+
+STRING 219
+{
+|cff87ceeb UNITS NOW AVAILABLE|r
+Dwarves - You may now build a Workshop. This building offers training and upgrades for Riflemen, Mortar Teams, and Siege Engines.
+}
+
+STRING 220
+{
+Sylvanas Windrunner
+}
+
+STRING 221
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Sylvanas53.mp3
+{
+It's over, Balnazzar. Varimathras?
+}
+
+STRING 222
+{
+Varimathras
+}
+
+STRING 223
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Varimathras54.mp3
+{
+Yes, my lady?
+}
+
+STRING 224
+{
+Sylvanas Windrunner
+}
+
+STRING 225
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Sylvanas55.mp3
+{
+Kill him.
+}
+
+STRING 226
+{
+Varimathras
+}
+
+STRING 227
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Varimathras56.mp3
+{
+But I... It is forbidden for one of the Nathrezim to kill another! My defection was one thing, but this...
+}
+
+STRING 228
+{
+Sylvanas Windrunner
+}
+
+STRING 229
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Sylvanas57.mp3
+{
+I require one last test of your loyalty, dreadlord. Do it.
+}
+
+STRING 230
+{
+Balnazzar
+}
+
+STRING 231
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Balnazzar58.mp3
+{
+You wouldn't dare!
+}
+
+STRING 232
+{
+Grand Marshal Garithos
+}
+
+STRING 233
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Garithos59.mp3
+{
+There, your business is done. Now, I want you wretched animals out of my city before I--
+}
+
+STRING 234
+{
+Sylvanas Windrunner
+}
+
+STRING 235
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Sylvanas60.mp3
+{
+Kill him, too.
+}
+
+STRING 236
+{
+Varimathras
+}
+
+STRING 237
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Varimathras61.mp3
+{
+Gladly.
+}
+
+STRING 238
+{
+Sylvanas Windrunner
+}
+
+STRING 239
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Sylvanas62.mp3
+{
+The capital city is ours, but we are no longer part of the Scourge. From here on out, we shall be known as the Forsaken.
+}
+
+STRING 240
+{
+Sylvanas Windrunner
+}
+
+STRING 241
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Sylvanas63.mp3
+{
+We will find our own path in this world, dreadlord... and slaughter anyone who stands in our way.
+}
+
+STRING 274
+{
+Sylvanas Windrunner
+}
+
+STRING 275
+{
+Let's see. I've made one of your brothers my servant, and tore the other to bloody shreds. I wonder what your fate holds, Balnazzar?
+}
+
+STRING 276
+{
+Balnazzar
+}
+
+STRING 277
+{
+I'll cut out your tongue!
+}
+
+STRING 282
+{
+Balnazzar
+}
+
+STRING 283
+{
+Ah, my wayward pet, Garithos. I see you've grown a spine since we last met.
+}
+
+STRING 284
+{
+Grand Marshal Garithos
+}
+
+STRING 285
+{
+Your mind powers tricked me before, demon, but never again! You and I have a serious score to settle.
+}
+
+STRING 290
+{
+Balnazzar
+}
+
+STRING 291
+{
+You disappoint me, brother. Poor Detheroc must have been stung by your treachery. How dare you call yourself Nathrezim!
+}
+
+STRING 338
+{
+Varimathras
+}
+
+STRING 339
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Varimathras07.mp3
+{
+Balnazzar's forces are advancing!
+}
+
+STRING 346
+{
+Varimathras
+}
+
+STRING 347
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Varimathras10.mp3
+{
+Our base is under siege! Man the defenses!
+}
+
+STRING 348
+{
+Varimathras
+}
+
+STRING 349
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Varimathras09.mp3
+{
+Drive them back! We've got to push into the heart of the city!
+}
+
+STRING 350
+{
+Varimathras
+}
+
+STRING 351
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Varimathras08.mp3
+{
+We're under attack!
+}
+
+STRING 360
+{
+Grand Marshal Garithos
+}
+
+STRING 361
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Garithos11.mp3
+{
+Here they come, boys! Stand your ground!
+}
+
+STRING 368
+{
+Grand Marshal Garithos
+}
+
+STRING 369
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Garithos14.mp3
+{
+We're under attack! Defend the base at all costs!
+}
+
+STRING 370
+{
+Grand Marshal Garithos
+}
+
+STRING 371
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Garithos13.mp3
+{
+Cut them to shreds! For Lordaeron!
+}
+
+STRING 372
+{
+Grand Marshal Garithos
+}
+
+STRING 373
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Garithos12.mp3
+{
+The blasted undead are advancing!
+}
+
+STRING 380
+{
+Grand Marshal Garithos
+}
+
+STRING 381
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Garithos50.mp3
+{
+The enemy is advancing! We may need help here!
+}
+
+STRING 386
+{
+Grand Marshal Garithos
+}
+
+STRING 387
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Garithos52.mp3
+{
+Stand fast, my warriors! We're not out of this yet!
+}
+
+STRING 388
+{
+Grand Marshal Garithos
+}
+
+STRING 389
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Garithos51.mp3
+{
+They're pressing the attack! We've got to hold the line!
+}
+
+STRING 396
+{
+Sylvanas Windrunner
+}
+
+STRING 397
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Sylvanas38.mp3
+{
+Push the attack! Their defenses are weakening!
+}
+
+STRING 402
+{
+Sylvanas Windrunner
+}
+
+STRING 403
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Sylvanas40.mp3
+{
+Where are you, Balnazzar? Afraid to face me?
+}
+
+STRING 404
+{
+Sylvanas Windrunner
+}
+
+STRING 405
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Sylvanas39.mp3
+{
+Show them no mercy!
+}
+
+STRING 412
+{
+Varimathras
+}
+
+STRING 413
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Varimathras41.mp3
+{
+Strike for the Dark Lady! For Sylvanas!
+}
+
+STRING 418
+{
+Varimathras
+}
+
+STRING 419
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Varimathras43.mp3
+{
+Balnazzar must be somewhere!
+}
+
+STRING 420
+{
+Varimathras
+}
+
+STRING 421
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Varimathras42.mp3
+{
+Victory draws near! Hasten the attack!
+}
+
+STRING 434
+{
+Grand Marshal Garithos
+}
+
+STRING 435
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Garithos44.mp3
+{
+Slay these inhuman freaks!
+}
+
+STRING 440
+{
+Grand Marshal Garithos
+}
+
+STRING 441
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Garithos46.mp3
+{
+The city is nearly ours!
+}
+
+STRING 442
+{
+Grand Marshal Garithos
+}
+
+STRING 443
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Garithos45.mp3
+{
+Forward, my warriors! We'll take back what's ours!
+}
+
+STRING 444
+{
+Lordaeron City Mutant
+}
+
+STRING 445
+{
+Jacobs Reject
+}
+
+STRING 462
+{
+Sylvanas Windrunner
+}
+
+STRING 463
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Sylvanas22.mp3
+{
+Storehouses such as this hold many of Lordaeron's treasures. Seek them out, and we'll claim whatever artifacts they hold!
+}
+
+STRING 472
+{
+Banshee
+}
+
+STRING 473
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Banshee24.mp3
+{
+Mistress Sylvanas, we've found yet another storehouse! It likely holds priceless magical treasures!
+}
+
+STRING 482
+{
+Banshee
+}
+
+STRING 483
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Banshee23.mp3
+{
+Mistress, we've discovered another storehouse! It may hold artifacts that could aid us!
+}
+
+STRING 484
+{
+Balnazzar
+}
+
+STRING 485
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Balnazzar29.mp3
+{
+Now, feel the wrath of the Legion!
+}
+
+STRING 492
+{
+Balnazzar
+}
+
+STRING 493
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Balnazzar32.mp3
+{
+I still have a hand to play.
+}
+
+STRING 494
+{
+Balnazzar
+}
+
+STRING 495
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Balnazzar31.mp3
+{
+Heed me, demons! Devour these traitorous fools!
+}
+
+STRING 496
+{
+Balnazzar
+}
+
+STRING 497
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Balnazzar30.mp3
+{
+Come, you burning devils! Balnazzar calls!
+}
+
+STRING 506
+{
+Balnazzar
+}
+
+STRING 507
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Balnazzar25.mp3
+{
+You vile traitors will suffer for this outrage!
+}
+
+STRING 514
+{
+Balnazzar
+}
+
+STRING 515
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Balnazzar28.mp3
+{
+My power is supreme! You mongrels cannot win!
+}
+
+STRING 516
+{
+Balnazzar
+}
+
+STRING 517
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Balnazzar27.mp3
+{
+You will all drown in lakes of blood!
+}
+
+STRING 518
+{
+Balnazzar
+}
+
+STRING 519
+// Sound\Dialogue\UndeadExpCamp\Undead06x\L06Balnazzar26.mp3
+{
+These Plaguelands are mine!
+}
+
+STRING 520
+{
+Specter
+}
+
+STRING 521
+{
+Kobold Hut
+}
+
+STRING 522
+{
+Dwarven Rifleman
+}
+
+STRING 523
+// Units\Human\Rifleman\RiflemanWarcry1.wav
+{
+For Ironforge!
+}
+
+STRING 524
+{
+Dwarven Rifleman
+}
+
+STRING 525
+// Units\Human\Rifleman\RiflemanWhat1.wav
+{
+Aye, sir!
+}
+
+STRING 526
+{
+Balnazzar's Forces
+}
+
+STRING 527
+{
+Morbent Fell
+}
+
+STRING 528
+{
+Ras Splinterspine
+}
+
+STRING 529
+{
+Dreadlord Loyalists
+}
+
+STRING 530
+{
+|cffffcc00OPTIONAL QUEST FAILED|r
+Ironforge Dwarves
+}
+
+STRING 531
+{
+|cff32cd32HINT|r - Rescue the dwarves to gain better defenses against air attacks.
+}
+
+STRING 532
+{
+|cff32cd32HINT|r - Garithos' Siege Engines have the Barrage upgrade, which gives them more effective firepower against enemy flyers.
+}
+

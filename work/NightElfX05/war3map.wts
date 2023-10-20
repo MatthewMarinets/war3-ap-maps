@@ -1,0 +1,709 @@
+﻿STRING 1
+{
+Defeat!
+}
+
+STRING 3
+{
+NightElfX05
+}
+
+STRING 4
+{
+1
+}
+
+STRING 5
+{
+Chapter Five: Balancing the Scales
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 7
+{
+Chapter Five
+}
+
+STRING 12
+{
+Illidan's Minions
+}
+
+STRING 13
+{
+The Naga forces are still poised to attack. Destroy them and send Illidan's foolish minions back to the sea so that you can recapture Illidan.
+}
+
+STRING 14
+{
+Destroy Illidan's base
+}
+
+STRING 16
+{
+|cffffcc00MAIN QUEST|r
+Illidan's Minions
+  - Destroy Illidan's base
+}
+
+STRING 17
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Illidan's Minions
+}
+
+STRING 19
+{
+|cffffcc00MISSION FAILED|r
+Maiev's base has been destroyed.
+}
+
+STRING 29
+{
+Maiev Shadowsong
+}
+
+STRING 30
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Maiev01.mp3
+{
+Hold your ground, my warriors! Goddess willing, Shan'do Stormrage will come.
+}
+
+STRING 31
+{
+Tyrande Whisperwind
+}
+
+STRING 32
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Tyrande03.mp3
+{
+My owls have already scouted ahead of us and found Maiev's location. She and her forces are under attack, but we'll need to pass through the jungle to reach her.
+}
+
+STRING 35
+{
+Maiev's Distress
+}
+
+STRING 36
+{
+Maiev and her Night Elf forces have been holding off Illidan and the Naga for weeks. With her defenses weakened and her gold supply exhausted, she cannot last much longer. You must bring Malfurion and Tyrande to Maiev's base and crush the imminent Naga threat.
+}
+
+STRING 37
+{
+Reach Maiev's base
+}
+
+STRING 39
+{
+|cffffcc00MAIN QUEST|r
+Maiev's Distress
+  - Reach Maiev's base
+  - Tyrande and Malfurion must survive
+}
+
+STRING 40
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Maiev's Distress
+}
+
+STRING 42
+{
+Balancing the Scales
+}
+
+STRING 43
+{
+The next day, on the shores of the Broken Isles, Maiev and her Watchers attempt to hold the line against Illidan's final assault.
+}
+
+STRING 44
+{
+Night Elf Sentinel
+}
+
+STRING 45
+{
+Naga Regime
+}
+
+STRING 50
+{
+Tyrande and Malfurion must survive
+}
+
+STRING 58
+{
+Night Elf Fleet
+}
+
+STRING 59
+{
+The Night Elf fleet was separated when crossing the perilous ocean. Now the three remaining ships are stranded offshore, unable to safely land. Reach all of the ships and clear a path for them to land upon the shore.
+}
+
+STRING 60
+{
+Reach the first ship
+}
+
+STRING 61
+{
+|cffffcc00OPTIONAL QUEST|r
+Night Elf Fleet
+  - Reach the first ship
+  - Reach the second ship
+  - Reach the third ship
+}
+
+STRING 62
+{
+Defeat!
+}
+
+STRING 64
+{
+Defeat!
+}
+
+STRING 65
+{
+|cffffcc00MISSION FAILED|r
+Tyrande has been slain.
+}
+
+STRING 66
+{
+Defeat!
+}
+
+STRING 67
+{
+|cffffcc00MISSION FAILED|r
+Malfurion has been slain.
+}
+
+STRING 71
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Night Elf Fleet
+}
+
+STRING 73
+{
+Malfurion Stormrage
+}
+
+STRING 74
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Furion04.mp3
+{
+Perhaps force of nature will speed our way.
+}
+
+STRING 75
+{
+Tyrande Whisperwind
+}
+
+STRING 76
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Tyrande05.mp3
+{
+We'd best make haste. I doubt Maiev's forces can hold out much longer.
+}
+
+STRING 89
+{
+Tyrande Whisperwind
+}
+
+STRING 90
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Tyrande06.mp3
+{
+What are these vile serpents?
+}
+
+STRING 91
+{
+Malfurion Stormrage
+}
+
+STRING 92
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Furion07.mp3
+{
+I don't know, but these creatures feel familiar somehow.
+}
+
+STRING 93
+{
+Naga
+}
+
+STRING 94
+{
+Wretched night elves! We are the naga! We are the future.
+}
+
+STRING 95
+{
+Maiev Shadowsong
+}
+
+STRING 96
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Maiev22.mp3
+{
+Elune be praised! I knew you would come, Shan'do Stormrage!
+}
+
+STRING 97
+{
+Malfurion Stormrage
+}
+
+STRING 98
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Furion23.mp3
+{
+I'm glad we reached you in time, Maiev.
+}
+
+STRING 99
+{
+Maiev Shadowsong
+}
+
+STRING 100
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Maiev24.mp3
+{
+Priestess Tyrande, I'm surprised you came in person. Are you here to absolve your guilty conscience?
+}
+
+STRING 101
+{
+Tyrande Whisperwind
+}
+
+STRING 102
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Tyrande25.mp3
+{
+I did what I had to do, Maiev. You are in no position to judge me.
+}
+
+STRING 103
+{
+Maiev Shadowsong
+}
+
+STRING 104
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Maiev26.mp3
+{
+What you did was murder my Watchers and set the Betrayer free! It is you who should be locked in a cage.
+}
+
+STRING 105
+{
+Malfurion Stormrage
+}
+
+STRING 106
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Furion27.mp3
+{
+Stop this, both of you! We're not out of danger yet. Maiev, what's the situation here?
+}
+
+STRING 107
+{
+Maiev Shadowsong
+}
+
+STRING 108
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Maiev28.mp3
+{
+There are no resources left in this area, Shan'do. We'll need to find a gold mine if we're to marshal more troops for an assault on Illidan's compound.
+}
+
+STRING 109
+{
+Malfurion Stormrage
+}
+
+STRING 110
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Furion29.mp3
+{
+Very well. Let's get moving, then.
+}
+
+STRING 111
+{
+Maiev Shadowsong
+}
+
+STRING 112
+{
+We've wasted too much time. The longer we wait to attack, the stronger Illidan's forces become. We must strike soon, Shan'do!
+}
+
+STRING 113
+{
+Maiev Shadowsong
+}
+
+STRING 114
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Maiev41.mp3
+{
+Victory is ours! It has been an honor to fight at your side, Shan'do.
+}
+
+STRING 115
+{
+Malfurion Stormrage
+}
+
+STRING 116
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Furion42.mp3
+{
+This battle is far from over, Maiev. Illidan has yet to be accounted for, and I've seen no sign of Tyrande, either.
+}
+
+STRING 118
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Tyrande43.mp3
+{
+Show yourself, Illidan! It's over!
+}
+
+STRING 119
+{
+Illidan Stormrage
+}
+
+STRING 120
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Illidan44.mp3
+{
+Not yet, my little priestess. A pity you couldn't see things my way. Now you--and the whole world--will understand just what I'm capable of! Ash Karath! 
+}
+
+STRING 125
+{
+Malfurion Stormrage
+}
+
+STRING 126
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Furion47.mp3
+{
+Don't worry, my love. We'll find Illidan wherever he runs. We'll find him.
+}
+
+STRING 157
+{
+|cffffcc00MISSION FAILED|r
+Your base has been destroyed.
+}
+
+STRING 158
+{
+Malfurion Stormrage
+}
+
+STRING 159
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Furion02.mp3
+{
+We've landed safely, but a few of our ships may have run aground on the outlying islands. I hate to leave any of our forces behind, but we simply have no time to wait.
+}
+
+STRING 162
+{
+Malfurion Stormrage
+}
+
+STRING 163
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Furion11.mp3
+{
+Just as I suspected; our ships did run aground here. The special allies I brought from Ashenvale should be somewhere in the vicinity.
+}
+
+STRING 164
+{
+Tyrande Whisperwind
+}
+
+STRING 165
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Tyrande12.mp3
+{
+Special allies?
+}
+
+STRING 170
+{
+Malfurion Stormrage
+}
+
+STRING 171
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Furion13.mp3
+{
+Just keep searching. You'll know them when you see them.
+}
+
+STRING 172
+{
+Reach the second ship
+}
+
+STRING 173
+{
+Reach the third ship
+}
+
+STRING 174
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r 
+Night Elf Fleet
+  - |cff808080Reach the first ship (Completed)|r
+  - Reach the second ship
+  - Reach the third ship
+}
+
+STRING 178
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r 
+Night Elf Fleet
+  - |cff808080Reach the first ship (Completed)|r
+  - |cff808080Reach the second ship (Completed)|r
+  - Reach the third ship
+}
+
+STRING 189
+{
+Malfurion Stormrage
+}
+
+STRING 190
+{
+We must move quickly to save Maiev!
+}
+
+STRING 191
+{
+Malfurion Stormrage
+}
+
+STRING 192
+{
+We must reach the warden's base quickly!
+}
+
+STRING 193
+{
+Tyrande Whisperwind
+}
+
+STRING 194
+{
+Maiev's forces won't hold out much longer!
+}
+
+STRING 197
+{
+Tyrande Whisperwind
+}
+
+STRING 198
+{
+We're running out of time. We must reach Maiev quickly!
+}
+
+STRING 200
+{
+There! Our missing comrades--the mountain giants!
+}
+
+STRING 202
+{
+By Elune... I haven't seen one of their kind in ages.
+}
+
+STRING 204
+{
+The Legion's coming awoke many of our old friends from their timeless slumber. These mighty ones will be of great help to us.
+}
+
+STRING 205
+{
+|cff87ceebUNIT RESCUED|r
+  - Units from the Night Elf fleet have joined your army.
+}
+
+STRING 206
+{
+|cff87ceebNEW UNIT ACQUIRED|r
+Mountain Giant - Massive slow moving melee unit that has the Taunt and War Club abilities.
+}
+
+STRING 207
+{
+Malfurion Stormrage
+}
+
+STRING 208
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Furion09.mp3
+{
+We'll have to fight our way through the naga to reach Maiev.
+}
+
+STRING 209
+{
+Tyrande Whisperwind
+}
+
+STRING 210
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Tyrande10.mp3
+{
+Then these foul beasts shall feel the wrath of the goddess' light!
+}
+
+STRING 211
+{
+|cff32cd32HINT|r - Move your Tree of Ages and begin harvesting from this mine.
+}
+
+STRING 212
+{
+|cff32cd32HINT|r - Gold Coins can be picked up to provide gold for Maiev to build reinforcements.
+}
+
+STRING 213
+{
+Illidan Stormrage
+}
+
+STRING 214
+{
+Tyrande! What are you doing here? This battle does not concern you.
+}
+
+STRING 215
+{
+Tyrande Whisperwind
+}
+
+STRING 216
+{
+I was wrong to set you free, Illidan. I can see that now. You've become a monster.
+}
+
+STRING 217
+{
+Illidan Stormrage
+}
+
+STRING 218
+{
+Monster? Is that what you think of me? I have always... cared for you, Tyrande. I sought only to prove my worthiness--my power!
+}
+
+STRING 219
+{
+Tyrande Whisperwind
+}
+
+STRING 220
+{
+Raw power is no substitute for true strength, Illidan. That is why I chose your brother over you.
+}
+
+STRING 221
+{
+Illidan Stormrage
+}
+
+STRING 222
+{
+Still you refuse to see me for what I truly am. You believe me to be a villian--your enemy. But soon now, you will see our enemies are the same!
+}
+
+STRING 239
+{
+Illidan Stormrage
+}
+
+STRING 240
+{
+I can scarcely believe you survived. You're more resourceful than I imagined, little warden.
+}
+
+STRING 241
+{
+Maiev Shadowsong
+}
+
+STRING 242
+{
+I am the hand of justice, Illidan. Long ago I swore an oath to keep you chained, and by all the gods, I shall!
+}
+
+STRING 244
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Illidan38.mp3
+{
+Brother! What are you doing here?
+}
+
+STRING 245
+{
+Malfurion Stormrage
+}
+
+STRING 246
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Furion39.mp3
+{
+I've come to stop you, Illidan. Instead of banishing you, I should have returned you to your cage when I had the chance! I was weak then--but no longer.
+}
+
+STRING 247
+{
+Illidan Stormrage
+}
+
+STRING 248
+// Sound\Dialogue\NightElfExpCamp\NightElf05x\S05Illidan40.mp3
+{
+I have sworn allegiance to a new master, brother. I have a great task to perform in his service. I'm sorry, but I cannot allow you to stand in my way.
+}
+
+STRING 249
+{
+Lady Serpentra
+}
+
+STRING 250
+{
+Uber Ensnare
+}
+
+STRING 253
+{
+Sea Creature Dwellings
+}
+
+STRING 254
+{
+Night Elf Fleet Location
+}
+
+STRING 255
+{
+Illidan's Naga
+}
+
+STRING 256
+{
+Land Creature Dwellings
+}
+
+STRING 257
+{
+|cff32cd32HINT|r - Tyrande Wisperwind and Malfurion Stormrage, the two most powerful Night Elf Heroes, are both level 10 and fully prepared to challenge all who stand against them.
+}
+

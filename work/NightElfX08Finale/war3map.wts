@@ -1,0 +1,222 @@
+﻿STRING 5
+{
+Force 1
+}
+
+STRING 6
+{
+NightElfX08Finale
+}
+
+STRING 7
+{
+1
+}
+
+STRING 8
+{
+Finale: A Parting of Ways
+}
+
+STRING 9
+{
+Blizzard Entertainment
+}
+
+STRING 11
+{
+Elite Huntress
+}
+
+STRING 43
+{
+Elite Druid of the Claw (Bear Form)
+}
+
+STRING 44
+{
+Elite Bear Form
+}
+
+STRING 47
+{
+Force 2
+}
+
+STRING 50
+{
+Finale
+}
+
+STRING 51
+{
+A Parting of Ways
+}
+
+STRING 52
+{
+Moments later, at the night elves' base camp, Illidan prepares for his departure.
+}
+
+STRING 53
+{
+Elite Archer
+}
+
+STRING 55
+{
+SentinelSpawner
+}
+
+STRING 56
+{
+FREESentinel
+}
+
+STRING 57
+{
+Sentinels
+}
+
+STRING 59
+{
+The Scourge
+}
+
+STRING 220
+{
+Waterfall FLAT
+}
+
+STRING 239
+{
+(Tyrande's)
+}
+
+STRING 240
+{
+River Golem
+}
+
+STRING 248
+{
+Shadowglen Berserker
+}
+
+STRING 250
+{
+Shadowglen High Priest
+}
+
+STRING 251
+{
+Shadowglen Healer
+}
+
+STRING 252
+{
+Tyrande's
+}
+
+STRING 253
+{
+Krag'jin
+}
+
+STRING 255
+{
+Shadowglen Trolls
+}
+
+STRING 256
+{
+Illidan's Naga
+}
+
+STRING 260
+{
+Malfurion's Force
+}
+
+STRING 262
+{
+Malfurion Stormrage
+}
+
+STRING 263
+// Sound\Dialogue\NightElfExpCamp\NightElf08xInterlude\S08Furion49.mp3
+{
+You have brought much suffering to the world, Illidan. For that, you can never be forgiven. However, you saved the life of my love. For that I will let you go. But, should you ever threaten my people again--
+}
+
+STRING 264
+{
+Illidan Stormrage
+}
+
+STRING 265
+// Sound\Dialogue\NightElfExpCamp\NightElf08xInterlude\S08Illidan50.mp3
+{
+I understand, brother. Lordship over this world was never my aim... only power... only the magic. I've lingered here too long. I must go. By aiding you, I have betrayed my new master. If I am not careful, his wrath will be my end.
+}
+
+STRING 266
+{
+Illidan Stormrage
+}
+
+STRING 267
+// Sound\Dialogue\NightElfExpCamp\NightElf08xInterlude\S08Illidan51.mp3
+{
+Farewell, brother--Tyrande. I doubt our paths will cross again. En'shu falah-nah.
+}
+
+STRING 268
+{
+Maiev Shadowsong
+}
+
+STRING 269
+// Sound\Dialogue\NightElfExpCamp\NightElf08xInterlude\S08Maiev52.mp3
+{
+Fools! Have you no sense of justice?
+}
+
+STRING 270
+{
+Tyrande Whisperwind
+}
+
+STRING 271
+// Sound\Dialogue\NightElfExpCamp\NightElf08xInterlude\S08Tyrande53.mp3
+{
+Maiev, Illidan has atoned for his crimes! He is no longer a threat to--
+}
+
+STRING 272
+{
+Malfurion Stormrage
+}
+
+STRING 273
+// Sound\Dialogue\NightElfExpCamp\NightElf08xInterlude\S08Furion54.mp3
+{
+It's no use, Tyrande. She has become vengeance itself, bound forever to the hunt. I only pray that in her zeal, she doesn’t cause even more havoc than Illidan.
+}
+
+STRING 274
+{
+Tyrande Whisperwind
+}
+
+STRING 275
+// Sound\Dialogue\NightElfExpCamp\NightElf08xInterlude\S08Tyrande55.mp3
+{
+Now, let’s go home, beloved. We’ve earned our rest.
+}
+
+STRING 276
+{
+Murloc Riverlord
+}
+

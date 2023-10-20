@@ -1,0 +1,173 @@
+﻿STRING 3
+{
+HumanX03Interlude
+}
+
+STRING 4
+{
+1
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 7
+{
+Interlude
+}
+
+STRING 10
+{
+Alliance of Lordaeron
+}
+
+STRING 11
+{
+Undead Scourge
+}
+
+STRING 12
+{
+Book of Beards
+}
+
+STRING 24
+{
+Kargin Ironknee
+}
+
+STRING 25
+{
+Purchase Book of Beards
+}
+
+STRING 27
+{
+A book.
+}
+
+STRING 28
+{
+This book is full of beard styles and trimming techniques.
+}
+
+STRING 29
+{
+Prince Kael'thas
+}
+
+STRING 30
+// Sound\Dialogue\HumanExpCamp\Human04xInterlude\A04Kael34.mp3
+{
+What is this desolate place, Vashj?
+}
+
+STRING 49
+{
+Player 1
+}
+
+STRING 50
+{
+Player 2
+}
+
+STRING 51
+{
+Player 3
+}
+
+STRING 52
+{
+The Dusts of Outland
+}
+
+STRING 53
+{
+Prince Kael'thas
+}
+
+STRING 54
+// Sound\Dialogue\HumanExpCamp\Human04xInterlude\A04Kael36.mp3
+{
+Amazing. I remember when Khadgar led the Alliance Expedition here, years ago. He almost succeeded in wiping the orcs out for good.
+}
+
+STRING 55
+{
+Lady Vashj
+}
+
+STRING 56
+// Sound\Dialogue\HumanExpCamp\Human04xInterlude\A04LadyVashj35.mp3
+{
+This shattered world is called Outland, young prince. It is all that remains of Draenor, the former homeland of the orcish Horde.
+}
+
+STRING 57
+{
+Prince Kael'thas
+}
+
+STRING 58
+// Sound\Dialogue\HumanExpCamp\Human04xInterlude\A04Kael37.mp3
+{
+In an attempt to escape, Ner'zhul opened a number of massive dimensional gateways, but all they succeeded in doing was tearing the planet apart.
+}
+
+STRING 59
+{
+Lady Vashj
+}
+
+STRING 60
+// Sound\Dialogue\HumanExpCamp\Human04xInterlude\A04LadyVashj38.mp3
+{
+Yes. And now, amongst the ruins of this dead world, we have come to find the master.
+}
+
+STRING 61
+{
+Lady Vashj
+}
+
+STRING 62
+// Sound\Dialogue\HumanExpCamp\Human04xInterlude\A04LadyVashj40.mp3
+{
+That I do not know. Regardless, we should seek him out quickly.
+}
+
+STRING 63
+{
+Prince Kael'thas
+}
+
+STRING 64
+// Sound\Dialogue\HumanExpCamp\Human04xInterlude\A04Kael39.mp3
+{
+Illidan... why here? What could possibly interest him in this barren wasteland?
+}
+
+STRING 65
+{
+Prince Kael'thas
+}
+
+STRING 66
+// Sound\Dialogue\HumanExpCamp\Human04xInterlude\A04Kael41.mp3
+{
+Agreed. Actually, I am anxious to meet him again. If he can cure my people of their hunger for magic, I will gladly pledge myself to his service.
+}
+
+STRING 67
+{
+After hours of marching, Kael'thas and Lady Vashj stand on a high plateau overlooking the red, barren landscape of Outland.
+}
+
+STRING 68
+{
+Interlude: The Dusts of Outland
+}
+

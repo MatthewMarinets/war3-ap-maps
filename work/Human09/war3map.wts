@@ -1,0 +1,498 @@
+﻿STRING 0
+{
+Defeat!
+}
+
+STRING 3
+{
+Mal'Ganis
+}
+
+STRING 4
+{
+Human09
+}
+
+STRING 5
+{
+1
+}
+
+STRING 6
+{
+Chapter Nine: Frostmourne
+}
+
+STRING 7
+{
+Blizzard Entertainment
+}
+
+STRING 8
+{
+Chapter Nine
+}
+
+STRING 9
+{
+Frostmourne
+}
+
+STRING 10
+{
+The next day, at Arthas' base camp...
+}
+
+STRING 14
+{
+Muradin Bronzebeard
+}
+
+STRING 15
+{
+You lied to your men and betrayed the mercenaries who fought for you. What's happening to you, Arthas? Is vengeance all that's important to you?
+}
+
+STRING 16
+{
+Arthas
+}
+
+STRING 17
+{
+Spare me, Muradin. You weren't there to see what Mal'Ganis did to my homeland.
+}
+
+STRING 18
+{
+Mal'Ganis
+}
+
+STRING 19
+{
+The Dark Lord said you would come. This is where your journey ends, boy. Trapped and freezing at the roof of the world, with only death to sing the tale of your doom.
+}
+
+STRING 20
+{
+Muradin Bronzebeard
+}
+
+STRING 21
+{
+This looks bad. We're completely surrounded.
+}
+
+STRING 22
+{
+Arthas
+}
+
+STRING 23
+{
+There's still one chance. Help me claim Frostmourne! If it's as powerful as you said, it might tilt the scales in our favor!
+}
+
+STRING 24
+{
+Muradin Bronzebeard
+}
+
+STRING 25
+{
+I have a bad feeling about this, lad. But I promised I'd see this through.
+}
+
+STRING 26
+{
+Arthas
+}
+
+STRING 27
+{
+Captain, I'll leave you to organize our defense. Let's move out.
+}
+
+STRING 28
+{
+Locate Frostmourne
+}
+
+STRING 29
+{
+Arthas must survive
+}
+
+STRING 30
+{
+Frostmourne
+}
+
+STRING 31
+{
+The only way to counter Mal'Ganis' power is to find the mysterious runeblade known as Frostmourne and bend its powers to your will. Though the cost may be high, only Frostmourne's power will ensure that justice is done.
+}
+
+STRING 35
+{
+So, you've taken up Frostmourne at the expense of your comrades' lives, just as the Dark Lord said you would. You're stronger than I thought.
+}
+
+STRING 36
+{
+Arthas
+}
+
+STRING 37
+{
+You waste your breath, Mal'Ganis. I heed only the voice of Frostmourne now.
+}
+
+STRING 38
+{
+Mal'Ganis
+}
+
+STRING 39
+{
+Guardian
+}
+
+STRING 40
+{
+Turn back, mortals. Death and darkness are all that await you in this forsaken vault.
+}
+
+STRING 45
+{
+Guardian
+}
+
+STRING 46
+{
+Turn away... before it's... too late.
+}
+
+STRING 52
+{
+Arthas
+}
+
+STRING 53
+{
+Behold, Muradin, our salvation, Frostmourne.
+}
+
+STRING 54
+{
+Muradin Bronzebeard
+}
+
+STRING 55
+{
+Hold, lad. There's an inscription on the dais. It's a warning. It says, "Whomsoever takes up this blade shall wield power eternal. Just as the blade rends flesh, so must power scar the spirit." Oh, I should've known. The blade is cursed! Let's get the hell out of here!
+}
+
+STRING 56
+{
+Arthas
+}
+
+STRING 57
+{
+I would gladly bear any curse to save my homeland.
+}
+
+STRING 58
+{
+Muradin Bronzebeard
+}
+
+STRING 59
+{
+Leave it be, Arthas. Forget this business and lead your men home.
+}
+
+STRING 60
+{
+Muradin must survive
+}
+
+STRING 61
+{
+Destroy Mal'Ganis' Base
+}
+
+STRING 63
+{
+After taking his vengeance upon Mal'Ganis, Prince Arthas wandered off into the frozen wastelands of Northrend.
+
+
+}
+
+STRING 64
+{
+Captain
+}
+
+STRING 65
+{
+Prince Arthas! Where is Muradin? We can't hold out for much longer!
+}
+
+STRING 66
+{
+Arthas
+}
+
+STRING 67
+{
+Muradin is dead. But take heart, Captain. The enemy will not stand long against the might of Frostmourne!
+}
+
+STRING 68
+{
+|cFFFFCC00MAIN QUEST|r
+Frostmourne
+  - Locate Frostmourne
+  - Arthas must survive
+  - Muradin must survive
+}
+
+STRING 72
+{
+|cFFFFCC00MAIN QUEST COMPLETED|r
+Mal'Ganis
+}
+
+STRING 73
+{
+Arthas
+}
+
+STRING 74
+{
+It is finished.
+}
+
+STRING 81
+{
+You hear the voice of the Dark Lord. He whispers to you through the blade you wield. What does he say, young human? What does the Dark Lord of the Dead tell you now?
+}
+
+STRING 82
+{
+Arthas
+}
+
+STRING 83
+{
+He tells me that the time for my vengeance has come.
+}
+
+STRING 84
+{
+Mal'Ganis
+}
+
+STRING 85
+{
+What? He can't possibly mean to--
+}
+
+STRING 86
+{
+|cFFFFCC00MAIN QUEST COMPLETED|r
+Frostmourne
+}
+
+STRING 87
+{
+|cFFFFCC00MAIN QUEST|r
+Mal'Ganis
+  - Destroy Mal'Ganis' Base
+}
+
+STRING 91
+{
+The Guardian
+}
+
+STRING 93
+{
+Mal'Ganis
+}
+
+STRING 94
+{
+Mal'Ganis engineered the Scourge and set the Undead loose throughout Lordaeron. He forced you to slay your countrymen and lead your troops into certain doom. Now, you must make him pay for every life he's brought to ruin.
+}
+
+STRING 100
+{
+Arthas
+}
+
+STRING 101
+{
+Damn the men! Nothing shall prevent me from having my revenge, old friend. Not even you.
+}
+
+STRING 102
+{
+Arthas
+}
+
+STRING 103
+{
+Now, I call out to the spirits of this place. I will give anything or pay any price, if only you will help me save my people.
+}
+
+STRING 104
+{
+Arthas
+}
+
+STRING 105
+{
+I'm so tired.
+}
+
+STRING 106
+{
+|cFFFFCC00MAIN QUEST COMPLETED|r
+Frostmourne
+}
+
+STRING 107
+{
+|cFFFFCC00MAIN QUEST|r
+Mal'Ganis
+  - Destroy Mal'Ganis' Base
+}
+
+STRING 108
+{
+|cFFFFCC00MAIN QUEST COMPLETED|r
+Frostmourne
+}
+
+STRING 109
+{
+|cFFFFCC00MAIN QUEST|r
+Mal'Ganis
+  - Destroy Mal'Ganis' Base
+}
+
+STRING 150
+{
+Arthas
+}
+
+STRING 151
+{
+I doubt there's anything down here more terrifying than what we've faced already.
+}
+
+STRING 158
+{
+Guardian
+}
+
+STRING 159
+{
+Believe what you will, boy. You shall not pass.
+}
+
+STRING 210
+{
+Tormented by Frostmourne's maddening voice, Arthas lost the last vestiges of his sanity.
+
+
+}
+
+STRING 211
+{
+Now, driven by the sword's dark will, Arthas plans to return home to Lordaeron and claim his just reward...
+
+
+}
+
+STRING 212
+{
+|cff87CEEBNEW UNIT AVAILABLE|r 
+Gryphon Rider - You may now build Gryphon Riders from the Gryphon Aviary. They are powerful flying creatures, mounted by Dwarven hammer-throwers.
+}
+
+STRING 213
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 214
+{
+|cffffcc00MISSION FAILED|r
+Arthas has been slain.
+}
+
+STRING 215
+{
+|cffffcc00MISSION FAILED|r
+Muradin has been slain.
+}
+
+STRING 216
+{
+Alliance Forces
+}
+
+STRING 217
+{
+Undead Scourge
+}
+
+STRING 218
+{
+Undead Pillagers
+}
+
+STRING 219
+{
+|cFFFFCC00MAIN QUEST|r
+Frostmourne
+  - Locate Frostmourne
+  - Arthas must survive
+  - Muradin must survive
+}
+
+STRING 220
+{
+Medium
+}
+
+STRING 221
+{
+Hard
+}
+
+STRING 226
+{
+Arthas
+}
+
+STRING 227
+{
+Still trying to protect the sword, are you?
+}
+
+STRING 256
+{
+Guardian
+}
+
+STRING 257
+{
+No... trying to protect you... from it.
+}
+

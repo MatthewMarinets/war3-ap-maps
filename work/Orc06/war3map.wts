@@ -1,0 +1,427 @@
+﻿STRING 0
+{
+Orc Scout
+}
+
+STRING 1
+{
+Orc06
+}
+
+STRING 2
+{
+1
+}
+
+STRING 3
+{
+Chapter Six: Where Wyverns Dare
+}
+
+STRING 4
+{
+Blizzard Entertainment
+}
+
+STRING 5
+{
+Warchief, we scouted the peak as you ordered. The humans have entrenched their fortifications all the way up to the summit.
+}
+
+STRING 14
+{
+Thrall
+}
+
+STRING 15
+{
+What are they up to? If they're looking to pick a fight, they've had ample opportunities before this!
+}
+
+STRING 16
+{
+Chapter Six
+}
+
+STRING 17
+{
+Where Wyverns Dare
+}
+
+STRING 18
+{
+Harpy Queen
+}
+
+STRING 19
+{
+Be warned, old fool. Stonetalon Peak is ours. Neither these brutes nor the humans will leave this place alive. Attack, my sisters!
+}
+
+STRING 27
+{
+Train |cffffcc00W|rarlock
+}
+
+STRING 28
+{
+W
+}
+
+STRING 29
+{
+Level Designed by Deltree
+}
+
+STRING 32
+{
+Train Goblin |cffffcc00Z|reppelin
+}
+
+STRING 33
+{
+ 
+}
+
+STRING 39
+{
+Orcish Horde
+}
+
+STRING 48
+{
+At that same moment, near the base of Stonetalon Peak...
+}
+
+STRING 58
+{
+Defeat!
+}
+
+STRING 116
+{
+Cairne Bloodhoof
+}
+
+STRING 117
+{
+There! These proud beasts will now aid us in reaching the summit.
+}
+
+STRING 138
+{
+|cffffcc00OPTIONAL QUEST|r
+Wyverns
+  - Find the Wyverns
+}
+
+STRING 144
+{
+|cff87CEEBNEW UNIT AVAILABLE|r
+Wyvern - You may now build Wyverns from the Beastiary. They are highly mobile flying creatures and excellent at scouting. Wyverns can learn the Envenomed Spears ability.
+}
+
+STRING 172
+{
+Cairne Bloodhoof
+}
+
+STRING 173
+{
+Ish-ne-alo por-ah, young warchief!
+}
+
+STRING 174
+{
+Thrall
+}
+
+STRING 175
+{
+Cairne! What are you doing here?
+}
+
+STRING 176
+{
+Cairne Bloodhoof
+}
+
+STRING 177
+{
+Our debt to you orcs can only be repaid with blood. We've come to help you reach the Oracle. However, those metal-clad pinkskins look like trouble.
+}
+
+STRING 178
+{
+Thrall
+}
+
+STRING 179
+{
+Those pinkskins are called humans. They are our enemies from across the sea. They seem intent on keeping us from the peak.
+}
+
+STRING 180
+{
+Cairne Bloodhoof
+}
+
+STRING 181
+{
+Hmm. The Oracle's wisdom belongs to all. Perhaps the wyverns that live nearby can be of use to us? They have no love for hostile intruders! 
+}
+
+STRING 205
+{
+Thrall
+}
+
+STRING 206
+{
+Quickly, my warriors, the wyverns must be freed!
+}
+
+STRING 220
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Wyverns
+}
+
+STRING 225
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Defiled Fountain
+}
+
+STRING 226
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Defiled Fountain
+}
+
+STRING 230
+{
+Razormane Tent
+}
+
+STRING 236
+{
+|cff87CEEBNEW UNIT AVAILABLE|r
+Tauren - You may now build Tauren from the Tauren Totem. They are mighty warriors and can learn the Pulverize ability.
+}
+
+STRING 237
+{
+|cffffcc00MAIN QUEST|r
+Stonetalon Peak
+  - Destroy the Human base that guards the peak
+}
+
+STRING 238
+{
+Stonetalon Peak
+}
+
+STRING 239
+{
+The mysterious Oracle lies within the dark hollows of Stonetalon Peak.  Destroy the Human base to reach the craggy summit to enter the recesses of the foreboding peak.
+}
+
+STRING 240
+{
+Destroy the Human base guarding the peak
+}
+
+STRING 241
+{
+Wyverns
+}
+
+STRING 242
+{
+You must seek out the noble Wyverns of Kalimdor and enlist their aid.  
+}
+
+STRING 243
+{
+Defiled Fountain
+}
+
+STRING 244
+{
+The Fountain of Health, blessed by the goddess Elune in ancient times, has been fouled by the wicked Harpies.  You must recover the Glyph of Purification from the local Centaur Khan and use its energies to restore the Fountain's holy waters. Once that is done, the purified waters will replenish your warriors' health.
+}
+
+STRING 245
+{
+Kill the Centaur Khan
+}
+
+STRING 246
+{
+Return the Glyph of Purification to restore the Fountain
+}
+
+STRING 247
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r 
+Defiled Fountain
+  - |cff808080Kill Centaur Khan (Completed)|r
+  - Return the Glyph of Purification to restore the Fountain
+}
+
+STRING 248
+{
+Harpy Rogue
+}
+
+STRING 249
+{
+Thrall
+}
+
+STRING 250
+{
+This place has been defiled. I sense that the spirits have fled.
+}
+
+STRING 251
+{
+|cffffcc00OPTIONAL QUEST|r
+Defiled Fountain
+  - Kill the Centaur Khan
+  - Return the Glyph of Purification to restore the Fountain
+}
+
+STRING 258
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Wyverns
+}
+
+STRING 259
+{
+|cff87CEEBNEW UNIT AVAILABLE|r
+Wyvern - You may now build Wyverns from the Beastiary.
+}
+
+STRING 260
+{
+|cffffcc00REQUIRED QUEST COMPLETED|r
+Stonetalon Peak
+}
+
+STRING 261
+{
+|cffffcc00OPTIONAL QUEST|r
+Defiled Fountain
+  - Return the Glyph of Purification to restore the Fountain
+}
+
+STRING 262
+{
+|cffffcc00OPTIONAL QUEST|r
+Defiled Fountain
+  - |cff808080Kill Centaur Khan (Completed)|r
+  - Return the Glyph of Purification to restore the Fountain
+}
+
+STRING 266
+{
+Save the Wyverns from the vile Harpies
+}
+
+STRING 267
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r 
+Wyverns
+  - |cff808080Find the Wyverns (Completed)|r
+  - Save the captured Wyverns
+}
+
+STRING 268
+{
+Find the Wyverns
+}
+
+STRING 271
+{
+Human Expedition
+}
+
+STRING 272
+{
+Bloodhoof Tauren
+}
+
+STRING 273
+{
+Lordaeron Brigade
+}
+
+STRING 274
+{
+Kul Tiras Elite Corps
+}
+
+STRING 289
+{
+Cairne Bloodhoof
+}
+
+STRING 290
+{
+The harpies have enslaved the wyverns!
+}
+
+STRING 291
+{
+Cairne Bloodhoof
+}
+
+STRING 292
+{
+Hold, Warchief.
+}
+
+STRING 293
+{
+Thrall
+}
+
+STRING 294
+{
+That's the young sorceress Grom told me about. It appears that she seeks the Oracle as well.  
+}
+
+STRING 295
+{
+Cairne Bloodhoof
+}
+
+STRING 296
+{
+Be wary, young one. That cave is the perfect spot for an ambush.
+}
+
+STRING 297
+{
+Thrall
+}
+
+STRING 298
+{
+Don't worry, Cairne. I was raised by the humans. I know their tricks and stratagems. There's no way that I'll let them stop me from reaching the Oracle.
+}
+
+STRING 299
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 300
+{
+Defeat!
+}
+

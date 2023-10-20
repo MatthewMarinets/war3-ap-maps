@@ -1,0 +1,1032 @@
+﻿STRING 3
+{
+HumanX03
+}
+
+STRING 4
+{
+1
+}
+
+STRING 5
+{
+Chapter Three: The Dungeons of Dalaran
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 7
+{
+Chapter Three
+}
+
+STRING 8
+{
+The Dungeons of Dalaran
+}
+
+STRING 9
+{
+Two days later, within the magically shielded dungeons of Dalaran, Kael'thas and his blood elf brethren languish in their cells, awaiting their inevitable executions.
+}
+
+STRING 11
+{
+Prince Kael'thas
+}
+
+STRING 12
+// Sound\Dialogue\HumanExpCamp\Human03x\A03Kael01.mp3
+{
+How could I have let this happen to my brethren? Locked in these cells, our thirst for magic will devour us.
+}
+
+STRING 13
+{
+Guard Marcus
+}
+
+STRING 14
+// Sound\Dialogue\HumanExpCamp\Human03x\A03GuardOne02.mp3
+{
+It'll all be over soon, traitor. Lord Garithos plans to execute the lot of you at dawn.
+}
+
+STRING 15
+{
+Defeat!
+}
+
+STRING 16
+{
+Jailor Kassan
+}
+
+STRING 17
+{
+The old Jailor of the sewer prison of Dalaran blocks the final gate barring you from the surface. Kill him and those guarding the gate with him so that the wrongfully imprisoned Blood Elves can push the fight into the city.
+}
+
+STRING 18
+{
+Slay Jailor Kassan and his guards
+}
+
+STRING 19
+{
+|cffffcc00MAIN QUEST|r
+Slay Jailor Kassan
+  - Slay Jailor Kassan and his guards
+  - Kael and Vashj must survive
+}
+
+STRING 20
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Slay Jailor Kassan
+}
+
+STRING 21
+{
+Blood Elf Lieutenants
+}
+
+STRING 22
+{
+Garithos has imprisoned your Blood Elf Lieutenants within special magical cages. Break them free so that they can release your brethren and prepare for the upcoming battle with Garithos.
+}
+
+STRING 24
+{
+Kael and Vashj must survive
+}
+
+STRING 25
+{
+|cffffcc00MAIN QUEST|r
+Blood Elf Lieutenants
+  - Free the Blood Elf Lieutenants (0 of 4 Free)
+  - Kael and Vashj must survive
+}
+
+STRING 31
+{
+|cff87ceebNEW ITEM RECEIVED|r - Ring of the Archmagi
+This artifact increases in power as you collect each Gem Fragment.
+}
+
+STRING 41
+{
+Blood Sheep
+}
+
+STRING 42
+{
+The power of the Blood Sheep is to be reckoned with.
+}
+
+STRING 43
+{
+Inner Sheep
+}
+
+STRING 44
+{
+Cold Sheep
+}
+
+STRING 45
+{
+Sheep Fire
+}
+
+STRING 46
+{
+Sheep Blood
+}
+
+STRING 47
+{
+Sheep Frost
+}
+
+STRING 48
+{
+Cinematic Hurl Boulder
+}
+
+STRING 49
+{
+C
+}
+
+STRING 50
+{
+Garithos' Enforcers
+}
+
+STRING 51
+{
+Imprisoned Blood Elves
+}
+
+STRING 52
+{
+Trapped Scourge
+}
+
+STRING 53
+{
+Ghostly Archmagi
+}
+
+STRING 54
+{
+Ghostly Archmage
+}
+
+STRING 88
+{
+Battle Cruiser
+}
+
+STRING 89
+{
+Dalaran Guardians
+}
+
+STRING 90
+{
+Dalaran Experiments
+}
+
+STRING 91
+{
+Naga Reinforcements
+}
+
+STRING 92
+{
+Defeat!
+}
+
+STRING 93
+{
+|cffffcc00MISSION FAILED|r
+Kael has been slain.
+}
+
+STRING 94
+{
+|cffffcc00MISSION FAILED|r
+Vashj has been slain.
+}
+
+STRING 95
+{
+Defeat!
+}
+
+STRING 96
+{
+Kael and Vashj must survive
+}
+
+STRING 153
+{
+Ghosts of Dalaran
+}
+
+STRING 154
+{
+The ghosts of the Archmagi slaughtered by Arthas during the destruction of Dalaran still haunt the decrepit ruins of the prison. Find their trapped spirits and slay them to release their tormented souls and give them peace.
+}
+
+STRING 155
+{
+Slay the Ghostly Archmagi (0 of 4 Slain)
+}
+
+STRING 162
+{
+|cffffcc00OPTIONAL QUEST|r
+Ghosts of Dalaran
+  - Slay the Ghostly Archmagi (0 of 4 Slain)
+}
+
+STRING 166
+{
+|cffffcc00OPTIONAL QUEST|r
+Ghosts of Dalaran
+  - Slay the Ghostly Archmagi (1 of 4 Slain)
+}
+
+STRING 179
+{
+Sheep Speed
+}
+
+STRING 181
+{
+Sheep Cripple
+}
+
+STRING 182
+{
+F
+}
+
+STRING 188
+{
+Magical Runes Yellow
+}
+
+STRING 189
+{
+Magical Runes Purple
+}
+
+STRING 190
+{
+Magical Runes Light Blue
+}
+
+STRING 191
+{
+Magical Runes Red
+}
+
+STRING 192
+{
+Magical Runes Green
+}
+
+STRING 193
+{
+Magical Runes DarkBlue
+}
+
+STRING 194
+{
+Guard Trogdar
+}
+
+STRING 195
+// Sound\Dialogue\HumanExpCamp\Human03x\A03GuardTwo03.mp3
+{
+Sunrise can't get here fast enough. These elves give me the creeps.
+}
+
+STRING 196
+{
+Guard Marcus
+}
+
+STRING 197
+// Sound\Dialogue\HumanExpCamp\Human03x\A03GuardOne04.mp3
+{
+Don't worry. This prison was built by the Kirin Tor to keep their pets from getting loose. The elves' magic is useless inside those enchanted cells.
+}
+
+STRING 198
+{
+Lady Vashj
+}
+
+STRING 199
+// Sound\Dialogue\HumanExpCamp\Human03x\A03LadyVashj05.mp3
+{
+Greetings, Kael. I assume we're not too late.
+}
+
+STRING 200
+{
+Prince Kael'thas
+}
+
+STRING 201
+// Sound\Dialogue\HumanExpCamp\Human03x\A03Kael06.mp3
+{
+On the contrary, Vashj. Your timing is impeccable. Once again I am in your debt. But even if we free my brethren, there is nowhere to run. Garithos' forces outnumber us ten to one.
+}
+
+STRING 202
+{
+Lady Vashj
+}
+
+STRING 203
+// Sound\Dialogue\HumanExpCamp\Human03x\A03LadyVashj07.mp3
+{
+You stand at a dangerous crossroads. You can either stay here and be slaughtered by human hands... or choose a darker path... to freedom.
+}
+
+STRING 204
+{
+Prince Kael'thas
+}
+
+STRING 205
+// Sound\Dialogue\HumanExpCamp\Human03x\A03Kael08.mp3
+{
+What is this darker path?
+}
+
+STRING 206
+{
+Lady Vashj
+}
+
+STRING 207
+// Sound\Dialogue\HumanExpCamp\Human03x\A03LadyVashj09.mp3
+{
+In the city above us stands a portal--a gateway that leads to other worlds.
+}
+
+STRING 208
+{
+Prince Kael'thas
+}
+
+STRING 209
+// Sound\Dialogue\HumanExpCamp\Human03x\A03Kael10.mp3
+{
+Yes, I know it. The lich, Kel'Thuzad, opened it to bring Archimonde here.
+}
+
+STRING 210
+{
+Lady Vashj
+}
+
+STRING 211
+// Sound\Dialogue\HumanExpCamp\Human03x\A03LadyVashj11.mp3
+{
+Yes. My master, Illidan, awaits us on the other side of that portal! Lead your people to him, and he will forge you a new destiny. He will sate your people's burning hunger.
+}
+
+STRING 212
+{
+Prince Kael'thas
+}
+
+STRING 213
+// Sound\Dialogue\HumanExpCamp\Human03x\A03Kael12.mp3
+{
+Side with a rogue demon... or lead my people to their certain deaths. There is no choice here, Vashj. We'll have to free my lieutenants first. They'll be able to rally the others while we assault the exit.
+}
+
+STRING 214
+{
+Lady Vashj
+}
+
+STRING 215
+// Sound\Dialogue\HumanExpCamp\Human03x\A03LadyVashj13.mp3
+{
+As you will.
+}
+
+STRING 217
+// Sound\Dialogue\HumanExpCamp\Human03x\A03Kael17.mp3
+{
+That guard means to sound the alarm! Stop him!
+}
+
+STRING 218
+{
+Prince Kael'thas
+}
+
+STRING 219
+// Sound\Dialogue\HumanExpCamp\Human03x\A03Kael18.mp3
+{
+If he trips the alarm, they will send in elite troops to stop us.
+}
+
+STRING 220
+{
+Prince Kael'thas
+}
+
+STRING 221
+// Sound\Dialogue\HumanExpCamp\Human03x\A03Kael19.mp3
+{
+Do not allow him to reach the alarm!
+}
+
+STRING 222
+{
+Prince Kael'thas
+}
+
+STRING 223
+// Sound\Dialogue\HumanExpCamp\Human03x\A03Kael20.mp3
+{
+Stop him before he sounds the alarm!
+}
+
+STRING 224
+{
+Prince Kael'thas
+}
+
+STRING 225
+// Sound\Dialogue\HumanExpCamp\Human03x\A03Kael21.mp3
+{
+The alarm's been sounded! Prepare yourselves!
+}
+
+STRING 226
+{
+Prince Kael'thas
+}
+
+STRING 227
+// Sound\Dialogue\HumanExpCamp\Human03x\A03Kael22.mp3
+{
+The elite guards will be coming for us!
+}
+
+STRING 228
+{
+Prince Kael'thas
+}
+
+STRING 229
+// Sound\Dialogue\HumanExpCamp\Human03x\A03Kael23.mp3
+{
+Be wary! We've been discovered!
+}
+
+STRING 234
+{
+Prince Kael'thas
+}
+
+STRING 235
+// Sound\Dialogue\HumanExpCamp\Human03x\A03Kael24.mp3
+{
+Hmm. That switch on the other side of the wall will release the creatures upon the guards.
+}
+
+STRING 238
+{
+Blood Elf Lieutenant
+}
+
+STRING 239
+// Sound\Dialogue\HumanExpCamp\Human03x\A03LieutenantTwo26.mp3
+{
+As you command, Prince Kael.
+}
+
+STRING 244
+{
+Blood Elf Lieutenant
+}
+
+STRING 245
+// Sound\Dialogue\HumanExpCamp\Human03x\A03LieutenantFour29.mp3
+{
+Prince Kael!
+}
+
+STRING 246
+{
+Blood Elf Lieutenant
+}
+
+STRING 247
+// Sound\Dialogue\HumanExpCamp\Human03x\A03LieutenantThree27.mp3
+{
+It's good to see you alive, my prince. What are your orders?
+}
+
+STRING 252
+{
+Free the Blood Elf Lieutenants (0 of 4 Freed)
+}
+
+STRING 304
+{
+Blood Elf Lieutenant
+}
+
+STRING 305
+// Sound\Dialogue\HumanExpCamp\Human03x\A03LieutenantOne14.mp3
+{
+Prince Kael! We knew you'd come!
+}
+
+STRING 346
+{
+Reveals invisible units in an area around the Hero. Will also reveal ghosts. |nContains <dust,uses> charges. |nLasts <AItb,Dur1> seconds.
+}
+
+STRING 347
+{
+Waygate Doodad
+}
+
+STRING 348
+{
+Monstrous Spider
+}
+
+STRING 349
+{
+Spider Broodling
+}
+
+STRING 350
+{
+Prince Kael'thas
+}
+
+STRING 351
+// Sound\Dialogue\HumanExpCamp\Human03x\A03Kael48.mp3
+{
+I sense powerful spirits stirring nearby.
+}
+
+STRING 354
+{
+Prince Kael'thas
+}
+
+STRING 355
+// Sound\Dialogue\HumanExpCamp\Human03x\A03Kael49.mp3
+{
+Arthas murdered a number of Archmagi when the Scourge ravaged this land. Now the wizards' invisible spirits can find no rest. Perhaps we should track them down and give them peace.
+}
+
+STRING 356
+{
+Prince Kael'thas
+}
+
+STRING 357
+// Units\Human\Kael\KaelWhat5.wav
+{
+I sense something... elusive.
+}
+
+STRING 358
+{
+|cff32cd32HINT|r - Standing a unit on each rune in a set of matching runes can reveal secrets and open locked doors.
+}
+
+STRING 359
+{
+Prince Kael'thas
+}
+
+STRING 360
+// Units\Human\Kael\KaelYes2.wav
+{
+Outstanding!
+}
+
+STRING 361
+{
+Arcanite Golem
+}
+
+STRING 362
+{
+Secret Sheep
+}
+
+STRING 363
+{
+Flying Sheep On Fire
+}
+
+STRING 364
+{
+SheepOnFirePerm
+}
+
+STRING 366
+{
+Circle of Power (medium) White
+}
+
+STRING 367
+{
+Circle of Power (medium) Red
+}
+
+STRING 368
+{
+Circle of Power (medium) Blue
+}
+
+STRING 375
+{
+Guard Seth
+}
+
+STRING 376
+// Sound\Dialogue\HumanExpCamp\Human03x\A03GuardOne32.mp3
+{
+The blasted elves are free! We can't take 'em alone!
+}
+
+STRING 377
+{
+Guard Troy
+}
+
+STRING 378
+// Sound\Dialogue\HumanExpCamp\Human03x\A03GuardTwo33.mp3
+{
+We don't have to. We can loose these creatures on 'em!
+}
+
+STRING 379
+{
+Lesser Flesh Golem
+}
+
+STRING 388
+{
+Jailor Kassan
+}
+
+STRING 389
+// Sound\Dialogue\HumanExpCamp\Human03x\A03JailorKassan42.mp3
+{
+You've gone as far as you're going to go, Prince Kael. Make it easy on yourself.
+}
+
+STRING 390
+{
+Prince Kael'thas
+}
+
+STRING 391
+// Sound\Dialogue\HumanExpCamp\Human03x\A03Kael43.mp3
+{
+You served the Kirin Tor well, Kassan, but the old order has passed away. My people and I are leaving this damned prison one way or another.
+}
+
+STRING 392
+{
+Jailor Kassan
+}
+
+STRING 393
+// Sound\Dialogue\HumanExpCamp\Human03x\A03JailorKassan44.mp3
+{
+It's a shame to see a good wizard gone bad. Do what you have to do, lad.
+}
+
+STRING 412
+{
+Free the Blood Elf Lieutenants  (1 of 4 Freed)
+}
+
+STRING 413
+{
+Free the Blood Elf Lieutenants  (2 of 4 Freed)
+}
+
+STRING 414
+{
+Free the Blood Elf Lieutenants  (3 of 4 Freed)
+}
+
+STRING 415
+{
+Free the Blood Elf Lieutenants
+}
+
+STRING 416
+{
+Dungeon Exit
+}
+
+STRING 417
+{
+Slay the Ghostly Archmagi (1 of 4 Slain)
+}
+
+STRING 419
+{
+Slay the Ghostly Archmagi (2 of 4 Slain)
+}
+
+STRING 420
+{
+|cffffcc00OPTIONAL QUEST|r
+Ghosts of Dalaran
+  - Slay the Ghostly Archmagi (2 of 4 Slain)
+}
+
+STRING 421
+{
+Slay the Ghostly Archmagi (3 of 4 Slain)
+}
+
+STRING 422
+{
+|cffffcc00OPTIONAL QUEST|r
+Ghosts of Dalaran
+  - Slay the Ghostly Archmagi (3 of 4 Slain)
+}
+
+STRING 423
+{
+Slay the Ghostly Archmagi
+}
+
+STRING 425
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Ghosts of Dalaran
+}
+
+STRING 444
+{
+Prince Kael'thas
+}
+
+STRING 445
+// Sound\Dialogue\HumanExpCamp\Human03x\A03Kael35.mp3
+{
+The undead fled into these tunnels when we retook the city!
+}
+
+STRING 446
+{
+Elite Guard
+}
+
+STRING 447
+{
+|cffffcc00SECRET LEVEL FOUND|r
+You have unlocked a secret mission. Complete this mission to play.
+}
+
+STRING 448
+{
+Prince Kael'thas
+}
+
+STRING 449
+// Sound\Dialogue\HumanExpCamp\Human04x\A04Kael32.mp3
+{
+Alright, men. Pull back, back to the portal!
+}
+
+STRING 450
+{
+Lady Vashj
+}
+
+STRING 451
+// Sound\Dialogue\HumanExpCamp\Human04x\A04LadyVashj33.mp3
+{
+Now, young prince, we take one final step towards destiny.
+}
+
+STRING 456
+{
+Lady Vashj
+}
+
+STRING 457
+// Sound\Dialogue\HumanExpCamp\Human03x\A03LadyVashj46.mp3
+{
+Hold, good prince. We will need to keep the portal open long enough to usher everyone through. But Garithos' forces will likely attack it before we can make our escape.
+}
+
+STRING 458
+{
+Prince Kael'thas
+}
+
+STRING 459
+// Sound\Dialogue\HumanExpCamp\Human03x\A03Kael47.mp3
+{
+Then I will hold him at bay. I'll buy you all the time you'll need.
+}
+
+STRING 460
+{
+Prince Kael'thas
+}
+
+STRING 461
+// Sound\Dialogue\HumanExpCamp\Human03x\A03Kael45.mp3
+{
+My brethren are assembled, Vashj. Now all we need to do is reach this portal of yours and--
+}
+
+STRING 464
+{
+|cff32cd32HINT|r - Use Banish to stop guards from hitting alarm switches.
+}
+
+STRING 468
+{
+Blood Elf
+}
+
+STRING 470
+{
+|cffffcc00MISSION FAILED|r
+You have slain one of your own Lieutenants! Traitor!
+}
+
+STRING 471
+{
+Defeat!
+}
+
+STRING 472
+{
+Steel Arrowheads
+}
+
+STRING 473
+{
+Improved Steel Arrowheads
+}
+
+STRING 474
+{
+Advanced Steel Arrowheads
+}
+
+STRING 475
+{
+Upgrade to Steel A|cffffcc00r|rrowheads
+}
+
+STRING 476
+{
+Upgrade to Improved Steel A|cffffcc00r|rrowheads
+}
+
+STRING 477
+{
+Upgrade to Advanced Steel A|cffffcc00r|rrowheads
+}
+
+STRING 478
+{
+Increases the damage of Archers.
+}
+
+STRING 479
+{
+Further increases the damage of Archers.
+}
+
+STRING 480
+{
+Blood Elven Archer
+}
+
+STRING 484
+{
+Antonidas,Conjurus Rex,Landazar,Fordred Aran
+}
+
+STRING 486
+{
+Ghost
+}
+
+STRING 487
+{
+Conjurus Rex,Fordred Aran,Landazar,Antonidas
+}
+
+STRING 498
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Blood Elf Lieutenants
+ - Free the Blood Elf Lieutenants (1 of 4 Freed)
+ - Kael and Vashj must survive
+}
+
+STRING 499
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Blood Elf Lieutenants
+ - Free the Blood Elf Lieutenants (2 of 4 Freed)
+ - Kael and Vashj must survive
+}
+
+STRING 500
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Blood Elf Lieutenants
+ - Free the Blood Elf Lieutenants (3 of 4 Freed)
+ - Kael and Vashj must survive
+}
+
+STRING 501
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Blood Elf Lieutenants
+}
+
+STRING 502
+{
+|cff87ceebNEW UNIT ACQUIRED|r
+Blood Elf Lieutenant - Powerful melee unit with the Defend ability. Lieutenants are also immune to magic, and Flamestrike can be cast upon them without harming them.
+}
+
+STRING 503
+{
+Help!
+}
+
+STRING 504
+{
+Help us!
+}
+
+STRING 505
+{
+Nooo!
+}
+
+STRING 507
+{
+Save me!
+}
+
+STRING 508
+{
+Help us!
+}
+
+STRING 509
+{
+About time!
+}
+
+STRING 510
+{
+Help us
+}
+
+STRING 511
+{
+Even the elves get tired of waiting.
+}
+
+STRING 513
+{
+Help us!
+}
+

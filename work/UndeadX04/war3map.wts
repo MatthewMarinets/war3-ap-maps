@@ -1,0 +1,901 @@
+﻿STRING 1
+{
+Defeat!
+}
+
+STRING 3
+{
+UndeadX04
+}
+
+STRING 4
+{
+1
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 7
+{
+Chapter Four
+}
+
+STRING 10
+{
+Alliance of Lordaeron
+}
+
+STRING 11
+{
+Undead Scourge
+}
+
+STRING 12
+{
+Dragon Hoard
+}
+
+STRING 13
+{
+The ancient Dragon Sapphiron lies within the nearby caves. There are rumors that he guards a wondrous hoard of powerful items. Slay the Dragon and take them for your own.
+}
+
+STRING 14
+{
+Slay the Dragon Sapphiron
+}
+
+STRING 16
+{
+|cffffcc00OPTIONAL QUEST|r
+Dragon Hoard
+  - Slay the Dragon Sapphiron
+}
+
+STRING 17
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Dragon Hoard
+}
+
+STRING 19
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 20
+{
+Defeat!
+}
+
+STRING 22
+{
+|cff32cd32HINT|r - Use Arthas' Holy Light ability to heal your troops.
+}
+
+STRING 24
+{
+Kargin Ironknee
+}
+
+STRING 25
+{
+Purchase Book of Beards
+}
+
+STRING 27
+{
+A book.
+}
+
+STRING 28
+{
+This book is full of beard styles and trimming techniques.
+}
+
+STRING 29
+{
+King Arthas
+}
+
+STRING 30
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Arthas01.mp3
+{
+Northrend. It feels like a lifetime since I was last here.
+}
+
+STRING 34
+{
+|cff32cd32HINT|r - Crypt Fiends now have the Burrow ability.
+}
+
+STRING 35
+{
+The Landing
+}
+
+STRING 36
+{
+The Blood Elves are heavily encamped all around the shores of Northrend. You must lay siege to their island stronghold farther off the coast and take its resources for your own.
+}
+
+STRING 37
+{
+Destroy the Blood Elves' island stronghold
+}
+
+STRING 39
+{
+|cffffcc00MAIN QUEST|r
+The Landing
+  - Destroy the Blood Elves' island stronghold
+}
+
+STRING 40
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+The Landing
+}
+
+STRING 46
+{
+Book of Beards
+}
+
+STRING 47
+{
+Beetle
+}
+
+STRING 58
+{
+King Arthas
+}
+
+STRING 59
+{
+Snake-men! Who the hell are they? I have never seen their like in Northrend before.
+}
+
+STRING 72
+{
+Anub'arak
+}
+
+STRING 73
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Anubarak40.mp3
+{
+Most impressive. But you need to conserve your energies, death knight. We have a long road ahead of us.
+}
+
+STRING 76
+{
+Necromancer
+}
+
+STRING 77
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Necromancer04.mp3
+{
+My king, we'll need to establish a base here first, but this island is nearly devoid of resources.
+}
+
+STRING 78
+{
+King Arthas
+}
+
+STRING 79
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Arthas05.mp3
+{
+What the--
+}
+
+STRING 80
+{
+Blood Elf
+}
+
+STRING 81
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04BloodElf07.mp3
+{
+Prince Arthas, we are the blood elves! We have sworn to avenge the ghosts of Quel'Thalas. This dead land... will be cleansed!
+}
+
+STRING 82
+{
+King Arthas
+}
+
+STRING 83
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Arthas08.mp3
+{
+Northrend belongs to the Scourge, elf! You made a terrible mistake by coming here. Slay them!
+}
+
+STRING 112
+{
+The Return to Northrend
+}
+
+STRING 113
+{
+Three weeks later, King Arthas' ragged fleet drops anchor off the icy southern coasts of Northrend.
+}
+
+STRING 134
+{
+King Arthas
+}
+
+STRING 135
+{
+Seismic tremors. What tortures this land?
+}
+
+STRING 139
+{
+Zergling
+}
+
+STRING 140
+{
+Creature Attack Dragon
+}
+
+STRING 141
+{
+Improved Creature Attack Dragon
+}
+
+STRING 142
+{
+Advanced Creature Attack Dragon
+}
+
+STRING 148
+{
+King Arthas
+}
+
+STRING 149
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Arthas06.mp3
+{
+They look like high elves! What are they doing here?
+}
+
+STRING 204
+{
+Chapter Four: The Return to Northrend
+}
+
+STRING 205
+{
+Fire Pit NOPATHING
+}
+
+STRING 206
+{
+Fire Pit Trashed NOPATHING
+}
+
+STRING 207
+{
+Undead Shipyard
+}
+
+STRING 208
+{
+Skulls on Sticks NOPATHING
+}
+
+STRING 209
+{
+ (Frozen Solid)
+}
+
+STRING 210
+{
+Archway Icecrown Stone NOPATHING
+}
+
+STRING 211
+{
+Gate to Azjul-Nerub
+}
+
+STRING 213
+{
+Penguin King
+}
+
+STRING 214
+{
+Penguin Warrior
+}
+
+STRING 216
+{
+Penguin Royal Guard
+}
+
+STRING 217
+{
+Little Timmy
+}
+
+STRING 218
+{
+Penguin King's Lair
+}
+
+STRING 235
+{
+ (Uber)
+}
+
+STRING 236
+{
+Sapphiron
+}
+
+STRING 237
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Sapphiron32.mp3
+{
+You dare enter my lair? I am Sapphiron, ancient servant of Malygos the Spell-Weaver! Explain yourselves!
+}
+
+STRING 238
+{
+Arthas
+}
+
+STRING 239
+{
+Sorry we don't have time to chat, great wyrm. We've come to murder you and steal whatever artifacts you've hoarded over the centuries.
+}
+
+STRING 240
+{
+Sapphiron
+}
+
+STRING 241
+{
+Honesty, how refreshing. None may challenge Sapphiron and live!
+}
+
+STRING 242
+{
+King Arthas
+}
+
+STRING 243
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Arthas50.mp3
+{
+These elves are pathetic. It's no wonder we destroyed their homeland so easily. 
+}
+
+STRING 244
+{
+Prince Kael'thas
+}
+
+STRING 245
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Kael51.mp3
+{
+Pity I wasn't there to stop you. It's been a long time, Arthas.
+}
+
+STRING 246
+{
+King Arthas
+}
+
+STRING 247
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Arthas52.mp3
+{
+Prince Kael'thas. I haven't seen you since... You lead these elves?   
+}
+
+STRING 248
+{
+Prince Kael'thas
+}
+
+STRING 249
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Kael53.mp3
+{
+This group, at least. What you faced here was merely a scouting force. Defeating Lord Illidan's army will be far more difficult. 
+}
+
+STRING 250
+{
+King Arthas
+}
+
+STRING 251
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Arthas54.mp3
+{
+Illidan? He's behind this invasion? 
+}
+
+STRING 252
+{
+Prince Kael'thas
+}
+
+STRING 253
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Kael55.mp3
+{
+He is. Our forces are vast, Arthas. Even now, they march upon the Icecrown Glacier. You'll never make it in time to save your precious Lich King. 
+}
+
+STRING 254
+{
+Prince Kael'thas
+}
+
+STRING 255
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Kael56.mp3
+{
+Consider this payment for Quel'Thalas... and other insults. 
+}
+
+STRING 256
+{
+King Arthas
+}
+
+STRING 257
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Arthas57.mp3
+{
+He's right. We'll never reach the glacier in time!
+}
+
+STRING 258
+{
+Anub'arak
+}
+
+STRING 259
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Anubarak58.mp3
+{
+There is another route we might take, death knight. The ancient, shattered kingdom of Azjol-Nerub lies deep below us. Though it has fallen on dark times, it could provide us a direct shortcut to the glacier.
+}
+
+STRING 260
+{
+King Arthas
+}
+
+STRING 261
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Arthas59.mp3
+{
+We have little choice. Lead on, Anub'arak. 
+}
+
+STRING 282
+{
+King Arthas
+}
+
+STRING 283
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Arthas60.mp3
+{
+You're certain we can reach the glacier through these tunnels?
+}
+
+STRING 284
+{
+Anub'arak
+}
+
+STRING 285
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Anubarak61.mp3
+{
+Nothing is certain, death knight. The ruins will be perilous, but it's worth the risk. 
+}
+
+STRING 286
+{
+King Arthas
+}
+
+STRING 287
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Arthas62.mp3
+{
+All right. Let's go. 
+}
+
+STRING 290
+{
+Breakthrough
+}
+
+STRING 291
+{
+Now that you have sufficient resources, you need only break through the pass to Azjol-Nerub. Its guardians are vicious and care only for slaughter and bloodshed. Slay them, and the way through the pass is clear.
+}
+
+STRING 292
+{
+Slay the guardians
+}
+
+STRING 293
+{
+|cffffcc00MAIN QUEST|r
+Breakthrough
+  - Slay the guardians
+}
+
+STRING 294
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Breakthrough
+}
+
+STRING 295
+{
+Lady Serpentra
+}
+
+STRING 296
+{
+Necromancer
+}
+
+STRING 297
+{
+The earthquakes have shattered a glacial wall and revealed a new waterway! Perhaps our fleet can use this to our advantage.
+}
+
+STRING 303
+{
+|cffffcc00SECRET FOUND|r
+Little Timmy returned.
+}
+
+STRING 304
+{
+ (Cloud)
+}
+
+STRING 306
+{
+Archway Icy NOPATHING
+}
+
+STRING 307
+{
+Blood Elf Frigate
+}
+
+STRING 308
+{
+Blood Elf Battleship
+}
+
+STRING 331
+{
+King Arthas
+}
+
+STRING 332
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Arthas26.mp3
+{
+Thanks for the assistance, mighty one.
+}
+
+STRING 333
+{
+Anub'arak
+}
+
+STRING 334
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Anubarak27.mp3
+{
+The Lich King sent me to aid you, death knight. I am Anub'arak, ancient king of Azjol-Nerub.
+}
+
+STRING 335
+{
+King Arthas
+}
+
+STRING 336
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Arthas28.mp3
+{
+I welcome your aid, Anub'arak, but we have little time for pleasantries. We must reach Icecrown immediately!
+}
+
+STRING 337
+{
+Anub'arak
+}
+
+STRING 338
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Anubarak24.mp3
+{
+Onward for the Scourge! Slay them in Ner'zhul's name!
+}
+
+STRING 339
+{
+King Arthas
+}
+
+STRING 340
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Arthas25.mp3
+{
+Who the--?
+}
+
+STRING 341
+{
+King Arthas
+}
+
+STRING 342
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Arthas03.mp3
+{
+Something out there is threatening the Lich King. We must reach Icecrown quickly.
+}
+
+STRING 347
+{
+Anub'arak
+}
+
+STRING 348
+{
+There is a dragon that lives in the hills nearby. The creature may hold artifacts that could protect us on our march. 
+}
+
+STRING 349
+{
+Illidan's Forces
+}
+
+STRING 350
+{
+ (Attack Only)
+}
+
+STRING 359
+{
+Large Penguin
+}
+
+STRING 362
+{
+King Arthas
+}
+
+STRING 363
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Arthas11.mp3
+{
+They must have a base around here somewhere.
+}
+
+STRING 364
+{
+Fish Dead Green
+}
+
+STRING 365
+{
+Fish Dead Blue
+}
+
+STRING 366
+{
+Fish Dead Red
+}
+
+STRING 372
+{
+EVENT FIRED
+}
+
+STRING 373
+{
+TEST SUCCEEDED
+}
+
+STRING 374
+{
+King Arachnathid
+}
+
+STRING 375
+{
+King Arthas
+}
+
+STRING 376
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Arthas36.mp3
+{
+Aarrghh...
+}
+
+STRING 377
+{
+The Lich King
+}
+
+STRING 378
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04LichKing37.mp3
+{
+Make haste! My enemies draw near! Our time is almost spent!
+}
+
+STRING 379
+{
+Anub'arak
+}
+
+STRING 380
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Anubarak38.mp3
+{
+Are you well, death knight?
+}
+
+STRING 381
+{
+King Arthas
+}
+
+STRING 382
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Arthas39.mp3
+{
+My powers are weakening, but I'll be all right.
+}
+
+STRING 383
+{
+King Arthas
+}
+
+STRING 384
+// Sound\Dialogue\UndeadExpCamp\Undead04x\L04Arthas39A.mp3
+{
+At least I still have enough power to do this.
+}
+
+STRING 385
+{
+Blue Dragonspawn Lord
+}
+
+STRING 386
+{
+Pathing Blocker (Air) (Large) (Sight)
+}
+
+STRING 391
+{
+King Arthas
+}
+
+STRING 392
+{
+Another earthquake. This can't be good.
+}
+
+STRING 395
+{
+King Arthas
+}
+
+STRING 396
+{
+Seismic tremors. What tortures this land?
+}
+
+STRING 402
+{
+Gate to Azjol-Nerub
+}
+
+STRING 404
+{
+I am lost. Help me!
+}
+
+STRING 405
+{
+Azjol-Nerub Passage
+}
+
+STRING 406
+{
+Defeat!
+}
+
+STRING 407
+{
+|cffffcc00MISSION FAILED|r
+All of your units have died.
+}
+
+STRING 409
+{
+|cffffcc00SECRET FOUND|r
+Penguin King
+}
+
+STRING 410
+{
+ 04
+}
+
+STRING 411
+{
+ 01
+}
+
+STRING 412
+{
+ 02
+}
+
+STRING 413
+{
+ 03
+}
+
+STRING 414
+{
+ 05
+}
+
+STRING 416
+{
+Nerubian Spider
+}
+
+STRING 418
+{
+ (hard)
+}
+
+STRING 419
+{
+Summon Nerubian Spider
+}
+
+STRING 420
+{
+Summon Nerubian Seer (Hard)
+}
+
+STRING 422
+{
+ 03a
+}
+
+STRING 423
+{
+ (Neutral Hostile) 02
+}
+
+STRING 424
+{
+Nerubian Guardians
+}
+
+STRING 425
+{
+Nerubian Lord
+}
+
+STRING 426
+{
+Spiderling
+}
+

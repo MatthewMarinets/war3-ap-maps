@@ -1,0 +1,327 @@
+﻿STRING 0
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Investigate Andorhal
+}
+
+STRING 2
+{
+Arthas
+}
+
+STRING 3
+{
+Let's build a base camp here. With those cultists creeping around, I'd rather not head in there without backup.
+}
+
+STRING 4
+{
+Human04
+}
+
+STRING 5
+{
+Jaina Proudmoore
+}
+
+STRING 7
+{
+I couldn't agree more.
+}
+
+STRING 8
+{
+|cffffcc00MAIN QUEST|r
+Investigate Andorhal
+  - Explore Andorhal
+}
+
+STRING 9
+{
+|cffffcc00MAIN QUEST|r
+Confront Kel'Thuzad
+  - Find Kel'Thuzad
+}
+
+STRING 10
+{
+|cffffcc00MAIN QUEST|r
+Investigate Andorhal
+  - Explore Andorhal
+}
+
+STRING 11
+{
+|cff32CD32HINT|r - Increase your gold mining capacity by mining from a newly discovered gold mine.
+}
+
+STRING 12
+{
+|cff32CD32HINT|r - Additional Peasants may help construct a building for a faster build speed.
+}
+
+STRING 13
+{
+Jaina Proudmoore
+}
+
+STRING 14
+{
+Look! It's those cultists who were with the necromancer! What are they doing to that mine? 
+}
+
+STRING 17
+{
+Jaina Proudmoore
+}
+
+STRING 18
+{
+What do you mean?
+}
+
+STRING 19
+{
+Regional Defenders
+}
+
+STRING 21
+{
+Acolyte
+}
+
+STRING 22
+{
+Damn these intruders! They must not interfere with the master's plan!
+}
+
+STRING 23
+{
+Kel'Thuzad
+}
+
+STRING 24
+{
+Hello again, children. I am Kel'Thuzad, and I've come to deliver a warning. Leave well enough alone. Your curiosity will be the death of you.
+}
+
+STRING 27
+{
+1
+}
+
+STRING 29
+{
+The next day, on the outskirts of Andorhal...
+}
+
+STRING 32
+{
+Kel'Thuzad
+}
+
+STRING 33
+{
+Naive fool. My death will make little difference in the long run. For, now, the scourging of this land... begins.
+}
+
+STRING 36
+{
+Undead Scourge
+}
+
+STRING 37
+{
+Arthas
+}
+
+STRING 38
+{
+Let's not wait to find out! Attack!
+}
+
+STRING 41
+{
+Explore Andorhal
+}
+
+STRING 42
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Investigate Andorhal
+}
+
+STRING 43
+{
+|cffffcc00MAIN QUEST|r
+Confront Kel'Thuzad
+  - Find Kel'Thuzad
+}
+
+STRING 44
+{
+Find Kel'Thuzad
+}
+
+STRING 46
+{
+Arthas
+}
+
+STRING 47
+{
+All the granaries are empty! The shipments have already been sent out. We're too late!
+}
+
+STRING 54
+{
+Investigate Andorhal
+}
+
+STRING 55
+{
+The plagued crates of grain seem to have originated from Andorhal, the distribution center of Lordaeron's agricultural products. Investigate Andorhal and ascertain whether there is any link between the mysterious cultists and the dread plague.
+}
+
+STRING 56
+{
+Confront Kel'Thuzad
+}
+
+STRING 57
+{
+The evil Necromancer, Kel'Thuzad, is apparently responsible for spreading the mysterious plague. Hunt the renegade wizard down and bring him to justice!
+}
+
+STRING 60
+{
+Blizzard Entertainment
+}
+
+STRING 61
+{
+Chapter Four
+}
+
+STRING 72
+{
+Arthas
+}
+
+STRING 73
+{
+Are you responsible for this plague, necromancer? Is this cult your doing?
+}
+
+STRING 74
+{
+Kel'Thuzad
+}
+
+STRING 75
+{
+Yes, I ordered the Cult of the Damned to distribute the plagued grain. But the sole credit is not mine.
+}
+
+STRING 76
+{
+Kel'Thuzad
+}
+
+STRING 77
+{
+I serve the dreadlord Mal'Ganis. He commands the Scourge that will cleanse this land and establish a paradise of eternal darkness!
+}
+
+STRING 78
+{
+Arthas
+}
+
+STRING 79
+{
+And what exactly is this Scourge meant to cleanse?
+}
+
+STRING 80
+{
+Kel'Thuzad
+}
+
+STRING 81
+{
+Why, the living, of course. His plan is already in motion. Seek him out at Stratholme if you need further proof.
+}
+
+STRING 82
+{
+The Cult of the Damned
+}
+
+STRING 87
+{
+Timmy
+}
+
+STRING 135
+{
+Alliance Forces
+}
+
+STRING 136
+{
+Defeat!
+}
+
+STRING 137
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Confront Kel'Thuzad
+}
+
+STRING 146
+{
+Arthas
+}
+
+STRING 147
+{
+All the granaries are empty! The shipments have already been sent out. We're too late!
+}
+
+STRING 152
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 153
+{
+Defeat!
+}
+
+STRING 154
+{
+|cff32cd32HINT|r - You can purchase items from the Goblin Merchant by moving a Hero near it, and then selecting the Goblin Merchant building.
+}
+
+STRING 156
+{
+Chapter Four: The Cult of the Damned
+}
+
+STRING 159
+{
+|cff32CD32HINT|r - Press the Call to Arms button on your Town Hall in order to change your Peasants to Militia.
+}
+
+STRING 161
+{
+|cff32cd32HINT|r - Heroes can be revived at an Altar of Kings.
+}
+
+STRING 163
+{
+|cff32cd32HINT|r - You can build an Altar of Kings to revive fallen Heroes.
+}
+

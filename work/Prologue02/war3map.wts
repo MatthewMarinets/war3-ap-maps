@@ -1,0 +1,915 @@
+﻿STRING 1
+{
+Prologue02
+}
+
+STRING 2
+{
+1
+}
+
+STRING 3
+{
+Chapter Two: Departures
+}
+
+STRING 4
+{
+Blizzard Entertainment
+}
+
+STRING 5
+{
+Chapter Two
+}
+
+STRING 6
+{
+Departures
+}
+
+STRING 7
+{
+Three days later, near the Lordaeron coast...
+}
+
+STRING 8
+{
+Orcish Horde
+}
+
+STRING 11
+{
+Defeat!
+}
+
+STRING 12
+{
+Defeat!
+}
+
+STRING 13
+{
+Thrall
+}
+
+STRING 14
+{
+It's been three days, and this... prophet has yet to show himself. I hope I'm not making a huge mistake by trusting him.
+}
+
+STRING 15
+{
+Grunt
+}
+
+STRING 16
+{
+Warchief, the clans are assembling as you ordered, but it will take them some time to reach us.
+}
+
+STRING 17
+{
+Thrall
+}
+
+STRING 18
+{
+Then we must prepare this camp immediately. I want my warriors to have food and proper lodgings when they arrive.
+}
+
+STRING 19
+{
+Grunt
+}
+
+STRING 20
+{
+Yes, Warchief.
+}
+
+STRING 21
+{
+Thrall
+}
+
+STRING 22
+{
+Warrior, has there been any word from Grom Hellscream? He and the Warsong clan were supposed to have been here by now.
+}
+
+STRING 23
+{
+Grunt
+}
+
+STRING 24
+{
+No, Warchief. We haven't heard from Hellscream in some time.
+}
+
+STRING 25
+{
+Thrall
+}
+
+STRING 26
+{
+Damn it, Grom. Where the hell are you?
+}
+
+STRING 28
+{
+Establish a Base
+}
+
+STRING 29
+{
+The Orcish Horde will be arriving soon.  This camp must be prepared for their arrival.
+}
+
+STRING 30
+{
+|cffffcc00MAIN QUEST|r
+Establish a Base
+  - Build a Burrow
+  - Build a War Mill
+  - Build a Barracks
+  - Train 5 Grunts 
+}
+
+STRING 31
+{
+Build a Burrow
+}
+
+STRING 33
+{
+Build a War Mill
+}
+
+STRING 34
+{
+Train 5 Grunts
+}
+
+STRING 35
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Establish a Base
+}
+
+STRING 36
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Establish a Base
+}
+
+STRING 46
+{
+Rescue Grom
+}
+
+STRING 47
+{
+Apparently, the Humans have captured the Warsong clan's chieftain, Grom Hellscream. You must infiltrate the Human base and free Grom before the Humans execute him. Slay anyone who gets in the way!
+}
+
+STRING 48
+{
+Narrator
+}
+
+STRING 49
+{
+In order to establish a base and recruit more troops, it is necessary to collect two different types of resources, gold and lumber.
+}
+
+STRING 50
+{
+Narrator
+}
+
+STRING 51
+{
+To learn how to harvest gold, select a peon.
+}
+
+STRING 52
+{
+Narrator
+}
+
+STRING 53
+{
+Peons can harvest gold from gold mines such as the one located here.
+}
+
+STRING 54
+{
+Narrator
+}
+
+STRING 55
+{
+To begin collecting gold, select your peon and |cff64ff64RIGHT-CLICK|r on the gold mine.
+}
+
+STRING 56
+{
+Narrator
+}
+
+STRING 57
+{
+Once a peon has been ordered to harvest gold, he will automatically travel back and forth between the gold mine and your closest great hall.
+}
+
+STRING 58
+{
+Narrator
+}
+
+STRING 59
+{
+Here are a few additional peons. To increase the rate of gold collection, order them to harvest from the same gold mine.
+}
+
+STRING 60
+{
+Alliance Forces
+}
+
+STRING 101
+{
+Narrator
+}
+
+STRING 102
+{
+Now that your gold income is steady, you will want to produce additional peons to construct the rest of your base.
+}
+
+STRING 103
+{
+Narrator
+}
+
+STRING 104
+{
+To train a peon, first select your great hall.
+}
+
+STRING 105
+{
+Narrator
+}
+
+STRING 106
+{
+There is now a |cff64ff64TRAIN PEON|r button located in the command card near the bottom-right corner of the screen. To begin training a peon, simply |cff64ff64CLICK|r this button.
+}
+
+STRING 113
+{
+Narrator
+}
+
+STRING 114
+{
+To construct a burrow, select one of your peons.
+}
+
+STRING 115
+{
+Narrator
+}
+
+STRING 116
+{
+In order to support a larger population, additional orc burrows will have to be constructed. Burrows provide the food that allows you to train more troops.
+}
+
+STRING 121
+{
+Narrator
+}
+
+STRING 122
+{
+Training a unit takes time. When your great hall is selected, you can see a progress indicator in the bottom-middle portion of your screen.
+}
+
+STRING 156
+{
+Narrator
+}
+
+STRING 157
+{
+Now, |cff64ff64CLICK|r on the |cff64ff64BUILD STRUCTURE|r button in the command card.
+}
+
+STRING 169
+{
+  - |cff808080Build a Barracks (Completed)|r
+}
+
+STRING 170
+{
+  - Build a Barracks
+}
+
+STRING 189
+{
+  - |cff808080Build a War Mill (Completed)|r
+}
+
+STRING 190
+{
+  - Build a War Mill
+}
+
+STRING 205
+{
+|cffffcc00MAIN QUEST|r
+Rescue Grom
+  - Find Grom
+}
+
+STRING 206
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Rescue Grom
+}
+
+STRING 208
+{
+Thrall
+}
+
+STRING 209
+{
+Grom, are you alright?
+}
+
+STRING 210
+{
+Grom Hellscream
+}
+
+STRING 211
+{
+I'm fine, little brother. Luckily, they only injured my pride.
+}
+
+STRING 212
+{
+Thrall
+}
+
+STRING 213
+{
+Great, 'cause we're getting out of here now. We're leaving the human lands for good.
+}
+
+STRING 214
+{
+Grom Hellscream
+}
+
+STRING 215
+{
+Finally. Follow me. I have an idea.
+}
+
+STRING 216
+{
+Grom Hellscream
+}
+
+STRING 217
+{
+We can set sail on the humans' own ships.
+}
+
+STRING 218
+{
+Thrall
+}
+
+STRING 219
+{
+Perfect. But we'll need to wait for the rest of the Horde--
+}
+
+STRING 220
+{
+Grunt
+}
+
+STRING 221
+{
+The Horde is assembled, Warchief. We await only your command.
+}
+
+STRING 222
+{
+The Prophet
+}
+
+STRING 223
+{
+Now, go, young Thrall. Sail west to the lands of Kalimdor. It is there that you will find your destiny. It is there that your people's salvation will be assured.
+}
+
+STRING 234
+{
+Thrall
+}
+
+STRING 235
+{
+I hope not. But if they have captured Hellscream, I'll make them regret it! Lok-Tar Ogar! Come, my warriors! We must drive the humans back!
+}
+
+STRING 236
+{
+Captain
+}
+
+STRING 237
+{
+You orcs are in violation of the Alliance Internment Act! We've already captured one of your leaders. If you surrender now, we'll spare your lives.
+}
+
+STRING 246
+{
+Grunt
+}
+
+STRING 247
+{
+Warchief, they say they've captured one of our leaders! Maybe they're referring to Grom?
+}
+
+STRING 250
+{
+Thrall
+}
+
+STRING 251
+{
+Then destroy them! Hellscream must be freed!
+}
+
+STRING 252
+{
+Grunt
+}
+
+STRING 253
+{
+Warchief! We've found where they're holding Grom, but the area is protected by fortified guard towers!
+}
+
+STRING 258
+{
+Narrator
+}
+
+STRING 259
+{
+Move Thrall and the rest of your forces across the bridge, and locate Grom.
+}
+
+STRING 340
+{
+Narrator
+}
+
+STRING 341
+{
+Now, move the mouse to where you want the building to be placed.
+}
+
+STRING 342
+{
+Narrator
+}
+
+STRING 343
+{
+Once you have found an appropriate location, |cff64ff64LEFT-CLICK|r to begin construction.
+}
+
+STRING 371
+{
+Narrator
+}
+
+STRING 372
+{
+In order to produce additional buildings, you must gather more lumber from the nearby forests.
+}
+
+STRING 373
+{
+Narrator
+}
+
+STRING 374
+{
+To harvest lumber, select a peon and |cff64ff64RIGHT-CLICK|r on a nearby tree.
+}
+
+STRING 385
+{
+Narrator
+}
+
+STRING 386
+{
+Now that your peon has been assigned to gather lumber, he will automatically travel back and forth between the forest and your closest great hall.
+}
+
+STRING 389
+{
+Narrator
+}
+
+STRING 390
+{
+Notice that additional buttons are now available in the command card. To construct an orc burrow, |cff64ff64CLICK|r on the |cff64ff64BUILD ORC BURROW|r button.
+}
+
+STRING 397
+{
+Narrator
+}
+
+STRING 398
+{
+Now that your burrow has been completed, the peon who built it can be assigned to a new task.
+}
+
+STRING 407
+{
+Narrator
+}
+
+STRING 408
+{
+Well placed war mills can increase the efficiency of your lumber harvesters. Try ordering a peon to construct a war mill near where your peons are chopping wood.
+}
+
+STRING 415
+{
+Narrator
+}
+
+STRING 416
+{
+War mills contain various upgrades that can be researched to improve your troops. To see what upgrades are available, select your war mill.
+}
+
+STRING 437
+{
+Narrator
+}
+
+STRING 438
+{
+All available upgrades appear as buttons in the war mill's command card. To research an upgrade, |cff64ff64LEFT-CLICK|r on the one you want to purchase.
+}
+
+STRING 449
+{
+Build a Barracks
+}
+
+STRING 454
+{
+Narrator
+}
+
+STRING 455
+{
+To increase the rate at which you collect lumber, train additional peons and assign them to harvest from the forest.
+}
+
+STRING 460
+{
+Narrator
+}
+
+STRING 461
+{
+The amount of gold that you currently possess is displayed in the upper-right portion of your screen. As peons return to your great hall with gold, your gold stockpile increases.
+}
+
+STRING 472
+{
+Narrator
+}
+
+STRING 473
+{
+Congratulations. You have accumulated enough gold and lumber to construct a barracks. This will enable you to train additional troops for your army.
+}
+
+STRING 474
+{
+Narrator
+}
+
+STRING 475
+{
+To construct a barracks, select a peon, |cff64ff64CLICK|r on the |cff64ff64BUILD STRUCTURE|r button, and |cff64ff64CLICK|r on |cff64ff64BUILD BARRACKS|r.
+}
+
+STRING 499
+{
+Narrator
+}
+
+STRING 500
+{
+Now that your barracks is complete, you can begin training grunts to reinforce your army.
+}
+
+STRING 501
+{
+Narrator
+}
+
+STRING 502
+{
+To train a grunt, first select your barracks.
+}
+
+STRING 513
+{
+Narrator
+}
+
+STRING 514
+{
+Now, |cff64ff64CLICK|r on the |cff64ff64TRAIN GRUNT|r button in the command card.
+}
+
+STRING 517
+{
+Narrator
+}
+
+STRING 518
+{
+Continue producing grunts until you reach your quest requirement.
+}
+
+STRING 560
+{
+  - |cff808080Train 5 Grunts (Completed)|r
+}
+
+STRING 561
+{
+  - Train 5 Grunts
+}
+
+STRING 564
+{
+
+}
+
+STRING 565
+{
+Grunts Trained |cffffffff0/5|r
+}
+
+STRING 568
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 570
+{
+|cff32cd32HINT|r - Peons can perform a wide range of valuable tasks, such as harvesting gold and lumber, and constructing buildings.
+}
+
+STRING 571
+{
+|cff32cd32HINT|r - You can queue up additional Peons by |cff64ff64CLICKING|r multiple times on the |cff64ff64TRAIN PEON|r button. Each unit that is queued will automatically begin training when the previous unit finishes.
+}
+
+STRING 573
+{
+|cff32cd32HINT|r - When you hear a "work complete" notification, pressing the |cff64ff64SPACEBAR|r will center your screen on the notification's source.
+}
+
+STRING 574
+{
+|cff32cd32HINT|r - Upgrades affect both current and future troops.
+}
+
+STRING 578
+{
+|cff32cd32HINT|r - Constructing an additional Barracks enables you to train multiple units simultaneously.
+}
+
+STRING 579
+{
+|cff32cd32HINT|r - You can also Repair buildings by selecting your Peon, then |cff64ff64RIGHT-CLICKING|r on the damaged building.
+}
+
+STRING 580
+{
+|cff32cd32HINT|r - To find out more information about Upkeep, point your mouse at the Upkeep indicator in the upper-right corner of your screen.
+}
+
+STRING 587
+{
+  - |cff808080Build a Burrow (Completed)|r
+}
+
+STRING 588
+{
+  - Build a Burrow
+}
+
+STRING 591
+{
+|cff32cd32HINT|r - You can attack gates to destroy them.
+}
+
+STRING 648
+{
+Narrator
+}
+
+STRING 649
+{
+Your army has grown to such a large size that it now requires a portion of your income to sustain it. This maintenance cost is referred to as upkeep.
+}
+
+STRING 674
+{
+|cff87ceebNEW UNIT ACQUIRED|r
+Shaman - This spellcaster has a ranged attack and can cast the Purge spell on enemy units to slow their movement.
+}
+
+STRING 675
+{
+Narrator
+}
+
+STRING 676
+{
+One of your structures was damaged during the fight. To repair a damaged building, select a peon, |cff64ff64CLICK|r the |cff64ff64REPAIR|r button, and then |cff64ff64LEFT-CLICK|r on the desired structure.
+}
+
+STRING 690
+{
+Narrator
+}
+
+STRING 691
+{
+You have just garrisoned a peon in one of your burrows. This enables your peon to hurl spears at any enemies that come within range.
+}
+
+STRING 693
+{
+Narrator
+}
+
+STRING 694
+{
+You have just placed a rally point for your structure. Whenever a unit finishes training from this building, he will automatically travel to the rally point's location.
+}
+
+STRING 695
+{
+Narrator
+}
+
+STRING 696
+{
+To place a rally point, select one of your unit-producing structures, and |cff64ff64RIGHT-CLICK|r on the ground where you want the rally point to appear.
+}
+
+STRING 698
+{
+|cff32cd32HINT|r - To unload your Peon from the Burrow, select the Burrow and |cff64ff64CLICK|r on the |cff64ff64STAND DOWN|r button in the command card.
+}
+
+STRING 699
+{
+|cff32cd32HINT|r - You can place a rally point for your Great Hall on either a gold mine or a tree to make newly trained Peons automatically begin harvesting.
+}
+
+STRING 709
+{
+Narrator
+}
+
+STRING 710
+{
+When you control multiple spellcasters at the same time, it often becomes necessary to quickly switch between  them to cast their individual spells. By using the subgroup interface, you can do so without having to try to select them individually.
+}
+
+STRING 711
+{
+Narrator
+}
+
+STRING 712
+{
+Notice that the currently selected units are displayed in the bottom-middle portion of your screen by little portraits. One of the unit portraits is highlighted with a yellow glow. This means that it is the currently activated subgroup.
+}
+
+STRING 715
+{
+Narrator
+}
+
+STRING 716
+{
+You can switch between subgoups by pressing the |cff64ff64TAB|r key or |cff64ff64LEFT-CLICKING|r on one of the portraits that is not highlighted. This activates that subgroup and displays their spells in your command card.
+}
+
+STRING 723
+{
+Find Grom
+}
+
+STRING 724
+{
+Destroy the Guard Towers guarding Grom
+}
+
+STRING 725
+{
+|cffffcc00MAIN QUEST|r
+Rescue Grom
+  - |cff808080Find Grom (Completed)|r
+  - Destroy the Guard Towers guarding Grom
+}
+
+STRING 726
+{
+Grunt
+}
+
+STRING 727
+{
+The wretched humans have been destroyed!
+}
+
+STRING 728
+{
+|cff32cd32HINT|r - When Heroes die, their spirits persist and can be revived at an altar. To revive Thrall, select your Altar of Storms and |cff64ff64LEFT-CLICK|r on the |cff64ff64REVIVE FAR SEER - THRALL|r button.
+}
+
+STRING 729
+{
+|cff32cd32HINT|r - Revived Heroes return to life with all of the experience, skills, and items that they had when they died.
+}
+
+STRING 734
+{
+Narrator
+}
+
+STRING 735
+{
+The blinking button at the top of the screen indicates that your quest journal has been updated. To find out more about your objectives, |cff64ff64CLICK|r on the |cff64ff64QUESTS|r button.
+}
+
+STRING 790
+{
+Grunts Trained |cffffffff1/5|r
+}
+
+STRING 795
+{
+Grunts Trained |cffffffff2/5|r
+}
+
+STRING 800
+{
+Grunts Trained |cffffffff3/5|r
+}
+
+STRING 805
+{
+Grunts Trained |cffffffff4/5|r
+}
+
+STRING 810
+{
+Grunts Trained |cffffffff5/5|r
+}
+

@@ -1,0 +1,6 @@
+[Errors]
+Nofood=TRIGSTR_323
+
+[CustomSkin]
+NoFoodSound=ErrorMessage
+

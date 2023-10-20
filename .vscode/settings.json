@@ -1,0 +1,10 @@
+{
+    "markdown.styles": [
+        ".vscode/markdown-format.css",
+    ],
+    "workbench.editorAssociations": {
+        "*.w3m": "hexEditor.hexedit",
+        "*.w3x": "hexEditor.hexedit",
+        "*.w3i": "hexEditor.hexedit",
+    },
+}

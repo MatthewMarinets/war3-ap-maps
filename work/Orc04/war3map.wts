@@ -1,0 +1,513 @@
+﻿STRING 1
+{
+Neeloc Greedyfingers
+}
+
+STRING 2
+{
+Ah, thank you! Now, these shredders will cut through those trees in no time!
+}
+
+STRING 12
+{
+Warsong Clan
+}
+
+STRING 18
+{
+Orc04
+}
+
+STRING 19
+{
+1
+}
+
+STRING 20
+{
+Chapter Four: The Spirits of Ashenvale
+}
+
+STRING 21
+{
+Blizzard Entertainment
+}
+
+STRING 22
+{
+The Spirits of Ashenvale
+}
+
+STRING 24
+{
+Forest Spirit
+}
+
+STRING 25
+{
+Grom Hellscream
+}
+
+STRING 26
+{
+Damn Thrall for sending us away! He chooses to use his greatest warriors for manual labor? He'll be lost without me.
+}
+
+STRING 27
+{
+Warsong Orc
+}
+
+STRING 28
+{
+Chieftain, there's something strange about these woods. It's too... quiet. Almost like we're being watched.
+}
+
+STRING 29
+{
+Grom Hellscream
+}
+
+STRING 30
+{
+Are you all afraid of spirits now? There is nothing here but ancient trees and shadow. 
+}
+
+STRING 31
+{
+Warsong Orc
+}
+
+STRING 32
+{
+You hear that? This place is haunted! I fear no living enemy, but my axe cannot cleave fleshless spirits!
+}
+
+STRING 33
+{
+Grom Hellscream
+}
+
+STRING 34
+{
+Still your tongue and get to work! The warchief's new settlement will require a great deal of lumber. This section of forest must be cleared!
+}
+
+STRING 44
+{
+Slash and Burn
+}
+
+STRING 45
+{
+Before Thrall's vision of a new Orc settlement can be attained, a massive amount of lumber must be harvested. Luckily, the dense, lush forests of Ashenvale will prove to be an abundant source of lumber.
+}
+
+STRING 46
+{
+Amass 15,000 units of lumber
+}
+
+STRING 47
+{
+Furbolg Chieftain
+}
+
+STRING 48
+{
+A nearby tribe of Furbolgs has begun to harass the Goblin Merchant and is scaring away potential customers. If you can slay the beasts' chieftain, the tribe may disperse and improve the Goblin town's commercial viability.
+}
+
+STRING 49
+{
+Slay the Furbolg Chieftain
+}
+
+STRING 62
+{
+ (Quest Completed)
+}
+
+STRING 85
+{
+
+}
+
+STRING 86
+{
+Lumber Harvested
+}
+
+STRING 87
+{
+Two days later, along the borderlands of Ashenvale forest...
+}
+
+STRING 127
+{
+Chapter Four
+}
+
+STRING 128
+{
+Shadowleaves
+}
+
+STRING 129
+{
+Moonhunters
+}
+
+STRING 141
+{
+Goblin Shack
+}
+
+STRING 154
+{
+Cinematic
+}
+
+STRING 157
+{
+Destroy Trees of Life
+}
+
+STRING 158
+{
+The enormous, enchanted Trees of Life will provide your forces with vast amounts of high quality lumber. You must seek out the sacred Trees and rip them down! Be wary, though. The warrior women who protect the forests are sure to take offense at the despoiling of their land.
+}
+
+STRING 159
+{
+Destroy the Trees of Life
+}
+
+STRING 166
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Destroy Trees of Life
+}
+
+STRING 167
+{
+Tree of Life
+}
+
+STRING 168
+{
+ (Ages)
+}
+
+STRING 169
+{
+ (Eternity)
+}
+
+STRING 184
+{
+|cffffcc00OPTIONAL QUEST|r
+Furbolg Chieftain
+  - Slay the Furbolg Chieftain
+}
+
+STRING 185
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r 
+Furbolg Chieftain
+}
+
+STRING 186
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 187
+{
+Defeat!
+}
+
+STRING 188
+{
+Defeat!
+}
+
+STRING 189
+{
+Starseekers
+}
+
+STRING 190
+{
+Nightblades
+}
+
+STRING 192
+{
+Sentinels
+}
+
+STRING 193
+{
+|cffffcc00HINT|r - Goblin Shredders are excellent lumber harvesters.
+}
+
+STRING 194
+{
+Neeloc Greedyfingers
+}
+
+STRING 195
+{
+Ah, greetings, good orc. Strange to see one of you in these parts.
+}
+
+STRING 196
+{
+Grom Hellscream
+}
+
+STRING 197
+{
+We are here to cut lumber, little goblin.
+}
+
+STRING 198
+{
+Neeloc Greedyfingers
+}
+
+STRING 199
+{
+Hmm. Well, there's this tribe of bear men, called furbolgs, in this region that's been giving us trouble. If you kill the chieftain, we'll sell our goods to you at cost. We might even let you borrow a few shredders!
+}
+
+STRING 200
+{
+Grom Hellscream
+}
+
+STRING 201
+{
+I'll consider it.
+}
+
+STRING 202
+{
+|cffffcc00OPTIONAL QUEST|r
+Furbolg Chieftain
+  - Slay the Furbolg Chieftain
+}
+
+STRING 203
+{
+Grom Hellscream
+}
+
+STRING 204
+{
+They must be the furbolgs the goblin spoke of. This will be a worthy battle!
+}
+
+STRING 205
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Furbolg Chieftain
+  - |cff808080Slay the Furbolg Chieftain (Completed)|r
+  - Return to Neeloc Greedyfingers for your reward
+}
+
+STRING 206
+{
+Return to Neeloc Greedyfingers for your reward
+}
+
+STRING 207
+{
+|cffffcc00A Tree of Life has been destroyed|r
+          - 3000 lumber pillaged
+}
+
+STRING 208
+{
+Grom Hellscream
+}
+
+STRING 209
+{
+These women fight with unmatched savagery! I've never seen their equal. They are... perfect warriors.
+}
+
+STRING 210
+{
+Grom Hellscream
+}
+
+STRING 211
+{
+Those dancing lights are strange. Perhaps they are the dread spirits that you've all been so afraid of?
+}
+
+STRING 212
+{
+Grom Hellscream
+}
+
+STRING 213
+{
+We've nearly hit our quota! Our lumber stores are almost full!
+}
+
+STRING 214
+{
+Warsong Orc
+}
+
+STRING 215
+{
+Women. They're women!
+}
+
+STRING 216
+{
+Grom Hellscream
+}
+
+STRING 217
+{
+Yes. They almost look like elves, but they're far too tall, and far too savage.
+}
+
+STRING 218
+{
+Warsong Orc
+}
+
+STRING 219
+{
+Chieftain, the warrior women have returned on flying beasts!
+}
+
+STRING 220
+{
+Grom Hellscream
+}
+
+STRING 221
+{
+They won't last long after our wolf riders have ensnared them!
+}
+
+STRING 222
+{
+|cffffcc00HINT|r - Pillage can be learned at your Great Hall, and gives Peons, Grunts and Raiders the ability to gather resources by damaging enemy buildings.
+}
+
+STRING 223
+{
+Warsong Orc
+}
+
+STRING 224
+{
+Chieftain, that great tree pulses with magic! We should keep our distance!
+}
+
+STRING 225
+{
+Grom Hellscream
+}
+
+STRING 226
+{
+Bah! Am I surrounded only by cowards? It's a tree, like any other! Cut it down!
+}
+
+STRING 229
+{
+|cffffcc00OPTIONAL QUEST|r
+Destroy Trees of Life
+  - Destroy the Trees of Life
+}
+
+STRING 231
+{
+|cffffcc00A Tree of Life has been destroyed|r
+          - 3000 lumber pillaged
+}
+
+STRING 232
+{
+Warsong Orc
+}
+
+STRING 233
+{
+Chieftain, we're under attack!
+}
+
+STRING 234
+{
+Huntress
+}
+
+STRING 235
+{
+You were right, sisters. These green-skinned brutes have no respect for life! Slay them in Elune's name!
+}
+
+STRING 238
+{
+|cffffcc00MAIN QUEST|r
+Slash and Burn
+  - Amass 15,000 lumber
+}
+
+STRING 239
+{
+|cff87ceebNEW UNIT AVAILABLE|r
+Shaman - You may now build Shaman from the Spirit Lodge. They are primary spellcasters and can initially cast Purge, which slows and dispels positive and negative buffs.
+}
+
+STRING 241
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Slash and Burn
+}
+
+STRING 242
+{
+Warsong Orc
+}
+
+STRING 243
+{
+Chieftain, the harvesting is complete!
+}
+
+STRING 244
+{
+Grom Hellscream
+}
+
+STRING 245
+{
+Good. Then we'll start constructing the settlement immediately.
+}
+
+STRING 246
+{
+|cff32cd32HINT|r - Construct additional War Mills near trees to increase the efficiency of your lumber harvesters.
+}
+
+STRING 247
+{
+Grom Hellscream
+}
+
+STRING 248
+{
+You see? The great tree provided us with an abundance of lumber! If we find any more, then we'll hack them apart as well!
+}
+
