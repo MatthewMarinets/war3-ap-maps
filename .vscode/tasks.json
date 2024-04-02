@@ -15,7 +15,7 @@
                 "kind": "none",
                 "isDefault": false
             },
-            "problemMatcher": "$msCompile",
+            "problemMatcher": [],
             "presentation": {
                 "echo": true,
                 "reveal": "silent",
@@ -23,7 +23,7 @@
                 "panel": "shared",
                 "showReuseMessage": true,
                 "clear": true,
-                "close": true
+                "close": false
             }
         },
         {
@@ -38,7 +38,7 @@
                 "kind": "none",
                 "isDefault": false
             },
-            "problemMatcher": "$msCompile",
+            "problemMatcher": [],
             "presentation": {
                 "echo": true,
                 "reveal": "silent",
@@ -46,7 +46,7 @@
                 "panel": "shared",
                 "showReuseMessage": true,
                 "clear": true,
-                "close": true
+                "close": false
             }
         },
     ]
