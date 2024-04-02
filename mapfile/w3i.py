@@ -15,26 +15,25 @@ class W3iVersions(enum.IntEnum):
     TFT = 25
 
 class MapFlags(enum.IntFlag):
-    HIDE_MINIMAP           = 0x0001
-    MODIFY_ALLY_PRIORITIES = 0x0002
-    MELEE_MAP              = 0x0004
-    LARGE_MAP              = 0x0008
-    VISIBLE_BLACK_MASK     = 0x0010
-    FIXED_FORCES           = 0x0020
-    CUSTOM_FORCES          = 0x0040
-    CUSTOM_TECH_TREE       = 0x0080
-    CUSTOM_ABILITIES       = 0x0100
-    CUSTOM_UPGRADES        = 0x0200
-    PROPERTIES_MENU_OPENED = 0x0400
-    WAVES_ON_CLIFFS        = 0x0800
-    WAVES_ON_SHORES        = 0x1000
-    # Todo(mm): Figure out what these flags mean
-    UNKNOWN_1              = 0x2000
-    UNKNOWN_2              = 0x4000
-    UNKNOWN_3              = 0x8000
-    UNKNOWN_4              = 0x10000
+    HIDE_MINIMAP            = 0x0001
+    MODIFY_ALLY_PRIORITIES  = 0x0002
+    MELEE_MAP               = 0x0004
+    LARGE_MAP               = 0x0008
+    VISIBLE_BLACK_MASK      = 0x0010
+    FIXED_FORCES            = 0x0020
+    CUSTOM_FORCES           = 0x0040
+    CUSTOM_TECH_TREE        = 0x0080
+    CUSTOM_ABILITIES        = 0x0100
+    CUSTOM_UPGRADES         = 0x0200
+    PROPERTIES_MENU_OPENED  = 0x0400
+    WAVES_ON_CLIFFS         = 0x0800
+    WAVES_ON_SHORES         = 0x1000
+    USE_TERRAIN_FOG         = 0x2000
+    REQUIRES_EXPANSION      = 0x4000  # Note(mm): The meaning of this flag is an educated guess
+    USE_ITEM_CLASSIFICATION = 0x8000
+    USE_WATER_TINTING       = 0x10000
 
-class PlayerType(enum.IntEnum):
+class FactionController(enum.IntEnum):
     Human = 1
     Computer = 2
     Neutral = 3
@@ -45,13 +44,13 @@ class PlayerFaction(enum.IntEnum):
     Orc = 2
     Undead = 3
     NightElf = 4
+    Selectable = 5
 
 class ForcesFlags(enum.IntFlag):
     Allied = 0x1
     AlliedVictory = 0x2
-    ShareVision = 0x4
-    # Todo(mm): Figure out what this flag means
-    Unknown = 0x8
+    # Note(mm): 0x4 seems unused?
+    ShareVision = 0x8
     ShareUnitControl = 0x10
     FullShareUnitControl = 0x20
 
@@ -68,7 +67,7 @@ class RandomEntityType(enum.IntEnum):
 @dataclass
 class PlayerInfo:
     player_id: int
-    player_type: PlayerType
+    player_type: FactionController
     player_faction: PlayerFaction
     fixed_start_position: bool
     name: str
@@ -148,6 +147,7 @@ class War3MapInformation:
     map_loading_screen_text: str = ""
     map_loading_screen_title: str = ""
     map_loading_screen_subtitle: str = ""
+    # Note(mm): For TFT, this seems to change with Map Options -> Game Data Set
     map_loading_screen_number: int = -1
     tft_prologue_screen_path: str = ""
     prologue_screen_text: str = ""
@@ -236,7 +236,7 @@ def read_w3i(raw_bytes: bytes) -> War3MapInformation:
     for _ in range(result.num_players):
         player = PlayerInfo(
             player_id=reader.read_int32(),
-            player_type=PlayerType(reader.read_int32()),
+            player_type=FactionController(reader.read_int32()),
             player_faction=PlayerFaction(reader.read_int32()),
             fixed_start_position=reader.read_bool32(),
             name=reader.read_cstring(),
@@ -411,8 +411,8 @@ def _unpack_types(data: dict[str, Any]) -> None:
                 data[key] = bytes(value_literal, encoding='utf-8').replace(b'0', b'\0')
             elif value_type == W3iVersions.__name__:
                 data[key] = W3iVersions[value_literal]
-            elif value_type == PlayerType.__name__:
-                data[key] = PlayerType[value_literal]
+            elif value_type == FactionController.__name__:
+                data[key] = FactionController[value_literal]
             elif value_type == PlayerFaction.__name__:
                 data[key] = PlayerFaction[value_literal]
             elif value_type == UpgradeAvailability.__name__:
@@ -455,59 +455,18 @@ def from_text(text: str) -> War3MapInformation:
 
 
 if __name__ == '__main__':
-    filenames = [
-        'work/Human02Interlude/war3map.w3i',
-        'extract/test_dalaran_ruins/war3map.w3i',
-        'work/HumanX01/war3map.w3i',
-        'work/HumanX02/war3map.w3i',
-        'work/HumanX03/war3map.w3i',
-        'work/HumanX03Interlude/war3map.w3i',
-        'work/HumanX03Secret/war3map.w3i',
-        'work/HumanX04/war3map.w3i',
-        'work/HumanX04Interlude/war3map.w3i',
-        'work/HumanX05/war3map.w3i',
-        'work/HumanX06/war3map.w3i',
-        'work/HumanX06Finale/war3map.w3i',
-        'work/NightElfX01/war3map.w3i',
-        'work/NightElfX02/war3map.w3i',
-        'work/NightElfX03/war3map.w3i',
-        'work/NightElfX04/war3map.w3i',
-        'work/NightElfX04Interlude/war3map.w3i',
-        'work/NightElfX05/war3map.w3i',
-        'work/NightElfX06/war3map.w3i',
-        'work/NightElfX06Interlude/war3map.w3i',
-        'work/NightElfX07/war3map.w3i',
-        'work/NightElfX08/war3map.w3i',
-        'work/NightElfX08Finale/war3map.w3i',
-        'work/OrcX01/war3map.w3i',
-        'work/OrcX01_02/war3map.w3i',
-        'work/OrcX01_03/war3map.w3i',
-        'work/OrcX01_04/war3map.w3i',
-        'work/OrcX01_05/war3map.w3i',
-        'work/UndeadX01/war3map.w3i',
-        'work/UndeadX01Interlude/war3map.w3i',
-        'work/UndeadX02/war3map.w3i',
-        'work/UndeadX02Interlude/war3map.w3i',
-        'work/UndeadX03/war3map.w3i',
-        'work/UndeadX04/war3map.w3i',
-        'work/UndeadX05/war3map.w3i',
-        'work/UndeadX06/war3map.w3i',
-        'work/UndeadX07a/war3map.w3i',
-        'work/UndeadX07b/war3map.w3i',
-        'work/UndeadX07c/war3map.w3i',
-        'work/UndeadX07Interlude/war3map.w3i',
-        'work/UndeadX08/war3map.w3i',
-        'work/War3XBonusCredits/war3map.w3i',
-        'work/War3XRegularCreditsIce/war3map.w3i',
-    ]
+    from work import manifest
+    filenames = [f'work/{x}/war3map.w3i' for x in manifest.all_directories]
+    # filenames += ['extract/test_dalaran_ruins/war3map.w3i']
     import os
+    os.makedirs('scratch/w3i', exist_ok=True)
     for filename in filenames:
         map_name = os.path.basename(os.path.dirname(filename))
         with open(filename, 'rb') as fp2:
             raw_data = fp2.read()
         data = read_w3i(raw_data)
         text = as_text(data)
-        with open(f'scratch/w3i_{map_name}.toml', 'w') as fp:
+        with open(f'scratch/w3i/w3i_{map_name}.toml', 'w') as fp:
             print(text, file=fp)
         retrived_data = from_text(text)
         round_tripped = to_binary(retrived_data)
