@@ -79,6 +79,7 @@ enum MapFlags = {
 * Contains information displayed when starting the game
 * Different format depending on RoC vs TFT
 * Information from `wc3-project.ag.vu` seems accurate for ROC, less so for TFT
+* Information on [wc3edit.net](https://forum.wc3edit.net/deprotection-cheating-f64/guide-format-explanation-of-w3m-and-w3x-files-t7080.html) seems better
 ```C
 Header_Common = {
     int version; // 18 for ROC, 19 for TFT beta, 25 for TFT
@@ -89,12 +90,14 @@ Header_Common = {
     string map_description;
     string players_recommended;
     float[8] camera_bounds;  // defined in JASS file
-    int[4] map_bounds_padding;
+    int[4] map_bounds_padding;  // left, right, top, bottom
     int map_playable_width;
     int map_playable_height;
     int flags; // same as .w3m / .w3x header flags
-    char tileset;  // 'A' = Ashenvale, 'X' = City Dalaran
+    char tileset;  // See #Tilesets
     int campaign_background;  // -1 = none
+    // Note: wc3edit.net has an extra string here for TFT -- path of custom loading screen model
+    // string custom_loading_screen_model;
     string map_loading_screen_text;
     string map_loading_screen_title;
     string map_loading_screen_subtitle;
@@ -105,79 +108,132 @@ Header_ROC = {
     string prologue_screen_text;
     string prologue_screen_title;
     string prologue_screen_subtitle;
-    int max_players;
-    Player[max_players] players;
-    int max_forces;
-    int forces_flags;
-    // 0x01 - allied
-    // 0x02 - allied victory
-    // 0x04 - share vision
-    // 0x10 - share unit control
-    // 0x20 - full share unit control
-    int unknown; // usually -1
-    Force_ROC[max_forces] forces;
-    bool file_continues; // true if there is more data after this point
+    int num_players;
+    Player[num_players] players;
+    int num_forces;
+    Force[num_forces] forces;
+    int num_upgrades;
+    Upgrade[num_upgrades] upgrades;
+    int num_technologies;
+    Technology[num_techs] technologies;
+    int num_random_entities;
+    RandomEntityTable[num_random_entities] random_entities;
 };
 Header_TFT = {
     Header_Common header_common;
-    union {
-        bytes[38|45] unknown_region;
-        struct {
-            // see conclusions below
-            int magic1 = -1;
-            int magic2 = 0;
-            int magic3 = 0;
-            string empty = "";
-            int tft_flags1;
-            int tft_flags2;
-            int tft_flags3;
-            short tft_flags4;
-            byte magic4 = 0xff;
-            char[4] weather;
-            string scenario_type;
-            int tft_flags5;
-            byte magic5 = 0xff;
-        }
-    }
-    int max_players;
+    int used_game_data_set = -1;  // 0 is "standard"
+    // int magic2 = 0;
+    string prologue_screen_path;
+    string prologue_screen_text;
+    string prologue_screen_title;
+    string prologue_screen_subtitle;
+    uint uses_terrain_fog = 0;    // 0 = not used
+    float fog_start_z;
+    float fog_end_z;
+    float fog_density;
+    u8_t fog_red;
+    u8_t fog_green;
+    u8_t fog_blue;
+    u8_t fog_alpha;
+    char[4] weather;  // b'0000' == none, otherwise see TerainArt/Weather.slk
+    string custom_sound_environment;
+    char custom_light_tileset_id;
+    u8_t water_tint_red;
+    u8_t water_tint_green;
+    u8_t water_tint_blue;
+    u8_t water_tint_alpha;
+    int num_players;
     Player[max_players] players;
-    int max_forces;
-    int forces_flags;
-    // 0x01 - allied
-    // 0x02 - allied victory
-    // 0x04 - share vision
-    // 0x10 - share unit control
-    // 0x20 - full share unit control
-    int unknown; // usually -1
-    Force_TFT[max_forces] forces;
-    bool file_continues; // true if there is more data after this point
+    int num_forces;
+    Force[max_forces] forces;
+    int num_upgrades;
+    Upgrade[num_upgrades] upgrades;
+    int num_technologies;
+    Technology[num_techs] technologies;
+    int num_random_entities;
+    RandomEntityTable[num_random_entities] random_entities;
+    int num_random_items;
+    RandomItemTable[num_random_items] random_items;
 };
 
 Player = {
-    int unknown;
+    int player_id;    // marked as "unknown" in source
     int player_type;  // 1=Human, 2=Computer, 3=Neutral, 4=Rescuable
     int player_race;  // 1=Human, 2=Orc, 3=Undead, 4=Night Elf
-    bool fixed_start_position;
+    bool32_t fixed_start_position;
     string player_name;
     float start_x;
     float start_y;
     int ally_low_priorities_flags;
     int ally_high_priorities_flags;
 };
-Force_ROC = {
+Force = {
+    int flags;
+    // 0x01 - allied
+    // 0x02 - allied victory
+    // 0x04 - share vision
+    // 0x10 - share unit control
+    // 0x20 - full share unit control
+    int player_mask_flags;
     string force_name;
-    int unknown;
-    int unknown;
 };
-Force_TFT = {
-    string force_name;
-    int unknown;
-    int unknown;
-    int unknown;
-};
+Upgrade = {
+    int player_flags;    // bit x == 1 => this change applies for player x
+    char[4] upgrade_id;  // see UpgradeData.slk
+    int level;           // 0-indexed
+    int availability;
+    // 0 - unavailable
+    // 1 - available
+    // 2 - researched
+}
+Technology = {
+    int player_flags;    // bit x == 1 => this change applies for player x
+    char[4] tech_id;     // item, unit, or ability
+    // presence in this list => unavailable
+}
+RandomEntityTable = {
+    int num_groups;
+    RandomEntityGroup[num_groups] groups;
+    RandomEntityGroup = {
+        int group_id;
+        string group_name;
+        int num_positions;
+        int[num_positions] table_types;
+        // 0 - unit
+        // 1 - building
+        // 2 - item
+        int num_entities;
+        RandomEntity[num_entities] entities;
+    }
+    RandomEntity = {
+        int probability_percent;
+        char[4][num_positions] entity_id;
+        // b'0000' indicates no entity is created
+    }
+}
+RandomItemTable = {
+    // TFT only?
+    int num_groups;
+    RandomItemGroup[num_groups] groups;
+    RandomItemGroup = {
+        int group_id;
+        string group_name;
+        int num_sets;
+        RandomItemSet[num_sets] sets;
+    }
+    RandomItemSet = {
+        int num_items;
+        Item[num_items] items;
+    }
+    RandomItem = {
+        int probability_percent;
+        char[4] item_id;  // see ItemData.slk
+    }
+}
 ```
 
 ### Observations
+Note: This was analyzed before I checked against the wc3edit.net source, which covers some of the data here
 * Output the unknown region of 42 TFT .w3i files and analyzed it. Data is in `doc/reference.w3i_unknown_analysis.txt`
 * `unknown_region[0x00:0x08]` is always `ff ff ff ff 00 00 00 00`
 * `unknown_region[0x08:0x0d]` is always `00 00 00 00 00`
@@ -443,3 +499,27 @@ block_t = {
 | WOcw | Outland wind              |
 | WOlw | Outland light wind        |
 
+### Tilesets
+From [Chocobo on TheHelper](https://www.thehelper.net/threads/guide-explanation-of-w3m-and-w3x-files.35292/) -- section 1.12.
+Tilesets are a single byte, which always encodes an ascii character.
+
+| Code | Tileset          |
+| ---- | ---------------- |
+| A    | Ashenvale        |
+| B    | Barrens          |
+| C    | Felwood          |
+| D    | Dungeon          |
+| F    | Lordaeron Fall   |
+| G    | Underground      |
+| L    | Lordaeron Summer |
+| N    | Northrend        |
+| Q    | Village Fall     |
+| V    | Village          |
+| W    | Lordaeron Winter |
+| X    | Dalaran          |
+| Y    | Cityscape        |
+| Z    | Sunken Ruins     |
+| I    | Icecrown         |
+| J    | Dalaran Ruins    |
+| O    | Outland          |
+| K    | Black Citadel    |

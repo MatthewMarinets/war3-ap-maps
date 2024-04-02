@@ -2,11 +2,13 @@
 Utilities for dealing with binary files
 """
 
+from typing import Literal
 import io
 import struct
 
-ENDIANNESS = 'little'
+ENDIANNESS: Literal['little'] = 'little'
 SIZE_OF_INT_IN_BYTES = 4
+NULL_ID = "null"
 
 class EndOfDataError(Exception): pass
 
@@ -26,6 +28,10 @@ class ByteArrayParser:
         start_index = self.index
         self.index += 4
         return struct.unpack_from('=I', self.raw_bytes, start_index)[0]
+    def read_u8(self) -> int:
+        start_index = self.index
+        self.index += 1
+        return struct.unpack_from('B', self.raw_bytes, start_index)[0]
     def read_bool32(self) -> bool:
         start_index = self.index
         self.index += 4
@@ -40,6 +46,11 @@ class ByteArrayParser:
         if self.index > len(self.raw_bytes):
             raise struct.error(f'insufficient data to read {length} bytes')
         return self.raw_bytes[start_index:self.index]
+    def read_id(self) -> str:
+        id_bytes = self.read_bytes(4)
+        if id_bytes == b'\0\0\0\0':
+            return NULL_ID
+        return id_bytes.decode('utf-8')
     def read_cstring(self) -> str:
         bytes_parts = self.raw_bytes[self.index:].split(b'\x00', 1)
         if len(bytes_parts) != 2:
@@ -58,6 +69,39 @@ def read_string_from_buffer(buffer: io.BufferedReader) -> str:
         raise ValueError('Buffer did not terminate a string')
     buffer.seek(length+1, 1)
     return read_bytes[:length].decode('utf-8')
+
+class ByteArrayWriter:
+    def __init__(self) -> None:
+        self.data = bytearray()
+    def as_bytes(self) -> bytes:
+        return bytes(self.data)
+    def write_bytes(self, value: bytes) -> 'ByteArrayWriter':
+        self.data.extend(value)
+        return self
+    def write_u8(self, value: int) -> 'ByteArrayWriter':
+        assert value >= 0 and value < 256, f'{value} is not a valid u8'
+        self.data.append(value)
+        return self
+    def write_u32(self, value: int) -> 'ByteArrayWriter':
+        self.data.extend(struct.pack("<I", value))
+        return self
+    def write_int32(self, value: int) -> 'ByteArrayWriter':
+        self.data.extend(struct.pack("<i", value))
+        return self
+    def write_id(self, value: str) -> 'ByteArrayWriter':
+        if value == NULL_ID:
+            self.data.extend(b'\0\0\0\0')
+            return self
+        assert len(value) == 4, f'"{value}" is not a valid ID; must be length 4'
+        self.data.extend(value.encode('utf-8'))
+        return self
+    def write_string(self, value: str) -> 'ByteArrayWriter':
+        self.data.extend(value.encode('utf-8'))
+        self.data.append(0)
+        return self
+    def write_float(self, value: float) -> 'ByteArrayWriter':
+        self.data.extend(struct.pack('f', value))
+        return self
 
 if __name__ == '__main__':
     parser = ByteArrayParser(b'\xff\x00\x00\xff\xff\xffabcdef\0\0asdf')
