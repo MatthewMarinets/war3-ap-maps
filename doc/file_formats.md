@@ -232,43 +232,73 @@ RandomItemTable = {
 }
 ```
 
-### Observations
-Note: This was analyzed before I checked against the wc3edit.net source, which covers some of the data here
-* Output the unknown region of 42 TFT .w3i files and analyzed it. Data is in `doc/reference.w3i_unknown_analysis.txt`
-* `unknown_region[0x00:0x08]` is always `ff ff ff ff 00 00 00 00`
-* `unknown_region[0x08:0x0d]` is always `00 00 00 00 00`
-* `unknown_region[0xd]` is always `00`, `40`, or `80`
-  * `80` on test map, OrcX01_05, UndeadX01_Interlude, War3XRegularCreditsIce
-  * `40` on HumanX06Finale
-  * `00` elsewhere (37 maps)
-* `unknown_region[0x13]` is `45` except in HumanX05 and HumanX06Finale, where it is `46`
-* `unknown_region[0x14:0x17]` is `00 00 00` except in UndeadX04 (`cd cc cc`) and NightElfX06Interlude (`00 00 80`)
-* `unknown_region[0x1c:0x20]` is always `00 00 00 00` except NightElfX05 / NightElfX06 (`52 4c 6c 72` = ascii RLlr = Rain Lordaeron light rain)
-* `unknown_region` is always either length 38 or 45
-* length 45 «—» `unknown_region[0x20:28]` "Dungeon" or "Default" (ascii)
-  * This only occurs on HumanX03, NightElfX03, OrcX01_05, UndeadX07a, UndeadX07b, UndeadX07c
-* The last byte is always `ff`
-  * In 35/42 cases, the last 4 bytes are `ff ff ff ff`
-* The following regex matches all checked files:
-```
-length=(38|45)\n\nff ff ff ff 00 00 00 00 
-00 00 00 00 00 [840]0 (00|1c|3b|48|7a|96|c8|fa) (00|42|43|44|45) 
-00 .0 .[abc] 4[56] (00 00 [08]0|cd cc cc) [03][0ef] 
-[01358bef][023689bef] [0258bcef][05689ef] [04568abef][046cef] ff (00 00 00 00|52 4c 6c 72) 
-(44 65 66 61 75 6c 74 |44 75 6e 67 65 6f 6e |)00 \n?(00|41|42|49|4a|59) (ff|19|32) (ff|00|4b|5e|80) (ff|00|32|64|d4) ff
+## .w3o / .w3u / .w3t / .w3b / .w3d / .w3a / .w3h / .w3q
+* .w3u files store unit data
+* .w3t files store item data
+* .w3b files store destructible data
+* .w3d files store doodad data
+* .w3a files store ability data
+* .w3h files store buff data
+* .w3q files store upgrade data
+* .w3o essentially packages all the above files together
+* Data is kept in tables that are essentially a series of key-value pairs
+
+```C
+w3u_data = {
+    int version = 1;
+    object_table_t blizzard_objects;
+    object_table_t map_objects;
+}
+object_table_t = {
+    int num_entries;
+    entry_t[num_entries] entries;
+}
+entry_t = {
+    char[4] parent_id;
+    char[4] object_id;
+    int num_modifications;
+    modification_t[num_modifications] modifications;
+}
+modification_t = {
+    char[4] modification_id;
+    int type_id;
+#if filetype == doodads || abilities || upgrades
+    union {
+        int variation_id;
+        int level;
+    };
+    int table_column;
+#endif
+    T value;
+    char[4] object_id;  // can be 0, parent_id, or object_id
+}
 ```
 
-### Conclusions
-* `unknown_region` starts with 3 `int`s which always seem to be -1, 0, 0
-* next is likely an empty string
-* next is likely a bitfield (int with an empty high-bit?)
-* another 10 bytes of flags
-* A byte that is always `ff`
-* A `char[4]` code or 0 (RLlr is used to denote Lordaeron light rain in .w3r files)
-  * https://forum.wc3edit.net/deprotection-cheating-f64/guide-format-explanation-of-w3m-and-w3x-files-t7080.html
-* A string, either "Dungeon", "Default", or ""
-* An integer of flags
-* A byte that is always `ff`
+### Variable types
+| Code | Type            |
+| ---- | --------------- |
+| 0    | int32           |
+| 1    | float           |
+| 2    | unreal (float in range [0, 1]) |
+| 3    | string          |
+| 4    | bool8           |
+| 5    | char            |
+| 6    | unit[]          |
+| 7    | item[]          |
+| 8    | regen_type      |
+| 9    | attack_type     |
+| 10   | weapon_type     |
+| 11   | target_type     |
+| 12   | move_type       |
+| 13   | defense_type    |
+| 14   | pathing_texture |
+| 15   | upgrade[]       |
+| 16   | string[]        |
+| 17   | ability[]       |
+| 18   | hero_ability[]  |
+| 19   | missile_art     |
+| 20   | attribute_type  |
+| 21   | attack_bits     |
 
 ## .wtg
 * .wtg files store trigger names for display in the editor

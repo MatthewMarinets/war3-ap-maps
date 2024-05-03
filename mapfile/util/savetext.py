@@ -15,17 +15,17 @@ def clean_data(data: dict[str, Any]) -> None:
         del data[key]
     return
 
-def to_toml(data: dict[str, Any], notes: Iterable[str] = ()) -> str:
+def to_toml(data: dict[str, Any], notes: Iterable[str] = (), array_nesting: Iterable[str] = ()) -> str:
     result: list[str] = [f"# {x}" for x in notes]
     result.append('')
     list_results: list[str] = []
     for key, value in data.items():
         if isinstance(value, bool):
             result.append(f'{key} = {str(value).lower()}')
-        elif value is None:
-            result.append(f'{key} = "null"')
+        # elif value is None:
+        #     result.append(f'{key} = "null"')
         elif isinstance(value, str):
-            result.append(f'{key} = "{value}"')
+            result.append(f"{key} = '{value}'")
         elif isinstance(value, bytes):
             value = value.replace(b'\0', b'0')
             result.append(f'{key} = {{ type = "bytes", value = "{value.decode("utf-8")}" }}')
@@ -39,8 +39,11 @@ def to_toml(data: dict[str, Any], notes: Iterable[str] = ()) -> str:
             result.append(f'{key} = {list(value)}')
         elif is_array:
             for val in value:
-                list_results.append(f'\n[[{key}]]')
-                list_results.append(to_toml(val))
+                list_results.append(f'\n[[{".".join(array_nesting + (key,))}]]')
+                list_results.append(to_toml(val, array_nesting=array_nesting + (key,)))
+        elif isinstance(value, dict):
+            list_results.append(f'[{".".join(array_nesting + (key,))}]')
+            list_results.append(to_toml(value, array_nesting=array_nesting + (key,)))
         else:
             result.append(f'{key} = {value}')
     return '\n'.join(result + list_results)

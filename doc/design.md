@@ -30,4 +30,3 @@ Possibilities:
 
 ## Shopsanity
 * Allow buying checks from goblin merchants
-* 

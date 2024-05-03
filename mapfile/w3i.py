@@ -472,8 +472,4 @@ if __name__ == '__main__':
         round_tripped = to_binary(retrived_data)
         assert round_tripped == raw_data
 
-
     print('done')
-
-
-

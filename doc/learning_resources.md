@@ -7,6 +7,7 @@
 * [Text colour modes](https://world-editor-tutorials.thehelper.net/colors.php)
 * [Zezula's writeup on MPQ archive format](http://zezula.net/en/mpq/mpqformat.html)
   * [Hive Workshop post introducing this tool + giving some technical support](https://www.hiveworkshop.com/threads/ladiks-mpq-editor.249562/)
+* [Zezula's CascView](http://www.zezula.net/en/casc/main.html)
 * [This Hive Workshop post explaining .blp format is excellent](https://www.hiveworkshop.com/threads/blp-specifications-wc3.279306/)
 * [JASS documentation repository](https://github.com/lep/jassdoc)
 * [Warcraft 3 Liquipedia](https://liquipedia.net/warcraft/Main_Page)
