@@ -27,4 +27,5 @@
 * [zlib RFC](https://www.rfc-editor.org/rfc/rfc1950)
 * [SO answer for getting raw inflate/deflate algorithms in Python](https://stackoverflow.com/questions/1089662/python-inflate-and-deflate-implementations)
 * [DEFLATE algorithm flush / block details](https://www.bolet.org/~pornin/deflate-flush-fr.html)
+* [Old spec for .slk format](https://outflank.nl/upload/sylksum.txt)
 

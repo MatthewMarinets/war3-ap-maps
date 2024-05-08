@@ -2,6 +2,7 @@
 * This information is mostly collected from [This post on TheHelper](https://www.thehelper.net/threads/guide-explanation-of-w3m-and-w3x-files.35292/)
 * [wc3-project.ag.vu](http://www.wc3-project.ag.vu/w3m-specs.html) also has a good summary of formats that appear in map files
 * [Wikipedia page on .tga format](https://en.wikipedia.org/wiki/Truevision_TGA)
+* [Old spec on .slk format](https://outflank.nl/upload/sylksum.txt)
 
 ## Summary
 | Extension | Explanation                                                                |
