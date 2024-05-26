@@ -68,6 +68,7 @@ class War3ObjectData:
     blizzard_objects: EntityTable
     map_objects: EntityTable
 
+
 def _parse_entity_table(reader: binary.ByteArrayParser, has_levels: bool = False) -> EntityTable:
     table = EntityTable(reader.read_int32())
     for _ in  range(table.num_entities):
@@ -114,6 +115,7 @@ def read_w3u(raw_data: bytes) -> War3ObjectData:
     assert reader.index == len(reader.raw_bytes), 'Extra bytes remain'
     return War3ObjectData(version, blizzard_table, map_table)
 
+
 def as_text(data: War3ObjectData) -> str:
     dict_data = dataclasses.asdict(data)
     savetext.clean_data(dict_data)
@@ -122,11 +124,13 @@ def as_text(data: War3ObjectData) -> str:
         ("Warcraft 3 Map Objects File (.w3o)", "See w3o.py for type definitions")
     )
 
+
 def from_text(text: str) -> War3ObjectData:
     import tomllib
     result = tomllib.loads(text)
     # Todo(mm): Properly unpack types
     return War3ObjectData(**result)
+
 
 if __name__ == '__main__':
     from work import manifest
@@ -146,6 +150,7 @@ if __name__ == '__main__':
         with open(f'scratch/w3o/w3u_{map_name}.toml', 'w') as fp:
             print(text, file=fp)
         retrived_data = from_text(text)
+        # assert retrived_data == data
         # round_tripped = to_binary(retrived_data)
         # assert round_tripped == raw_data
 

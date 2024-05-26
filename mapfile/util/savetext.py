@@ -3,6 +3,7 @@ Utilities for saving game data as a text-based format
 """
 from typing import *
 import enum
+from .. import translate
 
 def clean_data(data: dict[str, Any]) -> None:
     # Clear `num_` data members; they can be recovered from their corresponding arrays' len()
@@ -15,6 +16,7 @@ def clean_data(data: dict[str, Any]) -> None:
         del data[key]
     return
 
+
 def to_toml(data: dict[str, Any], notes: Iterable[str] = (), array_nesting: Iterable[str] = ()) -> str:
     result: list[str] = [f"# {x}" for x in notes]
     result.append('')
@@ -25,7 +27,10 @@ def to_toml(data: dict[str, Any], notes: Iterable[str] = (), array_nesting: Iter
         # elif value is None:
         #     result.append(f'{key} = "null"')
         elif isinstance(value, str):
-            result.append(f"{key} = '{value}'")
+            if len(value) == 4 and value != 'null' and (human_readable := translate.get_name(value)):
+                result.append(f"{key} = '{value}'  # {human_readable}")
+            else:
+                result.append(f"{key} = '{value}'")
         elif isinstance(value, bytes):
             value = value.replace(b'\0', b'0')
             result.append(f'{key} = {{ type = "bytes", value = "{value.decode("utf-8")}" }}')
@@ -42,7 +47,7 @@ def to_toml(data: dict[str, Any], notes: Iterable[str] = (), array_nesting: Iter
                 list_results.append(f'\n[[{".".join(array_nesting + (key,))}]]')
                 list_results.append(to_toml(val, array_nesting=array_nesting + (key,)))
         elif isinstance(value, dict):
-            list_results.append(f'[{".".join(array_nesting + (key,))}]')
+            list_results.append(f'\n[{".".join(array_nesting + (key,))}]')
             list_results.append(to_toml(value, array_nesting=array_nesting + (key,)))
         else:
             result.append(f'{key} = {value}')

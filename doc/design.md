@@ -12,10 +12,15 @@
 ### Abilities
 Possibilities:
 * Each ability is assigned to a random hero, only useful in the missions that hero appears
-* Abillities are assignable to heroes
+* Abilities are assignable to heroes
 * Abilities are locked to a hero, but when you get them, they are assignable to a mission
 * Items are general (ie "ability 2") and all heroes benefit from it
 * Assignable ability points that must be allocated in special UI
+
+### Hero slots
+#### Consistent slots
+* Each hero slot gets randomized. So if Arthas gets rando'd to Tyrande, he will be Tyrande in all human campaign missions
+* Alternate: hero slot rando. So Arthas can be Tyrande in Hu1 and Illidan in Hu2. Hero inventories are locked to slot (inspired by Arithon89 in GGG's Twitch chat)
 
 #### Settings
 > I would make the ability setting akin to:

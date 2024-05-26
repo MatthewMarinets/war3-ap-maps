@@ -17,7 +17,7 @@ def _split_semicolons(line: str) -> list[str]:
     return [x.replace('♥', ';') for x in elements]
 
 
-def parse_slk(lines: list[str]) -> tuple[tuple[str, ...], ...] | Error[tuple[str, int]]:
+def parse_slk(lines: list[str]) -> tuple[tuple[str | int | float, ...], ...] | Error[tuple[str, int]]:
     grid: list[list[str]] = []
     lines = [x for x in lines if x]
     size_x = -1
@@ -69,7 +69,10 @@ def parse_slk(lines: list[str]) -> tuple[tuple[str, ...], ...] | Error[tuple[str
                     if part[1] == '"':
                         val = part[2:-1]
                     else:
-                        val = int(part[1:])
+                        try:
+                            val = int(part[1:])
+                        except ValueError:
+                            val = float(part[1:])
                 else:
                     return Error((f"C record received unsupported argument '{part}'", line_number))
             if x_pos == -1:
