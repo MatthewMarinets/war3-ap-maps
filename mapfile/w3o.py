@@ -143,6 +143,40 @@ def read_w3u(raw_data: bytes) -> War3ObjectData:
     return War3ObjectData(version, blizzard_table, map_table)
 
 
+def to_binary(data: War3ObjectData, has_levels: bool = False) -> bytes:
+    writer = binary.ByteArrayWriter()
+    writer.write_int32(data.version)
+    for table in (data.blizzard_objects, data.map_objects):
+        writer.write_int32(table.num_entities)
+        for entity in table.entities:
+            writer.write_id(entity.parent_id)
+            writer.write_id(entity.entity_id)
+            writer.write_int32(entity.num_modifications)
+            for modification in entity.modifications:
+                writer.write_id(modification.modification_id)
+                writer.write_int32(modification.data_type)
+                
+                if has_levels:
+                    writer.write_int32(modification.variation_level)
+                    writer.write_int32(modification.table_column)
+                if modification.data_type == DataType.Integer:
+                    writer.write_int32(modification.value)
+                elif modification.data_type == DataType.Float:
+                    writer.write_float(modification.value)
+                elif modification.data_type == DataType.Unreal:
+                    writer.write_float(modification.value)
+                elif modification.data_type == DataType.String:
+                    writer.write_string(modification.value)
+                elif modification.data_type == DataType.Bool:
+                    writer.write_int32(modification.value)
+                elif modification.data_type == DataType.Char:
+                    writer.write_bytes(modification.value.encode('utf-8'))
+                else:
+                    assert False, f'Data type {modification.data_type} is unsupported'
+                writer.write_id(modification.object_id)
+    return writer.as_bytes()
+
+
 class W3oTomlWriter(savetext.TomlWriter):
     def __init__(self) -> None:
         super().__init__()
@@ -204,9 +238,9 @@ if __name__ == '__main__':
         text = as_text(data)
         with open(f'scratch/w3o/w3u_{map_name}.toml', 'w') as fp:
             print(text, file=fp)
-        retrived_data = from_text(text)
-        assert retrived_data == data
-        # round_tripped = to_binary(retrived_data)
-        # assert round_tripped == raw_data
+        retrieved_data = from_text(text)
+        assert retrieved_data == data
+        round_tripped = to_binary(retrieved_data)
+        assert round_tripped == raw_data
 
     print('done')
