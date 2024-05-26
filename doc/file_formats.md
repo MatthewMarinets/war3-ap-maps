@@ -306,6 +306,11 @@ modification_t = {
 * .wtg files store trigger names for display in the editor
 * ints after strings need not be 4-byte aligned in the file
 * bools are 4-byte values
+* Note(mm): TheHelper, wc3edit, and wc3-project sources are all very similar, but wc3edit had slightly more detail (revealed parameter type 3 is "string")
+  * [TheHelper](https://www.thehelper.net/threads/explanation-of-w3m-and-w3x-files.35292/)
+  * [wc3edit](https://forum.wc3edit.net/deprotection-cheating-f64/guide-format-explanation-of-w3m-and-w3x-files-t7080.html)
+  * [wc3-project](http://www.wc3-project.ag.vu/w3m-specs.html)
+
 ```C
 Header = {
     char[4] magic = "WTG!";
