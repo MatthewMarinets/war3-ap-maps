@@ -6,5 +6,11 @@
         "*.w3m": "hexEditor.hexedit",
         "*.w3x": "hexEditor.hexedit",
         "*.w3i": "hexEditor.hexedit",
+        "*.w3o": "hexEditor.hexedit",
+        "*.wtg": "hexEditor.hexedit",
+        // "*.slk": "blpPreview.previewEditor",
     },
+    // disable default slk by going to the extension and changing the
+    // filename pattern on line 78
+    // C:\Users\<user>\.vscode-oss\extensions\hugehardzhang.blp-preview-0.4.2\package.json
 }
