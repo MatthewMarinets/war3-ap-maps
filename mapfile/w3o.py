@@ -50,6 +50,12 @@ class Modification:
     value: str | int | float | list = 0
     object_id: int = 0
 
+    @staticmethod
+    def _from_dict(data: dict) -> 'Modification':
+        args = data.copy()
+        args['data_type'] = DataType[args['data_type']['value']]
+        return Modification(**args)
+
 @dataclass
 class Entity:
     parent_id: str
@@ -57,16 +63,37 @@ class Entity:
     num_modifications: int
     modifications: list[Modification] = dataclasses.field(default_factory=lambda: [])
 
+    @staticmethod
+    def _from_dict(data: dict) -> 'Entity':
+        return Entity(
+            data['parent_id'],
+            data['entity_id'],
+            len(data['modifications']),
+            [Modification._from_dict(x) for x in data['modifications']]
+        )
+
 @dataclass
 class EntityTable:
     num_entities: int
     entities: list[Entity] = dataclasses.field(default_factory=lambda: [])
+
+    @staticmethod
+    def _from_dict(data: dict) -> 'EntityTable':
+        return EntityTable(len(data['entities']), [Entity._from_dict(x) for x in data['entities']])
 
 @dataclass
 class War3ObjectData:
     version: int
     blizzard_objects: EntityTable
     map_objects: EntityTable
+
+    @staticmethod
+    def _from_dict(data: dict) -> 'War3ObjectData':
+        return War3ObjectData(
+            data['version'],
+            EntityTable._from_dict(data['blizzard_objects']),
+            EntityTable._from_dict(data['map_objects'])
+        )
 
 
 def _parse_entity_table(reader: binary.ByteArrayParser, has_levels: bool = False) -> EntityTable:
@@ -116,20 +143,48 @@ def read_w3u(raw_data: bytes) -> War3ObjectData:
     return War3ObjectData(version, blizzard_table, map_table)
 
 
+class W3oTomlWriter(savetext.TomlWriter):
+    def __init__(self) -> None:
+        super().__init__()
+        self.handlers = {
+            'version': self._write_int,
+            'blizzard_objects': self._write_dict,
+            'num_entities': self._write_nothing,
+            'entities': self._write_dict,
+            'parent_id': self._write_id,
+            'entity_id': self._write_id,
+            'num_modifications': self._write_nothing,
+            'modifications': self._write_dict,
+            'modification_id': self._write_id,
+            'data_type': self._write_enum,
+            'variation_level': self._write_int,
+            'table_column': self._write_int,  # todo(mm): This can probably reference a column header with translate
+            'value': self._write_stringify,
+            'object_id': self._write_id,
+        }
+        self.short_arrays = {
+            'map_objects.entities.modifications.value',
+            'blizzard_objects.entities.modifications.value',
+        }
+    def write(self, data: War3ObjectData) -> str:
+        self.lines.append("# Warcraft 3 Map Objects File (.w3o)")
+        self.lines.append("# See w3o.py for type definitions")
+        self.lines.append(f'version = {data.version}')
+        self._write_dict('blizzard_objects', dataclasses.asdict(data.blizzard_objects), 'blizzard_objects')
+        self._write_dict('map_objects', dataclasses.asdict(data.map_objects), 'map_objects')
+        result = '\n'.join(self.lines)
+        self.lines.clear()
+        return result
+
+
 def as_text(data: War3ObjectData) -> str:
-    dict_data = dataclasses.asdict(data)
-    savetext.clean_data(dict_data)
-    return savetext.to_toml(
-        dict_data,
-        ("Warcraft 3 Map Objects File (.w3o)", "See w3o.py for type definitions")
-    )
+    return W3oTomlWriter().write(data)
 
 
 def from_text(text: str) -> War3ObjectData:
     import tomllib
     result = tomllib.loads(text)
-    # Todo(mm): Properly unpack types
-    return War3ObjectData(**result)
+    return War3ObjectData._from_dict(result)
 
 
 if __name__ == '__main__':
@@ -150,7 +205,7 @@ if __name__ == '__main__':
         with open(f'scratch/w3o/w3u_{map_name}.toml', 'w') as fp:
             print(text, file=fp)
         retrived_data = from_text(text)
-        # assert retrived_data == data
+        assert retrived_data == data
         # round_tripped = to_binary(retrived_data)
         # assert round_tripped == raw_data
 
