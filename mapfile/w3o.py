@@ -133,12 +133,12 @@ def _parse_entity_table(reader: binary.ByteArrayParser, has_levels: bool = False
     return table
 
 
-def read_w3u(raw_data: bytes) -> War3ObjectData:
+def read_w3o(raw_data: bytes, has_levels: bool = False) -> War3ObjectData:
     reader = binary.ByteArrayParser(raw_data)
     version = reader.read_int32()
     assert version == 1, f'Unknown .w3u version: {version}'
-    blizzard_table = _parse_entity_table(reader)
-    map_table = _parse_entity_table(reader)
+    blizzard_table = _parse_entity_table(reader, has_levels)
+    map_table = _parse_entity_table(reader, has_levels)
     assert reader.index == len(reader.raw_bytes), 'Extra bytes remain'
     return War3ObjectData(version, blizzard_table, map_table)
 
@@ -147,11 +147,11 @@ def to_binary(data: War3ObjectData, has_levels: bool = False) -> bytes:
     writer = binary.ByteArrayWriter()
     writer.write_int32(data.version)
     for table in (data.blizzard_objects, data.map_objects):
-        writer.write_int32(table.num_entities)
+        writer.write_int32(len(table.entities))
         for entity in table.entities:
             writer.write_id(entity.parent_id)
             writer.write_id(entity.entity_id)
-            writer.write_int32(entity.num_modifications)
+            writer.write_int32(len(entity.modifications))
             for modification in entity.modifications:
                 writer.write_id(modification.modification_id)
                 writer.write_int32(modification.data_type)
@@ -223,24 +223,32 @@ def from_text(text: str) -> War3ObjectData:
 
 if __name__ == '__main__':
     from work import manifest
-    filenames = [f'work/{x}/war3map.w3u' for x in manifest.all_directories]
-    # filenames += ['extract/test_dalaran_ruins/war3map.w3i']
+    filenames: list[tuple[str, bool]] = []
+    filenames.extend([(f'work/{x}/war3map.w3u', False) for x in manifest.all_directories])
+    filenames.extend([(f'work/{x}/war3map.w3t', False) for x in manifest.all_directories])
+    filenames.extend([(f'work/{x}/war3map.w3b', False) for x in manifest.all_directories])
+    filenames.extend([(f'work/{x}/war3map.w3d', False) for x in manifest.all_directories])
+    filenames.extend([(f'work/{x}/war3map.w3a', True) for x in manifest.all_directories])
+    filenames.extend([(f'work/{x}/war3map.w3h', False) for x in manifest.all_directories])
+    filenames.extend([(f'work/{x}/war3map.w3q', True) for x in manifest.all_directories])
     import os
     os.makedirs('scratch/w3o', exist_ok=True)
-    for filename in filenames:
+    for filename, has_levels in filenames:
         if not os.path.exists(filename):
-            print(f'Warning: {filename} does not exist; skipping')
+            # print(f'Warning: {filename} does not exist; skipping')
             continue
+        print(f'Converting {filename}')
         map_name = os.path.basename(os.path.dirname(filename))
         with open(filename, 'rb') as fp2:
             raw_data = fp2.read()
-        data = read_w3u(raw_data)
+        data = read_w3o(raw_data, has_levels)
         text = as_text(data)
-        with open(f'scratch/w3o/w3u_{map_name}.toml', 'w') as fp:
+        ext = os.path.splitext(filename)[1].strip('.')
+        with open(f'scratch/w3o/{ext}_{map_name}.toml', 'w') as fp:
             print(text, file=fp)
         retrieved_data = from_text(text)
         assert retrieved_data == data
-        round_tripped = to_binary(retrieved_data)
+        round_tripped = to_binary(retrieved_data, has_levels)
         assert round_tripped == raw_data
 
     print('done')

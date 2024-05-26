@@ -101,7 +101,8 @@ class TomlWriter:
         for element in value:
             self.lines.append(f'[[{path}]]')
             element_func(key, element, path)
-            self.lines.append('')
+            if self.lines[-1]:
+                self.lines.append('')
     def _write_dict(self, key: str, value: dict, path: str) -> None:
         if not self.lines or self.lines[-1] != f'[[{path}]]':
             self.lines.append(f'[{path}]')
@@ -117,3 +118,5 @@ class TomlWriter:
                 if handler is None:
                     handler = self.handlers.get(subkey, self._write_stringify)
                 handler(subkey, subvalue, subpath)
+        if self.lines and self.lines[-1]:
+            self.lines.append('')

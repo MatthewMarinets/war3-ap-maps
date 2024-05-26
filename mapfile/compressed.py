@@ -6,7 +6,6 @@ from typing import *
 from dataclasses import dataclass
 import zlib
 import struct
-import numpy as np
 
 from mapfile.binary import ENDIANNESS
 
