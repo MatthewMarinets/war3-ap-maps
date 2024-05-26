@@ -1,9 +1,13 @@
 """
-Utilities for working with .wts (string library) files
+Utilities for working with .wts (string library) files.
 """
 import re
 
 def read_wts(filename: str) -> dict[str, str]:
+    """
+    Reads the strigger string contents into a dictionary.
+    Keys are in TRIGSTR_000 format.
+    """
     with open(filename, 'r', encoding='utf-8') as file_handle:
         lines = file_handle.readlines()
     result: dict[str, str] = {}

@@ -243,6 +243,7 @@ RandomItemTable = {
 * .w3q files store upgrade data
 * .w3o essentially packages all the above files together
 * Data is kept in tables that are essentially a series of key-value pairs
+* Note(mm): Some resources claim .w3d files have the optional level fields, but they do not
 
 ```C
 w3u_data = {
