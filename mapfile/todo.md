@@ -10,7 +10,7 @@
 - [ ] .w3r (regions)
 - [ ] .w3c (camera)
 - [ ] .w3s (sounds)
-- [ ] .imp (imports)
+- [x] .imp (imports)
 - [x] .w3u (units)
 - [x] .w3t (items)
 - [x] .w3b (destructables)
