@@ -1,4 +1,11 @@
 # Configuration
+## Using older versions of the editor
+Reforged is apparently a trap -- it sets a registry key that makes you unable to load an older version of the editor.
+Deleting this registry key is enough to recover functionality.
+The key is `Computer\HKEY_CURRENT_USER\SOFTWARE\Blizzard Entertainment\WorldEdit\Tool Windows`.
+
+[--video by Retera](https://www.youtube.com/watch?v=Ldn9uZlJSmg)
+
 ## External program interface configuration
 An external program interfacing with a Warcraft 3 map needs to know the following:
 * Warcraft 3 installation directory

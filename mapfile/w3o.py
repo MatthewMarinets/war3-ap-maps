@@ -7,7 +7,7 @@ This also handles the different subtypes:
 * .w3d (doodads)
 * .w3a (abilities)
 * .w3h (buffs)
-* .w3q (upgraades)
+* .w3q (upgrades)
 """
 from typing import *
 import enum
