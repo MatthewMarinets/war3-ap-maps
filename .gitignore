@@ -1,7 +1,8 @@
 __pycache__/
 scratch/
 original/
-testdata/
+testingdata/
+testout/
 extract/
 out/
 workspace.ini

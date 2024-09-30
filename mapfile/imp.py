@@ -30,7 +30,7 @@ def read_imp(raw_data: bytes) -> Imports:
         for _ in range(num_imports):
             result.imports.append(ImportedPath(reader.read_u8(), reader.read_cstring()))
     else:
-        assert False, f"Unable to handler .imp file of version {version}"
+        assert False, f"Unable to handle .imp file of version {version}"
     return result
 
 

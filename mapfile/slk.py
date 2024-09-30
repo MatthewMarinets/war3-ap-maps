@@ -25,7 +25,7 @@ def parse_slk(lines: list[str]) -> tuple[tuple[str | int | float, ...], ...] | E
     y_pos = -1
     expandable_grid = False
     if not lines:
-        return Error('No lines')
+        return Error(('No lines', 0))
     first_line = lines[0].strip()
     if not first_line.startswith('ID;'):
         return Error(('First line is not an ID record', 0))
@@ -36,7 +36,7 @@ def parse_slk(lines: list[str]) -> tuple[tuple[str | int | float, ...], ...] | E
             continue
         parts = _split_semicolons(line)
         if parts[0] == 'ID':
-            return Error(9("Second ID record in file", line_number))
+            return Error(("Second ID record in file", line_number))
         elif parts[0] == 'B':
             # Bounds
             if size_x != -1 or size_y != -1:
@@ -60,7 +60,7 @@ def parse_slk(lines: list[str]) -> tuple[tuple[str | int | float, ...], ...] | E
                 return Error(("C record did not receive any arguments", line_number))
             x_pos = -1
             for part in parts[1:]:
-                val = None
+                val: int | float | str | None = None
                 if part.startswith("X") or part.startswith("C"):
                     x_pos = int(part[1:]) - 1
                 elif part.startswith("Y") or part.startswith("R"):
@@ -99,7 +99,7 @@ def parse_slk(lines: list[str]) -> tuple[tuple[str | int | float, ...], ...] | E
     return tuple(tuple(x) for x in grid)
 
 
-def parse_slk_file(filename: str) -> tuple[tuple[str, ...], ...] | Error[str]:
+def parse_slk_file(filename: str) -> tuple[tuple[str, ...], ...] | Error[tuple[str, int]]:
     with open(filename, 'r') as fp:
         lines = fp.readlines()
     return parse_slk(lines)

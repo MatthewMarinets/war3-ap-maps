@@ -1,0 +1,20 @@
+﻿STRING 1
+{
+Test Campaign
+}
+
+STRING 2
+{
+Normal
+}
+
+STRING 4
+{
+Unknown
+}
+
+STRING 5
+{
+Testing the campaign exporter
+}
+

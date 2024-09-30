@@ -95,10 +95,12 @@ class ByteArrayWriter:
         assert len(value) == 4, f'"{value}" is not a valid ID; must be length 4'
         self.data.extend(value.encode('utf-8'))
         return self
-    def write_string(self, value: str) -> 'ByteArrayWriter':
+    def write_cstring(self, value: str) -> 'ByteArrayWriter':
         self.data.extend(value.encode('utf-8'))
         self.data.append(0)
         return self
+    def write_string(self, value: str) -> 'ByteArrayWriter':
+        return self.write_cstring(value)
     def write_float(self, value: float) -> 'ByteArrayWriter':
         self.data.extend(struct.pack('f', value))
         return self

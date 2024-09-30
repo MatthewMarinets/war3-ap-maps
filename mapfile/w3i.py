@@ -468,8 +468,8 @@ if __name__ == '__main__':
         text = as_text(data)
         with open(f'scratch/w3i/w3i_{map_name}.toml', 'w') as fp:
             print(text, file=fp)
-        retrived_data = from_text(text)
-        round_tripped = to_binary(retrived_data)
+        retrieved_data = from_text(text)
+        round_tripped = to_binary(retrieved_data)
         assert round_tripped == raw_data
 
     print('done')

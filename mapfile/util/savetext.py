@@ -17,7 +17,7 @@ def clean_data(data: dict[str, Any]) -> None:
     return
 
 
-def to_toml(data: dict[str, Any], notes: Iterable[str] = (), array_nesting: Iterable[str] = ()) -> str:
+def to_toml(data: dict[str, Any], notes: Iterable[str] = (), array_nesting: tuple[str, ...] = ()) -> str:
     result: list[str] = [f"# {x}" for x in notes]
     result.append('')
     list_results: list[str] = []
@@ -63,7 +63,7 @@ def parse_enum_flags[T: enum.IntFlag](value: str, enum_class: T) -> T:
 class TomlWriter:
     __slots__ = ('handlers', 'lines', 'short_arrays')
     def __init__(self) -> None:
-        self.handlers: dict[str, Callable] = {}
+        self.handlers: dict[str, Callable[[Any, Any, str], None]] = {}
         self.lines: list[str] = []
         self.short_arrays: Set[str] = set()
     def _write_nothing(self, key: str, value: Any, path: str) -> None:
