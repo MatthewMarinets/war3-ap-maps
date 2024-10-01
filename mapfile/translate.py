@@ -87,7 +87,7 @@ def init_map(map: dict, game_data_files: list[str]) -> None:
 def init_tft_map() -> None:
     if _id_to_strings_map:
         return
-    init_map(_id_to_strings_map, glob.glob(f"{MODERN_STRINGS_DIR}/*{STRING_FILE_SUFFIX}"))
+    init_map(_id_to_strings_map, glob.glob(f"{TFT_STRINGS_DIR}/*{STRING_FILE_SUFFIX}"))
 
 def init_roc_map() -> None:
     if _roc_id_to_strings_map:
@@ -120,17 +120,24 @@ def init_worldedit_map() -> None:
                     _id_to_display_prefix[id_value] = f"{table_row[slk_name_index]}."
 
 
-def get_name(object_id: str) -> str | None:
+def get_name(object_id: str, name_keys: tuple[str, ...] = ('Name', 'Bufftip', 'EditorName')) -> str | None:
     init_tft_map()
     init_worldedit_map()
-    if object_id in _id_to_strings_map and "Name" in _id_to_strings_map[object_id]:
-        return _id_to_strings_map[object_id]["Name"]
+    if object_id in _id_to_strings_map:
+        for name_key in name_keys:
+            if name_key in _id_to_strings_map[object_id]:
+                return _id_to_strings_map[object_id][name_key]
     world_edit_string = _id_to_world_edit_string.get(object_id)
     return _id_to_display_prefix.get(object_id, '') + _world_edit_strings["WorldEditStrings"].get(world_edit_string, '')
+
+
+def get_worldedit_string(worldedit_string: str) -> str | None:
+    init_worldedit_map()
+    return _world_edit_strings["WorldEditStrings"].get(worldedit_string, '')
 
 
 if __name__ == '__main__':
     # print(get_name("ncer"))
     # print(get_name("usle"))
-    # print(get_name("ncim"))
-    print(get_name("uabi"))
+    print(get_name("Xfum"))
+    print(get_worldedit_string("WESTRING_FEVAL_FRAC"))

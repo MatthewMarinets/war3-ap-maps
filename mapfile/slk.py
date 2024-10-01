@@ -68,6 +68,12 @@ def parse_slk(lines: list[str]) -> tuple[tuple[str | int | float, ...], ...] | E
                 elif part.startswith("K"):
                     if part[1] == '"':
                         val = part[2:-1]
+                    elif part[1:] == 'FALSE':
+                        val = False
+                    elif part[1:] == 'TRUE':
+                        val = True
+                    elif part[1] == '#':
+                        val = part[1:]
                     else:
                         try:
                             val = int(part[1:])
