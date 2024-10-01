@@ -11,14 +11,10 @@ W3F_FILE = 'test/testdata/mycampaign/war3campaign.w3f'
 
 class TestW3f(unittest.TestCase):
     def test_round_trip(self) -> None:
-        os.makedirs('testout/w3f', exist_ok=True)
-
         with open(W3F_FILE, 'rb') as fp:
             raw_data = fp.read()
         data = w3f.read_w3f(raw_data)
         text = w3f.as_text(data)
-        # with open(f'testout/w3f/mycampaign.w3f.toml', 'w') as fp:
-            # print(text, file=fp)
         retrieved_data = w3f.from_text(text)
         round_tripped_data = w3f.to_binary(retrieved_data)
 
