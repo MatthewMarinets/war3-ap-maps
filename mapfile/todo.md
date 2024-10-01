@@ -1,10 +1,10 @@
 # File formats covered
 - [x] mpq/w3m/w3x -- MPQEditor
 - [ ] .w3e (environment)
-- [ ] .w3i (info)
+- [x] .w3i (info)
 - [ ] .wtg (GUI trigger metadata)
 - [ ] .wct (text trigger metadata)
-- [ ] .mmp (minimap icons)
+- [x] .mmp (minimap icons)
 - [ ] .wpm (path map)
 - [ ] .doo (doodads placement)
 - [ ] .w3r (regions)
@@ -18,9 +18,9 @@
 - [x] .w3a (abilities)
 - [x] .w3h (buffs)
 - [x] .w3q (upgrades)
-- [ ] .w3o (general objects)
-- [ ] .w3f (campaign info)
-- [ ] .slk (spreadsheet)
+- [x] .w3o (general objects)
+- [x] .w3f (campaign info)
+- [x] .slk (spreadsheet)
 
 ## Text
 * .j (jass script)
