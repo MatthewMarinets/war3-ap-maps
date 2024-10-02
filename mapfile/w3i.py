@@ -109,19 +109,16 @@ class RandomEntity:
 class RandomEntityGroup:
     group_id: int
     name: str
-    num_positions: int
-    position_type: list[RandomEntityType]
-    num_entities: int
-    entities: list[RandomEntity] = dataclasses.field(default_factory=[])
+    position_type: list[RandomEntityType] = dataclasses.field(default_factory=list)
+    entities: list[RandomEntity] = dataclasses.field(default_factory=list)
 
 @dataclass
 class RandomEntityInfo:
-    num_groups: int
-    groups: list[RandomEntityGroup] = dataclasses.field(default_factory=lambda x: [])
+    groups: list[RandomEntityGroup] = dataclasses.field(default_factory=list)
 
 @dataclass
 class RandomItemInfo:
-    num_groups: int
+    pass
     # Todo(mm): finish this
 
 @dataclass
@@ -168,17 +165,11 @@ class War3MapInformation:
     tft_water_tint_green: int = 0
     tft_water_tint_blue: int = 0
     tft_water_tint_alpha: int = 0
-    num_players: int = 0
     players: list[PlayerInfo] = dataclasses.field(default_factory=lambda: [])
-    num_forces: int = 0
     forces: list[ForceInfo] = dataclasses.field(default_factory=lambda: [])
-    num_upgrades: int = 0
     upgrades: list[UpgradeInfo] = dataclasses.field(default_factory=lambda: [])
-    num_technologies: int = 0
     technologies: list[TechnologyInfo] = dataclasses.field(default_factory=lambda: [])
-    num_random_entities: int = 0
     random_entities: list[RandomEntityInfo] = dataclasses.field(default_factory=lambda: [])
-    num_random_items: int = 0
     random_items: list[RandomItemInfo] = dataclasses.field(default_factory=lambda: [])
 
 
@@ -232,8 +223,8 @@ def read_w3i(raw_bytes: bytes) -> War3MapInformation:
         result.tft_water_tint_green = reader.read_u8()
         result.tft_water_tint_blue = reader.read_u8()
         result.tft_water_tint_alpha = reader.read_u8()
-    result.num_players = reader.read_int32()
-    for _ in range(result.num_players):
+    num_players = reader.read_int32()
+    for _ in range(num_players):
         player = PlayerInfo(
             player_id=reader.read_int32(),
             player_type=FactionController(reader.read_int32()),
@@ -245,16 +236,16 @@ def read_w3i(raw_bytes: bytes) -> War3MapInformation:
             ally_high_priorities_flags=reader.read_u32(),
         )
         result.players.append(player)
-    result.num_forces = reader.read_int32()
-    for _ in range(result.num_forces):
+    num_forces = reader.read_int32()
+    for _ in range(num_forces):
         force = ForceInfo(
             flags=ForcesFlags(reader.read_u32()),
             player_mask_flags=reader.read_u32(),
             name=reader.read_cstring(),
         )
         result.forces.append(force)
-    result.num_upgrades = reader.read_int32()
-    for _ in range(result.num_upgrades):
+    num_upgrades = reader.read_int32()
+    for _ in range(num_upgrades):
         upgrade = UpgradeInfo(
             player_flags=reader.read_u32(),
             upgrade_id=reader.read_id(),
@@ -262,28 +253,26 @@ def read_w3i(raw_bytes: bytes) -> War3MapInformation:
             availability=UpgradeAvailability(reader.read_int32()),
         )
         result.upgrades.append(upgrade)
-    result.num_technologies = reader.read_int32()
-    for _ in range(result.num_technologies):
+    num_technologies = reader.read_int32()
+    for _ in range(num_technologies):
         technology = TechnologyInfo(
             player_flags=reader.read_u32(),
             tech_id=reader.read_id(),
         )
         result.technologies.append(technology)
-    result.num_random_entities = reader.read_int32()
-    for _ in range(result.num_random_entities):
+    num_random_entities = reader.read_int32()
+    for _ in range(num_random_entities):
         num_groups = reader.read_int32()
-        random_entity = RandomEntityInfo(
-            num_groups=num_groups,
-        )
+        random_entity = RandomEntityInfo()
         for _ in range(num_groups):
             random_entity_group = RandomEntityGroup(
-                reader.read_int32(),
-                reader.read_cstring(),
-                (num_positions := reader.read_int32()),
-                [RandomEntityType(reader.read_int32()) for _ in range(num_positions)],
-                reader.read_int32(),
+                group_id=reader.read_int32(),
+                name=reader.read_cstring(),
             )
-            for _ in range(random_entity_group.num_entities):
+            num_positions = reader.read_int32()
+            random_entity_group.position_type = [RandomEntityType(reader.read_int32()) for _ in range(num_positions)]
+            num_entities = reader.read_int32()
+            for _ in range(num_entities):
                 random_entity_group.entities.append(RandomEntity(
                     reader.read_int32(),
                     [reader.read_id() for _ in range(num_positions)],
@@ -291,8 +280,8 @@ def read_w3i(raw_bytes: bytes) -> War3MapInformation:
             random_entity.groups.append(random_entity_group)
         result.random_entities.append(random_entity)
     if version == W3iVersions.TFT:
-        result.num_random_items = reader.read_int32()
-        if result.num_random_items > 0:
+        num_random_items = reader.read_int32()
+        if num_random_items > 0:
             assert False, 'Random items detected; not implemented'
     assert reader.index == len(reader.raw_bytes), "Unknown bytes at end of w3i file"
     return result
@@ -346,57 +335,59 @@ def to_binary(data: War3MapInformation) -> bytes:
         writer.write_u8(data.tft_water_tint_green)
         writer.write_u8(data.tft_water_tint_blue)
         writer.write_u8(data.tft_water_tint_alpha)
-    writer.write_int32(data.num_players)
-    for x in range(data.num_players):
-        writer.write_int32(data.players[x].player_id)
-        writer.write_int32(data.players[x].player_type)
-        writer.write_int32(data.players[x].player_faction)
-        writer.write_int32(data.players[x].fixed_start_position)
-        writer.write_string(data.players[x].name)
-        writer.write_float(data.players[x].start_pos[0])
-        writer.write_float(data.players[x].start_pos[1])
-        writer.write_u32(data.players[x].ally_low_priorities_flags)
-        writer.write_u32(data.players[x].ally_high_priorities_flags)
-    writer.write_int32(data.num_forces)
-    for x in range(data.num_forces):
-        writer.write_u32(data.forces[x].flags)
-        writer.write_u32(data.forces[x].player_mask_flags)
-        writer.write_string(data.forces[x].name)
-    writer.write_int32(data.num_upgrades)
-    for x in range(data.num_upgrades):
-        writer.write_u32(data.upgrades[x].player_flags)
-        writer.write_id(data.upgrades[x].upgrade_id)
-        writer.write_int32(data.upgrades[x].level)
-        writer.write_int32(data.upgrades[x].availability)
-    writer.write_int32(data.num_technologies)
-    for x in range(data.num_technologies):
-        writer.write_u32(data.technologies[x].player_flags)
-        writer.write_id(data.technologies[x].tech_id)
-    writer.write_int32(data.num_random_entities)
-    for x in range(data.num_random_entities):
-        writer.write_int32(data.random_entities[x].num_groups)
-        for group_index in range(data.random_entities[x].num_groups):
-            writer.write_int32(data.random_entities[x].groups[group_index].group_id)
-            writer.write_string(data.random_entities[x].groups[group_index].name)
-            writer.write_int32(data.random_entities[x].groups[group_index].num_positions)
-            for position_index in range(data.random_entities[x].groups[group_index].num_positions):
-                writer.write_int32(data.random_entities[x].groups[group_index].position_type[position_index])
-            writer.write_int32(data.random_entities[x].groups[group_index].num_entities)
-            for entity_index in range(data.random_entities[x].groups[group_index].num_entities):
-                writer.write_int32(data.random_entities[x].groups[group_index].entities[entity_index].probability_percent)
-                for position_index in range(data.random_entities[x].groups[group_index].num_positions):
-                    writer.write_id(data.random_entities[x].groups[group_index].entities[entity_index].entity_id[position_index])
+    writer.write_int32(len(data.players))
+    for player in data.players:
+        writer.write_int32(player.player_id)
+        writer.write_int32(player.player_type)
+        writer.write_int32(player.player_faction)
+        writer.write_int32(player.fixed_start_position)
+        writer.write_string(player.name)
+        writer.write_float(player.start_pos[0])
+        writer.write_float(player.start_pos[1])
+        writer.write_u32(player.ally_low_priorities_flags)
+        writer.write_u32(player.ally_high_priorities_flags)
+    writer.write_int32(len(data.forces))
+    for force in data.forces:
+        writer.write_u32(force.flags)
+        writer.write_u32(force.player_mask_flags)
+        writer.write_string(force.name)
+    writer.write_int32(len(data.upgrades))
+    for upgrade in data.upgrades:
+        writer.write_u32(upgrade.player_flags)
+        writer.write_id(upgrade.upgrade_id)
+        writer.write_int32(upgrade.level)
+        writer.write_int32(upgrade.availability)
+    writer.write_int32(len(data.technologies))
+    for technology in data.technologies:
+        writer.write_u32(technology.player_flags)
+        writer.write_id(technology.tech_id)
+    writer.write_int32(len(data.random_entities))
+    for random_entity_info in data.random_entities:
+        writer.write_int32(len(random_entity_info.groups))
+        for random_entity_group in random_entity_info.groups:
+            writer.write_int32(random_entity_group.group_id)
+            writer.write_string(random_entity_group.name)
+            writer.write_int32(len(random_entity_group.position_type))
+            for position_type in random_entity_group.position_type:
+                writer.write_int32(position_type.value)
+            writer.write_int32(len(random_entity_group.entities))
+            for random_entity in random_entity_group.entities:
+                writer.write_int32(random_entity.probability_percent)
+                assert len(random_entity_group.position_type) == len(random_entity.entity_id), (
+                    f"Random group position type and entity ID lists must have the same length,"
+                    f" got {len(random_entity_group.position_type)} != {len(random_entity_group.entity_id)}"
+                )
+                for random_entity_id in random_entity.entity_id:
+                    writer.write_id(random_entity_id)
     if data.version == W3iVersions.TFT:
-        writer.write_int32(data.num_random_items)
+        writer.write_int32(0)
         # Todo(mm): Handle random items
     return writer.as_bytes()
 
 
 def as_text(data: War3MapInformation) -> str:
-    dict_data = dataclasses.asdict(data)
-    savetext.clean_data(dict_data)
     return savetext.to_toml(
-        dict_data,
+        dataclasses.asdict(data),
         ("Warcraft 3 Map Info File(.w3i)", "See w3i.py for type definitions")
     )
 
@@ -442,15 +433,11 @@ def _unpack_types(data: dict[str, Any]) -> None:
             else:
                 assert not custom_type, f'Unknown list type for key {key}'
 
+
 def from_text(text: str) -> War3MapInformation:
     import tomllib
     result = tomllib.loads(text)
     _unpack_types(result)
-    result['num_players'] = len(result['players'])
-    result['num_forces'] = len(result['forces'])
-    result['num_upgrades'] = len(result['upgrades'])
-    result['num_technologies'] = len(result['technologies'])
-    result['num_random_entities'] = len(result['random_entities'])
     return War3MapInformation(**result)
 
 

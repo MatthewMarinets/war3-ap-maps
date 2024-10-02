@@ -5,17 +5,6 @@ from typing import *
 import enum
 from .. import translate
 
-def clean_data(data: dict[str, Any]) -> None:
-    # Clear `num_` data members; they can be recovered from their corresponding arrays' len()
-    to_delete: list[str] = []
-    for key in data:
-        if key.startswith('num_') and (collection := key[4:]) and collection in data:
-            assert data[key] == len(data[collection])
-            to_delete.append(key)
-    for key in to_delete:
-        del data[key]
-    return
-
 
 def to_toml(data: dict[str, Any], notes: Iterable[str] = (), array_nesting: tuple[str, ...] = ()) -> str:
     result: list[str] = [f"# {x}" for x in notes]
