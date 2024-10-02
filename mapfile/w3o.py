@@ -60,7 +60,6 @@ class Modification:
 class Entity:
     parent_id: str
     entity_id: str
-    num_modifications: int
     modifications: list[Modification] = dataclasses.field(default_factory=lambda: [])
 
     @staticmethod
@@ -68,18 +67,16 @@ class Entity:
         return Entity(
             data['parent_id'],
             data['entity_id'],
-            len(data['modifications']),
             [Modification._from_dict(x) for x in data['modifications']]
         )
 
 @dataclass
 class EntityTable:
-    num_entities: int
     entities: list[Entity] = dataclasses.field(default_factory=lambda: [])
 
     @staticmethod
     def _from_dict(data: dict) -> 'EntityTable':
-        return EntityTable(len(data['entities']), [Entity._from_dict(x) for x in data['entities']])
+        return EntityTable([Entity._from_dict(x) for x in data['entities']])
 
 @dataclass
 class War3ObjectData:
@@ -97,14 +94,15 @@ class War3ObjectData:
 
 
 def _parse_entity_table(reader: binary.ByteArrayParser, has_levels: bool = False) -> EntityTable:
-    table = EntityTable(reader.read_int32())
-    for _ in  range(table.num_entities):
+    table = EntityTable()
+    num_entities = reader.read_int32()
+    for _ in  range(num_entities):
         entity = Entity(
             reader.read_id(),
             reader.read_id(),
-            reader.read_int32(),
         )
-        for _ in range(entity.num_modifications):
+        num_modifications = reader.read_int32()
+        for _ in range(num_modifications):
             modification = Modification(
                 reader.read_id(),
                 DataType(reader.read_int32()),
@@ -183,11 +181,9 @@ class W3oTomlWriter(savetext.TomlWriter):
         self.handlers = {
             'version': self._write_int,
             'blizzard_objects': self._write_dict,
-            'num_entities': self._write_nothing,
             'entities': self._write_dict,
             'parent_id': self._write_id,
             'entity_id': self._write_id,
-            'num_modifications': self._write_nothing,
             'modifications': self._write_dict,
             'modification_id': self._write_id,
             'data_type': self._write_enum,
