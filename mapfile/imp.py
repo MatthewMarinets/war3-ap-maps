@@ -48,7 +48,7 @@ def write_binary(data: Imports) -> bytes:
 def as_text(data: Imports) -> str:
     result = [
         '# Warcraft 3 imports file',
-        f'version = {data.version}',
+        f'version = {data.version}\n',
     ]
     for _import in data.imports:
         result.append('[[imports]]')
