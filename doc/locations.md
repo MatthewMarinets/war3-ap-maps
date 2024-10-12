@@ -121,6 +121,81 @@
 | H7 The Shores of Northrend        | East Ice Troll Warlord                           | Tome   | Manual of Health                    |
 | H7 The Shores of Northrend        | Centre Ancient Wendigo                           | Item   | Gauntlets of Ogre Strength +3       |
 | H7 The Shores of Northrend        | Victory                                          | **Victory** |                                |
+| H8 Dissension                     | Start                                            | Quest  | Burn the Boats                      |
+| H8 Dissension                     | North Necromancer                                | Consum | Potion of Mana                      |
+| H8 Dissension                     | North Merc Camp                                  | Merc   | Ice Troll                           |
+| H8 Dissension                     | North Merc Camp                                  | Merc   | Ice Troll Priest                    |
+| H8 Dissension                     | North Merc Camp                                  | Merc   | Ogre Warrior                        |
+| H8 Dissension                     | Northwest Skeletal Marksman                      | Item   | Goblin Night Scope                  |
+| H8 Dissension                     | First Ship Crypt Fiend                           | Item   | Ring of Regeneration                |
+| H8 Dissension                     | First Ship                                       | Quest  | Ship 1/5                            |
+| H8 Dissension                     | West Nerubian Warrior                            | Consum | Potion of Healing                   |
+| H8 Dissension                     | Southwest Nerubian Seer                          | Consum | Potion of Greater Mana              |
+| H8 Dissension                     | Southwest Nerubian Queen                         | Item   | Claws of Attack +12                 |
+| H8 Dissension                     | Second Ship                                      | Quest  | Ship 2/5                            |
+| H8 Dissension                     | South Merc Camp                                  | Merc   | Ice Troll Berserker                 |
+| H8 Dissension                     | South Merc Camp                                  | Merc   | Ogre Magi                           |
+| H8 Dissension                     | Center Murloc Nightcrawler                       | Consum | Mana Stone                          |
+| H8 Dissension                     | Hidden Frost Revenant                            | Item   | Sobi Mask                           |
+| H8 Dissension                     | Center Goblin Laboratory                         | Merc   | Goblin Sapper                       |
+| H8 Dissension                     | Third Ship                                       | Quest  | Ship 3/5                            |
+| H8 Dissension                     | Center Merc Camp                                 | Merc   | Ice Troll Trapper                   |
+| H8 Dissension                     | Center Merc Camp                                 | Merc   | Ice Troll High Priest               |
+| H8 Dissension                     | Center Merc Camp                                 | Merc   | Ogre Mauler                         |
+| H8 Dissension                     | Center Blue Drake                                | Consum | Potion of Greater Healing           |
+| H8 Dissension                     | Hidden Pandaren                                  | Item   | Pendant of Mana                     |
+| H8 Dissension                     | Center Shop                                      | Shop   | Amulet of Recall                    |
+| H8 Dissension                     | Center Shop                                      | Shop   | Potion of Healing                   |
+| H8 Dissension                     | Center Shop                                      | Shop   | Potion of Mana                      |
+| H8 Dissension                     | Center Shop                                      | Shop   | Scroll of Healing                   |
+| H8 Dissension                     | Fourth Ship                                      | Quest  | Ship 4/5                            |
+| H8 Dissension                     | Fifth Ship                                       | Quest  | Ship 5/5 - Victory                  |
+| H8 Dissension                     | Victory                                          | **Victory** |                                |
+| H9 Frostmourne                    | Start                                            | Quest  | Frostmourne                         |
+| H9 Frostmourne                    | Start                                            | Unlock | Gryphon                             |
+| H9 Frostmourne                    | Gauntlet Dire Frost Wolf                         | Item   | Ring of Protection +3               |
+| H9 Frostmourne                    | Gauntlet Dire Frost Wolf 2                       | Item   | Periapt of Vitality                 |
+| H9 Frostmourne                    | Gauntlet Wendigo Shaman                          | Consum | Potion of Greater Mana              |
+| H9 Frostmourne                    | Gauntlet Wendigo Shaman                          | Tome   | Tome of Agility                     |
+| H9 Frostmourne                    | Frostmourne                                      | Quest  | Frostmourne completed               |
+| H9 Frostmourne                    | Frostmourne                                      | Quest  | Mal'Ganis                           |
+| H9 Frostmourne                    | Center Nerubian Spider Lord                      | Consum | Healing Wards                       |
+| H9 Frostmourne                    | Center Nerubian Seer                             | Consum | Potion of Mana                      |
+| H9 Frostmourne                    | Center Ice Troll Berserker                       | Consum | Potion of Greater Healing           |
+| H9 Frostmourne                    | East Ice Troll Warlord                           | Consum | Health Stone                        |
+| H9 Frostmourne                    | East Shop                                        | Shop   | Potion of Healing                   |
+| H9 Frostmourne                    | East Shop                                        | Shop   | Potion of Mana                      |
+| H9 Frostmourne                    | East Shop                                        | Shop   | Scroll of Healing                   |
+| H9 Frostmourne                    | East Shop                                        | Shop   | Scroll of Protection                |
+| H9 Frostmourne                    | East Shop                                        | Shop   | Wand of Negation                    |
+| H9 Frostmourne                    | East Shop                                        | Shop   | Gem of True Seeing                  |
+| H9 Frostmourne                    | East Shop                                        | Shop   | Scroll of Town Portal               |
+| H9 Frostmourne                    | South Mercenary Camp                             | Merc   | Nerubian Warrior                    |
+| H9 Frostmourne                    | South Mercenary Camp                             | Merc   | Ice Troll Berserker                 |
+| H9 Frostmourne                    | South Mercenary Camp                             | Merc   | Frost Revenant                      |
+| H9 Frostmourne                    | South Mercenary Camp                             | Merc   | Nerubian Webspinner                 |
+| H9 Frostmourne                    | Victory                                          | **Victory** |                                |
+| O1 Landfall                       | West Murloc Flesheater                           | Consum | Healing Wards                       |
+| O1 Landfall                       | Center Quillboar Hunter                          | Consum | Healing Wards                       |
+| O1 Landfall                       | South Razormane Brute                            | Consum | Potion of Mana                      |
+| O1 Landfall                       | Center Harpy Windwitch                           | Consum | Scroll of the Beast                 |
+| O1 Landfall                       | Center Thunder Lizard                            | Consum | Potion of Mana                      |
+| O1 Landfall                       | Center Centaur Tent                              | Consum | Wand of Lightning Shield            |
+| O1 Landfall                       | East Murloc Flesheater                           | Tome   | Manual of Health                    |
+| O1 Landfall                       | Southeast Centaur Chest                          | Consum | Health Stone                        |
+| O1 Landfall                       | Southeast Murloc Tiderunner                      | Consum | Potion of Mana                      |
+| O1 Landfall                       | Southeast Murloc Flesheater                      | Item   | Periapt of Vitality                 |
+| O1 Landfall                       | Taurent Village Chest                            | Consum | Healing Wards                       |
+| O1 Landfall                       | South Headhunter Rescue                          | Forces | 2 headhunters                       |
+| O1 Landfall                       | Center Shipwreck Rescue                          | Forces | 2 headhunters 1 grunt               |
+| O1 Landfall                       | Horsemen Attack Rescue                           | Forces | 2 grunts 1 headhunter               |
+| O1 Landfall                       | Starting Shipwreck crate                         | Consum | Potion of Mana                      |
+| O1 Landfall                       | Dragon Whelp crate                               | Item   | Ring of Protection +1               |
+| O1 Landfall                       | Dust and Carnage crate                           | Consum | Scroll of Protection                |
+| O1 Landfall                       | Center Shipwreck crate                           | Item   | Lion's Ring                         |
+| O1 Landfall                       | Final Rescue crate                               | Consum | Potion of Healing                   |
+| O1 Landfall                       | Southeast Murloc crate                           | Consum | Potion of Healing                   |
+| O1 Landfall                       | Victory                                          | **Victory** |                                |
 
 ### Unformatted
 Orc Tutorial 1: Chasing Visions (HERO: Thrall (Tutorial), nobuild)

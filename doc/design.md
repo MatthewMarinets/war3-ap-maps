@@ -45,6 +45,16 @@ Possibilities:
   * Human 3: "Undead, milord! This whole village has gone mad!"
   * Human 3: "I'm sorry I can't stay and chat, but duty calls."
 * Human 4: "Your curiosity will be the death of you."
+* Human 6: "This entire city must be purged."
+  * Human 6: "You may be the prince, but I'm still your superior as a paladin"
+  * Human 6: "Then I must consider this an act of treason."
+  * Human 6: "Treason? Have you lost your mind, Arthas?"
+* Human 8: "The ships must be burned before the men reach the shore."
+* Human 9: "I will give anything or pay any price, if only you will help me save my people." 
+* Undead 8: "Tremble, mortals, and despair. Doom has come to this world."
+* Orc 1: "Is there nothing in this land but dust and carngage?"
+* Orc 3: "I can wait no longer. The humans must be slaughtered!"
+* Human x02: "Am I to assault the undead base with nothing but sticks and harsh language?"
 
 ## Difficulty challenges (tentative)
 * Human 01: Slay Menag without letting him run away
