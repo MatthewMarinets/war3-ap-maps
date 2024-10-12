@@ -35,3 +35,22 @@ Possibilities:
 
 ## Shopsanity
 * Allow buying checks from goblin merchants
+
+## Mission Unlocks
+* Human 1: "It is a father's right to dream, isn't it?"
+* Human 2: "Vengeance cannot be a part of what we must do."
+  * Human 2: "If we allow our passions to turn to bloodlust, we will become as vile as the orcs."
+  * Human 2: "We defeated their demons a long time ago."
+* Human 3: "It's been a long time since a prince escorted me anywhere."
+  * Human 3: "Undead, milord! This whole village has gone mad!"
+  * Human 3: "I'm sorry I can't stay and chat, but duty calls."
+* Human 4: "Your curiosity will be the death of you."
+
+## Difficulty challenges (tentative)
+* Human 01: Slay Menag without letting him run away
+* Human 02: Win without losing a building?
+* Human 03: Don't kill a skeleton after you've killed a necromancer?
+* Human 04: 
+* Human 05: Kill an undead base
+* Human 06: Kill 3 undead buildings
+* Human 06: Win without killing Mal'Ganis more than once
