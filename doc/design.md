@@ -64,3 +64,59 @@ Possibilities:
 * Human 05: Kill an undead base
 * Human 06: Kill 3 undead buildings
 * Human 06: Win without killing Mal'Ganis more than once
+
+## ROC Balance
+RoC maps use 1.01 balance, TFT campaign maps use 1.07. There are several differences between the versions, noted in [roc_vs_tft](./roc_vs_tft.md). The main ones are:
+* New units in TFT
+* A complete overhaul of the damage-type system
+  * Casters all switch from piercing to magic attack type
+  * Heroes get a hero damage type
+  * Unarmoured armour type added
+* Several new models and some unit renames
+* Upkeep / max food boundaries 40/70/90 -> 50/80/100
+* Many unit, ability, item, and building cost rebalances
+* Caster adept/mastery training reworked
+
+I've chosen to only port a subset of these changes for RoC maps; otherwise, they'll use TFT balance.
+
+Reverted:
+* Upkeep / max food boundaries
+* Magic attack types switched to piercing attacks (to ensure they can still hit magic-immune enemies)
+* Unit models and names
+  * Keeping hotkeys on TFT standards for consistency
+  * Note the Steam Tank gets updated to the Siege Engine when researching barrage
+
+I generally find most of the balance adjustments appealing:
+* Brilliance aura is less OP
+* Ancient Protectors lose their minimum range
+* Many caster buff/debuffs cost less mana and so can be used more
+* Long-range siege units have slightly more range (1000 -> 1150)
+* Many ultimates are easier to use, except NE
+* The absolutely OP NE ultimates are less spammable
+* Cyclone no longer lasts 70 years
+
+## Art
+There are many possible icons for the randomized items. Noting good options here:
+* Items -> Secret Level Powerup
+* Items -> Cheese
+* Items -> Mogrin's Report
+* Items -> Magic Key Chain
+* Items -> Blood Key
+* Items -> Ghost Key
+* Items -> Moon Key
+* Items -> Sun Key
+* Items -> Orc Flag
+* Units -> Wyvern Cage
+* Units -> Vulture
+* Units -> Stag
+* Units -> Skink
+* Units -> Snowy Owl
+* Units -> Raccoon
+* Units -> Penguin
+* Units -> Magic Vault
+* Units -> Icy Treasure Box
+* Units -> Frog
+* Units -> Dog
+* Units -> Chicken
+* Units -> Book of Summoning Pedestal
+* Units -> Arcane Vault
