@@ -36,7 +36,7 @@ def pack_map(source_dir: str, target_file: str) -> int:
         # See doc/workflow.md, under Background heading
         # Problem: Creating a new map / mpq file with MPQEditor causes it to be 50% larger than if it was saved with WorldEdit
         # Idea: Try copying a pre-saved .w3m and simply deleting files within the map and adding our desired files
-        shutil.copy('pack/empty.w3m', target_file)
+        shutil.copy('pack/empty.w3x', target_file)
         with open(f'{source_dir}/(listfile)', 'r', encoding='utf-8') as file_handle:
             files = file_handle.readlines()
         files = [x.strip() for x in files]
@@ -50,7 +50,7 @@ def pack_map(source_dir: str, target_file: str) -> int:
     # Retrive map metadata from .w3i file
     w3i_file = os.path.join(source_dir, 'war3map.w3i')
     wts_file = os.path.join(source_dir, 'war3map.wts')
-    map_info = w3i.read_w3i(w3i_file)
+    map_info = w3i.read_w3i_file(w3i_file)
     map_strings = wts.read_wts(wts_file)
     map_name = map_info.map_name
     if map_name.startswith('TRIGSTR_'):
@@ -81,7 +81,7 @@ if __name__ == '__main__':
         if not pack_source:
             return 1
         pack_out_dir = config.workspace.get('pack_out_dir', r'.\out')
-        pack_ext = config.workspace.get('pack_ext', 'w3m')
+        pack_ext = config.workspace.get('pack_ext', 'w3x')
         map_name = os.path.basename(pack_source)
         return pack_map(pack_source, os.path.abspath(rf'{pack_out_dir}\{map_name}.{pack_ext}'))
     sys.exit(main())

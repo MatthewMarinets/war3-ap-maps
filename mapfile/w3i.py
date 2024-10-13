@@ -173,6 +173,12 @@ class War3MapInformation:
     random_items: list[RandomItemInfo] = dataclasses.field(default_factory=lambda: [])
 
 
+def read_w3i_file(filename: str) -> War3MapInformation:
+    with open(filename, 'rb') as fp:
+        raw_bytes = fp.read()
+    return read_w3i(raw_bytes)
+
+
 def read_w3i(raw_bytes: bytes) -> War3MapInformation:
     reader = binary.ByteArrayParser(raw_bytes)
     version = reader.read_int32()

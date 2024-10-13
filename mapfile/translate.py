@@ -9,7 +9,7 @@ from mapfile.util.failable import Error
 
 
 VERBOSE = False
-GAME_DATA_DIR = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "gamedata/1_30_4"))
+GAME_DATA_DIR = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "gamedata/1_30_4")).replace('\\', '/')
 ROC_STRINGS_DIR = f"{GAME_DATA_DIR}/enus-strings/custom_v0/units"
 """Contains data from the era of ROC campaign"""
 TFT_STRINGS_DIR = f"{GAME_DATA_DIR}/enus-strings/custom_v1/units"
@@ -101,6 +101,7 @@ def init_worldedit_map() -> None:
     global _id_to_display_prefix
     init_map(_world_edit_strings, [WORLD_EDIT_STRINGS])
     for file in display_name_slk_files:
+        data_type = os.path.basename(file).split('.', 1)[0].split('data')[0]
         slk_data = slk.parse_slk_file(file)
         if isinstance(slk_data, Error):
             raise ValueError(slk_data.message)

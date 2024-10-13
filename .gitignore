@@ -1,5 +1,7 @@
 __pycache__/
 scratch/
+build/
+repacked/
 original/
 testingdata/
 testout/

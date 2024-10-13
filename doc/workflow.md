@@ -16,7 +16,7 @@
 | original reloaded into World Editor and saved | 240879 bytes |
 | saved reloaded into World Editor and saved    | 240770 bytes |
 
-Making a new map file with MPQEditor seems to make it significantly larger. However, it's possible to remove files from an existing map file; by making a template `empty.w3m`, using MPQEditor to remove all files from it, then adding desired files, we can keep the compression. The secret sauce seems to live in the `(attributes)` file, which I'm not sure how to edit from MPQEditor. The difference is only a handful of bytes for Human01.
+Making a new map file with MPQEditor seems to make it significantly larger. However, it's possible to remove files from an existing map file; by making a template `empty.w3x`, using MPQEditor to remove all files from it, then adding desired files, we can keep the compression. The secret sauce seems to live in the `(attributes)` file, which I'm not sure how to edit from MPQEditor. The difference is only a handful of bytes for Human01.
 
 | state                                                       | size         |
 | ----------------------------------------------------------- | ------------ |
@@ -24,6 +24,17 @@ Making a new map file with MPQEditor seems to make it significantly larger. Howe
 | open and save above in WorldEdit                            | 240820 bytes |
 
 Note that map files also store flags outside of the MPQ region; these will also have to be accounted for in such a tool
+
+### Making an empty .w3x
+Run mpqeditor console with `mpqeditor /console` in the directory containing the unprocessed empty.w3x.
+
+```sh
+open empty.w3x
+list empty.w3x
+# For every filename listed
+d empty.w3x <filename>
+list empty.w3x
+```
 
 ## Workflow
 * Extract original map files from Warcraft 3 install with MPQEditor
