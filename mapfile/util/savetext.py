@@ -31,6 +31,10 @@ def to_toml(data: dict[str, Any], notes: Iterable[str] = (), array_nesting: tupl
             result.append(f'{key} = []')
         elif is_array and (isinstance(value[0], int) or isinstance(value[0], float)):
             result.append(f'{key} = {list(value)}')
+        elif is_array and (isinstance(value[0], list) or isinstance(value[0], tuple)):
+            lines = ['']
+            write_inline_toml(lines, value)
+            result.append(f'{key} = {"\n".join(lines)}')
         elif is_array:
             for val in value:
                 list_results.append(f'\n[[{".".join(array_nesting + (key,))}]]')
@@ -41,6 +45,44 @@ def to_toml(data: dict[str, Any], notes: Iterable[str] = (), array_nesting: tupl
         else:
             result.append(f'{key} = {value}')
     return '\n'.join(result + list_results)
+
+
+def write_inline_toml(
+    lines: list[str],
+    data: dict[str, Any] | list | int | str, indent: int = 0, ids: set[tuple[str, str]] | None = None
+) -> None:
+    if isinstance(data, dict):
+        # Line-split version needs toml 1.1, which should go public any year now
+        child_ids = set()
+        lines[-1] += '{ '
+        for index, (key, value) in enumerate(data.items()):
+            if index:
+                lines[-1] += f', '
+            lines[-1] += f'{key} = '
+            write_inline_toml(lines, value, indent, child_ids)
+        if child_ids:
+            lines[-1:-1] = [(' '*indent) + f'# {"; ".join(sorted(child_ids))}']
+        lines[-1] += ' }'
+    elif isinstance(data, list) or isinstance(data, tuple):
+        lines[-1] += '['
+        for index, value in enumerate(data):
+            lines.append(' '*(indent+4))
+            write_inline_toml(lines, value, indent+4, ids)
+            if index < len(data) - 1:
+                lines[-1] += ','
+        lines.append((' '*indent) + ']')
+    elif isinstance(data, bool):
+        lines[-1] += str(data).lower()
+    elif isinstance(data, int) or isinstance(data, float):
+        lines[-1] += str(data)
+    elif isinstance(data, bytes):
+        lines[-1] += data.replace(b'\0', b'0').decode('utf-8')
+    elif isinstance(data, str):
+        if len(data) == 4 and data != 'null' and ids is not None and (human_readable := translate.get_name(data)):
+            ids.add(f'{data} = {human_readable}')
+        lines[-1] += f'"{data}"'
+    else:
+        raise NotImplementedError()
 
 
 def parse_enum_flags[T: enum.IntFlag](value: str, enum_class: T) -> T:

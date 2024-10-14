@@ -32,6 +32,10 @@ class ByteArrayParser:
         start_index = self.index
         self.index += 1
         return struct.unpack_from('B', self.raw_bytes, start_index)[0]
+    def read_s8(self) -> int:
+        start_index = self.index
+        self.index += 1
+        return struct.unpack_from('b', self.raw_bytes, start_index)[0]
     def read_bool32(self) -> bool:
         start_index = self.index
         self.index += 4
@@ -81,6 +85,10 @@ class ByteArrayWriter:
     def write_u8(self, value: int) -> 'ByteArrayWriter':
         assert value >= 0 and value < 256, f'{value} is not a valid u8'
         self.data.append(value)
+        return self
+    def write_s8(self, value: int) -> 'ByteArrayWriter':
+        assert value >= -128 and value < 128, f'{value} is not a valid s8'
+        self.data.extend(struct.pack("b", value))
         return self
     def write_u32(self, value: int) -> 'ByteArrayWriter':
         self.data.extend(struct.pack("<I", value))

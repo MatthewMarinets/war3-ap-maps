@@ -147,6 +147,8 @@ def get_name(object_id: str, name_keys: tuple[str, ...] = ('Name', 'Bufftip', 'E
                 return _id_to_strings_map[object_id][name_key]
     if not object_id.startswith('WESTRING_'):
         world_edit_string = _id_to_world_edit_string.get(object_id)
+        if world_edit_string:
+            world_edit_string = world_edit_string.upper()
     else:
         world_edit_string = object_id
     return _id_to_display_prefix.get(object_id, '') + _world_edit_strings["WorldEditStrings"].get(world_edit_string, '')
@@ -162,5 +164,5 @@ if __name__ == '__main__':
     # print(get_name("usle"))
     print(get_name("Xfum"))
     print(get_name("LTbr"))
+    print(get_name("LCc0"))
     print(get_name("WESTRING_DEST_BARREL"))
-    print(get_worldedit_string("WESTRING_FEVAL_FRAC"))
