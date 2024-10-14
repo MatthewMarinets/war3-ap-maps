@@ -1,5 +1,4 @@
 all_directories = [
-    'BonusCredits',
     'Human01',
     'Human02',
     'Human02Interlude',
@@ -79,6 +78,7 @@ all_directories = [
     'UndeadX07c',
     'UndeadX07Interlude',
     'UndeadX08',
+    'BonusCredits',
     'War3XBonusCredits',
     'War3XRegularCreditsIce',
     'WarcraftIIICredits',

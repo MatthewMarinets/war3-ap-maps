@@ -2,6 +2,8 @@
 Utilities for translating 4-character game IDs to names.
 """
 
+from typing import Any
+
 import glob
 import os
 from mapfile import slk
@@ -19,6 +21,7 @@ MODERN_STRINGS_DIR = f"{GAME_DATA_DIR}/enus-strings/units"
 UI_STRINGS = f"{GAME_DATA_DIR}/enus-strings/ui"
 """Contains various UI and internal property names"""
 WORLD_EDIT_STRINGS = f"{UI_STRINGS}/worldeditstrings.txt"
+WORLD_EDIT_GAME_STRINGS = f"{UI_STRINGS}/worldeditgamestrings.txt"
 
 
 STRING_FILE_SUFFIX = "strings.txt"
@@ -30,7 +33,9 @@ _id_to_display_prefix: dict[str, str] = {}
 
 
 display_name_slk_files = [
+    f'{GAME_DATA_DIR}/doodads/doodads.slk',
     f'{GAME_DATA_DIR}/doodads/doodadmetadata.slk',
+    f'{GAME_DATA_DIR}/units/destructabledata.slk',
     f'{GAME_DATA_DIR}/units/abilitybuffmetadata.slk',
     f'{GAME_DATA_DIR}/units/abilitymetadata.slk',
     f'{GAME_DATA_DIR}/units/destructablemetadata.slk',
@@ -94,23 +99,35 @@ def init_roc_map() -> None:
         return
     init_map(_roc_id_to_strings_map, glob.glob(f"{ROC_STRINGS_DIR}/*{STRING_FILE_SUFFIX}"))
 
+
+def _index(li: list, element: Any) -> int:
+    try:
+        return li.index(element)
+    except:
+        return -1
+
+
 def init_worldedit_map() -> None:
     if _world_edit_strings:
         return
     global _id_to_world_edit_string
     global _id_to_display_prefix
-    init_map(_world_edit_strings, [WORLD_EDIT_STRINGS])
+    init_map(_world_edit_strings, [WORLD_EDIT_STRINGS, WORLD_EDIT_GAME_STRINGS])
     for file in display_name_slk_files:
         data_type = os.path.basename(file).split('.', 1)[0].split('data')[0]
         slk_data = slk.parse_slk_file(file)
         if isinstance(slk_data, Error):
             raise ValueError(slk_data.message)
-        id_index = slk_data[0].index('ID')
-        display_name_index = slk_data[0].index('displayName')
-        try:
-            slk_name_index = slk_data[0].index('slk')
-        except:
-            slk_name_index = -1
+        if 'destructabledata.slk' in file:
+            id_index = slk_data[0].index('DestructableID')
+        elif 'doodads.slk' in file:
+            id_index = slk_data[0].index('doodID')
+        else:
+            id_index = slk_data[0].index('ID')
+        display_name_index = _index(slk_data[0], 'displayName')
+        if display_name_index < 0:
+            display_name_index = slk_data[0].index('Name')
+        slk_name_index = _index(slk_data[0], 'slk')
         for table_row in slk_data[1:]:
             id_value = table_row[id_index]
             display_name = table_row[display_name_index]
@@ -128,7 +145,10 @@ def get_name(object_id: str, name_keys: tuple[str, ...] = ('Name', 'Bufftip', 'E
         for name_key in name_keys:
             if name_key in _id_to_strings_map[object_id]:
                 return _id_to_strings_map[object_id][name_key]
-    world_edit_string = _id_to_world_edit_string.get(object_id)
+    if not object_id.startswith('WESTRING_'):
+        world_edit_string = _id_to_world_edit_string.get(object_id)
+    else:
+        world_edit_string = object_id
     return _id_to_display_prefix.get(object_id, '') + _world_edit_strings["WorldEditStrings"].get(world_edit_string, '')
 
 
@@ -141,4 +161,6 @@ if __name__ == '__main__':
     # print(get_name("ncer"))
     # print(get_name("usle"))
     print(get_name("Xfum"))
+    print(get_name("LTbr"))
+    print(get_name("WESTRING_DEST_BARREL"))
     print(get_worldedit_string("WESTRING_FEVAL_FRAC"))
