@@ -64,6 +64,16 @@ class RandomEntityType(enum.IntEnum):
     Building = 1
     Item = 2
 
+ENUM_NAME_TO_TYPE = {
+    'version': W3iVersions,
+    'flags': MapFlags,
+    'player_type': FactionController,
+    'player_faction': PlayerFaction,
+    'force_flags': ForcesFlags,
+    'availability': UpgradeAvailability,
+    'position_type': RandomEntityType,
+}
+
 @dataclass
 class PlayerInfo:
     player_id: int
@@ -77,14 +87,14 @@ class PlayerInfo:
 
 @dataclass(init=False, slots=True)
 class ForceInfo:
-    flags: ForcesFlags = ForcesFlags(0)
+    force_flags: ForcesFlags = ForcesFlags(0)
     player_mask_flags: int = 0
     name: str = ""
-    def __init__(self, flags: int | ForcesFlags, player_mask_flags: int, name: str) -> None:
-        if isinstance(flags, int):
-            self.flags = ForcesFlags(flags)
+    def __init__(self, force_flags: int | ForcesFlags, player_mask_flags: int, name: str) -> None:
+        if isinstance(force_flags, int):
+            self.force_flags = ForcesFlags(force_flags)
         else:
-            self.flags = flags
+            self.force_flags = force_flags
         self.player_mask_flags = player_mask_flags
         self.name = name
 
@@ -245,7 +255,7 @@ def read_w3i(raw_bytes: bytes) -> War3MapInformation:
     num_forces = reader.read_int32()
     for _ in range(num_forces):
         force = ForceInfo(
-            flags=ForcesFlags(reader.read_u32()),
+            force_flags=ForcesFlags(reader.read_u32()),
             player_mask_flags=reader.read_u32(),
             name=reader.read_cstring(),
         )
@@ -354,7 +364,7 @@ def to_binary(data: War3MapInformation) -> bytes:
         writer.write_u32(player.ally_high_priorities_flags)
     writer.write_int32(len(data.forces))
     for force in data.forces:
-        writer.write_u32(force.flags)
+        writer.write_u32(force.force_flags)
         writer.write_u32(force.player_mask_flags)
         writer.write_string(force.name)
     writer.write_int32(len(data.upgrades))
@@ -406,18 +416,6 @@ def _unpack_types(data: dict[str, Any]) -> None:
             value_literal = value['value']
             if value_type == 'bytes':
                 data[key] = bytes(value_literal, encoding='utf-8').replace(b'0', b'\0')
-            elif value_type == W3iVersions.__name__:
-                data[key] = W3iVersions[value_literal]
-            elif value_type == FactionController.__name__:
-                data[key] = FactionController[value_literal]
-            elif value_type == PlayerFaction.__name__:
-                data[key] = PlayerFaction[value_literal]
-            elif value_type == UpgradeAvailability.__name__:
-                data[key] = UpgradeAvailability[value_literal]
-            elif value_type == MapFlags.__name__:
-                data[key] = savetext.parse_enum_flags(value_literal, MapFlags)
-            elif value_type == ForcesFlags.__name__:
-                data[key] = savetext.parse_enum_flags(value_literal, ForcesFlags)
             else:
                 assert False, f'Unknown custom type {value_type}'
         elif isinstance(value, dict):
@@ -438,6 +436,8 @@ def _unpack_types(data: dict[str, Any]) -> None:
                 data[key] = [TechnologyInfo(**val) for val in value]
             else:
                 assert not custom_type, f'Unknown list type for key {key}'
+        elif key in ENUM_NAME_TO_TYPE:
+            data[key] = savetext.parse_enum_flags(value, ENUM_NAME_TO_TYPE[key])
 
 
 def from_text(text: str) -> War3MapInformation:

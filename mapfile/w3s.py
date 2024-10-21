@@ -146,8 +146,8 @@ def as_text(data: War3SoundInfo) -> str:
 
 
 def _parse_sound(sound: dict) -> War3Sound:
-    sound['flags'] = savetext.parse_enum_flags(sound['flags']['value'], SoundFlags)
-    sound['channel'] = savetext.parse_enum_flags(sound['channel']['value'], SoundChannel)
+    sound['flags'] = savetext.parse_enum_flags(sound['flags'], SoundFlags)
+    sound['channel'] = savetext.parse_enum_flags(sound['channel'], SoundChannel)
     return War3Sound(**sound)
 
 

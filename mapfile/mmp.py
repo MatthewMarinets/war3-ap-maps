@@ -83,8 +83,7 @@ def from_text(text: str) -> War3MinimapInfo:
     icons: list[War3MinimapIcon] = []
     for icon_data in result.get('icons', []):
         icon_type_data = icon_data.pop('icon_type')
-        assert icon_type_data['type'] == 'MinimapIconType'
-        icon_type = MinimapIconType[icon_type_data['value']]
+        icon_type = MinimapIconType[icon_type_data]
         icons.append(War3MinimapIcon(
             icon_type=icon_type,
             **icon_data,

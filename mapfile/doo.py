@@ -340,7 +340,7 @@ def as_text(data: War3PlacementInfo) -> str:
 
 
 def _parse_entity(entity: dict) -> DoodadEntity:
-    flags = savetext.parse_enum_flags(entity.pop('flags')['value'], EntityFlag)
+    flags = savetext.parse_enum_flags(entity.pop('flags'), EntityFlag)
     item_drops_dict = entity.pop('item_drops')
     item_drops = [
         [DropItem(**item_drop) for item_drop in item_drop_set]
@@ -354,7 +354,7 @@ def _parse_immobile_doodad(entity: dict) -> ImmobileEntity:
 
 
 def _parse_unit(entity: dict) -> UnitEntity:
-    entity['flags'] = savetext.parse_enum_flags(entity['flags']['value'], EntityFlag)
+    entity['flags'] = savetext.parse_enum_flags(entity['flags'], EntityFlag)
     item_drops_dict = entity.pop('item_drops')
     entity['item_drops'] = [
         [DropItem(**item_drop) for item_drop in item_drop_set]

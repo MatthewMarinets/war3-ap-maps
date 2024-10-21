@@ -24,7 +24,7 @@ def to_toml(data: dict[str, Any], notes: Iterable[str] = (), array_nesting: tupl
             value = value.replace(b'\0', b'0')
             result.append(f'{key} = {{ type = "bytes", value = "{value.decode("utf-8")}" }}')
         elif isinstance(value, enum.Enum):
-            result.append(f'{key} = {{ type = "{value.__class__.__name__}", value = "{value.name}" }}')
+            result.append(f'{key} = "{value.name}"')
         elif isinstance(value, int) and 'flags' in key:
             result.append(f'{key} = 0x{value:x}')
         elif (is_array := (isinstance(value, list) or isinstance(value, tuple))) and len(value) == 0:
@@ -118,7 +118,7 @@ class TomlWriter:
         value = value.replace(b'\0', b'0')
         self.lines.append(f'{key} = {{ type = "bytes", value = "{value.decode("utf-8")}" }}')
     def _write_enum(self, key: str, value: enum.Enum, path: str) -> None:
-        self.lines.append(f'{key} = {{ type = "{value.__class__.__name__}", value = "{value.name}" }}')
+        self.lines.append(f'{key} = "{value.name}"')
     def _write_inline_array(self, key: str, value: list, path: str) -> None:
         if not len(value):
             return self.lines.append(f'{key} = []')

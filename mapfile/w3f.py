@@ -167,8 +167,5 @@ def from_text(text: str) -> War3CampaignInfo:
     result = tomllib.loads(text)
     map_titles = [War3MapTitleInfo(**x) for x in result.pop('map_titles', [])]
     map_paths = [War3MapPathInfo(**x) for x in result.pop('map_paths', [])]
-    flags_dict: dict = result.pop('flags')
-    assert flags_dict is not None
-    assert flags_dict['type'] == 'CampaignFlag'
-    flags = CampaignFlag[flags_dict['value']]
+    flags = CampaignFlag[result.pop('flags')]
     return War3CampaignInfo(**result, flags=flags, map_titles=map_titles, map_paths=map_paths)

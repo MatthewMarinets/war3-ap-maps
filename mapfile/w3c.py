@@ -20,7 +20,6 @@ class War3Camera:
     roll: float
     fov: float
     far_z: float
-    # unknown: float
     name: str = ''
 
 

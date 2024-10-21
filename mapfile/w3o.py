@@ -53,7 +53,7 @@ class Modification:
     @staticmethod
     def _from_dict(data: dict) -> 'Modification':
         args = data.copy()
-        args['data_type'] = DataType[args['data_type']['value']]
+        args['data_type'] = DataType[args['data_type']]
         return Modification(**args)
 
 @dataclass
