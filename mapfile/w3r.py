@@ -3,7 +3,6 @@ Utilities for working with .w3r (region definition) files
 """
 
 from dataclasses import dataclass, field, asdict
-import enum
 import tomllib
 
 from mapfile import binary
@@ -51,6 +50,7 @@ def read_w3r(raw_bytes: bytes) -> War3RegionInfo:
             colour_r=reader.read_u8(),
         ))
         assert reader.read_s8() == -1
+    assert reader.index == len(raw_bytes)
     return data
 
 

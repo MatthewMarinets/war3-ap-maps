@@ -8,7 +8,7 @@
 - [ ] .wpm (path map)
 - [x] .doo (doodads placement)
 - [x] .w3r (regions)
-- [ ] .w3c (camera)
+- [x] .w3c (camera)
 - [ ] .w3s (sounds)
 - [x] .imp (imports)
 - [x] .w3u (units)
