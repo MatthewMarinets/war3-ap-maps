@@ -3,7 +3,7 @@
 - [ ] .w3e (environment)
 - [x] .w3i (info)
 - [ ] .wtg (GUI trigger metadata)
-- [ ] .wct (text trigger metadata)
+- [x] .wct (text trigger metadata)
 - [x] .mmp (minimap icons)
 - [ ] .wpm (path map)
 - [x] .doo (doodads placement)
