@@ -9,7 +9,7 @@
 - [x] .doo (doodads placement)
 - [x] .w3r (regions)
 - [x] .w3c (camera)
-- [ ] .w3s (sounds)
+- [x] .w3s (sounds)
 - [x] .imp (imports)
 - [x] .w3u (units)
 - [x] .w3t (items)
