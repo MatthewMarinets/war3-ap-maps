@@ -161,9 +161,15 @@ def get_worldedit_string(worldedit_string: str) -> str | None:
 
 
 if __name__ == '__main__':
+    import sys
+    names = ' '.join(sys.argv[1:]).split(' ')
+    for name in names:
+        if not name:
+            continue
+        print(f'{name}: {get_name(name)}')
     # print(get_name("ncer"))
     # print(get_name("usle"))
-    print(get_name("Xfum"))
-    print(get_name("LTbr"))
-    print(get_name("LCc0"))
-    print(get_name("WESTRING_DEST_BARREL"))
+    # print(get_name("Xfum"))
+    # print(get_name("LTbr"))
+    # print(get_name("LCc0"))
+    # print(get_name("WESTRING_DEST_BARREL"))
