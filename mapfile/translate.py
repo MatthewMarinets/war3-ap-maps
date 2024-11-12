@@ -93,6 +93,7 @@ def init_tft_map() -> None:
     if _id_to_strings_map:
         return
     init_map(_id_to_strings_map, glob.glob(f"{TFT_STRINGS_DIR}/*{STRING_FILE_SUFFIX}"))
+    _id_to_strings_map['sloc'] = {'type': 'unit', 'Name': 'Start Location'}
 
 def init_roc_map() -> None:
     if _roc_id_to_strings_map:
