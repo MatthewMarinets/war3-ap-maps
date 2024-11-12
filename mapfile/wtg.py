@@ -34,7 +34,7 @@ class TriggerVariable:
     name: str
     variable_type: str
     is_array: bool = False
-    array_size: int = 1
+    array_size: int = 0
     is_initialized: bool = False
     initial_value: str = ''
 
@@ -85,8 +85,9 @@ class Trigger:
     is_commented: bool = False
     is_enabled: bool = True
     is_custom_text: bool = False
-    is_initially_on: bool = True
-    unknown: int = 0
+    is_initially_off: bool = True
+    is_map_init: bool = False
+    """Only enabled on OrcX01 initialization trigger"""
     category_id: int = -1
     eca_functions: list[EcaFunction] = dataclasses.field(default_factory=list)
 
@@ -142,17 +143,17 @@ def parse_lib_parameters_from_trigger_strings(lines: list[str]) -> dict[str, Par
         '[TriggerCalls]': 3,
     }
     have_subfuncs = {
-        'AndMultiple': 1,
-        'OrMultiple': 1,
-        'IfThenElseMultiple': 1,
-        'ForLoopAMultiple': 1,
-        'ForLoopBMultiple': 1,
-        'ForLoopVarMultiple': 1,
-        'ForForceMultiple': 1,
-        'ForGroupMultiple': 1,
-        'EnumDestructablesInRectAllMultiple': 1,
-        'EnumDestructablesInCircleBJMultiple': 1,
-        'EnumItemsInRectBJMultiple': 1,
+        'AndMultiple': True,
+        'OrMultiple': True,
+        'IfThenElseMultiple': True,
+        'ForLoopAMultiple': True,
+        'ForLoopBMultiple': True,
+        'ForLoopVarMultiple': True,
+        'ForForceMultiple': True,
+        'ForGroupMultiple': True,
+        'EnumDestructablesInRectAllMultiple': True,
+        'EnumDestructablesInCircleBJMultiple': True,
+        'EnumItemsInRectBJMultiple': True,
     }
     readable_section = -1
     for line in lines:
@@ -217,15 +218,14 @@ def read_wtg(raw_data: bytes, lib_info: dict[str, ParamInfo]) -> W3TriggerData:
     for _ in range(num_triggers):
         trigger = Trigger()
         trigger.name = reader.read_cstring()
-        trigger.description = reader.read_cstring()
+        trigger.description = reader.read_cstring().replace('\r', '')
         if result.version == Version.TFT:
             trigger.is_commented = reader.read_bool32()
         trigger.is_enabled = reader.read_bool32()
         trigger.is_custom_text = reader.read_bool32()
-        trigger.is_initially_on = reader.read_bool32()
-        trigger.unknown = reader.read_int32()  # @TFT: This is "run on map init"?
+        trigger.is_initially_off = reader.read_bool32()
+        trigger.is_map_init = reader.read_bool32()  # @TFT: This is "run on map init"?
         trigger.category_id = reader.read_int32()
-        assert trigger.unknown in (0, 1)
         num_functions = reader.read_int32()
         for _ in range(num_functions):
             func = parse_function(reader, lib_info, parse_state)
@@ -297,6 +297,220 @@ def parse_parameter(reader: binary.ByteArrayParser, lib_info: dict[str, ParamInf
     return parameter
 
 
+def as_text(data: W3TriggerData) -> str:
+    lines: list[str] = []
+    if data.version == Version.ROC:
+        lines.append('version = ROC')
+    elif data.version == Version.TFT:
+        lines.append('version = TFT')
+    else:
+        lines.append(f'version = unknown({data.version})')
+    lines.append('\n# Categories')
+    lines.append('| ID  | Name | is a comment |')
+    lines.append('| --- | ---- | ------------ |')
+    for category in data.categories:
+        lines.append(f'| {category.category_id} | {category.name} | {category.is_comment_section} |')
+    lines.append('\n# Variables')
+    lines.append('| Name | Type | Array Size | Initial Value |')
+    lines.append('| ---- | ---- | ---------- | ------------- |')
+    for variable in data.variables:
+        lines.append(
+            f'| {variable.name} | {variable.variable_type} '
+            f'| {variable.array_size if variable.is_array else "."} '
+            f'| {variable.initial_value if variable.is_initialized else "."} '
+            '|'
+        )
+    lines.append('\n# Triggers')
+
+    def write_param(lines: list[str], param: EcaParameter, indent: str, prefix: str = 'param') -> None:
+        lines.append(f'{indent}- {prefix} {param.parameter_type.name} {param.value}')
+        if param.subscript is not None:
+            write_param(lines, param.subscript, indent + '  ', prefix='subscript')
+        if param.children is not None:
+            write_function_call(lines, param.children, indent + '  ')
+
+    def write_function_call(lines: list[str], func: EcaFunction, indent: str = '') -> None:
+        lines.append(f'{indent}- {func.function_type.name} {func.name}')
+        for param in func.parameters:
+            write_param(lines, param, indent + '  ')
+        last_subscope = 0
+        subscope_names = ['if', 'then', 'else']
+        subfunc_indent = indent + '  '
+        for subfunc in func.subfunctions:
+            if subfunc.subscope != last_subscope:
+                assert func.name == 'IfThenElseMultiple'
+                lines.append(f'{indent}  - {subfunc.subscope} ({subscope_names[subfunc.subscope]})')
+                last_subscope = subfunc.subscope
+                subfunc_indent = indent + '    '
+            write_function_call(lines, subfunc, subfunc_indent)
+
+    for trigger in data.triggers:
+        lines.append(f'## {"// " if trigger.is_commented else ""}{trigger.name}')
+        lines.append(f'- enabled: {trigger.is_enabled}')
+        category_name = [category.name for category in data.categories if category.category_id == trigger.category_id]
+        assert len(category_name) == 1, "Invalid category ID"
+        lines.append(f'- category: [{trigger.category_id}] {category_name[0]}')
+        lines.append(f'- starts off: {trigger.is_initially_off}')
+        lines.append(f'- is custom text: {trigger.is_custom_text}')
+        lines.append(f'- run on map init: {trigger.is_map_init}')
+        lines.append('```description')
+        lines.append(trigger.description)
+        lines.append('```')
+        lines.append('### Functions')
+        for func in trigger.eca_functions:
+            write_function_call(lines, func)
+        lines.append('\n')
+    return '\n'.join(lines)
+
+
+def _split_key_value(line: str, line_number: int, sep='=') -> tuple[str, str]:
+    assert sep in line, f"Line {line_number+1} is missing a separator ('{sep}')"
+    parts = line.split(sep, 1)
+    return tuple(x.strip() for x in parts)
+
+
+def _parse_int(literal: str, line_number: int) -> int:
+    try:
+        return int(literal)
+    except ValueError:
+        assert False, f'Invalid integer literal on line {line_number+1} for key version: {literal}'
+
+
+def _parse_bool(literal: str, line_number: int) -> bool:
+    literal = literal.casefold()
+    if literal == 'true':
+        return True
+    elif literal == 'false':
+        return False
+    assert False, f"Invalid value for boolean literal: {literal}"
+
+
+class LineIterator:
+    def __init__(self, lines: list[str]) -> None:
+        self.iter = enumerate(lines)
+    def expect_line(self, expected_line: str) -> None:
+        for line_number, line in self.iter:
+            if not line:
+                continue
+            assert line == expected_line, f'Unexpected content on line {line_number+1}, expected {expected_line}'
+            break
+    def expect_line_prefix(self, prefix: str) -> str:
+        for line_number, line in self.iter:
+            if not line:
+                continue
+            assert line.startswith(prefix), f'Unexpected content on line {line_number+1}, expected prefix {prefix}'
+            break
+
+
+def from_text(text: str) -> W3TriggerData:
+    result = W3TriggerData()
+    lines = text.split('\n')
+    parser = LineIterator(lines)
+    for line_number, line in parser.iter:
+        if not line:
+            continue
+        key, value = _split_key_value(line, line_number)
+        if key == 'version':
+            if value == 'ROC':
+                result.version = Version.ROC
+            elif value == 'TFT':
+                result.version = Version.TFT
+            else:
+                assert value.startswith('unknown('), f'Unknown version format on line {line_number+1}'
+                assert value.endswith(')'), f'Unknown version format on line {line_number+1}'
+                result.version = _parse_int(value[len('unknown('):-1], line_number)
+            break
+        else:
+            assert False, f"Unknown top-level key {key}"
+    parser.expect_line('# Categories')
+    parser.expect_line_prefix('| ID')
+    parser.expect_line_prefix('| --')
+    for line_number, line in parser.iter:
+        if not line:
+            break
+        # Note(mm): NightElf02 has a category that ends in a space, meaning .strip() isn't accruate T.T
+        parts = [x[1:-1] for x in line.split('|')[1:-1]]
+        assert len(parts) == 3, f"Wrong number of columns in Categories table on line {line_number}"
+        category = TriggerCategory(
+            category_id=_parse_int(parts[0], line_number),
+            name=parts[1],
+            is_comment_section=_parse_bool(parts[2], line_number),
+        )
+        result.categories.append(category)
+    parser.expect_line('# Variables')
+    parser.expect_line_prefix('| Name')
+    parser.expect_line_prefix('| --')
+    for line_number, line in parser.iter:
+        if not line:
+            break
+        parts = [x.strip() for x in line.split('|')[1:-1]]
+        assert len(parts) == 4
+        variable = TriggerVariable(
+            name=parts[0],
+            variable_type=parts[1],
+            is_array=parts[2] != '.',
+            array_size=(
+                0 if result.version == Version.ROC
+                else 1 if parts[2] == '.' else _parse_int(parts[2], line_number)
+            ),
+            is_initialized=parts[3] != '.',
+            initial_value='' if parts[3] == '.' else parts[3],
+        )
+        result.variables.append(variable)
+    parser.expect_line('# Triggers')
+    parsing_info = True
+    parsing_description = 0
+    trigger = None
+    for line_number, line in parser.iter:
+        if not line and not parsing_description:
+            continue
+        if parsing_description and line != '```':
+            assert trigger
+            if parsing_description > 1:
+                trigger.description += '\n'
+            trigger.description += line
+            parsing_description += 1
+        elif parsing_description:
+            parsing_description = 0
+        elif line.startswith('## '):
+            # Start new trigger
+            if trigger is not None:
+                result.triggers.append(trigger)
+            parsing_info = True
+            trigger = Trigger(line[3:])
+            if trigger.name.startswith('// '):
+                trigger.name = trigger.name[3:]
+                trigger.is_commented = True
+        elif line == '### Functions':
+            parsing_info = False
+        elif parsing_info and line == '```description':
+            parsing_description = 1
+        elif parsing_info:
+            key, value = _split_key_value(line, line_number, sep=':')
+            if key == '- enabled':
+                trigger.is_enabled = _parse_bool(value, line_number)
+            elif key == '- category':
+                assert value.startswith('['), f"Category data on line {line_number+1} doesn't start with '['"
+                assert ']' in value, f"Category data on line {line_number+1} doesn't contain ']'"
+                trigger.category_id = _parse_int(value[1:].split(']', 1)[0], line_number)
+            elif key == '- starts off':
+                trigger.is_initially_off = _parse_bool(value, line_number)
+            elif key == '- is custom text':
+                trigger.is_custom_text = _parse_bool(value, line_number)
+            elif key == '- run on map init':
+                trigger.is_map_init = _parse_bool(value, line_number)
+            else:
+                assert False, f"Unknown trigger info key on line {line_number+1}: {key}"
+        else:
+            # Parsing functions
+            assert trigger is not None
+            # TODO
+    assert not parsing_description
+    assert not parsing_info
+    assert trigger is not None
+    return result
+
+
 if __name__ == '__main__':
     from work import manifest
     # filenames = [f'work/HumanX01/war3map.wtg']
@@ -316,4 +530,19 @@ if __name__ == '__main__':
         with open(filename, 'rb') as fp2:
             raw_data = fp2.read()
         data = read_wtg(raw_data, lib_info)
-        print(data)
+        text = as_text(data)
+        with open(f'scratch/wtg/{os.path.basename(os.path.dirname(filename))}.md', 'w') as fp:
+            fp.write(text)
+        round_tripped_data = from_text(text)
+        assert round_tripped_data.categories == data.categories
+        assert round_tripped_data.variables == data.variables
+        for a_trigger, b_trigger in zip(round_tripped_data.triggers, data.triggers):
+            assert a_trigger.name == b_trigger.name
+            assert a_trigger.category_id == b_trigger.category_id
+            assert a_trigger.description == b_trigger.description
+            assert a_trigger.is_commented == b_trigger.is_commented
+            assert a_trigger.is_enabled == b_trigger.is_enabled
+            assert a_trigger.is_initially_off == b_trigger.is_initially_off
+            assert a_trigger.is_custom_text == b_trigger.is_custom_text
+            assert a_trigger.is_map_init == b_trigger.is_map_init
+        # print(data)
