@@ -330,7 +330,7 @@ def as_text(data: W3TriggerData) -> str:
             write_function_call(lines, param.children, indent + '  ')
 
     def write_function_call(lines: list[str], func: EcaFunction, indent: str = '') -> None:
-        lines.append(f'{indent}- {func.function_type.name} {func.name}')
+        lines.append(f'{indent}- {func.function_type.name} {"" if func.is_enabled else "# "}{func.name}')
         for param in func.parameters:
             write_param(lines, param, indent + '  ')
         last_subscope = 0
@@ -460,6 +460,7 @@ def from_text(text: str) -> W3TriggerData:
     parser.expect_line('# Triggers')
     parsing_info = True
     parsing_description = 0
+    trigger_element_stack: list[EcaFunction | EcaParameter | int] = []
     trigger = None
     for line_number, line in parser.iter:
         if not line and not parsing_description:
@@ -474,6 +475,7 @@ def from_text(text: str) -> W3TriggerData:
             parsing_description = 0
         elif line.startswith('## '):
             # Start new trigger
+            trigger_element_stack.clear()
             if trigger is not None:
                 result.triggers.append(trigger)
             parsing_info = True
@@ -504,11 +506,79 @@ def from_text(text: str) -> W3TriggerData:
         else:
             # Parsing functions
             assert trigger is not None
-            # TODO
+            indent_spaces, content = line.split('- ', 1)
+            indent = len(indent_spaces)
+            assert not (indent & 1), f"Trigger function indent is not even on line {line_number}"
+            indent = indent >> 1
+            content_type, content = content.split(' ', 1)
+            while len(trigger_element_stack) > indent:
+                trigger_element_stack.pop()
+            if content_type.title() in EcaFunctionType._member_names_:
+                content = content.strip()
+                enabled = True
+                if content and content[0] == '#':
+                    enabled = False
+                    content = content[1:].strip()
+                func_element = EcaFunction(EcaFunctionType[content_type.title()], name=content, is_enabled=enabled)
+                _append_eca_parameter(func_element, trigger_element_stack, trigger, line_number)
+                trigger_element_stack.append(func_element)
+            elif content_type in ('param', 'subscript'):
+                if ' ' in content:
+                    param_type_identifier, content = content.split(' ', 1)
+                else:
+                    param_type_identifier = content
+                    content = ''
+                param_type = EcaParameterType[param_type_identifier.title()]
+                param_element = EcaParameter(param_type, content)
+                _append_eca_parameter(param_element, trigger_element_stack, trigger, line_number, content_type)
+                trigger_element_stack.append(param_element)
+            elif content_type.isnumeric():
+                assert trigger_element_stack, f"Top-level element cannot be a subfunction index: line {line_number}"
+                assert isinstance(trigger_element_stack[-1], EcaFunction), f"Subfunction index cannot be used to index a parameter: line {line_number}"
+                trigger_element_stack.append(int(content_type))
+            else:
+                assert False, f"Unknown content type '{content_type}'"
+
     assert not parsing_description
     assert not parsing_info
     assert trigger is not None
+    result.triggers.append(trigger)
     return result
+
+
+def _append_eca_parameter(
+    element: EcaParameter|EcaFunction,
+    element_stack: list[EcaParameter|EcaFunction|int],
+    parent_trigger: Trigger,
+    line_number: int,
+    parameter_type: str = '',
+) -> None:
+    if not element_stack:
+        assert isinstance(element, EcaFunction), f"Cannot append a parameter to trigger function list: line {line_number}"
+        parent_trigger.eca_functions.append(element)
+        return
+    parent_element = element_stack[-1]
+    if isinstance(parent_element, EcaFunction):
+        if isinstance(element, EcaParameter):
+            parent_element.parameters.append(element)
+        elif isinstance(element, EcaFunction):
+            parent_element.subfunctions.append(element)
+        return
+    if isinstance(parent_element, int):
+        assert isinstance(element, EcaFunction), f"Cannot use a parameter as a subfunction: line {line_number}"
+        element.subscope = parent_element
+        parent_element = element_stack[-2]
+        assert isinstance(parent_element, EcaFunction), f"Parameter cannot append to a parameter subfunction index: line {line_number}"
+        parent_element.subfunctions.append(element)
+        return
+    assert isinstance(parent_element, EcaParameter)
+    if isinstance(element, EcaParameter):
+        assert parameter_type == 'subscript'
+        assert parent_element.subscript is None
+        parent_element.subscript = element
+    else:
+        assert parent_element.children is None
+        parent_element.children = element
 
 
 if __name__ == '__main__':
@@ -534,15 +604,5 @@ if __name__ == '__main__':
         with open(f'scratch/wtg/{os.path.basename(os.path.dirname(filename))}.md', 'w') as fp:
             fp.write(text)
         round_tripped_data = from_text(text)
-        assert round_tripped_data.categories == data.categories
-        assert round_tripped_data.variables == data.variables
-        for a_trigger, b_trigger in zip(round_tripped_data.triggers, data.triggers):
-            assert a_trigger.name == b_trigger.name
-            assert a_trigger.category_id == b_trigger.category_id
-            assert a_trigger.description == b_trigger.description
-            assert a_trigger.is_commented == b_trigger.is_commented
-            assert a_trigger.is_enabled == b_trigger.is_enabled
-            assert a_trigger.is_initially_off == b_trigger.is_initially_off
-            assert a_trigger.is_custom_text == b_trigger.is_custom_text
-            assert a_trigger.is_map_init == b_trigger.is_map_init
+        assert round_tripped_data == data
         # print(data)
