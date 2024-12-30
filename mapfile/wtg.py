@@ -228,13 +228,13 @@ def read_wtg(raw_data: bytes, lib_info: dict[str, ParamInfo]) -> W3TriggerData:
         trigger.category_id = reader.read_int32()
         num_functions = reader.read_int32()
         for _ in range(num_functions):
-            func = parse_function(reader, lib_info, parse_state)
+            func = _parse_function(reader, lib_info, parse_state)
             trigger.eca_functions.append(func)
         result.triggers.append(trigger)
     return result
 
 
-def parse_function(reader: binary.ByteArrayParser, lib_info: dict[str, ParamInfo], parse_state: ParseState) -> EcaFunction:
+def _parse_function(reader: binary.ByteArrayParser, lib_info: dict[str, ParamInfo], parse_state: ParseState) -> EcaFunction:
     eca_type = reader.read_int32()
     if eca_type > EcaFunctionType.Function:
         assert parse_state.scope_depth
@@ -258,19 +258,19 @@ def parse_function(reader: binary.ByteArrayParser, lib_info: dict[str, ParamInfo
         num_parameters = len(parameter_info[0])
     if parse_state.version == Version.TFT and lib_info[func.name].has_subfunctions:
         for _ in range(num_parameters):
-            parameter = parse_parameter(reader, lib_info, parse_state)
+            parameter = _parse_parameter(reader, lib_info, parse_state)
             func.parameters.append(parameter)
         num_subfuncs = reader.read_int32()
         parse_state.scope_depth = 1
         for _ in range(num_subfuncs):
-            subfunc = parse_function(reader, lib_info, parse_state)
+            subfunc = _parse_function(reader, lib_info, parse_state)
             if subfunc is None:
                 break
             func.subfunctions.append(subfunc)
         parse_state.scope_depth = 0
     else:
         for _ in range(num_parameters):
-            parameter = parse_parameter(reader, lib_info, parse_state)
+            parameter = _parse_parameter(reader, lib_info, parse_state)
             func.parameters.append(parameter)
         if parse_state.version == Version.TFT:
             finished_loop_scope = reader.read_bool32()
@@ -278,7 +278,7 @@ def parse_function(reader: binary.ByteArrayParser, lib_info: dict[str, ParamInfo
     return func
 
 
-def parse_parameter(reader: binary.ByteArrayParser, lib_info: dict[str, ParamInfo], parse_state: ParseState) -> EcaParameter:
+def _parse_parameter(reader: binary.ByteArrayParser, lib_info: dict[str, ParamInfo], parse_state: ParseState) -> EcaParameter:
     parameter = EcaParameter(
         parameter_type=EcaParameterType(reader.read_int32()),
         value=reader.read_cstring(),
@@ -287,13 +287,13 @@ def parse_parameter(reader: binary.ByteArrayParser, lib_info: dict[str, ParamInf
     if has_children:
         assert has_children == 1, f"has_children greater than 1 ({has_children}); maybe it's num_children?"
         if parameter.parameter_type == EcaParameterType.Function:
-            parameter.children = parse_function(reader, lib_info, parse_state)
+            parameter.children = _parse_function(reader, lib_info, parse_state)
         else:
             assert False, f"Children of parameter of type {parameter.parameter_type} is not implemented"
     has_subscript = reader.read_int32()
     if has_subscript:
         assert has_subscript == 1
-        parameter.subscript = parse_parameter(reader, lib_info, parse_state)
+        parameter.subscript = _parse_parameter(reader, lib_info, parse_state)
     return parameter
 
 
@@ -428,7 +428,7 @@ def from_text(text: str) -> W3TriggerData:
     for line_number, line in parser.iter:
         if not line:
             break
-        # Note(mm): NightElf02 has a category that ends in a space, meaning .strip() isn't accruate T.T
+        # Note(mm): NightElf02 has a category that ends in a space, meaning .strip() isn't accurate T.T
         parts = [x[1:-1] for x in line.split('|')[1:-1]]
         assert len(parts) == 3, f"Wrong number of columns in Categories table on line {line_number}"
         category = TriggerCategory(
