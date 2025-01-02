@@ -82,7 +82,7 @@ class EcaFunction:
 class Trigger:
     name: str = ''
     description: str = ''
-    is_commented: bool = False
+    is_commented: int = 0
     is_enabled: bool = True
     is_custom_text: bool = False
     is_initially_off: bool = True
@@ -220,7 +220,7 @@ def read_wtg(raw_data: bytes, lib_info: dict[str, ParamInfo]) -> W3TriggerData:
         trigger.name = reader.read_cstring()
         trigger.description = reader.read_cstring().replace('\r', '')
         if result.version == Version.TFT:
-            trigger.is_commented = reader.read_bool32()
+            trigger.is_commented = reader.read_int32()
         trigger.is_enabled = reader.read_bool32()
         trigger.is_custom_text = reader.read_bool32()
         trigger.is_initially_off = reader.read_bool32()
@@ -256,10 +256,11 @@ def _parse_function(reader: binary.ByteArrayParser, lib_info: dict[str, ParamInf
     else:
         parameter_info = lib_info[func.name]
         num_parameters = len(parameter_info[0])
+
+    for _ in range(num_parameters):
+        parameter = _parse_parameter(reader, lib_info, parse_state)
+        func.parameters.append(parameter)
     if parse_state.version == Version.TFT and lib_info[func.name].has_subfunctions:
-        for _ in range(num_parameters):
-            parameter = _parse_parameter(reader, lib_info, parse_state)
-            func.parameters.append(parameter)
         num_subfuncs = reader.read_int32()
         parse_state.scope_depth = 1
         for _ in range(num_subfuncs):
@@ -268,13 +269,9 @@ def _parse_function(reader: binary.ByteArrayParser, lib_info: dict[str, ParamInf
                 break
             func.subfunctions.append(subfunc)
         parse_state.scope_depth = 0
-    else:
-        for _ in range(num_parameters):
-            parameter = _parse_parameter(reader, lib_info, parse_state)
-            func.parameters.append(parameter)
-        if parse_state.version == Version.TFT:
-            finished_loop_scope = reader.read_bool32()
-            assert not finished_loop_scope, "Finished loop scope flag set for non-loop"
+    elif parse_state.version == Version.TFT:
+        finished_loop_scope = reader.read_bool32()
+        assert not finished_loop_scope, "Finished loop scope flag set for non-loop"
     return func
 
 
@@ -295,6 +292,88 @@ def _parse_parameter(reader: binary.ByteArrayParser, lib_info: dict[str, ParamIn
         assert has_subscript == 1
         parameter.subscript = _parse_parameter(reader, lib_info, parse_state)
     return parameter
+
+
+def to_binary(data: W3TriggerData) -> bytes:
+    writer = binary.ByteArrayWriter()
+
+    writer.write_id('WTG!')
+    writer.write_int32(data.version)
+
+    # Categories
+    writer.write_int32(len(data.categories))
+    for category in data.categories:
+        writer.write_int32(category.category_id)
+        writer.write_cstring(category.name)
+        if data.version == Version.TFT:
+            writer.write_bool32(category.is_comment_section)
+    # sub_version
+    if data.version == Version.TFT:
+        writer.write_int32(2)
+    else:
+        writer.write_int32(1)
+    # Variables
+    writer.write_int32(len(data.variables))
+    for variable in data.variables:
+        writer.write_cstring(variable.name)
+        writer.write_cstring(variable.variable_type)
+        writer.write_int32(1)
+        writer.write_bool32(variable.is_array)
+        if data.version == Version.TFT:
+            writer.write_int32(variable.array_size)
+        writer.write_bool32(variable.is_initialized)
+        writer.write_cstring(variable.initial_value)
+    # Triggers
+    writer.write_int32(len(data.triggers))
+    for trigger in data.triggers:
+        writer.write_cstring(trigger.name)
+        writer.write_cstring(trigger.description.replace('\n', '\r\n'))
+        if data.version == Version.TFT:
+            writer.write_int32(trigger.is_commented)
+        writer.write_bool32(trigger.is_enabled)
+        writer.write_bool32(trigger.is_custom_text)
+        writer.write_bool32(trigger.is_initially_off)
+        writer.write_bool32(trigger.is_map_init)
+        writer.write_int32(trigger.category_id)
+        writer.write_int32(len(trigger.eca_functions))
+        for function in trigger.eca_functions:
+            _write_function(writer, function, data)
+    return writer.as_bytes()
+
+
+def _write_function(
+    writer: binary.ByteArrayWriter,
+    function: EcaFunction,
+    data: W3TriggerData,
+    is_subfunction: bool = False,
+) -> None:
+    writer.write_int32(function.function_type)
+    if is_subfunction:
+        writer.write_int32(function.subscope)
+    writer.write_cstring(function.name)
+    writer.write_bool32(function.is_enabled)
+    # Number of parameters doesn't need to be written; comes from lib_info
+    for parameter in function.parameters:
+        _write_parameter(writer, parameter, data)
+    if data.version == Version.TFT:
+        writer.write_int32(len(function.subfunctions))
+        for subfunction in function.subfunctions:
+            _write_function(writer, subfunction, data, is_subfunction=True)
+
+
+def _write_parameter(writer: binary.ByteArrayWriter, parameter: EcaParameter, data: W3TriggerData) -> None:
+    writer.write_int32(parameter.parameter_type)
+    writer.write_cstring(parameter.value)
+    if parameter.children is not None:
+        writer.write_int32(1)
+        _write_function(writer, parameter.children, data)
+    else:
+        writer.write_int32(0)
+    if parameter.subscript is not None:
+        writer.write_int32(1)
+        _write_parameter(writer, parameter.subscript, data)
+    else:
+        writer.write_int32(0)
 
 
 def as_text(data: W3TriggerData) -> str:
@@ -345,7 +424,11 @@ def as_text(data: W3TriggerData) -> str:
             write_function_call(lines, subfunc, subfunc_indent)
 
     for trigger in data.triggers:
-        lines.append(f'## {"// " if trigger.is_commented else ""}{trigger.name}')
+        if trigger.is_commented:
+            # Note(mm): Random bytes can seemingly slip into the is_commented boolean; they must be preserved for a perfect round-trip
+            lines.append(f'## //{trigger.is_commented if trigger.is_commented != 1 else ""} {trigger.name}')
+        else:
+            lines.append(f'## {trigger.name}')
         lines.append(f'- enabled: {trigger.is_enabled}')
         category_name = [category.name for category in data.categories if category.category_id == trigger.category_id]
         assert len(category_name) == 1, "Invalid category ID"
@@ -480,9 +563,10 @@ def from_text(text: str) -> W3TriggerData:
                 result.triggers.append(trigger)
             parsing_info = True
             trigger = Trigger(line[3:])
-            if trigger.name.startswith('// '):
-                trigger.name = trigger.name[3:]
-                trigger.is_commented = True
+            if trigger.name.startswith('//'):
+                trigger.name = trigger.name[2:]
+                commented_flags, trigger.name = trigger.name.split(' ', 1)
+                trigger.is_commented = int(commented_flags) if commented_flags else 1
         elif line == '### Functions':
             parsing_info = False
         elif parsing_info and line == '```description':
@@ -604,5 +688,7 @@ if __name__ == '__main__':
         with open(f'scratch/wtg/{os.path.basename(os.path.dirname(filename))}.md', 'w') as fp:
             fp.write(text)
         round_tripped_data = from_text(text)
+        round_tripped_binary = to_binary(round_tripped_data)
         assert round_tripped_data == data
+        assert round_tripped_binary == raw_data
         # print(data)

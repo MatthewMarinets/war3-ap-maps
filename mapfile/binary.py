@@ -112,6 +112,9 @@ class ByteArrayWriter:
     def write_int32(self, value: int) -> 'ByteArrayWriter':
         self.data.extend(struct.pack("<i", value))
         return self
+    def write_bool32(self, value: bool) -> 'ByteArrayWriter':
+        self.data.extend(struct.pack("<i", value))
+        return self
     def write_id(self, value: str) -> 'ByteArrayWriter':
         if value == NULL_ID:
             self.data.extend(b'\0\0\0\0')
