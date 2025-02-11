@@ -30,6 +30,9 @@ class Wc3Location(enum.Enum):
         self.mission = mission
         self.type = type
         self.vanilla_item = vanilla_item
+    
+    def global_name(self) -> str:
+        return f"{self.mission.mission_name}: {self.location_name}"
 
     # Quests
     # (Main) Defend Strahnbrad
@@ -220,4 +223,8 @@ class Wc3Location(enum.Enum):
     NE5_VICTORY = 4500, "Victory", Wc3Mission.N5_BROTHERS_IN_BLOOD, Wc3LocationType.VICTORY
     NE6_VICTORY = 4600, "Victory", Wc3Mission.N6_A_DESTINY_OF_FLAME_AND_SORROW, Wc3LocationType.VICTORY
     NE7_VICTORY = 4700, "Victory", Wc3Mission.N7_TWILIGHT_OF_THE_GODS, Wc3LocationType.VICTORY
+
+
+location_name_to_id = {location.global_name(): location.id for location in Wc3Location}
+location_id_to_name = {location.id: location.global_name() for location in Wc3Location}
 
