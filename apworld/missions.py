@@ -51,6 +51,7 @@ class Wc3Mission(enum.Enum):
         self.race = race
     
     GENERAL = "General", "wc3", Wc3Campaign.GENERAL, 0, Wc3Race.NONE
+    """Used for locations that are not tied to any particular mission"""
 
     P1_CHASING_VISIONS =            "Chasing Visions", "T1", Wc3Campaign.PROLOGUE, 1, Wc3Race.ORC
     P2_DEPARTURES =                 "Departures", "T2", Wc3Campaign.PROLOGUE, 2, Wc3Race.ORC
@@ -94,3 +95,30 @@ class Wc3Mission(enum.Enum):
     N6_A_DESTINY_OF_FLAME_AND_SORROW =  "A Destiny of Flame and Sorrow", "N6", Wc3Campaign.NIGHT_ELF_1, 6, Wc3Race.NIGHT_ELF
     N7_TWILIGHT_OF_THE_GODS =           "Twilight of the Gods", "N7", Wc3Campaign.NIGHT_ELF_1, 7, Wc3Race.NIGHT_ELF
 
+    NX1_RISE_OF_THE_NAGA =          "Rise of the Naga", "Nx1", Wc3Campaign.NIGHT_ELF_2, 1, Wc3Race.NIGHT_ELF
+    NX2_THE_BROKEN_ISLES =          "The Broken Isles", "Nx2", Wc3Campaign.NIGHT_ELF_2, 2, Wc3Race.NIGHT_ELF
+    NX3_THE_TOMB_OF_SARGERAS =      "The Tomb of Sargeras", "Nx3", Wc3Campaign.NIGHT_ELF_2, 3, Wc3Race.NIGHT_ELF
+    NX4_WRATH_OF_THE_BETRAYER =     "Wrath of the Betrayer", "Nx4", Wc3Campaign.NIGHT_ELF_2, 4, Wc3Race.NIGHT_ELF
+    NX5_BALANCING_THE_SCALES =      "Balancing the Scales", "Nx5", Wc3Campaign.NIGHT_ELF_2, 5, Wc3Race.NIGHT_ELF
+    NX6_SHARDS_OF_THE_ALLIANCE =    "Shards of the Alliance", "Nx6", Wc3Campaign.NIGHT_ELF_2, 6, Wc3Race.NIGHT_ELF
+    NX7_THE_RUINS_OF_DALARAN =      "The Ruins of Dalaran", "Nx7", Wc3Campaign.NIGHT_ELF_2, 7, Wc3Race.NIGHT_ELF
+    NX8_THE_BROTHERS_STORMRAGE =    "The Brothers Stormrage", "Nx8", Wc3Campaign.NIGHT_ELF_2, 8, Wc3Race.NIGHT_ELF
+
+    HX1_MISCONCEPTIONS =            "Misconceptions", "Hx1", Wc3Campaign.HUMAN_2, 1, Wc3Race.HUMAN
+    HX2_A_DARK_COVENANT =           "A Dark Covenant", "Hx2", Wc3Campaign.HUMAN_2, 2, Wc3Race.NAGA
+    HX3_THE_DUNGEONS_OF_DALARAN =   "The Dungeons of Dalaran", "Hx3", Wc3Campaign.HUMAN_2, 3, Wc3Race.NAGA
+    # HXS_THE_CROSSING =              "The Crossing", "Hx?", Wc3Campaign.HUMAN_2, -1, Wc3Race.NAGA
+    HX4_THE_SEARCH_FOR_ILLIDAN =    "The Search for Illidan", "Hx4", Wc3Campaign.HUMAN_2, 4, Wc3Race.NAGA
+    HX5_GATES_OF_THE_ABYSS =        "Gates of the Abyss", "Hx5", Wc3Campaign.HUMAN_2, 5, Wc3Race.NAGA
+    HX6_LORD_OF_OUTLAND =           "Lord of Outland", "Hx6", Wc3Campaign.HUMAN_2, 6, Wc3Race.NAGA
+
+    UX1_KING_ARTHAS =                   "King Arthas", "Ux1", Wc3Campaign.UNDEAD_2, 1, Wc3Race.UNDEAD
+    UX2_THE_FLIGHT_FROM_LORDAERON =     "The Flight from Loardaeron", "Ux2", Wc3Campaign.UNDEAD_2, 2, Wc3Race.UNDEAD
+    UX3_THE_DARK_LADY =                 "The Dark Lady", "Ux3", Wc3Campaign.UNDEAD_2, 3, Wc3Race.UNDEAD
+    UX4_THE_RETURN_TO_NORTHREND =       "The Return to Northrend", "Ux4", Wc3Campaign.UNDEAD_2, 4, Wc3Race.UNDEAD
+    UX5_DREADLORDS_FALL =               "Dreadlord's Fall", "Ux5", Wc3Campaign.UNDEAD_2, 5, Wc3Race.UNDEAD
+    UX6_A_NEW_POWER_IN_LORDAERON =      "A New Power in Lordaeron", "Ux6", Wc3Campaign.UNDEAD_2, 6, Wc3Race.UNDEAD
+    UX7A_INTO_THE_SHADOW_WEB_CAVERNS =  "Into the Shadow Web Caverns", "Ux7a", Wc3Campaign.UNDEAD_2, 7, Wc3Race.UNDEAD
+    UX7B_THE_FORGOTTEN_ONES =           "The Forgotten Ones", "Ux7b", Wc3Campaign.UNDEAD_2, 8, Wc3Race.UNDEAD
+    UX7C_ASCENT_TO_THE_UPPER_KINGDOM =  "Ascent to the Upper Kingdom", "Ux7c", Wc3Campaign.UNDEAD_2, 9, Wc3Race.UNDEAD
+    UX8_A_SYMPHONY_OF_FROST_AND_FLAME = "A Symphony of Frost and Flame", "Ux8", Wc3Campaign.UNDEAD_2, 10, Wc3Race.UNDEAD
