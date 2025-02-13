@@ -9,3 +9,4 @@ extract/
 out/
 workspace.ini
 doc/generated/
+logs/

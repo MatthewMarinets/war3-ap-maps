@@ -4,7 +4,7 @@ Generates documentation for gamestrings
 
 from mapfile import translate
 
-if __name__ == '__main__':
+def main() -> None:
     # Export game strings as json to doc/generated/
     translate.init_roc_map()
     translate.init_tft_map()
@@ -20,3 +20,7 @@ if __name__ == '__main__':
         print(f'Writing {filename}')
         with open(filename, 'w') as fp:
             json.dump(collection, fp, indent=2)
+
+
+if __name__ == '__main__':
+    main()

@@ -80,7 +80,7 @@ def write_toml(target_file: str, contents: tuple[tuple]) -> None:
             fp.write('\n')
 
 
-if __name__ == '__main__':
+def main() -> None:
     # Export game data as json to doc/generated/
     os.makedirs('doc/generated/data', exist_ok=True)
     for data_dir in DATA_DIRS:
@@ -97,3 +97,7 @@ if __name__ == '__main__':
             # write_markdown(f'{target_file}.md', contents)
             write_toml(f'{target_file}.toml', contents)
     print('done')
+
+
+if __name__ == '__main__':
+    main()
