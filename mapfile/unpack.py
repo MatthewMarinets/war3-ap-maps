@@ -1,28 +1,47 @@
 """
-Extract a .w3m or .w3x into a directory
+Fully decompile a w3x or w3m map file
 """
 import os
-import subprocess
 import shutil
+import glob
 from mapfile import config
+from mapfile.util.failable import Error
+from mapfile import mpq, w3c, w3i, w3o, w3r, w3s, wct, wtg, wts, doo, imp
 
 mpq_editor_exe = config.workspace.get('mpqeditor_path', 'MPQEditor.exe')
 
-def extract_map_files(map_file: str, target_dir: str) -> None:
-    assert shutil.which(mpq_editor_exe), 'MPQEditor is not installed and on the path'
-    if os.path.exists(target_dir):
+
+CONVERT_HANDLERS = {
+    '.w3c': (w3c.convert, 'cameras.w3c.toml'),
+    '.w3i': (w3i.convert, 'info.w3i.toml'),
+    '.w3r': (w3r.convert, 'regions.w3r.toml'),
+    '.w3s': (w3s.convert, 'sounds.w3s.toml'),
+}
+
+
+def extract_map_files(map_file: str, target_dir: str) -> Error[str] | None:
+    if not os.path.isfile(map_file):
+        return Error(f'{map_file} does not exist')
+    if os.path.isdir(target_dir):
         shutil.rmtree(target_dir)
-    cmd = [
-        mpq_editor_exe, '/extract',
-        map_file, '*', target_dir, '/fp',
-    ]
-    ret = subprocess.call(cmd)
-    if ret:
-        print(f'Error {ret}')
+    
+    build_dir = f'{target_dir}/.build'
+    result = mpq.extract_w3x(map_file, build_dir)
+    if isinstance(result, Error):
+        return Error(f"Error running command '{result.message[1]}': error code {result.message[0]}")
+    for filename in glob.glob(f'{build_dir}/*'):
+        basename = os.path.basename(filename)
+        stem, ext = os.path.splitext(basename)
+        convert, target_name = CONVERT_HANDLERS.get(ext, (None, basename))
+        if convert:
+            convert(filename, f'{target_dir}/{target_name}')
+        else:
+            shutil.copy(filename, f'{target_dir}/{target_name}')
+    
 
 if __name__ == '__main__':
     import sys
-    # Usage: extract_map.py [extract_file [destination_dir]]
+    # Usage: unpack.py [extract_file [destination_dir]]
 
     if len(sys.argv) > 1:
         file = sys.argv[1]
@@ -35,6 +54,6 @@ if __name__ == '__main__':
 
     assert os.path.exists(file), f'{file} does not exist'
     stem = os.path.basename(os.path.splitext(file)[0])
-    dest = os.path.join(dest, stem)
+    dest = f'{dest}/{stem}'
     print(f'Extracting: {file} to {dest}')
     extract_map_files(os.path.abspath(file), os.path.abspath(dest))

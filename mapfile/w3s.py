@@ -5,11 +5,13 @@ Utilities for working with .w3s (sound definition) files
 from dataclasses import dataclass, field, asdict
 import enum
 import tomllib
+import os
 
 from mapfile import binary
 from mapfile.util import savetext
 
 
+EXTENSION = '.w3s'
 UNSET_FLOAT = 4294967296.0
 
 
@@ -62,6 +64,27 @@ class War3Sound:
 class War3SoundInfo:
     version: int = 1
     sounds: list[War3Sound] = field(default_factory=list)
+
+
+def convert(source: str, target: str) -> None:
+    source_ext = os.path.splitext(source)[1]
+    if source_ext == EXTENSION:
+        with open(source, 'rb') as fp:
+            contents = fp.read()
+        data = read_w3s(contents)
+    else:
+        with open(source, 'r') as fp:
+            str_contents = fp.read()
+        data = from_text(str_contents)
+    target_ext = os.path.splitext(target)[1]
+    if target_ext == EXTENSION:
+        write_bytes = to_binary(data)
+        with open(target, 'wb') as fp:
+            fp.write(write_bytes)
+    else:
+        write_str = as_text(data)
+        with open(target, 'w') as fp:
+            fp.write(write_str)
 
 
 def read_w3s(raw_bytes: bytes) -> War3SoundInfo:
@@ -160,7 +183,6 @@ def from_text(text: str) -> War3SoundInfo:
 if __name__ == '__main__':
     from work import manifest
     filenames = [f'work/{x}/war3map.w3s' for x in manifest.all_directories]
-    import os
     os.makedirs('scratch/w3s', exist_ok=True)
     for filename in filenames:
         if not os.path.isfile(filename):

@@ -4,9 +4,13 @@ Utilities for working with .w3c (camera definition) files
 
 from dataclasses import dataclass, field, asdict
 import tomllib
+import os
 
 from mapfile import binary
 from mapfile.util import savetext
+
+
+EXTENSION = '.w3c'
 
 
 @dataclass
@@ -27,6 +31,27 @@ class War3Camera:
 class War3CameraInfo:
     version: int = 0
     cameras: list[War3Camera] = field(default_factory=list)
+
+
+def convert(source: str, target: str) -> None:
+    source_ext = os.path.splitext(source)[1]
+    if source_ext == EXTENSION:
+        with open(source, 'rb') as fp:
+            contents = fp.read()
+        data = read_w3c(contents)
+    else:
+        with open(source, 'r') as fp:
+            str_contents = fp.read()
+        data = from_text(str_contents)
+    target_ext = os.path.splitext(target)[1]
+    if target_ext == EXTENSION:
+        write_bytes = to_binary(data)
+        with open(target, 'wb') as fp:
+            fp.write(write_bytes)
+    else:
+        write_str = as_text(data)
+        with open(target, 'w') as fp:
+            fp.write(write_str)
 
 
 def read_w3c(raw_bytes: bytes) -> War3CameraInfo:
@@ -89,7 +114,6 @@ def from_text(text: str) -> War3CameraInfo:
 if __name__ == '__main__':
     from work import manifest
     filenames = [f'work/{x}/war3map.w3c' for x in manifest.all_directories]
-    import os
     os.makedirs('scratch/w3c', exist_ok=True)
     for filename in filenames:
         print(filename)

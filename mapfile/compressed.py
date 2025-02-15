@@ -97,6 +97,7 @@ def compress_war3_file(metadata: War3Metadata, data: bytes) -> bytes:
     result += block
     return result
 
+
 if __name__ == '__main__':
     import glob
     import os

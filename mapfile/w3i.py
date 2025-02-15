@@ -3,11 +3,15 @@ Utilities for working with .w3i (map information) files
 """
 from typing import *
 import enum
-from mapfile.util import savetext
+import os
 import dataclasses
 from dataclasses import dataclass
 
+from mapfile.util import savetext
 from mapfile import binary
+
+EXTENSION = '.w3i'
+
 
 class W3iVersions(enum.IntEnum):
     ROC = 18
@@ -183,6 +187,25 @@ class War3MapInformation:
     random_items: list[RandomItemInfo] = dataclasses.field(default_factory=lambda: [])
 
 
+def convert(source: str, target: str) -> None:
+    source_ext = os.path.splitext(source)[1]
+    if source_ext == EXTENSION:
+        data = read_w3i_file(source)
+    else:
+        with open(source, 'r') as fp:
+            str_contents = fp.read()
+        data = from_text(str_contents)
+    target_ext = os.path.splitext(target)[1]
+    if target_ext == EXTENSION:
+        write_bytes = to_binary(data)
+        with open(target, 'wb') as fp:
+            fp.write(write_bytes)
+    else:
+        write_str = as_text(data)
+        with open(target, 'w') as fp:
+            fp.write(write_str)
+
+
 def read_w3i_file(filename: str) -> War3MapInformation:
     with open(filename, 'rb') as fp:
         raw_bytes = fp.read()
@@ -192,7 +215,7 @@ def read_w3i_file(filename: str) -> War3MapInformation:
 def read_w3i(raw_bytes: bytes) -> War3MapInformation:
     reader = binary.ByteArrayParser(raw_bytes)
     version = reader.read_int32()
-    assert version in [v.value for v in W3iVersions]
+    assert version in [v.value for v in W3iVersions], f'Unrecognized w3i version {version}'
     result = War3MapInformation(
         W3iVersions(version),
         map_revision=reader.read_int32(),
@@ -451,7 +474,6 @@ if __name__ == '__main__':
     from work import manifest
     filenames = [f'work/{x}/war3map.w3i' for x in manifest.all_directories]
     # filenames += ['extract/test_dalaran_ruins/war3map.w3i']
-    import os
     os.makedirs('scratch/w3i', exist_ok=True)
     for filename in filenames:
         map_name = os.path.basename(os.path.dirname(filename))
