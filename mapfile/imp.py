@@ -6,6 +6,9 @@ from dataclasses import dataclass, field
 from mapfile import binary
 
 
+EXTENSION = '.imp'
+
+
 @dataclass
 class ImportedPath:
     path_type: int
@@ -34,7 +37,7 @@ def read_binary(raw_data: bytes) -> Imports:
     return result
 
 
-def write_binary(data: Imports) -> bytes:
+def to_binary(data: Imports) -> bytes:
     writer = binary.ByteArrayWriter()
     writer.write_int32(data.version)
     writer.write_int32(len(data.imports))
@@ -77,7 +80,7 @@ if __name__ == '__main__':
         print(filename)
         print(toml_text)
         recovered_data = from_text(toml_text)
-        round_tripped = write_binary(recovered_data)
+        round_tripped = to_binary(recovered_data)
         assert round_tripped == contents
     print('done')
 

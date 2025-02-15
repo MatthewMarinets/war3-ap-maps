@@ -187,25 +187,6 @@ class War3MapInformation:
     random_items: list[RandomItemInfo] = dataclasses.field(default_factory=lambda: [])
 
 
-def convert(source: str, target: str) -> None:
-    source_ext = os.path.splitext(source)[1]
-    if source_ext == EXTENSION:
-        data = read_w3i_file(source)
-    else:
-        with open(source, 'r') as fp:
-            str_contents = fp.read()
-        data = from_text(str_contents)
-    target_ext = os.path.splitext(target)[1]
-    if target_ext == EXTENSION:
-        write_bytes = to_binary(data)
-        with open(target, 'wb') as fp:
-            fp.write(write_bytes)
-    else:
-        write_str = as_text(data)
-        with open(target, 'w') as fp:
-            fp.write(write_str)
-
-
 def read_w3i_file(filename: str) -> War3MapInformation:
     with open(filename, 'rb') as fp:
         raw_bytes = fp.read()

@@ -6,20 +6,10 @@ import shutil
 import glob
 from mapfile import config
 from mapfile.util.failable import Error
-from mapfile import mpq, w3c, w3i, w3o, w3r, w3s, wct, wtg, wts, doo, imp, mmp
+from mapfile import mpq
+from mapfile.common import CONVERT_HANDLERS
 
 mpq_editor_exe = config.workspace.get('mpqeditor_path', 'MPQEditor.exe')
-
-
-CONVERT_HANDLERS = {
-    '.doo': (doo.convert, 'doodads.doo.toml'),
-    '.mmp': (mmp.convert, 'minimap.mmp.toml'),
-    '.w3c': (w3c.convert, 'cameras.w3c.toml'),
-    '.w3i': (w3i.convert, 'info.w3i.toml'),
-    '.w3r': (w3r.convert, 'regions.w3r.toml'),
-    '.w3s': (w3s.convert, 'sounds.w3s.toml'),
-    '.wct': (wct.convert, 'triggers_text.wct.j'),
-}
 
 
 def extract_map_files(map_file: str, target_dir: str) -> Error[str] | None:
@@ -37,11 +27,13 @@ def extract_map_files(map_file: str, target_dir: str) -> Error[str] | None:
         stem, ext = os.path.splitext(basename)
         convert, target_name = CONVERT_HANDLERS.get(ext, (None, basename))
         if basename == 'war3mapUnits.doo':
+            assert convert is not None
             convert(filename, f'{target_dir}/units.doo.toml')
         elif convert:
             convert(filename, f'{target_dir}/{target_name}')
         else:
             shutil.copy(filename, f'{target_dir}/{target_name}')
+    return None
     
 
 if __name__ == '__main__':
@@ -51,7 +43,8 @@ if __name__ == '__main__':
     if len(sys.argv) > 1:
         file = sys.argv[1]
     else:
-        file = config.workspace.get('extract_file')
+        file = config.workspace.get('extract_file', '')
+        assert file
     if len(sys.argv) > 2:
         dest = sys.argv[2]
     else:

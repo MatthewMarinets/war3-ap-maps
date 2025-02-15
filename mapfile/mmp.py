@@ -39,27 +39,6 @@ class War3MinimapInfo:
     icons: list[War3MinimapIcon]
 
 
-def convert(source: str, target: str) -> None:
-    source_ext = os.path.splitext(source)[1]
-    if source_ext == EXTENSION:
-        with open(source, 'rb') as fp:
-            contents = fp.read()
-        data = read_binary(contents)
-    else:
-        with open(source, 'r') as fp:
-            str_contents = fp.read()
-        data = from_text(str_contents)
-    target_ext = os.path.splitext(target)[1]
-    if target_ext == EXTENSION:
-        write_bytes = to_binary(data)
-        with open(target, 'wb') as fp:
-            fp.write(write_bytes)
-    else:
-        write_str = as_text(data)
-        with open(target, 'w') as fp:
-            fp.write(write_str)
-
-
 def read_binary(raw_bytes: bytes) -> War3MinimapInfo:
     reader = binary.ByteArrayParser(raw_bytes)
     version = reader.read_int32()

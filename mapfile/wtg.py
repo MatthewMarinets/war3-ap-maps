@@ -11,6 +11,9 @@ import re
 from mapfile import binary
 
 
+EXTENSION = '.wtg'
+
+
 class ParamInfo(NamedTuple):
     arg_types: list[str]
     return_type: str
@@ -178,7 +181,12 @@ def parse_lib_parameters_from_trigger_strings(lines: list[str]) -> dict[str, Par
     return result
 
 
-def read_binary(raw_data: bytes, lib_info: dict[str, ParamInfo]) -> W3TriggerData:
+with open('gamedata/1_30_4/ui/triggerdata.txt') as fp:
+    _lib_lines = fp.readlines()
+LIB_INFO = parse_lib_parameters_from_trigger_strings(_lib_lines)
+
+
+def read_binary(raw_data: bytes, lib_info: dict[str, ParamInfo] = LIB_INFO) -> W3TriggerData:
     reader = binary.ByteArrayParser(raw_data)
     result = W3TriggerData()
 

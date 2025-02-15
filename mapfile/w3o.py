@@ -17,6 +17,9 @@ from dataclasses import dataclass
 
 from mapfile import binary
 
+EXTENSION = '.w3o'
+
+
 class DataType(enum.IntEnum):
     Integer = 0
     Float = 1
@@ -81,6 +84,7 @@ class EntityTable:
 @dataclass
 class War3ObjectData:
     version: int
+    has_levels: bool
     blizzard_objects: EntityTable
     map_objects: EntityTable
 
@@ -88,6 +92,7 @@ class War3ObjectData:
     def _from_dict(data: dict) -> 'War3ObjectData':
         return War3ObjectData(
             data['version'],
+            data['has_levels'],
             EntityTable._from_dict(data['blizzard_objects']),
             EntityTable._from_dict(data['map_objects'])
         )
@@ -138,10 +143,11 @@ def read_binary(raw_data: bytes, has_levels: bool = False) -> War3ObjectData:
     blizzard_table = _parse_entity_table(reader, has_levels)
     map_table = _parse_entity_table(reader, has_levels)
     assert reader.index == len(reader.raw_bytes), 'Extra bytes remain'
-    return War3ObjectData(version, blizzard_table, map_table)
+    return War3ObjectData(version, has_levels, blizzard_table, map_table)
 
 
-def to_binary(data: War3ObjectData, has_levels: bool = False) -> bytes:
+def to_binary(data: War3ObjectData) -> bytes:
+    has_levels = data.has_levels
     writer = binary.ByteArrayWriter()
     writer.write_int32(data.version)
     for table in (data.blizzard_objects, data.map_objects):
@@ -200,6 +206,8 @@ class W3oTomlWriter(savetext.TomlWriter):
         self.lines.append("# Warcraft 3 Map Objects File (.w3o)")
         self.lines.append("# See w3o.py for type definitions")
         self.lines.append(f'version = {data.version}')
+        self.lines.append(f'has_levels = {str(data.has_levels).lower()}')
+        self.lines.append('')
         self._write_dict('blizzard_objects', dataclasses.asdict(data.blizzard_objects), 'blizzard_objects')
         self._write_dict('map_objects', dataclasses.asdict(data.map_objects), 'map_objects')
         result = '\n'.join(self.lines)
@@ -244,7 +252,7 @@ if __name__ == '__main__':
             print(text, file=fp)
         retrieved_data = from_text(text)
         assert retrieved_data == data
-        round_tripped = to_binary(retrieved_data, has_levels)
+        round_tripped = to_binary(retrieved_data)
         assert round_tripped == raw_data
 
     print('done')

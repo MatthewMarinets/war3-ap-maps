@@ -48,7 +48,7 @@ def try_get_wc3_path() -> str:
 
 WORKSPACE_CONFIG_FILE = 'workspace.ini'
 
-workspace: dict[str, str | None] = {}
+workspace: dict[str, str] = {}
 if os.path.isfile(WORKSPACE_CONFIG_FILE):
     workspace = load_config('workspace.ini')
 else:
