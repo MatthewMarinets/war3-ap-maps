@@ -131,7 +131,7 @@ def _parse_entity_table(reader: binary.ByteArrayParser, has_levels: bool = False
     return table
 
 
-def read_w3o(raw_data: bytes, has_levels: bool = False) -> War3ObjectData:
+def read_binary(raw_data: bytes, has_levels: bool = False) -> War3ObjectData:
     reader = binary.ByteArrayParser(raw_data)
     version = reader.read_int32()
     assert version == 1, f'Unknown .w3u version: {version}'
@@ -237,7 +237,7 @@ if __name__ == '__main__':
         map_name = os.path.basename(os.path.dirname(filename))
         with open(filename, 'rb') as fp2:
             raw_data = fp2.read()
-        data = read_w3o(raw_data, has_levels)
+        data = read_binary(raw_data, has_levels)
         text = as_text(data)
         ext = os.path.splitext(filename)[1].strip('.')
         with open(f'scratch/w3o/{ext}_{map_name}.toml', 'w') as fp:

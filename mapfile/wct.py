@@ -2,10 +2,12 @@
 Utilites for working with .wct (Text Trigger) files.
 """
 
-from dataclasses import dataclass, field, asdict
+from dataclasses import dataclass, field
+import os
 from mapfile import binary
 
 
+EXTENSION = '.wct'
 SCRIPT_LABEL_START = r'//\\// '
 LABEL_CUSTOM_SCRIPT = 'Custom Script'
 LABEL_TRIGGER = 'Trigger '
@@ -26,7 +28,28 @@ class War3TextTriggers:
     triggers: list[War3TextTrigger] = field(default_factory=list)
 
 
-def read_wct(raw_bytes: bytes) -> War3TextTriggers:
+def convert(source: str, target: str) -> None:
+    source_ext = os.path.splitext(source)[1]
+    if source_ext == EXTENSION:
+        with open(source, 'rb') as fp:
+            contents = fp.read()
+        data = read_binary(contents)
+    else:
+        with open(source, 'r') as fp:
+            str_contents = fp.read()
+        data = from_text(str_contents)
+    target_ext = os.path.splitext(target)[1]
+    if target_ext == EXTENSION:
+        write_bytes = to_binary(data)
+        with open(target, 'wb') as fp:
+            fp.write(write_bytes)
+    else:
+        write_str = as_text(data)
+        with open(target, 'w') as fp:
+            fp.write(write_str)
+
+
+def read_binary(raw_bytes: bytes) -> War3TextTriggers:
     reader = binary.ByteArrayParser(raw_bytes)
     version = reader.read_int32()
     assert version in (0, 1), "Unknown file format version"
@@ -120,7 +143,6 @@ def from_text(text: str) -> War3TextTriggers:
 if __name__ == '__main__':
     from work import manifest
     filenames = [f'work/{x}/war3map.wct' for x in manifest.all_directories]
-    import os
     os.makedirs('scratch/wct', exist_ok=True)
     for filename in filenames:
         if not os.path.isfile(filename):
@@ -129,7 +151,7 @@ if __name__ == '__main__':
         map_name = os.path.basename(os.path.dirname(filename))
         with open(filename, 'rb') as fp2:
             raw_data = fp2.read()
-        data = read_wct(raw_data)
+        data = read_binary(raw_data)
         text = as_text(data)
         with open(f'scratch/wct/wct_{map_name}.j', 'w') as fp:
             print(text, file=fp)

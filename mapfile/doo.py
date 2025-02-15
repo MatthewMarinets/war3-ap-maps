@@ -5,9 +5,13 @@ Utilities for working with .doo (doodad / unit placement) files
 from dataclasses import dataclass, field, asdict
 import enum
 import tomllib
+import os
 
 from mapfile import binary
 from mapfile.util import savetext
+
+
+EXTENSION = '.doo'
 
 
 class War3PlacementVersion:
@@ -115,6 +119,27 @@ class War3PlacementInfo:
     immobile_doodads: list[ImmobileEntity] = field(default_factory=list)
 
 
+def convert(source: str, target: str) -> None:
+    source_ext = os.path.splitext(source)[1]
+    if source_ext == EXTENSION:
+        with open(source, 'rb') as fp:
+            contents = fp.read()
+        data = read_binary(contents, os.path.basename(source) == 'war3mapUnits.doo' )
+    else:
+        with open(source, 'r') as fp:
+            str_contents = fp.read()
+        data = from_text(str_contents)
+    target_ext = os.path.splitext(target)[1]
+    if target_ext == EXTENSION:
+        write_bytes = to_binary(data)
+        with open(target, 'wb') as fp:
+            fp.write(write_bytes)
+    else:
+        write_str = as_text(data)
+        with open(target, 'w') as fp:
+            fp.write(write_str)
+
+
 def _read_item_drop_sets(reader: binary.ByteArrayParser, ) -> list[DropItem]:
     num_items_in_set = reader.read_int32()
     item_set: list[DropItem] = []
@@ -128,7 +153,7 @@ def _read_item_drop_sets(reader: binary.ByteArrayParser, ) -> list[DropItem]:
     return item_set
 
 
-def read_doo(raw_bytes: bytes, describes_units: bool = False) -> War3PlacementInfo:
+def read_binary(raw_bytes: bytes, describes_units: bool = False) -> War3PlacementInfo:
     reader = binary.ByteArrayParser(raw_bytes)
     result = War3PlacementInfo()
     result.describes_units = describes_units
@@ -389,7 +414,6 @@ if __name__ == '__main__':
     # filenames = [f'work/{x}/war3map.doo' for x in manifest.all_directories]
     filenames = [f'work/{x}/war3mapUnits.doo' for x in manifest.all_directories]
     describes_units = True
-    import os
     # os.makedirs('scratch/doo', exist_ok=True)
     os.makedirs('scratch/units', exist_ok=True)
     for filename in filenames:
@@ -397,7 +421,7 @@ if __name__ == '__main__':
         map_name = os.path.basename(os.path.dirname(filename))
         with open(filename, 'rb') as fp2:
             raw_data = fp2.read()
-        data = read_doo(raw_data, describes_units)
+        data = read_binary(raw_data, describes_units)
         text = as_text(data)
         # with open(f'scratch/doo/doo_{map_name}.toml', 'w') as fp:
         with open(f'scratch/units/doounits_{map_name}.toml', 'w') as fp:

@@ -38,7 +38,7 @@ def convert(source: str, target: str) -> None:
     if source_ext == EXTENSION:
         with open(source, 'rb') as fp:
             contents = fp.read()
-        data = read_w3c(contents)
+        data = read_binary(contents)
     else:
         with open(source, 'r') as fp:
             str_contents = fp.read()
@@ -54,7 +54,7 @@ def convert(source: str, target: str) -> None:
             fp.write(write_str)
 
 
-def read_w3c(raw_bytes: bytes) -> War3CameraInfo:
+def read_binary(raw_bytes: bytes) -> War3CameraInfo:
     reader = binary.ByteArrayParser(raw_bytes)
     data = War3CameraInfo(reader.read_int32())
     assert data.version == 0, "Unknown file version"
@@ -120,7 +120,7 @@ if __name__ == '__main__':
         map_name = os.path.basename(os.path.dirname(filename))
         with open(filename, 'rb') as fp2:
             raw_data = fp2.read()
-        data = read_w3c(raw_data)
+        data = read_binary(raw_data)
         text = as_text(data)
         with open(f'scratch/w3c/w3c_{map_name}.toml', 'w') as fp:
             print(text, file=fp)

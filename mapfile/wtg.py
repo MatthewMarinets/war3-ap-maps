@@ -178,7 +178,7 @@ def parse_lib_parameters_from_trigger_strings(lines: list[str]) -> dict[str, Par
     return result
 
 
-def read_wtg(raw_data: bytes, lib_info: dict[str, ParamInfo]) -> W3TriggerData:
+def read_binary(raw_data: bytes, lib_info: dict[str, ParamInfo]) -> W3TriggerData:
     reader = binary.ByteArrayParser(raw_data)
     result = W3TriggerData()
 
@@ -683,7 +683,7 @@ if __name__ == '__main__':
         map_name = os.path.basename(os.path.dirname(filename))
         with open(filename, 'rb') as fp2:
             raw_data = fp2.read()
-        data = read_wtg(raw_data, lib_info)
+        data = read_binary(raw_data, lib_info)
         text = as_text(data)
         with open(f'scratch/wtg/{os.path.basename(os.path.dirname(filename))}.md', 'w') as fp:
             fp.write(text)

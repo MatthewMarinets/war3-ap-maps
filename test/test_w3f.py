@@ -13,7 +13,7 @@ class TestW3f(unittest.TestCase):
     def test_round_trip(self) -> None:
         with open(W3F_FILE, 'rb') as fp:
             raw_data = fp.read()
-        data = w3f.read_w3f(raw_data)
+        data = w3f.read_binary(raw_data)
         text = w3f.as_text(data)
         retrieved_data = w3f.from_text(text)
         round_tripped_data = w3f.to_binary(retrieved_data)
@@ -23,7 +23,7 @@ class TestW3f(unittest.TestCase):
     def test_trigger_strings_are_well_formed(self) -> None:
         with open(W3F_FILE, 'rb') as fp:
             raw_data = fp.read()
-        data = w3f.read_w3f(raw_data)
+        data = w3f.read_binary(raw_data)
 
         self.assertEqual(data.campaign_name, 'TRIGSTR_001')
         self.assertEqual(data.campaign_difficulty, 'TRIGSTR_002')

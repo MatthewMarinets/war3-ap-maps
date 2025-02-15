@@ -66,7 +66,7 @@ class War3CampaignInfo:
     map_paths: list[War3MapPathInfo]
 
 
-def read_w3f(raw_bytes: bytes) -> War3CampaignInfo:
+def read_binary(raw_bytes: bytes) -> War3CampaignInfo:
     reader = binary.ByteArrayParser(raw_bytes)
     file_format_version = reader.read_int32()
     assert file_format_version == 1, f'Unable to handle .w3f of version {file_format_version}'

@@ -5,9 +5,13 @@ Utilities for working with minimap icon (.mmp) files
 from dataclasses import dataclass, asdict
 import enum
 import tomllib
+import os
 
 from mapfile.util import savetext
 from mapfile import binary
+
+
+EXTENSION = '.mmp'
 
 
 class MinimapIconType(enum.IntEnum):
@@ -35,7 +39,28 @@ class War3MinimapInfo:
     icons: list[War3MinimapIcon]
 
 
-def read_mmp(raw_bytes: bytes) -> War3MinimapInfo:
+def convert(source: str, target: str) -> None:
+    source_ext = os.path.splitext(source)[1]
+    if source_ext == EXTENSION:
+        with open(source, 'rb') as fp:
+            contents = fp.read()
+        data = read_binary(contents)
+    else:
+        with open(source, 'r') as fp:
+            str_contents = fp.read()
+        data = from_text(str_contents)
+    target_ext = os.path.splitext(target)[1]
+    if target_ext == EXTENSION:
+        write_bytes = to_binary(data)
+        with open(target, 'wb') as fp:
+            fp.write(write_bytes)
+    else:
+        write_str = as_text(data)
+        with open(target, 'w') as fp:
+            fp.write(write_str)
+
+
+def read_binary(raw_bytes: bytes) -> War3MinimapInfo:
     reader = binary.ByteArrayParser(raw_bytes)
     version = reader.read_int32()
     assert version == 0
@@ -94,13 +119,12 @@ def from_text(text: str) -> War3MinimapInfo:
 if __name__ == '__main__':
     from work import manifest
     filenames = [f'work/{x}/war3map.mmp' for x in manifest.all_directories]
-    import os
     os.makedirs('scratch/mmp', exist_ok=True)
     for filename in filenames:
         map_name = os.path.basename(os.path.dirname(filename))
         with open(filename, 'rb') as fp2:
             raw_data = fp2.read()
-        data = read_mmp(raw_data)
+        data = read_binary(raw_data)
         text = as_text(data)
         with open(f'scratch/mmp/{map_name}.mmp.toml', 'w') as fp:
             print(text, file=fp)

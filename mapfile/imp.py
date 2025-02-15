@@ -18,7 +18,7 @@ class Imports:
     imports: list[ImportedPath]
 
 
-def read_imp(raw_data: bytes) -> Imports:
+def read_binary(raw_data: bytes) -> Imports:
     reader = binary.ByteArrayParser(raw_data)
     version = reader.read_int32()
     num_imports = reader.read_int32()
@@ -72,7 +72,7 @@ if __name__ == '__main__':
     for filename in filenames:
         with open(filename, 'rb') as fp:
             contents = fp.read()
-        data = read_imp(contents)
+        data = read_binary(contents)
         toml_text = as_text(data)
         print(filename)
         print(toml_text)

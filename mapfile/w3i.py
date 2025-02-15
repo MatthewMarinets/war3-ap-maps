@@ -209,10 +209,10 @@ def convert(source: str, target: str) -> None:
 def read_w3i_file(filename: str) -> War3MapInformation:
     with open(filename, 'rb') as fp:
         raw_bytes = fp.read()
-    return read_w3i(raw_bytes)
+    return read_binary(raw_bytes)
 
 
-def read_w3i(raw_bytes: bytes) -> War3MapInformation:
+def read_binary(raw_bytes: bytes) -> War3MapInformation:
     reader = binary.ByteArrayParser(raw_bytes)
     version = reader.read_int32()
     assert version in [v.value for v in W3iVersions], f'Unrecognized w3i version {version}'
@@ -479,7 +479,7 @@ if __name__ == '__main__':
         map_name = os.path.basename(os.path.dirname(filename))
         with open(filename, 'rb') as fp2:
             raw_data = fp2.read()
-        data = read_w3i(raw_data)
+        data = read_binary(raw_data)
         text = as_text(data)
         with open(f'scratch/w3i/w3i_{map_name}.toml', 'w') as fp:
             print(text, file=fp)
