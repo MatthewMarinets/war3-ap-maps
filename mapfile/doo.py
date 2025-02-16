@@ -188,7 +188,7 @@ def read_binary(raw_bytes: bytes, describes_units: bool = False) -> War3Placemen
         if result.version == War3PlacementVersion.TFT:
             doodad.random_table_id = reader.read_int32()
             num_item_drop_sets = reader.read_int32()
-            assert doodad.random_table_id == -1 or num_item_drop_sets == 0
+            assert doodad.random_table_id == -1 or num_item_drop_sets == 0, f'table_id={doodad.random_table_id}, num_sets={num_item_drop_sets}'
             for _ in range(num_item_drop_sets):
                 doodad.item_drops.append(_read_item_drop_sets(reader))
         doodad.entity_id = reader.read_int32()

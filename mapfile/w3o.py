@@ -98,7 +98,7 @@ class War3ObjectData:
         )
 
 
-def _parse_entity_table(reader: binary.ByteArrayParser, has_levels: bool = False) -> EntityTable:
+def _parse_entity_table(reader: binary.ByteArrayParser, has_levels: bool = False, version: int = 1) -> EntityTable:
     table = EntityTable()
     num_entities = reader.read_int32()
     for _ in  range(num_entities):
@@ -139,9 +139,9 @@ def _parse_entity_table(reader: binary.ByteArrayParser, has_levels: bool = False
 def read_binary(raw_data: bytes, has_levels: bool = False) -> War3ObjectData:
     reader = binary.ByteArrayParser(raw_data)
     version = reader.read_int32()
-    assert version == 1, f'Unknown .w3u version: {version}'
-    blizzard_table = _parse_entity_table(reader, has_levels)
-    map_table = _parse_entity_table(reader, has_levels)
+    assert version in (1, 2), f'Unknown .w3u version: {version}'
+    blizzard_table = _parse_entity_table(reader, has_levels, version)
+    map_table = _parse_entity_table(reader, has_levels, version)
     assert reader.index == len(reader.raw_bytes), 'Extra bytes remain'
     return War3ObjectData(version, has_levels, blizzard_table, map_table)
 
@@ -241,6 +241,7 @@ if __name__ == '__main__':
     filenames.extend([(f'work/{x}/war3map.w3a', True) for x in manifest.all_directories])
     filenames.extend([(f'work/{x}/war3map.w3h', False) for x in manifest.all_directories])
     filenames.extend([(f'work/{x}/war3map.w3q', True) for x in manifest.all_directories])
+    # filenames.append(('extract/roc_balance/.build/war3map.w3q', True))
     import os
     os.makedirs('scratch/w3o', exist_ok=True)
     for filename, has_levels in filenames:

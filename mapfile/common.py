@@ -20,7 +20,7 @@ def general_converter(module: FileFormatModule, extension: str | None = None, ar
         if source_ext == extension:
             with open(source, 'rb') as fp:
                 contents = fp.read()
-            data = module.read_binary(contents)
+            data = module.read_binary(contents, *args)
         else:
             with open(source, 'r') as fp:
                 str_contents = fp.read()
@@ -48,7 +48,7 @@ CONVERT_HANDLERS: dict[str, tuple[Callable[[str, str], None], str]] = {
     '.wct': (general_converter(wct), 'triggers_text.wct.j'),
     '.wtg': (general_converter(wtg), 'triggers_gui.wtg.md'),
     # .w3o
-    # '.w3u': (general_converter(w3o, '.w3u'), 'o_units.w3u.toml'),
+    '.w3u': (general_converter(w3o, '.w3u'), 'o_units.w3u.toml'),
     '.w3t': (general_converter(w3o, '.w3t'), 'o_items.w3t.toml'),
     '.w3b': (general_converter(w3o, '.w3b'), 'o_destructibles.w3b.toml'),
     '.w3d': (general_converter(w3o, '.w3d'), 'o_doodads.w3d.toml'),
