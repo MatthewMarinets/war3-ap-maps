@@ -56,8 +56,6 @@ class War3Sound:
     min_distance: float = UNSET_FLOAT
     max_distance: float = UNSET_FLOAT
     distance_cutoff: float = UNSET_FLOAT
-    min_distance: float = UNSET_FLOAT
-
 
 
 @dataclass

@@ -176,7 +176,7 @@ def parse_lib_parameters_from_trigger_strings(lines: list[str]) -> dict[str, Par
         assert args
         arg_types = [arg for arg in args[readable_section:] if arg != 'nothing']
         
-        result[function_name] = ParamInfo(arg_types, '', have_subfuncs.get(function_name, 0))
+        result[function_name] = ParamInfo(arg_types, '', have_subfuncs.get(function_name, False))
 
     return result
 
@@ -237,12 +237,13 @@ def read_binary(raw_data: bytes, lib_info: dict[str, ParamInfo] = LIB_INFO) -> W
         num_functions = reader.read_int32()
         for _ in range(num_functions):
             func = _parse_function(reader, lib_info, parse_state)
+            assert func is not None
             trigger.eca_functions.append(func)
         result.triggers.append(trigger)
     return result
 
 
-def _parse_function(reader: binary.ByteArrayParser, lib_info: dict[str, ParamInfo], parse_state: ParseState) -> EcaFunction:
+def _parse_function(reader: binary.ByteArrayParser, lib_info: dict[str, ParamInfo], parse_state: ParseState) -> EcaFunction | None:
     eca_type = reader.read_int32()
     if eca_type > EcaFunctionType.Function:
         assert parse_state.scope_depth
@@ -457,7 +458,7 @@ def as_text(data: W3TriggerData) -> str:
 def _split_key_value(line: str, line_number: int, sep='=') -> tuple[str, str]:
     assert sep in line, f"Line {line_number+1} is missing a separator ('{sep}')"
     parts = line.split(sep, 1)
-    return tuple(x.strip() for x in parts)
+    return tuple(x.strip() for x in parts)  # type: ignore
 
 
 def _parse_int(literal: str, line_number: int) -> int:
@@ -485,7 +486,7 @@ class LineIterator:
                 continue
             assert line == expected_line, f'Unexpected content on line {line_number+1}, expected {expected_line}'
             break
-    def expect_line_prefix(self, prefix: str) -> str:
+    def expect_line_prefix(self, prefix: str) -> None:
         for line_number, line in self.iter:
             if not line:
                 continue
@@ -580,6 +581,7 @@ def from_text(text: str) -> W3TriggerData:
         elif parsing_info and line == '```description':
             parsing_description = 1
         elif parsing_info:
+            assert trigger is not None
             key, value = _split_key_value(line, line_number, sep=':')
             if key == '- enabled':
                 trigger.is_enabled = _parse_bool(value, line_number)

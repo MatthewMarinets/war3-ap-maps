@@ -18,6 +18,7 @@ def command(cmd: list[str], cwd: str = '.') -> Error[tuple[int, str]] | None:
     retcode = subprocess.call(cmd, cwd=cwd)
     if retcode:
         return Error((retcode, ' '.join(cmd)))
+    return None
 
 
 def extract_w3x(map_file: str, target_dir: str) -> Error[tuple[int, str]] | None:
@@ -31,7 +32,7 @@ def extract_w3x(map_file: str, target_dir: str) -> Error[tuple[int, str]] | None
     return command(cmd)
 
 
-def create_w3x(source_dir: str, target_file: str) -> Error[tuple[str, int]] | None:
+def create_w3x(source_dir: str, target_file: str) -> Error[tuple[int, str]] | None:
     """
     Packs a directory into a .w3m/.w3x map file using MPQEditor
     """
@@ -58,6 +59,7 @@ def create_w3x(source_dir: str, target_file: str) -> Error[tuple[str, int]] | No
     result = command([mpq_editor_exe, '/compact', target_file])
     if isinstance(result, Error):
         return result
+    return None
 
     # Retrive map metadata from .w3i file
     w3i_file = os.path.join(source_dir, 'war3map.w3i')

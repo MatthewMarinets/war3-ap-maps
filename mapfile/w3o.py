@@ -51,7 +51,7 @@ class Modification:
     variation_level: int = 0
     table_column: int = 0
     value: str | int | float | list = 0
-    object_id: int = 0
+    object_id: str = ''
 
     @staticmethod
     def _from_dict(data: dict) -> 'Modification':
@@ -164,16 +164,22 @@ def to_binary(data: War3ObjectData) -> bytes:
                     writer.write_int32(modification.variation_level)
                     writer.write_int32(modification.table_column)
                 if modification.data_type == DataType.Integer:
+                    assert isinstance(modification.value, int)
                     writer.write_int32(modification.value)
                 elif modification.data_type == DataType.Float:
+                    assert isinstance(modification.value, float)
                     writer.write_float(modification.value)
                 elif modification.data_type == DataType.Unreal:
+                    assert isinstance(modification.value, float)
                     writer.write_float(modification.value)
                 elif modification.data_type == DataType.String:
+                    assert isinstance(modification.value, str)
                     writer.write_string(modification.value)
                 elif modification.data_type == DataType.Bool:
+                    assert isinstance(modification.value, int)
                     writer.write_int32(modification.value)
                 elif modification.data_type == DataType.Char:
+                    assert isinstance(modification.value, str)
                     writer.write_bytes(modification.value.encode('utf-8'))
                 else:
                     assert False, f'Data type {modification.data_type} is unsupported'
