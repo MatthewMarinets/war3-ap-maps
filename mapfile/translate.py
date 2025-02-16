@@ -101,7 +101,7 @@ def init_roc_map() -> None:
     init_map(_roc_id_to_strings_map, glob.glob(f"{ROC_STRINGS_DIR}/*{STRING_FILE_SUFFIX}"))
 
 
-def _index(li: list, element: Any) -> int:
+def _index(li: list | tuple, element: Any) -> int:
     try:
         return li.index(element)
     except:
@@ -133,6 +133,8 @@ def init_worldedit_map() -> None:
             id_value = table_row[id_index]
             display_name = table_row[display_name_index]
             if id_value and display_name:
+                assert isinstance(display_name, str)
+                assert isinstance(id_value, str)
                 assert id_value not in _id_to_world_edit_string
                 _id_to_world_edit_string[id_value] = display_name
                 if slk_name_index != -1:
@@ -152,7 +154,7 @@ def get_name(object_id: str, name_keys: tuple[str, ...] = ('Name', 'Bufftip', 'E
             world_edit_string = world_edit_string.upper()
     else:
         world_edit_string = object_id
-    return _id_to_display_prefix.get(object_id, '') + _world_edit_strings["WorldEditStrings"].get(world_edit_string, '')
+    return _id_to_display_prefix.get(object_id, '') + _world_edit_strings["WorldEditStrings"].get(world_edit_string, '')  # type: ignore
 
 
 def get_worldedit_string(worldedit_string: str) -> str | None:

@@ -49,11 +49,11 @@ def to_toml(data: dict[str, Any], notes: Iterable[str] = (), array_nesting: tupl
 
 def write_inline_toml(
     lines: list[str],
-    data: dict[str, Any] | list | int | str, indent: int = 0, ids: set[tuple[str, str]] | None = None
+    data: dict[str, Any] | list | int | str, indent: int = 0, ids: set[str] | None = None
 ) -> None:
     if isinstance(data, dict):
         # Line-split version needs toml 1.1, which should go public any year now
-        child_ids = set()
+        child_ids: set[str] = set()
         lines[-1] += '{ '
         for index, (key, value) in enumerate(data.items()):
             if index:
@@ -119,11 +119,13 @@ class TomlWriter:
         self.lines.append(f'{key} = {{ type = "bytes", value = "{value.decode("utf-8")}" }}')
     def _write_enum(self, key: str, value: enum.Enum, path: str) -> None:
         self.lines.append(f'{key} = "{value.name}"')
-    def _write_inline_array(self, key: str, value: list, path: str) -> None:
+
+    def _write_inline_array(self, key: str, value: list[str] | tuple[str, ...], path: str) -> None:
         if not len(value):
             return self.lines.append(f'{key} = []')
         self.lines.append(f'{key} = [{",".join(str(x) for x in value)}]')
-    def _write_element_array(self, key: str, value: list, path: str) -> None:
+
+    def _write_element_array(self, key: str, value: list | tuple, path: str) -> None:
         element_func = self.handlers.get(path)
         if element_func is None:
             element_func = self.handlers[key]
@@ -134,12 +136,14 @@ class TomlWriter:
             element_func(key, element, path)
             if self.lines[-1]:
                 self.lines.append('')
+
     def _write_dict(self, key: str, value: dict, path: str) -> None:
         if not self.lines or self.lines[-1] != f'[[{path}]]':
             self.lines.append(f'[{path}]')
         for subkey, subvalue in value.items():
             subpath = f'{path}.{subkey}'
             if isinstance(subvalue, Iterable) and not isinstance(subvalue, (str, dict)):
+                assert isinstance(subvalue, list) or isinstance(subvalue, tuple)
                 if subpath in self.short_arrays:
                     self._write_inline_array(subkey, subvalue, subpath)
                 else:

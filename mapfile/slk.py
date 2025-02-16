@@ -18,7 +18,7 @@ def _split_semicolons(line: str) -> list[str]:
 
 
 def parse_slk(lines: list[str]) -> tuple[tuple[str | int | float, ...], ...] | Error[tuple[str, int]]:
-    grid: list[list[str]] = []
+    grid: list[list[int | float | str]] = []
     lines = [x for x in lines if x]
     size_x = -1
     size_y = -1
@@ -105,7 +105,7 @@ def parse_slk(lines: list[str]) -> tuple[tuple[str | int | float, ...], ...] | E
     return tuple(tuple(x) for x in grid)
 
 
-def parse_slk_file(filename: str) -> tuple[tuple[str, ...], ...] | Error[tuple[str, int]]:
+def parse_slk_file(filename: str) -> tuple[tuple[str | int | float, ...], ...] | Error[tuple[str, int]]:
     with open(filename, 'r') as fp:
         lines = fp.readlines()
     return parse_slk(lines)

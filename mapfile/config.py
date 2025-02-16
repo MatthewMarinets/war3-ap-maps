@@ -15,7 +15,7 @@ def load_config(config_path: str) -> dict[str, str]:
     """
     with open(config_path, 'r', encoding='utf-8') as file_handle:
         lines = file_handle.readlines()
-    result = {}
+    result: dict[str, str] = {}
     for line_number, line in enumerate(lines):
         line = line.strip().split('#')[0]
         if not line:
@@ -55,7 +55,7 @@ else:
     import shutil
     workspace = {
         'wc3_path': try_get_wc3_path(),
-        'mpqeditor_path': shutil.which('MPQEditor.exe')
+        'mpqeditor_path': shutil.which('MPQEditor.exe') or 'MPQEditor.exe'
     }
 verbose = workspace.get('verbose', 'true').lower() == 'true'
 

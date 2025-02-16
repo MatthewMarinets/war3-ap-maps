@@ -395,7 +395,7 @@ def to_binary(data: War3MapInformation) -> bytes:
                 writer.write_int32(random_entity.probability_percent)
                 assert len(random_entity_group.position_type) == len(random_entity.entity_id), (
                     f"Random group position type and entity ID lists must have the same length,"
-                    f" got {len(random_entity_group.position_type)} != {len(random_entity_group.entity_id)}"
+                    f" got {len(random_entity_group.position_type)} != {len(random_entity.entity_id)}"
                 )
                 for random_entity_id in random_entity.entity_id:
                     writer.write_id(random_entity_id)
