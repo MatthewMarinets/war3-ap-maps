@@ -188,7 +188,7 @@ def read_binary(raw_bytes: bytes, describes_units: bool = False) -> War3Placemen
         if result.version == War3PlacementVersion.TFT:
             doodad.random_table_id = reader.read_int32()
             num_item_drop_sets = reader.read_int32()
-            assert doodad.random_table_id == -1 or num_item_drop_sets == 0, f'table_id={doodad.random_table_id}, num_sets={num_item_drop_sets}'
+            assert doodad.random_table_id == -1 or num_item_drop_sets == -1, f'table_id={doodad.random_table_id}, num_sets={num_item_drop_sets}'
             for _ in range(num_item_drop_sets):
                 doodad.item_drops.append(_read_item_drop_sets(reader))
         doodad.entity_id = reader.read_int32()
@@ -338,7 +338,10 @@ def to_binary(data: War3PlacementInfo) -> bytes:
         writer.write_s8(entity.life_percent)
         if data.version == War3PlacementVersion.TFT:
             writer.write_int32(entity.random_table_id)
-            writer.write_int32(len(entity.item_drops))
+            if entity.random_table_id != -1:
+                writer.write_int32(-1)
+            else:
+                writer.write_int32(len(entity.item_drops))
             for item_drop_set in entity.item_drops:
                 writer.write_int32(len(item_drop_set))
                 for item_drop in item_drop_set:
@@ -411,12 +414,12 @@ def from_text(text: str) -> War3PlacementInfo:
 
 if __name__ == '__main__':
     from work import manifest
-    # filenames = [f'work/{x}/war3map.doo' for x in manifest.all_directories]
-    filenames = [f'work/{x}/war3mapUnits.doo' for x in manifest.all_directories]
-    describes_units = True
+    filenames = [f'work/{x}/war3map.doo' for x in manifest.all_directories]
+    # filenames = [f'work/{x}/war3mapUnits.doo' for x in manifest.all_directories]
     # os.makedirs('scratch/doo', exist_ok=True)
     os.makedirs('scratch/units', exist_ok=True)
     for filename in filenames:
+        describes_units = 'war3mapUnits.doo' in filename
         print(filename)
         map_name = os.path.basename(os.path.dirname(filename))
         with open(filename, 'rb') as fp2:
