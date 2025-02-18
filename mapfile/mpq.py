@@ -52,14 +52,15 @@ def create_w3x(source_dir: str, target_file: str) -> Error[tuple[int, str]] | No
     with open(f'{source_dir}/(listfile)', 'r', encoding='utf-8') as file_handle:
         files = file_handle.readlines()
     files = [x.strip() for x in files]
-    for file in files:
-        result = command([mpq_editor_exe, '/add', target_file, file], cwd=source_dir)
-        if isinstance(result, Error):
-            return result
-    result = command([mpq_editor_exe, '/compact', target_file])
+    script_file = f'{source_dir}/.mpq_editor_script'
+    with open(script_file, 'w') as fp:
+        for file in files:
+            print(f'add {target_file} {file}', file=fp)
+        print(f'compact {target_file}', file=fp)
+    result = command([mpq_editor_exe, '/script', script_file])
     if isinstance(result, Error):
         return result
-    return None
+    os.remove(script_file)
 
     # Retrive map metadata from .w3i file
     w3i_file = os.path.join(source_dir, 'war3map.w3i')
@@ -82,4 +83,4 @@ def create_w3x(source_dir: str, target_file: str) -> Error[tuple[int, str]] | No
         # Note(mm): max players is force-set to 1
         bytes_written = file_handle.write(int.to_bytes(1, 4, binary.ENDIANNESS))
         assert bytes_written == 4
-    
+    return None

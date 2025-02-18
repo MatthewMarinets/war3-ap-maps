@@ -42,7 +42,7 @@ def compile_map_file(map_file: str, source_dir: str) -> Error[str] | None:
     result = mpq.create_w3x(build_dir, map_file)
     if isinstance(result, Error):
         return Error(f"Error running command '{result.message[1]}': error code {result.message[0]}")
-    # shutil.rmtree(build_dir)
+    shutil.rmtree(build_dir)
     return None
 
 
