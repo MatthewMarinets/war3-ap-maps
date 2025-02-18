@@ -21,10 +21,10 @@ if __name__ == '__main__':
         map_file = sys.argv[1]
     else:
         map_file = config.workspace.get('map_file')
+        pack_out_dir = config.workspace.get('pack_out_dir')
+        map_format = config.workspace.get('map_format', 'w3m')
+        map_file = os.path.abspath(rf'{pack_out_dir}\{map_file}.{map_format}')
     
-    pack_out_dir = config.workspace.get('pack_out_dir')
-    map_format = config.workspace.get('map_format', 'w3m')
-    map_path = os.path.abspath(rf'{pack_out_dir}\{map_file}.{map_format}')
-    if not os.path.isfile(map_path):
-        raise ValueError(f'Map file {map_path} does not exist')
-    start_mission(map_path)
+    if not os.path.isfile(map_file):
+        raise ValueError(f'Map file {map_file} does not exist')
+    start_mission(map_file)

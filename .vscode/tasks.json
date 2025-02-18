@@ -75,6 +75,29 @@
             }
         },
         {
+            "label": "start map",
+            "type": "shell",
+            "command": ["python"],
+            "args": [
+                "quick_start.py",
+                "${file}"
+            ],
+            "group": {
+                "kind": "none",
+                "isDefault": false
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "echo": false,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true,
+                "close": false
+            }
+        },
+        {
             "label": "translate",
             "type": "shell",
             "command": ["python"],
