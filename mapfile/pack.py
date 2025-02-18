@@ -61,5 +61,5 @@ if __name__ == '__main__':
         file = config.workspace.get('pack_out_dir', './out')
         file = f'{file}/{os.path.basename(source_dir)}.w3x'
 
-    print(f'Packing: {file} to {source_dir}')
+    print(f'Packing: {source_dir} to {file}')
     compile_map_file(os.path.abspath(file), os.path.abspath(source_dir))
