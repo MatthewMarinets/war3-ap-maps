@@ -54,9 +54,9 @@ if __name__ == '__main__':
         dest = sys.argv[2]
     else:
         dest = config.workspace.get('extract_dir', r'.\extract')
+        stem = os.path.basename(os.path.splitext(file)[0])
+        dest = f'{dest}/{stem}'
 
     assert os.path.exists(file), f'{file} does not exist'
-    stem = os.path.basename(os.path.splitext(file)[0])
-    dest = f'{dest}/{stem}'
     print(f'Extracting: {file} to {dest}')
     extract_map_files(os.path.abspath(file), os.path.abspath(dest))
