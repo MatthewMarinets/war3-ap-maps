@@ -39,7 +39,7 @@ def general_converter(module: FileFormatModule, extension: str | None = None, ar
 
 CONVERT_HANDLERS: dict[str, tuple[Callable[[str, str], None], str]] = {
     '.doo': (doo.convert, 'doodads.doo.toml'),
-    '.imp': (general_converter(imp), 'minimap.mmp.toml'),
+    '.imp': (general_converter(imp), 'imports.imp.toml'),
     '.mmp': (general_converter(mmp), 'minimap.mmp.toml'),
     '.w3c': (general_converter(w3c), 'cameras.w3c.toml'),
     '.w3i': (general_converter(w3i), 'info.w3i.toml'),

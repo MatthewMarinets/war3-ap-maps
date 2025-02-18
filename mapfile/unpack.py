@@ -24,6 +24,10 @@ def extract_map_files(map_file: str, target_dir: str) -> Error[str] | None:
         return Error(f"Error running command '{result.message[1]}': error code {result.message[0]}")
     for filename in glob.glob(f'{build_dir}/*'):
         basename = os.path.basename(filename)
+        if os.path.isdir(filename):
+            assert not basename.startswith('.'), f"mpq contains a .directory: {basename}"
+            shutil.copytree(filename, f'{target_dir}/{basename}')
+            continue
         stem, ext = os.path.splitext(basename)
         convert, target_name = CONVERT_HANDLERS.get(ext, (None, basename))
         if basename == 'war3mapUnits.doo':
@@ -33,6 +37,7 @@ def extract_map_files(map_file: str, target_dir: str) -> Error[str] | None:
             convert(filename, f'{target_dir}/{target_name}')
         else:
             shutil.copy(filename, f'{target_dir}/{target_name}')
+    shutil.rmtree(build_dir)
     return None
     
 
