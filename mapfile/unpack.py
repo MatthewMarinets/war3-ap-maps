@@ -43,7 +43,11 @@ def extract_map_files(map_file: str, target_dir: str) -> Error[str] | None:
 
 if __name__ == '__main__':
     import sys
-    # Usage: unpack.py [extract_file [destination_dir]]
+    usage = 'Usage: unpack.py [extract_file [destination_dir]]'
+    if {'-h', 'help', '-help', '--help'}.intersection(sys.argv):
+        print(usage)
+        sys.exit()
+
 
     if len(sys.argv) > 1:
         file = sys.argv[1]

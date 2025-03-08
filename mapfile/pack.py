@@ -48,7 +48,10 @@ def compile_map_file(map_file: str, source_dir: str) -> Error[str] | None:
 
 if __name__ == '__main__':
     import sys
-    # Usage: pack.py [source_dir [target_file]]
+    usage = 'Usage: pack.py [source_dir [target_file]]'
+    if {'-h', 'help', '-help', '--help'}.intersection(sys.argv):
+        print(usage)
+        sys.exit()
 
     if len(sys.argv) > 1:
         source_dir = sys.argv[1]
