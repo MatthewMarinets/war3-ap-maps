@@ -111,7 +111,7 @@ endfunction
 
 
 function constants_init takes nothing returns nothing
-    local string i = 0
+    local integer i = 0
     set File_Ability_List[0] = 'Amls'  // Aerial Shackles
     set File_Ability_List[1] = 'Aroc'  // Barrage
     set File_Ability_List[2] = 'Amic'  // Call to Arms
