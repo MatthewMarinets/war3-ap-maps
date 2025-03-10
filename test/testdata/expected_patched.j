@@ -133,7 +133,7 @@ endfunction
 
 
 
-function read_file takes string map_name, string file_name returns File
+function read_file takes string map_name, string file_name returns nothing
     local integer i = 0
     local string output = ""
 
@@ -153,8 +153,8 @@ function open_write takes string filename returns nothing
     set last_filename = filename
 endfunction
 
-function write_string takes string contents returns nothing
-    Preload(contents)
+function write takes string contents returns nothing
+    call Preload(contents)
 endfunction
 
 function close_write takes nothing returns nothing
