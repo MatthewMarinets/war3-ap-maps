@@ -1,40 +1,36 @@
-// This file defines file IO functions for JASS side of things
+// This file defines file IO functions for the JASS side of things
 // Based off the FileIO module created by Nestharus, see:
 // https://www.hiveworkshop.com/threads/codeless-save-load-its-now-a-reality-demo-map-included.226082/
 
 globals
-integer array File_Ability_List
-string array original_descriptions
-string array read_lines
+integer array p_ability_lines
+string array p_original_descriptions
+string array io_lines
 constant integer NUM_FILE_ABILITIES = 10
 string last_filename = ""
 endglobals
 
-function constants_init takes nothing returns nothing
+function InitTrig_fileio takes nothing returns nothing
     local integer i = 0
-    set File_Ability_List[0] = 'Amls'  // Aerial Shackles
-    set File_Ability_List[1] = 'Aroc'  // Barrage
-    set File_Ability_List[2] = 'Amic'  // Call to Arms
-    set File_Ability_List[3] = 'Amil'  // Call to Arms
-    set File_Ability_List[4] = 'Aclf'  // Cloud
-    set File_Ability_List[5] = 'Acmg'  // Control Magic
-    set File_Ability_List[6] = 'Adef'  // Defend
-    set File_Ability_List[7] = 'Adis'  // Dispel Magic
-    set File_Ability_List[8] = 'Afbt'  // Feedback
-    set File_Ability_List[9] = 'Afbk'  // Feedback
+    set p_ability_lines[0] = 'Amls'  // Aerial Shackles
+    set p_ability_lines[1] = 'Aroc'  // Barrage
+    set p_ability_lines[2] = 'Amic'  // Call to Arms
+    set p_ability_lines[3] = 'Amil'  // Call to Arms
+    set p_ability_lines[4] = 'Aclf'  // Cloud
+    set p_ability_lines[5] = 'Acmg'  // Control Magic
+    set p_ability_lines[6] = 'Adef'  // Defend
+    set p_ability_lines[7] = 'Adis'  // Dispel Magic
+    set p_ability_lines[8] = 'Afbt'  // Feedback
+    set p_ability_lines[9] = 'Afbk'  // Feedback
 
     loop
         exitwhen i >= NUM_FILE_ABILITIES
-        set original_descriptions[i] = BlzGetAbilityTooltip(File_Ability_List[i], 0)
+        set p_original_descriptions[i] = BlzGetAbilityTooltip(p_ability_lines[i], 0)
         set i = i + 1
     endloop
 endfunction
 
-function main takes nothing returns nothing
-    call constants_init()
-endfunction
-
-function read_file takes string map_name, string file_name returns nothing
+function io_read_file takes string file_name returns nothing
     local integer i = 0
     local string output = ""
 
@@ -42,23 +38,23 @@ function read_file takes string map_name, string file_name returns nothing
 
     loop
         exitwhen i >= NUM_FILE_ABILITIES
-        set read_lines[i] = BlzGetAbilityTooltip(File_Ability_List[i], 0)
-        call BlzSetAbilityTooltip(File_Ability_List[i], original_descriptions[i], 0)
+        set io_lines[i] = BlzGetAbilityTooltip(p_ability_lines[i], 0)
+        call BlzSetAbilityTooltip(p_ability_lines[i], p_original_descriptions[i], 0)
         set i = i + 1
     endloop
 endfunction
 
-function open_write takes string filename returns nothing
+function io_open_write takes string filename returns nothing
     call PreloadGenClear()
     call PreloadGenStart()
     set last_filename = filename
 endfunction
 
-function write takes string contents returns nothing
+function io_write takes string contents returns nothing
     call Preload(contents)
 endfunction
 
-function close_write takes nothing returns nothing
+function io_close_write takes nothing returns nothing
     call PreloadGenEnd(last_filename)
     set last_filename = ""
 endfunction
