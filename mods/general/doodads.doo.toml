@@ -1,0 +1,10021 @@
+# Warcraft 3 Doodad placement file (.doo)
+# See doo.py for type definitions
+
+version = 8
+sub_version = 11
+describes_units = false
+units = []
+immobile_doodads = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -1408.0
+y = -2240.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8635029792785645
+scale_y = 0.8635029792785645
+scale_z = 0.8635029792785645
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 0
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -1472.0
+y = -2112.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8190924525260925
+scale_y = 0.8190924525260925
+scale_z = 0.8190924525260925
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 1
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -1408.0
+y = -1984.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1432234048843384
+scale_y = 1.1432234048843384
+scale_z = 1.1432234048843384
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 2
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -1472.0
+y = -1856.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9213904738426208
+scale_y = 0.9213904738426208
+scale_z = 0.9213904738426208
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 3
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -1408.0
+y = -1728.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9547655582427979
+scale_y = 0.9547655582427979
+scale_z = 0.9547655582427979
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 4
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -1280.0
+y = -2496.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1880733966827393
+scale_y = 1.1880733966827393
+scale_z = 1.1880733966827393
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 5
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -1344.0
+y = -2368.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8989532589912415
+scale_y = 0.8989532589912415
+scale_z = 0.8989532589912415
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 6
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -1280.0
+y = -2240.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9338908791542053
+scale_y = 0.9338908791542053
+scale_z = 0.9338908791542053
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 7
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -1344.0
+y = -2112.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9681082367897034
+scale_y = 0.9681082367897034
+scale_z = 0.9681082367897034
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 8
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -1280.0
+y = -1984.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9880673289299011
+scale_y = 0.9880673289299011
+scale_z = 0.9880673289299011
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 9
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -1344.0
+y = -1856.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1493393182754517
+scale_y = 1.1493393182754517
+scale_z = 1.1493393182754517
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 10
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -1280.0
+y = -1728.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0272774696350098
+scale_y = 1.0272774696350098
+scale_z = 1.0272774696350098
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 11
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -1344.0
+y = -1600.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8846950531005859
+scale_y = 0.8846950531005859
+scale_z = 0.8846950531005859
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 12
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -1280.0
+y = -1472.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9573168754577637
+scale_y = 0.9573168754577637
+scale_z = 0.9573168754577637
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 13
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -1216.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.155613899230957
+scale_y = 1.155613899230957
+scale_z = 1.155613899230957
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 14
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -1152.0
+y = -2496.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1319804191589355
+scale_y = 1.1319804191589355
+scale_z = 1.1319804191589355
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 15
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -1216.0
+y = -2368.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.19964599609375
+scale_y = 1.19964599609375
+scale_z = 1.19964599609375
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 16
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -1152.0
+y = -2240.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8797510266304016
+scale_y = 0.8797510266304016
+scale_z = 0.8797510266304016
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 17
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -1216.0
+y = -2112.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0537065267562866
+scale_y = 1.0537065267562866
+scale_z = 1.0537065267562866
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 18
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -1152.0
+y = -1984.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8097537755966187
+scale_y = 0.8097537755966187
+scale_z = 0.8097537755966187
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 19
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -1216.0
+y = -1856.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0959441661834717
+scale_y = 1.0959441661834717
+scale_z = 1.0959441661834717
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 20
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -1152.0
+y = -1728.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.937760591506958
+scale_y = 0.937760591506958
+scale_z = 0.937760591506958
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 21
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -1216.0
+y = -1600.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1816767454147339
+scale_y = 1.1816767454147339
+scale_z = 1.1816767454147339
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 22
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -1152.0
+y = -1472.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0615437030792236
+scale_y = 1.0615437030792236
+scale_z = 1.0615437030792236
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 23
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -1216.0
+y = -1344.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0849087238311768
+scale_y = 1.0849087238311768
+scale_z = 1.0849087238311768
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 24
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -1024.0
+y = -2752.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8718284368515015
+scale_y = 0.8718284368515015
+scale_z = 0.8718284368515015
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 25
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -1088.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0173406600952148
+scale_y = 1.0173406600952148
+scale_z = 1.0173406600952148
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 26
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -1024.0
+y = -2496.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0608478784561157
+scale_y = 1.0608478784561157
+scale_z = 1.0608478784561157
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 27
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -1088.0
+y = -2368.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.050398349761963
+scale_y = 1.050398349761963
+scale_z = 1.050398349761963
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 28
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -1024.0
+y = -2240.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8348399996757507
+scale_y = 0.8348399996757507
+scale_z = 0.8348399996757507
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 29
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -1088.0
+y = -2112.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.163658618927002
+scale_y = 1.163658618927002
+scale_z = 1.163658618927002
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 30
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -1024.0
+y = -1984.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0007141828536987
+scale_y = 1.0007141828536987
+scale_z = 1.0007141828536987
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 31
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -1088.0
+y = -1856.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8345470428466797
+scale_y = 0.8345470428466797
+scale_z = 0.8345470428466797
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 32
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -1024.0
+y = -1728.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8283212184906006
+scale_y = 0.8283212184906006
+scale_z = 0.8283212184906006
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 33
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -1088.0
+y = -1600.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8190680146217346
+scale_y = 0.8190680146217346
+scale_z = 0.8190680146217346
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 34
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -1024.0
+y = -1472.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8412855267524719
+scale_y = 0.8412855267524719
+scale_z = 0.8412855267524719
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 35
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -1088.0
+y = -1344.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1023774147033691
+scale_y = 1.1023774147033691
+scale_z = 1.1023774147033691
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 36
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -1024.0
+y = -1216.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0083072185516357
+scale_y = 1.0083072185516357
+scale_z = 1.0083072185516357
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 37
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -896.0
+y = -2752.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9707328081130981
+scale_y = 0.9707328081130981
+scale_z = 0.9707328081130981
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 38
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -960.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.945658802986145
+scale_y = 0.945658802986145
+scale_z = 0.945658802986145
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 39
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -896.0
+y = -2496.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8227424621582031
+scale_y = 0.8227424621582031
+scale_z = 0.8227424621582031
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 40
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -960.0
+y = -2368.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9481002688407898
+scale_y = 0.9481002688407898
+scale_z = 0.9481002688407898
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 41
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -896.0
+y = -2240.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9477218389511108
+scale_y = 0.9477218389511108
+scale_z = 0.9477218389511108
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 42
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -960.0
+y = -2112.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1916135549545288
+scale_y = 1.1916135549545288
+scale_z = 1.1916135549545288
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 43
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -896.0
+y = -1984.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1033296585083008
+scale_y = 1.1033296585083008
+scale_z = 1.1033296585083008
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 44
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -960.0
+y = -1856.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.945719838142395
+scale_y = 0.945719838142395
+scale_z = 0.945719838142395
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 45
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -896.0
+y = -1728.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9719535708427429
+scale_y = 0.9719535708427429
+scale_z = 0.9719535708427429
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 46
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -960.0
+y = -1600.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9464889168739319
+scale_y = 0.9464889168739319
+scale_z = 0.9464889168739319
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 47
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -896.0
+y = -1472.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9168859720230103
+scale_y = 0.9168859720230103
+scale_z = 0.9168859720230103
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 48
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -960.0
+y = -1344.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0632526874542236
+scale_y = 1.0632526874542236
+scale_z = 1.0632526874542236
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 49
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -896.0
+y = -1216.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.144334316253662
+scale_y = 1.144334316253662
+scale_z = 1.144334316253662
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 50
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -832.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.892996072769165
+scale_y = 0.892996072769165
+scale_z = 0.892996072769165
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 51
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -768.0
+y = -2752.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8565081357955933
+scale_y = 0.8565081357955933
+scale_z = 0.8565081357955933
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 52
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -832.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9858334064483643
+scale_y = 0.9858334064483643
+scale_z = 0.9858334064483643
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 53
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -768.0
+y = -2496.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.103402853012085
+scale_y = 1.103402853012085
+scale_z = 1.103402853012085
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 54
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -832.0
+y = -2368.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.093185305595398
+scale_y = 1.093185305595398
+scale_z = 1.093185305595398
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 55
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -768.0
+y = -2240.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8572527766227722
+scale_y = 0.8572527766227722
+scale_z = 0.8572527766227722
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 56
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -832.0
+y = -2112.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.187572956085205
+scale_y = 1.187572956085205
+scale_z = 1.187572956085205
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 57
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -768.0
+y = -1984.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1943113803863525
+scale_y = 1.1943113803863525
+scale_z = 1.1943113803863525
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 58
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -832.0
+y = -1856.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0782556533813477
+scale_y = 1.0782556533813477
+scale_z = 1.0782556533813477
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 59
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -768.0
+y = -1728.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8216559886932373
+scale_y = 0.8216559886932373
+scale_z = 0.8216559886932373
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 60
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -832.0
+y = -1600.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8920683264732361
+scale_y = 0.8920683264732361
+scale_z = 0.8920683264732361
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 61
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -768.0
+y = -1472.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9853572845458984
+scale_y = 0.9853572845458984
+scale_z = 0.9853572845458984
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 62
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -832.0
+y = -1344.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1515977382659912
+scale_y = 1.1515977382659912
+scale_z = 1.1515977382659912
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 63
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -768.0
+y = -1216.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8867214918136597
+scale_y = 0.8867214918136597
+scale_z = 0.8867214918136597
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 64
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -832.0
+y = -1088.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9149693846702576
+scale_y = 0.9149693846702576
+scale_z = 0.9149693846702576
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 65
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -704.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1696646213531494
+scale_y = 1.1696646213531494
+scale_z = 1.1696646213531494
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 66
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -640.0
+y = -2752.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0927214622497559
+scale_y = 1.0927214622497559
+scale_z = 1.0927214622497559
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 67
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -704.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0697226524353027
+scale_y = 1.0697226524353027
+scale_z = 1.0697226524353027
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 68
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -640.0
+y = -2496.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8759667277336121
+scale_y = 0.8759667277336121
+scale_z = 0.8759667277336121
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 69
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -704.0
+y = -2368.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0895475149154663
+scale_y = 1.0895475149154663
+scale_z = 1.0895475149154663
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 70
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -640.0
+y = -2240.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.049311876296997
+scale_y = 1.049311876296997
+scale_z = 1.049311876296997
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 71
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -704.0
+y = -2112.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.030463695526123
+scale_y = 1.030463695526123
+scale_z = 1.030463695526123
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 72
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -640.0
+y = -1984.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8679465055465698
+scale_y = 0.8679465055465698
+scale_z = 0.8679465055465698
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 73
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -704.0
+y = -1856.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.121115803718567
+scale_y = 1.121115803718567
+scale_z = 1.121115803718567
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 74
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -640.0
+y = -1728.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8052126169204712
+scale_y = 0.8052126169204712
+scale_z = 0.8052126169204712
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 75
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -704.0
+y = -1600.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8874661326408386
+scale_y = 0.8874661326408386
+scale_z = 0.8874661326408386
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 76
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -640.0
+y = -1472.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0705771446228027
+scale_y = 1.0705771446228027
+scale_z = 1.0705771446228027
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 77
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -704.0
+y = -1344.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9563158750534058
+scale_y = 0.9563158750534058
+scale_z = 0.9563158750534058
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 78
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -640.0
+y = -1216.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0116398334503174
+scale_y = 1.0116398334503174
+scale_z = 1.0116398334503174
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 79
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -704.0
+y = -1088.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0255684852600098
+scale_y = 1.0255684852600098
+scale_z = 1.0255684852600098
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 80
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -576.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9959777593612671
+scale_y = 0.9959777593612671
+scale_z = 0.9959777593612671
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 81
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -512.0
+y = -2752.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0203802585601807
+scale_y = 1.0203802585601807
+scale_z = 1.0203802585601807
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 82
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -576.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9690359830856323
+scale_y = 0.9690359830856323
+scale_z = 0.9690359830856323
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 83
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -512.0
+y = -2496.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0322825908660889
+scale_y = 1.0322825908660889
+scale_z = 1.0322825908660889
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 84
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -576.0
+y = -2368.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0539262294769287
+scale_y = 1.0539262294769287
+scale_z = 1.0539262294769287
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 85
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -512.0
+y = -2240.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8617451190948486
+scale_y = 0.8617451190948486
+scale_z = 0.8617451190948486
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 86
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -576.0
+y = -2112.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9475143551826477
+scale_y = 0.9475143551826477
+scale_z = 0.9475143551826477
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 87
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -512.0
+y = -1984.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9007965922355652
+scale_y = 0.9007965922355652
+scale_z = 0.9007965922355652
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 88
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -576.0
+y = -1856.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9239906668663025
+scale_y = 0.9239906668663025
+scale_z = 0.9239906668663025
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 89
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -512.0
+y = -1728.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9522752165794373
+scale_y = 0.9522752165794373
+scale_z = 0.9522752165794373
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 90
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -576.0
+y = -1600.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.832764744758606
+scale_y = 0.832764744758606
+scale_z = 0.832764744758606
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 91
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -512.0
+y = -1472.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0367259979248047
+scale_y = 1.0367259979248047
+scale_z = 1.0367259979248047
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 92
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -576.0
+y = -1344.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0224311351776123
+scale_y = 1.0224311351776123
+scale_z = 1.0224311351776123
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 93
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -512.0
+y = -1216.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9349651336669922
+scale_y = 0.9349651336669922
+scale_z = 0.9349651336669922
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 94
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -576.0
+y = -1088.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0854823589324951
+scale_y = 1.0854823589324951
+scale_z = 1.0854823589324951
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 95
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -448.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0062685012817383
+scale_y = 1.0062685012817383
+scale_z = 1.0062685012817383
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 96
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -384.0
+y = -2752.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1508042812347412
+scale_y = 1.1508042812347412
+scale_z = 1.1508042812347412
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 97
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -448.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1569812297821045
+scale_y = 1.1569812297821045
+scale_z = 1.1569812297821045
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 98
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -384.0
+y = -2496.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0013489723205566
+scale_y = 1.0013489723205566
+scale_z = 1.0013489723205566
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 99
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -448.0
+y = -2368.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1633656024932861
+scale_y = 1.1633656024932861
+scale_z = 1.1633656024932861
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 100
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -384.0
+y = -2240.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0143864154815674
+scale_y = 1.0143864154815674
+scale_z = 1.0143864154815674
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 101
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -448.0
+y = -2112.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9252114295959473
+scale_y = 0.9252114295959473
+scale_z = 0.9252114295959473
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 102
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -384.0
+y = -1984.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0595782995224
+scale_y = 1.0595782995224
+scale_z = 1.0595782995224
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 103
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -448.0
+y = -1856.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0931119918823242
+scale_y = 1.0931119918823242
+scale_z = 1.0931119918823242
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 104
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -384.0
+y = -1728.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0975067615509033
+scale_y = 1.0975067615509033
+scale_z = 1.0975067615509033
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 105
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -448.0
+y = -1600.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1221412420272827
+scale_y = 1.1221412420272827
+scale_z = 1.1221412420272827
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 106
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -384.0
+y = -1472.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1469345092773438
+scale_y = 1.1469345092773438
+scale_z = 1.1469345092773438
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 107
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -448.0
+y = -1344.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0093082189559937
+scale_y = 1.0093082189559937
+scale_z = 1.0093082189559937
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 108
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -384.0
+y = -1216.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9833552837371826
+scale_y = 0.9833552837371826
+scale_z = 0.9833552837371826
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 109
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -448.0
+y = -1088.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0191106796264648
+scale_y = 1.0191106796264648
+scale_z = 1.0191106796264648
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 110
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -320.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0452834367752075
+scale_y = 1.0452834367752075
+scale_z = 1.0452834367752075
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 111
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -256.0
+y = -2752.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8431532382965088
+scale_y = 0.8431532382965088
+scale_z = 0.8431532382965088
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 112
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -320.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8059694766998291
+scale_y = 0.8059694766998291
+scale_z = 0.8059694766998291
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 113
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -256.0
+y = -2496.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9251015186309814
+scale_y = 0.9251015186309814
+scale_z = 0.9251015186309814
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 114
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -320.0
+y = -2368.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9698172807693481
+scale_y = 0.9698172807693481
+scale_z = 0.9698172807693481
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 115
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -256.0
+y = -2240.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1610462665557861
+scale_y = 1.1610462665557861
+scale_z = 1.1610462665557861
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 116
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -320.0
+y = -2112.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9216223955154419
+scale_y = 0.9216223955154419
+scale_z = 0.9216223955154419
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 117
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -256.0
+y = -1984.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9078158736228943
+scale_y = 0.9078158736228943
+scale_z = 0.9078158736228943
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 118
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -320.0
+y = -1856.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9455245137214661
+scale_y = 0.9455245137214661
+scale_z = 0.9455245137214661
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 119
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -256.0
+y = -1728.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.048640489578247
+scale_y = 1.048640489578247
+scale_z = 1.048640489578247
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 120
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -320.0
+y = -1600.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0872890949249268
+scale_y = 1.0872890949249268
+scale_z = 1.0872890949249268
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 121
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -256.0
+y = -1472.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8251351118087769
+scale_y = 0.8251351118087769
+scale_z = 0.8251351118087769
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 122
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -320.0
+y = -1344.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8094730377197266
+scale_y = 0.8094730377197266
+scale_z = 0.8094730377197266
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 123
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -256.0
+y = -1216.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0989960432052612
+scale_y = 1.0989960432052612
+scale_z = 1.0989960432052612
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 124
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -320.0
+y = -1088.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0336253643035889
+scale_y = 1.0336253643035889
+scale_z = 1.0336253643035889
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 125
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -192.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.104196310043335
+scale_y = 1.104196310043335
+scale_z = 1.104196310043335
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 126
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -128.0
+y = -2752.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8264901638031006
+scale_y = 0.8264901638031006
+scale_z = 0.8264901638031006
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 127
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -192.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0419142246246338
+scale_y = 1.0419142246246338
+scale_z = 1.0419142246246338
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 128
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -128.0
+y = -2496.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9200965166091919
+scale_y = 0.9200965166091919
+scale_z = 0.9200965166091919
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 129
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -192.0
+y = -2368.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1055513620376587
+scale_y = 1.1055513620376587
+scale_z = 1.1055513620376587
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 130
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -128.0
+y = -2240.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1053926944732666
+scale_y = 1.1053926944732666
+scale_z = 1.1053926944732666
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 131
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -192.0
+y = -2112.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9523118734359741
+scale_y = 0.9523118734359741
+scale_z = 0.9523118734359741
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 132
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -128.0
+y = -1984.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1594104766845703
+scale_y = 1.1594104766845703
+scale_z = 1.1594104766845703
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 133
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -192.0
+y = -1856.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9100620150566101
+scale_y = 0.9100620150566101
+scale_z = 0.9100620150566101
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 134
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -128.0
+y = -1728.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.003692865371704
+scale_y = 1.003692865371704
+scale_z = 1.003692865371704
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 135
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -192.0
+y = -1600.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1750602722167969
+scale_y = 1.1750602722167969
+scale_z = 1.1750602722167969
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 136
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -128.0
+y = -1472.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8991730213165283
+scale_y = 0.8991730213165283
+scale_z = 0.8991730213165283
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 137
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -192.0
+y = -1344.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9659230709075928
+scale_y = 0.9659230709075928
+scale_z = 0.9659230709075928
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 138
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -128.0
+y = -1216.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1080294847488403
+scale_y = 1.1080294847488403
+scale_z = 1.1080294847488403
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 139
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -192.0
+y = -1088.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.103500485420227
+scale_y = 1.103500485420227
+scale_z = 1.103500485420227
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 140
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 0.0
+y = -2752.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.048030138015747
+scale_y = 1.048030138015747
+scale_z = 1.048030138015747
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 141
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -64.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0333201885223389
+scale_y = 1.0333201885223389
+scale_z = 1.0333201885223389
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 142
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 0.0
+y = -2496.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9778131246566772
+scale_y = 0.9778131246566772
+scale_z = 0.9778131246566772
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 143
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -64.0
+y = -2368.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1496444940567017
+scale_y = 1.1496444940567017
+scale_z = 1.1496444940567017
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 144
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 0.0
+y = -2240.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1337748765945435
+scale_y = 1.1337748765945435
+scale_z = 1.1337748765945435
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 145
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -64.0
+y = -2112.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8642720580101013
+scale_y = 0.8642720580101013
+scale_z = 0.8642720580101013
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 146
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 0.0
+y = -1984.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8397840261459351
+scale_y = 0.8397840261459351
+scale_z = 0.8397840261459351
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 147
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -64.0
+y = -1856.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8430799841880798
+scale_y = 0.8430799841880798
+scale_z = 0.8430799841880798
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 148
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 0.0
+y = -1728.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0810389518737793
+scale_y = 1.0810389518737793
+scale_z = 1.0810389518737793
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 149
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -64.0
+y = -1600.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8551531434059143
+scale_y = 0.8551531434059143
+scale_z = 0.8551531434059143
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 150
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 0.0
+y = -1472.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8206916451454163
+scale_y = 0.8206916451454163
+scale_z = 0.8206916451454163
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 151
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -64.0
+y = -1344.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9963927865028381
+scale_y = 0.9963927865028381
+scale_z = 0.9963927865028381
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 152
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 0.0
+y = -1216.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1960692405700684
+scale_y = 1.1960692405700684
+scale_z = 1.1960692405700684
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 153
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 64.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1092746257781982
+scale_y = 1.1092746257781982
+scale_z = 1.1092746257781982
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 154
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 128.0
+y = -2496.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1059298515319824
+scale_y = 1.1059298515319824
+scale_z = 1.1059298515319824
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 155
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 64.0
+y = -2368.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8743919730186462
+scale_y = 0.8743919730186462
+scale_z = 0.8743919730186462
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 156
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 128.0
+y = -2240.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0458816289901733
+scale_y = 1.0458816289901733
+scale_z = 1.0458816289901733
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 157
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 64.0
+y = -2112.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1472396850585938
+scale_y = 1.1472396850585938
+scale_z = 1.1472396850585938
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 158
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 128.0
+y = -1984.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0112613439559937
+scale_y = 1.0112613439559937
+scale_z = 1.0112613439559937
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 159
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 64.0
+y = -1856.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.104867696762085
+scale_y = 1.104867696762085
+scale_z = 1.104867696762085
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 160
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 128.0
+y = -1728.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.919632613658905
+scale_y = 0.919632613658905
+scale_z = 0.919632613658905
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 161
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 64.0
+y = -1600.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.102401852607727
+scale_y = 1.102401852607727
+scale_z = 1.102401852607727
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 162
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 128.0
+y = -1472.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.155516266822815
+scale_y = 1.155516266822815
+scale_z = 1.155516266822815
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 163
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 64.0
+y = -1344.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.868141770362854
+scale_y = 0.868141770362854
+scale_z = 0.868141770362854
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 164
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 192.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9593555331230164
+scale_y = 0.9593555331230164
+scale_z = 0.9593555331230164
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 165
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 256.0
+y = -2496.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0389233827590942
+scale_y = 1.0389233827590942
+scale_z = 1.0389233827590942
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 166
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 192.0
+y = -2368.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1214332580566406
+scale_y = 1.1214332580566406
+scale_z = 1.1214332580566406
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 167
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 256.0
+y = -2240.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9031404256820679
+scale_y = 0.9031404256820679
+scale_z = 0.9031404256820679
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 168
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 192.0
+y = -2112.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8478530645370483
+scale_y = 0.8478530645370483
+scale_z = 0.8478530645370483
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 169
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 256.0
+y = -1984.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8301157355308533
+scale_y = 0.8301157355308533
+scale_z = 0.8301157355308533
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 170
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 192.0
+y = -1856.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1923459768295288
+scale_y = 1.1923459768295288
+scale_z = 1.1923459768295288
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 171
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 256.0
+y = -1728.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8672018051147461
+scale_y = 0.8672018051147461
+scale_z = 0.8672018051147461
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 172
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 192.0
+y = -1600.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1410505771636963
+scale_y = 1.1410505771636963
+scale_z = 1.1410505771636963
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 173
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 256.0
+y = -1472.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8343760967254639
+scale_y = 0.8343760967254639
+scale_z = 0.8343760967254639
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 174
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 192.0
+y = -1344.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9521043300628662
+scale_y = 0.9521043300628662
+scale_z = 0.9521043300628662
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 175
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 320.0
+y = -2368.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9875057935714722
+scale_y = 0.9875057935714722
+scale_z = 0.9875057935714722
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 176
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 384.0
+y = -2240.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1323832273483276
+scale_y = 1.1323832273483276
+scale_z = 1.1323832273483276
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 177
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 320.0
+y = -2112.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.006158709526062
+scale_y = 1.006158709526062
+scale_z = 1.006158709526062
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 178
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 384.0
+y = -1984.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.935856282711029
+scale_y = 0.935856282711029
+scale_z = 0.935856282711029
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 179
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 320.0
+y = -1856.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9412153363227844
+scale_y = 0.9412153363227844
+scale_z = 0.9412153363227844
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 180
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 384.0
+y = -1728.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1367535591125488
+scale_y = 1.1367535591125488
+scale_z = 1.1367535591125488
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 181
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 320.0
+y = -1600.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0798547267913818
+scale_y = 1.0798547267913818
+scale_z = 1.0798547267913818
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 182
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -448.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.086996078491211
+scale_y = 1.086996078491211
+scale_z = 1.086996078491211
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 183
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -512.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0178167819976807
+scale_y = 1.0178167819976807
+scale_z = 1.0178167819976807
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 184
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -448.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1327983140945435
+scale_y = 1.1327983140945435
+scale_z = 1.1327983140945435
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 185
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -512.0
+y = -3008.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9179357886314392
+scale_y = 0.9179357886314392
+scale_z = 0.9179357886314392
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 186
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -320.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8482437133789062
+scale_y = 0.8482437133789062
+scale_z = 0.8482437133789062
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 187
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -384.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0332469940185547
+scale_y = 1.0332469940185547
+scale_z = 1.0332469940185547
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 188
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -320.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0327098369598389
+scale_y = 1.0327098369598389
+scale_z = 1.0327098369598389
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 189
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -384.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8724510073661804
+scale_y = 0.8724510073661804
+scale_z = 0.8724510073661804
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 190
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -320.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.04049813747406
+scale_y = 1.04049813747406
+scale_z = 1.04049813747406
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 191
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -384.0
+y = -3008.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.953557014465332
+scale_y = 0.953557014465332
+scale_z = 0.953557014465332
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 192
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -256.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9253090620040894
+scale_y = 0.9253090620040894
+scale_z = 0.9253090620040894
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 193
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -192.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1748405694961548
+scale_y = 1.1748405694961548
+scale_z = 1.1748405694961548
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 194
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -256.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1610584259033203
+scale_y = 1.1610584259033203
+scale_z = 1.1610584259033203
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 195
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -192.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8979766964912415
+scale_y = 0.8979766964912415
+scale_z = 0.8979766964912415
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 196
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -256.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1483993530273438
+scale_y = 1.1483993530273438
+scale_z = 1.1483993530273438
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 197
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -192.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.806067168712616
+scale_y = 0.806067168712616
+scale_z = 0.806067168712616
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 198
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -256.0
+y = -3008.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8832545280456543
+scale_y = 0.8832545280456543
+scale_z = 0.8832545280456543
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 199
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -64.0
+y = -3904.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9486129879951477
+scale_y = 0.9486129879951477
+scale_z = 0.9486129879951477
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 200
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -128.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1490464210510254
+scale_y = 1.1490464210510254
+scale_z = 1.1490464210510254
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 201
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -64.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0133732557296753
+scale_y = 1.0133732557296753
+scale_z = 1.0133732557296753
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 202
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -128.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0680136680603027
+scale_y = 1.0680136680603027
+scale_z = 1.0680136680603027
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 203
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -64.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0432204008102417
+scale_y = 1.0432204008102417
+scale_z = 1.0432204008102417
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 204
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -128.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8926420211791992
+scale_y = 0.8926420211791992
+scale_z = 0.8926420211791992
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 205
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -64.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8913358449935913
+scale_y = 0.8913358449935913
+scale_z = 0.8913358449935913
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 206
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -128.0
+y = -3008.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.190563678741455
+scale_y = 1.190563678741455
+scale_z = 1.190563678741455
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 207
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -64.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.016864538192749
+scale_y = 1.016864538192749
+scale_z = 1.016864538192749
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 208
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 64.0
+y = -3904.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9744926691055298
+scale_y = 0.9744926691055298
+scale_z = 0.9744926691055298
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 209
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = 0.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1662954092025757
+scale_y = 1.1662954092025757
+scale_z = 1.1662954092025757
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 210
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 64.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1070163249969482
+scale_y = 1.1070163249969482
+scale_z = 1.1070163249969482
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 211
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = 0.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0916471481323242
+scale_y = 1.0916471481323242
+scale_z = 1.0916471481323242
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 212
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 64.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0683188438415527
+scale_y = 1.0683188438415527
+scale_z = 1.0683188438415527
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 213
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 0.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.178722620010376
+scale_y = 1.178722620010376
+scale_z = 1.178722620010376
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 214
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 64.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0514848232269287
+scale_y = 1.0514848232269287
+scale_z = 1.0514848232269287
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 215
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 0.0
+y = -3008.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0026551485061646
+scale_y = 1.0026551485061646
+scale_z = 1.0026551485061646
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 216
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 64.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8202033042907715
+scale_y = 0.8202033042907715
+scale_z = 0.8202033042907715
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 217
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 128.0
+y = -4032.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1987793445587158
+scale_y = 1.1987793445587158
+scale_z = 1.1987793445587158
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 218
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 192.0
+y = -3904.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1159276962280273
+scale_y = 1.1159276962280273
+scale_z = 1.1159276962280273
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 219
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 128.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9680227637290955
+scale_y = 0.9680227637290955
+scale_z = 0.9680227637290955
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 220
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 192.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9248818159103394
+scale_y = 0.9248818159103394
+scale_z = 0.9248818159103394
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 221
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 128.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8306162357330322
+scale_y = 0.8306162357330322
+scale_z = 0.8306162357330322
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 222
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 192.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.00624418258667
+scale_y = 1.00624418258667
+scale_z = 1.00624418258667
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 223
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 128.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.979717493057251
+scale_y = 0.979717493057251
+scale_z = 0.979717493057251
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 224
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 192.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9999817609786987
+scale_y = 0.9999817609786987
+scale_z = 0.9999817609786987
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 225
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 128.0
+y = -3008.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1341776847839355
+scale_y = 1.1341776847839355
+scale_z = 1.1341776847839355
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 226
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 192.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1319438219070435
+scale_y = 1.1319438219070435
+scale_z = 1.1319438219070435
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 227
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 128.0
+y = -2752.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9260048866271973
+scale_y = 0.9260048866271973
+scale_z = 0.9260048866271973
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 228
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 256.0
+y = -4032.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9517014622688293
+scale_y = 0.9517014622688293
+scale_z = 0.9517014622688293
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 229
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 320.0
+y = -3904.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0308665037155151
+scale_y = 1.0308665037155151
+scale_z = 1.0308665037155151
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 230
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 256.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0032899379730225
+scale_y = 1.0032899379730225
+scale_z = 1.0032899379730225
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 231
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 320.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9508957862854004
+scale_y = 0.9508957862854004
+scale_z = 0.9508957862854004
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 232
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 256.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.147129774093628
+scale_y = 1.147129774093628
+scale_z = 1.147129774093628
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 233
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 320.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9392621517181396
+scale_y = 0.9392621517181396
+scale_z = 0.9392621517181396
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 234
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 256.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.936222493648529
+scale_y = 0.936222493648529
+scale_z = 0.936222493648529
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 235
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 320.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1050264835357666
+scale_y = 1.1050264835357666
+scale_z = 1.1050264835357666
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 236
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 256.0
+y = -3008.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1178076267242432
+scale_y = 1.1178076267242432
+scale_z = 1.1178076267242432
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 237
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 320.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1005463600158691
+scale_y = 1.1005463600158691
+scale_z = 1.1005463600158691
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 238
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 256.0
+y = -2752.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1105930805206299
+scale_y = 1.1105930805206299
+scale_z = 1.1105930805206299
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 239
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 320.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9931455850601196
+scale_y = 0.9931455850601196
+scale_z = 0.9931455850601196
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 240
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 384.0
+y = -4032.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1947875022888184
+scale_y = 1.1947875022888184
+scale_z = 1.1947875022888184
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 241
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 448.0
+y = -3904.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8297739028930664
+scale_y = 0.8297739028930664
+scale_z = 0.8297739028930664
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 242
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 384.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1314432621002197
+scale_y = 1.1314432621002197
+scale_z = 1.1314432621002197
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 243
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 448.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.015912413597107
+scale_y = 1.015912413597107
+scale_z = 1.015912413597107
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 244
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 384.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0529375076293945
+scale_y = 1.0529375076293945
+scale_z = 1.0529375076293945
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 245
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 448.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.014789342880249
+scale_y = 1.014789342880249
+scale_z = 1.014789342880249
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 246
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 384.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1182959079742432
+scale_y = 1.1182959079742432
+scale_z = 1.1182959079742432
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 247
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 448.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9557543396949768
+scale_y = 0.9557543396949768
+scale_z = 0.9557543396949768
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 248
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 384.0
+y = -3008.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8917509317398071
+scale_y = 0.8917509317398071
+scale_z = 0.8917509317398071
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 249
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 448.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8307139277458191
+scale_y = 0.8307139277458191
+scale_z = 0.8307139277458191
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 250
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 384.0
+y = -2752.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1493881940841675
+scale_y = 1.1493881940841675
+scale_z = 1.1493881940841675
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 251
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 448.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8175421357154846
+scale_y = 0.8175421357154846
+scale_z = 0.8175421357154846
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 252
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 384.0
+y = -2496.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0034852027893066
+scale_y = 1.0034852027893066
+scale_z = 1.0034852027893066
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 253
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 448.0
+y = -2368.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1608508825302124
+scale_y = 1.1608508825302124
+scale_z = 1.1608508825302124
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 254
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 512.0
+y = -4032.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9903256893157959
+scale_y = 0.9903256893157959
+scale_z = 0.9903256893157959
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 255
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 576.0
+y = -3904.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.092635989189148
+scale_y = 1.092635989189148
+scale_z = 1.092635989189148
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 256
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 512.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9674612283706665
+scale_y = 0.9674612283706665
+scale_z = 0.9674612283706665
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 257
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 576.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9286782741546631
+scale_y = 0.9286782741546631
+scale_z = 0.9286782741546631
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 258
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 512.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.154637336730957
+scale_y = 1.154637336730957
+scale_z = 1.154637336730957
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 259
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 576.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8645650148391724
+scale_y = 0.8645650148391724
+scale_z = 0.8645650148391724
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 260
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 512.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8490860462188721
+scale_y = 0.8490860462188721
+scale_z = 0.8490860462188721
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 261
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 576.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0070254802703857
+scale_y = 1.0070254802703857
+scale_z = 1.0070254802703857
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 262
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 512.0
+y = -3008.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1650745868682861
+scale_y = 1.1650745868682861
+scale_z = 1.1650745868682861
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 263
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 576.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0461502075195312
+scale_y = 1.0461502075195312
+scale_z = 1.0461502075195312
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 264
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 512.0
+y = -2752.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9327921867370605
+scale_y = 0.9327921867370605
+scale_z = 0.9327921867370605
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 265
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 576.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1530747413635254
+scale_y = 1.1530747413635254
+scale_z = 1.1530747413635254
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 266
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 512.0
+y = -2496.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0618488788604736
+scale_y = 1.0618488788604736
+scale_z = 1.0618488788604736
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 267
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 576.0
+y = -2368.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1259377002716064
+scale_y = 1.1259377002716064
+scale_z = 1.1259377002716064
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 268
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 512.0
+y = -2240.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9392132759094238
+scale_y = 0.9392132759094238
+scale_z = 0.9392132759094238
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 269
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 640.0
+y = -4032.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0883511304855347
+scale_y = 1.0883511304855347
+scale_z = 1.0883511304855347
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 270
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 704.0
+y = -3904.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9485886096954346
+scale_y = 0.9485886096954346
+scale_z = 0.9485886096954346
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 271
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 640.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.101425290107727
+scale_y = 1.101425290107727
+scale_z = 1.101425290107727
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 272
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 704.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8576556444168091
+scale_y = 0.8576556444168091
+scale_z = 0.8576556444168091
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 273
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 640.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0266060829162598
+scale_y = 1.0266060829162598
+scale_z = 1.0266060829162598
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 274
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 704.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8741478323936462
+scale_y = 0.8741478323936462
+scale_z = 0.8741478323936462
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 275
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 640.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.120749592781067
+scale_y = 1.120749592781067
+scale_z = 1.120749592781067
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 276
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 704.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8689230680465698
+scale_y = 0.8689230680465698
+scale_z = 0.8689230680465698
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 277
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 640.0
+y = -3008.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0080996751785278
+scale_y = 1.0080996751785278
+scale_z = 1.0080996751785278
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 278
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = 704.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0558305978775024
+scale_y = 1.0558305978775024
+scale_z = 1.0558305978775024
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 279
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 640.0
+y = -2752.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1064791679382324
+scale_y = 1.1064791679382324
+scale_z = 1.1064791679382324
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 280
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = 704.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9532762169837952
+scale_y = 0.9532762169837952
+scale_z = 0.9532762169837952
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 281
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 640.0
+y = -2496.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1347148418426514
+scale_y = 1.1347148418426514
+scale_z = 1.1347148418426514
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 282
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = 704.0
+y = -2368.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9814143180847168
+scale_y = 0.9814143180847168
+scale_z = 0.9814143180847168
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 283
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 640.0
+y = -2240.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0489822626113892
+scale_y = 1.0489822626113892
+scale_z = 1.0489822626113892
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 284
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = 768.0
+y = -4032.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8210578560829163
+scale_y = 0.8210578560829163
+scale_z = 0.8210578560829163
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 285
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 832.0
+y = -3904.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.093307375907898
+scale_y = 1.093307375907898
+scale_z = 1.093307375907898
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 286
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 768.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9277383089065552
+scale_y = 0.9277383089065552
+scale_z = 0.9277383089065552
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 287
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 832.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8566546440124512
+scale_y = 0.8566546440124512
+scale_z = 0.8566546440124512
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 288
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 768.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0034241676330566
+scale_y = 1.0034241676330566
+scale_z = 1.0034241676330566
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 289
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 832.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1549913883209229
+scale_y = 1.1549913883209229
+scale_z = 1.1549913883209229
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 290
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 768.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.833106517791748
+scale_y = 0.833106517791748
+scale_z = 0.833106517791748
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 291
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 832.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8509293794631958
+scale_y = 0.8509293794631958
+scale_z = 0.8509293794631958
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 292
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 768.0
+y = -3008.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9408246874809265
+scale_y = 0.9408246874809265
+scale_z = 0.9408246874809265
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 293
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = 832.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0374341011047363
+scale_y = 1.0374341011047363
+scale_z = 1.0374341011047363
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 294
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 768.0
+y = -2752.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8610370755195618
+scale_y = 0.8610370755195618
+scale_z = 0.8610370755195618
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 295
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 832.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9930479526519775
+scale_y = 0.9930479526519775
+scale_z = 0.9930479526519775
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 296
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 768.0
+y = -2496.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9065585136413574
+scale_y = 0.9065585136413574
+scale_z = 0.9065585136413574
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 297
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 832.0
+y = -2368.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8182257413864136
+scale_y = 0.8182257413864136
+scale_z = 0.8182257413864136
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 298
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 768.0
+y = -2240.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9930601119995117
+scale_y = 0.9930601119995117
+scale_z = 0.9930601119995117
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 299
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 960.0
+y = -3904.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1306132078170776
+scale_y = 1.1306132078170776
+scale_z = 1.1306132078170776
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 300
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 896.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8029786944389343
+scale_y = 0.8029786944389343
+scale_z = 0.8029786944389343
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 301
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 960.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.086324691772461
+scale_y = 1.086324691772461
+scale_z = 1.086324691772461
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 302
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 896.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1878048181533813
+scale_y = 1.1878048181533813
+scale_z = 1.1878048181533813
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 303
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 960.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1509385108947754
+scale_y = 1.1509385108947754
+scale_z = 1.1509385108947754
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 304
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = 896.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.068001389503479
+scale_y = 1.068001389503479
+scale_z = 1.068001389503479
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 305
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 960.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9193518757820129
+scale_y = 0.9193518757820129
+scale_z = 0.9193518757820129
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 306
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = 896.0
+y = -3008.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0440504550933838
+scale_y = 1.0440504550933838
+scale_z = 1.0440504550933838
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 307
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 960.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9291543960571289
+scale_y = 0.9291543960571289
+scale_z = 0.9291543960571289
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 308
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = 896.0
+y = -2752.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.129014015197754
+scale_y = 1.129014015197754
+scale_z = 1.129014015197754
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 309
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 960.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8741844892501831
+scale_y = 0.8741844892501831
+scale_z = 0.8741844892501831
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 310
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 896.0
+y = -2496.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9051912426948547
+scale_y = 0.9051912426948547
+scale_z = 0.9051912426948547
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 311
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 960.0
+y = -2368.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9581958055496216
+scale_y = 0.9581958055496216
+scale_z = 0.9581958055496216
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 312
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 1024.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.042170524597168
+scale_y = 1.042170524597168
+scale_z = 1.042170524597168
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 313
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 1088.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1783196926116943
+scale_y = 1.1783196926116943
+scale_z = 1.1783196926116943
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 314
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 1024.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9425458908081055
+scale_y = 0.9425458908081055
+scale_z = 0.9425458908081055
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 315
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 1088.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1483383178710938
+scale_y = 1.1483383178710938
+scale_z = 1.1483383178710938
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 316
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 1024.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9542772173881531
+scale_y = 0.9542772173881531
+scale_z = 0.9542772173881531
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 317
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 1088.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1094821691513062
+scale_y = 1.1094821691513062
+scale_z = 1.1094821691513062
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 318
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 1024.0
+y = -3008.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.955156147480011
+scale_y = 0.955156147480011
+scale_z = 0.955156147480011
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 319
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 1088.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.083822250366211
+scale_y = 1.083822250366211
+scale_z = 1.083822250366211
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 320
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 1024.0
+y = -2752.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.824744462966919
+scale_y = 0.824744462966919
+scale_z = 0.824744462966919
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 321
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 1088.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9510666728019714
+scale_y = 0.9510666728019714
+scale_z = 0.9510666728019714
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 322
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 1024.0
+y = -2496.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0234076976776123
+scale_y = 1.0234076976776123
+scale_z = 1.0234076976776123
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 323
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 1152.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.82393878698349
+scale_y = 0.82393878698349
+scale_z = 0.82393878698349
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 324
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 1216.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0453078746795654
+scale_y = 1.0453078746795654
+scale_z = 1.0453078746795654
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 325
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 1152.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9108555316925049
+scale_y = 0.9108555316925049
+scale_z = 0.9108555316925049
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 326
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 1216.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.954106330871582
+scale_y = 0.954106330871582
+scale_z = 0.954106330871582
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 327
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 1152.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.136277437210083
+scale_y = 1.136277437210083
+scale_z = 1.136277437210083
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 328
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 1216.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1948485374450684
+scale_y = 1.1948485374450684
+scale_z = 1.1948485374450684
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 329
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 1152.0
+y = -3008.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.190466046333313
+scale_y = 1.190466046333313
+scale_z = 1.190466046333313
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 330
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 1216.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0545122623443604
+scale_y = 1.0545122623443604
+scale_z = 1.0545122623443604
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 331
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 1152.0
+y = -2752.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.049238681793213
+scale_y = 1.049238681793213
+scale_z = 1.049238681793213
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 332
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 1216.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1668691635131836
+scale_y = 1.1668691635131836
+scale_z = 1.1668691635131836
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 333
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 1152.0
+y = -2496.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1931272745132446
+scale_y = 1.1931272745132446
+scale_z = 1.1931272745132446
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 334
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 1280.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9726249575614929
+scale_y = 0.9726249575614929
+scale_z = 0.9726249575614929
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 335
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 1344.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8119511008262634
+scale_y = 0.8119511008262634
+scale_z = 0.8119511008262634
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 336
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 1280.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1071994304656982
+scale_y = 1.1071994304656982
+scale_z = 1.1071994304656982
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 337
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 1344.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8572283983230591
+scale_y = 0.8572283983230591
+scale_z = 0.8572283983230591
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 338
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 1280.0
+y = -3008.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1415265798568726
+scale_y = 1.1415265798568726
+scale_z = 1.1415265798568726
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 339
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 1344.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9483932852745056
+scale_y = 0.9483932852745056
+scale_z = 0.9483932852745056
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 340
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 1280.0
+y = -2752.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.199243187904358
+scale_y = 1.199243187904358
+scale_z = 1.199243187904358
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 341
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -640.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9930601119995117
+scale_y = 0.9930601119995117
+scale_z = 0.9930601119995117
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 342
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -704.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8308115601539612
+scale_y = 0.8308115601539612
+scale_z = 0.8308115601539612
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 343
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -640.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1789910793304443
+scale_y = 1.1789910793304443
+scale_z = 1.1789910793304443
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 344
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -704.0
+y = -3008.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1175390481948853
+scale_y = 1.1175390481948853
+scale_z = 1.1175390481948853
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 345
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -512.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8790918588638306
+scale_y = 0.8790918588638306
+scale_z = 0.8790918588638306
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 346
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -576.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8059816956520081
+scale_y = 0.8059816956520081
+scale_z = 0.8059816956520081
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 347
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -448.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8469130992889404
+scale_y = 0.8469130992889404
+scale_z = 0.8469130992889404
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 348
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -256.0
+y = -3904.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.144932508468628
+scale_y = 1.144932508468628
+scale_z = 1.144932508468628
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 349
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -64.0
+y = -4032.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1590442657470703
+scale_y = 1.1590442657470703
+scale_z = 1.1590442657470703
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 350
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -768.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1495468616485596
+scale_y = 1.1495468616485596
+scale_z = 1.1495468616485596
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 351
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -832.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1132786273956299
+scale_y = 1.1132786273956299
+scale_z = 1.1132786273956299
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 352
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -768.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1115696430206299
+scale_y = 1.1115696430206299
+scale_z = 1.1115696430206299
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 353
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -832.0
+y = -3008.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9590991735458374
+scale_y = 0.9590991735458374
+scale_z = 0.9590991735458374
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 354
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -640.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8352062106132507
+scale_y = 0.8352062106132507
+scale_z = 0.8352062106132507
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 355
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -704.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1952147483825684
+scale_y = 1.1952147483825684
+scale_z = 1.1952147483825684
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 356
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -576.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0116276741027832
+scale_y = 1.0116276741027832
+scale_z = 1.0116276741027832
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 357
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -384.0
+y = -3904.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9309122562408447
+scale_y = 0.9309122562408447
+scale_z = 0.9309122562408447
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 358
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -192.0
+y = -4032.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9307901859283447
+scale_y = 0.9307901859283447
+scale_z = 0.9307901859283447
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 359
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -896.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.017230749130249
+scale_y = 1.017230749130249
+scale_z = 1.017230749130249
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 360
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -960.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0608844757080078
+scale_y = 1.0608844757080078
+scale_z = 1.0608844757080078
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 361
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -896.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9946593046188354
+scale_y = 0.9946593046188354
+scale_z = 0.9946593046188354
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 362
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -960.0
+y = -3008.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9255532026290894
+scale_y = 0.9255532026290894
+scale_z = 0.9255532026290894
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 363
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -768.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9690725803375244
+scale_y = 0.9690725803375244
+scale_z = 0.9690725803375244
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 364
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -832.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9440596103668213
+scale_y = 0.9440596103668213
+scale_z = 0.9440596103668213
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 365
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -704.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1488021612167358
+scale_y = 1.1488021612167358
+scale_z = 1.1488021612167358
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 366
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -512.0
+y = -3904.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1910886764526367
+scale_y = 1.1910886764526367
+scale_z = 1.1910886764526367
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 367
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -320.0
+y = -4032.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0114201307296753
+scale_y = 1.0114201307296753
+scale_z = 1.0114201307296753
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 368
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -1024.0
+y = -3456.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9257363080978394
+scale_y = 0.9257363080978394
+scale_z = 0.9257363080978394
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 369
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -1088.0
+y = -3328.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8077273368835449
+scale_y = 0.8077273368835449
+scale_z = 0.8077273368835449
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 370
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -1088.0
+y = -3072.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0005189180374146
+scale_y = 1.0005189180374146
+scale_z = 1.0005189180374146
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 371
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -896.0
+y = -3712.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1601917743682861
+scale_y = 1.1601917743682861
+scale_z = 1.1601917743682861
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 372
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -960.0
+y = -3584.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9990295767784119
+scale_y = 0.9990295767784119
+scale_z = 0.9990295767784119
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 373
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -832.0
+y = -3840.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9012482762336731
+scale_y = 0.9012482762336731
+scale_z = 0.9012482762336731
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 374
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -640.0
+y = -3968.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1539537906646729
+scale_y = 1.1539537906646729
+scale_z = 1.1539537906646729
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 375
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -1088.0
+y = -3200.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0578325986862183
+scale_y = 1.0578325986862183
+scale_z = 1.0578325986862183
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 376
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -1088.0
+y = -2944.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8970245122909546
+scale_y = 0.8970245122909546
+scale_z = 0.8970245122909546
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 377
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -1216.0
+y = -3456.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0873990058898926
+scale_y = 1.0873990058898926
+scale_z = 1.0873990058898926
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 378
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -1280.0
+y = -3328.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1520005464553833
+scale_y = 1.1520005464553833
+scale_z = 1.1520005464553833
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 379
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -1216.0
+y = -3200.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1307718753814697
+scale_y = 1.1307718753814697
+scale_z = 1.1307718753814697
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 380
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -1280.0
+y = -3072.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0990082025527954
+scale_y = 1.0990082025527954
+scale_z = 1.0990082025527954
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 381
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -1216.0
+y = -2944.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8436537384986877
+scale_y = 0.8436537384986877
+scale_z = 0.8436537384986877
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 382
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -1088.0
+y = -3712.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9437178373336792
+scale_y = 0.9437178373336792
+scale_z = 0.9437178373336792
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 383
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -1152.0
+y = -3584.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1071016788482666
+scale_y = 1.1071016788482666
+scale_z = 1.1071016788482666
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 384
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -1152.0
+y = -2816.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.00673246383667
+scale_y = 1.00673246383667
+scale_z = 1.00673246383667
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 385
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -1024.0
+y = -3840.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.102707028388977
+scale_y = 1.102707028388977
+scale_z = 1.102707028388977
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 386
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -832.0
+y = -3968.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8369762897491455
+scale_y = 0.8369762897491455
+scale_z = 0.8369762897491455
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 387
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -1344.0
+y = -3456.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1809077262878418
+scale_y = 1.1809077262878418
+scale_z = 1.1809077262878418
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 388
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -1408.0
+y = -3328.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8780419826507568
+scale_y = 0.8780419826507568
+scale_z = 0.8780419826507568
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 389
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -1344.0
+y = -3200.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9324870109558105
+scale_y = 0.9324870109558105
+scale_z = 0.9324870109558105
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 390
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -1408.0
+y = -3072.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.814929723739624
+scale_y = 0.814929723739624
+scale_z = 0.814929723739624
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 391
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -1344.0
+y = -2944.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9936583042144775
+scale_y = 0.9936583042144775
+scale_z = 0.9936583042144775
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 392
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -1216.0
+y = -3712.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0308786630630493
+scale_y = 1.0308786630630493
+scale_z = 1.0308786630630493
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 393
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -1280.0
+y = -3584.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8451186418533325
+scale_y = 0.8451186418533325
+scale_z = 0.8451186418533325
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 394
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -1280.0
+y = -2816.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9857234954833984
+scale_y = 0.9857234954833984
+scale_z = 0.9857234954833984
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 395
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -1152.0
+y = -3840.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.111911416053772
+scale_y = 1.111911416053772
+scale_z = 1.111911416053772
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 396
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -960.0
+y = -3968.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1786737442016602
+scale_y = 1.1786737442016602
+scale_z = 1.1786737442016602
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 397
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -1472.0
+y = -3456.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0540850162506104
+scale_y = 1.0540850162506104
+scale_z = 1.0540850162506104
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 398
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -1536.0
+y = -3328.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.05988347530365
+scale_y = 1.05988347530365
+scale_z = 1.05988347530365
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 399
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -1472.0
+y = -3200.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9578418135643005
+scale_y = 0.9578418135643005
+scale_z = 0.9578418135643005
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 400
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -1536.0
+y = -3072.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8340098857879639
+scale_y = 0.8340098857879639
+scale_z = 0.8340098857879639
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 401
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -1472.0
+y = -2944.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8285165429115295
+scale_y = 0.8285165429115295
+scale_z = 0.8285165429115295
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 402
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -1344.0
+y = -3712.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.118833065032959
+scale_y = 1.118833065032959
+scale_z = 1.118833065032959
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 403
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -1408.0
+y = -3584.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0646932125091553
+scale_y = 1.0646932125091553
+scale_z = 1.0646932125091553
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 404
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -1408.0
+y = -2816.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0531938076019287
+scale_y = 1.0531938076019287
+scale_z = 1.0531938076019287
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 405
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -1344.0
+y = -2688.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9101352691650391
+scale_y = 0.9101352691650391
+scale_z = 0.9101352691650391
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 406
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -1280.0
+y = -3840.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1144750118255615
+scale_y = 1.1144750118255615
+scale_z = 1.1144750118255615
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 407
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -1088.0
+y = -3968.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9059481024742126
+scale_y = 0.9059481024742126
+scale_z = 0.9059481024742126
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 408
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -960.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0689657926559448
+scale_y = 1.0689657926559448
+scale_z = 1.0689657926559448
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 409
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -512.0
+y = -4032.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.032660961151123
+scale_y = 1.032660961151123
+scale_z = 1.032660961151123
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 410
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -1536.0
+y = -2816.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9445112943649292
+scale_y = 0.9445112943649292
+scale_z = 0.9445112943649292
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 411
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -1472.0
+y = -2688.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.076412320137024
+scale_y = 1.076412320137024
+scale_z = 1.076412320137024
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 412
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -1408.0
+y = -2560.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9955382347106934
+scale_y = 0.9955382347106934
+scale_z = 0.9955382347106934
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 413
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -1728.0
+y = -3072.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9614796042442322
+scale_y = 0.9614796042442322
+scale_z = 0.9614796042442322
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 414
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -1792.0
+y = -2944.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9425703287124634
+scale_y = 0.9425703287124634
+scale_z = 0.9425703287124634
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 415
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -1728.0
+y = -2816.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8043581247329712
+scale_y = 0.8043581247329712
+scale_z = 0.8043581247329712
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 416
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -1792.0
+y = -2688.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1953246593475342
+scale_y = 1.1953246593475342
+scale_z = 1.1953246593475342
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 417
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -1728.0
+y = -2560.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9514695405960083
+scale_y = 0.9514695405960083
+scale_z = 0.9514695405960083
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 418
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -1664.0
+y = -3200.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8125370740890503
+scale_y = 0.8125370740890503
+scale_z = 0.8125370740890503
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 419
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -1664.0
+y = -2944.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9743340015411377
+scale_y = 0.9743340015411377
+scale_z = 0.9743340015411377
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 420
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -1664.0
+y = -2688.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8697287440299988
+scale_y = 0.8697287440299988
+scale_z = 0.8697287440299988
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 421
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -1600.0
+y = -2560.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1390362977981567
+scale_y = 1.1390362977981567
+scale_z = 1.1390362977981567
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 422
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -1664.0
+y = -2432.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1451033353805542
+scale_y = 1.1451033353805542
+scale_z = 1.1451033353805542
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 423
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -1600.0
+y = -2304.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9302896857261658
+scale_y = 0.9302896857261658
+scale_z = 0.9302896857261658
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 424
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -1536.0
+y = -2432.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9013336896896362
+scale_y = 0.9013336896896362
+scale_z = 0.9013336896896362
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 425
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -1856.0
+y = -3072.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8430677652359009
+scale_y = 0.8430677652359009
+scale_z = 0.8430677652359009
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 426
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -1920.0
+y = -2944.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9314005374908447
+scale_y = 0.9314005374908447
+scale_z = 0.9314005374908447
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 427
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -1856.0
+y = -2816.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.143968105316162
+scale_y = 1.143968105316162
+scale_z = 1.143968105316162
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 428
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -1920.0
+y = -2688.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9197913408279419
+scale_y = 0.9197913408279419
+scale_z = 0.9197913408279419
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 429
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -1856.0
+y = -2560.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0182195901870728
+scale_y = 1.0182195901870728
+scale_z = 1.0182195901870728
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 430
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -1728.0
+y = -3328.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8651632070541382
+scale_y = 0.8651632070541382
+scale_z = 0.8651632070541382
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 431
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -1792.0
+y = -3200.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8711570501327515
+scale_y = 0.8711570501327515
+scale_z = 0.8711570501327515
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 432
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -1792.0
+y = -2432.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8551775217056274
+scale_y = 0.8551775217056274
+scale_z = 0.8551775217056274
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 433
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -1728.0
+y = -2304.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0558550357818604
+scale_y = 1.0558550357818604
+scale_z = 1.0558550357818604
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 434
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -1664.0
+y = -3456.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.885537326335907
+scale_y = 0.885537326335907
+scale_z = 0.885537326335907
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 435
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -1664.0
+y = -2176.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0185980796813965
+scale_y = 1.0185980796813965
+scale_z = 1.0185980796813965
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 436
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 1152.0
+y = -3968.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9992859363555908
+scale_y = 0.9992859363555908
+scale_z = 0.9992859363555908
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 437
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 1280.0
+y = -3968.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8070071339607239
+scale_y = 0.8070071339607239
+scale_z = 0.8070071339607239
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 438
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 1408.0
+y = -3968.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9479781985282898
+scale_y = 0.9479781985282898
+scale_z = 0.9479781985282898
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 439
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 1344.0
+y = -3840.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9440596103668213
+scale_y = 0.9440596103668213
+scale_z = 0.9440596103668213
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 440
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 1408.0
+y = -3712.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0402051210403442
+scale_y = 1.0402051210403442
+scale_z = 1.0402051210403442
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 441
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = 1408.0
+y = -2688.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8703635334968567
+scale_y = 0.8703635334968567
+scale_z = 0.8703635334968567
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 442
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 1344.0
+y = -2560.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.946574330329895
+scale_y = 0.946574330329895
+scale_z = 0.946574330329895
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 443
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 1536.0
+y = -3968.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9806696176528931
+scale_y = 0.9806696176528931
+scale_z = 0.9806696176528931
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 444
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = 1472.0
+y = -3840.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8649312257766724
+scale_y = 0.8649312257766724
+scale_z = 0.8649312257766724
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 445
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 1536.0
+y = -3712.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9444869160652161
+scale_y = 0.9444869160652161
+scale_z = 0.9444869160652161
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 446
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 1472.0
+y = -3584.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8258797526359558
+scale_y = 0.8258797526359558
+scale_z = 0.8258797526359558
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 447
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 1536.0
+y = -3456.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.806921660900116
+scale_y = 0.806921660900116
+scale_z = 0.806921660900116
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 448
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 1472.0
+y = -3328.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8083865642547607
+scale_y = 0.8083865642547607
+scale_z = 0.8083865642547607
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 449
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 1536.0
+y = -3200.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.928885817527771
+scale_y = 0.928885817527771
+scale_z = 0.928885817527771
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 450
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = 1472.0
+y = -3072.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9400311708450317
+scale_y = 0.9400311708450317
+scale_z = 0.9400311708450317
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 451
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 1536.0
+y = -2944.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0859829187393188
+scale_y = 1.0859829187393188
+scale_z = 1.0859829187393188
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 452
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 1472.0
+y = -2816.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8007935285568237
+scale_y = 0.8007935285568237
+scale_z = 0.8007935285568237
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 453
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 1536.0
+y = -2688.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.136985421180725
+scale_y = 1.136985421180725
+scale_z = 1.136985421180725
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 454
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 1472.0
+y = -2560.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8920804858207703
+scale_y = 0.8920804858207703
+scale_z = 0.8920804858207703
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 455
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 1664.0
+y = -3968.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0136784315109253
+scale_y = 1.0136784315109253
+scale_z = 1.0136784315109253
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 456
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 1600.0
+y = -3840.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8319834470748901
+scale_y = 0.8319834470748901
+scale_z = 0.8319834470748901
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 457
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 1664.0
+y = -3712.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.927665114402771
+scale_y = 0.927665114402771
+scale_z = 0.927665114402771
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 458
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 1600.0
+y = -3584.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1875485181808472
+scale_y = 1.1875485181808472
+scale_z = 1.1875485181808472
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 459
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 1664.0
+y = -3456.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0356152057647705
+scale_y = 1.0356152057647705
+scale_z = 1.0356152057647705
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 460
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 1600.0
+y = -3328.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9555956125259399
+scale_y = 0.9555956125259399
+scale_z = 0.9555956125259399
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 461
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 1664.0
+y = -3200.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8828517198562622
+scale_y = 0.8828517198562622
+scale_z = 0.8828517198562622
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 462
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 1600.0
+y = -3072.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8096683621406555
+scale_y = 0.8096683621406555
+scale_z = 0.8096683621406555
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 463
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 1664.0
+y = -2944.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0111758708953857
+scale_y = 1.0111758708953857
+scale_z = 1.0111758708953857
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 464
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 1600.0
+y = -2816.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0659260749816895
+scale_y = 1.0659260749816895
+scale_z = 1.0659260749816895
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 465
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 1664.0
+y = -2688.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0721274614334106
+scale_y = 1.0721274614334106
+scale_z = 1.0721274614334106
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 466
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 1600.0
+y = -2560.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8361828327178955
+scale_y = 0.8361828327178955
+scale_z = 0.8361828327178955
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 467
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 1792.0
+y = -3968.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.120810627937317
+scale_y = 1.120810627937317
+scale_z = 1.120810627937317
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 468
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 1728.0
+y = -3840.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9072299003601074
+scale_y = 0.9072299003601074
+scale_z = 0.9072299003601074
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 469
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 1792.0
+y = -3712.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8907254934310913
+scale_y = 0.8907254934310913
+scale_z = 0.8907254934310913
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 470
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 1728.0
+y = -3584.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9064974784851074
+scale_y = 0.9064974784851074
+scale_z = 0.9064974784851074
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 471
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 1792.0
+y = -3456.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9376019239425659
+scale_y = 0.9376019239425659
+scale_z = 0.9376019239425659
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 472
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 1728.0
+y = -3328.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8433119654655457
+scale_y = 0.8433119654655457
+scale_z = 0.8433119654655457
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 473
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = 1792.0
+y = -3200.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8018189668655396
+scale_y = 0.8018189668655396
+scale_z = 0.8018189668655396
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 474
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 1728.0
+y = -3072.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9682546854019165
+scale_y = 0.9682546854019165
+scale_z = 0.9682546854019165
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 475
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 1792.0
+y = -2944.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1772576570510864
+scale_y = 1.1772576570510864
+scale_z = 1.1772576570510864
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 476
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 1728.0
+y = -2816.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0289621353149414
+scale_y = 1.0289621353149414
+scale_z = 1.0289621353149414
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 477
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 1792.0
+y = -2688.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8447402119636536
+scale_y = 0.8447402119636536
+scale_z = 0.8447402119636536
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 478
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 1728.0
+y = -2560.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8973052501678467
+scale_y = 0.8973052501678467
+scale_z = 0.8973052501678467
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 479
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 1920.0
+y = -3968.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9627857804298401
+scale_y = 0.9627857804298401
+scale_z = 0.9627857804298401
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 480
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 1856.0
+y = -3840.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8664449453353882
+scale_y = 0.8664449453353882
+scale_z = 0.8664449453353882
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 481
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 1920.0
+y = -3712.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1567492485046387
+scale_y = 1.1567492485046387
+scale_z = 1.1567492485046387
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 482
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 1856.0
+y = -3584.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8917997479438782
+scale_y = 0.8917997479438782
+scale_z = 0.8917997479438782
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 483
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 1920.0
+y = -3456.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1313822269439697
+scale_y = 1.1313822269439697
+scale_z = 1.1313822269439697
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 484
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 1856.0
+y = -3328.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9037263989448547
+scale_y = 0.9037263989448547
+scale_z = 0.9037263989448547
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 485
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 1920.0
+y = -3200.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.894228994846344
+scale_y = 0.894228994846344
+scale_z = 0.894228994846344
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 486
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 1856.0
+y = -3072.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0736900568008423
+scale_y = 1.0736900568008423
+scale_z = 1.0736900568008423
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 487
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 1920.0
+y = -2944.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0413649082183838
+scale_y = 1.0413649082183838
+scale_z = 1.0413649082183838
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 488
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 1856.0
+y = -2816.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0921109914779663
+scale_y = 1.0921109914779663
+scale_z = 1.0921109914779663
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 489
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 1920.0
+y = -2688.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9509202241897583
+scale_y = 0.9509202241897583
+scale_z = 0.9509202241897583
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 490
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 2048.0
+y = -3968.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8988189697265625
+scale_y = 0.8988189697265625
+scale_z = 0.8988189697265625
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 491
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = 1984.0
+y = -3840.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8259530067443848
+scale_y = 0.8259530067443848
+scale_z = 0.8259530067443848
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 492
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 2048.0
+y = -3712.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8120121359825134
+scale_y = 0.8120121359825134
+scale_z = 0.8120121359825134
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 493
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 1984.0
+y = -3584.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0144720077514648
+scale_y = 1.0144720077514648
+scale_z = 1.0144720077514648
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 494
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 2048.0
+y = -3456.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0786707401275635
+scale_y = 1.0786707401275635
+scale_z = 1.0786707401275635
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 495
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 1984.0
+y = -3328.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0122746229171753
+scale_y = 1.0122746229171753
+scale_z = 1.0122746229171753
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 496
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 2048.0
+y = -3200.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1825312376022339
+scale_y = 1.1825312376022339
+scale_z = 1.1825312376022339
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 497
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 1984.0
+y = -3072.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8098636269569397
+scale_y = 0.8098636269569397
+scale_z = 0.8098636269569397
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 498
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 2048.0
+y = -2944.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9697562456130981
+scale_y = 0.9697562456130981
+scale_z = 0.9697562456130981
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 499
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 1984.0
+y = -2816.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9037386178970337
+scale_y = 0.9037386178970337
+scale_z = 0.9037386178970337
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 500
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 2176.0
+y = -3968.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9521898031234741
+scale_y = 0.9521898031234741
+scale_z = 0.9521898031234741
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 501
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 2112.0
+y = -3840.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1488633155822754
+scale_y = 1.1488633155822754
+scale_z = 1.1488633155822754
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 502
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 2176.0
+y = -3712.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.051472544670105
+scale_y = 1.051472544670105
+scale_z = 1.051472544670105
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 503
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 2112.0
+y = -3584.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8725975155830383
+scale_y = 0.8725975155830383
+scale_z = 0.8725975155830383
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 504
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 2176.0
+y = -3456.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8610615134239197
+scale_y = 0.8610615134239197
+scale_z = 0.8610615134239197
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 505
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 2112.0
+y = -3328.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8209846019744873
+scale_y = 0.8209846019744873
+scale_z = 0.8209846019744873
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 506
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 2176.0
+y = -3200.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8647115230560303
+scale_y = 0.8647115230560303
+scale_z = 0.8647115230560303
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 507
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 2112.0
+y = -3072.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9955626726150513
+scale_y = 0.9955626726150513
+scale_z = 0.9955626726150513
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 508
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 2176.0
+y = -2944.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0288034677505493
+scale_y = 1.0288034677505493
+scale_z = 1.0288034677505493
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 509
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 2112.0
+y = -2816.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0638020038604736
+scale_y = 1.0638020038604736
+scale_z = 1.0638020038604736
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 510
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 2240.0
+y = -3840.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0650960206985474
+scale_y = 1.0650960206985474
+scale_z = 1.0650960206985474
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 511
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 2304.0
+y = -3712.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9576587080955505
+scale_y = 0.9576587080955505
+scale_z = 0.9576587080955505
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 512
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 2240.0
+y = -3584.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0671956539154053
+scale_y = 1.0671956539154053
+scale_z = 1.0671956539154053
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 513
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = 2304.0
+y = -3456.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0131657123565674
+scale_y = 1.0131657123565674
+scale_z = 1.0131657123565674
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 514
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 2240.0
+y = -3328.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1229225397109985
+scale_y = 1.1229225397109985
+scale_z = 1.1229225397109985
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 515
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 2304.0
+y = -3200.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.101144552230835
+scale_y = 1.101144552230835
+scale_z = 1.101144552230835
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 516
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 2240.0
+y = -3072.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8550921082496643
+scale_y = 0.8550921082496643
+scale_z = 0.8550921082496643
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 517
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 960.0
+y = -4032.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1723380088806152
+scale_y = 1.1723380088806152
+scale_z = 1.1723380088806152
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 518
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 2368.0
+y = -4032.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8010743260383606
+scale_y = 0.8010743260383606
+scale_z = 0.8010743260383606
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 519
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = 2368.0
+y = -3008.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1774041652679443
+scale_y = 1.1774041652679443
+scale_z = 1.1774041652679443
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 520
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = 2304.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0614705085754395
+scale_y = 1.0614705085754395
+scale_z = 1.0614705085754395
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 521
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = 2432.0
+y = -3904.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1853878498077393
+scale_y = 1.1853878498077393
+scale_z = 1.1853878498077393
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 522
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 2496.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8748436570167542
+scale_y = 0.8748436570167542
+scale_z = 0.8748436570167542
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 523
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 2432.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0882046222686768
+scale_y = 1.0882046222686768
+scale_z = 1.0882046222686768
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 524
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 2496.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8706443309783936
+scale_y = 0.8706443309783936
+scale_z = 0.8706443309783936
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 525
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 2432.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1879024505615234
+scale_y = 1.1879024505615234
+scale_z = 1.1879024505615234
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 526
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = 2496.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8382336497306824
+scale_y = 0.8382336497306824
+scale_z = 0.8382336497306824
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 527
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 2432.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.138413667678833
+scale_y = 1.138413667678833
+scale_z = 1.138413667678833
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 528
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = 2048.0
+y = -2624.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8213752508163452
+scale_y = 0.8213752508163452
+scale_z = 0.8213752508163452
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 529
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 2240.0
+y = -2752.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0546586513519287
+scale_y = 1.0546586513519287
+scale_z = 1.0546586513519287
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 530
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 2496.0
+y = -4032.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.057332158088684
+scale_y = 1.057332158088684
+scale_z = 1.057332158088684
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 531
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 2496.0
+y = -3008.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1234595775604248
+scale_y = 1.1234595775604248
+scale_z = 1.1234595775604248
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 532
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = 2432.0
+y = -2880.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.128415822982788
+scale_y = 1.128415822982788
+scale_z = 1.128415822982788
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 533
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = 2560.0
+y = -3904.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1952147483825684
+scale_y = 1.1952147483825684
+scale_z = 1.1952147483825684
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 534
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = 2624.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8276376128196716
+scale_y = 0.8276376128196716
+scale_z = 0.8276376128196716
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 535
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = 2560.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.197302222251892
+scale_y = 1.197302222251892
+scale_z = 1.197302222251892
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 536
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = 2624.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1542832851409912
+scale_y = 1.1542832851409912
+scale_z = 1.1542832851409912
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 537
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = 2560.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8349254727363586
+scale_y = 0.8349254727363586
+scale_z = 0.8349254727363586
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 538
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = 2624.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8702292442321777
+scale_y = 0.8702292442321777
+scale_z = 0.8702292442321777
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 539
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = 2560.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8126591444015503
+scale_y = 0.8126591444015503
+scale_z = 0.8126591444015503
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 540
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -1856.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9159215688705444
+scale_y = 0.9159215688705444
+scale_z = 0.9159215688705444
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 541
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -1920.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1509751081466675
+scale_y = 1.1509751081466675
+scale_z = 1.1509751081466675
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 542
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -1856.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9581225514411926
+scale_y = 0.9581225514411926
+scale_z = 0.9581225514411926
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 543
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -1920.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0719443559646606
+scale_y = 1.0719443559646606
+scale_z = 1.0719443559646606
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 544
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -1728.0
+y = -3904.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0911954641342163
+scale_y = 1.0911954641342163
+scale_z = 1.0911954641342163
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 545
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -1792.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0900235176086426
+scale_y = 1.0900235176086426
+scale_z = 1.0900235176086426
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 546
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -1728.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1343364715576172
+scale_y = 1.1343364715576172
+scale_z = 1.1343364715576172
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 547
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -1792.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.181041955947876
+scale_y = 1.181041955947876
+scale_z = 1.181041955947876
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 548
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -1664.0
+y = -4032.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0822962522506714
+scale_y = 1.0822962522506714
+scale_z = 1.0822962522506714
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 549
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -1600.0
+y = -3904.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.868080735206604
+scale_y = 0.868080735206604
+scale_z = 0.868080735206604
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 550
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -1664.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1437116861343384
+scale_y = 1.1437116861343384
+scale_z = 1.1437116861343384
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 551
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -1600.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8304086923599243
+scale_y = 0.8304086923599243
+scale_z = 0.8304086923599243
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 552
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -1536.0
+y = -4032.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0555254220962524
+scale_y = 1.0555254220962524
+scale_z = 1.0555254220962524
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 553
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -1472.0
+y = -3904.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0482985973358154
+scale_y = 1.0482985973358154
+scale_z = 1.0482985973358154
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 554
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -1536.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9302164316177368
+scale_y = 0.9302164316177368
+scale_z = 0.9302164316177368
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 555
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -1408.0
+y = -4032.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1054048538208008
+scale_y = 1.1054048538208008
+scale_z = 1.1054048538208008
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 556
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -1280.0
+y = -4032.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0234321355819702
+scale_y = 1.0234321355819702
+scale_z = 1.0234321355819702
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 557
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 8
+x = -2112.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9824763536453247
+scale_y = 0.9824763536453247
+scale_z = 0.9824763536453247
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 558
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -2176.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9121006727218628
+scale_y = 0.9121006727218628
+scale_z = 0.9121006727218628
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 559
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -2112.0
+y = -3520.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9383221864700317
+scale_y = 0.9383221864700317
+scale_z = 0.9383221864700317
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 560
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 2
+x = -2176.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1333965063095093
+scale_y = 1.1333965063095093
+scale_z = 1.1333965063095093
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 561
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -2112.0
+y = -3264.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8227302432060242
+scale_y = 0.8227302432060242
+scale_z = 0.8227302432060242
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 562
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -1984.0
+y = -4032.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1230933666229248
+scale_y = 1.1230933666229248
+scale_z = 1.1230933666229248
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 563
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -2048.0
+y = -3904.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0088931322097778
+scale_y = 1.0088931322097778
+scale_z = 1.0088931322097778
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 564
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 5
+x = -1984.0
+y = -3776.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9165075421333313
+scale_y = 0.9165075421333313
+scale_z = 0.9165075421333313
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 565
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -2048.0
+y = -3648.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9097690582275391
+scale_y = 0.9097690582275391
+scale_z = 0.9097690582275391
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 566
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 1
+x = -2048.0
+y = -3392.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.101632833480835
+scale_y = 1.101632833480835
+scale_z = 1.101632833480835
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 567
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -2048.0
+y = -3136.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.09212327003479
+scale_y = 1.09212327003479
+scale_z = 1.09212327003479
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 568
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 3
+x = -1856.0
+y = -4032.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8177496194839478
+scale_y = 0.8177496194839478
+scale_z = 0.8177496194839478
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 569
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -1920.0
+y = -3904.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8541643023490906
+scale_y = 0.8541643023490906
+scale_z = 0.8541643023490906
+flags = "PATHABLE|ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 570
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTcr'  # Crates
+variation = 0
+x = 128.0
+y = -320.0
+z = 0.0
+facing = 2.0420351028442383
+scale_x = 0.8405042290687561
+scale_y = 0.8405042290687561
+scale_z = 0.8405042290687561
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 571
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTcr'  # Crates
+variation = 0
+x = 256.0
+y = -320.0
+z = 0.0
+facing = 1.239183783531189
+scale_x = 1.0216742753982544
+scale_y = 1.0216742753982544
+scale_z = 1.0216742753982544
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 572
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTcr'  # Crates
+variation = 0
+x = 384.0
+y = -320.0
+z = 0.0
+facing = 0.890117883682251
+scale_x = 0.8895779848098755
+scale_y = 0.8895779848098755
+scale_z = 0.8895779848098755
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 573
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTcr'  # Crates
+variation = 0
+x = 384.0
+y = -448.0
+z = 0.0
+facing = 4.852015495300293
+scale_x = 0.9152989983558655
+scale_y = 0.9152989983558655
+scale_z = 0.9152989983558655
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 574
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTcr'  # Crates
+variation = 0
+x = 256.0
+y = -512.0
+z = 0.0
+facing = 3.473205089569092
+scale_x = 1.0958586931228638
+scale_y = 1.0958586931228638
+scale_z = 1.0958586931228638
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 575
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LOcg'  # Cage
+variation = 0
+x = 1344.0
+y = -1088.0
+z = 0.0
+facing = 0.5410520434379578
+scale_x = 0.909976601600647
+scale_y = 0.909976601600647
+scale_z = 0.909976601600647
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 576
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LOcg'  # Cage
+variation = 0
+x = 1536.0
+y = -1216.0
+z = 0.0
+facing = 1.6580628156661987
+scale_x = 1.1190038919448853
+scale_y = 1.1190038919448853
+scale_z = 1.1190038919448853
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 577
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LOcg'  # Cage
+variation = 0
+x = 1664.0
+y = -1344.0
+z = 0.0
+facing = 0.1745329201221466
+scale_x = 0.8060305118560791
+scale_y = 0.8060305118560791
+scale_z = 0.8060305118560791
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 578
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTbs'  # Barrel
+variation = 0
+x = 1376.0
+y = -736.0
+z = 0.0
+facing = 5.811946392059326
+scale_x = 1.3823450803756714
+scale_y = 1.3823450803756714
+scale_z = 1.3823450803756714
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 579
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTbs'  # Barrel
+variation = 0
+x = 1376.0
+y = -608.0
+z = 0.0
+facing = 6.038839340209961
+scale_x = 1.2081576585769653
+scale_y = 1.2081576585769653
+scale_z = 1.2081576585769653
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 580
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTbs'  # Barrel
+variation = 0
+x = 1440.0
+y = -544.0
+z = -20.0
+facing = 3.1241393089294434
+scale_x = 1.4524644613265991
+scale_y = 1.4524644613265991
+scale_z = 1.4524644613265991
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 581
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -2304.0
+y = 2048.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.8522965908050537
+scale_y = 0.8522965908050537
+scale_z = 0.8522965908050537
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 582
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -2240.0
+y = 1920.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.186413288116455
+scale_y = 1.186413288116455
+scale_z = 1.186413288116455
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 583
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 7
+x = -2176.0
+y = 2048.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1385235786437988
+scale_y = 1.1385235786437988
+scale_z = 1.1385235786437988
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 584
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 9
+x = -2240.0
+y = 2176.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.1990478038787842
+scale_y = 1.1990478038787842
+scale_z = 1.1990478038787842
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 585
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 4
+x = -2112.0
+y = 1920.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.164635181427002
+scale_y = 1.164635181427002
+scale_z = 1.164635181427002
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 586
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 0
+x = -2048.0
+y = 2048.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0017273426055908
+scale_y = 1.0017273426055908
+scale_z = 1.0017273426055908
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 587
+item_drops = []
+
+[[doodads]]
+
+type_id = 'LTlt'  # Summer Tree Wall
+variation = 6
+x = -2112.0
+y = 2176.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 0.9673879742622375
+scale_y = 0.9673879742622375
+scale_z = 0.9673879742622375
+flags = "ENABLED"
+life_percent = 100
+random_table_id = -1
+entity_id = 588
+item_drops = []

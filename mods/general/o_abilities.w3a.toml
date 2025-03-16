@@ -1,0 +1,19 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 2
+has_levels = true
+
+[blizzard_objects]
+[[blizzard_objects.entities]]
+parent_id = 'AIlu'  # Bundle of Lumber
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'atat'  # Profile.Target
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Objects\RandomObject\RandomObject,Abilities\Spells\Items\ResourceItems\ResourceEffectTarget.mdl'
+object_id = 'AIlu'  # Bundle of Lumber
+
+[map_objects]
+entities = []

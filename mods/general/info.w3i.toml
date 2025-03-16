@@ -1,0 +1,65 @@
+# Warcraft 3 Map Info File(.w3i)
+# See w3i.py for type definitions
+
+version = "TFT"
+map_revision = 31
+editor_version = 6061
+map_name = 'TRIGSTR_009'
+map_author = 'TRIGSTR_012'
+map_description = 'TRIGSTR_011'
+players_recommended = 'TRIGSTR_010'
+camera_bounds = [-2816.0, -3328.0, 2816.0, 6912.0, -2816.0, 6912.0, 2816.0, -3328.0]
+map_padding_left = 6
+map_padding_right = 6
+map_padding_top = 4
+map_padding_bottom = 8
+map_playable_width = 52
+map_playable_height = 84
+flags = "VISIBLE_BLACK_MASK|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS|WAVES_ON_SHORES|REQUIRES_EXPANSION|USE_ITEM_CLASSIFICATION"
+tileset = { type = "bytes", value = "L" }
+campaign_background = -1
+tft_loading_screen_model_path = ''
+map_loading_screen_text = ''
+map_loading_screen_title = ''
+map_loading_screen_subtitle = ''
+map_loading_screen_number = 1
+tft_prologue_screen_path = ''
+prologue_screen_text = ''
+prologue_screen_title = ''
+prologue_screen_subtitle = ''
+tft_uses_terrain_fog = 0
+tft_fog_start_z = 3000.0
+tft_fog_end_z = 5000.0
+tft_fog_density = 0.5
+tft_fog_red = 0
+tft_fog_green = 0
+tft_fog_blue = 0
+tft_fog_alpha = 255
+tft_weather = 'null'
+tft_custom_sound_environment = ''
+tft_custom_light_tileset = { type = "bytes", value = "0" }
+tft_water_tint_red = 255
+tft_water_tint_green = 255
+tft_water_tint_blue = 255
+tft_water_tint_alpha = 255
+upgrades = []
+technologies = []
+random_entities = []
+random_items = []
+
+[[players]]
+
+player_id = 0
+player_type = "Human"
+player_faction = "Human"
+fixed_start_position = false
+name = 'TRIGSTR_003'
+start_pos = [-640.0, 0.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[forces]]
+
+force_flags = "None"
+player_mask_flags = 0xffffffff
+name = 'TRIGSTR_004'

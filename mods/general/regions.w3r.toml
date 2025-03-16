@@ -1,0 +1,32 @@
+# Warcraft 3 Region file (.w3r)
+# See w3r.py for type definitions
+
+version = 5
+
+[[regions]]
+
+left = -1152.0
+bottom = -416.0
+right = 800.0
+top = 864.0
+region_name = 'Starting Region'
+region_id = 0
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -448.0
+bottom = 960.0
+right = 96.0
+top = 1408.0
+region_name = 'Test Region'
+region_id = 1
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 255
+colour_r = 0
