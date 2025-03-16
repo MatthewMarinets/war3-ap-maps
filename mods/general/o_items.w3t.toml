@@ -15,7 +15,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_013'
+value = 'Archipelago Item 0'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -23,7 +23,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_014'
+value = 'Purchase a check for map location 0.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -31,7 +31,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_007'
+value = 'Get a randomized item when used.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -39,7 +39,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_015'
+value = 'Collects map location 0 for the player.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -74,7 +74,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_016'
+value = 'Archipelago Item 1'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -82,7 +82,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_017'
+value = 'Purchase a check for map location 1.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -90,7 +90,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_018'
+value = 'Get a randomized item when used.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -98,7 +98,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_019'
+value = 'Collects map location 1 for the player.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -133,7 +133,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_020'
+value = 'Archipelago Item 2'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -141,7 +141,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_021'
+value = 'Purchase a check for map location 2.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -149,7 +149,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_022'
+value = 'Get a randomized item when used.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -157,7 +157,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_023'
+value = 'Collects map location 2 for the player.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -192,7 +192,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_024'
+value = 'Archipelago Item 3'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -200,7 +200,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_025'
+value = 'Purchase a check for map location 3.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -208,7 +208,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_026'
+value = 'Get a randomized item when used.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -216,7 +216,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_027'
+value = 'Collects map location 3 for the player.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -251,7 +251,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_028'
+value = 'Archipelago Item 4'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -259,7 +259,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_029'
+value = 'Purchase a check for map location 4.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -267,7 +267,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_030'
+value = 'Get a randomized item when used.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -275,7 +275,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_031'
+value = 'Collects map location 4 for the player.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -310,7 +310,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_032'
+value = 'Archipelago Item 5'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -318,7 +318,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_033'
+value = 'Purchase a check for map location 5.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -326,7 +326,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_034'
+value = 'Get a randomized item when used.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -334,7 +334,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_035'
+value = 'Collects map location 5 for the player.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -369,7 +369,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_036'
+value = 'Archipelago Item 6'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -377,7 +377,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_037'
+value = 'Purchase a check for map location 6.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -385,7 +385,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_038'
+value = 'Get a randomized item when used.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -393,7 +393,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_039'
+value = 'Collects map location 6 for the player.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -428,7 +428,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_040'
+value = 'Archipelago Item 7'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -436,7 +436,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_041'
+value = 'Purchase a check for map location 7.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -444,7 +444,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_042'
+value = 'Get a randomized item when used.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -452,7 +452,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_043'
+value = 'Collects map location 7 for the player.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -487,7 +487,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_044'
+value = 'Archipelago Item 8'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -495,7 +495,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_045'
+value = 'Purchase a check for map location 8.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -503,7 +503,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_046'
+value = 'Get a randomized item when used.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -511,7 +511,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_047'
+value = 'Collects map location 8 for the player.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -546,7 +546,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_048'
+value = 'Archipelago Item 9'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -554,7 +554,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_049'
+value = 'Purchase a check for map location 9.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -562,7 +562,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_050'
+value = 'Get a randomized item when used.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -570,7 +570,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_051'
+value = 'Collects map location 9 for the player.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -605,7 +605,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_054'
+value = 'Archipelago Item 10'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -613,7 +613,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_055'
+value = 'Purchase a check for map location 10.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -621,7 +621,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_056'
+value = 'Get a randomized item when used.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -629,7 +629,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_057'
+value = 'Collects map location 10 for the player.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
