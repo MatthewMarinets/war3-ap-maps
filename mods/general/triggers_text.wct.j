@@ -1,5 +1,5 @@
 // version: 1
-// Triggers: 5
+// Triggers: 6
 // Enter map-specific custom script code below.  This text will be included in the map script after variables are declared and before any trigger code.
 //\\// Trigger #1
 // This file defines file IO functions for the JASS side of things
@@ -7,29 +7,18 @@
 // https://www.hiveworkshop.com/threads/codeless-save-load-its-now-a-reality-demo-map-included.226082/
 
 globals
-integer array p_ability_lines
-string array p_original_descriptions
+string array p_original_names
 string array io_lines
-constant integer NUM_FILE_ABILITIES = 10
+constant integer NUM_FILE_LINES = 10
 string last_filename = ""
 endglobals
 
 function InitTrig_fileio takes nothing returns nothing
     local integer i = 0
-    set p_ability_lines[0] = 'Amls'  // Aerial Shackles
-    set p_ability_lines[1] = 'Aroc'  // Barrage
-    set p_ability_lines[2] = 'Amic'  // Call to Arms
-    set p_ability_lines[3] = 'Amil'  // Call to Arms
-    set p_ability_lines[4] = 'Aclf'  // Cloud
-    set p_ability_lines[5] = 'Acmg'  // Control Magic
-    set p_ability_lines[6] = 'Adef'  // Defend
-    set p_ability_lines[7] = 'Adis'  // Dispel Magic
-    set p_ability_lines[8] = 'Afbt'  // Feedback
-    set p_ability_lines[9] = 'Afbk'  // Feedback
 
     loop
-        exitwhen i >= NUM_FILE_ABILITIES
-        set p_original_descriptions[i] = BlzGetAbilityTooltip(p_ability_lines[i], 0)
+        exitwhen i >= NUM_FILE_LINES
+        set p_original_names[i] = GetPlayerName(Player(i))
         set i = i + 1
     endloop
 endfunction
@@ -41,9 +30,9 @@ function io_read_file takes string file_name returns nothing
     call Preloader(file_name)
 
     loop
-        exitwhen i >= NUM_FILE_ABILITIES
-        set io_lines[i] = BlzGetAbilityTooltip(p_ability_lines[i], 0)
-        call BlzSetAbilityTooltip(p_ability_lines[i], p_original_descriptions[i], 0)
+        exitwhen i >= NUM_FILE_LINES
+        set io_lines[i] = GetPlayerName(Player(i))
+        call SetPlayerName(Player(i), p_original_names[i])
         set i = i + 1
     endloop
 endfunction
@@ -79,6 +68,7 @@ globals
 string mission_name = "unknown"
 boolean array locations_checked
 constant integer MAX_LOCATIONS = 20
+integer update_number = 0
 endglobals
 
 function InitTrig_status takes nothing returns nothing
@@ -94,6 +84,11 @@ function status_send takes nothing returns nothing
     local integer i = 0
     call io_open_write("status.txt")
     call io_write(mission_name)
+    call io_write(I2S(update_number))
+    set update_number = update_number + 1
+    if update_number >= 100 then
+        set update_number = 0
+    endif
     loop
         exitwhen i >= MAX_LOCATIONS
         if locations_checked[i] then
@@ -108,11 +103,17 @@ function status_load takes nothing returns nothing
     local integer i = 0
     call io_read_file("prior_status.txt")
     if io_lines[0] != mission_name then
+        call DisplayTextToForce(GetPlayersAll(), "|cffff2222Error: Client Communications not established|r (Wrong mission)")
+        call DisplayTextToForce(GetPlayersAll(), "Got \"" + io_lines[0] + "\", expected \"" + mission_name + "\".")
+        return
+    endif
+    if S2I(io_lines[1]) != update_number then
+        call DisplayTextToForce(GetPlayersAll(), "|cffff2222Error: Client Communications not established|r (Wrong transmission)")
         return
     endif
     loop
-        exitwhen i + 2 > StringLength(io_lines[1])
-        set locations_checked[S2I(SubString(io_lines[1], i, i+2))] = true
+        exitwhen i + 2 > StringLength(io_lines[2])
+        set locations_checked[S2I(SubString(io_lines[2], i, i+2))] = true
     endloop
     call status_send()
 endfunction
@@ -177,11 +178,16 @@ function InitTrig_item_locations takes nothing returns nothing
 endfunction
 
 //\\// Trigger #4
-function InitTrig_map_info takes nothing returns nothing
-    set mission_name = "General"
-    call status_send()
+// Map initialization function template
+function map_init_load_status takes nothing returns nothing
+    call DestroyTimer(GetExpiredTimer())
     call status_load()
 endfunction
 
+function InitTrig_map_init takes nothing returns nothing
+    set mission_name = "General"
+    call status_send()
+    call TimerStart(CreateTimer(), 2, false, function map_init_load_status)
+endfunction
 
 //\\// End

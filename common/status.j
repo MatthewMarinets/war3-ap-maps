@@ -13,6 +13,7 @@ globals
 string mission_name = "unknown"
 boolean array locations_checked
 constant integer MAX_LOCATIONS = 20
+integer update_number = 0
 endglobals
 
 function InitTrig_status takes nothing returns nothing
@@ -28,6 +29,11 @@ function status_send takes nothing returns nothing
     local integer i = 0
     call io_open_write("status.txt")
     call io_write(mission_name)
+    call io_write(I2S(update_number))
+    set update_number = update_number + 1
+    if update_number >= 100 then
+        set update_number = 0
+    endif
     loop
         exitwhen i >= MAX_LOCATIONS
         if locations_checked[i] then
@@ -41,12 +47,13 @@ endfunction
 function status_load takes nothing returns nothing
     local integer i = 0
     call io_read_file("prior_status.txt")
-    if io_lines[0] != mission_name then
+    if io_lines[0] != mission_name or S2I(io_lines[1]) != update_number then
+        call DisplayTextToForce(GetPlayersAll(), "|cffff2222Error: Client Communications not established|r")
         return
     endif
     loop
-        exitwhen i + 2 > StringLength(io_lines[1])
-        set locations_checked[S2I(SubString(io_lines[1], i, i+2))] = true
+        exitwhen i + 2 > StringLength(io_lines[2])
+        set locations_checked[S2I(SubString(io_lines[2], i, i+2))] = true
     endloop
     call status_send()
 endfunction
