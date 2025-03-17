@@ -34,7 +34,6 @@ class Wc3Item(enum.Enum):
     GUARD_TOWER =  13, "Guard Tower", Wc3Race.HUMAN
     CANNON_TOWER = 14, "Cannon Tower", Wc3Race.HUMAN
     ARCANE_TOWER = 15, "Arcane Tower", Wc3Race.HUMAN
-    ARCANE_VAULT = 16, "Arcane Vault", Wc3Race.HUMAN
 
     # Human - Heroes
     ARTHAS_LEVEL = 1000, "Arthas Level", Wc3Race.HUMAN, 8
@@ -103,7 +102,6 @@ class Wc3Item(enum.Enum):
 
     # Orc - Buildings
     WATCH_TOWER =   112, "Watch Tower", Wc3Race.ORC
-    VOODOO_LOUNGE = 113, "Voodoo Lounge", Wc3Race.ORC
 
     # Orc - Heroes
     THRALL_LEVEL = 1003, "Thrall Level", Wc3Race.ORC
@@ -123,7 +121,7 @@ class Wc3Item(enum.Enum):
 
     SHAMAN_TRAINING =               123, "Shaman Training (Shaman)", Wc3Race.ORC, 2
     WITCH_DOCTOR_TRAINING =         124, "Witch Doctor Training (Witch Doctor)", Wc3Race.ORC, 2
-    SPIRIT_WALKER_DOCTOR_TRAINING = 125, "Spirit Walker Training (Spirit Walker)", Wc3Race.ORC, 2
+    SPIRIT_WALKER_TRAINING =        125, "Spirit Walker Training (Spirit Walker)", Wc3Race.ORC, 2
 
     UPGRADE_ORC_MELEE_WEAPONS = 126, "Progressive Melee Weapons (Orc Upgrade)", Wc3Race.ORC, 3
     """Steel, Thorium, Arcanite"""
@@ -158,12 +156,12 @@ class Wc3Item(enum.Enum):
     OBSIDIAN_STATUE = 206, "Obsidian Statue", Wc3Race.UNDEAD
     NECROMANCER =     207, "Necromancer", Wc3Race.UNDEAD
     BANSHEE =         208, "Banshee", Wc3Race.UNDEAD
-    FROST_WYRM =      209, "Frost Wyrm", Wc3Race.UNDEAD
+    SHADE =           209, "Acolyte", Wc3Race.UNDEAD
+    FROST_WYRM =      210, "Frost Wyrm", Wc3Race.UNDEAD
 
     # Undead - Buildings
-    SPIRIT_TOWER =   210, "Spirit Tower", Wc3Race.UNDEAD
-    NERUBIAN_TOWER = 211, "Nerubian Tower", Wc3Race.UNDEAD
-    TOMB_OF_RELICS = 212, "Tomb of Relics", Wc3Race.UNDEAD
+    SPIRIT_TOWER =   211, "Spirit Tower", Wc3Race.UNDEAD
+    NERUBIAN_TOWER = 212, "Nerubian Tower", Wc3Race.UNDEAD
 
     # Undead - Heroes
     UNDEAD_ARTHAS_LEVEL = 1006, "Undead Arthas Level", Wc3Race.UNDEAD, 8
@@ -233,7 +231,6 @@ class Wc3Item(enum.Enum):
 
     # Night Elf - Buildings
     ANCIENT_PROTECTOR =  311, "Ancient Protector", Wc3Race.NIGHT_ELF
-    ANCIENT_OF_WONDERS = 312, "Ancient of Wonders", Wc3Race.NIGHT_ELF
 
     # Night Elf - Heroes
     TYRANDE_LEVEL = 1012, "Tyrande Level", Wc3Race.NIGHT_ELF, 8
@@ -246,7 +243,7 @@ class Wc3Item(enum.Enum):
     ARCHER_MARKSMANSHIP =                  314, "Marksmanship (Archer)", Wc3Race.NIGHT_ELF
     HUNTRESS_SENTINEL =                    315, "Sentinel (Huntress)", Wc3Race.NIGHT_ELF
     HUNTRESS_MOON_GLAIVE =                 316, "Moon Glaive (Huntress)", Wc3Race.NIGHT_ELF
-    GLAIVE_THROWERR_VORPAL_BLADES =        317, "Vorpal Blades (Glaive Thrower)", Wc3Race.NIGHT_ELF
+    GLAIVE_THROWER_VORPAL_BLADES =         317, "Vorpal Blades (Glaive Thrower)", Wc3Race.NIGHT_ELF
     DRYAD_ABOLISH_MAGIC =                  318, "Abolish Magic (Dryad)", Wc3Race.NIGHT_ELF
     DRUID_OF_THE_CLAW_MARK_OF_THE_CLAW =   319, "Mark of the Claw (Druid of the Claw)", Wc3Race.NIGHT_ELF
     MOUNTAIN_GIANT_RESISTANT_SKIN =        320, "Resistant Skin (Mountain Giant)", Wc3Race.NIGHT_ELF
@@ -284,7 +281,7 @@ class Wc3Item(enum.Enum):
     NELF_STAFF_OF_PRESERVATION = 343, "Staff of Preservation (Ancient of Wonders)", Wc3Race.NIGHT_ELF
 
     # Blood Elf - Units
-    BLOOD_ELF_ENGINEER =  400, "Blood Elf Engineer", Wc3Race.NAGA
+    BLOOD_ELF_WORKER =  400, "Blood Elf Worker", Wc3Race.NAGA
     BLOOD_ELF_SWORDSMAN = 401, "Blood Elf Swordsman", Wc3Race.NAGA
     BLOOD_ELF_ARCHER =    402, "Blood Elf Archer", Wc3Race.NAGA
 
@@ -323,30 +320,30 @@ class Wc3Item(enum.Enum):
     # Mercenaries
 
     # Items
-    RING_OF_PROTECTION_1 =         2000, "Ring of Protection +1", Wc3Race.NONE, 1
-    TOME_OF_STRENGTH =             2001, "Tome of Strength", Wc3Race.NONE, 1
-    CLAWS_OF_ATTACK_3 =            2002, "Claws of Attack +3", Wc3Race.NONE, 1
-    GAUNTLETS_OF_OGRE_STRENGTH_3 = 2003, "Gauntlets of Ogre Strength +3", Wc3Race.NONE, 3
-    BRACER_OF_AGILITY_1 =          2004, "Bracer of Agility +1", Wc3Race.NONE, 1
-    MAUL_OF_STRENGTH_1 =           2005, "Maul of Strength +1", Wc3Race.NONE, 1
-    MANTLE_OF_INTELLIGENCE_3 =     2006, "Mantle of Intelligence +3", Wc3Race.NONE, 1
-    RING_OF_PROTECTION_2 =         2007, "Ring of Protection +2", Wc3Race.NONE, 1
-    CLAWS_OF_ATTACK_6 =            2008, "Claws of Attack +6", Wc3Race.NONE, 1
-    RING_OF_SUPERIORITY =          2009, "Ring of Superiority", Wc3Race.NONE, 1
-    PERIAPT_OF_VITALITY =          2010, "Periapt of Vitality", Wc3Race.NONE, 2
-    MEDALLION_OF_COURAGE =         2011, "Medallion of Courage", Wc3Race.NONE, 1
-    BOOTS_OF_SPEED =               2012, "Boots of Speed", Wc3Race.NONE, 1
-    TOME_OF_STRENGTH_2 =           2013, "Tome of Strength +2", Wc3Race.NONE, 1
-    TALISMAN_OF_EVASION =          2014, "Talisman of Evasion", Wc3Race.NONE, 1
-    ORB_OF_FROST =                 2015, "Orb of Frost", Wc3Race.NONE, 1
-    MANUAL_OF_HEALTH =             2016, "Manual of Health", Wc3Race.NONE, 1
-    GOBLIN_NIGHT_SCOPE =           2017, "Goblin Night Scope", Wc3Race.NONE, 1
-    CLAWS_OF_ATTACK_12 =           2018, "Claws of Attack +12", Wc3Race.NONE, 1
-    SOBI_MASK =                    2019, "Sobi Mask", Wc3Race.NONE, 1
-    PENDANT_OF_MANA =              2020, "Pendant of Mana", Wc3Race.NONE, 1
-    RING_OF_REGENERATION =         2021, "Ring of Regeneration", Wc3Race.NONE, 1
-    RING_OF_PROTECTION_3 =         2022, "Ring of Protection +3", Wc3Race.NONE, 1
-    TOME_OF_AGILITY =              2023, "Tome of Agility", Wc3Race.NONE, 1
+    H_RING_OF_PROTECTION_1 =         2000, "Hu: Ring of Protection +1", Wc3Race.NONE, 1
+    H_TOME_OF_STRENGTH =             2001, "Hu: Tome of Strength", Wc3Race.NONE, 1
+    H_CLAWS_OF_ATTACK_3 =            2002, "Hu: Claws of Attack +3", Wc3Race.NONE, 1
+    H_GAUNTLETS_OF_OGRE_STRENGTH_3 = 2003, "Hu: Gauntlets of Ogre Strength +3", Wc3Race.NONE, 3
+    H_BRACER_OF_AGILITY_1 =          2004, "Hu: Bracer of Agility +1", Wc3Race.NONE, 1
+    H_MAUL_OF_STRENGTH_1 =           2005, "Hu: Maul of Strength +1", Wc3Race.NONE, 1
+    H_MANTLE_OF_INTELLIGENCE_3 =     2006, "Hu: Mantle of Intelligence +3", Wc3Race.NONE, 1
+    H_RING_OF_PROTECTION_2 =         2007, "Hu: Ring of Protection +2", Wc3Race.NONE, 1
+    H_CLAWS_OF_ATTACK_6 =            2008, "Hu: Claws of Attack +6", Wc3Race.NONE, 1
+    H_RING_OF_SUPERIORITY =          2009, "Hu: Ring of Superiority", Wc3Race.NONE, 1
+    H_PERIAPT_OF_VITALITY =          2010, "Hu: Periapt of Vitality", Wc3Race.NONE, 2
+    H_MEDALLION_OF_COURAGE =         2011, "Hu: Medallion of Courage", Wc3Race.NONE, 1
+    H_BOOTS_OF_SPEED =               2012, "Hu: Boots of Speed", Wc3Race.NONE, 1
+    H_TOME_OF_STRENGTH_2 =           2013, "Hu: Tome of Strength +2", Wc3Race.NONE, 1
+    H_TALISMAN_OF_EVASION =          2014, "Hu: Talisman of Evasion", Wc3Race.NONE, 1
+    H_ORB_OF_FROST =                 2015, "Hu: Orb of Frost", Wc3Race.NONE, 1
+    H_MANUAL_OF_HEALTH =             2016, "Hu: Manual of Health", Wc3Race.NONE, 1
+    H_GOBLIN_NIGHT_SCOPE =           2017, "Hu: Goblin Night Scope", Wc3Race.NONE, 1
+    H_CLAWS_OF_ATTACK_12 =           2018, "Hu: Claws of Attack +12", Wc3Race.NONE, 1
+    H_SOBI_MASK =                    2019, "Hu: Sobi Mask", Wc3Race.NONE, 1
+    H_PENDANT_OF_MANA =              2020, "Hu: Pendant of Mana", Wc3Race.NONE, 1
+    H_RING_OF_REGENERATION =         2021, "Hu: Ring of Regeneration", Wc3Race.NONE, 1
+    H_RING_OF_PROTECTION_3 =         2022, "Hu: Ring of Protection +3", Wc3Race.NONE, 1
+    H_TOME_OF_AGILITY =              2023, "Hu: Tome of Agility", Wc3Race.NONE, 1
 
 
 item_name_to_data: dict[str, Wc3Item] = {}

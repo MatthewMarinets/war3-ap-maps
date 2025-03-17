@@ -225,6 +225,8 @@ class Wc3Location(enum.Enum):
     NE7_VICTORY = 4700, "Victory", Wc3Mission.N7_TWILIGHT_OF_THE_GODS, Wc3LocationType.VICTORY
 
 
-location_name_to_id = {location.global_name(): location.id for location in Wc3Location}
-location_id_to_name = {location.id: location.global_name() for location in Wc3Location}
-
+location_name_to_id = {_location.global_name(): _location.id for _location in Wc3Location}
+location_id_to_name = {_location.id: _location.global_name() for _location in Wc3Location}
+MISSION_TO_LOCATIONS: dict[Wc3Mission, list[Wc3Location]] = {_mission: [] for _mission in Wc3Mission}
+for _location in Wc3Location:
+    MISSION_TO_LOCATIONS[_location.mission].append(_location)
