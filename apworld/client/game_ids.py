@@ -1,0 +1,541 @@
+"""
+Converts between item names and in-game entity IDs
+"""
+
+import enum
+from ..items import Wc3Item
+
+
+class Tech(enum.StrEnum):
+    # Human
+    TOWN_HALL = 'htow'
+    KEEP = 'hkee'
+    CASTLE = 'hcas'
+    FARM = 'hhou'
+    ALTAR_OF_KINGS = 'halt'
+    HU_BARRACKS = 'hbar'
+    LUMBER_MILL = 'hlum'
+    BLACKSMITH = 'hbla'
+    WORKSHOP = 'harm'
+    ARCANE_SANCTUM = 'hars'
+    GRYPHON_AVIARY = 'hgra'
+    SCOUT_TOWER = 'hwtw'
+    ARCANE_VAULT = 'hvlt'
+
+    GUARD_TOWER = 'hgtw'
+    CANNON_TOWER = 'hctw'
+    ARCANE_TOWER = 'hatw'
+    
+    PEASANT = 'hpea'
+    FOOTMAN = 'hfoo'
+    KNIGHT = 'hkni'
+    RIFLEMAN = 'hrif'
+    MORTAR_TEAM = 'hmtm'
+    FLYING_MACHINE = 'hgyr'
+    GRYPHON_RIDER = 'hgry'
+    PRIEST = 'hmpr'
+    SORCERESS = 'hsor'
+    SIEGE_ENGINE = 'hmtt'
+    SPELL_BREAKER = 'hspt'
+    DRAGONHAWK_RIDER = 'hdhw'
+    
+    HUMAN_BACKPACK = 'Rhpm'
+    HUMAN_MAGIC_SENTRY = 'Rhse'
+    HUMAN_LUMBER_HARVESTING = 'Rhlh'
+    UPGRADE_HUMAN_MASONRY = 'Rhac'
+    UPGRADE_HUMAN_FORGED_SWORDS = 'Rhme'
+    UPGRADE_HUMAN_GUNPOWDER = 'Rhra'
+    UPGRADE_HUMAN_PLATING = 'Rhar'
+    UPGRADE_HUMAN_LEATHER_ARMOR = 'Rhla'
+    FOOTMAN_DEFEND = 'Rhde'
+    RIFLEMAN_LONG_RIFLES = 'Rhri'
+    KNIGHT_ANIMAL_WAR_TRAINING = 'Rhan'
+    PRIEST_TRAINING = 'Rhpt'
+    SORCERESS_TRAINING = 'Rhst'
+    SPELL_BREAKER_CONTROL_MAGIC = 'Rhss'
+    MORTAR_TEAM_FLARE = 'Rhfl'
+    MORTAR_TEAM_FRAGMENTATION_SHARDS = 'Rhfs'
+    FLYING_MACHINE_FLAK_CANNON = 'Rhfc'
+    FLYING_MACHINE_BOMBS = 'Rhgb'
+    SIEGE_ENGINE_BARRAGE = 'Rhrt'
+    GRYPHON_STORM_HAMMERS = 'Rhhb'
+    DRAGONHAWK_RIDER_CLOUD = 'Rhcd'
+
+    # Orc
+    GREAT_HALL = 'ogre'
+    STRONGHOLD = 'ostr'
+    FORTRESS = 'ofrt'
+    ALTAR_OF_STORMS = 'oalt'
+    ORC_BARRACKS = 'obar'
+    WAR_MILL = 'ofor'
+    TAUREN_TOTEM = 'otto'
+    SPIRIT_LODGE = 'osld'
+    BEASTIARY = 'obea'
+    ORC_BURROW = 'otrb'
+    VOODOO_LOUNGE = 'ovln'
+
+    WATCH_TOWER = 'owtw'
+
+    PEON = 'opeo'
+    GRUNT = 'ogru'
+    TROLL_HEADHUNTER = 'ohun'
+    DEMOLISHER = 'ocat'
+    RAIDER = 'orai'
+    KODO_BEAST = 'okod'
+    WIND_RIDER = 'owyv'
+    TROLL_BATRIDER = 'otbr'
+    TROLL_WITCH_DOCTOR = 'odoc'
+    SHAMAN = 'oshm'
+    SPIRIT_WALKER = 'ospw'
+    TAUREN = 'otau'
+
+    ORC_BACKPACK = 'Ropm'
+    ORC_PILLAGE = 'Ropg'
+    ORC_REINFORCED_DEFENSES = 'Rorb'
+    ORC_SPIKED_BARRICADES = 'Rosp'
+    UPGRADE_ORC_ARMOR = 'Roar'
+    UPGRADE_ORC_MELEE_WEAPONS = 'Rome'
+    UPGRADE_ORC_RANGED_WEAPONS = 'Rora'
+    GRUNT_BERSERKER_STRENGTH = 'Robs'
+    HEADHUNTER_BERSERKER = 'Robk'
+    HEADHUNTER_TROLL_REGENERATION = 'Rotr'
+    DEMOLISHER_BURNING_OIL = 'Robf'
+    SHAMAN_TRAINING = 'Rost'
+    WITCH_DOCTOR_TRAINING = 'Rowd'
+    SPIRIT_WALKER_TRAINING = 'Rowt'
+    RAIDER_ENSNARE = 'Roen'
+    KODO_BEAST_WAR_DRUMS = 'Rwdm'
+    WIND_RIDER_ENVENOMED_SPEARS = 'Rovs'
+    BATRIDER_LIQUID_FIRE = 'Rolf'
+    TAUREN_PULVERIZE = 'Rows'
+
+    # Undead
+    NECROPOLIS = 'unpl'
+    HALLS_OF_THE_DEAD = 'unp1'
+    BLACK_CITADEL = 'unp2'
+    ZIGGURAT = 'uzig'
+    ALTAR_OF_DARKNESS = 'uaod'
+    CRPYT = 'usep'
+    SACRIFICAL_PIT = 'usap'
+    GRAVEYARD = 'ugrv'
+    SLAUGHTERHOUSE = 'uslh'
+    TEMPLE_OF_THE_DAMNED = 'utod'
+    BONEYARD = 'ubon'
+    HAUNTED_GOLD_MINE = 'ugol'
+    TOMB_OF_RELICS = 'utom'
+
+    SPIRIT_TOWER = 'uzg1'
+    NERUBIAN_TOWER = 'uzg2'
+
+    ACOLYTE = 'uaco'
+    SHADE = 'ushd'
+    GHOUL = 'usho'
+    CRYPT_FIEND = 'ucry'
+    GARGOYLE = 'ugar'
+    MEAT_WAGON = 'umtw'
+    ABOMINATION = 'uabo'
+    OBSIDIAN_STATUE = 'uobs'
+    BANSHEE = 'uban'
+    NECROMANCER = 'unec'
+    FROST_WYRM = 'ufro'
+
+    UNDEAD_BACKPACK = 'Rupm'
+    UNDEAD_CREATURE_STRENGTH = 'Rura'
+    UNDEAD_CREATURE_CARAPACE = 'Rucr'
+    UNDEAD_UNHOLY_ARMOR = 'Ruar'
+    UNDEAD_UNHOLY_STRENGTH = 'Rume'
+    GHOUL_CANNIBALIZE = 'Ruac'
+    GHOUL_FRENZY = 'Rugf'
+    CRYPT_FIEND_WEB = 'Ruwb'
+    CRYPT_FIEND_BURROW = 'Rubu'
+    GARGOYLE_STONE_FORM = 'Rusf'
+    BANSHEE_TRAINING = 'Ruba'
+    NECROMANCER_TRAINING = 'Rune'
+    NECROMANCER_SKELETAL_LONGEVITY = 'Rusl'
+    NECROMANCER_SKELETAL_MASTERY = 'Rusm'
+    MEAT_WAGON_DISEASE_CLOUD = 'Rupc'
+    MEAT_WAGON_EXHUME_CORPSES = 'Ruex'
+    OBSIDIAN_STATUE_DESTROYER_FORM = 'Rusp'
+    FROST_WYRM_FREEZING_BREATH = 'Rufb'
+
+    # Night Elf
+    TREE_OF_LIFE = 'etol'
+    TREE_OF_AGES = 'etoa'
+    TREE_OF_ETERNITY = 'etoe'
+    MOON_WELL = 'emow'
+    ALTAR_OF_ELDERS = 'eate'
+    ANCIENT_OF_WAR = 'eaom'
+    ANCIENT_OF_LORE = 'eaoe'
+    ANCIENT_OF_WIND = 'eaow'
+    HUNTERS_HALL = 'edob'
+    CHIMAERA_ROOST = 'edos'
+    ANCIENT_OF_WONDERS = 'eden'
+
+    ANCIENT_PROTECTOR = 'etrp'
+
+    WISP = 'ewsp'
+    ARCHER = 'earc'
+    HUNTRESS = 'esen'
+    GLAIVE_THROWER = 'ebal'
+    DRYAD = 'edry'
+    DRUID_OF_THE_CLAW = 'edoc'
+    MOUNTAIN_GIANT = 'emtg'
+    DRUID_OF_THE_TALON = 'edot'
+    HIPPOGRYPH = 'ehip'
+    FAERIE_DRAGON = 'efdr'
+    CHIMAERA = 'echm'
+
+    NELF_BACKPACK = 'Repm'
+    NELF_NATURES_BLESSING = 'Renb'
+    NELF_ULTRAVISION = 'Reuv'
+    NELF_WELLSPRING = 'Rews'
+    NELF_MOON_ARMOR = 'Rema'
+    NELF_MOON_HIDES = 'Rerh'
+    NELF_STRENGTH_OF_THE_MOON = 'Resm'
+    NELF_STRENGTH_OF_THE_WILD = 'Resw'
+    ARCHER_IMPROVED_BOWS = 'Reib'
+    ARCHER_MARKSMANSHIP = 'Remk'
+    HUNTRESS_SENTINEL = 'Resc'
+    HUNTRESS_MOON_GLAIVE = 'Remg'
+    GLAIVE_THROWER_VORPAL_BLADES = 'Repb'
+    DRYAD_ABOLISH_MAGIC = 'Resi'
+    MOUNTAIN_GIANT_HARDENED_SKIN = 'Rehs'
+    MOUNTAIN_GIANT_RESISTANT_SKIN = 'Rers'
+    HIPPOGRYPH_TAMING = 'Reht'
+    DRUID_OF_THE_CLAW_TRAINING = 'Redc'
+    DRUID_OF_THE_TALON_TRAINING = 'Redt'
+    DRUID_OF_THE_CLAW_MARK_OF_THE_CLAW = 'Reeb'
+    DRUID_OF_THE_TALON_MARK_OF_THE_TALON = 'Reec'
+    CHIMAERA_CORROSIVE_BREATH = 'Recb'
+
+    # Blood Elf / Naga
+    BLOOD_ELF_WORKER = 'nhew'
+    BLOOD_ELF_ARCHER = 'nhea'
+    BLOOD_ELF_SWORDSMAN = 'hhes'
+
+    TEMPLE_OF_THE_TIDES = 'nntt'
+    ALTAR_OF_THE_DEPTHS = 'nnad'
+    CORAL_BED = 'nnfm'
+    SHRINE_OF_AZSHARA = 'nnsa'
+    SPAWNING_GROUNDS = 'nnsg'
+
+    TIDAL_GUARDIAN = 'nntg'
+
+    MUR_GUL_SLAVE = 'nmpe'
+    MUR_GUL_REAVER = 'nnmg'
+    NAGA_MYRMIDON = 'nmyr'
+    SNAP_DRAGON = 'nsnp'
+    DRAGON_TURTLE = 'nhyc'
+    NAGA_SIREN = 'nnsw'
+    COUATL = 'nwgs'
+    NAGA_ROYAL_GUARD = 'nnrg'
+
+    COUATL_ABOLISH_MAGIC = 'Rnsi'
+    NAGA_BLADES = 'Rnat'
+    NAGA_SCALES = 'Rnam'
+    NAGA_MYRMIDON_ENSNARE = 'Rnen'
+    NAGA_SIREN_TRAINING = 'Rnsw'
+    NAGA_SUBMERGE = 'Rnsb'
+
+    # Neutral
+    GOBLIN_ZEPPELIN = 'nzep'
+    GOBLIN_SAPPER = 'ngsp'
+    GOBLIN_SHREDDER = 'ngir'
+
+    # Heroes
+    ARTHAS = 'Hart'
+    ARTHAS_FROSTMOURNE = 'Harf'
+    JAINA = 'Hjai'
+    MURADIN_BRONZEBEARD = 'Hmbr'
+    KAEL_THAS = 'Hkal'
+    # ANTONIDAS = 'Hant'
+    # LORD_GARITHOS = 'Hlgr'
+    # SYLVANAS_ELF = 'Hvwd'
+    # UTHER = 'Huth'
+
+    THRALL = 'Othr'
+    CAIRNE_BLOODHOOF = 'Ocbh'
+    GROM_HELLSCREAM = 'Ogrh'
+    # FEL_GROM_HELLSCREM = 'Opgh'
+    # REXXAR = 'Orex'
+    # ROKHAN = 'Orkn'
+    # CHEN_STORMSTOUT = 'Nsjs'
+    # SAMURO = 'Osam'
+
+    ARTHAS_EVIL = 'Uear'
+    KEL_THUZAD = 'Uktl'
+    SYLVANAS = 'Usyl'
+    VARIMATHRAS = 'Uvar'
+    ANUB_ARAK = 'Uanb'
+    # MAL_GANIS = 'Umal'
+    # TICHONDRIUS = 'Utic'
+    # MANNOROTH = 'Nman'
+    # DETHEROC = 'Udth'
+    # BALNAZZAR = 'Ubal'
+
+    TYRANDE = 'Etyr'
+    FURION = 'Efur'
+    MALFURION = 'Emfr'
+    ILLIDAN = 'Eill'
+    ILLIDAN_EVIL = 'Eevi'
+    MAIEV = 'Ewrd'
+    # CENARIUS = 'Ecen'
+
+    LADY_VASHJ = 'Hvsh'
+    AKAMA = 'Naka'
+
+    # Unused
+    HIGH_ELVEN_BARRACKS = 'nheb'
+    ARCANE_OBSERVATORY = 'haro'
+    CAPTAIN = 'hcth'
+
+    PIG_FARM = 'npgf'
+    DRAGON_ROOST = 'ndrb'
+    SPIRIT_WALKER_ETHEREAL = 'ospm'
+    TROLL_BERSERKER = 'otbk'
+    WARLOCK = 'nw2w'
+    FEL_ORC_BURROW = 'ocbw'
+    FEL_ORC_WARLOCK = 'nchw'
+    FEL_ORC_GRUNT = 'nchg'
+    FEL_ORC_RAIDER = 'nchr'
+    FEL_ORC_KODO_BEAST = 'nckb'
+    FEL_ORC_PEON = 'ncpn'
+
+    DEMON_GATE = 'ndmg'
+    DESTROYER = 'ubsp'
+    ZOMBIE = 'nzom'
+    SKY_BARGE = 'uarb'
+
+    CORRUPTED_TREE_OF_LIFE = 'nctl'
+    CORRUPTED_TREE_OF_AGES = 'ncta'
+    CORRUPTED_TREE_OF_ETERNITY = 'ncte'
+    CORRUPTED_ANCIENT_PROTECTOR = 'ncap'
+    CORRUPTED_ANCIENT_OF_WAR = 'ncaw'
+    HIPPOGRYPH_RIDER = 'ehpr'
+    TREANT = 'efon'
+    RUNNER = 'enec'
+    SENTRY = 'nwat'
+    NAISHA = 'ensh'
+    SHANDRIS = 'eshd'
+
+    HU_SHIPYARD = 'hshy'
+    HU_TRANSPORT_SHIP = 'hbot'
+    HU_FRIGATE = 'hdes'
+    HU_BATTLESHIP = 'hbsh'
+    ORC_SHIPYARD = 'oshy'
+    ORC_TRANSPORT_SHIP = 'obot'
+    ORC_FRIGATE = 'odes'
+    ORC_JUGGERNAUT = 'ojgn'
+    UNDEAD_SHIPYARD = 'ushp'
+    UNDEAD_TRANSPORT_SHIP = 'ubot'
+    UNDEAD_FRIGATE = 'udes'
+    UNDEAD_BATTLESHIP = 'uubs'
+    NELF_SHIPYARD = 'eshy'
+    NELF_TRANSPORT_SHIP = 'etrs'
+    NELF_FRIGATE = 'edes'
+    NELF_BATTLESHIP = 'ebsg'
+
+    ZERGLING = 'zzrg'
+    HYDRALISK = 'zhyd'
+    MARINE = 'zmar'
+    SPACE_FEL_ORC = 'zcso'
+
+    # Tower Defense
+    ENGINEER = 'nbee'
+    BOULDER_TOWER = 'nbt1'
+    ENERGY_TOWER = 'net1'
+    FLAME_TOWER = 'nft1'
+    COLD_TOWER = 'ndt1'
+    DEATH_TOWER = 'ntt1'
+    ADVANCED_BOULDER_TOWER = 'nbt2'
+    ADVANCED_ENERGY_TOWER = 'net2'
+    ADVANCED_FLAME_TOWER = 'nft2'
+    ADVANCED_COLD_TOWER = 'ndt2'
+    ADVANCED_DEATH_TOWER = 'ntx2'
+
+
+ITEM_TO_GAME_ID: dict[Wc3Item, Tech] = {}
+for tech in Tech:
+    if tech._name_ in Wc3Item._member_names_:
+        ITEM_TO_GAME_ID[Wc3Item[tech._name_]] = tech
+
+
+TECH_REQUIREMENTS: dict[Tech, list[Tech]] = {
+    Tech.KEEP: [Tech.TOWN_HALL],
+    Tech.CASTLE: [Tech.KEEP, Tech.ALTAR_OF_KINGS],
+    Tech.BLACKSMITH: [Tech.TOWN_HALL],
+    Tech.ARCANE_SANCTUM: [Tech.KEEP],
+    Tech.WORKSHOP: [Tech.KEEP],
+    Tech.GRYPHON_AVIARY: [Tech.CASTLE, Tech.LUMBER_MILL],
+    Tech.PEASANT: [Tech.TOWN_HALL],
+    Tech.FOOTMAN: [Tech.HU_BARRACKS],
+    Tech.RIFLEMAN: [Tech.HU_BARRACKS, Tech.BLACKSMITH],
+    Tech.KNIGHT: [Tech.HU_BARRACKS, Tech.LUMBER_MILL, Tech.BLACKSMITH, Tech.CASTLE],
+    Tech.PRIEST: [Tech.ARCANE_SANCTUM],
+    Tech.SORCERESS: [Tech.ARCANE_SANCTUM],
+    Tech.SPELL_BREAKER: [Tech.ARCANE_SANCTUM, Tech.ARCANE_VAULT],
+    Tech.MORTAR_TEAM: [Tech.WORKSHOP],
+    Tech.FLYING_MACHINE: [Tech.WORKSHOP],
+    Tech.SIEGE_ENGINE: [Tech.WORKSHOP, Tech.CASTLE],
+    Tech.GRYPHON_RIDER: [Tech.GRYPHON_AVIARY],
+    Tech.DRAGONHAWK_RIDER: [Tech.GRYPHON_AVIARY, Tech.ARCANE_VAULT],
+    Tech.ARCANE_TOWER: [Tech.SCOUT_TOWER],
+    Tech.GUARD_TOWER: [Tech.SCOUT_TOWER, Tech.LUMBER_MILL],
+    Tech.CANNON_TOWER: [Tech.SCOUT_TOWER, Tech.WORKSHOP],
+
+    Tech.HUMAN_BACKPACK: [Tech.TOWN_HALL, Tech.ARCANE_VAULT],
+    Tech.HUMAN_MAGIC_SENTRY: [Tech.ARCANE_SANCTUM],
+    Tech.HUMAN_LUMBER_HARVESTING: [Tech.LUMBER_MILL, Tech.KEEP],  # Level 2: castle
+    Tech.UPGRADE_HUMAN_MASONRY: [Tech.LUMBER_MILL],  # Levels: Keep, Castle
+    Tech.UPGRADE_HUMAN_FORGED_SWORDS: [Tech.BLACKSMITH],  # Levels: Keep, Castle
+    Tech.UPGRADE_HUMAN_GUNPOWDER: [Tech.BLACKSMITH],  # Levels: Keep, Castle
+    Tech.UPGRADE_HUMAN_PLATING: [Tech.BLACKSMITH],  # Levels: Keep, Castle
+    Tech.UPGRADE_HUMAN_LEATHER_ARMOR: [Tech.BLACKSMITH],  # Levels: Keep, Castle
+    Tech.FOOTMAN_DEFEND: [Tech.HU_BARRACKS],
+    Tech.RIFLEMAN_LONG_RIFLES: [Tech.HU_BARRACKS, Tech.WORKSHOP],
+    Tech.KNIGHT_ANIMAL_WAR_TRAINING: [Tech.BARRACKS, Tech.LUMBER_MILL, Tech.BLACKSMITH, Tech.CASTLE],
+    Tech.PRIEST_TRAINING: [Tech.ARCANE_SANCTUM],  # Level 2: castle
+    Tech.SORCERESS_TRAINING: [Tech.ARCANE_SANCTUM],  # Level 2: castle
+    Tech.SPELL_BREAKER_CONTROL_MAGIC: [Tech.ARCANE_SANCTUM, Tech.CASTLE, Tech.ARCANE_VAULT],
+    Tech.MORTAR_TEAM_FLARE: [Tech.WORKSHOP, Tech.KEEP],
+    Tech.MORTAR_TEAM_FRAGMENTATION_SHARDS: [Tech.WORKSHOP, Tech.CASTLE],
+    Tech.FLYING_MACHINE_FLAK_CANNON: [Tech.WORKSHOP, Tech.CASTLE],
+    Tech.FLYING_MACHINE_BOMBS: [Tech.WORKSHOP, Tech.CASTLE],
+    Tech.SIEGE_ENGINE_BARRAGE: [Tech.WORKSHOP, Tech.CASTLE],
+    Tech.GRYPHON_STORM_HAMMERS: [Tech.GRYPHON_AVIARY],
+    Tech.DRAGONHAWK_RIDER_CLOUD: [Tech.GRYPHON_AVIARY, Tech.ARCANE_VAULT],
+
+    Tech.STRONGHOLD: [Tech.GREAT_HALL],
+    Tech.FORTRESS: [Tech.STRONGHOLD, Tech.ALTAR_OF_STORMS],
+    Tech.SPIRIT_LODGE: [Tech.STRONGHOLD],
+    Tech.BEASTIARY: [Tech.STRONGHOLD],
+    Tech.WATCH_TOWER: [Tech.WAR_MILL],
+    Tech.TAUREN_TOTEM: [Tech.FORTRESS, Tech.WAR_MILL],
+    Tech.PEON: [Tech.GREAT_HALL],
+    Tech.GRUNT: [Tech.ORC_BARRACKS],
+    Tech.HEADHUNTER: [Tech.ORC_BARRACKS, Tech.WAR_MILL],
+    Tech.DEMOLISHER: [Tech.ORC_BARRACKS, Tech.STRONGHOLD, Tech.WAR_MILL],
+    Tech.RAIDER: [Tech.BEASTIARY],
+    Tech.KODO_BEAST: [Tech.BEASTIARY, Tech.WAR_MILL],
+    Tech.WIND_RIDER: [Tech.BEASTIARY, Tech.FORTRESS],
+    Tech.TROLL_BATRIDER: [Tech.BEASTIARY, Tech.FORTRESS, Tech.VOODOO_LOUNGE],
+    Tech.TROLL_WITCH_DOCTOR: [Tech.SPIRIT_LODGE],
+    Tech.SHAMAN: [Tech.SPIRIT_LODGE],
+    Tech.SPIRIT_WALKER: [Tech.SPIRIT_LODGE],
+    Tech.TAUREN: [Tech.TAUREN_TOTEM],
+
+    Tech.ORC_BACKPACK: [Tech.GREAT_HALL, Tech.VOODOO_LOUNGE],
+    Tech.ORC_PILLAGE: [Tech.GREAT_HALL],
+    Tech.ORC_REINFORCED_DEFENSES: [Tech.WAR_MILL, Tech.FORTRESS],
+    Tech.ORC_SPIKED_BARRICADES: [Tech.WAR_MILL],  # Level 2: Stronghold
+    Tech.UPGRADE_ORC_ARMOR: [Tech.WAR_MILL],  # Levels: Stronghold, Fortress
+    Tech.UPGRADE_ORC_MELEE_WEAPONS: [Tech.WAR_MILL],  # Levels: Stronghold, Fortress
+    Tech.UPGRADE_ORC_RANGED_WEAPONS: [Tech.WAR_MILL],  # Levels: Stronghold, Fortress
+    Tech.GRUNT_BERSERKER_STRENGTH: [Tech.ORC_BARRACKS, Tech.STRONGHOLD],
+    Tech.HEADHUNTER_BERSERKER: [Tech.ORC_BARRACKS, Tech.FORTRESS, Tech.WAR_MILL],
+    Tech.HEADHUNTER_TROLL_REGENERATION: [Tech.ORC_BARRACKS, Tech.STRONGHOLD, Tech.WAR_MILL],
+    Tech.DEMOLISHER_BURNING_OIL: [Tech.ORC_BARRACKS, Tech.FORTRESS],
+    Tech.SHAMAN_TRAINING: [Tech.SPIRIT_LODGE],  # Level 2: Fortress
+    Tech.WITCH_DOCTOR_TRAINING: [Tech.SPIRIT_LODGE],  # Level 2: Fortress
+    Tech.SPIRIT_WALKER_TRAINING: [Tech.SPIRIT_LODGE],  # Level 2: Fortress
+    Tech.RAIDER_ENSNARE: [Tech.BEASTIARY],
+    Tech.KODO_BEAST_WAR_DRUMS: [Tech.BEASTIARY, Tech.FORTRESS, Tech.WAR_MILL],
+    Tech.WIND_RIDER_ENVENOMED_SPEARS: [Tech.BEASTIARY, Tech.FORTRESS],
+    Tech.BATRIDER_LIQUID_FIRE: [Tech.BEASTIARY, Tech.FORTRESS, Tech.VOODOO_LOUNGE],
+    Tech.TAUREN_PULVERIZE: [Tech.TAUREN_TOTEM],
+
+    Tech.HALLS_OF_THE_DEAD: [Tech.NECROPOLIS],
+    Tech.BLACK_CITADEL: [Tech.HALLS_OF_THE_DEAD, Tech.ALTAR_OF_DARKNESS],
+    Tech.SPIRIT_TOWER: [Tech.ZIGGURAT, Tech.GRAVEYARD],
+    Tech.NERUBIAN_TOWER: [Tech.ZIGGURAT],
+    Tech.SLAUGHTERHOUSE: [Tech.HALLS_OF_THE_DEAD, Tech.GRAVEYARD],
+    Tech.TEMPLE_OF_THE_DAMNED: [Tech.HALLS_OF_THE_DEAD, Tech.GRAVEYARD],
+    Tech.SACRIFICAL_PIT: [Tech.HALLS_OF_THE_DEAD],
+    Tech.BONEYARD: [Tech.BLACK_CITADEL, Tech.SACRIFICAL_PIT],
+    Tech.ACOLYTE: [Tech.NECROPOLIS],
+    Tech.SHADE: [Tech.SACRIFICAL_PIT],
+    Tech.GHOUL: [Tech.CRPYT],
+    Tech.CRYPT_FIEND: [Tech.CRPYT, Tech.GRAVEYARD],
+    Tech.GARGOYLE: [Tech.CRPYT, Tech.BLACK_CITADEL, Tech.GRAVEYARD],
+    Tech.MEAT_WAGON: [Tech.SLAUGHTERHOUSE],
+    Tech.ABOMINATION: [Tech.SLAUGHTERHOUSE, Tech.BLACK_CITADEL],
+    Tech.OBSIDIAN_STATUE: [Tech.SLAUGHTERHOUSE, Tech.TOMB_OF_RELICS],
+    Tech.BANSHEE: [Tech.TEMPLE_OF_THE_DAMNED],
+    Tech.NECROMANCER: [Tech.TEMPLE_OF_THE_DAMNED],
+    Tech.FROST_WYRM: [Tech.BONEYARD],
+
+    Tech.UNDEAD_BACKPACK: [Tech.NECROPOLIS, Tech.TOMB_OF_RELICS],
+    Tech.UNDEAD_CREATURE_STRENGTH: [Tech.GRAVEYARD],  # Levels: T2, T3
+    Tech.UNDEAD_CREATURE_CARAPACE: [Tech.GRAVEYARD],  # Levels: T2, T3
+    Tech.UNDEAD_UNHOLY_ARMOR: [Tech.GRAVEYARD],  # Levels: T2, T3
+    Tech.UNDEAD_UNHOLY_STRENGTH: [Tech.GRAVEYARD],  # Levels: T2, T3
+    Tech.GHOUL_CANNIBALIZE: [Tech.CRPYT],
+    Tech.GHOUL_FRENZY: [Tech.CRPYT, Tech.BLACK_CITADEL, Tech.GRAVEYARD],
+    Tech.CRYPT_FIEND_WEB: [Tech.CRPYT, Tech.GRAVEYARD, Tech.HALLS_OF_THE_DEAD],
+    Tech.CRYPT_FIEND_BURROW: [Tech.CRPYT, Tech.GRAVEYARD, Tech.HALLS_OF_THE_DEAD],
+    Tech.GARGOYLE_STONE_FORM: [Tech.CRPYT, Tech.BLACK_CITADEL, Tech.GRAVEYARD],
+    Tech.BANSHEE_TRAINING: [Tech.TEMPLE_OF_THE_DAMNED],  # Level 2: T3
+    Tech.NECROMANCER_TRAINING: [Tech.TEMPLE_OF_THE_DAMNED],  # Level 2: T3
+    Tech.NECROMANCER_SKELETAL_LONGEVITY: [Tech.TEMPLE_OF_THE_DAMNED, Tech.BLACK_CITADEL],
+    Tech.NECROMANCER_SKELETAL_MASTERY: [Tech.TEMPLE_OF_THE_DAMNED],
+    Tech.MEAT_WAGON_DISEASE_CLOUD: [Tech.SLAUGHTERHOUSE, Tech.BLACK_CITADEL],
+    Tech.MEAT_WAGON_EXHUME_CORPSES: [Tech.SLAUGHTERHOUSE, Tech.BLACK_CITADEL],
+    Tech.OBSIDIAN_STATUE_DESTROYER_FORM: [Tech.SLAUGHTERHOUSE, Tech.BLACK_CITADEL, Tech.TOMB_OF_RELICS],
+    Tech.FROST_WYRM_FREEZING_BREATH: [Tech.BONEYARD],
+
+    Tech.TREE_OF_AGES: [Tech.TREE_OF_LIFE],
+    Tech.TREE_OF_ETERNITY: [Tech.TREE_OF_AGES, Tech.ALTAR_OF_ELDERS],
+    Tech.ANCIENT_OF_LORE: [Tech.TREE_OF_AGES, Tech.HUNTERS_HALL],
+    Tech.ANCIENT_OF_WIND: [Tech.TREE_OF_AGES],
+    Tech.HUNTERS_HALL: [Tech.TREE_OF_LIFE],
+    Tech.ANCIENT_PROTECTOR: [Tech.HUNTERS_HALL],
+    Tech.CHIMAERA: [Tech.TREE_OF_ETERNITY, Tech.ANCIENT_OF_WIND],
+    Tech.WISP: [Tech.TREE_OF_LIFE],
+    Tech.ARCHER: [Tech.ANCIENT_OF_WAR],
+    Tech.HUNTRESS: [Tech.ANCIENT_OF_WAR, Tech.HUNTERS_HALL],
+    Tech.GLAIVE_THROWER: [Tech.ANCIENT_OF_WAR, Tech.HUNTERS_HALL],
+    Tech.DRYAD: [Tech.ANCIENT_OF_LORE],
+    Tech.DRUID_OF_THE_CLAW: [Tech.ANCIENT_OF_LORE],
+    Tech.MOUNTAIN_GIANT: [Tech.ANCIENT_OF_LORE, Tech.ANCIENT_OF_WONDERS],
+    Tech.DRUID_OF_THE_TALON: [Tech.ANCIENT_OF_WIND],
+    Tech.HIPPOGRYPH: [Tech.ANCIENT_OF_WIND],
+    Tech.FAERIE_DRAGON: [Tech.ANCIENT_OF_WIND, Tech.ANCIENT_OF_WONDERS],
+    Tech.CHIMAERA: [Tech.CHIMAERA_ROOST],
+
+    Tech.NELF_BACKPACK: [Tech.TREE_OF_LIFE, Tech.ANCIENT_OF_WONDERS],
+    Tech.NELF_NATURES_BLESSING: [Tech.TREE_OF_AGES],
+    Tech.NELF_ULTRAVISION: [Tech.HUNTERS_HALL],
+    Tech.NELF_WELLSPRING: [Tech.HUNTERS_HALL, Tech.TREE_OF_ETERNITY],
+    Tech.NELF_MOON_ARMOR: [Tech.HUNTERS_HALL],  # Levels: T2, T3
+    Tech.NELF_MOON_HIDES: [Tech.HUNTERS_HALL],  # Levels: T2, T3
+    Tech.NELF_STRENGTH_OF_THE_MOON: [Tech.HUNTERS_HALL],  # Levels: T2, T3
+    Tech.NELF_STRENGTH_OF_THE_WILD: [Tech.HUNTERS_HALL],  # Levels: T2, T3
+    Tech.ARCHER_IMPROVED_BOWS: [Tech.ANCIENT_OF_WAR, Tech.TREE_OF_AGES],
+    Tech.ARCHER_MARKSMANSHIP: [Tech.ANCIENT_OF_WAR, Tech.TREE_OF_ETERNITY, Tech.HUNTERS_HALL],
+    Tech.HUNTRESS_SENTINEL: [Tech.ANCIENT_OF_WAR, Tech.TREE_OF_AGES, Tech.HUNTERS_HALL],
+    Tech.HUNTRESS_MOON_GLAIVE: [Tech.ANCIENT_OF_WAR, Tech.TREE_OF_ETERNITY, Tech.HUNTERS_HALL],
+    Tech.GLAIVE_THROWER_VORPAL_BLADES: [Tech.ANCIENT_OF_WAR, Tech.TREE_OF_ETERNITY, Tech.HUNTERS_HALL],
+    Tech.DRYAD_ABOLISH_MAGIC: [Tech.ANCIENT_OF_LORE],
+    Tech.MOUNTAIN_GIANT_HARDENED_SKIN: [Tech.ANCIENT_OF_LORE, Tech.TREE_OF_ETERNITY, Tech.ANCIENT_OF_WONDERS],
+    Tech.MOUNTAIN_GIANT_RESISTANT_SKIN: [Tech.ANCIENT_OF_LORE, Tech.TREE_OF_ETERNITY, Tech.ANCIENT_OF_WONDERS],
+    Tech.HIPPOGRYPH_TAMING: [Tech.ANCIENT_OF_WIND],
+    Tech.DRUID_OF_THE_CLAW_TRAINING: [Tech.ANCIENT_OF_LORE],  # Level 2: T3
+    Tech.DRUID_OF_THE_TALON_TRAINING: [Tech.ANCIENT_OF_WIND],  # Level 2: T3
+    Tech.DRUID_OF_THE_CLAW_MARK_OF_THE_CLAW: [Tech.ANCIENT_OF_LORE],
+    Tech.DRUID_OF_THE_TALON_MARK_OF_THE_TALON: [Tech.ANCIENT_OF_WIND],
+    Tech.CHIMAERA_CORROSIVE_BREATH: [Tech.CHIMAERA_ROOST],
+
+    Tech.MUR_GUL_SLAVE: [Tech.TEMPLE_OF_THE_TIDES],
+    Tech.MUR_GUL_REAVER: [Tech.TEMPLE_OF_THE_TIDES],
+    Tech.NAGA_MYRMIDON: [Tech.SPAWNING_GROUNDS],
+    Tech.SNAP_DRAGON: [Tech.SPAWNING_GROUNDS],
+    Tech.DRAGON_TURTLE: [Tech.SPAWNING_GROUNDS],
+    Tech.NAGA_SIREN: [Tech.SHRINE_OF_AZSHARA],
+    Tech.COUATL: [Tech.SHRINE_OF_AZSHARA],
+    Tech.BLOOD_ELF_SWORDSMAN: [Tech.HU_BARRACKS],
+    Tech.BLOOD_ELF_ARCHER: [Tech.HU_BARRACKS],
+
+    Tech.NAGA_MYRMIDON_ENSNARE: [Tech.SPAWNING_GROUNDS],
+    Tech.COUATL_ABOLISH_MAGIC: [Tech.SHRINE_OF_AZSHARA],
+    Tech.NAGA_SIREN_TRAINING: [Tech.SHRINE_OF_AZSHARA],
+}
