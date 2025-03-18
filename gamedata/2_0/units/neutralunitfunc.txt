@@ -1,0 +1,1230 @@
+// permits dependencies upon heroes
+[HERO]
+DependencyOr=Hamg,Hmkg,Hpal,Hran,Obla,Ofar,Osha,Otch,Eadr,Edem,Ekee,Emoo,Udea,Udre,Ulic
+
+// skeletal archer
+[nska]
+Missileart=Abilities\Weapons\Arrow\ArrowMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+
+// skeleton
+[nske]
+
+// skeletal archer (summoned)
+[nsca]
+Missileart=Abilities\Weapons\Arrow\ArrowMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+
+// skeleton (summoned)
+[nsce]
+
+// giant skeleton
+[nskg]
+
+// skeletal marksman
+[nskm]
+Missileart=Abilities\Weapons\Arrow\ArrowMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+
+// burning archer
+[nskf]
+Missileart=Abilities\Weapons\Arrow\ArrowMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+
+// wind serpent 1
+[nws1]
+Buttonpos=1,0
+Missileart=Abilities\Weapons\DragonHawkMissile\DragonHawkMissile.mdl
+Missilearc=0.15
+Missilespeed=1100
+Attachmentanimprops=medium
+
+// wind serpent 2
+[nws2]
+Buttonpos=1,0
+Missileart=Abilities\Weapons\DragonHawkMissile\DragonHawkMissile.mdl
+Missilearc=0.15
+Missilespeed=1100
+Attachmentanimprops=medium
+
+// bandit 1
+[nban]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// brigand
+[nbrg]
+Missileart=Abilities\Weapons\Banditmissile\Banditmissile.mdl
+Missilearc=0.15
+Missilespeed=900
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// bandit 2
+[nrog]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// bandit 3
+[nenf]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// bandit lord
+[nbld]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// assassin
+[nass]
+Missileart=Abilities\Weapons\Banditmissile\Banditmissile.mdl
+Missilearc=0.15
+Missilespeed=900
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// black dragon whelp
+[nbdr]
+Missileart=Abilities\Weapons\RedDragonBreath\RedDragonMissile.mdl
+Missilearc=0.00
+Missilespeed=900
+Attachmentanimprops=medium
+
+// black drake
+[nbdk]
+Missileart=Abilities\Weapons\FireballMissile\FireballMissile.mdl
+Missilearc=0.00
+Missilespeed=900
+Attachmentanimprops=medium
+
+// black dragon
+[nbwm]
+Attachmentanimprops=medium
+Missileart=Abilities\Weapons\RedDragonBreath\RedDragonMissile.mdl
+Missilearc=0.00
+
+// blue dragon whelp
+[nadw]
+Attachmentanimprops=medium
+Missileart=Abilities\Weapons\FrostWyrmMissile\FrostWyrmMissile.mdl
+Missilearc=0.1
+Missilespeed=800
+
+// blue drake
+[nadk]
+Attachmentanimprops=medium
+Missileart=Abilities\Weapons\FrostWyrmMissile\FrostWyrmMissile.mdl
+Missilearc=0.1
+Missilespeed=800
+
+// blue dragon
+[nadr]
+Attachmentanimprops=medium
+Missileart=Abilities\Weapons\FrostWyrmMissile\FrostWyrmMissile.mdl
+Missilearc=0.1
+Missilespeed=800
+
+// bronze dragon whelp
+[nbzw]
+Attachmentanimprops=medium
+Missileart=Abilities\Weapons\ChimaeraLightningMissile\ChimaeraLightningMissile.mdl
+Missilearc=0.00
+Missilespeed=1500
+
+// bronze drake
+[nbzk]
+Attachmentanimprops=medium
+Missileart=Abilities\Weapons\ChimaeraLightningMissile\ChimaeraLightningMissile.mdl
+Missilearc=0.00
+Missilespeed=1500
+
+// bronze dragon
+[nbzd]
+Attachmentanimprops=medium
+Missileart=Abilities\Weapons\ChimaeraLightningMissile\ChimaeraLightningMissile.mdl
+Missilearc=0.00
+Missilespeed=1500
+
+// green dragon whelp
+[ngrw]
+Attachmentanimprops=medium
+Missileart=Abilities\Weapons\GreenDragonMissile\GreenDragonMissile.mdl
+Missilearc=0.00
+Missilespeed=1500
+
+// green drake
+[ngdk]
+Attachmentanimprops=medium
+Missileart=Abilities\Weapons\GreenDragonMissile\GreenDragonMissile.mdl
+Missilearc=0.00
+Missilespeed=1500
+
+// green dragon
+[ngrd]
+Attachmentanimprops=medium
+Missileart=Abilities\Weapons\GreenDragonMissile\GreenDragonMissile.mdl
+Missilearc=0.00
+Missilespeed=1500
+
+// red dragon whelp
+[nrdk]
+Missileart=Abilities\Weapons\FireBallMissile\FireBallMissile.mdl
+Missilearc=0.00
+Missilespeed=900
+Attachmentanimprops=medium
+
+// red drake
+[nrdr]
+Missileart=Abilities\Weapons\RedDragonBreath\RedDragonMissile.mdl
+Missilearc=0.00
+Missilespeed=900
+Attachmentanimprops=medium
+
+// red dragon
+[nrwm]
+Attachmentanimprops=medium
+Missileart=Abilities\Weapons\RedDragonBreath\RedDragonMissile.mdl
+Missilearc=0.00
+Missilespeed=900
+
+// black dragon roost
+[ndrk]
+Sellunits=nbdr,nbdk,nbwm
+
+// blue dragon roost
+[ndru]
+Sellunits=nadw,nadk,nadr
+
+// bronze dragon roost
+[ndrz]
+Sellunits=nbzw,nbzk,nbzd
+
+// green dragon roost
+[ndrg]
+Sellunits=ngrw,ngdk,ngrd
+
+// red dragon roost
+[ndrr]
+Sellunits=nrdk,nrdr,nrwm
+
+// centaur archer
+[ncea]
+Buttonpos=0,0
+Missileart=Abilities\Weapons\Arrow\ArrowMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+Attachmentanimprops=medium
+
+// centaur impaler
+[ncim]
+Buttonpos=0,0
+Missileart=Abilities\Weapons\Arrow\ArrowMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+Attachmentanimprops=medium
+
+// centaur outrunner
+[ncen]
+Buttonpos=0,0
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+Attachmentanimprops=medium
+
+// centaur drudge
+[ncer]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+Attachmentanimprops=medium
+
+// centaur sorceror
+[ncks]
+Missileart=Abilities\Weapons\FireballMissile\FireballMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+Attachmentanimprops=medium
+
+// centaur khan
+[ncnk]
+Specialart=Objects\Spawnmodels\Orc\OrcLargeDeathExplode\OrcLargeDeathExplode.mdl
+Attachmentanimprops=medium
+
+// Dark Troll High Priest
+[ndth]
+Missileart=Abilities\Weapons\FireballMissile\FireballMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// Dark Troll Shadow Priest
+[ndtp]
+Missileart=Abilities\Weapons\FireballMissile\FireballMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// Dark troll
+[ndtr]
+Missileart=Abilities\Weapons\Axe\AxeMissile.mdl
+Missilearc=0.15
+Missilespeed=1200
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// dark troll berserker
+[ndtb]
+Missileart=Abilities\Weapons\Axe\AxeMissile.mdl
+Missilearc=0.15
+Missilespeed=1200
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// dark troll trapper
+[ndtt]
+Missileart=Abilities\Weapons\Axe\AxeMissile.mdl
+Missilearc=0.15
+Missilespeed=1200
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// dark troll warlord
+[ndtw]
+Missileart=Abilities\Weapons\Axe\AxeMissile.mdl
+Missilearc=0.15
+Missilespeed=1200
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// berserk elemental
+[nelb]
+Missileart=Abilities\Weapons\WaterElementalMissile\WaterElementalMissile.mdl
+Missilearc=0.15
+Missilespeed=1300
+Attachmentanimprops=medium
+
+// enraged elemental
+[nele]
+Missileart=Abilities\Weapons\WaterElementalMissile\WaterElementalMissile.mdl
+Missilearc=0.15
+Missilespeed=1300
+Attachmentanimprops=medium
+
+[nenc]
+Attachmentanimprops=medium
+
+[nenp]
+Attachmentanimprops=medium
+
+[nepl]
+Attachmentanimprops=medium
+
+// felhound
+[nfel]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+Attachmentanimprops=medium
+
+// Forest Troll High Priest
+[nfsh]
+Missileart=Abilities\Weapons\FireballMissile\FireballMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+Specialart=Objects\Spawnmodels\Orc\OrcLargeDeathExplode\OrcLargeDeathExplode.mdl
+
+// Forest Troll Shadow Priest
+[nfsp]
+Missileart=Abilities\Weapons\FireballMissile\FireballMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// forest troll 1
+[nftr]
+Missileart=Abilities\Weapons\Axe\AxeMissile.mdl
+Missilearc=0.15
+Missilespeed=1200
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// forest troll berserker
+[nftb]
+Missileart=Abilities\Weapons\Axe\AxeMissile.mdl
+Missilearc=0.15
+Missilespeed=1200
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// forest troll 3
+[nftt]
+Missileart=Abilities\Weapons\Axe\AxeMissile.mdl
+Missilearc=0.15
+Missilespeed=1200
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// forest troll king
+[nftk]
+Missileart=Abilities\Weapons\Axe\AxeMissile.mdl
+Missilearc=0.15
+Missilespeed=1200
+Specialart=Objects\Spawnmodels\Orc\OrcLargeDeathExplode\OrcLargeDeathExplode.mdl
+
+[nnom]
+
+// Goblin Laboratory
+[ngad]
+Sellunits=ngsp,nzep,ngir
+
+// goblin merchant
+[ngme]
+Sellitems=phea,pman,pinv,shea,spro,wneg,gemt,stwp
+
+// rock golem 1
+[ngrk]
+Attachmentanimprops=large
+
+// rock golem 2
+[ngst]
+Attachmentanimprops=large
+Missileart=Abilities\Weapons\AncientProtectorMissile\AncientProtectorMissile.mdl
+Missilearc=0.0
+Missilespeed=1000
+
+// rock golem 3
+[nggr]
+Attachmentanimprops=large
+Missileart=Abilities\Weapons\AncientProtectorMissile\AncientProtectorMissile.mdl
+Missilearc=0.0
+Missilespeed=1000
+
+// battle golem
+[narg]
+Attachmentanimprops=large
+
+// war golem
+[nwrg]
+Attachmentanimprops=large
+
+// siege golem
+[nsgg]
+Attachmentanimprops=large
+
+// goblin shredder
+[ngir]
+Attachmentanimprops=medium
+
+// Furbolg level 4
+[nfrl]
+Buttonpos=0,0
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+Attachmentanimprops=medium
+
+// Furbolg Tracker level 6
+[nfrb]
+Buttonpos=0,0
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+Attachmentanimprops=medium
+
+// Furbolg Champion level 7
+[nfrg]
+Buttonpos=0,0
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+Attachmentanimprops=medium
+
+// Furbolg Ancient level 9
+[nfra]
+Buttonpos=0,0
+Specialart=Objects\Spawnmodels\Orc\OrcLargeDeathExplode\OrcLargeDeathExplode.mdl
+Attachmentanimprops=medium
+
+// Furbolg Shaman level 4
+[nfrs]
+Buttonpos=0,0
+Missileart=Abilities\Weapons\FarseerMissile\FarseerMissile.mdl
+Missilearc=0.15
+Missilespeed=1200
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+Attachmentanimprops=medium
+
+// Furbolg Elder Shaman level 7
+[nfre]
+Buttonpos=0,0
+Missileart=Abilities\Weapons\FarseerMissile\FarseerMissile.mdl
+Missilearc=0.15
+Missilespeed=1200
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+Attachmentanimprops=medium
+
+// snowy furbolg level 5
+[nfrp]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+Attachmentanimprops=medium
+
+// ghost
+[ngh1]
+Missileart=Abilities\Weapons\BansheeMissile\BansheeMissile.mdl
+Missilearc=0.00
+Missilespeed=900
+
+// wraith
+[ngh2]
+Missileart=Abilities\Weapons\BansheeMissile\BansheeMissile.mdl
+Missilearc=0.00
+Missilespeed=900
+
+// gnoll poacher
+[ngna]
+Buttonpos=0,0
+Missileart=Abilities\Weapons\Arrow\ArrowMissile.mdl
+Missilearc=0.15
+Missilespeed=1500
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// gnoll assassin
+[ngns]
+Buttonpos=0,0
+Missileart=Abilities\Weapons\PoisonArrow\PoisonArrowMissile.mdl
+Missilearc=0.15
+Missilespeed=1500
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// gnoll 1
+[ngno]
+Buttonpos=0,0
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// gnoll brute
+[ngnb]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// gnoll warden
+[ngnw]
+Missileart=Abilities\Weapons\FarseerMissile\FarseerMissile.mdl
+Missilearc=0.15
+Missilespeed=1200
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// gnoll king
+[ngnv]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// Gold Mine
+[ngol]
+
+// goblin sapper
+[ngsp]
+Buttonpos=0,0
+
+// harpy scout
+[nhar]
+Missileart=Abilities\Weapons\HarpyMissile\HarpyMissile.mdl
+Missilearc=0.15
+Missilespeed=1500
+
+// harpy rogue
+[nhrr]
+Missileart=Abilities\Weapons\HarpyMissile\HarpyMissile.mdl
+Missilearc=0.15
+Missilespeed=1500
+
+// harpy witch
+[nhrw]
+Missileart=Abilities\Weapons\FarseerMissile\FarseerMissile.mdl
+Missilearc=0.15
+Missilespeed=1200
+Specialart=Objects\Spawnmodels\Human\HumanLargeDeathExplode\HumanLargeDeathExplode.mdl
+
+// harpy hag
+[nhrh]
+Missileart=Abilities\Weapons\FarseerMissile\FarseerMissile.mdl
+Missilearc=0.15
+Missilespeed=1200
+Specialart=Objects\Spawnmodels\Human\HumanLargeDeathExplode\HumanLargeDeathExplode.mdl
+
+// harpy queen
+[nhrq]
+Missileart=Abilities\Weapons\GargoyleMissile\GargoyleMissile.mdl
+Missilearc=0.0
+Missilespeed=1000
+Specialart=Objects\Spawnmodels\Human\HumanLargeDeathExplode\HumanLargeDeathExplode.mdl
+
+// fallen priest
+[nhfp]
+Missileart=Abilities\Weapons\NecromancerMissile\NecromancerMissile.mdl
+Missilearc=0.00
+Missilespeed=900
+Specialart=Objects\Spawnmodels\Undead\UndeadLargeDeathExplode\UndeadLargeDeathExplode.mdl
+
+// deceiver
+[nhdc]
+Missileart=Abilities\Weapons\NecromancerMissile\NecromancerMissile.mdl
+Missilearc=0.00
+Missilespeed=900
+Specialart=Objects\Spawnmodels\Undead\UndeadLargeDeathExplode\UndeadLargeDeathExplode.mdl
+
+// heretic
+[nhhr]
+Missileart=Abilities\Weapons\NecromancerMissile\NecromancerMissile.mdl
+Missilearc=0.00
+Missilespeed=900
+Specialart=Objects\Spawnmodels\Undead\UndeadLargeDeathExplode\UndeadLargeDeathExplode.mdl
+
+// ice troll
+[nitr]
+Missileart=Abilities\Weapons\Axe\AxeMissile.mdl
+Missilearc=0.15
+Missilespeed=1200
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// ice troll berserker
+[nits]
+Missileart=Abilities\Weapons\Axe\AxeMissile.mdl
+Missilearc=0.15
+Missilespeed=1200
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// ice troll trapper
+[nitt]
+Missileart=Abilities\Weapons\Axe\AxeMissile.mdl
+Missilearc=0.15
+Missilespeed=1200
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// ice troll warlord
+[nitw]
+Missileart=Abilities\Weapons\Axe\AxeMissile.mdl
+Missilearc=0.15
+Missilespeed=1200
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// ice troll high priest
+[nith]
+Missileart=Abilities\Weapons\LichMissile\LichMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// ice troll priest
+[nitp]
+Missileart=Abilities\Weapons\LichMissile\LichMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// kobold
+[nkob]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// kobold geomancer
+[nkog]
+Missileart=Abilities\Weapons\FireBallMissile\FireBallMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// kobold taskmaster
+[nkol]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// kobold tunneler
+[nkot]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// lightning lizard
+[nltl]
+Missileart=Abilities\Weapons\ChimaeraLightningMissile\ChimaeraLightningMissile.mdl
+Missilearc=0.00
+Missilespeed=1500
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+Attachmentanimprops=large
+
+// thunder lizard
+[nthl]
+Missileart=Abilities\Weapons\ChimaeraLightningMissile\ChimaeraLightningMissile.mdl
+Missilearc=0.00
+Missilespeed=1500
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+Attachmentanimprops=large
+
+// storm wyrm
+[nstw]
+Missileart=Abilities\Weapons\ChimaeraLightningMissile\ChimaeraLightningMissile.mdl
+Missilearc=0.00
+Missilespeed=1500
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+Attachmentanimprops=large
+
+// murloc flesheater
+[nmfs]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// murloc mutant
+[nmmu]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// murloc plaguebearer
+[nmpg]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// murloc tiderunner
+[nmrl]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// murloc huntsman
+[nmrr]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// murloc nightcrawler
+[nmrm]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// owlbear
+[nowb]
+Specialart=Objects\Spawnmodels\Orc\OrcLargeDeathExplode\OrcLargeDeathExplode.mdl
+
+// enraged owlbear
+[nowe]
+Specialart=Objects\Spawnmodels\Orc\OrcLargeDeathExplode\OrcLargeDeathExplode.mdl
+
+// berserk owlbear
+[nowk]
+Specialart=Objects\Spawnmodels\Orc\OrcLargeDeathExplode\OrcLargeDeathExplode.mdl
+
+// razormane scout
+[nrzs]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// razormane brute
+[nrzb]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// razormane medicine man
+[nrzm]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// razormane chieftain
+[nrzg]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+
+// quillboar
+[nrzt]
+Missileart=Abilities\Weapons\BristleBackMissile\BristleBackMissile.mdl
+Missilearc=0.15
+Missilespeed=1500
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// quillboar hunter
+[nqbh]
+Missileart=Abilities\Weapons\BristleBackMissile\BristleBackMissile.mdl
+Missilearc=0.15
+Missilespeed=1500
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+[nspd]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+Attachmentanimprops=medium
+
+[nnwa]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+Attachmentanimprops=medium
+
+[nnwl]
+Missileart=Abilities\Weapons\CryptFiendMissile\CryptFiendMissile.mdl
+Missilearc=0.15
+Missilespeed=500
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+Attachmentanimprops=medium
+
+[nnws]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+Attachmentanimprops=medium
+
+[nnwr]
+Missileart=Abilities\Weapons\CryptFiendMissile\CryptFiendMissile.mdl
+Missilearc=0.15
+Missilespeed=500
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+Attachmentanimprops=medium
+
+[nnwq]
+Missileart=Abilities\Weapons\CryptFiendMissile\CryptFiendMissile.mdl
+Missilearc=0.15
+Missilespeed=500
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+Attachmentanimprops=medium
+
+// Mercenary Camp Lord Summer
+[nmer]
+Sellunits=nftb,nfsp,nogm
+
+// Lord Fall
+[nmr2]
+Sellunits=ngnb,ngnw,nomg
+
+// Lord Winter
+[nmr3]
+Sellunits=nogr,nits,nitt
+
+// Barrens
+[nmr4]
+Sellunits=ncen,nhrr,nrzm
+
+// Ashenvale
+[nmr5]
+Sellunits=nsts,nfrs,nthl
+
+// Felwood
+[nmr6]
+Sellunits=nmfs,nslf,nstl
+
+// Northrend
+[nmr7]
+Sellunits=nnwa,nits,nrvs
+
+// Cityscape
+[nmr8]
+Sellunits=nrog,nass,nkog
+
+// Dalaran
+[nmr9]
+Sellunits=nrog,nass,nkog
+
+// Village (fall)
+[nmr0]
+Sellunits=nkob,nmrr,nass
+
+// Dungeon
+[nmra]
+Sellunits=nskf,nkog,nowb
+
+// Underground
+[nmrb]
+Sellunits=nskm,nkog,nowb
+
+// Fountain of Power
+[nmoo]
+
+// fountain of health
+[nfoh]
+
+// Marketplace
+[nmrk]
+
+[nobs]
+
+// ogre 1
+[nogr]
+Attachmentanimprops=medium
+Buttonpos=0,0
+Specialart=Objects\Spawnmodels\Orc\OrcLargeDeathExplode\OrcLargeDeathExplode.mdl
+
+// ogre 2
+[nogm]
+Attachmentanimprops=medium
+Buttonpos=0,0
+Specialart=Objects\Spawnmodels\Orc\OrcLargeDeathExplode\OrcLargeDeathExplode.mdl
+
+// ogre lord
+[nogl]
+Attachmentanimprops=medium
+Buttonpos=0,0
+Specialart=Objects\Spawnmodels\Orc\OrcLargeDeathExplode\OrcLargeDeathExplode.mdl
+
+// ogre magi
+[nomg]
+Attachmentanimprops=medium
+Specialart=Objects\Spawnmodels\Orc\OrcLargeDeathExplode\OrcLargeDeathExplode.mdl
+
+// fire revenant
+[nrvf]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// frost revenant
+[nrvs]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// lightning revenant
+[nrvl]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// ice revenant
+[nrvi]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// death revenant
+[nrvd]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// sludge minion
+[nslm]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+//sludge flinger
+[nslf]
+Missileart=Abilities\Weapons\SludgeMissile\SludgeMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// sludge monstrosity
+[nsln]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// salamander hatchling
+[nslh]
+Missileart=Abilities\Weapons\FireBallMissile\FireBallMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+Attachmentanimprops=large
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// salamander
+[nslr]
+Missileart=Abilities\Weapons\FireBallMissile\FireBallMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+Attachmentanimprops=large
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// salamander vizier
+[nslv]
+Missileart=Abilities\Weapons\FireBallMissile\FireBallMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+Attachmentanimprops=large
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// salamander lord
+[nsll]
+Missileart=Abilities\Weapons\RedDragonBreath\RedDragonMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+Attachmentanimprops=large
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// satyr Trickster
+[nsat]
+Missileart=Abilities\Weapons\NecromancerMissile\NecromancerMissile.mdl
+Missilearc=0.15
+Missilespeed=1500
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// satyr shadowdancer
+[nsts]
+Missileart=Abilities\Weapons\BlackKeeperMissile\BlackKeeperMissile.mdl
+Missilearc=0.15
+Missilespeed=1500
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// satyr hellcaller
+[nsth]
+Specialart=Objects\Spawnmodels\Orc\OrcLargeDeathExplode\OrcLargeDeathExplode.mdl
+Attachmentanimprops=large
+
+// satyr soulstealer
+[nstl]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// satyr
+[nsty]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// black spider
+[nspb]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// spider
+[nspr]
+Specialart=Objects\Spawnmodels\Demon\DemonSmallDeathExplode\DemonSmallDeathExplode.mdl
+
+// giant spider
+[nsgt]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// spitting spider
+[nssp]
+Missileart=Abilities\Weapons\ChimaeraAcidMissile\ChimaeraAcidMissile.mdl
+Missilearc=0.15
+Missilespeed=1200
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// brood mother
+[nsbm]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// green spider
+[nspg]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+// sasquatch
+[nsqt]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// elder sasquatch
+[nsqe]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// sasquatch oracle
+[nsqo]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// ancient sasquatch
+[nsqa]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// dog
+[ndog]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// pig critter
+[npig]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// rat critter
+[nrat]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// stag critter
+[nder]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+[nsea]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+[nshe]
+RandomSoundLabel=SheepRandomSounds
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+[nshf]
+RandomSoundLabel=SheepRandomSounds
+
+// vulture
+[nvul]
+
+// male villager
+[nvil]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+[nvl2]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// kid villager
+[nvlk]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+[nvk2]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// female villager
+[nvlw]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// wendigo
+[nwen]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+Attachmentanimprops=medium
+
+// timber wolf
+[nwlt]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// giant wolf
+[nwlg]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// dire wolf
+[nwld]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// white wolf
+[nwwf]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+
+// giant white wolf
+[nwwg]
+Specialart=Objects\Spawnmodels\Orc\OrcLargeDeathExplode\OrcLargeDeathExplode.mdl
+
+// white dire wolf
+[nwwd]
+Specialart=Objects\Spawnmodels\Orc\OrcLargeDeathExplode\OrcLargeDeathExplode.mdl
+
+// elder wendigo
+[nwnr]
+Specialart=Objects\Spawnmodels\Orc\OrcLargeDeathExplode\OrcLargeDeathExplode.mdl
+Attachmentanimprops=medium
+
+// ancient wendigo
+[nwna]
+Specialart=Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+Attachmentanimprops=medium
+
+// wendigo shaman
+[nwns]
+Specialart=Objects\Spawnmodels\Orc\OrcLargeDeathExplode\OrcLargeDeathExplode.mdl
+Attachmentanimprops=medium
+
+// rogue wizard
+[nwzr]
+Missileart=Abilities\Weapons\LichMissile\LichMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+Specialart=Objects\Spawnmodels\Human\HumanLargeDeathExplode\HumanLargeDeathExplode.mdl
+Attachmentanimprops=medium
+
+// renegade wizard
+[nwzg]
+Missileart=Abilities\Weapons\FarseerMissile\FarseerMissile.mdl
+Missilearc=0.15
+Missilespeed=1200
+Specialart=Objects\Spawnmodels\Human\HumanLargeDeathExplode\HumanLargeDeathExplode.mdl
+Attachmentanimprops=medium
+
+// apprentice wizard
+[nwiz]
+Missileart=Abilities\Weapons\PriestMissile\PriestMissile.mdl
+Missilearc=0.15
+Missilespeed=1200
+Specialart=Objects\Spawnmodels\Human\HumanLargeDeathExplode\HumanLargeDeathExplode.mdl
+
+// dark wizard
+[nwzd]
+Missileart=Abilities\Weapons\FireBallMissile\FireBallMissile.mdl
+Missilearc=0.15
+Missilespeed=900
+Specialart=Objects\Spawnmodels\Human\HumanLargeDeathExplode\HumanLargeDeathExplode.mdl
+Attachmentanimprops=medium
+
+[nzep]
+Buttonpos=0,0
+MovementSoundLabel=GoblinZeppelinMovement
+LoopingSoundFadeIn=512
+LoopingSoundFadeOut=512
+Attachmentanimprops=large
+
+[nzom]
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+[ninf]
+Attachmentanimprops=large
+
+[nbal]
+Missileart=Abilities\Weapons\DemonHunterMissile\DemonHunterMissile.mdl
+Missilearc=0.0
+//Missilespeed=900
+Attachmentanimprops=medium
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+[nba2]
+Missileart=Abilities\Weapons\DemonHunterMissile\DemonHunterMissile.mdl
+Missilearc=0.0
+//Missilespeed=900
+Attachmentanimprops=medium
+Specialart=Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+
+[nglm]
+
+[nwgt]
+
+[ncnt]
+
+[nct1]
+
+[nct2]
+
+[ntnt]
+
+[ntt2]
+
+[ngnh]
+
+[ngt2]
+
+[nten]
+
+[ntn2]
+
+[nfh0]
+
+[nfh1]
+
+[nfr1]
+
+[nfr2]
+
+[nth0]
+
+[nth1]
+
+[ncb0]
+
+[ncb1]
+
+[ncb2]
+
+[ncb3]
+
+[ncb4]
+
+[ncb5]
+
+[ncb6]
+
+[ncb7]
+
+[ncb8]
+
+[ncb9]
+
+[ncba]
+
+[ncbb]
+
+[ncbc]
+
+[ncbd]
+
+[ncbe]
+
+[ncbf]
+
+[nmh0]
+
+[nmh1]
+
+// nerubian ziggurat
+[nnzg]
+
+// infected granary
+[ngni]
+
+// grain warehouse
+[ngwr]
+
+// circle of power
+[ncop]
+
+[ncp2]
+
+[ncp3]
+
+// harpy nest
+[nhns]
+
+// owl
+[nowl]
+
+// owl 2
+[now2]
+
+// owl 3
+[now3]
+
+// spirit pig
+[nspp]
+
+// wyvern cage 1
+[nwc1]
+
+// wyvern cage 2
+[nwc2]
+
+// wyvern cage 3
+[nwc3]
+
+// wyvern cage 4
+[nwc4]
+
+// magic vault
+[nmgv]
+Art=ReplaceableTextures\CommandButtons\BTNMagicVault.blp
