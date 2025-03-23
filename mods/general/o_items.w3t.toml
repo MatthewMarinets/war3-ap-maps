@@ -66,6 +66,22 @@ table_column = 0
 value = ''
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'isel'  # ItemData.Can Be Sold By Merchants
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 500
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I011'

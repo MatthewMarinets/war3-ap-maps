@@ -68,27 +68,3 @@ Default melee game initialization for all players
 ```
 ### Functions
 
-
-## map_init
-- enabled: True
-- category: [1] Archipelago
-- starts off: False
-- is custom text: True
-- run on map init: False
-```description
-
-```
-### Functions
-
-
-## unlocks
-- enabled: True
-- category: [1] Archipelago
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-
