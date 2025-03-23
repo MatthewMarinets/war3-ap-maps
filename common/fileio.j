@@ -19,12 +19,14 @@ function InitTrig_fileio takes nothing returns nothing
     endloop
 endfunction
 
+function io_read_file_simple takes string file_name returns nothing
+    call Preloader(file_name)
+endfunction
+
 function io_read_file takes string file_name returns nothing
     local integer i = 0
-    local string output = ""
 
     call Preloader(file_name)
-
     loop
         exitwhen i >= NUM_FILE_LINES
         set io_lines[i] = GetPlayerName(Player(i))

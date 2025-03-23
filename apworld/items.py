@@ -156,7 +156,7 @@ class Wc3Item(enum.Enum):
     OBSIDIAN_STATUE = 206, "Obsidian Statue", Wc3Race.UNDEAD
     NECROMANCER =     207, "Necromancer", Wc3Race.UNDEAD
     BANSHEE =         208, "Banshee", Wc3Race.UNDEAD
-    SHADE =           209, "Acolyte", Wc3Race.UNDEAD
+    SHADE =           209, "Shade", Wc3Race.UNDEAD
     FROST_WYRM =      210, "Frost Wyrm", Wc3Race.UNDEAD
 
     # Undead - Buildings

@@ -81,89 +81,87 @@ endfunction
 ```
 
 ## Packets
-Every packet has an ID, which increments from one transmission to the next.
+Every status packet has an ID, which increments from one transmission to the next.
 
 A common issue is that as files are not cleaned up, merely overwritten, care must be taken to ensure
 data is up-to-date.
 The connection is generally validated by the game, and so it may ignore packets if they do not pass an up-to-date
 check.
 
-Commands that are not safely repeatable, such as "uncollect location" commands, should be cleaned up by the game after reading.
+Commands that are not safely repeatable, such as "uncollect location" commands, should be marked out-of-date after executing and should not be executed if out-of-date.
 
 ### status.txt
 * Game -> Client
-* 2+ lines
-* Communicates mission data, communication index information, and collected locations
+* 4+ lines
+* Communicates map data, communication information, and collected locations
 
-| Line | Contains                    |
-| ---- | --------------------------- |
-| 1    | mission name/identifier     |
-| 2    | Transmission number mod 100 |
-| 3+   | Collected location index    |
+| Line | Contains                      | type                       |
+| ---- | ----------------------------- | -------------------------- |
+| 1    | Transmission number mod 10000 | integer                    |
+| 2    | mission ID                    | integer                    |
+| 3    | player index                  | comma-separated integers*  |
+| 4    | last message IDs              | comma-separated integers** |
+| 5+   | Collected location index      | integer                    |
 
-* *todo(mm)*: Change transmission to increment higher for safety, maybe 1000
-* *todo(mm)*: Maybe change mission identifier to an integer channel?
-* *todo(mm)*: Maybe send player index so unlocks doesn't have to determine it?
-  * Could also be used to deal with multiple user players in NEx08
+*Note player index is going to be a single element in almost all missions.
+NEx8 is the only mission that needs special handling as the user controls two players.
 
-### prior_status.txt
+**List indices refer to packets in order of increasing bitmask (unlocks, locations, messages).
+This means as new packet types are added, they get appended to the end of the list
+and an outdated client can still work with older packet types.
+
+### ping.txt
 * Client -> Game
-* Lists locations that should be marked as already collected
-* If this is not received within 3s of sending a status.txt packet, the communication channel should be considered unresponsive and the user notified with a text prompt
+* Acknowledges status messages sent by the game
+  * If this is not received within 3s of sending a status.txt packet, the communication channel should be considered unresponsive and the user notified with a text prompt
+* Also lets the game know it should read other packets
 
 | Line                  | Contains                                    |
 | --------------------- | ------------------------------------------- |
-| PlayerName(0)         | mission name/identifier                     |
-| PlayerName(1)         | last status transmission number + 1 mod 100 |
-| PlayerName(2)         | string of collected location IDs*           |
+| MaxTech(0, 'nske')    | Last status transmission index + 1          |
+| MaxTech(0, 'nvlk')    | mission ID                                  |
+| MaxTech(0, 'nvk2')    | reload packets bitmask                      |
 
-IDs are two-character stringified integers. Ex: " 0 710" says locations 0, 7, and 10 are collected
-
-* *todo(mm)*: Change transmission to an integer channel
-* *todo(mm)*: This packet should probably be cleaned up after reading
-
-## TODO: future packets
-* Maybe replace prior_status with a simple "acknowledgement" packet to mark communication as connected?
-* Include a simple integer part of any transmission so the game can easily check if a packet was actually received
+| bitmask | meaning              |
+| ------- | -------------------- |
+|       1 | reload unlocks       |
+|       2 | reload locations     |
+|       4 | load messages        |
 
 ### unlocks.txt
 * Client -> Game
 * Set unlocks for the player
-* Directly executes code to identify the user player with `GetPlayerController()`
-  * The player index is a little inconsistent, generall ranging from 0~3 but occasionally as high as 9 in some interludes
 * Sets their tech directly with `SetPlayerTechMaxAllowed()`
 * Sends additional data for other unlocks like hero max level
 
 | Line                       | Contains                                      |
 | -------------------------- | --------------------------------------------- |
-| MaxTech(Player(0), 'nske') | Last status transmission index + 1            |
-| MaxTech(Player(0), 'nvlk') | Echo mission ID                               |
-| MaxTech(Player(0), 'nsno') | Hero 1 max level                              |
-| MaxTech(Player(0), 'nfro') | Hero 2 max level                              |
-| MaxTech(Player(0), 'npng') | Hero 3 max level                              |
-| MaxTech(Player(0), 'ncrb') | Hero 4 max level                              |
-| PlayerName(1)              | String encoding locations to mark uncollected |
+| MaxTech(Player(0), 'nech') | Unlocks ID; echoed back in status.txt         |
+| MaxTech(Player(0), 'nsno') | Hero 0 max level                              |
+| MaxTech(Player(0), 'nfro') | Hero 1 max level                              |
+| MaxTech(Player(0), 'npng') | Hero 2 max level                              |
+| MaxTech(Player(0), 'ncrb') | Hero 3 max level                              |
 
-### messages.txt
-* Client -> Game
-* Display a message to the player
-* This packet should be cleaned up by the game
-
-| Line                       | Contains                                      |
-| -------------------------- | --------------------------------------------- |
-| MaxTech(Player(0), 'nske') | Last status transmission index + 1            |
-| MaxTech(Player(0), 'nvlk') | Echo mission ID                               |
-| MaxTech(Player(0), 'nalb') | Number of messsages (max NUM_FILE_LINES)      |
-| PlayerName(N)              | Message N                                     |
-
-### setlocations.txt
+### locations.txt
 * Client -> Game
 * Mark locations as collected or uncollected
 * Locations greater than MAX_LOCATIONS are ignored
 
 | Line                       | Contains                                      |
 | -------------------------- | --------------------------------------------- |
-| MaxTech(Player(0), 'nske') | Last status transmission index + 1            |
-| MaxTech(Player(0), 'nvlk') | Echo mission ID                               |
+| MaxTech(Player(0), 'nech') | Locations ID; echoed back in status.txt       |
 | PlayerName(0)              | String encoding locations to mark collected   |
 | PlayerName(1)              | String encoding locations to mark uncollected |
+
+Encoded IDs are two-character stringified integers. Ex: " 0 710" says locations 0, 7, and 10 are collected.
+
+### messages.txt
+* Client -> Game
+* Display a message to the player
+* Only read on request of ping.txt; assumed to be up-to-date
+
+| Line                       | Contains                                      |
+| -------------------------- | --------------------------------------------- |
+| MaxTech(Player(0), 'nech') | Message ID; echoed back in status.txt         |
+| MaxTech(Player(0), 'nalb') | Number of messsages (max NUM_FILE_LINES)      |
+| PlayerName(N)              | Message N                                     |
