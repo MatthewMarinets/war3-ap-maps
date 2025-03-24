@@ -11,7 +11,7 @@ from dataclasses import dataclass, field
 from .game_ids import Tech, TECH_REQUIREMENTS
 from .. import logger
 from ..locations import Wc3Location
-from .. import relations
+from .. import heroes
 
 
 PRELOADER_DIR = os.path.expanduser('~/Documents/Warcraft III/CustomMapData')
@@ -32,7 +32,7 @@ def default_locations_collected() -> dict[int, int]:
 class Wc3Inventory:
     def __init__(self) -> None:
         self.tech = {t: 0 for t in Tech}
-        self.levels = {h: 2 for h in relations.VanillaHero}
+        self.levels = {h: 2 for h in heroes.HeroSlot}
     
     def add_tech_and_prereqs(self, tech: Tech) -> bool:
         queue = [tech]
