@@ -143,16 +143,16 @@ def update_messages(game_status: GameStatus, packet_status: PacketStatus) -> Non
         return
     assert game_status.num_in_flight_messages == 0
     num_messages = min(len(game_status.pending_messages), NUM_FILE_LINES)
-    packet_status.last_sent = (packet_status.last_sent + 1) & 0xff
-    with open(MESSAGES_FILE, 'w') as fp:
-        fp.write(PRELOAD_FUNCTION_PROTOTYPE)
-        fp.write(send_int(packet_status.last_sent, channel='nech'))
-        fp.write(send_int(num_messages, channel='nalb'))
-        for index, message in enumerate(game_status.pending_messages[:num_messages]):
-            fp.write(send_string(message, player=index))
-        fp.write(ENDFUNCTION)
-    game_status.num_in_flight_messages = num_messages
     if num_messages > 0:
+        packet_status.last_sent = (packet_status.last_sent + 1) & 0xff
+        with open(MESSAGES_FILE, 'w') as fp:
+            fp.write(PRELOAD_FUNCTION_PROTOTYPE)
+            fp.write(send_int(packet_status.last_sent, channel='nech'))
+            fp.write(send_int(num_messages, channel='nalb'))
+            for index, message in enumerate(game_status.pending_messages[:num_messages]):
+                fp.write(send_string(message, player=index))
+            fp.write(ENDFUNCTION)
+        game_status.num_in_flight_messages = num_messages
         game_status.pending_update |= PacketType.MESSAGES
     else:
         game_status.pending_update &= ~PacketType.MESSAGES
