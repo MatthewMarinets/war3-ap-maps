@@ -142,6 +142,7 @@ Uther the Lightbringer
 }
 
 STRING 36
+// Sound\Dialogue\HumanCampaign\Human02\H02Uther01.mp3
 {
 Ah, good timing, lad. I sent two of my best knights in to parley with the orc leader. They should be returning shortly.
 }
@@ -152,6 +153,7 @@ Uther the Lightbringer
 }
 
 STRING 38
+// Sound\Dialogue\HumanCampaign\Human02\H02Uther02.mp3
 {
 Damn. These orcs will never surrender.
 }
@@ -167,6 +169,7 @@ Footmen Trained |cffffffff3/6|r
 }
 
 STRING 47
+// Units: hC00 (Dragon Hunter), Name (Name)
 {
 Dragon Hunter
 }
@@ -182,6 +185,7 @@ Footmen Trained |cffffffff4/6|r
 }
 
 STRING 54
+// Units: hC01 (Footman), EditorSuffix (Name - Editor Suffix)
 {
 (Fire Upgrade)
 }
@@ -192,11 +196,13 @@ Arthas
 }
 
 STRING 57
+// Units: hC06 (Dwarven Workshop), Name (Name)
 {
 Dwarven Workshop
 }
 
 STRING 58
+// Sound\Dialogue\HumanCampaign\Human02\H02Arthas03.mp3
 {
 Then let's get in there and destroy the beasts!
 }
@@ -207,16 +213,19 @@ Uther the Lightbringer
 }
 
 STRING 60
+// Units: hC02 (Feranor Steeltoe), Name (Name)
 {
 Feranor Steeltoe
 }
 
 STRING 61
+// Units: nC03 (Black Dragon Whelp), Name (Name)
 {
 Black Dragon Whelp
 }
 
 STRING 64
+// Sound\Dialogue\HumanCampaign\Human02\H02Uther04.mp3
 {
 Remember, Arthas, we are paladins. Vengeance cannot be a part of what we must do. If we allow our passions to turn to bloodlust, then we will become as vile as the orcs.
 }
@@ -227,6 +236,7 @@ Arthas
 }
 
 STRING 66
+// Sound\Dialogue\HumanCampaign\Human02\H02Arthas05.mp3
 {
 Yes, Uther.
 }
@@ -237,6 +247,7 @@ Uther the Lightbringer
 }
 
 STRING 68
+// Sound\Dialogue\HumanCampaign\Human02\H02Uther06.mp3
 {
 Now, if you're feeling up to it, I want you to lead the attack.
 }
@@ -247,6 +258,7 @@ Arthas
 }
 
 STRING 70
+// Sound\Dialogue\HumanCampaign\Human02\H02Arthas07.mp3
 {
 Me? Well, of course!
 }
@@ -257,6 +269,7 @@ Uther the Lightbringer
 }
 
 STRING 72
+// Sound\Dialogue\HumanCampaign\Human02\H02Uther08.mp3
 {
 I'll remain here and ensure that none of the loathsome beasts threaten the camp.
 }
@@ -267,6 +280,7 @@ Arthas
 }
 
 STRING 74
+// Sound\Dialogue\HumanCampaign\Human02\H02Arthas09.mp3
 {
 I won't fail you.
 }
@@ -277,6 +291,7 @@ Uther the Lightbringer
 }
 
 STRING 76
+// Sound\Dialogue\HumanCampaign\Human02\H02Uther10.mp3
 {
 I know you won't, lad.
 }
@@ -348,7 +363,7 @@ Bring the Heart of Searinox to Feranor Steeltoe
 
 STRING 201
 {
-
+(null)
 }
 
 STRING 202
@@ -367,6 +382,7 @@ Blademaster of Blackrock Clan
 }
 
 STRING 223
+// Sound\Dialogue\HumanCampaign\Human02\H02Blademaster11.mp3
 {
 Paladin fool! The warlocks of the Blackrock clan have spoken! Soon, demons will rain from the sky, and this wretched world will burn!
 }
@@ -377,6 +393,7 @@ Uther the Lightbringer
 }
 
 STRING 225
+// Sound\Dialogue\HumanCampaign\Human02\H02Uther12.mp3
 {
 Yes, I've heard this rhetoric before. You orcs will never learn!
 }
@@ -387,6 +404,7 @@ Uther the Lightbringer
 }
 
 STRING 227
+// Sound\Dialogue\HumanCampaign\Human02\H02Uther13.mp3
 {
 It was only a mirror image. Damn it, what are these curs up to?
 }
@@ -397,6 +415,7 @@ Blademaster
 }
 
 STRING 229
+// Sound\Dialogue\HumanCampaign\Human02\H02Warlock22.mp3
 {
 The hour of doom approaches! Let this paltry sacrifice appease our demon masters!
 }
@@ -407,6 +426,7 @@ Unlucky Footman
 }
 
 STRING 231
+// Sound\Dialogue\HumanCampaign\Human02\H02Footman23.mp3
 {
 You sick bastards! You'll never get away with--
 }
@@ -417,6 +437,7 @@ Feranor Steeltoe
 }
 
 STRING 236
+// Sound\Dialogue\HumanCampaign\Human02\H02DwarfHunter17.mp3
 {
 Well met, good human! Have you come to join in our hunt?
 }
@@ -427,6 +448,7 @@ Feranor Steeltoe
 }
 
 STRING 240
+// Sound\Dialogue\HumanCampaign\Human02\H02DwarfScout16.mp3
 {
 We're hunting black drakes. It's said that drakes' blood can bestow fiery enchantments upon weapons.
 }
@@ -437,6 +459,7 @@ Feranor Steeltoe
 }
 
 STRING 244
+// Sound\Dialogue\HumanCampaign\Human02\H02DwarfHunter18A.mp3
 {
 The name of the beast we're hunting is Searinox. With your aid, the monster won't stand a chance!
 }
@@ -447,6 +470,7 @@ Feranor Steeltoe
 }
 
 STRING 248
+// Sound\Dialogue\HumanCampaign\Human02\H02Dwarf21.mp3
 {
 Now, I will reforge your weapons to strike with searing heat!
 }
@@ -457,6 +481,7 @@ Searinox
 }
 
 STRING 252
+// Sound\Dialogue\HumanCampaign\Human02\H02Searinox19.mp3
 {
 You dare challenge me? You mortals become more reckless with every generation!
 }
@@ -467,6 +492,7 @@ Arthas
 }
 
 STRING 254
+// Sound\Dialogue\HumanCampaign\Human02\H02Arthas20.mp3
 {
 Let's bring this heart back to the dwarves.
 }
@@ -477,6 +503,7 @@ Footman
 }
 
 STRING 262
+// Sound\Dialogue\HumanCampaign\Human02\H02Footman38.mp3
 {
 If our town comes under attack, a militia can be summoned by ringing the bell on the town hall. The peasants will run to the town center and arm themselves for battle!
 }
@@ -557,6 +584,7 @@ Uther the Lightbringer
 }
 
 STRING 508
+// Sound\Dialogue\HumanCampaign\Human02\H02Uther25.mp3
 {
 You've done well, lad. This was a sound victory.
 }
@@ -567,6 +595,7 @@ Arthas
 }
 
 STRING 510
+// Sound\Dialogue\HumanCampaign\Human02\H02Arthas26.mp3
 {
 I don't know, Uther. The orcs were sacrificing townsfolk. I think they were trying to summon demons.
 }
@@ -577,6 +606,7 @@ Uther the Lightbringer
 }
 
 STRING 512
+// Sound\Dialogue\HumanCampaign\Human02\H02Uther27.mp3
 {
 Have faith, lad. These orcs are trying to hold on to dying traditions. We defeated their demons a long time ago. Let's head for home. It's been a long day.
 }
@@ -667,5 +697,11 @@ Establish a Base
   - |cff808080Construct a Barracks (Completed)|r
   - Construct 2 Farms
   - |cff808080Train 6 Footmen (Completed)|r
+}
+
+STRING 565
+// Units: Obla (Blademaster), Propernames (Proper Names)
+{
+Blademaster
 }
 

@@ -2,8 +2,8 @@
 # See w3i.py for type definitions
 
 version = "ROC"
-map_revision = 391
-editor_version = 4444
+map_revision = 392
+editor_version = 6061
 map_name = 'TRIGSTR_000'
 map_author = 'TRIGSTR_003'
 map_description = 'TRIGSTR_002'

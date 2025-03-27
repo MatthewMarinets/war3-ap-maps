@@ -1,6 +1,6 @@
 # Warcraft 3 Map Objects File (.w3o)
 # See w3o.py for type definitions
-version = 1
+version = 2
 has_levels = false
 
 [blizzard_objects]
@@ -56,7 +56,7 @@ modification_id = 'upro'  # Profile.Proper Names
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_109'
+value = 'TRIGSTR_565'
 object_id = 'null'
 
 [[blizzard_objects.entities]]
