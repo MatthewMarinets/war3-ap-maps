@@ -37,6 +37,12 @@ class MapFlags(enum.IntFlag):
     USE_ITEM_CLASSIFICATION = 0x8000
     USE_WATER_TINTING       = 0x10000
 
+class MapDataset(enum.IntEnum):
+    NOT_SET = -1
+    DEFAULT = 0
+    CUSTOM = 1
+    MELEE = 2
+
 class FactionController(enum.IntEnum):
     Human = 1
     Computer = 2
@@ -159,7 +165,7 @@ class War3MapInformation:
     map_loading_screen_title: str = ""
     map_loading_screen_subtitle: str = ""
     # Note(mm): For TFT, this seems to change with Map Options -> Game Data Set
-    map_loading_screen_number: int = -1
+    map_game_data_set: MapDataset = -1
     tft_prologue_screen_path: str = ""
     prologue_screen_text: str = ""
     prologue_screen_title: str = ""
@@ -221,7 +227,7 @@ def read_binary(raw_bytes: bytes) -> War3MapInformation:
     result.map_loading_screen_text = reader.read_cstring()
     result.map_loading_screen_title = reader.read_cstring()
     result.map_loading_screen_subtitle = reader.read_cstring()
-    result.map_loading_screen_number = reader.read_int32()
+    result.map_game_data_set = reader.read_int32()
     if version == W3iVersions.TFT:
         result.tft_prologue_screen_path = reader.read_cstring()
     result.prologue_screen_text = reader.read_cstring()
@@ -333,7 +339,7 @@ def to_binary(data: War3MapInformation) -> bytes:
     writer.write_string(data.map_loading_screen_text)
     writer.write_string(data.map_loading_screen_title)
     writer.write_string(data.map_loading_screen_subtitle)
-    writer.write_int32(data.map_loading_screen_number)
+    writer.write_int32(data.map_game_data_set)
     if data.version == W3iVersions.TFT:
         writer.write_string(data.tft_prologue_screen_path)
     writer.write_string(data.prologue_screen_text)
