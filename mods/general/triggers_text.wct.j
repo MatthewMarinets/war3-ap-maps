@@ -1,5 +1,5 @@
 // version: 1
-// Triggers: 4
+// Triggers: 5
 // Enter map-specific custom script code below.  This text will be included in the map script after variables are declared and before any trigger code.
 //\\// Trigger #1
 // This file defines file IO functions for the JASS side of things
@@ -55,6 +55,13 @@ function io_close_write takes nothing returns nothing
 endfunction
 
 //\\// Trigger #2
+// Functions to control and configure heroes
+
+function hero_set_max_level takes integer hero, integer level returns nothing
+    // todo
+endfunction
+
+//\\// Trigger #3
 // defines the packets that communicate with the client
 
 globals
@@ -90,10 +97,6 @@ function status_send takes nothing returns nothing
     endloop
     call io_close_write()
     set checks_before_timeout = 3
-endfunction
-
-function hero_set_max_level takes integer hero, integer level returns nothing
-    // todo
 endfunction
 
 function status_load_unlocks takes nothing returns nothing
@@ -237,7 +240,7 @@ function InitTrig_status takes nothing returns nothing
     call TimerStart(status_ack_ping_timer, 1, true, function status_check_ping)
 endfunction
 
-//\\// Trigger #3
+//\\// Trigger #4
 // triggers for sending locations when picking up location-linked items
 globals
 trigger t_location_found = null

@@ -35,10 +35,6 @@ function status_send takes nothing returns nothing
     set checks_before_timeout = 3
 endfunction
 
-function hero_set_max_level takes integer hero, integer level returns nothing
-    // todo
-endfunction
-
 function status_load_unlocks takes nothing returns nothing
     local player p = Player(0)
     local integer h = 0
