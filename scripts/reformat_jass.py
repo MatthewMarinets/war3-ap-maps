@@ -19,7 +19,7 @@ def reformat_file(in_file: str, out_file: str) -> None:
     function_def_name = ''
     result = []
 
-    _global_declaration = re.compile(r'\s*(\w+)\s+(\w+)(\s*=\s*([^\s]+))?')
+    _global_declaration = re.compile(r'\s*(\w+)\s+(array\s+)?(\w+)(\s*=\s*([^\s]+))?')
     _global_set = re.compile(r'    set (\w+)\s*=\s*([^\s]+)')
     _negative = re.compile(r'-(\d)')
     _comment_string = re.compile(r'(\s*)call CommentString\(\s*"([^"]*)"\s*\)')
@@ -36,14 +36,16 @@ def reformat_file(in_file: str, out_file: str) -> None:
             assert state == ParsingState.GLOBALS
             state = ParsingState.START
         elif state == ParsingState.GLOBALS and (m := re.match(_global_declaration, line)):
-            if m.group(3) is not None:
-                pretty = f'{m.group(1)} {m.group(2)}= {m.group(4)}\n'
+            if m.group(2) is not None:
+                pretty = f'{m.group(1)} array {m.group(3)}\n'
+            elif m.group(4) is not None:
+                pretty = f'{m.group(1)} {m.group(3)}= {m.group(5)}\n'
             elif m.group(1) == 'boolean':
-                pretty = f'{m.group(1)} {m.group(2)}= false\n'
+                pretty = f'{m.group(1)} {m.group(3)}= false\n'
             elif m.group(1) == 'integer':
-                pretty = f'{m.group(1)} {m.group(2)}= 0\n'
+                pretty = f'{m.group(1)} {m.group(3)}= 0\n'
             else:
-                pretty = f'{m.group(1)} {m.group(2)}= null\n'
+                pretty = f'{m.group(1)} {m.group(3)}= null\n'
         elif text == 'function InitGlobals takes nothing returns nothing':
             assert state == ParsingState.START
             state = ParsingState.INIT_GLOBALS
@@ -65,7 +67,7 @@ def reformat_file(in_file: str, out_file: str) -> None:
                 last_2 = last_3[-2:]
                 if line[c] == '(':
                     stack.append(False)
-                if last_2 == '( ' and last_3 not in (' ( ', '=( '):
+                if last_2 == '( ' and last_3 not in (' ( ', '=( ', '(( '):
                     stack[-1] = True
                     continue
                 if line[c:c+2] == ' )' and stack[-1]:
