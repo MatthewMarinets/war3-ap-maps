@@ -1,0 +1,157 @@
+# Warcraft 3 Map Info File(.w3i)
+# See w3i.py for type definitions
+
+version = "ROC"
+map_revision = 649
+editor_version = 4441
+map_name = 'TRIGSTR_015'
+map_author = 'TRIGSTR_038'
+map_description = 'TRIGSTR_037'
+players_recommended = 'TRIGSTR_036'
+camera_bounds = [-6912.0, -5120.0, 6912.0, 4992.0, -6912.0, 4992.0, 6912.0, -5120.0]
+map_padding_left = 6
+map_padding_right = 6
+map_padding_top = 6
+map_padding_bottom = 7
+map_playable_width = 116
+map_playable_height = 83
+flags = "HIDE_MINIMAP|FIXED_FORCES|CUSTOM_FORCES|CUSTOM_ABILITIES|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS|WAVES_ON_SHORES"
+tileset = { type = "bytes", value = "V" }
+campaign_background = 5
+tft_loading_screen_model_path = ''
+map_loading_screen_text = 'TRIGSTR_043'
+map_loading_screen_title = 'TRIGSTR_039'
+map_loading_screen_subtitle = 'TRIGSTR_042'
+map_loading_screen_number = 0
+tft_prologue_screen_path = ''
+prologue_screen_text = ''
+prologue_screen_title = ''
+prologue_screen_subtitle = ''
+tft_uses_terrain_fog = 0
+tft_fog_start_z = 0.0
+tft_fog_end_z = 0.0
+tft_fog_density = 0.0
+tft_fog_red = 0
+tft_fog_green = 0
+tft_fog_blue = 0
+tft_fog_alpha = 0
+tft_weather = ''
+tft_custom_sound_environment = ''
+tft_custom_light_tileset = { type = "bytes", value = "0" }
+tft_water_tint_red = 0
+tft_water_tint_green = 0
+tft_water_tint_blue = 0
+tft_water_tint_alpha = 0
+random_entities = []
+random_items = []
+
+[[players]]
+
+player_id = 1
+player_type = "Human"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_526'
+start_pos = [3456.0, -3264.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 2
+player_type = "Neutral"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_044'
+start_pos = [-1920.0, -1280.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0xc4a00000
+
+[[players]]
+
+player_id = 3
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_007'
+start_pos = [-3264.0, -2688.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x2
+
+[[players]]
+
+player_id = 6
+player_type = "Computer"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_050'
+start_pos = [-4416.0, 4576.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 9
+player_type = "Neutral"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_051'
+start_pos = [-6848.0, 768.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[forces]]
+
+force_flags = "None"
+player_mask_flags = 0xffffffbb
+name = 'TRIGSTR_526'
+
+[[forces]]
+
+force_flags = "None"
+player_mask_flags = 0x40
+name = 'TRIGSTR_674'
+
+[[forces]]
+
+force_flags = "None"
+player_mask_flags = 0x4
+name = 'TRIGSTR_044'
+
+[[upgrades]]
+
+player_flags = 0x200
+upgrade_id = 'Rhpt'  # Priest Adept Training,Priest Master Training
+level = 0
+availability = "Researched"
+
+[[upgrades]]
+
+player_flags = 0x200
+upgrade_id = 'Rhde'  # Defend
+level = 0
+availability = "Researched"
+
+[[upgrades]]
+
+player_flags = 0xa
+upgrade_id = 'Rhfl'  # Flare
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0xa
+upgrade_id = 'Rhpt'  # Priest Adept Training,Priest Master Training
+level = 1
+availability = "Unavailable"
+
+[[technologies]]
+
+player_flags = 0x24a
+tech_id = 'Stpm'
+
+[[technologies]]
+
+player_flags = 0x24a
+tech_id = 'Stpr'

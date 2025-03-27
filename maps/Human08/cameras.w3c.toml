@@ -1,0 +1,186 @@
+# Warcraft 3 Camera file (.w3c)
+# See w3c.py for type definitions
+
+version = 0
+
+[[cameras]]
+
+target_x = 7936.0
+target_y = 5048.6201171875
+z_offset = 0.0
+rotation = 41.97999572753906
+angle_of_attack = 317.7200012207031
+distance = 1680.3900146484375
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'IntroInitialZeppelinCamera'
+
+[[cameras]]
+
+target_x = 6595.9013671875
+target_y = 3651.223876953125
+z_offset = 0.0
+rotation = 41.835914611816406
+angle_of_attack = 325.60748291015625
+distance = 1680.387451171875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'IntroZeppelinUnloads'
+
+[[cameras]]
+
+target_x = 6367.89990234375
+target_y = 3748.81005859375
+z_offset = 0.0
+rotation = 72.83999633789062
+angle_of_attack = 327.9599914550781
+distance = 1422.6300048828125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'EmissaryCaptainCloseup'
+
+[[cameras]]
+
+target_x = 6037.919921875
+target_y = 3706.27001953125
+z_offset = 0.0
+rotation = 100.81999969482422
+angle_of_attack = 324.95001220703125
+distance = 1246.31005859375
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'IntroCaptainAddressesMen'
+
+[[cameras]]
+
+target_x = 6241.64990234375
+target_y = 1328.4200439453125
+z_offset = 0.0
+rotation = 90.0
+angle_of_attack = 304.0
+distance = 1650.0
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'IntroSeaView'
+
+[[cameras]]
+
+target_x = 5849.36669921875
+target_y = 3784.717041015625
+z_offset = 0.0
+rotation = 131.6959228515625
+angle_of_attack = 332.3674621582031
+distance = 1226.239990234375
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'IntroArthasApproaches'
+
+[[cameras]]
+
+target_x = 6016.85009765625
+target_y = 3708.969970703125
+z_offset = 0.0
+rotation = 55.34000015258789
+angle_of_attack = 334.25
+distance = 1055.8299560546875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'IntroCaptainBadNews'
+
+[[cameras]]
+
+target_x = 4372.56298828125
+target_y = 3694.6640625
+z_offset = 0.0
+rotation = 90.0
+angle_of_attack = 304.0
+distance = 1650.0
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'IntroEnd'
+
+[[cameras]]
+
+target_x = 5992.43359375
+target_y = 952.8892822265625
+z_offset = 0.0
+rotation = 139.49998474121094
+angle_of_attack = 326.1712341308594
+distance = 1365.5897216796875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'ExitDefeat'
+
+[[cameras]]
+
+target_x = 5676.595703125
+target_y = 939.231201171875
+z_offset = 0.0
+rotation = 113.05999755859375
+angle_of_attack = 308.0400085449219
+distance = 1721.7899169921875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'ExitVictory'
+
+[[cameras]]
+
+target_x = 5129.943359375
+target_y = 823.3721313476562
+z_offset = 0.0
+rotation = 70.87248992919922
+angle_of_attack = 315.9315490722656
+distance = 1282.8094482421875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'ExitVictoryCombat'
+
+[[cameras]]
+
+target_x = 5799.1298828125
+target_y = 823.1199951171875
+z_offset = 0.0
+rotation = 89.30000305175781
+angle_of_attack = 321.6600036621094
+distance = 1183.860107421875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'ExitVictoryArthasAddresses'
+
+[[cameras]]
+
+target_x = 1790.1199951171875
+target_y = 500.92999267578125
+z_offset = 0.0
+rotation = 90.0
+angle_of_attack = 312.0
+distance = 1800.0
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'GauntletInitial'
+
+[[cameras]]
+
+target_x = 2049.32177734375
+target_y = -4371.3212890625
+z_offset = 0.0
+rotation = 90.0
+angle_of_attack = 312.0
+distance = 1800.0
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'GauntletFinal'

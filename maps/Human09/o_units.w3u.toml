@@ -1,0 +1,341 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 1
+has_levels = false
+
+[blizzard_objects]
+[[blizzard_objects.entities]]
+parent_id = 'Harf'  # Paladin
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 12
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ustr'  # UnitBalance.Starting Strength
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 24
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uint'  # UnitBalance.Starting Intelligence
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 19
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uagi'  # UnitBalance.Starting Agility
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 15
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 150
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nnwa'  # Nerubian Warrior
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usst'  # UnitBalance.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nits'  # Ice Troll Berserker
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usst'  # UnitBalance.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nrvs'  # Frost Revenant
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usst'  # UnitBalance.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'phea'  # Potion of Healing
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'pman'  # Potion of Mana
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'pinv'  # Potion of Invisibility
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'shea'  # Scroll of Healing
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'spro'  # Scroll of Protection
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'stwp'  # Scroll of Town Portal
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'ngme'  # Goblin Merchant
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usei'  # Profile.Items Sold
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'phea,pman,shea,spro,wneg,gemt,stwp'
+object_id = 'null'
+
+[map_objects]
+[[map_objects.entities]]
+parent_id = 'nrvi'  # Ice Revenant
+entity_id = 'nC00'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_091'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.600000023841858
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2000
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 64
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1s'  # UnitWeapons.Attack 1 - Damage Sides per Die
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 16
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ACfa,ACfn'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ulev'  # UnitBalance.Level
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 10
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'udef'  # UnitBalance.Defense Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 6
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uacq'  # UnitWeapons.Acquisition Range
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 1000.0
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usin'  # UnitBalance.Sight Radius (Night)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1200
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_220'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nrvi'  # Ice Revenant
+entity_id = 'nC01'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_091'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_221'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.600000023841858
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2400
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'udef'  # UnitBalance.Defense Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 6
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 70
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1s'  # UnitWeapons.Attack 1 - Damage Sides per Die
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 15
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ACfa,ACfn'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uacq'  # UnitWeapons.Acquisition Range
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 1000.0
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usin'  # UnitBalance.Sight Radius (Night)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1200
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ulev'  # UnitBalance.Level
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 10
+object_id = 'null'

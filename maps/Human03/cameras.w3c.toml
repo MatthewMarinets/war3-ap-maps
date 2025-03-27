@@ -1,0 +1,329 @@
+# Warcraft 3 Camera file (.w3c)
+# See w3c.py for type definitions
+
+version = 0
+
+[[cameras]]
+
+target_x = 3988.810302734375
+target_y = -4323.74853515625
+z_offset = 0.0
+rotation = 151.2765350341797
+angle_of_attack = 323.6134033203125
+distance = 1134.1090087890625
+roll = 0.0
+fov = 90.0
+far_z = 5000.0
+name = 'Camera 001'
+
+[[cameras]]
+
+target_x = 3988.81005859375
+target_y = -4323.75
+z_offset = 0.0
+rotation = 158.76998901367188
+angle_of_attack = 330.6199951171875
+distance = 1134.1099853515625
+roll = 0.0
+fov = 90.0
+far_z = 5000.0
+name = 'Camera 002'
+
+[[cameras]]
+
+target_x = 4381.275390625
+target_y = -4140.4775390625
+z_offset = 0.0
+rotation = 44.734527587890625
+angle_of_attack = 338.28680419921875
+distance = 1083.5341796875
+roll = 0.0
+fov = 65.0
+far_z = 5000.0
+name = 'Camera 003'
+
+[[cameras]]
+
+target_x = 4742.57177734375
+target_y = -3662.06787109375
+z_offset = 0.0
+rotation = 44.734527587890625
+angle_of_attack = 344.0032043457031
+distance = 1005.6651611328125
+roll = 0.0
+fov = 65.0
+far_z = 4000.0
+name = 'Camera 004'
+
+[[cameras]]
+
+target_x = 4778.65380859375
+target_y = -3501.50048828125
+z_offset = 0.0
+rotation = 78.04507446289062
+angle_of_attack = 336.95745849609375
+distance = 869.6687622070312
+roll = 0.0
+fov = 65.0
+far_z = 3000.0
+name = 'Camera 005'
+
+[[cameras]]
+
+target_x = 4767.35009765625
+target_y = -3509.4267578125
+z_offset = 0.0
+rotation = 106.34585571289062
+angle_of_attack = 328.183837890625
+distance = 869.6687622070312
+roll = 0.0
+fov = 65.0
+far_z = 4000.0
+name = 'Camera 006'
+
+[[cameras]]
+
+target_x = 4448.41015625
+target_y = -3922.3505859375
+z_offset = 0.0
+rotation = 70.5743637084961
+angle_of_attack = 328.9815673828125
+distance = 1413.0911865234375
+roll = 0.0
+fov = 65.0
+far_z = 4000.0
+name = 'Camera 007'
+
+[[cameras]]
+
+target_x = 4580.9609375
+target_y = -3706.7705078125
+z_offset = 0.0
+rotation = 212.6110076904297
+angle_of_attack = 331.7059020996094
+distance = 738.4048461914062
+roll = 0.0
+fov = 70.0
+far_z = 4000.0
+name = 'Arthas'
+
+[[cameras]]
+
+target_x = 4919.294921875
+target_y = -3330.681396484375
+z_offset = 0.0
+rotation = 75.45185089111328
+angle_of_attack = 339.4479064941406
+distance = 597.0579833984375
+roll = 0.0
+fov = 70.0
+far_z = 4000.0
+name = 'Jaina'
+
+[[cameras]]
+
+target_x = 4321.2333984375
+target_y = -3803.76318359375
+z_offset = 0.0
+rotation = 43.6798210144043
+angle_of_attack = 331.10858154296875
+distance = 994.5198974609375
+roll = 0.0
+fov = 65.0
+far_z = 5000.0
+name = 'Formation'
+
+[[cameras]]
+
+target_x = 4837.2734375
+target_y = -3555.221923828125
+z_offset = 0.0
+rotation = 120.515625
+angle_of_attack = 323.5219421386719
+distance = 924.3389892578125
+roll = 0.0
+fov = 70.0
+far_z = 4000.0
+name = 'GroupShot'
+
+[[cameras]]
+
+target_x = 5276.49072265625
+target_y = -3372.699951171875
+z_offset = 0.0
+rotation = 12.097192764282227
+angle_of_attack = 333.40228271484375
+distance = 1083.630126953125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'OgreBattle01'
+
+[[cameras]]
+
+target_x = 5276.49072265625
+target_y = -3372.699951171875
+z_offset = 0.0
+rotation = 31.813493728637695
+angle_of_attack = 331.3798522949219
+distance = 1083.630126953125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'OgreBattle02'
+
+[[cameras]]
+
+target_x = 3420.90625
+target_y = -3204.833740234375
+z_offset = 0.0
+rotation = 90.00001525878906
+angle_of_attack = 303.9998474121094
+distance = 1649.9998779296875
+roll = 0.0
+fov = 70.00000762939453
+far_z = 5000.0009765625
+name = 'EscapeCam'
+
+[[cameras]]
+
+target_x = -3192.462646484375
+target_y = 1362.388916015625
+z_offset = 0.0
+rotation = 90.00663757324219
+angle_of_attack = 322.12884521484375
+distance = 846.7108154296875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Granary01'
+
+[[cameras]]
+
+target_x = -3238.675048828125
+target_y = 1457.8302001953125
+z_offset = 0.0
+rotation = 81.5802001953125
+angle_of_attack = 321.3926696777344
+distance = 846.7108154296875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Granary02'
+
+[[cameras]]
+
+target_x = -1982.6683349609375
+target_y = -2945.920166015625
+z_offset = 0.0
+rotation = 274.30657958984375
+angle_of_attack = 329.5240173339844
+distance = 876.7620849609375
+roll = 0.0
+fov = 70.0
+far_z = 6855.5830078125
+name = 'GranaryPriests'
+
+[[cameras]]
+
+target_x = -5832.451171875
+target_y = 1085.62109375
+z_offset = 0.0
+rotation = 111.97265625
+angle_of_attack = 336.197998046875
+distance = 1413.7281494140625
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Abomination'
+
+[[cameras]]
+
+target_x = 4048.667236328125
+target_y = -4404.7333984375
+z_offset = 96.84696197509766
+rotation = 147.1622314453125
+angle_of_attack = 342.67376708984375
+distance = 1041.9395751953125
+roll = 0.0
+fov = 65.0
+far_z = 10000.0
+name = 'Preload'
+
+[[cameras]]
+
+target_x = -2231.275634765625
+target_y = -2853.381103515625
+z_offset = 0.0
+rotation = 92.46092224121094
+angle_of_attack = 326.99835205078125
+distance = 1060.9947509765625
+roll = 0.0
+fov = 70.0
+far_z = 6855.5830078125
+name = 'Granary04'
+
+[[cameras]]
+
+target_x = -5536.72314453125
+target_y = 744.595947265625
+z_offset = 0.0
+rotation = 95.62503051757812
+angle_of_attack = 334.7015686035156
+distance = 1390.3692626953125
+roll = 0.0
+fov = 70.0
+far_z = 5860.26123046875
+name = 'Ending01'
+
+[[cameras]]
+
+target_x = -5837.18994140625
+target_y = 1127.92529296875
+z_offset = 0.0
+rotation = 103.79885864257812
+angle_of_attack = 332.441650390625
+distance = 1000.7349243164062
+roll = 0.0
+fov = 70.0
+far_z = 5860.26123046875
+name = 'Ending02'
+
+[[cameras]]
+
+target_x = -5648.4775390625
+target_y = 499.4828796386719
+z_offset = 0.0
+rotation = 108.19338989257812
+angle_of_attack = 329.7828369140625
+distance = 962.039794921875
+roll = 0.0
+fov = 70.0
+far_z = 5860.26123046875
+name = 'Ending03'
+
+[[cameras]]
+
+target_x = -6395.330078125
+target_y = 1301.300048828125
+z_offset = 0.0
+rotation = 129.8000030517578
+angle_of_attack = 341.4800109863281
+distance = 1175.6700439453125
+roll = 0.0
+fov = 70.0
+far_z = 10000.0
+name = 'FinalCin1'
+
+[[cameras]]
+
+target_x = -6395.330078125
+target_y = 1301.300048828125
+z_offset = 0.0
+rotation = 151.44996643066406
+angle_of_attack = 333.9700012207031
+distance = 1175.6700439453125
+roll = 0.0
+fov = 70.0
+far_z = 10000.0
+name = 'FinalCin2'

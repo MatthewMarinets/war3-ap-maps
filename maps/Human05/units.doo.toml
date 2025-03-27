@@ -1,0 +1,5927 @@
+# Warcraft 3 Doodad placement file (.doo)
+# See doo.py for type definitions
+
+version = 7
+sub_version = 9
+describes_units = true
+doodads = []
+immobile_doodads = []
+
+[[units]]
+
+type_id = 'sloc'  # Start Location
+variation = 0
+x = -7296.0
+y = -1408.0
+z = 301.75
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 11
+hit_points = 0
+mana_points = 0
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = 0.0
+hero_level = 0
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 36
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 0
+item_class = 0
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = -2464.0
+y = -6944.0
+z = 638.0
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 37
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 4519.5615234375
+y = -5550.98876953125
+z = 316.5
+facing = 0.3855086863040924
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 102
+
+[[units]]
+
+type_id = 'hrif'  # Rifleman
+variation = 0
+x = 6907.66552734375
+y = -7736.92822265625
+z = 316.5
+facing = 2.6546003818511963
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 1
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 26
+
+[[units]]
+
+type_id = 'sloc'  # Start Location
+variation = 0
+x = 6016.0
+y = -5440.0
+z = 316.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 9
+hit_points = 0
+mana_points = 0
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = 0.0
+hero_level = 0
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 108
+
+[[units]]
+
+type_id = 'hfoo'  # Footman
+variation = 0
+x = 6645.9189453125
+y = -7613.7177734375
+z = 339.72760009765625
+facing = 3.5476737022399902
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 1
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 25
+
+[[units]]
+
+type_id = 'hfoo'  # Footman
+variation = 0
+x = 6722.1494140625
+y = -7859.15869140625
+z = 316.5
+facing = 2.9406888484954834
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 1
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 24
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = -3168.0
+y = -4896.0
+z = 305.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 7
+
+[[units]]
+
+type_id = 'sloc'  # Start Location
+variation = 0
+x = 6080.0
+y = -5376.0
+z = 316.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 1
+hit_points = 0
+mana_points = 0
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = 0.0
+hero_level = 0
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 0
+
+[[units]]
+
+type_id = 'hrif'  # Rifleman
+variation = 0
+x = 4932.7841796875
+y = -5828.99658203125
+z = 316.5
+facing = 1.5826647281646729
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 78
+
+[[units]]
+
+type_id = 'hmpr'  # Priest
+variation = 0
+x = 6974.58642578125
+y = -7921.126953125
+z = 316.5
+facing = 2.969774007797241
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 1
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 28
+
+[[units]]
+
+type_id = 'sloc'  # Start Location
+variation = 0
+x = -5056.0
+y = -6336.0
+z = 305.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = 0
+mana_points = 0
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = 0.0
+hero_level = 0
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 1
+
+[[units]]
+
+type_id = 'ugrv'  # Graveyard
+variation = 0
+x = 256.0
+y = -640.0
+z = 378.25
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 127
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = -864.0
+y = -416.0
+z = 355.46875
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 214
+
+[[units]]
+
+type_id = 'ugho'  # Ghoul
+variation = 0
+x = 4772.7080078125
+y = 1281.233642578125
+z = 177.75967407226562
+facing = 4.593728065490723
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 5
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 51
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'unec'  # Necromancer
+variation = 0
+x = -5906.578125
+y = -6208.52734375
+z = 305.4457092285156
+facing = 2.28090763092041
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 213
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = -5984.0
+y = -6432.0
+z = 305.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 112
+
+[[units]]
+
+type_id = 'nogr'  # Ogre Warrior
+variation = 0
+x = -7877.00146484375
+y = -7358.40185546875
+z = 389.4533386230469
+facing = 1.3896021842956543
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 12
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 120
+
+[[units]]
+
+type_id = 'nmrl'  # Murloc Tiderunner
+variation = 0
+x = -1848.07177734375
+y = -2375.094970703125
+z = 120.13050842285156
+facing = 5.199409484863281
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 12
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 54
+
+[[units]]
+
+type_id = 'ugho'  # Ghoul
+variation = 0
+x = -5290.92236328125
+y = -5876.9326171875
+z = 305.5
+facing = 5.50536584854126
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 208
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'ngol'  # Gold Mine
+variation = 0
+x = 6080.0
+y = -6208.0
+z = 317.0
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 16000
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 11
+
+[[units]]
+
+type_id = 'nmrm'  # Murloc Nightcrawler
+variation = 0
+x = -2043.8575439453125
+y = -3515.30615234375
+z = 0.3362509608268738
+facing = 1.034711480140686
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 12
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 179
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'ugho'  # Ghoul
+variation = 0
+x = 360.0965881347656
+y = -1046.1317138671875
+z = 378.390625
+facing = 5.659531593322754
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 186
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 0
+item_class = 0
+
+[[units]]
+
+type_id = 'hgtw'  # Guard Tower
+variation = 0
+x = 6336.0
+y = -4032.0
+z = 358.375
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 65
+
+[[units]]
+
+type_id = 'sloc'  # Start Location
+variation = 0
+x = 5952.0
+y = -5376.0
+z = 316.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = 0
+mana_points = 0
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = 0.0
+hero_level = 0
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 117
+
+[[units]]
+
+type_id = 'uaod'  # Altar of Darkness
+variation = 0
+x = -4576.0
+y = -4832.0
+z = 305.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 63
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'usep'  # Crypt
+variation = 0
+x = -5568.0
+y = -6080.0
+z = 305.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 201
+
+[[units]]
+
+type_id = 'halt'  # Altar of Kings
+variation = 0
+x = 5728.0
+y = -4768.0
+z = 316.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 200
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'ugho'  # Ghoul
+variation = 0
+x = 189.86984252929688
+y = -2527.969970703125
+z = 318.67999267578125
+facing = 4.231879234313965
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 195
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'uabo'  # Abomination
+variation = 0
+x = 3890.218505859375
+y = 2655.60791015625
+z = 154.96224975585938
+facing = 2.7071754932403564
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 5
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 151
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'unec'  # Necromancer
+variation = 0
+x = 4713.3046875
+y = 1480.4189453125
+z = 205.51290893554688
+facing = 4.674396991729736
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 5
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 136
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'uabo'  # Abomination
+variation = 0
+x = -913.8331298828125
+y = -831.470703125
+z = 345.85198974609375
+facing = 4.687222003936768
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 194
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'usap'  # Sacrificial Pit
+variation = 0
+x = -5120.0
+y = -5056.0
+z = 305.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 75
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'usep'  # Crypt
+variation = 0
+x = 384.0
+y = -2048.0
+z = 321.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 104
+
+[[units]]
+
+type_id = 'usap'  # Sacrificial Pit
+variation = 0
+x = -1280.0
+y = -512.0
+z = 355.25
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 72
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = -96.0
+y = -992.0
+z = 378.0625
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 193
+
+[[units]]
+
+type_id = 'utod'  # Temple of the Damned
+variation = 0
+x = -5440.0
+y = -5504.0
+z = 305.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 203
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = -5088.0
+y = -5856.0
+z = 305.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 204
+
+[[units]]
+
+type_id = 'uslh'  # Slaughterhouse
+variation = 0
+x = -4160.0
+y = -5824.0
+z = 305.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 202
+
+[[units]]
+
+type_id = 'unp2'  # Black Citadel
+variation = 0
+x = -1024.0
+y = -1216.0
+z = 346.25
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 71
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'uaod'  # Altar of Darkness
+variation = 0
+x = -544.0
+y = -992.0
+z = 361.203125
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 64
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'Ulic'  # Lich
+variation = 0
+x = -4696.72412109375
+y = -6022.20556640625
+z = 305.5
+facing = 4.4191741943359375
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 10
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 59
+
+[[units.modified_abilities]]
+
+abil_id = 'AUfn'  # Frost Nova
+autocast_active = false
+abil_level = 3
+
+[[units.modified_abilities]]
+
+abil_id = 'AUfa'  # Frost Armor
+autocast_active = false
+abil_level = 3
+
+[[units.modified_abilities]]
+
+abil_id = 'AUdr'  # Dark Ritual
+autocast_active = false
+abil_level = 3
+
+[[units.modified_abilities]]
+
+abil_id = 'AUdd'  # Death And Decay
+autocast_active = false
+abil_level = 1
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'ugol'  # Haunted Gold Mine
+variation = 0
+x = -5120.0
+y = -7168.0
+z = 305.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 16000
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 4
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'ugol'  # Haunted Gold Mine
+variation = 0
+x = -1792.0
+y = -1024.0
+z = 346.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 16000
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 70
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'hbar'  # Barracks
+variation = 0
+x = 5120.0
+y = -4864.0
+z = 316.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 44
+
+[[units]]
+
+type_id = 'hlum'  # Lumber Mill
+variation = 0
+x = 5216.0
+y = -3936.0
+z = 417.203125
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 45
+
+[[units]]
+
+type_id = 'uaco'  # Acolyte
+variation = 0
+x = -1360.0675048828125
+y = -1075.1739501953125
+z = 346.25
+facing = 6.022645950317383
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 123
+
+[[units]]
+
+type_id = 'nfoh'  # Fountain of Health
+variation = 0
+x = -6464.0
+y = 2944.0
+z = 683.0
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 12
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'hgtw'  # Guard Tower
+variation = 0
+x = 7040.0
+y = -4160.0
+z = 326.0
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 125
+
+[[units]]
+
+type_id = 'unp2'  # Black Citadel
+variation = 0
+x = -5056.0
+y = -6336.0
+z = 305.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 5
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'unec'  # Necromancer
+variation = 0
+x = -3520.067138671875
+y = -5269.76953125
+z = 305.5
+facing = 5.868228435516357
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 83
+
+[[units]]
+
+type_id = 'uslh'  # Slaughterhouse
+variation = 0
+x = -3712.0
+y = -4608.0
+z = 305.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 82
+
+[[units]]
+
+type_id = 'nogr'  # Ogre Warrior
+variation = 0
+x = -7597.60107421875
+y = -7369.5927734375
+z = 389.8861999511719
+facing = 1.5709056854248047
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 12
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 48
+
+[[units]]
+
+type_id = 'nmrl'  # Murloc Tiderunner
+variation = 0
+x = -1922.0042724609375
+y = -2600.161376953125
+z = 126.37379455566406
+facing = 5.522406101226807
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 12
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 53
+
+[[units]]
+
+type_id = 'ugho'  # Ghoul
+variation = 0
+x = -5263.189453125
+y = -5664.8349609375
+z = 305.5
+facing = 5.416356086730957
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 207
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'ugho'  # Ghoul
+variation = 0
+x = -3526.887451171875
+y = -5422.7099609375
+z = 305.5
+facing = 6.082906723022461
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 124
+
+[[units]]
+
+type_id = 'nmrl'  # Murloc Tiderunner
+variation = 0
+x = -2254.646728515625
+y = -2614.33740234375
+z = 117.15855407714844
+facing = 5.824528217315674
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 12
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 58
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 7173.9384765625
+y = -7576.9638671875
+z = 383.5
+facing = 3.8847670555114746
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 80
+
+[[units]]
+
+type_id = 'ugho'  # Ghoul
+variation = 0
+x = 1043.1026611328125
+y = -1287.3509521484375
+z = 414.5328674316406
+facing = 6.128875255584717
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 144
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = -800.0
+y = -1760.0
+z = 398.65625
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 187
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 0
+item_class = 0
+
+[[units]]
+
+type_id = 'ngol'  # Gold Mine
+variation = 0
+x = 5696.0
+y = 3456.0
+z = 219.75
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 55
+
+[[units]]
+
+type_id = 'ugho'  # Ghoul
+variation = 0
+x = 4665.0537109375
+y = 1379.7928466796875
+z = 197.2967987060547
+facing = 4.72249698638916
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 5
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 135
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 6560.2744140625
+y = -5935.6591796875
+z = 316.5
+facing = 2.9787538051605225
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 13
+
+[[units]]
+
+type_id = 'Ulic'  # Lich
+variation = 0
+x = -691.2935791015625
+y = -675.561279296875
+z = 351.5110778808594
+facing = 5.699210166931152
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = 555
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 6
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+custom_colour = -1
+waygate_destination = -1
+entity_id = 22
+
+[[units.inventory_items]]
+
+slot = 0
+item_id = 'bgst'  # Belt of Giant Strength +6
+
+[[units.modified_abilities]]
+
+abil_id = 'AUfn'  # Frost Nova
+autocast_active = false
+abil_level = 3
+
+[[units.modified_abilities]]
+
+abil_id = 'AUfa'  # Frost Armor
+autocast_active = false
+abil_level = 1
+
+[[units.modified_abilities]]
+
+abil_id = 'AUdr'  # Dark Ritual
+autocast_active = false
+abil_level = 1
+
+[[units.modified_abilities]]
+
+abil_id = 'AUdd'  # Death And Decay
+autocast_active = false
+abil_level = 1
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = 864.0
+y = -1888.0
+z = 345.21875
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 183
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 0
+item_class = 0
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = 1312.0
+y = -1632.0
+z = 405.15625
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 110
+
+[[units]]
+
+type_id = 'uabo'  # Abomination
+variation = 0
+x = 5605.57763671875
+y = 1449.9981689453125
+z = 264.3194580078125
+facing = 2.7071754932403564
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 5
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 215
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 4419.62548828125
+y = -5325.40234375
+z = 316.5
+facing = 5.838231563568115
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 89
+
+[[units]]
+
+type_id = 'nogr'  # Ogre Warrior
+variation = 0
+x = -7763.45166015625
+y = 3452.186279296875
+z = 696.396728515625
+facing = 5.477599143981934
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 12
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 68
+
+[[units]]
+
+type_id = 'nogr'  # Ogre Warrior
+variation = 0
+x = -7805.35986328125
+y = 2960.715087890625
+z = 693.4723510742188
+facing = 5.679239273071289
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 12
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 69
+
+[[units]]
+
+type_id = 'nogl'  # Ogre Lord
+variation = 0
+x = -7834.24267578125
+y = 3208.914794921875
+z = 706.5054931640625
+facing = 5.711765289306641
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 12
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = [
+    [
+        # rst1 = Gauntlets of Ogre Strength +3
+        { item_id = "rst1", chance_percent = 100 }
+    ],
+    [
+        # pghe = Potion of Greater Healing
+        { item_id = "pghe", chance_percent = 100 }
+    ]
+]
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 90
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 4359.583984375
+y = -4870.12841796875
+z = 316.5
+facing = 5.756381511688232
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 88
+
+[[units]]
+
+type_id = 'ugho'  # Ghoul
+variation = 0
+x = 4641.61669921875
+y = 1214.335693359375
+z = 205.3865509033203
+facing = 4.755605697631836
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 5
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 49
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'ugrv'  # Graveyard
+variation = 0
+x = -5760.0
+y = -6912.0
+z = 310.25
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 128
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = -3680.0
+y = -4000.0
+z = 305.296875
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 3
+
+[[units]]
+
+type_id = 'hkee'  # Keep
+variation = 0
+x = 5952.0
+y = -5376.0
+z = 316.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 43
+
+[[units]]
+
+type_id = 'hfoo'  # Footman
+variation = 0
+x = 4806.6572265625
+y = -5319.07470703125
+z = 316.5
+facing = 1.6004670858383179
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 76
+
+[[units.modified_abilities]]
+
+abil_id = 'Adef'  # Defend
+autocast_active = false
+abil_level = 0
+
+[[units]]
+
+type_id = 'hfoo'  # Footman
+variation = 0
+x = 4934.9931640625
+y = -5327.224609375
+z = 316.5
+facing = 2.110140562057495
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = 1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 77
+
+[[units]]
+
+type_id = 'uC00'
+variation = 0
+x = -6464.14990234375
+y = -6079.91748046875
+z = 218.9609375
+facing = 0.0
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 4
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 210
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = 928.0
+y = -672.0
+z = 418.015625
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 199
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 5468.265625
+y = -5405.70263671875
+z = 331.31378173828125
+facing = 3.8883824348449707
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 103
+
+[[units]]
+
+type_id = 'nmrr'  # Murloc Huntsman
+variation = 0
+x = -1950.2581787109375
+y = -2345.834228515625
+z = 121.05328369140625
+facing = 5.301494598388672
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 12
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 52
+
+[[units]]
+
+type_id = 'uslh'  # Slaughterhouse
+variation = 0
+x = -320.0
+y = -448.0
+z = 393.8125
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 147
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 0
+item_class = 0
+
+[[units]]
+
+type_id = 'unec'  # Necromancer
+variation = 0
+x = 326.7403259277344
+y = -2441.2431640625
+z = 321.5002136230469
+facing = 4.214662551879883
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 198
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'uC00'
+variation = 0
+x = -6719.6826171875
+y = -6079.11669921875
+z = 221.25071716308594
+facing = 0.0
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 4
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 216
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = -4704.0
+y = -6816.0
+z = 305.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 192
+
+[[units]]
+
+type_id = 'hhou'  # Farm
+variation = 0
+x = 6592.0
+y = -4672.0
+z = 316.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 86
+
+[[units]]
+
+type_id = 'ngme'  # Goblin Merchant
+variation = 0
+x = 6912.0
+y = -768.0
+z = 303.75
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 87
+
+[[units]]
+
+type_id = 'unec'  # Necromancer
+variation = 0
+x = -3518.992919921875
+y = -4118.82763671875
+z = 300.7237854003906
+facing = 0.1225118637084961
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 106
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 4547.18603515625
+y = -5914.2900390625
+z = 316.5
+facing = 0.380656361579895
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 134
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 4830.79150390625
+y = -4706.9140625
+z = 316.5
+facing = 5.094418048858643
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 133
+
+[[units]]
+
+type_id = 'hrif'  # Rifleman
+variation = 0
+x = 4671.60498046875
+y = -5827.4814453125
+z = 316.5
+facing = 1.5997689962387085
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = 1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 116
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 5642.77099609375
+y = -5669.21875
+z = 345.99420166015625
+facing = 2.741771697998047
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 132
+
+[[units]]
+
+type_id = 'hfoo'  # Footman
+variation = 0
+x = 4672.59326171875
+y = -5578.09423828125
+z = 316.5
+facing = 1.2953834533691406
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = 1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 91
+
+[[units.modified_abilities]]
+
+abil_id = 'Adef'  # Defend
+autocast_active = false
+abil_level = 0
+
+[[units]]
+
+type_id = 'hfoo'  # Footman
+variation = 0
+x = 4679.326171875
+y = -5314.9833984375
+z = 316.5
+facing = 1.6166986227035522
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = 1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 27
+
+[[units.modified_abilities]]
+
+abil_id = 'Adef'  # Defend
+autocast_active = false
+abil_level = 0
+
+[[units]]
+
+type_id = 'hfoo'  # Footman
+variation = 0
+x = 4935.0234375
+y = -5573.5546875
+z = 316.5
+facing = 1.8629646301269531
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = 1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 23
+
+[[units.modified_abilities]]
+
+abil_id = 'Adef'  # Defend
+autocast_active = false
+abil_level = 0
+
+[[units]]
+
+type_id = 'hfoo'  # Footman
+variation = 0
+x = 5191.1044921875
+y = -5222.04638671875
+z = 316.5
+facing = 3.7069623470306396
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 118
+
+[[units]]
+
+type_id = 'uaco'  # Acolyte
+variation = 0
+x = -5204.64111328125
+y = -6783.33935546875
+z = 305.5
+facing = 4.500498294830322
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 97
+
+[[units]]
+
+type_id = 'uaco'  # Acolyte
+variation = 0
+x = -5341.31640625
+y = -6767.892578125
+z = 305.5
+facing = 4.692464828491211
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 98
+
+[[units]]
+
+type_id = 'uaco'  # Acolyte
+variation = 0
+x = -5465.0439453125
+y = -6772.64208984375
+z = 305.5
+facing = 4.864796161651611
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 99
+
+[[units]]
+
+type_id = 'uaco'  # Acolyte
+variation = 0
+x = -5068.12060546875
+y = -6771.75048828125
+z = 305.5
+facing = 4.3292999267578125
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 100
+
+[[units]]
+
+type_id = 'ugho'  # Ghoul
+variation = 0
+x = -2592.09619140625
+y = -7741.0341796875
+z = 605.1976318359375
+facing = 6.10209321975708
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 38
+
+[[units]]
+
+type_id = 'hbla'  # Blacksmith
+variation = 0
+x = 4736.0
+y = -4352.0
+z = 316.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 15
+
+[[units]]
+
+type_id = 'hhou'  # Farm
+variation = 0
+x = 6464.0
+y = -5184.0
+z = 316.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 21
+
+[[units]]
+
+type_id = 'uabo'  # Abomination
+variation = 0
+x = -4090.609130859375
+y = -4914.3955078125
+z = 305.5
+facing = 0.8116924166679382
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 211
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'sloc'  # Start Location
+variation = 0
+x = 7680.0
+y = 2752.0
+z = 132.75
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 4
+hit_points = 0
+mana_points = 0
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = 0.0
+hero_level = 0
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 221
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 7363.51123046875
+y = -7427.13330078125
+z = 383.7872619628906
+facing = 3.7566189765930176
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 67
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 7068.80029296875
+y = -7284.2265625
+z = 383.5
+facing = 4.074296951293945
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 79
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = -2336.0
+y = -7648.0
+z = 598.6875
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 172
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = -5920.0
+y = -5280.0
+z = 318.578125
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 2
+
+[[units]]
+
+type_id = 'hgtw'  # Guard Tower
+variation = 0
+x = 3584.0
+y = -5376.0
+z = 388.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 66
+
+[[units]]
+
+type_id = 'ugho'  # Ghoul
+variation = 0
+x = -3478.673095703125
+y = -5152.53173828125
+z = 305.5
+facing = 5.811575412750244
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 111
+
+[[units]]
+
+type_id = 'sloc'  # Start Location
+variation = 0
+x = 7488.0
+y = 2752.0
+z = 135.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 5
+hit_points = 0
+mana_points = 0
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = 0.0
+hero_level = 0
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 122
+
+[[units]]
+
+type_id = 'utod'  # Temple of the Damned
+variation = 0
+x = -4736.0
+y = -5440.0
+z = 305.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 113
+
+[[units]]
+
+type_id = 'usep'  # Crypt
+variation = 0
+x = -3840.0
+y = -6208.0
+z = 305.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 9
+
+[[units]]
+
+type_id = 'usep'  # Crypt
+variation = 0
+x = -4416.0
+y = -6400.0
+z = 305.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 6
+
+[[units]]
+
+type_id = 'nogr'  # Ogre Warrior
+variation = 0
+x = -7411.8837890625
+y = 2992.91943359375
+z = 607.1740112304688
+facing = 5.574720859527588
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 12
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 14
+
+[[units]]
+
+type_id = 'hhou'  # Farm
+variation = 0
+x = 6656.0
+y = -4800.0
+z = 316.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 47
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = -3936.0
+y = -6752.0
+z = 341.140625
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 212
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'hhou'  # Farm
+variation = 0
+x = 6400.0
+y = -5056.0
+z = 316.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 129
+
+[[units]]
+
+type_id = 'nogm'  # Ogre Mauler
+variation = 0
+x = -7781.4931640625
+y = -7564.7119140625
+z = 386.2159423828125
+facing = 4.76837158203125e-07
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 12
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = [
+    [
+        # prvt = Periapt of Vitality
+        { item_id = "prvt", chance_percent = 100 }
+    ]
+]
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 81
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = -3360.0
+y = -5920.0
+z = 305.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 8
+
+[[units]]
+
+type_id = 'sloc'  # Start Location
+variation = 0
+x = -1024.0
+y = -1152.0
+z = 346.25
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = 0
+mana_points = 0
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = 0.0
+hero_level = 0
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 115
+
+[[units]]
+
+type_id = 'nmrr'  # Murloc Huntsman
+variation = 0
+x = -2237.72607421875
+y = -2462.542724609375
+z = 136.52618408203125
+facing = 5.658578872680664
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 12
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = [
+    [
+        # pman = Potion of Mana
+        { item_id = "pman", chance_percent = 100 }
+    ]
+]
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 56
+
+[[units]]
+
+type_id = 'nmrl'  # Murloc Tiderunner
+variation = 0
+x = -2096.959716796875
+y = -2489.447021484375
+z = 126.97454071044922
+facing = 5.576944828033447
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 12
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 57
+
+[[units]]
+
+type_id = 'uabo'  # Abomination
+variation = 0
+x = -283.0953369140625
+y = -1210.6163330078125
+z = 377.7497253417969
+facing = 3.9756247997283936
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 107
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = -224.0
+y = -2144.0
+z = 359.890625
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 93
+
+[[units]]
+
+type_id = 'usep'  # Crypt
+variation = 0
+x = 640.0
+y = -1152.0
+z = 408.75
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 105
+
+[[units]]
+
+type_id = 'unec'  # Necromancer
+variation = 0
+x = 941.7431030273438
+y = -1297.052001953125
+z = 412.7879333496094
+facing = 6.175604343414307
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 74
+
+[[units]]
+
+type_id = 'ugho'  # Ghoul
+variation = 0
+x = -2654.143798828125
+y = -7619.3642578125
+z = 585.3200073242188
+facing = 0.7454303503036499
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 189
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = 352.0
+y = -2720.0
+z = 318.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 50
+
+[[units]]
+
+type_id = 'ugho'  # Ghoul
+variation = 0
+x = 278.2958068847656
+y = -941.514892578125
+z = 378.25
+facing = 0.28378570079803467
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 92
+
+[[units]]
+
+type_id = 'uaco'  # Acolyte
+variation = 0
+x = -1417.0882568359375
+y = -957.742919921875
+z = 345.7783203125
+facing = 5.79315185546875
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 60
+
+[[units]]
+
+type_id = 'uaco'  # Acolyte
+variation = 0
+x = -1366.0423583984375
+y = -1221.2608642578125
+z = 347.0661315917969
+facing = 0.17626726627349854
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 61
+
+[[units]]
+
+type_id = 'uaco'  # Acolyte
+variation = 0
+x = -1446.3546142578125
+y = -1373.04248046875
+z = 351.0937805175781
+facing = 0.47279101610183716
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 119
+
+[[units]]
+
+type_id = 'hhou'  # Farm
+variation = 0
+x = 6720.0
+y = -4672.0
+z = 316.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 130
+
+[[units]]
+
+type_id = 'uC00'
+variation = 0
+x = -6975.27197265625
+y = -6080.958984375
+z = 229.9064483642578
+facing = 0.0
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 4
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 217
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'hhou'  # Farm
+variation = 0
+x = 6528.0
+y = -5056.0
+z = 316.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 73
+
+[[units]]
+
+type_id = 'hgtw'  # Guard Tower
+variation = 0
+x = 3584.0
+y = -6080.0
+z = 316.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 20
+
+[[units]]
+
+type_id = 'nshe'  # Sheep
+variation = 0
+x = 2591.591796875
+y = -7210.3388671875
+z = 383.5976257324219
+facing = 3.036799669265747
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 46
+
+[[units]]
+
+type_id = 'nshe'  # Sheep
+variation = 0
+x = 2522.184326171875
+y = -7283.40185546875
+z = 366.4452209472656
+facing = 2.9345951080322266
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 137
+
+[[units]]
+
+type_id = 'nshe'  # Sheep
+variation = 0
+x = 2067.214111328125
+y = -6895.6689453125
+z = 403.74359130859375
+facing = 0.8095831274986267
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 138
+
+[[units]]
+
+type_id = 'nshe'  # Sheep
+variation = 0
+x = 2171.805419921875
+y = -7409.75634765625
+z = 362.2333068847656
+facing = 3.2312376499176025
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 139
+
+[[units]]
+
+type_id = 'nshe'  # Sheep
+variation = 0
+x = 2012.826904296875
+y = -7557.21435546875
+z = 451.9197082519531
+facing = 3.478024482727051
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 140
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 2313.34228515625
+y = -7696.435546875
+z = 387.0
+facing = 0.7807396054267883
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 141
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 2809.6455078125
+y = -7485.63671875
+z = 387.0
+facing = 1.9748408794403076
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 142
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 2527.537109375
+y = -7518.3349609375
+z = 387.0
+facing = 2.2655084133148193
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 143
+
+[[units]]
+
+type_id = 'hgtw'  # Guard Tower
+variation = 0
+x = 3648.0
+y = -4416.0
+z = 410.5625
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 85
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 0
+item_class = 0
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = -1696.0
+y = -480.0
+z = 365.21875
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 84
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 0
+item_class = 0
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 5611.619140625
+y = -4191.5732421875
+z = 402.963134765625
+facing = 4.617715835571289
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 146
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 6070.77392578125
+y = -4041.11328125
+z = 402.2196960449219
+facing = 4.485207557678223
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 148
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 5882.9658203125
+y = -4234.201171875
+z = 398.79522705078125
+facing = 4.224606990814209
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 150
+
+[[units]]
+
+type_id = 'nvlw'  # Villager
+variation = 0
+x = 5820.87060546875
+y = -4096.56103515625
+z = 414.7958679199219
+facing = 4.279475212097168
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 152
+
+[[units]]
+
+type_id = 'nvlw'  # Villager
+variation = 0
+x = 7125.32470703125
+y = -5281.66015625
+z = 316.5
+facing = 2.9744272232055664
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 153
+
+[[units]]
+
+type_id = 'nvlw'  # Villager
+variation = 0
+x = 7206.48681640625
+y = -5389.27001953125
+z = 316.5673828125
+facing = 4.030643939971924
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 154
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 7041.32861328125
+y = -5392.66552734375
+z = 316.5
+facing = 3.7008161544799805
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 155
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 6712.63623046875
+y = -5900.7939453125
+z = 316.5
+facing = 2.9787204265594482
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 156
+
+[[units]]
+
+type_id = 'nvlw'  # Villager
+variation = 0
+x = 6804.14306640625
+y = -5745.26708984375
+z = 316.5
+facing = 2.84184193611145
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 157
+
+[[units]]
+
+type_id = 'nvlw'  # Villager
+variation = 0
+x = 4408.21240234375
+y = -5950.23583984375
+z = 316.5
+facing = 0.054337989538908005
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 158
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 3911.42041015625
+y = -4925.9775390625
+z = 390.7932434082031
+facing = 5.780879974365234
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 159
+
+[[units]]
+
+type_id = 'nvlw'  # Villager
+variation = 0
+x = 3847.376220703125
+y = -5105.537109375
+z = 405.9076843261719
+facing = 5.374988555908203
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 160
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 3815.412353515625
+y = -4796.94970703125
+z = 412.5092468261719
+facing = 5.147825241088867
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 161
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 4644.79345703125
+y = -7287.08935546875
+z = 325.7169189453125
+facing = 0.6808468699455261
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 162
+
+[[units]]
+
+type_id = 'nvil'  # Villager
+variation = 0
+x = 4929.25439453125
+y = -7575.67529296875
+z = 316.5
+facing = 1.1073848009109497
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 163
+
+[[units]]
+
+type_id = 'nvlw'  # Villager
+variation = 0
+x = 4536.623046875
+y = -7367.1484375
+z = 323.5998840332031
+facing = 0.6166370511054993
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 164
+
+[[units]]
+
+type_id = 'nvlw'  # Villager
+variation = 0
+x = 4583.953125
+y = -7572.91943359375
+z = 316.5
+facing = 0.8153504729270935
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 165
+
+[[units]]
+
+type_id = 'nvlw'  # Villager
+variation = 0
+x = 4808.29052734375
+y = -7488.60400390625
+z = 316.5
+facing = 0.9016529321670532
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 166
+
+[[units]]
+
+type_id = 'hgtw'  # Guard Tower
+variation = 0
+x = 5504.0
+y = -6208.0
+z = 386.0
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 167
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 0
+item_class = 0
+
+[[units]]
+
+type_id = 'hfoo'  # Footman
+variation = 0
+x = 4805.69677734375
+y = -5572.0380859375
+z = 316.5
+facing = 1.5125024318695068
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 168
+
+[[units.modified_abilities]]
+
+abil_id = 'Adef'  # Defend
+autocast_active = false
+abil_level = 0
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 0
+item_class = 0
+
+[[units]]
+
+type_id = 'nvlw'  # Villager
+variation = 0
+x = 4403.56201171875
+y = -6072.33154296875
+z = 316.5
+facing = 4.495275497436523
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 169
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = -4256.0
+y = -5280.0
+z = 305.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 170
+
+[[units]]
+
+type_id = 'hgtw'  # Guard Tower
+variation = 0
+x = 4160.0
+y = -3904.0
+z = 408.625
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 8
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 101
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 0
+item_class = 0
+
+[[units]]
+
+type_id = 'ugho'  # Ghoul
+variation = 0
+x = -3427.944091796875
+y = -4048.855224609375
+z = 289.3978271484375
+facing = 1.7393957376480103
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 10
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 0
+item_class = 0
+
+[[units]]
+
+type_id = 'ugho'  # Ghoul
+variation = 0
+x = -3513.887451171875
+y = -3825.464599609375
+z = 294.9546813964844
+facing = 1.5773640871047974
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 173
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 0
+item_class = 0
+
+[[units]]
+
+type_id = 'ugho'  # Ghoul
+variation = 0
+x = 611.983642578125
+y = -612.283935546875
+z = 404.9961242675781
+facing = 5.5347723960876465
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 121
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'ugho'  # Ghoul
+variation = 0
+x = -4508.169921875
+y = -5289.84716796875
+z = 305.5
+facing = 6.013086795806885
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 175
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 0
+item_class = 0
+
+[[units]]
+
+type_id = 'ugho'  # Ghoul
+variation = 0
+x = -4485.5654296875
+y = -5542.85986328125
+z = 305.5
+facing = 6.251253128051758
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 176
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 0
+item_class = 0
+
+[[units]]
+
+type_id = 'uC00'
+variation = 0
+x = -7493.8466796875
+y = -6078.33056640625
+z = 155.25
+facing = 0.0
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 4
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 219
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'uzg1'  # Spirit Tower
+variation = 0
+x = -4128.0
+y = -4512.0
+z = 328.890625
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 6
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 205
+
+[[units]]
+
+type_id = 'ugho'  # Ghoul
+variation = 0
+x = -223.39439392089844
+y = -2492.777587890625
+z = 278.5362243652344
+facing = 0.8642328977584839
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 114
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'uC00'
+variation = 0
+x = -7235.19677734375
+y = -6076.38232421875
+z = 158.55528259277344
+facing = 0.0
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 4
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 218
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'utod'  # Temple of the Damned
+variation = 0
+x = 128.0
+y = -1408.0
+z = 378.25
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 181
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 0
+item_class = 0
+
+[[units]]
+
+type_id = 'uslh'  # Slaughterhouse
+variation = 0
+x = -320.0
+y = -1664.0
+z = 378.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 3
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 182
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 0
+item_class = 0
+
+[[units]]
+
+type_id = 'ncbc'  # City Building
+variation = 0
+x = 7456.0
+y = -6144.0
+z = 316.5
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 15
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 12500
+target_acquisition = -1.0
+hero_level = 1
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+random_unit_info = -1
+custom_colour = -1
+waygate_destination = -1
+entity_id = 62
+
+[[units]]
+
+type_id = 'sloc'  # Start Location
+variation = 0
+x = 6208.0
+y = 2880.0
+z = 245.9375
+facing = 4.7123894691467285
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 0
+hit_points = 0
+mana_points = 0
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = 0.0
+hero_level = 0
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 16
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0

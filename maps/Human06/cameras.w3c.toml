@@ -1,0 +1,342 @@
+# Warcraft 3 Camera file (.w3c)
+# See w3c.py for type definitions
+
+version = 0
+
+[[cameras]]
+
+target_x = 11102.466796875
+target_y = 5164.61767578125
+z_offset = 0.0
+rotation = 88.45311737060547
+angle_of_attack = 331.5494689941406
+distance = 1815.0006103515625
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Arthas and Jaina 1'
+
+[[cameras]]
+
+target_x = 10739.3046875
+target_y = 5997.62060546875
+z_offset = 0.0
+rotation = 105.0468521118164
+angle_of_attack = 333.73272705078125
+distance = 1239.669677734375
+roll = 0.0
+fov = 70.0
+far_z = 4300.0
+name = 'Arthas and Jaina 2'
+
+[[cameras]]
+
+target_x = 10493.615234375
+target_y = 5806.26513671875
+z_offset = 0.0
+rotation = 333.42181396484375
+angle_of_attack = 333.7080993652344
+distance = 1239.669677734375
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Arthas Jaina and Uther'
+
+[[cameras]]
+
+target_x = 6450.42529296875
+target_y = -828.4136962890625
+z_offset = 0.0
+rotation = 149.9062042236328
+angle_of_attack = 332.7071533203125
+distance = 1913.120361328125
+roll = 0.0
+fov = 50.0
+far_z = 9431.791015625
+name = 'Villagers Over There'
+
+[[cameras]]
+
+target_x = 6323.02197265625
+target_y = -779.1651000976562
+z_offset = 0.0
+rotation = 147.3749237060547
+angle_of_attack = 337.9830322265625
+distance = 1306.6868896484375
+roll = 0.0
+fov = 50.0
+far_z = 9431.791015625
+name = 'Grain of Andorhal'
+
+[[cameras]]
+
+target_x = 11555.0087890625
+target_y = 5910.1279296875
+z_offset = 0.0
+rotation = 90.0
+angle_of_attack = 304.0
+distance = 1650.0
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Arthas Town'
+
+[[cameras]]
+
+target_x = 10566.287109375
+target_y = 5755.75341796875
+z_offset = 0.0
+rotation = 331.5234680175781
+angle_of_attack = 337.693115234375
+distance = 1363.63671875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'What Must Be Purged'
+
+[[cameras]]
+
+target_x = 9489.0576171875
+target_y = 6098.271484375
+z_offset = 0.0
+rotation = 181.12503051757812
+angle_of_attack = 355.0123291015625
+distance = 1500.0003662109375
+roll = 0.0
+fov = 70.0
+far_z = 6000.0
+name = 'Arthas Expostulates'
+
+[[cameras]]
+
+target_x = 10794.96484375
+target_y = 5923.5634765625
+z_offset = 0.0
+rotation = 2.8150484561920166
+angle_of_attack = 330.9383544921875
+distance = 803.8023071289062
+roll = 0.0
+fov = 75.0
+far_z = 3000.0
+name = 'Uther Shocked'
+
+[[cameras]]
+
+target_x = 10483.0361328125
+target_y = 6209.4072265625
+z_offset = 0.0
+rotation = 31.172630310058594
+angle_of_attack = 335.1054992675781
+distance = 1294.7022705078125
+roll = 0.0
+fov = 70.0
+far_z = 5989.5
+name = 'Jaina Leaving'
+
+[[cameras]]
+
+target_x = 9083.9296875
+target_y = 239.7845916748047
+z_offset = 0.0
+rotation = 90.0
+angle_of_attack = 325.0
+distance = 1400.0
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'The Waygate'
+
+[[cameras]]
+
+target_x = 16.192996978759766
+target_y = 1574.1058349609375
+z_offset = 0.0
+rotation = 73.68750762939453
+angle_of_attack = 321.7838439941406
+distance = 1650.0
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'The Waygates'
+
+[[cameras]]
+
+target_x = -2048.419677734375
+target_y = -2840.956298828125
+z_offset = 0.0
+rotation = 172.3359375
+angle_of_attack = 330.64501953125
+distance = 1126.9722900390625
+roll = 0.0
+fov = 70.0
+far_z = 4000.0
+name = 'End Win Cinematic 1'
+
+[[cameras]]
+
+target_x = -1958.412109375
+target_y = -2054.25390625
+z_offset = 0.0
+rotation = 118.6171875
+angle_of_attack = 334.6345520019531
+distance = 1500.000244140625
+roll = 0.0
+fov = 70.0
+far_z = 4000.0
+name = 'End Win Cinematic 2'
+
+[[cameras]]
+
+target_x = -1893.54248046875
+target_y = -2080.80908203125
+z_offset = 0.0
+rotation = 248.90626525878906
+angle_of_attack = 331.6282653808594
+distance = 1650.000244140625
+roll = 0.0
+fov = 70.0
+far_z = 3500.0
+name = 'End Win Cinematic 3'
+
+[[cameras]]
+
+target_x = 9168.7626953125
+target_y = 4742.87158203125
+z_offset = 0.0
+rotation = 49.078155517578125
+angle_of_attack = 345.89959716796875
+distance = 4279.67578125
+roll = 0.0
+fov = 70.0
+far_z = 6000.0
+name = 'Test1'
+
+[[cameras]]
+
+target_x = -3269.699951171875
+target_y = -8633.810546875
+z_offset = 0.0
+rotation = 242.4217987060547
+angle_of_attack = 345.89959716796875
+distance = 4279.67578125
+roll = 0.0
+fov = 70.0
+far_z = 10000.0
+name = 'Test2'
+
+[[cameras]]
+
+target_x = 11205.962890625
+target_y = 6197.36376953125
+z_offset = 0.0
+rotation = 24.75002670288086
+angle_of_attack = 347.1208190917969
+distance = 2415.76513671875
+roll = 0.0
+fov = 70.0
+far_z = 10000.0
+name = 'Test3'
+
+[[cameras]]
+
+target_x = 9913.0068359375
+target_y = 4803.46240234375
+z_offset = 0.0
+rotation = 269.64837646484375
+angle_of_attack = 342.6203918457031
+distance = 1913.1204833984375
+roll = 0.0
+fov = 45.0
+far_z = 5301.0
+name = 'Inbetween Villagers'
+
+[[cameras]]
+
+target_x = -1691.252685546875
+target_y = -2418.9296875
+z_offset = 0.0
+rotation = 50.695308685302734
+angle_of_attack = 333.06256103515625
+distance = 1239.6695556640625
+roll = 0.0
+fov = 80.0
+far_z = 3500.0
+name = 'CamEndCinMalCountershot'
+
+[[cameras]]
+
+target_x = -1828.797607421875
+target_y = -2801.075927734375
+z_offset = 0.0
+rotation = 48.093788146972656
+angle_of_attack = 338.0939636230469
+distance = 1024.5201416015625
+roll = 0.0
+fov = 80.0
+far_z = 4000.0
+name = 'CamEnWinArthasBack'
+
+[[cameras]]
+
+target_x = -1687.526611328125
+target_y = -2666.89599609375
+z_offset = 0.0
+rotation = 39.7265625
+angle_of_attack = 323.5524597167969
+distance = 1815.0
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'CamEndWinFarshot'
+
+[[cameras]]
+
+target_x = -1508.233642578125
+target_y = -2470.787353515625
+z_offset = 0.0
+rotation = 313.9453125
+angle_of_attack = 338.19219970703125
+distance = 1650.0
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'CamCinEndWinMalRuntoward'
+
+[[cameras]]
+
+target_x = 2965.030029296875
+target_y = 267.260009765625
+z_offset = 0.0
+rotation = 93.15998840332031
+angle_of_attack = 332.41998291015625
+distance = 1500.0
+roll = 0.0
+fov = 70.0
+far_z = 5500.0
+name = 'MalGanis IntroCin1'
+
+[[cameras]]
+
+target_x = 3360.489990234375
+target_y = -584.5599975585938
+z_offset = 0.0
+rotation = 80.15998840332031
+angle_of_attack = 327.2400207519531
+distance = 1500.0
+roll = 0.0
+fov = 70.0
+far_z = 5500.0
+name = 'MalGanis IntroCin2'
+
+[[cameras]]
+
+target_x = 10807.1884765625
+target_y = 5713.76318359375
+z_offset = 0.0
+rotation = 333.4200134277344
+angle_of_attack = 333.7099914550781
+distance = 931.3823852539062
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Arthas Jaina and UtherStart'

@@ -1,0 +1,391 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 1
+has_levels = false
+
+[blizzard_objects]
+[[blizzard_objects.entities]]
+parent_id = 'nvlw'  # Villager
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 30
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nvil'  # Villager
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 30
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nzom'  # Zombie
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usle'  # UnitData.Sleeps
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'hhdl'  # Riderless Horse
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'umvs'  # UnitBalance.Speed Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 280
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Obla'  # Blademaster
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'upro'  # Profile.Proper Names
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_109'
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nrwm'  # Red Dragon
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.75
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nrdk'  # Red Dragon Whelp
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'umvs'  # UnitBalance.Speed Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 400
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'ogru'  # Grunt
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'orai'  # Raider
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'ngno'  # Gnoll
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usle'  # UnitData.Sleeps
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'ngnb'  # Gnoll Brute
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usle'  # UnitData.Sleeps
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'ngna'  # Gnoll Poacher
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usle'  # UnitData.Sleeps
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nmrl'  # Murloc Tiderunner
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usle'  # UnitData.Sleeps
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nmrr'  # Murloc Huntsman
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usle'  # UnitData.Sleeps
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[map_objects]
+[[map_objects.entities]]
+parent_id = 'hrif'  # Rifleman
+entity_id = 'hC00'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_047'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 650
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'udef'  # UnitBalance.Defense Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1r'  # UnitWeapons.Attack 1 - Range
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 450
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 30
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.2000000476837158
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 160
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclb'  # UnitUI.Tinting Color 3 (Blue)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 160
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1s'  # UnitWeapons.Attack 1 - Damage Sides per Die
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 8
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'hfoo'  # Footman
+entity_id = 'hC01'
+[[map_objects.entities.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_054'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 110
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclb'  # UnitUI.Tinting Color 3 (Blue)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 110
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.100000023841858
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 18
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1s'  # UnitWeapons.Attack 1 - Damage Sides per Die
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 4
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'harm'  # Workshop
+entity_id = 'hC06'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_057'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'hmtm'  # Mortar Team
+entity_id = 'hC02'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_060'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 150
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclb'  # UnitUI.Tinting Color 3 (Blue)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 200
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.100000023841858
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nrdk'  # Red Dragon Whelp
+entity_id = 'nC03'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_061'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'units\creeps\BlackDragon\BlackDragon'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 175
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1r'  # UnitWeapons.Attack 1 - Range
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'umvs'  # UnitBalance.Speed Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 400
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usle'  # UnitData.Sleeps
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'

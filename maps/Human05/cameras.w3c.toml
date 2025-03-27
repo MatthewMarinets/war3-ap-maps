@@ -1,0 +1,576 @@
+# Warcraft 3 Camera file (.w3c)
+# See w3c.py for type definitions
+
+version = 0
+
+[[cameras]]
+
+target_x = 4912.392578125
+target_y = -6259.52880859375
+z_offset = 0.0
+rotation = 88.50210571289062
+angle_of_attack = 316.68817138671875
+distance = 1126.97216796875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Arthas Defiant A'
+
+[[cameras]]
+
+target_x = 4908.7431640625
+target_y = -6277.49267578125
+z_offset = 0.0
+rotation = 89.46890258789062
+angle_of_attack = 326.94451904296875
+distance = 699.7613525390625
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Arthas Defiant B'
+
+[[cameras]]
+
+target_x = -7082.6689453125
+target_y = -2576.455078125
+z_offset = 0.0
+rotation = 90.0
+angle_of_attack = 304.0
+distance = 1650.0
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Caravan'
+
+[[cameras]]
+
+target_x = 5299.14990234375
+target_y = -7554.57080078125
+z_offset = 0.0
+rotation = 291.3838195800781
+angle_of_attack = 338.9284362792969
+distance = 1930.5400390625
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Dont Celebrate Yet'
+
+[[cameras]]
+
+target_x = 4954.71142578125
+target_y = -6703.16748046875
+z_offset = 0.0
+rotation = 291.5596008300781
+angle_of_attack = 325.97979736328125
+distance = 1755.036376953125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Dont Celebrate Yet B'
+
+[[cameras]]
+
+target_x = 4643.490234375
+target_y = -6103.5
+z_offset = 0.0
+rotation = 204.6101531982422
+angle_of_attack = 348.7528076171875
+distance = 943.3900146484375
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Easy Lad'
+
+[[cameras]]
+
+target_x = 6274.46484375
+target_y = -7560.21142578125
+z_offset = 0.0
+rotation = 139.50001525878906
+angle_of_attack = 319.3131103515625
+distance = 1198.7130126953125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'EndCinematic01'
+
+[[cameras]]
+
+target_x = 4833.8720703125
+target_y = -5917.38525390625
+z_offset = 0.0
+rotation = 83.39060974121094
+angle_of_attack = 309.8246154785156
+distance = 1833.79736328125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'EndCinematic02'
+
+[[cameras]]
+
+target_x = 4833.8720703125
+target_y = -5917.38525390625
+z_offset = 0.0
+rotation = 57.16404724121094
+angle_of_attack = 323.44677734375
+distance = 1833.79736328125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'EndCinematic03'
+
+[[cameras]]
+
+target_x = 7208.15087890625
+target_y = -5359.5107421875
+z_offset = 0.0
+rotation = 38.95310974121094
+angle_of_attack = 348.6219177246094
+distance = 1178.93408203125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'EndCinematic04'
+
+[[cameras]]
+
+target_x = 6865.70947265625
+target_y = -5487.4306640625
+z_offset = 0.0
+rotation = 82.44140625
+angle_of_attack = 338.1025695800781
+distance = 644.3447265625
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'EndCinematic05'
+
+[[cameras]]
+
+target_x = 6980.07275390625
+target_y = -5920.44482421875
+z_offset = 0.0
+rotation = 297.8436279296875
+angle_of_attack = 345.7142028808594
+distance = 932.7025756835938
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'EndCinematic06'
+
+[[cameras]]
+
+target_x = 6993.0908203125
+target_y = -5935.93994140625
+z_offset = 0.0
+rotation = 298.1951904296875
+angle_of_attack = 342.79949951171875
+distance = 1173.5667724609375
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'EndCinematic07'
+
+[[cameras]]
+
+target_x = 6608.78173828125
+target_y = -5725.162109375
+z_offset = 0.0
+rotation = 217.4764404296875
+angle_of_attack = 334.25048828125
+distance = 945.6326904296875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'EndCinematic08'
+
+[[cameras]]
+
+target_x = 6880.470703125
+target_y = -5962.1201171875
+z_offset = 0.0
+rotation = 293.1327209472656
+angle_of_attack = 345.9936218261719
+distance = 1040.1959228515625
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'EndCinematic09'
+
+[[cameras]]
+
+target_x = 6572.361328125
+target_y = -5697.12353515625
+z_offset = 0.0
+rotation = 192.70889282226562
+angle_of_attack = 333.68927001953125
+distance = 945.6326904296875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'EndCinematic10'
+
+[[cameras]]
+
+target_x = 6903.9482421875
+target_y = -5466.3330078125
+z_offset = 0.0
+rotation = 90.0
+angle_of_attack = 304.0
+distance = 1650.0
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Ending Cinematic Cancel'
+
+[[cameras]]
+
+target_x = 5940.3115234375
+target_y = -7308.32861328125
+z_offset = 0.0
+rotation = 175.88575744628906
+angle_of_attack = 330.2090759277344
+distance = 1318.584716796875
+roll = 0.0
+fov = 70.0
+far_z = 4545.45458984375
+name = 'Mob Attack A Alternate'
+
+[[cameras]]
+
+target_x = 4643.490234375
+target_y = -6103.5
+z_offset = 0.0
+rotation = 194.41000366210938
+angle_of_attack = 333.6199951171875
+distance = 943.3900146484375
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Nows Not The Time'
+
+[[cameras]]
+
+target_x = 3887.64990234375
+target_y = -5817.009765625
+z_offset = 0.0
+rotation = 122.42999267578125
+angle_of_attack = 328.3599853515625
+distance = 1363.6400146484375
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Oh Crap'
+
+[[cameras]]
+
+target_x = 4600.31982421875
+target_y = -5092.009765625
+z_offset = 0.0
+rotation = 117.5
+angle_of_attack = 331.55999755859375
+distance = 903.760009765625
+roll = 0.0
+fov = 50.0
+far_z = 5000.0
+name = 'Starting Cienmatic 14'
+
+[[cameras]]
+
+target_x = 5199.9482421875
+target_y = -5538.4833984375
+z_offset = 0.0
+rotation = 90.0
+angle_of_attack = 304.0
+distance = 1650.0
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Starting Cienmatic Cancel'
+
+[[cameras]]
+
+target_x = 5940.17822265625
+target_y = -7520.67578125
+z_offset = 0.0
+rotation = 101.65499114990234
+angle_of_attack = 310.1032409667969
+distance = 733.9163208007812
+roll = 0.0
+fov = 100.0
+far_z = 5721.27978515625
+name = 'Starting Cinematic 01'
+
+[[cameras]]
+
+target_x = 5033.4599609375
+target_y = -6525.0498046875
+z_offset = 0.0
+rotation = 132.47000122070312
+angle_of_attack = 312.0899963378906
+distance = 965.97998046875
+roll = 0.0
+fov = 100.0
+far_z = 5721.27978515625
+name = 'Starting Cinematic 02'
+
+[[cameras]]
+
+target_x = 4923.22021484375
+target_y = -6336.97998046875
+z_offset = 0.0
+rotation = 148.6387481689453
+angle_of_attack = 331.68475341796875
+distance = 845.010009765625
+roll = 0.0
+fov = 70.0
+far_z = 5355.919921875
+name = 'Starting Cinematic 03'
+
+[[cameras]]
+
+target_x = 4946.68994140625
+target_y = -6170.740234375
+z_offset = 0.0
+rotation = 102.04000091552734
+angle_of_attack = 329.239990234375
+distance = 1069.9000244140625
+roll = 0.0
+fov = 70.0
+far_z = 6050.0
+name = 'Starting Cinematic 04'
+
+[[cameras]]
+
+target_x = 5084.35009765625
+target_y = -5854.35009765625
+z_offset = 0.0
+rotation = 333.1400146484375
+angle_of_attack = 325.8999938964844
+distance = 1267.489990234375
+roll = 0.0
+fov = 75.0
+far_z = 5000.0
+name = 'Starting Cinematic 05'
+
+[[cameras]]
+
+target_x = 5639.3701171875
+target_y = -5740.14990234375
+z_offset = 0.0
+rotation = 346.32000732421875
+angle_of_attack = 328.8299865722656
+distance = 994.3099975585938
+roll = 0.0
+fov = 75.0
+far_z = 5000.0
+name = 'Starting Cinematic 06'
+
+[[cameras]]
+
+target_x = 5382.22021484375
+target_y = -5819.330078125
+z_offset = 0.0
+rotation = 304.9100036621094
+angle_of_attack = 330.17999267578125
+distance = 1252.77001953125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Starting Cinematic 07'
+
+[[cameras]]
+
+target_x = 5382.22021484375
+target_y = -5819.330078125
+z_offset = 0.0
+rotation = 305.29998779296875
+angle_of_attack = 332.8699951171875
+distance = 777.8699951171875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Starting Cinematic 08'
+
+[[cameras]]
+
+target_x = 4761.0
+target_y = -6000.259765625
+z_offset = 0.0
+rotation = 41.84000015258789
+angle_of_attack = 326.989990234375
+distance = 1057.1500244140625
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Starting Cinematic 09'
+
+[[cameras]]
+
+target_x = 4553.669921875
+target_y = -6044.509765625
+z_offset = 0.0
+rotation = 48.24999237060547
+angle_of_attack = 327.80999755859375
+distance = 1140.949951171875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Starting Cinematic 10'
+
+[[cameras]]
+
+target_x = 5324.9501953125
+target_y = -5817.6298828125
+z_offset = 0.0
+rotation = 147.75999450683594
+angle_of_attack = 328.69000244140625
+distance = 838.9000244140625
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Starting Cinematic 11'
+
+[[cameras]]
+
+target_x = 5292.72998046875
+target_y = -6124.85986328125
+z_offset = 0.0
+rotation = 242.6300048828125
+angle_of_attack = 333.5799865722656
+distance = 790.239990234375
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Starting Cinematic 12'
+
+[[cameras]]
+
+target_x = 4578.8701171875
+target_y = -5260.759765625
+z_offset = 0.0
+rotation = 125.16000366210938
+angle_of_attack = 329.75
+distance = 806.719970703125
+roll = 0.0
+fov = 90.0
+far_z = 5000.0
+name = 'Starting Cinematic 13'
+
+[[cameras]]
+
+target_x = 4662.9501953125
+target_y = -6324.3798828125
+z_offset = 0.0
+rotation = 93.25
+angle_of_attack = 322.5899963378906
+distance = 1519.3399658203125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Surprised A'
+
+[[cameras]]
+
+target_x = 4643.490234375
+target_y = -6103.5
+z_offset = 0.0
+rotation = 93.25
+angle_of_attack = 322.5899963378906
+distance = 943.3900146484375
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Surprised B'
+
+[[cameras]]
+
+target_x = 6703.82275390625
+target_y = -7779.126953125
+z_offset = 0.0
+rotation = 228.88478088378906
+angle_of_attack = 303.2874755859375
+distance = 2569.548583984375
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Test'
+
+[[cameras]]
+
+target_x = 5203.3544921875
+target_y = -7268.34765625
+z_offset = 0.0
+rotation = 177.46780395507812
+angle_of_attack = 353.7986755371094
+distance = 1755.036376953125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Undead Mob Attack A'
+
+[[cameras]]
+
+target_x = 4925.73974609375
+target_y = -6842.34912109375
+z_offset = 0.0
+rotation = 107.33203887939453
+angle_of_attack = 327.5182800292969
+distance = 1450.4429931640625
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Undead Mob Attack B'
+
+[[cameras]]
+
+target_x = 4761.080078125
+target_y = -5405.43994140625
+z_offset = 0.0
+rotation = 112.61000061035156
+angle_of_attack = 328.6700134277344
+distance = 1930.5400390625
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Undead Mob Attack C'
+
+[[cameras]]
+
+target_x = 5273.54736328125
+target_y = -7544.14794921875
+z_offset = 0.0
+rotation = 282.6699523925781
+angle_of_attack = 352.0
+distance = 1318.5799560546875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Uther Arrives A'
+
+[[cameras]]
+
+target_x = 5027.35986328125
+target_y = -7350.830078125
+z_offset = 0.0
+rotation = 282.8500061035156
+angle_of_attack = 334.70001220703125
+distance = 1318.5799560546875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Uther Arrives B'
+
+[[cameras]]
+
+target_x = 4692.93017578125
+target_y = -6662.990234375
+z_offset = 0.0
+rotation = 273.1000061035156
+angle_of_attack = 336.8699951171875
+distance = 1930.5400390625
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Your Timing'

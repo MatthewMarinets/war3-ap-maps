@@ -1,0 +1,236 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 1
+has_levels = false
+
+[blizzard_objects]
+[[blizzard_objects.entities]]
+parent_id = 'nass'  # Assassin
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ACvs'
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nrog'  # Rogue
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nenf'  # Enforcer
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ACev'
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nbrg'  # Brigand
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nban'  # Bandit
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nbld'  # Bandit Lord
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ACav,ACds'
+object_id = 'null'
+
+[map_objects]
+[[map_objects.entities]]
+parent_id = 'nvlw'  # Villager
+entity_id = 'nC00'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_003'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvl2'  # Villager
+entity_id = 'nC01'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_025'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 5
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ubsi'  # UnitBalance.Gold Bounty Awarded - Sides per Die
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 20
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 10
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvl2'  # Villager
+entity_id = 'nC02'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_033'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvl2'  # Villager
+entity_id = 'nC03'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_022'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlw'  # Villager
+entity_id = 'nC04'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_035'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlw'  # Villager
+entity_id = 'nC05'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_028'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 0.800000011920929
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlk'  # Child
+entity_id = 'nC06'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_029'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlk'  # Child
+entity_id = 'nC07'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_030'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlw'  # Villager
+entity_id = 'nC08'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_521'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlw'  # Villager
+entity_id = 'nC09'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_522'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlw'  # Villager
+entity_id = 'nC10'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_523'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlw'  # Villager
+entity_id = 'nC11'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_531'
+object_id = 'null'

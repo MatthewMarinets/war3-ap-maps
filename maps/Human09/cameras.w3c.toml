@@ -1,0 +1,459 @@
+# Warcraft 3 Camera file (.w3c)
+# See w3c.py for type definitions
+
+version = 0
+
+[[cameras]]
+
+target_x = 1204.52001953125
+target_y = 6313.22998046875
+z_offset = 0.0
+rotation = 121.70999145507812
+angle_of_attack = 333.4100036621094
+distance = 982.1300048828125
+roll = 0.0
+fov = 70.0
+far_z = 3500.0
+name = 'Camera 026'
+
+[[cameras]]
+
+target_x = 1267.6099853515625
+target_y = 6210.759765625
+z_offset = 0.0
+rotation = 239.5500030517578
+angle_of_attack = 327.7799987792969
+distance = 785.6400146484375
+roll = 0.0
+fov = 70.0
+far_z = 3500.0
+name = 'Camera 027'
+
+[[cameras]]
+
+target_x = 1343.219970703125
+target_y = 6343.6298828125
+z_offset = 40.0
+rotation = 205.47000122070312
+angle_of_attack = 323.2200012207031
+distance = 771.4500122070312
+roll = 0.0
+fov = 70.0
+far_z = 3500.0
+name = 'Camera 028'
+
+[[cameras]]
+
+target_x = 1074.93994140625
+target_y = 6123.77978515625
+z_offset = 0.0
+rotation = 183.08998107910156
+angle_of_attack = 334.07000732421875
+distance = 982.1300048828125
+roll = 0.0
+fov = 70.0
+far_z = 2000.0
+name = 'Exit Arthas 01'
+
+[[cameras]]
+
+target_x = 1362.489990234375
+target_y = 6318.4501953125
+z_offset = 30.0
+rotation = 83.5999984741211
+angle_of_attack = 328.42999267578125
+distance = 678.8699951171875
+roll = 0.0
+fov = 70.0
+far_z = 3500.0
+name = 'Exit Malganis 01'
+
+[[cameras]]
+
+target_x = 1323.1199951171875
+target_y = 6328.31005859375
+z_offset = 0.0
+rotation = 37.40999984741211
+angle_of_attack = 330.8699951171875
+distance = 678.8699951171875
+roll = 0.0
+fov = 70.0
+far_z = 3500.0
+name = 'Exit Malganis 02'
+
+[[cameras]]
+
+target_x = 13.369999885559082
+target_y = 9907.7900390625
+z_offset = 50.0
+rotation = 135.8099822998047
+angle_of_attack = 342.32000732421875
+distance = 974.3599853515625
+roll = 0.0
+fov = 90.0
+far_z = 3500.0
+name = 'ExitArthasRun 1'
+
+[[cameras]]
+
+target_x = -62.52000045776367
+target_y = 10010.259765625
+z_offset = 50.0
+rotation = 165.22000122070312
+angle_of_attack = 347.3800048828125
+distance = 665.5
+roll = 0.0
+fov = 90.0
+far_z = 3500.0
+name = 'ExitArthasRun 2'
+
+[[cameras]]
+
+target_x = 946.3300170898438
+target_y = 9630.0302734375
+z_offset = 50.0
+rotation = 104.08999633789062
+angle_of_attack = 317.75
+distance = 665.5
+roll = 0.0
+fov = 90.0
+far_z = 3500.0
+name = 'ExitArthasRun Follow'
+
+[[cameras]]
+
+target_x = 1363.02001953125
+target_y = 6264.66015625
+z_offset = 0.0
+rotation = 90.13999938964844
+angle_of_attack = 319.5
+distance = 1035.5
+roll = 0.0
+fov = 70.0
+far_z = 3500.0
+name = 'ExitInitialCamera'
+
+[[cameras]]
+
+target_x = 1202.2041015625
+target_y = 6132.1298828125
+z_offset = 0.0
+rotation = 110.32029724121094
+angle_of_attack = 324.2922058105469
+distance = 858.122802734375
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'ExitZoomIn'
+
+[[cameras]]
+
+target_x = -654.5
+target_y = 4607.5
+z_offset = 0.0
+rotation = 17.590002059936523
+angle_of_attack = 345.1400146484375
+distance = 1024.52001953125
+roll = 0.0
+fov = 70.0
+far_z = 2000.0
+name = 'FrostmourneArthasChannel'
+
+[[cameras]]
+
+target_x = -6544.6201171875
+target_y = -5370.64013671875
+z_offset = 0.0
+rotation = 90.0
+angle_of_attack = 304.0
+distance = 1650.0
+roll = 0.0
+fov = 70.0
+far_z = 3500.0
+name = 'FrostmourneArthasDone'
+
+[[cameras]]
+
+target_x = -840.0499877929688
+target_y = 4856.89990234375
+z_offset = 0.0
+rotation = 57.15999984741211
+angle_of_attack = 341.010009765625
+distance = 1170.510009765625
+roll = 0.0
+fov = 70.0
+far_z = 2000.0
+name = 'FrostmourneBeginCloseup'
+
+[[cameras]]
+
+target_x = -845.030029296875
+target_y = 4488.31005859375
+z_offset = 0.0
+rotation = 16.450002670288086
+angle_of_attack = 315.5199890136719
+distance = 1287.56005859375
+roll = 0.0
+fov = 70.0
+far_z = 2000.0
+name = 'FrostmourneDeathCamera'
+
+[[cameras]]
+
+target_x = -863.6199951171875
+target_y = 4806.8798828125
+z_offset = 115.0
+rotation = 57.15999984741211
+angle_of_attack = 354.1700134277344
+distance = 885.9600219726562
+roll = 0.0
+fov = 26.0
+far_z = 3500.0
+name = 'FrostmourneEndCloseup'
+
+[[cameras]]
+
+target_x = -1707.4100341796875
+target_y = 4404.18017578125
+z_offset = 0.0
+rotation = 358.7300109863281
+angle_of_attack = 327.0899963378906
+distance = 1617.8599853515625
+roll = 0.0
+fov = 70.0
+far_z = 3000.0
+name = 'FrostmourneIntroShot'
+
+[[cameras]]
+
+target_x = -1056.469970703125
+target_y = 4145.02978515625
+z_offset = 0.0
+rotation = 345.0299987792969
+angle_of_attack = 344.8599853515625
+distance = 636.1500244140625
+roll = 0.0
+fov = 70.0
+far_z = 2000.0
+name = 'FrostmourneMuradinDeath 01'
+
+[[cameras]]
+
+target_x = -1073.9200439453125
+target_y = 4167.66015625
+z_offset = 0.0
+rotation = 138.36000061035156
+angle_of_attack = 346.239990234375
+distance = 636.1500244140625
+roll = 0.0
+fov = 70.0
+far_z = 2500.0
+name = 'FrostmourneMuradinDeath 02'
+
+[[cameras]]
+
+target_x = -1118.4000244140625
+target_y = 4316.509765625
+z_offset = 0.0
+rotation = 74.81999969482422
+angle_of_attack = 345.32000732421875
+distance = 636.1500244140625
+roll = 0.0
+fov = 70.0
+far_z = 2000.0
+name = 'FrostmourneMuradinDeath 03'
+
+[[cameras]]
+
+target_x = -1171.97998046875
+target_y = 4401.02978515625
+z_offset = 70.0
+rotation = 82.40999603271484
+angle_of_attack = 348.2699890136719
+distance = 636.1500244140625
+roll = 0.0
+fov = 26.0
+far_z = 2500.0
+name = 'FrostmourneMuradinDeath 04'
+
+[[cameras]]
+
+target_x = -1396.68994140625
+target_y = 4491.68017578125
+z_offset = 0.0
+rotation = 48.04999923706055
+angle_of_attack = 330.32000732421875
+distance = 926.2100219726562
+roll = 0.0
+fov = 70.0
+far_z = 2500.0
+name = 'FrostmourneMuradinSaysLeave'
+
+[[cameras]]
+
+target_x = -1056.280029296875
+target_y = 4499.31982421875
+z_offset = 0.0
+rotation = 59.75999450683594
+angle_of_attack = 329.7300109863281
+distance = 926.2100219726562
+roll = 0.0
+fov = 70.0
+far_z = 2200.0
+name = 'FrostmourneMuradinToArthas'
+
+[[cameras]]
+
+target_x = -1230.43994140625
+target_y = 4454.93017578125
+z_offset = 0.0
+rotation = 359.01995849609375
+angle_of_attack = 342.04998779296875
+distance = 1151.8199462890625
+roll = 0.0
+fov = 70.0
+far_z = 2300.0
+name = 'FrostmourneSwordCloseup'
+
+[[cameras]]
+
+target_x = -786.9099731445312
+target_y = 4515.68017578125
+z_offset = 0.0
+rotation = 7.5099968910217285
+angle_of_attack = 340.7699890136719
+distance = 933.6500244140625
+roll = 0.0
+fov = 70.0
+far_z = 2000.0
+name = 'FrostmourneSwordPanBegin'
+
+[[cameras]]
+
+target_x = -1181.8800048828125
+target_y = 4762.1298828125
+z_offset = 0.0
+rotation = 104.11000061035156
+angle_of_attack = 338.04998779296875
+distance = 848.77001953125
+roll = 0.0
+fov = 70.0
+far_z = 2000.0
+name = 'FrostmourneSwordPanEnd'
+
+[[cameras]]
+
+target_x = -6467.06982421875
+target_y = -2397.419921875
+z_offset = 0.0
+rotation = 90.0
+angle_of_attack = 304.0
+distance = 1650.0
+roll = 0.0
+fov = 70.0
+far_z = 3500.0
+name = 'IntroArthasInValley'
+
+[[cameras]]
+
+target_x = -3492.2900390625
+target_y = -5510.64013671875
+z_offset = 0.0
+rotation = 126.31999969482422
+angle_of_attack = 329.3299865722656
+distance = 1070.949951171875
+roll = 0.0
+fov = 70.0
+far_z = 3500.0
+name = 'IntroCaptainCloseup'
+
+[[cameras]]
+
+target_x = -2603.580078125
+target_y = -3045.070068359375
+z_offset = 0.0
+rotation = 90.69999694824219
+angle_of_attack = 320.0799865722656
+distance = 1736.4000244140625
+roll = 0.0
+fov = 70.0
+far_z = 3500.0
+name = 'IntroFirstCamera'
+
+[[cameras]]
+
+target_x = -2555.010009765625
+target_y = -2222.2099609375
+z_offset = 0.0
+rotation = 86.83998107910156
+angle_of_attack = 335.19000244140625
+distance = 676.469970703125
+roll = 0.0
+fov = 70.0
+far_z = 3500.0
+name = 'IntroMalganisCloseup'
+
+[[cameras]]
+
+target_x = -2520.8798828125
+target_y = -5099.830078125
+z_offset = 0.0
+rotation = 90.76595306396484
+angle_of_attack = 327.00384521484375
+distance = 1147.6300048828125
+roll = 0.0
+fov = 70.0
+far_z = 3500.0
+name = 'IntroMuradinToArthas'
+
+[[cameras]]
+
+target_x = -2520.800048828125
+target_y = -2334.239990234375
+z_offset = 0.0
+rotation = 84.6500015258789
+angle_of_attack = 319.5299987792969
+distance = 1946.9300537109375
+roll = 0.0
+fov = 70.0
+far_z = 3500.0
+name = 'IntroNorthApproach'
+
+[[cameras]]
+
+target_x = -370.3699951171875
+target_y = -4127.41015625
+z_offset = 0.0
+rotation = 38.599998474121094
+angle_of_attack = 318.989990234375
+distance = 1956.219970703125
+roll = 0.0
+fov = 70.0
+far_z = 3500.0
+name = 'IntroNorthEastApproach'
+
+[[cameras]]
+
+target_x = -4493.169921875
+target_y = -5910.58984375
+z_offset = 0.0
+rotation = 141.47000122070312
+angle_of_attack = 336.7900085449219
+distance = 1551.68994140625
+roll = 0.0
+fov = 70.0
+far_z = 3500.0
+name = 'IntroToWaygate1'
+
+[[cameras]]
+
+target_x = -6593.10009765625
+target_y = -5319.259765625
+z_offset = 0.0
+rotation = 70.30998229980469
+angle_of_attack = 318.4599914550781
+distance = 1654.2099609375
+roll = 0.0
+fov = 70.0
+far_z = 3500.0
+name = 'IntroToWaygate3'

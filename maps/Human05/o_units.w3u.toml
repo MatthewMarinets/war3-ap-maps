@@ -1,0 +1,283 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 1
+has_levels = false
+
+[blizzard_objects]
+[[blizzard_objects.entities]]
+parent_id = 'nheb'  # High Elven Barracks
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'utra'  # Profile.Units Trained
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'hfoo,nhea,hmpr'
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nhea'  # Archer
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uhrt'  # UnitBalance.Hit Points Regeneration Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'always'
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'ugho'  # Ghoul
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubld'  # UnitBalance.Build Time
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 14
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'uabo'  # Abomination
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubld'  # UnitBalance.Build Time
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 30
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'umtw'  # Meat Wagon
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubld'  # UnitBalance.Build Time
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 25
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'unec'  # Necromancer
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubld'  # UnitBalance.Build Time
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 24
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'unp2'  # Black Citadel
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubld'  # UnitBalance.Build Time
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 60
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'unp1'  # Halls of the Dead
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubld'  # UnitBalance.Build Time
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 60
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'unpl'  # Necropolis
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubld'  # UnitBalance.Build Time
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 60
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'uzig'  # Ziggurat
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubld'  # UnitBalance.Build Time
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 40
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'ugrv'  # Graveyard
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubld'  # UnitBalance.Build Time
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 50
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'uslh'  # Slaughterhouse
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubld'  # UnitBalance.Build Time
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 50
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'utod'  # Temple of the Damned
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubld'  # UnitBalance.Build Time
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 45
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'usep'  # Crypt
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubld'  # UnitBalance.Build Time
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 50
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'uaod'  # Altar of Darkness
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubld'  # UnitBalance.Build Time
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 35
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'ncbc'  # City Building
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_041'
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nogl'  # Ogre Lord
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usle'  # UnitData.Sleeps
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nogm'  # Ogre Mauler
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usle'  # UnitData.Sleeps
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nogr'  # Ogre Warrior
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usle'  # UnitData.Sleeps
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'ngme'  # Goblin Merchant
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usei'  # Profile.Items Sold
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'phea,pman,shea,spro,wneg,gemt,stwp'
+object_id = 'null'
+
+[map_objects]
+[[map_objects.entities]]
+parent_id = 'umtw'  # Meat Wagon
+entity_id = 'uC00'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_004'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 200
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvl2'  # Villager
+entity_id = 'nC01'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_035'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Umal'  # Dreadlord
+entity_id = 'UC02'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_145'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'upro'  # Profile.Proper Names
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_146'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uhab'  # UnitAbilities.Hero
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'AUsl,AUcs,ANsl,SNdc'
+object_id = 'null'

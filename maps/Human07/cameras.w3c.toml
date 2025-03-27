@@ -1,0 +1,225 @@
+# Warcraft 3 Camera file (.w3c)
+# See w3c.py for type definitions
+
+version = 0
+
+[[cameras]]
+
+target_x = -1665.0748291015625
+target_y = 4116.4541015625
+z_offset = 0.0
+rotation = 19.61716079711914
+angle_of_attack = 333.0295715332031
+distance = 1423.058837890625
+roll = 0.0
+fov = 70.0
+far_z = 5872.13818359375
+name = 'ExitArthasCloseup'
+
+[[cameras]]
+
+target_x = -1370.8729248046875
+target_y = 3739.190673828125
+z_offset = 0.0
+rotation = 355.42962646484375
+angle_of_attack = 330.2113037109375
+distance = 1459.5560302734375
+roll = 0.0
+fov = 70.0
+far_z = 5872.13818359375
+name = 'ExitArthasMuradinTalk'
+
+[[cameras]]
+
+target_x = -3838.89990234375
+target_y = -5926.919921875
+z_offset = 0.0
+rotation = 148.42999267578125
+angle_of_attack = 335.94000244140625
+distance = 905.0558471679688
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'IntroArthasAfterMove'
+
+[[cameras]]
+
+target_x = -3912.25341796875
+target_y = -5637.9033203125
+z_offset = 0.0
+rotation = 135.49000549316406
+angle_of_attack = 336.2200012207031
+distance = 615.4181518554688
+roll = 0.0
+fov = 70.0
+far_z = 4997.43017578125
+name = 'IntroArthasCloseup'
+
+[[cameras]]
+
+target_x = -3855.02001953125
+target_y = -5257.5
+z_offset = 0.0
+rotation = 96.11998748779297
+angle_of_attack = 342.8900146484375
+distance = 962.0
+roll = 0.0
+fov = 70.0
+far_z = 3000.0
+name = 'IntroCameraSweepTo'
+
+[[cameras]]
+
+target_x = -3837.280029296875
+target_y = -5569.56005859375
+z_offset = 0.0
+rotation = 100.4800033569336
+angle_of_attack = 334.80999755859375
+distance = 734.119140625
+roll = 0.0
+fov = 70.0
+far_z = 4997.43017578125
+name = 'IntroCaptainCloseup'
+
+[[cameras]]
+
+target_x = -4584.6630859375
+target_y = -6022.412109375
+z_offset = 0.0
+rotation = 181.61717224121094
+angle_of_attack = 314.3212585449219
+distance = 1933.9320068359375
+roll = 0.0
+fov = 70.0
+far_z = 3993.0
+name = 'IntroInitialCamera'
+
+[[cameras]]
+
+target_x = 4934.990234375
+target_y = -3614.110107421875
+z_offset = 0.0
+rotation = 73.80000305175781
+angle_of_attack = 348.6000061035156
+distance = 1663.800048828125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'MuradinGoldMineView'
+
+[[cameras]]
+
+target_x = 4655.9599609375
+target_y = -4870.080078125
+z_offset = 0.0
+rotation = 14.699999809265137
+angle_of_attack = 333.5
+distance = 1585.489990234375
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'MuradinInitialCamera'
+
+[[cameras]]
+
+target_x = 4709.943359375
+target_y = -3095.50439453125
+z_offset = 0.0
+rotation = 132.72967529296875
+angle_of_attack = 330.8082275390625
+distance = 1109.26611328125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'MuradinTownIntro'
+
+[[cameras]]
+
+target_x = 4529.5
+target_y = 5763.02001953125
+z_offset = 0.0
+rotation = 92.94999694824219
+angle_of_attack = 311.04998779296875
+distance = 2222.5
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'MuradinViewCaptiveDwarves'
+
+[[cameras]]
+
+target_x = 4145.39990234375
+target_y = -2864.7431640625
+z_offset = 0.0
+rotation = 223.85812377929688
+angle_of_attack = 325.36309814453125
+distance = 976.91748046875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'MuradinAttacks'
+
+[[cameras]]
+
+target_x = 4269.1787109375
+target_y = -2633.211669921875
+z_offset = 0.0
+rotation = 132.72967529296875
+angle_of_attack = 330.8082275390625
+distance = 1109.26611328125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'MuradinFinalPeonMovementCamera'
+
+[[cameras]]
+
+target_x = 4320.76416015625
+target_y = -2907.2802734375
+z_offset = 0.0
+rotation = 295.5809326171875
+angle_of_attack = 329.4952392578125
+distance = 905.9158325195312
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'MuradinConversationCloseup'
+
+[[cameras]]
+
+target_x = 4616.259765625
+target_y = -2833.1298828125
+z_offset = 0.0
+rotation = 90.0
+angle_of_attack = 304.0
+distance = 1650.0
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'MuradinFinal'
+
+[[cameras]]
+
+target_x = -3790.89990234375
+target_y = -5626.2900390625
+z_offset = 0.0
+rotation = 90.0
+angle_of_attack = 304.0
+distance = 1650.0
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'IntroFinal'
+
+[[cameras]]
+
+target_x = -4523.24609375
+target_y = -4536.2333984375
+z_offset = 0.0
+rotation = 181.61717224121094
+angle_of_attack = 314.3212585449219
+distance = 1933.9320068359375
+roll = 0.0
+fov = 70.0
+far_z = 3993.0
+name = 'IntroInitialCamera2'

@@ -1,0 +1,418 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 1
+has_levels = false
+
+[blizzard_objects]
+[[blizzard_objects.entities]]
+parent_id = 'ngme'  # Goblin Merchant
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usei'  # Profile.Items Sold
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'amrc,phea,pman,shea'
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nbsp'  # Ship
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'umvr'  # UnitData.Turn Rate
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 0.10000000149011612
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'umvt'  # UnitData.Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'hover'
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 200
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'umvh'  # UnitData.Height
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 10.0
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'udty'  # UnitBalance.Defense Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'normal'
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'umvs'  # UnitBalance.Speed Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'ngad'  # Goblin Laboratory
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'useu'  # Profile.Units Sold
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ngsp'
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Aneu'
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'ngsp'  # Goblin Sapper
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usst'  # UnitBalance.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nitt'  # Ice Troll Trapper
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usma'  # UnitBalance.Stock Maximum
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usrg'  # UnitBalance.Stock Replenish Interval
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 30
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usst'  # UnitBalance.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nitp'  # Ice Troll Priest
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usma'  # UnitBalance.Stock Maximum
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usrg'  # UnitBalance.Stock Replenish Interval
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 30
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usst'  # UnitBalance.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nits'  # Ice Troll Berserker
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usma'  # UnitBalance.Stock Maximum
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usrg'  # UnitBalance.Stock Replenish Interval
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 30
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usst'  # UnitBalance.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nith'  # Ice Troll High Priest
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usma'  # UnitBalance.Stock Maximum
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usrg'  # UnitBalance.Stock Replenish Interval
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 30
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usst'  # UnitBalance.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nitr'  # Ice Troll
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usma'  # UnitBalance.Stock Maximum
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usrg'  # UnitBalance.Stock Replenish Interval
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 30
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usst'  # UnitBalance.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nogr'  # Ogre Warrior
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usma'  # UnitBalance.Stock Maximum
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usrg'  # UnitBalance.Stock Replenish Interval
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 30
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usst'  # UnitBalance.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nomg'  # Ogre Magi
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usma'  # UnitBalance.Stock Maximum
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usrg'  # UnitBalance.Stock Replenish Interval
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 30
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usst'  # UnitBalance.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nogm'  # Ogre Mauler
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usma'  # UnitBalance.Stock Maximum
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usrg'  # UnitBalance.Stock Replenish Interval
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 30
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usst'  # UnitBalance.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'phea'  # Potion of Healing
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'isto'  # ItemData.Stock Maximum
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'pman'  # Potion of Mana
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'pinv'  # Potion of Invisibility
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'pnvu'  # Potion of Invulnerability
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'shea'  # Scroll of Healing
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'isto'  # ItemData.Stock Maximum
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[map_objects]
+[[map_objects.entities]]
+parent_id = 'nmr2'  # Mercenary Camp
+entity_id = 'nC03'
+[[map_objects.entities.modifications]]
+modification_id = 'useu'  # Profile.Units Sold
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'nits,nomg'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nmer'  # Mercenary Camp
+entity_id = 'nC00'
+[[map_objects.entities.modifications]]
+modification_id = 'useu'  # Profile.Units Sold
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'nitr,nitp,nogr'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nmr3'  # Mercenary Camp
+entity_id = 'nC01'
+[[map_objects.entities.modifications]]
+modification_id = 'useu'  # Profile.Units Sold
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'nitt,nith,nogm'
+object_id = 'null'

@@ -1,0 +1,971 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 1
+has_levels = false
+
+[blizzard_objects]
+[[blizzard_objects.entities]]
+parent_id = 'nban'  # Bandit
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'ngno'  # Gnoll
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usle'  # UnitData.Sleeps
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'ngna'  # Gnoll Poacher
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usle'  # UnitData.Sleeps
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nrog'  # Rogue
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'ngnb'  # Gnoll Brute
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'usle'  # UnitData.Sleeps
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nvlk'  # Child
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'umvs'  # UnitBalance.Speed Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 150
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nvlw'  # Villager
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'umvs'  # UnitBalance.Speed Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 150
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nvil'  # Villager
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'umvs'  # UnitBalance.Speed Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 150
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nbld'  # Bandit Lord
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ACad'
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nenf'  # Enforcer
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'hfoo'  # Footman
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[map_objects]
+[[map_objects.entities]]
+parent_id = 'nvlk'  # Child
+entity_id = 'nC00'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_219'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_219'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'umvs'  # UnitBalance.Speed Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 200
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'hfoo'  # Footman
+entity_id = 'hC01'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_221'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1000
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvil'  # Villager
+entity_id = 'nC02'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_008'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.0
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclr'  # UnitUI.Tinting Color 1 (Red)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 160
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 160
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvil'  # Villager
+entity_id = 'nC03'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_014'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.2999999523162842
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclr'  # UnitUI.Tinting Color 1 (Red)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 170
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclb'  # UnitUI.Tinting Color 3 (Blue)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 150
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nenf'  # Enforcer
+entity_id = 'nC04'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_070'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.5
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 100
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclb'  # UnitUI.Tinting Color 3 (Blue)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 100
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'pierce'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1w'  # UnitWeapons.Attack 1 - Weapon Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'missile'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1r'  # UnitWeapons.Attack 1 - Range
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1000
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Abilities\Weapons\FireBallMissile\FireBallMissile.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1z'  # Profile.Attack 1 - Projectile Speed
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1200
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 10
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1d'  # UnitWeapons.Attack 1 - Damage Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlw'  # Villager
+entity_id = 'nC05'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_225'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclr'  # UnitUI.Tinting Color 1 (Red)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 130
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 130
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvil'  # Villager
+entity_id = 'nC06'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_007'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.100000023841858
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclr'  # UnitUI.Tinting Color 1 (Red)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 180
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclb'  # UnitUI.Tinting Color 3 (Blue)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 180
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 180
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlw'  # Villager
+entity_id = 'nC07'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_004'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.149999976158142
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 160
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclb'  # UnitUI.Tinting Color 3 (Blue)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 160
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlw'  # Villager
+entity_id = 'nC08'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_003'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 0.800000011920929
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclr'  # UnitUI.Tinting Color 1 (Red)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 200
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlw'  # Villager
+entity_id = 'nC09'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_016'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.2000000476837158
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 100
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclr'  # UnitUI.Tinting Color 1 (Red)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 130
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlw'  # Villager
+entity_id = 'nC10'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_018'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvil'  # Villager
+entity_id = 'nC11'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_108'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.399999976158142
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 160
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclb'  # UnitUI.Tinting Color 3 (Blue)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 180
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 400
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usid'  # UnitBalance.Sight Radius (Day)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1024
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usin'  # UnitBalance.Sight Radius (Night)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1024
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nenf'  # Enforcer
+entity_id = 'nC12'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_108'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_237'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.2999999523162842
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 140
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclr'  # UnitUI.Tinting Color 1 (Red)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 160
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usin'  # UnitBalance.Sight Radius (Night)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1024
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvil'  # Villager
+entity_id = 'nC13'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_238'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.149999976158142
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclr'  # UnitUI.Tinting Color 1 (Red)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 130
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 120
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvil'  # Villager
+entity_id = 'nC14'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_057'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.399999976158142
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 160
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclr'  # UnitUI.Tinting Color 1 (Red)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 230
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvil'  # Villager
+entity_id = 'nC15'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_100'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'umvs'  # UnitBalance.Speed Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 140
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'orai'  # Raider
+entity_id = 'oC16'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_096'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 850
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 25
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1d'  # UnitWeapons.Attack 1 - Damage Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'udef'  # UnitBalance.Defense Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'units\demon\ChaosWarlord\ChaosWarlord'
+object_id = 'owar'  # Orc Warchief
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.350000023841858
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlk'  # Child
+entity_id = 'nC17'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_242'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.2999999523162842
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlk'  # Child
+entity_id = 'nC18'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_243'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.0
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclr'  # UnitUI.Tinting Color 1 (Red)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 180
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 180
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uclb'  # UnitUI.Tinting Color 3 (Blue)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 180
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlk'  # Child
+entity_id = 'nC19'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_244'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlk'  # Child
+entity_id = 'nC20'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_245'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlk'  # Child
+entity_id = 'nC21'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_246'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlk'  # Child
+entity_id = 'nC22'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_247'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlk'  # Child
+entity_id = 'nC23'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_248'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvlk'  # Child
+entity_id = 'nC24'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_249'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvl2'  # Villager
+entity_id = 'nC25'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_010'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvil'  # Villager
+entity_id = 'nC26'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_011'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.5
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'nvil'  # Villager
+entity_id = 'nC27'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_012'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 0.8999999761581421
+object_id = 'null'

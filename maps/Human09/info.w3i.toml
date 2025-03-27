@@ -1,0 +1,129 @@
+# Warcraft 3 Map Info File(.w3i)
+# See w3i.py for type definitions
+
+version = "ROC"
+map_revision = 487
+editor_version = 4422
+map_name = 'TRIGSTR_004'
+map_author = 'TRIGSTR_007'
+map_description = 'TRIGSTR_006'
+players_recommended = 'TRIGSTR_005'
+camera_bounds = [-6912.0, -7424.0, 6912.0, 11008.0, -6912.0, 11008.0, 6912.0, -7424.0]
+map_padding_left = 6
+map_padding_right = 6
+map_padding_top = 4
+map_padding_bottom = 8
+map_playable_width = 116
+map_playable_height = 148
+flags = "HIDE_MINIMAP|FIXED_FORCES|CUSTOM_FORCES|CUSTOM_TECH_TREE|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS"
+tileset = { type = "bytes", value = "N" }
+campaign_background = 13
+tft_loading_screen_model_path = ''
+map_loading_screen_text = 'TRIGSTR_010'
+map_loading_screen_title = 'TRIGSTR_008'
+map_loading_screen_subtitle = 'TRIGSTR_009'
+map_loading_screen_number = 0
+tft_prologue_screen_path = ''
+prologue_screen_text = ''
+prologue_screen_title = ''
+prologue_screen_subtitle = ''
+tft_uses_terrain_fog = 0
+tft_fog_start_z = 0.0
+tft_fog_end_z = 0.0
+tft_fog_density = 0.0
+tft_fog_red = 0
+tft_fog_green = 0
+tft_fog_blue = 0
+tft_fog_alpha = 0
+tft_weather = ''
+tft_custom_sound_environment = ''
+tft_custom_light_tileset = { type = "bytes", value = "0" }
+tft_water_tint_red = 0
+tft_water_tint_green = 0
+tft_water_tint_blue = 0
+tft_water_tint_alpha = 0
+upgrades = []
+random_entities = []
+random_items = []
+
+[[players]]
+
+player_id = 1
+player_type = "Human"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_216'
+start_pos = [-2880.0, -6208.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 2
+player_type = "Computer"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_217'
+start_pos = [-1408.0, 1088.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x45aa0000
+
+[[players]]
+
+player_id = 3
+player_type = "Computer"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_218'
+start_pos = [6144.0, -5120.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x45aa0000
+
+[[players]]
+
+player_id = 4
+player_type = "Computer"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_217'
+start_pos = [-1664.0, -896.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x45aa0000
+
+[[players]]
+
+player_id = 6
+player_type = "Computer"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_217'
+start_pos = [4544.0, 5376.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[forces]]
+
+force_flags = "None"
+player_mask_flags = 0xffffffa3
+name = 'TRIGSTR_216'
+
+[[forces]]
+
+force_flags = "Allied"
+player_mask_flags = 0x5c
+name = 'TRIGSTR_217'
+
+[[technologies]]
+
+player_flags = 0x2
+tech_id = 'Hamg'  # Archmage
+
+[[technologies]]
+
+player_flags = 0x2
+tech_id = 'Hpal'  # Paladin
+
+[[technologies]]
+
+player_flags = 0x2
+tech_id = 'Hmkg'  # Mountain King

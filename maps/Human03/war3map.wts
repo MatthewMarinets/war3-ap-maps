@@ -1,0 +1,766 @@
+﻿STRING 3
+{
+Stacie
+}
+
+STRING 7
+{
+Jaina Proudmoore
+}
+
+STRING 10
+{
+Defeat!
+}
+
+STRING 12
+{
+Defeat!
+}
+
+STRING 13
+{
+Grain Warehouse
+}
+
+STRING 14
+{
+The Elven Priests have discovered an infected granary that is corrupting the land near the end of town. Seek out the fouled granary and destroy it if possible.
+}
+
+STRING 15
+{
+Human03
+}
+
+STRING 16
+{
+Fountain of Health
+}
+
+STRING 17
+{
+Locate the holy Fountain in the nearby forest. Its sacred waters can restore health and vitality to any who drink from them. 
+}
+
+STRING 18
+{
+Investigate Villages
+}
+
+STRING 19
+{
+The wizards of Dalaran suspect that the plague originated in the northern villages. Investigate the villages along the King's Road and uncover whatever clues you can regarding the plague's origins.  
+}
+
+STRING 22
+{
+Alric
+}
+
+STRING 24
+{
+Sergeant
+}
+
+STRING 25
+{
+Garglemel
+}
+
+STRING 28
+{
+Alizabeth
+}
+
+STRING 29
+{
+Alex
+}
+
+STRING 30
+{
+Austen
+}
+
+STRING 33
+{
+Achilles
+}
+
+STRING 35
+{
+Marie Claire Antoinette
+}
+
+STRING 36
+{
+1
+}
+
+STRING 37
+{
+Chapter Three: Ravages of the Plague
+}
+
+STRING 38
+{
+Blizzard Entertainment
+}
+
+STRING 39
+{
+Chapter Three
+}
+
+STRING 41
+{
+Defeat!
+}
+
+STRING 42
+{
+Ravages of the Plague
+}
+
+STRING 43
+{
+Three days later in Alterac, Arthas and his men wait near a crossroads along the King's Road.
+}
+
+STRING 44
+{
+Villagers
+}
+
+STRING 46
+{
+Lock your shields and defend yourselves! Their arrows won't get through! 
+}
+
+STRING 47
+{
+Arthas
+}
+
+STRING 49
+{
+Skeletons? Slay them all, immediately!
+}
+
+STRING 50
+{
+Undead Scourge
+}
+
+STRING 51
+{
+Regional Defenders
+}
+
+STRING 56
+{
+Garglemel
+}
+
+STRING 57
+{
+Arthas
+}
+
+STRING 58
+{
+Milord! If this is about taxes, I can explain!
+}
+
+STRING 59
+{
+Achilles
+}
+
+STRING 60
+{
+Milord, someone has destroyed the bridge from the far side of the river! There is another way to cross, but it is not as safe as it used to be.
+}
+
+STRING 63
+{
+Find the Fountain of Health
+}
+
+STRING 65
+{
+Stay your blade, Captain. She can take care of herself.
+}
+
+STRING 66
+{
+Captain
+}
+
+STRING 67
+{
+We must help her!
+}
+
+STRING 69
+{
+Arthas
+}
+
+STRING 70
+{
+We'll get to the bottom of this.
+}
+
+STRING 72
+{
+Arthas
+}
+
+STRING 73
+{
+I'm sure. Jaina usually runs a little late.
+}
+
+STRING 74
+{
+Captain
+}
+
+STRING 75
+{
+Prince Arthas, we've been waiting here for hours. Are you sure this friend of yours is coming?
+}
+
+STRING 76
+{
+|cffffcc00MAIN QUEST|r
+Investigate Villages
+  - Explore the countryside
+  - Arthas must survive
+  - Jaina must survive
+}
+
+STRING 77
+{
+Kel'Thuzad
+}
+
+STRING 78
+{
+|cffffcc00MAIN QUEST|r
+Investigate Villages
+  - Explore the countryside
+  - Arthas must survive
+  - Jaina must survive
+}
+
+STRING 80
+{
+We've been discovered, my brothers! Flee and continue with the operation!
+}
+
+STRING 81
+{
+Explore the countryside
+}
+
+STRING 84
+{
+Arthas
+}
+
+STRING 85
+{
+Kel'Thuzad
+}
+
+STRING 86
+{
+I'm sorry I can't stay and chat, but... duty calls.
+}
+
+STRING 87
+{
+Gentlemen, meet Miss Jaina Proudmoore, special agent to the Kirin Tor, and one of the most talented sorceresses in the land.
+}
+
+STRING 88
+{
+Jaina Proudmoore
+}
+
+STRING 89
+{
+That creature looks like it was sewn together from different corpses.
+}
+
+STRING 90
+{
+Arthas
+}
+
+STRING 91
+{
+Looks like you haven't lost your touch. It's good to see you again, Jaina.
+}
+
+STRING 92
+{
+Jaina Proudmoore
+}
+
+STRING 93
+{
+You too, Arthas. It's been awhile since a prince escorted me anywhere.
+}
+
+STRING 94
+{
+Arthas
+}
+
+STRING 95
+{
+Yes, it has. Well, I guess we should get underway.
+}
+
+STRING 96
+{
+Jaina Proudmoore
+}
+
+STRING 97
+{
+Our sources believe the plague originated in the region north of here. We should check out the villages along the King's Road.
+}
+
+STRING 98
+{
+Arthas
+}
+
+STRING 99
+{
+Let's study it after we kill it, okay?
+}
+
+STRING 109
+{
+Destroy Grain Warehouse
+}
+
+STRING 114
+{
+|cffffcc00MISSION FAILED|r
+Arthas has been slain.
+
+}
+
+STRING 115
+{
+Arthas
+}
+
+STRING 116
+{
+This must be the shrine that the old man spoke of. Any man who drinks from these Light-blessed waters will be healed.
+}
+
+STRING 117
+{
+Stacie
+}
+
+STRING 118
+{
+Prince Arthas! There's something amiss at the bridge ahead!
+}
+
+STRING 123
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Fountain of Health
+}
+
+STRING 124
+{
+|cffffcc00MISSION FAILED|r
+Jaina has been slain.
+
+}
+
+STRING 125
+{
+Marie Claire Antoinette
+}
+
+STRING 126
+{
+Look! It's Prince Arthas.
+}
+
+STRING 132
+{
+Achilles
+}
+
+STRING 133
+{
+Milord, someone has destroyed the bridge from the far side of the river! There is another way to cross, but it is not as safe as it used to be.
+}
+
+STRING 175
+{
+Villager
+}
+
+STRING 176
+{
+Greetings, milord!
+}
+
+STRING 186
+{
+Bandit
+}
+
+STRING 187
+{
+Slaughter them all!
+}
+
+STRING 202
+{
+Villager
+}
+
+STRING 203
+{
+Bandits! Run!
+}
+
+STRING 254
+{
+Bandit
+}
+
+STRING 255
+{
+Sack the town!
+}
+
+STRING 300
+{
+|cff32CD32HINT|r - Your Footmen now have the Defend skill. Use it for better protection against ranged attacks.
+}
+
+STRING 302
+{
+Jaina Proudmoore
+}
+
+STRING 303
+{
+It's as if the land around that granary is... dying.
+}
+
+STRING 304
+{
+Arthas
+}
+
+STRING 305
+{
+Could the grain itself be plagued?
+}
+
+STRING 306
+{
+Jaina Proudmoore
+}
+
+STRING 307
+{
+Let's hope not. Those crates bear the regional seal of Andorhal, the distribution center for the northern boroughs. If this grain can spread the plague, there's no telling how many villages might be affected.
+}
+
+STRING 334
+{
+Sergeant
+}
+
+STRING 335
+{
+Undead, milord! This whole village has gone mad! We did our best to defend the villagers, but--
+}
+
+STRING 362
+{
+Arthas
+}
+
+STRING 363
+{
+What were those creatures, Sergeant?
+}
+
+STRING 491
+{
+Villager
+}
+
+STRING 492
+{
+Save us!
+}
+
+STRING 498
+{
+Arthas
+}
+
+STRING 499
+{
+What the hell are you men shooting at?
+}
+
+STRING 521
+{
+Linda
+}
+
+STRING 522
+{
+Jillian
+}
+
+STRING 523
+{
+Splendora
+}
+
+STRING 526
+{
+Alliance Forces
+}
+
+STRING 531
+{
+Daunell Barton
+}
+
+STRING 537
+{
+Arthas must survive
+}
+
+STRING 538
+{
+Jaina must survive
+}
+
+STRING 540
+{
+|cff32CD32HINT|r - Arthas may use the Holy Light spell to damage the Undead.
+}
+
+STRING 562
+{
+Arthas
+}
+
+STRING 563
+{
+Destroy that warehouse, now!
+}
+
+STRING 591
+{
+Arthas
+}
+
+STRING 592
+{
+Well, I could use your help. We've got a warehouse to destroy at the end of town.
+}
+
+STRING 593
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Grain Warehouse
+}
+
+STRING 594
+{
+Arthas
+}
+
+STRING 595
+{
+What was that? And who was that wizard dressed in black?
+}
+
+STRING 596
+{
+Jaina Proudmoore
+}
+
+STRING 597
+{
+I believe that the robed man was a necromancer. Obviously, he and his lackeys are behind this plague.
+}
+
+STRING 598
+{
+Arthas
+}
+
+STRING 599
+{
+Well, it's a good bet we'll find him, and the answers we're looking for, in Andorhal.
+}
+
+STRING 608
+{
+Priest
+}
+
+STRING 609
+{
+Greetings. We are priests from Quel'Thalas. We've come to help heal the land of this strange curse.
+}
+
+STRING 614
+{
+Priest
+}
+
+STRING 615
+{
+You should know that there is a granary warehouse at the far end of this village. This evil blight may be evident there as well.
+}
+
+STRING 620
+{
+|cff87CEEBNEW UNIT ACQUIRED|r
+Priest - Supporting spellcaster. Can initially cast Heal, which increases the life of wounded units. Can also learn Dispel Magic and Inner Fire.
+}
+
+STRING 621
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Investigate Villages
+}
+
+STRING 622
+{
+|cffffcc00MAIN QUEST|r
+Grain Warehouse
+  - Destroy the Grain Warehouse
+}
+
+STRING 629
+{
+Arthas
+}
+
+STRING 630
+{
+We'll check it out.
+}
+
+STRING 639
+{
+Jaina
+}
+
+STRING 640
+{
+As always, the generosity of the elves is greatly appreciated.
+}
+
+STRING 650
+{
+Mortar Team
+}
+
+STRING 651
+{
+We're blasting those damned skeletons, sir. This whole flaming village is crawling with them.
+}
+
+STRING 670
+{
+|cff32cd32HINT|r - Move wounded units close to the Fountain of Health and they will heal more quickly.
+}
+
+STRING 671
+{
+Villager
+}
+
+STRING 672
+{
+Oh, thanks so much! I have a reward for you.
+}
+
+STRING 673
+{
+|cff87ceebNEW ITEM RECEIVED|r - Potion of Greater Healing.
+}
+
+STRING 674
+{
+Undead Forces
+}
+
+STRING 675
+{
+|cff32CD32HINT|r - Use Jaina's Summon Water Elemental spell to summon a water elemental unit.
+}
+
+STRING 676
+{
+Stacie
+}
+
+STRING 677
+{
+Prince Arthas! There's something amiss at the bridge ahead!
+}
+
+STRING 681
+{
+|cff87CEEBNEW UNIT ACQUIRED|r
+Mortar Team - Long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Flare ability.
+}
+
+STRING 682
+{
+Alric
+}
+
+STRING 683
+{
+Milord, there is an ancient fountain shrine nearby. Legends say that its holy waters can restore health and heal grievous wounds.
+}
+
+STRING 684
+{
+Arthas
+}
+
+STRING 685
+{
+That could prove to be useful indeed.
+}
+
+STRING 686
+{
+|cffffcc00OPTIONAL QUEST|r
+Fountain of Health
+  - Find the Fountain of Health
+}
+

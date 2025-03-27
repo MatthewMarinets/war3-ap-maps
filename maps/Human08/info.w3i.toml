@@ -1,0 +1,329 @@
+# Warcraft 3 Map Info File(.w3i)
+# See w3i.py for type definitions
+
+version = "ROC"
+map_revision = 432
+editor_version = 4414
+map_name = 'TRIGSTR_000'
+map_author = 'TRIGSTR_003'
+map_description = 'TRIGSTR_007'
+players_recommended = 'TRIGSTR_001'
+camera_bounds = [-5888.0, -7936.0, 7936.0, 5376.0, -5888.0, 5376.0, 7936.0, -7936.0]
+map_padding_left = 6
+map_padding_right = 6
+map_padding_top = 12
+map_padding_bottom = 8
+map_playable_width = 116
+map_playable_height = 108
+flags = "HIDE_MINIMAP|FIXED_FORCES|CUSTOM_FORCES|CUSTOM_TECH_TREE|CUSTOM_UPGRADES|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS|WAVES_ON_SHORES"
+tileset = { type = "bytes", value = "N" }
+campaign_background = 12
+tft_loading_screen_model_path = ''
+map_loading_screen_text = 'TRIGSTR_060'
+map_loading_screen_title = 'TRIGSTR_004'
+map_loading_screen_subtitle = 'TRIGSTR_028'
+map_loading_screen_number = 0
+tft_prologue_screen_path = ''
+prologue_screen_text = ''
+prologue_screen_title = ''
+prologue_screen_subtitle = ''
+tft_uses_terrain_fog = 0
+tft_fog_start_z = 0.0
+tft_fog_end_z = 0.0
+tft_fog_density = 0.0
+tft_fog_red = 0
+tft_fog_green = 0
+tft_fog_blue = 0
+tft_fog_alpha = 0
+tft_weather = ''
+tft_custom_sound_environment = ''
+tft_custom_light_tileset = { type = "bytes", value = "0" }
+tft_water_tint_red = 0
+tft_water_tint_green = 0
+tft_water_tint_blue = 0
+tft_water_tint_alpha = 0
+random_entities = []
+random_items = []
+
+[[players]]
+
+player_id = 1
+player_type = "Human"
+player_faction = "Human"
+fixed_start_position = false
+name = 'TRIGSTR_235'
+start_pos = [4288.0, 3904.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 4
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = false
+name = 'TRIGSTR_059'
+start_pos = [-512.0, -128.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 6
+player_type = "Computer"
+player_faction = "Undead"
+fixed_start_position = false
+name = 'TRIGSTR_236'
+start_pos = [-4544.0, 1280.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 8
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = false
+name = 'TRIGSTR_237'
+start_pos = [6016.0, 5248.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 9
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = false
+name = 'TRIGSTR_005'
+start_pos = [7232.0, 1216.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[forces]]
+
+force_flags = "Allied|ShareVision"
+player_mask_flags = 0xffffffaf
+name = 'TRIGSTR_235'
+
+[[forces]]
+
+force_flags = "None"
+player_mask_flags = 0x40
+name = 'TRIGSTR_236'
+
+[[forces]]
+
+force_flags = "None"
+player_mask_flags = 0x10
+name = 'TRIGSTR_059'
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhgb'  # Flying Machine Bombs
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhri'  # Long Rifles
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhse'  # Magic Sentry
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhfl'  # Flare
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhlh'  # Improved Lumber Harvesting,Advanced Lumber Harvesting
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhlh'  # Improved Lumber Harvesting,Advanced Lumber Harvesting
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhde'  # Defend
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhan'  # Animal War Training
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x40
+upgrade_id = 'Rune'  # Necromancer Adept Training,Necromancer Master Training
+level = 1
+availability = "Researched"
+
+[[upgrades]]
+
+player_flags = 0x40
+upgrade_id = 'Rune'  # Necromancer Adept Training,Necromancer Master Training
+level = 0
+availability = "Researched"
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'Hamg'  # Archmage
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'Hpal'  # Paladin
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'Hmkg'  # Mountain King
+
+[[technologies]]
+
+player_flags = 0x40
+tech_id = 'Udea'  # Death Knight
+
+[[technologies]]
+
+player_flags = 0x40
+tech_id = 'Ulic'  # Lich
+
+[[technologies]]
+
+player_flags = 0x40
+tech_id = 'Udre'  # Dreadlord
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'hpea'  # Peasant
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'hfoo'  # Footman
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'hkni'  # Knight
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'hgyr'  # Flying Machine
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'hgry'  # Gryphon Rider
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'hmpr'  # Priest
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'hsor'  # Sorceress
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'hmtt'  # Siege Engine
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'htow'  # Town Hall
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'hkee'  # Keep
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'hcas'  # Castle
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'hhou'  # Farm
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'halt'  # Altar of Kings
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'hbar'  # Barracks
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'hlum'  # Lumber Mill
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'hbla'  # Blacksmith
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'harm'  # Workshop
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'hars'  # Arcane Sanctum
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'hgra'  # Gryphon Aviary
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'hwtw'  # Scout Tower
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'hgtw'  # Guard Tower
+
+[[technologies]]
+
+player_flags = 0x202
+tech_id = 'hctw'  # Cannon Tower

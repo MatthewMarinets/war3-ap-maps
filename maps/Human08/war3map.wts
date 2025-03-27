@@ -1,0 +1,377 @@
+﻿STRING 0
+{
+Human08
+}
+
+STRING 1
+{
+1
+}
+
+STRING 2
+{
+Defeat!
+}
+
+STRING 3
+{
+Blizzard Entertainment
+}
+
+STRING 4
+{
+Chapter Eight
+}
+
+STRING 5
+{
+Lordaeron Emissary
+}
+
+STRING 6
+{
+Captain
+}
+
+STRING 7
+{
+Chapter Eight: Dissension
+}
+
+STRING 9
+{
+To hell with the undead! We'll cut our way through the woods, men!
+}
+
+STRING 10
+{
+Captain
+}
+
+STRING 11
+{
+I apologize, emissary, but the prince is away on an errand. What brings you to this desolate place?
+}
+
+STRING 12
+{
+Emissary
+}
+
+STRING 13
+{
+By royal edict, you men are to return to Lordaeron immediately. Lord Uther has convinced the king to recall this expedition.
+}
+
+STRING 14
+{
+Captain
+}
+
+STRING 15
+{
+We're to just pick up and leave?
+}
+
+STRING 16
+{
+Emissary
+}
+
+STRING 17
+{
+That's correct. My men report that the roads from here to the shore are held by the undead. You'll need to find an alternate route back to your ships.
+}
+
+STRING 18
+{
+Arthas
+}
+
+STRING 19
+{
+Captain, why are the guards not at their posts?
+}
+
+STRING 20
+{
+Captain
+}
+
+STRING 21
+{
+Well, milord, your father had our troops recalled at Lord Uther's request.
+}
+
+STRING 22
+{
+Arthas
+}
+
+STRING 23
+{
+Uther had my troops recalled? Damn it! If my warriors abandon me, I'll never defeat Mal'Ganis. The ships must be burned before the men reach the shore!
+}
+
+STRING 24
+{
+Muradin Bronzebeard
+}
+
+STRING 25
+{
+Isn't that a bit much, lad?
+}
+
+STRING 26
+{
+Arthas
+}
+
+STRING 27
+{
+Burned down to their frames! No one goes home until our job here is done! 
+}
+
+STRING 28
+{
+Dissension
+}
+
+STRING 29
+{
+
+}
+
+STRING 30
+{
+Ships Remaining:
+}
+
+STRING 31
+{
+Time Remaining
+}
+
+STRING 32
+{
+Footman
+}
+
+STRING 33
+{
+We've done it, lads! Let's board the ships and go home!
+}
+
+STRING 34
+{
+Burn the Boats
+}
+
+STRING 35
+{
+Lord Uther has ordered that your expedition be recalled. To prevent your men from abandoning the hunt for Mal'Ganis, you must burn their ships before they reach the frozen shoreline.
+}
+
+STRING 36
+{
+|cffffcc00MAIN QUEST|r
+Burn the Boats
+  - Destroy the five ships before time runs out
+}
+
+STRING 37
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Burn the Boats
+}
+
+STRING 38
+{
+|cffffcc00MAIN QUEST|r
+Burn the Boats
+  - Destroy the five ships before time runs out
+}
+
+STRING 39
+{
+Captain
+}
+
+STRING 40
+{
+|cffffcc00MAIN QUEST FAILED|r
+Burn the Boats
+}
+
+STRING 42
+{
+Prince Arthas?
+}
+
+STRING 43
+{
+Arthas
+}
+
+STRING 44
+{
+Quickly, my warriors! These murderous creatures have burned our ships and robbed you of your way home! Slay them all in the name of Lordaeron!
+}
+
+STRING 45
+{
+Footman
+}
+
+STRING 46
+{
+Damn beasts!
+}
+
+STRING 47
+{
+Knight
+}
+
+STRING 48
+{
+Kill them all!
+}
+
+STRING 50
+{
+Footman
+}
+
+STRING 51
+{
+Our ships are ruined. What will we do now?
+}
+
+STRING 52
+{
+Arthas
+}
+
+STRING 53
+{
+Listen to me, all of you! There is no way home for any of us, save through victory! In this land we will stand or fall together. Now, return to the base and man your posts.
+}
+
+STRING 56
+{
+|cff32CD32HINT|r - Use the Mercenary Camp to add new units to your army.
+}
+
+STRING 59
+{
+Lordaeron Navy
+}
+
+STRING 60
+{
+Early the next morning at Arthas' new base camp… 
+}
+
+STRING 64
+{
+Destroy the five ships
+}
+
+STRING 65
+{
+The timer must not reach 0:00
+}
+
+STRING 158
+{
+Arthas
+}
+
+STRING 159
+{
+We'll need more men to fight our way through the undead.
+}
+
+STRING 174
+{
+Muradin Bronzebeard
+}
+
+STRING 175
+{
+I've come across a few mercenary camps up here. Perhaps we can hire a few of them?
+}
+
+STRING 182
+{
+Arthas
+}
+
+STRING 183
+{
+Damn Uther for forcing me to do this!
+}
+
+STRING 200
+{
+Arthas
+}
+
+STRING 201
+{
+Very good! But there are still more ships to deal with!
+}
+
+STRING 228
+{
+Arthas
+}
+
+STRING 229
+{
+Well done! Only one ship remains!
+}
+
+STRING 231
+{
+|cff32CD32HINT|r - Use your mercenaries with ranged attacks or Muradin's Storm Bolt ability to sink the nearby ship.
+}
+
+STRING 232
+{
+|cff32CD32HINT|r - Some mercenaries have the Ensnare ability. Use Ensnare to bring the flying beasts to the ground.
+}
+
+STRING 233
+{
+|cff32CD32HINT|r - Attack the trees ahead with your Mortar Teams to clear a path.
+}
+
+STRING 234
+{
+|cff32CD32HINT|r - To clear a path, destroy the trees in the canyon below with Goblin Sappers.
+}
+
+STRING 235
+{
+Alliance Forces
+}
+
+STRING 236
+{
+Undead Scourge
+}
+
+STRING 237
+{
+Expeditionary Forces
+}
+
+STRING 238
+{
+|cffffcc00MISSION FAILED|r
+All of your units have been destroyed.
+}
+

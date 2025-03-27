@@ -1,0 +1,8872 @@
+version = ROC
+
+# Categories
+| ID  | Name | is a comment |
+| --- | ---- | ------------ |
+| 0 | Initialization | False |
+| 17 | Heroes | False |
+| 18 | Arthas Skills | False |
+| 9 | Difficulty | False |
+| 2 | Hints | False |
+| 12 | AI Resourcing | False |
+| 14 | MalGanisInvulnerability | False |
+| 16 | ItemFailsafe | False |
+| 3 | IntroCinematic | False |
+| 10 | InitialAttack | False |
+| 4 | ValleyEncounters | False |
+| 5 | FrostmourneCinematic | False |
+| 6 | ExitCinematic | False |
+| 1 | Defeat | False |
+| 15 | Victory | False |
+| 13 | Change Level Triggers | False |
+| 11 | Cheat Code Support | False |
+| 8 | DEBUG | False |
+
+# Variables
+| Name | Type | Array Size | Initial Value |
+| ---- | ---- | ---------- | ------------- |
+| Arthas | unit | . | . |
+| Muradin | unit | . | . |
+| Malganis | unit | . | . |
+| PurpleDefeated | boolean | . | false |
+| GreenDefeated | boolean | . | false |
+| WeatherSnow | weathereffect | . | . |
+| IntroCinematicEscape | boolean | . | false |
+| IntroCinematicRunning | boolean | . | false |
+| IntroNortheastGroup | group | . | . |
+| IntroNorthGroup | group | . | . |
+| IntroMalganis | unit | . | . |
+| PlayerMalganis | player | . | Player06 |
+| PlayerUndeadProtector | player | . | Player03 |
+| IntroCancelView | fogmodifier | . | . |
+| GhostMaterialize | real | . | 100.00 |
+| GhostA | unit | . | . |
+| GhostB | unit | . | . |
+| Skeleton01 | unit | . | . |
+| Skeleton02 | unit | . | . |
+| Skeleton03 | unit | . | . |
+| Skeleton04 | unit | . | . |
+| Skeleton05 | unit | . | . |
+| Skeleton06 | unit | . | . |
+| GuardianVisibility | fogmodifier | . | . |
+| FrostmourneCinematicRunning | boolean | . | . |
+| FrostmourneCinematicEscape | boolean | . | . |
+| Captain | unit | . | . |
+| ArthasIsEvil | boolean | . | . |
+| EvilArthas | unit | . | . |
+| ValleyVisA | fogmodifier | . | . |
+| ValleyVisB | fogmodifier | . | . |
+| ValleyVisC | fogmodifier | . | . |
+| DiasVisA | fogmodifier | . | . |
+| QuestFrostmourne | quest | . | . |
+| QuestMalganis | quest | . | . |
+| ExitCinematicRunning | boolean | . | . |
+| ExitCinematicEscape | boolean | . | . |
+| HeroDefeatPossible | boolean | . | true |
+| Guardian | unit | . | . |
+| Blizzard | weathereffect | . | . |
+| VisibilityAltar | fogmodifier | . | . |
+| EffectArthasAfterFM | effect | . | . |
+| GuardianLackeyA | unit | . | . |
+| GuardianLackeyB | unit | . | . |
+| ItemMuradin01 | item | . | . |
+| ItemMuradin02 | item | . | . |
+| ItemMuradin03 | item | . | . |
+| ItemMuradin04 | item | . | . |
+| ItemMuradin05 | item | . | . |
+| ItemMuradin06 | item | . | . |
+| QuestReqFrostmourne | questitem | . | . |
+| QuestReqArthasDie | questitem | . | . |
+| QuestReqMuradinDie | questitem | . | . |
+| QuestReqMalganis | questitem | . | . |
+| TimerInitialAttack | timer | . | . |
+| GuardianArcherA | unit | . | . |
+| GuardianArcherB | unit | . | . |
+| ValleyGroup | group | . | . |
+| EffectArthasIntro | effect | . | . |
+| EffectMuradinIntro | effect | . | . |
+| EffectKnight1Intro | effect | . | . |
+| EffectKnight2Intro | effect | . | . |
+| EffectRiflemanIntro1 | effect | . | . |
+| EffectRiflemanIntro2 | effect | . | . |
+| EffectRiflemanIntro3 | effect | . | . |
+| HintGryphonTimer | timer | . | . |
+| ScrollsOfTownPortal | integer | . | 0 |
+| AmuletsOfRecall | integer | . | 0 |
+| UnitGroupSelection | group | . | . |
+| SkillHolyLight | integer | . | 0 |
+| SkillDivineShield | integer | . | 0 |
+| SkillDevotionAura | integer | . | 0 |
+| SkillResurrection | integer | . | 0 |
+| PointGuardianPosition | location | . | . |
+| RealGuardianFacing | real | . | . |
+| GameOver | boolean | . | false |
+
+# Triggers
+## StartInitializationSequence
+- enabled: True
+- category: [0] Initialization
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action SetCampaignMenuRaceBJ
+  - param Preset CampaignIndexH
+- Event MapInitializationEvent
+- Action TriggerExecute
+  - param Variable gg_trg_Initialize_Variables
+- Action TriggerExecute
+  - param Variable gg_trg_Initial_Resources
+- Action TriggerExecute
+  - param Variable gg_trg_Initial_Weather
+- Action TriggerExecute
+  - param Variable gg_trg_Initial_Alliances
+- Action TriggerExecute
+  - param Variable gg_trg_Initial_Heroes
+- Action TriggerExecute
+  - param Variable gg_trg_Initial_ValleyPrep
+- Action TriggerExecute
+  - param Variable gg_trg_Initial_IntroWavePrep
+- Action TriggerExecute
+  - param Variable gg_trg_Initial_Quests
+- Action TriggerExecute
+  - param Variable gg_trg_Initial_AI
+- Action TriggerExecute
+  - param Variable gg_trg_Initial_Music
+- Action TriggerExecute
+  - param Variable gg_trg_Setup_Scorescreen
+- Action TriggerExecute
+  - param Variable gg_trg_TriggerIntroCinematic
+
+
+## Initialize Variables
+- enabled: True
+- category: [0] Initialization
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action SetVariable
+  - param Variable Malganis
+  - param Variable gg_unit_Umal_0177
+- Action SetVariable
+  - param Variable Captain
+  - param Variable gg_unit_hcth_0105
+- Action SetVariable
+  - param Variable Guardian
+  - param Variable gg_unit_nC00_0011
+- Action SetVariable
+  - param Variable GuardianLackeyA
+  - param Variable gg_unit_nrvs_0116
+- Action SetVariable
+  - param Variable GuardianLackeyB
+  - param Variable gg_unit_nrvs_0118
+- Action SetVariable
+  - param Variable GuardianArcherA
+  - param Variable gg_unit_nskm_0135
+- Action SetVariable
+  - param Variable GuardianArcherB
+  - param Variable gg_unit_nskm_0147
+
+
+## Initial Resources
+- enabled: True
+- category: [0] Initialization
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action SetPlayerState
+  - param Preset Player01
+  - param Preset PlayerStateGold
+  - param String 1000
+- Action SetPlayerState
+  - param Preset Player01
+  - param Preset PlayerStateGoldGathered
+  - param String 1000
+- Action SetPlayerState
+  - param Preset Player01
+  - param Preset PlayerStateLumber
+  - param String 500
+- Action SetPlayerState
+  - param Preset Player01
+  - param Preset PlayerStateLumberGathered
+  - param String 500
+- Action SetPlayerState
+  - param Variable PlayerUndeadProtector
+  - param Preset PlayerStateGold
+  - param String 1000
+- Action SetPlayerState
+  - param Variable PlayerUndeadProtector
+  - param Preset PlayerStateGoldGathered
+  - param String 1000
+- Action SetPlayerState
+  - param Variable PlayerUndeadProtector
+  - param Preset PlayerStateLumber
+  - param String 1000
+- Action SetPlayerState
+  - param Variable PlayerUndeadProtector
+  - param Preset PlayerStateLumberGathered
+  - param String 1000
+- Action SetPlayerState
+  - param Variable PlayerMalganis
+  - param Preset PlayerStateGold
+  - param String 1000
+- Action SetPlayerState
+  - param Variable PlayerMalganis
+  - param Preset PlayerStateGoldGathered
+  - param String 1000
+- Action SetPlayerState
+  - param Variable PlayerMalganis
+  - param Preset PlayerStateLumber
+  - param String 1000
+- Action SetPlayerState
+  - param Variable PlayerMalganis
+  - param Preset PlayerStateLumberGathered
+  - param String 1000
+
+
+## Initial Weather
+- enabled: True
+- category: [0] Initialization
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action AddWeatherEffectSaveLast
+  - param Function GetEntireMapRect
+    - Function GetEntireMapRect
+  - param Preset WeatherNorthrendHeavySnow
+- Action SetVariable
+  - param Variable WeatherSnow
+  - param Function GetLastCreatedWeatherEffect
+    - Function GetLastCreatedWeatherEffect
+- Action EnableWeatherEffect
+  - param Variable WeatherSnow
+  - param Preset OnOffOn
+- Action SetTerrainFogExBJ
+  - param String 0
+  - param String 600.00
+  - param String 3500.00
+  - param String 0.00
+  - param String 100
+  - param String 100
+  - param String 100
+- Action SetTimeOfDay
+  - param String 20.00
+
+
+## Initial Alliances
+- enabled: True
+- category: [0] Initialization
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action SetPlayerColorBJ
+  - param Preset Player02
+  - param Preset Color06
+  - param Preset PlayerChangeColorChange
+- Action SetPlayerColorBJ
+  - param Preset Player04
+  - param Preset Color06
+  - param Preset PlayerChangeColorChange
+- Action SetPlayerAllianceStateBJ
+  - param Variable PlayerUndeadProtector
+  - param Variable PlayerMalganis
+  - param Preset AllianceSettingAlliedVision
+- Action SetPlayerAllianceStateBJ
+  - param Variable PlayerMalganis
+  - param Variable PlayerUndeadProtector
+  - param Preset AllianceSettingAlliedVision
+- Action SetPlayerAllianceStateBJ
+  - param Preset Player02
+  - param Variable PlayerMalganis
+  - param Preset AllianceSettingAlliedVision
+- Action SetPlayerAllianceStateBJ
+  - param Preset Player02
+  - param Variable PlayerUndeadProtector
+  - param Preset AllianceSettingAlliedVision
+- Action SetPlayerAllianceStateBJ
+  - param Variable PlayerMalganis
+  - param Preset Player02
+  - param Preset AllianceSettingAlliedVision
+- Action SetPlayerAllianceStateBJ
+  - param Variable PlayerUndeadProtector
+  - param Preset Player02
+  - param Preset AllianceSettingAlliedVision
+- Action SetPlayerAllianceBJ
+  - param Preset Player04
+  - param Preset AllianceTypePassive
+  - param Preset OnOffOn
+  - param Preset Player01
+- Action SetPlayerAllianceBJ
+  - param Preset Player02
+  - param Preset AllianceTypePassive
+  - param Preset OnOffOn
+  - param Preset PlayerNA
+- Action SetPlayerAllianceBJ
+  - param Preset Player04
+  - param Preset AllianceTypePassive
+  - param Preset OnOffOn
+  - param Preset PlayerNA
+- Action SetPlayerAllianceBJ
+  - param Preset Player03
+  - param Preset AllianceTypePassive
+  - param Preset OnOffOn
+  - param Preset PlayerNA
+- Action SetPlayerAllianceBJ
+  - param Preset Player06
+  - param Preset AllianceTypePassive
+  - param Preset OnOffOn
+  - param Preset PlayerNA
+- Action SetPlayerAllianceBJ
+  - param Preset PlayerNA
+  - param Preset AllianceTypePassive
+  - param Preset OnOffOn
+  - param Preset Player02
+- Action SetPlayerAllianceBJ
+  - param Preset PlayerNA
+  - param Preset AllianceTypePassive
+  - param Preset OnOffOn
+  - param Preset Player03
+- Action SetPlayerAllianceBJ
+  - param Preset PlayerNA
+  - param Preset AllianceTypePassive
+  - param Preset OnOffOn
+  - param Preset Player04
+- Action SetPlayerAllianceBJ
+  - param Preset PlayerNA
+  - param Preset AllianceTypePassive
+  - param Preset OnOffOn
+  - param Preset Player06
+
+
+## Initial ValleyPrep
+- enabled: True
+- category: [0] Initialization
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action ForGroup
+  - param Function GetUnitsOfPlayerAll
+    - Function GetUnitsOfPlayerAll
+      - param Preset PlayerNA
+  - param Function DoNothing
+    - Action UnitSetCanSleepBJ
+      - param Function GetEnumUnit
+        - Function GetEnumUnit
+      - param Preset SleepWakeOptionWake
+- Action SetUnitInvulnerable
+  - param Variable Guardian
+  - param Preset InvulnerabilityInvulnerable
+- Action SetUnitInvulnerable
+  - param Variable GuardianLackeyA
+  - param Preset InvulnerabilityInvulnerable
+- Action SetUnitInvulnerable
+  - param Variable GuardianLackeyB
+  - param Preset InvulnerabilityInvulnerable
+- Action SetUnitInvulnerable
+  - param Variable GuardianArcherA
+  - param Preset InvulnerabilityInvulnerable
+- Action SetUnitInvulnerable
+  - param Variable GuardianArcherB
+  - param Preset InvulnerabilityInvulnerable
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionPause
+  - param Variable Guardian
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionPause
+  - param Variable GuardianLackeyA
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionPause
+  - param Variable GuardianLackeyB
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionPause
+  - param Variable GuardianArcherA
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionPause
+  - param Variable GuardianArcherB
+- Action CreateFogModifierRectBJ
+  - param Preset EnabledDisabledDisabled
+  - param Preset Player01
+  - param Preset FogStateMasked
+  - param Variable gg_rct_FrostmourneValleyVisibilityA
+- Action SetVariable
+  - param Variable ValleyVisA
+  - param Function GetLastCreatedFogModifier
+    - Function GetLastCreatedFogModifier
+- Action CreateFogModifierRectBJ
+  - param Preset EnabledDisabledDisabled
+  - param Preset Player01
+  - param Preset FogStateMasked
+  - param Variable gg_rct_FrostmourneValleyVisibilityB
+- Action SetVariable
+  - param Variable ValleyVisB
+  - param Function GetLastCreatedFogModifier
+    - Function GetLastCreatedFogModifier
+- Action CreateFogModifierRectBJ
+  - param Preset EnabledDisabledDisabled
+  - param Preset Player01
+  - param Preset FogStateMasked
+  - param Variable gg_rct_FrostmourneValleyVisibilityC
+- Action SetVariable
+  - param Variable ValleyVisC
+  - param Function GetLastCreatedFogModifier
+    - Function GetLastCreatedFogModifier
+
+
+## Initial IntroWavePrep
+- enabled: True
+- category: [0] Initialization
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action ForGroup
+  - param Function GetUnitsInRectAll
+    - Function GetUnitsInRectAll
+      - param Variable gg_rct_IntroNorthUndeadWave
+  - param Function DoNothing
+    - Action GroupAddUnitSimple
+      - param Function GetEnumUnit
+        - Function GetEnumUnit
+      - param Variable IntroNorthGroup
+- Action ForGroup
+  - param Function GetUnitsInRectAll
+    - Function GetUnitsInRectAll
+      - param Variable gg_rct_IntroNortheastUndeadWave
+  - param Function DoNothing
+    - Action GroupAddUnitSimple
+      - param Function GetEnumUnit
+        - Function GetEnumUnit
+      - param Variable IntroNortheastGroup
+- Action ForGroup
+  - param Variable IntroNorthGroup
+  - param Function DoNothing
+    - Action ShowUnitHide
+      - param Function GetEnumUnit
+        - Function GetEnumUnit
+- Action ForGroup
+  - param Variable IntroNortheastGroup
+  - param Function DoNothing
+    - Action ShowUnitHide
+      - param Function GetEnumUnit
+        - Function GetEnumUnit
+
+
+## Initial ValleyGroup
+- enabled: True
+- category: [0] Initialization
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action GroupAddUnitSimple
+  - param Variable Arthas
+  - param Variable ValleyGroup
+- Action GroupAddUnitSimple
+  - param Variable Muradin
+  - param Variable ValleyGroup
+- Action GroupAddUnitSimple
+  - param Variable gg_unit_hkni_0251
+  - param Variable ValleyGroup
+- Action GroupAddUnitSimple
+  - param Variable gg_unit_hkni_0250
+  - param Variable ValleyGroup
+- Action GroupAddUnitSimple
+  - param Variable gg_unit_hrif_0252
+  - param Variable ValleyGroup
+- Action GroupAddUnitSimple
+  - param Variable gg_unit_hrif_0253
+  - param Variable ValleyGroup
+- Action GroupAddUnitSimple
+  - param Variable gg_unit_hrif_0254
+  - param Variable ValleyGroup
+- Event TriggerRegisterTimerEventSingle
+  - param String 1.00
+
+
+## Initial Quests
+- enabled: True
+- category: [0] Initialization
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CreateQuestBJ
+  - param Preset QuestTypeReqDiscovered
+  - param String TRIGSTR_030
+  - param String TRIGSTR_031
+  - param String ReplaceableTextures\CommandButtons\BTNFrostMourne.tga
+- Action SetVariable
+  - param Variable QuestFrostmourne
+  - param Function GetLastCreatedQuestBJ
+    - Function GetLastCreatedQuestBJ
+- Action CreateQuestItemBJ
+  - param Variable QuestFrostmourne
+  - param String TRIGSTR_028
+- Action SetVariable
+  - param Variable QuestReqFrostmourne
+  - param Function GetLastCreatedQuestItemBJ
+    - Function GetLastCreatedQuestItemBJ
+- Action CreateQuestItemBJ
+  - param Variable QuestFrostmourne
+  - param String TRIGSTR_029
+- Action SetVariable
+  - param Variable QuestReqArthasDie
+  - param Function GetLastCreatedQuestItemBJ
+    - Function GetLastCreatedQuestItemBJ
+- Action CreateQuestItemBJ
+  - param Variable QuestFrostmourne
+  - param String TRIGSTR_060
+- Action SetVariable
+  - param Variable QuestReqMuradinDie
+  - param Function GetLastCreatedQuestItemBJ
+    - Function GetLastCreatedQuestItemBJ
+- Action CreateQuestBJ
+  - param Preset QuestTypeReqUndiscovered
+  - param String TRIGSTR_093
+  - param String TRIGSTR_094
+  - param String ReplaceableTextures\CommandButtons\BTNHeroDreadLord.tga
+- Action SetVariable
+  - param Variable QuestMalganis
+  - param Function GetLastCreatedQuestBJ
+    - Function GetLastCreatedQuestBJ
+- Action CreateQuestItemBJ
+  - param Variable QuestMalganis
+  - param String TRIGSTR_061
+- Action SetVariable
+  - param Variable QuestReqMalganis
+  - param Function GetLastCreatedQuestItemBJ
+    - Function GetLastCreatedQuestItemBJ
+
+
+## Initial AI
+- enabled: True
+- category: [0] Initialization
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action StartCampaignAI
+  - param Preset Player02
+  - param String h09_teal.ai
+- Action StartCampaignAI
+  - param Variable PlayerUndeadProtector
+  - param String h09_purple.ai
+- Action StartCampaignAI
+  - param Variable PlayerMalganis
+  - param String h09_green.ai
+
+
+## Initial Music
+- enabled: True
+- category: [0] Initialization
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action ClearMapMusicBJ
+- Action TriggerSleepAction
+  - param String 0.01
+- Action PlayThematicMusicBJ
+  - param Preset MusicThemeDarkAgents
+- Action SetMapMusicIndexedBJ
+  - param Preset MusicFileMusic
+  - param String 2
+
+
+## Setup Scorescreen
+- enabled: True
+- category: [0] Initialization
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action SetPlayerOnScoreScreenBJ
+  - param Preset ShowHideHide
+  - param Preset Player02
+- Action SetPlayerOnScoreScreenBJ
+  - param Preset ShowHideHide
+  - param Preset Player04
+
+
+## Initial Heroes
+- enabled: True
+- category: [17] Heroes
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action InitGameCacheBJ
+  - param String Campaigns.w3v
+- Action TriggerExecute
+  - param Variable gg_trg_Load_Arthas
+- Action TriggerExecute
+  - param Variable gg_trg_Load_Muradin
+- Action SetHeroLevel
+  - param Variable Malganis
+  - param String 9
+  - param Preset ShowHideHide
+- Action SelectHeroSkill
+  - param Variable Malganis
+  - param Preset HeroSkillCarrionSwarm
+- Action SelectHeroSkill
+  - param Variable Malganis
+  - param Preset HeroSkillCarrionSwarm
+- Action SelectHeroSkill
+  - param Variable Malganis
+  - param Preset HeroSkillSleep
+- Action SelectHeroSkill
+  - param Variable Malganis
+  - param Preset HeroSkillSleep
+- Action SelectHeroSkill
+  - param Variable Malganis
+  - param Preset HeroSkillSleep
+- Action UnitAddItemByIdSwapped
+  - param String ankh
+  - param Variable Malganis
+- Action UnitAddItemByIdSwapped
+  - param String ankh
+  - param Variable Malganis
+- Action UnitAddItemByIdSwapped
+  - param String ankh
+  - param Variable Malganis
+- Action UnitAddItemByIdSwapped
+  - param String rlif
+  - param Variable Malganis
+- Action UnitAddItemByIdSwapped
+  - param String rlif
+  - param Variable Malganis
+- Action UnitAddItemByIdSwapped
+  - param String rlif
+  - param Variable Malganis
+- Action SuspendHeroXPBJ
+  - param Preset EnableDisableDisable
+  - param Variable Malganis
+
+
+## Load Arthas
+- enabled: True
+- category: [17] Heroes
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action RestoreUnitLocFacingPointBJ
+  - param String Arthas
+  - param String Human09
+  - param Function GetLastCreatedGameCacheBJ
+    - Function GetLastCreatedGameCacheBJ
+  - param Preset Player01
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_InitPlaceArthas
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_InitArthasLooks
+- Action SetVariable
+  - param Variable Arthas
+  - param Function GetLastRestoredUnitBJ
+    - Function GetLastRestoredUnitBJ
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable Arthas
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CreateNUnitsAtLocFacingLocBJ
+  - param String 1
+  - param String Hart
+  - param Preset Player01
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_InitPlaceArthas
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_InitArthasLooks
+- Action SetVariable
+  - param Variable Arthas
+  - param Function GetLastCreatedUnit
+    - Function GetLastCreatedUnit
+- Action SetHeroLevel
+  - param Variable Arthas
+  - param String 9
+  - param Preset ShowHideHide
+- Action SelectHeroSkill
+  - param Variable Arthas
+  - param Preset HeroSkillHolyBolt
+- Action SelectHeroSkill
+  - param Variable Arthas
+  - param Preset HeroSkillHolyBolt
+- Action SelectHeroSkill
+  - param Variable Arthas
+  - param Preset HeroSkillHolyBolt
+- Action SelectHeroSkill
+  - param Variable Arthas
+  - param Preset HeroSkillDivineShield
+- Action SelectHeroSkill
+  - param Variable Arthas
+  - param Preset HeroSkillDivineShield
+- Action SelectHeroSkill
+  - param Variable Arthas
+  - param Preset HeroSkillDevotionAura
+- Action SelectHeroSkill
+  - param Variable Arthas
+  - param Preset HeroSkillDevotionAura
+- Action SelectHeroSkill
+  - param Variable Arthas
+  - param Preset HeroSkillDevotionAura
+- Action SelectHeroSkill
+  - param Variable Arthas
+  - param Preset HeroSkillResurrection
+
+
+## Load Muradin
+- enabled: True
+- category: [17] Heroes
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action RestoreUnitLocFacingPointBJ
+  - param String Muradin
+  - param String Human09
+  - param Function GetLastCreatedGameCacheBJ
+    - Function GetLastCreatedGameCacheBJ
+  - param Preset Player01
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_InitPlaceMuradin
+  - param Function GetUnitLoc
+    - Function GetUnitLoc
+      - param Variable gg_unit_hmpr_0130
+- Action SetVariable
+  - param Variable Muradin
+  - param Function GetLastRestoredUnitBJ
+    - Function GetLastRestoredUnitBJ
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable Muradin
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CreateNUnitsAtLocFacingLocBJ
+  - param String 1
+  - param String Hmbr
+  - param Preset Player01
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_InitPlaceMuradin
+  - param Function GetUnitLoc
+    - Function GetUnitLoc
+      - param Variable gg_unit_hmpr_0130
+- Action SetVariable
+  - param Variable Muradin
+  - param Function GetLastCreatedUnit
+    - Function GetLastCreatedUnit
+- Action SetHeroLevel
+  - param Variable Muradin
+  - param String 7
+  - param Preset ShowHideHide
+- Action SelectHeroSkill
+  - param Variable Muradin
+  - param Preset HeroSkillStormBolt
+- Action SelectHeroSkill
+  - param Variable Muradin
+  - param Preset HeroSkillStormBolt
+- Action SelectHeroSkill
+  - param Variable Muradin
+  - param Preset HeroSkillThunderClap
+- Action SelectHeroSkill
+  - param Variable Muradin
+  - param Preset HeroSkillThunderClap
+- Action SelectHeroSkill
+  - param Variable Muradin
+  - param Preset HeroSkillBash
+- Action SelectHeroSkill
+  - param Variable Muradin
+  - param Preset HeroSkillBash
+- Action SelectHeroSkill
+  - param Variable Muradin
+  - param Preset HeroSkillAvatar
+
+
+## Arthas Leans a Skill
+- enabled: True
+- category: [18] Arthas Skills
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareHeroSkill
+      - param Function GetLearnedSkillBJ
+        - Function GetLearnedSkillBJ
+      - param Preset OperatorEqualENE
+      - param Preset HeroSkillHolyBolt
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable SkillHolyLight
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable SkillHolyLight
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareHeroSkill
+      - param Function GetLearnedSkillBJ
+        - Function GetLearnedSkillBJ
+      - param Preset OperatorEqualENE
+      - param Preset HeroSkillDivineShield
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable SkillDivineShield
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable SkillDivineShield
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareHeroSkill
+      - param Function GetLearnedSkillBJ
+        - Function GetLearnedSkillBJ
+      - param Preset OperatorEqualENE
+      - param Preset HeroSkillDevotionAura
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable SkillDevotionAura
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable SkillDevotionAura
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareHeroSkill
+      - param Function GetLearnedSkillBJ
+        - Function GetLearnedSkillBJ
+      - param Preset OperatorEqualENE
+      - param Preset HeroSkillResurrection
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable SkillResurrection
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable SkillResurrection
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Event TriggerRegisterPlayerUnitEventSimple
+  - param Preset Player01
+  - param Preset PlayerUnitEventHero_Skill
+
+
+## RecreateArthasSkills
+- enabled: True
+- category: [18] Arthas Skills
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable SkillHolyLight
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action SelectHeroSkill
+      - param Variable EvilArthas
+      - param Preset HeroSkillHolyBolt
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetVariable
+  - param Variable SkillHolyLight
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable SkillHolyLight
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable SkillHolyLight
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action SelectHeroSkill
+      - param Variable EvilArthas
+      - param Preset HeroSkillHolyBolt
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetVariable
+  - param Variable SkillHolyLight
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable SkillHolyLight
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable SkillHolyLight
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action SelectHeroSkill
+      - param Variable EvilArthas
+      - param Preset HeroSkillHolyBolt
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetVariable
+  - param Variable SkillHolyLight
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable SkillHolyLight
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable SkillDivineShield
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action SelectHeroSkill
+      - param Variable EvilArthas
+      - param Preset HeroSkillDivineShield
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetVariable
+  - param Variable SkillDivineShield
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable SkillDivineShield
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable SkillDivineShield
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action SelectHeroSkill
+      - param Variable EvilArthas
+      - param Preset HeroSkillDivineShield
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetVariable
+  - param Variable SkillDivineShield
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable SkillDivineShield
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable SkillDivineShield
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action SelectHeroSkill
+      - param Variable EvilArthas
+      - param Preset HeroSkillDivineShield
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetVariable
+  - param Variable SkillDivineShield
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable SkillDivineShield
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable SkillDevotionAura
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action SelectHeroSkill
+      - param Variable EvilArthas
+      - param Preset HeroSkillDevotionAura
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetVariable
+  - param Variable SkillDevotionAura
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable SkillDevotionAura
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable SkillDevotionAura
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action SelectHeroSkill
+      - param Variable EvilArthas
+      - param Preset HeroSkillDevotionAura
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetVariable
+  - param Variable SkillDevotionAura
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable SkillDevotionAura
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable SkillDevotionAura
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action SelectHeroSkill
+      - param Variable EvilArthas
+      - param Preset HeroSkillDevotionAura
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetVariable
+  - param Variable SkillDevotionAura
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable SkillDevotionAura
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable SkillResurrection
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action SelectHeroSkill
+      - param Variable EvilArthas
+      - param Preset HeroSkillResurrection
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetVariable
+  - param Variable SkillResurrection
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable SkillResurrection
+      - param Preset OperatorSubtract
+      - param String 1
+
+
+## Easy
+- enabled: True
+- category: [9] Difficulty
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String PURPLE TOWN
+- Action RemoveUnit
+  - param Variable gg_unit_usep_0084
+- Action CommentString
+  - param String GREEN TOWN
+- Action RemoveUnit
+  - param Variable gg_unit_usep_0061
+- Action RemoveUnit
+  - param Variable gg_unit_uslh_0063
+- Action CommentString
+  - param String INITIAL WAVES
+- Action RemoveUnit
+  - param Variable gg_unit_ucry_0216
+- Action RemoveUnit
+  - param Variable gg_unit_unec_0230
+- Action CommentString
+  - param String VALLEY
+- Action RemoveUnit
+  - param Variable gg_unit_nwwg_0255
+- Action RemoveUnit
+  - param Variable gg_unit_nwwf_0120
+- Action CommentString
+  - param String HANDICAP
+- Action SetPlayerHandicapBJ
+  - param Preset Player02
+  - param Preset RealHandicapEasy
+- Action SetPlayerHandicapBJ
+  - param Preset Player03
+  - param Preset RealHandicapEasy
+- Action SetPlayerHandicapBJ
+  - param Preset Player04
+  - param Preset RealHandicapEasy
+- Action SetPlayerHandicapBJ
+  - param Preset Player06
+  - param Preset RealHandicapEasy
+- Action SetPlayerHandicapBJ
+  - param Preset PlayerNA
+  - param Preset RealHandicapEasy
+- Condition OperatorCompareGameDifficulty
+  - param Function GetGameDifficulty
+    - Function GetGameDifficulty
+  - param Preset OperatorEqualENE
+  - param Preset GameDifficultyEasy
+- Event MapInitializationEvent
+
+
+## Normal
+- enabled: True
+- category: [9] Difficulty
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String PURPLE TOWN
+- Action RemoveUnit
+  - param Variable gg_unit_usep_0084
+- Action CommentString
+  - param String GREEN TOWN
+- Action RemoveUnit
+  - param Variable gg_unit_usep_0061
+- Action RemoveUnit
+  - param Variable gg_unit_uslh_0063
+- Action CommentString
+  - param String INITIAL WAVES
+- Action RemoveUnit
+  - param Variable gg_unit_ucry_0216
+- Action RemoveUnit
+  - param Variable gg_unit_unec_0230
+- Action CommentString
+  - param String VALLEY
+- Action RemoveUnit
+  - param Variable gg_unit_nwwg_0255
+- Action RemoveUnit
+  - param Variable gg_unit_nwwf_0120
+- Condition OperatorCompareGameDifficulty
+  - param Function GetGameDifficulty
+    - Function GetGameDifficulty
+  - param Preset OperatorEqualENE
+  - param Preset GameDifficultyNormal
+- Event MapInitializationEvent
+
+
+## Hard
+- enabled: True
+- category: [9] Difficulty
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String VALLEY
+- Action ReplaceUnitBJ
+  - param Variable gg_unit_nwnr_0107
+  - param String nwna
+  - param Preset UnitStateMethodMaximum
+- Action CommentString
+  - param String MAL'GANIS
+- Action SuspendHeroXPBJ
+  - param Preset EnableDisableEnable
+  - param Variable Malganis
+- Action SetHeroLevel
+  - param Variable Malganis
+  - param String 10
+  - param Preset ShowHideHide
+- Action SelectHeroSkill
+  - param Variable Malganis
+  - param Preset HeroSkillCarrionSwarm
+- Action SuspendHeroXPBJ
+  - param Preset EnableDisableDisable
+  - param Variable Malganis
+- Action CommentString
+  - param String GUARDIAN
+- Action ReplaceUnitBJ
+  - param Variable Guardian
+  - param String nC01
+  - param Preset UnitStateMethodMaximum
+- Action SetVariable
+  - param Variable Guardian
+  - param Function GetLastReplacedUnitBJ
+    - Function GetLastReplacedUnitBJ
+- Action ForGroup
+  - param Function GetUnitsOfPlayerAll
+    - Function GetUnitsOfPlayerAll
+      - param Preset PlayerNA
+  - param Function DoNothing
+    - Action UnitSetCanSleepBJ
+      - param Function GetEnumUnit
+        - Function GetEnumUnit
+      - param Preset SleepWakeOptionWake
+- Action SetUnitInvulnerable
+  - param Variable Guardian
+  - param Preset InvulnerabilityInvulnerable
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionPause
+  - param Variable Guardian
+- Condition OperatorCompareGameDifficulty
+  - param Function GetGameDifficulty
+    - Function GetGameDifficulty
+  - param Preset OperatorEqualENE
+  - param Preset GameDifficultyHard
+- Event MapInitializationEvent
+
+
+## Gryphon
+- enabled: True
+- category: [2] Hints
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action QueuedTriggerAddBJ
+  - param Variable gg_trg_GryphonMessage
+  - param Preset CheckingIgnoringChecking
+- Event TriggerRegisterTimerExpireEventBJ
+  - param Variable HintGryphonTimer
+
+
+## GryphonMessage
+- enabled: True
+- category: [2] Hints
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Condition OperatorCompareBoolean
+  - param Variable GameOver
+  - param Preset OperatorEqualENE
+  - param String false
+- Action QuestMessageBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Preset QuestMessageTypeHint
+  - param String TRIGSTR_212
+- Action TriggerSleepAction
+  - param Preset RealQueueDelayHint
+- Action QueuedTriggerRemoveBJ
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+
+
+## PurpleGold
+- enabled: True
+- category: [12] AI Resourcing
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action AdjustPlayerStateBJ
+  - param String 1000
+  - param Preset Player03
+  - param Preset PlayerStateGold
+- Event TriggerRegisterPlayerStateEvent
+  - param Preset Player03
+  - param Preset PlayerStateGold
+  - param Preset LimitOpLessThanOrEqual
+  - param String 1000.00
+
+
+## PurpleLumber
+- enabled: True
+- category: [12] AI Resourcing
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action AdjustPlayerStateBJ
+  - param String 1000
+  - param Preset Player03
+  - param Preset PlayerStateLumber
+- Event TriggerRegisterPlayerStateEvent
+  - param Preset Player03
+  - param Preset PlayerStateLumber
+  - param Preset LimitOpLessThanOrEqual
+  - param String 1000.00
+
+
+## GreenGold
+- enabled: True
+- category: [12] AI Resourcing
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action AdjustPlayerStateBJ
+  - param String 1000
+  - param Preset Player06
+  - param Preset PlayerStateGold
+- Event TriggerRegisterPlayerStateEvent
+  - param Preset Player06
+  - param Preset PlayerStateGold
+  - param Preset LimitOpLessThanOrEqual
+  - param String 1000.00
+
+
+## GreenLumber
+- enabled: True
+- category: [12] AI Resourcing
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action AdjustPlayerStateBJ
+  - param String 1000
+  - param Preset Player06
+  - param Preset PlayerStateLumber
+- Event TriggerRegisterPlayerStateEvent
+  - param Preset Player06
+  - param Preset PlayerStateLumber
+  - param Preset LimitOpLessThanOrEqual
+  - param String 1000.00
+
+
+## GiveAnkh
+- enabled: True
+- category: [14] MalGanisInvulnerability
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Malganis
+          - param String 1
+      - param Preset OperatorEqualENE
+      - param Preset ItemNull
+  - param Function DoNothing
+    - Action UnitAddItemByIdSwapped
+      - param String ankh
+      - param Variable Malganis
+  - param Function DoNothing
+    - Action DoNothing
+- Event TriggerRegisterTimerEventPeriodic
+  - param String 2.00
+
+
+## DestroyMalganisItems
+- enabled: True
+- category: [14] MalGanisInvulnerability
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action RemoveItem
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Malganis
+      - param String 1
+- Action RemoveItem
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Malganis
+      - param String 2
+- Action RemoveItem
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Malganis
+      - param String 3
+- Action RemoveItem
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Malganis
+      - param String 4
+- Action RemoveItem
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Malganis
+      - param String 5
+- Action RemoveItem
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Malganis
+      - param String 6
+
+
+## ItemFailsafeDetect
+- enabled: True
+- category: [16] ItemFailsafe
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String SCROLLS
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 1
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable ScrollsOfTownPortal
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable ScrollsOfTownPortal
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 1
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Arthas
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 2
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable ScrollsOfTownPortal
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable ScrollsOfTownPortal
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 2
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Arthas
+          - param String 2
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 3
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable ScrollsOfTownPortal
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable ScrollsOfTownPortal
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 3
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Arthas
+          - param String 3
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 4
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable ScrollsOfTownPortal
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable ScrollsOfTownPortal
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 4
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Arthas
+          - param String 4
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 5
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable ScrollsOfTownPortal
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable ScrollsOfTownPortal
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 5
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Arthas
+          - param String 5
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 6
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable ScrollsOfTownPortal
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable ScrollsOfTownPortal
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 6
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Arthas
+          - param String 6
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 1
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable ScrollsOfTownPortal
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable ScrollsOfTownPortal
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 1
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Muradin
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 2
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable ScrollsOfTownPortal
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable ScrollsOfTownPortal
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 2
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Muradin
+          - param String 2
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 3
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable ScrollsOfTownPortal
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable ScrollsOfTownPortal
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 3
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Muradin
+          - param String 3
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 4
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable ScrollsOfTownPortal
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable ScrollsOfTownPortal
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 4
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Muradin
+          - param String 4
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 5
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable ScrollsOfTownPortal
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable ScrollsOfTownPortal
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 5
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Muradin
+          - param String 5
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 6
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable ScrollsOfTownPortal
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable ScrollsOfTownPortal
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 6
+      - param Preset OperatorEqualENE
+      - param String stwp
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Muradin
+          - param String 6
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String AMULETS OF RECALL
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 1
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable AmuletsOfRecall
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable AmuletsOfRecall
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 1
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Arthas
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 2
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable AmuletsOfRecall
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable AmuletsOfRecall
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 2
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Arthas
+          - param String 2
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 3
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable AmuletsOfRecall
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable AmuletsOfRecall
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 3
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Arthas
+          - param String 3
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 4
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable AmuletsOfRecall
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable AmuletsOfRecall
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 4
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Arthas
+          - param String 4
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 5
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable AmuletsOfRecall
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable AmuletsOfRecall
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 5
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Arthas
+          - param String 5
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 6
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable AmuletsOfRecall
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable AmuletsOfRecall
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Arthas
+              - param String 6
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Arthas
+          - param String 6
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 1
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable AmuletsOfRecall
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable AmuletsOfRecall
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 1
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Muradin
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 2
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable AmuletsOfRecall
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable AmuletsOfRecall
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 2
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Muradin
+          - param String 2
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 3
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable AmuletsOfRecall
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable AmuletsOfRecall
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 3
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Muradin
+          - param String 3
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 4
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable AmuletsOfRecall
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable AmuletsOfRecall
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 4
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Muradin
+          - param String 4
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 5
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable AmuletsOfRecall
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable AmuletsOfRecall
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 5
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Muradin
+          - param String 5
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 6
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action SetVariable
+      - param Variable AmuletsOfRecall
+      - param Function OperatorInt
+        - Function OperatorInt
+          - param Variable AmuletsOfRecall
+          - param Preset OperatorAdd
+          - param String 1
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareItemCode
+      - param Function GetItemTypeId
+        - Function GetItemTypeId
+          - param Function UnitItemInSlotBJ
+            - Function UnitItemInSlotBJ
+              - param Variable Muradin
+              - param String 6
+      - param Preset OperatorEqualENE
+      - param String amrc
+  - param Function DoNothing
+    - Action RemoveItem
+      - param Function UnitItemInSlotBJ
+        - Function UnitItemInSlotBJ
+          - param Variable Muradin
+          - param String 6
+  - param Function DoNothing
+    - Action DoNothing
+
+
+## ItemFailsafeReplace
+- enabled: True
+- category: [16] ItemFailsafe
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String stwp
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_ScrollReplace01
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable ScrollsOfTownPortal
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String stwp
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_ScrollReplace02
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable ScrollsOfTownPortal
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String stwp
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_ScrollReplace03
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable ScrollsOfTownPortal
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String stwp
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_ScrollReplace01
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable ScrollsOfTownPortal
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String stwp
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_ScrollReplace02
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable ScrollsOfTownPortal
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String stwp
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_ScrollReplace03
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable ScrollsOfTownPortal
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String stwp
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_ScrollReplace01
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable ScrollsOfTownPortal
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String stwp
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_ScrollReplace02
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable ScrollsOfTownPortal
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String stwp
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_ScrollReplace03
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable ScrollsOfTownPortal
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String stwp
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_ScrollReplace01
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable ScrollsOfTownPortal
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String stwp
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_ScrollReplace02
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable ScrollsOfTownPortal
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String stwp
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_ScrollReplace03
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable ScrollsOfTownPortal
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable ScrollsOfTownPortal
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String amrc
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_AmuletReplace01
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable AmuletsOfRecall
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String amrc
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_AmuletReplace02
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable AmuletsOfRecall
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String amrc
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_AmuletReplace03
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable AmuletsOfRecall
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String amrc
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_AmuletReplace01
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable AmuletsOfRecall
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String amrc
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_AmuletReplace02
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable AmuletsOfRecall
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String amrc
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_AmuletReplace03
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable AmuletsOfRecall
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String amrc
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_AmuletReplace01
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable AmuletsOfRecall
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String amrc
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_AmuletReplace02
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable AmuletsOfRecall
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String amrc
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_AmuletReplace03
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable AmuletsOfRecall
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String amrc
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_AmuletReplace01
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable AmuletsOfRecall
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String amrc
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_AmuletReplace02
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable AmuletsOfRecall
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorSubtract
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorGreater
+      - param String 0
+  - param Function DoNothing
+    - Action CreateItemLoc
+      - param String amrc
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_AmuletReplace03
+  - param Function DoNothing
+    - Action ReturnAction
+- Action SetVariable
+  - param Variable AmuletsOfRecall
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable AmuletsOfRecall
+      - param Preset OperatorSubtract
+      - param String 1
+
+
+## TriggerIntroCinematic
+- enabled: True
+- category: [3] IntroCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action SetVariable
+  - param Variable IntroCinematicRunning
+  - param String true
+- Action EnableTrigger
+  - param Variable gg_trg_IntroCinematicEscape
+- Action TriggerExecute
+  - param Variable gg_trg_IntroEnvironment
+- Action TriggerExecute
+  - param Variable gg_trg_IntroCinematicMode
+- Action TriggerExecute
+  - param Variable gg_trg_IntroInitialCamera
+- Action TriggerExecute
+  - param Variable gg_trg_IntroActorSetup
+
+
+## IntroEnvironment
+- enabled: True
+- category: [3] IntroCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action SetSkyModel
+  - param Preset SkyModelSky08
+
+
+## IntroCinematicMode
+- enabled: True
+- category: [3] IntroCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CinematicModeBJ
+  - param Preset OnOffOn
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+
+
+## IntroActorSetup
+- enabled: True
+- category: [3] IntroCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hgry_0133
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroGryphonPatrolA
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hgyr_0132
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroGyrocopterPatrolA
+- Action TriggerSleepAction
+  - param String 3.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hkni_0110
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroKnightMoveA
+- Action TriggerSleepAction
+  - param String 4.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetUnitLookAt
+  - param Variable gg_unit_hmpr_0130
+  - param Preset UnitFacingBoneHead
+  - param Variable gg_unit_hrif_0210
+  - param String 0
+  - param String 0
+  - param String 90
+- Action TriggerSleepAction
+  - param String 1.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetUnitLookAt
+  - param Variable gg_unit_hrif_0210
+  - param Preset UnitFacingBoneHead
+  - param Variable gg_unit_hmpr_0130
+  - param String 0
+  - param String 0
+  - param String 90
+- Action TriggerSleepAction
+  - param String 3.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetUnitLifeBJ
+  - param Variable gg_unit_hkni_0125
+  - param String 900.00
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hkni_0125
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroKnightHealedMove
+- Action AttachSoundToUnitBJ
+  - param Variable gg_snd_HorseLoop2
+  - param Variable gg_unit_hkni_0125
+- Action PlaySoundBJ
+  - param Variable gg_snd_HorseLoop2
+
+
+## IntroKnightARespond
+- enabled: True
+- category: [3] IntroCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action SetUnitFacingToFaceUnitTimed
+  - param Variable gg_unit_hkni_0111
+  - param Variable gg_unit_hkni_0110
+  - param String 0.20
+- Action TriggerSleepAction
+  - param String 4.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hkni_0111
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroKnightMoveB
+- Action AttachSoundToUnitBJ
+  - param Variable gg_snd_HorseLoop2
+  - param Variable gg_unit_hkni_0111
+- Action PlaySoundBJ
+  - param Variable gg_snd_HorseLoop2
+- Action TriggerSleepAction
+  - param String 1.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hkni_0110
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroKnightMoveC
+- Action AttachSoundToUnitBJ
+  - param Variable gg_snd_HorseLoop2
+  - param Variable gg_unit_hkni_0110
+- Action PlaySoundBJ
+  - param Variable gg_snd_HorseLoop2
+- Event TriggerRegisterEnterRectSimple
+  - param Variable gg_rct_IntroKnightMoveA
+
+
+## IntroKnightBRespond
+- enabled: True
+- category: [3] IntroCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action SetUnitFacingToFaceUnitTimed
+  - param Variable gg_unit_hkni_0110
+  - param Variable gg_unit_hgtw_0009
+  - param String 0.30
+- Event TriggerRegisterEnterRectSimple
+  - param Variable gg_rct_IntroKnightMoveC
+
+
+## IntroInitialCamera
+- enabled: True
+- category: [3] IntroCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeOut
+  - param String 0.00
+  - param Preset CineFilterTextureWhite
+  - param String 0
+  - param String 0
+  - param String 0
+  - param String 0
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_IntroFirstCamera
+  - param Preset Player01
+  - param String 0.00
+- Action TriggerSleepAction
+  - param String 1.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeIn
+  - param String 2.00
+  - param Preset CineFilterTextureBlack
+  - param String 0
+  - param String 0
+  - param String 0
+  - param String 0
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_IntroMuradinToArthas
+  - param Preset Player01
+  - param String 8.00
+- Action TriggerSleepAction
+  - param String 7.50
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action IssuePointOrderLoc
+  - param Variable Muradin
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroMuradinToArthas
+
+
+## IntroMuradinAsksArthas
+- enabled: True
+- category: [3] IntroCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action SetUnitAnimationWithRarity
+  - param Variable Arthas
+  - param String stand
+  - param Preset RarityControlFrequent
+- Action SetUnitAnimationWithRarity
+  - param Variable Muradin
+  - param String stand
+  - param Preset RarityControlFrequent
+- Action SetUnitLookAt
+  - param Variable Arthas
+  - param Preset UnitFacingBoneHead
+  - param Variable Muradin
+  - param String 0
+  - param String 0
+  - param String 50.00
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable Muradin
+  - param String TRIGSTR_014
+  - param Variable gg_snd_H09Muradin01
+  - param String TRIGSTR_015
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontWait
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TriggerSleepAction
+  - param String 0.50
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetUnitFacingToFaceUnitTimed
+  - param Variable Arthas
+  - param Variable Muradin
+  - param String 0.40
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable Arthas
+  - param String TRIGSTR_016
+  - param Variable gg_snd_H09Arthas02
+  - param String TRIGSTR_017
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontWait
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TriggerSleepAction
+  - param String 0.50
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TriggerExecute
+  - param Variable gg_trg_IntroUndeadApproach
+- Condition OperatorCompareUnitCode
+  - param Function GetUnitTypeId
+    - Function GetUnitTypeId
+      - param Function GetEnteringUnit
+        - Function GetEnteringUnit
+  - param Preset OperatorEqualENE
+  - param String Hmbr
+- Event TriggerRegisterEnterRectSimple
+  - param Variable gg_rct_IntroMuradinToArthas
+
+
+## IntroUndeadApproach
+- enabled: True
+- category: [3] IntroCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action ForGroup
+  - param Variable IntroNorthGroup
+  - param Function DoNothing
+    - Action ShowUnitShow
+      - param Function GetEnumUnit
+        - Function GetEnumUnit
+- Action ForGroup
+  - param Variable IntroNortheastGroup
+  - param Function DoNothing
+    - Action ShowUnitShow
+      - param Function GetEnumUnit
+        - Function GetEnumUnit
+- Action GroupPointOrderLoc
+  - param Variable IntroNortheastGroup
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroNortheastUndeadMoveTo
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_IntroNorthEastApproach
+  - param Preset Player01
+  - param String 0.01
+- Action SetSoundPositionLocBJ
+  - param Variable gg_snd_GargoyleWhat1
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_GargoyleSound
+  - param String 0
+- Action PlaySoundBJ
+  - param Variable gg_snd_GargoyleWhat1
+- Action TriggerSleepAction
+  - param String 2.50
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CreateNUnitsAtLoc
+  - param String 1
+  - param String Umal
+  - param Preset Player04
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroSpawnMalganis
+  - param String 270.00
+- Action SetVariable
+  - param Variable IntroMalganis
+  - param Function GetLastCreatedUnit
+    - Function GetLastCreatedUnit
+- Action GroupPointOrderLoc
+  - param Variable IntroNorthGroup
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroNorthUndeadMoveTo
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_IntroNorthApproach
+  - param Preset Player01
+  - param String 0.01
+- Action SetUnitAnimationWithRarity
+  - param Variable Malganis
+  - param String stand
+  - param Preset RarityControlFrequent
+- Action TriggerSleepAction
+  - param String 0.50
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_IntroMalganisCloseup
+  - param Preset Player01
+  - param String 2.00
+- Action SetSoundPositionLocBJ
+  - param Variable gg_snd_AbominationYesAttack2
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_GargoyleSound
+  - param String 0
+- Action SetSoundVolumeBJ
+  - param Variable gg_snd_AbominationYesAttack2
+  - param String 70.00
+- Action PlaySoundBJ
+  - param Variable gg_snd_AbominationYesAttack2
+- Action TriggerSleepAction
+  - param String 2.00
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable IntroMalganis
+  - param String TRIGSTR_018
+  - param Variable gg_snd_H09MalGanis03
+  - param String TRIGSTR_019
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontWait
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TriggerExecute
+  - param Variable gg_trg_IntroArthasDecides
+
+
+## IntroBaseReorients
+- enabled: True
+- category: [3] IntroCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action ResetUnitLookAt
+  - param Variable gg_unit_hrif_0210
+- Action IssueImmediateOrder
+  - param Variable gg_unit_hpea_0138
+  - param Preset UnitOrderAutoHarvestLumber
+- Action IssueImmediateOrder
+  - param Variable gg_unit_hpea_0137
+  - param Preset UnitOrderAutoHarvestGold
+- Action IssueImmediateOrder
+  - param Variable gg_unit_hpea_0136
+  - param Preset UnitOrderAutoHarvestGold
+- Action IssueImmediateOrder
+  - param Variable gg_unit_hpea_0134
+  - param Preset UnitOrderAutoHarvestGold
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hgyr_0132
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroGyrocopterAlert
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hgry_0133
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroGryphonAlert
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hmpr_0112
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroPriest01Alert
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hmpr_0130
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroPriest02Alert
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hmpr_0129
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroPriest03Alert
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hfoo_0123
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroFootman02Alert
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hfoo_0124
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroFootman03Alert
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hfoo_0126
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroFootman04Alert
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hrif_0210
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroRifleman02Alert
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hrif_0117
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroRifleman03Alert
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hrif_0115
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroRifleman06Alert
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hrif_0211
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroRifleman07Alert
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hsor_0128
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroSorceress01
+
+
+## IntroArthasDecides
+- enabled: True
+- category: [3] IntroCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action TriggerExecute
+  - param Variable gg_trg_IntroBaseReorients
+- Action SetUnitAnimationWithRarity
+  - param Variable gg_unit_hcth_0105
+  - param String stand
+  - param Preset RarityControlFrequent
+- Action SetUnitFacingToFaceUnitTimed
+  - param Variable Arthas
+  - param Variable IntroMalganis
+  - param String 0
+- Action SetUnitFacingToFaceUnitTimed
+  - param Variable Muradin
+  - param Variable IntroMalganis
+  - param String 0
+- Action RemoveUnit
+  - param Variable IntroMalganis
+- Action ResetUnitLookAt
+  - param Variable Arthas
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_IntroMuradinToArthas
+  - param Preset Player01
+  - param String 0.01
+- Action SetSoundPositionLocBJ
+  - param Variable gg_snd_HumanCallToArmsWhat1
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_CallToArmsSound
+  - param String 0
+- Action SetSoundVolumeBJ
+  - param Variable gg_snd_HumanCallToArmsWhat1
+  - param String 60.00
+- Action PlaySoundBJ
+  - param Variable gg_snd_HumanCallToArmsWhat1
+- Action TriggerSleepAction
+  - param String 0.50
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetUnitFacingToFaceUnitTimed
+  - param Variable Muradin
+  - param Variable Arthas
+  - param String 0.20
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable Muradin
+  - param String TRIGSTR_020
+  - param Variable gg_snd_H09Muradin04
+  - param String TRIGSTR_021
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontWait
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TriggerSleepAction
+  - param String 0.50
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetUnitFacingToFaceUnitTimed
+  - param Variable Arthas
+  - param Variable Muradin
+  - param String 0.20
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable Arthas
+  - param String TRIGSTR_022
+  - param Variable gg_snd_H09Arthas05
+  - param String TRIGSTR_023
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontWait
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TriggerSleepAction
+  - param String 0.50
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable Muradin
+  - param String TRIGSTR_024
+  - param Variable gg_snd_H09Muradin06
+  - param String TRIGSTR_025
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontWait
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action IssuePointOrderLoc
+  - param Variable Arthas
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroArthasToCaptain
+- Action IssuePointOrderLoc
+  - param Variable Muradin
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroMuradintoCaptain
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_IntroCaptainCloseup
+  - param Preset Player01
+  - param String 4.00
+
+
+## IntroArthasTalksToCaptain
+- enabled: True
+- category: [3] IntroCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action TriggerSleepAction
+  - param String 0.20
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetUnitFacingToFaceUnitTimed
+  - param Variable Arthas
+  - param Variable gg_unit_hcth_0105
+  - param String 0.20
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable Arthas
+  - param String TRIGSTR_026
+  - param Variable gg_snd_H09Arthas07
+  - param String TRIGSTR_027
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontWait
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hcth_0105
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroCaptainAlert
+- Action IssuePointOrderLoc
+  - param Variable Arthas
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroArthasToWaygate
+- Action IssuePointOrderLoc
+  - param Variable Muradin
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroMuradinToWaygate
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_IntroToWaygate1
+  - param Preset Player01
+  - param String 3.50
+- Action TriggerSleepAction
+  - param String 3.50
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_IntroToWaygate3
+  - param Preset Player01
+  - param String 10.50
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TriggerSleepAction
+  - param String 10.50
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Condition OperatorCompareUnitCode
+  - param Function GetUnitTypeId
+    - Function GetUnitTypeId
+      - param Function GetEnteringUnit
+        - Function GetEnteringUnit
+  - param Preset OperatorEqualENE
+  - param String Hart
+- Event TriggerRegisterEnterRectSimple
+  - param Variable gg_rct_IntroArthasToCaptain
+
+
+## IntroEscortFollowsArthas
+- enabled: True
+- category: [3] IntroCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Condition OperatorCompareUnit
+  - param Function GetEnteringUnit
+    - Function GetEnteringUnit
+  - param Preset OperatorEqualENE
+  - param Variable Arthas
+- Condition OperatorCompareBoolean
+  - param Variable IntroCinematicRunning
+  - param Preset OperatorEqualENE
+  - param String true
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hkni_0250
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroEscortKnight01
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hkni_0251
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroEscortKnight02
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hrif_0254
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroEscortRifleman01
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hrif_0253
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroEscortRifleman02
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_hrif_0252
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroEscortRifleman03
+- Action AttachSoundToUnitBJ
+  - param Variable gg_snd_HorseLoop3
+  - param Variable gg_unit_hkni_0251
+- Action PlaySoundBJ
+  - param Variable gg_snd_HorseLoop3
+- Action WaitForSoundBJ
+  - param Variable gg_snd_HorseLoop3
+  - param String 0.01
+- Action AttachSoundToUnitBJ
+  - param Variable gg_snd_HorseLoop3
+  - param Variable gg_unit_hkni_0251
+- Action PlaySoundBJ
+  - param Variable gg_snd_HorseLoop3
+- Action WaitForSoundBJ
+  - param Variable gg_snd_HorseLoop3
+  - param String 0.01
+- Action AttachSoundToUnitBJ
+  - param Variable gg_snd_HorseLoop2
+  - param Variable gg_unit_hkni_0251
+- Action PlaySoundBJ
+  - param Variable gg_snd_HorseLoop2
+- Event TriggerRegisterEnterRectSimple
+  - param Variable gg_rct_IntroTriggerArthasEscort
+
+
+## IntroArthasReachesWaygate
+- enabled: True
+- category: [3] IntroCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action SetUnitFacingToFaceUnitTimed
+  - param Variable Arthas
+  - param Variable gg_unit_nwgt_0209
+  - param String 0.40
+- Action AddSpecialEffectLocBJ
+  - param Function GetUnitLoc
+    - Function GetUnitLoc
+      - param Variable EvilArthas
+  - param String Abilities\Spells\Human\MassTeleport\MassTeleportTarget.mdl
+- Action AttachSoundToUnitBJ
+  - param Variable gg_snd_MassTeleportTarget
+  - param Variable Arthas
+- Action PlaySoundBJ
+  - param Variable gg_snd_MassTeleportTarget
+- Action SetVariable
+  - param Variable EffectArthasAfterFM
+  - param Function GetLastCreatedEffectBJ
+    - Function GetLastCreatedEffectBJ
+- Action TriggerSleepAction
+  - param String 2
+- Action DestroyEffectBJ
+  - param Variable EffectArthasAfterFM
+- Condition OperatorCompareUnit
+  - param Function GetEnteringUnit
+    - Function GetEnteringUnit
+  - param Preset OperatorEqualENE
+  - param Variable Arthas
+- Condition OperatorCompareBoolean
+  - param Variable IntroCinematicRunning
+  - param Preset OperatorEqualENE
+  - param String true
+- Event TriggerRegisterEnterRectSimple
+  - param Variable gg_rct_IntroArthasToWaygate
+
+
+## IntroMuradinReachesWaygate
+- enabled: True
+- category: [3] IntroCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action TriggerSleepAction
+  - param String 0.20
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetUnitFacingToFaceUnitTimed
+  - param Variable Muradin
+  - param Variable gg_unit_nwgt_0209
+  - param String 0.40
+- Condition OperatorCompareUnit
+  - param Function GetEnteringUnit
+    - Function GetEnteringUnit
+  - param Preset OperatorEqualENE
+  - param Variable Muradin
+- Condition OperatorCompareBoolean
+  - param Variable IntroCinematicRunning
+  - param Preset OperatorEqualENE
+  - param String true
+- Event TriggerRegisterEnterRectSimple
+  - param Variable gg_rct_IntroMuradinToWaygate
+
+
+## IntroLastDwarfReachesWaygate
+- enabled: True
+- category: [3] IntroCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action ForGroup
+  - param Function GetUnitsInRectAll
+    - Function GetUnitsInRectAll
+      - param Variable gg_rct_IntroArthasWaygateForce
+  - param Function DoNothing
+    - Action IssueTargetOrder
+      - param Function GetEnumUnit
+        - Function GetEnumUnit
+      - param Preset UnitOrderMoveUnit
+      - param Variable gg_unit_nwgt_0209
+- Action TriggerSleepAction
+  - param String 2.50
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeOut
+  - param String 1.00
+  - param Preset CineFilterTextureWhite
+  - param String 0
+  - param String 0
+  - param String 0
+  - param String 0
+- Action TriggerSleepAction
+  - param String 1.50
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_IntroArthasInValley
+  - param Preset Player01
+  - param String 0
+- Action SetUnitPositionLoc
+  - param Variable Arthas
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyArthas
+- Action SetUnitFacingToFaceLocTimed
+  - param Variable Arthas
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyUnitFacing
+  - param String 0
+- Action SetUnitPositionLoc
+  - param Variable Muradin
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyMuradin
+- Action SetUnitFacingToFaceLocTimed
+  - param Variable Muradin
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyUnitFacing
+  - param String 0
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hkni_0250
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyKnight01
+- Action SetUnitFacingToFaceLocTimed
+  - param Variable gg_unit_hkni_0250
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyUnitFacing
+  - param String 0
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hkni_0251
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyKnight02
+- Action SetUnitFacingToFaceLocTimed
+  - param Variable gg_unit_hkni_0251
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyUnitFacing
+  - param String 0
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hrif_0254
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyRifleman01
+- Action SetUnitFacingToFaceLocTimed
+  - param Variable gg_unit_hrif_0254
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyUnitFacing
+  - param String 0
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hrif_0253
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyRifleman02
+- Action SetUnitFacingToFaceLocTimed
+  - param Variable gg_unit_hrif_0253
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyUnitFacing
+  - param String 0
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hrif_0252
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyRifleman03
+- Action SetUnitFacingToFaceLocTimed
+  - param Variable gg_unit_hrif_0252
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyUnitFacing
+  - param String 0
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeIn
+  - param String 1.00
+  - param Preset CineFilterTextureWhite
+  - param String 0
+  - param String 0
+  - param String 0
+  - param String 0
+- Action CreateFogModifierRectBJ
+  - param Preset EnabledDisabledEnabled
+  - param Preset Player01
+  - param Preset FogStateMasked
+  - param Variable gg_rct_WayGateExit_BlackMask
+- Action TriggerSleepAction
+  - param String 1.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable IntroCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TriggerExecute
+  - param Variable gg_trg_IntroCinematicEnd
+- Condition OperatorCompareBoolean
+  - param Variable IntroCinematicRunning
+  - param Preset OperatorEqualENE
+  - param String true
+- Condition OperatorCompareUnit
+  - param Function GetEnteringUnit
+    - Function GetEnteringUnit
+  - param Preset OperatorEqualENE
+  - param Variable gg_unit_hrif_0252
+- Event TriggerRegisterEnterRectSimple
+  - param Variable gg_rct_IntroEscortRifleman03
+
+
+## IntroCinematicEnd
+- enabled: True
+- category: [3] IntroCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action SetVariable
+  - param Variable IntroCinematicRunning
+  - param String false
+- Action DisableTrigger
+  - param Variable gg_trg_IntroCinematicEscape
+- Action SetSkyModel
+  - param Preset SkyModelNone
+- Action SetTerrainFogExBJ
+  - param String 0
+  - param String 600.00
+  - param String 6000.00
+  - param String 0.00
+  - param String 100
+  - param String 100
+  - param String 100
+- Action WaygateActivateBJ
+  - param Preset EnableDisableDisable
+  - param Variable gg_unit_nwgt_0209
+- Action CinematicModeBJ
+  - param Preset OnOffOff
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+- Action SelectGroupBJ
+  - param Variable ValleyGroup
+- Action SelectUnitRemove
+  - param Variable Muradin
+- Action SelectUnitAdd
+  - param Variable Muradin
+- Action ResetToGameCameraForPlayer
+  - param Preset Player01
+  - param String 0.00
+- Action QuestMessageBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Preset QuestMessageTypeDiscovered
+  - param String TRIGSTR_068
+- Action RemoveUnit
+  - param Variable IntroMalganis
+- Action SetPlayerAllianceBJ
+  - param Preset Player04
+  - param Preset AllianceTypePassive
+  - param Preset OnOffOff
+  - param Preset Player01
+- Action StartTimerBJ
+  - param Variable TimerInitialAttack
+  - param Preset PeriodicOptionOneTime
+  - param String 60.00
+- Action StartTimerBJ
+  - param Variable HintGryphonTimer
+  - param Preset PeriodicOptionOneTime
+  - param String 10.00
+- Action CommandAI
+  - param Variable PlayerUndeadProtector
+  - param String 0
+  - param String 0
+- Action CommandAI
+  - param Variable PlayerMalganis
+  - param String 0
+  - param String 0
+- Action SetPlayerState
+  - param Preset Player01
+  - param Preset PlayerStateGold
+  - param String 1000
+- Action SetPlayerState
+  - param Preset Player01
+  - param Preset PlayerStateLumber
+  - param String 500
+- Action SetResourceAmount
+  - param Variable gg_unit_ngol_0003
+  - param String 30000
+- Action CommentString
+  - param String HANDLE SCROLLS
+- Action TriggerExecute
+  - param Variable gg_trg_ItemFailsafeDetect
+
+
+## InroArthasGroupTeleports
+- enabled: False
+- category: [3] IntroCinematic
+- starts off: True
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String Arthas
+- Action AddSpecialEffectLocBJ
+  - param Function GetUnitLoc
+    - Function GetUnitLoc
+      - param Variable Arthas
+  - param String Abilities\Spells\Human\MassTeleport\MassTeleportTarget.mdl
+- Action SetVariable
+  - param Variable EffectArthasAfterFM
+  - param Function GetLastCreatedEffectBJ
+    - Function GetLastCreatedEffectBJ
+- Action CommentString
+  - param String Muradin
+- Action AddSpecialEffectLocBJ
+  - param Function GetUnitLoc
+    - Function GetUnitLoc
+      - param Variable Muradin
+  - param String Abilities\Spells\Human\MassTeleport\MassTeleportTarget.mdl
+- Action SetVariable
+  - param Variable EffectArthasAfterFM
+  - param Function GetLastCreatedEffectBJ
+    - Function GetLastCreatedEffectBJ
+- Action TriggerSleepAction
+  - param String 2
+- Action DestroyEffectBJ
+  - param Variable EffectArthasAfterFM
+
+
+## IntroCinematicEscape
+- enabled: True
+- category: [3] IntroCinematic
+- starts off: True
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action SetVariable
+  - param Variable IntroCinematicEscape
+  - param String true
+- Action SetVariable
+  - param Variable IntroCinematicRunning
+  - param String false
+- Action StopSoundBJ
+  - param Function GetLastPlayedSound
+    - Function GetLastPlayedSound
+  - param Preset FadeDontFade
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeOut
+  - param String 0.40
+  - param Preset CineFilterTextureWhite
+  - param String 0
+  - param String 0
+  - param String 0
+  - param String 0
+- Action TriggerSleepAction
+  - param String 0.80
+- Action ForGroup
+  - param Variable IntroNorthGroup
+  - param Function DoNothing
+    - Action ShowUnitShow
+      - param Function GetEnumUnit
+        - Function GetEnumUnit
+- Action ForGroup
+  - param Variable IntroNortheastGroup
+  - param Function DoNothing
+    - Action ShowUnitShow
+      - param Function GetEnumUnit
+        - Function GetEnumUnit
+- Action CreateFogModifierRectBJ
+  - param Preset EnabledDisabledEnabled
+  - param Preset Player01
+  - param Preset FogStateVisible
+  - param Variable gg_rct_IntroCancelVisibility
+- Action SetVariable
+  - param Variable IntroCancelView
+  - param Function GetLastCreatedFogModifier
+    - Function GetLastCreatedFogModifier
+- Action FogModifierStop
+  - param Variable IntroCancelView
+- Action CreateFogModifierRectBJ
+  - param Preset EnabledDisabledEnabled
+  - param Preset Player01
+  - param Preset FogStateMasked
+  - param Variable gg_rct_WayGateExit_BlackMask
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_IntroArthasInValley
+  - param Preset Player01
+  - param String 0.00
+- Action TriggerSleepAction
+  - param String 0.01
+- Action ResetUnitLookAt
+  - param Variable gg_unit_hrif_0210
+- Action ResetUnitLookAt
+  - param Variable Arthas
+- Action ResetUnitLookAt
+  - param Variable Muradin
+- Action IssueImmediateOrder
+  - param Variable gg_unit_hpea_0138
+  - param Preset UnitOrderAutoHarvestLumber
+- Action IssueImmediateOrder
+  - param Variable gg_unit_hpea_0137
+  - param Preset UnitOrderAutoHarvestGold
+- Action IssueImmediateOrder
+  - param Variable gg_unit_hpea_0136
+  - param Preset UnitOrderAutoHarvestGold
+- Action IssueImmediateOrder
+  - param Variable gg_unit_hpea_0134
+  - param Preset UnitOrderAutoHarvestGold
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hgyr_0132
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroGyrocopterAlert
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hgry_0133
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroGryphonAlert
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hmpr_0112
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroPriest01Alert
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hmpr_0130
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroPriest02Alert
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hmpr_0129
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroPriest03Alert
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hfoo_0123
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroFootman02Alert
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hfoo_0124
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroFootman03Alert
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hfoo_0126
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroFootman04Alert
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hrif_0210
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroRifleman02Alert
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hrif_0117
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroRifleman03Alert
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hrif_0115
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroRifleman06Alert
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hrif_0211
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroRifleman08Alert
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hsor_0128
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroSorceress01
+- Action SetUnitLifeBJ
+  - param Variable gg_unit_hkni_0125
+  - param String 900.00
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hkni_0125
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroKnightHealedMove
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hcth_0105
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroCaptainAlert
+- Action SetUnitPositionLoc
+  - param Variable Arthas
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyArthas
+- Action SetUnitFacingToFaceLocTimed
+  - param Variable Arthas
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyUnitFacing
+  - param String 0
+- Action SetUnitPositionLoc
+  - param Variable Muradin
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyMuradin
+- Action SetUnitFacingToFaceLocTimed
+  - param Variable Muradin
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyUnitFacing
+  - param String 0
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hkni_0250
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyKnight01
+- Action SetUnitFacingToFaceLocTimed
+  - param Variable gg_unit_hkni_0250
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyUnitFacing
+  - param String 0
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hkni_0251
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyKnight02
+- Action SetUnitFacingToFaceLocTimed
+  - param Variable gg_unit_hkni_0251
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyUnitFacing
+  - param String 0
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hrif_0254
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyRifleman01
+- Action SetUnitFacingToFaceLocTimed
+  - param Variable gg_unit_hrif_0254
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyUnitFacing
+  - param String 0
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hrif_0253
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyRifleman02
+- Action SetUnitFacingToFaceLocTimed
+  - param Variable gg_unit_hrif_0253
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyUnitFacing
+  - param String 0
+- Action SetUnitPositionLoc
+  - param Variable gg_unit_hrif_0252
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroValleyRifleman03
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeIn
+  - param String 0.40
+  - param Preset CineFilterTextureWhite
+  - param String 0
+  - param String 0
+  - param String 0
+  - param String 0
+- Action SetSkyModel
+  - param Preset SkyModelNone
+- Action SetTerrainFogExBJ
+  - param String 0
+  - param String 600.00
+  - param String 6000.00
+  - param String 0.00
+  - param String 100
+  - param String 100
+  - param String 100
+- Action CinematicModeBJ
+  - param Preset OnOffOff
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+- Action SelectGroupBJ
+  - param Variable ValleyGroup
+- Action SelectUnitRemove
+  - param Variable Muradin
+- Action SelectUnitAdd
+  - param Variable Muradin
+- Action ResetToGameCameraForPlayer
+  - param Preset Player01
+  - param String 0.00
+- Action QuestMessageBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Preset QuestMessageTypeDiscovered
+  - param String TRIGSTR_219
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Function CountUnitsInGroup
+        - Function CountUnitsInGroup
+          - param Function GetUnitsOfPlayerAndTypeId
+            - Function GetUnitsOfPlayerAndTypeId
+              - param Preset Player04
+              - param String Umal
+      - param Preset OperatorEqual
+      - param String 1
+  - param Function DoNothing
+    - Action RemoveUnit
+      - param Variable IntroMalganis
+  - param Function DoNothing
+    - Action DoNothing
+- Action WaygateActivateBJ
+  - param Preset EnableDisableDisable
+  - param Variable gg_unit_nwgt_0209
+- Action SetPlayerAllianceBJ
+  - param Preset Player04
+  - param Preset AllianceTypePassive
+  - param Preset OnOffOff
+  - param Preset Player01
+- Action StartTimerBJ
+  - param Variable TimerInitialAttack
+  - param Preset PeriodicOptionOneTime
+  - param String 60.00
+- Action StartTimerBJ
+  - param Variable HintGryphonTimer
+  - param Preset PeriodicOptionOneTime
+  - param String 10.00
+- Action CommandAI
+  - param Variable PlayerUndeadProtector
+  - param String 0
+  - param String 0
+- Action CommandAI
+  - param Variable PlayerMalganis
+  - param String 0
+  - param String 0
+- Action SetPlayerState
+  - param Preset Player01
+  - param Preset PlayerStateGold
+  - param String 1000
+- Action SetPlayerState
+  - param Preset Player01
+  - param Preset PlayerStateLumber
+  - param String 500
+- Action SetResourceAmount
+  - param Variable gg_unit_ngol_0003
+  - param String 30000
+- Action CommentString
+  - param String HANDLE SCROLLS
+- Action TriggerExecute
+  - param Variable gg_trg_ItemFailsafeDetect
+- Event TriggerRegisterPlayerEventEndCinematic
+  - param Preset Player01
+
+
+## InitialAttackTimerExpires
+- enabled: True
+- category: [10] InitialAttack
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action StartCampaignAI
+  - param Preset Player04
+  - param String h09_yellow.ai
+- Event TriggerRegisterTimerExpireEventBJ
+  - param Variable TimerInitialAttack
+- Action # GroupPointOrderLoc
+  - param Variable IntroNortheastGroup
+  - param Preset UnitOrderAttack
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroGreenAttackRegion
+- Action # GroupPointOrderLoc
+  - param Variable IntroNorthGroup
+  - param Preset UnitOrderAttack
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_IntroGreenAttackRegion
+
+
+## FirstWolves
+- enabled: True
+- category: [4] ValleyEncounters
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action ForGroup
+  - param Function GetUnitsInRectAll
+    - Function GetUnitsInRectAll
+      - param Variable gg_rct_ValleyFirstWolves
+  - param Function DoNothing
+    - Action IssuePointOrderLoc
+      - param Function GetEnumUnit
+        - Function GetEnumUnit
+      - param Preset UnitOrderAttack
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_ValleyFirstWolfAttack
+- Event TriggerRegisterEnterRectSimple
+  - param Variable gg_rct_ValleyFirstWolfAttack
+
+
+## WolfSpotted
+- enabled: True
+- category: [4] ValleyEncounters
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Condition OperatorCompareUnit
+  - param Function GetAttackedUnitBJ
+    - Function GetAttackedUnitBJ
+  - param Preset OperatorEqualENE
+  - param Variable gg_unit_nwwf_0257
+- Event TriggerRegisterPlayerUnitEventSimple
+  - param Preset PlayerNA
+  - param Preset PlayerUnitEventAttacked
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_nwwf_0257
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ValleyWhiteWolfRun
+
+
+## WolfTurnsAround
+- enabled: True
+- category: [4] ValleyEncounters
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action IssueImmediateOrder
+  - param Function GetEnteringUnit
+    - Function GetEnteringUnit
+  - param Preset UnitOrderStop
+- Action SetUnitFacingTimed
+  - param Function GetEnteringUnit
+    - Function GetEnteringUnit
+  - param String 180.00
+  - param String 0.50
+- Condition OperatorCompareUnit
+  - param Function GetEnteringUnit
+    - Function GetEnteringUnit
+  - param Preset OperatorEqualENE
+  - param Variable gg_unit_nwwf_0257
+- Event TriggerRegisterEnterRectSimple
+  - param Variable gg_rct_ValleyWhiteWolfRun
+
+
+## WolvesAttack
+- enabled: True
+- category: [4] ValleyEncounters
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_nwwf_0161
+  - param Preset UnitOrderAttack
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ValleyWolvesAttack
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_nwwg_0259
+  - param Preset UnitOrderAttack
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ValleyWolvesAttack
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_nwwf_0257
+  - param Preset UnitOrderAttack
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ValleyWolvesAttack
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_nwwg_0255
+  - param Preset UnitOrderAttack
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ValleyWolvesAttack
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_nwwd_0139
+  - param Preset UnitOrderAttack
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ValleyWolvesAttack
+- Action IssuePointOrderLoc
+  - param Variable gg_unit_nwwg_0256
+  - param Preset UnitOrderAttack
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ValleyWolvesAttack
+- Condition OperatorComparePlayer
+  - param Function GetOwningPlayer
+    - Function GetOwningPlayer
+      - param Function GetEnteringUnit
+        - Function GetEnteringUnit
+  - param Preset OperatorEqualENE
+  - param Preset Player01
+- Event TriggerRegisterEnterRectSimple
+  - param Variable gg_rct_ValleyWolvesAttack
+
+
+## TriggerGraveyardAttack
+- enabled: True
+- category: [4] ValleyEncounters
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action TriggerExecute
+  - param Variable gg_trg_SpawnGhosts
+- Action TriggerExecute
+  - param Variable gg_trg_SpawnSkeletal_Archers
+- Condition OperatorComparePlayer
+  - param Function GetOwningPlayer
+    - Function GetOwningPlayer
+      - param Function GetEnteringUnit
+        - Function GetEnteringUnit
+  - param Preset OperatorEqualENE
+  - param Preset Player01
+- Event TriggerRegisterEnterRectSimple
+  - param Variable gg_rct_ValleyGraveyardTrigger
+
+
+## SpawnGhosts
+- enabled: True
+- category: [4] ValleyEncounters
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CreateNUnitsAtLoc
+  - param String 1
+  - param String ngh1
+  - param Preset PlayerNA
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ValleyGhost01
+  - param String 225.00
+- Action SetUnitVertexColorBJ
+  - param Function GetLastCreatedUnit
+    - Function GetLastCreatedUnit
+  - param String 100
+  - param String 100
+  - param String 100
+  - param String 100.00
+- Action SetVariable
+  - param Variable GhostA
+  - param Function GetLastCreatedUnit
+    - Function GetLastCreatedUnit
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionPause
+  - param Function GetLastCreatedUnit
+    - Function GetLastCreatedUnit
+- Action CreateNUnitsAtLoc
+  - param String 1
+  - param String ngh2
+  - param Preset PlayerNA
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ValleyGhost02
+  - param String 225.00
+- Action SetUnitVertexColorBJ
+  - param Function GetLastCreatedUnit
+    - Function GetLastCreatedUnit
+  - param String 100
+  - param String 100
+  - param String 100
+  - param String 100.00
+- Action SetVariable
+  - param Variable GhostB
+  - param Function GetLastCreatedUnit
+    - Function GetLastCreatedUnit
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionPause
+  - param Function GetLastCreatedUnit
+    - Function GetLastCreatedUnit
+- Action ForLoopA
+  - param String 1
+  - param String 20
+  - param Function DoNothing
+    - Action TriggerExecute
+      - param Variable gg_trg_LoopGhostTransparency
+- Action TriggerSleepAction
+  - param String 2.10
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionUnpause
+  - param Variable GhostA
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionUnpause
+  - param Variable GhostB
+
+
+## LoopGhostTransparency
+- enabled: True
+- category: [4] ValleyEncounters
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action TriggerSleepAction
+  - param Function OperatorReal
+    - Function OperatorReal
+      - param String 0.10
+      - param Preset OperatorMultiply
+      - param Function I2R
+        - Function I2R
+          - param Function GetForLoopIndexA
+            - Function GetForLoopIndexA
+- Action SetVariable
+  - param Variable GhostMaterialize
+  - param Function OperatorReal
+    - Function OperatorReal
+      - param Variable GhostMaterialize
+      - param Preset OperatorSubtract
+      - param String 5.00
+- Action SetUnitVertexColorBJ
+  - param Variable GhostA
+  - param String 100
+  - param String 100
+  - param String 100
+  - param Variable GhostMaterialize
+- Action SetUnitVertexColorBJ
+  - param Variable GhostB
+  - param String 100
+  - param String 100
+  - param String 100
+  - param Variable GhostMaterialize
+
+
+## SpawnSkeletal Archers
+- enabled: True
+- category: [4] ValleyEncounters
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CreateNUnitsAtLoc
+  - param String 1
+  - param String nska
+  - param Preset PlayerNA
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ValleySkelArcher01
+  - param String 180.00
+- Action SetVariable
+  - param Variable Skeleton01
+  - param Function GetLastCreatedUnit
+    - Function GetLastCreatedUnit
+- Action CreateNUnitsAtLoc
+  - param String 1
+  - param String nskm
+  - param Preset PlayerNA
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ValleySkelArcher02
+  - param String 180.00
+- Action SetVariable
+  - param Variable Skeleton02
+  - param Function GetLastCreatedUnit
+    - Function GetLastCreatedUnit
+- Action CreateNUnitsAtLoc
+  - param String 1
+  - param String nska
+  - param Preset PlayerNA
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ValleySkelArcher03
+  - param String 180.00
+- Action SetVariable
+  - param Variable Skeleton03
+  - param Function GetLastCreatedUnit
+    - Function GetLastCreatedUnit
+- Action CreateNUnitsAtLoc
+  - param String 1
+  - param String nskm
+  - param Preset PlayerNA
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ValleySkelArcher04
+  - param String 180.00
+- Action SetVariable
+  - param Variable Skeleton04
+  - param Function GetLastCreatedUnit
+    - Function GetLastCreatedUnit
+- Action CreateNUnitsAtLoc
+  - param String 1
+  - param String nska
+  - param Preset PlayerNA
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ValleySkelArcher05
+  - param String 200.00
+- Action SetVariable
+  - param Variable Skeleton05
+  - param Function GetLastCreatedUnit
+    - Function GetLastCreatedUnit
+- Action CreateNUnitsAtLoc
+  - param String 1
+  - param String nska
+  - param Preset PlayerNA
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ValleySkelArcher06
+  - param String 225.00
+- Action SetVariable
+  - param Variable Skeleton06
+  - param Function GetLastCreatedUnit
+    - Function GetLastCreatedUnit
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionPause
+  - param Variable Skeleton01
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionPause
+  - param Variable Skeleton02
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionPause
+  - param Variable Skeleton03
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionPause
+  - param Variable Skeleton04
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionPause
+  - param Variable Skeleton05
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionPause
+  - param Variable Skeleton06
+- Action SetUnitAnimation
+  - param Variable Skeleton01
+  - param String birth
+- Action SetUnitAnimation
+  - param Variable Skeleton02
+  - param String birth
+- Action SetUnitAnimation
+  - param Variable Skeleton03
+  - param String birth
+- Action SetUnitAnimation
+  - param Variable Skeleton04
+  - param String birth
+- Action SetUnitAnimation
+  - param Variable Skeleton05
+  - param String birth
+- Action SetUnitAnimation
+  - param Variable Skeleton06
+  - param String birth
+- Action TriggerSleepAction
+  - param String 2.50
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionUnpause
+  - param Variable Skeleton01
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionUnpause
+  - param Variable Skeleton02
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionUnpause
+  - param Variable Skeleton03
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionUnpause
+  - param Variable Skeleton04
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionUnpause
+  - param Variable Skeleton05
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionUnpause
+  - param Variable Skeleton06
+
+
+## GuardianEncounter
+- enabled: True
+- category: [4] ValleyEncounters
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CreateFogModifierRadiusLocBJ
+  - param Preset EnabledDisabledEnabled
+  - param Preset Player01
+  - param Preset FogStateVisible
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ValleyGuardianVisibility
+  - param String 768.00
+- Action SetVariable
+  - param Variable GuardianVisibility
+  - param Function GetLastCreatedFogModifier
+    - Function GetLastCreatedFogModifier
+- Action SetSpeechVolumeGroupsBJ
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable Guardian
+  - param String TRIGSTR_039
+  - param Variable gg_snd_H09Guardian08
+  - param String TRIGSTR_040
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontWait
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareReal
+      - param Function DistanceBetweenPoints
+        - Function DistanceBetweenPoints
+          - param Function GetUnitLoc
+            - Function GetUnitLoc
+              - param Variable Arthas
+          - param Function GetUnitLoc
+            - Function GetUnitLoc
+              - param Variable Guardian
+      - param Preset OperatorLessEq
+      - param String 2048.00
+  - param Function DoNothing
+    - Action TransmissionFromUnitWithNameBJ
+      - param Function GetPlayersAll
+        - Function GetPlayersAll
+      - param Variable Arthas
+      - param String TRIGSTR_150
+      - param Variable gg_snd_H09Arthas09
+      - param String TRIGSTR_151
+      - param Preset AddSetToAdd
+      - param String 0
+      - param Preset WaitDontWait
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareReal
+      - param Function DistanceBetweenPoints
+        - Function DistanceBetweenPoints
+          - param Function GetUnitLoc
+            - Function GetUnitLoc
+              - param Variable Arthas
+          - param Function GetUnitLoc
+            - Function GetUnitLoc
+              - param Variable Guardian
+      - param Preset OperatorLessEq
+      - param String 2048.00
+  - param Function DoNothing
+    - Action TransmissionFromUnitWithNameBJ
+      - param Function GetPlayersAll
+        - Function GetPlayersAll
+      - param Variable Guardian
+      - param String TRIGSTR_158
+      - param Variable gg_snd_H09Guardian10
+      - param String TRIGSTR_159
+      - param Preset AddSetToAdd
+      - param String 0
+      - param Preset WaitDontWait
+  - param Function DoNothing
+    - Action DoNothing
+- Action VolumeGroupResetBJ
+- Action CommentString
+  - param String DIFFICULTY MODIFIER
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareGameDifficulty
+      - param Function GetGameDifficulty
+        - Function GetGameDifficulty
+      - param Preset OperatorEqualENE
+      - param Preset GameDifficultyNormal
+  - param Function DoNothing
+    - Action SetUnitManaBJ
+      - param Variable gg_unit_nC00_0011
+      - param String 250.00
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareGameDifficulty
+      - param Function GetGameDifficulty
+        - Function GetGameDifficulty
+      - param Preset OperatorEqualENE
+      - param Preset GameDifficultyEasy
+  - param Function DoNothing
+    - Action SetUnitManaBJ
+      - param Variable gg_unit_nC00_0011
+      - param String 0.00
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetUnitInvulnerable
+  - param Variable Guardian
+  - param Preset InvulnerabilityVulnerable
+- Action SetUnitInvulnerable
+  - param Variable GuardianLackeyA
+  - param Preset InvulnerabilityVulnerable
+- Action SetUnitInvulnerable
+  - param Variable GuardianLackeyB
+  - param Preset InvulnerabilityVulnerable
+- Action SetUnitInvulnerable
+  - param Variable GuardianArcherA
+  - param Preset InvulnerabilityVulnerable
+- Action SetUnitInvulnerable
+  - param Variable GuardianArcherB
+  - param Preset InvulnerabilityVulnerable
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionUnpause
+  - param Variable Guardian
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionUnpause
+  - param Variable GuardianLackeyA
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionUnpause
+  - param Variable GuardianLackeyB
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionUnpause
+  - param Variable GuardianArcherA
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionUnpause
+  - param Variable GuardianArcherB
+- Condition OperatorComparePlayer
+  - param Function GetOwningPlayer
+    - Function GetOwningPlayer
+      - param Function GetEnteringUnit
+        - Function GetEnteringUnit
+  - param Preset OperatorEqualENE
+  - param Preset Player01
+- Condition OperatorCompareBoolean
+  - param Variable GameOver
+  - param Preset OperatorEqualENE
+  - param String false
+- Event TriggerRegisterEnterRectSimple
+  - param Variable gg_rct_ValleyGuardianTrigger
+
+
+## GuardianDies
+- enabled: True
+- category: [4] ValleyEncounters
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action SetVariable
+  - param Variable PointGuardianPosition
+  - param Function GetUnitLoc
+    - Function GetUnitLoc
+      - param Function GetDyingUnit
+        - Function GetDyingUnit
+- Action SetVariable
+  - param Variable RealGuardianFacing
+  - param Function GetUnitFacing
+    - Function GetUnitFacing
+      - param Function GetDyingUnit
+        - Function GetDyingUnit
+- Action RemoveUnit
+  - param Function GetDyingUnit
+    - Function GetDyingUnit
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareGameDifficulty
+      - param Function GetGameDifficulty
+        - Function GetGameDifficulty
+      - param Preset OperatorEqualENE
+      - param Preset GameDifficultyEasy
+  - param Function DoNothing
+    - Action CreateNUnitsAtLoc
+      - param String 1
+      - param String nC00
+      - param Preset PlayerNA
+      - param Variable PointGuardianPosition
+      - param Variable RealGuardianFacing
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareGameDifficulty
+      - param Function GetGameDifficulty
+        - Function GetGameDifficulty
+      - param Preset OperatorEqualENE
+      - param Preset GameDifficultyNormal
+  - param Function DoNothing
+    - Action CreateNUnitsAtLoc
+      - param String 1
+      - param String nC00
+      - param Preset PlayerNA
+      - param Variable PointGuardianPosition
+      - param Variable RealGuardianFacing
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareGameDifficulty
+      - param Function GetGameDifficulty
+        - Function GetGameDifficulty
+      - param Preset OperatorEqualENE
+      - param Preset GameDifficultyHard
+  - param Function DoNothing
+    - Action CreateNUnitsAtLoc
+      - param String 1
+      - param String nC01
+      - param Preset PlayerNA
+      - param Variable PointGuardianPosition
+      - param Variable RealGuardianFacing
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetVariable
+  - param Variable Guardian
+  - param Function GetLastCreatedUnit
+    - Function GetLastCreatedUnit
+- Action SetUnitLifeBJ
+  - param Variable Guardian
+  - param String 1.00
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionPause
+  - param Variable Guardian
+- Action SetUnitInvulnerable
+  - param Variable Guardian
+  - param Preset InvulnerabilityInvulnerable
+- Condition OperatorCompareUnit
+  - param Function GetDyingUnit
+    - Function GetDyingUnit
+  - param Preset OperatorEqualENE
+  - param Variable Guardian
+- Condition OperatorCompareBoolean
+  - param Variable GameOver
+  - param Preset OperatorEqualENE
+  - param String false
+- Event TriggerRegisterPlayerUnitEventSimple
+  - param Preset PlayerNA
+  - param Preset PlayerUnitEventDeath
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitAliveBJ
+        - Function IsUnitAliveBJ
+          - param Variable GuardianLackeyA
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action PauseUnitBJ
+      - param Preset PauseUnpauseOptionPause
+      - param Variable GuardianLackeyA
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitAliveBJ
+        - Function IsUnitAliveBJ
+          - param Variable GuardianLackeyB
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action PauseUnitBJ
+      - param Preset PauseUnpauseOptionPause
+      - param Variable GuardianLackeyB
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitAliveBJ
+        - Function IsUnitAliveBJ
+          - param Variable GuardianArcherA
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action PauseUnitBJ
+      - param Preset PauseUnpauseOptionPause
+      - param Variable GuardianArcherA
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitAliveBJ
+        - Function IsUnitAliveBJ
+          - param Variable GuardianArcherB
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action PauseUnitBJ
+      - param Preset PauseUnpauseOptionPause
+      - param Variable GuardianArcherB
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitAliveBJ
+        - Function IsUnitAliveBJ
+          - param Variable GuardianLackeyA
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action SetUnitInvulnerable
+      - param Variable GuardianLackeyA
+      - param Preset InvulnerabilityInvulnerable
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitAliveBJ
+        - Function IsUnitAliveBJ
+          - param Variable GuardianLackeyB
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action SetUnitInvulnerable
+      - param Variable GuardianLackeyB
+      - param Preset InvulnerabilityInvulnerable
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitAliveBJ
+        - Function IsUnitAliveBJ
+          - param Variable GuardianArcherA
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action SetUnitInvulnerable
+      - param Variable GuardianArcherA
+      - param Preset InvulnerabilityInvulnerable
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitAliveBJ
+        - Function IsUnitAliveBJ
+          - param Variable GuardianArcherB
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action SetUnitInvulnerable
+      - param Variable GuardianArcherB
+      - param Preset InvulnerabilityInvulnerable
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetSpeechVolumeGroupsBJ
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable Guardian
+  - param String TRIGSTR_045
+  - param Variable gg_snd_H09Guardian11
+  - param String TRIGSTR_046
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontWait
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareReal
+      - param Function DistanceBetweenPoints
+        - Function DistanceBetweenPoints
+          - param Function GetUnitLoc
+            - Function GetUnitLoc
+              - param Variable Arthas
+          - param Function GetRectCenter
+            - Function GetRectCenter
+              - param Variable gg_rct_ValleyGuardianVisibility
+      - param Preset OperatorLessEq
+      - param String 2048.00
+  - param Function DoNothing
+    - Action TransmissionFromUnitWithNameBJ
+      - param Function GetPlayersAll
+        - Function GetPlayersAll
+      - param Variable Arthas
+      - param String TRIGSTR_226
+      - param Variable gg_snd_H09Arthas12
+      - param String TRIGSTR_227
+      - param Preset AddSetToAdd
+      - param String 0
+      - param Preset WaitDontWait
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareReal
+      - param Function DistanceBetweenPoints
+        - Function DistanceBetweenPoints
+          - param Function GetUnitLoc
+            - Function GetUnitLoc
+              - param Variable Arthas
+          - param Function GetRectCenter
+            - Function GetRectCenter
+              - param Variable gg_rct_ValleyGuardianVisibility
+      - param Preset OperatorLessEq
+      - param String 2048.00
+  - param Function DoNothing
+    - Action TransmissionFromUnitTypeWithNameBJ
+      - param Function GetPlayersAll
+        - Function GetPlayersAll
+      - param Preset PlayerNA
+      - param String nC00
+      - param String TRIGSTR_256
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_ValleyGuardianVisibility
+      - param Variable gg_snd_H09Guardian13
+      - param String TRIGSTR_257
+      - param Preset AddSetToAdd
+      - param String 0
+      - param Preset WaitDontWait
+  - param Function DoNothing
+    - Action DoNothing
+- Action VolumeGroupSetVolumeBJ
+  - param Preset VolumeGroupUI
+  - param String 1.00
+- Action VolumeGroupResetBJ
+- Action KillUnit
+  - param Variable Guardian
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitAliveBJ
+        - Function IsUnitAliveBJ
+          - param Variable GuardianLackeyA
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action PauseUnitBJ
+      - param Preset PauseUnpauseOptionUnpause
+      - param Variable GuardianLackeyA
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitAliveBJ
+        - Function IsUnitAliveBJ
+          - param Variable GuardianLackeyB
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action PauseUnitBJ
+      - param Preset PauseUnpauseOptionUnpause
+      - param Variable GuardianLackeyB
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitAliveBJ
+        - Function IsUnitAliveBJ
+          - param Variable GuardianArcherA
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action PauseUnitBJ
+      - param Preset PauseUnpauseOptionUnpause
+      - param Variable GuardianArcherA
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitAliveBJ
+        - Function IsUnitAliveBJ
+          - param Variable GuardianArcherB
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action PauseUnitBJ
+      - param Preset PauseUnpauseOptionUnpause
+      - param Variable GuardianArcherB
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitAliveBJ
+        - Function IsUnitAliveBJ
+          - param Variable GuardianLackeyA
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action KillUnit
+      - param Variable GuardianLackeyA
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitAliveBJ
+        - Function IsUnitAliveBJ
+          - param Variable GuardianLackeyB
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action KillUnit
+      - param Variable GuardianLackeyB
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitAliveBJ
+        - Function IsUnitAliveBJ
+          - param Variable GuardianArcherA
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action KillUnit
+      - param Variable GuardianArcherA
+  - param Function DoNothing
+    - Action DoNothing
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitAliveBJ
+        - Function IsUnitAliveBJ
+          - param Variable GuardianArcherB
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action KillUnit
+      - param Variable GuardianArcherB
+  - param Function DoNothing
+    - Action DoNothing
+- Action TriggerSleepAction
+  - param String 2.00
+- Action ConditionalTriggerExecute
+  - param Variable gg_trg_TriggerFrostmourneCinematic
+
+
+## TriggerFrostmourneCinematic
+- enabled: True
+- category: [5] FrostmourneCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Condition OperatorCompareBoolean
+  - param Function IsUnitAliveBJ
+    - Function IsUnitAliveBJ
+      - param Variable Arthas
+  - param Preset OperatorEqualENE
+  - param String true
+- Condition OperatorCompareBoolean
+  - param Function IsUnitAliveBJ
+    - Function IsUnitAliveBJ
+      - param Variable Muradin
+  - param Preset OperatorEqualENE
+  - param String true
+- Condition OperatorCompareBoolean
+  - param Variable GameOver
+  - param Preset OperatorEqualENE
+  - param String false
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action SetVariable
+  - param Variable HeroDefeatPossible
+  - param String false
+- Action SetUnitInvulnerable
+  - param Variable Arthas
+  - param Preset InvulnerabilityInvulnerable
+- Action SetUnitInvulnerable
+  - param Variable Muradin
+  - param Preset InvulnerabilityInvulnerable
+- Action SetVariable
+  - param Variable FrostmourneCinematicRunning
+  - param String true
+- Action TriggerExecute
+  - param Variable gg_trg_FrostmourneCinematicSetup
+
+
+## FrostmourneCinematicSetup
+- enabled: True
+- category: [5] FrostmourneCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String TURN OFF SKILL LEARNING TRIGGER
+- Action DisableTrigger
+  - param Variable gg_trg_Arthas_Leans_a_Skill
+- Action SetSkyModel
+  - param Preset SkyModelSky05
+- Action UseTimeOfDayBJ
+  - param Preset OnOffOff
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeOut
+  - param String 1.00
+  - param Preset CineFilterTextureWhite
+  - param String 0
+  - param String 0
+  - param String 0
+  - param String 0
+- Action TriggerSleepAction
+  - param String 1.00
+- Action SetUnitInvulnerable
+  - param Variable Arthas
+  - param Preset InvulnerabilityVulnerable
+- Action SetUnitInvulnerable
+  - param Variable Muradin
+  - param Preset InvulnerabilityVulnerable
+- Action CinematicModeBJ
+  - param Preset OnOffOn
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+- Action EnableTrigger
+  - param Variable gg_trg_FrostmourneCinematicEscapeGood
+- Action EnableTrigger
+  - param Variable gg_trg_FrostmourneCinematicEscapeEvil
+- Action TriggerExecute
+  - param Variable gg_trg_FrostmourneActorSetup
+- Action CommentString
+  - param String START MUSIC THEME
+- Action PlayThematicMusicBJ
+  - param Preset MusicThemeDarkVictory
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_FrostmourneIntroShot
+  - param Preset Player01
+  - param String 0
+- Action TriggerSleepAction
+  - param String 1.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TriggerExecute
+  - param Variable gg_trg_FrostmourneApproach
+
+
+## FrostmourneActorSetup
+- enabled: True
+- category: [5] FrostmourneCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action ForGroup
+  - param Variable ValleyGroup
+  - param Function DoNothing
+    - Action ShowUnitHide
+      - param Function GetEnumUnit
+        - Function GetEnumUnit
+- Action ShowUnitShow
+  - param Variable Arthas
+- Action ShowUnitShow
+  - param Variable Muradin
+- Action SetUnitPositionLocFacingBJ
+  - param Variable Arthas
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_FrostmourneArthasBegin
+  - param String 0.00
+- Action SetUnitPositionLocFacingBJ
+  - param Variable Muradin
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_FrostmourneMuradinBegin
+  - param String 0.00
+- Action ClearSelection
+- Action PauseAllUnitsBJ
+  - param Preset PauseUnpauseOptionPause
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionUnpause
+  - param Variable Arthas
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionUnpause
+  - param Variable Muradin
+- Action UnitRemoveBuffsBJ
+  - param Preset BuffTypeAll
+  - param Variable Arthas
+- Action UnitRemoveBuffsBJ
+  - param Preset BuffTypeAll
+  - param Variable Muradin
+- Action FogModifierStart
+  - param Variable ValleyVisA
+- Action FogModifierStart
+  - param Variable ValleyVisB
+- Action FogModifierStart
+  - param Variable ValleyVisC
+
+
+## FrostmourneApproach
+- enabled: True
+- category: [5] FrostmourneCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeIn
+  - param String 0.40
+  - param Preset CineFilterTextureWhite
+  - param String 0
+  - param String 0
+  - param String 0
+  - param String 0
+- Action TriggerSleepAction
+  - param String 0.40
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_FrostmourneSwordCloseup
+  - param Preset Player01
+  - param String 6.00
+- Action SetSoundPositionLocBJ
+  - param Variable gg_snd_FrostmourneLoopUndead01
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_FrostmourneSound
+  - param String 0
+- Action PlaySoundBJ
+  - param Variable gg_snd_FrostmourneLoopUndead01
+- Action IssuePointOrderLoc
+  - param Variable Arthas
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_FrostmourneArthasEnters
+- Action IssuePointOrderLoc
+  - param Variable Muradin
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_FrostmourneMuradinEnters
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable Arthas
+  - param String TRIGSTR_052
+  - param Variable gg_snd_H09Arthas14
+  - param String TRIGSTR_053
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontWait
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action IssuePointOrderLoc
+  - param Variable Muradin
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_FrostmourneMuradinReads
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable Muradin
+  - param String TRIGSTR_054
+  - param Variable gg_snd_H09Muradin15
+  - param String TRIGSTR_055
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontDont
+- Action TriggerSleepAction
+  - param Function OperatorReal
+    - Function OperatorReal
+      - param String 0.20
+      - param Preset OperatorMultiply
+      - param Function GetSoundDurationBJ
+        - Function GetSoundDurationBJ
+          - param Variable gg_snd_H09Muradin15
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CameraSetSmoothingFactorBJ
+  - param String 0.00
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_FrostmourneSwordPanBegin
+  - param Preset Player01
+  - param String 0.00
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_FrostmourneSwordPanEnd
+  - param Preset Player01
+  - param Function OperatorReal
+    - Function OperatorReal
+      - param Function OperatorReal
+        - Function OperatorReal
+          - param Function OperatorReal
+            - Function OperatorReal
+              - param String 0.60
+              - param Preset OperatorMultiply
+              - param Function GetSoundDurationBJ
+                - Function GetSoundDurationBJ
+                  - param Variable gg_snd_H09Muradin15
+          - param Preset OperatorAdd
+          - param String 1
+      - param Preset OperatorAdd
+      - param String 1
+- Action TriggerSleepAction
+  - param Function OperatorReal
+    - Function OperatorReal
+      - param String 0.60
+      - param Preset OperatorMultiply
+      - param Function GetSoundDurationBJ
+        - Function GetSoundDurationBJ
+          - param Variable gg_snd_H09Muradin15
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetUnitFacingToFaceUnitTimed
+  - param Variable Muradin
+  - param Variable Arthas
+  - param String 0
+- Action CameraSetSmoothingFactorBJ
+  - param String 0.00
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_FrostmourneMuradinSaysLeave
+  - param Preset Player01
+  - param String 0
+- Action WaitForSoundBJ
+  - param Variable gg_snd_H09Muradin15
+  - param String 0
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action IssuePointOrderLoc
+  - param Variable Muradin
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_FrostmourneMuradinToArthas
+- Action IssuePointOrderLoc
+  - param Variable Arthas
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_FrostmourneArthasAtDias
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable Arthas
+  - param String TRIGSTR_056
+  - param Variable gg_snd_H09Arthas16
+  - param String TRIGSTR_057
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontDont
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_FrostmourneMuradinToArthas
+  - param Preset Player01
+  - param Function OperatorReal
+    - Function OperatorReal
+      - param Function GetSoundDurationBJ
+        - Function GetSoundDurationBJ
+          - param Variable gg_snd_H09Arthas16
+      - param Preset OperatorAdd
+      - param Function OperatorReal
+        - Function OperatorReal
+          - param Function GetSoundDurationBJ
+            - Function GetSoundDurationBJ
+              - param Variable gg_snd_H09Muradin17
+          - param Preset OperatorAdd
+          - param Function GetSoundDurationBJ
+            - Function GetSoundDurationBJ
+              - param Variable gg_snd_H09Arthas18
+- Action TriggerSleepAction
+  - param Function GetSoundDurationBJ
+    - Function GetSoundDurationBJ
+      - param Variable gg_snd_H09Arthas16
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetUnitFacingToFaceUnitTimed
+  - param Variable Muradin
+  - param Variable Arthas
+  - param String 0
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable Muradin
+  - param String TRIGSTR_058
+  - param Variable gg_snd_H09Muradin17
+  - param String TRIGSTR_059
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontDont
+- Action TriggerSleepAction
+  - param Function GetSoundDurationBJ
+    - Function GetSoundDurationBJ
+      - param Variable gg_snd_H09Muradin17
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable Arthas
+  - param String TRIGSTR_100
+  - param Variable gg_snd_H09Arthas18
+  - param String TRIGSTR_101
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontWait
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CameraSetSmoothingFactorBJ
+  - param String 0.00
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_FrostmourneBeginCloseup
+  - param Preset Player01
+  - param String 0
+- Action TriggerSleepAction
+  - param String 0.05
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action IssuePointOrderLoc
+  - param Variable Arthas
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_FrostmourneArthasTakesSword
+- Action AttachSoundToUnitBJ
+  - param Variable gg_snd_DivineShield
+  - param Variable Arthas
+- Action SetSoundVolumeBJ
+  - param Variable gg_snd_DivineShield
+  - param String 40.00
+- Action PlaySoundBJ
+  - param Variable gg_snd_DivineShield
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable Arthas
+  - param String TRIGSTR_102
+  - param Variable gg_snd_H09Arthas19
+  - param String TRIGSTR_103
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontDont
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_FrostmourneEndCloseup
+  - param Preset Player01
+  - param Function GetSoundDurationBJ
+    - Function GetSoundDurationBJ
+      - param Variable gg_snd_H09Arthas19
+- Action WaitForSoundBJ
+  - param Variable gg_snd_H09Arthas19
+  - param String 4.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetSoundVolumeBJ
+  - param Variable gg_snd_FrostmourneChant1
+  - param String 60.00
+- Action PlaySoundBJ
+  - param Variable gg_snd_FrostmourneChant1
+- Action WaitForSoundBJ
+  - param Variable gg_snd_H09Arthas19
+  - param String 1.50
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetUnitAnimation
+  - param Variable gg_unit_nfrm_0226
+  - param String Stand Third
+- Action StopSoundBJ
+  - param Variable gg_snd_FrostmourneLoopUndead01
+  - param Preset FadeDontFade
+- Action WaitForSoundBJ
+  - param Variable gg_snd_H09Arthas19
+  - param String 0
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CameraSetSmoothingFactorBJ
+  - param String 0.00
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_FrostmourneDeathCamera
+  - param Preset Player01
+  - param String 0.00
+- Action SetUnitAnimation
+  - param Variable gg_unit_nfrm_0226
+  - param String death
+- Action TriggerSleepAction
+  - param String 1.50
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeOut
+  - param String 0.25
+  - param Preset CineFilterTextureWhite
+  - param String 100.00
+  - param String 100.00
+  - param String 100.00
+  - param String 0.00
+- Action TriggerExecute
+  - param Variable gg_trg_FrostmourneMuradinHit
+
+
+## FrostmourneMuradinHit
+- enabled: True
+- category: [5] FrostmourneCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeIn
+  - param String 3.00
+  - param Preset CineFilterTextureWhite
+  - param String 100.00
+  - param String 100.00
+  - param String 100.00
+  - param String 0.00
+- Action SetUnitTimeScalePercent
+  - param Variable Muradin
+  - param String 80.00
+- Action SetUnitAnimation
+  - param Variable Muradin
+  - param String death second
+- Action AttachSoundToUnitBJ
+  - param Variable gg_snd_HeroMountainKingDeath
+  - param Variable Muradin
+- Action PlaySoundBJ
+  - param Variable gg_snd_HeroMountainKingDeath
+- Action CameraSetSmoothingFactorBJ
+  - param String 0.00
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_FrostmourneMuradinDeath_01
+  - param Preset Player01
+  - param String 0.01
+- Action SetUnitFacingToFaceUnitTimed
+  - param Variable Arthas
+  - param Variable Muradin
+  - param String 0.00
+- Action TriggerSleepAction
+  - param String 1.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action ReplaceUnitBJ
+  - param Variable Arthas
+  - param String Harf
+  - param Preset UnitStateMethodRelative
+- Action SetVariable
+  - param Variable EvilArthas
+  - param Function GetLastReplacedUnitBJ
+    - Function GetLastReplacedUnitBJ
+- Action TriggerExecute
+  - param Variable gg_trg_RecreateArthasSkills
+- Action SetVariable
+  - param Variable ArthasIsEvil
+  - param String true
+- Action SetUnitAnimation
+  - param Variable EvilArthas
+  - param String Stand Fourth
+- Action CameraSetSmoothingFactorBJ
+  - param String 0.00
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_FrostmourneMuradinDeath_02
+  - param Preset Player01
+  - param String 0.01
+- Action TriggerSleepAction
+  - param String 1.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CameraSetSmoothingFactorBJ
+  - param String 0.00
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_FrostmourneMuradinDeath_03
+  - param Preset Player01
+  - param String 0.01
+- Action TriggerSleepAction
+  - param String 2.50
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetUnitAnimation
+  - param Variable EvilArthas
+  - param String Stand Fifth
+- Action TriggerSleepAction
+  - param String 0.50
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CameraSetSmoothingFactorBJ
+  - param String 0.00
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_FrostmourneMuradinDeath_04
+  - param Preset Player01
+  - param String 1.00
+- Action SetSoundPositionLocBJ
+  - param Variable gg_snd_BalrogAttack1
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_FrostmourneArthasAfterMalsDeath
+  - param String 0
+- Action SetSoundVolumeBJ
+  - param Variable gg_snd_BalrogAttack1
+  - param String 40.00
+- Action PlaySoundBJ
+  - param Variable gg_snd_BalrogAttack1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TriggerSleepAction
+  - param String 0.20
+- Action SetSoundPositionLocBJ
+  - param Variable gg_snd_ColdArrow2
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_FrostmourneArthasAfterMalsDeath
+  - param String 0
+- Action SetSoundVolumeBJ
+  - param Variable gg_snd_ColdArrow2
+  - param String 45.00
+- Action PlaySoundBJ
+  - param Variable gg_snd_ColdArrow2
+- Action TriggerSleepAction
+  - param String 3.20
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetSoundPositionLocBJ
+  - param Variable gg_snd_MetalMediumBashStone1
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_HammerDrop
+  - param String 0
+- Action SetSoundVolumeBJ
+  - param Variable gg_snd_MetalMediumBashStone1
+  - param String 60.00
+- Action PlaySoundBJ
+  - param Variable gg_snd_MetalMediumBashStone1
+- Action TriggerSleepAction
+  - param String 0.60
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetSoundPositionLocBJ
+  - param Variable gg_snd_WoodLightBashStone3
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_HammerDrop
+  - param String 0
+- Action SetSoundVolumeBJ
+  - param Variable gg_snd_WoodLightBashStone3
+  - param String 60.00
+- Action PlaySoundBJ
+  - param Variable gg_snd_WoodLightBashStone3
+- Action TriggerSleepAction
+  - param String 0.60
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TriggerExecute
+  - param Variable gg_trg_FrostmourneCinematicEnd
+
+
+## FrostmourneCinematicEnd
+- enabled: True
+- category: [5] FrostmourneCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeOut
+  - param String 1.00
+  - param Preset CineFilterTextureWhite
+  - param String 0
+  - param String 0
+  - param String 0
+  - param String 0
+- Action SetSoundVolumeBJ
+  - param Variable gg_snd_FrostmourneChant1
+  - param String 50.00
+- Action PlaySoundBJ
+  - param Variable gg_snd_FrostmourneChant1
+- Action TriggerSleepAction
+  - param String 2.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeIn
+  - param String 1.00
+  - param Preset CineFilterTextureWhite
+  - param String 0
+  - param String 0
+  - param String 0
+  - param String 0
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_FrostmourneArthasDone
+  - param Preset Player01
+  - param String 0
+- Action SetVariable
+  - param Variable ItemMuradin01
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Muradin
+      - param String 1
+- Action SetVariable
+  - param Variable ItemMuradin02
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Muradin
+      - param String 2
+- Action SetVariable
+  - param Variable ItemMuradin03
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Muradin
+      - param String 3
+- Action SetVariable
+  - param Variable ItemMuradin04
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Muradin
+      - param String 4
+- Action SetVariable
+  - param Variable ItemMuradin05
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Muradin
+      - param String 5
+- Action SetVariable
+  - param Variable ItemMuradin06
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Muradin
+      - param String 6
+- Action CreateItemLoc
+  - param Function GetItemTypeId
+    - Function GetItemTypeId
+      - param Variable ItemMuradin01
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ItemMuradin01
+- Action CreateItemLoc
+  - param Function GetItemTypeId
+    - Function GetItemTypeId
+      - param Variable ItemMuradin02
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ItemMuradin02
+- Action CreateItemLoc
+  - param Function GetItemTypeId
+    - Function GetItemTypeId
+      - param Variable ItemMuradin03
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ItemMuradin03
+- Action CreateItemLoc
+  - param Function GetItemTypeId
+    - Function GetItemTypeId
+      - param Variable ItemMuradin04
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ItemMuradin04
+- Action CreateItemLoc
+  - param Function GetItemTypeId
+    - Function GetItemTypeId
+      - param Variable ItemMuradin05
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ItemMuradin05
+- Action CreateItemLoc
+  - param Function GetItemTypeId
+    - Function GetItemTypeId
+      - param Variable ItemMuradin06
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ItemMuradin06
+- Action TriggerExecute
+  - param Variable gg_trg_ItemFailsafeReplace
+- Action GroupRemoveUnitSimple
+  - param Variable Arthas
+  - param Variable ValleyGroup
+- Action ForGroup
+  - param Variable ValleyGroup
+  - param Function DoNothing
+    - Action RemoveUnit
+      - param Function GetEnumUnit
+        - Function GetEnumUnit
+- Action CommentString
+  - param String MAKE MALGANIS VULNERABLE
+- Action TriggerExecute
+  - param Variable gg_trg_DestroyMalganisItems
+- Action DisableTrigger
+  - param Variable gg_trg_GiveAnkh
+- Action CreateFogModifierRectBJ
+  - param Preset EnabledDisabledEnabled
+  - param Preset Player01
+  - param Preset FogStateMasked
+  - param Variable gg_rct_FrostmourneDiasVisibility
+- Action SetVariable
+  - param Variable DiasVisA
+  - param Function GetLastCreatedFogModifier
+    - Function GetLastCreatedFogModifier
+- Action SetUnitAnimation
+  - param Variable EvilArthas
+  - param String Stand
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitAliveBJ
+        - Function IsUnitAliveBJ
+          - param Variable Captain
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action SetUnitPositionLoc
+      - param Variable Captain
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_FrostmourneCaptainSpawn
+  - param Function DoNothing
+    - Action TriggerExecute
+      - param Variable gg_trg_FrostmourneEndCaptainFailsafe
+- Action TriggerSleepAction
+  - param String 1.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetUnitPositionLoc
+  - param Variable EvilArthas
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_FrostmourneArthasOutside
+- Action SetUnitFacingTimed
+  - param Variable EvilArthas
+  - param String 315.00
+  - param String 0
+- Action TriggerExecute
+  - param Variable gg_trg_FrostmourneArthasTeleports
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionUnpause
+  - param Variable Captain
+- Action IssuePointOrderLoc
+  - param Variable Captain
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_FrostmourneCaptainToArthas
+- Action TriggerSleepAction
+  - param String 1.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable Captain
+  - param String TRIGSTR_064
+  - param Variable gg_snd_H09Captain20
+  - param String TRIGSTR_065
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontWait
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable EvilArthas
+  - param String TRIGSTR_066
+  - param Variable gg_snd_H09Arthas21
+  - param String TRIGSTR_067
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontWait
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable FrostmourneCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action DisableTrigger
+  - param Variable gg_trg_FrostmourneCinematicEscapeEvil
+- Action DisableTrigger
+  - param Variable gg_trg_FrostmourneCinematicEscapeGood
+- Action SetVariable
+  - param Variable FrostmourneCinematicRunning
+  - param String false
+- Action SetSkyModel
+  - param Preset SkyModelNone
+- Action UseTimeOfDayBJ
+  - param Preset OnOffOn
+- Action DisableTrigger
+  - param Variable gg_trg_FrostmourneCinematicEscapeEvil
+- Action DisableTrigger
+  - param Variable gg_trg_FrostmourneCinematicEscapeGood
+- Action PauseAllUnitsBJ
+  - param Preset PauseUnpauseOptionUnpause
+- Action CameraResetSmoothingFactorBJ
+- Action CinematicModeBJ
+  - param Preset OnOffOff
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+- Action CommentString
+  - param String ENABLE VICTORY
+- Action EnableTrigger
+  - param Variable gg_trg_Green_Base_Dead
+- Action CommentString
+  - param String RESELECT ARTHAS
+- Action SelectUnitSingle
+  - param Variable EvilArthas
+- Action ResetToGameCameraForPlayer
+  - param Preset Player01
+  - param String 0.00
+- Action CommandAI
+  - param Variable PlayerUndeadProtector
+  - param String 0
+  - param String 0
+- Action CommandAI
+  - param Variable PlayerMalganis
+  - param String 0
+  - param String 0
+- Action QuestSetCompletedBJ
+  - param Variable QuestFrostmourne
+  - param Preset CompletionOptionCompleted
+- Action QuestItemSetCompletedBJ
+  - param Variable QuestReqFrostmourne
+  - param Preset CompletionOptionCompleted
+- Action QuestItemSetCompletedBJ
+  - param Variable QuestReqArthasDie
+  - param Preset CompletionOptionCompleted
+- Action QuestItemSetCompletedBJ
+  - param Variable QuestReqMuradinDie
+  - param Preset CompletionOptionCompleted
+- Action QuestMessageBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Preset QuestMessageTypeCompleted
+  - param String TRIGSTR_086
+- Action TriggerSleepAction
+  - param String 10.00
+- Action CreateFogModifierRadiusLocBJ
+  - param Preset EnabledDisabledEnabled
+  - param Preset Player01
+  - param Preset FogStateVisible
+  - param Function GetUnitLoc
+    - Function GetUnitLoc
+      - param Variable gg_unit_uaod_0072
+  - param String 1024.00
+- Action DestroyFogModifier
+  - param Function GetLastCreatedFogModifier
+    - Function GetLastCreatedFogModifier
+- Action PingMinimapLocForForce
+  - param Preset Force01
+  - param Function GetUnitLoc
+    - Function GetUnitLoc
+      - param Variable gg_unit_uaod_0072
+  - param String 5.00
+- Action SetCameraQuickPositionLocForPlayer
+  - param Preset Player01
+  - param Function GetUnitLoc
+    - Function GetUnitLoc
+      - param Variable gg_unit_uaod_0072
+- Action VolumeGroupResetBJ
+- Action QuestSetDiscoveredBJ
+  - param Variable QuestMalganis
+  - param Preset DiscoveredOptionDiscovered
+- Action QuestMessageBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Preset QuestMessageTypeDiscovered
+  - param String TRIGSTR_087
+
+
+## FrostmourneEndCaptainFailsafe
+- enabled: True
+- category: [5] FrostmourneCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CreateNUnitsAtLoc
+  - param String 1
+  - param String hcth
+  - param Preset Player01
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_FrostmourneCaptainSpawn
+  - param String 180.00
+- Action SetVariable
+  - param Variable Captain
+  - param Function GetLastCreatedUnit
+    - Function GetLastCreatedUnit
+
+
+## FrostmourneArthasTeleports
+- enabled: True
+- category: [5] FrostmourneCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action AddSpecialEffectLocBJ
+  - param Function GetUnitLoc
+    - Function GetUnitLoc
+      - param Variable EvilArthas
+  - param String Abilities\Spells\Human\MassTeleport\MassTeleportTarget.mdl
+- Action SetSoundPositionLocBJ
+  - param Variable gg_snd_MassTeleportTarget
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_FrostmourneArthasOutside
+  - param String 0
+- Action SetSoundVolumeBJ
+  - param Variable gg_snd_MassTeleportTarget
+  - param String 80.00
+- Action PlaySoundBJ
+  - param Variable gg_snd_MassTeleportTarget
+- Action SetVariable
+  - param Variable EffectArthasAfterFM
+  - param Function GetLastCreatedEffectBJ
+    - Function GetLastCreatedEffectBJ
+- Action TriggerSleepAction
+  - param String 2
+- Action DestroyEffectBJ
+  - param Variable EffectArthasAfterFM
+
+
+## Arthas Channel
+- enabled: True
+- category: [5] FrostmourneCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action IssueImmediateOrder
+  - param Variable Arthas
+  - param Preset UnitOrderStop
+- Action SetUnitAnimation
+  - param Variable Arthas
+  - param String Stand Channel
+- Action TriggerSleepAction
+  - param Function GetSoundDurationBJ
+    - Function GetSoundDurationBJ
+      - param Variable gg_snd_H09Arthas19
+- Action SetUnitAnimation
+  - param Variable Arthas
+  - param String Stand
+- Condition OperatorCompareUnit
+  - param Variable Arthas
+  - param Preset OperatorEqualENE
+  - param Function GetEnteringUnit
+    - Function GetEnteringUnit
+- Event TriggerRegisterEnterRectSimple
+  - param Variable gg_rct_FrostmourneArthasTakesSword
+
+
+## FrostmourneCinematicEscapeGood
+- enabled: True
+- category: [5] FrostmourneCinematic
+- starts off: True
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Condition OperatorCompareBoolean
+  - param Variable ArthasIsEvil
+  - param Preset OperatorEqualENE
+  - param String false
+- Event TriggerRegisterPlayerEventEndCinematic
+  - param Preset Player01
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action DisableTrigger
+  - param Variable gg_trg_FrostmourneCinematicEscapeEvil
+- Action SetVariable
+  - param Variable FrostmourneCinematicEscape
+  - param String true
+- Action SetVariable
+  - param Variable FrostmourneCinematicRunning
+  - param String false
+- Action StopSoundBJ
+  - param Function GetLastPlayedSound
+    - Function GetLastPlayedSound
+  - param Preset FadeDontFade
+- Action VolumeGroupResetBJ
+- Action EndThematicMusicBJ
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeOut
+  - param String 1.00
+  - param Preset CineFilterTextureWhite
+  - param String 0
+  - param String 0
+  - param String 0
+  - param String 0
+- Action TriggerSleepAction
+  - param String 2.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsLocationMaskedToPlayer
+        - Function IsLocationMaskedToPlayer
+          - param Function GetRectCenter
+            - Function GetRectCenter
+              - param Variable gg_rct_FrostmourneValleyVisibilityA
+          - param Preset Player01
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action DoNothing
+  - param Function DoNothing
+    - Action FogModifierStart
+      - param Variable ValleyVisA
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsLocationMaskedToPlayer
+        - Function IsLocationMaskedToPlayer
+          - param Function GetRectCenter
+            - Function GetRectCenter
+              - param Variable gg_rct_FrostmourneValleyVisibilityB
+          - param Preset Player01
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action DoNothing
+  - param Function DoNothing
+    - Action FogModifierStart
+      - param Variable ValleyVisB
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsLocationMaskedToPlayer
+        - Function IsLocationMaskedToPlayer
+          - param Function GetRectCenter
+            - Function GetRectCenter
+              - param Variable gg_rct_FrostmourneValleyVisibilityC
+          - param Preset Player01
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action DoNothing
+  - param Function DoNothing
+    - Action FogModifierStart
+      - param Variable ValleyVisC
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeIn
+  - param String 1.00
+  - param Preset CineFilterTextureWhite
+  - param String 0
+  - param String 0
+  - param String 0
+  - param String 0
+- Action CreateFogModifierRectBJ
+  - param Preset EnabledDisabledEnabled
+  - param Preset Player01
+  - param Preset FogStateMasked
+  - param Variable gg_rct_FrostmourneDiasVisibility
+- Action SetVariable
+  - param Variable DiasVisA
+  - param Function GetLastCreatedFogModifier
+    - Function GetLastCreatedFogModifier
+- Action CameraResetSmoothingFactorBJ
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_FrostmourneArthasDone
+  - param Preset Player01
+  - param String 0
+- Action TriggerSleepAction
+  - param String 0.01
+- Action ResetToGameCameraForPlayer
+  - param Preset Player01
+  - param String 0.00
+- Action CinematicModeBJ
+  - param Preset OnOffOff
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+- Action SetSkyModel
+  - param Preset SkyModelNone
+- Action UseTimeOfDayBJ
+  - param Preset OnOffOn
+- Action CommentString
+  - param String ENABLE VICTORY
+- Action EnableTrigger
+  - param Variable gg_trg_Green_Base_Dead
+- Action SetVariable
+  - param Variable ItemMuradin01
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Muradin
+      - param String 1
+- Action SetVariable
+  - param Variable ItemMuradin02
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Muradin
+      - param String 2
+- Action SetVariable
+  - param Variable ItemMuradin03
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Muradin
+      - param String 3
+- Action SetVariable
+  - param Variable ItemMuradin04
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Muradin
+      - param String 4
+- Action SetVariable
+  - param Variable ItemMuradin05
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Muradin
+      - param String 5
+- Action SetVariable
+  - param Variable ItemMuradin06
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Muradin
+      - param String 6
+- Action CreateItemLoc
+  - param Function GetItemTypeId
+    - Function GetItemTypeId
+      - param Variable ItemMuradin01
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ItemMuradin01
+- Action CreateItemLoc
+  - param Function GetItemTypeId
+    - Function GetItemTypeId
+      - param Variable ItemMuradin02
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ItemMuradin02
+- Action CreateItemLoc
+  - param Function GetItemTypeId
+    - Function GetItemTypeId
+      - param Variable ItemMuradin03
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ItemMuradin03
+- Action CreateItemLoc
+  - param Function GetItemTypeId
+    - Function GetItemTypeId
+      - param Variable ItemMuradin04
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ItemMuradin04
+- Action CreateItemLoc
+  - param Function GetItemTypeId
+    - Function GetItemTypeId
+      - param Variable ItemMuradin05
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ItemMuradin05
+- Action CreateItemLoc
+  - param Function GetItemTypeId
+    - Function GetItemTypeId
+      - param Variable ItemMuradin06
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ItemMuradin06
+- Action TriggerExecute
+  - param Variable gg_trg_ItemFailsafeReplace
+- Action GroupRemoveUnitSimple
+  - param Variable Arthas
+  - param Variable ValleyGroup
+- Action ShowUnitHide
+  - param Variable Muradin
+- Action SetUnitOwner
+  - param Variable Muradin
+  - param Preset PlayerNP
+  - param Preset ChangeColorTrue
+- Action ForGroup
+  - param Variable ValleyGroup
+  - param Function DoNothing
+    - Action RemoveUnit
+      - param Function GetEnumUnit
+        - Function GetEnumUnit
+- Action CommentString
+  - param String MAKE MALGANIS VULNERABLE
+- Action TriggerExecute
+  - param Variable gg_trg_DestroyMalganisItems
+- Action DisableTrigger
+  - param Variable gg_trg_GiveAnkh
+- Action ReplaceUnitBJ
+  - param Variable Arthas
+  - param String Harf
+  - param Preset UnitStateMethodRelative
+- Action SetVariable
+  - param Variable EvilArthas
+  - param Function GetLastReplacedUnitBJ
+    - Function GetLastReplacedUnitBJ
+- Action TriggerExecute
+  - param Variable gg_trg_RecreateArthasSkills
+- Action SetUnitPositionLoc
+  - param Variable EvilArthas
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_FrostmourneArthasOutside
+- Action SetUnitFacingTimed
+  - param Variable EvilArthas
+  - param String 315.00
+  - param String 0
+- Action CommentString
+  - param String RESELECT ARTHAS
+- Action SelectUnitSingle
+  - param Variable EvilArthas
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitAliveBJ
+        - Function IsUnitAliveBJ
+          - param Variable Captain
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action SetUnitPositionLocFacingBJ
+      - param Variable Captain
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_FrostmourneCaptainToArthas
+      - param String 150.00
+  - param Function DoNothing
+    - Action CreateNUnitsAtLoc
+      - param String 1
+      - param String hcth
+      - param Preset Player01
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_FrostmourneCaptainToArthas
+      - param String 150.00
+- Action PauseAllUnitsBJ
+  - param Preset PauseUnpauseOptionUnpause
+- Action CommandAI
+  - param Variable PlayerUndeadProtector
+  - param String 0
+  - param String 0
+- Action CommandAI
+  - param Variable PlayerMalganis
+  - param String 0
+  - param String 0
+- Action QuestSetCompletedBJ
+  - param Variable QuestFrostmourne
+  - param Preset CompletionOptionCompleted
+- Action QuestMessageBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Preset QuestMessageTypeCompleted
+  - param String TRIGSTR_106
+- Action TriggerSleepAction
+  - param String 10.00
+- Action CreateFogModifierRadiusLocBJ
+  - param Preset EnabledDisabledEnabled
+  - param Preset Player01
+  - param Preset FogStateVisible
+  - param Function GetUnitLoc
+    - Function GetUnitLoc
+      - param Variable gg_unit_uaod_0072
+  - param String 1024.00
+- Action DestroyFogModifier
+  - param Function GetLastCreatedFogModifier
+    - Function GetLastCreatedFogModifier
+- Action PingMinimapLocForForce
+  - param Preset Force01
+  - param Function GetUnitLoc
+    - Function GetUnitLoc
+      - param Variable gg_unit_uaod_0072
+  - param String 5.00
+- Action SetCameraQuickPositionLocForPlayer
+  - param Preset Player01
+  - param Function GetUnitLoc
+    - Function GetUnitLoc
+      - param Variable gg_unit_uaod_0072
+- Action QuestSetDiscoveredBJ
+  - param Variable QuestMalganis
+  - param Preset DiscoveredOptionDiscovered
+- Action QuestMessageBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Preset QuestMessageTypeDiscovered
+  - param String TRIGSTR_107
+
+
+## FrostmourneCinematicEscapeEvil
+- enabled: True
+- category: [5] FrostmourneCinematic
+- starts off: True
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Condition OperatorCompareBoolean
+  - param Variable ArthasIsEvil
+  - param Preset OperatorEqualENE
+  - param String true
+- Event TriggerRegisterPlayerEventEndCinematic
+  - param Preset Player01
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action DisableTrigger
+  - param Variable gg_trg_FrostmourneCinematicEscapeGood
+- Action VolumeGroupResetBJ
+- Action SetVariable
+  - param Variable FrostmourneCinematicEscape
+  - param String true
+- Action SetVariable
+  - param Variable FrostmourneCinematicRunning
+  - param String false
+- Action StopSoundBJ
+  - param Function GetLastPlayedSound
+    - Function GetLastPlayedSound
+  - param Preset FadeDontFade
+- Action EndThematicMusicBJ
+- Action CameraResetSmoothingFactorBJ
+- Action CinematicModeBJ
+  - param Preset OnOffOff
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+- Action CommentString
+  - param String ENABLE VICTORY
+- Action EnableTrigger
+  - param Variable gg_trg_Green_Base_Dead
+- Action CommentString
+  - param String RESELECT ARTHAS
+- Action SelectUnitSingle
+  - param Variable EvilArthas
+- Action ResetToGameCameraForPlayer
+  - param Preset Player01
+  - param String 0.00
+- Action SetSkyModel
+  - param Preset SkyModelNone
+- Action UseTimeOfDayBJ
+  - param Preset OnOffOn
+- Action CommentString
+  - param String MURADIN ITEMS
+- Action SetVariable
+  - param Variable ItemMuradin01
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Muradin
+      - param String 1
+- Action SetVariable
+  - param Variable ItemMuradin02
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Muradin
+      - param String 2
+- Action SetVariable
+  - param Variable ItemMuradin03
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Muradin
+      - param String 3
+- Action SetVariable
+  - param Variable ItemMuradin04
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Muradin
+      - param String 4
+- Action SetVariable
+  - param Variable ItemMuradin05
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Muradin
+      - param String 5
+- Action SetVariable
+  - param Variable ItemMuradin06
+  - param Function UnitItemInSlotBJ
+    - Function UnitItemInSlotBJ
+      - param Variable Muradin
+      - param String 6
+- Action CreateItemLoc
+  - param Function GetItemTypeId
+    - Function GetItemTypeId
+      - param Variable ItemMuradin01
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ItemMuradin01
+- Action CreateItemLoc
+  - param Function GetItemTypeId
+    - Function GetItemTypeId
+      - param Variable ItemMuradin02
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ItemMuradin02
+- Action CreateItemLoc
+  - param Function GetItemTypeId
+    - Function GetItemTypeId
+      - param Variable ItemMuradin03
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ItemMuradin03
+- Action CreateItemLoc
+  - param Function GetItemTypeId
+    - Function GetItemTypeId
+      - param Variable ItemMuradin04
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ItemMuradin04
+- Action CreateItemLoc
+  - param Function GetItemTypeId
+    - Function GetItemTypeId
+      - param Variable ItemMuradin05
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ItemMuradin05
+- Action CreateItemLoc
+  - param Function GetItemTypeId
+    - Function GetItemTypeId
+      - param Variable ItemMuradin06
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ItemMuradin06
+- Action TriggerExecute
+  - param Variable gg_trg_ItemFailsafeReplace
+- Action GroupRemoveUnitSimple
+  - param Variable Arthas
+  - param Variable ValleyGroup
+- Action # ShowUnitHide
+  - param Variable Muradin
+- Action # SetUnitOwner
+  - param Variable Muradin
+  - param Preset PlayerNP
+  - param Preset ChangeColorTrue
+- Action ForGroup
+  - param Variable ValleyGroup
+  - param Function DoNothing
+    - Action RemoveUnit
+      - param Function GetEnumUnit
+        - Function GetEnumUnit
+- Action CommentString
+  - param String MAKE MALGANIS VULNERABLE
+- Action TriggerExecute
+  - param Variable gg_trg_DestroyMalganisItems
+- Action DisableTrigger
+  - param Variable gg_trg_GiveAnkh
+- Action SetUnitPositionLoc
+  - param Variable EvilArthas
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_FrostmourneArthasOutside
+- Action SetUnitFacingTimed
+  - param Variable EvilArthas
+  - param String 315.00
+  - param String 0
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitAliveBJ
+        - Function IsUnitAliveBJ
+          - param Variable Captain
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action SetUnitPositionLocFacingBJ
+      - param Variable Captain
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_FrostmourneCaptainToArthas
+      - param String 150.00
+  - param Function DoNothing
+    - Action CreateNUnitsAtLoc
+      - param String 1
+      - param String hcth
+      - param Preset Player01
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_FrostmourneCaptainToArthas
+      - param String 150.00
+- Action PauseAllUnitsBJ
+  - param Preset PauseUnpauseOptionUnpause
+- Action CommandAI
+  - param Variable PlayerUndeadProtector
+  - param String 0
+  - param String 0
+- Action CommandAI
+  - param Variable PlayerMalganis
+  - param String 0
+  - param String 0
+- Action QuestSetCompletedBJ
+  - param Variable QuestFrostmourne
+  - param Preset CompletionOptionCompleted
+- Action QuestMessageBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Preset QuestMessageTypeCompleted
+  - param String TRIGSTR_108
+- Action TriggerSleepAction
+  - param String 10.00
+- Action CreateFogModifierRadiusLocBJ
+  - param Preset EnabledDisabledEnabled
+  - param Preset Player01
+  - param Preset FogStateVisible
+  - param Function GetUnitLoc
+    - Function GetUnitLoc
+      - param Variable gg_unit_uaod_0072
+  - param String 1024.00
+- Action DestroyFogModifier
+  - param Function GetLastCreatedFogModifier
+    - Function GetLastCreatedFogModifier
+- Action PingMinimapLocForForce
+  - param Preset Force01
+  - param Function GetUnitLoc
+    - Function GetUnitLoc
+      - param Variable gg_unit_uaod_0072
+  - param String 5.00
+- Action SetCameraQuickPositionLocForPlayer
+  - param Preset Player01
+  - param Function GetUnitLoc
+    - Function GetUnitLoc
+      - param Variable gg_unit_uaod_0072
+- Action QuestSetDiscoveredBJ
+  - param Variable QuestMalganis
+  - param Preset DiscoveredOptionDiscovered
+- Action QuestMessageBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Preset QuestMessageTypeDiscovered
+  - param String TRIGSTR_109
+
+
+## TriggerExitCinematic
+- enabled: True
+- category: [6] ExitCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action SetVariable
+  - param Variable ExitCinematicRunning
+  - param String true
+- Action TriggerExecute
+  - param Variable gg_trg_Level_Enabling
+- Action QuestSetCompletedBJ
+  - param Variable QuestMalganis
+  - param Preset CompletionOptionCompleted
+- Action QuestItemSetCompletedBJ
+  - param Variable QuestReqMalganis
+  - param Preset CompletionOptionCompleted
+- Action QuestMessageBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Preset QuestMessageTypeCompleted
+  - param String TRIGSTR_072
+- Action TriggerSleepAction
+  - param Preset RealQueueDelayQuest
+- Action EnableTrigger
+  - param Variable gg_trg_ExitCinematicEscape
+- Action TriggerExecute
+  - param Variable gg_trg_ExitCinematicSetup
+
+
+## ExitCinematicSetup
+- enabled: True
+- category: [6] ExitCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action UseTimeOfDayBJ
+  - param Preset OnOffOff
+- Action SetSkyModel
+  - param Preset SkyModelSky08
+- Action RemoveWeatherEffectBJ
+  - param Variable WeatherSnow
+- Action CommentString
+  - param String PLAY SOUND THEME
+- Action VolumeGroupSetVolumeBJ
+  - param Preset VolumeGroupMusic
+  - param String 35.00
+- Action PlayThematicMusicBJ
+  - param Preset MusicThemeDarkVictory
+- Action ClearSelection
+- Action # EnableWeatherEffect
+  - param Variable WeatherSnow
+  - param Preset OnOffOff
+- Action # AddWeatherEffectSaveLast
+  - param Variable gg_rct_ExitCinematicWeather_Blizzard
+  - param Preset WeatherNorthrendBlizzard
+- Action # SetVariable
+  - param Variable Blizzard
+  - param Function GetLastCreatedWeatherEffect
+    - Function GetLastCreatedWeatherEffect
+- Action # EnableWeatherEffect
+  - param Variable Blizzard
+  - param Preset OnOffOn
+- Action SetTerrainFogExBJ
+  - param String 0
+  - param String 300.00
+  - param String 2000.00
+  - param String 0
+  - param String 100
+  - param String 100
+  - param String 100
+- Action CinematicModeBJ
+  - param Preset OnOffOn
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+- Action PauseAllUnitsBJ
+  - param Preset PauseUnpauseOptionPause
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeOut
+  - param String 1.00
+  - param Preset CineFilterTextureWhite
+  - param String 0
+  - param String 0
+  - param String 0
+  - param String 0
+- Action TriggerSleepAction
+  - param String 1.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetPlayerAllianceBJ
+  - param Preset Player01
+  - param Preset AllianceTypePassive
+  - param Preset OnOffOn
+  - param Preset Player06
+- Action SetPlayerAllianceBJ
+  - param Preset Player06
+  - param Preset AllianceTypePassive
+  - param Preset OnOffOn
+  - param Preset Player01
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_ExitInitialCamera
+  - param Preset Player01
+  - param String 0.00
+- Action TriggerExecute
+  - param Variable gg_trg_ExitCinematicActorSetup
+
+
+## ExitCinematicActorSetup
+- enabled: True
+- category: [6] ExitCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitDeadBJ
+        - Function IsUnitDeadBJ
+          - param Variable Malganis
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function 
+    - Action ReviveHeroLoc
+      - param Variable Malganis
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_ExitMalganisInitialPosition
+      - param Preset ShowHideHide
+  - param Function 
+    - Action SetUnitPositionLoc
+      - param Variable Malganis
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_ExitMalganisInitialPosition
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Function IsUnitDeadBJ
+        - Function IsUnitDeadBJ
+          - param Variable EvilArthas
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReviveHeroLoc
+      - param Variable EvilArthas
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_ExitArthasInitialPosition
+      - param Preset ShowHideHide
+  - param Function DoNothing
+    - Action SetUnitPositionLoc
+      - param Variable EvilArthas
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_ExitArthasInitialPosition
+- Action RemoveGuardPosition
+  - param Variable Malganis
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionUnpause
+  - param Variable EvilArthas
+- Action PauseUnitBJ
+  - param Preset PauseUnpauseOptionUnpause
+  - param Variable Malganis
+- Action SetUnitFacingToFaceUnitTimed
+  - param Variable EvilArthas
+  - param Variable Malganis
+  - param String 0
+- Action SetUnitFacingToFaceUnitTimed
+  - param Variable Malganis
+  - param Variable EvilArthas
+  - param String 0
+- Action UnitRemoveBuffsBJ
+  - param Preset BuffTypeAll
+  - param Variable EvilArthas
+- Action UnitRemoveBuffsBJ
+  - param Preset BuffTypeAll
+  - param Variable Malganis
+- Action SetUnitAnimationWithRarity
+  - param Variable EvilArthas
+  - param String stand
+  - param Preset RarityControlFrequent
+- Action SetUnitAnimationWithRarity
+  - param Variable Malganis
+  - param String stand
+  - param Preset RarityControlFrequent
+- Action TriggerExecute
+  - param Variable gg_trg_ExitCinematicArthasMalganisTalk
+
+
+## ExitCinematicArthasMalganisTalk
+- enabled: True
+- category: [6] ExitCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action AddWeatherEffectSaveLast
+  - param Variable gg_rct_ExitCinematicWeather_Blizzard
+  - param Preset WeatherNorthrendBlizzard
+- Action SetVariable
+  - param Variable WeatherSnow
+  - param Function GetLastCreatedWeatherEffect
+    - Function GetLastCreatedWeatherEffect
+- Action EnableWeatherEffect
+  - param Variable WeatherSnow
+  - param Preset OnOffOn
+- Action TriggerSleepAction
+  - param String 0.01
+- Action AddWeatherEffectSaveLast
+  - param Variable gg_rct_ExitCinematicWeather_Blizzard
+  - param Preset WeatherHeavyWind
+- Action SetVariable
+  - param Variable Blizzard
+  - param Function GetLastCreatedWeatherEffect
+    - Function GetLastCreatedWeatherEffect
+- Action EnableWeatherEffect
+  - param Variable Blizzard
+  - param Preset OnOffOn
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeIn
+  - param String 1.00
+  - param Preset CineFilterTextureWhite
+  - param String 0
+  - param String 0
+  - param String 0
+  - param String 0
+- Action TriggerSleepAction
+  - param String 1.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable Malganis
+  - param String TRIGSTR_003
+  - param Variable gg_snd_H09MalGanis23
+  - param String TRIGSTR_035
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontDont
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_ExitZoomIn
+  - param Preset Player01
+  - param Function GetSoundDurationBJ
+    - Function GetSoundDurationBJ
+      - param Function GetLastPlayedSound
+        - Function GetLastPlayedSound
+- Action WaitForSoundBJ
+  - param Function GetLastPlayedSound
+    - Function GetLastPlayedSound
+  - param String 0
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable EvilArthas
+  - param String TRIGSTR_036
+  - param Variable gg_snd_H09Arthas24
+  - param String TRIGSTR_037
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontWait
+- Action CameraSetSmoothingFactorBJ
+  - param String 0.00
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_Exit_Malganis_01
+  - param Preset Player01
+  - param String 0.01
+- Action TriggerSleepAction
+  - param String 0.01
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable Malganis
+  - param String TRIGSTR_038
+  - param Variable gg_snd_H09MalGanis25
+  - param String TRIGSTR_081
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontDont
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_Exit_Malganis_02
+  - param Preset Player01
+  - param Function GetSoundDurationBJ
+    - Function GetSoundDurationBJ
+      - param Function GetLastPlayedSound
+        - Function GetLastPlayedSound
+- Action WaitForSoundBJ
+  - param Variable gg_snd_H09MalGanis25
+  - param String 1.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetSoundVolumeBJ
+  - param Variable gg_snd_FrostmourneChant1
+  - param String 35.00
+- Action PlaySoundBJ
+  - param Variable gg_snd_FrostmourneChant1
+- Action WaitForSoundBJ
+  - param Variable gg_snd_H09MalGanis25
+  - param String 0.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeOut
+  - param String 0.50
+  - param Preset CineFilterTextureWhite
+  - param String 0
+  - param String 0
+  - param String 0
+  - param String 0
+- Action TriggerSleepAction
+  - param String 0.60
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CameraSetSmoothingFactorBJ
+  - param String 0.00
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_Exit_Arthas_01
+  - param Preset Player01
+  - param String 0.01
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeIn
+  - param String 0.50
+  - param Preset CineFilterTextureWhite
+  - param String 0
+  - param String 0
+  - param String 0
+  - param String 0
+- Action TriggerSleepAction
+  - param String 0.25
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TriggerSleepAction
+  - param String 0.15
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable EvilArthas
+  - param String TRIGSTR_082
+  - param Variable gg_snd_H09Arthas26
+  - param String TRIGSTR_083
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontWait
+- Action TriggerSleepAction
+  - param String 0.50
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CameraSetSmoothingFactorBJ
+  - param String 0.00
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_Camera_026
+  - param Preset Player01
+  - param String 0.01
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable Malganis
+  - param String TRIGSTR_084
+  - param Variable gg_snd_H09MalGanis27
+  - param String TRIGSTR_085
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontDont
+- Action SetUnitFacingToFaceLocTimed
+  - param Variable Malganis
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ExitMalganisLookTo_1
+  - param String 0
+- Action SetUnitLookAt
+  - param Variable Malganis
+  - param Preset UnitFacingBoneHead
+  - param Variable EvilArthas
+  - param String 0
+  - param String 0
+  - param String 90
+- Action # IssuePointOrderLoc
+  - param Variable EvilArthas
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ExitArthasMovesToMalganis
+- Action WaitForSoundBJ
+  - param Variable gg_snd_H09MalGanis27
+  - param String 3.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetUnitLifeBJ
+  - param Variable Malganis
+  - param String 1.00
+- Action IssueTargetOrder
+  - param Variable EvilArthas
+  - param Preset UnitOrderAttackUnit
+  - param Variable Malganis
+- Action # SetUnitFacingToFaceLocTimed
+  - param Variable Malganis
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ExitMalganisLookTo_2
+  - param String 0
+- Action VolumeGroupResetBJ
+- Action # CameraSetSmoothingFactorBJ
+  - param String 0.00
+- Action # CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_Camera_027
+  - param Preset Player01
+  - param String 0.01
+- Action CameraSetSmoothingFactorBJ
+  - param String 0.00
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_Camera_028
+  - param Preset Player01
+  - param String 0.01
+- Action WaitForSoundBJ
+  - param Variable gg_snd_H09MalGanis27
+  - param String 0.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable EvilArthas
+  - param String TRIGSTR_073
+  - param Variable gg_snd_H09Arthas28
+  - param String TRIGSTR_074
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontDont
+- Action WaitForSoundBJ
+  - param Variable gg_snd_H09Arthas28
+  - param String 0
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeOut
+  - param String 1.00
+  - param Preset CineFilterTextureWhite
+  - param String 100.00
+  - param String 100.00
+  - param String 100.00
+  - param String 0
+- Action EndThematicMusicBJ
+- Action TriggerSleepAction
+  - param String 2.50
+- Action # TransmissionFromUnitWithNameBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Variable EvilArthas
+  - param String TRIGSTR_104
+  - param Variable gg_snd_H09Arthas28a
+  - param String TRIGSTR_105
+  - param Preset AddSetToAdd
+  - param String 0
+  - param Preset WaitDontDont
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TriggerExecute
+  - param Variable gg_trg_ExitArthasRuns
+
+
+## ExitArthasRuns
+- enabled: True
+- category: [6] ExitCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action SetUnitPositionLoc
+  - param Variable EvilArthas
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ExitArthaslPositionRunStart
+- Action SetTerrainFogExBJ
+  - param String 0
+  - param String 300.00
+  - param String 1500.00
+  - param String 0
+  - param String 100
+  - param String 100
+  - param String 100
+- Action RemoveWeatherEffectBJ
+  - param Variable WeatherSnow
+- Action RemoveWeatherEffectBJ
+  - param Variable Blizzard
+- Action AddWeatherEffectSaveLast
+  - param Variable gg_rct_ExitCinematicWeather_Blizzard_Running
+  - param Preset WeatherNorthrendBlizzard
+- Action SetVariable
+  - param Variable WeatherSnow
+  - param Function GetLastCreatedWeatherEffect
+    - Function GetLastCreatedWeatherEffect
+- Action EnableWeatherEffect
+  - param Variable WeatherSnow
+  - param Preset OnOffOn
+- Action TriggerSleepAction
+  - param String 0.01
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action AddWeatherEffectSaveLast
+  - param Variable gg_rct_ExitCinematicWeather_Blizzard_Running
+  - param Preset WeatherHeavyWind
+- Action SetVariable
+  - param Variable Blizzard
+  - param Function GetLastCreatedWeatherEffect
+    - Function GetLastCreatedWeatherEffect
+- Action EnableWeatherEffect
+  - param Variable Blizzard
+  - param Preset OnOffOn
+- Action TriggerSleepAction
+  - param String 0.50
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action SetUnitMoveSpeed
+  - param Variable EvilArthas
+  - param String 150.00
+- Action IssuePointOrderLoc
+  - param Variable EvilArthas
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ExitArthasPositionRunTo
+- Action # TriggerSleepAction
+  - param String 1.00
+- Action # CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_ExitArthasRun_Follow
+  - param Preset Player01
+  - param String 0.01
+- Action # SetCameraTargetControllerNoZForPlayer
+  - param Preset Player01
+  - param Variable EvilArthas
+  - param String 0
+  - param String 0
+  - param Preset CameraOrientationNormal
+- Action TriggerSleepAction
+  - param String 0.50
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeIn
+  - param String 1.00
+  - param Preset CineFilterTextureWhite
+  - param String 100.00
+  - param String 100.00
+  - param String 100.00
+  - param String 0
+- Action SetMusicVolumeBJ
+  - param String 100
+- Action PlayThematicMusicBJ
+  - param Preset MusicThemeSadMystery
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_ExitArthasRun_1
+  - param Preset Player01
+  - param String 0.01
+- Action TriggerSleepAction
+  - param String 0.01
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CameraSetupApplyForPlayer
+  - param Preset CameraApply
+  - param Variable gg_cam_ExitArthasRun_2
+  - param Preset Player01
+  - param String 15.00
+- Action SetUnitMoveSpeed
+  - param Variable EvilArthas
+  - param String 150.00
+- Action IssuePointOrderLoc
+  - param Variable EvilArthas
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ExitArthasPositionRunTo
+- Action TriggerSleepAction
+  - param String 11.00
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TriggerExecute
+  - param Variable gg_trg_ExitCinematicEnd
+
+
+## ExitCinematicEnd
+- enabled: True
+- category: [6] ExitCinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeOut
+  - param String 4.00
+  - param Preset CineFilterTextureWhite
+  - param String 0
+  - param String 0
+  - param String 0
+  - param String 0
+- Action TriggerSleepAction
+  - param String 4.20
+- Action DisableTrigger
+  - param Variable gg_trg_ExitCinematicEscape
+- Action EnableTrigger
+  - param Variable gg_trg_ExitCinematicEscapeNoFade
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action DisplayTimedTextToForce
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param String 26.00
+  - param String TRIGSTR_063
+- Action DisplayTimedTextToForce
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param String 26.00
+  - param String TRIGSTR_210
+- Action DisplayTimedTextToForce
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param String 26.00
+  - param String TRIGSTR_211
+- Action TriggerSleepAction
+  - param String 30.00
+- Action EndThematicMusicBJ
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareBoolean
+      - param Variable ExitCinematicEscape
+      - param Preset OperatorEqualENE
+      - param String true
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action TriggerExecute
+  - param Variable gg_trg_Level_Victory
+
+
+## ExitCinematicEscape
+- enabled: True
+- category: [6] ExitCinematic
+- starts off: True
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterPlayerEventEndCinematic
+  - param Preset Player01
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action SetVariable
+  - param Variable ExitCinematicEscape
+  - param String true
+- Action SetVariable
+  - param Variable ExitCinematicRunning
+  - param String false
+- Action StopSoundBJ
+  - param Function GetLastPlayedSound
+    - Function GetLastPlayedSound
+  - param Preset FadeDontFade
+- Action CinematicFadeBJ
+  - param Preset FadeTypeOptionFadeOut
+  - param String 2.00
+  - param Preset CineFilterTextureWhite
+  - param String 0
+  - param String 0
+  - param String 0
+  - param String 0
+- Action TriggerSleepAction
+  - param String 2.00
+- Action TriggerExecute
+  - param Variable gg_trg_Level_Victory
+
+
+## ExitCinematicEscapeNoFade
+- enabled: True
+- category: [6] ExitCinematic
+- starts off: True
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterPlayerEventEndCinematic
+  - param Preset Player01
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action SetVariable
+  - param Variable ExitCinematicEscape
+  - param String true
+- Action SetVariable
+  - param Variable ExitCinematicRunning
+  - param String false
+- Action StopSoundBJ
+  - param Function GetLastPlayedSound
+    - Function GetLastPlayedSound
+  - param Preset FadeDontFade
+- Action TriggerSleepAction
+  - param String 2
+- Action TriggerExecute
+  - param Variable gg_trg_Level_Victory
+
+
+## BuildingDefeat
+- enabled: True
+- category: [1] Defeat
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action SetVariable
+  - param Variable GameOver
+  - param String true
+- Action QueuedTriggerClearInactiveBJ
+- Action DisableTrigger
+  - param Variable gg_trg_MuradinDefeat
+- Action DisableTrigger
+  - param Variable gg_trg_ArthasDefeat
+- Action DisableTrigger
+  - param Variable gg_trg_Green_Base_Dead
+- Action QuestMessageBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Preset QuestMessageTypeMissionFailed
+  - param String TRIGSTR_213
+- Action TriggerSleepAction
+  - param Preset RealQueueDelayQuest
+- Action TriggerExecute
+  - param Variable gg_trg_Level_Defeat
+- Condition OperatorCompareInteger
+  - param Function GetPlayerStructureCount
+    - Function GetPlayerStructureCount
+      - param Preset Player01
+      - param Preset InclusionExclude
+  - param Preset OperatorEqual
+  - param String 0
+- Condition OperatorCompareBoolean
+  - param Variable ExitCinematicRunning
+  - param Preset OperatorEqualENE
+  - param String false
+- Condition OperatorCompareBoolean
+  - param Variable GameOver
+  - param Preset OperatorEqualENE
+  - param String false
+- Event TriggerRegisterPlayerUnitEventSimple
+  - param Preset Player01
+  - param Preset PlayerUnitEventDeath
+
+
+## ArthasDefeat
+- enabled: True
+- category: [1] Defeat
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action SetVariable
+  - param Variable GameOver
+  - param String true
+- Action QueuedTriggerClearInactiveBJ
+- Action DisableTrigger
+  - param Variable gg_trg_MuradinDefeat
+- Action DisableTrigger
+  - param Variable gg_trg_BuildingDefeat
+- Action QuestMessageBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Preset QuestMessageTypeMissionFailed
+  - param String TRIGSTR_214
+- Action TriggerSleepAction
+  - param Preset RealQueueDelayQuest
+- Action TriggerExecute
+  - param Variable gg_trg_Level_Defeat
+- Condition OperatorCompareBoolean
+  - param Variable HeroDefeatPossible
+  - param Preset OperatorEqualENE
+  - param String true
+- Condition OperatorCompareUnit
+  - param Function GetDyingUnit
+    - Function GetDyingUnit
+  - param Preset OperatorEqualENE
+  - param Variable Arthas
+- Condition OperatorCompareBoolean
+  - param Variable GameOver
+  - param Preset OperatorEqualENE
+  - param String false
+- Event TriggerRegisterPlayerUnitEventSimple
+  - param Preset Player01
+  - param Preset PlayerUnitEventDeath
+
+
+## MuradinDefeat
+- enabled: True
+- category: [1] Defeat
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action SetVariable
+  - param Variable GameOver
+  - param String true
+- Action QueuedTriggerClearInactiveBJ
+- Action DisableTrigger
+  - param Variable gg_trg_ArthasDefeat
+- Action DisableTrigger
+  - param Variable gg_trg_BuildingDefeat
+- Action QuestMessageBJ
+  - param Function GetPlayersAll
+    - Function GetPlayersAll
+  - param Preset QuestMessageTypeMissionFailed
+  - param String TRIGSTR_215
+- Action TriggerSleepAction
+  - param Preset RealQueueDelayQuest
+- Action TriggerExecute
+  - param Variable gg_trg_Level_Defeat
+- Condition OperatorCompareBoolean
+  - param Variable HeroDefeatPossible
+  - param Preset OperatorEqualENE
+  - param String true
+- Condition OperatorCompareUnit
+  - param Function GetDyingUnit
+    - Function GetDyingUnit
+  - param Preset OperatorEqualENE
+  - param Variable Muradin
+- Condition OperatorCompareBoolean
+  - param Variable GameOver
+  - param Preset OperatorEqualENE
+  - param String false
+- Event TriggerRegisterPlayerUnitEventSimple
+  - param Preset Player01
+  - param Preset PlayerUnitEventDeath
+
+
+## Green Base Dead
+- enabled: True
+- category: [15] Victory
+- starts off: True
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterTimerEventPeriodic
+  - param String 2.00
+- Condition OperatorCompareBoolean
+  - param Variable GameOver
+  - param Preset OperatorEqualENE
+  - param String false
+- Condition OperatorCompareBoolean
+  - param Function IsQuestDiscovered
+    - Function IsQuestDiscovered
+      - param Variable QuestMalganis
+  - param Preset OperatorEqualENE
+  - param String true
+- Condition OperatorCompareBoolean
+  - param Function IsUnitDeadBJ
+    - Function IsUnitDeadBJ
+      - param Variable Malganis
+  - param Preset OperatorEqualENE
+  - param String true
+- Condition OperatorCompareInteger
+  - param Function CountUnitsInGroup
+    - Function CountUnitsInGroup
+      - param Function GetUnitsOfPlayerMatching
+        - Function GetUnitsOfPlayerMatching
+          - param Preset Player06
+          - param Function 
+            - Condition GetBooleanAnd
+              - param Function 
+                - Condition GetBooleanAnd
+                  - param Function 
+                    - Condition OperatorCompareBoolean
+                      - param Function IsUnitType
+                        - Function IsUnitType
+                          - param Function GetFilterUnit
+                            - Function GetFilterUnit
+                          - param Preset UnitTypeStructure
+                      - param Preset OperatorEqualENE
+                      - param String true
+                  - param Function 
+                    - Condition OperatorCompareUnitCode
+                      - param Function GetUnitTypeId
+                        - Function GetUnitTypeId
+                          - param Function GetFilterUnit
+                            - Function GetFilterUnit
+                      - param Preset OperatorNotEqualENE
+                      - param String uzg1
+              - param Function 
+                - Condition GetBooleanAnd
+                  - param Function 
+                    - Condition OperatorCompareUnitCode
+                      - param Function GetUnitTypeId
+                        - Function GetUnitTypeId
+                          - param Function GetFilterUnit
+                            - Function GetFilterUnit
+                      - param Preset OperatorNotEqualENE
+                      - param String uzig
+                  - param Function 
+                    - Condition OperatorCompareBoolean
+                      - param Function IsUnitAliveBJ
+                        - Function IsUnitAliveBJ
+                          - param Function GetFilterUnit
+                            - Function GetFilterUnit
+                      - param Preset OperatorEqualENE
+                      - param String true
+  - param Preset OperatorEqual
+  - param String 0
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action DisableTrigger
+  - param Variable gg_trg_BuildingDefeat
+- Action QueuedTriggerClearInactiveBJ
+- Action TriggerExecute
+  - param Variable gg_trg_TriggerExitCinematic
+
+
+## Level Enabling
+- enabled: True
+- category: [13] Change Level Triggers
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action SetCampaignAvailableBJ
+  - param Preset EnableDisableEnable
+  - param Preset CampaignIndexU
+- Action SetCinematicAvailableBJ
+  - param Preset EnableDisableEnable
+  - param Preset CinematicIndexHED
+- Action SetMissionAvailableBJ
+  - param Preset EnableDisableEnable
+  - param Preset MissionIndexU00
+
+
+## Level Victory
+- enabled: True
+- category: [13] Change Level Triggers
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CustomVictoryBJ
+  - param Preset Player01
+  - param Preset UseSkipOptionSkip
+  - param Preset UseSkipOptionUse
+
+
+## Level Defeat
+- enabled: True
+- category: [13] Change Level Triggers
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CustomDefeatBJ
+  - param Preset Player01
+  - param String TRIGSTR_000
+
+
+## Victory Cheat
+- enabled: True
+- category: [11] Cheat Code Support
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action TriggerExecute
+  - param Variable gg_trg_Level_Enabling
+- Action TriggerExecute
+  - param Variable gg_trg_Level_Victory
+- Event TriggerRegisterPlayerEventVictory
+  - param Preset Player01
+
+
+## Defeat Cheat
+- enabled: True
+- category: [11] Cheat Code Support
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action TriggerExecute
+  - param Variable gg_trg_Level_Defeat
+- Event TriggerRegisterPlayerEventDefeat
+  - param Preset Player01
+
+
+## VictoryDEBUG
+- enabled: False
+- category: [8] DEBUG
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action TriggerExecute
+  - param Variable gg_trg_TriggerExitCinematic
+- Event TriggerRegisterPlayerChatEvent
+  - param Preset Player01
+  - param String debugvictory
+  - param Preset ChatMatchTypeExact
+
+
+## VictoryDEBUG Copy
+- enabled: False
+- category: [8] DEBUG
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action TriggerExecute
+  - param Variable gg_trg_TriggerExitCinematic
+- Event TriggerRegisterPlayerChatEvent
+  - param Preset Player01
+  - param String v
+  - param Preset ChatMatchTypeExact
+
+
+## FrostmourneDEBUG
+- enabled: False
+- category: [8] DEBUG
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action TriggerExecute
+  - param Variable gg_trg_TriggerFrostmourneCinematic
+- Event TriggerRegisterPlayerChatEvent
+  - param Preset Player01
+  - param String debugfrostmourne
+  - param Preset ChatMatchTypeExact
+
+
+## FrostmourneDEBUG Copy
+- enabled: False
+- category: [8] DEBUG
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action TriggerExecute
+  - param Variable gg_trg_TriggerFrostmourneCinematic
+- Event TriggerRegisterPlayerChatEvent
+  - param Preset Player01
+  - param String f
+  - param Preset ChatMatchTypeExact
+
+
+## RunDEBUG
+- enabled: False
+- category: [8] DEBUG
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action TriggerExecute
+  - param Variable gg_trg_ExitArthasRuns
+- Event TriggerRegisterPlayerChatEvent
+  - param Preset Player01
+  - param String run
+  - param Preset ChatMatchTypeExact
+

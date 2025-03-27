@@ -1,0 +1,762 @@
+# Warcraft 3 Map Info File(.w3i)
+# See w3i.py for type definitions
+
+version = "ROC"
+map_revision = 400
+editor_version = 4426
+map_name = 'TRIGSTR_043'
+map_author = 'TRIGSTR_046'
+map_description = 'TRIGSTR_073'
+players_recommended = 'TRIGSTR_044'
+camera_bounds = [-4608.0, -4736.0, 3840.0, 4480.0, -4608.0, 4480.0, 3840.0, -4736.0]
+map_padding_left = 8
+map_padding_right = 14
+map_padding_top = 7
+map_padding_bottom = 13
+map_playable_width = 74
+map_playable_height = 76
+flags = "HIDE_MINIMAP|LARGE_MAP|FIXED_FORCES|CUSTOM_FORCES|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS|WAVES_ON_SHORES"
+tileset = { type = "bytes", value = "L" }
+campaign_background = 2
+tft_loading_screen_model_path = ''
+map_loading_screen_text = 'TRIGSTR_047'
+map_loading_screen_title = 'TRIGSTR_074'
+map_loading_screen_subtitle = 'TRIGSTR_075'
+map_loading_screen_number = -1
+tft_prologue_screen_path = ''
+prologue_screen_text = ''
+prologue_screen_title = ''
+prologue_screen_subtitle = ''
+tft_uses_terrain_fog = 0
+tft_fog_start_z = 0.0
+tft_fog_end_z = 0.0
+tft_fog_density = 0.0
+tft_fog_red = 0
+tft_fog_green = 0
+tft_fog_blue = 0
+tft_fog_alpha = 0
+tft_weather = ''
+tft_custom_sound_environment = ''
+tft_custom_light_tileset = { type = "bytes", value = "0" }
+tft_water_tint_red = 0
+tft_water_tint_green = 0
+tft_water_tint_blue = 0
+tft_water_tint_alpha = 0
+random_entities = []
+random_items = []
+
+[[players]]
+
+player_id = 0
+player_type = "Neutral"
+player_faction = "Orc"
+fixed_start_position = true
+name = 'TRIGSTR_032'
+start_pos = [4864.0, -4672.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x12b1
+
+[[players]]
+
+player_id = 1
+player_type = "Human"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_039'
+start_pos = [-2880.0, 1984.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 2
+player_type = "Neutral"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_049'
+start_pos = [4864.0, -4672.0]
+ally_low_priorities_flags = 0x31207265
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 8
+player_type = "Neutral"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_051'
+start_pos = [-3712.0, -192.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 9
+player_type = "Neutral"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_327'
+start_pos = [4864.0, -4544.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[forces]]
+
+force_flags = "None"
+player_mask_flags = 0xfffffefa
+name = 'TRIGSTR_328'
+
+[[forces]]
+
+force_flags = "None"
+player_mask_flags = 0x100
+name = 'TRIGSTR_051'
+
+[[forces]]
+
+force_flags = "None"
+player_mask_flags = 0x1
+name = 'TRIGSTR_032'
+
+[[forces]]
+
+force_flags = "None"
+player_mask_flags = 0x4
+name = 'TRIGSTR_049'
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhme'  # Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhme'  # Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhme'  # Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhra'  # Black Gunpowder,Refined Gunpowder,Imbued Gunpowder
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhra'  # Black Gunpowder,Refined Gunpowder,Imbued Gunpowder
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhra'  # Black Gunpowder,Refined Gunpowder,Imbued Gunpowder
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhaa'
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhaa'
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhaa'
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhar'  # Iron Plating,Steel Plating,Mithril Plating
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhar'  # Iron Plating,Steel Plating,Mithril Plating
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhar'  # Iron Plating,Steel Plating,Mithril Plating
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhmi'
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhmi'
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhac'  # Improved Masonry,Advanced Masonry,Imbued Masonry
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhac'  # Improved Masonry,Advanced Masonry,Imbued Masonry
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhac'  # Improved Masonry,Advanced Masonry,Imbued Masonry
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhss'  # Control Magic
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhss'  # Control Magic
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhde'  # Defend
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhan'  # Animal War Training
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhpt'  # Priest Adept Training,Priest Master Training
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhpt'  # Priest Adept Training,Priest Master Training
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhst'  # Sorceress Adept Training,Sorceress Master Training
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhst'  # Sorceress Adept Training,Sorceress Master Training
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhla'  # Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhla'  # Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhla'  # Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhri'  # Long Rifles
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhlh'  # Improved Lumber Harvesting,Advanced Lumber Harvesting
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhlh'  # Improved Lumber Harvesting,Advanced Lumber Harvesting
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhse'  # Magic Sentry
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhsr'
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rome'  # Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rome'  # Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rome'  # Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rora'  # Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rora'  # Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rora'  # Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Roaa'
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Roaa'
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Roaa'
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Roar'  # Steel Armor,Thorium Armor,Arcanite Armor
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Roar'  # Steel Armor,Thorium Armor,Arcanite Armor
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Roar'  # Steel Armor,Thorium Armor,Arcanite Armor
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Romi'
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Romi'
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Roac'
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Roac'
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Ross'
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Ross'
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rows'  # Pulverize
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rowt'  # Spirit Walker Adept Training,Spirit Walker Master Training
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rovs'  # Envenomed Spears
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rowd'  # Witch Doctor Adept Training,Witch Doctor Master Training
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rowd'  # Witch Doctor Adept Training,Witch Doctor Master Training
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rost'  # Shaman Adept Training,Shaman Master Training
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rost'  # Shaman Adept Training,Shaman Master Training
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rolh'
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rolh'
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Ronv'
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rosp'  # Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rosp'  # Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rosp'  # Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhgb'  # Flying Machine Bombs
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rhfs'  # Fragmentation Shards
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rwdm'  # War Drums Damage Increase
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Ropg'  # Pillage
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Robs'  # Berserker Strength
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Roen'  # Ensnare
+level = 0
+availability = "Researched"
+
+[[upgrades]]
+
+player_flags = 0x1
+upgrade_id = 'Rotr'  # Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration
+level = 0
+availability = "Unavailable"
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'opeo'  # Peon
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'ogru'  # Grunt
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'orai'  # Raider
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'otau'  # Tauren
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'ohun'  # Troll Headhunter
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'ocat'  # Demolisher
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'okod'  # Kodo Beast
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'owyv'  # Wind Rider
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'odoc'  # Troll Witch Doctor
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'oshm'  # Shaman
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'oeye'  # Sentry Ward
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'otot'  # Stasis Trap
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'oang'  # Ancestral Guardian
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'Obla'  # Blademaster
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'Ofar'  # Far Seer
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'Otch'  # Tauren Chieftain
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'ogre'  # Great Hall
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'ostr'  # Stronghold
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'ofrt'  # Fortress
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'oalt'  # Altar of Storms
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'obar'  # Barracks
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'ofor'  # War Mill
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'otto'  # Tauren Totem
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'osld'  # Spirit Lodge
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'obea'  # Beastiary
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'otrb'  # Orc Burrow
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'ohut'
+
+[[technologies]]
+
+player_flags = 0x1
+tech_id = 'olum'

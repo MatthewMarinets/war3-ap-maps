@@ -1,0 +1,154 @@
+# Warcraft 3 Minimap Info File (.mmp)
+# See mmp.py for type definitions
+
+file_format_version = 0
+
+[[icons]]
+
+icon_type = "GoldMine"
+x = 227
+y = 198
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "GoldMine"
+x = 52
+y = 213
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "GoldMine"
+x = 104
+y = 111
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "House"
+x = 31
+y = 46
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "GoldMine"
+x = 221
+y = 37
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "House"
+x = 240
+y = 107
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "PlayerStart"
+x = 18
+y = 118
+colour_blue = 4
+colour_green = 42
+colour_red = 78
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "PlayerStart"
+x = 226
+y = 185
+colour_blue = 241
+colour_green = 191
+colour_red = 126
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "PlayerStart"
+x = 227
+y = 184
+colour_blue = 255
+colour_green = 66
+colour_red = 0
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "PlayerStart"
+x = 53
+y = 200
+colour_blue = 0
+colour_green = 192
+colour_red = 32
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "PlayerStart"
+x = 225
+y = 184
+colour_blue = 151
+colour_green = 150
+colour_red = 149
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "PlayerStart"
+x = 252
+y = 49
+colour_blue = 1
+colour_green = 252
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "PlayerStart"
+x = 249
+y = 49
+colour_blue = 14
+colour_green = 138
+colour_red = 254
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "PlayerStart"
+x = 116
+y = 114
+colour_blue = 129
+colour_green = 0
+colour_red = 84
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "PlayerStart"
+x = 229
+y = 47
+colour_blue = 3
+colour_green = 3
+colour_red = 255
+colour_alpha = 255

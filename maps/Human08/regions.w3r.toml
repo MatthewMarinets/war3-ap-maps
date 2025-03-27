@@ -1,0 +1,1334 @@
+# Warcraft 3 Region file (.w3r)
+# See w3r.py for type definitions
+
+version = 5
+
+[[regions]]
+
+left = 5344.0
+bottom = 1792.0
+right = 5440.0
+top = 1888.0
+region_name = 'ExitDefeatFootman01Move'
+region_id = 37
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5504.0
+bottom = 1024.0
+right = 5632.0
+top = 1152.0
+region_name = 'ExitDefeatFootman01Target'
+region_id = 45
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 128
+
+[[regions]]
+
+left = 5696.0
+bottom = 1664.0
+right = 5792.0
+top = 1760.0
+region_name = 'ExitDefeatFootman02Move'
+region_id = 38
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5728.0
+bottom = 992.0
+right = 5856.0
+top = 1120.0
+region_name = 'ExitDefeatFootman02Target'
+region_id = 46
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 128
+
+[[regions]]
+
+left = 6176.0
+bottom = 1888.0
+right = 6272.0
+top = 1984.0
+region_name = 'ExitDefeatFootman03Move'
+region_id = 39
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5952.0
+bottom = 1056.0
+right = 6080.0
+top = 1184.0
+region_name = 'ExitDefeatFootman03Target'
+region_id = 47
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 128
+
+[[regions]]
+
+left = 6464.0
+bottom = 1664.0
+right = 6560.0
+top = 1760.0
+region_name = 'ExitDefeatFootman04Move'
+region_id = 40
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 6208.0
+bottom = 1120.0
+right = 6336.0
+top = 1248.0
+region_name = 'ExitDefeatFootman04Target'
+region_id = 48
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 128
+
+[[regions]]
+
+left = 5152.0
+bottom = 1536.0
+right = 5248.0
+top = 1632.0
+region_name = 'ExitDefeatPeasant01Move'
+region_id = 33
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5312.0
+bottom = 992.0
+right = 5440.0
+top = 1120.0
+region_name = 'ExitDefeatPeasant01Target'
+region_id = 41
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 128
+
+[[regions]]
+
+left = 5472.0
+bottom = 1376.0
+right = 5568.0
+top = 1472.0
+region_name = 'ExitDefeatPeasant02Move'
+region_id = 34
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5600.0
+bottom = 864.0
+right = 5728.0
+top = 992.0
+region_name = 'ExitDefeatPeasant02Target'
+region_id = 42
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 128
+
+[[regions]]
+
+left = 5888.0
+bottom = 1504.0
+right = 5984.0
+top = 1600.0
+region_name = 'ExitDefeatPeasant03Move'
+region_id = 35
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5888.0
+bottom = 864.0
+right = 6016.0
+top = 992.0
+region_name = 'ExitDefeatPeasant03Target'
+region_id = 43
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 128
+
+[[regions]]
+
+left = 6240.0
+bottom = 1632.0
+right = 6336.0
+top = 1728.0
+region_name = 'ExitDefeatPeasant04Move'
+region_id = 36
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 6112.0
+bottom = 960.0
+right = 6240.0
+top = 1088.0
+region_name = 'ExitDefeatPeasant04Target'
+region_id = 44
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 128
+
+[[regions]]
+
+left = 5920.0
+bottom = 480.0
+right = 6048.0
+top = 608.0
+region_name = 'ExitDefeatRowboat01'
+region_id = 49
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 6272.0
+bottom = 704.0
+right = 6400.0
+top = 832.0
+region_name = 'ExitDefeatRowboat02'
+region_id = 50
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5472.0
+bottom = 544.0
+right = 5600.0
+top = 672.0
+region_name = 'ExitVictoryArthasMove'
+region_id = 57
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5952.0
+bottom = 1760.0
+right = 6048.0
+top = 1856.0
+region_name = 'ExitVictoryCaptain01Move'
+region_id = 52
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5824.0
+bottom = 1184.0
+right = 5952.0
+top = 1312.0
+region_name = 'ExitVictoryCaptain01Target'
+region_id = 54
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 128
+
+[[regions]]
+
+left = 5632.0
+bottom = 1824.0
+right = 5728.0
+top = 1920.0
+region_name = 'ExitVictoryKnight01Create'
+region_id = 51
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5600.0
+bottom = 1152.0
+right = 5728.0
+top = 1280.0
+region_name = 'ExitVictoryKnight01Target'
+region_id = 53
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 128
+
+[[regions]]
+
+left = 6048.0
+bottom = 1952.0
+right = 6144.0
+top = 2048.0
+region_name = 'ExitVictoryKnight02Create'
+region_id = 55
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 6048.0
+bottom = 1216.0
+right = 6176.0
+top = 1344.0
+region_name = 'ExitVictoryKnight02Target'
+region_id = 56
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 128
+
+[[regions]]
+
+left = 3616.0
+bottom = 1056.0
+right = 3744.0
+top = 1184.0
+region_name = 'ExitVictoryMerc01Create'
+region_id = 62
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4992.0
+bottom = 928.0
+right = 5120.0
+top = 1056.0
+region_name = 'ExitVictoryMerc01Target'
+region_id = 59
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 3392.0
+bottom = 960.0
+right = 3520.0
+top = 1088.0
+region_name = 'ExitVictoryMerc02Create'
+region_id = 64
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 3552.0
+bottom = 832.0
+right = 3680.0
+top = 960.0
+region_name = 'ExitVictoryMerc03Create'
+region_id = 63
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5696.0
+bottom = 3264.0
+right = 5824.0
+top = 3392.0
+region_name = 'IntroArthasPissed'
+region_id = 16
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5632.0
+bottom = 3456.0
+right = 5760.0
+top = 3584.0
+region_name = 'IntroArthasTarget'
+region_id = 15
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 6496.0
+bottom = 3520.0
+right = 6624.0
+top = 3648.0
+region_name = 'IntroEmissaryFlankA'
+region_id = 5
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 6720.0
+bottom = 3776.0
+right = 6848.0
+top = 3904.0
+region_name = 'IntroEmissaryFlankAReturn'
+region_id = 7
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 6496.0
+bottom = 3808.0
+right = 6624.0
+top = 3936.0
+region_name = 'IntroEmissaryFlankB'
+region_id = 6
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 6720.0
+bottom = 3520.0
+right = 6848.0
+top = 3648.0
+region_name = 'IntroEmissaryFlankBReturn'
+region_id = 9
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 6432.0
+bottom = 3648.0
+right = 6560.0
+top = 3776.0
+region_name = 'IntroEmissaryMoveTo'
+region_id = 4
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 6624.0
+bottom = 3648.0
+right = 6752.0
+top = 3776.0
+region_name = 'IntroEmissaryReturn'
+region_id = 8
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4992.0
+bottom = 2688.0
+right = 5120.0
+top = 2816.0
+region_name = 'IntroFootman01Target'
+region_id = 10
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5504.0
+bottom = 2560.0
+right = 5632.0
+top = 2688.0
+region_name = 'IntroFootman02Target'
+region_id = 11
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5952.0
+bottom = 2496.0
+right = 6080.0
+top = 2624.0
+region_name = 'IntroFootman03Target'
+region_id = 12
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 6528.0
+bottom = 2720.0
+right = 6656.0
+top = 2848.0
+region_name = 'IntroFootman04Target'
+region_id = 13
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4800.0
+bottom = 3264.0
+right = 4928.0
+top = 3392.0
+region_name = 'IntroInitialArthas'
+region_id = 0
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 0
+colour_r = 255
+
+[[regions]]
+
+left = 4800.0
+bottom = 3552.0
+right = 4928.0
+top = 3680.0
+region_name = 'IntroInitialMuradin'
+region_id = 1
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 0
+colour_r = 255
+
+[[regions]]
+
+left = 5600.0
+bottom = 3936.0
+right = 5728.0
+top = 4064.0
+region_name = 'IntroMortar01'
+region_id = 17
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5760.0
+bottom = 3936.0
+right = 5888.0
+top = 4064.0
+region_name = 'IntroMortar02'
+region_id = 20
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5632.0
+bottom = 3680.0
+right = 5760.0
+top = 3808.0
+region_name = 'IntroMuradinTarget'
+region_id = 14
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5504.0
+bottom = 3808.0
+right = 5632.0
+top = 3936.0
+region_name = 'IntroRifleman01'
+region_id = 18
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5856.0
+bottom = 3808.0
+right = 5984.0
+top = 3936.0
+region_name = 'IntroRifleman02'
+region_id = 19
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 6816.0
+bottom = 3648.0
+right = 6944.0
+top = 3776.0
+region_name = 'IntroZeppelinTarget'
+region_id = 3
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4928.0
+bottom = 640.0
+right = 5056.0
+top = 768.0
+region_name = 'ExitVictoryMerc03Target'
+region_id = 60
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4832.0
+bottom = 832.0
+right = 4960.0
+top = 960.0
+region_name = 'ExitVictoryMerc02Target'
+region_id = 61
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -4864.0
+bottom = 640.0
+right = -4608.0
+top = 896.0
+region_name = 'VisibilityBoat01'
+region_id = 21
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 255
+colour_r = 0
+
+[[regions]]
+
+left = -3968.0
+bottom = -3968.0
+right = -3712.0
+top = -3712.0
+region_name = 'VisibilityBoat02'
+region_id = 22
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 255
+colour_r = 0
+
+[[regions]]
+
+left = -384.0
+bottom = -768.0
+right = -128.0
+top = -512.0
+region_name = 'VisibilityBoat03'
+region_id = 23
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 255
+colour_r = 0
+
+[[regions]]
+
+left = 1920.0
+bottom = -4864.0
+right = 2176.0
+top = -4608.0
+region_name = 'VisibilityBoat04'
+region_id = 24
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 255
+colour_r = 0
+
+[[regions]]
+
+left = 4608.0
+bottom = -640.0
+right = 4864.0
+top = -384.0
+region_name = 'VisibilityBoat05'
+region_id = 25
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 255
+colour_r = 0
+
+[[regions]]
+
+left = 2528.0
+bottom = 1408.0
+right = 8160.0
+top = 5888.0
+region_name = 'WeatherLightSnow01'
+region_id = 2
+weather_effect_id = 'SNls'
+ambient_sound = ''
+colour_b = 192
+colour_g = 192
+colour_r = 192
+
+[[regions]]
+
+left = 4608.0
+bottom = 2176.0
+right = 7040.0
+top = 2688.0
+region_name = 'WoodRow1'
+region_id = 26
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 128
+colour_g = 0
+colour_r = 0
+
+[[regions]]
+
+left = 4608.0
+bottom = 2048.0
+right = 7168.0
+top = 2176.0
+region_name = 'WoodRow2'
+region_id = 27
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 128
+colour_g = 0
+colour_r = 0
+
+[[regions]]
+
+left = 4608.0
+bottom = 1920.0
+right = 7168.0
+top = 2048.0
+region_name = 'WoodRow3'
+region_id = 28
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 128
+colour_g = 0
+colour_r = 0
+
+[[regions]]
+
+left = 4672.0
+bottom = 1792.0
+right = 7232.0
+top = 1920.0
+region_name = 'WoodRow4'
+region_id = 29
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 128
+colour_g = 0
+colour_r = 0
+
+[[regions]]
+
+left = 4640.0
+bottom = 1664.0
+right = 7200.0
+top = 1792.0
+region_name = 'WoodRow5'
+region_id = 30
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 128
+colour_g = 0
+colour_r = 0
+
+[[regions]]
+
+left = 4512.0
+bottom = 1536.0
+right = 7072.0
+top = 1664.0
+region_name = 'WoodRow6'
+region_id = 31
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 128
+colour_g = 0
+colour_r = 0
+
+[[regions]]
+
+left = 4544.0
+bottom = 1152.0
+right = 7104.0
+top = 1536.0
+region_name = 'WoodRow7'
+region_id = 32
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 128
+colour_g = 0
+colour_r = 0
+
+[[regions]]
+
+left = 5216.0
+bottom = 832.0
+right = 6464.0
+top = 1376.0
+region_name = 'ExitVictoryAllFaceArthas'
+region_id = 58
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 255
+colour_r = 0
+
+[[regions]]
+
+left = 5728.0
+bottom = 480.0
+right = 5856.0
+top = 608.0
+region_name = 'ExitVictoryArthasAddresses'
+region_id = 65
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5728.0
+bottom = 640.0
+right = 5856.0
+top = 768.0
+region_name = 'ExitVictoryArthasToMen'
+region_id = 66
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 128
+
+[[regions]]
+
+left = 4800.0
+bottom = 3168.0
+right = 6816.0
+top = 3872.0
+region_name = 'ExitVictoryToBase'
+region_id = 67
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 128
+
+[[regions]]
+
+left = -1824.0
+bottom = 3840.0
+right = -1408.0
+top = 4288.0
+region_name = 'VoiceOverDamnUther'
+region_id = 76
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -5504.0
+bottom = 960.0
+right = -4096.0
+top = 2144.0
+region_name = 'HintShipsMustBurn'
+region_id = 77
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 96.0
+bottom = 1504.0
+right = 992.0
+top = 2304.0
+region_name = 'HintDrakes'
+region_id = 78
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -1664.0
+bottom = 128.0
+right = -1024.0
+top = 640.0
+region_name = 'HintTrees'
+region_id = 79
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5984.0
+bottom = 2752.0
+right = 6080.0
+top = 2848.0
+region_name = 'IntroCaptainTarget'
+region_id = 81
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4608.0
+bottom = 448.0
+right = 7136.0
+top = 2656.0
+region_name = 'VisibilityWood'
+region_id = 80
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4864.0
+bottom = 4352.0
+right = 4992.0
+top = 4480.0
+region_name = 'AdditionalFarm'
+region_id = 82
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4192.0
+bottom = 3808.0
+right = 4288.0
+top = 3904.0
+region_name = 'IntroFinalArthas'
+region_id = 83
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4320.0
+bottom = 3648.0
+right = 4416.0
+top = 3744.0
+region_name = 'IntroFinalMuradin'
+region_id = 84
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4160.0
+bottom = 4000.0
+right = 4256.0
+top = 4096.0
+region_name = 'IntroFinalMortarA'
+region_id = 85
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4384.0
+bottom = 4000.0
+right = 4480.0
+top = 4096.0
+region_name = 'IntroFinalMortarB'
+region_id = 86
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -5120.0
+bottom = -2496.0
+right = -4928.0
+top = -2304.0
+region_name = 'BlueFire01'
+region_id = 87
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -4544.0
+bottom = -3200.0
+right = -4352.0
+top = -3008.0
+region_name = 'BlueFire02'
+region_id = 88
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -1984.0
+bottom = -992.0
+right = -1536.0
+top = -512.0
+region_name = 'HintMortarTeamTree'
+region_id = 89
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 2912.0
+bottom = 3296.0
+right = 3296.0
+top = 4192.0
+region_name = 'VoiceOverNeedMenTrigger'
+region_id = 68
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 288.0
+bottom = 1952.0
+right = 1024.0
+top = 2656.0
+region_name = 'UnitGroupBlueDragon'
+region_id = 69
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 1376.0
+bottom = 896.0
+right = 2336.0
+top = 1152.0
+region_name = 'TriggerGauntletCinematic'
+region_id = 70
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 1920.0
+bottom = -3840.0
+right = 2048.0
+top = -3712.0
+region_name = 'VisiibilityGauntletEnd'
+region_id = 71
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -6624.0
+bottom = 864.0
+right = -5760.0
+top = 3616.0
+region_name = 'Ocean01'
+region_id = 72
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -6400.0
+bottom = -2144.0
+right = -3776.0
+top = 1184.0
+region_name = 'Ocean02'
+region_id = 73
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -6176.0
+bottom = -3872.0
+right = -4768.0
+top = -1600.0
+region_name = 'Ocean03'
+region_id = 74
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -5408.0
+bottom = -5248.0
+right = -192.0
+top = -2976.0
+region_name = 'Ocean04'
+region_id = 75
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -2112.0
+bottom = -2496.0
+right = -1024.0
+top = -1120.0
+region_name = 'Ocean05'
+region_id = 90
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -1824.0
+bottom = -1120.0
+right = 1280.0
+top = 544.0
+region_name = 'OCean06'
+region_id = 91
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 384.0
+bottom = -4384.0
+right = 1536.0
+top = -1600.0
+region_name = 'OCean07'
+region_id = 92
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 1312.0
+bottom = -7552.0
+right = 4288.0
+top = -3968.0
+region_name = 'OCean08'
+region_id = 93
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 3200.0
+bottom = -7744.0
+right = 6080.0
+top = 1408.0
+region_name = 'OCean09'
+region_id = 94
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128

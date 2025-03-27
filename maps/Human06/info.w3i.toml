@@ -1,0 +1,244 @@
+# Warcraft 3 Map Info File(.w3i)
+# See w3i.py for type definitions
+
+version = "ROC"
+map_revision = 405
+editor_version = 4436
+map_name = 'TRIGSTR_004'
+map_author = 'TRIGSTR_009'
+map_description = 'TRIGSTR_008'
+players_recommended = 'TRIGSTR_007'
+camera_bounds = [-4864.0, -9216.0, 12160.0, 8064.0, -4864.0, 8064.0, 12160.0, -9216.0]
+map_padding_left = 6
+map_padding_right = 13
+map_padding_top = 4
+map_padding_bottom = 17
+map_playable_width = 141
+map_playable_height = 139
+flags = "HIDE_MINIMAP|FIXED_FORCES|CUSTOM_FORCES|CUSTOM_TECH_TREE|CUSTOM_UPGRADES|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS"
+tileset = { type = "bytes", value = "Y" }
+campaign_background = 9
+tft_loading_screen_model_path = ''
+map_loading_screen_text = 'TRIGSTR_013'
+map_loading_screen_title = 'TRIGSTR_010'
+map_loading_screen_subtitle = 'TRIGSTR_011'
+map_loading_screen_number = 0
+tft_prologue_screen_path = ''
+prologue_screen_text = ''
+prologue_screen_title = ''
+prologue_screen_subtitle = ''
+tft_uses_terrain_fog = 0
+tft_fog_start_z = 0.0
+tft_fog_end_z = 0.0
+tft_fog_density = 0.0
+tft_fog_red = 0
+tft_fog_green = 0
+tft_fog_blue = 0
+tft_fog_alpha = 0
+tft_weather = ''
+tft_custom_sound_environment = ''
+tft_custom_light_tileset = { type = "bytes", value = "0" }
+tft_water_tint_red = 0
+tft_water_tint_green = 0
+tft_water_tint_blue = 0
+tft_water_tint_alpha = 0
+random_entities = []
+random_items = []
+
+[[players]]
+
+player_id = 1
+player_type = "Human"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_242'
+start_pos = [11328.0, 5568.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 2
+player_type = "Computer"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_000'
+start_pos = [4224.0, 6848.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 3
+player_type = "Computer"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_240'
+start_pos = [-2176.0, -8064.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 5
+player_type = "Neutral"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_113'
+start_pos = [-3328.0, 576.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 6
+player_type = "Computer"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_241'
+start_pos = [-4224.0, -6592.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 8
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_000'
+start_pos = [8192.0, 4544.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 9
+player_type = "Neutral"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_243'
+start_pos = [10432.0, 7936.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 10
+player_type = "Neutral"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_096'
+start_pos = [2752.0, -832.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 11
+player_type = "Neutral"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_096'
+start_pos = [2816.0, -832.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[forces]]
+
+force_flags = "Allied"
+player_mask_flags = 0xfffff2b3
+name = 'TRIGSTR_242'
+
+[[forces]]
+
+force_flags = "Allied|AlliedVictory|ShareVision"
+player_mask_flags = 0x4c
+name = 'TRIGSTR_240'
+
+[[forces]]
+
+force_flags = "Allied"
+player_mask_flags = 0xd00
+name = 'TRIGSTR_036'
+
+[[forces]]
+
+force_flags = "None"
+player_mask_flags = 0x0
+name = 'TRIGSTR_038'
+
+[[forces]]
+
+force_flags = "None"
+player_mask_flags = 0x0
+name = 'TRIGSTR_039'
+
+[[forces]]
+
+force_flags = "None"
+player_mask_flags = 0x0
+name = 'TRIGSTR_040'
+
+[[upgrades]]
+
+player_flags = 0x4
+upgrade_id = 'Rune'  # Necromancer Adept Training,Necromancer Master Training
+level = 0
+availability = "Researched"
+
+[[upgrades]]
+
+player_flags = 0x4
+upgrade_id = 'Rune'  # Necromancer Adept Training,Necromancer Master Training
+level = 1
+availability = "Researched"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhgb'  # Flying Machine Bombs
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhhb'  # Storm Hammers
+level = 0
+availability = "Unavailable"
+
+[[technologies]]
+
+player_flags = 0x3
+tech_id = 'hgyr'  # Flying Machine
+
+[[technologies]]
+
+player_flags = 0x3
+tech_id = 'hgry'  # Gryphon Rider
+
+[[technologies]]
+
+player_flags = 0x3
+tech_id = 'Hamg'  # Archmage
+
+[[technologies]]
+
+player_flags = 0x3
+tech_id = 'Hmkg'  # Mountain King
+
+[[technologies]]
+
+player_flags = 0x3
+tech_id = 'Hpal'  # Paladin
+
+[[technologies]]
+
+player_flags = 0x3
+tech_id = 'hgra'  # Gryphon Aviary
+
+[[technologies]]
+
+player_flags = 0x2
+tech_id = 'hmtt'  # Siege Engine

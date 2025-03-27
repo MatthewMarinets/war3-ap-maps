@@ -1,0 +1,473 @@
+# Warcraft 3 Map Info File(.w3i)
+# See w3i.py for type definitions
+
+version = "ROC"
+map_revision = 739
+editor_version = 4422
+map_name = 'TRIGSTR_109'
+map_author = 'TRIGSTR_112'
+map_description = 'TRIGSTR_111'
+players_recommended = 'TRIGSTR_110'
+camera_bounds = [-7936.0, -7936.0, 7424.0, 3840.0, -7936.0, 3840.0, 7424.0, -7936.0]
+map_padding_left = 18
+map_padding_right = 14
+map_padding_top = 14
+map_padding_bottom = 18
+map_playable_width = 128
+map_playable_height = 96
+flags = "HIDE_MINIMAP|FIXED_FORCES|CUSTOM_FORCES|CUSTOM_TECH_TREE|CUSTOM_ABILITIES|CUSTOM_UPGRADES|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS|WAVES_ON_SHORES"
+tileset = { type = "bytes", value = "V" }
+campaign_background = 7
+tft_loading_screen_model_path = ''
+map_loading_screen_text = 'TRIGSTR_115'
+map_loading_screen_title = 'TRIGSTR_113'
+map_loading_screen_subtitle = 'TRIGSTR_114'
+map_loading_screen_number = 0
+tft_prologue_screen_path = ''
+prologue_screen_text = ''
+prologue_screen_title = ''
+prologue_screen_subtitle = ''
+tft_uses_terrain_fog = 0
+tft_fog_start_z = 0.0
+tft_fog_end_z = 0.0
+tft_fog_density = 0.0
+tft_fog_red = 0
+tft_fog_green = 0
+tft_fog_blue = 0
+tft_fog_alpha = 0
+tft_weather = ''
+tft_custom_sound_environment = ''
+tft_custom_light_tileset = { type = "bytes", value = "0" }
+tft_water_tint_red = 0
+tft_water_tint_green = 0
+tft_water_tint_blue = 0
+tft_water_tint_alpha = 0
+random_entities = []
+random_items = []
+
+[[players]]
+
+player_id = 0
+player_type = "Neutral"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_012'
+start_pos = [6208.0, 2880.0]
+ally_low_priorities_flags = 0xeeeeeeee
+ally_high_priorities_flags = 0xeeeeeeee
+
+[[players]]
+
+player_id = 1
+player_type = "Human"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_279'
+start_pos = [6080.0, -5376.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 3
+player_type = "Computer"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_280'
+start_pos = [-1024.0, -1152.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x45980000
+
+[[players]]
+
+player_id = 4
+player_type = "Computer"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_125'
+start_pos = [7680.0, 2752.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 5
+player_type = "Computer"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_281'
+start_pos = [7488.0, 2752.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x45980000
+
+[[players]]
+
+player_id = 6
+player_type = "Computer"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_012'
+start_pos = [-5056.0, -6336.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0xc59a0000
+
+[[players]]
+
+player_id = 8
+player_type = "Neutral"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_282'
+start_pos = [5952.0, -5376.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0xc59a0000
+
+[[players]]
+
+player_id = 9
+player_type = "Neutral"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_283'
+start_pos = [6016.0, -5440.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 11
+player_type = "Neutral"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_284'
+start_pos = [-7296.0, -1408.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[forces]]
+
+force_flags = "Allied"
+player_mask_flags = 0xffffff87
+name = 'TRIGSTR_279'
+
+[[forces]]
+
+force_flags = "Allied|ShareVision"
+player_mask_flags = 0x78
+name = 'TRIGSTR_012'
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhme'  # Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhme'  # Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhra'  # Black Gunpowder,Refined Gunpowder,Imbued Gunpowder
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhra'  # Black Gunpowder,Refined Gunpowder,Imbued Gunpowder
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhaa'
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhaa'
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhar'  # Iron Plating,Steel Plating,Mithril Plating
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhar'  # Iron Plating,Steel Plating,Mithril Plating
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhac'  # Improved Masonry,Advanced Masonry,Imbued Masonry
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhac'  # Improved Masonry,Advanced Masonry,Imbued Masonry
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhmi'
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhss'  # Control Magic
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhss'  # Control Magic
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhan'  # Animal War Training
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhst'  # Sorceress Adept Training,Sorceress Master Training
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhla'  # Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhla'  # Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhlh'  # Improved Lumber Harvesting,Advanced Lumber Harvesting
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhse'  # Magic Sentry
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x40
+upgrade_id = 'Rump'
+level = 0
+availability = "Researched"
+
+[[upgrades]]
+
+player_flags = 0x200
+upgrade_id = 'Rhme'  # Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords
+level = 2
+availability = "Researched"
+
+[[upgrades]]
+
+player_flags = 0x200
+upgrade_id = 'Rhme'  # Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords
+level = 0
+availability = "Researched"
+
+[[upgrades]]
+
+player_flags = 0x200
+upgrade_id = 'Rhme'  # Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords
+level = 1
+availability = "Researched"
+
+[[upgrades]]
+
+player_flags = 0x200
+upgrade_id = 'Rhar'  # Iron Plating,Steel Plating,Mithril Plating
+level = 2
+availability = "Researched"
+
+[[upgrades]]
+
+player_flags = 0x200
+upgrade_id = 'Rhar'  # Iron Plating,Steel Plating,Mithril Plating
+level = 0
+availability = "Researched"
+
+[[upgrades]]
+
+player_flags = 0x200
+upgrade_id = 'Rhar'  # Iron Plating,Steel Plating,Mithril Plating
+level = 1
+availability = "Researched"
+
+[[upgrades]]
+
+player_flags = 0x200
+upgrade_id = 'Rhpt'  # Priest Adept Training,Priest Master Training
+level = 1
+availability = "Researched"
+
+[[upgrades]]
+
+player_flags = 0x200
+upgrade_id = 'Rhpt'  # Priest Adept Training,Priest Master Training
+level = 0
+availability = "Researched"
+
+[[upgrades]]
+
+player_flags = 0x200
+upgrade_id = 'Rhst'  # Sorceress Adept Training,Sorceress Master Training
+level = 1
+availability = "Researched"
+
+[[upgrades]]
+
+player_flags = 0x200
+upgrade_id = 'Rhst'  # Sorceress Adept Training,Sorceress Master Training
+level = 0
+availability = "Researched"
+
+[[upgrades]]
+
+player_flags = 0x200
+upgrade_id = 'Rhan'  # Animal War Training
+level = 0
+availability = "Researched"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhpt'  # Priest Adept Training,Priest Master Training
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x2
+upgrade_id = 'Rhgb'  # Flying Machine Bombs
+level = 0
+availability = "Unavailable"
+
+[[technologies]]
+
+player_flags = 0x2
+tech_id = 'Atdp'  # Drop Pilot
+
+[[technologies]]
+
+player_flags = 0x2
+tech_id = 'Atlp'  # Load Pilot
+
+[[technologies]]
+
+player_flags = 0x2
+tech_id = 'Stpr'
+
+[[technologies]]
+
+player_flags = 0x2
+tech_id = 'Stpm'
+
+[[technologies]]
+
+player_flags = 0x2
+tech_id = 'hkni'  # Knight
+
+[[technologies]]
+
+player_flags = 0x2
+tech_id = 'hgyr'  # Flying Machine
+
+[[technologies]]
+
+player_flags = 0x2
+tech_id = 'hgry'  # Gryphon Rider
+
+[[technologies]]
+
+player_flags = 0x2
+tech_id = 'Hamg'  # Archmage
+
+[[technologies]]
+
+player_flags = 0x2
+tech_id = 'Hmkg'  # Mountain King
+
+[[technologies]]
+
+player_flags = 0x2
+tech_id = 'Hpal'  # Paladin
+
+[[technologies]]
+
+player_flags = 0x2
+tech_id = 'hcas'  # Castle
+
+[[technologies]]
+
+player_flags = 0x2
+tech_id = 'hgra'  # Gryphon Aviary
+
+[[technologies]]
+
+player_flags = 0x2
+tech_id = 'hmtt'  # Siege Engine
+
+[[technologies]]
+
+player_flags = 0x68
+tech_id = 'Udea'  # Death Knight
+
+[[technologies]]
+
+player_flags = 0x68
+tech_id = 'Ulic'  # Lich
+
+[[technologies]]
+
+player_flags = 0x68
+tech_id = 'Udre'  # Dreadlord
+
+[[technologies]]
+
+player_flags = 0x2
+tech_id = 'hstt'

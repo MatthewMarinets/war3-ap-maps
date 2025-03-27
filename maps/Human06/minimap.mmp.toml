@@ -1,0 +1,134 @@
+# Warcraft 3 Minimap Info File (.mmp)
+# See mmp.py for type definitions
+
+file_format_version = 0
+
+[[icons]]
+
+icon_type = "GoldMine"
+x = 247
+y = 34
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "GoldMine"
+x = 34
+y = 237
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "House"
+x = 236
+y = 141
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "House"
+x = 46
+y = 106
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "PlayerStart"
+x = 16
+y = 215
+colour_blue = 0
+colour_green = 192
+colour_red = 32
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "PlayerStart"
+x = 45
+y = 236
+colour_blue = 129
+colour_green = 0
+colour_red = 84
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "PlayerStart"
+x = 116
+y = 132
+colour_blue = 4
+colour_green = 42
+colour_red = 78
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "PlayerStart"
+x = 192
+y = 55
+colour_blue = 151
+colour_green = 150
+colour_red = 149
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "PlayerStart"
+x = 29
+y = 112
+colour_blue = 14
+colour_green = 138
+colour_red = 254
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "PlayerStart"
+x = 136
+y = 22
+colour_blue = 185
+colour_green = 230
+colour_red = 28
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "PlayerStart"
+x = 236
+y = 40
+colour_blue = 255
+colour_green = 66
+colour_red = 0
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "PlayerStart"
+x = 115
+y = 132
+colour_blue = 70
+colour_green = 98
+colour_red = 16
+colour_alpha = 255
+
+[[icons]]
+
+icon_type = "PlayerStart"
+x = 224
+y = 6
+colour_blue = 241
+colour_green = 191
+colour_red = 126
+colour_alpha = 255

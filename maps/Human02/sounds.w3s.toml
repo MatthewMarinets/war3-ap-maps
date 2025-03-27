@@ -1,0 +1,694 @@
+# Warcraft 3 Sound file (.w3s)
+# See w3s.py for type definitions
+
+version = 1
+
+[[sounds]]
+
+name = 'gg_snd_BlacksmithWhat1'
+file = 'Buildings\Human\Blacksmith\BlacksmithWhat1.wav'
+effects = 'DefaultEAXON'
+flags = "Three_D|Stop_Outside_Range"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_GraveYardWhat1'
+file = 'Buildings\Undead\Graveyard\GraveYardWhat1.wav'
+effects = 'DefaultEAXON'
+flags = "Three_D|Stop_Outside_Range"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Arthas03'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Arthas03.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Arthas05'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Arthas05.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Arthas07'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Arthas07.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Arthas09'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Arthas09.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Arthas15'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Arthas15.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Arthas18'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Arthas18.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Arthas20'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Arthas20.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 10
+fade_out = 10
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Arthas24'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Arthas24.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Arthas26'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Arthas26.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Blademaster11'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Blademaster11.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Dwarf21'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Dwarf21.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02DwarfHunter17'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02DwarfHunter17.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02DwarfHunter18A'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02DwarfHunter18A.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 10
+fade_out = 10
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02DwarfScout16'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02DwarfScout16.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Footman23'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Footman23.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Searinox19'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Searinox19.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 10
+fade_out = 10
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Uther01'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Uther01.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Uther02'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Uther02.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Uther04'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Uther04.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Uther06'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Uther06.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Uther08'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Uther08.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Uther10'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Uther10.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Uther12'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Uther12.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Uther13'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Uther13.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Uther25'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Uther25.mp3'
+effects = 'DefaultEAXON'
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Uther27'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Uther27.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02VillagerM39'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02VillagerM39.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Warlock22'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Warlock22.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 10
+fade_out = 10
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_HeroBladeMasterDeath'
+file = 'Units\Orc\HeroBladeMaster\HeroBladeMasterDeath.wav'
+effects = 'HeroAcksEAX'
+flags = "Three_D|Stop_Outside_Range"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_HeroDropItem1'
+file = 'Sound\Interface\HeroDropItem1.wav'
+effects = ''
+flags = "NONE"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_HorseLoop1'
+file = 'Units\Human\Knight\HorseLoop1.wav'
+effects = 'DefaultEAXON'
+flags = "Three_D|Stop_Outside_Range"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_HorseLoop3'
+file = 'Units\Human\Knight\HorseLoop3.wav'
+effects = 'DefaultEAXON'
+flags = "Three_D|Stop_Outside_Range"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_KnightNoRiderWarcry1'
+file = 'Units\Human\KnightNoRider\KnightNoRiderWarcry1.wav'
+effects = 'DefaultEAXON'
+flags = "Three_D|Stop_Outside_Range"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_KnightNoRiderWhat2'
+file = 'Units\Human\KnightNoRider\KnightNoRiderWhat2.wav'
+effects = 'DefaultEAXON'
+flags = "Three_D|Stop_Outside_Range"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_KnightNoRiderWhat3'
+file = 'Units\Human\KnightNoRider\KnightNoRiderWhat3.wav'
+effects = 'DefaultEAXON'
+flags = "Three_D|Stop_Outside_Range"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_SkeletonYesAttack1'
+file = 'Units\Undead\Skeleton\SkeletonYesAttack1.wav'
+effects = 'DefaultEAXON'
+flags = "Three_D|Stop_Outside_Range"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_SkeletonYesAttack2'
+file = 'Units\Undead\Skeleton\SkeletonYesAttack2.wav'
+effects = 'DefaultEAXON'
+flags = "Three_D|Stop_Outside_Range"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_SkeletonYesAttack3'
+file = 'Units\Undead\Skeleton\SkeletonYesAttack3.wav'
+effects = 'DefaultEAXON'
+flags = "Three_D|Stop_Outside_Range"
+fade_in = 12700
+fade_out = 12700
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_H02Footman38'
+file = 'Sound\Dialogue\HumanCampaign\Human02\H02Footman38.mp3'
+effects = ''
+flags = "NONE"
+fade_in = 10
+fade_out = 10
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_FootmanDeath'
+file = 'Units\Human\Footman\FootmanDeath.wav'
+effects = 'DefaultEAXON'
+flags = "Three_D|Stop_Outside_Range"
+fade_in = 10
+fade_out = 10
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_SorceressDeath'
+file = 'Units\Human\Sorceress\SorceressDeath.wav'
+effects = 'DefaultEAXON'
+flags = "Three_D|Stop_Outside_Range"
+fade_in = 10
+fade_out = 10
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_VillagerMaleDeath1'
+file = 'Units\Critters\VillagerMan\VillagerMaleDeath1.wav'
+effects = 'DefaultEAXON'
+flags = "Three_D|Stop_Outside_Range"
+fade_in = 10
+fade_out = 10
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_RaiseSkeleton'
+file = 'Abilities\Spells\Undead\RaiseSkeletonWarrior\RaiseSkeleton.wav'
+effects = 'SpellsEAX'
+flags = "Three_D|Stop_Outside_Range"
+fade_in = 10
+fade_out = 10
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0
+
+[[sounds]]
+
+name = 'gg_snd_WaterLakeLoop1'
+file = 'Sound\Ambient\DoodadEffects\WaterLakeLoop1.wav'
+effects = 'DoodadsEAX'
+flags = "Looping|Three_D|Stop_Outside_Range"
+fade_in = 10
+fade_out = 10
+volume = -1
+pitch = 4294967296.0
+channel = "Default"
+min_distance = 4294967296.0
+max_distance = 4294967296.0
+distance_cutoff = 4294967296.0

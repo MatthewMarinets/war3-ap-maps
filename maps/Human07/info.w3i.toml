@@ -1,0 +1,214 @@
+# Warcraft 3 Map Info File(.w3i)
+# See w3i.py for type definitions
+
+version = "ROC"
+map_revision = 279
+editor_version = 4414
+map_name = 'TRIGSTR_011'
+map_author = 'TRIGSTR_015'
+map_description = 'TRIGSTR_014'
+players_recommended = 'TRIGSTR_013'
+camera_bounds = [-4608.0, -7680.0, 5120.0, 6656.0, -4608.0, 6656.0, 5120.0, -7680.0]
+map_padding_left = 6
+map_padding_right = 6
+map_padding_top = 4
+map_padding_bottom = 8
+map_playable_width = 84
+map_playable_height = 116
+flags = "HIDE_MINIMAP|FIXED_FORCES|CUSTOM_FORCES|CUSTOM_TECH_TREE|CUSTOM_UPGRADES|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS|WAVES_ON_SHORES"
+tileset = { type = "bytes", value = "N" }
+campaign_background = 11
+tft_loading_screen_model_path = ''
+map_loading_screen_text = 'TRIGSTR_018'
+map_loading_screen_title = 'TRIGSTR_016'
+map_loading_screen_subtitle = 'TRIGSTR_017'
+map_loading_screen_number = -1
+tft_prologue_screen_path = ''
+prologue_screen_text = ''
+prologue_screen_title = ''
+prologue_screen_subtitle = ''
+tft_uses_terrain_fog = 0
+tft_fog_start_z = 0.0
+tft_fog_end_z = 0.0
+tft_fog_density = 0.0
+tft_fog_red = 0
+tft_fog_green = 0
+tft_fog_blue = 0
+tft_fog_alpha = 0
+tft_weather = ''
+tft_custom_sound_environment = ''
+tft_custom_light_tileset = { type = "bytes", value = "0" }
+tft_water_tint_red = 0
+tft_water_tint_green = 0
+tft_water_tint_blue = 0
+tft_water_tint_alpha = 0
+random_entities = []
+random_items = []
+
+[[players]]
+
+player_id = 1
+player_type = "Human"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_167'
+start_pos = [-3776.0, -5504.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 3
+player_type = "Computer"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_168'
+start_pos = [2432.0, 4672.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 6
+player_type = "Computer"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_169'
+start_pos = [-3712.0, 4352.0]
+ally_low_priorities_flags = 0x7341
+ally_high_priorities_flags = 0x0
+
+[[players]]
+
+player_id = 7
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_170'
+start_pos = [1536.0, -2112.0]
+ally_low_priorities_flags = 0x6e656946
+ally_high_priorities_flags = 0x44
+
+[[players]]
+
+player_id = 8
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_171'
+start_pos = [4992.0, 5504.0]
+ally_low_priorities_flags = 0x6e656946
+ally_high_priorities_flags = 0x44
+
+[[players]]
+
+player_id = 9
+player_type = "Neutral"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_000'
+start_pos = [-3072.0, -4992.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[forces]]
+
+force_flags = "None"
+player_mask_flags = 0xfffffe37
+name = 'TRIGSTR_167'
+
+[[forces]]
+
+force_flags = "None"
+player_mask_flags = 0x180
+name = 'TRIGSTR_172'
+
+[[forces]]
+
+force_flags = "Allied|ShareVision"
+player_mask_flags = 0x48
+name = 'TRIGSTR_169'
+
+[[upgrades]]
+
+player_flags = 0x180
+upgrade_id = 'Rhgb'  # Flying Machine Bombs
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+
+player_flags = 0x182
+upgrade_id = 'Rhhb'  # Storm Hammers
+level = 0
+availability = "Unavailable"
+
+[[technologies]]
+
+player_flags = 0x182
+tech_id = 'Hpal'  # Paladin
+
+[[technologies]]
+
+player_flags = 0x182
+tech_id = 'Hamg'  # Archmage
+
+[[technologies]]
+
+player_flags = 0x182
+tech_id = 'Hmkg'  # Mountain King
+
+[[technologies]]
+
+player_flags = 0x102
+tech_id = 'hgry'  # Gryphon Rider
+
+[[technologies]]
+
+player_flags = 0x102
+tech_id = 'hgra'  # Gryphon Aviary
+
+[[technologies]]
+
+player_flags = 0x48
+tech_id = 'ufro'  # Frost Wyrm
+
+[[technologies]]
+
+player_flags = 0x48
+tech_id = 'uban'  # Banshee
+
+[[technologies]]
+
+player_flags = 0x8
+tech_id = 'ugar'  # Gargoyle
+
+[[technologies]]
+
+player_flags = 0x8
+tech_id = 'umtw'  # Meat Wagon
+
+[[technologies]]
+
+player_flags = 0x8
+tech_id = 'unec'  # Necromancer
+
+[[technologies]]
+
+player_flags = 0x40
+tech_id = 'Udea'  # Death Knight
+
+[[technologies]]
+
+player_flags = 0x40
+tech_id = 'Ulic'  # Lich
+
+[[technologies]]
+
+player_flags = 0x40
+tech_id = 'Udre'  # Dreadlord
+
+[[technologies]]
+
+player_flags = 0x2
+tech_id = 'hmtt'  # Siege Engine

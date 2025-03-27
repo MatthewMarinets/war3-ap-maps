@@ -1,0 +1,970 @@
+# Warcraft 3 Region file (.w3r)
+# See w3r.py for type definitions
+
+version = 5
+
+[[regions]]
+
+left = -4608.0
+bottom = -7744.0
+right = -3712.0
+top = -6688.0
+region_name = 'MalganisSpawnDS'
+region_id = 1
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 9632.0
+bottom = 4768.0
+right = 12992.0
+top = 7872.0
+region_name = 'Arthas Town'
+region_id = 2
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 3264.0
+bottom = -7776.0
+right = 3872.0
+top = -7200.0
+region_name = 'Malganis Sneak5'
+region_id = 6
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -3712.0
+bottom = 5696.0
+right = -3264.0
+top = 6144.0
+region_name = 'Malganis Sneak4'
+region_id = 7
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -1120.0
+bottom = -4576.0
+right = -576.0
+top = -4032.0
+region_name = 'Malganis Sneak3'
+region_id = 8
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 9632.0
+bottom = -8000.0
+right = 10208.0
+top = -7424.0
+region_name = 'Malganis Sneak2'
+region_id = 9
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 2784.0
+bottom = -288.0
+right = 3296.0
+top = 320.0
+region_name = 'Malganis Sneak1'
+region_id = 10
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -5536.0
+bottom = 4160.0
+right = -736.0
+top = 6880.0
+region_name = 'Malganis Sneak4 Buildings'
+region_id = 11
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 896.0
+bottom = -2048.0
+right = 7072.0
+top = 768.0
+region_name = 'Malganis Sneak1 Buildings'
+region_id = 12
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5696.0
+bottom = -8640.0
+right = 12320.0
+top = -3808.0
+region_name = 'Malganis Sneak2 Buildings'
+region_id = 13
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -3168.0
+bottom = -6560.0
+right = 896.0
+top = -1856.0
+region_name = 'Malganis Sneak3 Buildings'
+region_id = 14
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 2176.0
+bottom = -8448.0
+right = 4800.0
+top = -3712.0
+region_name = 'Malganis Sneak5 Buildings'
+region_id = 15
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 10752.0
+bottom = 5504.0
+right = 10880.0
+top = 5664.0
+region_name = 'Cin1ArthasStop1'
+region_id = 17
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 10560.0
+bottom = 6112.0
+right = 10720.0
+top = 6272.0
+region_name = 'Cin1JainaStop1'
+region_id = 20
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 9664.0
+bottom = 8288.0
+right = 9888.0
+top = 8640.0
+region_name = 'Cin1KnightsBLeave'
+region_id = 24
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 10144.0
+bottom = 8288.0
+right = 10368.0
+top = 8640.0
+region_name = 'Cin1KnightsALeave'
+region_id = 25
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 9760.0
+bottom = 8288.0
+right = 9888.0
+top = 8416.0
+region_name = 'Cin1UtherLeave'
+region_id = 26
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 10144.0
+bottom = 8288.0
+right = 10272.0
+top = 8416.0
+region_name = 'Cin1JainaLeave'
+region_id = 27
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 9792.0
+bottom = 6080.0
+right = 9920.0
+top = 6208.0
+region_name = 'Cin1ArthasStop2'
+region_id = 28
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -4384.0
+bottom = -7296.0
+right = -4000.0
+top = -7008.0
+region_name = 'NULL'
+region_id = 29
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -4352.0
+bottom = -6944.0
+right = -4128.0
+top = -6752.0
+region_name = 'Malganis Revive'
+region_id = 18
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5472.0
+bottom = -608.0
+right = 5664.0
+top = -448.0
+region_name = 'Villagers Go Here'
+region_id = 19
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 8160.0
+bottom = -576.0
+right = 9792.0
+top = 640.0
+region_name = 'The Waygate'
+region_id = 4
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -1472.0
+bottom = 1536.0
+right = 960.0
+top = 3360.0
+region_name = 'Waterfall Reveal'
+region_id = 5
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 0
+colour_r = 0
+
+[[regions]]
+
+left = 8768.0
+bottom = -320.0
+right = 9280.0
+top = 320.0
+region_name = 'The Waygate Revealed'
+region_id = 16
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 1536.0
+bottom = 1312.0
+right = 2272.0
+top = 2464.0
+region_name = 'The Waygate Central1'
+region_id = 21
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -2560.0
+bottom = 1248.0
+right = -1856.0
+top = 2208.0
+region_name = 'The Waygate Central2'
+region_id = 22
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 9664.0
+bottom = 7360.0
+right = 10720.0
+top = 7936.0
+region_name = 'Ending Waves'
+region_id = 0
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 11968.0
+bottom = 352.0
+right = 12576.0
+top = 1184.0
+region_name = 'Ending Waves2'
+region_id = 3
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5056.0
+bottom = 7424.0
+right = 5728.0
+top = 8192.0
+region_name = 'Ending Waves3'
+region_id = 32
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -1888.0
+bottom = -2560.0
+right = -1760.0
+top = -2464.0
+region_name = 'End Victory Malganis'
+region_id = 33
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -2112.0
+bottom = -3264.0
+right = -1952.0
+top = -3136.0
+region_name = 'End Victory Arthas'
+region_id = 34
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -1984.0
+bottom = -1568.0
+right = -1728.0
+top = -1376.0
+region_name = 'End Victory Malganis2'
+region_id = 36
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 10272.0
+bottom = 6240.0
+right = 10560.0
+top = 6432.0
+region_name = 'Cin1KnightsAGoHere1'
+region_id = 35
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 10720.0
+bottom = 6240.0
+right = 11008.0
+top = 6432.0
+region_name = 'Cin1KnightsBGoHere1'
+region_id = 37
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 10560.0
+bottom = 5888.0
+right = 10688.0
+top = 6016.0
+region_name = 'Cin1UtherGoHere1'
+region_id = 38
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 8288.0
+bottom = 6208.0
+right = 8480.0
+top = 6496.0
+region_name = 'Lightning'
+region_id = 39
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 8288.0
+bottom = 4416.0
+right = 8640.0
+top = 5024.0
+region_name = 'VillagersESCmove'
+region_id = 40
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 10912.0
+bottom = 3488.0
+right = 11040.0
+top = 3648.0
+region_name = 'Arthas Starts Here'
+region_id = 41
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -6144.0
+bottom = -5856.0
+right = 14304.0
+top = 10464.0
+region_name = 'Reveal1'
+region_id = 23
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 255
+colour_r = 255
+
+[[regions]]
+
+left = -3232.0
+bottom = -6656.0
+right = 1184.0
+top = -5824.0
+region_name = 'Reveal2'
+region_id = 30
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 255
+colour_r = 255
+
+[[regions]]
+
+left = 704.0
+bottom = -9888.0
+right = 14304.0
+top = -5856.0
+region_name = 'Reveal3'
+region_id = 31
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 255
+colour_r = 255
+
+[[regions]]
+
+left = 9376.0
+bottom = 7584.0
+right = 9792.0
+top = 7776.0
+region_name = 'Cin1KnightsAStart'
+region_id = 43
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 9824.0
+bottom = 7648.0
+right = 10272.0
+top = 8096.0
+region_name = 'Cin1KnightsBStart'
+region_id = 44
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -6080.0
+bottom = -9920.0
+right = 768.0
+top = 10400.0
+region_name = 'DasBoot1'
+region_id = 47
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 736.0
+bottom = -9952.0
+right = 7808.0
+top = 4320.0
+region_name = 'DasBoot2'
+region_id = 48
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 7744.0
+bottom = -9920.0
+right = 14304.0
+top = 1184.0
+region_name = 'DasBoot3'
+region_id = 49
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 8064.0
+bottom = 1184.0
+right = 14304.0
+top = 1824.0
+region_name = 'DasMalganisSTOP'
+region_id = 50
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 255
+
+[[regions]]
+
+left = 10976.0
+bottom = 5856.0
+right = 11136.0
+top = 6016.0
+region_name = 'Arthas Cin Skip Move'
+region_id = 51
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -4256.0
+bottom = -7520.0
+right = -4160.0
+top = -7392.0
+region_name = 'HardGhoul1'
+region_id = 52
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -4416.0
+bottom = -7520.0
+right = -4320.0
+top = -7392.0
+region_name = 'HardGhoul2'
+region_id = 53
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 3744.0
+bottom = -4544.0
+right = 4320.0
+top = -3904.0
+region_name = 'Way Gate Hint 1'
+region_id = 54
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -2720.0
+bottom = -5696.0
+right = -2144.0
+top = -5056.0
+region_name = 'Way Gate Hint 2'
+region_id = 55
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 8192.0
+bottom = -6720.0
+right = 8768.0
+top = -6080.0
+region_name = 'Way Gate Hint 3'
+region_id = 56
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -4448.0
+bottom = 3744.0
+right = -3872.0
+top = 4384.0
+region_name = 'Way Gate Hint 4'
+region_id = 57
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5952.0
+bottom = -192.0
+right = 6144.0
+top = -32.0
+region_name = 'Villagers Go Here 2'
+region_id = 58
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 2432.0
+bottom = 224.0
+right = 2848.0
+top = 704.0
+region_name = 'Forgive Me'
+region_id = 59
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -512.0
+bottom = 2432.0
+right = 704.0
+top = 3552.0
+region_name = 'WaterfallSight'
+region_id = 60
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 11264.0
+bottom = 5760.0
+right = 11648.0
+top = 6336.0
+region_name = 'Harvest Gold'
+region_id = 61
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 11488.0
+bottom = 4992.0
+right = 11872.0
+top = 5280.0
+region_name = 'Harvest Lumber'
+region_id = 62
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 3392.0
+bottom = -736.0
+right = 3520.0
+top = -608.0
+region_name = 'MalganicFirstTPSkip Move'
+region_id = 42
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -2464.0
+bottom = -1856.0
+right = -1216.0
+top = -512.0
+region_name = 'StreamLoop01'
+region_id = 45
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 255
+
+[[regions]]
+
+left = -1472.0
+bottom = -160.0
+right = -256.0
+top = 864.0
+region_name = 'StreamLoop02'
+region_id = 46
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 255
+
+[[regions]]
+
+left = -1952.0
+bottom = 1344.0
+right = -768.0
+top = 2272.0
+region_name = 'StreamLoop03'
+region_id = 63
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 255
+
+[[regions]]
+
+left = -1696.0
+bottom = 2528.0
+right = -736.0
+top = 3456.0
+region_name = 'StreamLoop04'
+region_id = 64
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 255
+
+[[regions]]
+
+left = 736.0
+bottom = -5184.0
+right = 2144.0
+top = -3968.0
+region_name = 'StreamLoop05'
+region_id = 65
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 255
+
+[[regions]]
+
+left = 992.0
+bottom = -8000.0
+right = 2048.0
+top = -7136.0
+region_name = 'StreamLoop06'
+region_id = 66
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 255
+
+[[regions]]
+
+left = 768.0
+bottom = 1472.0
+right = 1824.0
+top = 2304.0
+region_name = 'StreamLoop07'
+region_id = 67
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 255
+
+[[regions]]
+
+left = 64.0
+bottom = -128.0
+right = 1248.0
+top = 832.0
+region_name = 'StreamLoop08'
+region_id = 68
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 0
+colour_r = 255

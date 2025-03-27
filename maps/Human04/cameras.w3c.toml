@@ -1,0 +1,173 @@
+# Warcraft 3 Camera file (.w3c)
+# See w3c.py for type definitions
+
+version = 0
+
+[[cameras]]
+
+target_x = -2163.830078125
+target_y = -5114.39990234375
+z_offset = 200.0
+rotation = 49.459999084472656
+angle_of_attack = 330.7900085449219
+distance = 1368.97998046875
+roll = 0.0
+fov = 50.0
+far_z = 5000.0
+name = 'Opening02'
+
+[[cameras]]
+
+target_x = -1906.199951171875
+target_y = -4304.66015625
+z_offset = 0.0
+rotation = 114.69999694824219
+angle_of_attack = 318.2699890136719
+distance = 1679.6400146484375
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Opening04'
+
+[[cameras]]
+
+target_x = -2830.85009765625
+target_y = -5477.77978515625
+z_offset = 140.0
+rotation = 13.239998817443848
+angle_of_attack = 330.1099853515625
+distance = 1075.18994140625
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Opening01'
+
+[[cameras]]
+
+target_x = -2357.570068359375
+target_y = -4861.39013671875
+z_offset = 0.0
+rotation = 38.43000030517578
+angle_of_attack = 327.05999755859375
+distance = 1505.8800048828125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Opening03'
+
+[[cameras]]
+
+target_x = -1851.669921875
+target_y = -4100.78125
+z_offset = 0.0
+rotation = 112.50273132324219
+angle_of_attack = 316.94061279296875
+distance = 1566.0589599609375
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Opening05'
+
+[[cameras]]
+
+target_x = -2191.739990234375
+target_y = -4058.550048828125
+z_offset = 0.0
+rotation = 116.7199935913086
+angle_of_attack = 318.2699890136719
+distance = 1070.77001953125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'OpeningTownHallShot'
+
+[[cameras]]
+
+target_x = -1369.77001953125
+target_y = -4516.75
+z_offset = 0.0
+rotation = 87.7699966430664
+angle_of_attack = 320.3999938964844
+distance = 971.3800048828125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'OpeningFarmShot'
+
+[[cameras]]
+
+target_x = -1779.530029296875
+target_y = -3497.030029296875
+z_offset = 0.0
+rotation = 103.97000122070312
+angle_of_attack = 313.6199951171875
+distance = 1032.3900146484375
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'OpeningBarracksShot'
+
+[[cameras]]
+
+target_x = 4811.69189453125
+target_y = 4865.0966796875
+z_offset = 0.0
+rotation = 90.52734375
+angle_of_attack = 318.7562255859375
+distance = 1084.1458740234375
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'FinalEnding'
+
+[[cameras]]
+
+target_x = -2446.8837890625
+target_y = 2864.8056640625
+z_offset = 0.0
+rotation = 110.24563598632812
+angle_of_attack = 345.6673278808594
+distance = 912.8786010742188
+roll = 0.0
+fov = 80.0
+far_z = 4000.0
+name = 'Granary02'
+
+[[cameras]]
+
+target_x = -1374.0999755859375
+target_y = 2864.929931640625
+z_offset = 0.0
+rotation = 18.170001983642578
+angle_of_attack = 354.8500061035156
+distance = 1489.739990234375
+roll = 0.0
+fov = 70.0
+far_z = 4000.0
+name = 'Granery01Close'
+
+[[cameras]]
+
+target_x = -1964.0999755859375
+target_y = 2663.9599609375
+z_offset = 0.0
+rotation = 25.549999237060547
+angle_of_attack = 339.8500061035156
+distance = 1160.72998046875
+roll = 0.0
+fov = 70.0
+far_z = 4000.0
+name = 'Granery01d'
+
+[[cameras]]
+
+target_x = 2514.0400390625
+target_y = 3601.820068359375
+z_offset = 0.0
+rotation = 52.029998779296875
+angle_of_attack = 330.1700134277344
+distance = 865.47998046875
+roll = 0.0
+fov = 70.0
+far_z = 4000.0
+name = 'End'

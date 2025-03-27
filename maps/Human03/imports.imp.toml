@@ -1,0 +1,6 @@
+# Warcraft 3 imports file
+version = 0
+
+[[imports]]
+path_type = 0
+path = 'LargeCityGateOpen1.wav'

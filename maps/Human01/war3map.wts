@@ -1,0 +1,761 @@
+﻿STRING 3
+{
+Amy Diane
+}
+
+STRING 4
+{
+Alicia
+}
+
+STRING 7
+{
+Gerard
+}
+
+STRING 8
+{
+Farmer Jerrett
+}
+
+STRING 9
+{
+Arthas must survive
+}
+
+STRING 10
+{
+Joe
+}
+
+STRING 11
+{
+Scott
+}
+
+STRING 12
+{
+Mike
+}
+
+STRING 14
+{
+Farmer Ted
+}
+
+STRING 16
+{
+Maria
+}
+
+STRING 18
+{
+Stephanie
+}
+
+STRING 19
+{
+Those bandits stole my ledger. Without it, I will lose my entire farm! Please, retrieve it from their camp! It would mean so much to us.
+}
+
+STRING 20
+{
+Uther the Lightbringer
+}
+
+STRING 21
+{
+Welcome, Prince Arthas. The men and I are honored by your presence.
+}
+
+STRING 22
+{
+Arthas
+}
+
+STRING 23
+{
+Can the formalities, Uther. I'm not king yet. It's good to see you.
+}
+
+STRING 24
+{
+Uther the Lightbringer
+}
+
+STRING 25
+{
+You too, lad. I'm pleased that King Terenas sent you to help me.
+}
+
+STRING 26
+{
+Arthas
+}
+
+STRING 27
+{
+Father still hopes your patience and experience might rub off on me.
+}
+
+STRING 28
+{
+Uther the Lightbringer
+}
+
+STRING 29
+{
+It is a father's right to dream, isn't it?
+}
+
+STRING 30
+{
+Arthas
+}
+
+STRING 31
+{
+|cffffcc00OPTIONAL QUEST|r
+Bandit Lord
+  - Slay Menag, the Bandit Lord
+  - Return Ledger to Gerard
+}
+
+STRING 32
+{
+Blackrock Clan
+}
+
+STRING 34
+{
+Bandit Lord
+}
+
+STRING 35
+{
+Alicia
+}
+
+STRING 36
+{
+The cunning Bandit Lord, Menag, has been terrorizing the lands around Strahnbrad for months. He and his lackeys just made off with a ledger full of vital information regarding the estate of the local farmer, Gerard.
+}
+
+STRING 37
+{
+Slay Menag, the Bandit Lord
+}
+
+STRING 38
+{
+Return Ledger to Gerard
+}
+
+STRING 39
+{
+Alliance of Lordaeron
+}
+
+STRING 40
+{
+Save Timmy
+}
+
+STRING 41
+{
+Please, you're my only hope! A group of gnolls kidnapped my little Timmy and took him to their hideout in the forest. Could you find him and bring him home?
+}
+
+STRING 42
+{
+|cffffcc00OPTIONAL QUEST|r
+Save Timmy
+  - Slay the Gnoll kidnappers
+}
+
+STRING 43
+{
+Human01
+}
+
+STRING 44
+{
+1
+}
+
+STRING 45
+{
+Something has been agitating the local beasts lately. Just yesterday, a half-starved pack of Gnolls pillaged a local farmhouse, stealing livestock and kidnapping a young boy named Timmy. Hopefully, the cretins haven't eaten him yet.
+}
+
+STRING 46
+{
+Blizzard Entertainment
+}
+
+STRING 47
+{
+Recent orc uprisings in southern Lordaeron have forced the Alliance to take decisive measures. To contain the orcish threat, King Terenas has sent two of the realm's greatest paladins - his son, Prince Arthas, and the legendary Uther the Lightbringer - to deal with the orcs once and for all.
+}
+
+STRING 49
+{
+Villagers
+}
+
+STRING 51
+{
+Bloodhill Bandits
+}
+
+STRING 57
+{
+Thornby
+}
+
+STRING 60
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Save Timmy
+}
+
+STRING 64
+{
+Defend Strahnbrad
+}
+
+STRING 65
+{
+Strahnbrad may already be under attack by Orcish forces! Immediate action must be taken! Make your way to the village and slay any marauding Orcs you encounter.
+}
+
+STRING 66
+{
+Look, here's where we stand. Our scouts have confirmed that there is an orc encampment hidden somewhere over the next ridge.
+}
+
+STRING 68
+{
+Travel to Strahnbrad
+}
+
+STRING 69
+{
+Slay the Gnoll kidnappers
+}
+
+STRING 70
+{
+Menag
+}
+
+STRING 71
+{
+Say your prayers!
+}
+
+STRING 72
+{
+|cffffcc00MAIN QUEST FAILED|r
+Arthas has been slain
+}
+
+STRING 73
+{
+Chapter One: The Defense of Strahnbrad
+}
+
+STRING 74
+{
+Chapter One
+}
+
+STRING 75
+{
+The Defense of Strahnbrad
+}
+
+STRING 77
+{
+Uther the Lightbringer
+}
+
+STRING 79
+{
+As I suspected...
+}
+
+STRING 80
+{
+Arthas
+}
+
+STRING 81
+{
+It gets worse. They're preparing to attack the nearby village of Strahnbrad. As far as we know, the village is completely defenseless.
+}
+
+STRING 82
+{
+Uther the Lightbringer
+}
+
+STRING 83
+{
+I need to move against the orcs' base immediately. Can you handle Strahnbrad's defense on your own?
+}
+
+STRING 84
+{
+Arthas
+}
+
+STRING 85
+{
+Of course, Uther. Don't worry about me.
+}
+
+STRING 86
+{
+Uther the Lightbringer
+}
+
+STRING 87
+{
+Good. Meet me at the orc camp once you've saved the village. Be careful, Arthas.
+}
+
+STRING 88
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Defeat the Slave Master
+}
+
+STRING 89
+{
+|cffffcc00MAIN QUEST|r
+Defend Strahnbrad
+  - Travel to Strahnbrad
+  - Arthas must survive
+}
+
+STRING 96
+{
+Slave Master
+}
+
+STRING 97
+{
+Haul these wretches off with the rest of them!
+}
+
+STRING 98
+{
+Grunt
+}
+
+STRING 99
+{
+Move 'em out!
+}
+
+STRING 100
+{
+Dean
+}
+
+STRING 104
+{
+Arthas
+}
+
+STRING 105
+{
+Damn! The attack has already begun! To arms, my brothers!
+}
+
+STRING 108
+{
+Benedict
+}
+
+STRING 109
+{
+Save us!
+}
+
+STRING 110
+{
+Gerard
+}
+
+STRING 111
+{
+Help! Bandits are stealing our belongings!
+}
+
+STRING 112
+{
+Menag
+}
+
+STRING 113
+{
+Heh! We'll take their coin just like everyone else's!
+}
+
+STRING 120
+{
+Sylvia
+}
+
+STRING 121
+{
+Bless you, Prince Arthas!
+}
+
+STRING 122
+{
+Daniel
+}
+
+STRING 123
+{
+But what about the others who were taken away?
+}
+
+STRING 124
+{
+Arthas
+}
+
+STRING 125
+{
+Don't worry, son. We'll find them and bring them home safe.
+}
+
+STRING 126
+{
+Arthas
+}
+
+STRING 127
+{
+Never a dull moment... Let's get moving! 
+}
+
+STRING 128
+{
+Knight
+}
+
+STRING 129
+{
+Prince Arthas, Lord Uther needs you at the orc encampment immediately!
+}
+
+STRING 131
+{
+Footman
+}
+
+STRING 133
+{
+It's a trap!
+}
+
+STRING 134
+{
+Benedict
+}
+
+STRING 135
+{
+Take everything, men. Take all the valuables.
+}
+
+STRING 219
+{
+Little Timmy
+}
+
+STRING 221
+{
+Duelist
+}
+
+STRING 225
+{
+Matilda
+}
+
+STRING 230
+{
+Little Timmy
+}
+
+STRING 231
+{
+Help! Help me, please. I'm trapped in the cage.
+}
+
+STRING 232
+{
+Little Timmy
+}
+
+STRING 233
+{
+Please get me out of here. I want to go home.
+}
+
+STRING 237
+{
+(Bandit Form)
+}
+
+STRING 238
+{
+Garth
+}
+
+STRING 242
+{
+Ryan
+}
+
+STRING 243
+{
+Blake
+}
+
+STRING 244
+{
+Logan
+}
+
+STRING 245
+{
+Garrett
+}
+
+STRING 246
+{
+Andrew
+}
+
+STRING 247
+{
+Steven
+}
+
+STRING 248
+{
+James
+}
+
+STRING 249
+{
+Jeremy
+}
+
+STRING 250
+{
+Thornby
+}
+
+STRING 251
+{
+We'll fight for Lordaeron. Get your swords!
+}
+
+STRING 256
+{
+Farmer Jerrett
+}
+
+STRING 257
+{
+Greetings, friend.
+}
+
+STRING 258
+{
+Farmer Ted
+}
+
+STRING 259
+{
+Welcome to our village.
+}
+
+STRING 260
+{
+Maria
+}
+
+STRING 261
+{
+Hello!
+}
+
+STRING 262
+{
+Stephanie
+}
+
+STRING 263
+{
+Greetings, milord!
+}
+
+STRING 264
+{
+Amy Diane
+}
+
+STRING 265
+{
+Welcome to our village!
+}
+
+STRING 284
+{
+Gerard
+}
+
+STRING 285
+{
+Thank you for helping me.
+}
+
+STRING 286
+{
+Gerard
+}
+
+STRING 287
+{
+Please, take this item.
+}
+
+STRING 288
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Bandit Lord
+}
+
+STRING 323
+{
+Alicia
+}
+
+STRING 324
+{
+Oh, thanks so much! I have a reward for you.
+}
+
+STRING 325
+{
+|cff32cd32HINT|r - Use Holy Light to heal wounded units.
+}
+
+STRING 326
+{
+Defeat!
+}
+
+STRING 327
+{
+The Silver Hand
+}
+
+STRING 328
+{
+Alliance Forces
+}
+
+STRING 363
+{
+|cff32ceebNEW UNIT ACQUIRED|r
+Footman - Footmen are versatile soldiers equipped for melee combat.
+}
+
+STRING 367
+{
+|cffffcc00MAIN QUEST|r
+Defend Strahnbrad
+  - Travel to Strahnbrad
+  - Arthas must survive
+}
+
+STRING 368
+{
+Defeat the Slave Master and his guards
+}
+
+STRING 369
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Defend Strahnbrad
+  - |cff808080Travel to Strahnbrad (Completed)|r
+  - Defeat the Slave Master and his guards
+  - Arthas must survive
+}
+
+STRING 370
+{
+|cffffcc00OPTIONAL QUEST UPDATE|r
+Bandit Lord
+  - |cff808080Slay Menag, the Bandit Lord (Completed)|r
+  - Return Ledger to Gerard
+}
+
+STRING 372
+{
+|cffffcc00OPTIONAL QUEST FAILED|r
+Save Timmy
+}
+
+STRING 373
+{
+|cffffcc00OPTIONAL QUEST FAILED|r
+Save Timmy
+}
+
+STRING 374
+{
+|cffffcc00OPTIONAL QUEST FAILED|r
+Bandit Lord
+}
+
+STRING 379
+{
+Dean
+}
+
+STRING 380
+{
+Save us!
+}
+
+STRING 383
+{
+Grunt
+}
+
+STRING 384
+{
+He's escaping! Kill him!
+}
+
+STRING 389
+{
+|cff87ceebNEW ITEM RECEIVED|r - Ring of Protection +1
+}
+
+STRING 398
+{
+|cff87ceebNEW ITEM RECEIVED|r - Tome of Strength
+}
+

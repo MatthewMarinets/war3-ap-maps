@@ -1,0 +1,453 @@
+﻿STRING 0
+{
+Workers
+}
+
+STRING 3
+{
+Arthas
+}
+
+STRING 4
+{
+We're under attack! Take cover!
+}
+
+STRING 7
+{
+Muradin Bronzebeard
+}
+
+STRING 8
+{
+Captain
+}
+
+STRING 9
+{
+This is a Light-forsaken land, isn't it? You can barely even see the sun! This howling wind cuts to the bone and you're not even shaking. Milord, are you alright?
+}
+
+STRING 10
+{
+Arthas
+}
+
+STRING 11
+{
+Human07
+}
+
+STRING 12
+{
+Captain, are all my forces accounted for?
+}
+
+STRING 13
+{
+1
+}
+
+STRING 14
+{
+Chapter Seven: The Shores of Northrend
+}
+
+STRING 15
+{
+Blizzard Entertainment
+}
+
+STRING 16
+{
+Chapter Seven
+}
+
+STRING 17
+{
+The Shores of Northrend
+}
+
+STRING 18
+{
+One month later, along the icy coast of Daggercap Bay...
+}
+
+STRING 20
+{
+Captain
+}
+
+STRING 21
+{
+Nearly. There are only a few ships that--
+}
+
+STRING 23
+{
+Bloody hell! You're not undead! You're all alive!
+}
+
+STRING 24
+{
+Arthas
+}
+
+STRING 25
+{
+Arthas must survive
+}
+
+STRING 27
+{
+Arthas
+}
+
+STRING 28
+{
+Ah, a gold mine! We'll set up our base there.
+}
+
+STRING 29
+{
+Arthas
+}
+
+STRING 30
+{
+|cffffcc00MAIN QUEST|r
+Establish a Base Camp
+  - Find a gold mine
+  - Arthas must survive
+}
+
+STRING 31
+{
+|cffffcc00MAIN QUEST|r
+Mal'Ganis
+  - Destroy Mal'Ganis' base
+}
+
+STRING 33
+{
+|cffffcc00MAIN QUEST|r
+Establish a Base Camp
+  - Find a gold mine
+  - Arthas must survive
+}
+
+STRING 34
+{
+Ice trolls.
+}
+
+STRING 35
+{
+|cff32CD32HINT|r - Use Peasants to Repair damaged Gyrocopters.
+}
+
+STRING 37
+{
+Establish Base Camp
+}
+
+STRING 38
+{
+There are many threats, both seen and unseen, in this frozen wasteland. Thus, before the hunt for Mal'Ganis can begin, you must first set up a base camp and bolster your forces.
+}
+
+STRING 39
+{
+Muradin? Muradin Bronzebeard, is that you? 
+}
+
+STRING 40
+{
+Muradin Bronzebeard
+}
+
+STRING 41
+{
+|cffffcc00MAIN QUEST|r
+Mal'Ganis
+  - Destroy Mal'Ganis' base
+}
+
+STRING 42
+{
+Mal'Ganis
+}
+
+STRING 43
+{
+Mal'Ganis' citadel lies somewhere within the arctic wastes of Northrend. You must discover his remote lair and crush his standing forces. Only then will the fiend be vulnerable to attack. 
+}
+
+STRING 44
+{
+Locate a gold mine
+}
+
+STRING 45
+{
+Destroy Mal'Ganis' base
+}
+
+STRING 47
+{
+Rescue Muradin's Men
+}
+
+STRING 48
+{
+You must find Muradin's missing comrades and aid them in defeating the Dreadlord's insidious Undead minions. 
+}
+
+STRING 49
+{
+|cff87CEEBNEW UNIT AVAILABLE|r
+Steam Tank - You may now build Steam Tanks from the Workshop. They are heavily armored vehicles, effective at destroying buildings.
+}
+
+STRING 51
+{
+Defeat!
+}
+
+STRING 53
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Establish a Base Camp
+}
+
+STRING 54
+{
+|cffffcc00OPTIONAL QUEST DISCOVERED|r
+Rescue Muradin's Men
+  - Rescue the Dwarven Base
+}
+
+STRING 57
+{
+Damn, boy. I never imagined that you'd be the one to come to our rescue!
+}
+
+STRING 58
+{
+Arthas
+}
+
+STRING 59
+{
+Rescue? Muradin, I didn't even know you were here.
+}
+
+STRING 60
+{
+Muradin Bronzebeard
+}
+
+STRING 61
+{
+Just the same, lad, I could use your help. My mates and I were attacked, and we got separated. I'd appreciate any backup you could give me.
+}
+
+STRING 62
+{
+Arthas
+}
+
+STRING 63
+{
+Of course I'll help, Muradin. Let's move!
+}
+
+STRING 64
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Establish a Base Camp
+}
+
+STRING 65
+{
+|cffffcc00OPTIONAL QUEST DISCOVERED|r
+Rescue Muradin's Men
+  - Rescue the Dwarven Base
+}
+
+STRING 77
+{
+|cffffcc00OPTIONAL QUEST COMPLETED|r
+Rescue Muradin's Men
+}
+
+STRING 78
+{
+Arthas
+}
+
+STRING 79
+{
+All right, Muradin. What were you doing up here, anyway?
+}
+
+STRING 80
+{
+Muradin Bronzebeard
+}
+
+STRING 81
+{
+Well, lad, there's an ancient way gate that lies somewhere in this glacial wasteland. Supposedly, it transports you to a hidden vault where a runeblade named Frostmourne is held.
+}
+
+STRING 82
+{
+Muradin Bronzebeard
+}
+
+STRING 83
+{
+We came here to recover Frostmourne, but the closer we came to finding the way gate, the more undead we encountered.
+}
+
+STRING 84
+{
+Arthas
+}
+
+STRING 85
+{
+That has to be where Mal'Ganis is hiding! I want that base leveled!
+}
+
+STRING 89
+{
+Arthas
+}
+
+STRING 90
+{
+That has to be where Mal'Ganis is hiding! I want that base leveled!
+}
+
+STRING 91
+{
+Arthas
+}
+
+STRING 92
+{
+Very well. Our first priority is to set up a base camp with proper defenses. There's no telling what's waiting for us out there in the shadows.
+}
+
+STRING 93
+{
+Captain
+}
+
+STRING 94
+{
+Prince Arthas, we haven't found any trace of Mal'Ganis.
+}
+
+STRING 95
+{
+Arthas
+}
+
+STRING 96
+{
+No matter. He can't hide from me forever. Captain, I want you to establish this site as our primary base.
+}
+
+STRING 97
+{
+Captain
+}
+
+STRING 98
+{
+Yes, milord.
+}
+
+STRING 104
+{
+Rescue the Dwarven base
+}
+
+STRING 145
+{
+Muradin Bronzebeard
+}
+
+STRING 146
+{
+That's them! And they're still under attack from the undead!
+}
+
+STRING 153
+{
+Arthas
+}
+
+STRING 154
+{
+Let's move, men! Those dwarves need help!
+}
+
+STRING 163
+{
+|cff87CEEBNEW UNIT AVAILABLE|r
+Gyrocopter - You may now build Gyrocopters from the Workshop. They are fast moving flying machines, excellent at scouting and effective against air units.
+
+}
+
+STRING 164
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Mal'Ganis
+}
+
+STRING 165
+{
+|cffffcc00MISSION FAILED|r
+Arthas has been slain.
+}
+
+STRING 166
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 167
+{
+Alliance Forces
+}
+
+STRING 168
+{
+Undead Pillagers
+}
+
+STRING 169
+{
+Undead Scourge
+}
+
+STRING 170
+{
+Dwarven Scouts
+}
+
+STRING 171
+{
+Dwarven Expedition
+}
+
+STRING 172
+{
+Dwaven Expedition
+}
+

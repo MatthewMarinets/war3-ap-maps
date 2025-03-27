@@ -1,0 +1,1180 @@
+# Warcraft 3 Region file (.w3r)
+# See w3r.py for type definitions
+
+version = 5
+
+[[regions]]
+
+left = -3776.0
+bottom = -5824.0
+right = -3744.0
+top = -5792.0
+region_name = 'ArthasIntroTurn'
+region_id = 10
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -3616.0
+bottom = -6080.0
+right = -3584.0
+top = -6048.0
+region_name = 'ArthasIntroTurn02'
+region_id = 12
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 3808.0
+bottom = -5696.0
+right = 4576.0
+top = -4768.0
+region_name = 'BeginMuradinIntro'
+region_id = 13
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4832.0
+bottom = 4672.0
+right = 5408.0
+top = 5472.0
+region_name = 'CaptiveDwarfPeasantsReharvest'
+region_id = 79
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4000.0
+bottom = 4576.0
+right = 5504.0
+top = 6816.0
+region_name = 'CaptiveDwarves'
+region_id = 50
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 256.0
+bottom = -3968.0
+right = 512.0
+top = -3712.0
+region_name = 'DifficultyNerubianQueen'
+region_id = 46
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -2048.0
+bottom = 4128.0
+right = -1952.0
+top = 4224.0
+region_name = 'ExitArthasFacing'
+region_id = 58
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -2016.0
+bottom = 3904.0
+right = -1920.0
+top = 4000.0
+region_name = 'ExitArthasLooking'
+region_id = 55
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -2880.0
+bottom = 3040.0
+right = -544.0
+top = 5376.0
+region_name = 'ExitBuildingFailsafe'
+region_id = 3
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -2656.0
+bottom = 4352.0
+right = -2560.0
+top = 4448.0
+region_name = 'ExitKnightOffScreen'
+region_id = 56
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -2304.0
+bottom = 4032.0
+right = -2208.0
+top = 4128.0
+region_name = 'ExitKnightToArthas'
+region_id = 57
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -5184.0
+bottom = 3680.0
+right = -3392.0
+top = 5824.0
+region_name = 'ExitMoveUnitArea'
+region_id = 59
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -2240.0
+bottom = 3744.0
+right = -2144.0
+top = 3840.0
+region_name = 'ExitMuradinFacing'
+region_id = 38
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -2016.0
+bottom = 3616.0
+right = -1920.0
+top = 3712.0
+region_name = 'ExitMuradinPosition'
+region_id = 37
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 2624.0
+bottom = -5056.0
+right = 2752.0
+top = -4928.0
+region_name = 'IceTrollHut'
+region_id = 77
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 1536.0
+bottom = -6112.0
+right = 1664.0
+top = -5984.0
+region_name = 'IceTrollPatrol01'
+region_id = 42
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 2208.0
+bottom = -7328.0
+right = 2336.0
+top = -7200.0
+region_name = 'IceTrollPatrol02'
+region_id = 43
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -4000.0
+bottom = -5856.0
+right = -3872.0
+top = -5728.0
+region_name = 'IntroArthasInitial'
+region_id = 44
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -4064.0
+bottom = -6240.0
+right = -4000.0
+top = -6176.0
+region_name = 'IntroArthasInitialFacing'
+region_id = 45
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -3872.0
+bottom = -5952.0
+right = -3808.0
+top = -5888.0
+region_name = 'IntroArthasMovementTarget'
+region_id = 11
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -3840.0
+bottom = -5728.0
+right = -3776.0
+top = -5664.0
+region_name = 'IntroCaptainMovementTarget'
+region_id = 39
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -3904.0
+bottom = -4608.0
+right = -3872.0
+top = -4576.0
+region_name = 'IntroPeonAPatrolReturn'
+region_id = 8
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -3840.0
+bottom = -5056.0
+right = -3808.0
+top = -5024.0
+region_name = 'IntroPeonAPatrolShore'
+region_id = 6
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -4576.0
+bottom = -4928.0
+right = -4544.0
+top = -4896.0
+region_name = 'IntroPeonBPatrolReturn'
+region_id = 7
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -4160.0
+bottom = -5024.0
+right = -4128.0
+top = -4992.0
+region_name = 'IntroPeonBPatrolShore'
+region_id = 9
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -5376.0
+bottom = 2272.0
+right = -960.0
+top = 6880.0
+region_name = 'MainUndeadBase'
+region_id = 54
+weather_effect_id = 'SNls'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4736.0
+bottom = -3040.0
+right = 4832.0
+top = -2944.0
+region_name = 'MuradinArthasOffScreen'
+region_id = 64
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4384.0
+bottom = -2848.0
+right = 4480.0
+top = -2752.0
+region_name = 'MuradinArthasToMuradin'
+region_id = 65
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4096.0
+bottom = -1920.0
+right = 4224.0
+top = -1792.0
+region_name = 'MuradinBuildFarm01'
+region_id = 68
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4352.0
+bottom = -1920.0
+right = 4480.0
+top = -1792.0
+region_name = 'MuradinBuildFarm02'
+region_id = 69
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4352.0
+bottom = -2560.0
+right = 4864.0
+top = -2048.0
+region_name = 'MuradinBuildTownHall'
+region_id = 67
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4864.0
+bottom = -4224.0
+right = 4992.0
+top = -4096.0
+region_name = 'MuradinIntro ArthasMove'
+region_id = 14
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4512.0
+bottom = -4640.0
+right = 4576.0
+top = -4576.0
+region_name = 'MuradinIntro CaptainMove'
+region_id = 2
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4864.0
+bottom = -3072.0
+right = 4928.0
+top = -3008.0
+region_name = 'MuradinIntro CaptainMoveAfter'
+region_id = 70
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 255
+colour_r = 0
+
+[[regions]]
+
+left = 4544.0
+bottom = -4448.0
+right = 4608.0
+top = -4384.0
+region_name = 'MuradinIntro Footman01Move'
+region_id = 4
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4576.0
+bottom = -3168.0
+right = 4640.0
+top = -3104.0
+region_name = 'MuradinIntro Footman01MoveAfter'
+region_id = 71
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 255
+colour_r = 0
+
+[[regions]]
+
+left = 4672.0
+bottom = -4544.0
+right = 4736.0
+top = -4480.0
+region_name = 'MuradinIntro Footman02Move'
+region_id = 27
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4768.0
+bottom = -3168.0
+right = 4832.0
+top = -3104.0
+region_name = 'MuradinIntro Footman02MoveAfter'
+region_id = 72
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 255
+colour_r = 0
+
+[[regions]]
+
+left = 4800.0
+bottom = -4672.0
+right = 4864.0
+top = -4608.0
+region_name = 'MuradinIntro Footman03Move'
+region_id = 28
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4960.0
+bottom = -3168.0
+right = 5024.0
+top = -3104.0
+region_name = 'MuradinIntro Footman03MoveAfter'
+region_id = 74
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 255
+colour_r = 0
+
+[[regions]]
+
+left = 4640.0
+bottom = -4320.0
+right = 4704.0
+top = -4256.0
+region_name = 'MuradinIntro Peon01Move'
+region_id = 15
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4768.0
+bottom = -4416.0
+right = 4832.0
+top = -4352.0
+region_name = 'MuradinIntro Peon02Move'
+region_id = 16
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4928.0
+bottom = -4512.0
+right = 4992.0
+top = -4448.0
+region_name = 'MuradinIntro Peon03Move'
+region_id = 1
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4640.0
+bottom = -4736.0
+right = 4704.0
+top = -4672.0
+region_name = 'MuradinIntro PriestMove'
+region_id = 30
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4672.0
+bottom = -3232.0
+right = 4736.0
+top = -3168.0
+region_name = 'MuradinIntro PriestMoveAfter'
+region_id = 73
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 0
+colour_g = 255
+colour_r = 0
+
+[[regions]]
+
+left = 4800.0
+bottom = -3936.0
+right = 5440.0
+top = -2592.0
+region_name = 'MuradinIntroVisibility'
+region_id = 26
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 3872.0
+bottom = -2560.0
+right = 3968.0
+top = -2464.0
+region_name = 'MuradinPeon01Attacked'
+region_id = 47
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4928.0
+bottom = -3520.0
+right = 4992.0
+top = -3456.0
+region_name = 'MuradinPeon01Corner'
+region_id = 33
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4736.0
+bottom = -4000.0
+right = 4800.0
+top = -3936.0
+region_name = 'MuradinPeon01Goes'
+region_id = 29
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4864.0
+bottom = -2560.0
+right = 4960.0
+top = -2464.0
+region_name = 'MuradinPeon01Retreat'
+region_id = 61
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4000.0
+bottom = -2304.0
+right = 4096.0
+top = -2208.0
+region_name = 'MuradinPeon02Attacked'
+region_id = 48
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4992.0
+bottom = -3328.0
+right = 5056.0
+top = -3264.0
+region_name = 'MuradinPeon02Corner'
+region_id = 34
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4896.0
+bottom = -4032.0
+right = 4960.0
+top = -3968.0
+region_name = 'MuradinPeon02Goes'
+region_id = 31
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4224.0
+bottom = -1920.0
+right = 4320.0
+top = -1824.0
+region_name = 'MuradinPeon02Retreat'
+region_id = 62
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4256.0
+bottom = -2176.0
+right = 4352.0
+top = -2080.0
+region_name = 'MuradinPeon03Attacked'
+region_id = 49
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5184.0
+bottom = -3264.0
+right = 5248.0
+top = -3200.0
+region_name = 'MuradinPeon03Corner'
+region_id = 35
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 5056.0
+bottom = -4096.0
+right = 5120.0
+top = -4032.0
+region_name = 'MuradinPeon03Goes'
+region_id = 32
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4480.0
+bottom = -1920.0
+right = 4576.0
+top = -1824.0
+region_name = 'MuradinPeon03Retreat'
+region_id = 63
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4160.0
+bottom = -2976.0
+right = 4256.0
+top = -2880.0
+region_name = 'MuradinToArthas'
+region_id = 66
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -5504.0
+bottom = -6144.0
+right = -2720.0
+top = 2656.0
+region_name = 'Ocean01'
+region_id = 0
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -2752.0
+bottom = -6112.0
+right = -1856.0
+top = 1568.0
+region_name = 'Ocean02'
+region_id = 5
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -1856.0
+bottom = -3840.0
+right = 640.0
+top = 1504.0
+region_name = 'Ocean03'
+region_id = 78
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 2464.0
+bottom = 3584.0
+right = 5888.0
+top = 7360.0
+region_name = 'OrangeGreyFailsafe'
+region_id = 36
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -4128.0
+bottom = -5408.0
+right = -4032.0
+top = -5312.0
+region_name = 'PeonHammering'
+region_id = 60
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4480.0
+bottom = 5472.0
+right = 4608.0
+top = 5600.0
+region_name = 'SpawnCryptFiend'
+region_id = 53
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4320.0
+bottom = 5728.0
+right = 4448.0
+top = 5856.0
+region_name = 'SpawnGhouls'
+region_id = 52
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 928.0
+bottom = -4096.0
+right = 1024.0
+top = -4000.0
+region_name = 'SpiderlingPatrol'
+region_id = 40
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4384.0
+bottom = -4928.0
+right = 4448.0
+top = -4864.0
+region_name = 'TeleportArthas'
+region_id = 17
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 3904.0
+bottom = -5280.0
+right = 4000.0
+top = -5184.0
+region_name = 'TeleportCaptain'
+region_id = 18
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 3968.0
+bottom = -5088.0
+right = 4064.0
+top = -4992.0
+region_name = 'TeleportFootman01'
+region_id = 19
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4096.0
+bottom = -5216.0
+right = 4192.0
+top = -5120.0
+region_name = 'TeleportFootman02'
+region_id = 20
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4192.0
+bottom = -5344.0
+right = 4288.0
+top = -5248.0
+region_name = 'TeleportFootman03'
+region_id = 21
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4096.0
+bottom = -4960.0
+right = 4192.0
+top = -4864.0
+region_name = 'TeleportPeon01'
+region_id = 22
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4224.0
+bottom = -5088.0
+right = 4320.0
+top = -4992.0
+region_name = 'TeleportPeon02'
+region_id = 23
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4352.0
+bottom = -5216.0
+right = 4448.0
+top = -5120.0
+region_name = 'TeleportPeon03'
+region_id = 24
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 4064.0
+bottom = -5440.0
+right = 4160.0
+top = -5344.0
+region_name = 'TeleportPriest'
+region_id = 25
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 1920.0
+bottom = 3232.0
+right = 5600.0
+top = 7072.0
+region_name = 'TriggerDwarvesFound'
+region_id = 51
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 3296.0
+bottom = -2848.0
+right = 3360.0
+top = -2784.0
+region_name = 'VisibilityDwarves01'
+region_id = 75
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 3808.0
+bottom = -3360.0
+right = 3872.0
+top = -3296.0
+region_name = 'VisibilityDwarves02'
+region_id = 76
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -1280.0
+bottom = -5696.0
+right = -1088.0
+top = -5504.0
+region_name = 'WhiteWolfPatrol'
+region_id = 41
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -128.0
+bottom = -7552.0
+right = 160.0
+top = -7232.0
+region_name = 'WhiteWolfPatrolBegin'
+region_id = 80
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 2272.0
+bottom = -5376.0
+right = 2368.0
+top = -5280.0
+region_name = 'IceTroll138PatrolBegin'
+region_id = 81
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 3232.0
+bottom = -5984.0
+right = 3328.0
+top = -5888.0
+region_name = 'IceTroll140PatrolBegin'
+region_id = 82
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 544.0
+bottom = -4608.0
+right = 640.0
+top = -4512.0
+region_name = 'SpiderlingPatrolBegin'
+region_id = 83
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
