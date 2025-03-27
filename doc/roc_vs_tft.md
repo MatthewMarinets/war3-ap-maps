@@ -241,3 +241,21 @@ Note: models updated in TFT generally use a _v1 suffix; ROC models lack the suff
 * Furion -> Malfurion
 * Lich
 * Wyvern -> Wind Rider (model unchanged)
+
+## Map Data
+Upgrading a map from RoC to TFT has the following effects:
+* `(attributes)` file changes (probably just checksum updates)
+* w3i info changes
+  * Version "ROC" -> "TFT"
+  * Flags gains `REQUIRES_EXPANSION`
+  * `tft_fog` attributes get populated
+    * `start_z` -> 3000.0
+    * `end_z` -> 5000.0
+    * `density` -> 0.5
+    * `alpha` -> 255
+  * `tft_weather` -> `null`
+  * `tft_water_tint` attributes -> 255
+* GUI triggers version ROC -> TFT
+  * Array Variables with array size 0 -> array size 1
+* Text triggers version 0 -> 1
+* units.doo version, subversion (7, 9) -> (8, 11)
