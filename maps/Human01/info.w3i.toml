@@ -1,8 +1,8 @@
 # Warcraft 3 Map Info File(.w3i)
 # See w3i.py for type definitions
 
-version = "ROC"
-map_revision = 402
+version = "TFT"
+map_revision = 406
 editor_version = 6061
 map_name = 'TRIGSTR_043'
 map_author = 'TRIGSTR_046'
@@ -15,33 +15,33 @@ map_padding_top = 7
 map_padding_bottom = 13
 map_playable_width = 74
 map_playable_height = 76
-flags = "HIDE_MINIMAP|LARGE_MAP|FIXED_FORCES|CUSTOM_FORCES|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS|WAVES_ON_SHORES"
+flags = "HIDE_MINIMAP|LARGE_MAP|FIXED_FORCES|CUSTOM_FORCES|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS|WAVES_ON_SHORES|REQUIRES_EXPANSION"
 tileset = { type = "bytes", value = "L" }
 campaign_background = 2
 tft_loading_screen_model_path = ''
 map_loading_screen_text = 'TRIGSTR_047'
 map_loading_screen_title = 'TRIGSTR_074'
 map_loading_screen_subtitle = 'TRIGSTR_075'
-map_game_data_set = 1
+map_game_data_set = 2
 tft_prologue_screen_path = ''
 prologue_screen_text = ''
 prologue_screen_title = ''
 prologue_screen_subtitle = ''
 tft_uses_terrain_fog = 0
-tft_fog_start_z = 0.0
-tft_fog_end_z = 0.0
-tft_fog_density = 0.0
+tft_fog_start_z = 3000.0
+tft_fog_end_z = 5000.0
+tft_fog_density = 0.5
 tft_fog_red = 0
 tft_fog_green = 0
 tft_fog_blue = 0
-tft_fog_alpha = 0
-tft_weather = ''
+tft_fog_alpha = 255
+tft_weather = 'null'
 tft_custom_sound_environment = ''
 tft_custom_light_tileset = { type = "bytes", value = "0" }
-tft_water_tint_red = 0
-tft_water_tint_green = 0
-tft_water_tint_blue = 0
-tft_water_tint_alpha = 0
+tft_water_tint_red = 255
+tft_water_tint_green = 255
+tft_water_tint_blue = 255
+tft_water_tint_alpha = 255
 random_entities = []
 random_items = []
 

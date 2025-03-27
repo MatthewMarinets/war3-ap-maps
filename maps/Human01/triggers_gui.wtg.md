@@ -1,4 +1,4 @@
-version = ROC
+version = TFT
 
 # Categories
 | ID  | Name | is a comment |
@@ -188,14 +188,14 @@ version = ROC
 | TalkGerard2 | effect | . | . |
 | CageVisibility | fogmodifier | . | . |
 | AmyDiane | unit | . | . |
-| VillagersArray | unitcode | 0 | . |
-| GhostArray | unit | 0 | . |
+| VillagersArray | unitcode | 1 | . |
+| GhostArray | unit | 1 | . |
 | AAAP_Arthas | player | . | Player01 |
 | WarlordAndCrewGroup | group | . | . |
 | AAAPG_Arthas | force | . | Force01 |
 | P_Uther | player | . | Player09 |
 | P_Orcs | player | . | Player00 |
-| GhostRegionArray | rect | 0 | . |
+| GhostRegionArray | rect | 1 | . |
 | TimmyQuestFailed | boolean | . | false |
 | TimmyQuestRequiredUnits | group | . | . |
 | OrcQuestGiven | boolean | . | false |
@@ -206,7 +206,7 @@ version = ROC
 | GAMEOVER | boolean | . | false |
 | AliciaVisModifier | fogmodifier | . | . |
 | MenagBanditsGroup | group | . | . |
-| VillagerSpeechArray | trigger | 0 | . |
+| VillagerSpeechArray | trigger | 1 | . |
 | IntroObjectiveGiven | boolean | . | false |
 | SelectedUnits | group | . | . |
 | LedgerQuestGiven | boolean | . | false |
