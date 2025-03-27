@@ -2,8 +2,8 @@
 # See w3i.py for type definitions
 
 version = "ROC"
-map_revision = 400
-editor_version = 4426
+map_revision = 402
+editor_version = 6061
 map_name = 'TRIGSTR_043'
 map_author = 'TRIGSTR_046'
 map_description = 'TRIGSTR_073'
@@ -22,7 +22,7 @@ tft_loading_screen_model_path = ''
 map_loading_screen_text = 'TRIGSTR_047'
 map_loading_screen_title = 'TRIGSTR_074'
 map_loading_screen_subtitle = 'TRIGSTR_075'
-map_loading_screen_number = -1
+map_loading_screen_number = 1
 tft_prologue_screen_path = ''
 prologue_screen_text = ''
 prologue_screen_title = ''

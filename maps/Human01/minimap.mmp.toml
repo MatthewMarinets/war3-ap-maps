@@ -6,7 +6,7 @@ file_format_version = 0
 [[icons]]
 
 icon_type = "PlayerStart"
-x = 269
+x = 266
 y = 248
 colour_blue = 3
 colour_green = 3
@@ -16,7 +16,7 @@ colour_alpha = 255
 [[icons]]
 
 icon_type = "PlayerStart"
-x = 60
+x = 62
 y = 73
 colour_blue = 255
 colour_green = 66
@@ -26,7 +26,7 @@ colour_alpha = 255
 [[icons]]
 
 icon_type = "PlayerStart"
-x = 269
+x = 266
 y = 248
 colour_blue = 129
 colour_green = 0
@@ -36,7 +36,7 @@ colour_alpha = 255
 [[icons]]
 
 icon_type = "PlayerStart"
-x = 269
+x = 266
 y = 248
 colour_blue = 185
 colour_green = 230
@@ -46,7 +46,7 @@ colour_alpha = 255
 [[icons]]
 
 icon_type = "PlayerStart"
-x = 38
+x = 40
 y = 130
 colour_blue = 151
 colour_green = 150
@@ -56,7 +56,7 @@ colour_alpha = 255
 [[icons]]
 
 icon_type = "PlayerStart"
-x = 269
+x = 266
 y = 245
 colour_blue = 241
 colour_green = 191

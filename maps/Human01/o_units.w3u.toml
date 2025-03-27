@@ -1,6 +1,6 @@
 # Warcraft 3 Map Objects File (.w3o)
 # See w3o.py for type definitions
-version = 1
+version = 2
 has_levels = false
 
 [blizzard_objects]
@@ -142,7 +142,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_219'
+value = 'TRIGSTR_399'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -258,7 +258,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_070'
+value = 'TRIGSTR_400'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -384,7 +384,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_007'
+value = 'TRIGSTR_401'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -535,7 +535,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_108'
+value = 'TRIGSTR_402'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -594,7 +594,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_108'
+value = 'TRIGSTR_403'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -742,7 +742,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_096'
+value = 'TRIGSTR_404'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]

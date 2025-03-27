@@ -1,9 +1,11 @@
 ﻿STRING 3
+// Units: nC08 (Amy Diane), Name (Name)
 {
 Amy Diane
 }
 
 STRING 4
+// Units: nC07 (Alicia), Name (Name)
 {
 Alicia
 }
@@ -14,6 +16,7 @@ Gerard
 }
 
 STRING 8
+// Units: nC02 (Farmer Jerrett), Name (Name)
 {
 Farmer Jerrett
 }
@@ -24,36 +27,43 @@ Arthas must survive
 }
 
 STRING 10
+// Units: nC25 (Joe), Name (Name)
 {
 Joe
 }
 
 STRING 11
+// Units: nC26 (Scott), Name (Name)
 {
 Scott
 }
 
 STRING 12
+// Units: nC27 (Mike), Name (Name)
 {
 Mike
 }
 
 STRING 14
+// Units: nC03 (Farmer Ted), Name (Name)
 {
 Farmer Ted
 }
 
 STRING 16
+// Units: nC09 (Maria), Name (Name)
 {
 Maria
 }
 
 STRING 18
+// Units: nC10 (Stephanie), Name (Name)
 {
 Stephanie
 }
 
 STRING 19
+// Sound\Dialogue\HumanCampaign\Human01\H01VillagerM28.mp3
 {
 Those bandits stole my ledger. Without it, I will lose my entire farm! Please, retrieve it from their camp! It would mean so much to us.
 }
@@ -64,6 +74,7 @@ Uther the Lightbringer
 }
 
 STRING 21
+// Sound\Dialogue\HumanCampaign\Human01\H01Uther01.mp3
 {
 Welcome, Prince Arthas. The men and I are honored by your presence.
 }
@@ -74,6 +85,7 @@ Arthas
 }
 
 STRING 23
+// Sound\Dialogue\HumanCampaign\Human01\H01Arthas02.mp3
 {
 Can the formalities, Uther. I'm not king yet. It's good to see you.
 }
@@ -84,6 +96,7 @@ Uther the Lightbringer
 }
 
 STRING 25
+// Sound\Dialogue\HumanCampaign\Human01\H01Uther03.mp3
 {
 You too, lad. I'm pleased that King Terenas sent you to help me.
 }
@@ -94,6 +107,7 @@ Arthas
 }
 
 STRING 27
+// Sound\Dialogue\HumanCampaign\Human01\H01Arthas04.mp3
 {
 Father still hopes your patience and experience might rub off on me.
 }
@@ -104,6 +118,7 @@ Uther the Lightbringer
 }
 
 STRING 29
+// Sound\Dialogue\HumanCampaign\Human01\H01Uther05.mp3
 {
 It is a father's right to dream, isn't it?
 }
@@ -162,6 +177,7 @@ Save Timmy
 }
 
 STRING 41
+// Sound\Dialogue\HumanCampaign\Human01\H01VillagerF27.mp3
 {
 Please, you're my only hope! A group of gnolls kidnapped my little Timmy and took him to their hideout in the forest. Could you find him and bring him home?
 }
@@ -209,6 +225,7 @@ Bloodhill Bandits
 }
 
 STRING 57
+// Units: nC14 (Thornby), Name (Name)
 {
 Thornby
 }
@@ -230,6 +247,7 @@ Strahnbrad may already be under attack by Orcish forces! Immediate action must b
 }
 
 STRING 66
+// Sound\Dialogue\HumanCampaign\Human01\H01Arthas06.mp3
 {
 Look, here's where we stand. Our scouts have confirmed that there is an orc encampment hidden somewhere over the next ridge.
 }
@@ -250,6 +268,7 @@ Menag
 }
 
 STRING 71
+// Units\Creeps\Bandit\BanditYesAttack2.wav
 {
 Say your prayers!
 }
@@ -281,6 +300,7 @@ Uther the Lightbringer
 }
 
 STRING 79
+// Sound\Dialogue\HumanCampaign\Human01\H01Uther07.mp3
 {
 As I suspected...
 }
@@ -291,6 +311,7 @@ Arthas
 }
 
 STRING 81
+// Sound\Dialogue\HumanCampaign\Human01\H01Arthas08.mp3
 {
 It gets worse. They're preparing to attack the nearby village of Strahnbrad. As far as we know, the village is completely defenseless.
 }
@@ -301,6 +322,7 @@ Uther the Lightbringer
 }
 
 STRING 83
+// Sound\Dialogue\HumanCampaign\Human01\H01Uther09.mp3
 {
 I need to move against the orcs' base immediately. Can you handle Strahnbrad's defense on your own?
 }
@@ -311,6 +333,7 @@ Arthas
 }
 
 STRING 85
+// Sound\Dialogue\HumanCampaign\Human01\H01Arthas10.mp3
 {
 Of course, Uther. Don't worry about me.
 }
@@ -321,6 +344,7 @@ Uther the Lightbringer
 }
 
 STRING 87
+// Sound\Dialogue\HumanCampaign\Human01\H01Uther11.mp3
 {
 Good. Meet me at the orc camp once you've saved the village. Be careful, Arthas.
 }
@@ -345,6 +369,7 @@ Slave Master
 }
 
 STRING 97
+// Sound\Dialogue\HumanCampaign\Human01\H01WolfRider19.mp3
 {
 Haul these wretches off with the rest of them!
 }
@@ -355,11 +380,13 @@ Grunt
 }
 
 STRING 99
+// Sound\Dialogue\HumanCampaign\Human01\H01Grunt21.mp3
 {
 Move 'em out!
 }
 
 STRING 100
+// Units: nC15 (Dean), Name (Name)
 {
 Dean
 }
@@ -370,6 +397,7 @@ Arthas
 }
 
 STRING 105
+// Sound\Dialogue\HumanCampaign\Human01\H01Arthas18.mp3
 {
 Damn! The attack has already begun! To arms, my brothers!
 }
@@ -380,6 +408,7 @@ Benedict
 }
 
 STRING 109
+// Sound\Dialogue\HumanCampaign\Human03\H03VillagerM50.mp3
 {
 Save us!
 }
@@ -390,6 +419,7 @@ Gerard
 }
 
 STRING 111
+// Sound\Dialogue\HumanCampaign\Human01\H01VillagerM33.mp3
 {
 Help! Bandits are stealing our belongings!
 }
@@ -400,6 +430,7 @@ Menag
 }
 
 STRING 113
+// Sound\Dialogue\HumanCampaign\Human01\H01BanditB14.mp3
 {
 Heh! We'll take their coin just like everyone else's!
 }
@@ -410,6 +441,7 @@ Sylvia
 }
 
 STRING 121
+// Sound\Dialogue\HumanCampaign\Human01\H01VillagerF22.mp3
 {
 Bless you, Prince Arthas!
 }
@@ -420,6 +452,7 @@ Daniel
 }
 
 STRING 123
+// Sound\Dialogue\HumanCampaign\Human01\H01VillagerC23.mp3
 {
 But what about the others who were taken away?
 }
@@ -430,6 +463,7 @@ Arthas
 }
 
 STRING 125
+// Sound\Dialogue\HumanCampaign\Human01\H01Arthas24.mp3
 {
 Don't worry, son. We'll find them and bring them home safe.
 }
@@ -440,6 +474,7 @@ Arthas
 }
 
 STRING 127
+// Sound\Dialogue\HumanCampaign\Human01\H01Arthas26.mp3
 {
 Never a dull moment... Let's get moving! 
 }
@@ -450,6 +485,7 @@ Knight
 }
 
 STRING 129
+// Sound\Dialogue\HumanCampaign\Human01\H01Knight25.mp3
 {
 Prince Arthas, Lord Uther needs you at the orc encampment immediately!
 }
@@ -460,6 +496,7 @@ Footman
 }
 
 STRING 133
+// Sound\Dialogue\HumanCampaign\Human03\H03Footman47.mp3
 {
 It's a trap!
 }
@@ -470,21 +507,25 @@ Benedict
 }
 
 STRING 135
+// Sound\Dialogue\HumanCampaign\Human01\H01Bandit32.mp3
 {
 Take everything, men. Take all the valuables.
 }
 
 STRING 219
+// Units: nC00 (Little Timmy), Name (Name)
 {
 Little Timmy
 }
 
 STRING 221
+// Units: hC01 (Duelist), Name (Name)
 {
 Duelist
 }
 
 STRING 225
+// Units: nC05 (Matilda), Name (Name)
 {
 Matilda
 }
@@ -495,6 +536,7 @@ Little Timmy
 }
 
 STRING 231
+// Sound\Dialogue\HumanCampaign\Human01\H01VillagerC35.mp3
 {
 Help! Help me, please. I'm trapped in the cage.
 }
@@ -505,56 +547,67 @@ Little Timmy
 }
 
 STRING 233
+// Sound\Dialogue\HumanCampaign\Human01\H01VillagerC36.mp3
 {
 Please get me out of here. I want to go home.
 }
 
 STRING 237
+// Units: nC12 (Benedict), EditorSuffix (Name - Editor Suffix)
 {
 (Bandit Form)
 }
 
 STRING 238
+// Units: nC13 (Garth), Name (Name)
 {
 Garth
 }
 
 STRING 242
+// Units: nC17 (Ryan), Name (Name)
 {
 Ryan
 }
 
 STRING 243
+// Units: nC18 (Blake), Name (Name)
 {
 Blake
 }
 
 STRING 244
+// Units: nC19 (Logan), Name (Name)
 {
 Logan
 }
 
 STRING 245
+// Units: nC20 (Garrett), Name (Name)
 {
 Garrett
 }
 
 STRING 246
+// Units: nC21 (Andrew), Name (Name)
 {
 Andrew
 }
 
 STRING 247
+// Units: nC22 (Steven), Name (Name)
 {
 Steven
 }
 
 STRING 248
+// Units: nC23 (James), Name (Name)
 {
 James
 }
 
 STRING 249
+// Units: nC24 (Jeremy), Name (Name)
 {
 Jeremy
 }
@@ -565,6 +618,7 @@ Thornby
 }
 
 STRING 251
+// Sound\Dialogue\HumanCampaign\Human01\H01VillagerM43.mp3
 {
 We'll fight for Lordaeron. Get your swords!
 }
@@ -575,6 +629,7 @@ Farmer Jerrett
 }
 
 STRING 257
+// Units\Critters\VillagerMan\VillagerM1.wav
 {
 Greetings, friend.
 }
@@ -585,6 +640,7 @@ Farmer Ted
 }
 
 STRING 259
+// Units\Critters\VillagerMan\VillagerM2.wav
 {
 Welcome to our village.
 }
@@ -595,6 +651,7 @@ Maria
 }
 
 STRING 261
+// Units\Critters\VillagerWoman\VillagerF1.wav
 {
 Hello!
 }
@@ -605,6 +662,7 @@ Stephanie
 }
 
 STRING 263
+// Units\Critters\VillagerWoman\VillagerF2.wav
 {
 Greetings, milord!
 }
@@ -615,6 +673,7 @@ Amy Diane
 }
 
 STRING 265
+// Units\Critters\VillagerWoman\VillagerF3.wav
 {
 Welcome to our village!
 }
@@ -625,6 +684,7 @@ Gerard
 }
 
 STRING 285
+// Sound\Dialogue\HumanCampaign\Human03\H03VillagerM44.mp3
 {
 Thank you for helping me.
 }
@@ -635,6 +695,7 @@ Gerard
 }
 
 STRING 287
+// Sound\Dialogue\HumanCampaign\Human03\H03VillagerM43.mp3
 {
 Please, take this item.
 }
@@ -735,6 +796,7 @@ Dean
 }
 
 STRING 380
+// Sound\Dialogue\HumanCampaign\Human03\H03VillagerM50.mp3
 {
 Save us!
 }
@@ -745,6 +807,7 @@ Grunt
 }
 
 STRING 384
+// Sound\Dialogue\HumanCampaign\Human01\H01Grunt17.mp3
 {
 He's escaping! Kill him!
 }
@@ -757,5 +820,41 @@ STRING 389
 STRING 398
 {
 |cff87ceebNEW ITEM RECEIVED|r - Tome of Strength
+}
+
+STRING 399
+// Units: nC00 (Little Timmy), Tip (Tooltip - Basic)
+{
+Little Timmy
+}
+
+STRING 400
+// Units: nC04 (Menag), Name (Name)
+{
+Menag
+}
+
+STRING 401
+// Units: nC06 (Gerard), Name (Name)
+{
+Gerard
+}
+
+STRING 402
+// Units: nC11 (Benedict), Name (Name)
+{
+Benedict
+}
+
+STRING 403
+// Units: nC12 (Benedict), Name (Name)
+{
+Benedict
+}
+
+STRING 404
+// Units: oC16 (Slave Master), Name (Name)
+{
+Slave Master
 }
 
