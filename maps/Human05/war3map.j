@@ -6070,19 +6070,19 @@ function Trig_Wagons_Reach_Breadcrumb_Func007002 takes nothing returns boolean
 endfunction
 
 function Trig_Wagons_Reach_Breadcrumb_Conditions takes nothing returns boolean
-    if ( not GetBooleanOr( Trig_Wagons_Reach_Breadcrumb_Func003001(), Trig_Wagons_Reach_Breadcrumb_Func003002() ) ) then
+    if ( not GetBooleanOr(Trig_Wagons_Reach_Breadcrumb_Func003001(), Trig_Wagons_Reach_Breadcrumb_Func003002()) ) then
         return false
     endif
-    if ( not GetBooleanOr( Trig_Wagons_Reach_Breadcrumb_Func004001(), Trig_Wagons_Reach_Breadcrumb_Func004002() ) ) then
+    if ( not GetBooleanOr(Trig_Wagons_Reach_Breadcrumb_Func004001(), Trig_Wagons_Reach_Breadcrumb_Func004002()) ) then
         return false
     endif
-    if ( not GetBooleanOr( Trig_Wagons_Reach_Breadcrumb_Func005001(), Trig_Wagons_Reach_Breadcrumb_Func005002() ) ) then
+    if ( not GetBooleanOr(Trig_Wagons_Reach_Breadcrumb_Func005001(), Trig_Wagons_Reach_Breadcrumb_Func005002()) ) then
         return false
     endif
-    if ( not GetBooleanOr( Trig_Wagons_Reach_Breadcrumb_Func006001(), Trig_Wagons_Reach_Breadcrumb_Func006002() ) ) then
+    if ( not GetBooleanOr(Trig_Wagons_Reach_Breadcrumb_Func006001(), Trig_Wagons_Reach_Breadcrumb_Func006002()) ) then
         return false
     endif
-    if ( not GetBooleanOr( Trig_Wagons_Reach_Breadcrumb_Func007001(), Trig_Wagons_Reach_Breadcrumb_Func007002() ) ) then
+    if ( not GetBooleanOr(Trig_Wagons_Reach_Breadcrumb_Func007001(), Trig_Wagons_Reach_Breadcrumb_Func007002()) ) then
         return false
     endif
     if ( not ( CountUnitsInGroup(udg_TheCaravanWagons) > 0 ) ) then
@@ -6355,7 +6355,7 @@ function Trig_Caravan_Removal_Func001002 takes nothing returns boolean
 endfunction
 
 function Trig_Caravan_Removal_Conditions takes nothing returns boolean
-    if ( not GetBooleanOr( Trig_Caravan_Removal_Func001001(), Trig_Caravan_Removal_Func001002() ) ) then
+    if ( not GetBooleanOr(Trig_Caravan_Removal_Func001001(), Trig_Caravan_Removal_Func001002()) ) then
         return false
     endif
     return true

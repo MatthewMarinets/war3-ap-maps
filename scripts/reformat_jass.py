@@ -56,7 +56,8 @@ def reformat_file(in_file: str, out_file: str) -> None:
             state = ParsingState.START
         elif m := re.match(_comment_string, line):
             pretty = f'{m.group(1)}// {m.group(2)}\n'
-        elif text.startswith('call') or text.startswith('return ') or text.startswith('set'):
+        elif text.startswith('call') or text.startswith('return ') or text.startswith('set') or text.startswith('if'):
+            # remove spaces inside word-parens()
             pretty_chars = []
             index = 0
             stack = []

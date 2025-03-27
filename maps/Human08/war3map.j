@@ -2841,7 +2841,7 @@ function Trig_EncounterUndead_Conditions takes nothing returns boolean
     if ( not ( GetOwningPlayer(GetEnteringUnit()) == Player(1) ) ) then
         return false
     endif
-    if ( not GetBooleanAnd( Trig_EncounterUndead_Func002001(), Trig_EncounterUndead_Func002002() ) ) then
+    if ( not GetBooleanAnd(Trig_EncounterUndead_Func002001(), Trig_EncounterUndead_Func002002()) ) then
         return false
     endif
     return true
@@ -2872,7 +2872,7 @@ function Trig_EncounterUndeadMessageArthas_Func001002 takes nothing returns bool
 endfunction
 
 function Trig_EncounterUndeadMessageArthas_Conditions takes nothing returns boolean
-    if ( not GetBooleanAnd( Trig_EncounterUndeadMessageArthas_Func001001(), Trig_EncounterUndeadMessageArthas_Func001002() ) ) then
+    if ( not GetBooleanAnd(Trig_EncounterUndeadMessageArthas_Func001001(), Trig_EncounterUndeadMessageArthas_Func001002()) ) then
         return false
     endif
     if ( not ( udg_GameOver == false ) ) then
@@ -2916,7 +2916,7 @@ function Trig_EncounterUndeadMessageMuradin_Func001002 takes nothing returns boo
 endfunction
 
 function Trig_EncounterUndeadMessageMuradin_Conditions takes nothing returns boolean
-    if ( not GetBooleanAnd( Trig_EncounterUndeadMessageMuradin_Func001001(), Trig_EncounterUndeadMessageMuradin_Func001002() ) ) then
+    if ( not GetBooleanAnd(Trig_EncounterUndeadMessageMuradin_Func001001(), Trig_EncounterUndeadMessageMuradin_Func001002()) ) then
         return false
     endif
     if ( not ( udg_GameOver == false ) ) then

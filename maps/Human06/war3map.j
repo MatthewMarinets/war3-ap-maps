@@ -2593,7 +2593,7 @@ function Trig_Kill_Villager_Deny_Malganis_Func003002 takes nothing returns boole
 endfunction
 
 function Trig_Kill_Villager_Deny_Malganis_Conditions takes nothing returns boolean
-    if ( not GetBooleanOr( Trig_Kill_Villager_Deny_Malganis_Func003001(), Trig_Kill_Villager_Deny_Malganis_Func003002() ) ) then
+    if ( not GetBooleanOr(Trig_Kill_Villager_Deny_Malganis_Func003001(), Trig_Kill_Villager_Deny_Malganis_Func003002()) ) then
         return false
     endif
     if ( not ( IsUnitAlly(GetKillingUnitBJ(), udg_ThePlayer) == true ) ) then
@@ -3143,7 +3143,7 @@ function Trig_Villagers_Run_District_1_Func001002 takes nothing returns boolean
 endfunction
 
 function Trig_Villagers_Run_District_1_Conditions takes nothing returns boolean
-    if ( not GetBooleanOr( Trig_Villagers_Run_District_1_Func001001(), Trig_Villagers_Run_District_1_Func001002() ) ) then
+    if ( not GetBooleanOr(Trig_Villagers_Run_District_1_Func001001(), Trig_Villagers_Run_District_1_Func001002()) ) then
         return false
     endif
     return true
@@ -3191,7 +3191,7 @@ function Trig_Villagers_Run_District_2_Func001002 takes nothing returns boolean
 endfunction
 
 function Trig_Villagers_Run_District_2_Conditions takes nothing returns boolean
-    if ( not GetBooleanOr( Trig_Villagers_Run_District_2_Func001001(), Trig_Villagers_Run_District_2_Func001002() ) ) then
+    if ( not GetBooleanOr(Trig_Villagers_Run_District_2_Func001001(), Trig_Villagers_Run_District_2_Func001002()) ) then
         return false
     endif
     return true
@@ -3238,7 +3238,7 @@ function Trig_Villagers_Run_District_3_Func001002 takes nothing returns boolean
 endfunction
 
 function Trig_Villagers_Run_District_3_Conditions takes nothing returns boolean
-    if ( not GetBooleanOr( Trig_Villagers_Run_District_3_Func001001(), Trig_Villagers_Run_District_3_Func001002() ) ) then
+    if ( not GetBooleanOr(Trig_Villagers_Run_District_3_Func001001(), Trig_Villagers_Run_District_3_Func001002()) ) then
         return false
     endif
     return true
@@ -3285,7 +3285,7 @@ function Trig_Villagers_Run_District_4_Func001002 takes nothing returns boolean
 endfunction
 
 function Trig_Villagers_Run_District_4_Conditions takes nothing returns boolean
-    if ( not GetBooleanOr( Trig_Villagers_Run_District_4_Func001001(), Trig_Villagers_Run_District_4_Func001002() ) ) then
+    if ( not GetBooleanOr(Trig_Villagers_Run_District_4_Func001001(), Trig_Villagers_Run_District_4_Func001002()) ) then
         return false
     endif
     return true
@@ -3332,7 +3332,7 @@ function Trig_Villagers_Run_District_5_Func001002 takes nothing returns boolean
 endfunction
 
 function Trig_Villagers_Run_District_5_Conditions takes nothing returns boolean
-    if ( not GetBooleanOr( Trig_Villagers_Run_District_5_Func001001(), Trig_Villagers_Run_District_5_Func001002() ) ) then
+    if ( not GetBooleanOr(Trig_Villagers_Run_District_5_Func001001(), Trig_Villagers_Run_District_5_Func001002()) ) then
         return false
     endif
     return true
@@ -3443,7 +3443,7 @@ function Trig_If_Building_Pops_MakeVillagers_Func002002 takes nothing returns bo
 endfunction
 
 function Trig_If_Building_Pops_MakeVillagers_Conditions takes nothing returns boolean
-    if ( not GetBooleanOr( Trig_If_Building_Pops_MakeVillagers_Func002001(), Trig_If_Building_Pops_MakeVillagers_Func002002() ) ) then
+    if ( not GetBooleanOr(Trig_If_Building_Pops_MakeVillagers_Func002001(), Trig_If_Building_Pops_MakeVillagers_Func002002()) ) then
         return false
     endif
     return true
@@ -3555,7 +3555,7 @@ function Trig_If_Building_Pops_Shake_Camera_Func001002 takes nothing returns boo
 endfunction
 
 function Trig_If_Building_Pops_Shake_Camera_Conditions takes nothing returns boolean
-    if ( not GetBooleanOr( Trig_If_Building_Pops_Shake_Camera_Func001001(), Trig_If_Building_Pops_Shake_Camera_Func001002() ) ) then
+    if ( not GetBooleanOr(Trig_If_Building_Pops_Shake_Camera_Func001001(), Trig_If_Building_Pops_Shake_Camera_Func001002()) ) then
         return false
     endif
     return true

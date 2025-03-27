@@ -2157,7 +2157,7 @@ function Trig_Ice_Troll_Attacks_Func003002 takes nothing returns boolean
 endfunction
 
 function Trig_Ice_Troll_Attacks_Conditions takes nothing returns boolean
-    if ( not GetBooleanOr( Trig_Ice_Troll_Attacks_Func003001(), Trig_Ice_Troll_Attacks_Func003002() ) ) then
+    if ( not GetBooleanOr(Trig_Ice_Troll_Attacks_Func003001(), Trig_Ice_Troll_Attacks_Func003002()) ) then
         return false
     endif
     if ( not ( DistanceBetweenPoints(GetUnitLoc(udg_Arthas), GetUnitLoc(GetAttackedUnitBJ())) <= 1024.00 ) ) then
@@ -3072,7 +3072,7 @@ function Trig_Dwarves_Spotted_Conditions takes nothing returns boolean
     if ( not ( GetOwningPlayer(GetTriggerUnit()) == Player(1) ) ) then
         return false
     endif
-    if ( not GetBooleanOr( Trig_Dwarves_Spotted_Func004001(), Trig_Dwarves_Spotted_Func004002() ) ) then
+    if ( not GetBooleanOr(Trig_Dwarves_Spotted_Func004001(), Trig_Dwarves_Spotted_Func004002()) ) then
         return false
     endif
     return true
@@ -3119,7 +3119,7 @@ function Trig_Dwarves_Spotted_Message_Func001002 takes nothing returns boolean
 endfunction
 
 function Trig_Dwarves_Spotted_Message_Conditions takes nothing returns boolean
-    if ( not GetBooleanOr( Trig_Dwarves_Spotted_Message_Func001001(), Trig_Dwarves_Spotted_Message_Func001002() ) ) then
+    if ( not GetBooleanOr(Trig_Dwarves_Spotted_Message_Func001001(), Trig_Dwarves_Spotted_Message_Func001002()) ) then
         return false
     endif
     if ( not ( udg_GameOver == false ) ) then
