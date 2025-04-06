@@ -8,33 +8,33 @@ from .missions import Wc3Mission
 
 class HeroSlot(enum.IntEnum):
     PALADIN_ARTHAS = 1
-    JAINA = enum.auto()
-    MURADIN_BRONZEBEARD = enum.auto()
+    JAINA = 2
+    MURADIN_BRONZEBEARD = 3
 
-    THRALL = enum.auto()
-    CAIRNE_BLOODHOOF = enum.auto()
-    GROM_HELLSCREAM = enum.auto()
+    THRALL = 4
+    CAIRNE_BLOODHOOF = 5
+    GROM_HELLSCREAM = 6
 
-    DEATH_KNIGHT_ARTHAS = enum.auto()
-    KEL_THUZAD = enum.auto()
-    ARTHAS_TFT = enum.auto()
-    SYLVANAS = enum.auto()
-    VARIMATHRAS = enum.auto()
-    ANUB_ARAK = enum.auto()
+    DEATH_KNIGHT_ARTHAS = 7
+    KEL_THUZAD = 8
+    ARTHAS_TFT = 9
+    SYLVANAS = 10
+    VARIMATHRAS = 11
+    ANUB_ARAK = 12
 
-    TYRANDE = enum.auto()
-    FURION = enum.auto()
-    ILLIDAN = enum.auto()
-    TYRANDE_TFT = enum.auto()
-    MALFURION = enum.auto()
-    MAIEV = enum.auto()
+    TYRANDE = 13
+    FURION = 14
+    ILLIDAN = 15
+    TYRANDE_TFT = 16
+    MALFURION = 17
+    MAIEV = 18
 
-    KAEL_THAS = enum.auto()
-    DEMON_ILLIDAN = enum.auto()
-    LADY_VASHJ = enum.auto()
-    AKAMA = enum.auto()
+    KAEL_THAS = 19
+    DEMON_ILLIDAN = 20
+    LADY_VASHJ = 21
+    AKAMA = 22
 
-    LORD_GARITHOS = enum.auto()
+    LORD_GARITHOS = 23
 
 
 class HeroSource(enum.IntEnum):
