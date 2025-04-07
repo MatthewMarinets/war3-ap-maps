@@ -46,29 +46,29 @@ function hero_load takes integer hero_slot returns boolean
     call SetPlayerTechMaxAllowed(p, 'nech', -1)
     call SetPlayerTechMaxAllowed(p, 'nske', -1)
     call SetPlayerTechMaxAllowed(p, 'npng', -1)
-    call SetPlayerTechMaxAllowed(p, 'ndog', -1)
-    call SetPlayerTechMaxAllowed(p, 'nskk', -1)
-    call SetPlayerTechMaxAllowed(p, 'npig', -1)
-    call SetPlayerTechMaxAllowed(p, 'nsea', -1)
-    call SetPlayerTechMaxAllowed(p, 'ncrb', -1)
-    call SetPlayerTechMaxAllowed(p, 'nder', -1)
+    call SetPlayerTechMaxAllowed(p, 'ndog', 0)
+    call SetPlayerTechMaxAllowed(p, 'nskk', 0)
+    call SetPlayerTechMaxAllowed(p, 'npig', 0)
+    call SetPlayerTechMaxAllowed(p, 'nsea', 0)
+    call SetPlayerTechMaxAllowed(p, 'ncrb', 0)
+    call SetPlayerTechMaxAllowed(p, 'nder', 0)
     // nfro = abil IDs
-    call SetPlayerTechMaxAllowed(Player(0), 'nfro', -1)
-    call SetPlayerTechMaxAllowed(Player(1), 'nfro', -1)
-    call SetPlayerTechMaxAllowed(Player(2), 'nfro', -1)
-    call SetPlayerTechMaxAllowed(Player(3), 'nfro', -1)
+    call SetPlayerTechMaxAllowed(Player(0), 'nfro', 0)
+    call SetPlayerTechMaxAllowed(Player(1), 'nfro', 0)
+    call SetPlayerTechMaxAllowed(Player(2), 'nfro', 0)
+    call SetPlayerTechMaxAllowed(Player(3), 'nfro', 0)
     // nrac = abil skillpoints
-    call SetPlayerTechMaxAllowed(Player(0), 'nrac', -1)
-    call SetPlayerTechMaxAllowed(Player(1), 'nrac', -1)
-    call SetPlayerTechMaxAllowed(Player(2), 'nrac', -1)
-    call SetPlayerTechMaxAllowed(Player(3), 'nrac', -1)
+    call SetPlayerTechMaxAllowed(Player(0), 'nrac', 0)
+    call SetPlayerTechMaxAllowed(Player(1), 'nrac', 0)
+    call SetPlayerTechMaxAllowed(Player(2), 'nrac', 0)
+    call SetPlayerTechMaxAllowed(Player(3), 'nrac', 0)
     // nvul = items
-    call SetPlayerTechMaxAllowed(Player(0), 'nvul', -1)
-    call SetPlayerTechMaxAllowed(Player(1), 'nvul', -1)
-    call SetPlayerTechMaxAllowed(Player(2), 'nvul', -1)
-    call SetPlayerTechMaxAllowed(Player(3), 'nvul', -1)
-    call SetPlayerTechMaxAllowed(Player(4), 'nvul', -1)
-    call SetPlayerTechMaxAllowed(Player(5), 'nvul', -1)
+    call SetPlayerTechMaxAllowed(Player(0), 'nvul', 0)
+    call SetPlayerTechMaxAllowed(Player(1), 'nvul', 0)
+    call SetPlayerTechMaxAllowed(Player(2), 'nvul', 0)
+    call SetPlayerTechMaxAllowed(Player(3), 'nvul', 0)
+    call SetPlayerTechMaxAllowed(Player(4), 'nvul', 0)
+    call SetPlayerTechMaxAllowed(Player(5), 'nvul', 0)
 
     call SetPlayerTechMaxAllowed(p, 'nalb', hero_global_slots[hero_slot])
     call io_read_file("heroes.txt")
@@ -90,19 +90,19 @@ function hero_configure takes unit hero, integer slot returns nothing
     local integer i = 0
     call SetHeroXP(hero, GetPlayerTechMaxAllowed(p, 'ncrb'), false)
     set val = GetPlayerTechMaxAllowed(p, 'ndog')
-    if val > 0 and val < 1000 then
+    if val > 0 then
         call SetHeroAgi(hero, val, true)
     endif
     set val = GetPlayerTechMaxAllowed(p, 'nskk')
-    if val > 0 and val < 1000 then
+    if val > 0 then
         call SetHeroStr(hero, val, true)
     endif
     set val = GetPlayerTechMaxAllowed(p, 'npig')
-    if val > 0 and val < 1000 then
+    if val > 0 then
         call SetHeroInt(hero, val, true)
     endif
     set val = GetPlayerTechMaxAllowed(p, 'nsea')
-    if val > 0 and val < 1000000 then
+    if val > 0 then
         call SetUnitState(hero, UNIT_STATE_MAX_LIFE, I2R(val))
         call SetUnitState(hero, UNIT_STATE_LIFE, I2R(val))
     endif
@@ -125,14 +125,23 @@ function hero_configure takes unit hero, integer slot returns nothing
         set val = GetPlayerTechMaxAllowed(Player(i), 'nvul')
         if val > 0 then
             call UnitAddItemById(hero, val)
-        // else
-        //     call UnitAddItemById(hero, 'wtlg')
+        else
+            // pad out empty slots with a dummy item so later items go to the correct slots
+            call UnitAddItemById(hero, 'wtlg')
+        endif
+        set i = i + 1
+    endloop
+    set i = 0
+    loop
+        exitwhen i > 5
+        if GetItemTypeId(UnitItemInSlot(hero, i)) == 'wtlg' then
+            call UnitRemoveItemFromSlot(hero, i)
         endif
         set i = i + 1
     endloop
     // max level
     set val = GetPlayerTechMaxAllowed(p, 'nder')
-    if val > 0 and val < 1000 then
+    if val > 0 then
         set HERO_MAX_LEVEL[slot] = val
         call hero_apply_max_level(hero, val)
     endif

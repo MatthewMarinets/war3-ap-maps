@@ -90,10 +90,10 @@ class HeroStatus:
     name: str
     xp: int = 0
     max_level: int = 2
-    strength: int = -1
-    agility: int = -1
-    intelligence: int = -1
-    max_health: int = -1
+    strength: int = 0
+    agility: int = 0
+    intelligence: int = 0
+    max_health: int = 0
     abilities: dict[GameID, int] = field(default_factory=dict)
     items: list[GameID|None] = field(default_factory=lambda: [None]*6)
 
@@ -449,7 +449,8 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
 
 
 def init_test_data(game_status: GameStatus) -> None:
-    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS] = HeroStatus(heroes.HeroChoice.BLACKROCK_BLADEMASTER, "Rokhan")
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS] = HeroStatus(heroes.HeroChoice.BLACKROCK_BLADEMASTER, "Rokhan", xp=210)
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].items[2] = GameID.BRACER_OF_AGILITY
     game_status.hero_data[heroes.HeroSlot.JAINA] = HeroStatus(heroes.HeroChoice.FIRELORD, "Ragnaros")
 
 
