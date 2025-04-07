@@ -671,3 +671,903 @@ variation_level = 0
 table_column = 0
 value = ''
 object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I01B'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Archipelago Item 11'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Purchase a check for map location 11.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Get a randomized item when used.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Collects map location 11 for the player.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'isel'  # ItemData.Can Be Sold By Merchants
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 500
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I01C'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Archipelago Item 12'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Purchase a check for map location 12.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Get a randomized item when used.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Collects map location 12 for the player.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'isel'  # ItemData.Can Be Sold By Merchants
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 500
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I01D'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Archipelago Item 13'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Purchase a check for map location 13.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Get a randomized item when used.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Collects map location 13 for the player.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'isel'  # ItemData.Can Be Sold By Merchants
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 500
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I01E'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Archipelago Item 14'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Purchase a check for map location 14.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Get a randomized item when used.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Collects map location 14 for the player.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'isel'  # ItemData.Can Be Sold By Merchants
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 500
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I01F'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Archipelago Item 15'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Purchase a check for map location 15.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Get a randomized item when used.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Collects map location 15 for the player.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'isel'  # ItemData.Can Be Sold By Merchants
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 500
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I020'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Archipelago Item 16'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Purchase a check for map location 16.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Get a randomized item when used.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Collects map location 16 for the player.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'isel'  # ItemData.Can Be Sold By Merchants
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 500
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I021'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Archipelago Item 17'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Purchase a check for map location 17.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Get a randomized item when used.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Collects map location 17 for the player.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'isel'  # ItemData.Can Be Sold By Merchants
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 500
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I022'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Archipelago Item 18'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Purchase a check for map location 18.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Get a randomized item when used.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Collects map location 18 for the player.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'isel'  # ItemData.Can Be Sold By Merchants
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 500
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I023'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Archipelago Item 19'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Purchase a check for map location 19.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Get a randomized item when used.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Collects map location 19 for the player.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'isel'  # ItemData.Can Be Sold By Merchants
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 500
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I024'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Archipelago Item 20'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Purchase a check for map location 20.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Get a randomized item when used.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Collects map location 20 for the player.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'isel'  # ItemData.Can Be Sold By Merchants
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 500
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I025'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Archipelago Item 21'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Purchase a check for map location 21.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Get a randomized item when used.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Collects map location 21 for the player.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'isel'  # ItemData.Can Be Sold By Merchants
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 500
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I026'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Archipelago Item 22'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Purchase a check for map location 22.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Get a randomized item when used.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Collects map location 22 for the player.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'isel'  # ItemData.Can Be Sold By Merchants
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 500
+object_id = 'null'
