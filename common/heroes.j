@@ -79,6 +79,7 @@ function hero_load takes integer hero_slot returns boolean
         set hero_abil_2[hero_slot] = GetPlayerTechMaxAllowed(Player(1), 'nfro')
         set hero_abil_3[hero_slot] = GetPlayerTechMaxAllowed(Player(2), 'nfro')
         set hero_abil_4[hero_slot] = GetPlayerTechMaxAllowed(Player(3), 'nfro')
+        set last_hero_packet = GetPlayerTechMaxAllowed(p, 'nech')
     endif
 
     return GetPlayerTechMaxAllowed(p, 'nske') == 1

@@ -4,6 +4,7 @@ globals
 integer last_unlock_packet = -1
 integer last_location_packet = -1
 integer last_message_packet = -1
+integer last_hero_packet = -1
 integer checks_before_timeout = -1
 string player_index = ""
 boolean array locations_checked
@@ -18,7 +19,7 @@ function status_send takes nothing returns nothing
     call io_write(I2S(update_index))
     call io_write(I2S(MISSION_ID))
     call io_write(player_index)
-    call io_write(I2S(last_unlock_packet) + "," + I2S(last_location_packet) + "," + I2S(last_message_packet))
+    call io_write(I2S(last_unlock_packet) + "," + I2S(last_location_packet) + "," + I2S(last_message_packet) + "," + I2S(last_hero_packet))
     set update_index = update_index + 1
     if update_index >= 10000 then
         set update_index = 0
