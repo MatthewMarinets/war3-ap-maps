@@ -256,7 +256,7 @@ def read_status(filename: str, status: MissionStatus) -> None:
     status.player_index = line_contents(lines.pop(0)).split(',')
     last_transmissions = [int(x) for x in line_contents(lines.pop(0)).split(',')]
     if len(last_transmissions) > NUM_PACKET_TYPES:
-        if not status.errors.VERSION_MISMATCH:
+        if not (status.errors & MissionError.VERSION_MISMATCH):
             logger.error(
                 f"Too many packet acknowledgements sent ({len(last_transmissions)} > {NUM_PACKET_TYPES}); "
                 "mod may be a newer version"
@@ -264,7 +264,7 @@ def read_status(filename: str, status: MissionStatus) -> None:
             status.errors |= MissionError.VERSION_MISMATCH
         last_transmissions = last_transmissions[:3]
     elif len(last_transmissions) < NUM_PACKET_TYPES:
-        if not status.errors.VERSION_MISMATCH:
+        if not (status.errors & MissionError.VERSION_MISMATCH):
             logger.error(
                 f"Too few packet acknowledgements sent({len(last_transmissions)} < {NUM_PACKET_TYPES}); "
                 "mod may be out of date"
