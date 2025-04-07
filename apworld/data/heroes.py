@@ -4,6 +4,7 @@ Tables storing relationships between items and missions
 
 import enum
 from .missions import Wc3Mission
+from .game_ids import GameID
 
 
 class HeroSlot(enum.IntEnum):
@@ -41,7 +42,8 @@ class HeroSource(enum.IntEnum):
     VANILLA = 1
     ENEMY = 2
     BONUS = 3
-    TAVERN = 4
+    MELEE = 4
+    TAVERN = 5
 
 
 class HeroClass(enum.IntEnum):
@@ -79,16 +81,17 @@ class HeroClass(enum.IntEnum):
         return self.name.replace('_', ' ').title().replace('Of', 'of').replace('The', 'the')
 
 
-class HeroChoices(enum.Enum):
+class HeroChoice(enum.Enum):
     def __new__(cls, id: int, *args, **kwargs):
         obj = object.__new__(cls)
         obj._value_ = id
         return obj
 
-    def __init__(self, id: int, hero_name: str, hero_class: HeroClass, source: HeroSource) -> None:
+    def __init__(self, id: int, hero_name: str, hero_class: HeroClass, source: HeroSource, game_id: GameID) -> None:
         self.hero_name = hero_name
         self.hero_class = hero_class
         self.source = source
+        self.game_id = game_id
         self.vanilla_slot: HeroSlot|None = None
         if source == HeroSource.VANILLA:
             for hero_slot in HeroSlot:
@@ -97,57 +100,77 @@ class HeroChoices(enum.Enum):
                     break
             assert self.vanilla_slot is not None
 
-    PALADIN_ARTHAS =      1,  "Arthas", HeroClass.PALADIN, HeroSource.VANILLA
-    JAINA =               2,  "Jaina", HeroClass.ARCHMAGE, HeroSource.VANILLA
-    MURADIN_BRONZEBEARD = 3,  "Muradin Bronzebeard", HeroClass.MOUNTAIN_KING, HeroSource.VANILLA
-    THRALL =              4,  "Thrall", HeroClass.FAR_SEER, HeroSource.VANILLA
-    CAIRNE_BLOODHOOF =    5,  "Cairne Bloodhoof", HeroClass.TAUREN_CHIEFTAIN, HeroSource.VANILLA
-    GROM_HELLSCREAM =     6,  "Grom Hellscream", HeroClass.BLADEMASTER, HeroSource.VANILLA
-    DEATH_KNIGHT_ARTHAS = 7,  "Death Knight Arthas", HeroClass.DEATH_KNIGHT, HeroSource.VANILLA
-    KEL_THUZAD =          8,  "Kel'Thuzad", HeroClass.LICH, HeroSource.VANILLA
-    SYLVANAS =            9,  "Sylvanas", HeroClass.DARK_RANGER, HeroSource.VANILLA
-    VARIMATHRAS =         10, "Varimathras", HeroClass.DREADLORD, HeroSource.VANILLA
-    ANUB_ARAK =           11, "Anub'arak", HeroClass.CRYPT_LORD, HeroSource.VANILLA
-    TYRANDE =             12, "Tyrande", HeroClass.PRIESTESS_OF_THE_MOON, HeroSource.VANILLA
-    FURION =              13, "Furion", HeroClass.KEEPER_OF_THE_GROVE, HeroSource.VANILLA
-    ILLIDAN =             14, "Illidan", HeroClass.DEMON_HUNTER, HeroSource.VANILLA
-    MAIEV =               15, "Maiev", HeroClass.WARDEN, HeroSource.VANILLA
-    TYRANDE_TFT =         16, "Tyrande", HeroClass.PRIESTESS_OF_THE_MOON, HeroSource.VANILLA
-    MALFURION =           17, "Malfurion", HeroClass.KEEPER_OF_THE_GROVE, HeroSource.VANILLA
-    KAEL_THAS =           18, "Kael'Thas", HeroClass.BLOOD_MAGE, HeroSource.VANILLA
-    LADY_VASHJ =          19, "Lady Vashj", HeroClass.NAGA_SEA_WITCH, HeroSource.VANILLA
-    DEMON_ILLIDAN =       20, "Demon Illidan", HeroClass.DEMON_HUNTER, HeroSource.VANILLA
-    AKAMA =               21, "Akama", HeroClass.ELDER_SAGE, HeroSource.VANILLA
-    LORD_GARITHOS =       22, "Lord Garithos", HeroClass.DARK_KNIGHT, HeroSource.VANILLA  # Shockwave, Holy Light, Devotion Aura, Avatar
+    PALADIN_ARTHAS =      1,  "Arthas", HeroClass.PALADIN, HeroSource.VANILLA, GameID.ARTHAS
+    JAINA =               2,  "Jaina", HeroClass.ARCHMAGE, HeroSource.VANILLA, GameID.JAINA
+    MURADIN_BRONZEBEARD = 3,  "Muradin Bronzebeard", HeroClass.MOUNTAIN_KING, HeroSource.VANILLA, GameID.MURADIN_BRONZEBEARD
+    THRALL =              4,  "Thrall", HeroClass.FAR_SEER, HeroSource.VANILLA, GameID.THRALL
+    CAIRNE_BLOODHOOF =    5,  "Cairne Bloodhoof", HeroClass.TAUREN_CHIEFTAIN, HeroSource.VANILLA, GameID.CAIRNE_BLOODHOOF
+    GROM_HELLSCREAM =     6,  "Grom Hellscream", HeroClass.BLADEMASTER, HeroSource.VANILLA, GameID.GROM_HELLSCREAM
+    DEATH_KNIGHT_ARTHAS = 7,  "Death Knight Arthas", HeroClass.DEATH_KNIGHT, HeroSource.VANILLA, GameID.ARTHAS_EVIL
+    KEL_THUZAD =          8,  "Kel'Thuzad", HeroClass.LICH, HeroSource.VANILLA, GameID.KEL_THUZAD
+    ARTHAS_TFT =          9,  "Death Knight Arthas", HeroClass.DARK_RANGER, HeroSource.VANILLA, GameID.ARTHAS_EVIL
+    SYLVANAS =            10,  "Sylvanas", HeroClass.DARK_RANGER, HeroSource.VANILLA, GameID.SYLVANAS
+    VARIMATHRAS =         11, "Varimathras", HeroClass.DREADLORD, HeroSource.VANILLA, GameID.VARIMATHRAS
+    ANUB_ARAK =           12, "Anub'arak", HeroClass.CRYPT_LORD, HeroSource.VANILLA, GameID.ANUB_ARAK
+    TYRANDE =             13, "Tyrande", HeroClass.PRIESTESS_OF_THE_MOON, HeroSource.VANILLA, GameID.TYRANDE
+    FURION =              14, "Furion", HeroClass.KEEPER_OF_THE_GROVE, HeroSource.VANILLA, GameID.FURION
+    ILLIDAN =             15, "Illidan", HeroClass.DEMON_HUNTER, HeroSource.VANILLA, GameID.ILLIDAN
+    MAIEV =               16, "Maiev", HeroClass.WARDEN, HeroSource.VANILLA, GameID.MAIEV
+    TYRANDE_TFT =         17, "Tyrande", HeroClass.PRIESTESS_OF_THE_MOON, HeroSource.VANILLA, GameID.TYRANDE
+    MALFURION =           18, "Malfurion", HeroClass.KEEPER_OF_THE_GROVE, HeroSource.VANILLA, GameID.MALFURION
+    KAEL_THAS =           19, "Kael'Thas", HeroClass.BLOOD_MAGE, HeroSource.VANILLA, GameID.KAEL_THAS
+    LADY_VASHJ =          20, "Lady Vashj", HeroClass.NAGA_SEA_WITCH, HeroSource.VANILLA, GameID.LADY_VASHJ
+    DEMON_ILLIDAN =       21, "Demon Illidan", HeroClass.DEMON_HUNTER, HeroSource.VANILLA, GameID.ILLIDAN_EVIL
+    AKAMA =               22, "Akama", HeroClass.ELDER_SAGE, HeroSource.VANILLA, GameID.AKAMA
+    LORD_GARITHOS =       23, "Lord Garithos", HeroClass.DARK_KNIGHT, HeroSource.VANILLA, GameID.LORD_GARITHOS  # Shockwave, Holy Light, Devotion Aura, Avatar
 
-    MAL_GANIS =           23, "Mal'Ganis", HeroClass.DREADLORD, HeroSource.ENEMY  # Aura -> Soul Preservation, Inferno -> Dark Conversion
-    DETHEROC =            24, "Detheroc", HeroClass.DREADLORD, HeroSource.ENEMY  # Aura -> Shadow Strike, Inferno -> Death and Decay
-    MANNOROTH =           25, "Mannoroth", HeroClass.PIT_LORD, HeroSource.ENEMY  # Shockwave, Thunder Clap, Earthquake, Reincarnation
-    MAGTHERIDON =         26, "Magtheridon", HeroClass.PIT_LORD, HeroSource.ENEMY
-    UTHER =               27, "Uther", HeroClass.PALADIN, HeroSource.ENEMY
-    RANGER_SYLVANAS =     28, "Sylvanas Windrunner", HeroClass.RANGER, HeroSource.ENEMY  # Cold Arrows, Scout, Trueshot Aura, Starfall
-    ANTONIDAS =           29, "Antonidas", HeroClass.ARCHMAGE, HeroSource.ENEMY
-    # DAGREN_THE_ORCSLAYER = "Dagren the Orcslayer", HeroClass.PALADIN, HeroSource.ENEMY
-    # HALAHK_THE_LIFEBRINGER = "Halahk the Lifebringer", HeroClass.PALADIN, HeroSource.ENEMY
-    # LORD_NICOLAS_BUZAN = "Lord Nicolas Buzan", HeroClass.PALADIN, HeroSource.ENEMY
-    # MAGROTH_THE_DEFENDER = "Magroth the Defender", HeroClass.PALADIN, HeroSource.ENEMY
-    # SIR_GREGORY_EDMUNDSON = "Sir Gregory Edmundson", HeroClass.PALADIN, HeroSource.ENEMY
-    # AZGALOR = "Azgalor", HeroClass.PIT_LORD, HeroSource.ENEMY  # Copy-paste of Mannoroth
+    MAL_GANIS =           30, "Mal'Ganis", HeroClass.DREADLORD, HeroSource.ENEMY, GameID.DREADLORD  # Use stock dreadlord, otherwise (Aura -> Soul Preservation, Inferno -> Dark Conversion)
+    DETHEROC =            31, "Detheroc", HeroClass.DREADLORD, HeroSource.ENEMY, GameID.DETHEROC  # Aura -> Shadow Strike, Inferno -> Death and Decay
+    # DALVENGYR =           _, "Dalvengyr", HeroClass.DREADLORD, HeroSource.ENEMY, GameID.DALVENGYR
+    # MANNOROTH =           _, "Mannoroth", HeroClass.PIT_LORD, HeroSource.ENEMY, GameID.MANNOROTH  # Shockwave, Thunder Clap, Reincarnation, Earthquake
+    MAGTHERIDON =         32, "Magtheridon", HeroClass.PIT_LORD, HeroSource.ENEMY, GameID.MAGTHERIDON
+    UTHER =               33, "Uther", HeroClass.PALADIN, HeroSource.ENEMY, GameID.UTHER
+    RANGER_SYLVANAS =     34, "Sylvanas Windrunner", HeroClass.RANGER, HeroSource.ENEMY, GameID.SYLVANAS_ELF  # Cold Arrows, Scout, Trueshot Aura, Starfall
+    ANTONIDAS =           35, "Antonidas", HeroClass.ARCHMAGE, HeroSource.ENEMY, GameID.ANTONIDAS
+    BLACKROCK_BLADEMASTER = 36, "Blackrock Blademaster", HeroClass.BLADEMASTER, HeroSource.ENEMY, GameID.CHAOS_BLADEMASTER
+    # DAGREN_THE_ORCSLAYER = _, "Dagren the Orcslayer", HeroClass.PALADIN, HeroSource.ENEMY, GameID.DAGREN_THE_ORCSLAYER
+    # HALAHK_THE_LIFEBRINGER = _, "Halahk the Lifebringer", HeroClass.PALADIN, HeroSource.ENEMY, GameID.HALAHK_THE_LIFEBRINGER
+    # LORD_NICOLAS_BUZAN = _, "Lord Nicolas Buzan", HeroClass.PALADIN, HeroSource.ENEMY, GameID.LORD_NICOLAS_BUZAN
+    # MAGROTH_THE_DEFENDER = _, "Magroth the Defender", HeroClass.PALADIN, HeroSource.ENEMY, GameID.MAGROTH_THE_DEFENDER
+    # SIR_GREGORY_EDMUNDSON = _, "Sir Gregory Edmundson", HeroClass.PALADIN, HeroSource.ENEMY, GameID.SIR_GREGORY_EDMUNDSON
+    # AZGALOR = _, "Azgalor", HeroClass.PIT_LORD, HeroSource.ENEMY, GameID.AZGALOR  # Copy-paste of Mannoroth
 
-    REXXAR =            30, "Tavern", HeroClass.BEASTMASTER, HeroSource.BONUS
-    ROKHAN =            31, "Rokhan", HeroClass.SHADOW_HUNTER, HeroSource.BONUS
-    CHEN_STORMSTOUT =   32, "Chen Stormstout", HeroClass.PANDAREN_BREWMASTER, HeroSource.BONUS
-    # DREK_THAR = "Drek'Thar", HeroClass.FAR_SEER, HeroSource.BONUS
-    # SAMURO = "Samuro", HeroClass.BLADEMASTER, HeroSource.BONUS
+    REXXAR =            40, "Tavern", HeroClass.BEASTMASTER, HeroSource.BONUS, GameID.BEASTMASTER
+    ROKHAN =            41, "Rokhan", HeroClass.SHADOW_HUNTER, HeroSource.BONUS, GameID.SHADOW_HUNTER
+    CHEN_STORMSTOUT =   42, "Chen Stormstout", HeroClass.PANDAREN_BREWMASTER, HeroSource.BONUS, GameID.PANDAREN_BREWMASTER
+    # DREK_THAR = "Drek'Thar", HeroClass.FAR_SEER, HeroSource.BONUS, GameID.DREK_THAR
+    # SAMURO = "Samuro", HeroClass.BLADEMASTER, HeroSource.BONUS, GameID.SAMURO
 
-    ALCHEMIST =           33, "Alchemist", HeroClass.ALCHEMIST, HeroSource.TAVERN
-    NAGA_SEA_WITCH =      34, "Naga Sea Witch", HeroClass.NAGA_SEA_WITCH, HeroSource.TAVERN
-    TINKER =              35, "Tinker", HeroClass.TINKER, HeroSource.TAVERN
-    BEASTMASTER =         36, "Beastmaster", HeroClass.BEASTMASTER, HeroSource.TAVERN
-    DARK_RANGER =         37, "Dark Ranger", HeroClass.DARK_RANGER, HeroSource.TAVERN
-    FIRELORD =            38, "Firelord", HeroClass.FIRELORD, HeroSource.TAVERN
-    PANDAREN_BREWMASTER = 39, "Pandaren Brewmaster", HeroClass.PANDAREN_BREWMASTER, HeroSource.TAVERN
-    PIT_LORD =            40, "Pit Lord", HeroClass.PIT_LORD, HeroSource.TAVERN
+    PALADIN =               50, "Paladin", HeroClass.PALADIN, HeroSource.MELEE, GameID.PALADIN
+    ARCHMAGE =              51, "Archmage", HeroClass.PALADIN, HeroSource.MELEE, GameID.ARCHMAGE
+    MOUNTAIN_KING =         52, "Mountain King", HeroClass.MOUNTAIN_KING, HeroSource.MELEE, GameID.MOUNTAIN_KING
+    BLOOD_MAGE =            53, "Blood Mage", HeroClass.BLOOD_MAGE, HeroSource.MELEE, GameID.BLOOD_MAGE
+    BLADEMASTER =           54, "Blademaster", HeroClass.PALADIN, HeroSource.MELEE, GameID.BLADEMASTER
+    FAR_SEER =              55, "Far Seer", HeroClass.PALADIN, HeroSource.MELEE, GameID.FAR_SEER
+    TAUREN_CHIEFTAIN =      56, "Tauren Chieftain", HeroClass.MOUNTAIN_KING, HeroSource.MELEE, GameID.TAUREN_CHIEFTAIN
+    SHADOW_HUNTER =         57, "Shadow Hunter", HeroClass.BLOOD_MAGE, HeroSource.MELEE, GameID.SHADOW_HUNTER
+    DEATH_KNIGHT =          58, "Death Knight", HeroClass.PALADIN, HeroSource.MELEE, GameID.DEATH_KNIGHT
+    LICH =                  59, "Lich", HeroClass.PALADIN, HeroSource.MELEE, GameID.LICH
+    DREADLORD =             60, "Dreadlord", HeroClass.MOUNTAIN_KING, HeroSource.MELEE, GameID.DREADLORD
+    CRYPT_LORD =            61, "Crypt Lord", HeroClass.BLOOD_MAGE, HeroSource.MELEE, GameID.CRYPT_LORD
+    PRIESTESS_OF_THE_MOON = 62, "Priestess of the Moon", HeroClass.PALADIN, HeroSource.MELEE, GameID.PRIESTESS_OF_THE_MOON
+    KEEPER_OF_THE_GROVE =   63, "Keeper of the Grove", HeroClass.PALADIN, HeroSource.MELEE, GameID.KEEPER_OF_THE_GROVE
+    DEMON_HUNTER =          64, "Demon Hunter", HeroClass.MOUNTAIN_KING, HeroSource.MELEE, GameID.DEMON_HUNTER
+    WARDEN =                65, "Warden", HeroClass.BLOOD_MAGE, HeroSource.MELEE, GameID.WARDEN
+
+    ALCHEMIST =           66, "Alchemist", HeroClass.ALCHEMIST, HeroSource.TAVERN, GameID.ALCHEMIST
+    NAGA_SEA_WITCH =      67, "Naga Sea Witch", HeroClass.NAGA_SEA_WITCH, HeroSource.TAVERN, GameID.NAGA_SEA_WITCH
+    TINKER =              68, "Tinker", HeroClass.TINKER, HeroSource.TAVERN, GameID.TINKER
+    BEASTMASTER =         69, "Beastmaster", HeroClass.BEASTMASTER, HeroSource.TAVERN, GameID.BEASTMASTER
+    DARK_RANGER =         70, "Dark Ranger", HeroClass.DARK_RANGER, HeroSource.TAVERN, GameID.DARK_RANGER
+    FIRELORD =            71, "Firelord", HeroClass.FIRELORD, HeroSource.TAVERN, GameID.FIRELORD
+    PANDAREN_BREWMASTER = 72, "Pandaren Brewmaster", HeroClass.PANDAREN_BREWMASTER, HeroSource.TAVERN, GameID.PANDAREN_BREWMASTER
+    PIT_LORD =            73, "Pit Lord", HeroClass.PIT_LORD, HeroSource.TAVERN, GameID.PIT_LORD
 
 
 class SuperheroSlot(enum.IntEnum):

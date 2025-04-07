@@ -1,8 +1,9 @@
 """Generation functions. Requires core imports."""
 from typing import Mapping, Any, Callable, TYPE_CHECKING
+from .data import missions
 
 from BaseClasses import Region, CollectionState, Entrance, Item, Location
-from . import missions, locations, items
+from . import locations, items
 
 if TYPE_CHECKING:
     from .world import Wc3World

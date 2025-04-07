@@ -8,10 +8,10 @@ import sys
 import os
 from dataclasses import dataclass, field
 
-from .game_ids import Tech, TECH_REQUIREMENTS
+from ..data.game_ids import Tech, TECH_REQUIREMENTS
 from .. import logger
-from ..locations import Wc3Location
-from .. import heroes
+from ..data.locations import Wc3Location
+from ..data import heroes
 
 
 PRELOADER_DIR = os.path.expanduser('~/Documents/Warcraft III/CustomMapData')
