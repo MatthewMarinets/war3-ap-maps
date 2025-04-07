@@ -133,6 +133,8 @@ class HeroChoice(enum.Enum):
     RANGER_SYLVANAS =     34, "Sylvanas Windrunner", HeroClass.RANGER, HeroSource.ENEMY, GameID.SYLVANAS_ELF  # Cold Arrows, Scout, Trueshot Aura, Starfall
     ANTONIDAS =           35, "Antonidas", HeroClass.ARCHMAGE, HeroSource.ENEMY, GameID.ANTONIDAS
     BLACKROCK_BLADEMASTER = 36, "Blackrock Blademaster", HeroClass.BLADEMASTER, HeroSource.ENEMY, GameID.CHAOS_BLADEMASTER
+    GHOST_ANTONIDAS =     37, "Ghost Antonidas", HeroClass.ARCHMAGE, HeroSource.ENEMY, GameID.GHOST_ANTONIDAS
+    GHOST_KEEPER =        38, "Ghost", HeroClass.KEEPER_OF_THE_GROVE, HeroSource.ENEMY, GameID.GHOST_KEEPER_OF_THE_GROVE
     # DAGREN_THE_ORCSLAYER = _, "Dagren the Orcslayer", HeroClass.PALADIN, HeroSource.ENEMY, GameID.DAGREN_THE_ORCSLAYER
     # HALAHK_THE_LIFEBRINGER = _, "Halahk the Lifebringer", HeroClass.PALADIN, HeroSource.ENEMY, GameID.HALAHK_THE_LIFEBRINGER
     # LORD_NICOLAS_BUZAN = _, "Lord Nicolas Buzan", HeroClass.PALADIN, HeroSource.ENEMY, GameID.LORD_NICOLAS_BUZAN
@@ -291,3 +293,16 @@ MISSION_TO_SUPERHERO_SLOT: dict[Wc3Mission, SuperheroSlot] = {
 SUPERHERO_SLOT_TO_MISSION: dict[SuperheroSlot, Wc3Mission] = {
     _superhero: _mission for _mission, _superhero in MISSION_TO_SUPERHERO_SLOT.items()
 }
+
+LEVEL_THRESHOLDS = [
+    0,      # 1
+    200,    # 2
+    500,    # 3
+    900,    # 4
+    1400,   # 5
+    2000,   # 6
+    2700,   # 7
+    3500,   # 8
+    4400,   # 9
+    5400,   # 10
+]

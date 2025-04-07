@@ -8,7 +8,7 @@ import sys
 import os
 from dataclasses import dataclass, field
 
-from ..data.game_ids import Tech, TECH_REQUIREMENTS
+from ..data.game_ids import Tech, TECH_REQUIREMENTS, GameID, HERO_ABILITIES, int_to_id
 from .. import logger
 from ..data.locations import Wc3Location
 from ..data import heroes
@@ -20,9 +20,10 @@ PING_FILE = f'{PRELOADER_DIR}/ping.txt'
 UNLOCKS_FILE = f'{PRELOADER_DIR}/unlocks.txt'
 LOCATIONS_FILE = f'{PRELOADER_DIR}/locations.txt'
 MESSAGES_FILE = f'{PRELOADER_DIR}/messages.txt'
+HEROES_FILE = f'{PRELOADER_DIR}/heroes.txt'
 
 NUM_FILE_LINES = 10
-MAX_LOCATIONS = 20  # Matches status.j
+MAX_LOCATIONS = 30  # Should match status.j
 
 
 def default_locations_collected() -> dict[int, int]:
@@ -61,6 +62,7 @@ class PacketType(enum.IntFlag):
     UNLOCKS = 1
     LOCATIONS = 2
     MESSAGES = 4
+    HEROES = 8
 NUM_PACKET_TYPES = len(PacketType)
 
 
@@ -77,6 +79,29 @@ def default_packet_status() -> dict[PacketType, PacketStatus]:
     }
 
 
+class MissionError(enum.Flag):
+    NONE = 0
+    VERSION_MISMATCH = enum.auto()
+
+
+@dataclass
+class HeroStatus:
+    hero: heroes.HeroChoice
+    name: str
+    xp: int = 0
+    max_level: int = 2
+    strength: int = -1
+    agility: int = -1
+    intelligence: int = -1
+    max_health: int = -1
+    abilities: dict[GameID, int] = field(default_factory=dict)
+    items: list[GameID|None] = field(default_factory=lambda: [None]*6)
+
+    def __post_init__(self) -> None:
+        for abil_id in HERO_ABILITIES[self.hero.game_id]:
+            self.abilities[abil_id] = 0
+
+
 @dataclass
 class MissionStatus:
     update_number: int = -100
@@ -84,6 +109,7 @@ class MissionStatus:
     player_index: list[str] = field(default_factory=list)
     packet_status: dict[PacketType, PacketStatus] = field(default_factory=default_packet_status)
     locations_collected: dict[int, int] = field(default_factory=default_locations_collected)
+    errors: MissionError = MissionError.NONE
 
 
 @dataclass
@@ -91,7 +117,8 @@ class GameStatus:
     pending_messages: list[str] = field(default_factory=list)
     num_in_flight_messages: int = 0
     inventory: Wc3Inventory = field(default_factory=Wc3Inventory)
-    pending_update: PacketType = PacketType.NONE
+    pending_update: PacketType = PacketType.HEROES
+    hero_data: dict[heroes.HeroSlot, HeroStatus] = field(default_factory=dict)
 
 
 @dataclass
@@ -103,7 +130,7 @@ class AsyncContext:
 
 PRELOAD_FUNCTION_PROTOTYPE = 'function PreloadFiles takes nothing returns nothing\n'
 ENDFUNCTION = 'endfunction\n'
-def send_int(message: int, channel: str = 'nske', player: str|int = 0) -> str:
+def send_int(message: int|str, channel: str = 'nske', player: str|int = 0) -> str:
     return f"call SetPlayerTechMaxAllowed(Player({player}), '{channel}', {message})\n"
 
 
@@ -180,15 +207,47 @@ def update_locations(status: MissionStatus) -> None:
         fp.write(ENDFUNCTION)
 
 
+def update_heroes(game_status: GameStatus, status: MissionStatus) -> None:
+    packet_status = status.packet_status[PacketType.HEROES]
+    packet_status.last_sent = (packet_status.last_sent + 1) & 0xff
+    with open(HEROES_FILE, 'w') as fp:
+        fp.write(PRELOAD_FUNCTION_PROTOTYPE)
+        fp.write("local integer slot = GetPlayerTechMaxAllowed(Player(0), 'nalb')\n")
+        fp.write(send_int(packet_status.last_sent, 'nech'))
+        for index, (slot, data) in enumerate(game_status.hero_data.items()):
+            if index == 0:
+                fp.write(f'if slot == {slot.value} then\n')
+            else:
+                fp.write(f'elseif slot == {slot.value} then\n')
+            fp.write(send_string(data.name))
+            fp.write(send_int(f"'{data.hero.game_id}'", 'npng'))
+            fp.write(send_int(data.agility, 'ndog'))
+            fp.write(send_int(data.strength, 'nskk'))
+            fp.write(send_int(data.intelligence, 'npig'))
+            fp.write(send_int(data.max_health, 'nsea'))
+            fp.write(send_int(data.xp, 'ncrb'))
+            fp.write(send_int(data.max_level, 'nder'))
+            for abil_index, (abil_id, abil_level) in enumerate(data.abilities.items()):
+                fp.write(send_int(f"'{abil_id}'", 'nfro', player=abil_index))
+                fp.write(send_int(abil_level, 'nrac', player=abil_index))
+            for item_index, item_id in enumerate(data.items):
+                if item_id is None:
+                    continue
+                fp.write(send_int(f"'{item_id}'", 'nvul', player=item_index))
+            fp.write(send_int(1, 'nske'))
+        fp.write('endif\n')
+        fp.write(ENDFUNCTION)
+
+
 def line_contents(raw_line: str) -> str:
     parts = raw_line.split('( "', 1)
     if len(parts) != 2 or 'PreloadEnd' in parts[0]:
         raise ValueError(f'Invalid line format in status.txt. Line: "{raw_line}"')
     return parts[1].rsplit('"', 1)[0]
+END_TRANSMISSION = 'call PreloadEnd'
 
 
 def read_status(filename: str, status: MissionStatus) -> None:
-    END_TRANSMISSION = 'call PreloadEnd'
     with open(filename, 'r') as fp:
         lines = fp.readlines()
     lines = lines[2:]
@@ -197,17 +256,20 @@ def read_status(filename: str, status: MissionStatus) -> None:
     status.player_index = line_contents(lines.pop(0)).split(',')
     last_transmissions = [int(x) for x in line_contents(lines.pop(0)).split(',')]
     if len(last_transmissions) > NUM_PACKET_TYPES:
-        # todo(mm): This will spam errors every update currently; will have to remember when it's been sent
-        logger.error(
-            f"Too many packet acknowledgements sent ({len(last_transmissions)} > {NUM_PACKET_TYPES}); "
-            "mod may be a newer version"
-        )
+        if not status.errors.VERSION_MISMATCH:
+            logger.error(
+                f"Too many packet acknowledgements sent ({len(last_transmissions)} > {NUM_PACKET_TYPES}); "
+                "mod may be a newer version"
+            )
+            status.errors |= MissionError.VERSION_MISMATCH
         last_transmissions = last_transmissions[:3]
     elif len(last_transmissions) < NUM_PACKET_TYPES:
-        logger.error(
-            f"Too few packet acknowledgements sent({len(last_transmissions)} < {NUM_PACKET_TYPES}); "
-            "mod may be out of date"
-        )
+        if not status.errors.VERSION_MISMATCH:
+            logger.error(
+                f"Too few packet acknowledgements sent({len(last_transmissions)} < {NUM_PACKET_TYPES}); "
+                "mod may be out of date"
+            )
+            status.errors |= MissionError.VERSION_MISMATCH
         last_transmissions.extend([-2] * (NUM_PACKET_TYPES - len(last_transmissions)))
     assert len(last_transmissions) == NUM_PACKET_TYPES
     for packet_status, transmission_id in zip(status.packet_status.values(), last_transmissions):
@@ -218,6 +280,26 @@ def read_status(filename: str, status: MissionStatus) -> None:
         if END_TRANSMISSION in line:
             break
         status.locations_collected[int(line_contents(line))] = 1
+
+
+def read_hero_status(filename: str, game_status: GameStatus, mission_status: MissionStatus) -> None:
+    with open(filename, 'r') as fp:
+        lines = fp.readlines()
+    lines = lines[2:]
+    slot_index = int(line_contents(lines.pop(0)))
+    mission_id = int(line_contents(lines.pop(0)))
+    slot = heroes.HeroSlot(slot_index)
+    hero_data = game_status.hero_data[slot]
+    hero_data.xp = int(line_contents(lines.pop(0)))
+    hero_data.agility = int(line_contents(lines.pop(0)))
+    hero_data.strength = int(line_contents(lines.pop(0)))
+    hero_data.intelligence = int(line_contents(lines.pop(0)))
+    hero_data.max_health = int(line_contents(lines.pop(0)))
+    assert len(hero_data.abilities) == 4
+    for abil_id in hero_data.abilities:
+        hero_data.abilities[abil_id] = int(line_contents(lines.pop(0)))
+    for item_slot in range(6):
+        hero_data.items[item_slot] = int_to_id(int(line_contents(lines.pop(0))))
 
 
 def sync_mission_status(source: MissionStatus, target: MissionStatus) -> None:
@@ -265,6 +347,8 @@ async def status_loop(ctx: AsyncContext) -> None:
             update_unlocks(ctx.game_status, ctx.mission_status)
         if ctx.game_status.pending_update & PacketType.LOCATIONS:
             update_locations(ctx.mission_status)
+        if ctx.game_status.pending_update & PacketType.HEROES:
+            update_heroes(ctx.game_status, ctx.mission_status)
         update_messages(ctx.game_status, ctx.mission_status.packet_status[PacketType.MESSAGES])
         if (ctx.mission_status.update_number != old_update_number
             or ctx.game_status.pending_update
@@ -364,8 +448,14 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
     logger.info("Shutting down console")
 
 
+def init_test_data(game_status: GameStatus) -> None:
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS] = HeroStatus(heroes.HeroChoice.BLACKROCK_BLADEMASTER, "Rokhan")
+    game_status.hero_data[heroes.HeroSlot.JAINA] = HeroStatus(heroes.HeroChoice.FIRELORD, "Ragnaros")
+
+
 async def main() -> None:
     async_context = AsyncContext(True)
+    init_test_data(async_context.game_status)
     console_task = asyncio.create_task(_stdin_reader(async_context))
     await status_loop(async_context)
     console_task.cancel()

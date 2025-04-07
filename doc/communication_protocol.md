@@ -137,10 +137,6 @@ and an outdated client can still work with older packet types.
 | Line                       | Contains                                      |
 | -------------------------- | --------------------------------------------- |
 | MaxTech(Player(0), 'nech') | Unlocks ID; echoed back in status.txt         |
-| MaxTech(Player(0), 'nsno') | Hero 0 max level                              |
-| MaxTech(Player(0), 'nfro') | Hero 1 max level                              |
-| MaxTech(Player(0), 'npng') | Hero 2 max level                              |
-| MaxTech(Player(0), 'ncrb') | Hero 3 max level                              |
 
 ### locations.txt
 * Client -> Game
@@ -165,3 +161,58 @@ Encoded IDs are two-character stringified integers. Ex: " 0 710" says locations 
 | MaxTech(Player(0), 'nech') | Message ID; echoed back in status.txt         |
 | MaxTech(Player(0), 'nalb') | Number of messsages (max NUM_FILE_LINES)      |
 | PlayerName(N)              | Message N                                     |
+
+### heroes.txt
+* Client -> Game
+* Read on map startup asynchronously of ping.txt; assumed up-to-date
+* Read on request from ping.txt
+* Hero index passed in via MaxTech(0, 'nalb'), script can check it
+
+| Line                       | Contains                                      |
+| -------------------------- | --------------------------------------------- |
+| MaxTech(Player(0), 'nech') | Message ID; echoed back in status.txt         |
+| MaxTech(Player(0), 'nske') | 1 iff Hero data was read successfully         |
+| PlayerName(0)              | Hero name                                     |
+| MaxTech(Player(0), 'npng') | Hero Type (unit ID)                           |
+| MaxTech(Player(0), 'ndog') | Agility stat                                  |
+| MaxTech(Player(0), 'nskk') | Strength stat                                 |
+| MaxTech(Player(0), 'npig') | Intelligence stat                             |
+| MaxTech(Player(0), 'nsea') | Max health                                    |
+| MaxTech(Player(0), 'ncrb') | Experience                                    |
+| MaxTech(Player(0), 'nder') | Max level                                     |
+| MaxTech(Player(N), 'nfro') | Abil N ID; N=0..3                             |
+| MaxTech(Player(N), 'nrac') | Abil N skillpoints; N=0..3                    |
+| MaxTech(Player(N), 'nvul') | Item in slot N; N=0..5                        |
+
+### hero_status.txt
+* Game -> Client
+
+| Line  | Contains                      | type                       |
+| ----  | ----------------------------- | -------------------------- |
+| 1     | Hero slot ID                  | integer                    |
+| 2     | mission ID                    | integer                    |
+| 3     | hero xp                       | integer                    |
+| 4     | hero agi                      | integer                    |
+| 5     | hero str                      | integer                    |
+| 6     | hero int                      | integer                    |
+| 7     | hero max life                 | integer                    |
+| 8~11  | skill point allocation        | integer                    |
+| 11~16 | item in slot 0..5             | integer                    |
+
+### pocket.txt
+*todo*
+* Client -> Game
+* Used to send information about quest items to the game
+  * Gerard's Ledger
+  * Heart of Searinox
+  * ?Frostmourne?
+  * Urn of King Terenas
+  * Key of the Three Moons
+  * Heart of Aszune
+  * Enchanted Gemstone
+  * ?Soul Gem? / ?Soul?
+  * ?Horn of Cenarius?
+  * Empty Vial / Full Vial
+  * ?Skull of Guldan?
+* Sets the MaxTech of each item ID to 1 if acquired, 0 otherwise (on player 0)
+* *Todo*: Viewable in the Quests tab

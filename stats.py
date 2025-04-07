@@ -1,4 +1,4 @@
-from apworld import locations, items, missions
+from apworld.data import missions, locations, items
 
 faction_counts = {race: 0 for race in missions.Wc3Race}
 faction_counts[missions.Wc3Race.NONE] = 0

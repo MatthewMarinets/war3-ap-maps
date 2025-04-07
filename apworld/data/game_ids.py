@@ -877,11 +877,12 @@ class GameID(enum.StrEnum):
 
 
 class Tech(enum.StrEnum):
+    """Defines which Game IDs are set in the unlocks.txt packet"""
     # Human
     TOWN_HALL = GameID.TOWN_HALL
     KEEP = GameID.KEEP
     CASTLE = GameID.CASTLE
-    FARM = GameID.FARM
+    # FARM = GameID.FARM
     ALTAR_OF_KINGS = GameID.ALTAR_OF_KINGS
     HU_BARRACKS = GameID.HU_BARRACKS
     LUMBER_MILL = GameID.LUMBER_MILL
@@ -942,7 +943,7 @@ class Tech(enum.StrEnum):
     TAUREN_TOTEM = GameID.TAUREN_TOTEM
     SPIRIT_LODGE = GameID.SPIRIT_LODGE
     BEASTIARY = GameID.BEASTIARY
-    ORC_BURROW = GameID.ORC_BURROW
+    # ORC_BURROW = GameID.ORC_BURROW
     VOODOO_LOUNGE = GameID.VOODOO_LOUNGE
 
     WATCH_TOWER = GameID.WATCH_TOWER
@@ -984,7 +985,7 @@ class Tech(enum.StrEnum):
     NECROPOLIS = GameID.NECROPOLIS
     HALLS_OF_THE_DEAD = GameID.HALLS_OF_THE_DEAD
     BLACK_CITADEL = GameID.BLACK_CITADEL
-    ZIGGURAT = GameID.ZIGGURAT
+    # ZIGGURAT = GameID.ZIGGURAT
     ALTAR_OF_DARKNESS = GameID.ALTAR_OF_DARKNESS
     CRPYT = GameID.CRPYT
     SACRIFICIAL_PIT = GameID.SACRIFICIAL_PIT
@@ -992,7 +993,7 @@ class Tech(enum.StrEnum):
     SLAUGHTERHOUSE = GameID.SLAUGHTERHOUSE
     TEMPLE_OF_THE_DAMNED = GameID.TEMPLE_OF_THE_DAMNED
     BONEYARD = GameID.BONEYARD
-    HAUNTED_GOLD_MINE = GameID.HAUNTED_GOLD_MINE
+    # HAUNTED_GOLD_MINE = GameID.HAUNTED_GOLD_MINE
     TOMB_OF_RELICS = GameID.TOMB_OF_RELICS
 
     SPIRIT_TOWER = GameID.SPIRIT_TOWER
@@ -1033,7 +1034,7 @@ class Tech(enum.StrEnum):
     TREE_OF_LIFE = GameID.TREE_OF_LIFE
     TREE_OF_AGES = GameID.TREE_OF_AGES
     TREE_OF_ETERNITY = GameID.TREE_OF_ETERNITY
-    MOON_WELL = GameID.MOON_WELL
+    # MOON_WELL = GameID.MOON_WELL
     ALTAR_OF_ELDERS = GameID.ALTAR_OF_ELDERS
     ANCIENT_OF_WAR = GameID.ANCIENT_OF_WAR
     ANCIENT_OF_LORE = GameID.ANCIENT_OF_LORE
@@ -1139,6 +1140,13 @@ class Tech(enum.StrEnum):
     ORB_OF_VENOM = GameID.ORB_OF_VENOM
     ANTI_MAGIC_POTION = GameID.ANTI_MAGIC_POTION
 
+    # Debug to disable TFT heroes in ROC maps with manually editing them
+    # TODO
+    BLOOD_MAGE = GameID.BLOOD_MAGE
+    SHADOW_HUNTER = GameID.SHADOW_HUNTER
+    CRYPT_LORD = GameID.CRYPT_LORD
+    WARDEN = GameID.WARDEN
+
 
 ITEM_TO_GAME_ID: dict[Wc3Item, Tech] = {}
 for tech in Tech:
@@ -1232,8 +1240,8 @@ TECH_REQUIREMENTS_LEVEL_1: dict[Tech, list[Tech]] = {
 
     Tech.HALLS_OF_THE_DEAD: [Tech.NECROPOLIS],
     Tech.BLACK_CITADEL: [Tech.HALLS_OF_THE_DEAD, Tech.ALTAR_OF_DARKNESS],
-    Tech.SPIRIT_TOWER: [Tech.ZIGGURAT, Tech.GRAVEYARD],
-    Tech.NERUBIAN_TOWER: [Tech.ZIGGURAT],
+    Tech.SPIRIT_TOWER: [Tech.GRAVEYARD],
+    # Tech.NERUBIAN_TOWER: [Tech.ZIGGURAT],
     Tech.SLAUGHTERHOUSE: [Tech.HALLS_OF_THE_DEAD, Tech.GRAVEYARD],
     Tech.TEMPLE_OF_THE_DAMNED: [Tech.HALLS_OF_THE_DEAD, Tech.GRAVEYARD],
     Tech.SACRIFICIAL_PIT: [Tech.HALLS_OF_THE_DEAD],
@@ -1464,8 +1472,8 @@ HERO_ABILITIES[GameID.AZGALOR] = HERO_ABILITIES[GameID.MANNOROTH]
 HERO_ABILITIES[GameID.DALVENGYR] = HERO_ABILITIES[GameID.DREADLORD]
 
 
-def int_to_id(integer_id: int) -> str:
-    return integer_id.to_bytes(length=4, byteorder='little').decode('utf-8')
+def int_to_id(integer_id: int) -> GameID:
+    return GameID(integer_id.to_bytes(length=4, byteorder='little').decode('utf-8'))
 
 def id_to_int(str_id: str) -> int:
     return int.from_bytes(str_id.encode('utf-8'), byteorder='little')

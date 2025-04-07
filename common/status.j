@@ -1,14 +1,13 @@
 // defines the packets that communicate with the client
-
+// depends: map_config, fileio
 globals
-integer mission_id = $(MISSION_ID)
 integer last_unlock_packet = -1
 integer last_location_packet = -1
 integer last_message_packet = -1
 integer checks_before_timeout = -1
 string player_index = ""
 boolean array locations_checked
-constant integer MAX_LOCATIONS = 20
+constant integer MAX_LOCATIONS = 30
 integer update_index = 0
 timer status_ack_ping_timer
 endglobals
@@ -17,7 +16,7 @@ function status_send takes nothing returns nothing
     local integer i = 0
     call io_open_write("status.txt")
     call io_write(I2S(update_index))
-    call io_write(I2S(mission_id))
+    call io_write(I2S(MISSION_ID))
     call io_write(player_index)
     call io_write(I2S(last_unlock_packet) + "," + I2S(last_location_packet) + "," + I2S(last_message_packet))
     set update_index = update_index + 1
@@ -37,29 +36,8 @@ endfunction
 
 function status_load_unlocks takes nothing returns nothing
     local player p = Player(0)
-    local integer h = 0
     call SetPlayerTechMaxAllowed(p, 'nech', -1)
-    call SetPlayerTechMaxAllowed(p, 'nsno', -1)
-    call SetPlayerTechMaxAllowed(p, 'nfro', -1)
-    call SetPlayerTechMaxAllowed(p, 'npng', -1)
-    call SetPlayerTechMaxAllowed(p, 'ncrb', -1)
     call io_read_file_simple("unlocks.txt")
-    set h = GetPlayerTechMaxAllowed(p, 'nsno')
-    if h > 0 then
-        call hero_set_max_level(0, h)
-    endif
-    set h = GetPlayerTechMaxAllowed(p, 'nfro')
-    if h > 0 then
-        call hero_set_max_level(1, h)
-    endif
-    set h = GetPlayerTechMaxAllowed(p, 'npng')
-    if h > 0 then
-        call hero_set_max_level(2, h)
-    endif
-    set h = GetPlayerTechMaxAllowed(p, 'ncrb')
-    if h > 0 then
-        call hero_set_max_level(3, h)
-    endif
     set last_unlock_packet = GetPlayerTechMaxAllowed(p, 'nech')
 endfunction
 
@@ -103,7 +81,7 @@ function status_load_messages takes nothing returns nothing
     local player p = Player(0)
     local integer num_messages
     call SetPlayerTechMaxAllowed(p, 'nech', -1)
-    call SetPlayerTechMaxAllowed(p, 'nalb', -1)
+    call SetPlayerTechMaxAllowed(p, 'nalb', 0)
     call io_read_file("messages.txt")
     set num_messages = GetPlayerTechMaxAllowed(p, 'nalb')
     if num_messages > NUM_FILE_LINES then
@@ -126,7 +104,7 @@ function status_check_ping takes nothing returns nothing
     call SetPlayerTechMaxAllowed(p, 'nvlk', -1)
     call SetPlayerTechMaxAllowed(p, 'nvk2', -1)
     call io_read_file_simple("ping.txt")
-    if GetPlayerTechMaxAllowed(p, 'nske') != update_index or GetPlayerTechMaxAllowed(p, 'nvlk') != mission_id then
+    if GetPlayerTechMaxAllowed(p, 'nske') != update_index or GetPlayerTechMaxAllowed(p, 'nvlk') != MISSION_ID then
         if checks_before_timeout > 0 then
             set checks_before_timeout = checks_before_timeout - 1
         elseif checks_before_timeout == 0 then
