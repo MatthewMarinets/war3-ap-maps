@@ -39,7 +39,7 @@ class Wc3Location(enum.Enum):
     # (Side) Save Timmy
     # (Side) Bandit Lord
     HU1_VICTORY =        1100, "Victory",                   Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.VICTORY
-    HU1_THORNBY_RESCUE = 1101, "Enlist Thornby",            Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.RESCUE
+    HU1_ENLIST_THORNBY = 1101, "Enlist Thornby",            Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.RESCUE
     HU1_TOWN_RESCUE =    1102, "Rescue Battling Footmen",   Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.RESCUE
     HU1_TIMMY =          1103, "Save Timmy",                Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.QUEST, "Ring of Protection +1"
     HU1_MENAG =          1104, "Bandit Lord",               Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.QUEST, "Tome of Strength"
@@ -186,6 +186,7 @@ class Wc3Location(enum.Enum):
     UD1_HORSE_ITEM =    2101, "Horse Item",     Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Ring of Protection +2"
     UD1_ASSASSIN_ITEM = 2102, "Assassin Item",  Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Spider Ring"
     UD1_GOLEM_ITEM =    2103, "Rock Golem Item", Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Gauntlets of Ogre Strength +3"
+    UD1_GRAVEYARD =     2104, "Reach the Graveyard", Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.RESCUE
     # Captain: Potion of Greater Healing
     # Bandit: Potion of Healing
     # Footman: Potion of Healing
