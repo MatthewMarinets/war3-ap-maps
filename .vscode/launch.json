@@ -17,5 +17,21 @@
                 "order": 1,
             }
         },
+        {
+            "name": "Python: comm",
+            "type": "python",
+            "request": "launch",
+            "module": "apworld.client.comm",
+            "cwd": "${workspaceFolder}",
+            "args": [],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "presentation": {
+                "hidden": false,
+                "group": "python",
+                "order": 1,
+            }
+        },
     ]
 }

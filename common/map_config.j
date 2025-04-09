@@ -4,6 +4,8 @@ constant integer MISSION_ID = $(MISSION_ID)
 integer NUM_HEROES = $(NUM_HEROES)
 constant player USER_PLAYER = $(USER_PLAYER)
 integer array hero_global_slots
+constant integer HERO_ID_ALL = -1
+constant integer HERO_ID_NONE = 0
 constant integer HERO_ID_PALADIN_ARTHAS = 1
 constant integer HERO_ID_JAINA = 2
 constant integer HERO_ID_MURADIN_BRONZEBEARD = 3
@@ -35,10 +37,9 @@ function hero_get_unit_from_index takes integer hero returns unit
 endfunction
 
 function hero_update_variable takes integer slot, unit hero returns nothing
+    // todo
     if slot == 0 then
-    //     udg_Arthas = hero
-    // elseif slot == 1
-    //     udg_Jaina = hero
+        set udg_Arthas = hero
     endif
 endfunction
 

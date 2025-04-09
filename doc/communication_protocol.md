@@ -92,16 +92,23 @@ Commands that are not safely repeatable, such as "uncollect location" commands, 
 
 ### status.txt
 * Game -> Client
-* 4+ lines
+* 10+ lines
 * Communicates map data, communication information, and collected locations
+* The client performs a version check on reading this packet and can send messages if there's a version mismatch
 
-| Line | Contains                      | type                       |
+| Line | Contains                      | format                     |
 | ---- | ----------------------------- | -------------------------- |
 | 1    | Transmission number mod 10000 | integer                    |
-| 2    | mission ID                    | integer                    |
-| 3    | player index                  | comma-separated integers*  |
-| 4    | last message IDs              | comma-separated integers** |
-| 5+   | Collected location index      | integer                    |
+| 2    | protocol version              | major.minor                |
+| 3    | mission ID                    | integer                    |
+| 4    | player index                  | comma-separated integers*  |
+| 5    | last message IDs              | comma-separated integers** |
+| 6    | last hero status index        | integer                    |
+| 7    | reserved                      | empty                      |
+| 8    | reserved                      | empty                      |
+| 9    | reserved                      | empty                      |
+| 10   | reserved                      | empty                      |
+| 11+  | Collected location index      | integer                    |
 
 *Note player index is going to be a single element in almost all missions.
 NEx8 is the only mission that needs special handling as the user controls two players.
@@ -184,13 +191,14 @@ Encoded IDs are two-character stringified integers. Ex: " 0 710" says locations 
 | MaxTech(Player(N), 'nrac') | Abil N skillpoints; N=0..3                    |
 | MaxTech(Player(N), 'nvul') | Item in slot N; N=0..5                        |
 
-### hero_status.txt
+### hero_X.txt
 * Game -> Client
+* X is the hero slot as an integer
 
 | Line  | Contains                      | type                       |
 | ----  | ----------------------------- | -------------------------- |
 | 1     | Hero slot ID                  | integer                    |
-| 2     | mission ID                    | integer                    |
+| 2     | Hero name                     | integer                    |
 | 3     | hero xp                       | integer                    |
 | 4     | hero agi                      | integer                    |
 | 5     | hero str                      | integer                    |

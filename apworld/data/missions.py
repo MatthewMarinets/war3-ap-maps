@@ -11,6 +11,7 @@ class Wc3Race(enum.Flag):
     ORC = enum.auto()
     NIGHT_ELF = enum.auto()
     NAGA = enum.auto()
+    BLOOD_ELF = enum.auto()
 
 
 class Wc3Campaign(enum.Enum):
@@ -100,15 +101,15 @@ class Wc3Mission(enum.Enum):
     NX5_BALANCING_THE_SCALES =      "Balancing the Scales", "Nx5", Wc3Campaign.NIGHT_ELF_2, 5, Wc3Race.NIGHT_ELF
     NX6_SHARDS_OF_THE_ALLIANCE =    "Shards of the Alliance", "Nx6", Wc3Campaign.NIGHT_ELF_2, 6, Wc3Race.NIGHT_ELF
     NX7_THE_RUINS_OF_DALARAN =      "The Ruins of Dalaran", "Nx7", Wc3Campaign.NIGHT_ELF_2, 7, Wc3Race.NIGHT_ELF
-    NX8_THE_BROTHERS_STORMRAGE =    "The Brothers Stormrage", "Nx8", Wc3Campaign.NIGHT_ELF_2, 8, Wc3Race.NIGHT_ELF
+    NX8_THE_BROTHERS_STORMRAGE =    "The Brothers Stormrage", "Nx8", Wc3Campaign.NIGHT_ELF_2, 8, Wc3Race.NIGHT_ELF|Wc3Race.NAGA
 
     HX1_MISCONCEPTIONS =            "Misconceptions", "Hx1", Wc3Campaign.HUMAN_2, 1, Wc3Race.HUMAN
-    HX2_A_DARK_COVENANT =           "A Dark Covenant", "Hx2", Wc3Campaign.HUMAN_2, 2, Wc3Race.NAGA
-    HX3_THE_DUNGEONS_OF_DALARAN =   "The Dungeons of Dalaran", "Hx3", Wc3Campaign.HUMAN_2, 3, Wc3Race.NAGA
-    # HXS_THE_CROSSING =              "The Crossing", "Hx?", Wc3Campaign.HUMAN_2, -1, Wc3Race.NAGA
-    HX4_THE_SEARCH_FOR_ILLIDAN =    "The Search for Illidan", "Hx4", Wc3Campaign.HUMAN_2, 4, Wc3Race.NAGA
-    HX5_GATES_OF_THE_ABYSS =        "Gates of the Abyss", "Hx5", Wc3Campaign.HUMAN_2, 5, Wc3Race.NAGA
-    HX6_LORD_OF_OUTLAND =           "Lord of Outland", "Hx6", Wc3Campaign.HUMAN_2, 6, Wc3Race.NAGA
+    HX2_A_DARK_COVENANT =           "A Dark Covenant", "Hx2", Wc3Campaign.HUMAN_2, 2, Wc3Race.BLOOD_ELF|Wc3Race.NAGA
+    HX3_THE_DUNGEONS_OF_DALARAN =   "The Dungeons of Dalaran", "Hx3", Wc3Campaign.HUMAN_2, 3, Wc3Race.BLOOD_ELF
+    # HXS_THE_CROSSING =              "The Crossing", "Hx?", Wc3Campaign.HUMAN_2, -1, Wc3Race.BLOOD_ELF
+    HX4_THE_SEARCH_FOR_ILLIDAN =    "The Search for Illidan", "Hx4", Wc3Campaign.HUMAN_2, 4, Wc3Race.BLOOD_ELF|Wc3Race.NAGA
+    HX5_GATES_OF_THE_ABYSS =        "Gates of the Abyss", "Hx5", Wc3Campaign.HUMAN_2, 5, Wc3Race.BLOOD_ELF|Wc3Race.NAGA
+    HX6_LORD_OF_OUTLAND =           "Lord of Outland", "Hx6", Wc3Campaign.HUMAN_2, 6, Wc3Race.BLOOD_ELF|Wc3Race.NAGA
 
     UX1_KING_ARTHAS =                   "King Arthas", "Ux1", Wc3Campaign.UNDEAD_2, 1, Wc3Race.UNDEAD
     UX2_THE_FLIGHT_FROM_LORDAERON =     "The Flight from Loardaeron", "Ux2", Wc3Campaign.UNDEAD_2, 2, Wc3Race.UNDEAD
@@ -120,3 +121,6 @@ class Wc3Mission(enum.Enum):
     UX7B_THE_FORGOTTEN_ONES =           "The Forgotten Ones", "Ux7b", Wc3Campaign.UNDEAD_2, 8, Wc3Race.UNDEAD
     UX7C_ASCENT_TO_THE_UPPER_KINGDOM =  "Ascent to the Upper Kingdom", "Ux7c", Wc3Campaign.UNDEAD_2, 9, Wc3Race.UNDEAD
     UX8_A_SYMPHONY_OF_FROST_AND_FLAME = "A Symphony of Frost and Flame", "Ux8", Wc3Campaign.UNDEAD_2, 10, Wc3Race.UNDEAD
+
+
+VALUE_TO_MISSION = {_mission.value: _mission for _mission in Wc3Mission}

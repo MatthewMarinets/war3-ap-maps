@@ -1,6 +1,9 @@
 // defines the packets that communicate with the client
 // depends: map_config, fileio
 globals
+constant string COMM_VERSION = "1.0"
+constant integer MAX_UPDATE_ID = 100000
+integer error_state = 0
 integer last_unlock_packet = -1
 integer last_location_packet = -1
 integer last_message_packet = -1
@@ -10,6 +13,7 @@ string player_index = ""
 boolean array locations_checked
 constant integer MAX_LOCATIONS = 30
 integer update_index = 0
+integer hero_status_index = -1
 timer status_ack_ping_timer
 endglobals
 
@@ -17,11 +21,17 @@ function status_send takes nothing returns nothing
     local integer i = 0
     call io_open_write("status.txt")
     call io_write(I2S(update_index))
+    call io_write(COMM_VERSION)
     call io_write(I2S(MISSION_ID))
     call io_write(player_index)
     call io_write(I2S(last_unlock_packet) + "," + I2S(last_location_packet) + "," + I2S(last_message_packet) + "," + I2S(last_hero_packet))
+    call io_write(I2S(hero_status_index))
+    call io_write("_")
+    call io_write("_")
+    call io_write("_")
+    call io_write("_")
     set update_index = update_index + 1
-    if update_index >= 10000 then
+    if update_index >= MAX_UPDATE_ID then
         set update_index = 0
     endif
     loop
@@ -110,10 +120,14 @@ function status_check_ping takes nothing returns nothing
             set checks_before_timeout = checks_before_timeout - 1
         elseif checks_before_timeout == 0 then
             set checks_before_timeout = -1
+            set error_state = 1
             call DisplayTextToForce(GetPlayersAll(), "|cffff2222Error: Client communication timeout|r")
             call DisplayTextToForce(GetPlayersAll(), "|cffff2222Check the client is started correctly. Locations will not send until communication is established|r")
         endif
         return
+    elseif error_state > 0 then
+        set error_state = 0
+        call DisplayTextToForce(GetPlayersAll(), "|cff2266ffClient communications re-established.|r")
     endif
     set bitmask = GetPlayerTechMaxAllowed(p, 'nvk2')
     if bitmask > 0 then

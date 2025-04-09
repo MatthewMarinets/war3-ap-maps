@@ -594,8 +594,13 @@ class GameID(enum.StrEnum):
     # Unused
     HIGH_ELVEN_BARRACKS = 'nheb'
     ARCANE_OBSERVATORY = 'haro'
+    HIGH_ELVEN_FARM = 'nefm'
+    HIGH_ELVEN_GUARD_TOWER = 'negt'
+    EARTH_FURY_TOWER = 'negf'
+    SKY_FURY_TOWER = 'negm'
     CAPTAIN = 'hcth'
     EMISSARY = 'nemi'
+    ROC_DRAGON_HAWK = 'nws1'
 
     PIG_FARM = 'npgf'
     DRAGON_ROOST = 'ndrb'
@@ -613,6 +618,9 @@ class GameID(enum.StrEnum):
     DESTROYER = 'ubsp'
     ZOMBIE = 'nzom'
     SKY_BARGE = 'uarb'
+    FEL_STALKER = 'nfel'
+    INFERNAL = 'ninf'
+    DOOM_GUARD = 'nbal'
 
     CORRUPTED_TREE_OF_LIFE = 'nctl'
     CORRUPTED_TREE_OF_AGES = 'ncta'
@@ -622,6 +630,9 @@ class GameID(enum.StrEnum):
     CORRUPTED_MOON_WELL = 'ncmw'  # Under Neutral Passive/Campaign instead of NE
     HIPPOGRYPH_RIDER = 'ehpr'
     TREANT = 'efon'
+    CORRUPTED_TREANT = 'nenc'
+    POISON_TREANT = 'nenp'
+    PLAGUE_TREANT = 'nepl'
     RUNNER = 'enec'
     SENTRY = 'nwat'
     NAISHA = 'ensh'
@@ -1141,11 +1152,11 @@ class Tech(enum.StrEnum):
     ANTI_MAGIC_POTION = GameID.ANTI_MAGIC_POTION
 
     # Debug to disable TFT heroes in ROC maps with manually editing them
-    # TODO
-    BLOOD_MAGE = GameID.BLOOD_MAGE
-    SHADOW_HUNTER = GameID.SHADOW_HUNTER
-    CRYPT_LORD = GameID.CRYPT_LORD
-    WARDEN = GameID.WARDEN
+    # TODO remove these from all RoC maps in the info file
+    # BLOOD_MAGE = GameID.BLOOD_MAGE  # Hblm
+    # SHADOW_HUNTER = GameID.SHADOW_HUNTER  # Oshd
+    # CRYPT_LORD = GameID.CRYPT_LORD  # Ucrl
+    # WARDEN = GameID.WARDEN  # Ewar
 
 
 ITEM_TO_GAME_ID: dict[Wc3Item, Tech] = {}
@@ -1472,8 +1483,12 @@ HERO_ABILITIES[GameID.AZGALOR] = HERO_ABILITIES[GameID.MANNOROTH]
 HERO_ABILITIES[GameID.DALVENGYR] = HERO_ABILITIES[GameID.DREADLORD]
 
 
-def int_to_id(integer_id: int) -> GameID:
-    return GameID(integer_id.to_bytes(length=4, byteorder='little').decode('utf-8'))
+def int_to_id(integer_id: int) -> GameID|None:
+    if not integer_id:
+        return None
+    return GameID(integer_id.to_bytes(length=4, byteorder='big').decode('utf-8'))
 
-def id_to_int(str_id: str) -> int:
-    return int.from_bytes(str_id.encode('utf-8'), byteorder='little')
+def id_to_int(str_id: str|None) -> int:
+    if str_id is None:
+        return 0
+    return int.from_bytes(str_id.encode('utf-8'), byteorder='big')

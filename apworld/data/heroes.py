@@ -136,27 +136,27 @@ class HeroChoice(enum.Enum):
     UTHER =               33, "Uther", HeroClass.PALADIN, HeroSource.ENEMY, GameID.UTHER
     RANGER_SYLVANAS =     34, "Sylvanas Windrunner", HeroClass.RANGER, HeroSource.ENEMY, GameID.SYLVANAS_ELF  # Cold Arrows, Scout, Trueshot Aura, Starfall
     ANTONIDAS =           35, "Antonidas", HeroClass.ARCHMAGE, HeroSource.ENEMY, GameID.ANTONIDAS
-    BLACKROCK_BLADEMASTER = 36, "Blackrock Blademaster", HeroClass.BLADEMASTER, HeroSource.ENEMY, GameID.CHAOS_BLADEMASTER
+    FEL_ORC_BLADEMASTER = 36, "Rend", HeroClass.BLADEMASTER, HeroSource.ENEMY, GameID.CHAOS_BLADEMASTER
     GHOST_ANTONIDAS =     37, "Ghost Antonidas", HeroClass.ARCHMAGE, HeroSource.ENEMY, GameID.GHOST_ANTONIDAS
-    GHOST_KEEPER =        38, "Ghost", HeroClass.KEEPER_OF_THE_GROVE, HeroSource.ENEMY, GameID.GHOST_KEEPER_OF_THE_GROVE
+    ANCIENT_GUARDIAN =    38, "Ghost", HeroClass.KEEPER_OF_THE_GROVE, HeroSource.ENEMY, GameID.GHOST_KEEPER_OF_THE_GROVE
     # DAGREN_THE_ORCSLAYER = _, "Dagren the Orcslayer", HeroClass.PALADIN, HeroSource.ENEMY, GameID.DAGREN_THE_ORCSLAYER
     # HALAHK_THE_LIFEBRINGER = _, "Halahk the Lifebringer", HeroClass.PALADIN, HeroSource.ENEMY, GameID.HALAHK_THE_LIFEBRINGER
-    # LORD_NICOLAS_BUZAN = _, "Lord Nicolas Buzan", HeroClass.PALADIN, HeroSource.ENEMY, GameID.LORD_NICOLAS_BUZAN
+    # LORD_NICOLAS_BUZAN =   _, "Lord Nicolas Buzan", HeroClass.PALADIN, HeroSource.ENEMY, GameID.LORD_NICOLAS_BUZAN
     # MAGROTH_THE_DEFENDER = _, "Magroth the Defender", HeroClass.PALADIN, HeroSource.ENEMY, GameID.MAGROTH_THE_DEFENDER
     # SIR_GREGORY_EDMUNDSON = _, "Sir Gregory Edmundson", HeroClass.PALADIN, HeroSource.ENEMY, GameID.SIR_GREGORY_EDMUNDSON
-    # AZGALOR = _, "Azgalor", HeroClass.PIT_LORD, HeroSource.ENEMY, GameID.AZGALOR  # Copy-paste of Mannoroth
+    # AZGALOR =               _, "Azgalor", HeroClass.PIT_LORD, HeroSource.ENEMY, GameID.AZGALOR  # Copy-paste of Mannoroth
 
-    REXXAR =            40, "Tavern", HeroClass.BEASTMASTER, HeroSource.BONUS, GameID.BEASTMASTER
-    ROKHAN =            41, "Rokhan", HeroClass.SHADOW_HUNTER, HeroSource.BONUS, GameID.SHADOW_HUNTER
-    CHEN_STORMSTOUT =   42, "Chen Stormstout", HeroClass.PANDAREN_BREWMASTER, HeroSource.BONUS, GameID.PANDAREN_BREWMASTER
-    # DREK_THAR = "Drek'Thar", HeroClass.FAR_SEER, HeroSource.BONUS, GameID.DREK_THAR
-    # SAMURO = "Samuro", HeroClass.BLADEMASTER, HeroSource.BONUS, GameID.SAMURO
+    REXXAR =                40, "Tavern", HeroClass.BEASTMASTER, HeroSource.BONUS, GameID.BEASTMASTER
+    ROKHAN =                41, "Rokhan", HeroClass.SHADOW_HUNTER, HeroSource.BONUS, GameID.SHADOW_HUNTER
+    CHEN_STORMSTOUT =       42, "Chen Stormstout", HeroClass.PANDAREN_BREWMASTER, HeroSource.BONUS, GameID.PANDAREN_BREWMASTER
+    # DREK_THAR =              _, "Drek'Thar", HeroClass.FAR_SEER, HeroSource.BONUS, GameID.DREK_THAR
+    # SAMURO =                 _, "Samuro", HeroClass.BLADEMASTER, HeroSource.BONUS, GameID.SAMURO
 
     PALADIN =               50, "Gavinrad the Dire", HeroClass.PALADIN, HeroSource.MELEE, GameID.PALADIN
     ARCHMAGE =              51, "Kelen the Seeker", HeroClass.ARCHMAGE, HeroSource.MELEE, GameID.ARCHMAGE
     MOUNTAIN_KING =         52, "Kelv Sternhammer", HeroClass.MOUNTAIN_KING, HeroSource.MELEE, GameID.MOUNTAIN_KING
     BLOOD_MAGE =            53, "Eldin Sunstrider", HeroClass.BLOOD_MAGE, HeroSource.MELEE, GameID.BLOOD_MAGE
-    BLADEMASTER =           54, "Blademaster", HeroClass.BLADEMASTER, HeroSource.MELEE, GameID.BLADEMASTER
+    BLADEMASTER =           54, "Nikoro", HeroClass.BLADEMASTER, HeroSource.MELEE, GameID.BLADEMASTER
     FAR_SEER =              55, "Morg Wolfsong", HeroClass.FAR_SEER, HeroSource.MELEE, GameID.FAR_SEER
     TAUREN_CHIEFTAIN =      56, "Kel Stonebull", HeroClass.TAUREN_CHIEFTAIN, HeroSource.MELEE, GameID.TAUREN_CHIEFTAIN
     SHADOW_HUNTER =         57, "Shaka'zahn", HeroClass.SHADOW_HUNTER, HeroSource.MELEE, GameID.SHADOW_HUNTER
@@ -169,14 +169,14 @@ class HeroChoice(enum.Enum):
     DEMON_HUNTER =          64, "Darksorrow", HeroClass.DEMON_HUNTER, HeroSource.MELEE, GameID.DEMON_HUNTER
     WARDEN =                65, "The Iron Raven", HeroClass.WARDEN, HeroSource.MELEE, GameID.WARDEN
 
-    ALCHEMIST =           66, "Razzil Naypolm", HeroClass.ALCHEMIST, HeroSource.TAVERN, GameID.ALCHEMIST
-    NAGA_SEA_WITCH =      67, "Ursula Snakemane", HeroClass.NAGA_SEA_WITCH, HeroSource.TAVERN, GameID.NAGA_SEA_WITCH
-    TINKER =              68, "Gazz Stripbolt", HeroClass.TINKER, HeroSource.TAVERN, GameID.TINKER
-    BEASTMASTER =         69, "Gorsh Talonfang", HeroClass.BEASTMASTER, HeroSource.TAVERN, GameID.BEASTMASTER
-    DARK_RANGER =         70, "Anya Eversong", HeroClass.DARK_RANGER, HeroSource.TAVERN, GameID.DARK_RANGER
-    FIRELORD =            71, "Blazefury", HeroClass.FIRELORD, HeroSource.TAVERN, GameID.FIRELORD
-    PANDAREN_BREWMASTER = 72, "Mushi Ale-Hearth", HeroClass.PANDAREN_BREWMASTER, HeroSource.TAVERN, GameID.PANDAREN_BREWMASTER
-    PIT_LORD =            73, "Destromath", HeroClass.PIT_LORD, HeroSource.TAVERN, GameID.PIT_LORD
+    ALCHEMIST =             66, "Razzil Naypolm", HeroClass.ALCHEMIST, HeroSource.TAVERN, GameID.ALCHEMIST
+    NAGA_SEA_WITCH =        67, "Ursula Snakemane", HeroClass.NAGA_SEA_WITCH, HeroSource.TAVERN, GameID.NAGA_SEA_WITCH
+    TINKER =                68, "Gazz Stripbolt", HeroClass.TINKER, HeroSource.TAVERN, GameID.TINKER
+    BEASTMASTER =           69, "Gorsh Talonfang", HeroClass.BEASTMASTER, HeroSource.TAVERN, GameID.BEASTMASTER
+    DARK_RANGER =           70, "Anya Eversong", HeroClass.DARK_RANGER, HeroSource.TAVERN, GameID.DARK_RANGER
+    FIRELORD =              71, "Blazefury", HeroClass.FIRELORD, HeroSource.TAVERN, GameID.FIRELORD
+    PANDAREN_BREWMASTER =   72, "Mushi Ale-Hearth", HeroClass.PANDAREN_BREWMASTER, HeroSource.TAVERN, GameID.PANDAREN_BREWMASTER
+    PIT_LORD =              73, "Destromath", HeroClass.PIT_LORD, HeroSource.TAVERN, GameID.PIT_LORD
 
 
 class SuperheroSlot(enum.IntEnum):
@@ -273,6 +273,7 @@ MISSION_TO_HERO_SLOT = {
     Wc3Mission.HX1_MISCONCEPTIONS: [HeroSlot.KAEL],
     Wc3Mission.HX2_A_DARK_COVENANT: [HeroSlot.KAEL, HeroSlot.LADY_VASHJ],
     Wc3Mission.HX3_THE_DUNGEONS_OF_DALARAN: [HeroSlot.KAEL, HeroSlot.LADY_VASHJ],
+    # Wc3Mission.HXS_THE_CROSSING: [HeroSlot.KAEL, HeroSlot.LADY_VASHJ],
     Wc3Mission.HX4_THE_SEARCH_FOR_ILLIDAN: [HeroSlot.KAEL, HeroSlot.LADY_VASHJ],
     Wc3Mission.HX5_GATES_OF_THE_ABYSS: [HeroSlot.KAEL, HeroSlot.LADY_VASHJ, HeroSlot.ILLIDAN],
     Wc3Mission.HX6_LORD_OF_OUTLAND: [HeroSlot.KAEL, HeroSlot.LADY_VASHJ, HeroSlot.ILLIDAN, HeroSlot.AKAMA],

@@ -1,9 +1,11 @@
 // Functions to control and configure heroes
-// depends: fileio
+// depends: fileio, map_config, status
 globals
-unit array heroes
+unit hero_item_target = null
 integer array HERO_MAX_LEVEL
-trigger t_disable_hero_level
+integer array hero_hashes
+trigger t_hero_update
+timer hero_update_status_timer
 integer array hero_abil_1
 integer array hero_abil_2
 integer array hero_abil_3
@@ -23,22 +25,6 @@ function hero_set_max_level takes integer hero_index, integer level returns noth
     local unit hero = hero_get_unit_from_index(hero_index)
     set HERO_MAX_LEVEL[hero_index] = level
     call hero_apply_max_level(hero, level)
-endfunction
-
-function hero_disable_leveling takes nothing returns nothing
-    local integer i = 0
-    loop
-        exitwhen hero_get_unit_from_index(i) == GetTriggerUnit()
-        set i = i + 1
-        exitwhen i > 4
-    endloop
-    if i > 4 then
-        debug call DisplayTextToForce(GetPlayersAll(), "Error: Couldn't find hero index for levelling hero")
-        return
-    endif
-    if GetHeroLevel(GetTriggerUnit()) >= HERO_MAX_LEVEL[i] then
-        call SuspendHeroXP(GetTriggerUnit(), true)
-    endif
 endfunction
 
 function hero_load takes integer hero_slot returns boolean
@@ -172,16 +158,41 @@ function hero_hide_replace takes integer slot, unit replace returns unit
     return hero
 endfunction
 
-function hero_publish_status takes integer slot, string filename returns nothing
+function hero_hash_state takes unit hero, integer slot returns integer
+    local integer result = 0
+    set result = result + GetHeroLevel(hero)
+    set result = result * 3 + GetHeroAgi(hero, false)
+    set result = result * 3 + GetHeroStr(hero, false)
+    set result = result * 3 + GetHeroInt(hero, false)
+    set result = result * 3 + R2I(GetUnitState(hero, UNIT_STATE_MAX_LIFE))
+    set result = result * 3 + GetUnitAbilityLevel(hero, hero_abil_1[slot])
+    set result = result * 3 + GetUnitAbilityLevel(hero, hero_abil_2[slot])
+    set result = result * 3 + GetUnitAbilityLevel(hero, hero_abil_3[slot])
+    set result = result * 3 + GetUnitAbilityLevel(hero, hero_abil_4[slot])
+    set result = result * 3 + GetItemTypeId(UnitItemInSlot(hero, 0))
+    set result = result * 3 + GetItemTypeId(UnitItemInSlot(hero, 1))
+    set result = result * 3 + GetItemTypeId(UnitItemInSlot(hero, 2))
+    set result = result * 3 + GetItemTypeId(UnitItemInSlot(hero, 3))
+    set result = result * 3 + GetItemTypeId(UnitItemInSlot(hero, 4))
+    set result = result * 3 + GetItemTypeId(UnitItemInSlot(hero, 5))
+    return result
+endfunction
+
+function hero_publish_status takes integer slot returns nothing
     local unit hero = hero_get_unit_from_index(slot)
-    call io_open_write(filename)
+    local integer this_hash = hero_hash_state(hero, slot)
+    if this_hash == hero_hashes[slot] then
+        return
+    endif
+    set hero_hashes[slot] = this_hash
+    call io_open_write("hero_" + I2S(hero_global_slots[slot]) + ".txt")
     call io_write(I2S(hero_global_slots[slot]))
-    call io_write(I2S(MISSION_ID))
+    call io_write(GetHeroProperName(hero))
     call io_write(I2S(GetHeroXP(hero)))
     call io_write(I2S(GetHeroAgi(hero, false)))
     call io_write(I2S(GetHeroStr(hero, false)))
     call io_write(I2S(GetHeroInt(hero, false)))
-    call io_write(R2S(GetUnitState(hero, UNIT_STATE_MAX_LIFE)))
+    call io_write(I2S(R2I(GetUnitState(hero, UNIT_STATE_MAX_LIFE))))
     call io_write(I2S(GetUnitAbilityLevel(hero, hero_abil_1[slot])))
     call io_write(I2S(GetUnitAbilityLevel(hero, hero_abil_2[slot])))
     call io_write(I2S(GetUnitAbilityLevel(hero, hero_abil_3[slot])))
@@ -193,10 +204,48 @@ function hero_publish_status takes integer slot, string filename returns nothing
     call io_write(I2S(GetItemTypeId(UnitItemInSlot(hero, 4))))
     call io_write(I2S(GetItemTypeId(UnitItemInSlot(hero, 5))))
     call io_close_write()
+
+    set hero_status_index = hero_status_index + 1
+    if hero_status_index >= MAX_UPDATE_ID then
+        set hero_status_index = 0
+    endif
+endfunction
+
+function hero_publish_all_statuses takes nothing returns nothing
+    local integer i = 0
+    loop
+        exitwhen i >= NUM_HEROES
+        call hero_publish_status(i)
+        set i = i + 1
+    endloop
+    call status_send()
+endfunction
+
+function hero_on_update takes nothing returns nothing
+    local integer i = 0
+    set hero_item_target = GetTriggerUnit()
+    loop
+        exitwhen hero_get_unit_from_index(i) == hero_item_target
+        set i = i + 1
+        exitwhen i >= NUM_HEROES
+    endloop
+    if i >= NUM_HEROES then
+        debug call DisplayTextToForce(GetPlayersAll(), "Error: Couldn't find hero index for levelling hero")
+        return
+    endif
+    if GetHeroLevel(GetTriggerUnit()) >= HERO_MAX_LEVEL[i] then
+        call SuspendHeroXP(GetTriggerUnit(), true)
+    endif
 endfunction
 
 function InitTrig_heroes takes nothing returns nothing
-    set t_disable_hero_level=CreateTrigger()
-    call TriggerRegisterPlayerUnitEventSimple(t_disable_hero_level, USER_PLAYER, EVENT_PLAYER_HERO_LEVEL)
-    call TriggerAddAction(t_disable_hero_level, function hero_disable_leveling)
+    set t_hero_update=CreateTrigger()
+    call TriggerRegisterPlayerUnitEventSimple(t_hero_update, USER_PLAYER, EVENT_PLAYER_HERO_LEVEL)
+    call TriggerAddAction(t_hero_update, function hero_on_update)
+    set hero_update_status_timer=CreateTimer()
+    call TimerStart(hero_update_status_timer, 1, true, function hero_publish_all_statuses)
+    set hero_hashes[0] = 0
+    set hero_hashes[1] = 0
+    set hero_hashes[2] = 0
+    set hero_hashes[3] = 0
 endfunction

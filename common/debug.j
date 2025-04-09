@@ -4,7 +4,6 @@ trigger t_xp
 endglobals
 
 function debug_xp_tome takes nothing returns nothing
-    call DisplayTextToForce(GetPlayersAll(), "XPXPXP")
     call CreateItem('texp', GetStartLocationX(GetPlayerId(USER_PLAYER)), GetStartLocationY(GetPlayerId(USER_PLAYER)))
 endfunction
 

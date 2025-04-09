@@ -6,12 +6,13 @@ import threading
 import asyncio
 import sys
 import os
+import inspect
 from dataclasses import dataclass, field
 
 from ..data.game_ids import Tech, TECH_REQUIREMENTS, GameID, HERO_ABILITIES, int_to_id
 from .. import logger
 from ..data.locations import Wc3Location
-from ..data import heroes
+from ..data import heroes, missions
 
 
 PRELOADER_DIR = os.path.expanduser('~/Documents/Warcraft III/CustomMapData')
@@ -24,6 +25,15 @@ HEROES_FILE = f'{PRELOADER_DIR}/heroes.txt'
 
 NUM_FILE_LINES = 10
 MAX_LOCATIONS = 30  # Should match status.j
+MAX_UPDATE_ID = 100000  # Should match status.j
+
+COMM_VERSION = (1, 0)
+
+
+class ColorCode(enum.StrEnum):
+    RESET = '|r'
+    ERROR = '|cffff2222'
+    WARNING = '|cffff9966'
 
 
 def default_locations_collected() -> dict[int, int]:
@@ -33,8 +43,7 @@ def default_locations_collected() -> dict[int, int]:
 class Wc3Inventory:
     def __init__(self) -> None:
         self.tech = {t: 0 for t in Tech}
-        self.levels = {h: 2 for h in heroes.HeroSlot}
-    
+
     def add_tech_and_prereqs(self, tech: Tech) -> bool:
         queue = [tech]
         result = False
@@ -55,6 +64,9 @@ class Wc3Inventory:
                     queue.extend(reqs)
                     result = True
         return result
+    
+    def __repr__(self) -> str:
+        return f'<{sum(self.tech.values())} Techs>'
 
 
 class PacketType(enum.IntFlag):
@@ -73,21 +85,19 @@ class PacketStatus:
 
 
 def default_packet_status() -> dict[PacketType, PacketStatus]:
-    return {
-        packet_type: PacketStatus()
-        for packet_type in PacketType
-    }
+    return {packet_type: PacketStatus() for packet_type in PacketType}
 
 
 class MissionError(enum.Flag):
     NONE = 0
     VERSION_MISMATCH = enum.auto()
+    MINOR_VERSION_MISMATCH = enum.auto()
 
 
 @dataclass
 class HeroStatus:
     hero: heroes.HeroChoice
-    name: str
+    name: str = ''
     xp: int = 0
     max_level: int = 2
     strength: int = 0
@@ -98,6 +108,12 @@ class HeroStatus:
     items: list[GameID|None] = field(default_factory=lambda: [None]*6)
 
     def __post_init__(self) -> None:
+        self.reset_abils()
+        if not self.name:
+            self.name = self.hero.hero_name
+    
+    def reset_abils(self) -> None:
+        self.abilities.clear()
         for abil_id in HERO_ABILITIES[self.hero.game_id]:
             self.abilities[abil_id] = 0
 
@@ -112,13 +128,19 @@ class MissionStatus:
     errors: MissionError = MissionError.NONE
 
 
+def init_hero_data() -> dict[heroes.HeroSlot, HeroStatus]:
+    return {slot: HeroStatus(heroes.HERO_SLOT_TO_DEFAULT_CHOICE[slot]) for slot in heroes.HeroSlot}
+
+
 @dataclass
 class GameStatus:
     pending_messages: list[str] = field(default_factory=list)
     num_in_flight_messages: int = 0
     inventory: Wc3Inventory = field(default_factory=Wc3Inventory)
-    pending_update: PacketType = PacketType.HEROES
-    hero_data: dict[heroes.HeroSlot, HeroStatus] = field(default_factory=dict)
+    pending_update: PacketType = PacketType.HEROES|PacketType.MESSAGES
+    last_hero_update: int = -1
+    next_hero_update: int = -1
+    hero_data: dict[heroes.HeroSlot, HeroStatus] = field(default_factory=init_hero_data, repr=False)
 
 
 @dataclass
@@ -149,15 +171,19 @@ def update_ping(status: MissionStatus, pending: PacketType = PacketType.NONE) ->
 
 def update_unlocks(game_status: GameStatus, mission_status: MissionStatus) -> None:
     packet_status = mission_status.packet_status[PacketType.UNLOCKS]
-    packet_status.last_sent = (packet_status.last_sent + 1) & 0xff
+    packet_status.last_sent = (packet_status.last_sent + 1) & 0xffff
     with open(UNLOCKS_FILE, 'w') as fp:
         fp.write(PRELOAD_FUNCTION_PROTOTYPE)
         fp.write(send_int(packet_status.last_sent, channel='nech'))
         for tech_id, unlock_level in game_status.inventory.tech.items():
             for player in mission_status.player_index:
                 fp.write(send_int(unlock_level, tech_id, player))
-        # todo(mm): Hero levels
         fp.write(ENDFUNCTION)
+
+
+def initialize_messages() -> None:
+    if os.path.exists(MESSAGES_FILE):
+        os.remove(MESSAGES_FILE)
 
 
 def update_messages(game_status: GameStatus, packet_status: PacketStatus) -> None:
@@ -190,6 +216,7 @@ def update_locations(status: MissionStatus) -> None:
     if packet_status.last_received != packet_status.last_sent:
         # Don't want to obliterate any location removal data after we've already cleared it locally
         return
+    packet_status.last_sent = (packet_status.last_sent + 1) & 0xffff
     collected_parts: list[str] = []
     uncollected_parts: list[str] = []
     for location_id, location_status in status.locations_collected.items():
@@ -209,8 +236,8 @@ def update_locations(status: MissionStatus) -> None:
 
 def update_heroes(game_status: GameStatus, status: MissionStatus) -> None:
     packet_status = status.packet_status[PacketType.HEROES]
-    packet_status.last_sent = (packet_status.last_sent + 1) & 0xff
-    with open(HEROES_FILE, 'w') as fp:
+    packet_status.last_sent = (packet_status.last_sent + 1) & 0xffff
+    with open(HEROES_FILE, 'w', encoding='utf-8') as fp:
         fp.write(PRELOAD_FUNCTION_PROTOTYPE)
         fp.write("local integer slot = GetPlayerTechMaxAllowed(Player(0), 'nalb')\n")
         fp.write(send_int(packet_status.last_sent, 'nech'))
@@ -247,29 +274,80 @@ def line_contents(raw_line: str) -> str:
 END_TRANSMISSION = 'call PreloadEnd'
 
 
-def read_status(filename: str, status: MissionStatus) -> None:
-    with open(filename, 'r') as fp:
+def log_message_to_game(game_status: GameStatus, message: str, level: ColorCode) -> None:
+    if level == ColorCode.ERROR:
+        logger.error(message)
+    elif level == ColorCode.WARNING:
+        logger.warning(message)
+    else:
+        logger.info(message)
+    game_status.pending_messages.clear()
+    game_status.pending_messages.append(f'{level}{level.name.title()}{ColorCode.RESET}: {message}')
+    game_status.pending_update |= PacketType.MESSAGES
+
+
+def format_version(version: tuple[int, ...]) -> str:
+    return '.'.join(map(str, version))
+
+
+def read_status(status: MissionStatus, game_status: GameStatus) -> None:
+    if not os.path.exists(STATUS_FILE):
+        status.update_number = -1
+        status.mission_id = -1
+        status.player_index.clear()
+        return
+    with open(STATUS_FILE, 'r') as fp:
         lines = fp.readlines()
     lines = lines[2:]
-    status.update_number = (int(line_contents(lines.pop(0))) + 1) % 10000
+    status.update_number = (int(line_contents(lines.pop(0))) + 1) % MAX_UPDATE_ID
+    game_comm_version = tuple(map(int, line_contents(lines.pop(0)).split('.')))
+    if not game_comm_version or game_comm_version[0] != COMM_VERSION[0]:
+        if not (status.errors & MissionError.VERSION_MISMATCH):
+            msg = (
+                f"Communications version mismatch! "
+                f"Client={format_version(COMM_VERSION)}, "
+                f"Mod={format_version(game_comm_version)}. "
+            )
+            if game_comm_version < COMM_VERSION:
+                msg += "Please update your mod files before continuing."
+            else:
+                msg += "Please update your client before continuing."
+            log_message_to_game(game_status, msg, ColorCode.ERROR)
+            status.errors |= MissionError.VERSION_MISMATCH
+            return
+    if game_comm_version != COMM_VERSION:
+        if not (status.errors & MissionError.MINOR_VERSION_MISMATCH):
+            msg = (
+                f"Communication minor version mismatch. "
+                f"Client={format_version(COMM_VERSION)}, "
+                f"Mod={format_version(game_comm_version)}. "
+                "Some features may not work correctly."
+            )
+            log_message_to_game(game_status, msg, ColorCode.WARNING)
+            status.errors |= MissionError.MINOR_VERSION_MISMATCH
     status.mission_id = int(line_contents(lines.pop(0)))
     status.player_index = line_contents(lines.pop(0)).split(',')
     last_transmissions = [int(x) for x in line_contents(lines.pop(0)).split(',')]
+    game_status.next_hero_update = int(line_contents(lines.pop(0)))
+    lines.pop(0)  # reserved
+    lines.pop(0)  # reserved
+    lines.pop(0)  # reserved
+    lines.pop(0)  # reserved
     if len(last_transmissions) > NUM_PACKET_TYPES:
-        if not (status.errors & MissionError.VERSION_MISMATCH):
+        if not (status.errors & MissionError.MINOR_VERSION_MISMATCH):
             logger.error(
                 f"Too many packet acknowledgements sent ({len(last_transmissions)} > {NUM_PACKET_TYPES}); "
                 "mod may be a newer version"
             )
-            status.errors |= MissionError.VERSION_MISMATCH
+            status.errors |= MissionError.MINOR_VERSION_MISMATCH
         last_transmissions = last_transmissions[:3]
     elif len(last_transmissions) < NUM_PACKET_TYPES:
-        if not (status.errors & MissionError.VERSION_MISMATCH):
+        if not (status.errors & MissionError.MINOR_VERSION_MISMATCH):
             logger.error(
                 f"Too few packet acknowledgements sent({len(last_transmissions)} < {NUM_PACKET_TYPES}); "
                 "mod may be out of date"
             )
-            status.errors |= MissionError.VERSION_MISMATCH
+            status.errors |= MissionError.MINOR_VERSION_MISMATCH
         last_transmissions.extend([-2] * (NUM_PACKET_TYPES - len(last_transmissions)))
     assert len(last_transmissions) == NUM_PACKET_TYPES
     for packet_status, transmission_id in zip(status.packet_status.values(), last_transmissions):
@@ -282,24 +360,45 @@ def read_status(filename: str, status: MissionStatus) -> None:
         status.locations_collected[int(line_contents(line))] = 1
 
 
-def read_hero_status(filename: str, game_status: GameStatus, mission_status: MissionStatus) -> None:
+def read_hero_status(slot: int, game_status: GameStatus) -> None:
+    filename = f'{PRELOADER_DIR}/hero_{slot}.txt'
+    if not os.path.isfile(filename):
+        logger.debug(f"Unable to read {filename} as it does not exist")
+        return
     with open(filename, 'r') as fp:
         lines = fp.readlines()
     lines = lines[2:]
     slot_index = int(line_contents(lines.pop(0)))
-    mission_id = int(line_contents(lines.pop(0)))
+    assert slot_index == slot
+    hero_name = line_contents(lines.pop(0))
     slot = heroes.HeroSlot(slot_index)
     hero_data = game_status.hero_data[slot]
     hero_data.xp = int(line_contents(lines.pop(0)))
     hero_data.agility = int(line_contents(lines.pop(0)))
     hero_data.strength = int(line_contents(lines.pop(0)))
     hero_data.intelligence = int(line_contents(lines.pop(0)))
-    hero_data.max_health = int(line_contents(lines.pop(0)))
+    hero_data.max_health = int(float(line_contents(lines.pop(0))))
     assert len(hero_data.abilities) == 4
     for abil_id in hero_data.abilities:
         hero_data.abilities[abil_id] = int(line_contents(lines.pop(0)))
     for item_slot in range(6):
         hero_data.items[item_slot] = int_to_id(int(line_contents(lines.pop(0))))
+
+
+def read_necessary_hero_status(status: MissionStatus, game_status: GameStatus) -> None:
+    if status.mission_id < 0:
+        return
+    if game_status.last_hero_update == game_status.next_hero_update:
+        return
+    mission = missions.VALUE_TO_MISSION.get(status.mission_id)
+    if mission is None:
+        logger.warning(f'Unable to read mission ID {status.mission_id}')
+        return
+    mission_hero_slots = heroes.MISSION_TO_HERO_SLOT[mission]
+    for slot in mission_hero_slots:
+        read_hero_status(slot.value, game_status)
+    game_status.last_hero_update = game_status.next_hero_update
+    game_status.pending_update |= PacketType.HEROES
 
 
 def sync_mission_status(source: MissionStatus, target: MissionStatus) -> None:
@@ -324,13 +423,14 @@ def sync_mission_status(source: MissionStatus, target: MissionStatus) -> None:
 
 async def status_loop(ctx: AsyncContext) -> None:
     new_status = MissionStatus()
+    initialize_messages()
     while ctx.running:
         if not os.path.isfile(STATUS_FILE):
             await asyncio.sleep(0.5)
             continue
         sync_mission_status(ctx.mission_status, new_status)
         try:
-            read_status(STATUS_FILE, new_status)
+            read_status(new_status, ctx.game_status)
         except Exception as ex:
             logger.exception(ex)
             await asyncio.sleep(2)
@@ -343,6 +443,7 @@ async def status_loop(ctx: AsyncContext) -> None:
             ctx.game_status.pending_update |= PacketType.UNLOCKS
         old_update_number = ctx.mission_status.update_number
         sync_mission_status(new_status, ctx.mission_status)
+        read_necessary_hero_status(ctx.mission_status, ctx.game_status)
         if ctx.game_status.pending_update & PacketType.UNLOCKS:
             update_unlocks(ctx.game_status, ctx.mission_status)
         if ctx.game_status.pending_update & PacketType.LOCATIONS:
@@ -390,6 +491,24 @@ def try_parse_unlock_id(user_input: str) -> Tech | None:
     return tech
 
 
+def try_parse_hero_slot(user_input: str) -> heroes.HeroSlot | None:
+    result: heroes.HeroSlot | None = None
+    try:
+        result = heroes.HeroSlot(user_input)
+    except ValueError: pass
+    try:
+        result = heroes.HeroSlot[user_input.upper().replace(' ', '_').replace("'", '')]
+    except KeyError: pass
+    return result
+
+
+def try_parse_int(user_input: str, default: int) -> int:
+    try:
+        return int(user_input, base=0)
+    except ValueError:
+        return default
+
+
 async def _stdin_reader(ctx: AsyncContext) -> None:
     queue: asyncio.Queue[str] = asyncio.Queue()
     start_stdin_reader_thread(queue)
@@ -403,9 +522,25 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
                 ctx.running = False
             elif text == "/help":
                 logger.info("Commands:")
-                logger.info('/exit\n/status\n/check <args>\n/uncheck <args>\n/msg <message>\n/unlock <techid>')
+                logger.info(inspect.cleandoc('''
+                    /exit
+                    /status
+                    /check <args>
+                    /uncheck <args>
+                    /msg <message>
+                    /unlock <techid>
+                    /level <hero slot> [amount]
+                '''))
             elif text == "/status":
+                logger.info(ctx.game_status)
                 logger.info(ctx.mission_status)
+            elif text.startswith('/herostatus '):
+                slot_identifier = text.split(' ', 1)[1].strip()
+                hero_slot = try_parse_hero_slot(slot_identifier)
+                if hero_slot is None:
+                    logger.warning(f'"{slot_identifier}" is not a recognized hero slot')
+                else:
+                    logger.info(ctx.game_status.hero_data[hero_slot])
             elif text.startswith('/check '):
                 parts = [p for p in text.split(' ') if p]
                 for part in parts[1:]:
@@ -435,6 +570,21 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
                     if ctx.game_status.inventory.tech[tech]:
                         ctx.game_status.inventory.tech[tech] = 0
                         ctx.game_status.pending_update |= PacketType.UNLOCKS
+            elif text.startswith('/level '):
+                slot_identifier = text.split(' ', 1)[1].strip()
+                if slot_identifier[-1].isnumeric():
+                    slot_identifier, delta_str = slot_identifier.rsplit(' ', 1)
+                    delta = try_parse_int(delta_str, 1)
+                else:
+                    delta = 1
+                hero_slot = try_parse_hero_slot(slot_identifier)
+                if hero_slot is None:
+                    logger.warning(f'"{slot_identifier}" is not a recognized hero slot')
+                else:
+                    ctx.game_status.hero_data[hero_slot].max_level += delta
+                    logger.info(
+                        f"{hero_slot.name} max level set to {ctx.game_status.hero_data[hero_slot].max_level}"
+                    )
             elif text.startswith('/msg '):
                 if len(text.strip()) < 6:
                     logger.warning('/msg requires an argument')
@@ -449,9 +599,15 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
 
 
 def init_test_data(game_status: GameStatus) -> None:
-    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS] = HeroStatus(heroes.HeroChoice.BLACKROCK_BLADEMASTER, "Rokhan", xp=210)
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].hero = heroes.HeroChoice.FEL_ORC_BLADEMASTER
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].reset_abils()
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].name = r"McCoy Tyner"
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].xp = 240
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].max_level = 3
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].abilities[GameID.BLADEMASTER_CRITICAL_STRIKE] = 1
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].items[2] = GameID.BRACER_OF_AGILITY
-    game_status.hero_data[heroes.HeroSlot.JAINA] = HeroStatus(heroes.HeroChoice.FIRELORD, "Ragnaros")
+    game_status.hero_data[heroes.HeroSlot.JAINA].hero = heroes.HeroChoice.FIRELORD
+    game_status.hero_data[heroes.HeroSlot.JAINA].name = "Jenna"
 
 
 async def main() -> None:
