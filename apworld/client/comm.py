@@ -12,7 +12,7 @@ from dataclasses import dataclass, field
 from ..data.game_ids import Tech, TECH_REQUIREMENTS, GameID, HERO_ABILITIES, int_to_id
 from .. import logger
 from ..data.locations import Wc3Location
-from ..data import heroes, missions
+from ..data import heroes, missions, tables
 
 
 PRELOADER_DIR = os.path.expanduser('~/Documents/Warcraft III/CustomMapData')
@@ -299,7 +299,10 @@ def read_status(status: MissionStatus, game_status: GameStatus) -> None:
     with open(STATUS_FILE, 'r') as fp:
         lines = fp.readlines()
     lines = lines[2:]
-    status.update_number = (int(line_contents(lines.pop(0))) + 1) % MAX_UPDATE_ID
+    try:
+        status.update_number = (int(line_contents(lines.pop(0))) + 1) % MAX_UPDATE_ID
+    except IndexError:
+        return
     game_comm_version = tuple(map(int, line_contents(lines.pop(0)).split('.')))
     if not game_comm_version or game_comm_version[0] != COMM_VERSION[0]:
         if not (status.errors & MissionError.VERSION_MISMATCH):
@@ -394,7 +397,7 @@ def read_necessary_hero_status(status: MissionStatus, game_status: GameStatus) -
     if mission is None:
         logger.warning(f'Unable to read mission ID {status.mission_id}')
         return
-    mission_hero_slots = heroes.MISSION_TO_HERO_SLOT[mission]
+    mission_hero_slots = tables.MISSION_TO_HERO_SLOT[mission]
     for slot in mission_hero_slots:
         read_hero_status(slot.value, game_status)
     game_status.last_hero_update = game_status.next_hero_update
@@ -601,7 +604,7 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
 def init_test_data(game_status: GameStatus) -> None:
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].hero = heroes.HeroChoice.FEL_ORC_BLADEMASTER
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].reset_abils()
-    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].name = r"McCoy Tyner"
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].name = r":D"
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].xp = 240
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].max_level = 3
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].abilities[GameID.BLADEMASTER_CRITICAL_STRIKE] = 1

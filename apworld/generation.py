@@ -9,6 +9,11 @@ if TYPE_CHECKING:
     from .world import Wc3World
 
 
+VERSION_PUBLIC = 0
+VERSION_MAJOR = 0
+VERSION_MINOR = 1
+
+
 REGION_TO_LOCATIONS: dict[str, list[locations.Wc3Location]] = {}
 for location in locations.Wc3Location:
     REGION_TO_LOCATIONS.setdefault(location.mission.mission_name, []).append(location)
@@ -51,6 +56,7 @@ class Generation:
 
     def fill_slot_data(self, world: 'Wc3World') -> Mapping[str, Any]:
         return {
-            "version_major": 0,
-            "version_minor": 1,
+            "version_public": VERSION_PUBLIC,
+            "version_major": VERSION_MAJOR,
+            "version_minor": VERSION_MINOR,
         }

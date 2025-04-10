@@ -13,6 +13,9 @@ class Wc3Race(enum.Flag):
     NAGA = enum.auto()
     BLOOD_ELF = enum.auto()
 
+    HUMAN_SHOP = HUMAN|BLOOD_ELF
+    ALL_SHOPS = HUMAN|UNDEAD|ORC|NIGHT_ELF|BLOOD_ELF
+
 
 class Wc3Campaign(enum.Enum):
     def __new__(cls, id: int, *args, **kwargs):
@@ -42,7 +45,9 @@ class Wc3Mission(enum.Enum):
         obj._value_ = campaign.value * 100 + chapter
         return obj
 
-    def __init__(self, name: str, short_name: str, campaign: Wc3Campaign, chapter: int, race: Wc3Race) -> None:
+    def __init__(
+        self, name: str, short_name: str, campaign: Wc3Campaign, chapter: int, race: Wc3Race
+    ) -> None:
         self.mission_name = name
         self.short_name = short_name
         self.campaign = campaign
