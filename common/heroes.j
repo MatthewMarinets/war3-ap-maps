@@ -21,9 +21,9 @@ function hero_apply_max_level takes unit hero, integer level returns nothing
     endif
 endfunction
 
-function hero_set_max_level takes integer hero_index, integer level returns nothing
-    local unit hero = hero_get_unit_from_index(hero_index)
-    set HERO_MAX_LEVEL[hero_index] = level
+function hero_set_max_level takes integer slot, integer level returns nothing
+    local unit hero = hero_get_unit_from_index(slot)
+    set HERO_MAX_LEVEL[slot] = level
     call hero_apply_max_level(hero, level)
 endfunction
 
@@ -221,9 +221,9 @@ function hero_publish_all_statuses takes nothing returns nothing
     call status_send()
 endfunction
 
-function hero_on_update takes nothing returns nothing
+function hero_on_update takes unit hero returns nothing
     local integer i = 0
-    set hero_item_target = GetTriggerUnit()
+    set hero_item_target = hero
     loop
         exitwhen hero_get_unit_from_index(i) == hero_item_target
         set i = i + 1
@@ -233,15 +233,17 @@ function hero_on_update takes nothing returns nothing
         debug call DisplayTextToForce(GetPlayersAll(), "Error: Couldn't find hero index for levelling hero")
         return
     endif
-    if GetHeroLevel(GetTriggerUnit()) >= HERO_MAX_LEVEL[i] then
-        call SuspendHeroXP(GetTriggerUnit(), true)
-    endif
+    call hero_apply_max_level(hero, HERO_MAX_LEVEL[i])
+endfunction
+
+function hero_on_update_triggerfunction takes nothing returns nothing
+    call hero_on_update(GetTriggerUnit())
 endfunction
 
 function InitTrig_heroes takes nothing returns nothing
     set t_hero_update=CreateTrigger()
     call TriggerRegisterPlayerUnitEventSimple(t_hero_update, USER_PLAYER, EVENT_PLAYER_HERO_LEVEL)
-    call TriggerAddAction(t_hero_update, function hero_on_update)
+    call TriggerAddAction(t_hero_update, function hero_on_update_triggerfunction)
     set hero_update_status_timer=CreateTimer()
     call TimerStart(hero_update_status_timer, 1, true, function hero_publish_all_statuses)
     set hero_hashes[0] = 0
