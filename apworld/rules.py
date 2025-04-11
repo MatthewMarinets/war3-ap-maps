@@ -47,14 +47,14 @@ class Wc3Logic:
         )
     
     def nelf_has_healing(self, state: 'CollectionState') -> bool:
-        return (
-            self.has(state, Wc3Item.NELF_WELLSPRING)
-            or self.has_all(state, (Wc3Item.DRUID_OF_THE_CLAW, Wc3Item.DRUID_OF_THE_CLAW_TRAINING))
-        )
+        return self.has_all_from_any_group(state, (
+            (Wc3Item.NELF_WELLSPRING,),
+            (Wc3Item.DRUID_OF_THE_CLAW, Wc3Item.DRUID_OF_THE_CLAW_TRAINING,),
+        ))
     
     def undead_has_healing(self, state: 'CollectionState') -> bool:
         return (
-            self.has_any(state, (Wc3Item.OBSIDIAN_STATUE, Wc3Item.UNDEAD))
+            self.has_any(state, (Wc3Item.OBSIDIAN_STATUE, Wc3Item.SHOP_ITEM_SCROLL_OF_HEALING))
         )
     
     def human_has_dispel(self, state: 'CollectionState') -> bool:
@@ -64,15 +64,15 @@ class Wc3Logic:
         )
     
     def orc_has_dispel(self, state: 'CollectionState') -> bool:
-        return (
-            self.has(state, Wc3Item.SHAMAN)
-            or self.has_all(state, (Wc3Item.SPIRIT_WALKER, Wc3Item.SPIRIT_WALKER_TRAINING))
-        )
+        return self.has_all_from_any_group(state, (
+            (Wc3Item.SHAMAN,),
+            (Wc3Item.SPIRIT_WALKER, Wc3Item.SPIRIT_WALKER_TRAINING,),
+        ))
     
     def nelf_has_dispel(self, state: 'CollectionState') -> bool:
         return self.has_all_from_any_group(state, (
             (Wc3Item.WISP,),
-            (Wc3Item.DRYAD, Wc3Item.DRYAD_ABOLISH_MAGIC),
+            (Wc3Item.DRYAD, Wc3Item.DRYAD_ABOLISH_MAGIC,),
         ))
 
 

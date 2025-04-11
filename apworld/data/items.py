@@ -1,7 +1,7 @@
 
 import enum
 import dataclasses
-from .missions import Wc3Race, Wc3Campaign
+from .missions import Wc3Race, Wc3Campaign, Wc3Mission
 from .game_ids import Tech, GameID
 from .heroes import HeroSlot
 
@@ -43,6 +43,13 @@ class PickupItem:
     quantity: int
     game_id: GameID
     campaign: Wc3Campaign
+    charged: bool = False
+
+
+@dataclasses.dataclass
+class QuestItem:
+    vanilla_mission: Wc3Mission
+    """The mission the player would acquire this quest item in vanilla"""
 
 
 ItemType = Unit | Building | Level | Upgrade | ShopItem | PickupItem
@@ -294,6 +301,20 @@ class Wc3Item(enum.Enum):
     NAGA_BLADES =           415, "Progressive Blades (Naga)",        Upgrade(Tech.NAGA_BLADES, Wc3Race.NAGA, 3)
     NAGA_SCALES =           416, "Progressive Scales (Naga)",        Upgrade(Tech.NAGA_SCALES, Wc3Race.NAGA, 3)
 
+    # Quest Items
+    GERARDS_LEDGER =            800, "Gerard's Ledger",                 QuestItem(Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD)
+    HEART_OF_SEARINOX =         801, "Heart of Searinox",               QuestItem(Wc3Mission.H2_BLACKROCK_AND_ROLL)
+    URN_OF_KING_TERENAS =       802, "Urn of King Terenas",             QuestItem(Wc3Mission.U2_DIGGING_UP_THE_DEAD)
+    KEY_OF_THE_THREE_MOONS_1 =  803, "Key of the Three Moons Part 1",   QuestItem(Wc3Mission.U4_KEY_OF_THE_THREE_MOONS)
+    KEY_OF_THE_THREE_MOONS_2 =  804, "Key of the Three Moons Part 2",   QuestItem(Wc3Mission.U4_KEY_OF_THE_THREE_MOONS)
+    KEY_OF_THE_THREE_MOONS_3 =  805, "Key of the Three Moons Part 3",   QuestItem(Wc3Mission.U4_KEY_OF_THE_THREE_MOONS)
+    HEART_OF_ASZUNE =           806, "Heart of Aszune",                 QuestItem(Wc3Mission.O7_THE_ORACLE)
+    ENCHANTED_GEMSTONE =        807, "Enchanted Gemstone",              QuestItem(Wc3Mission.O7_THE_ORACLE)
+    SOUL_GEM =                  808, "Soul Gem",                        QuestItem(Wc3Mission.O8_BY_DEMONS_BE_DRIVEN)
+    EMPTY_VIAL =                809, "Empty Vial",                      QuestItem(Wc3Mission.N5_BROTHERS_IN_BLOOD)
+    FULL_VIAL =                 810, "Full Vial",                       QuestItem(Wc3Mission.N5_BROTHERS_IN_BLOOD)
+    SKELETAL_ARTIFACT =         811, "Skeletal Artifact",               QuestItem(Wc3Mission.NX2_THE_BROKEN_ISLES)
+
     # Heroes
     ARTHAS_LEVEL =        1000, "Arthas Level",         Level(HeroSlot.PALADIN_ARTHAS, 1, 2)
     JAINA_LEVEL =         1001, "Jaina Level",          Level(HeroSlot.JAINA, 3, 4)
@@ -345,10 +366,25 @@ class Wc3Item(enum.Enum):
     H_RING_OF_REGENERATION =         2121, "Ring of Regeneration (Human)",          PickupItem(1, GameID.RING_OF_REGENERATION, Wc3Race.HUMAN)
     H_RING_OF_PROTECTION_3 =         2122, "Ring of Protection +3 (Human)",         PickupItem(1, GameID.RING_OF_PROTECTION_3, Wc3Race.HUMAN)
     H_TOME_OF_AGILITY =              2123, "Tome of Agility (Human)",               PickupItem(1, GameID.TOME_OF_AGILITY, Wc3Race.HUMAN)
+    H_POTION_OF_HEALING =            2124, "Potion of Healing (Human)",             PickupItem(1, GameID.POTION_OF_HEALING, Wc3Race.HUMAN, charged=True)
+    H_POTION_OF_MANA =               2125, "Potion of Mana (Human)",                PickupItem(1, GameID.POTION_OF_MANA, Wc3Race.HUMAN, charged=True)
+    H_SCROLL_OF_HEALING =            2126, "Scroll of Healing (Human)",             PickupItem(1, GameID.SCROLL_OF_HEALING, Wc3Race.HUMAN, charged=True)
+    H_SCROLL_OF_PROTECTION =         2127, "Scroll of Protection (Human)",          PickupItem(1, GameID.SCROLL_OF_PROTECTION, Wc3Race.HUMAN, charged=True)
+    H_WAND_OF_NEGATION =             2128, "Wand of Negation (Human)",              PickupItem(1, GameID.WAND_OF_NEGATION, Wc3Race.HUMAN, charged=True)
+    H_POTION_OF_GREATER_HEALING =    2129, "Potion of Greater Healing (Human)",     PickupItem(1, GameID.POTION_OF_GREATER_HEALING, Wc3Race.HUMAN, charged=True)
+    H_POTION_OF_RESTORATION =        2130, "Potion of Restoration (Human)",         PickupItem(1, GameID.POTION_OF_RESTORATION, Wc3Race.HUMAN, charged=True)
+    H_SCROLL_OF_TOWN_PORTAL =        2131, "Scroll of Town Portal (Human)",         PickupItem(2, GameID.SCROLL_OF_TOWN_PORTAL, Wc3Race.HUMAN, charged=True)
+    H_SCROLL_OF_THE_BEAST =          2132, "Scroll of the Beast (Human)",           PickupItem(1, GameID.SCROLL_OF_THE_BEAST, Wc3Race.HUMAN, charged=True)
+    H_MANA_STONE =                   2133, "Mana Stone (Human)",                    PickupItem(1, GameID.MANA_STONE, Wc3Race.HUMAN, charged=True)
+    H_HEALTH_STONE =                 2134, "Health Stone (Human)",                  PickupItem(1, GameID.HEALTH_STONE, Wc3Race.HUMAN, charged=True)
+    H_POTION_OF_GREATER_MANA =       2135, "Potion of Greater Mana (Human)",        PickupItem(1, GameID.POTION_OF_GREATER_MANA, Wc3Race.HUMAN, charged=True)
+    H_HEALING_WARDS =                2136, "Healing Wards (Human)",                 PickupItem(1, GameID.HEALING_WARDS, Wc3Race.HUMAN, charged=True)
 
     U_RING_OF_PROTECTION_2 =         2200, "Ring of Protection +2 (Undead)",        PickupItem(1, GameID.RING_OF_PROTECTION_2, Wc3Race.UNDEAD)
     U_SPIDER_RING =                  2201, "Spider Ring (Undead)",                  PickupItem(1, GameID.SPIDER_RING, Wc3Race.UNDEAD)
     U_GAUNTLETS_OF_OGRE_STRENGTH_3 = 2202, "Gauntlets of Ogre Strength +3 (Undead)",PickupItem(1, GameID.GAUNTLETS_OF_OGRE_STRENGTH_3, Wc3Race.UNDEAD)
+
+    N_HORN_OF_CENARIUS =             2400, "Horn of Cenarius (Night Elf)",          PickupItem(1, GameID.HORN_OF_CENARIUS)
 
 
 item_name_to_data: dict[str, Wc3Item] = {}
