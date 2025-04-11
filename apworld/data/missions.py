@@ -35,8 +35,8 @@ class Wc3Campaign(enum.Enum):
     ORC_1 = 3, "Orc", "The Invasion of Kalimdor"
     NIGHT_ELF_1 = 4, "Night Elf", "Eternity's End"
     NIGHT_ELF_2 = 5, "Sentinels", "Terror of the Tides"
-    HUMAN_2 = 5, "Alliance", "Curse of the Blood Elves"
-    UNDEAD_2 = 6, "Scourge", "Legacy of the Damned"
+    HUMAN_2 = 6, "Alliance", "Curse of the Blood Elves"
+    UNDEAD_2 = 7, "Scourge", "Legacy of the Damned"
 
 
 class Wc3Mission(enum.Enum):
