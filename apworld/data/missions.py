@@ -23,20 +23,21 @@ class Wc3Campaign(enum.Enum):
         obj._value_ = id
         return obj
 
-    def __init__(self, id: int, title_faction: str, name: str) -> None:
+    def __init__(self, id: int, mnemonic: str, title_faction: str, name: str) -> None:
         self.id = id
+        self.mnemonic = mnemonic
         self.title_faction = title_faction
         self.campaign_name = name
 
-    GENERAL = -1, "General", "General Locations"
-    PROLOGUE = 0, "Prologue", "Exodus of the Horde"
-    HUMAN_1 = 1, "Human", "The Scourge of Lordaeron"
-    UNDEAD_1 = 2, "Undead", "Path of the Damned"
-    ORC_1 = 3, "Orc", "The Invasion of Kalimdor"
-    NIGHT_ELF_1 = 4, "Night Elf", "Eternity's End"
-    NIGHT_ELF_2 = 5, "Sentinels", "Terror of the Tides"
-    HUMAN_2 = 6, "Alliance", "Curse of the Blood Elves"
-    UNDEAD_2 = 7, "Scourge", "Legacy of the Damned"
+    GENERAL =    -1, "G", "General", "General Locations"
+    PROLOGUE =    0, "P", "Prologue", "Exodus of the Horde"
+    HUMAN_1 =     1, "H", "Human", "The Scourge of Lordaeron"
+    UNDEAD_1 =    2, "U", "Undead", "Path of the Damned"
+    ORC_1 =       3, "O", "Orc", "The Invasion of Kalimdor"
+    NIGHT_ELF_1 = 4, "N", "Night Elf", "Eternity's End"
+    NIGHT_ELF_2 = 5, "N2", "Sentinels", "Terror of the Tides"
+    HUMAN_2 =     6, "H2", "Alliance", "Curse of the Blood Elves"
+    UNDEAD_2 =    7, "U2", "Scourge", "Legacy of the Damned"
 
 
 class Wc3Mission(enum.Enum):

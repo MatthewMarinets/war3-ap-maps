@@ -60,7 +60,7 @@ class Wc3Location(enum.Enum):
     HU1_GNOLL_ITEM =        1103, "Gnoll Crate",            Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.ITEM, "Potion of Healing"
     HU1_BENEDICT =          1104, "Benedict's Trap",        Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.ITEM, "Scroll of Healing"
     HU1_BANDIT_ITEM =       1105, "Bandit Item",            Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.ITEM, "Potion of Mana"
-    HU1_MENAG =             1106, "Bandit Lord Item",       Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.QUEST_ITEM, "Gerard's Ledger"
+    HU1_MENAG =             1106, "Bandit Lord Item",       Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.QUEST  # Gerard's Ledger
     HU1_NORTH_CRATE_ITEM =  1107, "North Crate Item",       Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.ITEM, "Potion of Mana"
     HU1_ENLIST_THORNBY =    1120, "Enlist Thornby",         Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.RESCUE
     HU1_TOWN_RESCUE =       1121, "Rescue Battling Footmen",Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.RESCUE
@@ -72,20 +72,21 @@ class Wc3Location(enum.Enum):
     # (Main) Blademaster
     # (Main) Establish Base
     # (Side) Searinox
-    HU2_VICTORY =            1200, "Victory",               Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.VICTORY
-    HU2_WEST_MURLOC_ITEM =   1201, "Western Murloc Item",   Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Claws of Attack +3"
-    HU2_WEST_OGRE_ITEM =     1202, "Western Ogre Item",     Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Gauntlets of Ogre Strength +3"
-    HU2_GNOLL_POACHER_ITEM = 1203, "Gnoll Poacher Item",    Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Mana"
-    HU2_MURLOC_HUT_ITEM =    1204, "Murloc Hut Item",       Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Healing"
-    HU2_GNOLL_ITEM =         1205, "Gnoll Item",            Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Healing"
-    HU2_WEST_CRATE_ITEM =    1206, "West Base Crate Item",  Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Scroll of Protection"
-    HU2_EAST_CRATE_ITEM =    1207, "East Base Crate Item",  Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Healing"
-    HU2_GNOLL_WARDEN_ITEM =  1210, "Gnoll Warden Item",     Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Wand of Negation"
-    HU2_SLAY_BLADEMASTER =   1220, "Slay Blademaster",      Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST_HERO
-    HU2_ESTABLISH_BASE =     1221, "Establish Base",        Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST
-    HU2_FERANOR_STEELTOE =   1222, "Meet Feranor Steeltoe", Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.RESCUE
-    HU2_SEARINOX =           1223, "Defeat Searinox",       Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST
-    HU2_ORC_BASE =           1224, "Destroy the Orc Base",  Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.BASE
+    HU2_VICTORY =               1200, "Victory",                 Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.VICTORY
+    HU2_WEST_MURLOC_ITEM =      1201, "Western Murloc Item",     Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Claws of Attack +3"
+    HU2_WEST_OGRE_ITEM =        1202, "Western Ogre Item",       Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Gauntlets of Ogre Strength +3"
+    HU2_GNOLL_POACHER_ITEM =    1203, "Gnoll Poacher Item",      Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Mana"
+    HU2_MURLOC_HUT_ITEM =       1204, "Murloc Hut Item",         Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Healing"
+    HU2_GNOLL_ITEM =            1205, "Gnoll Item",              Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Healing"
+    HU2_WEST_CRATE_ITEM =       1206, "West Base Crate Item",    Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Scroll of Protection"
+    HU2_EAST_CRATE_ITEM =       1207, "East Base Crate Item",    Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Healing"
+    HU2_GNOLL_WARDEN_ITEM =     1210, "Gnoll Warden Item",       Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Wand of Negation"
+    HU2_SLAY_BLADEMASTER =      1220, "Slay Blademaster",        Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST_HERO
+    HU2_ESTABLISH_BASE =        1221, "Establish Base",          Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST
+    HU2_FERANOR_STEELTOE =      1222, "Meet Feranor Steeltoe",   Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.RESCUE
+    HU2_SEARINOX =              1223, "Defeat Searinox",         Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST  # Heart of Searinox
+    HU2_RETURN_SEARINOX_HEART = 1224, "Return Searinox's Heart", Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST_ITEM, "Orb of Fire"
+    HU2_ORC_BASE =              1225, "Destroy the Orc Base",    Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.BASE
 
     # Quests:
     # (Main) Investigate Villages
@@ -229,7 +230,7 @@ class Wc3Location(enum.Enum):
     UD2_GAVINRAD_THE_DIRE_ITEM =    2201, "Gavinrad the Dire Item",   Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.QUEST_HERO, "Scroll of Healing"
     UD2_BALLADOR_THE_BRIGHT_ITEM =  2202, "Ballador the Bright Item", Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.QUEST_HERO, "Potion of Greater Healing"
     UD2_SAGE_TRUTHBEARER_ITEM =     2203, "Sage Truthbearer Item",    Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.QUEST_HERO, "Gloves of Haste"
-    UD2_UTHER_ITEM =                2204, "Uther Item",               Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.QUEST_HERO, "Urn of King Terenas"
+    UD2_UTHER_ITEM =                2204, "Uther Item",               Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.QUEST_HERO  # Urn of King Terenas
     UD2_GRANITE_GOLEM_ITEM =        2205, "Granite Golem Item",       Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.ITEM, "Pendant of Energy"
     UD2_ROGUE_WIZARD_ITEM =         2206, "Rogue Wizard Item",        Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.ITEM, "Voodoo Doll"
     UD2_ELDER_SASQUATCH_ITEM =      2207, "Elder Sasquatch Item",     Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.SECRET_ITEM, "Claws of Attack +6"
@@ -267,9 +268,9 @@ class Wc3Location(enum.Enum):
     UD4_FOREST_CRATE =        2401, "Forest Crate",        Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.ITEM, "Scroll of Mana"
     UD4_CENTER_ISLAND_CRATE = 2402, "Center Island Crate", Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.ITEM, "Potion of Greater Healing"
     UD4_SLAY_SYLVANAS =       2420, "Slay Sylvanas",       Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.HERO
-    UD4_NORTHWEST_ALTAR =     2421, "Northwest Altar",     Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.QUEST
-    UD4_NORTH_ALTAR =         2422, "North Altar",         Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.QUEST
-    UD4_SOUTHEAST_ALTAR =     2423, "North Altar",         Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.QUEST
+    UD4_NORTHWEST_ALTAR =     2421, "Northwest Altar",     Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.QUEST  # Key of 3 moons fragment
+    UD4_NORTH_ALTAR =         2422, "North Altar",         Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.QUEST  # Key of 3 moons fragment
+    UD4_SOUTHEAST_ALTAR =     2423, "North Altar",         Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.QUEST  # Key of 3 moons fragment
     UD4_CHARTER_ZEPPELINS =   2424, "Charter Zeppelins",   Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.RESCUE
 
     # Quests:
@@ -280,7 +281,7 @@ class Wc3Location(enum.Enum):
     UD5_ROCK_GOLEM_ITEM =           2501, "Rock Golem Item",                Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.ITEM, "Ring of Regeneration"
     UD5_EAST_GNOLL_OVERSEER_ITEM =  2502, "East Gnoll Overseer Item",       Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.ITEM, "Scroll of the Beast"
     UD5_WEST_GNOLL_OVERSEER_ITEM =  2503, "West Gnoll Overseer Item",       Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.ITEM, "Potion of Greater Mana"
-    UD5_DESTROY_SYLVANAS_BASE =     2504, "Destroy Sylvanas's Base",        Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.QUEST_BASE, "Slippers of Agility"
+    UD5_DESTROY_SYLVANAS_BASE =     2504, "Destroy Sylvanas's Base",        Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.QUEST_BASE, "Slippers of Agility +3"
     UD5_BLOCK_RUNNERS =             2505, "Stop all Runners",               Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.QUEST_ITEM, "Hood of Cunning"
     UD5_SLAY_SYLVANAS =             2520, "Slay Sylvanas",                  Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.HERO
     UD5_SLAY_ARCHMAGE =             2521, "Slay Archmage",                  Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.HERO
