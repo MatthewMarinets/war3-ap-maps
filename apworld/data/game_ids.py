@@ -1183,7 +1183,7 @@ TECH_REQUIREMENTS_LEVEL_1: dict[Tech, list[Tech]] = {
     Tech.CASTLE: [Tech.KEEP, Tech.ALTAR_OF_KINGS],
     Tech.BLACKSMITH: [Tech.TOWN_HALL],
     Tech.ARCANE_SANCTUM: [Tech.KEEP],
-    Tech.WORKSHOP: [Tech.KEEP],
+    Tech.WORKSHOP: [Tech.KEEP, Tech.BLACKSMITH],
     Tech.GRYPHON_AVIARY: [Tech.CASTLE, Tech.LUMBER_MILL],
     Tech.PEASANT: [Tech.TOWN_HALL],
     Tech.FOOTMAN: [Tech.HU_BARRACKS],

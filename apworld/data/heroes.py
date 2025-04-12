@@ -111,21 +111,19 @@ class HeroChoice(enum.Enum):
     GROM_HELLSCREAM =     6,  "Grom Hellscream", HeroClass.BLADEMASTER, HeroSource.VANILLA, GameID.GROM_HELLSCREAM
     DEATH_KNIGHT_ARTHAS = 7,  "Death Knight Arthas", HeroClass.DEATH_KNIGHT, HeroSource.VANILLA, GameID.ARTHAS_EVIL
     KEL_THUZAD =          8,  "Kel'Thuzad", HeroClass.LICH, HeroSource.VANILLA, GameID.KEL_THUZAD
-    ARTHAS_TFT =          9,  "Death Knight Arthas", HeroClass.DARK_RANGER, HeroSource.VANILLA, GameID.ARTHAS_EVIL
-    SYLVANAS =            10, "Sylvanas", HeroClass.DARK_RANGER, HeroSource.VANILLA, GameID.SYLVANAS
-    VARIMATHRAS =         11, "Varimathras", HeroClass.DREADLORD, HeroSource.VANILLA, GameID.VARIMATHRAS
-    ANUB_ARAK =           12, "Anub'arak", HeroClass.CRYPT_LORD, HeroSource.VANILLA, GameID.ANUB_ARAK
-    TYRANDE =             13, "Tyrande", HeroClass.PRIESTESS_OF_THE_MOON, HeroSource.VANILLA, GameID.TYRANDE
-    FURION =              14, "Furion", HeroClass.KEEPER_OF_THE_GROVE, HeroSource.VANILLA, GameID.FURION
-    ILLIDAN =             15, "Illidan", HeroClass.DEMON_HUNTER, HeroSource.VANILLA, GameID.ILLIDAN
-    MAIEV =               16, "Maiev", HeroClass.WARDEN, HeroSource.VANILLA, GameID.MAIEV
-    TYRANDE_TFT =         17, "Tyrande", HeroClass.PRIESTESS_OF_THE_MOON, HeroSource.VANILLA, GameID.TYRANDE
-    MALFURION =           18, "Malfurion", HeroClass.KEEPER_OF_THE_GROVE, HeroSource.VANILLA, GameID.MALFURION
-    KAEL =                19, "Kael", HeroClass.BLOOD_MAGE, HeroSource.VANILLA, GameID.KAEL_THAS
-    LADY_VASHJ =          20, "Lady Vashj", HeroClass.NAGA_SEA_WITCH, HeroSource.VANILLA, GameID.LADY_VASHJ
-    DEMON_ILLIDAN =       21, "Demon Illidan", HeroClass.DEMON_HUNTER, HeroSource.VANILLA, GameID.ILLIDAN_EVIL
-    AKAMA =               22, "Akama", HeroClass.ELDER_SAGE, HeroSource.VANILLA, GameID.AKAMA
-    LORD_GARITHOS =       23, "Lord Garithos", HeroClass.DARK_KNIGHT, HeroSource.VANILLA, GameID.LORD_GARITHOS  # Shockwave, Holy Light, Devotion Aura, Avatar
+    SYLVANAS =            9,  "Sylvanas", HeroClass.DARK_RANGER, HeroSource.VANILLA, GameID.SYLVANAS
+    VARIMATHRAS =         10, "Varimathras", HeroClass.DREADLORD, HeroSource.VANILLA, GameID.VARIMATHRAS
+    ANUB_ARAK =           11, "Anub'arak", HeroClass.CRYPT_LORD, HeroSource.VANILLA, GameID.ANUB_ARAK
+    TYRANDE =             12, "Tyrande", HeroClass.PRIESTESS_OF_THE_MOON, HeroSource.VANILLA, GameID.TYRANDE
+    FURION =              13, "Furion", HeroClass.KEEPER_OF_THE_GROVE, HeroSource.VANILLA, GameID.FURION
+    ILLIDAN =             14, "Illidan", HeroClass.DEMON_HUNTER, HeroSource.VANILLA, GameID.ILLIDAN
+    MAIEV =               15, "Maiev", HeroClass.WARDEN, HeroSource.VANILLA, GameID.MAIEV
+    MALFURION =           16, "Malfurion", HeroClass.KEEPER_OF_THE_GROVE, HeroSource.VANILLA, GameID.MALFURION
+    KAEL =                17, "Kael", HeroClass.BLOOD_MAGE, HeroSource.VANILLA, GameID.KAEL_THAS
+    LADY_VASHJ =          18, "Lady Vashj", HeroClass.NAGA_SEA_WITCH, HeroSource.VANILLA, GameID.LADY_VASHJ
+    DEMON_ILLIDAN =       19, "Demon Illidan", HeroClass.DEMON_HUNTER, HeroSource.VANILLA, GameID.ILLIDAN_EVIL
+    AKAMA =               20, "Akama", HeroClass.ELDER_SAGE, HeroSource.VANILLA, GameID.AKAMA
+    LORD_GARITHOS =       21, "Lord Garithos", HeroClass.DARK_KNIGHT, HeroSource.VANILLA, GameID.LORD_GARITHOS  # Shockwave, Holy Light, Devotion Aura, Avatar
 
     MAL_GANIS =           30, "Mal'Ganis", HeroClass.DREADLORD, HeroSource.ENEMY, GameID.DREADLORD  # Use stock dreadlord, otherwise (Aura -> Soul Preservation, Inferno -> Dark Conversion)
     DETHEROC =            31, "Detheroc", HeroClass.DREADLORD, HeroSource.ENEMY, GameID.DETHEROC  # Aura -> Shadow Strike, Inferno -> Death and Decay
@@ -216,6 +214,9 @@ HERO_SLOT_TO_DEFAULT_CHOICE = {
     for _choice in HeroChoice
     if _choice.vanilla_slot
 }
+HERO_SLOT_TO_DEFAULT_CHOICE[HeroSlot.TYRANDE_TFT] = HeroChoice.TYRANDE
+HERO_SLOT_TO_DEFAULT_CHOICE[HeroSlot.ARTHAS_TFT] = HeroChoice.DEATH_KNIGHT_ARTHAS
+assert len(HERO_SLOT_TO_DEFAULT_CHOICE) == len(HeroSlot)
 
 LEVEL_THRESHOLDS = [
     0,      # 1

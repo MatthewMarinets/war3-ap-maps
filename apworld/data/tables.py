@@ -2,6 +2,7 @@
 
 from .missions import Wc3Mission
 from .heroes import HeroSlot, SuperheroSlot
+from . import items
 
 MISSION_TO_HERO_SLOT = {
     Wc3Mission.P1_CHASING_VISIONS: [HeroSlot.THRALL],
@@ -88,4 +89,8 @@ MISSION_TO_SUPERHERO_SLOT: dict[Wc3Mission, SuperheroSlot] = {
 }
 SUPERHERO_SLOT_TO_MISSION: dict[SuperheroSlot, Wc3Mission] = {
     _superhero: _mission for _mission, _superhero in MISSION_TO_SUPERHERO_SLOT.items()
+}
+
+HERO_SLOT_TO_ITEM: dict[HeroSlot, items.Wc3Item] = {
+    _item.type.slot: _item for _item in items.Wc3Item if isinstance(_item.type, items.Level)
 }
