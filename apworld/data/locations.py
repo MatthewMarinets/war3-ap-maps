@@ -11,7 +11,7 @@ class Wc3LocationType(enum.Enum):
     VICTORY = enum.auto()
     QUEST = enum.auto()
     HERO = enum.auto()
-    MILESTONE = enum.auto()
+    BASE = enum.auto()
     RESCUE = enum.auto()
     SECRET = enum.auto()
     SHOP = enum.auto()
@@ -72,7 +72,7 @@ class Wc3Location(enum.Enum):
     HU2_ESTABLISH_BASE =     1221, "Establish Base",        Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST
     HU2_FERANOR_STEELTOE =   1222, "Meet Feranor Steeltoe", Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.RESCUE
     HU2_SEARINOX =           1223, "Defeat Searinox",       Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST
-    HU2_ORC_BASE =           1224, "Destroy the Orc Base",  Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.MILESTONE
+    HU2_ORC_BASE =           1224, "Destroy the Orc Base",  Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.BASE
 
     # Quests:
     # (Main) Investigate Villages
@@ -85,12 +85,11 @@ class Wc3Location(enum.Enum):
     HU3_BANDIT_HUT_ITEM =      1304, "Bandit Hut Item",      Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.ITEM, "Scroll of Protection"
     HU3_SKELETON_AMBUSH_ITEM = 1305, "Skeletal Ambush Item", Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.ITEM, "Potion of Mana"
     HU3_MORTAR_SKELETON_ITEM = 1306, "Mortar Skeleton Item", Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.ITEM, "Scroll of Healing"
-    HU3_LOCK_YOUR_SHIELDS =    1320, "Lock Your Shields",    Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.MILESTONE
-    HU3_FOOTMAN_RESCUE =       1321, "Footman Rescue",       Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.RESCUE
-    HU3_FOUNTAIN_OF_HEALING =  1322, "Fountain of Healing",  Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.QUEST
-    HU3_PRIEST_RESCUE =        1323, "Priest Rescue",        Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.RESCUE
-    HU3_MORTAR_TEAM_RESCUE =   1324, "Mortar Team Rescue",   Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.RESCUE
-    HU3_GARGLEMEL_TAXES =      1325, "Garglemel's Taxes",    Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.SECRET
+    HU3_FOOTMAN_RESCUE =       1320, "Footman Rescue",       Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.RESCUE
+    HU3_FOUNTAIN_OF_HEALING =  1321, "Fountain of Healing",  Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.QUEST
+    HU3_PRIEST_RESCUE =        1322, "Priest Rescue",        Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.RESCUE
+    HU3_MORTAR_TEAM_RESCUE =   1323, "Mortar Team Rescue",   Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.RESCUE
+    HU3_GARGLEMEL_TAXES =      1324, "Garglemel's Taxes",    Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.SECRET
 
     # Quests:
     # (Main) Investigate Andorhal
@@ -103,38 +102,40 @@ class Wc3Location(enum.Enum):
     HU4_MURLOC_NIGHTCRAWLER_ITEM =  1405, "Murloc Nightcrawler Item", Wc3Mission.H4_THE_CULT_OF_THE_DAMNED, Wc3LocationType.ITEM, "Potion of Mana"
     HU4_ENFORCER_ITEM =             1406, "Enforcer Item",            Wc3Mission.H4_THE_CULT_OF_THE_DAMNED, Wc3LocationType.ITEM, "Potion of Mana"
     HU4_TROLL_HUT_ITEM =            1407, "Troll Hut Item",           Wc3Mission.H4_THE_CULT_OF_THE_DAMNED, Wc3LocationType.ITEM, "Scroll of Protection"
-    HU4_UNDEAD_BASE =               1420, "Destroy the Undead Base",  Wc3Mission.H4_THE_CULT_OF_THE_DAMNED, Wc3LocationType.MILESTONE
+    HU4_UNDEAD_BASE =               1420, "Destroy the Undead Base",  Wc3Mission.H4_THE_CULT_OF_THE_DAMNED, Wc3LocationType.BASE
     HU4_INVESTIGATE_ANDORHAL =      1421, "Investigate Andorhal",     Wc3Mission.H4_THE_CULT_OF_THE_DAMNED, Wc3LocationType.QUEST
-    HU4_CENTER_SHOP =               1422, "Center Shop",              Wc3Mission.H4_THE_CULT_OF_THE_DAMNED, Wc3LocationType.SHOP
-    HU4_NORTH_SHOP =                1423, "North Shop",               Wc3Mission.H4_THE_CULT_OF_THE_DAMNED, Wc3LocationType.SHOP
+    HU4_CENTER_GOBLIN_MERCHANT =    1422, "Center Goblin Merchant",   Wc3Mission.H4_THE_CULT_OF_THE_DAMNED, Wc3LocationType.SHOP
+    HU4_NORTH_GOBLIN_MERCHANT =     1423, "North Goblin Merchant",    Wc3Mission.H4_THE_CULT_OF_THE_DAMNED, Wc3LocationType.SHOP
 
     # Quests:
     # (Main) Defend Heathglen
     # (Side) Grain Caravan
-    HU5_VICTORY =               1500, "Victory",              Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.VICTORY
-    HU5_OGRE_LORD_ITEM =        1501, "Ogre Lord Item",       Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.ITEM, "Gauntlets of Ogre Strength +3"
-    HU5_OGRE_LORD_ITEM_2 =      1502, "Ogre Lord Item 2",     Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.ITEM, "Potion of Greater Healing"
-    HU5_OGRE_MAULER_ITEM =      1503, "Ogre Mauler Item",     Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.ITEM, "Periapt of Vitality"
-    HU5_CARAVAN_ITEM =          1504, "Caravan Item",         Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.ITEM, "Medallion of Courage"
-    HU5_CARAVAN_ITEM_2 =        1505, "Caravan Item 2",       Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.ITEM, "Scroll of Town Portal"
-    HU5_MURLOC_HUNTSMAN_ITEM =  1506, "Murloc Huntsman Item", Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.ITEM, "Potion of Mana"
-    HU5_SHEEP_ITEM =            1507, "Secret Sheep Item",    Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.SECRET, "Potion of Restoration"
-    HU5_CRATE_ITEM =            1508, "Crate Item",           Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.SECRET, "Scroll of Healing"
-    HU5_FREE_VILLAGER =         1509, "Free Mark",            Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.ITEM, "Boots of Speed"
-    HU5_SLAY_PURPLE_LICH =      1520, "Slay Purple Lich",     Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.HERO
-    HU5_SLAY_GREEN_LICH =       1521, "Slay Green Lich",      Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.HERO
-    HU5_GRAIN_CARAVAN =         1522, "Grain Caravan",        Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.QUEST
-    HU5_TOWN_ENTRANCE_RESCUE =  1523, "Town Entrance Rescue", Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.RESCUE
-    HU5_GOBLIN_MERCHANT =       1524, "Goblin Merchant",      Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.SHOP
+    HU5_VICTORY =              1500, "Victory",              Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.VICTORY
+    HU5_OGRE_LORD_ITEM =       1501, "Ogre Lord Item",       Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.ITEM, "Gauntlets of Ogre Strength +3"
+    HU5_OGRE_LORD_ITEM_2 =     1502, "Ogre Lord Item 2",     Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.ITEM, "Potion of Greater Healing"
+    HU5_OGRE_MAULER_ITEM =     1503, "Ogre Mauler Item",     Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.ITEM, "Periapt of Vitality"
+    HU5_CARAVAN_ITEM =         1504, "Caravan Item",         Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.ITEM, "Medallion of Courage"
+    HU5_CARAVAN_ITEM_2 =       1505, "Caravan Item 2",       Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.ITEM, "Scroll of Town Portal"
+    HU5_MURLOC_HUNTSMAN_ITEM = 1506, "Murloc Huntsman Item", Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.ITEM, "Potion of Mana"
+    HU5_SHEEP_ITEM =           1507, "Secret Sheep Item",    Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.SECRET, "Potion of Restoration"
+    HU5_CRATE_ITEM =           1508, "Crate Item",           Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.SECRET, "Scroll of Healing"
+    HU5_FREE_VILLAGER_MARK =   1509, "Free Villager Mark",   Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.ITEM, "Boots of Speed"
+    HU5_SLAY_PURPLE_LICH =     1520, "Slay Purple Lich",     Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.HERO
+    HU5_SLAY_GREEN_LICH =      1521, "Slay Green Lich",      Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.HERO
+    HU5_GRAIN_CARAVAN =        1522, "Grain Caravan",        Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.QUEST
+    HU5_ROADSIDE_RESCUE =      1523, "Roadside Rescue",      Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.RESCUE
+    HU5_DESTROY_PURPLE_BASE =  1524, "Destroy Purple Base (Black Citadel)", Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.BASE
+    HU5_DESTROY_GREEN_BASE =   1525, "Destroy Green Base (Black Citadel)",  Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.BASE
+    HU5_GOBLIN_MERCHANT =      1526, "Goblin Merchant",      Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.SHOP
 
     # Quests:
     # (Main) The Culling
-    HU6_VICTORY =           1600, "Victory",        Wc3Mission.H6_THE_CULLING, Wc3LocationType.VICTORY
-    HU6_TENT_ITEM =         1601, "Tent Item",      Wc3Mission.H6_THE_CULLING, Wc3LocationType.ITEM, "Tome of Strength +2"
-    HU6_FILSON_THE_RAT =    1602, "Filson the Rat", Wc3Mission.H6_THE_CULLING, Wc3LocationType.SECRET, "Talisman of Evasion"
-    HU6_ENFORCER_ITEM =     1603, "Enforcer Item",  Wc3Mission.H6_THE_CULLING, Wc3LocationType.ITEM, "Scroll of Town Portal"
-    HU6_SLAY_MALGANIS =     1620, "Slay Mal'Ganis", Wc3Mission.H6_THE_CULLING, Wc3LocationType.MILESTONE
-    HU6_SHOP =              1821, "Shop",           Wc3Mission.H6_THE_CULLING, Wc3LocationType.SHOP
+    HU6_VICTORY =           1600, "Victory",         Wc3Mission.H6_THE_CULLING, Wc3LocationType.VICTORY
+    HU6_TENT_ITEM =         1601, "Tent Item",       Wc3Mission.H6_THE_CULLING, Wc3LocationType.ITEM, "Tome of Strength +2"
+    HU6_FILSON_THE_RAT =    1602, "Filson the Rat",  Wc3Mission.H6_THE_CULLING, Wc3LocationType.SECRET, "Talisman of Evasion"
+    HU6_ENFORCER_ITEM =     1603, "Enforcer Item",   Wc3Mission.H6_THE_CULLING, Wc3LocationType.ITEM, "Scroll of Town Portal"
+    HU6_SLAY_MALGANIS =     1620, "Slay Mal'Ganis",  Wc3Mission.H6_THE_CULLING, Wc3LocationType.HERO
+    HU6_GOBLIN_MERCHANT =   1821, "Goblin Merchant", Wc3Mission.H6_THE_CULLING, Wc3LocationType.SHOP
 
     # Quests:
     # (Main) Establish Base Camp
@@ -168,7 +169,7 @@ class Wc3Location(enum.Enum):
     HU8_BOAT_2 =                   1821, "Boat 2",                   Wc3Mission.H8_DISSENSION, Wc3LocationType.QUEST
     HU8_BOAT_3 =                   1822, "Boat 3",                   Wc3Mission.H8_DISSENSION, Wc3LocationType.QUEST
     HU8_BOAT_4 =                   1823, "Boat 4",                   Wc3Mission.H8_DISSENSION, Wc3LocationType.QUEST
-    HU8_SHOP =                     1824, "Shop",                     Wc3Mission.H8_DISSENSION, Wc3LocationType.SHOP
+    HU8_GOBLIN_MERCHANT =          1824, "Goblin Merchant",          Wc3Mission.H8_DISSENSION, Wc3LocationType.SHOP
     HU8_MERCENARY_CAMP_1 =         1825, "Mercenary Camp 1",         Wc3Mission.H8_DISSENSION, Wc3LocationType.SHOP
     HU8_MERCENARY_CAMP_2 =         1826, "Mercenary Camp 2",         Wc3Mission.H8_DISSENSION, Wc3LocationType.SHOP
     HU8_MERCENARY_CAMP_3 =         1827, "Mercenary Camp 3",         Wc3Mission.H8_DISSENSION, Wc3LocationType.SHOP
@@ -186,7 +187,7 @@ class Wc3Location(enum.Enum):
     HU9_NERUBIAN_SPIDER_LORD_ITEM = 1907, "Nerubian Spider Lord Item", Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.ITEM, "Healing Wards"
     HU9_ICE_TROLL_BERSERKER_ITEM =  1908, "Ice Troll Berserker Item",  Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.ITEM, "Potion of Greater Healing"
     HU9_MAL_GANIS =                 1920, "Slay Mal'Ganis",            Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.HERO
-    HU9_SHOP =                      1921, "Shop",                      Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.SHOP
+    HU9_GOBLIN_MERCHANT =           1921, "Goblin Merchant",           Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.SHOP
     HU9_MERCENARY_CAMP =            1922, "Mercenary Camp",            Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.SHOP
     HU9_FROSTMOURNE =               1923, "Obtain Frostmourne",        Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.QUEST
 
@@ -239,12 +240,12 @@ class Wc3Location(enum.Enum):
     UD3_CENTER_GNOLL_HUT_ITEM =      2306, "Center Gnoll Hut Item",      Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.ITEM, "Book of the Dead"
     UD3_ROCK_GOLEM_ITEM =            2307, "Rock Golem Item",            Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.ITEM, "Potion of Greater Healing"
     UD3_SLAY_SYLVANAS =              2320, "Slay Sylvanas",              Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.HERO
-    UD3_PINK_BASE =                  2321, "Pink Town Hall",             Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.MILESTONE
-    UD3_ORANGE_BASE =                2322, "Orange Lumber Mill",         Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.MILESTONE
-    UD3_TEAL_BASE =                  2323, "Teal Town Hall",             Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.MILESTONE
-    UD3_YELLOW_BASE =                2324, "Yellow Town Hall",           Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.MILESTONE
-    UD3_BLUE_BASE =                  2325, "Blue Castle",                Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.MILESTONE
-    UD3_SHOP =                       2326, "Goblin Merchant",            Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.SHOP
+    UD3_DESTROY_PINK_BASE =          2321, "Destroy Pink Base (Town Hall)",     Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.BASE
+    UD3_DESTROY_ORANGE_BASE =        2322, "Destroy Orange Base (Lumber Mill)", Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.BASE
+    UD3_DESTROY_TEAL_BASE =          2323, "Destroy Teal Base (Town Hall)",     Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.BASE
+    UD3_DESTROY_YELLOW_BASE =        2324, "Destroy Yellow Base (Town Hall)",   Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.BASE
+    UD3_DESTROY_BLUE_BASE =          2325, "Destroy Blue Base (Castle)",        Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.BASE
+    UD3_GOBLIN_MERCHANT =            2326, "Goblin Merchant",            Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.SHOP
 
     # Quests:
     # (Main) Three Moons
@@ -258,10 +259,87 @@ class Wc3Location(enum.Enum):
     UD4_SOUTHEAST_ALTAR =     2423, "North Altar",         Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.QUEST
     UD4_CHARTER_ZEPPELINS =   2424, "Charter Zeppelins",   Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.RESCUE
 
-    UD5_VICTORY = 2500, "Victory", Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.VICTORY
-    UD6_VICTORY = 2600, "Victory", Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.VICTORY
-    UD7_VICTORY = 2700, "Victory", Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.VICTORY
-    UD8_VICTORY = 2800, "Victory", Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.VICTORY
+    # Quests:
+    # (Main) The Sunwell
+    # (Side) Sylvanas Windrunner
+    # (Side) Silvermoon Runners
+    UD5_VICTORY =                   2500, "Victory",                        Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.VICTORY
+    UD5_ROCK_GOLEM_ITEM =           2501, "Rock Golem Item",                Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.ITEM, "Ring of Regeneration"
+    UD5_EAST_GNOLL_OVERSEER_ITEM =  2502, "East Gnoll Overseer Item",       Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.ITEM, "Scroll of the Beast"
+    UD5_WEST_GNOLL_OVERSEER_ITEM =  2503, "West Gnoll Overseer Item",       Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.ITEM, "Potion of Greater Mana"
+    UD5_DESTROY_SYLVANAS_BASE =     2504, "Destroy Sylvanas's Base",        Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.QUEST, "Slippers of Agility"
+    UD5_BLOCK_RUNNERS =             2505, "Stop all Runners",               Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.QUEST, "Hood of Cunning"
+    UD5_SLAY_SYLVANAS =             2520, "Slay Sylvanas",                  Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.HERO
+    UD5_SLAY_ARCHMAGE =             2521, "Slay Archmage",                  Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.HERO
+    UD5_GOBLIN_MERCHANT =           2522, "Goblin Merchant",                Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.SHOP
+    UD5_MERCENARY_CAMP =            2523, "Mercenary Camp",                 Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.SHOP
+    UD5_EAST_SILVERMOON_CASTLE =    2524, "Destroy East Silvermoon Castle", Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.BASE
+    UD5_WEST_SILVERMOON_CASTLE =    2525, "Destroy West Silvermoon Castle", Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.BASE
+
+    # Quests:
+    # (Main) Demon Gate
+    # (Side) Orc Heroes
+    UD6_VICTORY =                    2600, "Victory",                            Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.VICTORY
+    UD6_SLAY_HAOMARUSH =             2601, "Slay Haomarush (Teal)",              Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.QUEST, "Manual of Health"
+    UD6_SLAY_KHANZO =                2602, "Slay Khanzo (Blue)",                 Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.QUEST, "Tome of Agility"
+    UD6_SLAY_GENJUROS =              2603, "Slay Genjuros (Brown)",              Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.QUEST, "Tome of Strength"
+    UD6_SLAY_THROK_FEROTH =          2604, "Slay Throk'Feroth (Orange)",         Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.QUEST, "Tome of Intelligence"
+    UD6_SLAY_MAZRIGOS =              2605, "Slay Mazrigos (Light Blue)",         Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.QUEST, "Tome of Intelligence"
+    UD6_SLAY_JUBEITHOS =             2606, "Slay Jubei'Thos (Red)",              Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.QUEST, "Tome of Knowledge"
+    UD6_EAST_RED_DRAGON_ITEM =       2607, "East Red Dragon Item",               Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.ITEM, "Periapt of Vitality"
+    UD6_WEST_RED_DRAGON_ITEM =       2608, "West Red Dragon Item",               Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.ITEM, "Claws of Attack +9"
+    UD6_TROLL_CAGE_ITEM =            2609, "Troll Cage Item",                    Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.ITEM, "Scroll of Mana"
+    UD6_ICE_TROLL_HIGH_PRIEST_ITEM = 2610, "Ice Troll High Priest Item",         Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.ITEM, "Potion of Greater Healing"
+    UD6_ICE_TROLL_BERSERKER_ITEM =   2611, "Ice Troll Berserker Item",           Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.ITEM, "Ring of Protection +3"
+    UD6_ICE_TROLL_WARLORD_ITEM =     2612, "Ice Troll Warlord Item",             Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.ITEM, "Sobi Mask"
+    UD6_MURLOC_NIGHTCRAWLER_ITEM =   2613, "Murloc Nightcrawler Item",           Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.SECRET, "Mana Stone"
+    UD6_DESTROY_BLUE_BASE =          2620, "Destroy Blue Base (Great Hall)",     Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.BASE
+    UD6_DESTROY_BROWN_BASE =         2621, "Destroy Brown Base (Stronghold)",    Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.BASE
+    UD6_DESTROY_ORANGE_BASE =        2622, "Destroy Orange Base (Stronghold)",   Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.BASE
+    UD6_DESTROY_LIGHT_BLUE_BASE =    2623, "Destroy Light Blue Base (Fortress)", Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.BASE
+    UD6_DESTROY_RED_BASE =           2624, "Destroy Red Base (Fortress)",        Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.BASE
+    UD6_GOBLIN_MERCHANT =            2625, "Goblin Merchant",                    Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.SHOP
+
+    # Quests:
+    # (Main) Three Archmagi
+    UD7_VICTORY =                   2700, "Victory",                      Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.VICTORY
+    UD7_SLAY_SHEEP_ARCHMAGE =       2701, "Slay Sheep Archmage",          Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.HERO, "Health Stone"
+    UD7_SHEEP_ARCHMAGE_TENT_ITEM =  2702, "Sheep Archmage Tent Item",     Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.ITEM, "Anti-Magic Potion"
+    UD7_MAGIC_VAULT_ITEM_1 =        2703, "Magic Vault Item 1",           Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.ITEM, "Khadgar's Pipe of Insight"
+    UD7_MAGIC_VAULT_ITEM_2 =        2704, "Magic Vault Item 2",           Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.ITEM, "Tome of Intelligence"
+    UD7_MAGIC_VAULT_ITEM_3 =        2705, "Magic Vault Item 3",           Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.ITEM, "Pendant of Mana"
+    UD7_SLAY_WORKSHOP_ARCHMAGE =    2706, "Slay Workshop Archmage",       Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.HERO, "Mantle of Intelligence +3"
+    UD7_SLAY_YELLOW_ARCHMAGE =      2707, "Slay Yellow Archmage",         Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.HERO
+    UD7_TOWER_SQUARE_ITEM =         2708, "Tower Square Item",            Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.ITEM, "Boots of Quel'Thalas +6"
+    UD7_DEAD_TOWN_CRATE_ITEM =      2709, "Dead Town Crate Item",         Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.ITEM, "Scroll of Mana"
+    UD7_SLAY_FIRST_ARCHMAGE =       2720, "Slay First Archmage",          Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.QUEST
+    UD7_SLAY_SECOND_ARCHMAGE =      2721, "Slay Second Archmage",         Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.QUEST
+    UD7_GOBLIN_MERCHANT =           2722, "Goblin Merchant",              Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.SHOP
+    UD7_SOUTH_CAGE_RESCUE =         2723, "South Cage Rescue",            Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.RESCUE
+    UD7_WEST_CAGE_RESCUE =          2724, "West Cage Rescue",             Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.RESCUE
+    UD7_NORTHEAST_CAGE_RESCUE =     2725, "Northeast Cage Rescue",        Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.RESCUE
+    UD7_DESTROY_PURPLE_BASE =       2726, "Destroy Purple Base (Keep)",   Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.BASE
+    UD7_DESTROY_YELLOW_BASE =       2727, "Destroy Yellow Base (Castle)", Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.BASE
+    UD7_DESTROY_ORANGE_BASE =       2728, "Destroy Orange Base (Castle)", Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.BASE
+
+    # Quests:
+    # (Main) Archimonde
+    # (Side) Goblin Land Mines
+    UD8_VICTORY =                  2800, "Victory",                      Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.VICTORY
+    UD8_MAGIC_VAULT_ITEM_1 =       2801, "Magic Vault Item 1",           Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.ITEM, "Scepter of Mastery"
+    UD8_MAGIC_VAULT_ITEM_2 =       2802, "Magic Vault Item 2",           Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.ITEM, "Medallion of Courage"
+    UD8_GNOLL_HUT_ITEM =           2803, "Gnoll Hut Item",               Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.ITEM, "Scroll of Healing"
+    UD8_SLAY_SHEEP_ARCHMAGE =      2804, "Slay Sheep Archmage",          Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.HERO, "Ring of Protection +5"
+    UD8_SHEEP_ARCHMAGE_TENT_ITEM = 2805, "Sheep Archmage Tent Item",     Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.ITEM, "Tome of Strength +2"
+    UD8_SLAY_WEST_BASE_ARCHMAGE =  2820, "Slay West Kirin Tor Archmage", Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.HERO
+    UD8_SLAY_GATE_ARCHMAGE =       2821, "Slay Gate Archmage",           Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.HERO
+    UD8_SLAY_VAULT_ARCHMAGE =      2822, "Slay Vault Archmage",          Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.HERO
+    UD8_DESTROY_RED_BASE =         2823, "Destroy Red Castle",           Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.BASE
+    UD8_DESTROY_TEAL_BASE =        2824, "Destroy Teal Castle",          Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.BASE
+    UD8_DESTROY_BLUE_BASE =        2825, "Destroy Blue Castle",          Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.BASE
+    UD8_GOBLIN_LAND_MINES =        2826, "Goblin Land Mines",            Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.QUEST, "Goblin Land Mines"
+    UD8_GOBLIN_LABORATORY =        2827, "Goblin Laboratory",            Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.SHOP
+    UD8_GOBLIN_MERCHANT =          2828, "Goblin Merchant",              Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.SHOP
 
     OR1_VICTORY = 3100, "Victory", Wc3Mission.O1_LANDFALL, Wc3LocationType.VICTORY
     OR2_VICTORY = 3200, "Victory", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.VICTORY
