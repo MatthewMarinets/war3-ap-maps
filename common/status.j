@@ -9,7 +9,6 @@ integer last_location_packet = -1
 integer last_message_packet = -1
 integer last_hero_packet = -1
 integer checks_before_timeout = -1
-string player_index = ""
 boolean array locations_checked
 constant integer MAX_LOCATIONS = 30
 integer update_index = 0
@@ -23,7 +22,7 @@ function status_send takes nothing returns nothing
     call io_write(I2S(update_index))
     call io_write(COMM_VERSION)
     call io_write(I2S(MISSION_ID))
-    call io_write(player_index)
+    call io_write(PLAYER_INDEX)
     call io_write(I2S(last_unlock_packet) + "," + I2S(last_location_packet) + "," + I2S(last_message_packet) + "," + I2S(last_hero_packet))
     call io_write(I2S(hero_status_index))
     call io_write("_")
@@ -163,7 +162,6 @@ function InitTrig_status takes nothing returns nothing
         exitwhen i > 10
         set i = i + 1
     endloop
-    set player_index = I2S(i)
     set status_ack_ping_timer = CreateTimer()
     call status_send()
     call TimerStart(status_ack_ping_timer, 1, true, function status_check_ping)

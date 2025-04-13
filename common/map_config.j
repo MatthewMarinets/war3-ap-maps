@@ -3,6 +3,7 @@ globals
 constant integer MISSION_ID = $(MISSION_ID)
 integer NUM_HEROES = $(NUM_HEROES)
 constant player USER_PLAYER = $(USER_PLAYER)
+constant string PLAYER_INDEX = $(PLAYER_INDEX)
 integer array hero_global_slots
 constant integer HERO_ID_ALL = -1
 constant integer HERO_ID_NONE = 0
@@ -32,20 +33,32 @@ constant integer HERO_ID_LORD_GARITHOS = 23
 endglobals
 
 function hero_get_unit_from_index takes integer hero returns unit
-    // todo
-    return udg_Arthas
+    if slot == 0 then
+        return $(HERO_VAR_0)
+    elseif slot == 1 then
+        return $(HERO_VAR_1)
+    elseif slot == 2 then
+        return $(HERO_VAR_2)
+    else
+        return $(HERO_VAR_3)
+    endif
 endfunction
 
 function hero_update_variable takes integer slot, unit hero returns nothing
-    // todo
     if slot == 0 then
-        set udg_Arthas = hero
+        set $(HERO_VAR_0) = hero
+    elseif slot == 1 then
+        set $(HERO_VAR_1) = hero
+    elseif slot == 2 then
+        set $(HERO_VAR_2) = hero
+    else
+        set $(HERO_VAR_3) = hero
     endif
 endfunction
 
 function InitTrig_map_config takes nothing returns nothing
-    set hero_global_slots[0] = HERO_ID_PALADIN_ARTHAS
-    set hero_global_slots[1] = HERO_ID_PALADIN_ARTHAS
-    set hero_global_slots[2] = HERO_ID_PALADIN_ARTHAS
-    set hero_global_slots[3] = HERO_ID_PALADIN_ARTHAS
+    set hero_global_slots[0] = $(HERO_ID_0)
+    set hero_global_slots[1] = $(HERO_ID_1)
+    set hero_global_slots[2] = $(HERO_ID_2)
+    set hero_global_slots[3] = $(HERO_ID_3)
 endfunction

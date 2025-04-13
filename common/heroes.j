@@ -246,6 +246,7 @@ function InitTrig_heroes takes nothing returns nothing
     call TriggerAddAction(t_hero_update, function hero_on_update_triggerfunction)
     set hero_update_status_timer=CreateTimer()
     call TimerStart(hero_update_status_timer, 1, true, function hero_publish_all_statuses)
+    set hero_item_target = hero_get_unit_from_index(0)
     set hero_hashes[0] = 0
     set hero_hashes[1] = 0
     set hero_hashes[2] = 0
