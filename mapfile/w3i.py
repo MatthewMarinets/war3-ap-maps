@@ -457,6 +457,12 @@ def from_text(text: str) -> War3MapInformation:
     return War3MapInformation(**result)
 
 
+def from_text_file(filename: str) -> War3MapInformation:
+    with open(filename, 'r') as fp:
+        text = fp.read()
+    return from_text(text)
+
+
 if __name__ == '__main__':
     from work import manifest
     filenames = [f'work/{x}/war3map.w3i' for x in manifest.all_directories]

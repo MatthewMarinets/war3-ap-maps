@@ -675,6 +675,12 @@ def _append_eca_parameter(
         parent_element.children = element
 
 
+def from_text_file(filename) -> W3TriggerData:
+    with open(filename, 'r') as fp:
+        text = fp.read()
+    return from_text(text)
+
+
 if __name__ == '__main__':
     from work import manifest
     # filenames = [f'work/HumanX01/war3map.wtg']

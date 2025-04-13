@@ -119,6 +119,12 @@ def from_text(text: str) -> War3TextTriggers:
     return data
 
 
+def from_text_file(filename: str) -> War3TextTriggers:
+    with open(filename, 'r') as fp:
+        text = fp.read()
+    return from_text(text)
+
+
 if __name__ == '__main__':
     from work import manifest
     filenames = [f'work/{x}/war3map.wct' for x in manifest.all_directories]
