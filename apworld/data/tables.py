@@ -82,6 +82,39 @@ for _mission, _heroes in MISSION_TO_HERO_SLOT.items():
         HERO_SLOT_TO_MISSIONS[_hero].append(_mission)
 
 
+# Note(mm): This table might not be necessary for anything; keeping it around just in case
+# MISSION_TO_NPC_HERO_SLOT: dict[Wc3Mission, list[HeroSlot]] = {
+#     Wc3Mission.H5_MARCH_OF_THE_SCOURGE: [HeroSlot.JAINA],
+#     Wc3Mission.H6_MARCH_OF_THE_SCOURGE: [HeroSlot.JAINA],
+#     Wc3Mission.U5_THE_FALL_OF_SILVERMOON: [HeroSlot.KEL_THUZAD],
+#     Wc3Mission.U8_UNDER_THE_BURNING_SKY: [HeroSlot.KEL_THUZAD],
+#     Wc3Mission.O1_LANDFALL: [HeroSlot.CAIRNE_BLOODHOOF],
+#     Wc3Mission.O2_THE_LONG_MARCH: [HeroSlot.CAIRNE_BLOODHOOF],
+#     Wc3Mission.O3_CRY_OF_THE_WARSONG: [HeroSlot.GROM_HELLSCREAM],
+#     Wc3Mission.O7_THE_ORACLE: [HeroSlot.JAINA],
+#     Wc3Mission.O8_BY_DEMONS_BE_DRIVEN: [HeroSlot.JAINA],
+#     Wc3Mission.N3_THE_AWAKENING_OF_STORMRAGE: [HeroSlot.FURION],
+#     Wc3Mission.N5_BROTHERS_IN_BLOOD: [HeroSlot.ILLIDAN],
+#     Wc3Mission.N7_TWILIGHT_OF_THE_GODS: [HeroSlot.JAINA, HeroSlot.THRALL],
+#     Wc3Mission.NX1_RISE_OF_THE_NAGA: [HeroSlot.DEMON_ILLIDAN],
+#     Wc3Mission.NX2_THE_BROKEN_ISLES: [HeroSlot.DEMON_ILLIDAN],
+#     Wc3Mission.NX3_THE_TOMB_OF_SARGERAS: [HeroSlot.LADY_VASHJ, HeroSlot.DEMON_ILLIDAN],
+#     Wc3Mission.NX5_BALANCING_THE_SCALES: [HeroSlot.DEMON_ILLIDAN],
+#     Wc3Mission.NX6_SHARDS_OF_THE_ALLIANCE: [HeroSlot.KAEL],
+#     Wc3Mission.NX7_THE_RUINS_OF_DALARAN: [HeroSlot.KAEL, HeroSlot.DEMON_ILLIDAN],
+#     Wc3Mission.NX8_THE_BROTHERS_STORMRAGE: [HeroSlot.TYRANDE_TFT, HeroSlot.MAIEV],
+#     Wc3Mission.HX1_MISCONCEPTIONS: [HeroSlot.LORD_GARITHOS, HeroSlot.LADY_VASHJ],
+#     Wc3Mission.HX2_A_DARK_COVENANT: [HeroSlot.LORD_GARITHOS],
+#     Wc3Mission.HX4_THE_SEARCH_FOR_ILLIDAN: [HeroSlot.MAIEV, HeroSlot.DEMON_ILLIDAN],
+#     Wc3Mission.UX2_THE_FLIGHT_FROM_LORDAERON: [HeroSlot.VARIMATHRAS, HeroSlot.SYLVANAS],
+#     Wc3Mission.UX3_THE_DARK_LADY: [HeroSlot.VARIMATHRAS],
+#     Wc3Mission.UX4_THE_RETURN_TO_NORTHREND: [HeroSlot.KAEL],
+#     Wc3Mission.UX5_DREADLORDS_FALL: [HeroSlot.LORD_GARITHOS],
+#     Wc3Mission.UX7C_ASCENT_TO_THE_UPPER_KINGDOM: [HeroSlot.ANUB_ARAK],
+#     Wc3Mission.UX8_A_SYMPHONY_OF_FROST_AND_FLAME: [HeroSlot.DEMON_ILLIDAN, HeroSlot.KAEL, HeroSlot.LADY_VASHJ],
+# }
+
+
 MISSION_TO_SUPERHERO_SLOT: dict[Wc3Mission, SuperheroSlot] = {
     Wc3Mission.H9_FROSTMOURNE: SuperheroSlot.FROSTMOURNE_ARTHAS,
     Wc3Mission.O5_THE_HUNTER_OF_SHADOWS: SuperheroSlot.POSSESSED_GROM,

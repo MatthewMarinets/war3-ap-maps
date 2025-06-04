@@ -21,8 +21,6 @@ Integers may be passed by setting tech max allowed amounts on units the player c
 The standard is to use critter unit IDs as the various channels, which can allow passing a few dozen integers at a time.
 More integers may be passed in future by adding more IDs to the protocol, such as neutral buildings.
 
-The Player 0 critter skeleton ID (`'nske'`) will generally be used to acknowledge the last status transmission number, to help validate the packet.
-
 Changes to player tech max allowed aren't restored, so setting this on acquirable units and items allows the script to control unlocks without intervention on the mod's part.
 
 Example:
@@ -131,9 +129,11 @@ and an outdated client can still work with older packet types.
 
 | bitmask | meaning              |
 | ------- | -------------------- |
-|       1 | reload unlocks       |
-|       2 | reload locations     |
-|       4 | load messages        |
+| 0x    1 | reload unlocks       |
+| 0x    2 | reload locations     |
+| 0x    4 | load messages        |
+| 0x    8 | reload heroes        |
+| 0x   10 | load items           |
 
 ### unlocks.txt
 * Client -> Game
@@ -190,22 +190,45 @@ Encoded IDs are two-character stringified integers. Ex: " 0 710" says locations 
 | MaxTech(Player(N), 'nfro') | Abil N ID; N=0..3                             |
 | MaxTech(Player(N), 'nrac') | Abil N skillpoints; N=0..3                    |
 | MaxTech(Player(N), 'nvul') | Item in slot N; N=0..5                        |
+| MaxTech(Player(N), 'nsno') | Charges remaining for item in slot N; N=0..5  |
 
 ### hero_X.txt
 * Game -> Client
-* X is the hero slot as an integer
 
-| Line  | Contains                      | type                       |
-| ----  | ----------------------------- | -------------------------- |
-| 1     | Hero slot ID                  | integer                    |
-| 2     | Hero name                     | integer                    |
-| 3     | hero xp                       | integer                    |
-| 4     | hero agi                      | integer                    |
-| 5     | hero str                      | integer                    |
-| 6     | hero int                      | integer                    |
-| 7     | hero max life                 | integer                    |
-| 8~11  | skill point allocation        | integer                    |
-| 11~16 | item in slot 0..5             | integer                    |
+| Line     | Contains                      | type                       |
+| ----     | ----------------------------- | -------------------------- |
+| 1        | Hero slot ID                  | integer                    |
+| 2        | Hero name                     | integer                    |
+| 3        | hero xp                       | integer                    |
+| 4        | hero agi                      | integer                    |
+| 5        | hero str                      | integer                    |
+| 6        | hero int                      | integer                    |
+| 7        | hero max life                 | integer                    |
+| 8..12    | skill point allocation        | integer                    |
+| 12:2:24  | item in slot 0..5             | integer                    |
+| 13:2:24  | charges of item in slot 0..5  | integer                    |
+
+### items.txt
+* Client -> Game
+* Tells the game to spawn items or tomes at a hero's location
+* Number of items sent is clamped to [0, 12]
+
+| Line                        | Contains                                      |
+| --------------------------- | --------------------------------------------- |
+| MaxTech(Player(0), 'nech')  | Message ID; echoed back in status.txt         |
+| MaxTech(Player(0), 'nalb')  | Number of items sent in this packet; max 12   |
+| MaxTech(Player(0), 'ncrb')  | Item 1 ID                                     |
+| MaxTech(Player(1), 'ncrb')  | Item 2 ID                                     |
+| MaxTech(Player(2), 'ncrb')  | Item 3 ID                                     |
+| MaxTech(Player(3), 'ncrb')  | Item 4 ID                                     |
+| MaxTech(Player(4), 'ncrb')  | Item 5 ID                                     |
+| MaxTech(Player(5), 'ncrb')  | Item 6 ID                                     |
+| MaxTech(Player(6), 'ncrb')  | Item 7 ID                                     |
+| MaxTech(Player(7), 'ncrb')  | Item 8 ID                                     |
+| MaxTech(Player(8), 'ncrb')  | Item 9 ID                                     |
+| MaxTech(Player(9), 'ncrb')  | Item 10 ID                                    |
+| MaxTech(Player(10), 'ncrb') | Item 11 ID                                    |
+| MaxTech(Player(11), 'ncrb') | Item 12 ID                                    |
 
 ### pocket.txt
 *todo*

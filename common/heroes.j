@@ -75,6 +75,7 @@ function hero_configure takes unit hero, integer slot returns nothing
     local player p = Player(0)
     local integer val
     local integer i = 0
+    local item i_item
     call SetHeroXP(hero, GetPlayerTechMaxAllowed(p, 'ncrb'), false)
     set val = GetPlayerTechMaxAllowed(p, 'ndog')
     if val > 0 then
@@ -111,10 +112,14 @@ function hero_configure takes unit hero, integer slot returns nothing
         exitwhen i > 5
         set val = GetPlayerTechMaxAllowed(Player(i), 'nvul')
         if val > 0 then
-            call UnitAddItemById(hero, val)
+            set i_item = UnitAddItemById(hero, val)
         else
             // pad out empty slots with a dummy item so later items go to the correct slots
-            call UnitAddItemById(hero, 'wtlg')
+            set i_item = UnitAddItemById(hero, 'wtlg')
+        endif
+        set val = GetPlayerTechMaxAllowed(Player(i), 'nsno')
+        if val > 0 and GetItemCharges(i_item) > 0 then
+            call SetItemCharges(i_item, val)
         endif
         set i = i + 1
     endloop
@@ -181,6 +186,8 @@ endfunction
 function hero_publish_status takes integer slot returns nothing
     local unit hero = hero_get_unit_from_index(slot)
     local integer this_hash = hero_hash_state(hero, slot)
+    local integer i = 0
+    local item i_item
     if this_hash == hero_hashes[slot] then
         return
     endif
@@ -197,12 +204,17 @@ function hero_publish_status takes integer slot returns nothing
     call io_write(I2S(GetUnitAbilityLevel(hero, hero_abil_2[slot])))
     call io_write(I2S(GetUnitAbilityLevel(hero, hero_abil_3[slot])))
     call io_write(I2S(GetUnitAbilityLevel(hero, hero_abil_4[slot])))
-    call io_write(I2S(GetItemTypeId(UnitItemInSlot(hero, 0))))
-    call io_write(I2S(GetItemTypeId(UnitItemInSlot(hero, 1))))
-    call io_write(I2S(GetItemTypeId(UnitItemInSlot(hero, 2))))
-    call io_write(I2S(GetItemTypeId(UnitItemInSlot(hero, 3))))
-    call io_write(I2S(GetItemTypeId(UnitItemInSlot(hero, 4))))
-    call io_write(I2S(GetItemTypeId(UnitItemInSlot(hero, 5))))
+    loop
+        exitwhen i >= 6
+        set i_item = UnitItemInSlot(hero, i)
+        call io_write(I2S(GetItemTypeId(i_item)))
+        if i_item == null then
+            call io_write("0")
+        else
+            call io_write(I2S(GetItemCharges(i_item)))
+        endif
+        set i = i + 1
+    endloop
     call io_close_write()
 
     set hero_status_index = hero_status_index + 1

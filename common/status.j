@@ -8,9 +8,11 @@ integer last_unlock_packet = -1
 integer last_location_packet = -1
 integer last_message_packet = -1
 integer last_hero_packet = -1
-integer checks_before_timeout = -1
+integer last_item_packet = -1
+integer checks_before_timeout = 2
 boolean array locations_checked
 constant integer MAX_LOCATIONS = 30
+constant integer MAX_ITEMS_PER_PACKET = 12
 integer update_index = 0
 integer hero_status_index = -1
 timer status_ack_ping_timer
@@ -23,7 +25,7 @@ function status_send takes nothing returns nothing
     call io_write(COMM_VERSION)
     call io_write(I2S(MISSION_ID))
     call io_write(PLAYER_INDEX)
-    call io_write(I2S(last_unlock_packet) + "," + I2S(last_location_packet) + "," + I2S(last_message_packet) + "," + I2S(last_hero_packet))
+    call io_write(I2S(last_unlock_packet) + "," + I2S(last_location_packet) + "," + I2S(last_message_packet) + "," + I2S(last_hero_packet) + "," + I2S(last_item_packet))
     call io_write(I2S(hero_status_index))
     call io_write("_")
     call io_write("_")
@@ -41,7 +43,6 @@ function status_send takes nothing returns nothing
         set i = i + 1
     endloop
     call io_close_write()
-    set checks_before_timeout = 3
 endfunction
 
 function status_load_unlocks takes nothing returns nothing
@@ -106,6 +107,44 @@ function status_load_messages takes nothing returns nothing
     set last_message_packet = GetPlayerTechMaxAllowed(p, 'nech')
 endfunction
 
+function status_load_items takes nothing returns nothing
+    local integer num_items = -1
+    local integer item_id = 0
+    local player p = Player(0)
+    call SetPlayerTechMaxAllowed(p, 'nech', -1)
+    call SetPlayerTechMaxAllowed(p, 'nalb', 0)
+    call SetPlayerTechMaxAllowed(Player(0), 'ncrb', 0)
+    call SetPlayerTechMaxAllowed(Player(1), 'ncrb', 0)
+    call SetPlayerTechMaxAllowed(Player(2), 'ncrb', 0)
+    call SetPlayerTechMaxAllowed(Player(3), 'ncrb', 0)
+    call SetPlayerTechMaxAllowed(Player(4), 'ncrb', 0)
+    call SetPlayerTechMaxAllowed(Player(5), 'ncrb', 0)
+    call SetPlayerTechMaxAllowed(Player(6), 'ncrb', 0)
+    call SetPlayerTechMaxAllowed(Player(7), 'ncrb', 0)
+    call SetPlayerTechMaxAllowed(Player(8), 'ncrb', 0)
+    call SetPlayerTechMaxAllowed(Player(9), 'ncrb', 0)
+    call SetPlayerTechMaxAllowed(Player(10), 'ncrb', 0)
+    call SetPlayerTechMaxAllowed(Player(11), 'ncrb', 0)
+
+    call io_read_file_simple("items.txt")
+    set last_item_packet = GetPlayerTechMaxAllowed(p, 'nech')
+    set num_items = GetPlayerTechMaxAllowed(p, 'nalb')
+    if num_items < 0 then
+        set num_items = 0
+    elseif num_items > MAX_ITEMS_PER_PACKET then
+        set num_items = MAX_ITEMS_PER_PACKET
+    endif
+
+    loop
+        exitwhen num_items <= 0
+        set item_id = GetPlayerTechMaxAllowed(Player(MAX_ITEMS_PER_PACKET - num_items), 'ncrb')
+        if item_id != 0 then
+            call CreateItem(item_id, GetUnitX(hero_item_target), GetUnitY(hero_item_target))
+        endif
+        set num_items = num_items - 1
+    endloop
+endfunction
+
 function status_check_ping takes nothing returns nothing
     local integer bitmask = 0
     local boolean should_send = false
@@ -128,9 +167,30 @@ function status_check_ping takes nothing returns nothing
         set error_state = 0
         call DisplayTextToForce(GetPlayersAll(), "|cff2266ffClient communications re-established.|r")
     endif
+    set checks_before_timeout = 2
     set bitmask = GetPlayerTechMaxAllowed(p, 'nvk2')
     if bitmask > 0 then
         set should_send = true
+    endif
+    if bitmask >= 128 then
+        set bitmask = bitmask - 128
+        // unused
+    endif
+    if bitmask >= 64 then
+        set bitmask = bitmask - 64
+        // unused
+    endif
+    if bitmask >= 32 then
+        set bitmask = bitmask - 32
+        // unused
+    endif
+    if bitmask >= 16 then
+        set bitmask = bitmask - 16
+        call status_load_items()
+    endif
+    if bitmask >= 8 then
+        set bitmask = bitmask - 8
+        // todo: reset heroes
     endif
     if bitmask >= 4 then
         set bitmask = bitmask - 4

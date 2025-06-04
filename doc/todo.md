@@ -1,11 +1,29 @@
-# File formats covered
+## Issues
+- [ ] Add magic number / mechanism to prevent loading data from another game
+- [ ] Add packet to send a new item to a campaign
+- [ ] Add packet to set/update hero state
+- [ ] comm: Global <--> local location conversion
+- [ ] Begin converting missions
+  - [ ] Eliminate gamecache usage
+  - [ ] Redirect starting next mission
+  - [ ] Hero init
+  - [ ] Remove hero level cap triggers
+  - [ ] Special considerations for first hero appearances
+  - [ ] Replace items -> AP items
+  - [ ] Location sending functions
+  - [ ] Purge any unlock tech functions
+
+### Longer term
+- [ ] Figure out item recovery / make item bank levels
+- [ ] Figure out slot storage
+- [ ] RoC models and creep gold drop amounts
+
+## File formats covered
 - [x] mpq/w3m/w3x -- MPQEditor
-- [ ] .w3e (environment)
 - [x] .w3i (info)
-- [ ] .wtg (GUI trigger metadata)
+- [x] .wtg (GUI trigger metadata)
 - [x] .wct (text trigger metadata)
 - [x] .mmp (minimap icons)
-- [ ] .wpm (path map)
 - [x] .doo (doodads placement)
 - [x] .w3r (regions)
 - [x] .w3c (camera)
@@ -22,20 +40,22 @@
 - [x] .w3f (campaign info)
 - [x] .slk (spreadsheet)
 
-## Text
+### Text
 * .j (jass script)
 * .wai (AI jass script)
 * .pld (preloader jass script)
 * .w3p (Campaign profile)
 * .wts (trigger strings)
 
-## Binary data
+### Binary data
 * .mdl/.mdx (model)
 * .blp (image)
 * .tga (old image format)
 * .shd (shadow map)
+* .w3e (environment)
+* .wpm (path map)
 
-## Won't handle
+### External - won't handle
 * .w3v (gamecache) -- unsolved checksum
 * .w3z (savegame)
 * .w3g (replay)
