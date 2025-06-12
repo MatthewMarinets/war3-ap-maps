@@ -3,7 +3,6 @@ globals
 constant integer MISSION_ID = $(MISSION_ID)
 integer NUM_HEROES = $(NUM_HEROES)
 constant player USER_PLAYER = $(USER_PLAYER)
-constant string PLAYER_INDEX = $(PLAYER_INDEX)
 integer array hero_global_slots
 constant integer HERO_ID_ALL = -1
 constant integer HERO_ID_NONE = 0

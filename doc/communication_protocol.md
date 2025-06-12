@@ -99,19 +99,15 @@ Commands that are not safely repeatable, such as "uncollect location" commands, 
 | 1    | Transmission number mod 10000 | integer                    |
 | 2    | protocol version              | major.minor                |
 | 3    | mission ID                    | integer                    |
-| 4    | player index                  | comma-separated integers*  |
-| 5    | last message IDs              | comma-separated integers** |
-| 6    | last hero status index        | integer                    |
+| 4    | last message IDs              | comma-separated integers* |
+| 5    | last hero status index        | integer                    |
+| 6    | reserved                      | empty                      |
 | 7    | reserved                      | empty                      |
 | 8    | reserved                      | empty                      |
 | 9    | reserved                      | empty                      |
-| 10   | reserved                      | empty                      |
-| 11+  | Collected location index      | integer                    |
+| 10+  | Collected location index      | integer                    |
 
-*Note player index is going to be a single element in almost all missions.
-NEx8 is the only mission that needs special handling as the user controls two players.
-
-**List indices refer to packets in order of increasing bitmask (unlocks, locations, messages).
+*List indices refer to packets in order of increasing bitmask (unlocks, locations, messages).
 This means as new packet types are added, they get appended to the end of the list
 and an outdated client can still work with older packet types.
 
@@ -139,11 +135,11 @@ and an outdated client can still work with older packet types.
 * Client -> Game
 * Set unlocks for the player
 * Sets their tech directly with `SetPlayerTechMaxAllowed()`
-* Sends additional data for other unlocks like hero max level
+* Takes `p` as an input from `GetPlayerTechMaxAllowed(Player(0), 'nvil')`
 
 | Line                       | Contains                                      |
 | -------------------------- | --------------------------------------------- |
-| MaxTech(Player(0), 'nech') | Unlocks ID; echoed back in status.txt         |
+| MaxTech(Player(p), 'nech') | Unlocks ID; echoed back in status.txt         |
 
 ### locations.txt
 * Client -> Game

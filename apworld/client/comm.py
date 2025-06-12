@@ -134,7 +134,6 @@ class HeroStatus:
 class MissionStatus:
     update_number: int = -100
     mission_id: int = -1
-    player_index: list[str] = field(default_factory=list)
     packet_status: dict[PacketType, PacketStatus] = field(default_factory=default_packet_status)
     locations_collected: dict[int, int] = field(default_factory=default_locations_collected)
     errors: MissionError = MissionError.NONE
@@ -170,6 +169,10 @@ def send_int(message: int|str, channel: str = 'nske', player: str|int = 0) -> st
     return f"call SetPlayerTechMaxAllowed(Player({player}), '{channel}', {message})\n"
 
 
+def set_tech(game_id: GameID, player_literal: str, amount: int = 1) -> str:
+    return f"call SetPlayerTechMaxAllowed({player_literal}, '{game_id}', {amount})\n"
+
+
 def send_string(message: str, player: str|int = 0) -> str:
     return f'call SetPlayerName(Player({player}), "{message}")\n'
 
@@ -188,10 +191,10 @@ def update_unlocks(game_status: GameStatus, mission_status: MissionStatus) -> No
     packet_status.last_sent = (packet_status.last_sent + 1) & 0xffff
     with open(UNLOCKS_FILE, 'w') as fp:
         fp.write(PRELOAD_FUNCTION_PROTOTYPE)
+        fp.write("local player p = Player(GetPlayerTechMaxAllowed(Player(0), 'nvil'))\n")
         fp.write(send_int(packet_status.last_sent, channel='nech'))
         for tech_id, unlock_level in game_status.inventory.tech.items():
-            for player in mission_status.player_index:
-                fp.write(send_int(unlock_level, tech_id, player))
+            fp.write(set_tech(tech_id, 'p', unlock_level))
         fp.write(ENDFUNCTION)
 
 
@@ -336,7 +339,6 @@ def read_status(status: MissionStatus, game_status: GameStatus) -> None:
     if not os.path.exists(STATUS_FILE):
         status.update_number = -1
         status.mission_id = -1
-        status.player_index.clear()
         return
     with open(STATUS_FILE, 'r') as fp:
         lines = fp.readlines()
@@ -371,7 +373,6 @@ def read_status(status: MissionStatus, game_status: GameStatus) -> None:
             log_message_to_game(game_status, msg, ColorCode.WARNING)
             status.errors |= MissionError.MINOR_VERSION_MISMATCH
     status.mission_id = int(line_contents(lines.pop(0)))
-    status.player_index = line_contents(lines.pop(0)).split(',')
     last_transmissions = [int(x) for x in line_contents(lines.pop(0)).split(',')]
     game_status.next_hero_update = int(line_contents(lines.pop(0)))
     lines.pop(0)  # reserved
@@ -459,7 +460,6 @@ def sync_mission_status(source: MissionStatus, target: MissionStatus) -> None:
     mission_change = source.mission_id != target.mission_id
     target.update_number = source.update_number
     target.mission_id = source.mission_id
-    target.player_index = source.player_index
     if mission_change:
         for k, v in source.locations_collected.items():
             target.locations_collected[k] = v

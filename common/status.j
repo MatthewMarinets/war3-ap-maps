@@ -24,7 +24,6 @@ function status_send takes nothing returns nothing
     call io_write(I2S(update_index))
     call io_write(COMM_VERSION)
     call io_write(I2S(MISSION_ID))
-    call io_write(PLAYER_INDEX)
     call io_write(I2S(last_unlock_packet) + "," + I2S(last_location_packet) + "," + I2S(last_message_packet) + "," + I2S(last_hero_packet) + "," + I2S(last_item_packet))
     call io_write(I2S(hero_status_index))
     call io_write("_")
@@ -45,11 +44,16 @@ function status_send takes nothing returns nothing
     call io_close_write()
 endfunction
 
-function status_load_unlocks takes nothing returns nothing
+function status_load_unlocks_for_player takes integer target_player returns nothing
     local player p = Player(0)
     call SetPlayerTechMaxAllowed(p, 'nech', -1)
+    call SetPlayerTechMaxAllowed(p, 'nvil', target_player)
     call io_read_file_simple("unlocks.txt")
     set last_unlock_packet = GetPlayerTechMaxAllowed(p, 'nech')
+endfunction
+
+function status_load_unlocks takes nothing returns nothing
+    call status_load_unlocks_for_player(GetPlayerId(USER_PLAYER))
 endfunction
 
 function status_load_locations takes nothing returns nothing
