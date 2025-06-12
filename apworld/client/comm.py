@@ -452,7 +452,6 @@ def update_game_status_for_new_mission(game_status: GameStatus) -> None:
     # todo: fetch pre-checked locations from the global cache
     game_status.num_in_flight_messages = 0
     game_status.num_in_flight_items = 0
-    game_status.pending_update |= PacketType.UNLOCKS
 
 
 def sync_mission_status(source: MissionStatus, target: MissionStatus) -> None:
@@ -663,9 +662,14 @@ def init_test_data(game_status: GameStatus) -> None:
     game_status.hero_data[heroes.HeroSlot.JAINA].name = "Jenna"
 
 
+def init_game_status(game_status: GameStatus) -> None:
+    game_status.pending_update |= PacketType.UNLOCKS
+
+
 async def main() -> None:
     async_context = AsyncContext(True)
     init_test_data(async_context.game_status)
+    init_game_status(async_context.game_status)
     console_task = asyncio.create_task(_stdin_reader(async_context))
     await status_loop(async_context)
     console_task.cancel()
