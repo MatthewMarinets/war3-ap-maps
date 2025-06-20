@@ -209,6 +209,20 @@ class SuperheroChoices(enum.Enum):
     # ARCHIMONDE = 7, "Archimonde", HeroClass.WARLOCK, HeroSource.ENEMY  # Divine Armour, Has Rain of Fire, Dark Portal
 
 
+class ItemChannel(enum.Flag):
+    HUMAN = enum.auto()          # Arthas, Jaina, Muradin
+    UNDEAD =  enum.auto()        # DK Arthas, Kel'Thuzad
+    ORC = enum.auto()            # Thrall, Cairne
+    WARSONG = enum.auto()        # Grom
+    NIGHT_ELF = enum.auto()      # Tyrande, Furion
+    ROC_ILLIDAN = enum.auto()    # Illidan
+    TFT_NIGHT_ELF = enum.auto()  # Maiev, Tyrande, Malfurion
+    TFT_ILLIDAN = enum.auto()    # Illidan
+    BLOOD_ELF = enum.auto()      # Kael, Lady Vashj, (Illidan), Akama
+    SCOURGE = enum.auto()        # Arthas, Kel'Thuzad (UDx1), Sylvanas (UDx1), Anub'arak
+    FORSAKEN = enum.auto()       # Sylvanas, Varimathras, Garithos
+
+
 HERO_SLOT_TO_DEFAULT_CHOICE = {
     _choice.vanilla_slot: _choice
     for _choice in HeroChoice

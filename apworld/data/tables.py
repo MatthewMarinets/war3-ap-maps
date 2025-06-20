@@ -1,7 +1,7 @@
 """Holds look-up tables connecting data types from different data files"""
 
-from .missions import Wc3Mission
-from .heroes import HeroSlot, SuperheroSlot
+from .missions import Wc3Mission, Wc3Campaign
+from .heroes import HeroSlot, SuperheroSlot, ItemChannel
 from . import items
 
 MISSION_TO_HERO_SLOT = {
@@ -126,4 +126,25 @@ SUPERHERO_SLOT_TO_MISSION: dict[SuperheroSlot, Wc3Mission] = {
 
 HERO_SLOT_TO_ITEM: dict[HeroSlot, items.Wc3Item] = {
     _item.type.slot: _item for _item in items.Wc3Item if isinstance(_item.type, items.Level)
+}
+CAMPAIGN_TO_ITEM_SLOT: dict[Wc3Campaign, ItemChannel] = {
+    Wc3Campaign.HUMAN_1: ItemChannel.HUMAN,
+    Wc3Campaign.UNDEAD_1: ItemChannel.UNDEAD,
+    Wc3Campaign.ORC_1: ItemChannel.ORC,
+    Wc3Campaign.NIGHT_ELF_1: ItemChannel.NIGHT_ELF,
+    Wc3Campaign.NIGHT_ELF_2: ItemChannel.TFT_NIGHT_ELF,
+    Wc3Campaign.HUMAN_2: ItemChannel.BLOOD_ELF,
+    Wc3Campaign.UNDEAD_2: ItemChannel.SCOURGE,
+}
+MISSION_TO_ITEM_SLOT: dict[Wc3Mission, ItemChannel] = {
+    Wc3Mission.O4_THE_SPIRITS_OF_ASHENVALE: ItemChannel.WARSONG,
+    Wc3Mission.O5_THE_HUNTER_OF_SHADOWS: ItemChannel.WARSONG,
+    Wc3Mission.N6_A_DESTINY_OF_FLAME_AND_SORROW: ItemChannel.ROC_ILLIDAN,
+    Wc3Mission.NX8_THE_BROTHERS_STORMRAGE: ItemChannel.TFT_NIGHT_ELF|ItemChannel.TFT_ILLIDAN,
+    Wc3Mission.HX5_GATES_OF_THE_ABYSS: ItemChannel.BLOOD_ELF|ItemChannel.TFT_ILLIDAN,
+    Wc3Mission.HX6_LORD_OF_OUTLAND: ItemChannel.BLOOD_ELF|ItemChannel.TFT_ILLIDAN,
+    Wc3Mission.UX1_KING_ARTHAS: ItemChannel.SCOURGE|ItemChannel.FORSAKEN,
+    Wc3Mission.UX3_THE_DARK_LADY: ItemChannel.FORSAKEN,
+    Wc3Mission.UX5_DREADLORDS_FALL: ItemChannel.FORSAKEN,
+    Wc3Mission.UX6_A_NEW_POWER_IN_LORDAERON: ItemChannel.FORSAKEN,
 }
