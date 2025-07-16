@@ -127,24 +127,49 @@ SUPERHERO_SLOT_TO_MISSION: dict[SuperheroSlot, Wc3Mission] = {
 HERO_SLOT_TO_ITEM: dict[HeroSlot, items.Wc3Item] = {
     _item.type.slot: _item for _item in items.Wc3Item if isinstance(_item.type, items.Level)
 }
-CAMPAIGN_TO_ITEM_SLOT: dict[Wc3Campaign, ItemChannel] = {
-    Wc3Campaign.HUMAN_1: ItemChannel.HUMAN,
-    Wc3Campaign.UNDEAD_1: ItemChannel.UNDEAD,
-    Wc3Campaign.ORC_1: ItemChannel.ORC,
-    Wc3Campaign.NIGHT_ELF_1: ItemChannel.NIGHT_ELF,
-    Wc3Campaign.NIGHT_ELF_2: ItemChannel.TFT_NIGHT_ELF,
-    Wc3Campaign.HUMAN_2: ItemChannel.BLOOD_ELF,
-    Wc3Campaign.UNDEAD_2: ItemChannel.SCOURGE,
+CAMPAIGN_TO_ITEM_SLOT: dict[Wc3Campaign, tuple[ItemChannel, ItemChannel]] = {
+    Wc3Campaign.HUMAN_1: (ItemChannel.HUMAN, ItemChannel.NONE),
+    Wc3Campaign.UNDEAD_1: (ItemChannel.UNDEAD, ItemChannel.NONE),
+    Wc3Campaign.ORC_1: (ItemChannel.ORC, ItemChannel.NONE),
+    Wc3Campaign.NIGHT_ELF_1: (ItemChannel.NIGHT_ELF, ItemChannel.NONE),
+    Wc3Campaign.NIGHT_ELF_2: (ItemChannel.TFT_NIGHT_ELF, ItemChannel.NONE),
+    Wc3Campaign.HUMAN_2: (ItemChannel.BLOOD_ELF, ItemChannel.NONE),
+    Wc3Campaign.UNDEAD_2: (ItemChannel.SCOURGE, ItemChannel.NONE),
 }
-MISSION_TO_ITEM_SLOT: dict[Wc3Mission, ItemChannel] = {
-    Wc3Mission.O4_THE_SPIRITS_OF_ASHENVALE: ItemChannel.WARSONG,
-    Wc3Mission.O5_THE_HUNTER_OF_SHADOWS: ItemChannel.WARSONG,
-    Wc3Mission.N6_A_DESTINY_OF_FLAME_AND_SORROW: ItemChannel.ROC_ILLIDAN,
-    Wc3Mission.NX8_THE_BROTHERS_STORMRAGE: ItemChannel.TFT_NIGHT_ELF|ItemChannel.TFT_ILLIDAN,
-    Wc3Mission.HX5_GATES_OF_THE_ABYSS: ItemChannel.BLOOD_ELF|ItemChannel.TFT_ILLIDAN,
-    Wc3Mission.HX6_LORD_OF_OUTLAND: ItemChannel.BLOOD_ELF|ItemChannel.TFT_ILLIDAN,
-    Wc3Mission.UX1_KING_ARTHAS: ItemChannel.SCOURGE|ItemChannel.FORSAKEN,
-    Wc3Mission.UX3_THE_DARK_LADY: ItemChannel.FORSAKEN,
-    Wc3Mission.UX5_DREADLORDS_FALL: ItemChannel.FORSAKEN,
-    Wc3Mission.UX6_A_NEW_POWER_IN_LORDAERON: ItemChannel.FORSAKEN,
+MISSION_TO_ITEM_SLOT: dict[Wc3Mission, tuple[ItemChannel, ItemChannel]] = {
+    Wc3Mission.O4_THE_SPIRITS_OF_ASHENVALE: (ItemChannel.WARSONG, ItemChannel.NONE),
+    Wc3Mission.O5_THE_HUNTER_OF_SHADOWS: (ItemChannel.WARSONG, ItemChannel.NONE),
+    Wc3Mission.N6_A_DESTINY_OF_FLAME_AND_SORROW: (ItemChannel.ROC_ILLIDAN, ItemChannel.NONE),
+    Wc3Mission.NX8_THE_BROTHERS_STORMRAGE: (ItemChannel.TFT_NIGHT_ELF, ItemChannel.TFT_ILLIDAN),
+    Wc3Mission.HX5_GATES_OF_THE_ABYSS: (ItemChannel.BLOOD_ELF, ItemChannel.TFT_ILLIDAN),
+    Wc3Mission.HX6_LORD_OF_OUTLAND: (ItemChannel.BLOOD_ELF, ItemChannel.TFT_ILLIDAN),
+    Wc3Mission.UX1_KING_ARTHAS: (ItemChannel.SCOURGE, ItemChannel.FORSAKEN),
+    Wc3Mission.UX3_THE_DARK_LADY: (ItemChannel.FORSAKEN, ItemChannel.NONE),
+    Wc3Mission.UX5_DREADLORDS_FALL: (ItemChannel.FORSAKEN, ItemChannel.NONE),
+    Wc3Mission.UX6_A_NEW_POWER_IN_LORDAERON: (ItemChannel.FORSAKEN, ItemChannel.NONE),
+}
+
+
+def mission_to_item_channel(mission: Wc3Mission) -> tuple[ItemChannel, ItemChannel]:
+    return MISSION_TO_ITEM_SLOT.get(
+        mission,
+        CAMPAIGN_TO_ITEM_SLOT.get(
+            mission.campaign,
+            (ItemChannel.NONE, ItemChannel.NONE)
+        )
+    )
+
+
+ITEM_CHANNEL_TO_DEFAULT_HERO: dict[ItemChannel, HeroSlot] = {
+    ItemChannel.HUMAN: HeroSlot.PALADIN_ARTHAS,
+    ItemChannel.UNDEAD: HeroSlot.DEATH_KNIGHT_ARTHAS,
+    ItemChannel.ORC: HeroSlot.THRALL,
+    ItemChannel.WARSONG: HeroSlot.GROM_HELLSCREAM,
+    ItemChannel.NIGHT_ELF: HeroSlot.TYRANDE,
+    ItemChannel.ROC_ILLIDAN: HeroSlot.ILLIDAN,
+    ItemChannel.TFT_NIGHT_ELF: HeroSlot.MAIEV,
+    ItemChannel.TFT_ILLIDAN: HeroSlot.DEMON_ILLIDAN,
+    ItemChannel.BLOOD_ELF: HeroSlot.KAEL,
+    ItemChannel.SCOURGE: HeroSlot.ARTHAS_TFT,
+    ItemChannel.FORSAKEN: HeroSlot.SYLVANAS,
 }

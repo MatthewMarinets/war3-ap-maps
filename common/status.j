@@ -9,12 +9,15 @@ integer last_location_packet = -1
 integer last_message_packet = -1
 integer last_hero_packet = -1
 integer last_item_packet = -1
+integer last_item_channel_packet = -1
 integer checks_before_timeout = 2
 boolean array locations_checked
 constant integer MAX_LOCATIONS = 30
 constant integer MAX_ITEMS_PER_PACKET = 12
 integer update_index = 0
 integer hero_status_index = -1
+integer num_channel_1_items_received = 0
+integer num_channel_2_items_received = 0
 timer status_ack_ping_timer
 endglobals
 
@@ -24,9 +27,9 @@ function status_send takes nothing returns nothing
     call io_write(I2S(update_index))
     call io_write(COMM_VERSION)
     call io_write(I2S(MISSION_ID))
-    call io_write(I2S(last_unlock_packet) + "," + I2S(last_location_packet) + "," + I2S(last_message_packet) + "," + I2S(last_hero_packet) + "," + I2S(last_item_packet))
+    call io_write(I2S(last_unlock_packet) + "," + I2S(last_location_packet) + "," + I2S(last_message_packet) + "," + I2S(last_hero_packet) + "," + I2S(last_item_packet) + "," + I2S(last_item_channel_packet))
     call io_write(I2S(hero_status_index))
-    call io_write("_")
+    call io_write(I2S(num_channel_1_items_received) + "," + I2S(num_channel_2_items_received))
     call io_write("_")
     call io_write("_")
     call io_write("_")
@@ -113,10 +116,13 @@ endfunction
 
 function status_load_items takes nothing returns nothing
     local integer num_items = -1
+    local integer i = 0
     local integer item_id = 0
     local player p = Player(0)
+    local unit target_unit = null
     call SetPlayerTechMaxAllowed(p, 'nech', -1)
     call SetPlayerTechMaxAllowed(p, 'nalb', 0)
+    call SetPlayerTechMaxAllowed(p, 'ndog', 0)
     call SetPlayerTechMaxAllowed(Player(0), 'ncrb', 0)
     call SetPlayerTechMaxAllowed(Player(1), 'ncrb', 0)
     call SetPlayerTechMaxAllowed(Player(2), 'ncrb', 0)
@@ -139,13 +145,21 @@ function status_load_items takes nothing returns nothing
         set num_items = MAX_ITEMS_PER_PACKET
     endif
 
+    if GetPlayerTechMaxAllowed(p, 'ndog') == 0 then
+        set target_unit = item_channel_1_target
+        set num_channel_1_items_received = num_channel_1_items_received + num_items
+    else
+        set target_unit = item_channel_2_target
+        set num_channel_2_items_received = num_channel_2_items_received + num_items
+    endif
+
     loop
-        exitwhen num_items <= 0
-        set item_id = GetPlayerTechMaxAllowed(Player(MAX_ITEMS_PER_PACKET - num_items), 'ncrb')
+        exitwhen i >= num_items
+        set item_id = GetPlayerTechMaxAllowed(Player(i), 'ncrb')
         if item_id != 0 then
-            call CreateItem(item_id, GetUnitX(hero_item_target), GetUnitY(hero_item_target))
+            call UnitAddItemById(target_unit, item_id)
         endif
-        set num_items = num_items - 1
+        set i = i + 1
     endloop
 endfunction
 
@@ -176,6 +190,10 @@ function status_check_ping takes nothing returns nothing
     if bitmask > 0 then
         set should_send = true
     endif
+    if bitmask >= 256 then
+        set bitmask = bitmask - 256
+        // unused
+    endif
     if bitmask >= 128 then
         set bitmask = bitmask - 128
         // unused
@@ -186,7 +204,7 @@ function status_check_ping takes nothing returns nothing
     endif
     if bitmask >= 32 then
         set bitmask = bitmask - 32
-        // unused
+        // item channels; no-op
     endif
     if bitmask >= 16 then
         set bitmask = bitmask - 16
@@ -210,6 +228,27 @@ function status_check_ping takes nothing returns nothing
     endif
     if should_send then
         call status_send()
+    endif
+endfunction
+
+function status_init_item_channels takes integer local_channel_id returns nothing
+    if local_channel_id == 1 then
+        call SetPlayerTechMaxAllowed(Player(0), 'nalb', item_channel_1)
+    else
+        call SetPlayerTechMaxAllowed(Player(0), 'nalb', item_channel_2)
+    endif
+    call SetPlayerTechMaxAllowed(Player(0), 'nech', -1)
+    call SetPlayerTechMaxAllowed(Player(0), 'nske', 0)
+    call SetPlayerTechMaxAllowed(Player(0), 'npng', -1)
+    call io_read_file_simple("item_channels.txt")
+    set last_item_channel_packet = GetPlayerTechMaxAllowed(Player(0), 'nech')
+    if GetPlayerTechMaxAllowed(Player(0), 'nech') == 0 then
+        return
+    endif
+    if local_channel_id == 1 then
+        set num_channel_1_items_received = GetPlayerTechMaxAllowed(Player(0), 'npng')
+    else
+        set num_channel_2_items_received = GetPlayerTechMaxAllowed(Player(0), 'npng')
     endif
 endfunction
 

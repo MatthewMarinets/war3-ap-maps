@@ -63,7 +63,7 @@ call PreloadGenEnd("output_script.pld")
 ```
 
 Which generates something like this to output_script.pld:
-```lua
+```js
 function PreloadFiles takes nothing returns nothing
 
     call Preload( "")
@@ -77,6 +77,13 @@ function XXX takes nothing returns nothing
 
 endfunction
 ```
+
+## Save and Load
+When loading a save, the game needs to perform a few checks:
+* Check that the connection/slot matches the client
+* Request client re-sends items gained in the time gap between save-load
+  * Note this clobbers level data. Retaining level/attribute data would mean tomes can re-apply themselves,
+    meaning repeated loads can power up a hero for free
 
 ## Packets
 Every status packet has an ID, which increments from one transmission to the next.
@@ -99,9 +106,9 @@ Commands that are not safely repeatable, such as "uncollect location" commands, 
 | 1    | Transmission number mod 10000 | integer                    |
 | 2    | protocol version              | major.minor                |
 | 3    | mission ID                    | integer                    |
-| 4    | last message IDs              | comma-separated integers* |
+| 4    | last message IDs              | comma-separated integers*  |
 | 5    | last hero status index        | integer                    |
-| 6    | reserved                      | empty                      |
+| 6    | Last inv. item received index | comma-separated integers   |
 | 7    | reserved                      | empty                      |
 | 8    | reserved                      | empty                      |
 | 9    | reserved                      | empty                      |
@@ -114,7 +121,7 @@ and an outdated client can still work with older packet types.
 ### ping.txt
 * Client -> Game
 * Acknowledges status messages sent by the game
-  * If this is not received within 3s of sending a status.txt packet, the communication channel should be considered unresponsive and the user notified with a text prompt
+  * If this is not received within 2s of sending a status.txt packet, the communication channel should be considered unresponsive and the user notified with a text prompt
 * Also lets the game know it should read other packets
 
 | Line                  | Contains                                    |
@@ -123,13 +130,14 @@ and an outdated client can still work with older packet types.
 | MaxTech(0, 'nvlk')    | mission ID                                  |
 | MaxTech(0, 'nvk2')    | reload packets bitmask                      |
 
-| bitmask | meaning              |
-| ------- | -------------------- |
-| 0x    1 | reload unlocks       |
-| 0x    2 | reload locations     |
-| 0x    4 | load messages        |
-| 0x    8 | reload heroes        |
-| 0x   10 | load items           |
+| bitmask | meaning                            |
+| ------- | ---------------------------------- |
+| 0x    1 | reload unlocks                     |
+| 0x    2 | reload locations                   |
+| 0x    4 | load messages                      |
+| 0x    8 | reload heroes                      |
+| 0x   10 | load items                         |
+| 0x   20 | item channels; no action necessary |
 
 ### unlocks.txt
 * Client -> Game
@@ -188,6 +196,17 @@ Encoded IDs are two-character stringified integers. Ex: " 0 710" says locations 
 | MaxTech(Player(N), 'nvul') | Item in slot N; N=0..5                        |
 | MaxTech(Player(N), 'nsno') | Charges remaining for item in slot N; N=0..5  |
 
+### item_channels.txt
+* Client -> Game [startup]
+* Read on map startup asynchronously of ping.txt; assumed up-to-date
+* Item channel passed in via N = `MaxTech(0, 'nalb')`
+
+| Line                       | Contains                                      |
+| -------------------------- | --------------------------------------------- |
+| MaxTech(Player(0), 'nech') | Message ID                                    |
+| MaxTech(Player(0), 'nske') | 1 iff channel data was read successfully      |
+| MaxTech(Player(0), 'npng') | Items acknowledged on channel N               |
+
 ### hero_X.txt
 * Game -> Client
 
@@ -206,6 +225,8 @@ Encoded IDs are two-character stringified integers. Ex: " 0 710" says locations 
 
 ### items.txt
 * Client -> Game
+* The client retains a complete list of all items sent to each item channel
+* The game publishes how many items it has already claimed for its item channels in status.txt
 * Tells the game to spawn items or tomes at a hero's location
 * Number of items sent is clamped to [0, 12]
 
@@ -213,6 +234,7 @@ Encoded IDs are two-character stringified integers. Ex: " 0 710" says locations 
 | --------------------------- | --------------------------------------------- |
 | MaxTech(Player(0), 'nech')  | Message ID; echoed back in status.txt         |
 | MaxTech(Player(0), 'nalb')  | Number of items sent in this packet; max 12   |
+| MaxTech(Player(0), 'ndog')  | target item channel local ID (0 or 1)         |
 | MaxTech(Player(0), 'ncrb')  | Item 1 ID                                     |
 | MaxTech(Player(1), 'ncrb')  | Item 2 ID                                     |
 | MaxTech(Player(2), 'ncrb')  | Item 3 ID                                     |

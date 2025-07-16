@@ -21,7 +21,7 @@
             "name": "Python: comm",
             "type": "python",
             "request": "launch",
-            "module": "apworld.client.comm",
+            "module": "apworld.client.standalone",
             "cwd": "${workspaceFolder}",
             "args": [],
             "env": {

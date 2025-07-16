@@ -1,12 +1,8 @@
 """Client for communicating with the game."""
 
 import enum
-import time
-import threading
 import asyncio
-import sys
 import os
-import inspect
 from dataclasses import dataclass, field
 
 from ..data.game_ids import Tech, TECH_REQUIREMENTS, GameID, HERO_ABILITIES, int_to_id
@@ -22,6 +18,7 @@ LOCATIONS_FILE = f'{PRELOADER_DIR}/locations.txt'
 MESSAGES_FILE = f'{PRELOADER_DIR}/messages.txt'
 HEROES_FILE = f'{PRELOADER_DIR}/heroes.txt'
 ITEMS_FILE = f'{PRELOADER_DIR}/items.txt'
+ITEM_CHANNELS_FILE = f'{PRELOADER_DIR}/item_channels.txt'
 
 NUM_FILE_LINES = 10
 MAX_LOCATIONS = 30  # Should match status.j
@@ -45,7 +42,9 @@ def default_locations_collected() -> dict[int, int]:
 class Wc3Inventory:
     def __init__(self) -> None:
         self.tech = {t: 0 for t in Tech}
-        self.items = {}
+        self.items: dict[heroes.ItemChannel, list[GameID]] = {
+            channel: [] for channel in heroes.ItemChannel if channel != heroes.ItemChannel.NONE
+        }
 
     def add_tech_and_prereqs(self, tech: Tech) -> bool:
         queue = [tech]
@@ -79,6 +78,7 @@ class PacketType(enum.IntFlag):
     MESSAGES = 4
     HEROES = 8
     ITEMS = 0x10
+    ITEM_CHANNELS = 0x20
 NUM_PACKET_TYPES = len(PacketType)
 
 
@@ -144,16 +144,26 @@ def init_hero_data() -> dict[heroes.HeroSlot, HeroStatus]:
 
 
 @dataclass
+class ItemChannelState:
+    items_received: list[GameID] = field(default_factory=list)
+    items_acked: int = 0
+
+
+def init_item_channels() -> dict[heroes.ItemChannel]:
+    return {channel: ItemChannelState() for channel in heroes.ItemChannel if channel != heroes.ItemChannel.NONE}
+
+
+@dataclass
 class GameStatus:
     pending_messages: list[str] = field(default_factory=list)
     num_in_flight_messages: int = 0
-    pending_items: list[str] = field(default_factory=list)
-    num_in_flight_items: int = 0
-    inventory: Wc3Inventory = field(default_factory=Wc3Inventory)
-    pending_update: PacketType = PacketType.HEROES|PacketType.MESSAGES
+    item_channel_state: dict[heroes.ItemChannel, ItemChannelState] = field(default_factory=init_item_channels)
+    in_flight_item_channel: heroes.ItemChannel = heroes.ItemChannel.NONE
+    pending_update: PacketType = PacketType.HEROES|PacketType.ITEM_CHANNELS  # read on mission start
     last_hero_update: int = -1
     next_hero_update: int = -1
     hero_data: dict[heroes.HeroSlot, HeroStatus] = field(default_factory=init_hero_data, repr=False)
+    inventory: Wc3Inventory = field(default_factory=Wc3Inventory)
 
 
 @dataclass
@@ -283,30 +293,65 @@ def update_heroes(game_status: GameStatus, status: MissionStatus) -> None:
             fp.write(send_int(1, 'nske'))
         fp.write('endif\n')
         fp.write(ENDFUNCTION)
+    game_status.pending_update &= ~PacketType.HEROES
+
+
+def update_item_channels(game_status: GameStatus, mission_status: MissionStatus) -> None:
+    packet_status = mission_status.packet_status[PacketType.ITEM_CHANNELS]
+    packet_status.last_sent = (packet_status.last_sent + 1) & 0xffff
+    with open(ITEM_CHANNELS_FILE, 'w') as fp:
+        fp.write(PRELOAD_FUNCTION_PROTOTYPE)
+        fp.write("local integer channel = GetPlayerTechMaxAllowed(Player(0), 'nalb')\n")
+        fp.write(send_int(packet_status.last_sent, 'nech'))
+        for index, (channel, state) in enumerate(game_status.item_channel_state.items()):
+            if index == 0:
+                fp.write(f'if channel == {channel.value} then\n')
+            else:
+                fp.write(f'elseif channel == {channel.value} then\n')
+            fp.write(send_int(state.items_acked, 'npng'))
+        fp.write('endif\n')
+        fp.write(ENDFUNCTION)
+    game_status.pending_update &= ~PacketType.ITEM_CHANNELS
 
 
 def update_items(game_status: GameStatus, mission_status: MissionStatus) -> None:
     packet_status = mission_status.packet_status[PacketType.ITEMS]
-    if packet_status.last_received == packet_status.last_sent and game_status.num_in_flight_items > 0:
-        for _ in range(game_status.num_in_flight_items):
-            game_status.pending_items.pop(0)
-        game_status.num_in_flight_items = 0
-    if packet_status.last_received != packet_status.last_sent and game_status.num_in_flight_items > 0:
+    if (packet_status.last_received == packet_status.last_sent
+        and game_status.in_flight_item_channel != heroes.ItemChannel.NONE
+    ):
+        game_status.in_flight_item_channel = heroes.ItemChannel.NONE
+    if (packet_status.last_received != packet_status.last_sent
+        and game_status.in_flight_item_channel != heroes.ItemChannel.NONE
+    ):
         # Don't want to clobber the file when we might interrupt the game mid-read
         game_status.pending_update |= PacketType.ITEMS
         return
-    assert game_status.num_in_flight_items == 0
-    num_items = min(len(game_status.pending_items), 12)
+    assert game_status.in_flight_item_channel == heroes.ItemChannel.NONE
+    if mission_status.mission_id < 0:
+        game_status.pending_update &= ~PacketType.ITEMS
+        return
+    mission = missions.Wc3Mission(mission_status.mission_id)
+    item_channels = tables.mission_to_item_channel(mission)
+    num_items = 0
+    for local_item_channel_id, item_channel in enumerate(item_channels):
+        if item_channel == heroes.ItemChannel.NONE:
+            continue
+        state = game_status.item_channel_state[item_channel]
+        num_items = len(state.items_received) - state.items_acked
+        if num_items > 0:
+            break
+    num_items = min(num_items, 12)
     if num_items > 0:
         packet_status.last_sent = (packet_status.last_sent + 1) & 0xff
         with open(ITEMS_FILE, 'w') as fp:
             fp.write(PRELOAD_FUNCTION_PROTOTYPE)
             fp.write(send_int(packet_status.last_sent, channel='nech'))
             fp.write(send_int(num_items, channel='nalb'))
-            for index, message in enumerate(game_status.pending_items[:num_items]):
-                fp.write(send_string(message, player=index))
+            fp.write(send_int(local_item_channel_id, 'ndog'))
+            for index, item_id in enumerate(state.items_received[state.items_acked:state.items_acked+num_items]):
+                fp.write(send_int(f"'{item_id}'", channel='ncrb', player=index))
             fp.write(ENDFUNCTION)
-        game_status.num_in_flight_items = num_items
+        game_status.in_flight_item_channel = item_channel
         game_status.pending_update |= PacketType.ITEMS
     else:
         game_status.pending_update &= ~PacketType.ITEMS
@@ -376,7 +421,13 @@ def read_status(status: MissionStatus, game_status: GameStatus) -> None:
     status.mission_id = int(line_contents(lines.pop(0)))
     last_transmissions = [int(x) for x in line_contents(lines.pop(0)).split(',')]
     game_status.next_hero_update = int(line_contents(lines.pop(0)))
-    lines.pop(0)  # reserved
+    num_items_received = [int(x) for x in line_contents(lines.pop(0)).split(',')]
+    for item_channel, num_received in zip(
+        tables.mission_to_item_channel(missions.Wc3Mission(status.mission_id)),
+        num_items_received
+    ):
+        if item_channel != heroes.ItemChannel.NONE:
+            game_status.item_channel_state[item_channel].items_acked = num_received
     lines.pop(0)  # reserved
     lines.pop(0)  # reserved
     lines.pop(0)  # reserved
@@ -401,6 +452,7 @@ def read_status(status: MissionStatus, game_status: GameStatus) -> None:
         packet_status.last_received = transmission_id
     for location_id in status.locations_collected:
         status.locations_collected[location_id] = 0
+    # locations collected
     for line in lines:
         if END_TRANSMISSION in line:
             break
@@ -452,7 +504,7 @@ def read_necessary_hero_status(status: MissionStatus, game_status: GameStatus) -
 def update_game_status_for_new_mission(game_status: GameStatus) -> None:
     # todo: fetch pre-checked locations from the global cache
     game_status.num_in_flight_messages = 0
-    game_status.num_in_flight_items = 0
+    game_status.in_flight_item_channel = heroes.ItemChannel.NONE
 
 
 def sync_mission_status(source: MissionStatus, target: MissionStatus) -> None:
@@ -478,6 +530,13 @@ async def status_loop(ctx: AsyncContext) -> None:
     new_status = MissionStatus()
     initialize_messages()
     while ctx.running:
+        # Update on-startup packets immediately
+        if ctx.game_status.pending_update & PacketType.HEROES:
+            update_heroes(ctx.game_status, ctx.mission_status)
+        if ctx.game_status.pending_update & PacketType.ITEM_CHANNELS:
+            update_item_channels(ctx.game_status, ctx.mission_status)
+        
+        # Await status
         if not os.path.isfile(STATUS_FILE):
             await asyncio.sleep(0.5)
             continue
@@ -495,12 +554,12 @@ async def status_loop(ctx: AsyncContext) -> None:
         old_update_number = ctx.mission_status.update_number
         sync_mission_status(new_status, ctx.mission_status)
         read_necessary_hero_status(ctx.mission_status, ctx.game_status)
+
+        # Update on-request client->game packets
         if ctx.game_status.pending_update & PacketType.UNLOCKS:
             update_unlocks(ctx.game_status, ctx.mission_status)
         if ctx.game_status.pending_update & PacketType.LOCATIONS:
             update_locations(ctx.mission_status)
-        if ctx.game_status.pending_update & PacketType.HEROES:
-            update_heroes(ctx.game_status, ctx.mission_status)
         update_messages(ctx.game_status, ctx.mission_status.packet_status[PacketType.MESSAGES])
         update_items(ctx.game_status, ctx.mission_status)
         if (ctx.mission_status.update_number != old_update_number
@@ -511,3 +570,5 @@ async def status_loop(ctx: AsyncContext) -> None:
             ctx.game_status.pending_update = PacketType.NONE
 
         await asyncio.sleep(0.5)
+
+# todo(mm): save/load client data

@@ -4,6 +4,9 @@ constant integer MISSION_ID = $(MISSION_ID)
 integer NUM_HEROES = $(NUM_HEROES)
 constant player USER_PLAYER = $(USER_PLAYER)
 integer array hero_global_slots
+constant integer item_channel_1 = $(ITEM_CHANNEL_1)
+constant integer item_channel_2 = $(ITEM_CHANNEL_2)
+constant integer item_channel_2_hero_slot = $(ITEM_CHANNEL_2_HERO_SLOT)
 constant integer HERO_ID_ALL = -1
 constant integer HERO_ID_NONE = 0
 constant integer HERO_ID_PALADIN_ARTHAS = 1
@@ -31,16 +34,27 @@ constant integer HERO_ID_AKAMA = 22
 constant integer HERO_ID_LORD_GARITHOS = 23
 endglobals
 
-function hero_get_unit_from_index takes integer hero returns unit
+function hero_get_unit_from_index takes integer slot returns unit
     if slot == 0 then
         return $(HERO_VAR_0)
     elseif slot == 1 then
         return $(HERO_VAR_1)
     elseif slot == 2 then
         return $(HERO_VAR_2)
-    else
+    elseif slot == 3 then
         return $(HERO_VAR_3)
     endif
+    return null
+endfunction
+
+function hero_get_index_from_unit takes unit hero returns integer
+    local integer i = 0
+    loop
+        exitwhen hero_get_unit_from_index(i) == hero
+        set i = i + 1
+        exitwhen i >= NUM_HEROES
+    endloop
+    return i
 endfunction
 
 function hero_update_variable takes integer slot, unit hero returns nothing

@@ -13,19 +13,19 @@ endfunction
 
 function debug_xp_tome takes nothing returns nothing
     // call CreateItem('texp', GetStartLocationX(GetPlayerId(USER_PLAYER)), GetStartLocationY(GetPlayerId(USER_PLAYER)))
-    call CreateItem('texp', GetUnitX(hero_item_target), GetUnitX(hero_item_target))
+    call CreateItem('texp', GetUnitX(item_channel_1_target), GetUnitX(item_channel_1_target))
 endfunction
 
 function debug_xp2_tome takes nothing returns nothing
-    call CreateItem('tkno', GetUnitX(hero_item_target), GetUnitX(hero_item_target))
+    call CreateItem('tkno', GetUnitX(item_channel_1_target), GetUnitX(item_channel_1_target))
 endfunction
 
 function debug_health_tome takes nothing returns nothing
-    call CreateItem('manh', GetUnitX(hero_item_target), GetUnitX(hero_item_target))
+    call CreateItem('manh', GetUnitX(item_channel_1_target), GetUnitX(item_channel_1_target))
 endfunction
 
 function debug_dragon_egg takes nothing returns nothing
-    call CreateItem('fgrd', GetUnitX(hero_item_target), GetUnitX(hero_item_target))
+    call CreateItem('fgrd', GetUnitX(item_channel_1_target), GetUnitX(item_channel_1_target))
 endfunction
 
 function InitTrig_debug takes nothing returns nothing

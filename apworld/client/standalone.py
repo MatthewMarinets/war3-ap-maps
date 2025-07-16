@@ -8,8 +8,8 @@ import threading
 import sys
 
 from .. import logger
-from .comm import PacketType, AsyncContext, GameStatus, status_loop
-from ..data import heroes
+from .comm import PacketType, AsyncContext, GameStatus, status_loop, InventoryItem
+from ..data import heroes, game_ids
 from ..data.game_ids import Tech, GameID
 
 
@@ -34,6 +34,25 @@ def try_parse_hero_slot(user_input: str) -> heroes.HeroSlot | None:
     try:
         result = heroes.HeroSlot[user_input.upper().replace(' ', '_').replace("'", '')]
     except KeyError: pass
+    return result
+
+
+def try_parse_game_id(user_input: str) -> str:
+    if user_input in game_ids.GameID:
+        return user_input
+    try:
+        return game_ids.GameID[user_input.upper().replace(' ', '_').replace("'", '').replace('+', '')]
+    except KeyError: pass
+    return ''
+
+
+def try_parse_item_channel_id(user_input: str) -> heroes.ItemChannel | None:
+    result: heroes.ItemChannel | None = None
+    try:
+        result = heroes.ItemChannel[user_input.upper().replace(' ', '_')]
+    except ValueError: pass
+    if result == heroes.ItemChannel.NONE:
+        return None
     return result
 
 
@@ -86,6 +105,7 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
                     /exit
                     /status
                     /herostatus <hero slot ID>
+                    /senditem <item channel ID> <item ID>
                     /check <args>
                     /uncheck <args>
                     /msg <message>
@@ -102,6 +122,20 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
                     logger.warning(f'"{slot_identifier}" is not a recognized hero slot')
                 else:
                     logger.info(ctx.game_status.hero_data[hero_slot])
+            elif tokens[0] == '/senditem':
+                if len(tokens) < 3:
+                    logger.warning(f'/senditem requires 2 arguments, got {len(tokens) - 1}')
+                    continue
+                channel_id = try_parse_item_channel_id(tokens[1])
+                if channel_id is None:
+                    logger.warning(f'"{user_identifier}" is not a recognized item channel ID')
+                    continue
+                user_identifier = ' '.join(tokens[2:])
+                item_id = try_parse_game_id(user_identifier)
+                if not item_id:
+                    logger.warning(f'"{user_identifier}" is not a valid game ID')
+                    continue
+                ctx.game_status.item_channel_state[channel_id].items_received.append(item_id)
             elif tokens[0] == '/check':
                 parts = [p for p in text.split(' ') if p]
                 for part in parts[1:]:
@@ -166,7 +200,7 @@ def init_test_data(game_status: GameStatus) -> None:
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].xp = 240
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].max_level = 3
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].abilities[GameID.BLADEMASTER_CRITICAL_STRIKE] = 1
-    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].items[2] = GameID.BRACER_OF_AGILITY
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].items[2] = InventoryItem(GameID.BRACER_OF_AGILITY)
     game_status.hero_data[heroes.HeroSlot.JAINA].hero = heroes.HeroChoice.FIRELORD
     game_status.hero_data[heroes.HeroSlot.JAINA].name = "Jenna"
 

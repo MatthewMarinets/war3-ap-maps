@@ -1,10 +1,12 @@
 // Functions to control and configure heroes
 // depends: fileio, map_config, status
 globals
-unit hero_item_target = null
+unit item_channel_1_target = null
+unit item_channel_2_target = null
 integer array HERO_MAX_LEVEL
 integer array hero_hashes
 trigger t_hero_update
+trigger t_hero_pickup_item
 timer hero_update_status_timer
 integer array hero_abil_1
 integer array hero_abil_2
@@ -127,7 +129,8 @@ function hero_configure takes unit hero, integer slot returns nothing
     loop
         exitwhen i > 5
         if GetItemTypeId(UnitItemInSlot(hero, i)) == 'wtlg' then
-            call UnitRemoveItemFromSlot(hero, i)
+            set i_item = UnitRemoveItemFromSlot(hero, i)
+            call RemoveItem(i_item)
         endif
         set i = i + 1
     endloop
@@ -200,10 +203,35 @@ function hero_publish_status takes integer slot returns nothing
     call io_write(I2S(GetHeroStr(hero, false)))
     call io_write(I2S(GetHeroInt(hero, false)))
     call io_write(I2S(R2I(GetUnitState(hero, UNIT_STATE_MAX_LIFE))))
-    call io_write(I2S(GetUnitAbilityLevel(hero, hero_abil_1[slot])))
-    call io_write(I2S(GetUnitAbilityLevel(hero, hero_abil_2[slot])))
-    call io_write(I2S(GetUnitAbilityLevel(hero, hero_abil_3[slot])))
-    call io_write(I2S(GetUnitAbilityLevel(hero, hero_abil_4[slot])))
+    if GetUnitTypeId(hero) == 'Ntin' then
+        // special handling for Goblin Tinker
+        if GetUnitAbilityLevel(hero, 'ANeg') == 0 then
+            call io_write(I2S(GetUnitAbilityLevel(hero, 'ANsy')))
+            call io_write(I2S(GetUnitAbilityLevel(hero, 'ANcs')))
+            call io_write(I2S(GetUnitAbilityLevel(hero, 'ANeg')))
+            call io_write(I2S(GetUnitAbilityLevel(hero, 'ANrg')))
+        elseif GetUnitAbilityLevel(hero, 'ANeg') == 1 then
+            call io_write(I2S(GetUnitAbilityLevel(hero, 'ANs1')))
+            call io_write(I2S(GetUnitAbilityLevel(hero, 'ANc1')))
+            call io_write(I2S(GetUnitAbilityLevel(hero, 'ANeg')))
+            call io_write(I2S(GetUnitAbilityLevel(hero, 'ANg1')))
+        elseif GetUnitAbilityLevel(hero, 'ANeg') == 2 then
+            call io_write(I2S(GetUnitAbilityLevel(hero, 'ANs2')))
+            call io_write(I2S(GetUnitAbilityLevel(hero, 'ANc2')))
+            call io_write(I2S(GetUnitAbilityLevel(hero, 'ANeg')))
+            call io_write(I2S(GetUnitAbilityLevel(hero, 'ANg2')))
+        else
+            call io_write(I2S(GetUnitAbilityLevel(hero, 'ANs3')))
+            call io_write(I2S(GetUnitAbilityLevel(hero, 'ANc3')))
+            call io_write(I2S(GetUnitAbilityLevel(hero, 'ANeg')))
+            call io_write(I2S(GetUnitAbilityLevel(hero, 'ANg3')))
+        endif
+    else
+        call io_write(I2S(GetUnitAbilityLevel(hero, hero_abil_1[slot])))
+        call io_write(I2S(GetUnitAbilityLevel(hero, hero_abil_2[slot])))
+        call io_write(I2S(GetUnitAbilityLevel(hero, hero_abil_3[slot])))
+        call io_write(I2S(GetUnitAbilityLevel(hero, hero_abil_4[slot])))
+    endif
     loop
         exitwhen i >= 6
         set i_item = UnitItemInSlot(hero, i)
@@ -225,40 +253,52 @@ endfunction
 
 function hero_publish_all_statuses takes nothing returns nothing
     local integer i = 0
+    local integer starting_hero_status_index = hero_status_index
     loop
         exitwhen i >= NUM_HEROES
         call hero_publish_status(i)
         set i = i + 1
     endloop
-    call status_send()
+    if hero_status_index != starting_hero_status_index then
+        call status_send()
+    endif
 endfunction
 
-function hero_on_update takes unit hero returns nothing
-    local integer i = 0
-    set hero_item_target = hero
-    loop
-        exitwhen hero_get_unit_from_index(i) == hero_item_target
-        set i = i + 1
-        exitwhen i >= NUM_HEROES
-    endloop
-    if i >= NUM_HEROES then
+function hero_on_level takes unit hero returns nothing
+    local integer hero_index = hero_get_index_from_unit(hero)
+    if hero_index >= NUM_HEROES then
         debug call DisplayTextToForce(GetPlayersAll(), "Error: Couldn't find hero index for levelling hero")
         return
     endif
-    call hero_apply_max_level(hero, HERO_MAX_LEVEL[i])
+    call hero_apply_max_level(hero, HERO_MAX_LEVEL[hero_index])
 endfunction
 
-function hero_on_update_triggerfunction takes nothing returns nothing
-    call hero_on_update(GetTriggerUnit())
+function hero_on_level_triggerfunction takes nothing returns nothing
+    call hero_on_level(GetTriggerUnit())
+endfunction
+
+function hero_on_item_pickup takes nothing returns nothing
+    local integer hero_index = hero_get_index_from_unit(GetTriggerUnit())
+    if not IsHeroUnitId(GetUnitTypeId(GetTriggerUnit())) then
+        return
+    endif
+    if hero_index == item_channel_2_hero_slot then
+        return
+    endif
+    set item_channel_1_target = GetTriggerUnit()
 endfunction
 
 function InitTrig_heroes takes nothing returns nothing
     set t_hero_update=CreateTrigger()
     call TriggerRegisterPlayerUnitEventSimple(t_hero_update, USER_PLAYER, EVENT_PLAYER_HERO_LEVEL)
-    call TriggerAddAction(t_hero_update, function hero_on_update_triggerfunction)
+    call TriggerAddAction(t_hero_update, function hero_on_level_triggerfunction)
+    set t_hero_pickup_item=CreateTrigger()
+    call TriggerRegisterPlayerUnitEventSimple(t_hero_pickup_item, USER_PLAYER, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    call TriggerAddAction(t_hero_pickup_item, function hero_on_item_pickup)
     set hero_update_status_timer=CreateTimer()
     call TimerStart(hero_update_status_timer, 1, true, function hero_publish_all_statuses)
-    set hero_item_target = hero_get_unit_from_index(0)
+    set item_channel_1_target = hero_get_unit_from_index(0)
+    set item_channel_2_target = hero_get_unit_from_index(item_channel_2_hero_slot)
     set hero_hashes[0] = 0
     set hero_hashes[1] = 0
     set hero_hashes[2] = 0
