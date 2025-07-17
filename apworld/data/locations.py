@@ -55,13 +55,13 @@ class Wc3Location(enum.Enum):
     # (Side) Save Timmy
     # (Side) Bandit Lord
     HU1_VICTORY =           1100, "Victory",                Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.VICTORY
-    HU1_FIRST_CRATE_ITEM =  1101, "First Crate Item",       Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.ITEM, "Potion of Healing"
-    HU1_SECOND_CRATE_ITEM = 1102, "Second Crate Item",      Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.ITEM, "Scroll of Protection"
+    HU1_FIRST_CRATE =       1101, "First Crate",            Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.ITEM, "Potion of Healing"
+    HU1_SECOND_CRATE =      1102, "Second Crate",           Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.ITEM, "Scroll of Protection"
     HU1_GNOLL_ITEM =        1103, "Gnoll Crate",            Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.ITEM, "Potion of Healing"
     HU1_BENEDICT =          1104, "Benedict's Trap",        Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.ITEM, "Scroll of Healing"
     HU1_BANDIT_ITEM =       1105, "Bandit Item",            Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.ITEM, "Potion of Mana"
     HU1_MENAG =             1106, "Bandit Lord Item",       Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.QUEST  # Gerard's Ledger
-    HU1_NORTH_CRATE_ITEM =  1107, "North Crate Item",       Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.ITEM, "Potion of Mana"
+    HU1_NORTH_CRATE =       1107, "North Crate",            Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.ITEM, "Potion of Mana"
     HU1_ENLIST_THORNBY =    1120, "Enlist Thornby",         Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.RESCUE
     HU1_TOWN_RESCUE =       1121, "Rescue Battling Footmen",Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.RESCUE
     HU1_TIMMY =             1122, "Save Timmy",             Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.QUEST_ITEM, "Ring of Protection +1"
@@ -78,8 +78,8 @@ class Wc3Location(enum.Enum):
     HU2_GNOLL_POACHER_ITEM =    1203, "Gnoll Poacher Item",      Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Mana"
     HU2_MURLOC_HUT_ITEM =       1204, "Murloc Hut Item",         Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Healing"
     HU2_GNOLL_ITEM =            1205, "Gnoll Item",              Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Healing"
-    HU2_WEST_CRATE_ITEM =       1206, "West Base Crate Item",    Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Scroll of Protection"
-    HU2_EAST_CRATE_ITEM =       1207, "East Base Crate Item",    Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Healing"
+    HU2_WEST_CRATE =            1206, "West Base Crate",         Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Scroll of Protection"
+    HU2_EAST_CRATE =            1207, "East Base Crate",         Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Healing"
     HU2_GNOLL_WARDEN_ITEM =     1210, "Gnoll Warden Item",       Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Wand of Negation"
     HU2_SLAY_BLADEMASTER =      1220, "Slay Blademaster",        Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST_HERO
     HU2_ESTABLISH_BASE =        1221, "Establish Base",          Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST
@@ -131,8 +131,8 @@ class Wc3Location(enum.Enum):
     HU5_CARAVAN_ITEM =         1504, "Grain Caravan",        Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.QUEST_ITEM, "Medallion of Courage"
     HU5_CARAVAN_ITEM_2 =       1505, "Grain Caravan Item 2", Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.QUEST_ITEM, "Scroll of Town Portal"
     HU5_MURLOC_HUNTSMAN_ITEM = 1506, "Murloc Huntsman Item", Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.ITEM, "Potion of Mana"
-    HU5_SHEEP_ITEM =           1507, "Secret Sheep Item",    Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.SECRET, "Potion of Restoration"
-    HU5_CRATE_ITEM =           1508, "Crate Item",           Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.SECRET, "Scroll of Healing"
+    HU5_SHEEP_ITEM =           1507, "Secret Sheep Item",    Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.SECRET_ITEM, "Potion of Restoration"
+    HU5_ZOMBIE_FARM_CRATE =    1508, "Zombie Farm Crate",    Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.SECRET, "Scroll of Healing"
     HU5_FREE_VILLAGER_MARK =   1509, "Free Villager Mark",   Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.ITEM, "Boots of Speed"
     HU5_SLAY_PURPLE_LICH =     1520, "Slay Purple Lich",     Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.HERO
     HU5_SLAY_GREEN_LICH =      1521, "Slay Green Lich",      Wc3Mission.H5_MARCH_OF_THE_SCOURGE, Wc3LocationType.HERO
@@ -216,10 +216,10 @@ class Wc3Location(enum.Enum):
     UD1_BANDIT_ITEM =            2105, "Bandit Item",            Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Healing"
     UD1_FOOTMAN_ITEM =           2106, "Footman Item",           Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Healing"
     UD1_CAPTAIN_2_ITEM =         2106, "Captain 2 Item",         Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Greater Healing"
-    UD1_ENTRANCE_CRATE_ITEM =    2107, "Entrance Crate Item",    Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Healing"
-    UD1_LUMBER_MILL_CRATE_ITEM = 2108, "Lumber Mill Crate Item", Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Healing"
-    UD1_FISTFIGHT_CRATE_ITEM =   2109, "Fistfight Crate Item",   Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Greater Mana"
-    UD1_BOAT_CRATE_ITEM =        2110, "Boat Crate Item",        Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Scroll of Healing"
+    UD1_ENTRANCE_CRATE =         2107, "Entrance Crate",         Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Healing"
+    UD1_LUMBER_MILL_CRATE =      2108, "Lumber Mill Crate",      Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Healing"
+    UD1_FISTFIGHT_CRATE =        2109, "Fistfight Crate",        Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Greater Mana"
+    UD1_BOAT_CRATE =             2110, "Boat Crate",             Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Scroll of Healing"
     UD1_GRAVEYARD =              2120, "Reach the Graveyard",    Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.QUEST_RESCUE
 
     # Quests:
@@ -235,9 +235,9 @@ class Wc3Location(enum.Enum):
     UD2_ROGUE_WIZARD_ITEM =         2206, "Rogue Wizard Item",        Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.ITEM, "Voodoo Doll"
     UD2_ELDER_SASQUATCH_ITEM =      2207, "Elder Sasquatch Item",     Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.SECRET_ITEM, "Claws of Attack +6"
     UD2_SHEEP_ITEM =                2208, "Sheep Item",               Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.ITEM, "Goblin Night Scope"
-    UD2_SASQUATCH_CRATE_ITEM =      2209, "Sasquatch Crate Item",     Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.ITEM, "Potion of Healing"
-    UD2_KNIGHT_CRATE_ITEM =         2210, "Knight Crate Item",        Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.ITEM, "Potion of Mana"
-    UD2_UTHER_CRATE_ITEM =          2211, "Uther Crate Item",         Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.ITEM, "Scroll of Protection"
+    UD2_SASQUATCH_CRATE =           2209, "Sasquatch Crate",          Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.ITEM, "Potion of Healing"
+    UD2_KNIGHT_CRATE =              2210, "Knight Crate",             Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.ITEM, "Potion of Mana"
+    UD2_UTHER_CRATE =               2211, "Uther Crate",              Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.ITEM, "Scroll of Protection"
     UD2_RECOVER_REMAINS =           2220, "Recover Remains",          Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.QUEST
     UD2_ESTABLISH_BASE =            2221, "Establish a Base",         Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.QUEST
     UD2_FEAST_ON_SOULS =            2222, "Feast on Souls",           Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.SECRET
@@ -355,7 +355,30 @@ class Wc3Location(enum.Enum):
     UD8_GOBLIN_LABORATORY =        2827, "Goblin Laboratory",            Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.SHOP
     UD8_GOBLIN_MERCHANT =          2828, "Goblin Merchant",              Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.SHOP
 
-    OR1_VICTORY = 3100, "Victory", Wc3Mission.O1_LANDFALL, Wc3LocationType.VICTORY
+    # Quests:
+    # (main) Rally the Horde
+    # (main) Protect Cairne
+    OR1_VICTORY =                    3100, "Victory", Wc3Mission.O1_LANDFALL, Wc3LocationType.VICTORY
+    OR1_QUILLBOAR_HUNTER_ITEM =      3101, "Quillboar Hunter Item", Wc3Mission.O1_LANDFALL, Wc3LocationType.ITEM, "Healing Wards"
+    OR1_MURLOC_FLESHEATER_ITEM =     3102, "West Murloc Flesheater Item", Wc3Mission.O1_LANDFALL, Wc3LocationType.ITEM, "Healing Wards"
+    OR1_MURLOC_NIGHTCRAWLER_ITEM =   3103, "Murloc Nightcrawler Item", Wc3Mission.O1_LANDFALL, Wc3LocationType.ITEM, "Periapt of Vitality"
+    OR1_RAZORMANE_BRUTE_ITEM =       3104, "Razormane Brute Item", Wc3Mission.O1_LANDFALL, Wc3LocationType.ITEM, "Potion of Mana"
+    OR1_THUNDER_LIZARD_ITEM =        3105, "Thunder Lizard Item", Wc3Mission.O1_LANDFALL, Wc3LocationType.ITEM, "Potion of Mana"
+    OR1_HARPY_WINDWITCH_ITEM =       3106, "Harpy Windwitch Item", Wc3Mission.O1_LANDFALL, Wc3LocationType.ITEM, "Scroll of the Beast"
+    OR1_CENTAUR_TENT_ITEM =          3107, "Centaur Tent Item", Wc3Mission.O1_LANDFALL, Wc3LocationType.ITEM, "Wand of Lightning Shield"
+    OR1_MURLOC_FLESHEATER_ITEM_2 =   3108, "East Murloc Flesheater Item", Wc3Mission.O1_LANDFALL, Wc3LocationType.ITEM, "Manual of Health"
+    OR1_MURLOC_TIDERUNNER_ITEM =     3109, "Murloc Tiderunner Item", Wc3Mission.O1_LANDFALL, Wc3LocationType.ITEM, "Potion of Mana"
+    OR1_SOUTHEAST_PENINSULA_ITEM =   3110, "Southeast Peninsula Item", Wc3Mission.O1_LANDFALL, Wc3LocationType.ITEM, "Health Stone"
+    OR1_LANDFALL_CRATE =             3111, "Landfall Crate", Wc3Mission.O1_LANDFALL, Wc3LocationType.ITEM, "Potion of Mana"
+    OR1_BRONZE_DRAGON_CRATE =        3112, "Bronze Dragon Crate", Wc3Mission.O1_LANDFALL, Wc3LocationType.ITEM, "Ring of Protection +1"
+    OR1_FIRST_VILLAGE_CRATE =        3113, "First Village Crate", Wc3Mission.O1_LANDFALL, Wc3LocationType.ITEM, "Scroll of Protection"
+    OR1_WARSONG_RESCUE_CRATE =       3114, "Warsong Rescue Crate", Wc3Mission.O1_LANDFALL, Wc3LocationType.ITEM, "Lion's Ring"
+    OR1_HORSEMAN_ATTACK_CRATE =      3115, "Horseman Attack Crate", Wc3Mission.O1_LANDFALL, Wc3LocationType.ITEM, "Potion of Healing"
+    OR1_MURLOC_CRATE =               3116, "Murloc Crate", Wc3Mission.O1_LANDFALL, Wc3LocationType.ITEM, "Potion of Healing"
+    OR1_CAPTIVE_TROLLS_RESCUE =      3120, "Captured Troll Rescue", Wc3Mission.O1_LANDFALL, Wc3LocationType.RESCUE
+    OR1_WARSONG_RESCUE =             3121, "Warsong Rescue", Wc3Mission.O1_LANDFALL, Wc3LocationType.RESCUE
+    OR1_HORSEMAN_ATTACK_RESCUE =     3122, "Horseman Attack Rescue", Wc3Mission.O1_LANDFALL, Wc3LocationType.RESCUE
+
     OR2_VICTORY = 3200, "Victory", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.VICTORY
     OR3_VICTORY = 3300, "Victory", Wc3Mission.O3_CRY_OF_THE_WARSONG, Wc3LocationType.VICTORY
     OR4_VICTORY = 3400, "Victory", Wc3Mission.O4_THE_SPIRITS_OF_ASHENVALE, Wc3LocationType.VICTORY
