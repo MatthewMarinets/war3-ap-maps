@@ -175,3 +175,17 @@ Get a location for every enemy type slain
 | Or 1      | Thunder Lizard         | Creep                      |
 | Or 1      | Razormane Medicine Man | Creep                      |
 | Or 1      | Murloc Nightcrawler    | Creep                      |
+| Or 2      | Centaur Impaler        | Creep                      |
+| Or 2      | Centaur Outrunner      | Creep                      |
+| Or 2      | Centaur Drudge         | Creep                      |
+| Or 2      | Centaur Sorcerer       | Creep                      |
+| Or 2      | Centaur Archer         | Creep                      |
+| Or 2      | Centaur Khan           | Creep                      |
+| Or 2      | Murloc Tiderunner      | Creep                      |
+| Or 2      | Murloc Nightcrawler    | Creep                      |
+| Or 2      | Harpy Scout            | Creep                      |
+| Or 2      | Harpy Rogue            | Creep                      |
+| Or 2      | Harpy Storm-hag        | Creep                      |
+| Or 2      | Harpy Queen            | Creep                      |
+| Or 2      | Lightning Lizard       | Creep                      |
+| Or 2      | Thunder Lizard         | Creep                      |

@@ -379,7 +379,23 @@ class Wc3Location(enum.Enum):
     OR1_WARSONG_RESCUE =             3121, "Warsong Rescue", Wc3Mission.O1_LANDFALL, Wc3LocationType.RESCUE
     OR1_HORSEMAN_ATTACK_RESCUE =     3122, "Horseman Attack Rescue", Wc3Mission.O1_LANDFALL, Wc3LocationType.RESCUE
 
-    OR2_VICTORY = 3200, "Victory", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.VICTORY
+    OR2_VICTORY =                       3200, "Victory", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.VICTORY
+    OR2_WEST_MURLOC_HUT_ITEM =          3201, "West Murloc Hut Item", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.ITEM, "Potion of Mana"
+    OR2_EAST_MURLOC_HUT_ITEM =          3202, "East Murloc Hut Item", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.ITEM, "Ancient Figuring"
+    OR2_WEST_HARPY_NEST_ITEM =          3203, "West Harpy Nest Item", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.ITEM, "Mantle of Intelligence +3"
+    OR2_HARPY_QUEEN_ITEM =              3204, "Harpy Queen Item", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.ITEM, "Totem of Might"
+    OR2_EAST_HARPY_NEST_ITEM =          3205, "East Harpy Nest Item", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.ITEM, "Potion of Greater Mana"
+    OR2_SOUTH_CENTUAR_SORCERER_ITEM =   3206, "South Centaur Sorcerer Item", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.ITEM, "Scroll of Healing"
+    OR2_THUNDER_LIZARD_ITEM =           3207, "Thunder Lizard Item", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.ITEM, "Claws of Attack +3"
+    OR2_CENTER_CENTUAR_SORCERER_ITEM =  3208, "Center Centaur Sorcerer Item", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.ITEM, "Potion of Greater Mana"
+    OR2_CENTER_CENTAUR_TENT_ITEM =      3209, "Center Centaur Tent Item", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.ITEM, "Scroll of Healing"
+    OR2_NORTHEAST_CENTAUR_TENT_ITEM =   3210, "Northeast Centaur Tent Item", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.ITEM, "Tome of Agility"
+    OR2_CENTAUR_KHAN_ITEM =             3211, "Centaur Khan Item", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.ITEM, "Pendant of Energy"
+    OR2_FIRST_OASIS =                   3220, "First Oasis", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.QUEST
+    OR2_SECOND_OASIS =                  3221, "Second Oasis", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.QUEST_RESCUE
+    OR2_RAIDER_RESCUE =                 3222, "Raider Rescue", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.RESCUE
+    OR2_CENTER_SHOP =                   3223, "Goblin Merchant", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.SHOP
+
     OR3_VICTORY = 3300, "Victory", Wc3Mission.O3_CRY_OF_THE_WARSONG, Wc3LocationType.VICTORY
     OR4_VICTORY = 3400, "Victory", Wc3Mission.O4_THE_SPIRITS_OF_ASHENVALE, Wc3LocationType.VICTORY
     OR5_VICTORY = 3500, "Victory", Wc3Mission.O5_THE_HUNTER_OF_SHADOWS, Wc3LocationType.VICTORY
