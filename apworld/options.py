@@ -5,6 +5,7 @@ from dataclasses import dataclass
 import Options as baseoptions
 
 from .data.heroes import HeroSlot, HeroChoice
+from .data import missions
 
 if TYPE_CHECKING:
     from worlds.AutoWorld import World
@@ -12,7 +13,11 @@ if TYPE_CHECKING:
 
 
 class IncludedCampaigns(baseoptions.OptionSet):
-    valid_keys = ('Human', 'Undead', 'Orc', 'Night Elf')
+    valid_keys = tuple(
+        campaign.title_faction
+        for campaign in missions.Wc3Campaign
+        if campaign != missions.Wc3Campaign.GENERAL
+    )
 
 
 class OptionHeroChoice(baseoptions.Choice):

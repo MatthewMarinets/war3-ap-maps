@@ -49,10 +49,10 @@ class PickupItem:
 @dataclasses.dataclass
 class QuestItem:
     vanilla_mission: Wc3Mission
-    """The mission the player would acquire this quest item in vanilla"""
+    """The mission the player would require this quest item in vanilla"""
 
 
-ItemType = Unit | Building | Level | Upgrade | ShopItem | PickupItem
+ItemType = Unit | Building | Level | Upgrade | ShopItem | PickupItem | QuestItem
 
 
 class Wc3Item(enum.Enum):

@@ -148,7 +148,7 @@ class Wc3Location(enum.Enum):
     HU6_FILSON_THE_RAT =    1602, "Filson the Rat",  Wc3Mission.H6_THE_CULLING, Wc3LocationType.SECRET_ITEM, "Talisman of Evasion"
     HU6_ENFORCER_ITEM =     1603, "Enforcer Item",   Wc3Mission.H6_THE_CULLING, Wc3LocationType.ITEM, "Scroll of Town Portal"
     HU6_SLAY_MALGANIS =     1620, "Slay Mal'Ganis",  Wc3Mission.H6_THE_CULLING, Wc3LocationType.HERO
-    HU6_GOBLIN_MERCHANT =   1821, "Goblin Merchant", Wc3Mission.H6_THE_CULLING, Wc3LocationType.SHOP
+    HU6_GOBLIN_MERCHANT =   1621, "Goblin Merchant", Wc3Mission.H6_THE_CULLING, Wc3LocationType.SHOP
 
     # Quests:
     # (Main) Establish Base Camp

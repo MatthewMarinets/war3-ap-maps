@@ -1,8 +1,8 @@
 """Defines the top-level world class. Requires core imports."""
 from typing import TYPE_CHECKING, Mapping, Any
 from worlds.AutoWorld import World
+from .data import items, locations
 from . import options, generation, rules
-from . import items, locations
 
 
 if TYPE_CHECKING:
@@ -25,6 +25,7 @@ class Wc3World(World):
     item_name_groups = {}
     location_name_groups = {}
     options_dataclass = options.Wc3Options
+    options: options.Wc3Options
 
     def __init__(self, multiworld: 'MultiWorld', player: int) -> None:
         super().__init__(multiworld, player)
@@ -40,6 +41,9 @@ class Wc3World(World):
     
     def set_rules(self) -> None:
         rules.set_rules(self)
+    
+    def get_filler_item_name(self) -> str:
+        return self.random.choices(tuple(self.filler_items_distribution), weights=self.filler_items_distribution.values())[0]  # type: ignore
     
     def fill_slot_data(self) -> Mapping[str, Any]:
         assert self.generation_info is not None

@@ -45,6 +45,7 @@ class Wc3Inventory:
         self.items: dict[heroes.ItemChannel, list[GameID]] = {
             channel: [] for channel in heroes.ItemChannel if channel != heroes.ItemChannel.NONE
         }
+        self.quest_items: list[str] = []
 
     def add_tech_and_prereqs(self, tech: Tech) -> bool:
         queue = [tech]
@@ -67,9 +68,6 @@ class Wc3Inventory:
                     result = True
         return result
     
-    def __repr__(self) -> str:
-        return f'<{sum(self.tech.values())} Techs>'
-
 
 class PacketType(enum.IntFlag):
     NONE = 0
@@ -84,7 +82,7 @@ NUM_PACKET_TYPES = len(PacketType)
 
 @dataclass
 class PacketStatus:
-    last_sent = -1
+    last_sent = 0
     last_received = -1
 
 
@@ -198,6 +196,10 @@ def update_ping(status: MissionStatus, pending: PacketType = PacketType.NONE) ->
 
 def update_unlocks(game_status: GameStatus, mission_status: MissionStatus) -> None:
     packet_status = mission_status.packet_status[PacketType.UNLOCKS]
+    if (PacketType.UNLOCKS not in game_status.pending_update
+        and packet_status.last_sent == packet_status.last_received
+    ):
+        return
     packet_status.last_sent = (packet_status.last_sent + 1) & 0xffff
     with open(UNLOCKS_FILE, 'w') as fp:
         fp.write(PRELOAD_FUNCTION_PROTOTYPE)
@@ -239,10 +241,13 @@ def update_messages(game_status: GameStatus, packet_status: PacketStatus) -> Non
         game_status.pending_update &= ~PacketType.MESSAGES
 
 
-def update_locations(status: MissionStatus) -> None:
+def update_locations(game_status: GameStatus, status: MissionStatus) -> None:
     packet_status = status.packet_status[PacketType.LOCATIONS]
     if packet_status.last_received != packet_status.last_sent:
         # Don't want to obliterate any location removal data after we've already cleared it locally
+        game_status.pending_update |= PacketType.Locations
+        return
+    if PacketType.LOCATIONS not in game_status.pending_update:
         return
     packet_status.last_sent = (packet_status.last_sent + 1) & 0xffff
     collected_parts: list[str] = []
@@ -505,6 +510,7 @@ def update_game_status_for_new_mission(game_status: GameStatus) -> None:
     # todo: fetch pre-checked locations from the global cache
     game_status.num_in_flight_messages = 0
     game_status.in_flight_item_channel = heroes.ItemChannel.NONE
+    game_status.pending_update |= PacketType.UNLOCKS
 
 
 def sync_mission_status(source: MissionStatus, target: MissionStatus) -> None:
@@ -556,10 +562,8 @@ async def status_loop(ctx: AsyncContext) -> None:
         read_necessary_hero_status(ctx.mission_status, ctx.game_status)
 
         # Update on-request client->game packets
-        if ctx.game_status.pending_update & PacketType.UNLOCKS:
-            update_unlocks(ctx.game_status, ctx.mission_status)
-        if ctx.game_status.pending_update & PacketType.LOCATIONS:
-            update_locations(ctx.mission_status)
+        update_unlocks(ctx.game_status, ctx.mission_status)
+        update_locations(ctx.game_status, ctx.mission_status)
         update_messages(ctx.game_status, ctx.mission_status.packet_status[PacketType.MESSAGES])
         update_items(ctx.game_status, ctx.mission_status)
         if (ctx.mission_status.update_number != old_update_number
