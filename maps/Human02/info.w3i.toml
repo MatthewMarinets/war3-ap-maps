@@ -1,8 +1,8 @@
 # Warcraft 3 Map Info File(.w3i)
 # See w3i.py for type definitions
 
-version = "ROC"
-map_revision = 392
+version = "TFT"
+map_revision = 426
 editor_version = 6061
 map_name = 'TRIGSTR_000'
 map_author = 'TRIGSTR_003'
@@ -15,7 +15,7 @@ map_padding_top = 12
 map_padding_bottom = 22
 map_playable_width = 94
 map_playable_height = 94
-flags = "HIDE_MINIMAP|FIXED_FORCES|CUSTOM_FORCES|CUSTOM_TECH_TREE|CUSTOM_UPGRADES|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS|WAVES_ON_SHORES"
+flags = "HIDE_MINIMAP|FIXED_FORCES|CUSTOM_FORCES|CUSTOM_TECH_TREE|CUSTOM_UPGRADES|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS|WAVES_ON_SHORES|REQUIRES_EXPANSION"
 tileset = { type = "bytes", value = "L" }
 campaign_background = 3
 tft_loading_screen_model_path = ''
@@ -35,7 +35,7 @@ tft_fog_red = 0
 tft_fog_green = 0
 tft_fog_blue = 0
 tft_fog_alpha = 0
-tft_weather = ''
+tft_weather = 'null'
 tft_custom_sound_environment = ''
 tft_custom_light_tileset = { type = "bytes", value = "0" }
 tft_water_tint_red = 0
@@ -800,11 +800,6 @@ tech_id = 'otot'  # Stasis Trap
 [[technologies]]
 
 player_flags = 0x1
-tech_id = 'oang'  # Ancestral Guardian
-
-[[technologies]]
-
-player_flags = 0x1
 tech_id = 'Obla'  # Blademaster
 
 [[technologies]]
@@ -886,3 +881,23 @@ tech_id = 'htws'
 
 player_flags = 0x1
 tech_id = 'Obbc'
+
+[[technologies]]
+
+player_flags = 0xf
+tech_id = 'Hblm'  # Blood Mage
+
+[[technologies]]
+
+player_flags = 0xf
+tech_id = 'Oshd'  # Shadow Hunter
+
+[[technologies]]
+
+player_flags = 0xf
+tech_id = 'Ucrl'  # Crypt Lord
+
+[[technologies]]
+
+player_flags = 0xf
+tech_id = 'Ewar'  # Warden

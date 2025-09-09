@@ -1,8 +1,9 @@
-version = ROC
+version = TFT
 
 # Categories
 | ID  | Name | is a comment |
 | --- | ---- | ------------ |
+| 14 | Archipelago | False |
 | 3 | Start Game | False |
 | 1 | Intro Cinematic | False |
 | 12 | EstablishBaseQuest | False |
@@ -17,6 +18,7 @@ version = ROC
 | 0 | General Triggers | False |
 | 5 | VictoryDefeat | False |
 | 2 | Level Data | False |
+| 15 | Orc Base | False |
 
 # Variables
 | Name | Type | Array Size | Initial Value |
@@ -61,7 +63,7 @@ version = ROC
 | HasRedAIBegun | boolean | . | false |
 | Lumber01 | unit | . | . |
 | Lumber02 | unit | . | . |
-| Gold01 | unit | . | . |
+| Gold01 | unit | . | UnitNull |
 | Gold02 | unit | . | . |
 | Gold03 | unit | . | . |
 | Nightsound | sound | . | . |
@@ -128,8 +130,151 @@ version = ROC
 | CameraPosition | location | . | . |
 | BlacksmithDestroyed | boolean | . | false |
 | AltarHintTimer | timer | . | . |
+| orc_buildings_killed | integer | . | . |
 
 # Triggers
+## fileio
+- enabled: True
+- category: [14] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: True
+```description
+
+```
+### Functions
+
+
+## map_config
+- enabled: True
+- category: [14] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: True
+```description
+
+```
+### Functions
+
+
+## status
+- enabled: True
+- category: [14] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: True
+```description
+
+```
+### Functions
+
+
+## heroes
+- enabled: True
+- category: [14] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: True
+```description
+
+```
+### Functions
+
+
+## item_locations
+- enabled: True
+- category: [14] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: True
+```description
+
+```
+### Functions
+
+
+## debug
+- enabled: True
+- category: [14] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: True
+```description
+
+```
+### Functions
+
+
+## zoom
+- enabled: True
+- category: [14] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: True
+```description
+
+```
+### Functions
+
+
+## AP Load Arthas
+- enabled: True
+- category: [14] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String set udg_Arthas = hero_create(0, USER_PLAYER, GetRectCenterX(gg_rct_ArthasStart), GetRectCenterY(gg_rct_ArthasStart), 90.0)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable Arthas
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CreateNUnitsAtLoc
+  - param String 1
+  - param String Hart
+  - param Preset Player01
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_ArthasStart
+  - param String 90.00
+- Action SetVariable
+  - param Variable Arthas
+  - param Function GetLastCreatedUnit
+    - Function GetLastCreatedUnit
+- Action SetHeroLevel
+  - param Variable Arthas
+  - param String 2
+  - param Preset ShowHideHide
+- Action SelectHeroSkill
+  - param Variable Arthas
+  - param Preset HeroSkillHolyBolt
+- Action SelectHeroSkill
+  - param Variable Arthas
+  - param Preset HeroSkillDevotionAura
+- Action CustomScriptCode
+  - param String set hero_abil_1[0] = 'AHhb'
+- Action CustomScriptCode
+  - param String set hero_abil_2[0] = 'AHds'
+- Action CustomScriptCode
+  - param String set hero_abil_3[0] = 'AHad'
+- Action CustomScriptCode
+  - param String set hero_abil_4[0] = 'AHre'
+
+
 ## Map Initialization
 - enabled: True
 - category: [3] Start Game
@@ -242,12 +387,6 @@ version = ROC
   - param Variable gg_unit_hpea_0044
 - Action SetVariable
   - param Variable Gold01
-  - param Variable gg_unit_hpea_0042
-- Action SetVariable
-  - param Variable Gold02
-  - param Variable gg_unit_hpea_0021
-- Action SetVariable
-  - param Variable Gold03
   - param Variable gg_unit_hpea_0020
 - Action CommentString
   - param String Uther's Inventory
@@ -701,75 +840,12 @@ version = ROC
 - Action InitGameCacheBJ
   - param String Campaigns.w3v
 - Action ConditionalTriggerExecute
-  - param Variable gg_trg___Load_Arthas
+  - param Variable gg_trg_AP_Load_Arthas
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Intro_Cinematic
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Handicap
 - Event MapInitializationEvent
-
-
-##   Load Arthas
-- enabled: True
-- category: [3] Start Game
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-Attempt to load the hero.
-Upon failure, create a default version of the hero.
-```
-### Functions
-- Action CommentString
-  - param String Load the hero data
-- Action RestoreUnitLocFacingAngleBJ
-  - param String Arthas
-  - param String Human02
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-  - param Preset Player01
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_ArthasStart
-  - param String 90.00
-- Action SetVariable
-  - param Variable Arthas
-  - param Function GetLastRestoredUnitBJ
-    - Function GetLastRestoredUnitBJ
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareUnit
-      - param Variable Arthas
-      - param Preset OperatorNotEqualENE
-      - param Preset UnitNull
-  - param Function DoNothing
-    - Action ReturnAction
-  - param Function DoNothing
-    - Action DoNothing
-- Action CommentString
-  - param String If the hero data wasn't found, create a default hero
-- Action CreateNUnitsAtLoc
-  - param String 1
-  - param String Hart
-  - param Preset Player01
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_ArthasStart
-  - param String 90.00
-- Action SetVariable
-  - param Variable Arthas
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-- Action SetHeroLevel
-  - param Variable Arthas
-  - param String 2
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillHolyBolt
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDevotionAura
 
 
 ## Delayed Special FX
@@ -1642,59 +1718,10 @@ Upon failure, create a default version of the hero.
     - Action ReturnAction
   - param Function DoNothing
     - Action DoNothing
-- Action CommentString
-  - param String 
-- Action SetVariable
-  - param Variable LocationOfGold01
-  - param Function GetUnitLoc
-    - Function GetUnitLoc
-      - param Variable Gold01
-- Action SetVariable
-  - param Variable LocationOfGold02
-  - param Function GetUnitLoc
-    - Function GetUnitLoc
-      - param Variable Gold02
-- Action SetVariable
-  - param Variable LocationOfGold03
-  - param Function GetUnitLoc
-    - Function GetUnitLoc
-      - param Variable Gold03
+- Action TriggerExecute
+  - param Variable gg_trg_Create_Gold_Peasants
 - Action RemoveUnit
-  - param Variable Gold01
-- Action RemoveUnit
-  - param Variable Gold02
-- Action RemoveUnit
-  - param Variable Gold03
-- Action CreateNUnitsAtLoc
-  - param String 1
-  - param String hpea
-  - param Variable AAAP_Arthas
-  - param Variable LocationOfGold01
-  - param String 0
-- Action SetVariable
-  - param Variable Gold01
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-- Action CreateNUnitsAtLoc
-  - param String 1
-  - param String hpea
-  - param Variable AAAP_Arthas
-  - param Variable LocationOfGold02
-  - param String 0
-- Action SetVariable
-  - param Variable Gold02
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-- Action CreateNUnitsAtLoc
-  - param String 1
-  - param String hpea
-  - param Variable AAAP_Arthas
-  - param Variable LocationOfGold03
-  - param String 0
-- Action SetVariable
-  - param Variable Gold03
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
+  - param Variable gg_unit_hpea_0020
 - Action TriggerSleepAction
   - param String 0.01
 - Action IfThenElse
@@ -1713,15 +1740,6 @@ Upon failure, create a default version of the hero.
   - param Variable gg_trg_Intro_Cinematic_Cancel
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Delayed_Special_FX
-- Action IssueImmediateOrder
-  - param Variable Gold01
-  - param Preset UnitOrderAutoHarvestGold
-- Action IssueImmediateOrder
-  - param Variable Gold02
-  - param Preset UnitOrderAutoHarvestGold
-- Action IssueImmediateOrder
-  - param Variable Gold03
-  - param Preset UnitOrderAutoHarvestGold
 - Action QuestMessageBJ
   - param Variable AAAPG_Arthas
   - param Preset QuestMessageTypeDiscovered
@@ -1863,6 +1881,10 @@ Upon failure, create a default version of the hero.
 - Action SetVariable
   - param Variable IntroCinematicDone
   - param String true
+- Action TriggerExecute
+  - param Variable gg_trg_Create_Gold_Peasants
+- Action RemoveUnit
+  - param Variable gg_unit_hpea_0020
 - Action TriggerSleepAction
   - param String 1.00
 - Action QuestMessageBJ
@@ -1876,72 +1898,119 @@ Upon failure, create a default version of the hero.
 - Action IssueImmediateOrder
   - param Variable Lumber02
   - param Preset UnitOrderAutoHarvestLumber
-- Action SetVariable
-  - param Variable LocationOfGold01
-  - param Function GetUnitLoc
-    - Function GetUnitLoc
-      - param Variable Gold01
-- Action SetVariable
-  - param Variable LocationOfGold02
-  - param Function GetUnitLoc
-    - Function GetUnitLoc
-      - param Variable Gold02
-- Action SetVariable
-  - param Variable LocationOfGold03
-  - param Function GetUnitLoc
-    - Function GetUnitLoc
-      - param Variable Gold03
-- Action RemoveUnit
-  - param Variable Gold01
-- Action RemoveUnit
-  - param Variable Gold02
-- Action RemoveUnit
-  - param Variable Gold03
-- Action CreateNUnitsAtLoc
-  - param String 1
-  - param String hpea
-  - param Preset Player01
-  - param Variable LocationOfGold01
-  - param String 0
-- Action SetVariable
-  - param Variable Gold01
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-- Action CreateNUnitsAtLoc
-  - param String 1
-  - param String hpea
-  - param Preset Player01
-  - param Variable LocationOfGold02
-  - param String 0
-- Action SetVariable
-  - param Variable Gold02
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-- Action CreateNUnitsAtLoc
-  - param String 1
-  - param String hpea
-  - param Preset Player01
-  - param Variable LocationOfGold03
-  - param String 0
-- Action SetVariable
-  - param Variable Gold03
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
 - Action TriggerSleepAction
   - param String 0.01
-- Action IssueImmediateOrder
-  - param Variable Gold01
-  - param Preset UnitOrderAutoHarvestGold
-- Action IssueImmediateOrder
-  - param Variable Gold02
-  - param Preset UnitOrderAutoHarvestGold
-- Action IssueImmediateOrder
-  - param Variable Gold03
-  - param Preset UnitOrderAutoHarvestGold
 - Action StartTimerBJ
   - param Variable AltarHintTimer
   - param Preset PeriodicOptionOneTime
   - param String 30
+
+
+## Create Gold Peasants
+- enabled: True
+- category: [1] Intro Cinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CustomScriptCode
+  - param String set udg_Gold01 = CreateUnit(udg_AAAP_Arthas, 'hpea', -4276.2, -3938.2, 241.047)
+- Action CustomScriptCode
+  - param String set udg_Gold02 = CreateUnit(udg_AAAP_Arthas, 'hpea', -4147.5, -3873.2, 255.484)
+- Action CustomScriptCode
+  - param String set udg_Gold03 = CreateUnit(udg_AAAP_Arthas, 'hpea', -4067.4, -3981.1, 343.377)
+- Action IssueTargetOrder
+  - param Variable Gold01
+  - param Preset UnitOrderHarvest
+  - param Variable gg_unit_ngol_0009
+- Action IssueTargetOrder
+  - param Variable Gold02
+  - param Preset UnitOrderHarvest
+  - param Variable gg_unit_ngol_0009
+- Action IssueTargetOrder
+  - param Variable Gold03
+  - param Preset UnitOrderHarvest
+  - param Variable gg_unit_ngol_0009
+
+
+## PeasantFakeHarvest
+- enabled: True
+- category: [1] Intro Cinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String The original map had allied peasants harvesting gold that were replaced with player ones
+- Action CommentString
+  - param String If the replacement happened while a peasant was in the mine, the player peasants would not properly start mining
+- Action CommentString
+  - param String So, we fake it with some animations. This rough setup is based on the one in H7
+- Action AddUnitAnimationPropertiesBJ
+  - param Preset AddRemoveAdd
+  - param String gold
+  - param Function GetTriggerUnit
+    - Function GetTriggerUnit
+- Action IssueTargetOrder
+  - param Function GetTriggerUnit
+    - Function GetTriggerUnit
+  - param Preset UnitOrderAttackUnit
+  - param Variable gg_unit_htow_0003
+- Action SetUnitMoveSpeed
+  - param Function GetTriggerUnit
+    - Function GetTriggerUnit
+  - param String 8.00
+- Condition OperatorCompareUnit
+  - param Function GetTriggerUnit
+    - Function GetTriggerUnit
+  - param Preset OperatorEqualENE
+  - param Variable gg_unit_hpea_0020
+- Event TriggerRegisterEnterRectSimple
+  - param Variable gg_rct_Gold_Turnaround
+
+
+## PeasantFakeReturn
+- enabled: True
+- category: [1] Intro Cinematic
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action AddUnitAnimationPropertiesBJ
+  - param Preset AddRemoveRemove
+  - param String gold
+  - param Function GetTriggerUnit
+    - Function GetTriggerUnit
+- Action IssuePointOrderLoc
+  - param Function GetTriggerUnit
+    - Function GetTriggerUnit
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_Gold_Turnaround
+- Action SetUnitMoveSpeed
+  - param Function GetTriggerUnit
+    - Function GetTriggerUnit
+  - param Function GetUnitDefaultMoveSpeed
+    - Function GetUnitDefaultMoveSpeed
+      - param Function GetTriggerUnit
+        - Function GetTriggerUnit
+- Condition OperatorCompareUnit
+  - param Function GetTriggerUnit
+    - Function GetTriggerUnit
+  - param Preset OperatorEqualENE
+  - param Variable gg_unit_hpea_0020
+- Event TriggerRegisterEnterRectSimple
+  - param Variable gg_rct_Gold_Dropoff
 
 
 ##   Red AI Settings
@@ -2480,6 +2549,8 @@ If a building is cancelled, add to the counter to balance out the fact that we s
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(21)
 - Action DisableTrigger
   - param Variable gg_trg___FootmanPopsOut
 - Action SetVariable
@@ -4705,7 +4776,7 @@ If a building is cancelled, add to the counter to balance out the fact that we s
 ```
 ### Functions
 - Action CreateItemLoc
-  - param String spro
+  - param String I016
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Crate01
@@ -4726,7 +4797,7 @@ If a building is cancelled, add to the counter to balance out the fact that we s
 ```
 ### Functions
 - Action CreateItemLoc
-  - param String phea
+  - param String I017
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Crate02
@@ -4818,6 +4889,8 @@ If a building is cancelled, add to the counter to balance out the fact that we s
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(22)
 - Action DestroyEffectBJ
   - param Variable TalkFeranor
 - Action CreateFogModifierRadiusLocBJ
@@ -5103,13 +5176,13 @@ If a building is cancelled, add to the counter to balance out the fact that we s
     - Function GetEnteringUnit
   - param Preset OperatorEqualENE
   - param Variable Arthas
-- Condition OperatorCompareBoolean
-  - param Function UnitHasItemOfTypeBJ
-    - Function UnitHasItemOfTypeBJ
-      - param Variable Arthas
-      - param String sehr
-  - param Preset OperatorEqualENE
-  - param String true
+- Condition OperatorCompareInteger
+  - param Function GetPlayerTechMaxAllowedSwap
+    - Function GetPlayerTechMaxAllowedSwap
+      - param String I01b
+      - param Variable AAAP_Arthas
+  - param Preset OperatorGreaterEq
+  - param String 1
 - Condition OperatorCompareBoolean
   - param Variable GameOver
   - param Preset OperatorEqualENE
@@ -5145,8 +5218,6 @@ If a building is cancelled, add to the counter to balance out the fact that we s
   - param Variable gg_trg_Fail_Searinox_Quest_01
 - Action DestroyEffectBJ
   - param Variable TalkFeranor
-- Action RemoveItem
-  - param Variable HeartofSearinox
 - Action ResetToGameCameraForPlayer
   - param Preset Player01
   - param String 0.00
@@ -5379,11 +5450,8 @@ Feranor is no longer made invulnerable and vulnerable on the fly, as he is now i
   - param Preset InvulnerabilityVulnerable
 - Action CommentString
   - param String Give Orb
-- Action CreateItemLoc
-  - param String ofir
-  - param Function GetUnitLoc
-    - Function GetUnitLoc
-      - param Variable Arthas
+- Action CustomScriptCode
+  - param String call status_check_location(12)
 - Action UnitAddItemSwapped
   - param Function GetLastCreatedItem
     - Function GetLastCreatedItem
@@ -5457,11 +5525,8 @@ Feranor is no longer made invulnerable and vulnerable on the fly, as he is now i
   - param String Blacksmith is Destroyed
 - Action CommentString
   - param String Give Orb
-- Action CreateItemLoc
-  - param String ofir
-  - param Function GetUnitLoc
-    - Function GetUnitLoc
-      - param Variable Arthas
+- Action CustomScriptCode
+  - param String call status_check_location(12)
 - Action UnitAddItemSwapped
   - param Function GetLastCreatedItem
     - Function GetLastCreatedItem
@@ -5903,7 +5968,7 @@ Feranor is no longer made invulnerable and vulnerable on the fly, as he is now i
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
 - Action CreateItemLoc
-  - param String sehr
+  - param String I01b
   - param Function GetUnitLoc
     - Function GetUnitLoc
       - param Variable gg_unit_nser_0048
@@ -5911,9 +5976,6 @@ Feranor is no longer made invulnerable and vulnerable on the fly, as he is now i
   - param Variable HeartofSearinox
   - param Function GetLastCreatedItem
     - Function GetLastCreatedItem
-- Action SetItemInvulnerableBJ
-  - param Variable HeartofSearinox
-  - param Preset InvulnerabilityInvulnerable
 - Action TriggerSleepAction
   - param String 1.00
 - Action QueuedTriggerAddBJ
@@ -6023,9 +6085,6 @@ Feranor is no longer made invulnerable and vulnerable on the fly, as he is now i
 
 ```
 ### Functions
-- Action SetItemDroppableBJ
-  - param Variable HeartofSearinox
-  - param Preset DropNoDropOptionNoDrop
 - Action IfThenElse
   - param Function 
     - Condition OperatorCompareBoolean
@@ -6183,6 +6242,8 @@ Feranor is no longer made invulnerable and vulnerable on the fly, as he is now i
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(20)
 - Action SetVariable
   - param Variable VictoryCondition02
   - param String true
@@ -6896,22 +6957,6 @@ Feranor is no longer made invulnerable and vulnerable on the fly, as he is now i
     - Function GetTriggeringTrigger
 - Action DisableTrigger
   - param Variable gg_trg_All_Buildings_Destroyed
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareBoolean
-      - param Function UnitHasItem
-        - Function UnitHasItem
-          - param Variable Arthas
-          - param Variable HeartofSearinox
-      - param Preset OperatorEqualENE
-      - param String true
-  - param Function DoNothing
-    - Action RemoveItem
-      - param Variable HeartofSearinox
-  - param Function DoNothing
-    - Action DoNothing
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Next_Level_Prep
 - Action UseTimeOfDayBJ
   - param Preset OnOffOff
 - Action SetUnitInvulnerable
@@ -6937,6 +6982,8 @@ Feranor is no longer made invulnerable and vulnerable on the fly, as he is now i
 
 ```
 ### Functions
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Action CinematicFadeBJ
   - param Preset FadeTypeOptionFadeOut
   - param String 1.00
@@ -7194,20 +7241,6 @@ Feranor is no longer made invulnerable and vulnerable on the fly, as he is now i
 - Action SetVariable
   - param Variable VictorySkipped
   - param String true
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareBoolean
-      - param Function UnitHasItem
-        - Function UnitHasItem
-          - param Variable Arthas
-          - param Variable HeartofSearinox
-      - param Preset OperatorEqualENE
-      - param String true
-  - param Function DoNothing
-    - Action RemoveItem
-      - param Variable HeartofSearinox
-  - param Function DoNothing
-    - Action DoNothing
 - Action ClearSelection
 - Action ForGroup
   - param Function GetUnitsInRectAll
@@ -7351,39 +7384,6 @@ DefeatHappened should stop all possible cinematics and text messages. If it does
   - param String true
 
 
-## Next Level Prep
-- enabled: True
-- category: [2] Level Data
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action CommentString
-  - param String Save hero data
-- Action InitGameCacheBJ
-  - param String Campaigns.w3v
-- Action StoreUnitBJ
-  - param Variable Arthas
-  - param String Arthas
-  - param String Human03
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action SaveGameCacheBJ
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action CommentString
-  - param String Enable next level
-- Action SetMissionAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset MissionIndexH02
-- Action SetMissionAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset MissionIndexH03
-
-
 ## Next Level Run
 - enabled: True
 - category: [2] Level Data
@@ -7397,7 +7397,7 @@ DefeatHappened should stop all possible cinematics and text messages. If it does
 - Action CommentString
   - param String Run next level
 - Action SetNextLevelBJ
-  - param String Maps\Campaign\Human02Interlude.w3m
+  - param String Maps\AP_Campaign\Human03.w3x
 - Action CustomVictoryBJ
   - param Variable AAAP_Arthas
   - param Preset UseSkipOptionUse
@@ -7414,8 +7414,6 @@ DefeatHappened should stop all possible cinematics and text messages. If it does
 
 ```
 ### Functions
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Next_Level_Prep
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Next_Level_Run
 - Event TriggerRegisterPlayerEventVictory
@@ -7434,7 +7432,46 @@ DefeatHappened should stop all possible cinematics and text messages. If it does
 ### Functions
 - Action CustomDefeatBJ
   - param Variable AAAP_Arthas
-  - param String TRIGSTR_390
+  - param String TRIGSTR_658
 - Event TriggerRegisterPlayerEventDefeat
   - param Preset Player01
+
+
+## Orc Base Dies
+- enabled: True
+- category: [15] Orc Base
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action SetVariable
+  - param Variable orc_buildings_killed
+  - param Function OperatorInt
+    - Function OperatorInt
+      - param Variable orc_buildings_killed
+      - param Preset OperatorAdd
+      - param String 1
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareInteger
+      - param Variable orc_buildings_killed
+      - param Preset OperatorGreaterEq
+      - param String 3
+  - param Function DoNothing
+    - Action CustomScriptCode
+      - param String call status_check_location(25)
+  - param Function DoNothing
+    - Action DoNothing
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_obea_0117
+  - param Preset UnitEventDeath
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_obar_0118
+  - param Preset UnitEventDeath
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_ofor_0059
+  - param Preset UnitEventDeath
 

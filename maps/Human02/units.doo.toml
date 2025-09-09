@@ -1,8 +1,8 @@
 # Warcraft 3 Doodad placement file (.doo)
 # See doo.py for type definitions
 
-version = 7
-sub_version = 9
+version = 8
+sub_version = 11
 describes_units = true
 doodads = []
 immobile_doodads = []
@@ -477,38 +477,42 @@ item_class = 0
 
 [[units]]
 
-type_id = 'hpea'  # Peasant
+type_id = 'ngnw'  # Gnoll Warden
 variation = 0
-x = -4276.17236328125
-y = -3938.1826171875
-z = 474.2480163574219
-facing = 4.207071304321289
+x = 733.587890625
+y = -5943.67919921875
+z = 928.059814453125
+facing = 0.0
 scale_x = 1.0
 scale_y = 1.0
 scale_z = 1.0
 flags = "ENABLED"
-player_owner = 9
+player_owner = 24
 hit_points = -1
 mana_points = -1
 random_item_table_id = -1
-item_drops = []
-goldmine_gold_amount = 0
+item_drops = [
+    [
+        { item_id = "I01a", chance_percent = 100 }
+    ]
+]
+goldmine_gold_amount = 12500
 target_acquisition = -1.0
 hero_level = 1
 hero_strength = 0
 hero_agility = 0
 hero_intelligence = 0
 inventory_items = []
-random_unit_info = -1
+modified_abilities = []
 custom_colour = -1
 waygate_destination = -1
-entity_id = 42
+entity_id = 74
 
-[[units.modified_abilities]]
+[units.random_unit_info]
 
-abil_id = 'Amil'  # Call to Arms
-autocast_active = false
-abil_level = 0
+random_type = 'class'
+level = 1
+item_class = 0
 
 [[units]]
 
@@ -783,8 +787,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # rat3 = Claws of Attack +3
-        { item_id = "rat3", chance_percent = 100 }
+        { item_id = "I011", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 0
@@ -862,38 +865,38 @@ entity_id = 142
 
 [[units]]
 
-type_id = 'hpea'  # Peasant
+type_id = 'nmrl'  # Murloc Tiderunner
 variation = 0
-x = -4067.369873046875
-y = -3981.134033203125
-z = 495.3560791015625
-facing = 5.993062973022461
+x = 4982.81787109375
+y = 675.8251342773438
+z = 304.5797424316406
+facing = 0.10527265816926956
 scale_x = 1.0
 scale_y = 1.0
 scale_z = 1.0
 flags = "ENABLED"
-player_owner = 9
+player_owner = 24
 hit_points = -1
 mana_points = -1
 random_item_table_id = -1
 item_drops = []
-goldmine_gold_amount = 0
+goldmine_gold_amount = 12500
 target_acquisition = -1.0
 hero_level = 1
 hero_strength = 0
 hero_agility = 0
 hero_intelligence = 0
 inventory_items = []
-random_unit_info = -1
+modified_abilities = []
 custom_colour = -1
 waygate_destination = -1
-entity_id = 20
+entity_id = 72
 
-[[units.modified_abilities]]
+[units.random_unit_info]
 
-abil_id = 'Amil'  # Call to Arms
-autocast_active = false
-abil_level = 0
+random_type = 'class'
+level = 1
+item_class = 0
 
 [[units]]
 
@@ -1183,8 +1186,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # rst1 = Gauntlets of Ogre Strength +3
-        { item_id = "rst1", chance_percent = 100 }
+        { item_id = "I012", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -1253,8 +1255,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # pman = Potion of Mana
-        { item_id = "pman", chance_percent = 100 }
+        { item_id = "I013", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 0
@@ -1463,8 +1464,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # phea = Potion of Healing
-        { item_id = "phea", chance_percent = 100 }
+        { item_id = "I014", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 0
@@ -1955,38 +1955,38 @@ item_class = 0
 
 [[units]]
 
-type_id = 'hpea'  # Peasant
+type_id = 'nmrl'  # Murloc Tiderunner
 variation = 0
-x = -4147.52978515625
-y = -3873.1650390625
-z = 471.1958923339844
-facing = 4.459035396575928
+x = 4747.2734375
+y = 2215.25634765625
+z = 560.7194213867188
+facing = 4.143792629241943
 scale_x = 1.0
 scale_y = 1.0
 scale_z = 1.0
 flags = "ENABLED"
-player_owner = 9
+player_owner = 24
 hit_points = -1
 mana_points = -1
 random_item_table_id = -1
 item_drops = []
-goldmine_gold_amount = 0
+goldmine_gold_amount = 12500
 target_acquisition = -1.0
 hero_level = 1
 hero_strength = 0
 hero_agility = 0
 hero_intelligence = 0
 inventory_items = []
-random_unit_info = -1
+modified_abilities = []
 custom_colour = -1
 waygate_destination = -1
-entity_id = 21
+entity_id = 73
 
-[[units.modified_abilities]]
+[units.random_unit_info]
 
-abil_id = 'Amil'  # Call to Arms
-autocast_active = false
-abil_level = 0
+random_type = 'class'
+level = 1
+item_class = 0
 
 [[units]]
 
@@ -2471,8 +2471,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # phea = Potion of Healing
-        { item_id = "phea", chance_percent = 100 }
+        { item_id = "I015", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 0
@@ -3215,17 +3214,17 @@ item_class = 0
 
 [[units]]
 
-type_id = 'nmrl'  # Murloc Tiderunner
+type_id = 'hpea'  # Peasant
 variation = 0
-x = 4982.81787109375
-y = 675.8251342773438
-z = 304.5797424316406
-facing = 0.10527265816926956
+x = -4268.42529296875
+y = -3938.080322265625
+z = 474.7001037597656
+facing = 4.884727478027344
 scale_x = 1.0
 scale_y = 1.0
 scale_z = 1.0
 flags = "ENABLED"
-player_owner = 24
+player_owner = 9
 hit_points = -1
 mana_points = -1
 random_item_table_id = -1
@@ -3240,82 +3239,7 @@ inventory_items = []
 modified_abilities = []
 custom_colour = -1
 waygate_destination = -1
-entity_id = 72
-
-[units.random_unit_info]
-
-random_type = 'class'
-level = 1
-item_class = 0
-
-[[units]]
-
-type_id = 'nmrl'  # Murloc Tiderunner
-variation = 0
-x = 4747.2734375
-y = 2215.25634765625
-z = 560.7194213867188
-facing = 4.143792629241943
-scale_x = 1.0
-scale_y = 1.0
-scale_z = 1.0
-flags = "ENABLED"
-player_owner = 24
-hit_points = -1
-mana_points = -1
-random_item_table_id = -1
-item_drops = []
-goldmine_gold_amount = 12500
-target_acquisition = -1.0
-hero_level = 1
-hero_strength = 0
-hero_agility = 0
-hero_intelligence = 0
-inventory_items = []
-modified_abilities = []
-custom_colour = -1
-waygate_destination = -1
-entity_id = 73
-
-[units.random_unit_info]
-
-random_type = 'class'
-level = 1
-item_class = 0
-
-[[units]]
-
-type_id = 'ngnw'  # Gnoll Warden
-variation = 0
-x = 733.587890625
-y = -5943.67919921875
-z = 928.059814453125
-facing = 0.0
-scale_x = 1.0
-scale_y = 1.0
-scale_z = 1.0
-flags = "ENABLED"
-player_owner = 24
-hit_points = -1
-mana_points = -1
-random_item_table_id = -1
-item_drops = [
-    [
-        # wneg = Wand of Negation
-        { item_id = "wneg", chance_percent = 100 }
-    ]
-]
-goldmine_gold_amount = 12500
-target_acquisition = -1.0
-hero_level = 1
-hero_strength = 0
-hero_agility = 0
-hero_intelligence = 0
-inventory_items = []
-modified_abilities = []
-custom_colour = -1
-waygate_destination = -1
-entity_id = 74
+entity_id = 20
 
 [units.random_unit_info]
 

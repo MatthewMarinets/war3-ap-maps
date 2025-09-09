@@ -646,3 +646,31 @@ ambient_sound = ''
 colour_b = 255
 colour_g = 128
 colour_r = 128
+
+[[regions]]
+
+left = -4640.0
+bottom = -4032.0
+right = -4544.0
+top = -3680.0
+region_name = 'Gold Turnaround'
+region_id = 46
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -4032.0
+bottom = -4160.0
+right = -3968.0
+top = -3776.0
+region_name = 'Gold Dropoff'
+region_id = 47
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128

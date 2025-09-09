@@ -191,8 +191,8 @@ function status_check_ping takes nothing returns nothing
         set should_send = true
     endif
     if bitmask >= 256 then
-        set bitmask = bitmask - 256
-        // unused
+        // bitmask & 255
+        set bitmask = bitmask - ((bitmask / 256) * 256)
     endif
     if bitmask >= 128 then
         set bitmask = bitmask - 128

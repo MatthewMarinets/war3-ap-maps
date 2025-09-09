@@ -75,6 +75,6 @@ endfunction
 
 function InitTrig_item_locations takes nothing returns nothing
     set t_location_found = CreateTrigger()
-    call TriggerRegisterPlayerUnitEventSimple(t_location_found, Player(0), EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    call TriggerRegisterPlayerUnitEventSimple(t_location_found, USER_PLAYER, EVENT_PLAYER_UNIT_PICKUP_ITEM)
     call TriggerAddAction(t_location_found, function trigger_function_item_locations)
 endfunction
