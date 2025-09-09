@@ -149,7 +149,7 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
                         ctx.mission_status.locations_collected[int(part)] = -1
                 ctx.game_status.pending_update |= PacketType.LOCATIONS
             elif tokens[0] == '/unlock':
-                user_identifier = text.split(' ', 1)[1].strip()
+                user_identifier = " ".join(tokens[1:])
                 tech = try_parse_unlock_id(user_identifier)
                 if tech is None:
                     logger.warning(f'"{user_identifier}" is not a recognized ID')
@@ -157,7 +157,7 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
                     if ctx.game_status.inventory.add_tech_and_prereqs(tech):
                         ctx.game_status.pending_update |= PacketType.UNLOCKS
             elif tokens[0] == '/lock':
-                user_identifier = text.split(' ', 1)[1].strip()
+                user_identifier = " ".join(tokens[1:])
                 tech = try_parse_unlock_id(user_identifier)
                 if tech is None:
                     logger.warning(f'"{user_identifier}" is not a recognized ID')

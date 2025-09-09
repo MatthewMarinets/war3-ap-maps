@@ -1,9 +1,10 @@
 """Runtime client for communicating with the AP server. Requires core imports."""
+from typing import Sequence
 import asyncio
 import multiprocessing
 import colorama
 
-from CommonClient import CommonContext, server_loop, ClientCommandProcessor, gui_enabled, get_base_parser
+from CommonClient import CommonContext, server_loop, ClientCommandProcessor, gui_enabled, get_base_parser, handle_url_arg
 from NetUtils import NetworkItem
 from Utils import async_start
 
@@ -55,8 +56,7 @@ class Wc3Context(CommonContext):
             self._handle_connected(args)
         elif cmd == "ReceivedItems":
             self._handle_received_items(args)
-        print(f"{cmd} -- {args}")
-    
+
     def _handle_connected(self, args: dict) -> None:
         self.generation_version = (args["slot_data"]["version_major"], args["slot_data"]["version_minor"])
         logger.info(f"Connected. World version {self.generation_version}")
@@ -79,7 +79,8 @@ class Wc3Context(CommonContext):
                 self.comm_ctx.game_status.inventory.items[item_data.type.channel].append(item_data.type.game_id)
                 self.comm_ctx.game_status.pending_update |= comm.PacketType.ITEMS
             elif isinstance(item_data.type, items.QuestItem):
-                self.comm_ctx.game_status.inventory.quest_items.append(item_data)
+                self.comm_ctx.game_status.inventory.tech[item_data.type.gameid] += 1
+                self.comm_ctx.game_status.pending_update |= comm.PacketType.UNLOCKS
             else:
                 logger.error(f"Received unknown item type: {item_data.type}")
 
@@ -94,14 +95,15 @@ def parse_uri(uri: str) -> str:
     return uri.split('?', 1)[0]
 
 
-async def main():
+async def main(args: Sequence[str] | None):
     multiprocessing.freeze_support()
     parser = get_base_parser()
     parser.add_argument('--name', default=None, help="Slot Name to connect as.")
-    args, uri = parser.parse_known_args()
+    args, uri = parser.parse_known_args(args)
 
     if uri and uri[0].startswith('archipelago://'):
-        args.connect = parse_uri(' '.join(uri))
+        args.url = uri[0]
+        handle_url_arg(args, parser)
 
     ctx = Wc3Context(args.connect, args.password)
     ctx.auth = args.name
@@ -119,7 +121,7 @@ async def main():
     await ctx.shutdown()
 
 
-def launch() -> None:
+def launch(*args: str) -> None:
     colorama.init()
-    asyncio.run(main())
+    asyncio.run(main(args))
     colorama.deinit()

@@ -45,7 +45,6 @@ class Wc3Inventory:
         self.items: dict[heroes.ItemChannel, list[GameID]] = {
             channel: [] for channel in heroes.ItemChannel if channel != heroes.ItemChannel.NONE
         }
-        self.quest_items: list[str] = []
 
     def add_tech_and_prereqs(self, tech: Tech) -> bool:
         queue = [tech]

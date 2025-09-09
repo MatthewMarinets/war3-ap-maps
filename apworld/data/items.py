@@ -49,6 +49,8 @@ class PickupItem:
 @dataclasses.dataclass
 class QuestItem:
     vanilla_mission: Wc3Mission
+    gameid: Tech
+    amount: int = 1
     """The mission the player would require this quest item in vanilla"""
 
 
@@ -56,8 +58,8 @@ ItemType = Unit | Building | Level | Upgrade | ShopItem | PickupItem | QuestItem
 
 
 class Wc3Item(enum.Enum):
-    def __new__(cls, *args, **kwargs):
-        value = len(cls.__members__) + 1
+    def __new__(cls, id: int, *args, **kwargs):
+        value = id
         obj = object.__new__(cls)
         obj._value_ = value
         return obj
@@ -302,18 +304,16 @@ class Wc3Item(enum.Enum):
     NAGA_SCALES =           416, "Progressive Scales (Naga)",        Upgrade(Tech.NAGA_SCALES, Wc3Race.NAGA, 3)
 
     # Quest Items
-    GERARDS_LEDGER =            800, "Gerard's Ledger",                 QuestItem(Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD)
-    HEART_OF_SEARINOX =         801, "Heart of Searinox",               QuestItem(Wc3Mission.H2_BLACKROCK_AND_ROLL)
-    URN_OF_KING_TERENAS =       802, "Urn of King Terenas",             QuestItem(Wc3Mission.U2_DIGGING_UP_THE_DEAD)
-    KEY_OF_THE_THREE_MOONS_1 =  803, "Key of the Three Moons Part 1",   QuestItem(Wc3Mission.U4_KEY_OF_THE_THREE_MOONS)
-    KEY_OF_THE_THREE_MOONS_2 =  804, "Key of the Three Moons Part 2",   QuestItem(Wc3Mission.U4_KEY_OF_THE_THREE_MOONS)
-    KEY_OF_THE_THREE_MOONS_3 =  805, "Key of the Three Moons Part 3",   QuestItem(Wc3Mission.U4_KEY_OF_THE_THREE_MOONS)
-    HEART_OF_ASZUNE =           806, "Heart of Aszune",                 QuestItem(Wc3Mission.O7_THE_ORACLE)
-    ENCHANTED_GEMSTONE =        807, "Enchanted Gemstone",              QuestItem(Wc3Mission.O7_THE_ORACLE)
-    SOUL_GEM =                  808, "Soul Gem",                        QuestItem(Wc3Mission.O8_BY_DEMONS_BE_DRIVEN)
-    EMPTY_VIAL =                809, "Empty Vial",                      QuestItem(Wc3Mission.N5_BROTHERS_IN_BLOOD)
-    FULL_VIAL =                 810, "Full Vial",                       QuestItem(Wc3Mission.N5_BROTHERS_IN_BLOOD)
-    SKELETAL_ARTIFACT =         811, "Skeletal Artifact",               QuestItem(Wc3Mission.NX2_THE_BROKEN_ISLES)
+    GERARDS_LEDGER =         800, "Gerard's Ledger",        QuestItem(Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Tech.GERARDS_LOST_LEDGER)
+    HEART_OF_SEARINOX =      801, "Heart of Searinox",      QuestItem(Wc3Mission.H2_BLACKROCK_AND_ROLL, Tech.THE_HEART_OF_SEARINOX)
+    URN_OF_KING_TERENAS =    802, "Urn of King Terenas",    QuestItem(Wc3Mission.U2_DIGGING_UP_THE_DEAD, Tech.URN_OF_KING_TERENAS)
+    KEY_OF_THE_THREE_MOONS = 803, "Key of the Three Moons", QuestItem(Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Tech.KEY_OF_THE_THREE_MOONS, amount=3)
+    HEART_OF_ASZUNE =        804, "Heart of Aszune",        QuestItem(Wc3Mission.O7_THE_ORACLE, Tech.HEART_OF_ASZUNE)
+    ENCHANTED_GEMSTONE =     805, "Enchanted Gemstone",     QuestItem(Wc3Mission.O7_THE_ORACLE, Tech.ENCHANTED_GEMSTONE)
+    SOUL_GEM =               806, "Soul Gem",               QuestItem(Wc3Mission.O8_BY_DEMONS_BE_DRIVEN, Tech.SOUL_GEM)
+    EMPTY_VIAL =             807, "Empty Vial",             QuestItem(Wc3Mission.N5_BROTHERS_IN_BLOOD, Tech.EMPTY_VIAL)
+    FULL_VIAL =              808, "Full Vial",              QuestItem(Wc3Mission.N5_BROTHERS_IN_BLOOD, Tech.FULL_VIAL)
+    SKELETAL_ARTIFACT =      809, "Skeletal Artifact",      QuestItem(Wc3Mission.NX2_THE_BROKEN_ISLES, Tech.SKELETAL_ARTIFACT)
 
     # Heroes
     ARTHAS_LEVEL =        1000, "Arthas Level",         Level(HeroSlot.PALADIN_ARTHAS, 1, 2)

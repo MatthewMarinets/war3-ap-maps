@@ -2,7 +2,7 @@
 import logging
 
 try:
-    from worlds.AutoWorld import World
+    from worlds.AutoWorld import World, WebWorld
     standalone = False
 except ModuleNotFoundError:
     standalone = True
@@ -21,3 +21,14 @@ if standalone:
     logger.setLevel(logging.INFO)
 else:
     from .world import Wc3World
+    class Wc3WebWorld(WebWorld):
+        tutorials = []
+    
+    
+    from worlds.LauncherComponents import components, Component, launch as launch_component
+
+    def launch_client(*args: str):
+        from .client.ap import launch
+        launch_component(launch, name="Warcraft 3 Client", args=args)
+
+    components.append(Component("Warcraft 3 Client", func=launch_client, game_name="Warcraft 3", supports_uri=True))

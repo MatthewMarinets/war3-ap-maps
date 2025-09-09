@@ -32,8 +32,8 @@ class Wc3LocationType(enum.Flag):
 
 
 class Wc3Location(enum.Enum):
-    def __new__(cls, *args, **kwargs):
-        value = len(cls.__members__) + 1
+    def __new__(cls, id: int, *args, **kwargs):
+        value = id
         obj = object.__new__(cls)
         obj._value_ = value
         return obj
@@ -74,18 +74,18 @@ class Wc3Location(enum.Enum):
     # (Side) Searinox
     HU2_VICTORY =               1200, "Victory",                 Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.VICTORY
     HU2_WEST_MURLOC_ITEM =      1201, "Western Murloc Item",     Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Claws of Attack +3"
-    HU2_WEST_OGRE_ITEM =        1202, "Western Ogre Item",       Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Gauntlets of Ogre Strength +3"
+    HU2_WEST_OGRE_ITEM =        1202, "Western Ogre Item",       Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.SECRET_ITEM, "Gauntlets of Ogre Strength +3"
     HU2_GNOLL_POACHER_ITEM =    1203, "Gnoll Poacher Item",      Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Mana"
     HU2_MURLOC_HUT_ITEM =       1204, "Murloc Hut Item",         Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Healing"
     HU2_GNOLL_ITEM =            1205, "Gnoll Item",              Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Healing"
     HU2_WEST_CRATE =            1206, "West Base Crate",         Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Scroll of Protection"
     HU2_EAST_CRATE =            1207, "East Base Crate",         Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Healing"
-    HU2_GNOLL_WARDEN_ITEM =     1210, "Gnoll Warden Item",       Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Wand of Negation"
+    HU2_GNOLL_WARDEN_ITEM =     1210, "Gnoll Warden Item",       Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.SECRET_ITEM, "Wand of Negation"
+    HU2_SEARINOX =              1211, "Defeat Searinox",         Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST, "Heart of Searinox"
+    HU2_RETURN_SEARINOX_HEART = 1212, "Return Searinox's Heart", Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST_ITEM, "Orb of Fire"
     HU2_SLAY_BLADEMASTER =      1220, "Slay Blademaster",        Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST_HERO
     HU2_ESTABLISH_BASE =        1221, "Establish Base",          Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST
     HU2_FERANOR_STEELTOE =      1222, "Meet Feranor Steeltoe",   Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.RESCUE
-    HU2_SEARINOX =              1223, "Defeat Searinox",         Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST  # Heart of Searinox
-    HU2_RETURN_SEARINOX_HEART = 1224, "Return Searinox's Heart", Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST_ITEM, "Orb of Fire"
     HU2_ORC_BASE =              1225, "Destroy the Orc Base",    Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.BASE
 
     # Quests:
