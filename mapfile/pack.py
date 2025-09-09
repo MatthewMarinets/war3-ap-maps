@@ -7,9 +7,17 @@ import glob
 from mapfile import config
 from mapfile.util.failable import Error
 from mapfile import mpq
-from mapfile.common import CONVERT_HANDLERS
+from mapfile.common import CONVERT_HANDLERS, dereference_proxy
 
 mpq_editor_exe = config.workspace.get('mpqeditor_path', 'MPQEditor.exe')
+
+
+def copy_imports(source_dir: str, target_dir: str) -> None:
+    shutil.copytree(source_dir, target_dir, ignore=shutil.ignore_patterns('*.proxy'))
+    proxy_files = glob.glob(f'{source_dir}/*.proxy')
+    for file in proxy_files:
+        target_basename, _ = os.path.splitext(os.path.basename(file))
+        dereference_proxy(file, f'{target_dir}/{target_basename}')
 
 
 def compile_map_file(map_file: str, source_dir: str) -> Error[str] | None:
@@ -27,11 +35,11 @@ def compile_map_file(map_file: str, source_dir: str) -> Error[str] | None:
         basename = os.path.basename(filename)
         if os.path.isdir(filename):
             if not basename.startswith('.'):
-                shutil.copytree(filename, f'{build_dir}/{basename}')
+                copy_imports(filename, f'{build_dir}/{basename}')
             continue
-        stem, ext = os.path.splitext(basename)
+        stem, _ = os.path.splitext(basename)
         stem, ext = os.path.splitext(stem)
-        convert, target_name = CONVERT_HANDLERS.get(ext, (None, basename))
+        convert, _ = CONVERT_HANDLERS.get(ext, (None, basename))
         if stem == 'units':
             assert convert is not None
             convert(filename, f'{build_dir}/war3mapUnits.doo')

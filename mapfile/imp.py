@@ -17,8 +17,8 @@ class ImportedPath:
 
 @dataclass
 class Imports:
-    version: int
-    imports: list[ImportedPath]
+    version: int = 1
+    imports: list[ImportedPath] = field(default_factory=list)
 
 
 def read_binary(raw_data: bytes) -> Imports:

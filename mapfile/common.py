@@ -1,5 +1,6 @@
 from typing import Callable, TYPE_CHECKING, Protocol, TypeVar
 import os
+import shutil
 from . import doo, imp, mmp, w3c, w3f, w3i, w3o, w3r, w3s, wct, wtg, wts
 
 
@@ -35,6 +36,19 @@ def general_converter(module: FileFormatModule, extension: str | None = None, ar
             with open(target, 'w') as fp:
                 fp.write(write_str)
     return _convert
+
+
+PROXY_FILES = {
+    'questionmark_item.mdx': 'mods/general/war3mapImported/questionmark_item.mdx',
+}
+def make_proxy(actual_file: str, proxy_file: str) -> None:
+    with open(proxy_file, 'w') as fp:
+        fp.write(actual_file)
+
+def dereference_proxy(proxy_file: str, target: str) -> None:
+    with open(proxy_file, 'r') as fp:
+        source = fp.read().strip()
+    shutil.copy(source, target)
 
 
 CONVERT_HANDLERS: dict[str, tuple[Callable[[str, str], None], str]] = {

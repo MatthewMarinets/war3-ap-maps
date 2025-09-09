@@ -51,7 +51,7 @@ class Modification:
     variation_level: int = 0
     table_column: int = 0
     value: str | int | float | list = 0
-    object_id: str = ''
+    object_id: str = binary.NULL_ID
 
     @staticmethod
     def _from_dict(data: dict) -> 'Modification':
@@ -85,8 +85,8 @@ class EntityTable:
 class War3ObjectData:
     version: int
     has_levels: bool
-    blizzard_objects: EntityTable
-    map_objects: EntityTable
+    blizzard_objects: EntityTable = dataclasses.field(default_factory=EntityTable)
+    map_objects: EntityTable = dataclasses.field(default_factory=EntityTable)
 
     @staticmethod
     def _from_dict(data: dict) -> 'War3ObjectData':
@@ -229,6 +229,12 @@ def from_text(text: str) -> War3ObjectData:
     import tomllib
     result = tomllib.loads(text)
     return War3ObjectData._from_dict(result)
+
+
+def from_text_file(filename: str) -> War3ObjectData:
+    with open(filename, 'r') as fp:
+        text = fp.read()
+    return from_text(text)
 
 
 if __name__ == '__main__':

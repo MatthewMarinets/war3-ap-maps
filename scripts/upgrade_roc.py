@@ -4,14 +4,17 @@ Update unpacked RoC map files to TFT.
 
 import os
 import sys
+import shutil
 from dataclasses import dataclass, field
 
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
-from mapfile import doo, w3i, wtg, wct
+from mapfile import doo, w3i, wtg, wct, w3o, imp
 from apworld.data import missions, tables, heroes
 
 sys.path.pop()
+
+QUESTION_MARK_MODEL_PATH = 'mods/general/war3mapImported/questionmark_item.mdx'
 
 
 @dataclass
@@ -88,24 +91,90 @@ def update_doo(doo_file: str) -> None:
         fp.write(new_text)
 
 
-def _check_make_trigger(
+def add_ap_items(w3t_file: str) -> None:
+    if os.path.isfile(w3t_file):
+        items_data = w3o.from_text_file(w3t_file)
+    else:
+        items_data = w3o.War3ObjectData(version=2, has_levels=False)
+    modified_entity_ids = [item_data.entity_id for item_data in items_data.map_objects.entities]
+    for location_number in range(0x17):
+        item_id = f'I0{hex(location_number + 0x10)[2:]}'
+        if item_id in modified_entity_ids:
+            continue
+        items_data.map_objects.entities.append(
+            w3o.Entity('lmbr', item_id, [
+                w3o.Modification('unam', w3o.DataType.String, value=f'Archipelago Item {location_number}'),
+                w3o.Modification('utip', w3o.DataType.String, value=f'Purchase a check for map location {location_number}.'),
+                w3o.Modification('utub', w3o.DataType.String, value='Get a randomized item when used'),
+                w3o.Modification('ides', w3o.DataType.String, value=rf'Collects map location {location_number} for the player.'),
+                w3o.Modification('iico', w3o.DataType.String, value=r'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'),
+                w3o.Modification('ifil', w3o.DataType.String, value=r'war3mapImported\questionmark_item.mdl'),
+                w3o.Modification('iabi', w3o.DataType.String, value=''),
+            ])
+        )
+
+    new_text = w3o.as_text(items_data)
+    with open(w3t_file, 'w') as fp:
+        fp.write(new_text)
+
+
+def add_ap_models(imported_dir: str) -> None:
+    target_file = f'{imported_dir}/questionmark_item.mdx.proxy'
+    if os.path.isfile(target_file):
+        return
+    os.makedirs(imported_dir, exist_ok=True)
+    with open(target_file, 'w') as fp:
+        fp.write('mods/general/war3mapImported/questionmark_item.mdx')
+
+
+def update_imp_file(imp_file: str) -> None:
+    if os.path.isfile(imp_file):
+        with open(imp_file, 'r') as fp:
+            imp_text = fp.read()
+        imp_data = imp.from_text(imp_text)
+    else:
+        imp_data = imp.Imports()
+    imported_paths = [os.path.basename(import_path.path) for import_path in imp_data.imports]
+    imp_data.version = 1
+    model_basename = os.path.basename(QUESTION_MARK_MODEL_PATH)
+    if model_basename not in imported_paths:
+        imp_data.imports.append(imp.ImportedPath(8, f'war3mapImported/{model_basename}'))
+    with open(imp_file, 'w') as fp:
+        fp.write(imp.as_text(imp_data))
+
+
+def update_listfile(listfile_path: str) -> None:
+    with open(listfile_path, 'r') as fp:
+        lines = fp.readlines()
+    for path in (
+        'war3map.w3t\n',
+        'war3map.imp\n',
+        'war3mapImported\\questionmark_item.mdx\n',
+    ):
+        if path not in lines:
+            lines.append(path)
+    with open(listfile_path, 'w') as fp:
+        fp.writelines(lines)
+
+
+def _make_trigger_if_necessary(
     trigger_name: str,
     archipelago_category_index: int,
     wtg_data: wtg.W3TriggerData,
     wct_data: wct.War3TextTriggers,
-) -> int:
+) -> None:
     existing_names = [x.name for x in wtg_data.triggers]
     if trigger_name in existing_names:
-        return existing_names.index(trigger_name)
+        return
     assert len(wct_data.triggers) == len(wtg_data.triggers)
-    result = len(wct_data.triggers)
-    wct_data.triggers.append(wct.War3TextTrigger(True))
-    wtg_data.triggers.append(wtg.Trigger(
+    result = 0
+    wct_data.triggers[0:0] = [wct.War3TextTrigger(True)]
+    wtg_data.triggers[0:0] = [wtg.Trigger(
         name=trigger_name,
         is_custom_text=True,
         is_initially_off=False,
         category_id=archipelago_category_index,
-    ))
+    )]
 
     return result
 
@@ -121,6 +190,9 @@ def update_triggers(map_dir: str) -> None:
     wtg_file = f'{map_dir}/triggers_gui.wtg.md'
     wct_file = f'{map_dir}/triggers_text.wct.j'
     w3i_file = f'{map_dir}/info.w3i.toml'
+    assert os.path.isfile(wtg_file)
+    assert os.path.isfile(wct_file)
+    assert os.path.isfile(w3i_file)
     wtg_data = wtg.from_text_file(wtg_file)
     wct_data = wct.from_text_file(wct_file)
     w3i_data = w3i.from_text_file(w3i_file)
@@ -139,13 +211,21 @@ def update_triggers(map_dir: str) -> None:
 
     # Create or get AP triggers
     ap_category_id = archipelago_category.category_id
-    fileio_index = _check_make_trigger('fileio', ap_category_id, wtg_data, wct_data)
-    map_config_index = _check_make_trigger('map_config', ap_category_id, wtg_data, wct_data)
-    status_index = _check_make_trigger('status', ap_category_id, wtg_data, wct_data)
-    heroes_index = _check_make_trigger('heroes', ap_category_id, wtg_data, wct_data)
-    item_locations_index = _check_make_trigger('item_locations', ap_category_id, wtg_data, wct_data)
-    debug_index = _check_make_trigger('debug', ap_category_id, wtg_data, wct_data)
-    zoom_index = _check_make_trigger('zoom', ap_category_id, wtg_data, wct_data)
+    _make_trigger_if_necessary('zoom', ap_category_id, wtg_data, wct_data)
+    _make_trigger_if_necessary('debug', ap_category_id, wtg_data, wct_data)
+    _make_trigger_if_necessary('item_locations', ap_category_id, wtg_data, wct_data)
+    _make_trigger_if_necessary('heroes', ap_category_id, wtg_data, wct_data)
+    _make_trigger_if_necessary('status', ap_category_id, wtg_data, wct_data)
+    _make_trigger_if_necessary('map_config', ap_category_id, wtg_data, wct_data)
+    _make_trigger_if_necessary('fileio', ap_category_id, wtg_data, wct_data)
+    trigger_names = [trigger.name for trigger in wtg_data.triggers]
+    zoom_index = trigger_names.index('zoom')
+    debug_index = trigger_names.index('debug')
+    item_locations_index = trigger_names.index('item_locations')
+    heroes_index = trigger_names.index('heroes')
+    status_index = trigger_names.index('status')
+    map_config_index = trigger_names.index('map_config')
+    fileio_index = trigger_names.index('fileio')
 
     file_index_mapping = (
         (FILEIO_J, fileio_index),
@@ -249,6 +329,10 @@ def main(map_dir: str) -> int:
     update_war3_info(f'{map_dir}/info.w3i.toml')
     update_doo(f'{map_dir}/doodads.doo.toml')
     update_doo(f'{map_dir}/units.doo.toml')
+    add_ap_items(f'{map_dir}/o_items.w3t.toml')
+    add_ap_models(f'{map_dir}/war3mapImported')
+    update_listfile(f'{map_dir}/(listfile)')
+    update_imp_file(f'{map_dir}/imports.imp.toml')
     update_triggers(map_dir)
 
 

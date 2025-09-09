@@ -7,9 +7,16 @@ import glob
 from mapfile import config
 from mapfile.util.failable import Error
 from mapfile import mpq
-from mapfile.common import CONVERT_HANDLERS
+from mapfile.common import CONVERT_HANDLERS, PROXY_FILES, make_proxy
 
 mpq_editor_exe = config.workspace.get('mpqeditor_path', 'MPQEditor.exe')
+
+
+def copy_imports(source_dir: str, target_dir: str) -> None:
+    shutil.copytree(source_dir, target_dir, ignore=lambda *_: PROXY_FILES)
+    files_to_proxy = [x for x in os.listdir(source_dir) if x in PROXY_FILES]
+    for file in files_to_proxy:
+        make_proxy(PROXY_FILES[file], f'{target_dir}/{file}.proxy')
 
 
 def extract_map_files(map_file: str, target_dir: str) -> Error[str] | None:
@@ -26,9 +33,9 @@ def extract_map_files(map_file: str, target_dir: str) -> Error[str] | None:
         basename = os.path.basename(filename)
         if os.path.isdir(filename):
             assert not basename.startswith('.'), f"mpq contains a .directory: {basename}"
-            shutil.copytree(filename, f'{target_dir}/{basename}')
+            copy_imports(filename, f'{target_dir}/{basename}')
             continue
-        stem, ext = os.path.splitext(basename)
+        _, ext = os.path.splitext(basename)
         convert, target_name = CONVERT_HANDLERS.get(ext, (None, basename))
         if basename == 'war3mapUnits.doo':
             assert convert is not None
