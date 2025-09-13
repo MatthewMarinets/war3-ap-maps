@@ -50,7 +50,7 @@ def try_parse_item_channel_id(user_input: str) -> heroes.ItemChannel | None:
     result: heroes.ItemChannel | None = None
     try:
         result = heroes.ItemChannel[user_input.upper().replace(' ', '_')]
-    except ValueError: pass
+    except KeyError: pass
     if result == heroes.ItemChannel.NONE:
         return None
     return result

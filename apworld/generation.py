@@ -21,7 +21,7 @@ for location in locations.Wc3Location:
 
 def get_included_races_and_campaigns(options: 'Wc3Options') -> tuple[missions.Wc3Race, list[missions.Wc3Campaign]]:
     included_races: missions.Wc3Race = missions.Wc3Race.NONE
-    included_campaigns: missions.Wc3Campaign = []
+    included_campaigns: list[missions.Wc3Campaign] = []
     if missions.Wc3Campaign.HUMAN_1.title_faction in options.included_campaigns:
         included_races |= missions.Wc3Race.HUMAN
         included_campaigns.append(missions.Wc3Campaign.HUMAN_1)
@@ -65,7 +65,7 @@ class Generation:
         self.hero_slots: set[heroes.HeroSlot] = set()
         self.item_channels: set[heroes.ItemChannel] = set()
         self.included_races: missions.Wc3Race = missions.Wc3Race.NONE
-        self.included_campaigns: list[missions.Wc3Campaign] = []
+        self.included_campaigns: set[missions.Wc3Campaign] = set()
 
     def create_regions(self, world: 'Wc3World') -> None:
         self.regions.append(Region(world.origin_region_name, world.player, world.multiworld))

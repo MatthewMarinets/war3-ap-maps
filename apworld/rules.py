@@ -71,7 +71,7 @@ class Wc3Logic:
         ))
 
     def human_has_healing(self, state: 'CollectionState') -> bool:
-        return self.has_any(state, (Wc3Item.PRIEST, Wc3Item.HUMAN_SCROLL_OF_REGENERATION))
+        return self.has_any(state, (Wc3Item.PRIEST, Wc3Item.SHOP_ITEM_SCROLL_OF_REGENERATION))
 
     def human_has_dispel(self, state: 'CollectionState') -> bool:
         return (
@@ -92,8 +92,8 @@ class Wc3Logic:
 
     def orc_has_healing(self, state: 'CollectionState') -> bool:
         return (
-            self.has_any(state, (Wc3Item.ORC_HEALING_SALVE))
-            or (self.has(state, Wc3Item.WITCH_DOCTOR)
+            self.has_any(state, (Wc3Item.SHOP_ITEM_HEALING_SALVE,))
+            or (self.has(state, Wc3Item.TROLL_WITCH_DOCTOR)
                 and self.has(state, Wc3Item.WITCH_DOCTOR_TRAINING, 2)
             )
         )

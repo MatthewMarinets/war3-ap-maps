@@ -102,6 +102,30 @@ class KelThuzadHero(OptionHeroChoice):
     """What hero will appear everywhere Kel'Thuzad (RoC) appears"""
     default = HeroChoice.KEL_THUZAD.value
 
+class ThrallHero(OptionHeroChoice):
+    """What hero will appear everywhere Thrall appears"""
+    default = HeroChoice.THRALL.value
+
+class CairneHero(OptionHeroChoice):
+    """What hero will appear everywhere Cairne appears"""
+    default = HeroChoice.CAIRNE_BLOODHOOF.value
+
+class GromHero(OptionHeroChoice):
+    """What hero will appear everywhere Grom appears"""
+    default = HeroChoice.GROM_HELLSCREAM.value
+
+class TyrandeHero(OptionHeroChoice):
+    """What hero will appear everywhere Tyrande (RoC) appears"""
+    default = HeroChoice.TYRANDE.value
+
+class FurionHero(OptionHeroChoice):
+    """What hero will appear everywhere Furion (RoC) appears"""
+    default = HeroChoice.FURION.value
+
+class IllidanHero(OptionHeroChoice):
+    """What hero will appear everywhere Illidan (RoC) appears"""
+    default = HeroChoice.ILLIDAN.value
+
 
 @dataclass
 class Wc3Options(baseoptions.PerGameCommonOptions):
@@ -111,3 +135,9 @@ class Wc3Options(baseoptions.PerGameCommonOptions):
     muradin_bronzebeard_hero: MuradinBronzebeardHero
     death_knight_arthas_hero: DeathKnightArthasHero
     kel_thuzad_hero: KelThuzadHero
+    thrall_hero: ThrallHero
+    cairne_hero: CairneHero
+    grom_hero: GromHero
+    tyrande_hero: TyrandeHero
+    furion_hero: FurionHero
+    illidan_hero: IllidanHero

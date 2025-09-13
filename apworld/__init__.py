@@ -22,7 +22,7 @@ if standalone:
 else:
     from .world import Wc3World
     class Wc3WebWorld(WebWorld):
-        tutorials = []
+        tutorials: list = []
     
     
     from worlds.LauncherComponents import components, Component, launch as launch_component

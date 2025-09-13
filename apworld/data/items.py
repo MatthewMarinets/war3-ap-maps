@@ -424,16 +424,21 @@ class Wc3Item(enum.Enum):
     U_TOME_OF_STRENGTH =             2267, "Tome of Strength (Undead)",                      PickupItem(1, GameID.TOME_OF_STRENGTH, ItemChannel.UNDEAD, charged=True)
     U_TOME_OF_STRENGTH_2 =           2268, "Tome of Strength +2 (Undead)",                   PickupItem(1, GameID.TOME_OF_STRENGTH_2, ItemChannel.UNDEAD, charged=True)
 
+    # Orc Campaign Items
+
+    # Night Elf Campaign Items
     N_HORN_OF_CENARIUS =             2400, "Horn of Cenarius (Night Elf)",          PickupItem(1, GameID.HORN_OF_CENARIUS, ItemChannel.NIGHT_ELF)
 
 
-item_name_to_data: dict[str, Wc3Item] = {}
+NAME_TO_ITEM: dict[str, Wc3Item] = {}
+ID_TO_ITEM: dict[int, Wc3Item] = {}
 item_id_to_name: dict[int, str] = {}
 item_name_to_id: dict[str, int] = {}
 for item in Wc3Item:
     assert item.item_name not in item_name_to_id, f"Duplicate item name: {item.item_name}"
     assert item.id not in item_id_to_name, f"Duplicate item ID: {item.id}"
-    item_name_to_data[item.item_name] = item
+    NAME_TO_ITEM[item.item_name] = item
+    ID_TO_ITEM[item.id] = item
     item_id_to_name[item.id] = item.item_name
     item_name_to_id[item.item_name] = item.id
 

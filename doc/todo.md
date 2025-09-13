@@ -1,8 +1,18 @@
+## Maps
+* Human02
+  - [x] Implement locations
+  - [x] Remove gamecache
+  - [x] Update next level path
+  - [x] Fix footmen counter
+  - [x] Remove rifleman unlock
+  - [ ] Remove hero level cap triggers
+
 ## Issues
 - [ ] Add magic number / mechanism to prevent loading data from another game
-- [ ] Add packet to send a new item to a campaign
+- [ ] Restarting a mission re-sends hero items
+- [x] Add packet to send a new item to a campaign
 - [ ] Add packet to set/update hero state
-- [ ] comm: Global <--> local location conversion
+- [x] comm: Global <--> local location conversion
 - [ ] Begin converting missions
   - [ ] Eliminate gamecache usage
   - [ ] Redirect starting next mission

@@ -9,7 +9,7 @@ from NetUtils import NetworkItem
 from Utils import async_start
 
 from ..world import Wc3World
-from ..data.locations import Wc3Location
+from ..data.locations import Wc3Location, global_location_id
 from ..data import items
 from .. import logger
 from . import comm
@@ -24,8 +24,20 @@ class Wc3CommandProcessor(ClientCommandProcessor):
         ]))
         return True
     
-    def _cmd_debug_tech(self) -> bool:
-        logger.info(self.ctx.comm_ctx.game_status.inventory.tech)
+    def _cmd_debug(self, key: str) -> bool:
+        parts = key.split('.')
+        current: dict|list|object = self.ctx.comm_ctx
+        for part in parts:
+            if part.isnumeric():
+                part = int(part)
+            if isinstance(current, dict):
+                current = current[part]
+            elif isinstance(current, list):
+                current = current[int(part)]
+            else:
+                current = getattr(current, part)
+        logger.info(current)
+        return True
 
 
 # await self.ctx.send_msgs([{"cmd": 'LocationChecks', "locations": victory_locations}])
@@ -40,7 +52,7 @@ class Wc3Context(CommonContext):
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.generation_version = (-1, -1)
-        self.comm_ctx = comm.AsyncContext(True)
+        self.comm_ctx = comm.AsyncContext(True, client_interface=self)
     
     async def server_auth(self, password_requested: bool = False) -> None:
         self.game = Wc3World.game
@@ -64,7 +76,7 @@ class Wc3Context(CommonContext):
     def _handle_received_items(self, args: dict) -> None:
         received_items: list[NetworkItem] = args["items"]
         for received_item in received_items:
-            item_data = items.Wc3Item(received_item.item)
+            item_data = items.ID_TO_ITEM[received_item.item]
             if (isinstance(item_data.type, items.Building)
                 or isinstance(item_data.type, items.Unit)
                 or isinstance(item_data.type, items.Upgrade)
@@ -76,13 +88,23 @@ class Wc3Context(CommonContext):
                 self.comm_ctx.game_status.hero_data[item_data.type.slot].max_level += 1
                 self.comm_ctx.game_status.pending_update |= comm.PacketType.HEROES
             elif isinstance(item_data.type, items.PickupItem):
-                self.comm_ctx.game_status.inventory.items[item_data.type.channel].append(item_data.type.game_id)
-                self.comm_ctx.game_status.pending_update |= comm.PacketType.ITEMS
+                self.comm_ctx.game_status.item_channel_state[item_data.type.channel].items_received.append(item_data.type.game_id)
             elif isinstance(item_data.type, items.QuestItem):
                 self.comm_ctx.game_status.inventory.tech[item_data.type.gameid] += 1
                 self.comm_ctx.game_status.pending_update |= comm.PacketType.UNLOCKS
             else:
                 logger.error(f"Received unknown item type: {item_data.type}")
+    
+    def on_location_received(self, mission_id: int, location_ids: list[int]) -> None:
+        logger.info(f"Found location {mission_id}:{','.join(map(str, location_ids))}")
+        async_start(self.send_msgs([{
+            "cmd": "LocationChecks",
+            "locations": [global_location_id(mission_id, location_id) for location_id in location_ids],
+        }]))
+    
+    def fetch_locations_collected(self, location_status: dict[int, int], new_mission_id: int) -> None:
+        for k in location_status:
+            location_status[k] = global_location_id(new_mission_id, k) in self.locations_checked
 
     def run_gui(self) -> None:
         from .gui import start_gui

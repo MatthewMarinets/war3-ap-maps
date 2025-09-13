@@ -29,7 +29,7 @@ class Wc3Campaign(enum.Enum):
         self.title_faction = title_faction
         self.campaign_name = name
 
-    GENERAL =    -1, "G", "General", "General Locations"
+    GENERAL =    10, "G", "General", "General Locations"
     PROLOGUE =    0, "P", "Prologue", "Exodus of the Horde"
     HUMAN_1 =     1, "H", "Human", "The Scourge of Lordaeron"
     UNDEAD_1 =    2, "U", "Undead", "Path of the Damned"
@@ -49,6 +49,7 @@ class Wc3Mission(enum.Enum):
     def __init__(
         self, name: str, short_name: str, campaign: Wc3Campaign, chapter: int, race: Wc3Race
     ) -> None:
+        self.id = self.value
         self.mission_name = name
         self.short_name = short_name
         self.campaign = campaign
@@ -129,4 +130,4 @@ class Wc3Mission(enum.Enum):
     UX8_A_SYMPHONY_OF_FROST_AND_FLAME = "A Symphony of Frost and Flame", "Ux8", Wc3Campaign.UNDEAD_2, 10, Wc3Race.UNDEAD
 
 
-VALUE_TO_MISSION = {_mission.value: _mission for _mission in Wc3Mission}
+ID_TO_MISSION = {_mission.value: _mission for _mission in Wc3Mission}
