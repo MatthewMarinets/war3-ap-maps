@@ -163,25 +163,10 @@ STRING 39
 Blackrock Clan
 }
 
-STRING 45
-{
-Footmen Trained |cffffffff3/6|r
-}
-
 STRING 47
 // Units: hC00 (Dragon Hunter), Name (Name)
 {
 Dragon Hunter
-}
-
-STRING 48
-{
-Footmen Trained |cffffffff2/6|r
-}
-
-STRING 53
-{
-Footmen Trained |cffffffff4/6|r
 }
 
 STRING 54
@@ -321,11 +306,6 @@ STRING 82
 To ensure that the Orc threat is dealt with effectively, you must establish a base camp and bolster your forces. Only when the camp is prepared can the area be considered properly garrisoned. 
 }
 
-STRING 85
-{
-Footmen Trained |cffffffff5/6|r
-}
-
 STRING 109
 {
 Blademaster
@@ -369,11 +349,6 @@ STRING 201
 STRING 202
 {
 Footmen
-}
-
-STRING 204
-{
-Footmen Trained  |cffffffff0/6|r
 }
 
 STRING 222
@@ -518,11 +493,6 @@ STRING 294
 Dragon Hunters
 }
 
-STRING 317
-{
-Footmen Trained |cffffffff1/6|r
-}
-
 STRING 391
 {
 The Silver Hand
@@ -566,11 +536,6 @@ Arthas
 STRING 445
 {
 The fiery enchantments you seek could prove useful.
-}
-
-STRING 484
-{
-Footmen Trained |cffffffff6/6|r
 }
 
 STRING 507

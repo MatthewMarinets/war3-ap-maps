@@ -131,6 +131,7 @@ version = TFT
 | BlacksmithDestroyed | boolean | . | false |
 | AltarHintTimer | timer | . | . |
 | orc_buildings_killed | integer | . | . |
+| footmen_trained_unit_name | string | . | Footmen |
 
 # Triggers
 ## fileio
@@ -2165,19 +2166,49 @@ version = TFT
 
 ```
 ### Functions
+- Condition OperatorCompareBoolean
+  - param Function IsUnitType
+    - Function IsUnitType
+      - param Function GetTriggerUnit
+        - Function GetTriggerUnit
+      - param Preset UnitTypeStructure
+  - param Preset OperatorEqualENE
+  - param String true
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
 - Action QueuedTriggerAddBJ
   - param Variable gg_trg_BarracksConstructed_Queue
   - param Preset CheckingIgnoringChecking
-- Condition OperatorCompareUnitCode
-  - param Function GetUnitTypeId
-    - Function GetUnitTypeId
-      - param Function GetConstructedStructure
-        - Function GetConstructedStructure
-  - param Preset OperatorEqualENE
-  - param String hbar
+- Condition OrMultiple
+  - Condition OperatorCompareUnitCode
+    - param Function GetUnitTypeId
+      - Function GetUnitTypeId
+        - param Function GetTriggerUnit
+          - Function GetTriggerUnit
+    - param Preset OperatorEqualENE
+    - param String hbar
+  - Condition OperatorCompareUnitCode
+    - param Function GetUnitTypeId
+      - Function GetUnitTypeId
+        - param Function GetTriggerUnit
+          - Function GetTriggerUnit
+    - param Preset OperatorEqualENE
+    - param String harm
+  - Condition OperatorCompareUnitCode
+    - param Function GetUnitTypeId
+      - Function GetUnitTypeId
+        - param Function GetTriggerUnit
+          - Function GetTriggerUnit
+    - param Preset OperatorEqualENE
+    - param String hars
+  - Condition OperatorCompareUnitCode
+    - param Function GetUnitTypeId
+      - Function GetUnitTypeId
+        - param Function GetTriggerUnit
+          - Function GetTriggerUnit
+    - param Preset OperatorEqualENE
+    - param String hgra
 - Event TriggerRegisterPlayerUnitEventSimple
   - param Preset Player01
   - param Preset PlayerUnitEventConstruct_Finish
@@ -2293,10 +2324,8 @@ version = TFT
   - param String 80.00
   - param String 0.00
   - param String 0
-- Action LeaderboardSetPlayerItemLabelBJ
-  - param Variable AAAP_Arthas
-  - param Variable FootmenLeaderboard
-  - param String TRIGSTR_204
+- Action CustomScriptCode
+  - param String call LeaderboardSetPlayerItemLabelBJ(udg_AAAP_Arthas, udg_FootmenLeaderboard, udg_footmen_trained_unit_name + " Trained |cffffffff" + I2S(udg_FootmenTrained) + "/6|r")
 - Action QueuedTriggerRemoveBJ
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
@@ -2650,6 +2679,13 @@ If a building is cancelled, add to the counter to balance out the fact that we s
 
 ```
 ### Functions
+- Condition OperatorCompareUnitCode
+  - param Function GetUnitTypeId
+    - Function GetUnitTypeId
+      - param Function GetTrainedUnit
+        - Function GetTrainedUnit
+  - param Preset OperatorNotEqualENE
+  - param String hpea
 - Action SetVariable
   - param Variable FootmenTrained
   - param Function OperatorInt
@@ -2659,91 +2695,23 @@ If a building is cancelled, add to the counter to balance out the fact that we s
       - param String 1
 - Action IfThenElse
   - param Function 
-    - Condition OperatorCompareInteger
-      - param Variable FootmenTrained
-      - param Preset OperatorEqual
-      - param String 1
+    - Condition OperatorCompareUnitCode
+      - param Function GetUnitTypeId
+        - Function GetUnitTypeId
+          - param Function GetTriggerUnit
+            - Function GetTriggerUnit
+      - param Preset OperatorNotEqualENE
+      - param String hfoo
   - param Function DoNothing
-    - Action LeaderboardSetPlayerItemLabelBJ
-      - param Variable AAAP_Arthas
-      - param Variable FootmenLeaderboard
-      - param String TRIGSTR_317
-  - param Function DoNothing
-    - Action DoNothing
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareInteger
-      - param Variable FootmenTrained
-      - param Preset OperatorEqual
-      - param String 2
-  - param Function DoNothing
-    - Action LeaderboardSetPlayerItemLabelBJ
-      - param Variable AAAP_Arthas
-      - param Variable FootmenLeaderboard
-      - param String TRIGSTR_048
+    - Action SetVariable
+      - param Variable footmen_trained_unit_name
+      - param String (wo)men
   - param Function DoNothing
     - Action DoNothing
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareInteger
-      - param Variable FootmenTrained
-      - param Preset OperatorEqual
-      - param String 3
-  - param Function DoNothing
-    - Action LeaderboardSetPlayerItemLabelBJ
-      - param Variable AAAP_Arthas
-      - param Variable FootmenLeaderboard
-      - param String TRIGSTR_045
-  - param Function DoNothing
-    - Action DoNothing
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareInteger
-      - param Variable FootmenTrained
-      - param Preset OperatorEqual
-      - param String 4
-  - param Function DoNothing
-    - Action LeaderboardSetPlayerItemLabelBJ
-      - param Variable AAAP_Arthas
-      - param Variable FootmenLeaderboard
-      - param String TRIGSTR_053
-  - param Function DoNothing
-    - Action DoNothing
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareInteger
-      - param Variable FootmenTrained
-      - param Preset OperatorEqual
-      - param String 5
-  - param Function DoNothing
-    - Action LeaderboardSetPlayerItemLabelBJ
-      - param Variable AAAP_Arthas
-      - param Variable FootmenLeaderboard
-      - param String TRIGSTR_085
-  - param Function DoNothing
-    - Action DoNothing
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareInteger
-      - param Variable FootmenTrained
-      - param Preset OperatorEqual
-      - param String 6
-  - param Function DoNothing
-    - Action LeaderboardSetPlayerItemLabelBJ
-      - param Variable AAAP_Arthas
-      - param Variable FootmenLeaderboard
-      - param String TRIGSTR_484
-  - param Function DoNothing
-    - Action DoNothing
+- Action CustomScriptCode
+  - param String call LeaderboardSetPlayerItemLabelBJ(udg_AAAP_Arthas, udg_FootmenLeaderboard, udg_footmen_trained_unit_name + " Trained |cffffffff" + I2S(udg_FootmenTrained) + "/6|r")
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_FootmenTrained
-- Condition OperatorCompareUnitCode
-  - param Function GetUnitTypeId
-    - Function GetUnitTypeId
-      - param Function GetTrainedUnit
-        - Function GetTrainedUnit
-  - param Preset OperatorEqualENE
-  - param String hfoo
 - Event TriggerRegisterPlayerUnitEventSimple
   - param Preset Player01
   - param Preset PlayerUnitEventTrain_Finish
@@ -5148,11 +5116,11 @@ If a building is cancelled, add to the counter to balance out the fact that we s
   - param Variable AAAPG_Arthas
   - param Preset QuestMessageTypeHint
   - param String TRIGSTR_020
-- Action SetPlayerUnitAvailableBJ
+- Action # SetPlayerUnitAvailableBJ
   - param String hrif
   - param Preset AvailabilityOptionAvailable
   - param Variable AAAP_Arthas
-- Action SetPlayerUnitAvailableBJ
+- Action # SetPlayerUnitAvailableBJ
   - param String hbla
   - param Preset AvailabilityOptionAvailable
   - param Variable AAAP_Arthas
