@@ -179,13 +179,20 @@ def _make_trigger_if_necessary(
     return result
 
 
-FILEIO_J = 'common/fileio.j'
-MAP_CONFIG_J = 'common/map_config.j'
-STATUS_J = 'common/status.j'
-HEROES_J = 'common/heroes.j'
-ITEM_LOCATIONS_J = 'common/item_locations.j'
-DEBUG_J = 'common/debug.j'
-ZOOM_J = 'common/zoom.j'
+def filestem(filename: str) -> str:
+    return os.path.basename(os.path.splitext(filename)[0])
+
+
+JASS_FILES = (
+    # As these are prepended, the order is reversed in the editor
+    'common/zoom.j',
+    'common/debug.j',
+    'common/item_locations.j',
+    'common/heroes.j',
+    'common/status.j',
+    'common/map_config.j',
+    'common/fileio.j',
+)
 def update_triggers(map_dir: str) -> None:
     wtg_file = f'{map_dir}/triggers_gui.wtg.md'
     wct_file = f'{map_dir}/triggers_text.wct.j'
@@ -197,6 +204,10 @@ def update_triggers(map_dir: str) -> None:
     wct_data = wct.from_text_file(wct_file)
     w3i_data = w3i.from_text_file(w3i_file)
 
+    # Update data versions
+    wct_data.version = 1
+    wtg_data.version = wtg.Version.TFT
+
     # Create or get trigger category
     archipelago_category_results = [
         category for category in wtg_data.categories if category.name == 'Archipelago'
@@ -204,41 +215,20 @@ def update_triggers(map_dir: str) -> None:
     if not archipelago_category_results:
         max_id = max(category.category_id for category in wtg_data.categories)
         archipelago_category = wtg.TriggerCategory(max_id + 1, 'Archipelago')
-        wtg_data.categories.append(archipelago_category)
+        wtg_data.categories[0:0] = [archipelago_category]
     else:
         archipelago_category = archipelago_category_results[0]
     del archipelago_category_results
 
     # Create or get AP triggers
     ap_category_id = archipelago_category.category_id
-    _make_trigger_if_necessary('zoom', ap_category_id, wtg_data, wct_data)
-    _make_trigger_if_necessary('debug', ap_category_id, wtg_data, wct_data)
-    _make_trigger_if_necessary('item_locations', ap_category_id, wtg_data, wct_data)
-    _make_trigger_if_necessary('heroes', ap_category_id, wtg_data, wct_data)
-    _make_trigger_if_necessary('status', ap_category_id, wtg_data, wct_data)
-    _make_trigger_if_necessary('map_config', ap_category_id, wtg_data, wct_data)
-    _make_trigger_if_necessary('fileio', ap_category_id, wtg_data, wct_data)
-    trigger_names = [trigger.name for trigger in wtg_data.triggers]
-    zoom_index = trigger_names.index('zoom')
-    debug_index = trigger_names.index('debug')
-    item_locations_index = trigger_names.index('item_locations')
-    heroes_index = trigger_names.index('heroes')
-    status_index = trigger_names.index('status')
-    map_config_index = trigger_names.index('map_config')
-    fileio_index = trigger_names.index('fileio')
+    for jass_file in JASS_FILES:
+        _make_trigger_if_necessary(filestem(jass_file), ap_category_id, wtg_data, wct_data)
+    trigger_indices = {trigger.name: index for index, trigger in enumerate(wtg_data.triggers)}
 
-    file_index_mapping = (
-        (FILEIO_J, fileio_index),
-        (STATUS_J, status_index),
-        (HEROES_J, heroes_index),
-        (ITEM_LOCATIONS_J, item_locations_index),
-        (DEBUG_J, debug_index),
-        (ZOOM_J, zoom_index),
-        (MAP_CONFIG_J, map_config_index),
-    )
-
-    for filename, target_index in file_index_mapping:
-        with open(filename, 'r') as fp:
+    for jass_file in JASS_FILES:
+        target_index = trigger_indices[filestem(jass_file)]
+        with open(jass_file, 'r') as fp:
             text = fp.read()
         wct_data.triggers[target_index].text = text
 
@@ -290,7 +280,7 @@ def update_triggers(map_dir: str) -> None:
         item_channel_2_hero_slot = hero_slots.index(item_channel_2_global_hero_id)
 
     # Format map_config trigger
-    map_config = wct_data.triggers[map_config_index]
+    map_config = wct_data.triggers[trigger_indices['map_config']]
     map_config.text = (
         map_config.text
         .replace('$(MISSION_ID)', str(mission_id))
