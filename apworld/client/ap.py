@@ -10,7 +10,7 @@ from Utils import async_start
 
 from ..world import Wc3World
 from ..data.locations import Wc3Location, global_location_id
-from ..data import items
+from ..data import items, heroes
 from .. import logger
 from . import comm
 
@@ -53,15 +53,13 @@ class Wc3Context(CommonContext):
         super().__init__(*args, **kwargs)
         self.generation_version = (-1, -1)
         self.comm_ctx = comm.AsyncContext(True, client_interface=self)
-    
+
     async def server_auth(self, password_requested: bool = False) -> None:
         self.game = Wc3World.game
         if password_requested and not self.password:
             await super(Wc3Context, self).server_auth(password_requested)
         await self.get_username()
         await self.send_connect()
-        if self.ui:
-            self.ui.first_check = True
 
     def on_package(self, cmd: str, args: dict) -> None:
         if cmd == "Connected":
@@ -71,8 +69,14 @@ class Wc3Context(CommonContext):
 
     def _handle_connected(self, args: dict) -> None:
         self.generation_version = (args["slot_data"]["version_major"], args["slot_data"]["version_minor"])
+        hero_class: dict[int, int] = args["slot_data"]["hero_class"]
+        hero_names: dict[int, str] = args["slot_data"]["hero_names"]
+        for hero_id, hero_class_id in hero_class.items():
+            self.comm_ctx.game_status.hero_data[int(hero_id)].hero = heroes.HERO_CHOICE_ID_TO_DATA[hero_class_id]
+        for hero_id, hero_name in hero_names.items():
+            self.comm_ctx.game_status.hero_data[int(hero_id)].name = hero_name
         logger.info(f"Connected. World version {self.generation_version}")
-    
+
     def _handle_received_items(self, args: dict) -> None:
         received_items: list[NetworkItem] = args["items"]
         for received_item in received_items:

@@ -1,5 +1,6 @@
 """Generation functions. Requires core imports."""
 from typing import Mapping, Any, Callable, TYPE_CHECKING
+from dataclasses import fields
 
 from BaseClasses import Region, CollectionState, Entrance, Item, Location, ItemClassification
 from .data import locations, items, missions, heroes, tables
@@ -66,6 +67,13 @@ class Generation:
         self.item_channels: set[heroes.ItemChannel] = set()
         self.included_races: missions.Wc3Race = missions.Wc3Race.NONE
         self.included_campaigns: set[missions.Wc3Campaign] = set()
+    
+    def process_options(self, world: 'Wc3World') -> None:
+        for field in fields(world.options):
+            if not field.name.endswith('_name'):
+                continue
+            if not getattr(world.options, field.name):
+                setattr(world.options, field.name, world.random.choice(heroes.ALL_HERO_NAMES))
 
     def create_regions(self, world: 'Wc3World') -> None:
         self.regions.append(Region(world.origin_region_name, world.player, world.multiworld))
@@ -128,6 +136,56 @@ class Generation:
 
     def fill_slot_data(self, world: 'Wc3World') -> Mapping[str, Any]:
         return {
+            "hero_class": {
+                heroes.HeroSlot.PALADIN_ARTHAS.value: world.options.paladin_arthas_hero.value,
+                heroes.HeroSlot.JAINA.value: world.options.jaina_hero.value,
+                heroes.HeroSlot.MURADIN_BRONZEBEARD.value: world.options.muradin_bronzebeard_hero.value,
+                heroes.HeroSlot.THRALL.value: world.options.thrall_hero.value,
+                heroes.HeroSlot.CAIRNE_BLOODHOOF.value: world.options.cairne_bloodhoof_hero.value,
+                heroes.HeroSlot.GROM_HELLSCREAM.value: world.options.grom_hellscream_hero.value,
+                heroes.HeroSlot.DEATH_KNIGHT_ARTHAS.value: world.options.death_knight_arthas_hero.value,
+                heroes.HeroSlot.KEL_THUZAD.value: world.options.kel_thuzad_hero.value,
+                # heroes.HeroSlot.ARTHAS_TFT.value: world.options.arthas_tft_hero.value,
+                # heroes.HeroSlot.SYLVANAS.value: world.options.sylvanas_hero.value,
+                # heroes.HeroSlot.VARIMATHRAS.value: world.options.varimathras_hero.value,
+                # heroes.HeroSlot.ANUB_ARAK.value: world.options.anub_arak_hero.value,
+                heroes.HeroSlot.TYRANDE.value: world.options.tyrande_hero.value,
+                heroes.HeroSlot.FURION.value: world.options.furion_hero.value,
+                heroes.HeroSlot.ILLIDAN.value: world.options.illidan_hero.value,
+                # heroes.HeroSlot.TYRANDE_TFT.value: world.options.tyrande_tft_hero.value,
+                # heroes.HeroSlot.MALFURION.value: world.options.malfurion_hero.value,
+                # heroes.HeroSlot.MAIEV.value: world.options.maiev_hero.value,
+                # heroes.HeroSlot.KAEL.value: world.options.kael_hero.value,
+                # heroes.HeroSlot.DEMON_ILLIDAN.value: world.options.demon_illidan_hero.value,
+                # heroes.HeroSlot.LADY_VASHJ.value: world.options.lady_vashj_hero.value,
+                # heroes.HeroSlot.AKAMA.value: world.options.akama_hero.value,
+                # heroes.HeroSlot.LORD_GARITHOS.value: world.options.lord_garithos_hero.value,
+            },
+            "hero_names": {
+                heroes.HeroSlot.PALADIN_ARTHAS.value: world.options.paladin_arthas_name.value,
+                heroes.HeroSlot.JAINA.value: world.options.jaina_name.value,
+                heroes.HeroSlot.MURADIN_BRONZEBEARD.value: world.options.muradin_bronzebeard_name.value,
+                heroes.HeroSlot.THRALL.value: world.options.thrall_name.value,
+                heroes.HeroSlot.CAIRNE_BLOODHOOF.value: world.options.cairne_bloodhoof_name.value,
+                heroes.HeroSlot.GROM_HELLSCREAM.value: world.options.grom_hellscream_name.value,
+                heroes.HeroSlot.DEATH_KNIGHT_ARTHAS.value: world.options.death_knight_arthas_name.value,
+                heroes.HeroSlot.KEL_THUZAD.value: world.options.kel_thuzad_name.value,
+                # heroes.HeroSlot.ARTHAS_TFT.value: world.options.arthas_tft_name.value,
+                # heroes.HeroSlot.SYLVANAS.value: world.options.sylvanas_name.value,
+                # heroes.HeroSlot.VARIMATHRAS.value: world.options.varimathras_name.value,
+                # heroes.HeroSlot.ANUB_ARAK.value: world.options.anub_arak_name.value,
+                heroes.HeroSlot.TYRANDE.value: world.options.tyrande_name.value,
+                heroes.HeroSlot.FURION.value: world.options.furion_name.value,
+                heroes.HeroSlot.ILLIDAN.value: world.options.illidan_name.value,
+                # heroes.HeroSlot.TYRANDE_TFT.value: world.options.tyrande_tft_name.value,
+                # heroes.HeroSlot.MALFURION.value: world.options.malfurion_name.value,
+                # heroes.HeroSlot.MAIEV.value: world.options.maiev_name.value,
+                # heroes.HeroSlot.KAEL.value: world.options.kael_name.value,
+                # heroes.HeroSlot.DEMON_ILLIDAN.value: world.options.demon_illidan_name.value,
+                # heroes.HeroSlot.LADY_VASHJ.value: world.options.lady_vashj_name.value,
+                # heroes.HeroSlot.AKAMA.value: world.options.akama_name.value,
+                # heroes.HeroSlot.LORD_GARITHOS.value: world.options.lord_garithos_name.value,
+            },
             "version_public": VERSION_PUBLIC,
             "version_major": VERSION_MAJOR,
             "version_minor": VERSION_MINOR,

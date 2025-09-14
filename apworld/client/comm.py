@@ -491,7 +491,7 @@ def read_hero_status(slot: int, game_status: GameStatus) -> None:
     if not os.path.isfile(filename):
         logger.debug(f"Unable to read {filename} as it does not exist")
         return
-    with open(filename, 'r') as fp:
+    with open(filename, 'r', encoding='utf-8') as fp:
         lines = fp.readlines()
     lines = lines[2:]
     slot_index = int(line_contents(lines.pop(0)))

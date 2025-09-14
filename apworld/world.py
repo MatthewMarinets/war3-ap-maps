@@ -31,8 +31,12 @@ class Wc3World(World):
         super().__init__(multiworld, player)
         self.generation_info: generation.Generation | None = None
 
-    def create_regions(self) -> None:
+    def generate_early(self) -> None:
         self.generation_info = generation.Generation()
+        self.generation_info.process_options(self)
+
+    def create_regions(self) -> None:
+        assert self.generation_info is not None
         self.generation_info.create_regions(self)
     
     def create_items(self) -> None:

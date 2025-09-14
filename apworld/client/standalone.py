@@ -6,6 +6,7 @@ import inspect
 import time
 import threading
 import sys
+import shlex
 
 from .. import logger
 from .comm import PacketType, AsyncContext, GameStatus, status_loop, InventoryItem
@@ -81,10 +82,6 @@ def start_stdin_reader_thread(queue: asyncio.Queue[str]) -> threading.Thread:
     return thread
 
 
-def tokenize(line: str) -> list[str]:
-    return [t for t in line.split() if t]
-
-
 async def _stdin_reader(ctx: AsyncContext) -> None:
     queue: asyncio.Queue[str] = asyncio.Queue()
     start_stdin_reader_thread(queue)
@@ -94,7 +91,7 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
             queue.task_done()
 
             logger.debug(f'User: {text}')
-            tokens = tokenize(text)
+            tokens = shlex.split(text)
             if not tokens:
                 continue
             elif tokens[0] == '/exit' or tokens[0] == 'q':
@@ -104,6 +101,7 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
                 logger.info(inspect.cleandoc('''
                     /exit
                     /status
+                    /setname "<hero slot ID>" "name"
                     /herostatus <hero slot ID>
                     /senditem <item channel ID> <item ID>
                     /check <args>
@@ -115,6 +113,15 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
             elif tokens[0] == '/status':
                 logger.info(ctx.game_status)
                 logger.info(ctx.mission_status)
+            elif tokens[0] == '/setname':
+                if len(tokens) < 3:
+                    logger.warning(f"/setname takes 2 arguments, got {len(tokens) - 1}")
+                    continue
+                user_identifier = try_parse_hero_slot(tokens[1])
+                if user_identifier is None:
+                    logger.warning(f"{tokens[1]} is not a valid hero slot name")
+                    continue
+                ctx.game_status.hero_data[user_identifier].name = tokens[3]
             elif tokens[0] == '/herostatus':
                 slot_identifier = " ".join(tokens[1:])
                 hero_slot = try_parse_hero_slot(slot_identifier)
@@ -196,7 +203,7 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
 def init_test_data(game_status: GameStatus) -> None:
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].hero = heroes.HeroChoice.FEL_ORC_BLADEMASTER
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].reset_abils()
-    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].name = r":D"
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].name = "«§upa¢ool»"
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].xp = 240
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].max_level = 3
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].abilities[GameID.BLADEMASTER_CRITICAL_STRIKE] = 1

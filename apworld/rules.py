@@ -36,38 +36,48 @@ class Wc3Logic:
     def has_any(self, state: 'CollectionState', items: Iterable[Wc3Item]) -> bool:
         return state.has_any(tuple(x.item_name for x in items), self.player)
 
-    def has_from_each_group(
-        self, state: 'CollectionState', items: Iterable[Iterable[Wc3Item]], count: int = 1
-    ) -> bool:
-        return all(state.has_from_list((x.item_name for x in group), self.player, count) for group in items)
-
     def has_all_from_any_group(
-        self, state: 'CollectionState', items: Iterable[Iterable[Wc3Item]],
+        self, state: 'CollectionState', items: Iterable[Iterable[str]],
     ) -> bool:
-        return any(state.has_all((x.item_name for x in group), self.player) for group in items)
+        for group in items:
+            if state.has_all(group, self.player):
+                return True
+        return False
 
     def has_level(self, state: 'CollectionState', item: Wc3Item, level: int) -> bool:
         assert isinstance(item.type, Level)
         return state.has(item.item_name, self.player, count=max(0, level - item.type.start_level_cap))
 
-    def human_has_footman(self, state: 'CollectionState') -> bool:
-        return self.has(state, Wc3Item.FOOTMAN)
+    def human_has_military_unit(self, state: 'CollectionState') -> bool:
+        return self.has_any(state, (
+            Wc3Item.FOOTMAN,
+            Wc3Item.RIFLEMAN,
+            Wc3Item.KNIGHT,
+            Wc3Item.PRIEST,
+            Wc3Item.SORCERESS,
+            Wc3Item.SPELL_BREAKER,
+            Wc3Item.MORTAR_TEAM,
+            Wc3Item.FLYING_MACHINE,
+            Wc3Item.SIEGE_ENGINE,
+            Wc3Item.GRYPHON_RIDER,
+            Wc3Item.DRAGONHAWK_RIDER,
+        ))
 
     def human_has_ground_attacker(self, state: 'CollectionState') -> bool:
         return self.has_all_from_any_group(state, (
-            (Wc3Item.FOOTMAN,),
-            (Wc3Item.RIFLEMAN,),
-            (Wc3Item.KNIGHT,),
-            (Wc3Item.MORTAR_TEAM,),
-            (Wc3Item.FLYING_MACHINE, Wc3Item.FLYING_MACHINE_BOMBS,),
-            (Wc3Item.PRIEST,),
-            (Wc3Item.SORCERESS,),
-            (Wc3Item.SPELL_BREAKER,),
-            (Wc3Item.GRYPHON_RIDER,),
-            (Wc3Item.DRAGONHAWK_RIDER,),
-            (Wc3Item.PEASANT, Wc3Item.CANNON_TOWER,),
-            (Wc3Item.PEASANT, Wc3Item.ARCANE_TOWER,),
-            (Wc3Item.PEASANT, Wc3Item.GUARD_TOWER,),
+            (Wc3Item.FOOTMAN.item_name,),
+            (Wc3Item.RIFLEMAN.item_name,),
+            (Wc3Item.KNIGHT.item_name,),
+            (Wc3Item.MORTAR_TEAM.item_name,),
+            (Wc3Item.FLYING_MACHINE.item_name, Wc3Item.FLYING_MACHINE_BOMBS.item_name,),
+            (Wc3Item.PRIEST.item_name,),
+            (Wc3Item.SORCERESS.item_name,),
+            (Wc3Item.SPELL_BREAKER.item_name,),
+            (Wc3Item.GRYPHON_RIDER.item_name,),
+            (Wc3Item.DRAGONHAWK_RIDER.item_name,),
+            (Wc3Item.PEASANT.item_name, Wc3Item.CANNON_TOWER.item_name,),
+            (Wc3Item.PEASANT.item_name, Wc3Item.ARCANE_TOWER.item_name,),
+            (Wc3Item.PEASANT.item_name, Wc3Item.GUARD_TOWER.item_name,),
         ))
 
     def human_has_healing(self, state: 'CollectionState') -> bool:
@@ -99,27 +109,15 @@ class Wc3Logic:
         )
 
     def nelf_has_healing(self, state: 'CollectionState') -> bool:
-        return self.has_all_from_any_group(state, (
-            (Wc3Item.NELF_WELLSPRING,),
-            (Wc3Item.DRUID_OF_THE_CLAW, Wc3Item.DRUID_OF_THE_CLAW_TRAINING,),
-        ))
+        return (
+            self.has(state, Wc3Item.NELF_WELLSPRING)
+            or self.has_all(state, (Wc3Item.DRUID_OF_THE_CLAW, Wc3Item.DRUID_OF_THE_CLAW_TRAINING))
+        )
 
     def undead_has_healing(self, state: 'CollectionState') -> bool:
         return (
             self.has_any(state, (Wc3Item.OBSIDIAN_STATUE, Wc3Item.SHOP_ITEM_SCROLL_OF_HEALING))
         )
-
-    def orc_has_dispel(self, state: 'CollectionState') -> bool:
-        return self.has_all_from_any_group(state, (
-            (Wc3Item.SHAMAN,),
-            (Wc3Item.SPIRIT_WALKER, Wc3Item.SPIRIT_WALKER_TRAINING,),
-        ))
-
-    def nelf_has_dispel(self, state: 'CollectionState') -> bool:
-        return self.has_all_from_any_group(state, (
-            (Wc3Item.WISP,),
-            (Wc3Item.DRYAD, Wc3Item.DRYAD_ABOLISH_MAGIC,),
-        ))
 
     # ========================== #
     # Mission-Specific Functions #
@@ -136,7 +134,7 @@ class Wc3Logic:
 def set_rules(world: 'Wc3World') -> None:
     logic = Wc3Logic(world)
     location_to_rule: dict[int, Callable[['CollectionState'], bool]] = {
-        Wc3Location.HU2_ESTABLISH_BASE.id: logic.human_has_footman,
+        Wc3Location.HU2_ESTABLISH_BASE.id: logic.human_has_military_unit,
         Wc3Location.HU2_ORC_BASE.id: logic.human_2_orc_base,
         Wc3Location.HU2_WEST_OGRE_ITEM.id: logic.human_can_clear_trees_on_arthas_level,
         Wc3Location.HU2_GNOLL_WARDEN_ITEM.id: logic.human_can_clear_trees_on_arthas_level,

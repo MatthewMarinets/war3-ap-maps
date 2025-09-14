@@ -91,6 +91,7 @@ class HeroChoice(enum.Enum):
         return obj
 
     def __init__(self, id: int, hero_name: str, hero_class: HeroClass, source: HeroSource, game_id: GameID) -> None:
+        self.id = id
         self.hero_name = hero_name
         self.hero_class = hero_class
         self.source = source
@@ -109,7 +110,7 @@ class HeroChoice(enum.Enum):
     THRALL =              4,  "Thrall", HeroClass.FAR_SEER, HeroSource.VANILLA, GameID.THRALL
     CAIRNE_BLOODHOOF =    5,  "Cairne Bloodhoof", HeroClass.TAUREN_CHIEFTAIN, HeroSource.VANILLA, GameID.CAIRNE_BLOODHOOF
     GROM_HELLSCREAM =     6,  "Grom Hellscream", HeroClass.BLADEMASTER, HeroSource.VANILLA, GameID.GROM_HELLSCREAM
-    DEATH_KNIGHT_ARTHAS = 7,  "Death Knight Arthas", HeroClass.DEATH_KNIGHT, HeroSource.VANILLA, GameID.ARTHAS_EVIL
+    DEATH_KNIGHT_ARTHAS = 7,  "Arthas", HeroClass.DEATH_KNIGHT, HeroSource.VANILLA, GameID.ARTHAS_EVIL
     KEL_THUZAD =          8,  "Kel'Thuzad", HeroClass.LICH, HeroSource.VANILLA, GameID.KEL_THUZAD
     SYLVANAS =            9,  "Sylvanas", HeroClass.DARK_RANGER, HeroSource.VANILLA, GameID.SYLVANAS
     VARIMATHRAS =         10, "Varimathras", HeroClass.DREADLORD, HeroSource.VANILLA, GameID.VARIMATHRAS
@@ -121,7 +122,7 @@ class HeroChoice(enum.Enum):
     MALFURION =           16, "Malfurion", HeroClass.KEEPER_OF_THE_GROVE, HeroSource.VANILLA, GameID.MALFURION
     KAEL =                17, "Kael", HeroClass.BLOOD_MAGE, HeroSource.VANILLA, GameID.KAEL_THAS
     LADY_VASHJ =          18, "Lady Vashj", HeroClass.NAGA_SEA_WITCH, HeroSource.VANILLA, GameID.LADY_VASHJ
-    DEMON_ILLIDAN =       19, "Demon Illidan", HeroClass.DEMON_HUNTER, HeroSource.VANILLA, GameID.ILLIDAN_EVIL
+    DEMON_ILLIDAN =       19, "Illidan", HeroClass.DEMON_HUNTER, HeroSource.VANILLA, GameID.ILLIDAN_EVIL
     AKAMA =               20, "Akama", HeroClass.ELDER_SAGE, HeroSource.VANILLA, GameID.AKAMA
     LORD_GARITHOS =       21, "Lord Garithos", HeroClass.DARK_KNIGHT, HeroSource.VANILLA, GameID.LORD_GARITHOS  # Shockwave, Holy Light, Devotion Aura, Avatar
 
@@ -232,6 +233,7 @@ HERO_SLOT_TO_DEFAULT_CHOICE = {
 HERO_SLOT_TO_DEFAULT_CHOICE[HeroSlot.TYRANDE_TFT] = HeroChoice.TYRANDE
 HERO_SLOT_TO_DEFAULT_CHOICE[HeroSlot.ARTHAS_TFT] = HeroChoice.DEATH_KNIGHT_ARTHAS
 assert len(HERO_SLOT_TO_DEFAULT_CHOICE) == len(HeroSlot)
+HERO_CHOICE_ID_TO_DATA = {_choice.id: _choice for _choice in HeroChoice}
 
 LEVEL_THRESHOLDS = [
     0,      # 1
@@ -244,4 +246,78 @@ LEVEL_THRESHOLDS = [
     3500,   # 8
     4400,   # 9
     5400,   # 10
+]
+
+ALL_HERO_NAMES = [
+    *[_choice.name for _choice in HeroChoice],
+    # Other heroes
+    "Dagren the Orcslayer",
+    "Halahk the Lifebringer",
+    "Lord Nicolas Buzan",
+    "Magroth the Defender",
+    "Sir Gregory Edmundson",
+    "Mannoroth",
+    "Azgalor",
+    "Drek'Thar",
+    "Samuro",
+    "Uther",
+    "Cenarius",
+    "Archimonde",
+    "Admiral Proundmoore",
+    # Dreadlords
+    "Tichondrius",
+    "Balnazzar",
+    "Dalvengyr",  # HuX02
+    "Anetheron",  # UD03Interlude
+    "Mephistroth",  # UD03Interlude
+    # UD6 Blademasters + Far Seers
+    "Genjuros",
+    "Haomarush",
+    "Khanzo",
+    "Mazrigos",
+    "Throk'Feroth",
+    "Jubei'Thos",
+    # HuX6 Blademasters
+    "Bloodgrin",
+    "Bonethirst",
+    "Sagra'nel",
+    "Nera'thor",
+    "Rend",  # Black Tooth Grin Clan?
+    "Maim",  # Black Tooth Grin Clan?
+    # Non-hero characters
+    "King Terenas",
+    "Medivh",
+    "Nazgrel",
+    "Sen'jin",
+    "Vol'jin",
+    # Warcraft 2 characters
+    "Anduin Lothar",
+    "Alleria Windrunner",
+    "Danath",
+    "Khadgar",
+    "Kurdran",
+    "Turalyon",
+    "Genn Greymane",
+    "Thoras Trollbane",
+    "Orgrim Doomhammer",    # Blackrock Clan
+    "Gul'dan",              # Stormreaver Clan
+    "Cho'gall",             # Twilight's Hammer Clan
+    "Kilrogg Deadeye",      # Bleeding Hollow Clan
+    "Zuluhed",              # Dragonmaw Clan
+    # Burning Blade lacks a clan leader
+    "Durotan",              # Frostwolf Clan
+    "Zul'jin",
+    # Beyond the Dark Portal
+    "Ner'zhul",             # Shadow Moon Clan
+    # "Grom Hellscream",    # Warsong Clan
+    "Kargath Bladefist",    # Shattered Hand Clan
+    "Fenris the Hunter",    # Thunderlord Clan
+    "Mogor",                # Laughing Skull Clan
+    "Tagar Spinebreaker",   # Bonechewer Clan
+    "Dentarg",
+    "Teron Gorefiend",
+    # Warcraft 1
+    "Llane Wrynn",
+    "Blackhand",
+    "Garona",
 ]
