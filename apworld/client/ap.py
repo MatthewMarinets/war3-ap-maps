@@ -75,6 +75,8 @@ class Wc3Context(CommonContext):
             self.comm_ctx.game_status.hero_data[int(hero_id)].hero = heroes.HERO_CHOICE_ID_TO_DATA[hero_class_id]
         for hero_id, hero_name in hero_names.items():
             self.comm_ctx.game_status.hero_data[int(hero_id)].name = hero_name
+        self.comm_ctx.game_status.world_id = args["slot_data"]["world_id"]
+        self.comm_ctx.game_status.do_startup = True
         logger.info(f"Connected. World version {self.generation_version}")
 
     def _handle_received_items(self, args: dict) -> None:
@@ -90,7 +92,7 @@ class Wc3Context(CommonContext):
                 self.comm_ctx.game_status.pending_update |= comm.PacketType.UNLOCKS
             elif isinstance(item_data.type, items.Level):
                 self.comm_ctx.game_status.hero_data[item_data.type.slot].max_level += 1
-                self.comm_ctx.game_status.pending_update |= comm.PacketType.HEROES
+                self.comm_ctx.game_status.pending_update |= comm.PacketType.HERO_LEVEL
             elif isinstance(item_data.type, items.PickupItem):
                 self.comm_ctx.game_status.item_channel_state[item_data.type.channel].items_received.append(item_data.type.game_id)
             elif isinstance(item_data.type, items.QuestItem):

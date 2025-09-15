@@ -4,6 +4,7 @@ import enum
 import asyncio
 import os
 from dataclasses import dataclass, field
+import time
 
 from ..data.game_ids import Tech, TECH_REQUIREMENTS, GameID, HERO_ABILITIES, int_to_id
 from .. import logger
@@ -95,6 +96,7 @@ class PacketType(enum.IntFlag):
     HEROES = 8
     ITEMS = 0x10
     ITEM_CHANNELS = 0x20
+    HERO_LEVEL = 0x40
 NUM_PACKET_TYPES = len(PacketType)
 
 
@@ -149,6 +151,7 @@ class HeroStatus:
 @dataclass
 class MissionStatus:
     update_number: int = -100
+    world_id: int = -1
     mission_id: int = -1
     packet_status: dict[PacketType, PacketStatus] = field(default_factory=default_packet_status)
     locations_collected: dict[int, int] = field(default_factory=default_locations_collected)
@@ -175,11 +178,14 @@ def init_item_channels() -> dict[heroes.ItemChannel, ItemChannelState]:
 
 @dataclass
 class GameStatus:
+    world_id: int = field(default_factory=lambda: (time.time_ns() >> 17) & 0x7fff_ffff)
+    """Positive 32-bit int value identifying the world to avoid pulling data from another world"""
+    do_startup = True
     pending_messages: list[str] = field(default_factory=list)
     num_in_flight_messages: int = 0
     item_channel_state: dict[heroes.ItemChannel, ItemChannelState] = field(default_factory=init_item_channels)
     in_flight_item_channel: heroes.ItemChannel = heroes.ItemChannel.NONE
-    pending_update: PacketType = PacketType.HEROES|PacketType.ITEM_CHANNELS  # read on mission start
+    pending_update: PacketType = PacketType.HEROES  # read on mission start
     last_hero_update: int = -1
     next_hero_update: int = -1
     hero_data: dict[heroes.HeroSlot, HeroStatus] = field(default_factory=init_hero_data, repr=False)
@@ -205,13 +211,16 @@ def set_tech(game_id: GameID|Tech, player_literal: str, amount: int = 1) -> str:
 
 
 def send_string(message: str, player: str|int = 0) -> str:
-    return f'call SetPlayerName(Player({player}), "{message}")\n'
+    # Note(mm): Attempting to change a player name to empty-string instead just no-ops;
+    # make sure to always send at least one character
+    return f'call SetPlayerName(Player({player}), "{message or "_"}")\n'
 
 
-def update_ping(status: MissionStatus, pending: PacketType = PacketType.NONE) -> None:
+def update_ping(status: MissionStatus, world_id: int, pending: PacketType = PacketType.NONE) -> None:
     with open(PING_FILE, 'w') as fp:
         fp.write(PRELOAD_FUNCTION_PROTOTYPE)
         fp.write(send_int(status.update_number, channel='nske'))
+        fp.write(send_int(world_id, channel='nwgt'))
         fp.write(send_int(status.mission_id, channel='nvlk'))
         fp.write(send_int(pending.value, channel='nvk2'))
         fp.write(ENDFUNCTION)
@@ -285,6 +294,7 @@ def update_locations(game_status: GameStatus, status: MissionStatus) -> None:
     uncollected_string = ''.join(uncollected_parts)
     with open(LOCATIONS_FILE, 'w') as fp:
         fp.write(PRELOAD_FUNCTION_PROTOTYPE)
+        fp.write(send_int(packet_status.last_sent, 'nech'))
         fp.write(send_string(collected_string, player=0))
         fp.write(send_string(uncollected_string, player=1))
         fp.write(ENDFUNCTION)
@@ -321,7 +331,6 @@ def update_heroes(game_status: GameStatus, status: MissionStatus) -> None:
             fp.write(send_int(1, 'nske'))
         fp.write('endif\n')
         fp.write(ENDFUNCTION)
-    game_status.pending_update &= ~PacketType.HEROES
 
 
 def update_item_channels(game_status: GameStatus, mission_status: MissionStatus) -> None:
@@ -339,7 +348,6 @@ def update_item_channels(game_status: GameStatus, mission_status: MissionStatus)
             fp.write(send_int(state.items_acked, 'npng'))
         fp.write('endif\n')
         fp.write(ENDFUNCTION)
-    game_status.pending_update &= ~PacketType.ITEM_CHANNELS
 
 
 def update_items(game_status: GameStatus, mission_status: MissionStatus) -> None:
@@ -447,6 +455,7 @@ def read_status(status: MissionStatus, game_status: GameStatus) -> None:
             )
             log_message_to_game(game_status, msg, ColorCode.WARNING)
             status.errors |= MissionError.MINOR_VERSION_MISMATCH
+    status.world_id = int(line_contents(lines.pop(0)))
     status.mission_id = int(line_contents(lines.pop(0)))
     last_transmissions = [int(x) for x in line_contents(lines.pop(0)).split(',')]
     game_status.next_hero_update = int(line_contents(lines.pop(0)))
@@ -457,7 +466,6 @@ def read_status(status: MissionStatus, game_status: GameStatus) -> None:
     ):
         if item_channel != heroes.ItemChannel.NONE:
             game_status.item_channel_state[item_channel].items_acked = num_received
-    lines.pop(0)  # reserved
     lines.pop(0)  # reserved
     lines.pop(0)  # reserved
     if len(last_transmissions) > NUM_PACKET_TYPES:
@@ -532,7 +540,7 @@ def update_game_status_for_new_mission(ctx: AsyncContext, mission_id: int) -> No
     ctx.client_interface.fetch_locations_collected(ctx.mission_status.locations_collected, mission_id)
     ctx.game_status.num_in_flight_messages = 0
     ctx.game_status.in_flight_item_channel = heroes.ItemChannel.NONE
-    ctx.game_status.pending_update |= PacketType.UNLOCKS
+    ctx.game_status.pending_update |= PacketType.UNLOCKS | PacketType.LOCATIONS
 
 
 def sync_mission_status(
@@ -542,6 +550,7 @@ def sync_mission_status(
     """Sync data coming from the mod with an existing `MissionStatus`"""
     mission_change = source.mission_id != target.mission_id
     target.update_number = source.update_number
+    target.world_id = source.world_id
     target.mission_id = source.mission_id
     for packet_type, packet_status in source.packet_status.items():
         target.packet_status[packet_type].last_received = packet_status.last_received
@@ -575,10 +584,9 @@ async def status_loop(ctx: AsyncContext) -> None:
     initialize_messages()
     while ctx.running:
         # Update on-startup packets immediately
-        if ctx.game_status.pending_update & PacketType.HEROES:
+        if ctx.game_status.do_startup:
             update_heroes(ctx.game_status, ctx.mission_status)
-        if ctx.game_status.pending_update & PacketType.ITEM_CHANNELS:
-            update_item_channels(ctx.game_status, ctx.mission_status)
+            ctx.game_status.do_startup = False
         
         # Await status
         if not os.path.isfile(STATUS_FILE):
@@ -592,14 +600,26 @@ async def status_loop(ctx: AsyncContext) -> None:
             logger.exception(ex)
             await asyncio.sleep(2)
             continue
+        if new_status.world_id >= 0 and new_status.world_id != ctx.game_status.world_id:
+            await asyncio.sleep(2)
+            continue
         if (new_status.mission_id != ctx.mission_status.mission_id
-            or new_status.update_number == 1
+            or new_status.world_id < 0
         ):
             update_game_status_for_new_mission(ctx, new_status.mission_id)
         old_update_number = ctx.mission_status.update_number
         sync_locations(new_status, ctx.mission_status, ctx.client_interface)
         sync_mission_status(new_status, ctx.mission_status)
-        read_necessary_hero_status(ctx.mission_status, ctx.game_status)
+        if new_status.world_id < 0:
+            update_heroes(ctx.game_status, ctx.mission_status)
+            ctx.game_status.pending_update |= PacketType.HEROES
+            update_item_channels(ctx.game_status, ctx.mission_status)
+            ctx.game_status.pending_update |= PacketType.ITEM_CHANNELS
+        else:
+            read_necessary_hero_status(ctx.mission_status, ctx.game_status)
+            if ctx.game_status.pending_update & (PacketType.HERO_LEVEL | PacketType.HEROES):
+                update_heroes(ctx.game_status, ctx.mission_status)
+            ctx.game_status.pending_update &= ~PacketType.HEROES  # Don't request heroes init
 
         # Update on-request client->game packets
         update_unlocks(ctx.game_status, ctx.mission_status)
@@ -610,7 +630,7 @@ async def status_loop(ctx: AsyncContext) -> None:
             or ctx.game_status.pending_update
         ):
             # Ack new mission/transmission
-            update_ping(ctx.mission_status, ctx.game_status.pending_update)
+            update_ping(ctx.mission_status, ctx.game_status.world_id, ctx.game_status.pending_update)
             ctx.game_status.pending_update = PacketType.NONE
 
         await asyncio.sleep(0.5)

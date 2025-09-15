@@ -7,6 +7,8 @@ integer array HERO_MAX_LEVEL
 integer array hero_hashes
 trigger t_hero_update
 trigger t_hero_pickup_item
+trigger t_hero_configure_all
+trigger t_hero_set_all_max_level
 timer hero_update_status_timer
 integer array hero_abil_1
 integer array hero_abil_2
@@ -73,6 +75,7 @@ function hero_load takes integer hero_slot returns boolean
     return GetPlayerTechMaxAllowed(p, 'nske') == 1
 endfunction
 
+// should be called after hero_load()
 function hero_configure takes unit hero, integer slot returns nothing
     local player p = Player(0)
     local integer val
@@ -142,13 +145,36 @@ function hero_configure takes unit hero, integer slot returns nothing
     endif
 endfunction
 
+function hero_configure_all takes nothing returns nothing
+    local integer slot = 0
+    local unit hero
+    loop
+        exitwhen slot >= NUM_HEROES
+        call hero_load(slot)
+        set hero = hero_get_unit_from_index(slot)
+        // todo: handle hero unit type mismatch
+        call hero_configure(hero, slot)
+        set slot = slot + 1
+    endloop
+endfunction
+
+function hero_set_all_max_level takes nothing returns nothing
+    local integer slot = 0
+    local unit hero
+    loop
+        exitwhen slot >= NUM_HEROES
+        call hero_load(slot)
+        call hero_set_max_level(slot, GetPlayerTechMaxAllowed(Player(0), 'nder'))
+        set slot = slot + 1
+    endloop
+endfunction
+
 function hero_create takes integer hero_slot, player for_player, real x, real y, real facing returns unit
     local unit hero = null
     if not hero_load(hero_slot) then
         return null
     endif
     set hero = CreateUnit(for_player, GetPlayerTechMaxAllowed(Player(0), 'npng'), x, y, facing)
-    call hero_configure(hero, hero_slot)
     return hero
 endfunction
 
@@ -161,6 +187,7 @@ function hero_hide_replace takes integer slot, unit replace returns unit
         call ShowUnit(old_hero, true)
         return old_hero
     endif
+    call hero_configure(hero, slot)
     call hero_update_variable(slot, hero)
     call RemoveUnit(hero)
     return hero
@@ -295,6 +322,10 @@ function InitTrig_heroes takes nothing returns nothing
     set t_hero_pickup_item=CreateTrigger()
     call TriggerRegisterPlayerUnitEventSimple(t_hero_pickup_item, USER_PLAYER, EVENT_PLAYER_UNIT_PICKUP_ITEM)
     call TriggerAddAction(t_hero_pickup_item, function hero_on_item_pickup)
+    set t_hero_configure_all=CreateTrigger()
+    call TriggerAddAction(t_hero_configure_all, function hero_configure_all)
+    set t_hero_set_all_max_level=CreateTrigger()
+    call TriggerAddAction(t_hero_set_all_max_level, function hero_set_all_max_level)
     set hero_update_status_timer=CreateTimer()
     call TimerStart(hero_update_status_timer, 1, true, function hero_publish_all_statuses)
     set item_channel_1_target = hero_get_unit_from_index(0)

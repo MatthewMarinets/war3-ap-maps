@@ -1,6 +1,7 @@
 """Generation functions. Requires core imports."""
 from typing import Mapping, Any, Callable, TYPE_CHECKING
 from dataclasses import fields
+import time
 
 from BaseClasses import Region, CollectionState, Entrance, Item, Location, ItemClassification
 from .data import locations, items, missions, heroes, tables
@@ -154,7 +155,7 @@ class Generation:
                 heroes.HeroSlot.ILLIDAN.value: world.options.illidan_hero.value,
                 # heroes.HeroSlot.TYRANDE_TFT.value: world.options.tyrande_tft_hero.value,
                 # heroes.HeroSlot.MALFURION.value: world.options.malfurion_hero.value,
-                # heroes.HeroSlot.MAIEV.value: world.options.maiev_hero.value,
+                heroes.HeroSlot.MAIEV.value: world.options.maiev_hero.value,
                 # heroes.HeroSlot.KAEL.value: world.options.kael_hero.value,
                 # heroes.HeroSlot.DEMON_ILLIDAN.value: world.options.demon_illidan_hero.value,
                 # heroes.HeroSlot.LADY_VASHJ.value: world.options.lady_vashj_hero.value,
@@ -179,7 +180,7 @@ class Generation:
                 heroes.HeroSlot.ILLIDAN.value: world.options.illidan_name.value,
                 # heroes.HeroSlot.TYRANDE_TFT.value: world.options.tyrande_tft_name.value,
                 # heroes.HeroSlot.MALFURION.value: world.options.malfurion_name.value,
-                # heroes.HeroSlot.MAIEV.value: world.options.maiev_name.value,
+                heroes.HeroSlot.MAIEV.value: world.options.maiev_name.value,
                 # heroes.HeroSlot.KAEL.value: world.options.kael_name.value,
                 # heroes.HeroSlot.DEMON_ILLIDAN.value: world.options.demon_illidan_name.value,
                 # heroes.HeroSlot.LADY_VASHJ.value: world.options.lady_vashj_name.value,
@@ -189,4 +190,6 @@ class Generation:
             "version_public": VERSION_PUBLIC,
             "version_major": VERSION_MAJOR,
             "version_minor": VERSION_MINOR,
+            # New ID every ~0.13s; IDs loop once every 8.9 years
+            "world_id": ((time.time_ns() >> 17) + world.player) & 0x7fff_ffff,
         }

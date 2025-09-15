@@ -256,16 +256,6 @@ version = TFT
   - param Variable Arthas
   - param Function GetLastCreatedUnit
     - Function GetLastCreatedUnit
-- Action SetHeroLevel
-  - param Variable Arthas
-  - param String 2
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillHolyBolt
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDevotionAura
 - Action CustomScriptCode
   - param String set hero_abil_1[0] = 'AHhb'
 - Action CustomScriptCode
@@ -1660,14 +1650,6 @@ version = TFT
       - param Variable AAAP_Arthas
       - param Preset ChangeColorTrue
 - Action SetUnitOwner
-  - param Variable Gold01
-  - param Variable AAAP_Arthas
-  - param Preset ChangeColorTrue
-- Action SetUnitOwner
-  - param Variable Gold02
-  - param Variable AAAP_Arthas
-  - param Preset ChangeColorTrue
-- Action SetUnitOwner
   - param Variable Gold03
   - param Variable AAAP_Arthas
   - param Preset ChangeColorTrue
@@ -1683,6 +1665,10 @@ version = TFT
     - Action ReturnAction
   - param Function DoNothing
     - Action DoNothing
+- Action RemoveUnit
+  - param Variable gg_unit_hpea_0020
+- Action ConditionalTriggerExecute
+  - param Variable gg_trg_Create_Gold_Peasants
 - Action IssueImmediateOrder
   - param Variable Lumber02
   - param Preset UnitOrderAutoHarvestLumber
@@ -1719,10 +1705,6 @@ version = TFT
     - Action ReturnAction
   - param Function DoNothing
     - Action DoNothing
-- Action TriggerExecute
-  - param Variable gg_trg_Create_Gold_Peasants
-- Action RemoveUnit
-  - param Variable gg_unit_hpea_0020
 - Action TriggerSleepAction
   - param String 0.01
 - Action IfThenElse
@@ -1882,10 +1864,10 @@ version = TFT
 - Action SetVariable
   - param Variable IntroCinematicDone
   - param String true
-- Action TriggerExecute
-  - param Variable gg_trg_Create_Gold_Peasants
 - Action RemoveUnit
   - param Variable gg_unit_hpea_0020
+- Action ConditionalTriggerExecute
+  - param Variable gg_trg_Create_Gold_Peasants
 - Action TriggerSleepAction
   - param String 1.00
 - Action QuestMessageBJ
@@ -1935,6 +1917,13 @@ version = TFT
   - param Variable Gold03
   - param Preset UnitOrderHarvest
   - param Variable gg_unit_ngol_0009
+- Action DisableTrigger
+  - param Variable gg_trg_PeasantFakeHarvest
+- Action DisableTrigger
+  - param Variable gg_trg_PeasantFakeReturn
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
 
 
 ## PeasantFakeHarvest
@@ -1958,11 +1947,13 @@ version = TFT
   - param String gold
   - param Function GetTriggerUnit
     - Function GetTriggerUnit
-- Action IssueTargetOrder
+- Action IssuePointOrderLoc
   - param Function GetTriggerUnit
     - Function GetTriggerUnit
-  - param Preset UnitOrderAttackUnit
-  - param Variable gg_unit_htow_0003
+  - param Preset UnitOrderMove
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_Gold_Dropoff
 - Action SetUnitMoveSpeed
   - param Function GetTriggerUnit
     - Function GetTriggerUnit
@@ -6869,30 +6860,6 @@ Feranor is no longer made invulnerable and vulnerable on the fly, as he is now i
 - Event TriggerRegisterGameStateEventTimeOfDay
   - param Preset LimitOpEqual
   - param String 6.00
-
-
-## Disable Arthas Experience
-- enabled: True
-- category: [0] General Triggers
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Condition OperatorCompareInteger
-  - param Function GetHeroLevel
-    - Function GetHeroLevel
-      - param Variable Arthas
-  - param Preset OperatorGreaterEq
-  - param String 3
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableDisable
-  - param Variable Arthas
-- Event TriggerRegisterPlayerUnitEventSimple
-  - param Preset Player01
-  - param Preset PlayerUnitEventHero_Level
 
 
 ## Victory Cinematic

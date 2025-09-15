@@ -1,5 +1,5 @@
 // version: 1
-// Triggers: 98
+// Triggers: 97
 //\\// Trigger #0
 // This file defines file IO functions for the JASS side of things
 // Based off the FileIO module created by Nestharus, see:
@@ -139,6 +139,7 @@ globals
 constant string COMM_VERSION = "1.0"
 constant integer MAX_UPDATE_ID = 100000
 integer error_state = 0
+integer world_id = -1
 integer last_unlock_packet = -1
 integer last_location_packet = -1
 integer last_message_packet = -1
@@ -149,7 +150,7 @@ integer checks_before_timeout = 2
 boolean array locations_checked
 constant integer MAX_LOCATIONS = 30
 constant integer MAX_ITEMS_PER_PACKET = 12
-integer update_index = 0
+integer update_index = -1
 integer hero_status_index = -1
 integer num_channel_1_items_received = 0
 integer num_channel_2_items_received = 0
@@ -161,11 +162,11 @@ function status_send takes nothing returns nothing
     call io_open_write("status.txt")
     call io_write(I2S(update_index))
     call io_write(COMM_VERSION)
+    call io_write(I2S(world_id))
     call io_write(I2S(MISSION_ID))
-    call io_write(I2S(last_unlock_packet) + "," + I2S(last_location_packet) + "," + I2S(last_message_packet) + "," + I2S(last_hero_packet) + "," + I2S(last_item_packet) + "," + I2S(last_item_channel_packet))
+    call io_write(I2S(last_unlock_packet) + "," + I2S(last_location_packet) + "," + I2S(last_message_packet) + "," + I2S(last_hero_packet) + "," + I2S(last_item_packet) + "," + I2S(last_item_channel_packet) + ",-1")
     call io_write(I2S(hero_status_index))
     call io_write(I2S(num_channel_1_items_received) + "," + I2S(num_channel_2_items_received))
-    call io_write("_")
     call io_write("_")
     call io_write("_")
     set update_index = update_index + 1
@@ -222,7 +223,7 @@ endfunction
 
 function status_check_location takes integer location_id returns nothing
     if location_id >= MAX_LOCATIONS then
-        call DisplayTextToForce(GetPlayersAll(), "|cffff2222Error: Attempted to check invalid location ID: " + I2S(location_id) + "|r")
+        call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cffff2222Error: Attempted to check invalid location ID: " + I2S(location_id) + "|r")
         return
     endif
     set locations_checked[location_id] = true
@@ -298,74 +299,6 @@ function status_load_items takes nothing returns nothing
     endloop
 endfunction
 
-function status_check_ping takes nothing returns nothing
-    local integer bitmask = 0
-    local boolean should_send = false
-    local player p = Player(0)
-    call SetPlayerTechMaxAllowed(p, 'nske', -1)
-    call SetPlayerTechMaxAllowed(p, 'nvlk', -1)
-    call SetPlayerTechMaxAllowed(p, 'nvk2', -1)
-    call io_read_file_simple("ping.txt")
-    if GetPlayerTechMaxAllowed(p, 'nske') != update_index or GetPlayerTechMaxAllowed(p, 'nvlk') != MISSION_ID then
-        if checks_before_timeout > 0 then
-            set checks_before_timeout = checks_before_timeout - 1
-        elseif checks_before_timeout == 0 then
-            set checks_before_timeout = -1
-            set error_state = 1
-            call DisplayTextToForce(GetPlayersAll(), "|cffff2222Error: Client communication timeout|r")
-            call DisplayTextToForce(GetPlayersAll(), "|cffff2222Check the client is started correctly. Locations will not send until communication is established|r")
-        endif
-        return
-    elseif error_state > 0 then
-        set error_state = 0
-        call DisplayTextToForce(GetPlayersAll(), "|cff2266ffClient communications re-established.|r")
-    endif
-    set checks_before_timeout = 2
-    set bitmask = GetPlayerTechMaxAllowed(p, 'nvk2')
-    if bitmask > 0 then
-        set should_send = true
-    endif
-    if bitmask >= 256 then
-        // bitmask & 255
-        set bitmask = bitmask - ((bitmask / 256) * 256)
-    endif
-    if bitmask >= 128 then
-        set bitmask = bitmask - 128
-        // unused
-    endif
-    if bitmask >= 64 then
-        set bitmask = bitmask - 64
-        // unused
-    endif
-    if bitmask >= 32 then
-        set bitmask = bitmask - 32
-        // item channels; no-op
-    endif
-    if bitmask >= 16 then
-        set bitmask = bitmask - 16
-        call status_load_items()
-    endif
-    if bitmask >= 8 then
-        set bitmask = bitmask - 8
-        // todo: reset heroes
-    endif
-    if bitmask >= 4 then
-        set bitmask = bitmask - 4
-        call status_load_messages()
-    endif
-    if bitmask >= 2 then
-        set bitmask = bitmask - 2
-        call status_load_locations()
-    endif
-    if bitmask >= 1 then
-        set bitmask = bitmask - 1
-        call status_load_unlocks()
-    endif
-    if should_send then
-        call status_send()
-    endif
-endfunction
-
 function status_init_item_channels takes integer local_channel_id returns nothing
     if local_channel_id == 1 then
         call SetPlayerTechMaxAllowed(Player(0), 'nalb', item_channel_1)
@@ -384,6 +317,86 @@ function status_init_item_channels takes integer local_channel_id returns nothin
         set num_channel_1_items_received = GetPlayerTechMaxAllowed(Player(0), 'npng')
     else
         set num_channel_2_items_received = GetPlayerTechMaxAllowed(Player(0), 'npng')
+    endif
+endfunction
+
+function status_check_ping takes nothing returns nothing
+    local integer bitmask = 0
+    local boolean should_send = false
+    local player p = Player(0)
+    call SetPlayerTechMaxAllowed(p, 'nske', -1)
+    call SetPlayerTechMaxAllowed(p, 'nwgt', -1)
+    call SetPlayerTechMaxAllowed(p, 'nvlk', -1)
+    call SetPlayerTechMaxAllowed(p, 'nvk2', -1)
+    call io_read_file_simple("ping.txt")
+    if GetPlayerTechMaxAllowed(p, 'nske') != update_index or GetPlayerTechMaxAllowed(p, 'nvlk') != MISSION_ID then
+        if checks_before_timeout > 0 then
+            set checks_before_timeout = checks_before_timeout - 1
+        elseif checks_before_timeout == 0 then
+            set checks_before_timeout = -1
+            set error_state = 1
+            call DisplayTextToForce(GetPlayersAll(), "|cffff2222Error: Client communication timeout|r")
+            call DisplayTextToForce(GetPlayersAll(), "|cffff2222Check the client is started correctly. Locations will not send until communication is established|r")
+        endif
+        return
+    elseif world_id >= 0 and GetPlayerTechMaxAllowed(p, 'nwgt') != world_id then
+        if error_state != 2 then
+            set error_state = 2
+            call DisplayTextToForce(GetPlayersAll(), "|cffff2222Error: Client is connected to a different world seed|r")
+            call DisplayTextToForce(GetPlayersAll(), "|cffff2222Restart the level or connect the client to a different room|r")
+        endif
+        return
+    elseif error_state > 0 then
+        set error_state = 0
+        call DisplayTextToForce(GetPlayersAll(), "|cff2266ffClient communications re-established.|r")
+    endif
+    set world_id = GetPlayerTechMaxAllowed(p, 'nwgt')
+    set checks_before_timeout = 2
+    set bitmask = GetPlayerTechMaxAllowed(p, 'nvk2')
+    if bitmask > 0 then
+        set should_send = true
+    endif
+    if bitmask >= 256 then
+        // bitmask & 255
+        set bitmask = bitmask - ((bitmask / 256) * 256)
+    endif
+    if bitmask >= 128 then
+        set bitmask = bitmask - 128
+        // unused
+    endif
+    if bitmask >= 64 then
+        set bitmask = bitmask - 64
+        call TriggerExecute(t_hero_set_all_max_level)
+    endif
+    if bitmask >= 32 then
+        set bitmask = bitmask - 32
+        call status_init_item_channels(0)
+        if item_channel_2 > 0 then
+            call status_init_item_channels(1)
+        endif
+    endif
+    if bitmask >= 16 then
+        set bitmask = bitmask - 16
+        call status_load_items()
+    endif
+    if bitmask >= 8 then
+        set bitmask = bitmask - 8
+        call TriggerExecute(t_hero_configure_all)
+    endif
+    if bitmask >= 4 then
+        set bitmask = bitmask - 4
+        call status_load_messages()
+    endif
+    if bitmask >= 2 then
+        set bitmask = bitmask - 2
+        call status_load_locations()
+    endif
+    if bitmask >= 1 then
+        set bitmask = bitmask - 1
+        call status_load_unlocks()
+    endif
+    if should_send then
+        call status_send()
     endif
 endfunction
 
@@ -415,6 +428,8 @@ integer array HERO_MAX_LEVEL
 integer array hero_hashes
 trigger t_hero_update
 trigger t_hero_pickup_item
+trigger t_hero_configure_all
+trigger t_hero_set_all_max_level
 timer hero_update_status_timer
 integer array hero_abil_1
 integer array hero_abil_2
@@ -481,6 +496,7 @@ function hero_load takes integer hero_slot returns boolean
     return GetPlayerTechMaxAllowed(p, 'nske') == 1
 endfunction
 
+// should be called after hero_load()
 function hero_configure takes unit hero, integer slot returns nothing
     local player p = Player(0)
     local integer val
@@ -550,13 +566,36 @@ function hero_configure takes unit hero, integer slot returns nothing
     endif
 endfunction
 
+function hero_configure_all takes nothing returns nothing
+    local integer slot = 0
+    local unit hero
+    loop
+        exitwhen slot >= NUM_HEROES
+        call hero_load(slot)
+        set hero = hero_get_unit_from_index(slot)
+        // todo: handle hero unit type mismatch
+        call hero_configure(hero, slot)
+        set slot = slot + 1
+    endloop
+endfunction
+
+function hero_set_all_max_level takes nothing returns nothing
+    local integer slot = 0
+    local unit hero
+    loop
+        exitwhen slot >= NUM_HEROES
+        call hero_load(slot)
+        call hero_set_max_level(slot, GetPlayerTechMaxAllowed(Player(0), 'nder'))
+        set slot = slot + 1
+    endloop
+endfunction
+
 function hero_create takes integer hero_slot, player for_player, real x, real y, real facing returns unit
     local unit hero = null
     if not hero_load(hero_slot) then
         return null
     endif
     set hero = CreateUnit(for_player, GetPlayerTechMaxAllowed(Player(0), 'npng'), x, y, facing)
-    call hero_configure(hero, hero_slot)
     return hero
 endfunction
 
@@ -569,6 +608,7 @@ function hero_hide_replace takes integer slot, unit replace returns unit
         call ShowUnit(old_hero, true)
         return old_hero
     endif
+    call hero_configure(hero, slot)
     call hero_update_variable(slot, hero)
     call RemoveUnit(hero)
     return hero
@@ -703,6 +743,10 @@ function InitTrig_heroes takes nothing returns nothing
     set t_hero_pickup_item=CreateTrigger()
     call TriggerRegisterPlayerUnitEventSimple(t_hero_pickup_item, USER_PLAYER, EVENT_PLAYER_UNIT_PICKUP_ITEM)
     call TriggerAddAction(t_hero_pickup_item, function hero_on_item_pickup)
+    set t_hero_configure_all=CreateTrigger()
+    call TriggerAddAction(t_hero_configure_all, function hero_configure_all)
+    set t_hero_set_all_max_level=CreateTrigger()
+    call TriggerAddAction(t_hero_set_all_max_level, function hero_set_all_max_level)
     set hero_update_status_timer=CreateTimer()
     call TimerStart(hero_update_status_timer, 1, true, function hero_publish_all_statuses)
     set item_channel_1_target = hero_get_unit_from_index(0)
@@ -799,6 +843,7 @@ endfunction
 // debug commands
 globals
 trigger t_help
+trigger t_print
 trigger t_xp
 trigger t_xp2
 trigger t_health
@@ -806,7 +851,7 @@ trigger t_dragon
 endglobals
 
 function debug_print_help takes nothing returns nothing
-    call DisplayTextToForce(GetPlayersAll(), "Commands: 'xp', 'xp2', 'health', 'dragon'")
+    call DisplayTextToForce(GetPlayersAll(), "Commands: '-print', '-xp', '-xp2', '-health', '-dragon'")
 endfunction
 
 function debug_xp_tome takes nothing returns nothing
@@ -826,22 +871,45 @@ function debug_dragon_egg takes nothing returns nothing
     call CreateItem('fgrd', GetUnitX(item_channel_1_target), GetUnitX(item_channel_1_target))
 endfunction
 
+function debug_print takes nothing returns nothing
+    local string s_locations_checked = ""
+    local integer index = 0
+    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "world_id: " + I2S(world_id))
+    loop
+        exitwhen index >= MAX_LOCATIONS
+        if locations_checked[index] then
+            set s_locations_checked = s_locations_checked + "," + I2S(index)
+        endif
+        set index = index + 1
+    endloop
+    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "checked: " + s_locations_checked)
+    set index = 0
+    loop
+        exitwhen index >= NUM_HEROES
+        call DisplayTextToPlayer(GetLocalPlayer(), 0,0, "Hero " + I2S(index) + " max level: " + I2S(HERO_MAX_LEVEL[index]))
+        set index = index + 1
+    endloop
+endfunction
+
 function InitTrig_debug takes nothing returns nothing
     set t_help=CreateTrigger()
-    call TriggerRegisterPlayerChatEvent(t_help, USER_PLAYER, "help", false)
+    call TriggerRegisterPlayerChatEvent(t_help, USER_PLAYER, "-help", false)
     call TriggerAddAction(t_help, function debug_print_help)
     set t_xp=CreateTrigger()
-    call TriggerRegisterPlayerChatEvent(t_xp, USER_PLAYER, "xp", false)
+    call TriggerRegisterPlayerChatEvent(t_xp, USER_PLAYER, "-xp", false)
     call TriggerAddAction(t_xp, function debug_xp_tome)
     set t_xp2=CreateTrigger()
-    call TriggerRegisterPlayerChatEvent(t_xp2, USER_PLAYER, "xp2", false)
+    call TriggerRegisterPlayerChatEvent(t_xp2, USER_PLAYER, "-xp2", false)
     call TriggerAddAction(t_xp2, function debug_xp2_tome)
     set t_health=CreateTrigger()
-    call TriggerRegisterPlayerChatEvent(t_health, USER_PLAYER, "health", false)
+    call TriggerRegisterPlayerChatEvent(t_health, USER_PLAYER, "-health", false)
     call TriggerAddAction(t_health, function debug_health_tome)
     set t_dragon=CreateTrigger()
-    call TriggerRegisterPlayerChatEvent(t_dragon, USER_PLAYER, "dragon", false)
+    call TriggerRegisterPlayerChatEvent(t_dragon, USER_PLAYER, "-dragon", false)
     call TriggerAddAction(t_dragon, function debug_dragon_egg)
+    set t_print=CreateTrigger()
+    call TriggerRegisterPlayerChatEvent(t_print, USER_PLAYER, "-print", false)
+    call TriggerAddAction(t_print, function debug_print)
 endfunction
 
 //\\// Trigger #6

@@ -194,6 +194,14 @@ class IllidanName(OptionHeroName):
     """The name for the hero unit in the Illidan (RoC) slot"""
     default = HeroChoice.ILLIDAN.hero_name
 
+class MaievHero(OptionHeroChoice):
+    """What hero will appear everywhere Maiev appears"""
+    default = HeroChoice.MAIEV.id
+
+class MaievName(OptionHeroName):
+    """The name for the hero unit in the Maiev slot"""
+    default = HeroChoice.MAIEV.hero_name
+
 
 @dataclass
 class Wc3Options(baseoptions.PerGameCommonOptions):
@@ -220,3 +228,5 @@ class Wc3Options(baseoptions.PerGameCommonOptions):
     furion_name: FurionName
     illidan_hero: IllidanHero
     illidan_name: IllidanName
+    maiev_hero: MaievHero
+    maiev_name: MaievName

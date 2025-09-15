@@ -101,6 +101,7 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
                 logger.info(inspect.cleandoc('''
                     /exit
                     /status
+                    /location_status
                     /setname "<hero slot ID>" "name"
                     /herostatus <hero slot ID>
                     /senditem <item channel ID> <item ID>
@@ -113,6 +114,12 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
             elif tokens[0] == '/status':
                 logger.info(ctx.game_status)
                 logger.info(ctx.mission_status)
+            elif tokens[0] == '/location_status':
+                logger.info({
+                    location_id: location_value
+                    for location_id, location_value in ctx.mission_status.locations_collected.items()
+                    if location_value
+                })
             elif tokens[0] == '/setname':
                 if len(tokens) < 3:
                     logger.warning(f"/setname takes 2 arguments, got {len(tokens) - 1}")
@@ -184,6 +191,7 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
                     logger.warning(f'"{slot_identifier}" is not a recognized hero slot')
                 else:
                     ctx.game_status.hero_data[hero_slot].max_level += delta
+                    ctx.game_status.pending_update |= PacketType.HERO_LEVEL
                     logger.info(
                         f"{hero_slot.name} max level set to {ctx.game_status.hero_data[hero_slot].max_level}"
                     )

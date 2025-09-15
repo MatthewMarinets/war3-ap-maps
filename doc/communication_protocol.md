@@ -100,16 +100,17 @@ Commands that are not safely repeatable, such as "uncollect location" commands, 
 * 10+ lines
 * Communicates map data, communication information, and collected locations
 * The client performs a version check on reading this packet and can send messages if there's a version mismatch
+* Transmission number should be negative for the very first status on loading a mission
 
 | Line | Contains                      | format                     |
 | ---- | ----------------------------- | -------------------------- |
 | 1    | Transmission number mod 10000 | integer                    |
 | 2    | protocol version              | major.minor                |
-| 3    | mission ID                    | integer                    |
-| 4    | last message IDs              | comma-separated integers*  |
-| 5    | last hero status index        | integer                    |
-| 6    | Last inv. item received index | comma-separated integers   |
-| 7    | reserved                      | empty                      |
+| 3    | world ID                      | integer                    |
+| 4    | mission ID                    | integer                    |
+| 5    | last message IDs              | comma-separated integers*  |
+| 6    | last hero status index        | integer                    |
+| 7    | Last inv. item received index | comma-separated integers   |
 | 8    | reserved                      | empty                      |
 | 9    | reserved                      | empty                      |
 | 10+  | Collected location index      | integer                    |
@@ -121,12 +122,16 @@ and an outdated client can still work with older packet types.
 ### ping.txt
 * Client -> Game
 * Acknowledges status messages sent by the game
-  * If this is not received within 2s of sending a status.txt packet, the communication channel should be considered unresponsive and the user notified with a text prompt
+  * If this is not received within 2s of sending a status.txt packet,
+    the communication channel should be considered unresponsive and the user notified with a text prompt
 * Also lets the game know it should read other packets
+* If the game has an unset world ID (-1), then should adopt world ID as its game ID.
+  * Otherwise, if game ID doesn't match, should print a warning and no-op
 
 | Line                  | Contains                                    |
 | --------------------- | ------------------------------------------- |
 | MaxTech(0, 'nske')    | Last status transmission index + 1          |
+| MaxTech(0, 'nwgt')    | world ID                                    |
 | MaxTech(0, 'nvlk')    | mission ID                                  |
 | MaxTech(0, 'nvk2')    | reload packets bitmask                      |
 
@@ -137,7 +142,8 @@ and an outdated client can still work with older packet types.
 | 0x    4 | load messages                      |
 | 0x    8 | reload heroes                      |
 | 0x   10 | load items                         |
-| 0x   20 | item channels; no action necessary |
+| 0x   20 | item channels                      |
+| 0x   40 | hero levels                        |
 
 ### unlocks.txt
 * Client -> Game
@@ -175,7 +181,7 @@ Encoded IDs are two-character stringified integers. Ex: " 0 710" says locations 
 
 ### heroes.txt
 * Client -> Game
-* Read on map startup asynchronously of ping.txt; assumed up-to-date
+* Hero type read on map startup asynchronously of ping.txt; assumed up-to-date
 * Read on request from ping.txt
 * Hero index passed in via MaxTech(0, 'nalb'), script can check it
 
@@ -197,8 +203,8 @@ Encoded IDs are two-character stringified integers. Ex: " 0 710" says locations 
 | MaxTech(Player(N), 'nsno') | Charges remaining for item in slot N; N=0..5  |
 
 ### item_channels.txt
-* Client -> Game [startup]
-* Read on map startup asynchronously of ping.txt; assumed up-to-date
+* Client -> Game
+* Must be read before updating heroes for the first time
 * Item channel passed in via N = `MaxTech(0, 'nalb')`
 
 | Line                       | Contains                                      |
@@ -247,21 +253,3 @@ Encoded IDs are two-character stringified integers. Ex: " 0 710" says locations 
 | MaxTech(Player(9), 'ncrb')  | Item 10 ID                                    |
 | MaxTech(Player(10), 'ncrb') | Item 11 ID                                    |
 | MaxTech(Player(11), 'ncrb') | Item 12 ID                                    |
-
-### pocket.txt
-*todo*
-* Client -> Game
-* Used to send information about quest items to the game
-  * Gerard's Ledger
-  * Heart of Searinox
-  * ?Frostmourne?
-  * Urn of King Terenas
-  * Key of the Three Moons
-  * Heart of Aszune
-  * Enchanted Gemstone
-  * ?Soul Gem? / ?Soul?
-  * ?Horn of Cenarius?
-  * Empty Vial / Full Vial
-  * ?Skull of Guldan?
-* Sets the MaxTech of each item ID to 1 if acquired, 0 otherwise (on player 0)
-* *Todo*: Viewable in the Quests tab
