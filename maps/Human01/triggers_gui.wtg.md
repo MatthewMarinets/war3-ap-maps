@@ -3,6 +3,7 @@ version = TFT
 # Categories
 | ID  | Name | is a comment |
 | --- | ---- | ------------ |
+| 23 | Archipelago | False |
 | 2 | Map Initialization | False |
 | 0 | Intro Cinematic | False |
 | 4 | Delete Uther | False |
@@ -13,7 +14,6 @@ version = TFT
 | 7 | City Under Siege | False |
 | 3 | Pursuit Cinematic | False |
 | 6 | Rescue Footmen | False |
-| 5 | Disable Experience Gain | False |
 | 10 | Timmy Quest | False |
 | 12 | Ledger Quest | False |
 | 9 | Orc Cinematic | False |
@@ -89,7 +89,6 @@ version = TFT
 | Bandit04 | unit | . | . |
 | Matilda | unit | . | . |
 | Gerard | unit | . | . |
-| Ledger | item | . | . |
 | Hannah | unit | . | . |
 | Stephanie | unit | . | . |
 | Maria | unit | . | . |
@@ -214,6 +213,132 @@ version = TFT
 | WaterfallBoolean | boolean | . | false |
 
 # Triggers
+## fileio
+- enabled: True
+- category: [23] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## map_config
+- enabled: True
+- category: [23] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## status
+- enabled: True
+- category: [23] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## heroes
+- enabled: True
+- category: [23] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## item_locations
+- enabled: True
+- category: [23] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## debug
+- enabled: True
+- category: [23] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## zoom
+- enabled: True
+- category: [23] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## AP Load Arthas
+- enabled: True
+- category: [23] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String set udg_Arthas = hero_create(0, USER_PLAYER, -3859.099365234375, 2748.791015625, 5.4226)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable Arthas
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CustomScriptCode
+  - param String set udg_Arthas = CreateUnit(USER_PLAYER, 'Hart', -3859.099365234375, 2748.791015625, 5.4226)
+- Action SetVariable
+  - param Variable Arthas
+  - param Function GetLastCreatedUnit
+    - Function GetLastCreatedUnit
+- Action CustomScriptCode
+  - param String set hero_abil_1[0] = 'AHhb'
+- Action CustomScriptCode
+  - param String set hero_abil_2[0] = 'AHds'
+- Action CustomScriptCode
+  - param String set hero_abil_3[0] = 'AHad'
+- Action CustomScriptCode
+  - param String set hero_abil_4[0] = 'AHre'
+
+
 ## Map Initialization
 - enabled: True
 - category: [2] Map Initialization
@@ -226,8 +351,8 @@ version = TFT
 ### Functions
 - Action SetCampaignMenuRaceBJ
   - param Preset CampaignIndexH
-- Action InitGameCacheBJ
-  - param String Campaigns.w3v
+- Action TriggerExecute
+  - param Variable gg_trg_AP_Load_Arthas
 - Action CinematicFadeBJ
   - param Preset FadeTypeOptionFadeOut
   - param String 0.00
@@ -352,9 +477,6 @@ version = TFT
 - Action SetVariable
   - param Variable Recruit02
   - param Variable gg_unit_nC13_0159
-- Action SetVariable
-  - param Variable Arthas
-  - param Variable gg_unit_Hart_0023
 - Action SetVariable
   - param Variable StartingFootman01
   - param Variable gg_unit_hfoo_0053
@@ -3219,6 +3341,8 @@ Loops
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(20)
 - Action QueuedTriggerAddBJ
   - param Variable gg_trg_Recruit_Queue
   - param Preset CheckingIgnoringChecking
@@ -3705,7 +3829,7 @@ It is safe to call this multiple times, checking conditions.  It will only destr
 - Action TriggerSleepAction
   - param String 0.10
 - Action CreateItemLoc
-  - param String phea
+  - param String I011
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Crate01
@@ -3729,7 +3853,7 @@ It is safe to call this multiple times, checking conditions.  It will only destr
 - Action TriggerSleepAction
   - param String 0.10
 - Action CreateItemLoc
-  - param String spro
+  - param String I012
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Crate02
@@ -3753,7 +3877,7 @@ It is safe to call this multiple times, checking conditions.  It will only destr
 - Action TriggerSleepAction
   - param String 0.10
 - Action CreateItemLoc
-  - param String pman
+  - param String I017
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Crate03
@@ -5172,6 +5296,8 @@ Inhabitant makes it to a house - let him enter and be removed.
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(21)
 - Action CreateNUnitsAtLoc
   - param String 1
   - param String ogru
@@ -5254,33 +5380,6 @@ Inhabitant makes it to a house - let him enter and be removed.
 - Event TriggerRegisterPlayerUnitEventSimple
   - param Preset Player02
   - param Preset PlayerUnitEventDeath
-
-
-## Disable Arthas
-- enabled: True
-- category: [5] Disable Experience Gain
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Condition OperatorCompareInteger
-  - param Function GetHeroLevel
-    - Function GetHeroLevel
-      - param Variable Arthas
-  - param Preset OperatorGreaterEq
-  - param String 2
-- Action DisableTrigger
-  - param Function GetTriggeringTrigger
-    - Function GetTriggeringTrigger
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableDisable
-  - param Variable Arthas
-- Event TriggerRegisterUnitEvent
-  - param Variable gg_unit_Hart_0023
-  - param Preset UnitEventHeroLevel
 
 
 ## Timmy Quest
@@ -5855,24 +5954,8 @@ Inhabitant makes it to a house - let him enter and be removed.
       - param Preset OperatorEqualENE
       - param String false
   - param Function DoNothing
-    - Action CreateItemLoc
-      - param String rde0
-      - param Function GetUnitLoc
-        - Function GetUnitLoc
-          - param Variable Arthas
-  - param Function DoNothing
-    - Action DoNothing
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareBoolean
-      - param Variable TimmyQuestFailed
-      - param Preset OperatorEqualENE
-      - param String false
-  - param Function DoNothing
-    - Action UnitAddItemSwapped
-      - param Function GetLastCreatedItem
-        - Function GetLastCreatedItem
-      - param Variable Arthas
+    - Action CustomScriptCode
+      - param String call status_check_location(22)
   - param Function DoNothing
     - Action DoNothing
 - Action IfThenElse
@@ -5891,20 +5974,6 @@ Inhabitant makes it to a house - let him enter and be removed.
     - Function GetPlayersAll
 - Action SelectGroupBJ
   - param Variable SelectedUnits
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareBoolean
-      - param Variable TimmyQuestFailed
-      - param Preset OperatorEqualENE
-      - param String false
-  - param Function DoNothing
-    - Action QuestMessageBJ
-      - param Function GetPlayersAll
-        - Function GetPlayersAll
-      - param Preset QuestMessageTypeItemAcquired
-      - param String TRIGSTR_389
-  - param Function DoNothing
-    - Action DoNothing
 - Action SetCameraQuickPositionLocForPlayer
   - param Variable AAAP_Arthas
   - param Function GetUnitLoc
@@ -6796,17 +6865,10 @@ Inhabitant makes it to a house - let him enter and be removed.
   - param Function DoNothing
     - Action DoNothing
 - Action CreateItemLoc
-  - param String ledg
+  - param String I016
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Menag
-- Action SetVariable
-  - param Variable Ledger
-  - param Function GetLastCreatedItem
-    - Function GetLastCreatedItem
-- Action SetItemInvulnerableBJ
-  - param Variable Ledger
-  - param Preset InvulnerabilityInvulnerable
 - Action CommentString
   - param String Don't display quest information, if the quest wasn't given yet.
 - Action IfThenElse
@@ -6896,17 +6958,6 @@ Inhabitant makes it to a house - let him enter and be removed.
   - param Variable TalkGerard2
   - param Function GetLastCreatedEffectBJ
     - Function GetLastCreatedEffectBJ
-- Action SetItemDroppableBJ
-  - param Variable Ledger
-  - param Preset DropNoDropOptionNoDrop
-- Condition OperatorCompareItem
-  - param Function GetManipulatedItem
-    - Function GetManipulatedItem
-  - param Preset OperatorEqualENE
-  - param Variable Ledger
-- Event TriggerRegisterPlayerUnitEventSimple
-  - param Preset Player01
-  - param Preset PlayerUnitEventHeroPickUpItem
 
 
 ## Return Ledger
@@ -6925,18 +6976,22 @@ Inhabitant makes it to a house - let him enter and be removed.
 - Action QueuedTriggerAddBJ
   - param Variable gg_trg_Return_Ledger_Queue
   - param Preset CheckingIgnoringChecking
+- Condition OperatorCompareBoolean
+  - param Variable LedgerQuestGiven
+  - param Preset OperatorEqualENE
+  - param String true
 - Condition OperatorCompareUnit
   - param Function GetTriggerUnit
     - Function GetTriggerUnit
   - param Preset OperatorEqualENE
   - param Variable Arthas
-- Condition OperatorCompareBoolean
-  - param Function UnitHasItem
-    - Function UnitHasItem
-      - param Variable Arthas
-      - param Variable Ledger
-  - param Preset OperatorEqualENE
-  - param String true
+- Condition OperatorCompareInteger
+  - param Function GetPlayerTechMaxAllowedSwap
+    - Function GetPlayerTechMaxAllowedSwap
+      - param String ledg
+      - param Variable AAAP_Arthas
+  - param Preset OperatorGreater
+  - param String 0
 - Condition OperatorCompareBoolean
   - param Variable BanditQuestFailed
   - param Preset OperatorEqualENE
@@ -6985,8 +7040,6 @@ Inhabitant makes it to a house - let him enter and be removed.
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_LedgerCenter
-- Action RemoveItem
-  - param Variable Ledger
 - Action SetSpeechVolumeGroupsBJ
 - Action IfThenElse
   - param Function 
@@ -7042,15 +7095,8 @@ Inhabitant makes it to a house - let him enter and be removed.
 - Action SetVariable
   - param Variable IsLedgerReturned
   - param String true
-- Action CreateItemLoc
-  - param String tstr
-  - param Function GetUnitLoc
-    - Function GetUnitLoc
-      - param Variable Arthas
-- Action UnitAddItemSwapped
-  - param Function GetLastCreatedItem
-    - Function GetLastCreatedItem
-  - param Variable Arthas
+- Action CustomScriptCode
+  - param String call status_check_location(23)
 - Action IfThenElse
   - param Function 
     - Condition OperatorCompareBoolean
@@ -9277,6 +9323,32 @@ Inhabitant makes it to a house - let him enter and be removed.
       - Function GetForLoopIndexA
 
 
+## AP Graveyard Location
+- enabled: True
+- category: [19] Graveyard
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Condition OperatorComparePlayer
+  - param Function GetOwningPlayer
+    - Function GetOwningPlayer
+      - param Function GetTriggerUnit
+        - Function GetTriggerUnit
+  - param Preset OperatorEqualENE
+  - param Variable AAAP_Arthas
+- Event TriggerRegisterEnterRectSimple
+  - param Variable gg_rct_Ghost_Facing
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(24)
+
+
 ## Waterfall Sight
 - enabled: True
 - category: [15] WaterfallVis
@@ -9606,8 +9678,8 @@ Inhabitant makes it to a house - let him enter and be removed.
 - Action SetVariable
   - param Variable GAMEOVER
   - param String true
-- Action TriggerExecute
-  - param Variable gg_trg_Next_Level_Prep
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Condition OperatorCompareBoolean
   - param Function IsUnitGroupDeadBJ
     - Function IsUnitGroupDeadBJ
@@ -9704,20 +9776,6 @@ Inhabitant makes it to a house - let him enter and be removed.
 - Action TriggerSleepAction
   - param String 1.00
 - Action ClearSelection
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareBoolean
-      - param Function UnitHasItem
-        - Function UnitHasItem
-          - param Variable Arthas
-          - param Variable Ledger
-      - param Preset OperatorEqualENE
-      - param String true
-  - param Function DoNothing
-    - Action RemoveItem
-      - param Variable Ledger
-  - param Function DoNothing
-    - Action DoNothing
 - Action UseTimeOfDayBJ
   - param Preset OnOffOff
 - Action ForGroup
@@ -10155,20 +10213,6 @@ Inhabitant makes it to a house - let him enter and be removed.
 - Action CameraResetSmoothingFactorBJ
 - Action CommentString
   - param String Change Mission
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareBoolean
-      - param Function UnitHasItem
-        - Function UnitHasItem
-          - param Variable Arthas
-          - param Variable Ledger
-      - param Preset OperatorEqualENE
-      - param String true
-  - param Function DoNothing
-    - Action RemoveItem
-      - param Variable Ledger
-  - param Function DoNothing
-    - Action DoNothing
 - Action TriggerExecute
   - param Variable gg_trg_Next_Level_Run
 
@@ -10227,6 +10271,11 @@ Inhabitant makes it to a house - let him enter and be removed.
 
 ```
 ### Functions
+- Condition OperatorCompareUnit
+  - param Function GetTriggerUnit
+    - Function GetTriggerUnit
+  - param Preset OperatorEqualENE
+  - param Variable Arthas
 - Action SetVariable
   - param Variable GAMEOVER
   - param String true
@@ -10251,53 +10300,9 @@ Inhabitant makes it to a house - let him enter and be removed.
   - param String 2.00
 - Action TriggerExecute
   - param Variable gg_trg_Defeat_Cheat
-- Event TriggerRegisterUnitEvent
-  - param Variable gg_unit_Hart_0023
-  - param Preset UnitEventDeath
-
-
-## Next Level Prep
-- enabled: True
-- category: [16] Level Data
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action CommentString
-  - param String Save hero data
-- Action InitGameCacheBJ
-  - param String Campaigns.w3v
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareBoolean
-      - param Function UnitHasItem
-        - Function UnitHasItem
-          - param Variable Arthas
-          - param Variable Ledger
-      - param Preset OperatorEqualENE
-      - param String true
-  - param Function DoNothing
-    - Action RemoveItem
-      - param Variable Ledger
-  - param Function DoNothing
-    - Action DoNothing
-- Action StoreUnitBJ
-  - param Variable Arthas
-  - param String Arthas
-  - param String Human02
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action SaveGameCacheBJ
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action CommentString
-  - param String Enable next level
-- Action SetMissionAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset MissionIndexH01
+- Event TriggerRegisterPlayerUnitEventSimple
+  - param Preset Player01
+  - param Preset PlayerUnitEventDeath
 
 
 ## Next Level Run
@@ -10313,7 +10318,7 @@ Inhabitant makes it to a house - let him enter and be removed.
 - Action CommentString
   - param String Run next level
 - Action SetNextLevelBJ
-  - param String Maps\Campaign\Human02.w3m
+  - param String Maps\AP_Campaign\Human02.w3x
 - Action CustomVictoryBJ
   - param Variable AAAP_Arthas
   - param Preset UseSkipOptionUse
@@ -10330,8 +10335,6 @@ Inhabitant makes it to a house - let him enter and be removed.
 
 ```
 ### Functions
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Next_Level_Prep
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Next_Level_Run
 - Event TriggerRegisterPlayerEventVictory

@@ -63,16 +63,16 @@ class Wc3Location(enum.Enum):
     HU1_VICTORY =           10100, "Victory",                Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.VICTORY
     HU1_FIRST_CRATE =       10101, "First Crate",            Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.ITEM, "Potion of Healing"
     HU1_SECOND_CRATE =      10102, "Second Crate",           Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.ITEM, "Scroll of Protection"
-    HU1_GNOLL_ITEM =        10103, "Gnoll Crate",            Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.ITEM, "Potion of Healing"
+    HU1_GNOLL_ITEM =        10103, "Gnoll Item",             Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.ITEM, "Potion of Healing"
     HU1_BENEDICT =          10104, "Benedict's Trap",        Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.ITEM, "Scroll of Healing"
     HU1_BANDIT_ITEM =       10105, "Bandit Item",            Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.ITEM, "Potion of Mana"
-    HU1_MENAG =             10106, "Bandit Lord Item",       Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.QUEST  # Gerard's Ledger
+    HU1_MENAG =             10106, "Bandit Lord Item",       Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.QUEST, "Gerard's Ledger"
     HU1_NORTH_CRATE =       10107, "North Crate",            Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.ITEM, "Potion of Mana"
     HU1_ENLIST_THORNBY =    10120, "Enlist Thornby",         Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.RESCUE
     HU1_TOWN_RESCUE =       10121, "Rescue Battling Footmen",Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.RESCUE
     HU1_TIMMY =             10122, "Save Timmy",             Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.QUEST_ITEM, "Ring of Protection +1"
-    HU1_RETURN_LEDGER =     10124, "Return Gerard's Ledger", Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.QUEST_ITEM, "Tome of Strength"
-    HU1_GRAVEYARD =         10125, "Find the Graveyard",     Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.SECRET
+    HU1_RETURN_LEDGER =     10123, "Return Gerard's Ledger", Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.QUEST_ITEM, "Tome of Strength"
+    HU1_GRAVEYARD =         10124, "Find the Graveyard",     Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD, Wc3LocationType.SECRET
 
     # Quests:
     # (Main) Blademaster

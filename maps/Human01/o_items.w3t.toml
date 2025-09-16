@@ -1,0 +1,1365 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 2
+has_levels = false
+
+[blizzard_objects]
+entities = []
+
+[map_objects]
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I010'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_405'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_406'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_407'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_408'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I011'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_409'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_410'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_411'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_412'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I012'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_413'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_414'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_415'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_416'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I013'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_417'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_418'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_419'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_420'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I014'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_421'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_422'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_423'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_424'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I015'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_425'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_426'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_427'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_428'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I016'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_429'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_430'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_431'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_432'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I017'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_433'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_434'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_435'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_436'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I018'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_437'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_438'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_439'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_440'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I019'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_441'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_442'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_443'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_444'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I01a'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_445'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_446'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_447'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_448'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I01b'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_449'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_450'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_451'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_452'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I01c'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_453'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_454'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_455'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_456'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I01d'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_457'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_458'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_459'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_460'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I01e'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_461'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_462'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_463'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_464'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I01f'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_465'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_466'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_467'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_468'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I020'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_469'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_470'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_471'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_472'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I021'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_473'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_474'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_475'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_476'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I022'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_477'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_478'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_479'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_480'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I023'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_481'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_482'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_483'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_484'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I024'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_485'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_486'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_487'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_488'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I025'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_489'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_490'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_491'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_492'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'lmbr'  # Bundle of Lumber
+entity_id = 'I026'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_493'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_494'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_495'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_496'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iico'  # Profile.Interface Icon
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ifil'  # ItemData.Model Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'war3mapImported\questionmark_item.mdl'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'iabi'  # ItemData.Abilities
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'

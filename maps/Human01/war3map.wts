@@ -812,11 +812,6 @@ STRING 384
 He's escaping! Kill him!
 }
 
-STRING 389
-{
-|cff87ceebNEW ITEM RECEIVED|r - Ring of Protection +1
-}
-
 STRING 398
 {
 |cff87ceebNEW ITEM RECEIVED|r - Tome of Strength
@@ -856,5 +851,557 @@ STRING 404
 // Units: oC16 (Slave Master), Name (Name)
 {
 Slave Master
+}
+
+STRING 405
+// Items: I010 (Archipelago Item 0), Name (Name)
+{
+Archipelago Item 0
+}
+
+STRING 406
+// Items: I010 (Archipelago Item 0), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 0.
+}
+
+STRING 407
+// Items: I010 (Archipelago Item 0), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 408
+// Items: I010 (Archipelago Item 0), Description (Description)
+{
+Collects map location 0 for the player.
+}
+
+STRING 409
+// Items: I011 (Archipelago Item 1), Name (Name)
+{
+Archipelago Item 1
+}
+
+STRING 410
+// Items: I011 (Archipelago Item 1), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 1.
+}
+
+STRING 411
+// Items: I011 (Archipelago Item 1), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 412
+// Items: I011 (Archipelago Item 1), Description (Description)
+{
+Collects map location 1 for the player.
+}
+
+STRING 413
+// Items: I012 (Archipelago Item 2), Name (Name)
+{
+Archipelago Item 2
+}
+
+STRING 414
+// Items: I012 (Archipelago Item 2), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 2.
+}
+
+STRING 415
+// Items: I012 (Archipelago Item 2), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 416
+// Items: I012 (Archipelago Item 2), Description (Description)
+{
+Collects map location 2 for the player.
+}
+
+STRING 417
+// Items: I013 (Archipelago Item 3), Name (Name)
+{
+Archipelago Item 3
+}
+
+STRING 418
+// Items: I013 (Archipelago Item 3), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 3.
+}
+
+STRING 419
+// Items: I013 (Archipelago Item 3), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 420
+// Items: I013 (Archipelago Item 3), Description (Description)
+{
+Collects map location 3 for the player.
+}
+
+STRING 421
+// Items: I014 (Archipelago Item 4), Name (Name)
+{
+Archipelago Item 4
+}
+
+STRING 422
+// Items: I014 (Archipelago Item 4), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 4.
+}
+
+STRING 423
+// Items: I014 (Archipelago Item 4), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 424
+// Items: I014 (Archipelago Item 4), Description (Description)
+{
+Collects map location 4 for the player.
+}
+
+STRING 425
+// Items: I015 (Archipelago Item 5), Name (Name)
+{
+Archipelago Item 5
+}
+
+STRING 426
+// Items: I015 (Archipelago Item 5), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 5.
+}
+
+STRING 427
+// Items: I015 (Archipelago Item 5), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 428
+// Items: I015 (Archipelago Item 5), Description (Description)
+{
+Collects map location 5 for the player.
+}
+
+STRING 429
+// Items: I016 (Archipelago Item 6), Name (Name)
+{
+Archipelago Item 6
+}
+
+STRING 430
+// Items: I016 (Archipelago Item 6), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 6.
+}
+
+STRING 431
+// Items: I016 (Archipelago Item 6), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 432
+// Items: I016 (Archipelago Item 6), Description (Description)
+{
+Collects map location 6 for the player.
+}
+
+STRING 433
+// Items: I017 (Archipelago Item 7), Name (Name)
+{
+Archipelago Item 7
+}
+
+STRING 434
+// Items: I017 (Archipelago Item 7), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 7.
+}
+
+STRING 435
+// Items: I017 (Archipelago Item 7), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 436
+// Items: I017 (Archipelago Item 7), Description (Description)
+{
+Collects map location 7 for the player.
+}
+
+STRING 437
+// Items: I018 (Archipelago Item 8), Name (Name)
+{
+Archipelago Item 8
+}
+
+STRING 438
+// Items: I018 (Archipelago Item 8), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 8.
+}
+
+STRING 439
+// Items: I018 (Archipelago Item 8), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 440
+// Items: I018 (Archipelago Item 8), Description (Description)
+{
+Collects map location 8 for the player.
+}
+
+STRING 441
+// Items: I019 (Archipelago Item 9), Name (Name)
+{
+Archipelago Item 9
+}
+
+STRING 442
+// Items: I019 (Archipelago Item 9), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 9.
+}
+
+STRING 443
+// Items: I019 (Archipelago Item 9), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 444
+// Items: I019 (Archipelago Item 9), Description (Description)
+{
+Collects map location 9 for the player.
+}
+
+STRING 445
+// Items: I01a (Archipelago Item 10), Name (Name)
+{
+Archipelago Item 10
+}
+
+STRING 446
+// Items: I01a (Archipelago Item 10), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 10.
+}
+
+STRING 447
+// Items: I01a (Archipelago Item 10), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 448
+// Items: I01a (Archipelago Item 10), Description (Description)
+{
+Collects map location 10 for the player.
+}
+
+STRING 449
+// Items: I01b (Archipelago Item 11), Name (Name)
+{
+Archipelago Item 11
+}
+
+STRING 450
+// Items: I01b (Archipelago Item 11), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 11.
+}
+
+STRING 451
+// Items: I01b (Archipelago Item 11), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 452
+// Items: I01b (Archipelago Item 11), Description (Description)
+{
+Collects map location 11 for the player.
+}
+
+STRING 453
+// Items: I01c (Archipelago Item 12), Name (Name)
+{
+Archipelago Item 12
+}
+
+STRING 454
+// Items: I01c (Archipelago Item 12), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 12.
+}
+
+STRING 455
+// Items: I01c (Archipelago Item 12), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 456
+// Items: I01c (Archipelago Item 12), Description (Description)
+{
+Collects map location 12 for the player.
+}
+
+STRING 457
+// Items: I01d (Archipelago Item 13), Name (Name)
+{
+Archipelago Item 13
+}
+
+STRING 458
+// Items: I01d (Archipelago Item 13), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 13.
+}
+
+STRING 459
+// Items: I01d (Archipelago Item 13), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 460
+// Items: I01d (Archipelago Item 13), Description (Description)
+{
+Collects map location 13 for the player.
+}
+
+STRING 461
+// Items: I01e (Archipelago Item 14), Name (Name)
+{
+Archipelago Item 14
+}
+
+STRING 462
+// Items: I01e (Archipelago Item 14), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 14.
+}
+
+STRING 463
+// Items: I01e (Archipelago Item 14), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 464
+// Items: I01e (Archipelago Item 14), Description (Description)
+{
+Collects map location 14 for the player.
+}
+
+STRING 465
+// Items: I01f (Archipelago Item 15), Name (Name)
+{
+Archipelago Item 15
+}
+
+STRING 466
+// Items: I01f (Archipelago Item 15), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 15.
+}
+
+STRING 467
+// Items: I01f (Archipelago Item 15), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 468
+// Items: I01f (Archipelago Item 15), Description (Description)
+{
+Collects map location 15 for the player.
+}
+
+STRING 469
+// Items: I020 (Archipelago Item 16), Name (Name)
+{
+Archipelago Item 16
+}
+
+STRING 470
+// Items: I020 (Archipelago Item 16), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 16.
+}
+
+STRING 471
+// Items: I020 (Archipelago Item 16), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 472
+// Items: I020 (Archipelago Item 16), Description (Description)
+{
+Collects map location 16 for the player.
+}
+
+STRING 473
+// Items: I021 (Archipelago Item 17), Name (Name)
+{
+Archipelago Item 17
+}
+
+STRING 474
+// Items: I021 (Archipelago Item 17), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 17.
+}
+
+STRING 475
+// Items: I021 (Archipelago Item 17), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 476
+// Items: I021 (Archipelago Item 17), Description (Description)
+{
+Collects map location 17 for the player.
+}
+
+STRING 477
+// Items: I022 (Archipelago Item 18), Name (Name)
+{
+Archipelago Item 18
+}
+
+STRING 478
+// Items: I022 (Archipelago Item 18), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 18.
+}
+
+STRING 479
+// Items: I022 (Archipelago Item 18), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 480
+// Items: I022 (Archipelago Item 18), Description (Description)
+{
+Collects map location 18 for the player.
+}
+
+STRING 481
+// Items: I023 (Archipelago Item 19), Name (Name)
+{
+Archipelago Item 19
+}
+
+STRING 482
+// Items: I023 (Archipelago Item 19), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 19.
+}
+
+STRING 483
+// Items: I023 (Archipelago Item 19), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 484
+// Items: I023 (Archipelago Item 19), Description (Description)
+{
+Collects map location 19 for the player.
+}
+
+STRING 485
+// Items: I024 (Archipelago Item 20), Name (Name)
+{
+Archipelago Item 20
+}
+
+STRING 486
+// Items: I024 (Archipelago Item 20), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 20.
+}
+
+STRING 487
+// Items: I024 (Archipelago Item 20), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 488
+// Items: I024 (Archipelago Item 20), Description (Description)
+{
+Collects map location 20 for the player.
+}
+
+STRING 489
+// Items: I025 (Archipelago Item 21), Name (Name)
+{
+Archipelago Item 21
+}
+
+STRING 490
+// Items: I025 (Archipelago Item 21), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 21.
+}
+
+STRING 491
+// Items: I025 (Archipelago Item 21), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 492
+// Items: I025 (Archipelago Item 21), Description (Description)
+{
+Collects map location 21 for the player.
+}
+
+STRING 493
+// Items: I026 (Archipelago Item 22), Name (Name)
+{
+Archipelago Item 22
+}
+
+STRING 494
+// Items: I026 (Archipelago Item 22), Tip (Tooltip - Basic)
+{
+Purchase a check for map location 22.
+}
+
+STRING 495
+// Items: I026 (Archipelago Item 22), Ubertip (Tooltip - Extended)
+{
+Get a randomized item when used
+}
+
+STRING 496
+// Items: I026 (Archipelago Item 22), Description (Description)
+{
+Collects map location 22 for the player.
 }
 

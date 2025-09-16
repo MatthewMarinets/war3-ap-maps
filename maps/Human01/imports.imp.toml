@@ -1,0 +1,6 @@
+# Warcraft 3 imports file
+version = 1
+
+[[imports]]
+path_type = 8
+path = 'war3mapImported/questionmark_item.mdx'

@@ -760,3 +760,23 @@ tech_id = 'ohut'
 
 player_flags = 0x1
 tech_id = 'olum'
+
+[[technologies]]
+
+player_flags = 0xf
+tech_id = 'Hblm'  # Blood Mage
+
+[[technologies]]
+
+player_flags = 0xf
+tech_id = 'Oshd'  # Shadow Hunter
+
+[[technologies]]
+
+player_flags = 0xf
+tech_id = 'Ucrl'  # Crypt Lord
+
+[[technologies]]
+
+player_flags = 0xf
+tech_id = 'Ewar'  # Warden

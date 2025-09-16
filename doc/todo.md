@@ -1,17 +1,36 @@
 ## Maps
+* Human01
+  - [x] Eliminate gamecache usage
+  - [x] Redirect starting next mission
+  - [x] Hero init
+  - [x] Remove hero level cap triggers
+  - [x] Special considerations for first hero appearances
+  - [x] Replace items -> AP items
+  - [x] Location sending functions
 * Human02
   - [x] Implement locations
   - [x] Remove gamecache
   - [x] Update next level path
   - [x] Fix footmen counter
   - [x] Remove rifleman unlock
-  - [ ] Remove hero level cap triggers
+  - [x] Remove hero level cap triggers
+
+### Item check conditions boilerplate
+```markdown
+- Condition OperatorCompareInteger
+  - param Function GetPlayerTechMaxAllowedSwap
+    - Function GetPlayerTechMaxAllowedSwap
+      - param String ledg
+      - param Variable AAAP_Arthas
+  - param Preset OperatorGreater
+  - param String 0
+```
 
 ## Issues
-- [ ] Add magic number / mechanism to prevent loading data from another game
+- [x] Add magic number / mechanism to prevent loading data from another game
 - [ ] Restarting a mission re-sends hero items
 - [x] Add packet to send a new item to a campaign
-- [ ] Add packet to set/update hero state
+- [x] Add packet to set/update hero state
 - [x] comm: Global <--> local location conversion
 - [ ] Begin converting missions
   - [ ] Eliminate gamecache usage
@@ -26,7 +45,8 @@
 ### Longer term
 - [ ] Figure out item recovery / make item bank levels
 - [ ] Figure out slot storage
-- [ ] RoC models and creep gold drop amounts
+- [ ] RoC models
+- [ ] RoC creep gold drop amounts
 
 ## File formats covered
 - [x] mpq/w3m/w3x -- MPQEditor
