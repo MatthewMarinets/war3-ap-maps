@@ -15,5 +15,5 @@ modification_id = 'gnam'  # Profile.Name
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'TRIGSTR_503'
+value = 'Captain Promotion'
 object_id = 'null'

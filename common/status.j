@@ -239,7 +239,7 @@ function status_check_ping takes nothing returns nothing
             call DisplayTextToForce(GetPlayersAll(), "|cffff2222Restart the level or connect the client to a different room|r")
         endif
         return
-    elseif error_state > 0 then
+    elseif error_state > 0 and world_id >= 0 then
         set error_state = 0
         call DisplayTextToForce(GetPlayersAll(), "|cff2266ffClient communications re-established.|r")
     endif

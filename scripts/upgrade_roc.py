@@ -312,7 +312,7 @@ def update_triggers(map_dir: str) -> None:
 def main(map_dir: str) -> int:
     files = os.listdir(map_dir)
     if '(listfile)' not in files:
-        print(f'Error: {map_dir }')
+        print(f'Error: Missing (listfile) in {map_dir}')
         return 1
     print(f'Processing {map_dir}')
     

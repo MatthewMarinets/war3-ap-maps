@@ -1404,34 +1404,3 @@ STRING 496
 {
 Collects map location 22 for the player.
 }
-
-STRING 498
-// Abilities: A000 (Promote to Captain), Name (Name)
-{
-Promote to Captain
-}
-
-STRING 499
-// Abilities: A000 (Promote to Captain), Tip (Tooltip - Normal)
-{
-Promote to Captain [|cffffcc00R|r]
-}
-
-STRING 500
-// Abilities: A000 (Promote to Captain), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 501
-// Abilities: A000 (Promote to Captain), Ubertip (Tooltip - Normal - Extended)
-{
-Promote this unit to a Captain.
-}
-
-STRING 503
-// Upgrades: R000 (Defend), Name (Name)
-{
-Captain Promotion
-}
-

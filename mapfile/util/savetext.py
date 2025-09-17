@@ -118,6 +118,8 @@ class TomlWriter:
         value = value.replace(b'\0', b'0')
         self.lines.append(f'{key} = {{ type = "bytes", value = "{value.decode("utf-8")}" }}')
     def _write_enum(self, key: str, value: enum.Enum, path: str) -> None:
+        if not isinstance(value, enum.Enum):
+            raise ValueError(f"key {key} has invalid value {value}, expected enum")
         self.lines.append(f'{key} = "{value.name}"')
 
     def _write_inline_array(self, key: str, value: list[str] | tuple[str, ...], path: str) -> None:

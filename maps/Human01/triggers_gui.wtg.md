@@ -339,6 +339,18 @@ version = TFT
   - param String set hero_abil_4[0] = 'AHre'
 
 
+## irregulars
+- enabled: True
+- category: [23] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
 ## Map Initialization
 - enabled: True
 - category: [2] Map Initialization
@@ -479,10 +491,10 @@ version = TFT
   - param Variable gg_unit_nC13_0159
 - Action SetVariable
   - param Variable StartingFootman01
-  - param Variable gg_unit_hfoo_0053
+  - param Variable gg_unit_hA00_0053
 - Action SetVariable
   - param Variable StartingFootman02
-  - param Variable gg_unit_hfoo_0054
+  - param Variable gg_unit_hA00_0054
 - Action SetVariable
   - param Variable StartingForces
   - param Function GetUnitsInRectAll
