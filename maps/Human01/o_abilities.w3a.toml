@@ -1,0 +1,123 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 2
+has_levels = true
+
+[blizzard_objects]
+entities = []
+
+[map_objects]
+[[map_objects.entities]]
+parent_id = 'Amrf'  # Crow Form
+entity_id = 'AP00'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_498'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'atp1'  # Profile.Tooltip - Normal
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = 'TRIGSTR_499'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ahky'  # Profile.Hotkey - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'TRIGSTR_500'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = 'hcth'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Eme2'  # AbilityData.Morphing Flags
+data_type = "Integer"
+variation_level = 1
+table_column = 2
+value = 9
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = 'TRIGSTR_501'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'aart'  # Profile.Icon - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNTheCaptain.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'acas'  # AbilityData.Casting Time
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.0
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'areq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'R100'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'achd'  # AbilityData.Check Dependencies
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'auar'  # Profile.Icon - Turn Off
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNTheCaptain.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'adur'  # AbilityData.Duration - Normal
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.25
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'aefs'  # Profile.Effect Sound
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'CaptainYes'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'acat'  # Profile.Caster
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Abilities\Spells\Human\Slow\SlowCaster.mdl'
+object_id = 'null'

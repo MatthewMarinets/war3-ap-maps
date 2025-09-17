@@ -122,7 +122,7 @@ modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = ''
+value = 'AP00'
 object_id = 'null'
 
 [map_objects]

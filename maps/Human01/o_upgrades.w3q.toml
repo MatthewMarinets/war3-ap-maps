@@ -1,0 +1,19 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 2
+has_levels = true
+
+[blizzard_objects]
+entities = []
+
+[map_objects]
+[[map_objects.entities]]
+parent_id = 'Rhde'  # Defend
+entity_id = 'R100'
+[[map_objects.entities.modifications]]
+modification_id = 'gnam'  # Profile.Name
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = 'TRIGSTR_503'
+object_id = 'null'

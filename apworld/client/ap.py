@@ -85,10 +85,14 @@ class Wc3Context(CommonContext):
             item_data = items.ID_TO_ITEM[received_item.item]
             if (isinstance(item_data.type, items.Building)
                 or isinstance(item_data.type, items.Unit)
-                or isinstance(item_data.type, items.Upgrade)
                 or isinstance(item_data.type, items.ShopItem)
             ):
                 self.comm_ctx.game_status.inventory.add_tech_and_prereqs(item_data.type.game_id)
+                self.comm_ctx.game_status.pending_update |= comm.PacketType.UNLOCKS
+            elif (isinstance(item_data.type, items.Upgrade)
+                or isinstance(item_data.type, items.CaptainPromotion)
+            ):
+                self.comm_ctx.game_status.inventory.add_tech_and_prereqs(item_data.type.game_id, 1)
                 self.comm_ctx.game_status.pending_update |= comm.PacketType.UNLOCKS
             elif isinstance(item_data.type, items.Level):
                 self.comm_ctx.game_status.hero_data[item_data.type.slot].max_level += 1

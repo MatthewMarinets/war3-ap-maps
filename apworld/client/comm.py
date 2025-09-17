@@ -66,26 +66,18 @@ class Wc3Inventory:
         }
         """Items currently in a hero's inventory"""
 
-    def add_tech_and_prereqs(self, tech: Tech) -> bool:
+    def add_tech_and_prereqs(self, tech: Tech, amount: int = -1) -> int:
         queue = [tech]
-        result = False
         while queue:
             new_id = queue.pop()
             if self.tech[new_id] == 0:
-                if new_id in TECH_REQUIREMENTS[1]:
-                    self.tech[new_id] += 1
-                else:
-                    self.tech[new_id] = -1
                 queue.extend(TECH_REQUIREMENTS[0].get(new_id, ()))
-                result = True
-            elif self.tech[new_id] < 3:
+            elif self.tech[new_id] > 0 and self.tech[new_id] < 3:
                 reqs = TECH_REQUIREMENTS[self.tech[new_id]].get(new_id)
                 if reqs is not None:
-                    # Only upgrade the tech level if it has more levels
-                    self.tech[new_id] += 1
                     queue.extend(reqs)
-                    result = True
-        return result
+            self.tech[new_id] += amount
+        return self.tech[tech]
     
 
 class PacketType(enum.IntFlag):
@@ -579,6 +571,25 @@ def sync_locations(
             client_interface.on_location_received(source.mission_id, new_locations)
 
 
+async def short_sleep() -> None:
+    await asyncio.sleep(0.25)
+    await asyncio.sleep(0.25)
+
+
+async def long_sleep() -> None:
+    # Note(mm): One big sleep messes with the standalone stdout reader
+    await asyncio.sleep(0.2)
+    await asyncio.sleep(0.2)
+    await asyncio.sleep(0.2)
+    await asyncio.sleep(0.2)
+    await asyncio.sleep(0.2)
+    await asyncio.sleep(0.2)
+    await asyncio.sleep(0.2)
+    await asyncio.sleep(0.2)
+    await asyncio.sleep(0.2)
+    await asyncio.sleep(0.2)
+
+
 async def status_loop(ctx: AsyncContext) -> None:
     new_status = MissionStatus()
     initialize_messages()
@@ -590,7 +601,7 @@ async def status_loop(ctx: AsyncContext) -> None:
         
         # Await status
         if not os.path.isfile(STATUS_FILE):
-            await asyncio.sleep(0.5)
+            await short_sleep()
             continue
         new_status.clear_locations()
         sync_mission_status(ctx.mission_status, new_status)
@@ -598,10 +609,10 @@ async def status_loop(ctx: AsyncContext) -> None:
             read_status(new_status, ctx.game_status)
         except Exception as ex:
             logger.exception(ex)
-            await asyncio.sleep(2)
+            await long_sleep()
             continue
         if new_status.world_id >= 0 and new_status.world_id != ctx.game_status.world_id:
-            await asyncio.sleep(2)
+            await long_sleep()
             continue
         if (new_status.mission_id != ctx.mission_status.mission_id
             or new_status.world_id < 0
@@ -633,6 +644,6 @@ async def status_loop(ctx: AsyncContext) -> None:
             update_ping(ctx.mission_status, ctx.game_status.world_id, ctx.game_status.pending_update)
             ctx.game_status.pending_update = PacketType.NONE
 
-        await asyncio.sleep(0.5)
+        await short_sleep()
 
 # todo(mm): save/load client data

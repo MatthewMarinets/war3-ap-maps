@@ -423,6 +423,27 @@ class GameID(enum.StrEnum):
     TINY_CASTLE = 'tcas'
     TINY_GREAT_HALL = 'tgrh'
 
+    # Runes
+    BUNDLE_OF_LUMBER = 'lmbr'
+    GLYPH_OF_FORTIFICATION = 'gfor'
+    GLYPF_OF_OMNISCIENCE = 'gomn'
+    GLYPH_OF_ULTRAVISION = 'guvi'
+    GOLD_COINS = 'gold'
+    RUNE_OF_DISPEL_MAGIC = 'rdis'
+    RUNE_OF_GREATER_HEALING = 'rhe3'
+    RUNE_OF_GREATER_MANA = 'rma2'
+    RUNE_OF_GREATER_RESURRECTION = 'rre2'
+    RUNE_OF_HEALING = 'rhe2'
+    RUNE_OF_LESSER_HEALING = 'rhe1'
+    RUNE_OF_LESSER_RESURRECTION = 'rre1'
+    RUNE_OF_MANA = 'rman'
+    RUNE_OF_REBIRTH = 'rreb'
+    RUNE_OF_RESTORATION = 'res'
+    RUNE_OF_SHIELDING = 'rsps'
+    RUNE_OF_SPEED = 'rspd'
+    RUNE_OF_SPIRIT_LINK = 'rspl'
+    RUNE_OF_THE_WATCHER = 'rwat'
+
     # Quest items
     BLOOD_KEY = 'kybl'
     EMPTY_VIAL = 'bzbe'
@@ -1188,6 +1209,9 @@ class Tech(enum.StrEnum):
     EMPTY_VIAL = GameID.EMPTY_VIAL
     FULL_VIAL = GameID.FULL_VIAL
     SKELETAL_ARTIFACT = GameID.SKELETAL_ARTIFACT
+
+    # Special signals
+    CAPTAIN = GameID.CAPTAIN
 
 
 TECH_REQUIREMENTS_LEVEL_1: dict[Tech, list[Tech]] = {

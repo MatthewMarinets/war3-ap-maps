@@ -1,12 +1,91 @@
 # Design Ideas
 ## TODO
-* Get communication working at all
-* Basic items (unit unlocks, hero levels, send items)
-* Get saves working (may involve some kind of rewind / client-based memory)
-* Crazier hero customization / abilities
-* Permanent Items
-* Consumables
-* Runes
+* Test saving
+* Implement the rest of the missionss
+
+## No-builds
+No-builds get kind of samey if you start with vanilla units, as that's enough to beat the mission.
+To integrate with items, the baseline should be lowered and items used to bring the mission back
+to baseline power level.
+
+### Proposal 1: Irregulars
+Replace some starting units with "irregulars", which have lower stats but may be upgraded to other units.
+
+What units work as an irregular?
+* Militia
+* Bandit
+* Villagers (non-combat irregulars)
+* Zombie
+* Skeleton
+* Ghost
+* Kel'Thuzad (Ghost)
+* Night Elf Runner
+
+What additional units can be accessed?
+* Human
+  * Militia
+  * Blood Elf Archer
+  * Emissary/Chaplain
+  * Swordsman
+  * Bandits (Bandit, Brigand, Rogue, Assassin, Enforcer, Bandit Lord)
+  * Wizards (Apprentice Wizard, Rogue Wizard, Renegade Wizard, Dark Wizard)
+* Undead
+  * Skeleton Warrior, Skeleton Mage
+  * Skeletons (Skeleton Archer, Burning Archer, Skeleton Warrior, Giant Skeleton Warrior)
+  * Skeletal Orcs (Skeletal Orc, Skeletal Orc Grunt, Skeletal Orc Champion)
+  * Zombie, Dalaran Mutant
+  * Ghosts (Ghost, Wraith)
+  * Fel beasts (Fel Beast, Fel Stalker, Fel Ravager)
+  * Heretics (Fallen Priest, Deceiver, Heretic)
+  * Ice Revenants (Frost Revenant, Ice Revenant)
+  * Dungeon Revenants (Fire Revenant, Lightning Revenant, Death Revenant)
+  * Water Revenants (Revenant of the Tides, Revenant of the Seas, Revenant of the Depths, Deeplord Revenant)
+* Orc
+  * Orc Warlock
+  * Spirit Wolf
+  * Forest Trolls (Forest Troll, FT Shadow Priest, FT Trapper, FT Berserker, FT High Priest, FT Warlord)
+  * Ogres (Ogre Warrior, Ogre Magi, Ogre Mauler, Ogre Lord)
+  * Stormreavers (Stormreaver Apprentice, Stormreaver Hermit, Stormreaver Necrolyte, Stormreaver Warlock)
+* Night elf
+  * Sentry
+  * Warden
+  * Treant
+  * Furbolgs (Furbolg, Furbolg Shaman, Furbolg Tracker, Furbolg Champion, Furbolg Elder Shaman, Furbolg Ursa Warrior)
+  * Wildkins (Wildkin, Enraged Wildkin, Berserk Wildkin)
+* Naga
+  * Murlocs (Murloc Tiderunner, Murloc Huntsman, Murloc Nightcrawler)
+  * Mur'gul (Mur'gul Cliffrunner, Mur'gul Blood-gill, Mur'gul Tidewarrior, Mur'gul Snarecaster, Mur'gul Marauder, Mur'gul Shadowcaster)
+  * Sea Turtles (Sea Turtle Hatchling, Sea Turtle , Sea Turtle, Giant Sea Turtle, Gargantuan Sea Turtle, Dragon Turtle)
+  * Makrura (Markrura Prawn, Markrura Pooldweller, Markrura Tidecaller, Makrura Deepseer, Makrura Snapper, Makrura Tidal Lord)
+  * Draenei (Draenei Guardian, Draenei Disciple, Draenei Protector, Draenei Watcher, Draenei Harbinger, Draenei Darkslayer, Draenei Seer)
+
+### Proposal 2: Captains
+Some starting units are replaced with a captain.
+Captains are unlocked on a per-mission basis with an item.
+Example: item for "Human02: Captain".
+
+How should the game handle getting a captain mid-mission?
+* Upgrade a random unit?
+* Spawn a new unit? (at hero1 location)
+* Allow irregulars to upgrade to a captain?
+
+What captains are there?
+* Human
+  * Captain
+  * Blood Elf Lieutenant
+  * Emissary/Chaplain
+  * Hydromancer
+  * Marine
+* Undead
+  * Sylvanas Windrunner (Banshee)
+* Orc
+  * Space Fel Orc
+  * Orc Warchief
+* Night Elf
+  * Shandris
+  * Naisha
+* Naga
+  * Naga Royal Guard
 
 ## Heroes
 ### Abilities
@@ -29,9 +108,8 @@ Possibilities:
 > Powerful: Each hero gets 5 slots instead of 4, otherwise similar to Shuffle. (I would make it 1 ultimate, 1 passive, 1 support, and 2 primary/secondary)
 > Chaos: Anything is possible. 4 ultimates on one hero? 4 passives on another?
 > Chaos+: Why not 5 ultimates on one hero?
---Sraw
 
-## Items
+--Sraw
 
 ## Shopsanity
 * Allow buying checks from goblin merchants

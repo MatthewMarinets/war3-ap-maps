@@ -1,19 +1,23 @@
 """
 Standalone client
 """
+from typing import Callable, Any
 import asyncio
 import inspect
 import time
 import threading
 import sys
 import shlex
+from dataclasses import dataclass
 
 from .. import logger
 from .comm import PacketType, AsyncContext, GameStatus, status_loop, InventoryItem
-from ..data import heroes, game_ids
+from ..data import heroes, game_ids, locations
 from ..data.game_ids import Tech, GameID
 
-
+# ===================================== #
+#                Parsers                #
+# ===================================== #
 def try_parse_unlock_id(user_input: str) -> Tech | None:
     tech: Tech | None = None
     try:
@@ -38,13 +42,13 @@ def try_parse_hero_slot(user_input: str) -> heroes.HeroSlot | None:
     return result
 
 
-def try_parse_game_id(user_input: str) -> str:
+def try_parse_game_id(user_input: str) -> str | None:
     if user_input in game_ids.GameID:
         return user_input
     try:
         return game_ids.GameID[user_input.upper().replace(' ', '_').replace("'", '').replace('+', '')]
     except KeyError: pass
-    return ''
+    return None
 
 
 def try_parse_item_channel_id(user_input: str) -> heroes.ItemChannel | None:
@@ -57,12 +61,151 @@ def try_parse_item_channel_id(user_input: str) -> heroes.ItemChannel | None:
     return result
 
 
-def try_parse_int(user_input: str, default: int) -> int:
+def try_parse_int(user_input: str) -> int | None:
     try:
         return int(user_input, base=0)
     except ValueError:
-        return default
+        return None
 
+# ===================================== #
+#                Handlers               #
+# ===================================== #
+def handle_exit(ctx: AsyncContext, *args) -> None:
+    ctx.running = False
+
+
+def print_help(ctx: AsyncContext, *args) -> None:
+    logger.info('Commands:')
+    for command, handler in COMMANDS.items():
+        parts = [command]
+        for arg in handler[1]:
+            if arg.default is not None:
+                parts.append(f'[{arg.argname}]')
+            else:
+                parts.append(f'<{arg.argname}>')
+        logger.info(" ".join(parts))
+
+
+def print_status(ctx: AsyncContext, *args) -> None:
+    logger.info(ctx.game_status)
+    logger.info(ctx.mission_status)
+
+
+def print_location_status(ctx: AsyncContext, *args) -> None:
+    mission_id = ctx.mission_status.mission_id
+    logger.info(f"Current mission: {mission_id}")
+    for location_id, location_value in ctx.mission_status.locations_collected.items():
+        if not location_value:
+            continue
+        global_id = locations.global_location_id(mission_id, location_id)
+        location = locations.location_from_id.get(global_id)
+        if location is None:
+            continue
+        logger.info(f"{location_id} ({location.location_name}): {location_value}")
+
+
+def print_hero_status(ctx: AsyncContext, hero_slot: heroes.HeroSlot) -> None:
+    logger.info(ctx.game_status.hero_data[hero_slot])
+
+
+def handle_set_name(ctx: AsyncContext, hero_slot: heroes.HeroSlot, name: str, *args) -> None:
+    ctx.game_status.hero_data[hero_slot].name = name
+    ctx.game_status.pending_update |= PacketType.HEROES
+
+
+def handle_send_item(ctx: AsyncContext, channel_id: heroes.ItemChannel, item_id: GameID) -> None:
+    ctx.game_status.item_channel_state[channel_id].items_received.append(item_id)
+    ctx.game_status.pending_update |= PacketType.ITEMS
+
+
+def handle_send_check(ctx: AsyncContext, *args: str) -> None:
+    for arg in args:
+        if arg.isnumeric():
+            ctx.mission_status.locations_collected[int(arg)] = 1
+    print_location_status(ctx)
+    ctx.game_status.pending_update |= PacketType.LOCATIONS
+
+
+def handle_unsend_check(ctx: AsyncContext, *args: str) -> None:
+    for arg in args:
+        if arg.isnumeric():
+            ctx.mission_status.locations_collected[int(arg)] = -1
+    print_location_status(ctx)
+    ctx.game_status.pending_update |= PacketType.LOCATIONS
+
+
+def handle_unlock(ctx: AsyncContext, tech: GameID, amount: int, *args) -> None:
+    if not amount:
+        if tech == Tech.CAPTAIN or tech in game_ids.TECH_REQUIREMENTS_LEVEL_2:
+            amount = 1
+        else:
+            amount = -1
+    ctx.game_status.inventory.add_tech_and_prereqs(tech, amount)
+    ctx.game_status.pending_update |= PacketType.UNLOCKS
+    logger.info(f"{tech} is level {ctx.game_status.inventory.tech[tech]}")
+
+
+def handle_lock(ctx: AsyncContext, tech: GameID, *args) -> None:
+    if ctx.game_status.inventory.tech[tech]:
+        ctx.game_status.inventory.tech[tech] = 0
+        ctx.game_status.pending_update |= PacketType.UNLOCKS
+
+
+def handle_level(ctx: AsyncContext, hero_slot: heroes.HeroSlot, amount: int, *args) -> None:
+    ctx.game_status.hero_data[hero_slot].max_level += amount
+    ctx.game_status.pending_update |= PacketType.HERO_LEVEL
+    logger.info(
+        f"{hero_slot.name} max level set to {ctx.game_status.hero_data[hero_slot].max_level}"
+    )
+
+
+def handle_msg(ctx: AsyncContext, *args: str) -> None:
+    message = ' '.join(args)
+    ctx.game_status.pending_messages.append(message)
+    ctx.game_status.pending_update |= PacketType.MESSAGES
+
+
+@dataclass
+class CommandArg:
+    argname: str
+    type_converter: Callable[[str], Any] = str
+    default: Any | None = None
+
+
+COMMANDS: dict[str, tuple[Callable[[AsyncContext], None], list[CommandArg]]] = {
+    '/exit': (handle_exit, []),
+    '/help': (print_help, []),
+    '/location_status': (print_location_status, []),
+    '/status': (print_status, []),
+    '/herostatus': (print_hero_status,
+        [CommandArg('hero slot ID', try_parse_hero_slot)]
+    ),
+    '/setname': (handle_set_name, [
+        CommandArg('hero slot ID', try_parse_hero_slot),
+        CommandArg('name'),
+    ]),
+    '/senditem': (handle_send_item, [
+        CommandArg('item channel ID', try_parse_item_channel_id),
+        CommandArg('item ID', try_parse_game_id),
+    ]),
+    '/check': (handle_send_check, [
+        CommandArg('locations'),
+    ]),
+    '/uncheck': (handle_unsend_check, [
+        CommandArg('locations'),
+    ]),
+    '/msg': (handle_msg, [
+        CommandArg('message'),
+    ]),
+    '/unlock': (handle_unlock, [
+        CommandArg('techid', try_parse_game_id),
+        CommandArg('amount', try_parse_int, 0),
+    ]),
+    '/level': (handle_level, [
+        CommandArg('hero slot ID', try_parse_hero_slot),
+        CommandArg('amount', try_parse_int, 1),
+    ]),
+}
 
 
 def start_stdin_reader_thread(queue: asyncio.Queue[str]) -> threading.Thread:
@@ -94,115 +237,37 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
             tokens = shlex.split(text)
             if not tokens:
                 continue
-            elif tokens[0] == '/exit' or tokens[0] == 'q':
-                ctx.running = False
-            elif tokens[0] == '/help':
-                logger.info("Commands:")
-                logger.info(inspect.cleandoc('''
-                    /exit
-                    /status
-                    /location_status
-                    /setname "<hero slot ID>" "name"
-                    /herostatus <hero slot ID>
-                    /senditem <item channel ID> <item ID>
-                    /check <args>
-                    /uncheck <args>
-                    /msg <message>
-                    /unlock <techid>
-                    /level <hero slot> [amount]
-                '''))
-            elif tokens[0] == '/status':
-                logger.info(ctx.game_status)
-                logger.info(ctx.mission_status)
-            elif tokens[0] == '/location_status':
-                logger.info({
-                    location_id: location_value
-                    for location_id, location_value in ctx.mission_status.locations_collected.items()
-                    if location_value
-                })
-            elif tokens[0] == '/setname':
-                if len(tokens) < 3:
-                    logger.warning(f"/setname takes 2 arguments, got {len(tokens) - 1}")
-                    continue
-                user_identifier = try_parse_hero_slot(tokens[1])
-                if user_identifier is None:
-                    logger.warning(f"{tokens[1]} is not a valid hero slot name")
-                    continue
-                ctx.game_status.hero_data[user_identifier].name = tokens[3]
-            elif tokens[0] == '/herostatus':
-                slot_identifier = " ".join(tokens[1:])
-                hero_slot = try_parse_hero_slot(slot_identifier)
-                if hero_slot is None:
-                    logger.warning(f'"{slot_identifier}" is not a recognized hero slot')
+            handlers = COMMANDS.get(tokens[0])
+            if handlers is None:
+                logger.warning(f"Unknown command '{tokens[0]}'")
+                print_help(ctx)
+                continue
+            handler_function, arg_handlers = handlers
+            arguments: list = []
+            okay = True
+            for index, token in enumerate(tokens[1:]):
+                if index < len(arg_handlers):
+                    parsed_arg = arg_handlers[index].type_converter(token)
+                    if parsed_arg is None:
+                        logger.warning(f"'{token}' is not a valid {arg_handlers[index].argname}")
+                        okay = False
+                        break
+                    arguments.append(parsed_arg)
                 else:
-                    logger.info(ctx.game_status.hero_data[hero_slot])
-            elif tokens[0] == '/senditem':
-                if len(tokens) < 3:
-                    logger.warning(f'/senditem requires 2 arguments, got {len(tokens) - 1}')
-                    continue
-                channel_id = try_parse_item_channel_id(tokens[1])
-                if channel_id is None:
-                    logger.warning(f'"{user_identifier}" is not a recognized item channel ID')
-                    continue
-                user_identifier = ' '.join(tokens[2:])
-                item_id = try_parse_game_id(user_identifier)
-                if not item_id:
-                    logger.warning(f'"{user_identifier}" is not a valid game ID')
-                    continue
-                ctx.game_status.item_channel_state[channel_id].items_received.append(item_id)
-            elif tokens[0] == '/check':
-                parts = [p for p in text.split(' ') if p]
-                for part in parts[1:]:
-                    if part.isnumeric():
-                        ctx.mission_status.locations_collected[int(part)] = 1
-                ctx.game_status.pending_update |= PacketType.LOCATIONS
-            elif tokens[0] == '/uncheck':
-                parts = [p for p in text.split(' ') if p]
-                for part in parts[1:]:
-                    if part.isnumeric():
-                        ctx.mission_status.locations_collected[int(part)] = -1
-                ctx.game_status.pending_update |= PacketType.LOCATIONS
-            elif tokens[0] == '/unlock':
-                user_identifier = " ".join(tokens[1:])
-                tech = try_parse_unlock_id(user_identifier)
-                if tech is None:
-                    logger.warning(f'"{user_identifier}" is not a recognized ID')
-                else:
-                    if ctx.game_status.inventory.add_tech_and_prereqs(tech):
-                        ctx.game_status.pending_update |= PacketType.UNLOCKS
-            elif tokens[0] == '/lock':
-                user_identifier = " ".join(tokens[1:])
-                tech = try_parse_unlock_id(user_identifier)
-                if tech is None:
-                    logger.warning(f'"{user_identifier}" is not a recognized ID')
-                else:
-                    if ctx.game_status.inventory.tech[tech]:
-                        ctx.game_status.inventory.tech[tech] = 0
-                        ctx.game_status.pending_update |= PacketType.UNLOCKS
-            elif tokens[0] == '/level':
-                slot_identifier = text.split(' ', 1)[1].strip()
-                if slot_identifier[-1].isnumeric():
-                    slot_identifier, delta_str = slot_identifier.rsplit(' ', 1)
-                    delta = try_parse_int(delta_str, 1)
-                else:
-                    delta = 1
-                hero_slot = try_parse_hero_slot(slot_identifier)
-                if hero_slot is None:
-                    logger.warning(f'"{slot_identifier}" is not a recognized hero slot')
-                else:
-                    ctx.game_status.hero_data[hero_slot].max_level += delta
-                    ctx.game_status.pending_update |= PacketType.HERO_LEVEL
-                    logger.info(
-                        f"{hero_slot.name} max level set to {ctx.game_status.hero_data[hero_slot].max_level}"
-                    )
-            elif tokens[0] == '/msg':
-                if len(text.strip()) < 6:
-                    logger.warning('/msg requires an argument')
-                    continue
-                ctx.game_status.pending_messages.append(text[5:])
-                ctx.game_status.pending_update |= PacketType.MESSAGES
-            else:
-                logger.warning(f'Unknown command "{text}"')
+                    arguments.append(token)
+            if not okay:
+                continue
+            index = len(tokens) - 1
+            for index, arg_handler in enumerate(arg_handlers[index:], start=index):
+                if arg_handler.default is None:
+                    logger.warning(f"Missing required argument {arg_handler.argname}")
+                    okay = False
+                    break
+                arguments.append(arg_handler.default)
+            if not okay:
+                continue
+            handler_function(ctx, *arguments)
+
         except Exception as ex:
             logger.exception(ex)
     logger.info("Shutting down console")

@@ -49,12 +49,17 @@ class PickupItem:
 @dataclasses.dataclass
 class QuestItem:
     vanilla_mission: Wc3Mission
+    """The mission the player would require this quest item in vanilla"""
     gameid: Tech
     amount: int = 1
-    """The mission the player would require this quest item in vanilla"""
 
 
-ItemType = Unit | Building | Level | Upgrade | ShopItem | PickupItem | QuestItem
+@dataclasses.dataclass
+class CaptainPromotion:
+    mission: Wc3Mission
+
+
+ItemType = Unit | Building | Level | Upgrade | ShopItem | PickupItem | QuestItem | CaptainPromotion
 
 
 class Wc3Item(enum.Enum):
@@ -338,6 +343,9 @@ class Wc3Item(enum.Enum):
     # TYRANDE_TFT_LEVEL = _, "Tyrande (TFT) Level",   Level(HeroSlot.TYRANDE_TFT, 10, 10)
     # MALFURION_LEVEL =   _, "Malfurion Level",       Level(HeroSlot.MALFURION, 10, 10)
     # ILLIDAN_TFT_LEVEL = _, "Illidan (TFT) Level",   Level(HeroSlot.DEMON_ILLIDAN, 10, 10)
+
+    # Captains
+    H1_CAPTAIN = 1100, "Human 01: Captain", CaptainPromotion(Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD)
 
     # Human Campaign Items
     H_BOOTS_OF_SPEED =               2100, "Boots of Speed (Human)",                PickupItem(1, GameID.BOOTS_OF_SPEED, ItemChannel.HUMAN)

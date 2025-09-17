@@ -20,6 +20,7 @@ integer hero_status_index = -1
 integer num_channel_1_items_received = 0
 integer num_channel_2_items_received = 0
 timer status_ack_ping_timer
+trigger t_captain_promoted
 endglobals
 
 function status_send takes nothing returns nothing
@@ -48,12 +49,39 @@ function status_send takes nothing returns nothing
     call io_close_write()
 endfunction
 
+function captains_set_ability_usable takes player p returns nothing
+    local integer available = GetPlayerTechMaxAllowed(p, 'hcth') - GetPlayerTechCount(p, 'AP00', true)
+    if available < 0 then
+        set available = 0
+    endif
+    call SetPlayerTechResearched(p, 'R100', available)
+endfunction
+
 function status_load_unlocks_for_player takes integer target_player returns nothing
     local player p = Player(0)
     call SetPlayerTechMaxAllowed(p, 'nech', -1)
     call SetPlayerTechMaxAllowed(p, 'nvil', target_player)
     call io_read_file_simple("unlocks.txt")
     set last_unlock_packet = GetPlayerTechMaxAllowed(p, 'nech')
+    // captains
+    call captains_set_ability_usable(Player(target_player))
+endfunction
+
+function status_captain_promoted_actions takes nothing returns nothing
+    local player p = GetOwningPlayer(GetTriggerUnit())
+    local effect special_effect
+    if GetSpellAbilityId() != 'AP00' then
+        return
+    endif
+    call AddPlayerTechResearched(p, 'AP00', 1)
+    call captains_set_ability_usable(p)
+endfunction
+
+function captains_init takes nothing returns nothing
+    call SetPlayerTechMaxAllowed(USER_PLAYER, 'hcth', 0)
+    set t_captain_promoted = CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(t_captain_promoted, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddAction(t_captain_promoted, function status_captain_promoted_actions)
 endfunction
 
 function status_load_unlocks takes nothing returns nothing
@@ -281,4 +309,6 @@ function InitTrig_status takes nothing returns nothing
     set status_ack_ping_timer = CreateTimer()
     call status_send()
     call TimerStart(status_ack_ping_timer, 1, true, function status_check_ping)
+    // Captains
+    call captains_init()
 endfunction
