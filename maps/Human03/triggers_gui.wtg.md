@@ -1,8 +1,9 @@
-version = ROC
+version = TFT
 
 # Categories
 | ID  | Name | is a comment |
 | --- | ---- | ------------ |
+| 40 | Archipelago | False |
 | 0 | Initialization | False |
 | 35 | Bubble | False |
 | 24 | SetupQuests | False |
@@ -114,6 +115,102 @@ version = ROC
 | MortarTeamVis | fogmodifier | . | . |
 
 # Triggers
+## fileio
+- enabled: True
+- category: [40] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## map_config
+- enabled: True
+- category: [40] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## status
+- enabled: True
+- category: [40] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## heroes
+- enabled: True
+- category: [40] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## item_locations
+- enabled: True
+- category: [40] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## debug
+- enabled: True
+- category: [40] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## zoom
+- enabled: True
+- category: [40] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## irregulars
+- enabled: True
+- category: [40] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
 ## MapInitialization
 - enabled: True
 - category: [0] Initialization
