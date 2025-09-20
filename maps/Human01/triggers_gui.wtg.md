@@ -3496,7 +3496,7 @@ Loops
   - param Variable Garth
 - Action CreateNUnitsAtLoc
   - param String 1
-  - param String hfoo
+  - param String hA00
   - param Preset Player01
   - param Function GetRectCenter
     - Function GetRectCenter
@@ -3553,7 +3553,7 @@ Loops
   - param Variable Thornby
 - Action CreateNUnitsAtLoc
   - param String 1
-  - param String hfoo
+  - param String hA00
   - param Preset Player01
   - param Function GetRectCenter
     - Function GetRectCenter

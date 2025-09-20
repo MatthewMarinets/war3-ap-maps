@@ -9,7 +9,68 @@ from . import editor_ids, mod_entity
 from apworld.data.game_ids import GameID
 
 
+@dataclass
+class AbilInfo:
+    unit_name: str
+    unit_game_id: GameID
+    select_id: str
+    transform_id: str
+    upgrade_id: str
+    hotkey: str
+    x: int
+    y: int
+    sound: str
+    icon: str
+    upgrade_name: str = ''
+    joke: str = ''
+
+    def __post_init__(self) -> None:
+        if not self.upgrade_name:
+            self.upgrade_name = self.unit_name
+
+
 SPELLBOOK_ABIL_ID = 'APPh'
+HUMAN_ABIL_INFO = [
+    AbilInfo(
+        "Captain", GameID.CAPTAIN, 'AP00', 'AP0a', 'RP00', "T", 1, 2,
+        "CaptainWhat", "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp",
+        upgrade_name="Captain Promotion"
+    ),
+    AbilInfo(
+        "Footman", GameID.FOOTMAN, 'AP01', 'AP0b', 'RP01', "F", 0, 0,
+        "FootmanReady", "ReplaceableTextures\\CommandButtons\\BTNFootman.blp",
+    ),
+    AbilInfo(
+        "Rifleman", GameID.RIFLEMAN, 'AP02', 'AP0c', 'RP02', "R", 1, 0,
+        "RiflemanReady", "ReplaceableTextures\\CommandButtons\\BTNRifleman.blp",
+    ),
+    AbilInfo(
+        "Archer", GameID.BLOOD_ELF_ARCHER, 'AP03', 'AP0d', 'RP03', "H", 2, 0,
+        "ArcherReady", "ReplaceableTextures\\CommandButtons\\BTNHighElvenArcher.blp",
+        joke=" (Magic makes for fast transition)."
+    ),
+    AbilInfo(
+        "Knight", GameID.KNIGHT, 'AP04', 'AP0e', 'RP04', "G", 3, 0,
+        "KnightReady", "ReplaceableTextures\\CommandButtons\\BTNKnight.blp",
+    ),
+    AbilInfo(
+        "Priest", GameID.PRIEST, 'AP05', 'AP0f', 'RP05', "E", 0, 1,
+        "PriestReady", "ReplaceableTextures\\CommandButtons\\BTNPriest.blp",
+    ),
+    AbilInfo(
+        "Sorceress", GameID.SORCERESS, 'AP06', 'AP0g', 'RP06', "X", 1, 1,
+        "SorceressReady", "ReplaceableTextures\\CommandButtons\\BTNSorceress.blp",
+        joke=" (Magic makes for fast transition)."
+    ),
+    AbilInfo(
+        "Spell Breaker", GameID.SPELL_BREAKER, 'AP07', 'AP0h', 'RP07', "B", 2, 1,
+        "SpellBreakerReady", "ReplaceableTextures\\CommandButtons\\BTNSpellBreaker.blp",
+    ),
+    AbilInfo(
+        "Mortar Team", GameID.MORTAR_TEAM, 'AP08', 'AP0i', 'RP08', "M", 0, 2,
+        "MortarTeamReady", "ReplaceableTextures\\CommandButtons\\BTNMortarTeam.blp",
+    ),
+]
 
 def update_abilities_human(abils_file: str) -> None:
     if not os.path.isfile(abils_file):
@@ -19,74 +80,54 @@ def update_abilities_human(abils_file: str) -> None:
     
     entities = mod_entity.Entities(data.map_objects.entities)
 
-    SELECT_ABILS = {
-        'AP00': ("Captain", "T", 0, 0, 'ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp'),
-        'AP01': ("Footman", "F", 0, 0, 'ReplaceableTextures\\CommandButtons\\BTNFootman.blp'),
-        'AP02': ("Rifleman", "R", 1, 0, 'ReplaceableTextures\\CommandButtons\\BTNRifleman.blp'),
-        'AP03': ("Archer", "H", 2, 0, 'ReplaceableTextures\\CommandButtons\\BTNHighElvenArcher.blp'),
-        'AP04': ("Knight", "G", 3, 0, 'ReplaceableTextures\\CommandButtons\\BTNKnight.blp'),
-        'AP05': ("Priest", "E", 0, 1, 'ReplaceableTextures\\CommandButtons\\BTNPriest.blp'),
-        'AP06': ("Sorceress", "X", 1, 1, 'ReplaceableTextures\\CommandButtons\\BTNSorceress.blp'),
-        'AP07': ("Spell Breaker", "B", 2, 1, 'ReplaceableTextures\\CommandButtons\\BTNSpellBreaker.blp'),
-        'AP08': ("Mortar Team", "M", 0, 2, 'ReplaceableTextures\\CommandButtons\\BTNMortarTeam.blp'),
-    }
-
-    for index, (abil_id, (unit_name, hotkey, button_x, button_y, icon)) in enumerate(SELECT_ABILS.items()):
+    # Select abilities
+    for index, info in enumerate(HUMAN_ABIL_INFO):
         entities.set_entity(
-            abil_id, editor_ids.ABIL_CHANNEL,
-            {
-                editor_ids.FIELD_ABIL_NAME: f"Promote to {unit_name}",
-                editor_ids.FIELD_ABIL_ICON_NORMAL: icon,
-                (editor_ids.FIELD_ABIL_TOOLTIP_NORMAL, 1): f"Promote to {unit_name} [|cffffcc00{hotkey}|r]",
-                (editor_ids.FIELD_ABIL_TOOLTIP_NORMAL_EXTENDED, 1):
-                    f"Promote this unit to a{'n' if unit_name[0] in 'AEIOU' else ''} {unit_name}",
-                editor_ids.FIELD_ABIL_HOTKEY: hotkey,
-                editor_ids.FIELD_ABIL_STATS_IS_HERO_ABILITY: 0,
-                editor_ids.FIELD_ABIL_BUTTON_POSITION_NORMAL_X: button_x,
-                editor_ids.FIELD_ABIL_BUTTON_POSITION_NORMAL_Y: button_y,
-                (editor_ids.FIELD_ABIL_DATA_CHANNEL_OPTIONS, 1): 1,
-                (editor_ids.FIELD_ABIL_DATA_CHANNEL_ART_DURATION, 1): 0.0,
-                (editor_ids.FIELD_ABIL_DATA_CHANNEL_DISABLE_OTHER_ABILITIES, 1): 0,
-                (editor_ids.FIELD_ABIL_DATA_CHANNEL_BASE_ORDER_ID, 1): editor_ids.BASE_ORDER_IDS[index],
-            }
-        )
+            info.select_id, editor_ids.ABIL_CHANNEL, {
+            editor_ids.FIELD_ABIL_NAME: f"Promote to {info.unit_name}",
+            editor_ids.FIELD_ABIL_ICON_NORMAL: info.icon,
+            (editor_ids.FIELD_ABIL_TOOLTIP_NORMAL, 1):
+                f"Promote to {info.unit_name} [|cffffcc00{info.hotkey}|r]",
+            (editor_ids.FIELD_ABIL_TOOLTIP_NORMAL_EXTENDED, 1):
+                f"Promote this unit to a{'n' if info.unit_name[0] in 'AEIOU' else ''} {info.unit_name}."
+                + info.joke,
+            editor_ids.FIELD_ABIL_HOTKEY: info.hotkey,
+            editor_ids.FIELD_ABIL_STATS_IS_HERO_ABILITY: 0,
+            editor_ids.FIELD_ABIL_BUTTON_POSITION_NORMAL_X: info.x,
+            editor_ids.FIELD_ABIL_BUTTON_POSITION_NORMAL_Y: info.y,
+            editor_ids.FIELD_ABIL_REQUIREMENTS: info.upgrade_id,
+            (editor_ids.FIELD_ABIL_DATA_CHANNEL_OPTIONS, 1): 1,
+            (editor_ids.FIELD_ABIL_DATA_CHANNEL_ART_DURATION, 1): 0.0,
+            (editor_ids.FIELD_ABIL_DATA_CHANNEL_DISABLE_OTHER_ABILITIES, 1): 0,
+            (editor_ids.FIELD_ABIL_DATA_CHANNEL_BASE_ORDER_ID, 1): editor_ids.BASE_ORDER_IDS[index],
+        })
 
-    TRANSFORM_ABIL_TO_DATA = {
-        'AP0a': (GameID.CAPTAIN.value, "CaptainWhat"),
-        'AP0b': (GameID.FOOTMAN.value, "FootmanReady"),
-        'AP0c': (GameID.RIFLEMAN.value, "RiflemanReady"),
-        'AP0d': (GameID.BLOOD_ELF_ARCHER.value, "ArcherReady"),
-        'AP0e': (GameID.KNIGHT.value, "KnightReady"),
-        'AP0f': (GameID.PRIEST.value, "PriestReady"),
-        'AP0g': (GameID.SORCERESS.value, "SorceressReady"),
-        'AP0h': (GameID.SPELL_BREAKER.value, "SpellBreakerReady"),
-        'AP0i': (GameID.MORTAR_TEAM.value, "MortarTeamReady"),
-    }
-    for abil_id, (unit_id, sound_id) in TRANSFORM_ABIL_TO_DATA.items():
+    # Transform abilities
+    for info in HUMAN_ABIL_INFO:
         entities.set_entity(
-            abil_id, editor_ids.ABIL_CROW_FORM_MEDIVH,
-            {
-                (editor_ids.FIELD_ABIL_DATA_CROW_FORM_ALTERNATE_FORM_UNIT, 1): unit_id,
-                (editor_ids.FIELD_ABIL_DATA_CROW_FORM_MORPHING_FLAGS, 1): 9,
-                (editor_ids.FIELD_ABIL_STATS_CASTING_TIME, 1): 0.0,
-                (editor_ids.FIELD_ABIL_STATS_DURATION_NORMAL, 1): 0.0,
-                editor_ids.FIELD_ABIL_EFFECT_SOUND: sound_id,
-            }
-        )
+            info.transform_id, editor_ids.ABIL_CROW_FORM_MEDIVH, {
+            (editor_ids.FIELD_ABIL_DATA_CROW_FORM_ALTERNATE_FORM_UNIT, 1): info.unit_game_id.value,
+            (editor_ids.FIELD_ABIL_DATA_CROW_FORM_MORPHING_FLAGS, 1): 9,
+            (editor_ids.FIELD_ABIL_STATS_CASTING_TIME, 1): 0.0,
+            (editor_ids.FIELD_ABIL_STATS_DURATION_NORMAL, 1): 0.0,
+            editor_ids.FIELD_ABIL_EFFECT_SOUND: info.sound,
+        })
     
+    # Spellbook ability
     entities.set_entity(
-        SPELLBOOK_ABIL_ID, editor_ids.ABIL_SPELL_BOOK,
-        {
-            editor_ids.FIELD_ABIL_NAME: "Promotion",
-            editor_ids.FIELD_ABIL_EDITOR_SUFFIX: "(Human)",
-            editor_ids.FIELD_ABIL_HOTKEY: "T",
-            editor_ids.FIELD_ABIL_ICON_NORMAL: r"ReplaceableTextures\CommandButtons\BTNHumanCaptureFlag.blp",
-            editor_ids.FIELD_ABIL_BUTTON_POSITION_NORMAL_Y: 2,
-            (editor_ids.FIELD_ABIL_DATA_SPELL_BOOK_MIN_SPELLS, 1): len(SELECT_ABILS),
-            (editor_ids.FIELD_ABIL_DATA_SPELL_BOOK_MAX_SPELLS, 1): len(SELECT_ABILS),
-            (editor_ids.FIELD_ABIL_DATA_SPELL_BOOK_SPELL_LIST, 1): ",".join(SELECT_ABILS),
-        }
-    )
+        SPELLBOOK_ABIL_ID, editor_ids.ABIL_SPELL_BOOK, {
+        editor_ids.FIELD_ABIL_NAME: "Promotion",
+        editor_ids.FIELD_ABIL_EDITOR_SUFFIX: "(Human)",
+        editor_ids.FIELD_ABIL_HOTKEY: "T",
+        editor_ids.FIELD_ABIL_ICON_NORMAL: r"ReplaceableTextures\CommandButtons\BTNHumanCaptureFlag.blp",
+        editor_ids.FIELD_ABIL_BUTTON_POSITION_NORMAL_Y: 2,
+        editor_ids.FIELD_ABIL_STATS_IS_ITEM_ABILITY: 0,
+        editor_ids.FIELD_ABIL_TOOLTIP_NORMAL: "Promote this unit to a regular Human unit.",
+        (editor_ids.FIELD_ABIL_DATA_SPELL_BOOK_MIN_SPELLS, 1): len(HUMAN_ABIL_INFO),
+        (editor_ids.FIELD_ABIL_DATA_SPELL_BOOK_MAX_SPELLS, 1): len(HUMAN_ABIL_INFO),
+        (editor_ids.FIELD_ABIL_DATA_SPELL_BOOK_SPELL_LIST, 1):
+            ",".join(info.select_id for info in HUMAN_ABIL_INFO),
+    })
     
     text = w3o.as_text(data)
     with open(abils_file, 'w') as fp:
@@ -101,15 +142,13 @@ def update_units(units_file: str) -> None:
     
     entities = mod_entity.Entities(data.map_objects.entities)
     entities.set_entity(
-        'hA00', GameID.MILITIA.value,
-        {
-            editor_ids.FIELD_UNIT_GENERAL_NAME: "Irregular",
-            editor_ids.FIELD_UNIT_ATTACK_1_DAMAGE_BASE: 9,
-            editor_ids.FIELD_UNIT_ABILITIES_NORMAL: SPELLBOOK_ABIL_ID,
-            editor_ids.FIELD_UNIT_ABILITIES_DEFAULT: '',
-            editor_ids.FIELD_UNIT_GENERAL_STRUCTURES_BUILT: '',
-        }
-    )
+        'hA00', GameID.MILITIA.value, {
+        editor_ids.FIELD_UNIT_GENERAL_NAME: "Irregular",
+        editor_ids.FIELD_UNIT_ATTACK_1_DAMAGE_BASE: 9,
+        editor_ids.FIELD_UNIT_ABILITIES_NORMAL: SPELLBOOK_ABIL_ID,
+        editor_ids.FIELD_UNIT_ABILITIES_DEFAULT: '',
+        editor_ids.FIELD_UNIT_GENERAL_STRUCTURES_BUILT: '',
+    })
 
     text = w3o.as_text(data)
     with open(units_file, 'w') as fp:
@@ -123,6 +162,12 @@ def update_upgrades(upgrades_file: str) -> None:
         data = w3o.from_text_file(upgrades_file)
     
     entities = mod_entity.Entities(data.map_objects.entities)
+    for info in HUMAN_ABIL_INFO:
+        entities.set_entity(
+            info.upgrade_id, GameID.FOOTMAN_DEFEND.value, {
+            (editor_ids.FIELD_UPGRADE_NAME, 1): f"Find {info.upgrade_name}",
+        })
+
 
     text = w3o.as_text(data)
     with open(upgrades_file, 'w') as fp:
@@ -138,7 +183,7 @@ def main(map_dir: str) -> int:
 
     update_abilities_human(f'{map_dir}/o_abilities.w3a.toml')
     update_units(f'{map_dir}/o_units.w3u.toml')
-    # update_upgrades(f'{map_dir}/o_upgrades.w3q.toml')
+    update_upgrades(f'{map_dir}/o_upgrades.w3q.toml')
 
 
 HELP = """

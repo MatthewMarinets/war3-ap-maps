@@ -184,12 +184,28 @@ function status_send takes nothing returns nothing
     call io_close_write()
 endfunction
 
+function B2I takes boolean b returns integer
+    if b then
+        return 1
+    endif
+    return 0
+endfunction
+
 function captains_set_ability_usable takes player p returns nothing
     local integer available = GetPlayerTechMaxAllowed(p, 'hcth') - GetPlayerTechCount(p, 'AP00', true)
     if available < 0 then
         set available = 0
     endif
-    call SetPlayerTechResearched(p, 'R100', available)
+    call SetPlayerTechResearched(p, 'RP00', available)
+    // General irregular unlocks
+    call SetPlayerTechResearched(p, 'RP01', B2I(GetPlayerTechMaxAllowed(p, 'hfoo') != 0))
+    call SetPlayerTechResearched(p, 'RP02', B2I(GetPlayerTechMaxAllowed(p, 'hrif') != 0))
+    call SetPlayerTechResearched(p, 'RP03', B2I(GetPlayerTechMaxAllowed(p, 'nhea') != 0))
+    call SetPlayerTechResearched(p, 'RP04', B2I(GetPlayerTechMaxAllowed(p, 'hkni') != 0))
+    call SetPlayerTechResearched(p, 'RP05', B2I(GetPlayerTechMaxAllowed(p, 'hmpr') != 0))
+    call SetPlayerTechResearched(p, 'RP06', B2I(GetPlayerTechMaxAllowed(p, 'hsor') != 0))
+    call SetPlayerTechResearched(p, 'RP07', B2I(GetPlayerTechMaxAllowed(p, 'hspt') != 0))
+    call SetPlayerTechResearched(p, 'RP08', B2I(GetPlayerTechMaxAllowed(p, 'hmtm') != 0))
 endfunction
 
 function status_load_unlocks_for_player takes integer target_player returns nothing

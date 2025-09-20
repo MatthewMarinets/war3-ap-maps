@@ -39,7 +39,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'Promote this unit to a Captain'
+value = 'Promote this unit to a Captain.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -63,7 +63,7 @@ modification_id = 'abpx'  # Profile.Button Position - Normal (X)
 data_type = "Integer"
 variation_level = 0
 table_column = 0
-value = 0
+value = 1
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -98,6 +98,22 @@ table_column = 6
 value = 'absorb'
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'areq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'RP00'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'ANcl'  # Channel
 entity_id = 'AP01'
@@ -130,7 +146,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'Promote this unit to a Footman'
+value = 'Promote this unit to a Footman.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -189,6 +205,14 @@ table_column = 6
 value = 'acidbomb'
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'areq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'RP01'
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'ANcl'  # Channel
 entity_id = 'AP02'
@@ -221,7 +245,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'Promote this unit to a Rifleman'
+value = 'Promote this unit to a Rifleman.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -280,6 +304,14 @@ table_column = 6
 value = 'acolyteharvest'
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'areq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'RP02'
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'ANcl'  # Channel
 entity_id = 'AP03'
@@ -312,7 +344,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'Promote this unit to an Archer'
+value = 'Promote this unit to an Archer. (Magic makes for fast transition).'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -363,6 +395,14 @@ table_column = 6
 value = 'AImove'
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'areq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'RP03'
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'ANcl'  # Channel
 entity_id = 'AP04'
@@ -395,7 +435,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'Promote this unit to a Knight'
+value = 'Promote this unit to a Knight.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -454,6 +494,14 @@ table_column = 6
 value = 'ambush'
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'areq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'RP04'
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'ANcl'  # Channel
 entity_id = 'AP05'
@@ -486,7 +534,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'Promote this unit to a Priest'
+value = 'Promote this unit to a Priest.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -553,6 +601,14 @@ table_column = 6
 value = 'ancestralspirit'
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'areq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'RP05'
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'ANcl'  # Channel
 entity_id = 'AP06'
@@ -585,7 +641,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'Promote this unit to a Sorceress'
+value = 'Promote this unit to a Sorceress. (Magic makes for fast transition).'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -652,6 +708,14 @@ table_column = 6
 value = 'ancestralspirittaarget'
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'areq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'RP06'
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'ANcl'  # Channel
 entity_id = 'AP07'
@@ -684,7 +748,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'Promote this unit to a Spell Breaker'
+value = 'Promote this unit to a Spell Breaker.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -743,6 +807,14 @@ table_column = 6
 value = 'animatedead'
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'areq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'RP07'
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'ANcl'  # Channel
 entity_id = 'AP08'
@@ -775,7 +847,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'Promote this unit to a Mortar Team'
+value = 'Promote this unit to a Mortar Team.'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -840,6 +912,14 @@ data_type = "String"
 variation_level = 1
 table_column = 6
 value = 'antimagicshell'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'areq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'RP08'
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -1186,6 +1266,78 @@ table_column = 0
 value = 'SpellBreakerReady'
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Promote to Spell Breaker'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'aart'  # Profile.Icon - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNSpellBreaker.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'atp1'  # Profile.Tooltip - Normal
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = 'Promote to Spell Breaker [|cffffcc00B|r]'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = 'Promote this unit to a Spell Breaker.'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ahky'  # Profile.Hotkey - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'B'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'areq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'RP07'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Ncl4'  # AbilityData.Art Duration
+data_type = "Unreal"
+variation_level = 1
+table_column = 4
+value = 0.0
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Ncl6'  # AbilityData.Base Order ID
+data_type = "String"
+variation_level = 1
+table_column = 6
+value = 'animatedead'
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'Amrf'  # Crow Form
 entity_id = 'AP0i'
@@ -1294,4 +1446,20 @@ data_type = "String"
 variation_level = 1
 table_column = 1
 value = 'AP00,AP01,AP02,AP03,AP04,AP05,AP06,AP07,AP08'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'aite'  # AbilityData.Item Ability
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'atp1'  # Profile.Tooltip - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Promote this unit to a regular Human unit.'
 object_id = 'null'
