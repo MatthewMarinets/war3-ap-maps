@@ -1,6 +1,6 @@
 # Warcraft 3 Map Objects File (.w3o)
 # See w3o.py for type definitions
-version = 1
+version = 2
 has_levels = false
 
 [blizzard_objects]
@@ -79,7 +79,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_003'
+value = 'Stacie'
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -90,7 +90,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_025'
+value = 'Garglemel'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -125,7 +125,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_033'
+value = 'Achilles'
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -136,7 +136,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_022'
+value = 'Alric'
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -147,7 +147,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_035'
+value = 'Marie Claire Antoinette'
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -158,7 +158,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_028'
+value = 'Alizabeth'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -177,7 +177,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_029'
+value = 'Alex'
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -188,7 +188,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_030'
+value = 'Austen'
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -199,7 +199,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_521'
+value = 'Linda'
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -210,7 +210,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_522'
+value = 'Jillian'
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -221,7 +221,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_523'
+value = 'Splendora'
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -232,5 +232,5 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_531'
+value = 'Daunell Barton'
 object_id = 'null'

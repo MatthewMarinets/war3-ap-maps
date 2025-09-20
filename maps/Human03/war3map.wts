@@ -1,4 +1,5 @@
 ﻿STRING 3
+// Units: nC00 (Stacie), Name (Name)
 {
 Stacie
 }
@@ -53,44 +54,9 @@ STRING 19
 The wizards of Dalaran suspect that the plague originated in the northern villages. Investigate the villages along the King's Road and uncover whatever clues you can regarding the plague's origins.  
 }
 
-STRING 22
-{
-Alric
-}
-
 STRING 24
 {
 Sergeant
-}
-
-STRING 25
-{
-Garglemel
-}
-
-STRING 28
-{
-Alizabeth
-}
-
-STRING 29
-{
-Alex
-}
-
-STRING 30
-{
-Austen
-}
-
-STRING 33
-{
-Achilles
-}
-
-STRING 35
-{
-Marie Claire Antoinette
 }
 
 STRING 36
@@ -134,6 +100,7 @@ Villagers
 }
 
 STRING 46
+// Sound\Dialogue\HumanCampaign\Human03\H03Footman13.mp3
 {
 Lock your shields and defend yourselves! Their arrows won't get through! 
 }
@@ -144,6 +111,7 @@ Arthas
 }
 
 STRING 49
+// Sound\Dialogue\HumanCampaign\Human03\H03Arthas17.mp3
 {
 Skeletons? Slay them all, immediately!
 }
@@ -169,6 +137,7 @@ Arthas
 }
 
 STRING 58
+// Sound\Dialogue\HumanCampaign\Human03\H03VillagerM45.mp3
 {
 Milord! If this is about taxes, I can explain!
 }
@@ -179,6 +148,7 @@ Achilles
 }
 
 STRING 60
+// Sound\Dialogue\HumanCampaign\Human03\H03VillagerM40.mp3
 {
 Milord, someone has destroyed the bridge from the far side of the river! There is another way to cross, but it is not as safe as it used to be.
 }
@@ -189,6 +159,7 @@ Find the Fountain of Health
 }
 
 STRING 65
+// Sound\Dialogue\HumanCampaign\Human03\H03Arthas04.mp3
 {
 Stay your blade, Captain. She can take care of herself.
 }
@@ -199,6 +170,7 @@ Captain
 }
 
 STRING 67
+// Sound\Dialogue\HumanCampaign\Human03\H03Captain03.mp3
 {
 We must help her!
 }
@@ -209,6 +181,7 @@ Arthas
 }
 
 STRING 70
+// Sound\Dialogue\HumanCampaign\Human03\H03Arthas16.mp3
 {
 We'll get to the bottom of this.
 }
@@ -219,6 +192,7 @@ Arthas
 }
 
 STRING 73
+// Sound\Dialogue\HumanCampaign\Human03\H03Arthas02.mp3
 {
 I'm sure. Jaina usually runs a little late.
 }
@@ -229,6 +203,7 @@ Captain
 }
 
 STRING 75
+// Sound\Dialogue\HumanCampaign\Human03\H03Captain01.mp3
 {
 Prince Arthas, we've been waiting here for hours. Are you sure this friend of yours is coming?
 }
@@ -257,6 +232,7 @@ Investigate Villages
 }
 
 STRING 80
+// Sound\Dialogue\HumanCampaign\Human03\H03KelThuzad32.mp3
 {
 We've been discovered, my brothers! Flee and continue with the operation!
 }
@@ -277,11 +253,13 @@ Kel'Thuzad
 }
 
 STRING 86
+// Sound\Dialogue\HumanCampaign\Human03\H03KelThuzad33.mp3
 {
 I'm sorry I can't stay and chat, but... duty calls.
 }
 
 STRING 87
+// Sound\Dialogue\HumanCampaign\Human03\H03Arthas05.mp3
 {
 Gentlemen, meet Miss Jaina Proudmoore, special agent to the Kirin Tor, and one of the most talented sorceresses in the land.
 }
@@ -292,6 +270,7 @@ Jaina Proudmoore
 }
 
 STRING 89
+// Sound\Dialogue\HumanCampaign\Human03\H03Jaina34.mp3
 {
 That creature looks like it was sewn together from different corpses.
 }
@@ -302,6 +281,7 @@ Arthas
 }
 
 STRING 91
+// Sound\Dialogue\HumanCampaign\Human03\H03Arthas06.mp3
 {
 Looks like you haven't lost your touch. It's good to see you again, Jaina.
 }
@@ -312,6 +292,7 @@ Jaina Proudmoore
 }
 
 STRING 93
+// Sound\Dialogue\HumanCampaign\Human03\H03Jaina07.mp3
 {
 You too, Arthas. It's been awhile since a prince escorted me anywhere.
 }
@@ -322,6 +303,7 @@ Arthas
 }
 
 STRING 95
+// Sound\Dialogue\HumanCampaign\Human03\H03Arthas08.mp3
 {
 Yes, it has. Well, I guess we should get underway.
 }
@@ -332,6 +314,7 @@ Jaina Proudmoore
 }
 
 STRING 97
+// Sound\Dialogue\HumanCampaign\Human03\H03Jaina09.mp3
 {
 Our sources believe the plague originated in the region north of here. We should check out the villages along the King's Road.
 }
@@ -342,6 +325,7 @@ Arthas
 }
 
 STRING 99
+// Sound\Dialogue\HumanCampaign\Human03\H03Arthas35.mp3
 {
 Let's study it after we kill it, okay?
 }
@@ -364,6 +348,7 @@ Arthas
 }
 
 STRING 116
+// Sound\Dialogue\HumanCampaign\Human03\H03Arthas12.mp3
 {
 This must be the shrine that the old man spoke of. Any man who drinks from these Light-blessed waters will be healed.
 }
@@ -374,6 +359,7 @@ Stacie
 }
 
 STRING 118
+// Sound\Dialogue\HumanCampaign\Human03\H03VillagerF39.mp3
 {
 Prince Arthas! There's something amiss at the bridge ahead!
 }
@@ -397,6 +383,7 @@ Marie Claire Antoinette
 }
 
 STRING 126
+// Sound\Dialogue\HumanCampaign\Human03\H03VillagerF53.mp3
 {
 Look! It's Prince Arthas.
 }
@@ -407,6 +394,7 @@ Achilles
 }
 
 STRING 133
+// Sound\Dialogue\HumanCampaign\Human03\H03VillagerM40.mp3
 {
 Milord, someone has destroyed the bridge from the far side of the river! There is another way to cross, but it is not as safe as it used to be.
 }
@@ -417,6 +405,7 @@ Villager
 }
 
 STRING 176
+// Sound\Dialogue\HumanCampaign\Human03\H03VillagerM41.mp3
 {
 Greetings, milord!
 }
@@ -462,6 +451,7 @@ Jaina Proudmoore
 }
 
 STRING 303
+// Sound\Dialogue\HumanCampaign\Human03\H03Jaina18.mp3
 {
 It's as if the land around that granary is... dying.
 }
@@ -472,6 +462,7 @@ Arthas
 }
 
 STRING 305
+// Sound\Dialogue\HumanCampaign\Human03\H03Arthas19.mp3
 {
 Could the grain itself be plagued?
 }
@@ -482,6 +473,7 @@ Jaina Proudmoore
 }
 
 STRING 307
+// Sound\Dialogue\HumanCampaign\Human03\H03Jaina20.mp3
 {
 Let's hope not. Those crates bear the regional seal of Andorhal, the distribution center for the northern boroughs. If this grain can spread the plague, there's no telling how many villages might be affected.
 }
@@ -526,29 +518,9 @@ STRING 499
 What the hell are you men shooting at?
 }
 
-STRING 521
-{
-Linda
-}
-
-STRING 522
-{
-Jillian
-}
-
-STRING 523
-{
-Splendora
-}
-
 STRING 526
 {
 Alliance Forces
-}
-
-STRING 531
-{
-Daunell Barton
 }
 
 STRING 537
@@ -572,6 +544,7 @@ Arthas
 }
 
 STRING 563
+// Sound\Dialogue\HumanCampaign\Human03\H03Arthas31.mp3
 {
 Destroy that warehouse, now!
 }
@@ -598,6 +571,7 @@ Arthas
 }
 
 STRING 595
+// Sound\Dialogue\HumanCampaign\Human03\H03Arthas36.mp3
 {
 What was that? And who was that wizard dressed in black?
 }
@@ -608,6 +582,7 @@ Jaina Proudmoore
 }
 
 STRING 597
+// Sound\Dialogue\HumanCampaign\Human03\H03Jaina37.mp3
 {
 I believe that the robed man was a necromancer. Obviously, he and his lackeys are behind this plague.
 }
@@ -618,6 +593,7 @@ Arthas
 }
 
 STRING 599
+// Sound\Dialogue\HumanCampaign\Human03\H03Arthas38.mp3
 {
 Well, it's a good bet we'll find him, and the answers we're looking for, in Andorhal.
 }
@@ -628,6 +604,7 @@ Priest
 }
 
 STRING 609
+// Sound\Dialogue\HumanCampaign\Human03\H03Priest21.mp3
 {
 Greetings. We are priests from Quel'Thalas. We've come to help heal the land of this strange curse.
 }
@@ -638,6 +615,7 @@ Priest
 }
 
 STRING 615
+// Sound\Dialogue\HumanCampaign\Human03\H03Priest23.mp3
 {
 You should know that there is a granary warehouse at the far end of this village. This evil blight may be evident there as well.
 }
@@ -702,6 +680,7 @@ Villager
 }
 
 STRING 672
+// Sound\Dialogue\HumanCampaign\Human01\H01VillagerF42.mp3
 {
 Oh, thanks so much! I have a reward for you.
 }
@@ -727,6 +706,7 @@ Stacie
 }
 
 STRING 677
+// Sound\Dialogue\HumanCampaign\Human03\H03VillagerF39.mp3
 {
 Prince Arthas! There's something amiss at the bridge ahead!
 }
@@ -743,6 +723,7 @@ Alric
 }
 
 STRING 683
+// Sound\Dialogue\HumanCampaign\Human03\H03VillagerM10.mp3
 {
 Milord, there is an ancient fountain shrine nearby. Legends say that its holy waters can restore health and heal grievous wounds.
 }
@@ -753,6 +734,7 @@ Arthas
 }
 
 STRING 685
+// Sound\Dialogue\HumanCampaign\Human03\H03Arthas11.mp3
 {
 That could prove to be useful indeed.
 }

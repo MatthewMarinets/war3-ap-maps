@@ -7,7 +7,6 @@ version = TFT
 | 0 | Initialization | False |
 | 35 | Bubble | False |
 | 24 | SetupQuests | False |
-| 25 | HeroExperienceCap | False |
 | 9 | Level Data | False |
 | 37 | IZZZZZI CINEMATICS IZZZZZZZI | False |
 | 28 | WaterElemental | False |
@@ -204,6 +203,30 @@ version = TFT
 - category: [40] Archipelago
 - starts off: False
 - is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## AP Load Arthas
+- enabled: True
+- category: [40] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## AP Load Jaina
+- enabled: True
+- category: [40] Archipelago
+- starts off: False
+- is custom text: False
 - run on map init: False
 ```description
 
@@ -548,14 +571,10 @@ Default melee game initialization for all players
     - Function GetUnitStateSwap
       - param Preset UnitStateMaxMana
       - param Variable Jaina
-- Action EnableTrigger
-  - param Variable gg_trg_JainaExperienceCap
 - Action CommentString
   - param String Arthas
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Load_Heroes
-- Action EnableTrigger
-  - param Variable gg_trg_ArthasExperienceCap
 - Action CommentString
   - param String Experience
 - Action SetPlayerHandicapXPBJ
@@ -1174,64 +1193,6 @@ Default melee game initialization for all players
   - param Variable QuestFountainReq
   - param Function GetLastCreatedQuestItemBJ
     - Function GetLastCreatedQuestItemBJ
-
-
-## ArthasExperienceCap
-- enabled: True
-- category: [25] HeroExperienceCap
-- starts off: True
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Condition OperatorCompareUnit
-  - param Function GetLevelingUnit
-    - Function GetLevelingUnit
-  - param Preset OperatorEqualENE
-  - param Variable Arthas
-- Condition OperatorCompareInteger
-  - param Function GetHeroLevel
-    - Function GetHeroLevel
-      - param Variable Arthas
-  - param Preset OperatorGreaterEq
-  - param String 4
-- Event TriggerRegisterPlayerUnitEventSimple
-  - param Preset Player01
-  - param Preset PlayerUnitEventHero_Level
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableDisable
-  - param Variable Arthas
-
-
-## JainaExperienceCap
-- enabled: True
-- category: [25] HeroExperienceCap
-- starts off: True
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Condition OperatorCompareUnit
-  - param Function GetLevelingUnit
-    - Function GetLevelingUnit
-  - param Preset OperatorEqualENE
-  - param Variable Jaina
-- Condition OperatorCompareInteger
-  - param Function GetHeroLevel
-    - Function GetHeroLevel
-      - param Variable Jaina
-  - param Preset OperatorGreaterEq
-  - param String 4
-- Event TriggerRegisterPlayerUnitEventSimple
-  - param Preset Player01
-  - param Preset PlayerUnitEventHero_Level
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableDisable
-  - param Variable Jaina
 
 
 ## Load Heroes

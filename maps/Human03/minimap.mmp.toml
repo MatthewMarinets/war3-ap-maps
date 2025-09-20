@@ -7,7 +7,7 @@ file_format_version = 0
 
 icon_type = "House"
 x = 11
-y = 59
+y = 62
 colour_blue = 255
 colour_green = 255
 colour_red = 255
@@ -17,7 +17,7 @@ colour_alpha = 255
 
 icon_type = "PlayerStart"
 x = 187
-y = 186
+y = 184
 colour_blue = 255
 colour_green = 66
 colour_red = 0
@@ -27,7 +27,7 @@ colour_alpha = 255
 
 icon_type = "PlayerStart"
 x = 9
-y = 113
+y = 114
 colour_blue = 241
 colour_green = 191
 colour_red = 126
@@ -37,7 +37,7 @@ colour_alpha = 255
 
 icon_type = "PlayerStart"
 x = 71
-y = 176
+y = 174
 colour_blue = 129
 colour_green = 0
 colour_red = 84
@@ -47,7 +47,7 @@ colour_alpha = 255
 
 icon_type = "PlayerStart"
 x = 51
-y = 45
+y = 48
 colour_blue = 0
 colour_green = 192
 colour_red = 32
