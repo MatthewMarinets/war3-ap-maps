@@ -39,7 +39,12 @@ class GameID(enum.StrEnum):
     SIEGE_ENGINE_WITH_BARRAGE = 'hrtt'
     SPELL_BREAKER = 'hspt'
     DRAGONHAWK_RIDER = 'hdhw'
-    
+
+    WATER_ELEMENTAL_L1 = 'hwat'
+    WATER_ELEMENTAL_L2 = 'hwt2'
+    WATER_ELEMENTAL_L3 = 'hwt3'
+    PHOENIX = 'hphx'
+
     HUMAN_BACKPACK = 'Rhpm'
     HUMAN_MAGIC_SENTRY = 'Rhse'
     HUMAN_LUMBER_HARVESTING = 'Rhlh'
@@ -98,6 +103,13 @@ class GameID(enum.StrEnum):
     SPIRIT_WALKER = 'ospm'
     TAUREN = 'otau'
 
+    FERAL_SPIRIT_L1 = 'osw1'
+    FERAL_SPIRIT_L2 = 'osw2'
+    FERAL_SPIRIT_L3 = 'osw3'
+    SERPENT_WARD_L1 = 'osp1'
+    SERPENT_WARD_L2 = 'osp2'
+    SERPENT_WARD_L3 = 'osp3'
+
     ORC_BACKPACK = 'Ropm'
     ORC_PILLAGE = 'Ropg'
     ORC_REINFORCED_DEFENSES = 'Rorb'
@@ -152,6 +164,17 @@ class GameID(enum.StrEnum):
     NECROMANCER = 'unec'
     FROST_WYRM = 'ufro'
 
+    DESTROYER = 'ubsp'
+    SKELETON_WARRIOR = 'uske'
+    SKELETAL_MAGE = 'uskm'
+    CARRION_BEETLE_L1 = 'ucs1'
+    CARRION_BEETLE_L2 = 'ucs2'
+    CARRION_BEETLE_L3 = 'ucs3'
+    BURROWED_CARRION_BEETLE_L2 = 'ucsB'
+    BURROWED_CARRION_BEETLE_L3 = 'ucsC'
+    BURROWED_CRYPT_FIEND = 'ucrm'
+    STONE_FORM_GARGOYLE = 'ugrm'
+
     UNDEAD_BACKPACK = 'Rupm'
     UNDEAD_CREATURE_STRENGTH = 'Rura'
     """*, Improved, Advanced"""
@@ -201,6 +224,10 @@ class GameID(enum.StrEnum):
     HIPPOGRYPH = 'ehip'
     FAERIE_DRAGON = 'efdr'
     CHIMAERA = 'echm'
+
+    HIPPOGRYPH_RIDER = 'ehpr'
+    DRUID_OF_THE_TALON_STORM_CROW_FORM = 'edtm'
+    DRUID_OF_THE_CLAW_BEAR_FORM = 'edcm'
 
     NELF_BACKPACK = 'Repm'
     NELF_NATURES_BLESSING = 'Renb'
@@ -655,7 +682,6 @@ class GameID(enum.StrEnum):
     FEL_ORC_PEON = 'ncpn'
 
     DEMON_GATE = 'ndmg'
-    DESTROYER = 'ubsp'
     ZOMBIE = 'nzom'
     SKY_BARGE = 'uarb'
     FEL_STALKER = 'nfel'
@@ -668,7 +694,6 @@ class GameID(enum.StrEnum):
     CORRUPTED_ANCIENT_PROTECTOR = 'ncap'
     CORRUPTED_ANCIENT_OF_WAR = 'ncaw'
     CORRUPTED_MOON_WELL = 'ncmw'  # Under Neutral Passive/Campaign instead of NE
-    HIPPOGRYPH_RIDER = 'ehpr'
     TREANT = 'efon'
     CORRUPTED_TREANT = 'nenc'
     POISON_TREANT = 'nenp'

@@ -9,7 +9,6 @@ version = TFT
 | 24 | SetupQuests | False |
 | 9 | Level Data | False |
 | 37 | IZZZZZI CINEMATICS IZZZZZZZI | False |
-| 28 | WaterElemental | False |
 | 2 | CinematicOpening | False |
 | 30 | CinematicGrain | False |
 | 8 | CinematicPriests | False |
@@ -220,6 +219,32 @@ version = TFT
 
 ```
 ### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String set udg_Arthas = hero_create(0, USER_PLAYER, GetRectCenterX(gg_rct_ArthasStart), GetRectCenterY(gg_rct_ArthasStart), 90.0)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable Arthas
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CustomScriptCode
+  - param String set udg_Arthas = CreateUnit(USER_PLAYER, 'Hart', GetRectCenterX(gg_rct_ArthasStart), GetRectCenterY(gg_rct_ArthasStart), 270.0)
+- Action CustomScriptCode
+  - param String set hero_abil_1[0] = 'AHhb'
+- Action CustomScriptCode
+  - param String set hero_abil_2[0] = 'AHds'
+- Action CustomScriptCode
+  - param String set hero_abil_3[0] = 'AHad'
+- Action CustomScriptCode
+  - param String set hero_abil_4[0] = 'AHre'
 
 
 ## AP Load Jaina
@@ -232,6 +257,32 @@ version = TFT
 
 ```
 ### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String set udg_Jaina = hero_create(1, Player(3), 5927.87646484375, -3474.820556640625, 3.270430326461792)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable Jaina
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CustomScriptCode
+  - param String set udg_Jaina = CreateUnit(Player(3), 'Hjai', 5927.87646484375, -3474.820556640625, 3.270430326461792)
+- Action CustomScriptCode
+  - param String set hero_abil_1[0] = 'AHbz'
+- Action CustomScriptCode
+  - param String set hero_abil_2[0] = 'AHwe'
+- Action CustomScriptCode
+  - param String set hero_abil_3[0] = 'AHab'
+- Action CustomScriptCode
+  - param String set hero_abil_4[0] = 'AHmt'
 
 
 ## MapInitialization
@@ -557,24 +608,10 @@ Default melee game initialization for all players
 
 ```
 ### Functions
-- Action CommentString
-  - param String Jaina
-- Action SetVariable
-  - param Variable Jaina
-  - param Variable gg_unit_Hjai_0011
-- Action SelectHeroSkill
-  - param Variable Jaina
-  - param Preset HeroSkillWaterElemental
-- Action SetUnitManaBJ
-  - param Variable Jaina
-  - param Function GetUnitStateSwap
-    - Function GetUnitStateSwap
-      - param Preset UnitStateMaxMana
-      - param Variable Jaina
-- Action CommentString
-  - param String Arthas
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Load_Heroes
+- Action TriggerExecute
+  - param Variable gg_trg_AP_Load_Arthas
+- Action TriggerExecute
+  - param Variable gg_trg_AP_Load_Jaina
 - Action CommentString
   - param String Experience
 - Action SetPlayerHandicapXPBJ
@@ -596,7 +633,7 @@ Default melee game initialization for all players
   - param Variable Arthas
   - param Variable Heroes
 - Action GroupAddUnitSimple
-  - param Variable gg_unit_Hjai_0011
+  - param Variable Jaina
   - param Variable Heroes
 
 
@@ -762,7 +799,7 @@ Default melee game initialization for all players
   - param Variable Arthas
   - param Variable StartingParty
 - Action GroupAddUnitSimple
-  - param Variable gg_unit_Hjai_0011
+  - param Variable Jaina
   - param Variable StartingParty
 - Action GroupAddUnitSimple
   - param Variable Captain
@@ -1195,107 +1232,6 @@ Default melee game initialization for all players
     - Function GetLastCreatedQuestItemBJ
 
 
-## Load Heroes
-- enabled: True
-- category: [9] Level Data
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action InitGameCacheBJ
-  - param String Campaigns.w3v
-- Action CommentString
-  - param String Load the hero data
-- Action RestoreUnitLocFacingAngleBJ
-  - param String Arthas
-  - param String Human03
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-  - param Preset Player01
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_ArthasStart
-  - param String 270.00
-- Action SetVariable
-  - param Variable Arthas
-  - param Function GetLastRestoredUnitBJ
-    - Function GetLastRestoredUnitBJ
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareUnit
-      - param Variable Arthas
-      - param Preset OperatorNotEqualENE
-      - param Preset UnitNull
-  - param Function DoNothing
-    - Action ReturnAction
-  - param Function DoNothing
-    - Action DoNothing
-- Action CommentString
-  - param String If the hero data wasn't found, create a default hero
-- Action CreateNUnitsAtLoc
-  - param String 1
-  - param String Hart
-  - param Preset Player01
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_ArthasStart
-  - param String 300.00
-- Action SetVariable
-  - param Variable Arthas
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-- Action SetHeroLevel
-  - param Variable Arthas
-  - param String 3
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillHolyBolt
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDivineShield
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDevotionAura
-
-
-## Next Level Prep
-- enabled: True
-- category: [9] Level Data
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action CommentString
-  - param String Store hero data for the next level(s)
-- Action StoreUnitBJ
-  - param Variable Arthas
-  - param String Arthas
-  - param String Human04
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action StoreUnitBJ
-  - param Variable Jaina
-  - param String Jaina
-  - param String Human04
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action SaveGameCacheBJ
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action CommentString
-  - param String Enable the next level in the glue screens
-- Action SetMissionAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset MissionIndexH04
-
-
 ## Next Level Run
 - enabled: True
 - category: [9] Level Data
@@ -1309,7 +1245,7 @@ Default melee game initialization for all players
 - Action CommentString
   - param String Run next level
 - Action SetNextLevelBJ
-  - param String Maps\Campaign\Human04.w3m
+  - param String Maps\AP_Campaign\Human04.w3x
 - Action CustomVictoryBJ
   - param Preset Player01
   - param Preset UseSkipOptionUse
@@ -1326,8 +1262,6 @@ Default melee game initialization for all players
 
 ```
 ### Functions
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Next_Level_Prep
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Next_Level_Run
 - Event TriggerRegisterPlayerEventVictory
@@ -1349,36 +1283,6 @@ Default melee game initialization for all players
   - param String TRIGSTR_012
 - Event TriggerRegisterPlayerEventDefeat
   - param Preset Player01
-
-
-## SetWaterElemental
-- enabled: True
-- category: [28] WaterElemental
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action DisableTrigger
-  - param Function GetTriggeringTrigger
-    - Function GetTriggeringTrigger
-- Action SetVariable
-  - param Variable WaterElemental
-  - param Function GetSummonedUnit
-    - Function GetSummonedUnit
-- Action IssueTargetOrder
-  - param Variable WaterElemental
-  - param Preset UnitOrderAttackUnit
-  - param Variable gg_unit_nogr_0008
-- Action IssueTargetOrder
-  - param Variable Jaina
-  - param Preset UnitOrderAttackUnit
-  - param Variable gg_unit_nogr_0008
-- Event TriggerRegisterPlayerUnitEventSimple
-  - param Preset Player03
-  - param Preset PlayerUnitEventSummoned
 
 
 ## OpeningCancelled
@@ -1405,7 +1309,7 @@ Activated from 'MapInitialization'
   - param Preset FadeDontDont
 - Action PauseUnitBJ
   - param Preset PauseUnpauseOptionUnpause
-  - param Variable gg_unit_Hjai_0011
+  - param Variable Jaina
 - Action PauseUnitBJ
   - param Preset PauseUnpauseOptionUnpause
   - param Variable gg_unit_nogr_0009
@@ -1445,17 +1349,14 @@ Activated from 'MapInitialization'
           - param Variable gg_rct_FacingPoint
       - param String 0.00
 - Action SetUnitInvulnerable
-  - param Variable gg_unit_Hjai_0011
+  - param Variable Jaina
   - param Preset InvulnerabilityVulnerable
 - Action SetUnitLifePercentBJ
-  - param Variable gg_unit_Hjai_0011
+  - param Variable Jaina
   - param String 100.00
-- Action SetUnitManaBJ
-  - param Variable gg_unit_Hjai_0011
-  - param Function GetUnitStateSwap
-    - Function GetUnitStateSwap
-      - param Preset UnitStateMaxMana
-      - param Variable gg_unit_Hjai_0011
+- Action SetUnitManaPercentBJ
+  - param Variable Jaina
+  - param String 100
 - Action RemoveUnit
   - param Variable gg_unit_nogr_0008
 - Action SetUnitInvulnerable
@@ -1627,7 +1528,7 @@ Default melee game initialization for all players
   - param String 20.00
 - Action PauseUnitBJ
   - param Preset PauseUnpauseOptionPause
-  - param Variable gg_unit_Hjai_0011
+  - param Variable Jaina
 - Action PauseUnitBJ
   - param Preset PauseUnpauseOptionPause
   - param Variable gg_unit_nogr_0008
@@ -1829,7 +1730,7 @@ Default melee game initialization for all players
     - Action DoNothing
 - Action PauseUnitBJ
   - param Preset PauseUnpauseOptionUnpause
-  - param Variable gg_unit_Hjai_0011
+  - param Variable Jaina
 - Action PauseUnitBJ
   - param Preset PauseUnpauseOptionUnpause
   - param Variable gg_unit_nogr_0008
@@ -1849,7 +1750,7 @@ Default melee game initialization for all players
   - param Function DoNothing
     - Action DoNothing
 - Action IssuePointOrderLoc
-  - param Variable gg_unit_Hjai_0011
+  - param Variable Jaina
   - param Preset UnitOrderMove
   - param Function GetRectCenter
     - Function GetRectCenter
@@ -2775,19 +2676,29 @@ Disabled the .01 second wait because it was preventing the ogre from running awa
     - Action ReturnAction
   - param Function DoNothing
     - Action DoNothing
-- Action IssueImmediateOrder
+- Action CustomScriptCode
+  - param String set udg_WaterElemental = CreateUnit(Player(3), 'hwt2', GetUnitX(udg_Jaina) + 180.0, GetUnitY(udg_Jaina) - 60.0, 45.0)
+- Action SetUnitAnimation
+  - param Variable WaterElemental
+  - param String birth
+- Action SetPlayerAllianceBJ
+  - param Preset PlayerNA
+  - param Preset AllianceTypePassive
+  - param Preset OnOffOff
+  - param Preset Player03
+- Action SetPlayerAllianceBJ
+  - param Preset Player03
+  - param Preset AllianceTypePassive
+  - param Preset OnOffOff
+  - param Preset PlayerNA
+- Action IssueTargetOrder
+  - param Variable WaterElemental
+  - param Preset UnitOrderAttackUnit
+  - param Variable gg_unit_nogr_0008
+- Action IssueTargetOrder
   - param Variable Jaina
-  - param Preset UnitOrderWaterElemental
-- Action SetPlayerAllianceBJ
-  - param Preset PlayerNA
-  - param Preset AllianceTypePassive
-  - param Preset OnOffOff
-  - param Preset Player03
-- Action SetPlayerAllianceBJ
-  - param Preset Player03
-  - param Preset AllianceTypePassive
-  - param Preset OnOffOff
-  - param Preset PlayerNA
+  - param Preset UnitOrderAttackUnit
+  - param Variable gg_unit_nogr_0008
 - Condition OperatorCompareUnit
   - param Function GetEnteringUnit
     - Function GetEnteringUnit
@@ -3537,6 +3448,8 @@ Disabled the .01 second wait because it was preventing the ogre from running awa
   - param Variable gg_unit_hmpr_0073
   - param Preset Player01
   - param Preset ChangeColorTrue
+- Action CustomScriptCode
+  - param String call status_check_location(22)
 - Action TriggerSleepAction
   - param String 0.20
 - Action IssuePointOrderLoc
@@ -3847,8 +3760,6 @@ Disabled the .01 second wait because it was preventing the ogre from running awa
 - Action SetUnitInvulnerable
   - param Variable Jaina
   - param Preset InvulnerabilityInvulnerable
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Next_Level_Prep
 - Action QueuedTriggerAddBJ
   - param Variable gg_trg_Ending01_Queue
   - param Preset CheckingIgnoringChecking
@@ -6197,6 +6108,8 @@ Run by cinematic ending
 
 ```
 ### Functions
+- Action CustomScriptCode
+  - param String call status_check_location(24)
 - Action AdjustPlayerStateBJ
   - param Function OperatorInt
     - Function OperatorInt
@@ -7587,6 +7500,8 @@ Turned on from 'VillagerBridgeOutMessage'
   - param String false
 - Action DisableTrigger
   - param Variable gg_trg_Fountain_Found
+- Action CustomScriptCode
+  - param String call status_check_location(21)
 - Action SetSpeechVolumeGroupsBJ
 - Action TransmissionFromUnitWithNameBJ
   - param Function GetPlayersAll
@@ -7732,10 +7647,6 @@ Turned on from 'VillagerBridgeOutMessage'
   - param Variable gg_unit_hfoo_0042
 - Action PlaySoundBJ
   - param Variable gg_snd_DefendCaster
-- Action SetPlayerTechResearchedSwap
-  - param String Rhde
-  - param String 1
-  - param Preset Player01
 - Action IssueImmediateOrder
   - param Variable gg_unit_hfoo_0042
   - param Preset UnitOrderDefend
@@ -7874,6 +7785,8 @@ Turned on from 'VillagerBridgeOutMessage'
     - Action ReturnAction
   - param Function DoNothing
     - Action DoNothing
+- Action CustomScriptCode
+  - param String call status_check_location(20)
 - Action ForGroup
   - param Variable FootmenDefending
   - param Function DoNothing
@@ -8459,6 +8372,8 @@ Turned on from 'VillagerBridgeOutMessage'
   - param String 0.5
 - Action TriggerSleepAction
   - param String 0.20
+- Action CustomScriptCode
+  - param String call status_check_location(23)
 - Action SetSpeechVolumeGroupsBJ
 - Action IfThenElse
   - param Function 

@@ -105,6 +105,7 @@ class Wc3Location(enum.Enum):
     HU3_BANDIT_HUT_ITEM =      10304, "Bandit Hut Item",      Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.ITEM, "Scroll of Protection"
     HU3_SKELETON_AMBUSH_ITEM = 10305, "Skeletal Ambush Item", Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.ITEM, "Potion of Mana"
     HU3_MORTAR_SKELETON_ITEM = 10306, "Mortar Skeleton Item", Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.ITEM, "Scroll of Healing"
+    HU3_OGRE_MAULER_ITEM =     10307, "Ogre Mauler Item",     Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.ITEM, "Potion of Healing"
     HU3_FOOTMAN_RESCUE =       10320, "Footman Rescue",       Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.RESCUE
     HU3_FOUNTAIN_OF_HEALING =  10321, "Fountain of Healing",  Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.QUEST
     HU3_PRIEST_RESCUE =        10322, "Priest Rescue",        Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.RESCUE

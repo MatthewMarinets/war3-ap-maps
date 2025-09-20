@@ -44,17 +44,17 @@ item_class = 0
 
 [[units]]
 
-type_id = 'Hjai'  # Archmage
+type_id = 'nska'  # Skeleton Archer
 variation = 0
-x = 5927.87646484375
-y = -3474.820556640625
-z = 0.0
-facing = 3.270430326461792
+x = -6253.63818359375
+y = -2185.56884765625
+z = 19.0
+facing = 3.649451971054077
 scale_x = 1.0
 scale_y = 1.0
 scale_z = 1.0
 flags = "ENABLED"
-player_owner = 3
+player_owner = 6
 hit_points = -1
 mana_points = -1
 random_item_table_id = -1
@@ -70,7 +70,7 @@ modified_abilities = []
 random_unit_info = -1
 custom_colour = -1
 waygate_destination = -1
-entity_id = 11
+entity_id = 152
 
 [[units]]
 
@@ -1224,7 +1224,7 @@ item_class = 0
 
 [[units]]
 
-type_id = 'pman'  # Potion of Mana
+type_id = 'I015'
 variation = 0
 x = -4931.98876953125
 y = 2671.312255859375
@@ -2390,8 +2390,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # brag = Bracer of Agility
-        { item_id = "brag", chance_percent = 100 }
+        { item_id = "I011", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -2905,8 +2904,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # shea = Scroll of Healing
-        { item_id = "shea", chance_percent = 100 }
+        { item_id = "I016", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 0
@@ -3430,8 +3428,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # spro = Scroll of Protection
-        { item_id = "spro", chance_percent = 100 }
+        { item_id = "I014", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -3685,8 +3682,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # mlst = Maul of Strength
-        { item_id = "mlst", chance_percent = 100 }
+        { item_id = "I012", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -3970,8 +3966,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # phea = Potion of Healing
-        { item_id = "phea", chance_percent = 100 }
+        { item_id = "I017", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 0
@@ -4254,7 +4249,7 @@ entity_id = 55
 
 [[units]]
 
-type_id = 'rin1'  # Mantle of Intelligence +3
+type_id = 'I013'
 variation = 0
 x = -6678.3681640625
 y = -4454.18115234375
@@ -4771,33 +4766,3 @@ random_unit_info = -1
 custom_colour = -1
 waygate_destination = -1
 entity_id = 151
-
-[[units]]
-
-type_id = 'nska'  # Skeleton Archer
-variation = 0
-x = -6253.63818359375
-y = -2185.56884765625
-z = 19.0
-facing = 3.649451971054077
-scale_x = 1.0
-scale_y = 1.0
-scale_z = 1.0
-flags = "ENABLED"
-player_owner = 6
-hit_points = -1
-mana_points = -1
-random_item_table_id = -1
-item_drops = []
-goldmine_gold_amount = 0
-target_acquisition = -1.0
-hero_level = 1
-hero_strength = 0
-hero_agility = 0
-hero_intelligence = 0
-inventory_items = []
-modified_abilities = []
-random_unit_info = -1
-custom_colour = -1
-waygate_destination = -1
-entity_id = 152

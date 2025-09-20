@@ -14,6 +14,16 @@
   - [x] Fix footmen counter
   - [x] Remove rifleman unlock
   - [x] Remove hero level cap triggers
+* Human03
+  - [x] Eliminate gamecache usage
+  - [x] Redirect starting next mission
+  - [x] Hero init
+  - [x] Remove hero level cap triggers
+  - [x] Special considerations for first hero appearances
+  - [x] Replace items -> AP items
+  - [x] Location sending functions
+  - [ ] Purge any unlock tech functions
+  - [ ] Extra check -- reward for protecting villagers from bandits
 
 ### Item check conditions boilerplate
 ```markdown
