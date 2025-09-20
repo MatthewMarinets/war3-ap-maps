@@ -1,7 +1,7 @@
 
 # Abilities
-ABIL_CHANNEL = 'ANcl'
-ABIL_SPELL_BOOK = 'Aspb'
+ABIL_CHANNEL = 'ANcl'  # Abilities/Neutral Hostile/Heroes
+ABIL_SPELL_BOOK = 'Aspb'  # Abilities/Special/Items
 
 ## Human
 ABIL_AERIAL_SHACKLES = 'Amls'
@@ -488,26 +488,46 @@ DESTRUCTIBLE_PATHING_BLOCKER_GROUND_LARGE = 'YTpc'
 ## Abilities
 FIELD_ABIL_NAME = 'anam'  # string
 FIELD_ABIL_TOOLTIP_NORMAL = 'atp1'  # string
-FIELD_ABIL_HOTKEY = 'ahky'  # string
-FIELD_ABIL_DATA_ALTERNATE_FORM_UNIT = 'Emeu'  # string
-FIELD_ABIL_DATA_MORPHING_FLAGS = 'Eme2'  # integer
 FIELD_ABIL_TOOLTIP_NORMAL_EXTENDED = 'aub1'  # string
+FIELD_ABIL_EDITOR_SUFFIX = 'ansf'
+FIELD_ABIL_HOTKEY = 'ahky'  # string
+FIELD_ABIL_HOTKEY_TURN_OFF = 'auhk'  # string
+FIELD_ABIL_HOTKEY_LEARN = 'arhk'  # string
 FIELD_ABIL_ICON_NORMAL = 'aart'  # string
-FIELD_ABIL_DATA_CASTING_TIME = 'acas'  # unreal
-FIELD_ABIL_REQUIREMENTS = 'areq'  # string
-FIELD_ABIL_DATA_CHECK_DEPENDENCIES = 'achd'  # integer
-FIELD_ABIL_DATA_ICON_TURN_OFF = 'auar'  # string
-FIELD_ABIL_DATA_DURATION_NORMAL = 'adur'  # unreal
-FIELD_ABIL_EFFECT_SOUND = 'aefs'  # string
-FIELD_ABIL_CASTER_ART = 'acat'  # string
-FIELD_ABIL_DATA_HERO_ABILITY = 'aher'  # integer
-FIELD_ABIL_BUTTON_POSITION_NORMAL_Y = 'abpy'
+FIELD_ABIL_ICON_TURN_OFF = 'auar'  # string
+FIELD_ABIL_ICON_RESEARCH = 'arar'  # string
 FIELD_ABIL_BUTTON_POSITION_NORMAL_X = 'abpx'
-FIELD_ABIL_DATA_LEVELS = 'alev'
-FIELD_ABIL_CHANNEL_DATA_OPTIONS = 'Ncl3'  # integer
-FIELD_ABIL_CHANNEL_DATA_ART_DURATION = 'Ncl4'  # unreal
-FIELD_ABIL_CHANNEL_DATA_DISABLE_OTHER_ABILITIES = 'Ncl5'  # integer
-FIELD_ABIL_CHANNEL_DATA_BASE_ORDER_ID = 'Ncl6'  # string
+FIELD_ABIL_BUTTON_POSITION_NORMAL_Y = 'abpy'
+FIELD_ABIL_BUTTON_POSITION_DISABLE_X = 'aubx'
+FIELD_ABIL_BUTTON_POSITION_DISABLE_Y = 'auby'
+FIELD_ABIL_BUTTON_POSITION_RESEARCH_X = 'arpx'
+FIELD_ABIL_BUTTON_POSITION_RESEARCH_Y = 'arpy'
+FIELD_ABIL_REQUIREMENTS = 'areq'  # string
+FIELD_ABIL_REQUIREMENTS_LEVELS = 'arqa'  # string
+FIELD_ABIL_EFFECT_SOUND = 'aefs'  # string
+FIELD_ABIL_ART_CASTER = 'acat'  # string
+FIELD_ABIL_STATS_CASTING_TIME = 'acas'  # unreal
+FIELD_ABIL_STATS_CAST_RANGE = 'aran'  # unreal
+FIELD_ABIL_STATS_DURATION_NORMAL = 'adur'  # unreal
+FIELD_ABIL_STATS_LEVELS = 'alev'
+FIELD_ABIL_STATS_IS_HERO_ABILITY = 'aher'
+FIELD_ABIL_STATS_IS_ITEM_ABILITY = 'aite'
+FIELD_ABIL_TECH_CHECK_DEPENDENCIES = 'achd'
+FIELD_ABIL_DATA_CROW_FORM_ALTERNATE_FORM_UNIT = 'Emeu'  # string
+FIELD_ABIL_DATA_CROW_FORM_NORMAL_FORM_UNIT = 'Eme1'  # string
+FIELD_ABIL_DATA_CROW_FORM_MORPHING_FLAGS = 'Eme2'  # integer
+FIELD_ABIL_DATA_CROW_FORM_ALTITUDE_ADJUSTMENT_DURATION = 'Eme3'  # unreal
+FIELD_ABIL_DATA_CROW_FORM_LANDING_DELAY_TIME = 'Eme4'  # unreal
+FIELD_ABIL_DATA_CHANNEL_OPTIONS = 'Ncl3'  # integer
+FIELD_ABIL_DATA_CHANNEL_ART_DURATION = 'Ncl4'  # unreal
+FIELD_ABIL_DATA_CHANNEL_DISABLE_OTHER_ABILITIES = 'Ncl5'  # integer
+FIELD_ABIL_DATA_CHANNEL_BASE_ORDER_ID = 'Ncl6'  # string
+FIELD_ABIL_DATA_SPELL_BOOK_SPELL_LIST = 'spb1'
+FIELD_ABIL_DATA_SPELL_BOOK_SHARED_COOLDOWN = 'spb2'
+FIELD_ABIL_DATA_SPELL_BOOK_MIN_SPELLS = 'spb3'
+FIELD_ABIL_DATA_SPELL_BOOK_MAX_SPELLS = 'spb4'
+FIELD_ABIL_DATA_ROBO_GOBLIN_STRENGTH_BONUS = 'Nrg5'
+FIELD_ABIL_DATA_ROBO_GOBLIN_DEFENSE_BONUS = 'Nrg6'
 
 ## Items
 FIELD_ITEM_NAME = 'unam'  # string
@@ -599,5 +619,45 @@ BASE_ORDER_IDS = [
     'cannibalize',
     'carrionscarabs',
     'carrionscarabsinstant',
+    'carrionscarabson',
+    'carrionscarabsoff',
+    'carrionswarm',
+    'chainlightning',
+    'channel',
+    'charm',
+    'chemicalrage',
+    'cloudoffog',
+    'clusterrockets',
+    'coldarrows',
+    'coldarrowstarg',
+    'controlmagic',
+    'corporealform',
+    'corrosivebreath',
+    'coupleinstant',
+    'coupletarget',
+    'creepanimatedead',
+    'creepdevour',
+    'creepheal',
+    'creephealoff',
+    'creephealon',
+    'creepthunderbolt',
+    'creepthunderclap',
+    'cripple',
+    'curse',
+    'curseoff',
+    'curseon',
+    'cyclone',
+    'darkconversion',
+    'darkportal',
+    'darkritual',
+    'darksummoning',
+    'deathanddecay',
+    'deathcoil',
+    'deathpact',
+    'decouple',
+    'defend',
+    'detectaoe',
+    'detonate',
+    'devour',
     # ...
 ]

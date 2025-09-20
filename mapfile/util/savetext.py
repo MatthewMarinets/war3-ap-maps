@@ -108,7 +108,10 @@ class TomlWriter:
     def _write_flags(self, key: str, value: int, path: str) -> None:
         self.lines.append(f'{key} = {hex(value)}')
     def _write_string(self, key: str, value: str, path: str) -> None:
-        self.lines.append(f"{key} = '{value}'")
+        if "'" in value:
+            self.lines.append(f"{key} = '''{value}'''")
+        else:
+            self.lines.append(f"{key} = '{value}'")
     def _write_id(self, key: str, value: str, path: str) -> None:
         if len(value) == 4 and value != 'null' and (human_readable := translate.get_name(value)):
             self.lines.append(f"{key} = '{value}'  # {human_readable}")

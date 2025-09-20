@@ -2742,7 +2742,7 @@ function irregulars_on_cast takes nothing returns nothing
     elseif a == 'AP07' then
         // spell breaker
         set e=irregular_transform(GetSpellAbilityUnit() , 'AP0h')
-    elseif a == 'AP07' then
+    elseif a == 'AP08' then
         // mortar team
         set e=irregular_transform(GetSpellAbilityUnit() , 'AP0i')
     endif

@@ -134,7 +134,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_219'
+value = 'Little Timmy'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -142,7 +142,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_399'
+value = 'Little Timmy'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -161,7 +161,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_221'
+value = 'Duelist'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -188,7 +188,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_008'
+value = 'Farmer Jerrett'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -223,7 +223,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_014'
+value = 'Farmer Ted'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -258,7 +258,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_400'
+value = 'Menag'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -357,7 +357,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_225'
+value = 'Matilda'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -384,7 +384,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_401'
+value = 'Gerard'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -427,7 +427,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_004'
+value = 'Alicia'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -462,7 +462,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_003'
+value = 'Amy Diane'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -489,7 +489,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_016'
+value = 'Maria'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -524,7 +524,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_018'
+value = 'Stephanie'
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -535,7 +535,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_402'
+value = 'Benedict'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -594,7 +594,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_403'
+value = 'Benedict'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -602,7 +602,7 @@ modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_237'
+value = '(Bandit Form)'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -653,7 +653,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_238'
+value = 'Garth'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -688,7 +688,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_057'
+value = 'Thornby'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -723,7 +723,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_100'
+value = 'Dean'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -742,7 +742,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_404'
+value = 'Slave Master'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -801,7 +801,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_242'
+value = 'Ryan'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -820,7 +820,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_243'
+value = 'Blake'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -863,7 +863,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_244'
+value = 'Logan'
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -874,7 +874,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_245'
+value = 'Garrett'
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -885,7 +885,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_246'
+value = 'Andrew'
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -896,7 +896,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_247'
+value = 'Steven'
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -907,7 +907,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_248'
+value = 'James'
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -918,7 +918,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_249'
+value = 'Jeremy'
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -929,7 +929,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_010'
+value = 'Joe'
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -940,7 +940,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_011'
+value = 'Scott'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -959,7 +959,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_012'
+value = 'Mike'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -994,7 +994,7 @@ modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'AP01,AP02,AP03,AP04,AP05,AP06,AP07,AP08'
+value = 'APPh'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]

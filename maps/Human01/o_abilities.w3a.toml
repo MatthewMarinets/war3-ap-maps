@@ -98,14 +98,6 @@ table_column = 6
 value = 'absorb'
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
-modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
 [[map_objects.entities]]
 parent_id = 'ANcl'  # Channel
 entity_id = 'AP01'
@@ -195,14 +187,6 @@ data_type = "String"
 variation_level = 1
 table_column = 6
 value = 'acidbomb'
-object_id = 'null'
-
-[[map_objects.entities.modifications]]
-modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -296,14 +280,6 @@ table_column = 6
 value = 'acolyteharvest'
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
-modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
 [[map_objects.entities]]
 parent_id = 'ANcl'  # Channel
 entity_id = 'AP03'
@@ -328,7 +304,7 @@ modification_id = 'atp1'  # Profile.Tooltip - Normal
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'Promote to Archer [|cffffcc00C|r]'
+value = 'Promote to Archer [|cffffcc00H|r]'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -344,7 +320,7 @@ modification_id = 'ahky'  # Profile.Hotkey - Normal
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'C'
+value = 'H'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -385,22 +361,6 @@ data_type = "String"
 variation_level = 1
 table_column = 6
 value = 'AImove'
-object_id = 'null'
-
-[[map_objects.entities.modifications]]
-modification_id = 'abpx'  # Profile.Button Position - Normal (X)
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 2
-object_id = 'null'
-
-[[map_objects.entities.modifications]]
-modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -492,14 +452,6 @@ data_type = "String"
 variation_level = 1
 table_column = 6
 value = 'ambush'
-object_id = 'null'
-
-[[map_objects.entities.modifications]]
-modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -789,14 +741,6 @@ data_type = "String"
 variation_level = 1
 table_column = 6
 value = 'animatedead'
-object_id = 'null'
-
-[[map_objects.entities.modifications]]
-modification_id = 'abpx'  # Profile.Button Position - Normal (X)
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 2
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -1283,4 +1227,71 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = 'MortarTeamReady'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Aspb'  # Spell Book
+entity_id = 'APPh'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Promotion'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = '(Human)'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ahky'  # Profile.Hotkey - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'T'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'aart'  # Profile.Icon - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'ReplaceableTextures\CommandButtons\BTNHumanCaptureFlag.blp'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'spb3'  # AbilityData.Minimum Spells
+data_type = "Integer"
+variation_level = 1
+table_column = 3
+value = 9
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'spb4'  # AbilityData.Maximum Spells
+data_type = "Integer"
+variation_level = 1
+table_column = 4
+value = 9
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'spb1'  # AbilityData.Spell List
+data_type = "String"
+variation_level = 1
+table_column = 1
+value = 'AP00,AP01,AP02,AP03,AP04,AP05,AP06,AP07,AP08'
 object_id = 'null'

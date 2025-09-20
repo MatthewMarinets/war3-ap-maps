@@ -185,6 +185,7 @@ def filestem(filename: str) -> str:
 
 JASS_FILES = (
     # As these are prepended, the order is reversed in the editor
+    'common/irregulars.j',
     'common/zoom.j',
     'common/debug.j',
     'common/item_locations.j',

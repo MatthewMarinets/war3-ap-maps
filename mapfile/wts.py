@@ -2,6 +2,7 @@
 Utilities for working with .wts (string library) files.
 """
 import re
+from typing import Iterable
 from codecs import BOM_UTF8
 BOM = BOM_UTF8.decode('utf-8')
 
@@ -34,6 +35,30 @@ def read_wts(filename: str) -> dict[str, str]:
             current_string.append(line)
         # Note(mm): everything else outside the `{}` scope is assumed to be a comment
     return result
+
+
+def clear_wts(filename: str, strings_to_clear: Iterable[str]) -> None:
+    """
+    Remove string entries in `strings_to_clear` while leavingthe rest of the file unchanged.
+    `strings_to_clear` should be in format `TRIGSTR_000`.
+    """
+    with open(filename, 'r', encoding='utf-8') as fp:
+        lines = fp.readlines()
+    strings_to_clear = {int(s[len('TRIGSTR_'):]) for s in strings_to_clear}
+    result: list[str] = []
+    removing = False
+    for line in lines:
+        if line.startswith('STRING '):
+            index = line[len('STRING '):].strip()
+            if int(index) in strings_to_clear:
+                removing = True
+            else:
+                removing = False 
+        if not removing:
+            result.append(line)
+    with open(filename, 'w', encoding='utf-8') as fp:
+        fp.writelines(result)
+
 
 if __name__ == '__main__':
     print(read_wts('work/HumanX01/war3map.wts'))
