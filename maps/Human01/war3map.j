@@ -2707,7 +2707,6 @@ function Trig_AP_Load_Arthas_Actions takes nothing returns nothing
     endif
     // If the hero data wasn't found, create a default hero
     set udg_Arthas=CreateUnit(USER_PLAYER, 'Hart', - 3859.099365234375, 2748.791015625, 5.4226)
-    set udg_Arthas=GetLastCreatedUnit()
     set hero_abil_1[0]='AHhb'
     set hero_abil_2[0]='AHds'
     set hero_abil_3[0]='AHad'

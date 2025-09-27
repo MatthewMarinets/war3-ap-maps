@@ -52,11 +52,8 @@ def type_from_filename(filename: str) -> str:
 
 def init_map(map: dict, game_data_files: list[str]) -> None:
     for file in game_data_files:
-        with open(file, 'r') as fp:
+        with open(file, 'r', encoding='utf-8-sig') as fp:
             lines = fp.readlines()
-        if lines and lines[0][:3] == 'ï»¿':
-            # Python struggling to deal with a BOM
-            lines[0] = lines[0][3:]
         current_id = ''
         current_data: dict[str, str] = {}
         for line_number, line in enumerate(lines):

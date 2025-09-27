@@ -24,6 +24,8 @@ def load_config(config_path: str) -> dict[str, str]:
         if len(parts) != 2:
             raise ValueError(f'Invalid line in config file: {config_path}:line {line_number+1}\n"{line}"')
         key, value = parts
+        if '~/' in value:
+            value = os.path.expanduser(value)
         result[key.strip()] = re.sub(r'\$\{(.+?)\}', lambda match: result[match.group(1)], value.strip())
     return result
 

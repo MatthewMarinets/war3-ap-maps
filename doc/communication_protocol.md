@@ -3,7 +3,9 @@ The mod and client communicate by reading and writing preloader files.
 On the mod-side, this is done with the preloader bug.
 On the client-side, this is done with normal Python file reads/writes.
 
-Preloader are read/written on the user's file system at `~/Documents/Warcraft III/CustomMapData`.
+Preloader are read/written on the user's file system at:
+* `~/Documents/Warcraft III/CustomMapData/` (Windows)
+* `$WINEPREFIX/drive_c/users/$USER/Documents/Warcraft III/CustomMapData/` (Linux/wine)
 
 ## Client -> Game
 The client can effect changes through the player API, using functions like:

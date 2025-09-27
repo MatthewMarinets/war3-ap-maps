@@ -1622,7 +1622,7 @@ WESTRING_OLTYPE_ITEM=Items
 
 WESTRING_ABOUTTITLE=About Warcraft III World Editor
 WESTRING_ABOUT_VERSION=Version
-WESTRING_ABOUT_COPYRIGHT=Copyright © 2002 - 2003 Blizzard Entertainment. All Rights Reserved.
+WESTRING_ABOUT_COPYRIGHT=Copyright Â© 2002 - 2003 Blizzard Entertainment. All Rights Reserved.
 WESTRING_ABOUT_LINK=Blizzard Entertainment
 
 WESTRING_LICENSETITLE=Warcraft III World Editor - End User License Agreement

@@ -22,12 +22,13 @@ def command(cmd: list[str], cwd: str = '.') -> Error[tuple[int, str]] | None:
 
 
 def extract_w3x(map_file: str, target_dir: str) -> Error[tuple[int, str]] | None:
-    assert shutil.which(mpq_editor_exe), 'MPQEditor is not installed and on the path'
+    assert shutil.which(mpq_editor_exe) or os.path.isfile(mpq_editor_exe), 'MPQEditor is not installed and on the path'
     if os.path.exists(target_dir):
         shutil.rmtree(target_dir)
     cmd = [
-        mpq_editor_exe, '/extract',
-        map_file, '*', target_dir, '/fp',
+        mpq_editor_exe, 'extract',
+        os.path.relpath(map_file, '.'), '*',
+        os.path.relpath(target_dir, '.'), '/fp',
     ]
     return command(cmd)
 
@@ -40,7 +41,7 @@ def create_w3x(source_dir: str, target_file: str) -> Error[tuple[int, str]] | No
     # commands:
     # /new to create a file
     # /add to add files (paths remain relative to working directory)
-    assert shutil.which(mpq_editor_exe), 'MPQEditor is not installed and on the path'
+    assert shutil.which(mpq_editor_exe) or os.path.isfile(mpq_editor_exe), 'MPQEditor is not installed and on the path'
     os.makedirs(os.path.dirname(target_file), exist_ok=True)
     if os.path.exists(target_file):
         os.remove(target_file)
@@ -53,11 +54,12 @@ def create_w3x(source_dir: str, target_file: str) -> Error[tuple[int, str]] | No
         files = file_handle.readlines()
     files = [x.strip() for x in files]
     script_file = f'{source_dir}/.mpq_editor_script'
+    relative_path = os.path.relpath(target_file, source_dir)
     with open(script_file, 'w') as fp:
         for file in files:
-            print(f'add {target_file} {file}', file=fp)
-        print(f'compact {target_file}', file=fp)
-    result = command([mpq_editor_exe, '/script', script_file])
+            print(f'add {relative_path} {file}', file=fp, end='\r\n')
+        print(f'compact {relative_path}', file=fp, end='\r\n')
+    result = command([mpq_editor_exe, '/script', os.path.relpath(script_file, source_dir)], cwd=source_dir)
     if isinstance(result, Error):
         return result
     os.remove(script_file)

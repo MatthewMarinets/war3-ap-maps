@@ -10,3 +10,4 @@ out/
 workspace.ini
 doc/generated/
 logs/
+venv/

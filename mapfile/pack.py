@@ -9,8 +9,6 @@ from mapfile.util.failable import Error
 from mapfile import mpq
 from mapfile.common import CONVERT_HANDLERS, dereference_proxy
 
-mpq_editor_exe = config.workspace.get('mpqeditor_path', 'MPQEditor.exe')
-
 
 def copy_imports(source_dir: str, target_dir: str) -> None:
     shutil.copytree(source_dir, target_dir, ignore=shutil.ignore_patterns('*.proxy'))
