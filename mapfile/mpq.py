@@ -75,14 +75,24 @@ def create_w3x(source_dir: str, target_file: str) -> Error[tuple[int, str]] | No
     encoded_map_name = map_name.encode('utf-8')
 
     # Write map file header metadata
+    # This is used by the map selection GUI to show the map name and supported players
     with open(target_file, 'r+b') as file_handle:
         file_handle.seek(8)
         bytes_written = file_handle.write(encoded_map_name)
         assert bytes_written == len(map_name)
-        file_handle.seek(1, 1)
+        file_handle.write(b'\0')
         bytes_written = file_handle.write(int.to_bytes(map_info.flags, 4, binary.ENDIANNESS))
         assert bytes_written == 4
         # Note(mm): max players is force-set to 1
         bytes_written = file_handle.write(int.to_bytes(1, 4, binary.ENDIANNESS))
         assert bytes_written == 4
+
+        # Zero out more space after the flags to clear out garbage data
+        # Note the MPQ header size is 0x200
+        position = file_handle.tell()
+        assert position < 0x50, f"MPQ file metadata is unexpectedly large: {position}"
+        zero_length = 0x50 - position
+        bytes_written = file_handle.write(b'\0'*zero_length)
+        assert bytes_written == zero_length
+        # Note(mm): It's possible to write my own metadata in the header here to be picked up by other tools
     return None
