@@ -3,6 +3,11 @@
 * Test saving
 * Implement the rest of the missionss
 
+## Text
+When getting a location check that isn't an item, it can be good to send a message.
+
+Format: `call DisplayTextToPlayer(GetLocalPlayeR(), 0, 0, "Got an |cffee1166Archipelago location|r (<info>)")`
+
 ## No-builds
 No-builds get kind of samey if you start with vanilla units, as that's enough to beat the mission.
 To integrate with items, the baseline should be lowered and items used to bring the mission back

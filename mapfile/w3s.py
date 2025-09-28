@@ -86,6 +86,8 @@ def read_binary(raw_bytes: bytes) -> War3SoundInfo:
         else:
             unset_float = UNSET_FLOAT
             unset_int = -1
+        # Note(mm): These "unset" values seem to vary more in the Scenario maps
+        # and may need to be stored for a successful round-trip
         assert reader.read_float() == unset_float
         assert reader.read_int32() == unset_int
         sound.channel = SoundChannel(reader.read_int32())

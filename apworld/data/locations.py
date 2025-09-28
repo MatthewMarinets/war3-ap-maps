@@ -111,6 +111,7 @@ class Wc3Location(enum.Enum):
     HU3_PRIEST_RESCUE =        10322, "Priest Rescue",        Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.RESCUE
     HU3_MORTAR_TEAM_RESCUE =   10323, "Mortar Team Rescue",   Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.RESCUE
     HU3_GARGLEMEL_TAXES =      10324, "Garglemel's Taxes",    Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.SECRET
+    HU3_DEFEAT_BANDITS =       10325, "Defeat the Bandits",   Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE, Wc3LocationType.ITEM, "Potion of Greater Healing"
 
     # Quests:
     # (Main) Investigate Andorhal

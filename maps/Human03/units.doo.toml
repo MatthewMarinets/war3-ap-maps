@@ -74,7 +74,7 @@ entity_id = 152
 
 [[units]]
 
-type_id = 'hcth'  # Captain
+type_id = 'hfoo'  # Footman
 variation = 0
 x = 4277.46337890625
 y = -4551.61767578125
@@ -104,7 +104,7 @@ entity_id = 62
 
 [[units]]
 
-type_id = 'hfoo'  # Footman
+type_id = 'hA00'
 variation = 0
 x = 4504.82421875
 y = -4652.72509765625
@@ -134,7 +134,7 @@ entity_id = 3
 
 [[units]]
 
-type_id = 'hfoo'  # Footman
+type_id = 'hA00'
 variation = 0
 x = 4493.1806640625
 y = -4533.41552734375

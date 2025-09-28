@@ -649,7 +649,7 @@ Default melee game initialization for all players
 ### Functions
 - Action SetVariable
   - param Variable Captain
-  - param Variable gg_unit_hcth_0062
+  - param Variable gg_unit_hfoo_0062
 
 
 ## SetupKelThuzad
@@ -805,10 +805,10 @@ Default melee game initialization for all players
   - param Variable Captain
   - param Variable StartingParty
 - Action GroupAddUnitSimple
-  - param Variable gg_unit_hfoo_0004
+  - param Variable gg_unit_hA00_0004
   - param Variable StartingParty
 - Action GroupAddUnitSimple
-  - param Variable gg_unit_hfoo_0003
+  - param Variable gg_unit_hA00_0003
   - param Variable StartingParty
 
 
@@ -1329,12 +1329,12 @@ Activated from 'MapInitialization'
     - Function GetRectCenter
       - param Variable gg_rct_Captain1b
 - Action SetUnitPositionLoc
-  - param Variable gg_unit_hfoo_0003
+  - param Variable gg_unit_hA00_0003
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Footman1b
 - Action SetUnitPositionLoc
-  - param Variable gg_unit_hfoo_0004
+  - param Variable gg_unit_hA00_0004
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Footman2b
@@ -1807,10 +1807,10 @@ Default melee game initialization for all players
   - param Variable Jaina
   - param String 0.15
 - Action SetUnitAnimation
-  - param Variable gg_unit_hfoo_0004
+  - param Variable gg_unit_hA00_0004
   - param String stand
 - Action SetUnitAnimation
-  - param Variable gg_unit_hfoo_0003
+  - param Variable gg_unit_hA00_0003
   - param String stand
 - Action TriggerSleepAction
   - param String 0.50
@@ -1969,13 +1969,13 @@ Default melee game initialization for all players
   - param Function DoNothing
     - Action DoNothing
 - Action IssuePointOrderLoc
-  - param Variable gg_unit_hfoo_0003
+  - param Variable gg_unit_hA00_0003
   - param Preset UnitOrderMove
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Footman02
 - Action IssuePointOrderLoc
-  - param Variable gg_unit_hfoo_0004
+  - param Variable gg_unit_hA00_0004
   - param Preset UnitOrderMove
   - param Function GetRectCenter
     - Function GetRectCenter
@@ -2460,13 +2460,13 @@ Default melee game initialization for all players
     - Function GetRectCenter
       - param Variable gg_rct_Captain1b
 - Action IssuePointOrderLoc
-  - param Variable gg_unit_hfoo_0004
+  - param Variable gg_unit_hA00_0004
   - param Preset UnitOrderMove
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Footman1b
 - Action IssuePointOrderLoc
-  - param Variable gg_unit_hfoo_0003
+  - param Variable gg_unit_hA00_0003
   - param Preset UnitOrderMove
   - param Function GetRectCenter
     - Function GetRectCenter
@@ -3450,6 +3450,8 @@ Disabled the .01 second wait because it was preventing the ogre from running awa
   - param Preset ChangeColorTrue
 - Action CustomScriptCode
   - param String call status_check_location(22)
+- Action CustomScriptCode
+  - param String call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Priest Rescue)")
 - Action TriggerSleepAction
   - param String 0.20
 - Action IssuePointOrderLoc
@@ -6110,6 +6112,8 @@ Run by cinematic ending
 ### Functions
 - Action CustomScriptCode
   - param String call status_check_location(24)
+- Action CustomScriptCode
+  - param String call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Garglemel's Taxes)")
 - Action AdjustPlayerStateBJ
   - param Function OperatorInt
     - Function OperatorInt
@@ -6554,15 +6558,10 @@ Run from 'BanditsAllDie'
   - param String 0.00
   - param Preset WaitDontWait
 - Action VolumeGroupResetBJ
-- Action CreateItemLoc
-  - param String pghe
-  - param Function GetUnitLoc
-    - Function GetUnitLoc
-      - param Variable Arthas
-- Action UnitAddItemSwapped
-  - param Function GetLastCreatedItem
-    - Function GetLastCreatedItem
-  - param Variable Arthas
+- Action CustomScriptCode
+  - param String call status_check_location(25)
+- Action CustomScriptCode
+  - param String call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Defeat Bandits)")
 - Action TriggerSleepAction
   - param Preset RealQueueDelayHint
 - Action IfThenElse
@@ -6575,11 +6574,6 @@ Run from 'BanditsAllDie'
     - Action ReturnAction
   - param Function DoNothing
     - Action DoNothing
-- Action QuestMessageBJ
-  - param Function GetPlayersAll
-    - Function GetPlayersAll
-  - param Preset QuestMessageTypeItemAcquired
-  - param String TRIGSTR_673
 - Action TriggerSleepAction
   - param Preset RealQueueDelayQuest
 - Action QueuedTriggerRemoveBJ
@@ -7502,6 +7496,8 @@ Turned on from 'VillagerBridgeOutMessage'
   - param Variable gg_trg_Fountain_Found
 - Action CustomScriptCode
   - param String call status_check_location(21)
+- Action CustomScriptCode
+  - param String call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Fountain of Healing)")
 - Action SetSpeechVolumeGroupsBJ
 - Action TransmissionFromUnitWithNameBJ
   - param Function GetPlayersAll
@@ -7787,6 +7783,8 @@ Turned on from 'VillagerBridgeOutMessage'
     - Action DoNothing
 - Action CustomScriptCode
   - param String call status_check_location(20)
+- Action CustomScriptCode
+  - param String call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Footman Rescue)")
 - Action ForGroup
   - param Variable FootmenDefending
   - param Function DoNothing
@@ -8374,6 +8372,8 @@ Turned on from 'VillagerBridgeOutMessage'
   - param String 0.20
 - Action CustomScriptCode
   - param String call status_check_location(23)
+- Action CustomScriptCode
+  - param String call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Mortar Team Rescue)")
 - Action SetSpeechVolumeGroupsBJ
 - Action IfThenElse
   - param Function 
