@@ -56,7 +56,7 @@ modification_id = 'upro'  # Profile.Proper Names
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_565'
+value = 'Blademaster'
 object_id = 'null'
 
 [[blizzard_objects.entities]]
@@ -167,7 +167,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_047'
+value = 'Dragon Hunter'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -250,7 +250,7 @@ modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_054'
+value = '(Fire Upgrade)'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -301,7 +301,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_057'
+value = 'Dwarven Workshop'
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -312,7 +312,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_060'
+value = 'Feranor Steeltoe'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -347,7 +347,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_061'
+value = 'Black Dragon Whelp'
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
