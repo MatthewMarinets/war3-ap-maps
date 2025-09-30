@@ -114,6 +114,14 @@ table_column = 0
 value = 0
 object_id = 'null'
 
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 25
+object_id = 'null'
+
 [[blizzard_objects.entities]]
 parent_id = 'ngnb'  # Gnoll Brute
 entity_id = 'null'
@@ -136,6 +144,14 @@ table_column = 0
 value = 0
 object_id = 'null'
 
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 25
+object_id = 'null'
+
 [[blizzard_objects.entities]]
 parent_id = 'nmrl'  # Murloc Tiderunner
 entity_id = 'null'
@@ -147,6 +163,14 @@ table_column = 0
 value = 0
 object_id = 'null'
 
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 25
+object_id = 'null'
+
 [[blizzard_objects.entities]]
 parent_id = 'nmrr'  # Murloc Huntsman
 entity_id = 'null'
@@ -156,6 +180,98 @@ data_type = "Integer"
 variation_level = 0
 table_column = 0
 value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 30
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'ngnw'  # Gnoll Warden
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 40
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nmrm'  # Murloc Nightcrawler
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 40
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nogr'  # Ogre Warrior
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 40
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nomg'  # Ogre Magi
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 70
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 5
 object_id = 'null'
 
 [map_objects]

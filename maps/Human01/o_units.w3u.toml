@@ -26,6 +26,14 @@ table_column = 0
 value = 0
 object_id = 'null'
 
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 25
+object_id = 'null'
+
 [[blizzard_objects.entities]]
 parent_id = 'ngna'  # Gnoll Poacher
 entity_id = 'null'
@@ -35,6 +43,14 @@ data_type = "Integer"
 variation_level = 0
 table_column = 0
 value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 25
 object_id = 'null'
 
 [[blizzard_objects.entities]]
