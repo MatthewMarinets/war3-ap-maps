@@ -38,7 +38,6 @@
 
 ## Issues
 - [x] Add magic number / mechanism to prevent loading data from another game
-- [ ] Restarting a mission re-sends hero items
 - [x] Add packet to send a new item to a campaign
 - [x] Add packet to set/update hero state
 - [x] comm: Global <--> local location conversion
@@ -53,10 +52,11 @@
   - [ ] Purge any unlock tech functions
 
 ### Longer term
+- [ ] No-builds: unlock tech for usage based on max allowed
 - [ ] Figure out item recovery / make item bank levels
 - [ ] Figure out slot storage
 - [ ] RoC models
-- [ ] RoC creep gold drop amounts
+- [x] RoC creep gold drop amounts
 
 ## File formats covered
 - [x] mpq/w3m/w3x -- MPQEditor

@@ -77,14 +77,45 @@ MODIFICATION_TYPES: dict[LiteralString, DataType] = {
     eid.FIELD_UNIT_ATTACK_1_RANGE: DataType.Integer,
     eid.FIELD_UNIT_ATTACK_1_WEAPON_TYPE: DataType.String,
     eid.FIELD_UNIT_BALANCE_DEFENSE_BASE: DataType.Integer,
-    eid.FIELD_UNIT_BALANCE_HIT_POINTS_BASE: DataType.Integer,
-    eid.FIELD_UNIT_BALANCE_SIGHT_RADIUS_DAY: DataType.Integer,
-    eid.FIELD_UNIT_BALANCE_SIGHT_RADIUS_NIGHT: DataType.Integer,
     eid.FIELD_UNIT_BALANCE_SPEED_BASE: DataType.Integer,
     eid.FIELD_UNIT_GENERAL_EDITOR_SUFFIX: DataType.String,
     eid.FIELD_UNIT_GENERAL_NAME: DataType.String,
     eid.FIELD_UNIT_GENERAL_STRUCTURES_BUILT: DataType.String,
     eid.FIELD_UNIT_GENERAL_TOOLTIP_BASIC: DataType.String,
+    eid.FIELD_UNIT_STATS_BUILD_TIME: DataType.Integer,
+    eid.FIELD_UNIT_STATS_FOOD_COST: DataType.Integer,
+    eid.FIELD_UNIT_STATS_FOOD_PRODUCED: DataType.Integer,
+    eid.FIELD_UNIT_STATS_FORMATION_RANK: DataType.Integer,
+    eid.FIELD_UNIT_STATS_GOLD_BOUNTY_BASE: DataType.Integer,
+    eid.FIELD_UNIT_STATS_GOLD_BOUNTY_NUM_DICE: DataType.Integer,
+    eid.FIELD_UNIT_STATS_GOLD_BOUNTY_SIDES_PER_DIE: DataType.Integer,
+    eid.FIELD_UNIT_STATS_GOLD_COST: DataType.Integer,
+    eid.FIELD_UNIT_STATS_HIT_POINTS_MAXIMUM: DataType.Integer,
+    eid.FIELD_UNIT_STATS_HIT_POINTS_REGENERATION_RATE: DataType.Unreal,
+    eid.FIELD_UNIT_STATS_HIT_POINTS_REGENERATION_TYPE: DataType.Integer,  # regenType
+    eid.FIELD_UNIT_STATS_IS_BUILDING: DataType.Integer,  # bool
+    eid.FIELD_UNIT_STATS_LEVEL: DataType.Integer,
+    eid.FIELD_UNIT_STATS_LUMBER_BOUNTY_BASE: DataType.Integer,
+    eid.FIELD_UNIT_STATS_LUMBER_BOUNTYNUM_DICE: DataType.Integer,
+    eid.FIELD_UNIT_STATS_LUMBER_BOUNTY_SIDES_PER_DIE: DataType.Integer,
+    eid.FIELD_UNIT_STATS_LUMBER_COST: DataType.Integer,
+    eid.FIELD_UNIT_STATS_MANA_INITIAL_AMOUNT: DataType.Integer,
+    eid.FIELD_UNIT_STATS_MANA_MAXIMUM: DataType.Integer,
+    eid.FIELD_UNIT_STATS_MANA_REGENERATION: DataType.Unreal,
+    eid.FIELD_UNIT_STATS_POINT_VALUE: DataType.Integer,
+    eid.FIELD_UNIT_STATS_PRIORITY: DataType.Integer,
+    eid.FIELD_UNIT_STATS_RACE: DataType.Integer,  # unitRace
+    eid.FIELD_UNIT_STATS_REPAIR_GOLD_COST: DataType.Integer,
+    eid.FIELD_UNIT_STATS_REPAIR_LUMBER_COST: DataType.Integer,
+    eid.FIELD_UNIT_STATS_REPAIR_TIME: DataType.Integer,
+    eid.FIELD_UNIT_STATS_SIGHT_RADIUS_DAY: DataType.Integer,
+    eid.FIELD_UNIT_STATS_SIGHT_RADIUS_NIGHT: DataType.Integer,
+    eid.FIELD_UNIT_STATS_SLEEPS: DataType.Integer,  # bool
+    eid.FIELD_UNIT_STATS_STOCK_MAXIMUM: DataType.Integer,
+    eid.FIELD_UNIT_STATS_STOCK_REPLENISH_INTERVAL: DataType.Integer,
+    eid.FIELD_UNIT_STATS_STOCK_START_DELAY: DataType.Integer,
+    eid.FIELD_UNIT_STATS_TRANSPORTED_SIZE: DataType.Integer,
+    eid.FIELD_UNIT_STATS_UNIT_CLASSIFICATION: DataType.Integer,  # unitClass
     eid.FIELD_UNIT_UI_MODEL_FILE: DataType.String,
     eid.FIELD_UNIT_UI_SCALING_VALUE: DataType.Float,
     eid.FIELD_UNIT_UI_TINT_BLUE: DataType.Integer,
@@ -115,16 +146,26 @@ MODIFICATION_TABLE_COLUMNS: dict[LiteralString, int] = {
 
 
 class Entities:
-    def __init__(self, entities: list[Entity]) -> None:
+    def __init__(self, entities: list[Entity], is_map_entity: bool = True) -> None:
         self.entities = entities
-        self.id_to_entity = {e.entity_id: e for e in entities}
+        self.is_map_entity = is_map_entity
+        if is_map_entity:
+            self.id_to_entity = {e.entity_id: e for e in entities}
+        else:
+            self.id_to_entity = {e.parent_id: e for e in entities}
 
     def set_entity(self, entity_id: str, parent_id: str, fields: dict[str|tuple[str, int], Any]) -> Entity:
-        result = self.id_to_entity.get(entity_id)
+        if self.is_map_entity:
+            result = self.id_to_entity.get(entity_id)
+        else:
+            result = self.id_to_entity.get(parent_id)
         if result is None:
             result = Entity(parent_id, entity_id)
             self.entities.append(result)
-            self.id_to_entity[entity_id] = result
+            if self.is_map_entity:
+                self.id_to_entity[entity_id] = result
+            else:
+                self.id_to_entity[parent_id] = result
         else:
             result.parent_id = parent_id
         id_to_modification = {(m.modification_id, m.variation_level): m for m in result.modifications}
