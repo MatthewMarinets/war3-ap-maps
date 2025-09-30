@@ -1,8 +1,9 @@
-version = ROC
+version = TFT
 
 # Categories
 | ID  | Name | is a comment |
 | --- | ---- | ------------ |
+| 22 | Archipelago | False |
 | 0 | Initialization | False |
 | 8 | StartAIHarrassment | False |
 | 9 | HeroesLevelLimiter | False |
@@ -71,6 +72,102 @@ version = ROC
 | GranaryEntranceGuy | unit | . | . |
 
 # Triggers
+## fileio
+- enabled: True
+- category: [22] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## map_config
+- enabled: True
+- category: [22] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## status
+- enabled: True
+- category: [22] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## heroes
+- enabled: True
+- category: [22] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## item_locations
+- enabled: True
+- category: [22] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## debug
+- enabled: True
+- category: [22] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## zoom
+- enabled: True
+- category: [22] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## irregulars
+- enabled: True
+- category: [22] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
 ## Map Initialization
 - enabled: True
 - category: [0] Initialization

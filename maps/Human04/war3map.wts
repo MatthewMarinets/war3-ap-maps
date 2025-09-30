@@ -10,6 +10,7 @@ Arthas
 }
 
 STRING 3
+// Sound\Dialogue\HumanCampaign\Human04\H04Arthas04.mp3
 {
 Let's build a base camp here. With those cultists creeping around, I'd rather not head in there without backup.
 }
@@ -25,6 +26,7 @@ Jaina Proudmoore
 }
 
 STRING 7
+// Sound\Dialogue\HumanCampaign\Human04\H04Jaina05.mp3
 {
 I couldn't agree more.
 }
@@ -66,6 +68,7 @@ Jaina Proudmoore
 }
 
 STRING 14
+// Sound\Dialogue\HumanCampaign\Human04\H04Jaina01.mp3
 {
 Look! It's those cultists who were with the necromancer! What are they doing to that mine? 
 }
@@ -76,6 +79,7 @@ Jaina Proudmoore
 }
 
 STRING 18
+// Sound\Dialogue\HumanCampaign\Human04\H04Jaina24.mp3
 {
 What do you mean?
 }
@@ -91,6 +95,7 @@ Acolyte
 }
 
 STRING 22
+// Sound\Dialogue\HumanCampaign\Human04\H04Acolyte03.mp3
 {
 Damn these intruders! They must not interfere with the master's plan!
 }
@@ -101,6 +106,7 @@ Kel'Thuzad
 }
 
 STRING 24
+// Sound\Dialogue\HumanCampaign\Human04\H04KelThuzad06.mp3
 {
 Hello again, children. I am Kel'Thuzad, and I've come to deliver a warning. Leave well enough alone. Your curiosity will be the death of you.
 }
@@ -121,6 +127,7 @@ Kel'Thuzad
 }
 
 STRING 33
+// Sound\Dialogue\HumanCampaign\Human04\H04KelThuzad28.mp3
 {
 Naive fool. My death will make little difference in the long run. For, now, the scourging of this land... begins.
 }
@@ -136,6 +143,7 @@ Arthas
 }
 
 STRING 38
+// Sound\Dialogue\HumanCampaign\Human04\H04Arthas02.mp3
 {
 Let's not wait to find out! Attack!
 }
@@ -169,6 +177,7 @@ Arthas
 }
 
 STRING 47
+// Sound\Dialogue\HumanCampaign\Human04\H04Arthas18.mp3
 {
 All the granaries are empty! The shipments have already been sent out. We're too late!
 }
@@ -209,6 +218,7 @@ Arthas
 }
 
 STRING 73
+// Sound\Dialogue\HumanCampaign\Human04\H04Arthas22.mp3
 {
 Are you responsible for this plague, necromancer? Is this cult your doing?
 }
@@ -219,6 +229,7 @@ Kel'Thuzad
 }
 
 STRING 75
+// Sound\Dialogue\HumanCampaign\Human04\H04KelThuzad23.mp3
 {
 Yes, I ordered the Cult of the Damned to distribute the plagued grain. But the sole credit is not mine.
 }
@@ -229,6 +240,7 @@ Kel'Thuzad
 }
 
 STRING 77
+// Sound\Dialogue\HumanCampaign\Human04\H04KelThuzad25.mp3
 {
 I serve the dreadlord Mal'Ganis. He commands the Scourge that will cleanse this land and establish a paradise of eternal darkness!
 }
@@ -239,6 +251,7 @@ Arthas
 }
 
 STRING 79
+// Sound\Dialogue\HumanCampaign\Human04\H04Arthas26.mp3
 {
 And what exactly is this Scourge meant to cleanse?
 }
@@ -249,6 +262,7 @@ Kel'Thuzad
 }
 
 STRING 81
+// Sound\Dialogue\HumanCampaign\Human04\H04KelThuzad27.mp3
 {
 Why, the living, of course. His plan is already in motion. Seek him out at Stratholme if you need further proof.
 }

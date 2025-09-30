@@ -1,52 +1,10 @@
 # Warcraft 3 Map Objects File (.w3o)
 # See w3o.py for type definitions
-version = 1
+version = 2
 has_levels = false
 
 [blizzard_objects]
-[[blizzard_objects.entities]]
-parent_id = 'phea'  # Potion of Healing
-entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
-[[blizzard_objects.entities]]
-parent_id = 'pman'  # Potion of Mana
-entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
-[[blizzard_objects.entities]]
-parent_id = 'spro'  # Scroll of Protection
-entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
-[[blizzard_objects.entities]]
-parent_id = 'shea'  # Scroll of Healing
-entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
+entities = []
 
 [map_objects]
 [[map_objects.entities]]
@@ -68,7 +26,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_087'
+value = 'Timmy'
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -91,4 +49,47 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = 'phea,shea,spro'
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'hmil'  # Militia
+entity_id = 'hA00'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Irregular'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 9
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'APPh'
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'udaa'  # UnitAbilities.Default Active Ability
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ubui'  # Profile.Structures Built
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ''
 object_id = 'null'
