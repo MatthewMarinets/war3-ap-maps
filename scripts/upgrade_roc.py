@@ -4,13 +4,13 @@ Update unpacked RoC map files to TFT.
 
 import os
 import sys
-import shutil
 from dataclasses import dataclass, field
 
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from mapfile import doo, w3i, wtg, wct, w3o, imp
 from apworld.data import missions, tables, heroes
+from scripts import update_irregulars
 
 sys.path.pop()
 
@@ -148,6 +148,9 @@ def update_listfile(listfile_path: str) -> None:
         lines = fp.readlines()
     for path in (
         'war3map.w3t\n',
+        'war3map.w3a\n',
+        'war3map.w3q\n',
+        'war3map.w3u\n',
         'war3map.imp\n',
         'war3mapImported\\questionmark_item.mdx\n',
     ):
@@ -325,6 +328,8 @@ def main(map_dir: str) -> int:
     update_listfile(f'{map_dir}/(listfile)')
     update_imp_file(f'{map_dir}/imports.imp.toml')
     update_triggers(map_dir)
+
+    update_irregulars.main(map_dir)
 
 
 HELP = """
