@@ -44,7 +44,7 @@ class MapDataset(enum.IntEnum):
     MELEE = 2
 
 class FactionController(enum.IntEnum):
-    Human = 1
+    User = 1
     Computer = 2
     Neutral = 3
     Rescuable = 4

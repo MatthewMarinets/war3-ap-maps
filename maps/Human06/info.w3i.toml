@@ -48,7 +48,7 @@ random_items = []
 [[players]]
 
 player_id = 1
-player_type = "Human"
+player_type = "User"
 player_faction = "Human"
 fixed_start_position = true
 name = 'TRIGSTR_242'

@@ -937,7 +937,7 @@ function debug_print takes nothing returns nothing
     set index = 0
     loop
         exitwhen index >= NUM_HEROES
-        call DisplayTextToPlayer(GetLocalPlayer(), 0,0, "Hero " + I2S(index) + " max level: " + I2S(HERO_MAX_LEVEL[index]))
+        call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Hero " + I2S(index) + " max level: " + I2S(HERO_MAX_LEVEL[index]))
         set index = index + 1
     endloop
 endfunction

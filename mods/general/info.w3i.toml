@@ -50,7 +50,7 @@ random_items = []
 [[players]]
 
 player_id = 0
-player_type = "Human"
+player_type = "User"
 player_faction = "Human"
 fixed_start_position = false
 name = 'TRIGSTR_003'
