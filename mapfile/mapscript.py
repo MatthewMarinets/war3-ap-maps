@@ -2,7 +2,7 @@
 Utility for regenerating war3map.j script files from other data
 """
 
-from . import wtg, wct, w3i, doo, w3r, w3c, w3s, wts, tables
+from . import wtg, wct, w3i, doo, w3r, w3c, w3s, wts, w3e, tables
 from datetime import datetime
 from .common import (
     TRIGGERS_CUSTOM_TEXT_FILE_NAME,
@@ -22,7 +22,7 @@ MAP_SCRIPT_FILE_NAME = 'war3map.j'
 class GenInfo:
     def __init__(self, variables: list[wtg.TriggerVariable]) -> None:
         self.unit_vars_used: set[str] = set()
-        self.doodad_vars_used: list[str] = []
+        self.doodad_vars_used: set[str] = set()
         self.custom_text_vars_used: list[str] = []
         self.indent_level = 0
         self.variables = {v.name: v for v in variables}
@@ -39,6 +39,15 @@ class PrependInfo:
         self.trigger_name = trigger_name
         self.lines: list[str] = []
         self.action_index = action_index
+
+
+def round1(n: float) -> float:
+    """
+    Homebrew round method to avoid "banker's rounding" / statistical rounding in builtin `round()`
+    """
+    if n * 10 - math.floor(n*10) < 0.5:
+        return math.floor(n*10) / 10
+    return math.ceil(n*10) / 10
 
 
 def escape_name(gui_name: str) -> str:
@@ -243,12 +252,12 @@ def generate_destructable_setup(doodads: doo.War3PlacementInfo, info: GenInfo) -
     result.append('    local trigger t')
     result.append('    local real life')
     doodad_var_to_doodad = {f'gg_dest_{doodad.type_id}_{doodad.entity_id:04}': doodad for doodad in doodads.doodads}
-    for doodad_var in info.doodad_vars_used:
+    for doodad_var in sorted(info.doodad_vars_used):
         doodad = doodad_var_to_doodad[doodad_var]
         if doodad.life_percent == 0:
             result.append((
                 f"    set {doodad_var}=CreateDeadDestructableZ('{doodad.type_id}', "
-                f"{doodad.x:.1f}, {doodad.y:.1f}, {doodad.z:.1f}, {doodad.facing * RADIANS_TO_DEGREES:.3f}, "
+                f"{doodad.x:.1f}, {doodad.y:.1f}, {round1(doodad.z):.1f}, {doodad.facing * RADIANS_TO_DEGREES:.3f}, "
                 f"{doodad.scale_x:.3f}, {doodad.variation})"
             ).replace('-', '- '))
             continue
@@ -354,7 +363,7 @@ def generate_unit_setup(units: doo.War3PlacementInfo, info: GenInfo) -> list[str
     return result
 
 
-def generate_region_setup(regions: w3r.War3RegionInfo) -> list[str]:
+def generate_region_setup(regions: w3r.War3RegionInfo, heightmap: w3e.War3Environment) -> list[str]:
     result = ['function CreateRegions takes nothing returns nothing']
     result.append('    local weathereffect we\n')
     for region in regions.regions:
@@ -368,9 +377,9 @@ def generate_region_setup(regions: w3r.War3RegionInfo) -> list[str]:
             mid_y = (region.top + region.bottom) / 2
             width = region.right - region.left
             height = region.top - region.bottom
-            # Todo: the last parameter is z, which presumably comes from the w3e file
+            z = heightmap.coord_to_height(mid_x, mid_y)
             result.append((
-                f'    call SetSoundPosition({region.ambient_sound}, {mid_x:.1f}, {mid_y:.1f}, -250.0)'
+                f'    call SetSoundPosition({region.ambient_sound}, {mid_x:.1f}, {mid_y:.1f}, {z:.1f})'
             ).replace('-', '- '))
             result.append(f'    call RegisterStackedSound({region.ambient_sound}, true, {width:.1f}, {height:.1f})')
     result.append('endfunction\n')
@@ -655,8 +664,7 @@ def check_parameters(parameters: list[wtg.EcaParameter], info: GenInfo) -> None:
             if parameter.value.startswith('gg_unit_'):
                 info.unit_vars_used.add(parameter.value)
             elif parameter.value.startswith('gg_dest_'):
-                if parameter.value not in info.doodad_vars_used:
-                    info.doodad_vars_used.append(parameter.value)
+                info.doodad_vars_used.add(parameter.value)
 
 
 OPERATORS = {
@@ -904,6 +912,7 @@ def generate(map_dir: str) -> None:
     regions = w3r.from_text_file(f'{map_dir}/{REGIONS_FILE_NAME}')
     cameras = w3c.from_text_file(f'{map_dir}/{CAMERAS_FILE_NAME}')
     sounds = w3s.from_text_file(f'{map_dir}/{SOUNDS_FILE_NAME}')
+    heightmap = w3e.read_binary_file(f'{map_dir}/war3map.w3e')
     string_table = wts.read_wts(f'{map_dir}/war3map.wts')
 
     result: list[str] = []
@@ -953,7 +962,7 @@ def generate(map_dir: str) -> None:
 
     # Regions
     result.append(section_header('Regions'))
-    result.extend(generate_region_setup(regions))
+    result.extend(generate_region_setup(regions, heightmap))
 
     # Cameras
     result.append(section_header('Cameras'))
