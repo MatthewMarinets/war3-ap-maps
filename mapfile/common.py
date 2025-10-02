@@ -1,4 +1,4 @@
-from typing import Callable, TYPE_CHECKING, Protocol, TypeVar
+from typing import Callable, Protocol, TypeVar
 import os
 import shutil
 from . import doo, imp, mmp, w3c, w3f, w3i, w3o, w3r, w3s, wct, wtg, wts
@@ -51,22 +51,40 @@ def dereference_proxy(proxy_file: str, target: str) -> None:
     shutil.copy(source, target)
 
 
+DOODADS_FILE_NAME = 'doodads.doo.toml'
+UNITS_FILE_NAME = 'units.doo.toml'
+IMPORTS_FILE_NAME = 'imports.imp.toml'
+MINIMAP_FILE_NAME = 'minimap.mmp.toml'
+CAMERAS_FILE_NAME = 'cameras.w3c.toml'
+INFO_FILE_NAME = 'info.w3i.toml'
+REGIONS_FILE_NAME = 'regions.w3r.toml'
+SOUNDS_FILE_NAME = 'sounds.w3s.toml'
+TRIGGERS_CUSTOM_TEXT_FILE_NAME = 'triggers_text.wct.j'
+TRIGGERS_GUI_FILE_NAME = 'triggers_gui.wtg.md'
+UNIT_DATA_FILE_NAME = 'o_units.w3u.toml'
+ITEM_DATA_FILE_NAME = 'o_items.w3t.toml'
+DESTRUCTABLE_DATA_FILE_NAME = 'o_destructibles.w3b.toml'
+DOODAD_DATA_FILE_NAME = 'o_doodads.w3d.toml'
+ABILITY_DATA_FILE_NAME = 'o_abilities.w3a.toml'
+BUFF_DATA_FILE_NAME = 'o_buffs.w3h.toml'
+UPGRADE_DATA_FILE_NAME = 'o_upgrades.w3q.toml'
+
 CONVERT_HANDLERS: dict[str, tuple[Callable[[str, str], None], str]] = {
-    '.doo': (doo.convert, 'doodads.doo.toml'),
-    '.imp': (general_converter(imp), 'imports.imp.toml'),
-    '.mmp': (general_converter(mmp), 'minimap.mmp.toml'),
-    '.w3c': (general_converter(w3c), 'cameras.w3c.toml'),
-    '.w3i': (general_converter(w3i), 'info.w3i.toml'),
-    '.w3r': (general_converter(w3r), 'regions.w3r.toml'),
-    '.w3s': (general_converter(w3s), 'sounds.w3s.toml'),
-    '.wct': (general_converter(wct), 'triggers_text.wct.j'),
-    '.wtg': (general_converter(wtg), 'triggers_gui.wtg.md'),
+    '.doo': (doo.convert, DOODADS_FILE_NAME),
+    '.imp': (general_converter(imp), IMPORTS_FILE_NAME),
+    '.mmp': (general_converter(mmp), MINIMAP_FILE_NAME),
+    '.w3c': (general_converter(w3c), CAMERAS_FILE_NAME),
+    '.w3i': (general_converter(w3i), INFO_FILE_NAME),
+    '.w3r': (general_converter(w3r), REGIONS_FILE_NAME),
+    '.w3s': (general_converter(w3s), SOUNDS_FILE_NAME),
+    '.wct': (general_converter(wct), TRIGGERS_CUSTOM_TEXT_FILE_NAME),
+    '.wtg': (general_converter(wtg), TRIGGERS_GUI_FILE_NAME),
     # .w3o
-    '.w3u': (general_converter(w3o, '.w3u'), 'o_units.w3u.toml'),
-    '.w3t': (general_converter(w3o, '.w3t'), 'o_items.w3t.toml'),
-    '.w3b': (general_converter(w3o, '.w3b'), 'o_destructibles.w3b.toml'),
-    '.w3d': (general_converter(w3o, '.w3d'), 'o_doodads.w3d.toml'),
-    '.w3a': (general_converter(w3o, '.w3a', (True,)), 'o_abilities.w3a.toml'),
-    '.w3h': (general_converter(w3o, '.w3h'), 'o_buffs.w3h.toml'),
-    '.w3q': (general_converter(w3o, '.w3q', (True,)), 'o_upgrades.w3q.toml'),
+    '.w3u': (general_converter(w3o, '.w3u'), UNIT_DATA_FILE_NAME),
+    '.w3t': (general_converter(w3o, '.w3t'), ITEM_DATA_FILE_NAME),
+    '.w3b': (general_converter(w3o, '.w3b'), DESTRUCTABLE_DATA_FILE_NAME),
+    '.w3d': (general_converter(w3o, '.w3d'), DOODAD_DATA_FILE_NAME),
+    '.w3a': (general_converter(w3o, '.w3a', (True,)), ABILITY_DATA_FILE_NAME),
+    '.w3h': (general_converter(w3o, '.w3h'), BUFF_DATA_FILE_NAME),
+    '.w3q': (general_converter(w3o, '.w3q', (True,)), UPGRADE_DATA_FILE_NAME),
 }

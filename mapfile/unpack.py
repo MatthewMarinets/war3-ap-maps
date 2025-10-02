@@ -7,7 +7,7 @@ import glob
 from mapfile import config
 from mapfile.util.failable import Error
 from mapfile import mpq
-from mapfile.common import CONVERT_HANDLERS, PROXY_FILES, make_proxy
+from mapfile.common import CONVERT_HANDLERS, PROXY_FILES, make_proxy, UNITS_FILE_NAME
 
 mpq_editor_exe = config.workspace.get('mpqeditor_path', 'MPQEditor.exe')
 
@@ -39,7 +39,7 @@ def extract_map_files(map_file: str, target_dir: str) -> Error[str] | None:
         convert, target_name = CONVERT_HANDLERS.get(ext, (None, basename))
         if basename == 'war3mapUnits.doo':
             assert convert is not None
-            convert(filename, f'{target_dir}/units.doo.toml')
+            convert(filename, f'{target_dir}/{UNITS_FILE_NAME}')
         elif convert:
             convert(filename, f'{target_dir}/{target_name}')
         else:

@@ -144,19 +144,20 @@ def parse_lib_parameters_from_trigger_strings(lines: list[str]) -> dict[str, Par
         '[TriggerConditions]': 1,
         '[TriggerActions]': 1,
         '[TriggerCalls]': 3,
+        '[TriggerParams]': 1,
     }
     have_subfuncs = {
-        'AndMultiple': True,
-        'OrMultiple': True,
-        'IfThenElseMultiple': True,
-        'ForLoopAMultiple': True,
-        'ForLoopBMultiple': True,
-        'ForLoopVarMultiple': True,
-        'ForForceMultiple': True,
-        'ForGroupMultiple': True,
-        'EnumDestructablesInRectAllMultiple': True,
-        'EnumDestructablesInCircleBJMultiple': True,
-        'EnumItemsInRectBJMultiple': True,
+        'AndMultiple',
+        'OrMultiple',
+        'IfThenElseMultiple',
+        'ForLoopAMultiple',
+        'ForLoopBMultiple',
+        'ForLoopVarMultiple',
+        'ForForceMultiple',
+        'ForGroupMultiple',
+        'EnumDestructablesInRectAllMultiple',
+        'EnumDestructablesInCircleBJMultiple',
+        'EnumItemsInRectBJMultiple',
     }
     readable_section = -1
     for line in lines:
@@ -176,7 +177,7 @@ def parse_lib_parameters_from_trigger_strings(lines: list[str]) -> dict[str, Par
         assert args
         arg_types = [arg for arg in args[readable_section:] if arg != 'nothing']
         
-        result[function_name] = ParamInfo(arg_types, '', have_subfuncs.get(function_name, False))
+        result[function_name] = ParamInfo(arg_types, '', function_name in have_subfuncs)
 
     return result
 
@@ -184,6 +185,11 @@ def parse_lib_parameters_from_trigger_strings(lines: list[str]) -> dict[str, Par
 with open('gamedata/1_30_4/ui/triggerdata.txt') as fp:
     _lib_lines = fp.readlines()
 LIB_INFO = parse_lib_parameters_from_trigger_strings(_lib_lines)
+"""
+dict containing function and preset information parsed from triggerdata.txt.
+Keys are function or preset names. Values are objects containing lists of argument types for functions;
+for presets, code substitutions are in arg_types[1].
+"""
 
 
 def read_binary(raw_data: bytes, lib_info: dict[str, ParamInfo] = LIB_INFO) -> W3TriggerData:

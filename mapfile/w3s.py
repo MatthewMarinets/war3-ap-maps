@@ -159,6 +159,12 @@ def from_text(text: str) -> War3SoundInfo:
     return War3SoundInfo(**result)
 
 
+def from_text_file(filename: str) -> War3SoundInfo:
+    with open(filename, 'r') as fp:
+        text = fp.read()
+    return from_text(text)
+
+
 if __name__ == '__main__':
     from work import manifest
     filenames = [f'work/{x}/war3map.w3s' for x in manifest.all_directories]
