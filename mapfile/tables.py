@@ -2,11 +2,16 @@ BUILDING_IDS = {
     'htow', 'hkee', 'hcas', 'hhou', 'halt', 'hbar', 'hlum', 'hbla',
     'harm', 'hars', 'hgra', 'hwtw', 'hvlt', 'hgtw', 'hctw', 'hatw',
     'ogre', 'ostr', 'ofrt', 'oalt', 'obar', 'ofor', 'otto', 'osld', 'obea', 'otrb', 'ovln', 'owtw',
+    'npgf',
     'unpl', 'unp1', 'unp2', 'uzig', 'uaod', 'usep', 'usap', 'ugrv',
     'uslh', 'utod', 'ubon', 'ugol', 'utom', 'uzg1', 'uzg2',
     'etol', 'etoa', 'etoe', 'emow', 'eate', 'eaom', 'eaoe', 'eaow', 'edob', 'edos', 'eden', 'etrp',
 
-    'ncnt', 'nct1', 'nct2', 'ndch', 'ndh0', 'ndh1', 'nfh0', 'nfh1', 'nfr1', 'nfr2', 'ngnh', 'ngn2', 'nhns',
+    'ngol', 'ngme', 'nfoh', 'nmoo', 'ngad', 'nwgt', 'ndrk', 'ndru', 'ndrz', 'ndrg', 'ndro', 'ndrr',
+    'nmer', 'nmr2', 'nmr3', 'nmr4', 'nmr5', 'nmr6', 'nmr7', 'nmr8', 'nmr9', 'nmr0', 'nmra', 'nmrb',
+    'ntav', 'nmrk', 'nmrc', 'nmrd', 'nshp', 'nmre', 'nmrf',
+
+    'ncnt', 'nct1', 'nct2', 'ndch', 'ndh0', 'ndh1', 'nfh0', 'nfh1', 'nfr1', 'nfr2', 'ngnh', 'ngt2', 'nhns',
     'nth0', 'nth1', 'nmg0', 'nmg1', 'nmh0', 'nmh1', 'nnzg', 'ntnt', 'ntt2', 'nten', 'ntn2', 'ncb0', 'ncb1',
     'ncb2', 'ncb3', 'ncb4', 'ncb5', 'ncb6', 'ncb7', 'ncb8', 'ncb9', 'ncba', 'ncbb', 'ncbc', 'ncbd', 'ncbe',
     'ncbf',

@@ -17,18 +17,20 @@ from .common import (
 import math
 
 MAP_SCRIPT_FILE_NAME = 'war3map.j'
+IMPROVED = False
 
 
 class GenInfo:
-    def __init__(self, variables: list[wtg.TriggerVariable]) -> None:
+    def __init__(self, variables: list[wtg.TriggerVariable], indent_level: int = 0) -> None:
         self.unit_vars_used: set[str] = set()
         self.doodad_vars_used: set[str] = set()
         self.custom_text_vars_used: list[str] = []
-        self.indent_level = 0
+        self.indent_level = indent_level
         self.variables = {v.name: v for v in variables}
         self.map_init_triggers: list[str] = []
         self.start_locations: list[doo.UnitEntity] = []
         self.item_drop_tables: dict[int, str] = {}
+        self.function_presence: set[str] = set()
 
     def indent(self) -> str:
         return ' '*(self.indent_level)
@@ -38,7 +40,10 @@ class PrependInfo:
     def __init__(self, trigger_name: str, action_index: int = 1) -> None:
         self.trigger_name = trigger_name
         self.lines: list[str] = []
-        self.action_index = action_index
+        self.action_index = [action_index]
+
+    def func_name(self) -> str:
+        return f'Trig_{self.trigger_name}_Func{"".join(f"{a:03}" for a in self.action_index)}'
 
 
 def round1(n: float) -> float:
@@ -89,17 +94,23 @@ def generate_user_defined_globals(gui_triggers: wtg.W3TriggerData) -> list[str]:
     sub_var_type = {
         'unitcode': 'integer'
     }
-    initializable_types = {'integer', 'boolean', 'string', 'real'}
+    initializable_types = {'integer', 'real'}
+    if IMPROVED:
+        initializable_types.add('boolean')
     for variable in gui_triggers.variables:
         var_type = sub_var_type.get(variable.variable_type, variable.variable_type)
         if variable.is_array:
             val = ''
         elif variable.initial_value and var_type in initializable_types:
             val = f'= {variable.initial_value}'
+        elif IMPROVED and variable.initial_value and var_type == 'string':
+            val = f'= "{variable.initial_value}"'
         elif variable.variable_type == 'boolean':
             val = '= false'
         elif variable.variable_type == 'integer':
             val = '= 0'
+        elif variable.variable_type == 'string':
+            val = ''
         else:
             val = '= null'
         result.append(
@@ -141,17 +152,30 @@ def generate_automatic_globals(
 
 def generate_global_variable_init(gui_triggers: wtg.W3TriggerData) -> list[str]:
     result = ['\nfunction InitGlobals takes nothing returns nothing']
-    result.append('    local integer i= 0')
+    for variable in gui_triggers.variables:
+        if variable.is_array:
+            result.append('    local integer i= 0')
+            break
     for variable in gui_triggers.variables:
         initial_value = variable.initial_value
-        if not initial_value and variable.variable_type == 'group':
-            initial_value = 'CreateGroup()'
-        elif variable.variable_type == 'player' and not initial_value.endswith(')'):
-            index = int(initial_value[len('Player'):])
-            initial_value = f'Player({index})'
-        elif variable.variable_type == 'force' and not initial_value.endswith(')'):
-            index = int(initial_value[len('Force'):])
-            initial_value = f'bj_FORCE_PLAYER[{index}]'
+        if not variable.is_initialized:
+            if variable.variable_type == 'group':
+                initial_value = 'CreateGroup()'
+            elif variable.variable_type == 'timer':
+                initial_value = 'CreateTimer()'
+            elif not IMPROVED and variable.variable_type == 'integer':
+                initial_value = '0'
+        else:
+            if variable.variable_type == 'unit' and initial_value == 'UnitNull':
+                initial_value = 'null'
+            elif variable.variable_type == 'player' and not initial_value.endswith(')'):
+                index = int(initial_value[len('Player'):])
+                initial_value = f'Player({index})'
+            elif variable.variable_type == 'force' and not initial_value.endswith(')'):
+                index = int(initial_value[len('Force'):])
+                initial_value = f'bj_FORCE_PLAYER[{index}]'
+            elif variable.variable_type == 'string':
+                initial_value = f'"{initial_value}"'
         if initial_value:
             result.append(f'    set udg_{escape_name(variable.name)}={initial_value}')
     result.append('endfunction\n')
@@ -270,12 +294,12 @@ def generate_destructable_setup(doodads: doo.War3PlacementInfo, info: GenInfo) -
 
 
 
-def generate_unit_setup(units: doo.War3PlacementInfo, info: GenInfo) -> list[str]:
+def generate_unit_setup(unit_info: doo.War3PlacementInfo, info: GenInfo) -> list[str]:
     RADIANS_TO_DEGREES = 360.0 / 2 / math.pi
     result: list[str] = []
 
     sections: dict[tuple[bool, int], list[str]] = {}
-    units = sorted(units.units, key=lambda x: x.entity_id)
+    units = sorted(unit_info.units, key=lambda x: x.entity_id)
     for index, unit in enumerate(units):
         if unit.type_id == 'sloc':
             info.start_locations.append(unit)
@@ -293,12 +317,24 @@ def generate_unit_setup(units: doo.War3PlacementInfo, info: GenInfo) -> list[str
                 f"    set u=CreateUnit(p, '{unit.type_id}', {unit.x:.1f}, {unit.y:.1f}, "
                 f"{unit.facing * RADIANS_TO_DEGREES:.3f})"
             ).replace(' -', ' - '))
+        if unit.goldmine_gold_amount != 12500 and unit.goldmine_gold_amount != 0:
+            sections[section].append(f'    call SetResourceAmount({unit_var}, {unit.goldmine_gold_amount})')
+        if unit.hero_level > 1:
+            sections[section].append(f'    call SetHeroLevel({unit_var}, {unit.hero_level}, false)')
+        if unit.hit_points > -1:
+            sections[section].append(f'    set life=GetUnitState({unit_var}, UNIT_STATE_LIFE)')
+            sections[section].append(
+                f'    call SetUnitState({unit_var}, UNIT_STATE_LIFE, {unit.hit_points * 0.01:.2f} * life)'
+            )
+        if unit.mana_points > -1:
+            sections[section].append(f'    call SetUnitState({unit_var}, UNIT_STATE_MANA, {unit.mana_points})')
         if unit.target_acquisition < -1.0:
             sections[section].append((
                 f'    call SetUnitAcquireRange({unit_var}, 200.0)'
             ))
-        if unit.hero_level > 1:
-            sections[section].append(f'    call SetHeroLevel({unit_var}, {unit.hero_level}, false)')
+        for abil in unit.modified_abilities:
+            for _ in range(abil.abil_level):
+                sections[section].append(f"    call SelectHeroSkill({unit_var}, '{abil.abil_id}')")
         if unit.entity_id in info.item_drop_tables:
             drop_func_name = info.item_drop_tables[unit.entity_id]
             sections[section].append((
@@ -363,7 +399,7 @@ def generate_unit_setup(units: doo.War3PlacementInfo, info: GenInfo) -> list[str
     return result
 
 
-def generate_region_setup(regions: w3r.War3RegionInfo, heightmap: w3e.War3Environment) -> list[str]:
+def generate_region_setup(regions: w3r.War3RegionInfo, geometry: w3e.War3Environment) -> list[str]:
     result = ['function CreateRegions takes nothing returns nothing']
     result.append('    local weathereffect we\n')
     for region in regions.regions:
@@ -377,7 +413,7 @@ def generate_region_setup(regions: w3r.War3RegionInfo, heightmap: w3e.War3Enviro
             mid_y = (region.top + region.bottom) / 2
             width = region.right - region.left
             height = region.top - region.bottom
-            z = heightmap.coord_to_height(mid_x, mid_y)
+            z = geometry.coord_to_height(mid_x, mid_y)
             result.append((
                 f'    call SetSoundPosition({region.ambient_sound}, {mid_x:.1f}, {mid_y:.1f}, {z:.1f})'
             ).replace('-', '- '))
@@ -408,21 +444,25 @@ def generate_camera_setup(cameras: w3c.War3CameraInfo) -> list[str]:
 def generate_upgrades_setup(info: w3i.War3MapInformation) -> list[str]:
     result: list[str] = []
     players_present = {player.player_id for player in info.players}
-    written = {player_id: set() for player_id in range(24)}
+    # Note(mm): Upgrades can be listed multiple times; this uses the position of the first appearance but
+    # the value of the last apppearance. Keep an index of previous writes to update old lines if necessary.
+    written: dict[int, dict[str, int]] = {player_id: {} for player_id in range(24)}
     player_lines: dict[int, list[str]] = {}
     for upgrade in info.upgrades:
         for player_id in range(24):
             if player_id not in players_present:
                 continue
             if (1 << player_id) & upgrade.player_flags:
-                if upgrade.upgrade_id in written[player_id]:
-                    continue
                 lines = player_lines.setdefault(player_id, [])
+                target_index = written[player_id].get(upgrade.upgrade_id)
+                if target_index is None:
+                    target_index = len(lines)
+                    lines.append('')
+                    written[player_id][upgrade.upgrade_id] = target_index
                 if upgrade.availability == w3i.UpgradeAvailability.Unavailable:
-                    lines.append(f"    call SetPlayerTechMaxAllowed(Player({player_id}), '{upgrade.upgrade_id}', 0)")
+                    lines[target_index] = f"    call SetPlayerTechMaxAllowed(Player({player_id}), '{upgrade.upgrade_id}', {max(upgrade.level - 1, 0)})"
                 elif upgrade.availability == w3i.UpgradeAvailability.Researched:
-                    lines.append(f"    call SetPlayerTechResearched(Player({player_id}), '{upgrade.upgrade_id}', 1)")
-                written[player_id].add(upgrade.upgrade_id)
+                    lines[target_index] = f"    call SetPlayerTechResearched(Player({player_id}), '{upgrade.upgrade_id}', {max(upgrade.level, 1)})"
     for player_id in range(24):
         if player_id not in players_present:
             continue
@@ -495,27 +535,39 @@ def generate_players(info: GenInfo, map_info: w3i.War3MapInformation) -> list[st
             if mask & force.player_mask_flags:
                 result.append(f'    call SetPlayerTeam(Player({player.player_id}), {index})')
         result.append('')
-        allied_section = ['    // Allied']
-        shared_vision_section = ['    // Shared Vision']
+        allied_section = ['    //   Allied']
+        shared_vision_section = ['    //   Shared Vision']
         if force.force_flags:
+            functions_written = 0
             for player in map_info.players:
                 if not ((1 << player.player_id) & force.player_mask_flags):
                     continue
                 for player2 in map_info.players:
-                    if not ((1 << player.player_id) & force.player_mask_flags):
+                    if not ((1 << player2.player_id) & force.player_mask_flags):
                         continue
                     if player.player_id == player2.player_id:
                         continue
-                    allied_section.append(f'    call setPlayerAllianceStateAllyBJ( Player({player.player_id}), Player({player2.player_id}), true )')
-                    shared_vision_section.append(f'    call SetPlayerAllianceStateVisionBJ( Player({player.player_id}), Player({player2.player_id}), true )')
-                allied_section.append('')
-                shared_vision_section.append('')
-            if w3i.ForcesFlags.Allied & force.force_flags:
+                    allied_section.append(f'    call SetPlayerAllianceStateAllyBJ(Player({player.player_id}), Player({player2.player_id}), true)')
+                    shared_vision_section.append(f'    call SetPlayerAllianceStateVisionBJ(Player({player.player_id}), Player({player2.player_id}), true)')
+                    functions_written += 1
+            allied_section.append('')
+            shared_vision_section.append('')
+            if (w3i.ForcesFlags.Allied & force.force_flags) and functions_written:
                 result.extend(allied_section)
-            if w3i.ForcesFlags.ShareVision & force.force_flags:
+            if (w3i.ForcesFlags.ShareVision & force.force_flags) and functions_written:
                 result.extend(shared_vision_section)
     result.append('endfunction\n')
+    result.extend(init_ally_priorities(info, map_info, active_players_mask, player_id_to_index))
+    return result
 
+
+def init_ally_priorities(
+    info: GenInfo,
+    map_info: w3i.War3MapInformation,
+    active_players_mask: int,
+    player_id_to_index: dict[int, int],
+) -> list[str]:
+    result: list[str] = []
     result.append('function InitAllyPriorities takes nothing returns nothing')
     for player in map_info.players:
         low_flags = player.ally_low_priorities_flags & active_players_mask
@@ -546,24 +598,35 @@ def generate_players(info: GenInfo, map_info: w3i.War3MapInformation) -> list[st
                     )
                     slot += 1
     result.append('endfunction\n')
+    if len(result) == 2:
+        return []
+    info.function_presence.add('InitAllyPriorities')
     return result
 
 
-def generate_main(info: GenInfo, map_info: w3i.War3MapInformation) -> list[str]:
+def generate_main(
+    info: GenInfo, map_info: w3i.War3MapInformation, geometry: w3e.War3Environment,
+) -> list[str]:
     result = [
         '//===========================================================================',
         'function main takes nothing returns nothing',
     ]
+    max_x = geometry.min_x + (geometry.width_plus_1 - 1) * 128
+    max_y = geometry.min_y + (geometry.height_plus_1 - 1) * 128
+    margin_left = geometry.min_x + map_info.map_padding_left*128
+    margin_bottom = geometry.min_y + map_info.map_padding_top*128
+    margin_right = max_x - map_info.map_padding_right*128
+    margin_top = max_y - map_info.map_padding_bottom*128
     result.append((
         f'    call SetCameraBounds('
-        f'{map_info.camera_bounds[1] - 384:.1f} + GetCameraMargin(CAMERA_MARGIN_LEFT), '
-        f'{map_info.camera_bounds[0] - 384:.1f} + GetCameraMargin(CAMERA_MARGIN_BOTTOM), '
-        f'{map_info.camera_bounds[2] + 512:.1f} -GetCameraMargin(CAMERA_MARGIN_RIGHT), '
-        f'{map_info.camera_bounds[3] + 256:.1f} -GetCameraMargin(CAMERA_MARGIN_TOP), '
-        f'{map_info.camera_bounds[7] - 384:.1f} + GetCameraMargin(CAMERA_MARGIN_LEFT), '
-        f'{map_info.camera_bounds[5] + 256:.1f} -GetCameraMargin(CAMERA_MARGIN_TOP), '
-        f'{map_info.camera_bounds[6] + 512:.1f} -GetCameraMargin(CAMERA_MARGIN_RIGHT), '
-        f'{map_info.camera_bounds[4] - 384:.1f} + GetCameraMargin(CAMERA_MARGIN_BOTTOM)'
+        f'{margin_left:.1f} + GetCameraMargin(CAMERA_MARGIN_LEFT), '
+        f'{margin_bottom:.1f} + GetCameraMargin(CAMERA_MARGIN_BOTTOM), '
+        f'{margin_right:.1f} -GetCameraMargin(CAMERA_MARGIN_RIGHT), '
+        f'{margin_top:.1f} -GetCameraMargin(CAMERA_MARGIN_TOP), '
+        f'{margin_left:.1f} + GetCameraMargin(CAMERA_MARGIN_LEFT), '
+        f'{margin_top:.1f} -GetCameraMargin(CAMERA_MARGIN_TOP), '
+        f'{margin_right:.1f} -GetCameraMargin(CAMERA_MARGIN_RIGHT), '
+        f'{margin_bottom:.1f} + GetCameraMargin(CAMERA_MARGIN_BOTTOM)'
         ')'
     ).replace('-', '- '))
 
@@ -595,22 +658,20 @@ def generate_main(info: GenInfo, map_info: w3i.War3MapInformation) -> list[str]:
 
 
 def generate_map_configuration(info: GenInfo, map_info: w3i.War3MapInformation) -> list[str]:
+    # Always present
     result = ['function config takes nothing returns nothing']
     result.append(f'    call SetMapName("{map_info.map_name}")')
     result.append(f'    call SetMapDescription("{map_info.map_description}")')
     result.append(f'    call SetPlayers({len(map_info.players)})')
-    result.append(f'    call SetTeams({len(map_info.forces) + 1})')
+    result.append(f'    call SetTeams({len(map_info.players)})')
     if w3i.MapFlags.HIDE_MINIMAP in map_info.flags:
         result.append(f'    call SetGamePlacement(MAP_PLACEMENT_USE_MAP_SETTINGS)')
     result.append('')
     
-    active_player_ids = [p.player_id for p in map_info.players]
     index = 0
-    for unit in sorted(info.start_locations, key=lambda x: x.player_owner):
-        if unit.player_owner not in active_player_ids:
-            continue
+    for player in map_info.players:
         result.append((
-            f'    call DefineStartLocation({index}, {unit.x:.1f}, {unit.y:.1f})'
+            f'    call DefineStartLocation({index}, {player.start_pos[0]:.1f}, {player.start_pos[1]:.1f})'
         ).replace(' -', ' - '))
         index += 1
     result.append('\n    // Player setup')
@@ -618,7 +679,8 @@ def generate_map_configuration(info: GenInfo, map_info: w3i.War3MapInformation) 
         result.append('    call InitCustomPlayerSlots()')
     if w3i.MapFlags.FIXED_FORCES:
         result.append('    call InitCustomTeams()')
-    result.append('    call InitAllyPriorities()')
+    if 'InitAllyPriorities' in info.function_presence:
+        result.append('    call InitAllyPriorities()')
     result.append('endfunction\n')
     return result
 
@@ -703,81 +765,124 @@ FUNCTION_SUBSTITUTIONS = {
 }
 
 
-def generate_operator(func: wtg.EcaFunction) -> str:
-    type_hint = func.name[len('OperatorCompare'):].lower()
+def generate_operator(func: wtg.EcaFunction, operator_name: str, prepend_info: PrependInfo) -> str:
+    type_hint = func.name[len(operator_name):].lower()
     return (
-        f'{generate_gui_parameter(func.parameters[0], type_hint)} '
+        f'{generate_gui_parameter(func.parameters[0], type_hint, prepend_info)} '
         f'{OPERATORS[func.parameters[1].value]} '
-        f'{generate_gui_parameter(func.parameters[2], type_hint)}'
+        f'{generate_gui_parameter(func.parameters[2], type_hint, prepend_info)}'
     )
 
 
-def generate_condition(condition: wtg.EcaFunction) -> str:
+def generate_condition(condition: wtg.EcaFunction, prepend_info: PrependInfo) -> str:
     if condition.name.startswith('OperatorCompare'):
-        return generate_operator(condition)
-    param_info = wtg.LIB_INFO[condition.name]
-    assert len(condition.parameters) == len(param_info.arg_types)
-    func_name = FUNCTION_SUBSTITUTIONS.get(condition.name, condition.name)
-    parameters = [
-        generate_gui_parameter(parameter, pinfo)
-        for parameter, pinfo in zip(condition.parameters, param_info.arg_types)
-    ]
-    return f'{func_name}({", ".join(parameters)})'
-    
+        result = f'( {generate_operator(condition, "OperatorCompare", prepend_info)} )'
+    elif condition.name.startswith('Operator'):
+        result = f'( {generate_operator(condition, "Operator", prepend_info)} )'
+    elif condition.name == 'OrMultiple':
+        result = ' or '.join(f'({generate_condition(subfunc, prepend_info)})' for subfunc in condition.subfunctions)
+    elif condition.name == 'AndMultiple':
+        result = ' and '.join(f'({generate_condition(subfunc, prepend_info)})' for subfunc in condition.subfunctions)
+    else:
+        param_info = wtg.LIB_INFO[condition.name]
+        assert len(condition.parameters) == len(param_info.arg_types)
+        func_name = FUNCTION_SUBSTITUTIONS.get(condition.name, condition.name)
+        parameters = [
+            generate_gui_parameter(parameter, pinfo, prepend_info)
+            for parameter, pinfo in zip(condition.parameters, param_info.arg_types)
+        ]
+        result = f'{func_name}({", ".join(parameters)})'
+    return result
 
-def generate_gui_parameter(parameter: wtg.EcaParameter, paramtype: str) -> str:
+
+def generate_top_level_condition(condition: wtg.EcaFunction, prepend_info: PrependInfo) -> str:
+    prepend_info.action_index.append(1)
+    result: list[str] = []
+    result.append(f'    if ( not {generate_condition(condition, prepend_info)} ) then')
+    result.append('        return false')
+    result.append('    endif')
+    prepend_info.action_index.pop()
+    prepend_info.action_index[-1] += 1
+    return result
+
+
+def generate_gui_parameter(parameter: wtg.EcaParameter, paramtype: str, prepend_info: PrependInfo) -> str:
+    func_name = prepend_info.func_name()
+    prepend_info.action_index.append(1)
     subscript = ''
     if parameter.subscript is not None:
-        subscript = f'[{generate_gui_parameter(parameter.subscript, "integer")}]'
+        subscript = f'[{generate_gui_parameter(parameter.subscript, "integer", prepend_info)}]'
     if parameter.parameter_type == wtg.EcaParameterType.Variable:
         if parameter.value.startswith('gg_'):
-            return f'{parameter.value}{subscript}'
-        return f'udg_{parameter.value}{subscript}'
+            result = f'{parameter.value}{subscript}'
+        else:
+            result = f'udg_{parameter.value}{subscript}'
     elif parameter.parameter_type == wtg.EcaParameterType.String:
-        if paramtype == 'string' or parameter.value.startswith('TRIGSTR'):
-            return f'"{parameter.value.replace("\\", "\\\\")}"'
+        if (paramtype == 'string'
+            or parameter.value.startswith('TRIGSTR')
+            or paramtype.endswith('file')
+            or paramtype.endswith('script')
+        ):
+            result = f'"{parameter.value.replace("\\", "\\\\")}"'
         elif paramtype.endswith('code'):
-            return f"'{parameter.value}'"
-        elif paramtype.endswith('file'):
-            return f'"{parameter.value.replace("\\", "\\\\")}"'
-        return parameter.value
+            result = f"'{parameter.value}'"
+        else:
+            result = parameter.value
     elif parameter.parameter_type == wtg.EcaParameterType.Function:
         f = parameter.children
         assert f is not None
-        return generate_condition(f)
+        if paramtype == 'boolexpr':
+            result = f'Condition(function {func_name})'
+            prepend_info.lines.append(f'function {func_name} takes nothing returns boolean')
+            prepend_info.lines.append(f'    return {generate_condition(f, prepend_info)}')
+            prepend_info.lines.append(f'endfunction\n')
+        else:
+            result = generate_condition(f, prepend_info)
     elif parameter.parameter_type == wtg.EcaParameterType.Preset:
-        return wtg.LIB_INFO[parameter.value].arg_types[1].replace('`', '"')
-    return parameter.value
+        result = wtg.LIB_INFO[parameter.value].arg_types[1].replace('`', '"')
+    else:
+        result = parameter.value
+    prepend_info.action_index.pop()
+    prepend_info.action_index[-1] += 1
+    return result
 
 
 
-def generate_gui_action(action: wtg.EcaFunction, info: GenInfo, prepend_info: PrependInfo | None) -> list[str]:
+def generate_gui_action(action: wtg.EcaFunction, info: GenInfo, prepend_info: PrependInfo) -> list[str]:
     check_parameters(action.parameters, info)
     function_name = FUNCTION_SUBSTITUTIONS.get(action.name, action.name)
+    prepend_info.action_index.append(1)
     if action.name == 'CommentString':
         assert len(action.parameters) == 1, (
             f"Error: Comments only take one parameter, got {len(action.parameters)}"
         )
-        return [f'{info.indent()}// {action.parameters[0].value}']
+        result = [f'{info.indent()}// {action.parameters[0].value}']
     elif action.name == 'CustomScriptCode':
         assert len(action.parameters) == 1, (
             f"Error: Custom script only takes one parameter, got {len(action.parameters)}"
         )
-        return [f'{info.indent()}{escape_custom_code(action.parameters[0].value)}']
+        result = [f'{info.indent()}{escape_custom_code(action.parameters[0].value)}']
     elif action.name == 'ReturnAction':
-        return [f'{info.indent()}return']
+        result = [f'{info.indent()}return']
     elif action.name == 'SetVariable':
         assert len(action.parameters) == 2
         var_info = info.variables[action.parameters[0].value]
         subscript = ''
         if action.parameters[0].subscript is not None:
-            subscript = f'[{generate_gui_parameter(action.parameters[0].subscript, "integer")}]'
-        return [
+            subscript = f'[{generate_gui_parameter(action.parameters[0].subscript, "integer", prepend_info)}]'
+        result = [
             f'{info.indent()}set udg_{var_info.name}{subscript}'
-            f'={generate_gui_parameter(action.parameters[1], var_info.variable_type)}'
+            f'={generate_gui_parameter(action.parameters[1], var_info.variable_type, prepend_info)}'
         ]
     elif action.name == 'IfThenElse':
-        result = [f'{info.indent()}if ( {generate_gui_parameter(action.parameters[0], "boolean")} ) then']
+        if IMPROVED:
+            result = [f'{info.indent()}if {generate_gui_parameter(action.parameters[0], "boolean", prepend_info)} then']
+        else:
+            prepend_func_name = prepend_info.func_name()
+            prepend_info.lines.append(f'function {prepend_func_name} takes nothing returns boolean')
+            prepend_info.lines.append(f'    return {generate_gui_parameter(action.parameters[0], "boolean", prepend_info)}')
+            prepend_info.lines.append(f'endfunction\n')
+            result = [f'{info.indent()}if ( {prepend_func_name}() ) then']
         info.indent_level += 4
         result.extend(generate_gui_action(action.parameters[1].children, info, prepend_info))
         info.indent_level -= 4
@@ -786,12 +891,11 @@ def generate_gui_action(action: wtg.EcaFunction, info: GenInfo, prepend_info: Pr
         result.extend(generate_gui_action(action.parameters[2].children, info, prepend_info))
         info.indent_level -= 4
         result.append(f'{info.indent()}endif')
-        return result
     elif action.name == 'ForLoopA':
         assert len(action.parameters) == 3
         result = []
-        result.append(f'{info.indent()}set bj_forLoopAIndex={generate_gui_parameter(action.parameters[0], "integer")}')
-        result.append(f'{info.indent()}set bj_forLoopAIndexEnd={generate_gui_parameter(action.parameters[1], "integer")}')
+        result.append(f'{info.indent()}set bj_forLoopAIndex={generate_gui_parameter(action.parameters[0], "integer", prepend_info)}')
+        result.append(f'{info.indent()}set bj_forLoopAIndexEnd={generate_gui_parameter(action.parameters[1], "integer", prepend_info)}')
         result.append(f'{info.indent()}loop')
         info.indent_level += 4
         result.append(f'{info.indent()}exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd')
@@ -799,28 +903,32 @@ def generate_gui_action(action: wtg.EcaFunction, info: GenInfo, prepend_info: Pr
         result.append(f'{info.indent()}set bj_forLoopAIndex=bj_forLoopAIndex + 1')
         info.indent_level -= 4
         result.append(f'{info.indent()}endloop')
-        return result
     elif action.name == 'ForGroup':
-        prepend_func_name = f'Trig_{prepend_info.trigger_name}_Func{prepend_info.action_index:03}002'
         result = [
             f'{info.indent()}call {function_name}'
-            f'({generate_gui_parameter(action.parameters[0], "group")}, '
-            f'function {prepend_func_name})'
+            f'({generate_gui_parameter(action.parameters[0], "group", prepend_info)}, '
         ]
+        prepend_func_name = prepend_info.func_name()
+        result[-1] += f'function {prepend_func_name})'
         prepend_info.lines.append(f'function {prepend_func_name} takes nothing returns nothing')
-        _info = GenInfo(info.variables.values())
-        _info.indent_level = 4
-        prepend_info.lines.extend(generate_gui_action(action.parameters[1].children, _info, None))
+        prepend_info.lines.extend(generate_gui_action(
+            action.parameters[1].children,
+            GenInfo(info.variables.values(), 4),
+            prepend_info
+        ))
         prepend_info.lines.append('endfunction\n')
-        return result
     # todo: other special-case functions as necessary
-    param_info = wtg.LIB_INFO[action.name]
-    assert len(action.parameters) == len(param_info.arg_types)
-    parameters = [
-        generate_gui_parameter(parameter, pinfo)
-        for parameter, pinfo in zip(action.parameters, param_info.arg_types)
-    ]
-    return [f'{info.indent()}call {function_name}({", ".join(parameters)})']
+    else:
+        param_info = wtg.LIB_INFO[action.name]
+        assert len(action.parameters) == len(param_info.arg_types)
+        parameters = [
+            generate_gui_parameter(parameter, pinfo, prepend_info)
+            for parameter, pinfo in zip(action.parameters, param_info.arg_types)
+        ]
+        result = [f'{info.indent()}call {function_name}({", ".join(parameters)})']
+    prepend_info.action_index.pop()
+    prepend_info.action_index[-1] += 1
+    return result
 
 
 def generate_gui_trigger(trigger: wtg.Trigger, info: GenInfo) -> list[str]:
@@ -833,25 +941,35 @@ def generate_gui_trigger(trigger: wtg.Trigger, info: GenInfo) -> list[str]:
         check_parameters(eca.parameters, info)
         functions[eca.function_type].append(eca)
 
-    # Conditions
     trigger_name = escape_name(trigger.name)
+    prepend_info = PrependInfo(trigger_name, 1)
+
+    # Conditions init
     if functions[wtg.EcaFunctionType.Condition]:
         result.append(f'function Trig_{trigger_name}_Conditions takes nothing returns boolean')
-        for condition in functions[wtg.EcaFunctionType.Condition]:
-            result.append(f'    if ( not ( {generate_condition(condition)} ) ) then')
-            result.append('        return false')
-            result.append('    endif')
+
+    # Actions init
+    body_result: list[str] = []
+    info.indent_level = 4
+    body_result.append(f'function Trig_{trigger_name}_Actions takes nothing returns nothing')
+
+    for eca in trigger.eca_functions:
+        if not eca.is_enabled:
+            prepend_info.action_index[-1] += 1
+        elif eca.function_type == wtg.EcaFunctionType.Event:
+            prepend_info.action_index[-1] += 1
+        elif eca.function_type == wtg.EcaFunctionType.Condition:
+            result.extend(generate_top_level_condition(eca, prepend_info))
+        else:
+            body_result.extend(generate_gui_action(eca, info, prepend_info))
+        assert len(prepend_info.action_index) == 1
+    
+    # Conditions
+    if functions[wtg.EcaFunctionType.Condition]:
         result.append('    return true')
         result.append('endfunction\n')
 
     # Actions
-    prepend_info = PrependInfo(trigger_name, 1)
-    body_result: list[str] = []
-    info.indent_level = 4
-    body_result.append(f'function Trig_{trigger_name}_Actions takes nothing returns nothing')
-    for action in functions[wtg.EcaFunctionType.Action]:
-        body_result.extend(generate_gui_action(action, info, prepend_info))
-        prepend_info.action_index += 1
     body_result.append('endfunction\n')
 
     # Initialization
@@ -861,13 +979,13 @@ def generate_gui_trigger(trigger: wtg.Trigger, info: GenInfo) -> list[str]:
     if trigger.is_initially_off:
         body_result.append(f'    call DisableTrigger(gg_trg_{trigger_name})')
     for event in functions[wtg.EcaFunctionType.Event]:
-        if event.name == 'MapInitializationEvent':
-            info.map_init_triggers.append(f'gg_trg_{trigger_name}')
+        if event.name == 'MapInitializationEvent' and trigger_name not in info.map_init_triggers:
+            info.map_init_triggers.append(trigger_name)
             continue
         param_info = wtg.LIB_INFO[event.name]
         assert len(param_info.arg_types) == len(event.parameters)
         parameters = ''.join([
-            ", " + generate_gui_parameter(p, ptype)
+            ", " + generate_gui_parameter(p, ptype, prepend_info)
             for p, ptype in zip(event.parameters, param_info.arg_types)
         ])
         body_result.append(f'    call {event.name}(gg_trg_{trigger_name}{parameters})')
@@ -888,6 +1006,8 @@ def generate_triggers(
     for gui_trigger, text_trigger in zip(gui_triggers.triggers, text_triggers.triggers):
         if not gui_trigger.is_enabled:
             continue
+        if gui_trigger.is_map_init:
+            info.map_init_triggers.append(gui_trigger.name)
         result.append('//===========================================================================')
         result.append(f'// Trigger: {gui_trigger.name}',)
         if gui_trigger.description:
@@ -912,7 +1032,7 @@ def generate(map_dir: str) -> None:
     regions = w3r.from_text_file(f'{map_dir}/{REGIONS_FILE_NAME}')
     cameras = w3c.from_text_file(f'{map_dir}/{CAMERAS_FILE_NAME}')
     sounds = w3s.from_text_file(f'{map_dir}/{SOUNDS_FILE_NAME}')
-    heightmap = w3e.read_binary_file(f'{map_dir}/war3map.w3e')
+    geometry = w3e.read_binary_file(f'{map_dir}/war3map.w3e')
     string_table = wts.read_wts(f'{map_dir}/war3map.wts')
 
     result: list[str] = []
@@ -962,7 +1082,7 @@ def generate(map_dir: str) -> None:
 
     # Regions
     result.append(section_header('Regions'))
-    result.extend(generate_region_setup(regions, heightmap))
+    result.extend(generate_region_setup(regions, geometry))
 
     # Cameras
     result.append(section_header('Cameras'))
@@ -983,7 +1103,7 @@ def generate(map_dir: str) -> None:
     result.append('//===========================================================================')
     result.append('function RunInitializationTriggers takes nothing returns nothing')
     for trigger_name in info.map_init_triggers:
-        result.append(f'    call ConditionalTriggerExecute({trigger_name})')
+        result.append(f'    call ConditionalTriggerExecute(gg_trg_{trigger_name})')
     result.append('endfunction\n')
 
     # Upgrades
@@ -1000,7 +1120,7 @@ def generate(map_dir: str) -> None:
 
     # Main Initialization
     result.append(section_header('Main Initialization'))
-    result.extend(generate_main(info, map_info))
+    result.extend(generate_main(info, map_info, geometry))
 
     # Map Configuration
     result.append(section_header('Map Configuration'))
@@ -1017,4 +1137,16 @@ def generate(map_dir: str) -> None:
     
 
 if __name__ == '__main__':
-    generate('maps/Human01')
+    import sys
+    if len(sys.argv) > 1:
+        _target = sys.argv[1]
+    else:
+        _target = 'maps/Human01'
+    if '-i' in sys.argv:
+        IMPROVED = True
+    if '-h' in sys.argv:
+        print("Usage: mapscript.py <map dir> [-i]")
+        print("  -i: Use improved generation (inline if conditions)")
+        sys.exit()
+    print(f'Generating script for {_target}')
+    generate(_target)

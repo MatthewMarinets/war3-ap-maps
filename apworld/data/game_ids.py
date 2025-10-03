@@ -921,7 +921,7 @@ class GameID(enum.StrEnum):
     FURBOLG_HUT = 'nfr1'
     FURBOLG_HUT_2 = 'nfr2'
     GNOLL_HUT = 'ngnh'
-    GNOLL_HUT_2 = 'ngn2'
+    GNOLL_HUT_2 = 'ngt2'
     HARPY_NEST = 'nhns'
     ICE_TROLL_HUT_0 = 'nth0'
     ICE_TROLL_HUT_1 = 'nth1'
