@@ -3,6 +3,7 @@ Utility for regenerating war3map.j script files from other data
 """
 
 from . import wtg, wct, w3i, doo, w3r, w3c, w3s, wts, w3e, tables
+import tomllib
 from datetime import datetime
 from .common import (
     TRIGGERS_CUSTOM_TEXT_FILE_NAME,
@@ -17,7 +18,10 @@ from .common import (
 import math
 
 MAP_SCRIPT_FILE_NAME = 'war3map.j'
-IMPROVED = False
+
+class Options:
+    IMPROVED = False
+    SEPARATE_ITEM_INIT_FUNC = True
 
 
 class GenInfo:
@@ -28,7 +32,6 @@ class GenInfo:
         self.indent_level = indent_level
         self.variables = {v.name: v for v in variables}
         self.map_init_triggers: list[str] = []
-        self.start_locations: list[doo.UnitEntity] = []
         self.item_drop_tables: dict[int, str] = {}
         self.function_presence: set[str] = set()
 
@@ -95,7 +98,7 @@ def generate_user_defined_globals(gui_triggers: wtg.W3TriggerData) -> list[str]:
         'unitcode': 'integer'
     }
     initializable_types = {'integer', 'real'}
-    if IMPROVED:
+    if Options.IMPROVED:
         initializable_types.add('boolean')
     for variable in gui_triggers.variables:
         var_type = sub_var_type.get(variable.variable_type, variable.variable_type)
@@ -103,7 +106,7 @@ def generate_user_defined_globals(gui_triggers: wtg.W3TriggerData) -> list[str]:
             val = ''
         elif variable.initial_value and var_type in initializable_types:
             val = f'= {variable.initial_value}'
-        elif IMPROVED and variable.initial_value and var_type == 'string':
+        elif Options.IMPROVED and variable.initial_value and var_type == 'string':
             val = f'= "{variable.initial_value}"'
         elif variable.variable_type == 'boolean':
             val = '= false'
@@ -163,7 +166,7 @@ def generate_global_variable_init(gui_triggers: wtg.W3TriggerData) -> list[str]:
                 initial_value = 'CreateGroup()'
             elif variable.variable_type == 'timer':
                 initial_value = 'CreateTimer()'
-            elif not IMPROVED and variable.variable_type == 'integer':
+            elif not Options.IMPROVED and variable.variable_type == 'integer':
                 initial_value = '0'
         else:
             if variable.variable_type == 'unit' and initial_value == 'UnitNull':
@@ -293,6 +296,30 @@ def generate_destructable_setup(doodads: doo.War3PlacementInfo, info: GenInfo) -
     return result
 
 
+def generate_preplaced_items(
+    unit_info: doo.War3PlacementInfo, info: GenInfo, item_data: dict[str, dict],
+) -> list[str]:
+    if not Options.SEPARATE_ITEM_INIT_FUNC:
+        return []
+    result = [section_header('Items')]
+    result.append('function CreateAllItems takes nothing returns nothing')
+    result.append('    local integer itemID\n')
+    placed_items: list[doo.UnitEntity] = []
+    for unit in unit_info.units:
+        if unit.player_owner != 27:
+            continue
+        if unit.type_id in item_data or unit.type_id.startswith('I'):
+            placed_items.append(unit)
+    for item in sorted(placed_items, key=lambda x: x.type_id):
+        result.append((
+            f"    call CreateItem('{item.type_id}', {item.x:.1f}, {item.y:.1f})"
+        ).replace('-', '- '))
+    result.append('endfunction\n')
+    if not placed_items:
+        return []
+    info.function_presence.add('CreateAllItems')
+    return result
+
 
 def generate_unit_setup(unit_info: doo.War3PlacementInfo, info: GenInfo) -> list[str]:
     RADIANS_TO_DEGREES = 360.0 / 2 / math.pi
@@ -302,7 +329,8 @@ def generate_unit_setup(unit_info: doo.War3PlacementInfo, info: GenInfo) -> list
     units = sorted(unit_info.units, key=lambda x: x.entity_id)
     for index, unit in enumerate(units):
         if unit.type_id == 'sloc':
-            info.start_locations.append(unit)
+            continue
+        if unit.type_id[0] == 'I' and Options.SEPARATE_ITEM_INIT_FUNC:
             continue
         section = (unit.type_id in tables.BUILDING_IDS, unit.player_owner)
         unit_var = f'gg_unit_{unit.type_id}_{unit.entity_id:04}'
@@ -345,13 +373,14 @@ def generate_unit_setup(unit_info: doo.War3PlacementInfo, info: GenInfo) -> list
             ))
 
     NEUTRAL_PASSIVE_PLAYER = 27
+    NEUTRAL_HOSTILE_PLAYER = 24
     PLAYER_LIST = list(range(25)) + [NEUTRAL_PASSIVE_PLAYER]
     for player_id in PLAYER_LIST:
         if player_id == NEUTRAL_PASSIVE_PLAYER:
             functions = ['CreateNeutralPassiveBuildings', 'CreateNeutralPassive']
             player_literal = 'Player(PLAYER_NEUTRAL_PASSIVE)'
-        elif player_id == 24:
-            functions = ['CreateNeutralPassiveBuildings', 'CreateNeutralHostile']
+        elif player_id == NEUTRAL_HOSTILE_PLAYER:
+            functions = ['CreateNeutralHostileBuildings', 'CreateNeutralHostile']
             player_literal = 'Player(PLAYER_NEUTRAL_AGGRESSIVE)'
         else:
             functions = [f'CreateBuildingsForPlayer{player_id}', f'CreateUnitsForPlayer{player_id}']
@@ -389,12 +418,18 @@ def generate_unit_setup(unit_info: doo.War3PlacementInfo, info: GenInfo) -> list
 
     result.append('//===========================================================================')
     result.append('function CreateAllUnits takes nothing returns nothing')
-    result.append('    call CreateNeutralPassiveBuildings()')
+    if (True, NEUTRAL_HOSTILE_PLAYER) in sections:
+        result.append('    call CreateNeutralHostileBuildings()')
+    if (True, NEUTRAL_PASSIVE_PLAYER) in sections:
+        result.append('    call CreateNeutralPassiveBuildings()')
     result.append('    call CreatePlayerBuildings()')
-    result.append('    call CreateNeutralHostile()')
-    result.append('    call CreateNeutralPassive()')
+    if (False, NEUTRAL_HOSTILE_PLAYER) in sections:
+        result.append('    call CreateNeutralHostile()')
+    if (False, NEUTRAL_PASSIVE_PLAYER) in sections:
+        result.append('    call CreateNeutralPassive()')
     result.append('    call CreatePlayerUnits()')
     result.append('endfunction\n')
+    info.function_presence.add('CreateAllUnits')
 
     return result
 
@@ -441,49 +476,62 @@ def generate_camera_setup(cameras: w3c.War3CameraInfo) -> list[str]:
     return result
 
 
-def generate_upgrades_setup(info: w3i.War3MapInformation) -> list[str]:
-    result: list[str] = []
-    players_present = {player.player_id for player in info.players}
-    # Note(mm): Upgrades can be listed multiple times; this uses the position of the first appearance but
+def generate_upgrades_setup(map_info: w3i.War3MapInformation, upgrade_data: dict[str, dict]) -> list[str]:
+    if not map_info.upgrades:
+        return []
+    result: list[str] = [section_header('Upgrades')]
+    players_present = {player.player_id for player in map_info.players}
+    # Note(mm): Upgrades can be listed multiple times; code uses the position of the first appearance but
     # the value of the last apppearance. Keep an index of previous writes to update old lines if necessary.
-    written: dict[int, dict[str, int]] = {player_id: {} for player_id in range(24)}
-    player_lines: dict[int, list[str]] = {}
-    for upgrade in info.upgrades:
+
+    values_to_write: dict[int, dict[tuple[str, str], int]] = {}
+    FUNCTION_NAMES = {
+        w3i.UpgradeAvailability.Unavailable: 'SetPlayerTechMaxAllowed',
+        w3i.UpgradeAvailability.Researched: 'SetPlayerTechResearched',
+    }
+    for upgrade in map_info.upgrades:
         for player_id in range(24):
             if player_id not in players_present:
                 continue
-            if (1 << player_id) & upgrade.player_flags:
-                lines = player_lines.setdefault(player_id, [])
-                target_index = written[player_id].get(upgrade.upgrade_id)
-                if target_index is None:
-                    target_index = len(lines)
-                    lines.append('')
-                    written[player_id][upgrade.upgrade_id] = target_index
+            if not ((1 << player_id) & upgrade.player_flags):
+                continue
+            player_data = values_to_write.setdefault(player_id, {})
+            last_value = player_data.setdefault((upgrade.upgrade_id, FUNCTION_NAMES[upgrade.availability]))
+            if last_value is None:
                 if upgrade.availability == w3i.UpgradeAvailability.Unavailable:
-                    lines[target_index] = f"    call SetPlayerTechMaxAllowed(Player({player_id}), '{upgrade.upgrade_id}', {max(upgrade.level - 1, 0)})"
-                elif upgrade.availability == w3i.UpgradeAvailability.Researched:
-                    lines[target_index] = f"    call SetPlayerTechResearched(Player({player_id}), '{upgrade.upgrade_id}', {max(upgrade.level, 1)})"
+                    last_value = 0x7fff_ffff
+                else:
+                    last_value = 0
+            if upgrade.availability == w3i.UpgradeAvailability.Unavailable:
+                player_data[upgrade.upgrade_id, FUNCTION_NAMES[upgrade.availability]] = min(last_value, upgrade.level)
+            else:
+                player_data[upgrade.upgrade_id, FUNCTION_NAMES[upgrade.availability]] = max(last_value, upgrade.level+1)
     for player_id in range(24):
         if player_id not in players_present:
             continue
-        if player_id in player_lines:
-            result.append(f'function InitUpgrades_Player{player_id} takes nothing returns nothing')
-            result.extend(player_lines[player_id])
-            result.append('endfunction\n')
+        if player_id not in values_to_write:
+            continue
+        player_data = values_to_write[player_id]
+        result.append(f'function InitUpgrades_Player{player_id} takes nothing returns nothing')
+        for (upgrade_id, func), level in player_data.items():
+            result.append(f"    call {func}(Player({player_id}), '{upgrade_id}', {level})")
+        result.append('endfunction\n')
     result.append('function InitUpgrades takes nothing returns nothing')
     for player_id in range(24):
-        if player_id in player_lines:
+        if player_id in values_to_write:
             result.append(f'    call InitUpgrades_Player{player_id}()')
     result.append('endfunction\n')
     return result
 
 
-def generate_techtree_setup(info: w3i.War3MapInformation) -> list[str]:
-    result: list[str] = []
-    players_present = {player.player_id for player in info.players}
-    written = {player_id: set() for player_id in range(24)}
+def generate_techtree_setup(map_info: w3i.War3MapInformation) -> list[str]:
+    if not map_info.technologies:
+        return []
+    result: list[str] = [section_header('TechTree')]
+    players_present = {player.player_id for player in map_info.players}
+    written: dict[int, set[str]] = {player_id: set() for player_id in range(24)}
     player_lines: dict[int, list[str]] = {}
-    for upgrade in info.technologies:
+    for upgrade in map_info.technologies:
         for player_id in range(24):
             if player_id not in players_present:
                 continue
@@ -646,7 +694,10 @@ def generate_main(
     result.append(f'    call InitUpgrades()')
     result.append(f'    call InitTechTree()')
     result.append(f'    call CreateAllDestructables()')
-    result.append(f'    call CreateAllUnits()')
+    if 'CreateAllItems' in info.function_presence:
+        result.append(f'    call CreateAllItems()')
+    if 'CreateAllUnits' in info.function_presence:
+        result.append(f'    call CreateAllUnits()')
     result.append(f'    call InitBlizzard()')
     result.append('\n')
     result.append(f'    call InitGlobals()')
@@ -765,40 +816,43 @@ FUNCTION_SUBSTITUTIONS = {
 }
 
 
-def generate_operator(func: wtg.EcaFunction, operator_name: str, prepend_info: PrependInfo) -> str:
+def generate_operator(func: wtg.EcaFunction, operator_name: str, info: GenInfo, prepend_info: PrependInfo) -> str:
     type_hint = func.name[len(operator_name):].lower()
     return (
-        f'{generate_gui_parameter(func.parameters[0], type_hint, prepend_info)} '
+        f'{generate_gui_parameter(func.parameters[0], type_hint, info, prepend_info)} '
         f'{OPERATORS[func.parameters[1].value]} '
-        f'{generate_gui_parameter(func.parameters[2], type_hint, prepend_info)}'
+        f'{generate_gui_parameter(func.parameters[2], type_hint, info, prepend_info)}'
     )
 
 
-def generate_condition(condition: wtg.EcaFunction, prepend_info: PrependInfo) -> str:
+def generate_condition(condition: wtg.EcaFunction, info: GenInfo, prepend_info: PrependInfo) -> str:
+    check_parameters(condition.parameters, info)
     if condition.name.startswith('OperatorCompare'):
-        result = f'( {generate_operator(condition, "OperatorCompare", prepend_info)} )'
+        result = f'( {generate_operator(condition, "OperatorCompare", info, prepend_info)} )'
     elif condition.name.startswith('Operator'):
-        result = f'( {generate_operator(condition, "Operator", prepend_info)} )'
+        result = f'( {generate_operator(condition, "Operator", info, prepend_info)} )'
     elif condition.name == 'OrMultiple':
-        result = ' or '.join(f'({generate_condition(subfunc, prepend_info)})' for subfunc in condition.subfunctions)
+        result = ' or '.join(f'({generate_condition(subfunc, info, prepend_info)})' for subfunc in condition.subfunctions)
     elif condition.name == 'AndMultiple':
-        result = ' and '.join(f'({generate_condition(subfunc, prepend_info)})' for subfunc in condition.subfunctions)
+        result = ' and '.join(f'({generate_condition(subfunc, info, prepend_info)})' for subfunc in condition.subfunctions)
     else:
         param_info = wtg.LIB_INFO[condition.name]
         assert len(condition.parameters) == len(param_info.arg_types)
         func_name = FUNCTION_SUBSTITUTIONS.get(condition.name, condition.name)
         parameters = [
-            generate_gui_parameter(parameter, pinfo, prepend_info)
+            generate_gui_parameter(parameter, pinfo, info, prepend_info)
             for parameter, pinfo in zip(condition.parameters, param_info.arg_types)
         ]
         result = f'{func_name}({", ".join(parameters)})'
     return result
 
 
-def generate_top_level_condition(condition: wtg.EcaFunction, prepend_info: PrependInfo) -> str:
+def generate_top_level_condition(
+    condition: wtg.EcaFunction, info: GenInfo, prepend_info: PrependInfo,
+) -> list[str]:
     prepend_info.action_index.append(1)
     result: list[str] = []
-    result.append(f'    if ( not {generate_condition(condition, prepend_info)} ) then')
+    result.append(f'    if ( not {generate_condition(condition, info, prepend_info)} ) then')
     result.append('        return false')
     result.append('    endif')
     prepend_info.action_index.pop()
@@ -806,12 +860,17 @@ def generate_top_level_condition(condition: wtg.EcaFunction, prepend_info: Prepe
     return result
 
 
-def generate_gui_parameter(parameter: wtg.EcaParameter, paramtype: str, prepend_info: PrependInfo) -> str:
+def generate_gui_parameter(
+    parameter: wtg.EcaParameter,
+    paramtype: str,
+    info: GenInfo,
+    prepend_info: PrependInfo,
+) -> str:
     func_name = prepend_info.func_name()
     prepend_info.action_index.append(1)
     subscript = ''
     if parameter.subscript is not None:
-        subscript = f'[{generate_gui_parameter(parameter.subscript, "integer", prepend_info)}]'
+        subscript = f'[{generate_gui_parameter(parameter.subscript, "integer", info, prepend_info)}]'
     if parameter.parameter_type == wtg.EcaParameterType.Variable:
         if parameter.value.startswith('gg_'):
             result = f'{parameter.value}{subscript}'
@@ -833,11 +892,12 @@ def generate_gui_parameter(parameter: wtg.EcaParameter, paramtype: str, prepend_
         assert f is not None
         if paramtype == 'boolexpr':
             result = f'Condition(function {func_name})'
+            contents = generate_condition(f, info, prepend_info)
             prepend_info.lines.append(f'function {func_name} takes nothing returns boolean')
-            prepend_info.lines.append(f'    return {generate_condition(f, prepend_info)}')
+            prepend_info.lines.append(f'    return {contents}')
             prepend_info.lines.append(f'endfunction\n')
         else:
-            result = generate_condition(f, prepend_info)
+            result = generate_condition(f, info, prepend_info)
     elif parameter.parameter_type == wtg.EcaParameterType.Preset:
         result = wtg.LIB_INFO[parameter.value].arg_types[1].replace('`', '"')
     else:
@@ -869,18 +929,19 @@ def generate_gui_action(action: wtg.EcaFunction, info: GenInfo, prepend_info: Pr
         var_info = info.variables[action.parameters[0].value]
         subscript = ''
         if action.parameters[0].subscript is not None:
-            subscript = f'[{generate_gui_parameter(action.parameters[0].subscript, "integer", prepend_info)}]'
+            subscript = f'[{generate_gui_parameter(action.parameters[0].subscript, "integer", info, prepend_info)}]'
         result = [
             f'{info.indent()}set udg_{var_info.name}{subscript}'
-            f'={generate_gui_parameter(action.parameters[1], var_info.variable_type, prepend_info)}'
+            f'={generate_gui_parameter(action.parameters[1], var_info.variable_type, info, prepend_info)}'
         ]
     elif action.name == 'IfThenElse':
-        if IMPROVED:
-            result = [f'{info.indent()}if {generate_gui_parameter(action.parameters[0], "boolean", prepend_info)} then']
+        if Options.IMPROVED:
+            result = [f'{info.indent()}if {generate_gui_parameter(action.parameters[0], "boolean", info, prepend_info)} then']
         else:
             prepend_func_name = prepend_info.func_name()
+            contents = generate_gui_parameter(action.parameters[0], "boolean", info, prepend_info)
             prepend_info.lines.append(f'function {prepend_func_name} takes nothing returns boolean')
-            prepend_info.lines.append(f'    return {generate_gui_parameter(action.parameters[0], "boolean", prepend_info)}')
+            prepend_info.lines.append(f'    return {contents}')
             prepend_info.lines.append(f'endfunction\n')
             result = [f'{info.indent()}if ( {prepend_func_name}() ) then']
         info.indent_level += 4
@@ -894,8 +955,8 @@ def generate_gui_action(action: wtg.EcaFunction, info: GenInfo, prepend_info: Pr
     elif action.name == 'ForLoopA':
         assert len(action.parameters) == 3
         result = []
-        result.append(f'{info.indent()}set bj_forLoopAIndex={generate_gui_parameter(action.parameters[0], "integer", prepend_info)}')
-        result.append(f'{info.indent()}set bj_forLoopAIndexEnd={generate_gui_parameter(action.parameters[1], "integer", prepend_info)}')
+        result.append(f'{info.indent()}set bj_forLoopAIndex={generate_gui_parameter(action.parameters[0], "integer", info, prepend_info)}')
+        result.append(f'{info.indent()}set bj_forLoopAIndexEnd={generate_gui_parameter(action.parameters[1], "integer", info, prepend_info)}')
         result.append(f'{info.indent()}loop')
         info.indent_level += 4
         result.append(f'{info.indent()}exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd')
@@ -906,14 +967,14 @@ def generate_gui_action(action: wtg.EcaFunction, info: GenInfo, prepend_info: Pr
     elif action.name == 'ForGroup':
         result = [
             f'{info.indent()}call {function_name}'
-            f'({generate_gui_parameter(action.parameters[0], "group", prepend_info)}, '
+            f'({generate_gui_parameter(action.parameters[0], "group", info, prepend_info)}, '
         ]
         prepend_func_name = prepend_info.func_name()
         result[-1] += f'function {prepend_func_name})'
         prepend_info.lines.append(f'function {prepend_func_name} takes nothing returns nothing')
         prepend_info.lines.extend(generate_gui_action(
             action.parameters[1].children,
-            GenInfo(info.variables.values(), 4),
+            GenInfo(list(info.variables.values()), 4),
             prepend_info
         ))
         prepend_info.lines.append('endfunction\n')
@@ -922,7 +983,7 @@ def generate_gui_action(action: wtg.EcaFunction, info: GenInfo, prepend_info: Pr
         param_info = wtg.LIB_INFO[action.name]
         assert len(action.parameters) == len(param_info.arg_types)
         parameters = [
-            generate_gui_parameter(parameter, pinfo, prepend_info)
+            generate_gui_parameter(parameter, pinfo, info, prepend_info)
             for parameter, pinfo in zip(action.parameters, param_info.arg_types)
         ]
         result = [f'{info.indent()}call {function_name}({", ".join(parameters)})']
@@ -959,7 +1020,7 @@ def generate_gui_trigger(trigger: wtg.Trigger, info: GenInfo) -> list[str]:
         elif eca.function_type == wtg.EcaFunctionType.Event:
             prepend_info.action_index[-1] += 1
         elif eca.function_type == wtg.EcaFunctionType.Condition:
-            result.extend(generate_top_level_condition(eca, prepend_info))
+            result.extend(generate_top_level_condition(eca, info, prepend_info))
         else:
             body_result.extend(generate_gui_action(eca, info, prepend_info))
         assert len(prepend_info.action_index) == 1
@@ -985,7 +1046,7 @@ def generate_gui_trigger(trigger: wtg.Trigger, info: GenInfo) -> list[str]:
         param_info = wtg.LIB_INFO[event.name]
         assert len(param_info.arg_types) == len(event.parameters)
         parameters = ''.join([
-            ", " + generate_gui_parameter(p, ptype, prepend_info)
+            ", " + generate_gui_parameter(p, ptype, info, prepend_info)
             for p, ptype in zip(event.parameters, param_info.arg_types)
         ])
         body_result.append(f'    call {event.name}(gg_trg_{trigger_name}{parameters})')
@@ -1011,7 +1072,7 @@ def generate_triggers(
         result.append('//===========================================================================')
         result.append(f'// Trigger: {gui_trigger.name}',)
         if gui_trigger.description:
-            lines = gui_trigger.description.split('\n')
+            lines = gui_trigger.description.strip().split('\n')
             result.append('//')
             for line in lines:
                 result.append(f'// {line}')
@@ -1020,6 +1081,23 @@ def generate_triggers(
             result.extend(generate_custom_text_trigger(text_trigger.text, info))
         else:
             result.extend(generate_gui_trigger(gui_trigger, info))
+    return result
+
+
+def generate_custom_trigger_init(gui_triggers: wtg.W3TriggerData, info: GenInfo) -> list[str]:
+    result: list[str] = []
+    result.append('//===========================================================================')
+    result.append('function InitCustomTriggers takes nothing returns nothing')
+    for trigger in gui_triggers.triggers:
+        if trigger.is_enabled:
+            result.append(f'    call InitTrig_{escape_name(trigger.name)}()')
+    result.append('endfunction\n')
+
+    result.append('//===========================================================================')
+    result.append('function RunInitializationTriggers takes nothing returns nothing')
+    for trigger_name in info.map_init_triggers:
+        result.append(f'    call ConditionalTriggerExecute(gg_trg_{trigger_name})')
+    result.append('endfunction\n')
     return result
 
 
@@ -1034,6 +1112,11 @@ def generate(map_dir: str) -> None:
     sounds = w3s.from_text_file(f'{map_dir}/{SOUNDS_FILE_NAME}')
     geometry = w3e.read_binary_file(f'{map_dir}/war3map.w3e')
     string_table = wts.read_wts(f'{map_dir}/war3map.wts')
+
+    with open('doc/generated/data/itemdata.toml', 'rb') as fp:
+        item_data = tomllib.load(fp)
+    with open('doc/generated/data/upgradedata.toml', 'rb') as fp:
+        upgrade_data = tomllib.load(fp)
 
     result: list[str] = []
     info = GenInfo(gui_triggers.variables)
@@ -1076,6 +1159,9 @@ def generate(map_dir: str) -> None:
     result.append(section_header('Destructable Objects'))
     result.extend(generate_destructable_setup(doodads, info))
 
+    # Pre-placed items
+    result.extend(generate_preplaced_items(units, info, item_data))
+
     # Unit Creation
     result.append(section_header('Unit Creation'))
     result.extend(generate_unit_setup(units, info))
@@ -1093,25 +1179,12 @@ def generate(map_dir: str) -> None:
     result.extend(triggers_lines)
 
     # Init custom triggers
-    result.append('//===========================================================================')
-    result.append('function InitCustomTriggers takes nothing returns nothing')
-    for trigger in gui_triggers.triggers:
-        if trigger.is_enabled:
-            result.append(f'    call InitTrig_{escape_name(trigger.name)}()')
-    result.append('endfunction\n')
-
-    result.append('//===========================================================================')
-    result.append('function RunInitializationTriggers takes nothing returns nothing')
-    for trigger_name in info.map_init_triggers:
-        result.append(f'    call ConditionalTriggerExecute(gg_trg_{trigger_name})')
-    result.append('endfunction\n')
+    result.extend(generate_custom_trigger_init(gui_triggers, info))
 
     # Upgrades
-    result.append(section_header('Upgrades'))
-    result.extend(generate_upgrades_setup(map_info))
+    result.extend(generate_upgrades_setup(map_info, upgrade_data))
 
     # TechTree
-    result.append(section_header('TechTree'))
     result.extend(generate_techtree_setup(map_info))
 
     # Players
@@ -1143,7 +1216,7 @@ if __name__ == '__main__':
     else:
         _target = 'maps/Human01'
     if '-i' in sys.argv:
-        IMPROVED = True
+        Options.IMPROVED = True
     if '-h' in sys.argv:
         print("Usage: mapscript.py <map dir> [-i]")
         print("  -i: Use improved generation (inline if conditions)")

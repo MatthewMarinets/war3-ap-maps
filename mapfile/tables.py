@@ -15,6 +15,8 @@ BUILDING_IDS = {
     'nth0', 'nth1', 'nmg0', 'nmg1', 'nmh0', 'nmh1', 'nnzg', 'ntnt', 'ntt2', 'nten', 'ntn2', 'ncb0', 'ncb1',
     'ncb2', 'ncb3', 'ncb4', 'ncb5', 'ncb6', 'ncb7', 'ncb8', 'ncb9', 'ncba', 'ncbb', 'ncbc', 'ncbd', 'ncbe',
     'ncbf',
+
+    'ngwr', 'ngni',
 }
 
 TILESET_TO_TERRAIN = {
