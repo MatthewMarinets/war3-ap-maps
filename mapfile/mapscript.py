@@ -2,7 +2,7 @@
 Utility for regenerating war3map.j script files from other data
 """
 
-from . import wtg, wct, w3i, doo, w3r, w3c, w3s, wts, w3e, tables
+from . import wtg, wct, w3i, doo, w3r, w3c, w3s, wts, w3e, w3o, tables
 import tomllib
 from datetime import datetime
 from .common import (
@@ -14,6 +14,7 @@ from .common import (
     REGIONS_FILE_NAME,
     CAMERAS_FILE_NAME,
     SOUNDS_FILE_NAME,
+    UNIT_DATA_FILE_NAME,
 )
 import math
 
@@ -21,6 +22,7 @@ MAP_SCRIPT_FILE_NAME = 'war3map.j'
 
 class Options:
     IMPROVED = False
+    FORCE_INITIALIZE = True
     SEPARATE_ITEM_INIT_FUNC = True
 
 
@@ -98,7 +100,7 @@ def generate_user_defined_globals(gui_triggers: wtg.W3TriggerData) -> list[str]:
         'unitcode': 'integer'
     }
     initializable_types = {'integer', 'real'}
-    if Options.IMPROVED:
+    if not Options.FORCE_INITIALIZE:
         initializable_types.add('boolean')
     for variable in gui_triggers.variables:
         var_type = sub_var_type.get(variable.variable_type, variable.variable_type)
@@ -106,7 +108,7 @@ def generate_user_defined_globals(gui_triggers: wtg.W3TriggerData) -> list[str]:
             val = ''
         elif variable.initial_value and var_type in initializable_types:
             val = f'= {variable.initial_value}'
-        elif Options.IMPROVED and variable.initial_value and var_type == 'string':
+        elif not Options.FORCE_INITIALIZE and variable.initial_value and var_type == 'string':
             val = f'= "{variable.initial_value}"'
         elif variable.variable_type == 'boolean':
             val = '= false'
@@ -166,10 +168,17 @@ def generate_global_variable_init(gui_triggers: wtg.W3TriggerData) -> list[str]:
                 initial_value = 'CreateGroup()'
             elif variable.variable_type == 'timer':
                 initial_value = 'CreateTimer()'
-            elif not Options.IMPROVED and variable.variable_type == 'integer':
-                initial_value = '0'
+            elif Options.FORCE_INITIALIZE:
+                if variable.variable_type == 'integer':
+                    initial_value = '0'
+                elif variable.variable_type == 'boolean':
+                    initial_value = 'false'
+                elif variable.variable_type == 'string':
+                    initial_value = '""'
         else:
             if variable.variable_type == 'unit' and initial_value == 'UnitNull':
+                initial_value = 'null'
+            elif variable.variable_type == 'rect' and initial_value == 'RectNull':
                 initial_value = 'null'
             elif variable.variable_type == 'player' and not initial_value.endswith(')'):
                 index = int(initial_value[len('Player'):])
@@ -321,31 +330,40 @@ def generate_preplaced_items(
     return result
 
 
-def generate_unit_setup(unit_info: doo.War3PlacementInfo, info: GenInfo) -> list[str]:
+def generate_unit_setup(
+    unit_info: doo.War3PlacementInfo, info: GenInfo, custom_units: dict[str, w3o.Entity],
+) -> list[str]:
     RADIANS_TO_DEGREES = 360.0 / 2 / math.pi
     result: list[str] = []
 
     sections: dict[tuple[bool, int], list[str]] = {}
     units = sorted(unit_info.units, key=lambda x: x.entity_id)
-    for index, unit in enumerate(units):
+    for unit in units:
         if unit.type_id == 'sloc':
             continue
         if unit.type_id[0] == 'I' and Options.SEPARATE_ITEM_INIT_FUNC:
             continue
-        section = (unit.type_id in tables.BUILDING_IDS, unit.player_owner)
+        if unit.type_id in custom_units:
+            is_building = custom_units[unit.type_id].parent_id in tables.BUILDING_IDS
+        else:
+            is_building = unit.type_id in tables.BUILDING_IDS
+        section = (is_building, unit.player_owner)
         unit_var = f'gg_unit_{unit.type_id}_{unit.entity_id:04}'
+        create_func = f"CreateUnit(p, '{unit.type_id}'"
+        if unit.type_id == 'ugol':
+            create_func = 'CreateBlightedGoldmine(p'
         if unit_var in info.unit_vars_used:
             sections.setdefault(section, []).append((
-                f"    set {unit_var}=CreateUnit(p, '{unit.type_id}', {unit.x:.1f}, {unit.y:.1f}, "
+                f"    set {unit_var}={create_func}, {unit.x:.1f}, {unit.y:.1f}, "
                 f"{unit.facing * RADIANS_TO_DEGREES:.3f})"
             ).replace(' -', ' - '))
         else:
             unit_var = 'u'
             sections.setdefault(section, []).append((
-                f"    set u=CreateUnit(p, '{unit.type_id}', {unit.x:.1f}, {unit.y:.1f}, "
+                f"    set u={create_func}, {unit.x:.1f}, {unit.y:.1f}, "
                 f"{unit.facing * RADIANS_TO_DEGREES:.3f})"
             ).replace(' -', ' - '))
-        if unit.goldmine_gold_amount != 12500 and unit.goldmine_gold_amount != 0:
+        if unit.type_id == 'ngol' or unit.type_id == 'ugol' or unit.type_id == 'egol':
             sections[section].append(f'    call SetResourceAmount({unit_var}, {unit.goldmine_gold_amount})')
         if unit.hero_level > 1:
             sections[section].append(f'    call SetHeroLevel({unit_var}, {unit.hero_level}, false)')
@@ -1004,31 +1022,36 @@ def generate_gui_trigger(trigger: wtg.Trigger, info: GenInfo) -> list[str]:
 
     trigger_name = escape_name(trigger.name)
     prepend_info = PrependInfo(trigger_name, 1)
-
-    # Conditions init
-    if functions[wtg.EcaFunctionType.Condition]:
-        result.append(f'function Trig_{trigger_name}_Conditions takes nothing returns boolean')
+    condition_prepend_info = PrependInfo(trigger_name, 1)
+    condition_prepend_info.action_index = prepend_info.action_index
 
     # Actions init
     body_result: list[str] = []
+    condition_result: list[str] = []
     info.indent_level = 4
     body_result.append(f'function Trig_{trigger_name}_Actions takes nothing returns nothing')
+
+    # Conditions init
+    has_conditions = any(x.is_enabled for x in functions[wtg.EcaFunctionType.Condition])
+    if has_conditions:
+        condition_result.append(f'function Trig_{trigger_name}_Conditions takes nothing returns boolean')
 
     for eca in trigger.eca_functions:
         if not eca.is_enabled:
             prepend_info.action_index[-1] += 1
+            continue
         elif eca.function_type == wtg.EcaFunctionType.Event:
             prepend_info.action_index[-1] += 1
         elif eca.function_type == wtg.EcaFunctionType.Condition:
-            result.extend(generate_top_level_condition(eca, info, prepend_info))
+            condition_result.extend(generate_top_level_condition(eca, info, condition_prepend_info))
         else:
             body_result.extend(generate_gui_action(eca, info, prepend_info))
         assert len(prepend_info.action_index) == 1
     
     # Conditions
-    if functions[wtg.EcaFunctionType.Condition]:
-        result.append('    return true')
-        result.append('endfunction\n')
+    if has_conditions:
+        condition_result.append('    return true')
+        condition_result.append('endfunction\n')
 
     # Actions
     body_result.append('endfunction\n')
@@ -1040,6 +1063,8 @@ def generate_gui_trigger(trigger: wtg.Trigger, info: GenInfo) -> list[str]:
     if trigger.is_initially_off:
         body_result.append(f'    call DisableTrigger(gg_trg_{trigger_name})')
     for event in functions[wtg.EcaFunctionType.Event]:
+        if not event.is_enabled:
+            continue
         if event.name == 'MapInitializationEvent' and trigger_name not in info.map_init_triggers:
             info.map_init_triggers.append(trigger_name)
             continue
@@ -1050,11 +1075,13 @@ def generate_gui_trigger(trigger: wtg.Trigger, info: GenInfo) -> list[str]:
             for p, ptype in zip(event.parameters, param_info.arg_types)
         ])
         body_result.append(f'    call {event.name}(gg_trg_{trigger_name}{parameters})')
-    if functions[wtg.EcaFunctionType.Condition]:
+    if has_conditions:
         body_result.append(f'    call TriggerAddCondition(gg_trg_{trigger_name}, Condition(function Trig_{trigger_name}_Conditions))')
     body_result.append(f'    call TriggerAddAction(gg_trg_{trigger_name}, function Trig_{trigger_name}_Actions)')
     body_result.append('endfunction\n')
 
+    result.extend(condition_prepend_info.lines)
+    result.extend(condition_result)
     result.extend(prepend_info.lines)
     result.extend(body_result)
     return result
@@ -1111,7 +1138,10 @@ def generate(map_dir: str) -> None:
     cameras = w3c.from_text_file(f'{map_dir}/{CAMERAS_FILE_NAME}')
     sounds = w3s.from_text_file(f'{map_dir}/{SOUNDS_FILE_NAME}')
     geometry = w3e.read_binary_file(f'{map_dir}/war3map.w3e')
+    unit_data = w3o.from_text_file(f'{map_dir}/{UNIT_DATA_FILE_NAME}')
     string_table = wts.read_wts(f'{map_dir}/war3map.wts')
+
+    custom_units = {u.entity_id: u for u in unit_data.map_objects.entities}
 
     with open('doc/generated/data/itemdata.toml', 'rb') as fp:
         item_data = tomllib.load(fp)
@@ -1164,7 +1194,7 @@ def generate(map_dir: str) -> None:
 
     # Unit Creation
     result.append(section_header('Unit Creation'))
-    result.extend(generate_unit_setup(units, info))
+    result.extend(generate_unit_setup(units, info, custom_units))
 
     # Regions
     result.append(section_header('Regions'))
