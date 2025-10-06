@@ -23,7 +23,6 @@ MAP_SCRIPT_FILE_NAME = 'war3map.j'
 class Options:
     IMPROVED = False
     FORCE_INITIALIZE = True
-    SEPARATE_ITEM_INIT_FUNC = True
 
 
 class GenInfo:
@@ -308,8 +307,6 @@ def generate_destructable_setup(doodads: doo.War3PlacementInfo, info: GenInfo) -
 def generate_preplaced_items(
     unit_info: doo.War3PlacementInfo, info: GenInfo, item_data: dict[str, dict],
 ) -> list[str]:
-    if not Options.SEPARATE_ITEM_INIT_FUNC:
-        return []
     result = [section_header('Items')]
     result.append('function CreateAllItems takes nothing returns nothing')
     result.append('    local integer itemID\n')
@@ -331,7 +328,10 @@ def generate_preplaced_items(
 
 
 def generate_unit_setup(
-    unit_info: doo.War3PlacementInfo, info: GenInfo, custom_units: dict[str, w3o.Entity],
+    unit_info: doo.War3PlacementInfo,
+    info: GenInfo,
+    custom_units: dict[str, w3o.Entity],
+    item_data: dict[str, dict],
 ) -> list[str]:
     RADIANS_TO_DEGREES = 360.0 / 2 / math.pi
     result: list[str] = []
@@ -341,7 +341,7 @@ def generate_unit_setup(
     for unit in units:
         if unit.type_id == 'sloc':
             continue
-        if unit.type_id[0] == 'I' and Options.SEPARATE_ITEM_INIT_FUNC:
+        if unit.type_id in item_data or unit.type_id[0] == 'I':
             continue
         if unit.type_id in custom_units:
             is_building = custom_units[unit.type_id].parent_id in tables.BUILDING_IDS
@@ -1194,7 +1194,7 @@ def generate(map_dir: str) -> None:
 
     # Unit Creation
     result.append(section_header('Unit Creation'))
-    result.extend(generate_unit_setup(units, info, custom_units))
+    result.extend(generate_unit_setup(units, info, custom_units, item_data))
 
     # Regions
     result.append(section_header('Regions'))
@@ -1247,6 +1247,7 @@ if __name__ == '__main__':
         _target = 'maps/Human01'
     if '-i' in sys.argv:
         Options.IMPROVED = True
+        Options.FORCE_INITIALIZE = False
     if '-h' in sys.argv:
         print("Usage: mapscript.py <map dir> [-i]")
         print("  -i: Use improved generation (inline if conditions)")
