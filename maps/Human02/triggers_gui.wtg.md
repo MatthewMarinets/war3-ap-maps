@@ -134,6 +134,18 @@ version = TFT
 | footmen_trained_unit_name | string | . | Footmen |
 
 # Triggers
+## irregulars
+- enabled: True
+- category: [14] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
 ## fileio
 - enabled: True
 - category: [14] Archipelago

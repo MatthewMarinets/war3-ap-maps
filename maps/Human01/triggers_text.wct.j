@@ -903,23 +903,23 @@ endfunction
 
 function debug_xp_tome takes nothing returns nothing
     // call CreateItem('texp', GetStartLocationX(GetPlayerId(USER_PLAYER)), GetStartLocationY(GetPlayerId(USER_PLAYER)))
-    call CreateItem('texp', GetUnitX(item_channel_1_target), GetUnitX(item_channel_1_target))
+    call CreateItem('texp', GetUnitX(item_channel_1_target), GetUnitY(item_channel_1_target))
 endfunction
 
 function debug_xp2_tome takes nothing returns nothing
-    call CreateItem('tkno', GetUnitX(item_channel_1_target), GetUnitX(item_channel_1_target))
+    call CreateItem('tkno', GetUnitX(item_channel_1_target), GetUnitY(item_channel_1_target))
 endfunction
 
 function debug_health_tome takes nothing returns nothing
-    call CreateItem('manh', GetUnitX(item_channel_1_target), GetUnitX(item_channel_1_target))
+    call CreateItem('manh', GetUnitX(item_channel_1_target), GetUnitY(item_channel_1_target))
 endfunction
 
 function debug_dragon_egg takes nothing returns nothing
-    call CreateItem('fgrd', GetUnitX(item_channel_1_target), GetUnitX(item_channel_1_target))
+    call CreateItem('fgrd', GetUnitX(item_channel_1_target), GetUnitY(item_channel_1_target))
 endfunction
 
 function debug_speed takes nothing returns nothing
-    call CreateItem('rspd', GetUnitX(item_channel_1_target), GetUnitX(item_channel_1_target))
+    call CreateItem('rspd', GetUnitX(item_channel_1_target), GetUnitY(item_channel_1_target))
 endfunction
 
 function debug_print takes nothing returns nothing
@@ -1034,7 +1034,7 @@ endfunction
 //===========================================================================
 function InitTrig_irregulars takes nothing returns nothing
     set t_irregulars_on_cast = CreateTrigger()
-    call TriggerRegisterPlayerUnitEventSimple(t_irregulars_on_cast, USER_PLAYER, EVENT_PLAYER_UNIT_SPELL_CAST )
+    call TriggerRegisterPlayerUnitEventSimple(t_irregulars_on_cast, USER_PLAYER, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddAction(t_irregulars_on_cast, function irregulars_on_cast)
     call Preload("Abilities\\Spells\\Human\\Polymorph\\PolyMorphDoneGround.mdl")
 endfunction

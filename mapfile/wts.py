@@ -56,7 +56,7 @@ def clear_wts(filename: str, strings_to_clear: Iterable[str]) -> None:
                 removing = False 
         if not removing:
             result.append(line)
-    with open(filename, 'w', encoding='utf-8') as fp:
+    with open(filename, 'w', encoding='utf-8', newline='\r\n') as fp:
         fp.writelines(result)
 
 

@@ -1034,7 +1034,7 @@ endfunction
 //===========================================================================
 function InitTrig_irregulars takes nothing returns nothing
     set t_irregulars_on_cast = CreateTrigger()
-    call TriggerRegisterPlayerUnitEventSimple(t_irregulars_on_cast, USER_PLAYER, EVENT_PLAYER_UNIT_SPELL_CAST )
+    call TriggerRegisterPlayerUnitEventSimple(t_irregulars_on_cast, USER_PLAYER, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddAction(t_irregulars_on_cast, function irregulars_on_cast)
     call Preload("Abilities\\Spells\\Human\\Polymorph\\PolyMorphDoneGround.mdl")
 endfunction

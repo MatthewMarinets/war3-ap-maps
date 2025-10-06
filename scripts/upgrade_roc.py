@@ -271,7 +271,7 @@ def update_triggers(map_dir: str) -> None:
     
     # Get map info
     hero_slots = tables.MISSION_TO_HERO_SLOT[mission]
-    human_players = [x for x in w3i_data.players if x.player_type == w3i.FactionController.Human]
+    human_players = [x for x in w3i_data.players if x.player_type == w3i.FactionController.User]
     assert len(human_players) == 1
     hero_global_slot_ids = [f'HERO_ID_{x.name}' for x in hero_slots]
     hero_global_slot_ids.extend(['HERO_ID_NONE'] * (4 - len(hero_global_slot_ids)))

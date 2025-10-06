@@ -1,6 +1,63 @@
 // version: 1
-// Triggers: 97
+// Triggers: 98
 //\\// Trigger #0
+globals
+trigger t_irregulars_on_cast
+endglobals
+
+function irregular_transform takes unit u, integer abil_id returns effect
+    local effect e = AddSpecialEffect("Abilities\\Spells\\Human\\Polymorph\\PolyMorphDoneGround.mdl", GetUnitX(u), GetUnitY(u))
+    call UnitAddAbility(u, abil_id)
+    call IssueImmediateOrder(u, "ravenform")
+    return e
+endfunction
+
+function irregulars_on_cast takes nothing returns nothing
+    local integer a = GetSpellAbilityId()
+    local effect e = null
+    if a == 'AP00' then
+        // captain
+        set e = irregular_transform(GetSpellAbilityUnit(), 'AP0a')
+    elseif a == 'AP01' then
+        // footman
+        set e = irregular_transform(GetSpellAbilityUnit(), 'AP0b')
+    elseif a == 'AP02' then
+        // rifleman
+        set e = irregular_transform(GetSpellAbilityUnit(), 'AP0c')
+    elseif a == 'AP03' then
+        // archer
+        set e = irregular_transform(GetSpellAbilityUnit(), 'AP0d')
+    elseif a == 'AP04' then
+        // knight
+        set e = irregular_transform(GetSpellAbilityUnit(), 'AP0e')
+    elseif a == 'AP05' then
+        // priest
+        set e = irregular_transform(GetSpellAbilityUnit(), 'AP0f')
+    elseif a == 'AP06' then
+        // sorceress
+        set e = irregular_transform(GetSpellAbilityUnit(), 'AP0g')
+    elseif a == 'AP07' then
+        // spell breaker
+        set e = irregular_transform(GetSpellAbilityUnit(), 'AP0h')
+    elseif a == 'AP08' then
+        // mortar team
+        set e = irregular_transform(GetSpellAbilityUnit(), 'AP0i')
+    endif
+    if e != null then
+        call TriggerSleepAction(2.0)
+        call DestroyEffect(e)
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_irregulars takes nothing returns nothing
+    set t_irregulars_on_cast = CreateTrigger()
+    call TriggerRegisterPlayerUnitEventSimple(t_irregulars_on_cast, USER_PLAYER, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddAction(t_irregulars_on_cast, function irregulars_on_cast)
+    call Preload("Abilities\\Spells\\Human\\Polymorph\\PolyMorphDoneGround.mdl")
+endfunction
+
+//\\// Trigger #1
 // This file defines file IO functions for the JASS side of things
 // Based off the FileIO module created by Nestharus, see:
 // https://www.hiveworkshop.com/threads/codeless-save-load-its-now-a-reality-demo-map-included.226082/
@@ -53,7 +110,7 @@ function io_close_write takes nothing returns nothing
     set last_filename = ""
 endfunction
 
-//\\// Trigger #1
+//\\// Trigger #2
 // Map-specific setup used by other scripts
 globals
 constant integer MISSION_ID = 102
@@ -132,7 +189,7 @@ function InitTrig_map_config takes nothing returns nothing
     set hero_global_slots[3] = HERO_ID_NONE
 endfunction
 
-//\\// Trigger #2
+//\\// Trigger #3
 // defines the packets that communicate with the client
 // depends: map_config, fileio
 globals
@@ -155,6 +212,7 @@ integer hero_status_index = -1
 integer num_channel_1_items_received = 0
 integer num_channel_2_items_received = 0
 timer status_ack_ping_timer
+trigger t_captain_promoted
 endglobals
 
 function status_send takes nothing returns nothing
@@ -183,12 +241,55 @@ function status_send takes nothing returns nothing
     call io_close_write()
 endfunction
 
+function B2I takes boolean b returns integer
+    if b then
+        return 1
+    endif
+    return 0
+endfunction
+
+function captains_set_ability_usable takes player p returns nothing
+    local integer available = GetPlayerTechMaxAllowed(p, 'hcth') - GetPlayerTechCount(p, 'AP00', true)
+    if available < 0 then
+        set available = 0
+    endif
+    call SetPlayerTechResearched(p, 'RP00', available)
+    // General irregular unlocks
+    call SetPlayerTechResearched(p, 'RP01', B2I(GetPlayerTechMaxAllowed(p, 'hfoo') != 0))
+    call SetPlayerTechResearched(p, 'RP02', B2I(GetPlayerTechMaxAllowed(p, 'hrif') != 0))
+    call SetPlayerTechResearched(p, 'RP03', B2I(GetPlayerTechMaxAllowed(p, 'nhea') != 0))
+    call SetPlayerTechResearched(p, 'RP04', B2I(GetPlayerTechMaxAllowed(p, 'hkni') != 0))
+    call SetPlayerTechResearched(p, 'RP05', B2I(GetPlayerTechMaxAllowed(p, 'hmpr') != 0))
+    call SetPlayerTechResearched(p, 'RP06', B2I(GetPlayerTechMaxAllowed(p, 'hsor') != 0))
+    call SetPlayerTechResearched(p, 'RP07', B2I(GetPlayerTechMaxAllowed(p, 'hspt') != 0))
+    call SetPlayerTechResearched(p, 'RP08', B2I(GetPlayerTechMaxAllowed(p, 'hmtm') != 0))
+endfunction
+
 function status_load_unlocks_for_player takes integer target_player returns nothing
     local player p = Player(0)
     call SetPlayerTechMaxAllowed(p, 'nech', -1)
     call SetPlayerTechMaxAllowed(p, 'nvil', target_player)
     call io_read_file_simple("unlocks.txt")
     set last_unlock_packet = GetPlayerTechMaxAllowed(p, 'nech')
+    // captains
+    call captains_set_ability_usable(Player(target_player))
+endfunction
+
+function status_captain_promoted_actions takes nothing returns nothing
+    local player p = GetOwningPlayer(GetTriggerUnit())
+    local effect special_effect
+    if GetSpellAbilityId() != 'AP00' then
+        return
+    endif
+    call AddPlayerTechResearched(p, 'AP00', 1)
+    call captains_set_ability_usable(p)
+endfunction
+
+function captains_init takes nothing returns nothing
+    call SetPlayerTechMaxAllowed(USER_PLAYER, 'hcth', 0)
+    set t_captain_promoted = CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(t_captain_promoted, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddAction(t_captain_promoted, function status_captain_promoted_actions)
 endfunction
 
 function status_load_unlocks takes nothing returns nothing
@@ -346,7 +447,7 @@ function status_check_ping takes nothing returns nothing
             call DisplayTextToForce(GetPlayersAll(), "|cffff2222Restart the level or connect the client to a different room|r")
         endif
         return
-    elseif error_state > 0 then
+    elseif error_state > 0 and world_id >= 0 then
         set error_state = 0
         call DisplayTextToForce(GetPlayersAll(), "|cff2266ffClient communications re-established.|r")
     endif
@@ -416,9 +517,11 @@ function InitTrig_status takes nothing returns nothing
     set status_ack_ping_timer = CreateTimer()
     call status_send()
     call TimerStart(status_ack_ping_timer, 1, true, function status_check_ping)
+    // Captains
+    call captains_init()
 endfunction
 
-//\\// Trigger #3
+//\\// Trigger #4
 // Functions to control and configure heroes
 // depends: fileio, map_config, status
 globals
@@ -757,7 +860,7 @@ function InitTrig_heroes takes nothing returns nothing
     set hero_hashes[3] = 0
 endfunction
 
-//\\// Trigger #4
+//\\// Trigger #5
 // triggers for sending locations when picking up location-linked items
 // depends: status
 globals
@@ -839,7 +942,7 @@ function InitTrig_item_locations takes nothing returns nothing
     call TriggerAddAction(t_location_found, function trigger_function_item_locations)
 endfunction
 
-//\\// Trigger #5
+//\\// Trigger #6
 // debug commands
 globals
 trigger t_help
@@ -848,27 +951,32 @@ trigger t_xp
 trigger t_xp2
 trigger t_health
 trigger t_dragon
+trigger t_speed
 endglobals
 
 function debug_print_help takes nothing returns nothing
-    call DisplayTextToForce(GetPlayersAll(), "Commands: '-print', '-xp', '-xp2', '-health', '-dragon'")
+    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Commands: '-print', '-xp', '-xp2', '-health', '-dragon', '-speed'")
 endfunction
 
 function debug_xp_tome takes nothing returns nothing
     // call CreateItem('texp', GetStartLocationX(GetPlayerId(USER_PLAYER)), GetStartLocationY(GetPlayerId(USER_PLAYER)))
-    call CreateItem('texp', GetUnitX(item_channel_1_target), GetUnitX(item_channel_1_target))
+    call CreateItem('texp', GetUnitX(item_channel_1_target), GetUnitY(item_channel_1_target))
 endfunction
 
 function debug_xp2_tome takes nothing returns nothing
-    call CreateItem('tkno', GetUnitX(item_channel_1_target), GetUnitX(item_channel_1_target))
+    call CreateItem('tkno', GetUnitX(item_channel_1_target), GetUnitY(item_channel_1_target))
 endfunction
 
 function debug_health_tome takes nothing returns nothing
-    call CreateItem('manh', GetUnitX(item_channel_1_target), GetUnitX(item_channel_1_target))
+    call CreateItem('manh', GetUnitX(item_channel_1_target), GetUnitY(item_channel_1_target))
 endfunction
 
 function debug_dragon_egg takes nothing returns nothing
-    call CreateItem('fgrd', GetUnitX(item_channel_1_target), GetUnitX(item_channel_1_target))
+    call CreateItem('fgrd', GetUnitX(item_channel_1_target), GetUnitY(item_channel_1_target))
+endfunction
+
+function debug_speed takes nothing returns nothing
+    call CreateItem('rspd', GetUnitX(item_channel_1_target), GetUnitY(item_channel_1_target))
 endfunction
 
 function debug_print takes nothing returns nothing
@@ -907,12 +1015,15 @@ function InitTrig_debug takes nothing returns nothing
     set t_dragon=CreateTrigger()
     call TriggerRegisterPlayerChatEvent(t_dragon, USER_PLAYER, "-dragon", false)
     call TriggerAddAction(t_dragon, function debug_dragon_egg)
+    set t_speed=CreateTrigger()
+    call TriggerRegisterPlayerChatEvent(t_speed, USER_PLAYER, "-speed", false)
+    call TriggerAddAction(t_speed, function debug_speed)
     set t_print=CreateTrigger()
     call TriggerRegisterPlayerChatEvent(t_print, USER_PLAYER, "-print", false)
     call TriggerAddAction(t_print, function debug_print)
 endfunction
 
-//\\// Trigger #6
+//\\// Trigger #7
 globals
 trigger t_zoom
 endglobals

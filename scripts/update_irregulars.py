@@ -150,6 +150,13 @@ def update_units(units_file: str) -> None:
         editor_ids.FIELD_UNIT_GENERAL_STRUCTURES_BUILT: '',
     })
 
+    blizz_entities = mod_entity.Entities(data.blizzard_objects.entities, False)
+    blizz_entities.set_entity(
+        'null', 'hfoo', {
+            editor_ids.FIELD_UNIT_ABILITIES_NORMAL: 'Adef,Aihn,AP00',
+        }
+    )
+
     text = w3o.as_text(data)
     with open(units_file, 'w') as fp:
         fp.write(text)

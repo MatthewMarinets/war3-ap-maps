@@ -1,0 +1,7 @@
+
+# *.j     text eol=crlf
+*.wts   text eol=crlf
+
+*.blp   binary
+*.w3e   binary
+*.wpm   binary

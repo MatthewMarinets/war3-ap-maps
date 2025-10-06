@@ -1235,10 +1235,10 @@ def generate(map_dir: str) -> None:
     result.append('//Struct method generated initializers/callers:\n')
     # Not supported
 
-    with open(f'{map_dir}/{MAP_SCRIPT_FILE_NAME}', 'w') as fp:
+    with open(f'{map_dir}/{MAP_SCRIPT_FILE_NAME}', 'w', newline='\r\n') as fp:
         for part in result:
-            fp.write(part.replace('\n', '\r\n'))
-            fp.write('\r\n')
+            fp.write(part)
+            fp.write('\n')
     
 
 if __name__ == '__main__':

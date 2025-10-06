@@ -35,7 +35,7 @@ def un_trig_string(filename: str, wts_strings: dict[int, str]) -> set[str]:
 
     if replaced:
         with open(filename, 'w', encoding='utf-8') as fp:
-            fp.write(result)
+            fp.write(result.replace('\n'))
 
     return replaced
 
