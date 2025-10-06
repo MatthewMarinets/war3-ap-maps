@@ -381,6 +381,8 @@ def generate_unit_setup(
         for abil in unit.modified_abilities:
             for _ in range(abil.abil_level):
                 sections[section].append(f"    call SelectHeroSkill({unit_var}, '{abil.abil_id}')")
+        for item in unit.inventory_items:
+            sections[section].append(f"    call UnitAddItemToSlotById({unit_var}, '{item.item_id}', {item.slot})")
         if unit.entity_id in info.item_drop_tables:
             drop_func_name = info.item_drop_tables[unit.entity_id]
             sections[section].append((
