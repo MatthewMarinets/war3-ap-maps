@@ -21,7 +21,7 @@ import math
 MAP_SCRIPT_FILE_NAME = 'war3map.j'
 
 class Options:
-    IMPROVED = False
+    INLINE_IF_CONDITIONS = False
     FORCE_INITIALIZE = True
 
 
@@ -953,7 +953,7 @@ def generate_gui_action(action: wtg.EcaFunction, info: GenInfo, prepend_info: Pr
             f'={generate_gui_parameter(action.parameters[1], var_info.variable_type, info, prepend_info)}'
         ]
     elif action.name == 'IfThenElse':
-        if Options.IMPROVED:
+        if Options.INLINE_IF_CONDITIONS:
             result = [f'{info.indent()}if {generate_gui_parameter(action.parameters[0], "boolean", info, prepend_info)} then']
         else:
             prepend_func_name = prepend_info.func_name()
@@ -1246,7 +1246,7 @@ if __name__ == '__main__':
     else:
         _target = 'maps/Human01'
     if '-i' in sys.argv:
-        Options.IMPROVED = True
+        Options.INLINE_IF_CONDITIONS = True
         Options.FORCE_INITIALIZE = False
     if '-h' in sys.argv:
         print("Usage: mapscript.py <map dir> [-i]")
