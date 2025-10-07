@@ -55,8 +55,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # phea = Potion of Healing
-        { item_id = "phea", chance_percent = 100 }
+        { item_id = "I014", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -1090,8 +1089,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # rde1 = Ring of Protection +2
-        { item_id = "rde1", chance_percent = 100 }
+        { item_id = "I011", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -1460,8 +1458,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # pman = Potion of Mana
-        { item_id = "pman", chance_percent = 100 }
+        { item_id = "I015", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 0
@@ -1635,8 +1632,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # pman = Potion of Mana
-        { item_id = "pman", chance_percent = 100 }
+        { item_id = "I016", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 0
@@ -2250,8 +2246,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # rat6 = Claws of Attack +6
-        { item_id = "rat6", chance_percent = 100 }
+        { item_id = "I012", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -2500,8 +2495,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # spro = Scroll of Protection
-        { item_id = "spro", chance_percent = 100 }
+        { item_id = "I017", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -2783,10 +2777,7 @@ player_owner = 24
 hit_points = -1
 mana_points = -1
 random_item_table_id = -1
-item_drops = [
-    [
-    ]
-]
+item_drops = []
 goldmine_gold_amount = 12500
 target_acquisition = -1.0
 hero_level = 1

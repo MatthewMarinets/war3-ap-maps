@@ -7,6 +7,7 @@
   - [x] Special considerations for first hero appearances
   - [x] Replace items -> AP items
   - [x] Location sending functions
+  - [x] Creep bounty
 * Human02
   - [x] Implement locations
   - [x] Remove gamecache
@@ -14,6 +15,7 @@
   - [x] Fix footmen counter
   - [x] Remove rifleman unlock
   - [x] Remove hero level cap triggers
+  - [x] Creep bounty
 * Human03
   - [x] Eliminate gamecache usage
   - [x] Redirect starting next mission
@@ -23,7 +25,18 @@
   - [x] Replace items -> AP items
   - [x] Location sending functions
   - [ ] Purge any unlock tech functions
-  - [ ] Extra check -- reward for protecting villagers from bandits
+  - [x] Extra check -- reward for protecting villagers from bandits
+  - [x] Creep bounty
+* Human04
+  - [x] Eliminate gamecache usage
+  - [x] Redirect starting next mission
+  - [x] Hero init
+  - [x] Remove hero level cap triggers
+  - [x] Replace items -> AP items
+  - [ ] Location sending functions
+  - [n/a] Purge any unlock tech functions
+  - [x] Creep bounty
+
 
 ### Item check conditions boilerplate
 ```markdown
@@ -50,9 +63,11 @@
   - [ ] Replace items -> AP items
   - [ ] Location sending functions
   - [ ] Purge any unlock tech functions
+  - [ ] Creep bounty
 
 ### Longer term
 - [ ] No-builds: unlock tech for usage based on max allowed
+- [ ] Irregulars: have some kind of resource cost to upgrade
 - [ ] Figure out item recovery / make item bank levels
 - [ ] Figure out slot storage
 - [ ] RoC models

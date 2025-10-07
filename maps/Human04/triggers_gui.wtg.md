@@ -6,7 +6,6 @@ version = TFT
 | 22 | Archipelago | False |
 | 0 | Initialization | False |
 | 8 | StartAIHarrassment | False |
-| 9 | HeroesLevelLimiter | False |
 | 10 | ComputerResources | False |
 | 21 | Hints | False |
 | 6 | Level Data | False |
@@ -168,6 +167,82 @@ version = TFT
 ### Functions
 
 
+## AP Load Arthas
+- enabled: True
+- category: [22] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String set udg_Arthas = hero_create(0, USER_PLAYER, GetRectCenterX(gg_rct_ArthasStart), GetRectCenterY(gg_rct_ArthasStart), 300.0)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable Arthas
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CustomScriptCode
+  - param String set udg_Arthas = CreateUnit(USER_PLAYER, 'Hart', GetRectCenterX(gg_rct_ArthasStart), GetRectCenterY(gg_rct_ArthasStart), 300.0)
+- Action CustomScriptCode
+  - param String set hero_abil_1[0] = 'AHhb'
+- Action CustomScriptCode
+  - param String set hero_abil_2[0] = 'AHds'
+- Action CustomScriptCode
+  - param String set hero_abil_3[0] = 'AHad'
+- Action CustomScriptCode
+  - param String set hero_abil_4[0] = 'AHre'
+
+
+## AP Load Jaina
+- enabled: True
+- category: [22] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String set udg_Jaina = hero_create(1, USER_PLAYER, GetRectCenterX(gg_rct_JainaStart), GetRectCenterY(gg_rct_JainaStart), 300.0)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable Jaina
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CustomScriptCode
+  - param String set udg_Jaina = CreateUnit(USER_PLAYER, 'Hjai', GetRectCenterX(gg_rct_JainaStart), GetRectCenterY(gg_rct_JainaStart), 300.0)
+- Action CustomScriptCode
+  - param String set hero_abil_1[0] = 'AHbz'
+- Action CustomScriptCode
+  - param String set hero_abil_2[0] = 'AHwe'
+- Action CustomScriptCode
+  - param String set hero_abil_3[0] = 'AHab'
+- Action CustomScriptCode
+  - param String set hero_abil_4[0] = 'AHmt'
+
+
 ## Map Initialization
 - enabled: True
 - category: [0] Initialization
@@ -206,7 +281,9 @@ version = TFT
 - Action CommentString
   - param String ***********
 - Action ConditionalTriggerExecute
-  - param Variable gg_trg_Load_Heroes
+  - param Variable gg_trg_AP_Load_Arthas
+- Action ConditionalTriggerExecute
+  - param Variable gg_trg_AP_Load_Jaina
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Opening01
 - Action ConditionalTriggerExecute
@@ -503,10 +580,6 @@ Run from Opening07 and OpeningCancelled
 
 ```
 ### Functions
-- Action EnableTrigger
-  - param Variable gg_trg_ArthasLevelUp
-- Action EnableTrigger
-  - param Variable gg_trg_JainaLevelup
 - Action CommentString
   - param String ****************
 - Action SetPlayerHandicapXPBJ
@@ -818,52 +891,6 @@ Not currently run
   - param Preset Player06
   - param String 0
   - param String 0
-
-
-## ArthasLevelUp
-- enabled: True
-- category: [9] HeroesLevelLimiter
-- starts off: True
-- is custom text: False
-- run on map init: False
-```description
-Turned on from 'SetupArthas'
-```
-### Functions
-- Condition OperatorCompareUnit
-  - param Function GetTriggerUnit
-    - Function GetTriggerUnit
-  - param Preset OperatorEqualENE
-  - param Variable Arthas
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableDisable
-  - param Variable Arthas
-- Event TriggerRegisterPlayerUnitEventSimple
-  - param Preset Player01
-  - param Preset PlayerUnitEventHero_Level
-
-
-## JainaLevelup
-- enabled: True
-- category: [9] HeroesLevelLimiter
-- starts off: True
-- is custom text: False
-- run on map init: False
-```description
-Turned on from 'SetupJaina'
-```
-### Functions
-- Condition OperatorCompareUnit
-  - param Function GetTriggerUnit
-    - Function GetTriggerUnit
-  - param Preset OperatorEqualENE
-  - param Variable Jaina
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableDisable
-  - param Variable Jaina
-- Event TriggerRegisterPlayerUnitEventSimple
-  - param Preset Player01
-  - param Preset PlayerUnitEventHero_Level
 
 
 ## GreenGold
@@ -1240,188 +1267,6 @@ Run from 'FarmDone'
   - param String TRIGSTR_163
 
 
-## Load Heroes
-- enabled: True
-- category: [6] Level Data
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-Run from Map Init
-```
-### Functions
-- Action InitGameCacheBJ
-  - param String Campaigns.w3v
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Load_Arthas
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Load_Jaina
-
-
-## Load Arthas
-- enabled: True
-- category: [6] Level Data
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action CommentString
-  - param String Load the hero data Arthas
-- Action RestoreUnitLocFacingAngleBJ
-  - param String Arthas
-  - param String Human04
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-  - param Preset Player01
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_ArthasStart
-  - param String 300.00
-- Action SetVariable
-  - param Variable Arthas
-  - param Function GetLastRestoredUnitBJ
-    - Function GetLastRestoredUnitBJ
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareUnit
-      - param Variable Arthas
-      - param Preset OperatorNotEqualENE
-      - param Preset UnitNull
-  - param Function DoNothing
-    - Action ReturnAction
-  - param Function DoNothing
-    - Action DoNothing
-- Action CommentString
-  - param String If the hero data wasn't found, create a default hero
-- Action CreateNUnitsAtLoc
-  - param String 1
-  - param String Hart
-  - param Preset Player01
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_ArthasStart
-  - param String 300.00
-- Action SetVariable
-  - param Variable Arthas
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-- Action SetHeroLevel
-  - param Variable Arthas
-  - param String 4
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillHolyBolt
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillHolyBolt
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDevotionAura
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDivineShield
-
-
-## Load Jaina
-- enabled: True
-- category: [6] Level Data
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action CommentString
-  - param String Load the hero data Jaina
-- Action RestoreUnitLocFacingAngleBJ
-  - param String Jaina
-  - param String Human04
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-  - param Preset Player01
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_JainaStart
-  - param String 300.00
-- Action SetVariable
-  - param Variable Jaina
-  - param Function GetLastRestoredUnitBJ
-    - Function GetLastRestoredUnitBJ
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareUnit
-      - param Variable Jaina
-      - param Preset OperatorNotEqualENE
-      - param Preset UnitNull
-  - param Function DoNothing
-    - Action ReturnAction
-  - param Function DoNothing
-    - Action DoNothing
-- Action CommentString
-  - param String If the hero data wasn't found, create a default hero
-- Action CreateNUnitsAtLoc
-  - param String 1
-  - param String Hjai
-  - param Preset Player01
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_JainaStart
-  - param String 300.00
-- Action SetVariable
-  - param Variable Jaina
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-- Action SetHeroLevel
-  - param Variable Jaina
-  - param String 2
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable Jaina
-  - param Preset HeroSkillWaterElemental
-- Action SelectHeroSkill
-  - param Variable Jaina
-  - param Preset HeroSkillBrillianceAura
-
-
-## Next Level Prep
-- enabled: True
-- category: [6] Level Data
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action CommentString
-  - param String Store hero data for the next level(s)
-- Action StoreUnitBJ
-  - param Variable Arthas
-  - param String Arthas
-  - param String Human05
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action StoreUnitBJ
-  - param Variable Jaina
-  - param String Jaina
-  - param String Human05
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action SaveGameCacheBJ
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action CommentString
-  - param String Enable the next level in the glue screens
-- Action SetMissionAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset MissionIndexH05
-
-
 ## Next Level Run
 - enabled: True
 - category: [6] Level Data
@@ -1435,7 +1280,7 @@ Run from Map Init
 - Action CommentString
   - param String Run the next level
 - Action SetNextLevelBJ
-  - param String Maps\Campaign\Human05.w3m
+  - param String Maps\Archipelago\Human05.w3x
 - Action CustomVictoryBJ
   - param Preset Player01
   - param Preset UseSkipOptionUse
@@ -1452,8 +1297,6 @@ Run from Map Init
 
 ```
 ### Functions
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Next_Level_Prep
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Next_Level_Run
 - Event TriggerRegisterPlayerEventVictory
@@ -3214,6 +3057,8 @@ Gold given to player 7 no necros can build a haunted mine.
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(21)
 - Action SetVariable
   - param Variable GranaryEntranceGuy
   - param Function GetEnteringUnit
@@ -4493,8 +4338,6 @@ Gold given to player 7 no necros can build a haunted mine.
 - Action TriggerSleepAction
   - param String 1.00
 - Action ClearSelection
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Next_Level_Prep
 - Action CommentString
   - param String NOW SKIPPABLE
 - Action EnableTrigger
@@ -4871,7 +4714,7 @@ Gold given to player 7 no necros can build a haunted mine.
 ```
 ### Functions
 - Action CreateItemLoc
-  - param String rnsp
+  - param String I013
   - param Function GetUnitLoc
     - Function GetUnitLoc
       - param Function GetDyingUnit
@@ -5595,6 +5438,8 @@ Enable the next level.
 Start the next level.
 ```
 ### Functions
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Action CommentString
   - param String Start the next level
 - Action CinematicFadeBJ

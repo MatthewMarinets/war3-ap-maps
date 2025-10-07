@@ -236,7 +236,7 @@ version = TFT
 - Action CommentString
   - param String If the hero data wasn't found, create a default hero
 - Action CustomScriptCode
-  - param String set udg_Arthas = CreateUnit(USER_PLAYER, 'Hart', GetRectCenterX(gg_rct_ArthasStart), GetRectCenterY(gg_rct_ArthasStart), 270.0)
+  - param String set udg_Arthas = CreateUnit(USER_PLAYER, 'Hart', GetRectCenterX(gg_rct_ArthasStart), GetRectCenterY(gg_rct_ArthasStart), 90.0)
 - Action CustomScriptCode
   - param String set hero_abil_1[0] = 'AHhb'
 - Action CustomScriptCode
@@ -1245,7 +1245,7 @@ Default melee game initialization for all players
 - Action CommentString
   - param String Run next level
 - Action SetNextLevelBJ
-  - param String Maps\AP_Campaign\Human04.w3x
+  - param String Maps\Archipelago\Human04.w3x
 - Action CustomVictoryBJ
   - param Preset Player01
   - param Preset UseSkipOptionUse
