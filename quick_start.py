@@ -5,6 +5,7 @@ Run a mission
 import subprocess
 import os
 from mapfile import config
+from scripts.helpers import get_target
 
 path_to_wc3 = config.workspace.get('wc3_path')
 assert os.path.exists(path_to_wc3), 'Warcraft 3 executable could not be found'
@@ -20,11 +21,12 @@ def start_mission(mission_file: str) -> None:
 
 if __name__ == '__main__':
     import sys
-    if len(sys.argv) >= 2:
-        map_file = sys.argv[1]
-    else:
-        map_file = config.workspace.get('map_file')
-        pack_out_dir = config.workspace.get('pack_out_dir')
-        map_format = config.workspace.get('map_format', 'w3x')
-        map_file = os.path.abspath(rf'{pack_out_dir}\{map_file}.{map_format}')
+    okay, target = get_target(sys.argv)
+    if not okay:
+        print(target)
+        sys.exit(1)
+    map_file = f'out/{target}.w3x'
+    print(f'Starting: {map_file}')
+    if sys.platform.startswith('linux'):
+        map_file = f'Z:{os.path.abspath(map_file)}'
     start_mission(map_file)

@@ -156,7 +156,7 @@ def update_listfile(listfile_path: str) -> None:
     ):
         if path not in lines:
             lines.append(path)
-    with open(listfile_path, 'w') as fp:
+    with open(listfile_path, 'w', newline='\r\n') as fp:
         fp.writelines(lines)
 
 

@@ -100,7 +100,8 @@ def update_abilities_human(abils_file: str) -> None:
             (editor_ids.FIELD_ABIL_TOOLTIP_NORMAL, 1):
                 f"Promote to {info.unit_name} [|cffffcc00{info.hotkey}|r]",
             (editor_ids.FIELD_ABIL_TOOLTIP_NORMAL_EXTENDED, 1):
-                f"* |cfffed312{info.cost} Gold|r\nPromote this unit to a{'n' if info.unit_name[0] in 'AEIOU' else ''} {info.unit_name}."
+                f"|cfffed312¤ {info.cost} Gold|r\n"
+                f"Promote this unit to a{'n' if info.unit_name[0] in 'AEIOU' else ''} {info.unit_name}."
                 + info.joke,
             editor_ids.FIELD_ABIL_HOTKEY: info.hotkey,
             editor_ids.FIELD_ABIL_STATS_IS_HERO_ABILITY: 0,
