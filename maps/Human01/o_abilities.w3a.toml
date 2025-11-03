@@ -39,7 +39,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "* |cfffed31280 Gold|r\nPromote this unit to a Captain."
+value = "|cfffed312¤ 80 Gold|r\nPromote this unit to a Captain."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -146,7 +146,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "* |cfffed31280 Gold|r\nPromote this unit to a Footman."
+value = "|cfffed312¤ 80 Gold|r\nPromote this unit to a Footman."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -245,7 +245,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "* |cfffed312125 Gold|r\nPromote this unit to a Rifleman."
+value = "|cfffed312¤ 125 Gold|r\nPromote this unit to a Rifleman."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -344,7 +344,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "* |cfffed31280 Gold|r\nPromote this unit to an Archer. (Magic makes for fast transition)."
+value = "|cfffed312¤ 80 Gold|r\nPromote this unit to an Archer. (Magic makes for fast transition)."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -435,7 +435,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "* |cfffed312225 Gold|r\nPromote this unit to a Knight."
+value = "|cfffed312¤ 225 Gold|r\nPromote this unit to a Knight."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -534,7 +534,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "* |cfffed31280 Gold|r\nPromote this unit to a Priest."
+value = "|cfffed312¤ 80 Gold|r\nPromote this unit to a Priest."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -641,7 +641,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "* |cfffed31290 Gold|r\nPromote this unit to a Sorceress. (Magic makes for fast transition)."
+value = "|cfffed312¤ 90 Gold|r\nPromote this unit to a Sorceress. (Magic makes for fast transition)."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -748,7 +748,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "* |cfffed312150 Gold|r\nPromote this unit to a Spell Breaker."
+value = "|cfffed312¤ 150 Gold|r\nPromote this unit to a Spell Breaker."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -847,7 +847,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "* |cfffed312150 Gold|r\nPromote this unit to a Mortar Team."
+value = "|cfffed312¤ 150 Gold|r\nPromote this unit to a Mortar Team."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
