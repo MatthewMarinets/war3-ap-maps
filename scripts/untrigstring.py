@@ -23,6 +23,8 @@ def un_trig_string(filename: str, wts_strings: dict[int, str]) -> set[str]:
             return match.group()
         replaced.add(match.group())
         result = wts_strings[match.group()]
+        result = result.replace('\\', '\\\\')
+        result = result.replace('\n', '\\n')
         if "'" in result:
             return f"''{result}''"
         return result.replace("'", r"\'")
