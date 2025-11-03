@@ -167,7 +167,7 @@ modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Adef,Aihn,AP00'
+value = "Adef,Aihn,AP00"
 object_id = 'null'
 
 [map_objects]
@@ -179,7 +179,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = ''
+value = ""
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -190,7 +190,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Timmy'
+value = "Timmy"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -201,7 +201,7 @@ modification_id = 'usei'  # Profile.Items Sold
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'pman,spro,wneg'
+value = "pman,spro,wneg"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -212,7 +212,7 @@ modification_id = 'usei'  # Profile.Items Sold
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'phea,shea,spro'
+value = "phea,shea,spro"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -223,7 +223,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Irregular'
+value = "Irregular"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -239,7 +239,7 @@ modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'APPh'
+value = "APPh"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -247,7 +247,7 @@ modification_id = 'udaa'  # UnitAbilities.Default Active Ability
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = ''
+value = ""
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -255,5 +255,5 @@ modification_id = 'ubui'  # Profile.Structures Built
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = ''
+value = ""
 object_id = 'null'

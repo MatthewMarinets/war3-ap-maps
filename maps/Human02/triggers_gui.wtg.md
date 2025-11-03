@@ -7344,7 +7344,7 @@ DefeatHappened should stop all possible cinematics and text messages. If it does
 - Action CommentString
   - param String Run next level
 - Action SetNextLevelBJ
-  - param String Maps\AP_Campaign\Human03.w3x
+  - param String Maps\Archipelago\Human03.w3x
 - Action CustomVictoryBJ
   - param Variable AAAP_Arthas
   - param Preset UseSkipOptionUse

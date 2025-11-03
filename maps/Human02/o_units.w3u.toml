@@ -56,7 +56,7 @@ modification_id = 'upro'  # Profile.Proper Names
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Blademaster'
+value = "Blademaster"
 object_id = 'null'
 
 [[blizzard_objects.entities]]
@@ -282,7 +282,7 @@ modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Adef,Aihn,AP00'
+value = "Adef,Aihn,AP00"
 object_id = 'null'
 
 [map_objects]
@@ -294,7 +294,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Dragon Hunter'
+value = "Dragon Hunter"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -377,7 +377,7 @@ modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = '(Fire Upgrade)'
+value = "(Fire Upgrade)"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -428,7 +428,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Dwarven Workshop'
+value = "Dwarven Workshop"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -439,7 +439,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Feranor Steeltoe'
+value = "Feranor Steeltoe"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -474,7 +474,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Black Dragon Whelp'
+value = "Black Dragon Whelp"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -482,7 +482,7 @@ modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'units\creeps\BlackDragon\BlackDragon'
+value = "units\\creeps\\BlackDragon\\BlackDragon"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -525,7 +525,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Irregular'
+value = "Irregular"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -541,7 +541,7 @@ modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'APPh'
+value = "APPh"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -549,7 +549,7 @@ modification_id = 'udaa'  # UnitAbilities.Default Active Ability
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = ''
+value = ""
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -557,5 +557,5 @@ modification_id = 'ubui'  # Profile.Structures Built
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = ''
+value = ""
 object_id = 'null'

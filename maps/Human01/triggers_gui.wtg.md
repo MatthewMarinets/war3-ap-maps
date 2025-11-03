@@ -10326,7 +10326,7 @@ Inhabitant makes it to a house - let him enter and be removed.
 - Action CommentString
   - param String Run next level
 - Action SetNextLevelBJ
-  - param String Maps\AP_Campaign\Human02.w3x
+  - param String Maps\Archipelago\Human02.w3x
 - Action CustomVictoryBJ
   - param Variable AAAP_Arthas
   - param Preset UseSkipOptionUse

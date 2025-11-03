@@ -8,6 +8,13 @@ When getting a location check that isn't an item, it can be good to send a messa
 
 Format: `call DisplayTextToPlayer(GetLocalPlayeR(), 0, 0, "Got an |cffee1166Archipelago location|r (<info>)")`
 
+## Next mission
+* Currently, next mission is set to the `Maps/Archipelago` folder
+* It would be good to have a "home base" mission similar to the ship in Stormgate that allows:
+  * Restocking / re-arranging heroes
+  * Storing items
+  * Checking progress / selecting next level
+
 ## No-builds
 No-builds get kind of samey if you start with vanilla units, as that's enough to beat the mission.
 To integrate with items, the baseline should be lowered and items used to bring the mission back

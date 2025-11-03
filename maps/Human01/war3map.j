@@ -8524,7 +8524,7 @@ endfunction
 //===========================================================================
 function Trig_Next_Level_Run_Actions takes nothing returns nothing
     // Run next level
-    call SetNextLevelBJ("Maps\\AP_Campaign\\Human02.w3x")
+    call SetNextLevelBJ("Maps\\Archipelago\\Human02.w3x")
     call CustomVictoryBJ(udg_AAAP_Arthas, true, true)
 endfunction
 
