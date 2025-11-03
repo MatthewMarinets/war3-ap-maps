@@ -16,6 +16,8 @@ DEFAULT_VALUES = {
         eid.FIELD_ABIL_BUTTON_POSITION_NORMAL_Y: 0,
     },
     eid.ABIL_CHARGE_GOLD_AND_LUMBER: {
+        eid.FIELD_ABIL_BUTTON_POSITION_NORMAL_X: 0,
+        eid.FIELD_ABIL_BUTTON_POSITION_NORMAL_Y: 0,
         eid.FIELD_ABIL_DATA_CHARGE_GOLD_AND_LUMBER_BASE_ORDER_ID: "neutralspell",
         eid.FIELD_ABIL_DATA_CHARGE_GOLD_AND_LUMBER_CHARGE_OWNING_PLAYER: 1,
         eid.FIELD_ABIL_DATA_CHARGE_GOLD_AND_LUMBER_GOLD_COST: 50,
@@ -207,3 +209,16 @@ class Entities:
                 result.modifications.remove(modification)
                 del id_to_modification[mod_id]
         return result
+
+    def remove_fields(self, entity_id: str, fields: list[str | tuple[str, int]]) -> None:
+        result = self.id_to_entity.get(entity_id)
+        if result is None:
+            return
+        id_to_modification = {(m.modification_id, m.variation_level): m for m in result.modifications}
+        for field in fields:
+            if isinstance(field, str):
+                field = (field, 0)
+            modification = id_to_modification.get(field)
+            if modification:
+                result.modifications.remove(modification)
+

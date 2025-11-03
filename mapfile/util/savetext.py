@@ -103,6 +103,8 @@ class TomlWriter:
         self.lines.append(f'{key} = {str(value).lower()}')
     def _write_stringify(self, key: str, value: Any, path: str) -> None:
         self.lines.append(f'{key} = {value!r}'.replace('\\\\', '\\'))
+    def _write_escaped_string(self, key: str, value: Any, path: str) -> None:
+        self.lines.append(f'{key} = "{value}"'.replace('\\', '\\\\').replace('\n', '\\n'))
     def _write_int(self, key: str, value: int, path: str) -> None:
         self.lines.append(f'{key} = {value}')
     def _write_flags(self, key: str, value: int, path: str) -> None:
@@ -124,6 +126,16 @@ class TomlWriter:
         if not isinstance(value, enum.Enum):
             raise ValueError(f"key {key} has invalid value {value}, expected enum")
         self.lines.append(f'{key} = "{value.name}"')
+    
+    def _write_any_value(self, key: str, value: Any, path: str) -> None:
+        if isinstance(value, bool):
+            self._write_bool(key, value, path)
+        elif isinstance(value, int):
+            self._write_int(key, value, path)
+        elif isinstance(value, str):
+            self._write_escaped_string(key, value, path)
+        else:
+            self._write_stringify(key, value, path)
 
     def _write_inline_array(self, key: str, value: list[str] | tuple[str, ...], path: str) -> None:
         if not len(value):

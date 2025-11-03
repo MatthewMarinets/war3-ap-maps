@@ -21,6 +21,7 @@ class AbilInfo:
     y: int
     sound: str
     icon: str
+    cost: int
     upgrade_name: str = ''
     joke: str = ''
 
@@ -30,45 +31,55 @@ class AbilInfo:
 
 
 SPELLBOOK_ABIL_ID = 'APPh'
+# Note(mm): Updating costs here also requires updating costs in irregulars.j currently.
 HUMAN_ABIL_INFO = [
     AbilInfo(
         "Captain", GameID.CAPTAIN, 'AP00', 'AP0a', 'RP00', "T", 1, 2,
         "CaptainWhat", "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp",
+        80,  # vanilla: 130
         upgrade_name="Captain Promotion"
     ),
     AbilInfo(
         "Footman", GameID.FOOTMAN, 'AP01', 'AP0b', 'RP01', "F", 0, 0,
         "FootmanReady", "ReplaceableTextures\\CommandButtons\\BTNFootman.blp",
+        80,  # vanilla: 135
     ),
     AbilInfo(
         "Rifleman", GameID.RIFLEMAN, 'AP02', 'AP0c', 'RP02', "R", 1, 0,
         "RiflemanReady", "ReplaceableTextures\\CommandButtons\\BTNRifleman.blp",
+        125,  # vanilla: 205
     ),
     AbilInfo(
         "Archer", GameID.BLOOD_ELF_ARCHER, 'AP03', 'AP0d', 'RP03', "H", 2, 0,
         "ArcherReady", "ReplaceableTextures\\CommandButtons\\BTNHighElvenArcher.blp",
+        80,  # vanilla: 130
         joke=" (Magic makes for fast transition)."
     ),
     AbilInfo(
         "Knight", GameID.KNIGHT, 'AP04', 'AP0e', 'RP04', "G", 3, 0,
         "KnightReady", "ReplaceableTextures\\CommandButtons\\BTNKnight.blp",
+        225,  # vanilla: 245
     ),
     AbilInfo(
         "Priest", GameID.PRIEST, 'AP05', 'AP0f', 'RP05', "E", 0, 1,
         "PriestReady", "ReplaceableTextures\\CommandButtons\\BTNPriest.blp",
+        80,  # vanilla: 135
     ),
     AbilInfo(
         "Sorceress", GameID.SORCERESS, 'AP06', 'AP0g', 'RP06', "X", 1, 1,
         "SorceressReady", "ReplaceableTextures\\CommandButtons\\BTNSorceress.blp",
+        90,  # vanilla: 155
         joke=" (Magic makes for fast transition)."
     ),
     AbilInfo(
         "Spell Breaker", GameID.SPELL_BREAKER, 'AP07', 'AP0h', 'RP07', "B", 2, 1,
         "SpellBreakerReady", "ReplaceableTextures\\CommandButtons\\BTNSpellBreaker.blp",
+        150,  # vanilla: 215
     ),
     AbilInfo(
         "Mortar Team", GameID.MORTAR_TEAM, 'AP08', 'AP0i', 'RP08', "M", 0, 2,
         "MortarTeamReady", "ReplaceableTextures\\CommandButtons\\BTNMortarTeam.blp",
+        150,  # vanilla: 180
     ),
 ]
 
@@ -89,7 +100,7 @@ def update_abilities_human(abils_file: str) -> None:
             (editor_ids.FIELD_ABIL_TOOLTIP_NORMAL, 1):
                 f"Promote to {info.unit_name} [|cffffcc00{info.hotkey}|r]",
             (editor_ids.FIELD_ABIL_TOOLTIP_NORMAL_EXTENDED, 1):
-                f"Promote this unit to a{'n' if info.unit_name[0] in 'AEIOU' else ''} {info.unit_name}."
+                f"* |cfffed312{info.cost} Gold|r\nPromote this unit to a{'n' if info.unit_name[0] in 'AEIOU' else ''} {info.unit_name}."
                 + info.joke,
             editor_ids.FIELD_ABIL_HOTKEY: info.hotkey,
             editor_ids.FIELD_ABIL_STATS_IS_HERO_ABILITY: 0,

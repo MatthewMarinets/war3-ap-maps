@@ -59,7 +59,15 @@ class CaptainPromotion:
     mission: Wc3Mission
 
 
-ItemType = Unit | Building | Level | Upgrade | ShopItem | PickupItem | QuestItem | CaptainPromotion
+@dataclasses.dataclass
+class Resources:
+    code: GameID
+    amount: int
+
+
+ItemType = (
+    Unit | Building | Level | Upgrade | ShopItem | PickupItem | QuestItem | CaptainPromotion | Resources
+)
 
 
 class Wc3Item(enum.Enum):
@@ -346,6 +354,9 @@ class Wc3Item(enum.Enum):
 
     # Captains
     H1_CAPTAIN = 1100, "Human 01: Captain", CaptainPromotion(Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD)
+
+    # Resource Fillers
+    FILLER_GOLD = 1200, "+100 Gold", Resources('gold', 100)
 
     # Human Campaign Items
     H_BOOTS_OF_SPEED =               2100, "Boots of Speed (Human)",                PickupItem(1, GameID.BOOTS_OF_SPEED, ItemChannel.HUMAN)

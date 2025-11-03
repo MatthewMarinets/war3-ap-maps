@@ -44,6 +44,7 @@ class DataType(enum.IntEnum):
     AttributeType = 20
     AttackBits = 21
 
+
 @dataclass
 class Modification:
     modification_id: str
@@ -164,22 +165,40 @@ def to_binary(data: War3ObjectData) -> bytes:
                     writer.write_int32(modification.variation_level)
                     writer.write_int32(modification.table_column)
                 if modification.data_type == DataType.Integer:
-                    assert isinstance(modification.value, int)
+                    assert isinstance(modification.value, int), (
+                        f"{entity.entity_id}.{modification.modification_id}: "
+                        f"Expected int, got {modification.value} ({type(modification.value)})"
+                    )
                     writer.write_int32(modification.value)
                 elif modification.data_type == DataType.Float:
-                    assert isinstance(modification.value, float)
+                    assert isinstance(modification.value, float), (
+                        f"{entity.entity_id}.{modification.modification_id}: "
+                        f"Expected float, got {modification.value} ({type(modification.value)})"
+                    )
                     writer.write_float(modification.value)
                 elif modification.data_type == DataType.Unreal:
-                    assert isinstance(modification.value, float)
+                    assert isinstance(modification.value, float), (
+                        f"{entity.entity_id}.{modification.modification_id}: "
+                        f"Expected float, got {modification.value} ({type(modification.value)})"
+                    )
                     writer.write_float(modification.value)
                 elif modification.data_type == DataType.String:
-                    assert isinstance(modification.value, str)
+                    assert isinstance(modification.value, str), (
+                        f"{entity.entity_id}.{modification.modification_id}: "
+                        f"Expected string, got {modification.value} ({type(modification.value)})"
+                    )
                     writer.write_string(modification.value)
                 elif modification.data_type == DataType.Bool:
-                    assert isinstance(modification.value, int)
+                    assert isinstance(modification.value, int), (
+                        f"{entity.entity_id}.{modification.modification_id}: "
+                        f"Expected int, got {modification.value} ({type(modification.value)})"
+                    )
                     writer.write_int32(modification.value)
                 elif modification.data_type == DataType.Char:
-                    assert isinstance(modification.value, str)
+                    assert isinstance(modification.value, str), (
+                        f"{entity.entity_id}.{modification.modification_id}: "
+                        f"Expected char, got {modification.value} ({type(modification.value)})"
+                    )
                     writer.write_bytes(modification.value.encode('utf-8'))
                 else:
                     assert False, f'Data type {modification.data_type} is unsupported'
@@ -201,13 +220,14 @@ class W3oTomlWriter(savetext.TomlWriter):
             'data_type': self._write_enum,
             'variation_level': self._write_int,
             'table_column': self._write_int,  # todo(mm): This can probably reference a column header with translate
-            'value': self._write_stringify,
+            'value': self._write_any_value,
             'object_id': self._write_id,
         }
         self.short_arrays = {
             'map_objects.entities.modifications.value',
             'blizzard_objects.entities.modifications.value',
         }
+
     def write(self, data: War3ObjectData) -> str:
         self.lines.append("# Warcraft 3 Map Objects File (.w3o)")
         self.lines.append("# See w3o.py for type definitions")

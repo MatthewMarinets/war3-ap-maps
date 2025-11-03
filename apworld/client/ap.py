@@ -94,6 +94,9 @@ class Wc3Context(CommonContext):
             ):
                 self.comm_ctx.game_status.inventory.add_tech_and_prereqs(item_data.type.game_id, 1)
                 self.comm_ctx.game_status.pending_update |= comm.PacketType.UNLOCKS
+            elif isinstance(item_data.type, items.Resources):
+                self.comm_ctx.game_status.inventory.tech[item_data.type.gameid] += item_data.type.amount
+                self.comm_ctx.game_status.pending_update |= comm.PacketType.UNLOCKS
             elif isinstance(item_data.type, items.Level):
                 self.comm_ctx.game_status.hero_data[item_data.type.slot].max_level += 1
                 self.comm_ctx.game_status.pending_update |= comm.PacketType.HERO_LEVEL

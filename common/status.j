@@ -19,6 +19,7 @@ integer update_index = -1
 integer hero_status_index = -1
 integer num_channel_1_items_received = 0
 integer num_channel_2_items_received = 0
+integer array gold_granted
 timer status_ack_ping_timer
 trigger t_captain_promoted
 endglobals
@@ -81,6 +82,9 @@ function status_load_unlocks_for_player takes integer target_player returns noth
     set last_unlock_packet = GetPlayerTechMaxAllowed(p, 'nech')
     // captains
     call captains_set_ability_usable(Player(target_player))
+    // resources
+    call AdjustPlayerStateBJ(GetPlayerTechMaxAllowed(Player(target_player), 'gold') - gold_granted[target_player], Player(target_player), PLAYER_STATE_RESOURCE_GOLD)
+    set gold_granted[target_player] = GetPlayerTechMaxAllowed(Player(target_player), 'gold')
 endfunction
 
 function status_captain_promoted_actions takes nothing returns nothing
@@ -318,9 +322,9 @@ function InitTrig_status takes nothing returns nothing
     endloop
     set i = 0
     loop
-        exitwhen GetPlayerController(Player(i)) == MAP_CONTROL_USER
-        exitwhen i > 10
+        exitwhen i > 12
         set i = i + 1
+        set gold_granted[i] = 0
     endloop
     set status_ack_ping_timer = CreateTimer()
     call status_send()
