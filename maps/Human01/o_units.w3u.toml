@@ -12,8 +12,16 @@ modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = ''
+value = ""
 object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 25
+object_id = 'nban'  # Bandit
 
 [[blizzard_objects.entities]]
 parent_id = 'ngno'  # Gnoll
@@ -61,8 +69,24 @@ modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = ''
+value = ""
 object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'nrog'  # Rogue
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 40
+object_id = 'nrog'  # Rogue
 
 [[blizzard_objects.entities]]
 parent_id = 'ngnb'  # Gnoll Brute
@@ -116,7 +140,7 @@ modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'ACad'
+value = "ACad"
 object_id = 'null'
 
 [[blizzard_objects.entities]]
@@ -127,7 +151,7 @@ modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = ''
+value = ""
 object_id = 'null'
 
 [[blizzard_objects.entities]]
@@ -138,7 +162,7 @@ modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Adef,Aihn,AP00'
+value = "Adef,Aihn,AP00"
 object_id = 'null'
 
 [map_objects]
@@ -150,7 +174,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Little Timmy'
+value = "Little Timmy"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -158,7 +182,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Little Timmy'
+value = "Little Timmy"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -177,7 +201,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Duelist'
+value = "Duelist"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -204,7 +228,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Farmer Jerrett'
+value = "Farmer Jerrett"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -239,7 +263,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Farmer Ted'
+value = "Farmer Ted"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -274,7 +298,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Menag'
+value = "Menag"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -306,7 +330,7 @@ modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'pierce'
+value = "pierce"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -314,7 +338,7 @@ modification_id = 'ua1w'  # UnitWeapons.Attack 1 - Weapon Type
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'missile'
+value = "missile"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -330,7 +354,7 @@ modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Abilities\Weapons\FireBallMissile\FireBallMissile.mdl'
+value = "Abilities\\Weapons\\FireBallMissile\\FireBallMissile.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -362,7 +386,15 @@ modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = ''
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 40
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -373,7 +405,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Matilda'
+value = "Matilda"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -400,7 +432,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Gerard'
+value = "Gerard"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -443,7 +475,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Alicia'
+value = "Alicia"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -478,7 +510,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Amy Diane'
+value = "Amy Diane"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -505,7 +537,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Maria'
+value = "Maria"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -540,7 +572,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Stephanie'
+value = "Stephanie"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -551,7 +583,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Benedict'
+value = "Benedict"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -610,7 +642,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Benedict'
+value = "Benedict"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -618,7 +650,7 @@ modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = '(Bandit Form)'
+value = "(Bandit Form)"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -650,7 +682,7 @@ modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = ''
+value = ""
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -661,6 +693,14 @@ table_column = 0
 value = 1024
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 40
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'nvil'  # Villager
 entity_id = 'nC13'
@@ -669,7 +709,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Garth'
+value = "Garth"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -704,7 +744,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Thornby'
+value = "Thornby"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -739,7 +779,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Dean'
+value = "Dean"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -758,7 +798,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Slave Master'
+value = "Slave Master"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -798,7 +838,7 @@ modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'units\demon\ChaosWarlord\ChaosWarlord'
+value = "units\\demon\\ChaosWarlord\\ChaosWarlord"
 object_id = 'owar'  # Orc Warchief
 
 [[map_objects.entities.modifications]]
@@ -817,7 +857,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Ryan'
+value = "Ryan"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -836,7 +876,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Blake'
+value = "Blake"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -879,7 +919,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Logan'
+value = "Logan"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -890,7 +930,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Garrett'
+value = "Garrett"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -901,7 +941,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Andrew'
+value = "Andrew"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -912,7 +952,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Steven'
+value = "Steven"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -923,7 +963,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'James'
+value = "James"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -934,7 +974,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Jeremy'
+value = "Jeremy"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -945,7 +985,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Joe'
+value = "Joe"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -956,7 +996,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Scott'
+value = "Scott"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -975,7 +1015,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Mike'
+value = "Mike"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -994,7 +1034,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Irregular'
+value = "Irregular"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1010,7 +1050,7 @@ modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'APPh'
+value = "APPh"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1018,7 +1058,7 @@ modification_id = 'udaa'  # UnitAbilities.Default Active Ability
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = ''
+value = ""
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1026,7 +1066,7 @@ modification_id = 'ubui'  # Profile.Structures Built
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = ''
+value = ""
 object_id = 'null'
 
 [[map_objects.entities.modifications]]

@@ -15,7 +15,7 @@ modification_id = 'gnam'  # Profile.Name
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'Captain Promotion'
+value = "Captain Promotion"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -26,7 +26,7 @@ modification_id = 'gnam'  # Profile.Name
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'Find Captain Promotion'
+value = "Find Captain Promotion"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -37,7 +37,7 @@ modification_id = 'gnam'  # Profile.Name
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'Find Footman'
+value = "Find Footman"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -48,7 +48,7 @@ modification_id = 'gnam'  # Profile.Name
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'Find Rifleman'
+value = "Find Rifleman"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -59,7 +59,7 @@ modification_id = 'gnam'  # Profile.Name
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'Find Archer'
+value = "Find Archer"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -70,7 +70,7 @@ modification_id = 'gnam'  # Profile.Name
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'Find Knight'
+value = "Find Knight"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -81,7 +81,7 @@ modification_id = 'gnam'  # Profile.Name
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'Find Priest'
+value = "Find Priest"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -92,7 +92,7 @@ modification_id = 'gnam'  # Profile.Name
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'Find Sorceress'
+value = "Find Sorceress"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -103,7 +103,7 @@ modification_id = 'gnam'  # Profile.Name
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'Find Spell Breaker'
+value = "Find Spell Breaker"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -114,5 +114,5 @@ modification_id = 'gnam'  # Profile.Name
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = 'Find Mortar Team'
+value = "Find Mortar Team"
 object_id = 'null'

@@ -988,8 +988,8 @@ version = TFT
   - param String 8.00
 - Action SetPlayerFlagBJ
   - param Preset PlayerFlagGivesBounty
-  - param Preset OnOffOff
-  - param Preset PlayerNA
+  - param Preset OnOffOn
+  - param Preset Player08
 - Action SetSkyModel
   - param Preset SkyModelSky04
 - Action SetTerrainFogExBJ
