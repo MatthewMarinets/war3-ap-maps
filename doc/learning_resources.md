@@ -1,4 +1,5 @@
 # Resources
+* [This random guide covers file formats quite well](https://867380699.github.io/blog/2019/05/09/W3X_Files_Format)
 * [Map file format](http://www.wc3-project.ag.vu/w3m-specs.html)
   * [Updated repost on theHelper](https://www.thehelper.net/threads/guide-explanation-of-w3m-and-w3x-files.35292/)
   * [Mirror on wc3edit.net](https://forum.wc3edit.net/deprotection-cheating-f64/guide-format-explanation-of-w3m-and-w3x-files-t7080.html)

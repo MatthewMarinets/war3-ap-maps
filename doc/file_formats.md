@@ -45,8 +45,8 @@
 | .mdx/.mdl | Model files                                                                |
 | .wai      | AI file                                                                    |
 
-## .w3m
-* RoC map file
+## .w3m / .w3x
+* Map files (.w3m = RoC, .w3x = TFT)
 * Has a 512-byte header, followed by MPQ archive of map files
 * Information in the header is generally the same as stored in the war3map.w3i file
 ```C
