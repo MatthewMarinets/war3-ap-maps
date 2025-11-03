@@ -1535,7 +1535,7 @@ function InitTrig_irregulars takes nothing returns nothing
     set human_no_gold_sound=CreateSound("Sound\\Interface\\warning\\human\\knightnogold1.wav", false, false, false, 10, 10, "")
     call SetSoundParamsFromLabel(human_no_gold_sound, "NoGoldHuman")
     call SetSoundDuration(human_no_gold_sound, GetSoundDuration(human_no_gold_sound))
-    call TriggerRegisterPlayerUnitEventSimple(t_irregulars_on_cast, USER_PLAYER, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerRegisterPlayerUnitEventSimple(t_irregulars_on_cast, USER_PLAYER, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddAction(t_irregulars_on_cast, function irregulars_on_cast)
     call Preload("Abilities\\Spells\\Human\\Polymorph\\PolyMorphDoneGround.mdl")
 endfunction

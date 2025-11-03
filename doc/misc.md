@@ -35,7 +35,9 @@ I'm using:
 ## Custom abilities
 * Every ability has an _order id_, which is used internally when performing an action
   * If a unit has two abilities with the same order id, trying to do either will always execute the first
-* To detect a unit using an ability, use the `EVENT_PLAYER_UNIT_SPELL_EFFECT` event
+* To detect a unit using an ability, use:
+  * `EVENT_PLAYER_UNIT_SPELL_EFFECT` for "Charge Gold and Lumber" -- seems more reliable for abilities in general
+  * `EVENT_PLAYER_UNIT_SPELL_CAST` for "Channel" -- slightly faster
 
 ### Channel
 The "Channel" ability has a customizable order id field,
