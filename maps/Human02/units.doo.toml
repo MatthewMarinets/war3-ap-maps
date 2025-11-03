@@ -516,7 +516,7 @@ item_class = 0
 
 [[units]]
 
-type_id = 'hrif'  # Rifleman
+type_id = 'hA00'
 variation = 0
 x = 184.0004119873047
 y = -2803.23583984375
@@ -1308,7 +1308,7 @@ item_class = 0
 
 [[units]]
 
-type_id = 'hrif'  # Rifleman
+type_id = 'hA00'
 variation = 0
 x = -252.7581329345703
 y = -2576.708740234375
