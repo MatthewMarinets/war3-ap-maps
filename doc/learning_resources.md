@@ -1,17 +1,15 @@
 # Resources
+## File Formats
 * [This random guide covers file formats quite well](https://867380699.github.io/blog/2019/05/09/W3X_Files_Format)
 * [Map file format](http://www.wc3-project.ag.vu/w3m-specs.html)
   * [Updated repost on theHelper](https://www.thehelper.net/threads/guide-explanation-of-w3m-and-w3x-files.35292/)
   * [Mirror on wc3edit.net](https://forum.wc3edit.net/deprotection-cheating-f64/guide-format-explanation-of-w3m-and-w3x-files-t7080.html)
-* [JHCR Writeup](https://lep.duckdns.org/blog/2020-09-25-jhcr-a-high-level-overview.html)
 * [.w3g format deep-dive](http://w3g.deepnode.de/files/w3g_format.txt)
-* [Text colour modes](https://world-editor-tutorials.thehelper.net/colors.php)
 * [Zezula's writeup on MPQ archive format](http://zezula.net/en/mpq/mpqformat.html)
   * [Hive Workshop post introducing this tool + giving some technical support](https://www.hiveworkshop.com/threads/ladiks-mpq-editor.249562/)
 * [Zezula's CascView](http://www.zezula.net/en/casc/main.html)
 * [This Hive Workshop post explaining .blp format is excellent](https://www.hiveworkshop.com/threads/blp-specifications-wc3.279306/)
 * [JASS documentation repository](https://github.com/lep/jassdoc)
-* [Warcraft 3 Liquipedia](https://liquipedia.net/warcraft/Main_Page)
 
 ## File IO
 * [Lua file IO](https://www.hiveworkshop.com/threads/fileio-lua-optimized.347049/)
@@ -30,3 +28,8 @@
 * [DEFLATE algorithm flush / block details](https://www.bolet.org/~pornin/deflate-flush-fr.html)
 * [Old spec for .slk format](https://outflank.nl/upload/sylksum.txt)
 
+## Misc
+* [Warcraft 3 Liquipedia](https://liquipedia.net/warcraft/Main_Page)
+* [WaterKnight's guide to sounds in jass](http://hiveworkshop.com/threads/quirks-of-sounds.201362/)
+* [Text colour modes basic intro](https://world-editor-tutorials.thehelper.net/colors.php)
+* [JHCR Writeup](https://lep.duckdns.org/blog/2020-09-25-jhcr-a-high-level-overview.html)
