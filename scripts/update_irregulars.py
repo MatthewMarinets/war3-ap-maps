@@ -5,7 +5,7 @@ from dataclasses import dataclass
 import sys
 import os
 from mapfile import w3o
-from . import editor_ids, mod_entity
+from . import editor_ids, mod_entity, custom_editor_ids as cid
 from apworld.data.game_ids import GameID
 
 
@@ -34,50 +34,77 @@ SPELLBOOK_ABIL_ID = 'APPh'
 # Note(mm): Updating costs here also requires updating costs in irregulars.j currently.
 HUMAN_ABIL_INFO = [
     AbilInfo(
-        "Captain", GameID.CAPTAIN, 'AP00', 'AP0a', 'RP00', "T", 1, 2,
+        "Captain", GameID.CAPTAIN,
+        cid.ABIL_SELECT_TRANSFORM_CAPTAIN, cid.ABIL_EXECUTE_TRANSFORM_CAPTAIN,
+        cid.UPGRADE_HAS_CAPTAIN,
+        "T", 1, 2,
         "CaptainWhat", "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp",
         80,  # vanilla: 130
         upgrade_name="Captain Promotion"
     ),
     AbilInfo(
-        "Footman", GameID.FOOTMAN, 'AP01', 'AP0b', 'RP01', "F", 0, 0,
+        "Footman", GameID.FOOTMAN,
+        cid.ABIL_SELECT_TRANSFORM_FOOTMAN, cid.ABIL_EXECUTE_TRANSFORM_FOOTMAN,
+        cid.UPGRADE_HAS_FOOTMAN,
+        "F", 0, 0,
         "FootmanReady", "ReplaceableTextures\\CommandButtons\\BTNFootman.blp",
         80,  # vanilla: 135
     ),
     AbilInfo(
-        "Rifleman", GameID.RIFLEMAN, 'AP02', 'AP0c', 'RP02', "R", 1, 0,
+        "Rifleman", GameID.RIFLEMAN,
+        cid.ABIL_SELECT_TRANSFORM_RIFLEMAN, cid.ABIL_EXECUTE_TRANSFORM_RIFLEMAN,
+        cid.UPGRADE_HAS_RIFLEMAN,
+        "R", 1, 0,
         "RiflemanReady", "ReplaceableTextures\\CommandButtons\\BTNRifleman.blp",
         125,  # vanilla: 205
     ),
     AbilInfo(
-        "Archer", GameID.BLOOD_ELF_ARCHER, 'AP03', 'AP0d', 'RP03', "H", 2, 0,
+        "Archer", GameID.BLOOD_ELF_ARCHER,
+        cid.ABIL_SELECT_TRANSFORM_BLOOD_ELF_ARCHER, cid.ABIL_EXECUTE_TRANSFORM_BLOOD_ELF_ARCHER,
+        cid.UPGRADE_HAS_BLOOD_ELF_ARCHER,
+        "H", 2, 0,
         "ArcherReady", "ReplaceableTextures\\CommandButtons\\BTNHighElvenArcher.blp",
         80,  # vanilla: 130
         joke=" (Magic makes for fast transition)."
     ),
     AbilInfo(
-        "Knight", GameID.KNIGHT, 'AP04', 'AP0e', 'RP04', "G", 3, 0,
+        "Knight", GameID.KNIGHT,
+        cid.ABIL_SELECT_TRANSFORM_KNIGHT, cid.ABIL_EXECUTE_TRANSFORM_KNIGHT,
+        cid.UPGRADE_HAS_KNIGHT,
+        "G", 3, 0,
         "KnightReady", "ReplaceableTextures\\CommandButtons\\BTNKnight.blp",
         225,  # vanilla: 245
     ),
     AbilInfo(
-        "Priest", GameID.PRIEST, 'AP05', 'AP0f', 'RP05', "E", 0, 1,
+        "Priest", GameID.PRIEST,
+        cid.ABIL_SELECT_TRANSFORM_PRIEST, cid.ABIL_EXECUTE_TRANSFORM_PRIEST,
+        cid.UPGRADE_HAS_PRIEST,
+        "E", 0, 1,
         "PriestReady", "ReplaceableTextures\\CommandButtons\\BTNPriest.blp",
         80,  # vanilla: 135
     ),
     AbilInfo(
-        "Sorceress", GameID.SORCERESS, 'AP06', 'AP0g', 'RP06', "X", 1, 1,
+        "Sorceress", GameID.SORCERESS,
+        cid.ABIL_SELECT_TRANSFORM_SORCERESS, cid.ABIL_EXECUTE_TRANSFORM_SORCERESS,
+        cid.UPGRADE_HAS_SORCERESS,
+        "X", 1, 1,
         "SorceressReady", "ReplaceableTextures\\CommandButtons\\BTNSorceress.blp",
         90,  # vanilla: 155
         joke=" (Magic makes for fast transition)."
     ),
     AbilInfo(
-        "Spell Breaker", GameID.SPELL_BREAKER, 'AP07', 'AP0h', 'RP07', "B", 2, 1,
+        "Spell Breaker", GameID.SPELL_BREAKER,
+        cid.ABIL_SELECT_TRANSFORM_SPELL_BREAKER, cid.ABIL_EXECUTE_TRANSFORM_SPELL_BREAKER,
+        cid.UPGRADE_HAS_SPELL_BREAKER,
+        "B", 2, 1,
         "SpellBreakerReady", "ReplaceableTextures\\CommandButtons\\BTNSpellBreaker.blp",
         150,  # vanilla: 215
     ),
     AbilInfo(
-        "Mortar Team", GameID.MORTAR_TEAM, 'AP08', 'AP0i', 'RP08', "M", 0, 2,
+        "Mortar Team", GameID.MORTAR_TEAM,
+        cid.ABIL_SELECT_TRANSFORM_MORTAR_TEAM, cid.ABIL_EXECUTE_TRANSFORM_MORTAR_TEAM,
+        cid.UPGRADE_HAS_MORTAR_TEAM,
+        "M", 0, 2,
         "MortarTeamReady", "ReplaceableTextures\\CommandButtons\\BTNMortarTeam.blp",
         150,  # vanilla: 180
     ),
