@@ -1,5 +1,5 @@
 // version: 1
-// Triggers: 91
+// Triggers: 93
 //\\// Trigger #0
 // This file defines file IO functions for the JASS side of things
 // Based off the FileIO module created by Nestharus, see:
@@ -814,8 +814,7 @@ globals
 trigger t_location_found = null
 endglobals
 
-function trigger_function_item_locations takes nothing returns nothing
-    local integer item_id = GetItemTypeId(GetManipulatedItem())
+function item_location_send takes integer item_id returns nothing
     if (item_id == 'I010') then
         call status_check_location(0)
     elseif (item_id == 'I011') then
@@ -836,17 +835,17 @@ function trigger_function_item_locations takes nothing returns nothing
         call status_check_location(8)
     elseif (item_id == 'I019') then
         call status_check_location(9)
-    elseif (item_id == 'I01A') then
+    elseif (item_id == 'I01a') then
         call status_check_location(10)
-    elseif (item_id == 'I01B') then
+    elseif (item_id == 'I01b') then
         call status_check_location(11)
-    elseif (item_id == 'I01C') then
+    elseif (item_id == 'I01c') then
         call status_check_location(12)
-    elseif (item_id == 'I01D') then
+    elseif (item_id == 'I01d') then
         call status_check_location(13)
-    elseif (item_id == 'I01E') then
+    elseif (item_id == 'I01e') then
         call status_check_location(14)
-    elseif (item_id == 'I01F') then
+    elseif (item_id == 'I01f') then
         call status_check_location(15)
     elseif (item_id == 'I020') then
         call status_check_location(16)
@@ -868,25 +867,39 @@ function trigger_function_item_locations takes nothing returns nothing
         call status_check_location(24)
     elseif (item_id == 'I029') then
         call status_check_location(25)
-    elseif (item_id == 'I02A') then
+    elseif (item_id == 'I02a') then
         call status_check_location(26)
-    elseif (item_id == 'I02B') then
+    elseif (item_id == 'I02b') then
         call status_check_location(27)
-    elseif (item_id == 'I02C') then
+    elseif (item_id == 'I02c') then
         call status_check_location(28)
-    elseif (item_id == 'I02D') then
+    elseif (item_id == 'I02d') then
         call status_check_location(29)
-    elseif (item_id == 'I02E') then
+    elseif (item_id == 'I02e') then
         call status_check_location(30)
-    elseif (item_id == 'I02F') then
+    elseif (item_id == 'I02f') then
         call status_check_location(31)
+    endif
+endfunction
+
+function item_location_in_range takes integer item_id returns boolean
+    if item_id < 'I010' or item_id > 'I02f' then
+        return false
+    endif
+    return true
+endfunction
+
+function trigger_function_pick_up_item takes nothing returns nothing
+    local integer item_id = GetItemTypeId(GetManipulatedItem())
+    if item_location_in_range(item_id) then
+        call item_location_send(item_id)
     endif
 endfunction
 
 function InitTrig_item_locations takes nothing returns nothing
     set t_location_found = CreateTrigger()
     call TriggerRegisterPlayerUnitEventSimple(t_location_found, USER_PLAYER, EVENT_PLAYER_UNIT_PICKUP_ITEM)
-    call TriggerAddAction(t_location_found, function trigger_function_item_locations)
+    call TriggerAddAction(t_location_found, function trigger_function_pick_up_item)
 endfunction
 
 //\\// Trigger #5

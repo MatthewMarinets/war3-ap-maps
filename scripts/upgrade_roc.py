@@ -97,7 +97,7 @@ def add_ap_items(w3t_file: str) -> None:
     else:
         items_data = w3o.War3ObjectData(version=2, has_levels=False)
     modified_entity_ids = [item_data.entity_id for item_data in items_data.map_objects.entities]
-    for location_number in range(0x17):
+    for location_number in range(0x20):
         item_id = f'I0{hex(location_number + 0x10)[2:]}'
         if item_id in modified_entity_ids:
             continue

@@ -204,6 +204,14 @@ table_column = 0
 value = "pman,spro,wneg"
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Asid,Aneu,Avul,Apit"
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'ngme'  # Goblin Merchant
 entity_id = 'nC03'
@@ -213,6 +221,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = "phea,shea,spro"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Asid,Aneu,Avul,Apit"
 object_id = 'null'
 
 [[map_objects.entities]]

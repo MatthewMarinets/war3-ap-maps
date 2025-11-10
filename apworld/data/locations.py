@@ -124,10 +124,10 @@ class Wc3Location(enum.Enum):
     HU4_MURLOC_NIGHTCRAWLER_ITEM =  10405, "Murloc Nightcrawler Item", Wc3Mission.H4_THE_CULT_OF_THE_DAMNED, Wc3LocationType.ITEM, "Potion of Mana"
     HU4_ENFORCER_ITEM =             10406, "Enforcer Item",            Wc3Mission.H4_THE_CULT_OF_THE_DAMNED, Wc3LocationType.ITEM, "Potion of Mana"
     HU4_TROLL_HUT_ITEM =            10407, "Troll Hut Item",           Wc3Mission.H4_THE_CULT_OF_THE_DAMNED, Wc3LocationType.ITEM, "Scroll of Protection"
+    HU4_CENTER_GOBLIN_MERCHANT =    10408, "Center Goblin Merchant",   Wc3Mission.H4_THE_CULT_OF_THE_DAMNED, Wc3LocationType.SHOP
+    HU4_NORTH_GOBLIN_MERCHANT =     10409, "North Goblin Merchant",    Wc3Mission.H4_THE_CULT_OF_THE_DAMNED, Wc3LocationType.SHOP
     HU4_UNDEAD_BASE =               10420, "Destroy the Undead Base",  Wc3Mission.H4_THE_CULT_OF_THE_DAMNED, Wc3LocationType.BASE
     HU4_INVESTIGATE_ANDORHAL =      10421, "Investigate Andorhal",     Wc3Mission.H4_THE_CULT_OF_THE_DAMNED, Wc3LocationType.QUEST
-    HU4_CENTER_GOBLIN_MERCHANT =    10422, "Center Goblin Merchant",   Wc3Mission.H4_THE_CULT_OF_THE_DAMNED, Wc3LocationType.SHOP
-    HU4_NORTH_GOBLIN_MERCHANT =     10423, "North Goblin Merchant",    Wc3Mission.H4_THE_CULT_OF_THE_DAMNED, Wc3LocationType.SHOP
 
     # Quests:
     # (Main) Defend Heathglen

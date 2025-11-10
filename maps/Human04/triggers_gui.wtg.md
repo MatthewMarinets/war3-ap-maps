@@ -69,6 +69,8 @@ version = TFT
 | JainaPoint | location | . | . |
 | CinematicRegionJaina | rect | . | RectNull |
 | GranaryEntranceGuy | unit | . | . |
+| ShopEast | unit | . | . |
+| ShopNorth | unit | . | . |
 
 # Triggers
 ## fileio
@@ -241,6 +243,64 @@ version = TFT
   - param String set hero_abil_3[0] = 'AHab'
 - Action CustomScriptCode
   - param String set hero_abil_4[0] = 'AHmt'
+
+
+## Shop Locations
+- enabled: True
+- category: [22] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action SetVariable
+  - param Variable ShopEast
+  - param Variable gg_unit_nC02_0079
+- Action SetVariable
+  - param Variable ShopNorth
+  - param Variable gg_unit_nC03_0004
+- Action AddItemToStockBJ
+  - param String I018
+  - param Variable ShopEast
+  - param String 1
+  - param String 1
+- Action AddItemToStockBJ
+  - param String I019
+  - param Variable ShopNorth
+  - param String 1
+  - param String 1
+- Event MapInitializationEvent
+
+
+## Base Location
+- enabled: True
+- category: [22] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CustomScriptCode
+  - param String call status_check_location(20)
+- Action CustomScriptCode
+  - param String call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Undead Base)")
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Condition OperatorCompareInteger
+  - param Function GetPlayerStructureCount
+    - Function GetPlayerStructureCount
+      - param Preset Player06
+      - param Preset InclusionInclude
+  - param Preset OperatorLessEq
+  - param String 0
+- Event TriggerRegisterPlayerUnitEventSimple
+  - param Preset Player06
+  - param Preset PlayerUnitEventDeath
 
 
 ## Map Initialization

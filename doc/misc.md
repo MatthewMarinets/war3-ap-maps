@@ -32,6 +32,9 @@ I'm using:
 * #2266ff For non-error "info" notices like connection re-established
 * #ee1166 For Archipelago locations
 
+## Shops
+* For a trigger to affect what a shop can sell, it must have the `Asit` / "Sell Items" ability
+
 ## Custom abilities
 * Every ability has an _order id_, which is used internally when performing an action
   * If a unit has two abilities with the same order id, trying to do either will always execute the first
