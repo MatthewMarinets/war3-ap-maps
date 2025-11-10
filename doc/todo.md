@@ -1,41 +1,26 @@
 ## Maps
-* Human01
+- [x] Human01
+- [x] Human02
+- [x] Human03
+- [x] Human04
   - [x] Eliminate gamecache usage
   - [x] Redirect starting next mission
   - [x] Hero init
   - [x] Remove hero level cap triggers
-  - [x] Special considerations for first hero appearances
   - [x] Replace items -> AP items
   - [x] Location sending functions
-  - [x] Creep bounty
-* Human02
-  - [x] Implement locations
-  - [x] Remove gamecache
-  - [x] Update next level path
-  - [x] Fix footmen counter
-  - [x] Remove rifleman unlock
-  - [x] Remove hero level cap triggers
-  - [x] Creep bounty
-* Human03
-  - [x] Eliminate gamecache usage
-  - [x] Redirect starting next mission
-  - [x] Hero init
-  - [x] Remove hero level cap triggers
-  - [x] Special considerations for first hero appearances
-  - [x] Replace items -> AP items
-  - [x] Location sending functions
-  - [ ] Purge any unlock tech functions
-  - [x] Extra check -- reward for protecting villagers from bandits
-  - [x] Creep bounty
-* Human04
-  - [x] Eliminate gamecache usage
-  - [x] Redirect starting next mission
-  - [x] Hero init
-  - [x] Remove hero level cap triggers
-  - [x] Replace items -> AP items
-  - [ ] Location sending functions
   - [n/a] Purge any unlock tech functions
   - [x] Creep bounty
+- [ ] Human05
+  - [ ] Eliminate gamecache usage
+  - [ ] Redirect starting next mission
+  - [ ] Hero init
+  - [ ] Remove hero level cap triggers
+  - [ ] Special considerations for first hero appearances
+  - [ ] Replace items -> AP items
+  - [ ] Location sending functions
+  - [ ] Purge any unlock tech functions
+  - [ ] Creep bounty
 
 
 ### Item check conditions boilerplate
@@ -67,11 +52,12 @@
 
 ### Longer term
 - [ ] No-builds: unlock tech for usage based on max allowed
-- [ ] Irregulars: have some kind of resource cost to upgrade
+- [x] Irregulars: have some kind of resource cost to upgrade
 - [ ] Figure out item recovery / make item bank levels
 - [ ] Figure out slot storage
 - [ ] RoC models
 - [x] RoC creep gold drop amounts
+- [ ] Enemysanity detection
 
 ## File formats covered
 - [x] mpq/w3m/w3x -- MPQEditor

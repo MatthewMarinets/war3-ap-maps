@@ -12,7 +12,7 @@ modification_id = 'utra'  # Profile.Units Trained
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'hfoo,nhea,hmpr'
+value = "hfoo,nhea,hmpr"
 object_id = 'null'
 
 [[blizzard_objects.entities]]
@@ -23,7 +23,7 @@ modification_id = 'uhrt'  # UnitBalance.Hit Points Regeneration Type
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'always'
+value = "always"
 object_id = 'null'
 
 [[blizzard_objects.entities]]
@@ -177,7 +177,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_041'
+value = "TRIGSTR_041"
 object_id = 'null'
 
 [[blizzard_objects.entities]]
@@ -221,7 +221,18 @@ modification_id = 'usei'  # Profile.Items Sold
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'phea,pman,shea,spro,wneg,gemt,stwp'
+value = "phea,pman,shea,spro,wneg,gemt,stwp"
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'hfoo'  # Footman
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Adef,Aihn,AP00"
 object_id = 'null'
 
 [map_objects]
@@ -233,7 +244,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_004'
+value = "TRIGSTR_004"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -252,7 +263,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_035'
+value = "TRIGSTR_035"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -263,7 +274,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_145'
+value = "TRIGSTR_145"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -271,7 +282,7 @@ modification_id = 'upro'  # Profile.Proper Names
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_146'
+value = "TRIGSTR_146"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -279,5 +290,48 @@ modification_id = 'uhab'  # UnitAbilities.Hero
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'AUsl,AUcs,ANsl,SNdc'
+value = "AUsl,AUcs,ANsl,SNdc"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'hmil'  # Militia
+entity_id = 'hA00'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Irregular"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 9
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "APPh"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'udaa'  # UnitAbilities.Default Active Ability
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ubui'  # Profile.Structures Built
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
 object_id = 'null'
