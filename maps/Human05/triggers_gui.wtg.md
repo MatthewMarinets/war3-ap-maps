@@ -294,6 +294,172 @@ version = TFT
 ### Functions
 
 
+## AP Load Arthas
+- enabled: True
+- category: [33] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String set udg_Arthas = hero_create(0, USER_PLAYER, GetRectCenterX(gg_rct_01Arthas_Start), GetRectCenterY(gg_rct_01Arthas_Start), 180.0)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable Arthas
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CustomScriptCode
+  - param String set udg_Arthas = CreateUnit(USER_PLAYER, 'Hart', GetRectCenterX(gg_rct_01Arthas_Start), GetRectCenterY(gg_rct_01Arthas_Start), 180.0)
+- Action CustomScriptCode
+  - param String set hero_abil_1[0] = 'AHhb'
+- Action CustomScriptCode
+  - param String set hero_abil_2[0] = 'AHds'
+- Action CustomScriptCode
+  - param String set hero_abil_3[0] = 'AHad'
+- Action CustomScriptCode
+  - param String set hero_abil_4[0] = 'AHre'
+
+
+## AP Load Jaina
+- enabled: True
+- category: [33] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String set udg_Jaina = hero_create_global(HERO_ID_JAINA, USER_PLAYER, GetRectCenterX(gg_rct_01Jaina_Start), GetRectCenterY(gg_rct_01Jaina_Start), 180.0)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable Jaina
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CustomScriptCode
+  - param String set udg_Jaina = CreateUnit(USER_PLAYER, 'Hjai', GetRectCenterX(gg_rct_01Jaina_Start), GetRectCenterY(gg_rct_01Jaina_Start), 180.0)
+
+
+## Shop Locations
+- enabled: True
+- category: [33] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event MapInitializationEvent
+- Action AddItemToStockBJ
+  - param String I029
+  - param Variable gg_unit_ngme_0087
+  - param String 1
+  - param String 1
+
+
+## Purple Lich Location
+- enabled: True
+- category: [33] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_Ulic_0022
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(20)
+
+
+## Green Lich Location
+- enabled: True
+- category: [33] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_Ulic_0059
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(21)
+
+
+## Purple Base Location
+- enabled: True
+- category: [33] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_unp2_0071
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(23)
+
+
+## Green Base Location
+- enabled: True
+- category: [33] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_unp2_0005
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(24)
+
+
 ## Map Initilization
 - enabled: True
 - category: [1] Map Initillization
@@ -368,152 +534,10 @@ Load all heroes.
 ### Functions
 - Action CommentString
   - param String Load the saved data
-- Action InitGameCacheBJ
-  - param String Campaigns.w3v
-- Action CommentString
-  - param String Load each hero
 - Action ConditionalTriggerExecute
-  - param Variable gg_trg_Load_Arthas
+  - param Variable gg_trg_AP_Load_Arthas
 - Action ConditionalTriggerExecute
-  - param Variable gg_trg_Load_Jaina
-
-
-## Load Arthas
-- enabled: True
-- category: [1] Map Initillization
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action RestoreUnitLocFacingAngleBJ
-  - param String Arthas
-  - param String Human05
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-  - param Preset Player01
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_01Arthas_Start
-  - param String 180.00
-- Action SetVariable
-  - param Variable Arthas
-  - param Function GetLastRestoredUnitBJ
-    - Function GetLastRestoredUnitBJ
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareUnit
-      - param Variable Arthas
-      - param Preset OperatorNotEqualENE
-      - param Preset UnitNull
-  - param Function DoNothing
-    - Action ReturnAction
-  - param Function DoNothing
-    - Action DoNothing
-- Action CommentString
-  - param String -----------------------Create Arthas-------------------------
-- Action CreateNUnitsAtLoc
-  - param String 1
-  - param String Hart
-  - param Preset Player01
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_01Arthas_Start
-  - param String 180.00
-- Action SetVariable
-  - param Variable Arthas
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-- Action SetHeroLevel
-  - param Variable Arthas
-  - param String 5
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillHolyBolt
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillHolyBolt
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDivineShield
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDevotionAura
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDevotionAura
-
-
-## Load Jaina
-- enabled: True
-- category: [1] Map Initillization
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-Default Jaina is level 5, so that she can be set to level 6 and given Mass Teleport in "Setup Heroes".
-```
-### Functions
-- Action RestoreUnitLocFacingAngleBJ
-  - param String Jaina
-  - param String Human05
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-  - param Preset Player01
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_01Jaina_Start
-  - param String 180.00
-- Action SetVariable
-  - param Variable Jaina
-  - param Function GetLastRestoredUnitBJ
-    - Function GetLastRestoredUnitBJ
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareUnit
-      - param Variable Jaina
-      - param Preset OperatorNotEqualENE
-      - param Preset UnitNull
-  - param Function DoNothing
-    - Action ReturnAction
-  - param Function DoNothing
-    - Action DoNothing
-- Action CommentString
-  - param String -----------------------Create Jaina-------------------------
-- Action CreateNUnitsAtLoc
-  - param String 1
-  - param String Hjai
-  - param Preset Player01
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_01Jaina_Start
-  - param String 180.00
-- Action SetVariable
-  - param Variable Jaina
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-- Action SetHeroLevel
-  - param Variable Jaina
-  - param String 5
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable Jaina
-  - param Preset HeroSkillBlizzard
-- Action SelectHeroSkill
-  - param Variable Jaina
-  - param Preset HeroSkillWaterElemental
-- Action SelectHeroSkill
-  - param Variable Jaina
-  - param Preset HeroSkillWaterElemental
-- Action SelectHeroSkill
-  - param Variable Jaina
-  - param Preset HeroSkillBrillianceAura
-- Action SelectHeroSkill
-  - param Variable Jaina
-  - param Preset HeroSkillBrillianceAura
+  - param Variable gg_trg_AP_Load_Jaina
 
 
 ## SetupHereos
@@ -5223,8 +5247,6 @@ Quest Information / Start timer
   - param Variable gg_trg_Timer_Warning_10_QUE
 - Action EnableTrigger
   - param Variable gg_trg_Villagers_Greeting_QUE
-- Action EnableTrigger
-  - param Variable gg_trg_Arthas_Exp_Cap
 - Action TriggerExecute
   - param Variable gg_trg_Start_AI
 
@@ -5562,7 +5584,7 @@ Undead Reach Hearthglen
     - Function GetUnitLoc
       - param Variable SheepItem
 - Action CreateItemLoc
-  - param String pres
+  - param String I017
   - param Variable SheepPoint
 - Condition OperatorCompareUnit
   - param Function GetTriggerUnit
@@ -5572,34 +5594,6 @@ Undead Reach Hearthglen
 - Event TriggerRegisterPlayerUnitEventSimple
   - param Preset PlayerNP
   - param Preset PlayerUnitEventDeath
-
-
-## Arthas Exp Cap
-- enabled: True
-- category: [24] Hearthglen
-- starts off: True
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action SetHeroXP
-  - param Variable Arthas
-  - param String 2000
-  - param Preset ShowHideHide
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableDisable
-  - param Function GetTriggerUnit
-    - Function GetTriggerUnit
-- Condition OperatorCompareUnit
-  - param Function GetLevelingUnit
-    - Function GetLevelingUnit
-  - param Preset OperatorEqualENE
-  - param Variable Arthas
-- Event TriggerRegisterPlayerUnitEventSimple
-  - param Preset Player01
-  - param Preset PlayerUnitEventHero_Level
 
 
 ## ArthasHopeless QUE
@@ -5952,7 +5946,7 @@ Undead Reach Hearthglen
 ```
 ### Functions
 - Action CreateItemLoc
-  - param String shea
+  - param String I018
   - param Function GetDestructableLoc
     - Function GetDestructableLoc
       - param Variable gg_dest_LTcr_2633
@@ -7611,10 +7605,10 @@ The caravan is never allowed to progress past (zBreadcrumbAllowed).
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
 - Action CreateItemLoc
-  - param String mcou
+  - param String I014
   - param Variable LastCaravanDeath
 - Action CreateItemLoc
-  - param String stwp
+  - param String I015
   - param Variable LastCaravanDeath
 - Action SetVariable
   - param Variable TownPortal
@@ -11575,7 +11569,7 @@ Playing the Plague cloud animation for farm 01
     - Function GetUnitLoc
       - param Variable Arthas
 - Action CreateItemLoc
-  - param String bspd
+  - param String I019
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Free_Villager
@@ -11712,6 +11706,8 @@ Playing the Plague cloud animation for farm 01
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(22)
 - Action QueuedTriggerAddBJ
   - param Variable gg_trg_Villagers_Greeting
   - param Preset CheckingIgnoringChecking
@@ -12433,8 +12429,6 @@ Diable Victory Condition1
 ```
 ### Functions
 - Action TriggerExecute
-  - param Variable gg_trg_Human_05_Save
-- Action TriggerExecute
   - param Variable gg_trg_Victory
 - Event TriggerRegisterPlayerEventVictory
   - param Preset Player01
@@ -12542,8 +12536,10 @@ Diable Victory Condition1
 ### Functions
 - Action CommentString
   - param String Start the next level
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Action SetNextLevelBJ
-  - param String Maps\Campaign\Human05Interlude.w3m
+  - param String Maps\Archipelago\Human06.w3x
 - Action CustomVictoryBJ
   - param Preset Player01
   - param Preset UseSkipOptionUse
@@ -12616,58 +12612,6 @@ Diable Victory Condition1
   - param Preset Player01
 
 
-## Human 05 Save
-- enabled: True
-- category: [14] Ending Cinematic
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-Save all heroes.
-Save the campaign game cache.
-Enable the next level.
-Start the next level.
-```
-### Functions
-- Action CommentString
-  - param String Store hero data for the next level(s)
-- Action StoreUnitBJ
-  - param Variable Arthas
-  - param String Arthas
-  - param String Human05Interlude
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action StoreUnitBJ
-  - param Variable Jaina
-  - param String Jaina
-  - param String Human05Interlude
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action StoreUnitBJ
-  - param Variable Arthas
-  - param String Arthas
-  - param String Human06
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action StoreUnitBJ
-  - param Variable Jaina
-  - param String Jaina
-  - param String Human06
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action SaveGameCacheBJ
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action CommentString
-  - param String Enable the next level in the glue screens
-- Action SetMissionAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset MissionIndexH06
-- Action SetMissionAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset MissionIndexH07
-
-
 ## Victory Cancel
 - enabled: True
 - category: [14] Ending Cinematic
@@ -12712,6 +12656,8 @@ Note that the "Pan camera" has to occur after the "Reset camera".  This is becau
 - Action SetVariable
   - param Variable GAMEOVER
   - param String true
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Condition OperatorCompareBoolean
   - param Function IsTriggerEnabled
     - Function IsTriggerEnabled
@@ -12765,8 +12711,6 @@ Uther and Jaina Return
   - param Variable gg_trg_Victory2
 - Action DisableTrigger
   - param Variable gg_trg_Defeat
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Human_05_Save
 - Action CommentString
   - param String ----------
 - Action QuestMessageBJ

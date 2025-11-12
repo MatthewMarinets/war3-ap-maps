@@ -7,7 +7,7 @@ file_format_version = 0
 
 icon_type = "GoldMine"
 x = 227
-y = 198
+y = 193
 colour_blue = 255
 colour_green = 255
 colour_red = 255
@@ -17,7 +17,7 @@ colour_alpha = 255
 
 icon_type = "GoldMine"
 x = 52
-y = 213
+y = 208
 colour_blue = 255
 colour_green = 255
 colour_red = 255
@@ -27,7 +27,7 @@ colour_alpha = 255
 
 icon_type = "GoldMine"
 x = 104
-y = 111
+y = 112
 colour_blue = 255
 colour_green = 255
 colour_red = 255
@@ -37,7 +37,7 @@ colour_alpha = 255
 
 icon_type = "House"
 x = 31
-y = 46
+y = 50
 colour_blue = 255
 colour_green = 255
 colour_red = 255
@@ -47,7 +47,7 @@ colour_alpha = 255
 
 icon_type = "GoldMine"
 x = 221
-y = 37
+y = 42
 colour_blue = 255
 colour_green = 255
 colour_red = 255
@@ -57,7 +57,7 @@ colour_alpha = 255
 
 icon_type = "House"
 x = 240
-y = 107
+y = 108
 colour_blue = 255
 colour_green = 255
 colour_red = 255
@@ -77,7 +77,7 @@ colour_alpha = 255
 
 icon_type = "PlayerStart"
 x = 226
-y = 185
+y = 181
 colour_blue = 241
 colour_green = 191
 colour_red = 126
@@ -87,7 +87,7 @@ colour_alpha = 255
 
 icon_type = "PlayerStart"
 x = 227
-y = 184
+y = 180
 colour_blue = 255
 colour_green = 66
 colour_red = 0
@@ -97,7 +97,7 @@ colour_alpha = 255
 
 icon_type = "PlayerStart"
 x = 53
-y = 200
+y = 195
 colour_blue = 0
 colour_green = 192
 colour_red = 32
@@ -107,7 +107,7 @@ colour_alpha = 255
 
 icon_type = "PlayerStart"
 x = 225
-y = 184
+y = 180
 colour_blue = 151
 colour_green = 150
 colour_red = 149
@@ -117,8 +117,8 @@ colour_alpha = 255
 
 icon_type = "PlayerStart"
 x = 252
-y = 49
-colour_blue = 1
+y = 53
+colour_blue = 0
 colour_green = 252
 colour_red = 255
 colour_alpha = 255
@@ -127,7 +127,7 @@ colour_alpha = 255
 
 icon_type = "PlayerStart"
 x = 249
-y = 49
+y = 53
 colour_blue = 14
 colour_green = 138
 colour_red = 254
@@ -147,7 +147,7 @@ colour_alpha = 255
 
 icon_type = "PlayerStart"
 x = 229
-y = 47
+y = 51
 colour_blue = 3
 colour_green = 3
 colour_red = 255

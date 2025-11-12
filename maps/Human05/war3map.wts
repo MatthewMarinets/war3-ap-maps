@@ -4,6 +4,7 @@ Jaina Proudmoore
 }
 
 STRING 2
+// Sound\Dialogue\HumanCampaign\Human05\H05Jaina01.mp3
 {
 Hearthglen, finally! I could use some rest!
 }
@@ -13,17 +14,14 @@ STRING 3
 Arthas
 }
 
-STRING 4
-{
-Grain Caravan
-}
-
 STRING 7
+// Sound\Dialogue\HumanCampaign\Human05\H05Arthas02.mp3
 {
 It looks like they're preparing for battle.
 }
 
 STRING 8
+// Sound\Dialogue\HumanCampaign\Human05\H05Footman03.mp3
 {
 Prince Arthas! During the night, a vast army of undead warriors emerged and began attacking villages at random!
 }
@@ -34,6 +32,7 @@ Footman
 }
 
 STRING 11
+// Sound\Dialogue\HumanCampaign\Human05\H05Footman04.mp3
 {
 Now, it's heading this way!
 }
@@ -49,6 +48,7 @@ Footman
 }
 
 STRING 14
+// Sound\Dialogue\HumanCampaign\Human05\H05Arthas05.mp3
 {
 Damn it. Jaina, I'll stay here to protect the village. Go as quickly as you can and tell Lord Uther what's happened.
 }
@@ -59,6 +59,7 @@ Arthas
 }
 
 STRING 16
+// Sound\Dialogue\HumanCampaign\Human05\H05Jaina06.mp3
 {
 But--
 }
@@ -69,6 +70,7 @@ Jaina Proudmoore
 }
 
 STRING 18
+// Sound\Dialogue\HumanCampaign\Human05\H05Arthas07.mp3
 {
 Go, Jaina! Every second counts!
 }
@@ -101,11 +103,13 @@ Defend Hearthglen
 }
 
 STRING 27
+// Sound\Dialogue\HumanCampaign\Human05\H05Arthas08.mp3
 {
 Wait--what did those crates contain?
 }
 
 STRING 28
+// Sound\Dialogue\HumanCampaign\Human05\H05Footman09.mp3
 {
 Just a grain shipment from Andorhal. There's no need to worry, milord. It's already been distributed amongst the villagers.
 }
@@ -116,6 +120,7 @@ Footman
 }
 
 STRING 30
+// Sound\Dialogue\HumanCampaign\Human05\H05Arthas10.mp3
 {
 Oh no.
 }
@@ -131,23 +136,14 @@ Arthas
 }
 
 STRING 33
+// Sound\Dialogue\HumanCampaign\Human05\H05Arthas11.mp3
 {
 The plague was never meant to simply kill my people. It was meant to turn them... into the undead! Defend yourselves!
-}
-
-STRING 35
-{
-Mark
 }
 
 STRING 40
 {
 Defeat!
-}
-
-STRING 41
-{
-Hearthglen Building
 }
 
 STRING 53
@@ -156,6 +152,7 @@ Footman
 }
 
 STRING 54
+// Sound\Dialogue\HumanCampaign\Human05\H05Footman12.mp3
 {
 Prince Arthas, we've spotted an undead caravan carrying a large load of plagued grain.
 }
@@ -176,6 +173,7 @@ Uther the Lightbringer
 }
 
 STRING 64
+// Sound\Dialogue\HumanCampaign\Human05\H05Uther27.mp3
 {
 For Lordaeron! For the king!
 }
@@ -212,6 +210,7 @@ Uther the Lightbringer
 }
 
 STRING 93
+// Sound\Dialogue\HumanCampaign\Human05\H05Uther30.mp3
 {
 I'm surprised that you kept things together as long as you did, lad. If I hadn't arrived just then--
 }
@@ -222,6 +221,7 @@ Arthas
 }
 
 STRING 95
+// Sound\Dialogue\HumanCampaign\Human05\H05Arthas31.mp3
 {
 Look, I did the best I could, Uther! If I'd had a legion of knights riding at my back, I would've--
 }
@@ -232,6 +232,7 @@ Uther the Lightbringer
 }
 
 STRING 97
+// Sound\Dialogue\HumanCampaign\Human05\H05Uther32.mp3
 {
 Now is not the time to be choking on pride! What we faced here was only the beginning. The undead ranks are bolstered every time one of our warriors falls in battle.
 }
@@ -242,6 +243,7 @@ Arthas
 }
 
 STRING 99
+// Sound\Dialogue\HumanCampaign\Human05\H05Arthas28.mp3
 {
 Uther, your timing couldn't have been better.
 }
@@ -252,6 +254,7 @@ Uther the Lightbringer
 }
 
 STRING 102
+// Sound\Dialogue\HumanCampaign\Human05\H05Uther29.mp3
 {
 Don't celebrate yet, son. This battle's far from over!
 }
@@ -262,6 +265,7 @@ Arthas
 }
 
 STRING 104
+// Sound\Dialogue\HumanCampaign\Human05\H05Arthas33.mp3
 {
 Then we should strike at their leader! I'll go to Stratholme and kill Mal'Ganis myself if I have to!
 }
@@ -272,6 +276,7 @@ Uther the Lightbringer
 }
 
 STRING 106
+// Sound\Dialogue\HumanCampaign\Human05\H05Uther34.mp3
 {
 Easy, lad. Brave as you are, you can't hope to defeat a man who commands the dead all by yourself.
 }
@@ -282,6 +287,7 @@ Arthas
 }
 
 STRING 108
+// Sound\Dialogue\HumanCampaign\Human05\H05Arthas35.mp3
 {
 Then feel free to tag along, Uther. I'm going. With or without you.
 }
@@ -327,6 +333,7 @@ Footman
 }
 
 STRING 117
+// Sound\Dialogue\HumanCampaign\Human05\H05Footman16.mp3
 {
 Prince Arthas, the caravan has infected the second village.
 }
@@ -337,6 +344,7 @@ Footman
 }
 
 STRING 121
+// Sound\Dialogue\HumanCampaign\Human05\H05Footman18.mp3
 {
 Milord, the third village has been infected!
 }
@@ -347,6 +355,7 @@ Footman
 }
 
 STRING 123
+// Sound\Dialogue\HumanCampaign\Human05\H05Footman20.mp3
 {
 Prince Arthas, we've failed to stop the caravan! It's reached the final town and turned it into an undead bastion!
 }
@@ -368,6 +377,7 @@ Acolyte
 }
 
 STRING 128
+// Sound\Dialogue\HumanCampaign\Human05\H05Acolyte22.mp3
 {
 Faster, my brethren! If we lose the shipment, the master will have our hides!
 }
@@ -388,18 +398,9 @@ Villager
 }
 
 STRING 135
+// Sound\Dialogue\HumanCampaign\Human01\H01VillagerM43.mp3
 {
 We'll fight for Lordaeron! Get your swords!
-}
-
-STRING 145
-{
-Special MalGanis
-}
-
-STRING 146
-{
-Special Malganis
 }
 
 STRING 148
@@ -434,6 +435,7 @@ Footman
 }
 
 STRING 219
+// Sound\Dialogue\HumanCampaign\Human05\H05Footman51.mp3
 {
 Ogres have moved down from the hills. It appears they're looking for a fight.
 }
@@ -505,6 +507,7 @@ Local Farmers
 }
 
 STRING 285
+// Sound\Dialogue\HumanCampaign\Human05\H05Footman24.mp3
 {
 Prince Arthas, the undead forces have arrived!
 }
@@ -525,6 +528,7 @@ Arthas
 }
 
 STRING 294
+// Units\Human\Arthas\ArthasPissed4.wav
 {
 Light, give me strength!
 
@@ -544,6 +548,7 @@ Mark
 }
 
 STRING 298
+// Sound\Dialogue\HumanCampaign\Human05\H05VillagerM49.mp3
 {
 Thank you for helping me.
 }
@@ -554,6 +559,7 @@ Mark
 }
 
 STRING 300
+// Sound\Dialogue\HumanCampaign\Human05\H05VillagerM47.mp3
 {
 Please, take this item.
 }

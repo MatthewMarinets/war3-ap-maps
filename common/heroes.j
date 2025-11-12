@@ -31,7 +31,7 @@ function hero_set_max_level takes integer slot, integer level returns nothing
     call hero_apply_max_level(hero, level)
 endfunction
 
-function hero_load takes integer hero_slot returns boolean
+function hero_load_global takes integer global_slot returns boolean
     local player p = Player(0)
     call SetPlayerTechMaxAllowed(p, 'nech', -1)
     call SetPlayerTechMaxAllowed(p, 'nske', -1)
@@ -60,19 +60,23 @@ function hero_load takes integer hero_slot returns boolean
     call SetPlayerTechMaxAllowed(Player(4), 'nvul', 0)
     call SetPlayerTechMaxAllowed(Player(5), 'nvul', 0)
 
-    call SetPlayerTechMaxAllowed(p, 'nalb', hero_global_slots[hero_slot])
+    call SetPlayerTechMaxAllowed(p, 'nalb', global_slot)
     call io_read_file("heroes.txt")
 
-    if GetPlayerTechMaxAllowed(p, 'nske') == 1 then
-        set HERO_MAX_LEVEL[hero_slot] = GetPlayerTechMaxAllowed(p, 'nder')
+    return GetPlayerTechMaxAllowed(p, 'nske') == 1
+endfunction
+
+function hero_load takes integer hero_slot returns boolean
+    local boolean success = hero_load_global(hero_global_slots[hero_slot])
+    if success then
+        set HERO_MAX_LEVEL[hero_slot] = GetPlayerTechMaxAllowed(Player(0), 'nder')
         set hero_abil_1[hero_slot] = GetPlayerTechMaxAllowed(Player(0), 'nfro')
         set hero_abil_2[hero_slot] = GetPlayerTechMaxAllowed(Player(1), 'nfro')
         set hero_abil_3[hero_slot] = GetPlayerTechMaxAllowed(Player(2), 'nfro')
         set hero_abil_4[hero_slot] = GetPlayerTechMaxAllowed(Player(3), 'nfro')
-        set last_hero_packet = GetPlayerTechMaxAllowed(p, 'nech')
+        set last_hero_packet = GetPlayerTechMaxAllowed(Player(0), 'nech')
     endif
-
-    return GetPlayerTechMaxAllowed(p, 'nske') == 1
+    return success
 endfunction
 
 // should be called after hero_load()
@@ -172,6 +176,18 @@ endfunction
 function hero_create takes integer hero_slot, player for_player, real x, real y, real facing returns unit
     local unit hero = null
     if not hero_load(hero_slot) then
+        return null
+    endif
+    set hero = CreateUnit(for_player, GetPlayerTechMaxAllowed(Player(0), 'npng'), x, y, facing)
+    return hero
+endfunction
+
+// Create and return a hero units from a global hero slot
+// Does not configure ability data for reporting
+// Returns null if the hero could not be loaded
+function hero_create_global takes integer global_slot, player for_player, real x, real y, real facing returns unit
+    local unit hero = null
+    if not hero_load_global(global_slot) then
         return null
     endif
     set hero = CreateUnit(for_player, GetPlayerTechMaxAllowed(Player(0), 'npng'), x, y, facing)
