@@ -9,6 +9,7 @@ from scripts import editor_ids, mod_entity
 ROC_UNIT_BALANCE_TOML = 'doc/generated/data/roc_unitbalance.toml'
 TFT_UNIT_BALANCE_TOML = 'doc/generated/data/unitbalance.toml'
 CREEP_PLAYER_ID = 24
+OLD_CREEP_PLAYER_ID = 12
 
 
 class UnitBalanceData(TypedDict):
@@ -17,11 +18,11 @@ class UnitBalanceData(TypedDict):
     bountyplus: int
 
 
-def get_map_relevant_units(unit_doo_file: str) -> list[str]:
+def get_map_relevant_units(unit_doo_file: str, player: int) -> list[str]:
     data = doo.from_text_file(unit_doo_file)
     result: set[str] = set()
     for unit in data.units:
-        if unit.player_owner == CREEP_PLAYER_ID and unit.type_id != 'sloc':
+        if unit.player_owner == player and unit.type_id != 'sloc':
             result.add(unit.type_id)
     return sorted(result)
 
@@ -57,7 +58,7 @@ def update_units(
         fp.write(text)
 
 
-def main(map_dir: str) -> None:
+def main(map_dir: str, player: int) -> None:
     unit_doo_file = f'{map_dir}/units.doo.toml'
     unit_file = f'{map_dir}/o_units.w3u.toml'
 
@@ -65,14 +66,14 @@ def main(map_dir: str) -> None:
         roc_balance_data = tomllib.load(fp)
     with open(TFT_UNIT_BALANCE_TOML, 'rb') as fp:
         tft_balance_data = tomllib.load(fp)
-    units_to_update = get_map_relevant_units(unit_doo_file)
+    units_to_update = get_map_relevant_units(unit_doo_file, player)
     update_units(unit_file, units_to_update, roc_balance_data, tft_balance_data)
 
 
 if __name__ == '__main__':
     import sys
     import os
-    USAGE = f"usage: python3 {os.path.basename(__file__)} <map directory>"
+    USAGE = f"usage: python3 {os.path.basename(__file__)} <map directory> [-player int|'old']"
 
     if len(sys.argv) < 2:
         print(USAGE)
@@ -81,8 +82,21 @@ if __name__ == '__main__':
     if {'-h', '-help', '--help'}.intersection(sys.argv):
         print(USAGE)
         sys.exit(0)
+    player = CREEP_PLAYER_ID
+    if '-player' in sys.argv:
+        index = sys.argv.index('-player') + 1
+        if index >= len(sys.argv):
+            print('Error: -player takes an argument')
+            sys.exit(1)
+        if sys.argv[index] == 'old':
+            player = OLD_CREEP_PLAYER_ID
+        elif sys.argv[index].isnumeric():
+            player = int(sys.argv[index])
+        else:
+            print(f'Error: argument to -player must be an integer, got {sys.argv[index]}')
+            sys.exit(1)
     map_dir = sys.argv[1]
     if not os.path.isdir(map_dir):
         print(f"Error: {map_dir} is not a directory")
         sys.exit(1)
-    main(map_dir)
+    main(map_dir, player)
