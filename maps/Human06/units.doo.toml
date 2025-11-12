@@ -234,22 +234,22 @@ item_class = 0
 
 [[units]]
 
-type_id = 'Hjai'  # Archmage
+type_id = 'ngme'  # Goblin Merchant
 variation = 0
-x = 11269.474609375
-y = 6069.35498046875
-z = 269.217529296875
-facing = 3.4956002235412598
+x = -2112.0
+y = 960.0
+z = 128.0
+facing = 4.7123894691467285
 scale_x = 1.0
 scale_y = 1.0
 scale_z = 1.0
 flags = "ENABLED"
-player_owner = 1
+player_owner = 27
 hit_points = -1
 mana_points = -1
 random_item_table_id = -1
 item_drops = []
-goldmine_gold_amount = 0
+goldmine_gold_amount = 12500
 target_acquisition = -1.0
 hero_level = 1
 hero_strength = 0
@@ -257,10 +257,15 @@ hero_agility = 0
 hero_intelligence = 0
 inventory_items = []
 modified_abilities = []
-random_unit_info = -1
 custom_colour = -1
 waygate_destination = -1
-entity_id = 6
+entity_id = 35
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
 
 [[units]]
 
@@ -2418,8 +2423,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # tst2 = Tome of Strength +2
-        { item_id = "tst2", chance_percent = 100 }
+        { item_id = "I011", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -4579,8 +4583,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # stwp = Scroll of Town Portal
-        { item_id = "stwp", chance_percent = 100 }
+        { item_id = "I013", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -5287,10 +5290,7 @@ player_owner = 5
 hit_points = -1
 mana_points = -1
 random_item_table_id = -1
-item_drops = [
-    [
-    ]
-]
+item_drops = []
 goldmine_gold_amount = 12500
 target_acquisition = -1.0
 hero_level = 1
@@ -5437,8 +5437,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # evtl = Talisman of Evasion
-        { item_id = "evtl", chance_percent = 100 }
+        { item_id = "I012", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -5452,41 +5451,6 @@ modified_abilities = []
 custom_colour = -1
 waygate_destination = -1
 entity_id = 59
-
-[units.random_unit_info]
-
-random_type = 'class'
-level = 1
-item_class = 0
-
-[[units]]
-
-type_id = 'ngme'  # Goblin Merchant
-variation = 0
-x = -2112.0
-y = 960.0
-z = 128.0
-facing = 4.7123894691467285
-scale_x = 1.0
-scale_y = 1.0
-scale_z = 1.0
-flags = "ENABLED"
-player_owner = 27
-hit_points = -1
-mana_points = -1
-random_item_table_id = -1
-item_drops = []
-goldmine_gold_amount = 12500
-target_acquisition = -1.0
-hero_level = 1
-hero_strength = 0
-hero_agility = 0
-hero_intelligence = 0
-inventory_items = []
-modified_abilities = []
-custom_colour = -1
-waygate_destination = -1
-entity_id = 35
 
 [units.random_unit_info]
 

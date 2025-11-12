@@ -20,6 +20,15 @@
   - [x] Location sending functions
   - [x] Creep bounty
   - [ ] Opening cinematic: fake Jaina teleporting away
+- [x] Human06
+  - [x] Eliminate gamecache usage
+  - [x] Redirect starting next mission
+  - [x] Hero init
+  - [x] Remove hero level cap triggers
+  - [x] Replace items -> AP items
+  - [x] Location sending functions
+  - [x] Purge any unlock tech functions
+  - [x] Creep bounty
 
 ### Item check conditions boilerplate
 ```markdown
@@ -37,6 +46,7 @@
 - [x] Add packet to send a new item to a campaign
 - [x] Add packet to set/update hero state
 - [x] comm: Global <--> local location conversion
+- [ ] All heroes should cost 0 food
 - [ ] Begin converting missions
   - [ ] Eliminate gamecache usage
   - [ ] Redirect starting next mission

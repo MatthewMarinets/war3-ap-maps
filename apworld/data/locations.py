@@ -151,12 +151,13 @@ class Wc3Location(enum.Enum):
 
     # Quests:
     # (Main) The Culling
-    HU6_VICTORY =           10600, "Victory",         Wc3Mission.H6_THE_CULLING, Wc3LocationType.VICTORY
-    HU6_TENT_ITEM =         10601, "Tent Item",       Wc3Mission.H6_THE_CULLING, Wc3LocationType.ITEM, "Tome of Strength +2"
-    HU6_FILSON_THE_RAT =    10602, "Filson the Rat",  Wc3Mission.H6_THE_CULLING, Wc3LocationType.SECRET_ITEM, "Talisman of Evasion"
-    HU6_ENFORCER_ITEM =     10603, "Enforcer Item",   Wc3Mission.H6_THE_CULLING, Wc3LocationType.ITEM, "Scroll of Town Portal"
-    HU6_SLAY_MALGANIS =     10620, "Slay Mal'Ganis",  Wc3Mission.H6_THE_CULLING, Wc3LocationType.HERO
-    HU6_GOBLIN_MERCHANT =   10621, "Goblin Merchant", Wc3Mission.H6_THE_CULLING, Wc3LocationType.SHOP
+    HU6_VICTORY =             10600, "Victory",             Wc3Mission.H6_THE_CULLING, Wc3LocationType.VICTORY
+    HU6_TENT_ITEM =           10601, "Tent Item",           Wc3Mission.H6_THE_CULLING, Wc3LocationType.ITEM, "Tome of Strength +2"
+    HU6_FILSON_THE_RAT =      10602, "Filson the Rat",      Wc3Mission.H6_THE_CULLING, Wc3LocationType.SECRET_ITEM, "Talisman of Evasion"
+    HU6_ENFORCER_ITEM =       10603, "Enforcer Item",       Wc3Mission.H6_THE_CULLING, Wc3LocationType.ITEM, "Scroll of Town Portal"
+    HU6_SLAY_MALGANIS =       10620, "Slay Mal'Ganis",      Wc3Mission.H6_THE_CULLING, Wc3LocationType.HERO
+    HU6_GOBLIN_MERCHANT =     10621, "Goblin Merchant",     Wc3Mission.H6_THE_CULLING, Wc3LocationType.SHOP
+    HU6_BEG_FOR_FORGIVENESS = 10622, "Beg for Forgiveness", Wc3Mission.H6_THE_CULLING, Wc3LocationType.SECRET
 
     # Quests:
     # (Main) Establish Base Camp

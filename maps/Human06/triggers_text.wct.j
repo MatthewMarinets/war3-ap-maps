@@ -1,5 +1,5 @@
 // version: 1
-// Triggers: 105
+// Triggers: 106
 //\\// Trigger #0
 // This file defines file IO functions for the JASS side of things
 // Based off the FileIO module created by Nestharus, see:
@@ -1109,7 +1109,7 @@ function InitTrig_irregulars takes nothing returns nothing
     call Preload("Abilities\\Spells\\Human\\Polymorph\\PolyMorphDoneGround.mdl")
 endfunction
 
-//\\// Trigger #85
+//\\// Trigger #86
 //===========================================================================
 function Trig_Malganis_Continuously_Attacks_Buildings_Actions takes nothing returns nothing
 
@@ -1136,7 +1136,7 @@ function InitTrig_Malganis_Continuously_Attacks_Buildings takes nothing returns 
 endfunction
 
 
-//\\// Trigger #86
+//\\// Trigger #87
 //===========================================================================
 function Trig_Malganis_Booting_Player_Actions takes nothing returns nothing
 
@@ -1164,7 +1164,7 @@ function InitTrig_Malganis_Booting_Player takes nothing returns nothing
 endfunction
 
 
-//\\// Trigger #90
+//\\// Trigger #91
 function Trig_Convert_Villager_Actions takes nothing returns nothing
     local unit villager
 

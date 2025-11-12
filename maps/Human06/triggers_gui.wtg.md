@@ -5,7 +5,6 @@ version = TFT
 | --- | ---- | ------------ |
 | 30 | Archipelago | False |
 | 12 | Initialization Phase | False |
-| 25 | Game Cache | False |
 | 18 | Waterfall | False |
 | 11 | Hero Variables | False |
 | 22 | Arthas XP | False |
@@ -198,6 +197,112 @@ version = TFT
 ### Functions
 
 
+## AP Load Arthas
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String set udg_ArthasVariable = hero_create(0, USER_PLAYER, GetRectCenterX(gg_rct_Arthas_Starts_Here), GetRectCenterY(gg_rct_Arthas_Starts_Here), 1.5708)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable ArthasVariable
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CustomScriptCode
+  - param String set udg_ArthasVariable = CreateUnit(USER_PLAYER, 'Hart', GetRectCenterX(gg_rct_Arthas_Starts_Here), GetRectCenterY(gg_rct_Arthas_Starts_Here), 1.5708)
+- Action CustomScriptCode
+  - param String set hero_abil_1[0] = 'AHhb'
+- Action CustomScriptCode
+  - param String set hero_abil_2[0] = 'AHds'
+- Action CustomScriptCode
+  - param String set hero_abil_3[0] = 'AHad'
+- Action CustomScriptCode
+  - param String set hero_abil_4[0] = 'AHre'
+
+
+## AP Load Jaina
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String set udg_JainaVariable = hero_create_global(HERO_ID_JAINA, USER_PLAYER, 11269.474609375, 6069.35498046875, 3.5)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable JainaVariable
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CustomScriptCode
+  - param String set udg_JainaVariable = CreateUnit(USER_PLAYER, 'Hjai', 11269.474609375, 6069.35498046875, 3.5)
+
+
+## Shop Locations
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event MapInitializationEvent
+- Action AddItemToStockBJ
+  - param String I025
+  - param Variable gg_unit_ngme_0035
+  - param String 1
+  - param String 1
+
+
+## Kill Malganis Location
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_Umal_0000
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(20)
+
+
 ## Initialize Initializations
 - enabled: True
 - category: [12] Initialization Phase
@@ -228,7 +333,7 @@ Change Dark Green Player Color to Brown so it doesn't show up as weird on the mi
   - param Variable MalganisConversions
   - param String 0.00
 - Action TriggerExecute
-  - param Variable gg_trg_RestoreVariablesStartCache
+  - param Variable gg_trg_AP_Load_Arthas
 - Action TriggerExecute
   - param Variable gg_trg_Initialize_Heroes
 - Action TriggerExecute
@@ -486,130 +591,6 @@ Change Dark Green Player Color to Brown so it doesn't show up as weird on the mi
     - Action DoNothing
 
 
-## RestoreVariablesStartCache
-- enabled: True
-- category: [25] Game Cache
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action InitGameCacheBJ
-  - param String Campaigns.w3v
-- Action RestoreUnitLocFacingPointBJ
-  - param String Arthas
-  - param String Human06
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-  - param Variable ThePlayer
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_Arthas_Starts_Here
-  - param Function CameraSetupGetDestPositionLoc
-    - Function CameraSetupGetDestPositionLoc
-      - param Function GetCurrentCameraSetup
-        - Function GetCurrentCameraSetup
-- Action SetVariable
-  - param Variable ArthasVariable
-  - param Function GetLastRestoredUnitBJ
-    - Function GetLastRestoredUnitBJ
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareUnit
-      - param Variable ArthasVariable
-      - param Preset OperatorEqualENE
-      - param Preset UnitNull
-  - param Function DoNothing
-    - Action ConditionalTriggerExecute
-      - param Variable gg_trg_Default_Arthas
-  - param Function DoNothing
-    - Action DoNothing
-
-
-## Default Arthas
-- enabled: True
-- category: [25] Game Cache
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action CreateNUnitsAtLocFacingLocBJ
-  - param String 1
-  - param String Hart
-  - param Variable ThePlayer
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_Arthas_Starts_Here
-  - param Function GetCameraTargetPositionLoc
-    - Function GetCameraTargetPositionLoc
-- Action SetVariable
-  - param Variable ArthasVariable
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-- Action SetHeroLevel
-  - param Variable ArthasVariable
-  - param String 6
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable ArthasVariable
-  - param Preset HeroSkillHolyBolt
-- Action SelectHeroSkill
-  - param Variable ArthasVariable
-  - param Preset HeroSkillHolyBolt
-- Action SelectHeroSkill
-  - param Variable ArthasVariable
-  - param Preset HeroSkillDivineShield
-- Action SelectHeroSkill
-  - param Variable ArthasVariable
-  - param Preset HeroSkillDevotionAura
-- Action SelectHeroSkill
-  - param Variable ArthasVariable
-  - param Preset HeroSkillDevotionAura
-- Action SelectHeroSkill
-  - param Variable ArthasVariable
-  - param Preset HeroSkillResurrection
-
-
-## Victory Save Cache
-- enabled: True
-- category: [25] Game Cache
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-Run by Deny 100 Villagers Victory in "Victory and Failure."
-```
-### Functions
-- Action InitGameCacheBJ
-  - param String Campaigns.w3v
-- Action SetMissionAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset MissionIndexH08
-- Action SetMissionAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset MissionIndexH09
-- Action StoreUnitBJ
-  - param Variable ArthasVariable
-  - param String Arthas
-  - param String Human06Interlude
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action StoreUnitBJ
-  - param Variable ArthasVariable
-  - param String Arthas
-  - param String Human07
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action SaveGameCacheBJ
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-
-
 ## Waterfall Reveal
 - enabled: True
 - category: [18] Waterfall
@@ -715,9 +696,8 @@ Run by Deny 100 Villagers Victory in "Victory and Failure."
 - Action SetVariable
   - param Variable UtherVariable
   - param Variable gg_unit_Huth_0007
-- Action SetVariable
-  - param Variable JainaVariable
-  - param Variable gg_unit_Hjai_0006
+- Action ConditionalTriggerExecute
+  - param Variable gg_trg_AP_Load_Jaina
 - Action SetVariable
   - param Variable MalganisVariable
   - param Variable gg_unit_Umal_0000
@@ -5209,6 +5189,8 @@ Runs when Timer expires (hopefully).
 
 ```
 ### Functions
+- Action CustomScriptCode
+  - param String call status_check_location(22)
 - Action QueuedTriggerAddBJ
   - param Variable gg_trg_Arthas_Says_Forgive_Me_Que
   - param Preset CheckingIgnoringChecking
@@ -7478,13 +7460,13 @@ Runs Victory Save Cache in "Game Cache."
   - param Variable gg_trg_All_Buildings_Destroyed
 - Action DisableTrigger
   - param Variable gg_trg_Malganis_Countdown_Timer_Hits_0
-- Action TriggerExecute
-  - param Variable gg_trg_Victory_Save_Cache
 - Action QuestMessageBJ
   - param Function GetPlayersAll
     - Function GetPlayersAll
   - param Preset QuestMessageTypeCompleted
   - param String TRIGSTR_107
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Action TriggerSleepAction
   - param Preset RealQueueDelayQuest
 - Action CinematicFadeBJ
@@ -8332,8 +8314,8 @@ Victory Save Cache enables the proper campaign levels and saves Arthas.
 
 ```
 ### Functions
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Victory_Save_Cache
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Action CinematicFadeBJ
   - param Preset FadeTypeOptionFadeOut
   - param String 2.00
@@ -8347,7 +8329,7 @@ Victory Save Cache enables the proper campaign levels and saves Arthas.
 - Event TriggerRegisterPlayerEventVictory
   - param Preset Player01
 - Action SetNextLevelBJ
-  - param String Maps\Campaign\Human06Interlude.w3m
+  - param String Maps\Archipelago\Human07.w3x
 - Action CustomVictoryBJ
   - param Variable ThePlayer
   - param Preset UseSkipOptionUse

@@ -100,6 +100,14 @@ value = "phea,pman,shea,spro,wneg,gemt,stwp"
 object_id = 'null'
 
 [[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Asid,Aneu,Avul,Apit"
+object_id = 'ngme'  # Goblin Merchant
+
+[[blizzard_objects.entities.modifications]]
 modification_id = 'usma'  # UnitBalance.Stock Maximum
 data_type = "Integer"
 variation_level = 0
