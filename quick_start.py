@@ -14,6 +14,7 @@ def start_mission(mission_file: str) -> None:
     cmd = [
         path_to_wc3,
         '-nowfpause',
+        '-window',
         '-loadfile', mission_file,
     ]
     print(' '.join(cmd))
