@@ -19,12 +19,14 @@ class Wc3CommandProcessor(ClientCommandProcessor):
     ctx: 'Wc3Context'
     
     def _cmd_scan_location(self) -> bool:
+        """Debug: scouts the bandit camp location"""
         async_start(self.ctx.send_msgs([
             {"cmd": "LocationScouts", "locations": [Wc3Location.HU1_BANDIT_ITEM.id, Wc3Location.HU1_ENLIST_THORNBY.id]}
         ]))
         return True
     
     def _cmd_debug(self, key: str) -> bool:
+        """Debug: prints current value of a member of the communication client"""
         parts = key.split('.')
         current: dict|list|object = self.ctx.comm_ctx
         for part in parts:
