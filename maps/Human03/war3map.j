@@ -2822,10 +2822,10 @@ function Trig_AP_Load_Jaina_Actions takes nothing returns nothing
     endif
     // If the hero data wasn't found, create a default hero
     set udg_Jaina=CreateUnit(Player(3), 'Hjai', 5927.87646484375, -3474.820556640625, 3.270430326461792)
-    set hero_abil_1[0]='AHbz'
-    set hero_abil_2[0]='AHwe'
-    set hero_abil_3[0]='AHab'
-    set hero_abil_4[0]='AHmt'
+    set hero_abil_1[1]='AHbz'
+    set hero_abil_2[1]='AHwe'
+    set hero_abil_3[1]='AHab'
+    set hero_abil_4[1]='AHmt'
 endfunction
 
 //===========================================================================

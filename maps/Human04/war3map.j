@@ -2304,10 +2304,10 @@ function Trig_AP_Load_Jaina_Actions takes nothing returns nothing
     endif
     // If the hero data wasn't found, create a default hero
     set udg_Jaina=CreateUnit(USER_PLAYER, 'Hjai', GetRectCenterX(gg_rct_JainaStart), GetRectCenterY(gg_rct_JainaStart), 300.0)
-    set hero_abil_1[0]='AHbz'
-    set hero_abil_2[0]='AHwe'
-    set hero_abil_3[0]='AHab'
-    set hero_abil_4[0]='AHmt'
+    set hero_abil_1[1]='AHbz'
+    set hero_abil_2[1]='AHwe'
+    set hero_abil_3[1]='AHab'
+    set hero_abil_4[1]='AHmt'
 endfunction
 
 //===========================================================================

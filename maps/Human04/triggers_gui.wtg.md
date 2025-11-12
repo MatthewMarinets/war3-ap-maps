@@ -236,13 +236,13 @@ version = TFT
 - Action CustomScriptCode
   - param String set udg_Jaina = CreateUnit(USER_PLAYER, 'Hjai', GetRectCenterX(gg_rct_JainaStart), GetRectCenterY(gg_rct_JainaStart), 300.0)
 - Action CustomScriptCode
-  - param String set hero_abil_1[0] = 'AHbz'
+  - param String set hero_abil_1[1] = 'AHbz'
 - Action CustomScriptCode
-  - param String set hero_abil_2[0] = 'AHwe'
+  - param String set hero_abil_2[1] = 'AHwe'
 - Action CustomScriptCode
-  - param String set hero_abil_3[0] = 'AHab'
+  - param String set hero_abil_3[1] = 'AHab'
 - Action CustomScriptCode
-  - param String set hero_abil_4[0] = 'AHmt'
+  - param String set hero_abil_4[1] = 'AHmt'
 
 
 ## Shop Locations
