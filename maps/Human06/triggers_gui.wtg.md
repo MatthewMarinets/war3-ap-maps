@@ -1,8 +1,9 @@
-version = ROC
+version = TFT
 
 # Categories
 | ID  | Name | is a comment |
 | --- | ---- | ------------ |
+| 30 | Archipelago | False |
 | 12 | Initialization Phase | False |
 | 25 | Game Cache | False |
 | 18 | Waterfall | False |
@@ -101,6 +102,102 @@ version = ROC
 | TimerMaySendCommands | timer | . | . |
 
 # Triggers
+## fileio
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## map_config
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## status
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## heroes
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## item_locations
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## debug
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## zoom
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## irregulars
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
 ## Initialize Initializations
 - enabled: True
 - category: [12] Initialization Phase

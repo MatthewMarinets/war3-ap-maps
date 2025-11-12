@@ -19,6 +19,7 @@ Mal'Ganis
 }
 
 STRING 6
+// Sound\Dialogue\HumanCampaign\Human06\H06MalGanis41.mp3
 {
 I live once more!
 }
@@ -53,11 +54,6 @@ STRING 13
 Early the next morning, on the outskirts of Stratholme...
 }
 
-STRING 17
-{
-CONVERSIONMAN
-}
-
 STRING 19
 {
 Mal'Ganis
@@ -69,6 +65,7 @@ Arthas
 }
 
 STRING 21
+// Sound\Dialogue\HumanCampaign\Human06\H06Arthas01.mp3
 {
 Glad you could make it, Uther.
 }
@@ -98,34 +95,9 @@ STRING 26
 Stop Mal'Ganis from claiming 100 zombies
 }
 
-STRING 28
-{
-Plagued Male Villager
-}
-
-STRING 29
-{
-Plagued Female Villager
-}
-
-STRING 30
-{
-Plagued Child Villager
-}
-
-STRING 31
-{
-Zombie of Mal'Ganis
-}
-
 STRING 32
 {
 Mal'Ganis
-}
-
-STRING 34
-{
-Conversion Man
 }
 
 STRING 36
@@ -149,6 +121,7 @@ Force 6
 }
 
 STRING 41
+// Sound\Dialogue\HumanCampaign\Human06\H06MalGanis32.mp3
 {
 As you can see, your people are now mine. I will now turn this city household by household, until the flame of life has been snuffed out... forever.
 }
@@ -159,6 +132,7 @@ Arthas
 }
 
 STRING 43
+// Sound\Dialogue\HumanCampaign\Human06\H06Arthas33.mp3
 {
 I won't allow it, Mal'Ganis! Better that these people die by my hand than serve as your slaves in death!
 }
@@ -169,13 +143,9 @@ Mal'Ganis
 }
 
 STRING 49
+// Sound\Dialogue\HumanCampaign\Human06\H06Uther02.mp3
 {
 Watch your tone with me, boy. You may be the prince, but I'm still your superior as a paladin!
-}
-
-STRING 50
-{
-Revive Conversion Man
 }
 
 STRING 53
@@ -184,6 +154,7 @@ Arthas
 }
 
 STRING 54
+// Sound\Dialogue\HumanCampaign\Human06\H06Arthas03.mp3
 {
 As if I could forget. Listen, Uther, there's something about the plague you should know....
 }
@@ -194,6 +165,7 @@ Arthas
 }
 
 STRING 56
+// Sound\Dialogue\HumanCampaign\Human06\H06Arthas04.mp3
 {
 Oh, no. We're too late. These people have all been infected! They may look fine now, but it's just a matter of time before they turn into the undead!
 }
@@ -209,6 +181,7 @@ Arthas
 }
 
 STRING 60
+// Sound\Dialogue\HumanCampaign\Human06\H06Uther05.mp3
 {
 What?
 }
@@ -219,6 +192,7 @@ Arthas
 }
 
 STRING 62
+// Sound\Dialogue\HumanCampaign\Human06\H06Arthas06.mp3
 {
 This entire city must be purged.
 }
@@ -229,6 +203,7 @@ Uther the Lightbringer
 }
 
 STRING 64
+// Sound\Dialogue\HumanCampaign\Human06\H06Uther07.mp3
 {
 How can you even consider that? There's got to be some other way.
 }
@@ -239,6 +214,7 @@ Arthas
 }
 
 STRING 66
+// Sound\Dialogue\HumanCampaign\Human06\H06Arthas08.mp3
 {
 Damn it, Uther! As your future king, I order you to purge this city!
 }
@@ -249,6 +225,7 @@ Uther the Lightbringer
 }
 
 STRING 68
+// Sound\Dialogue\HumanCampaign\Human06\H06Uther09.mp3
 {
 You are not my king yet, boy! Nor would I obey that command even if you were!
 }
@@ -259,6 +236,7 @@ Arthas
 }
 
 STRING 70
+// Sound\Dialogue\HumanCampaign\Human06\H06Arthas10.mp3
 {
 Then I must consider this an act of treason.
 }
@@ -269,6 +247,7 @@ Uther the Lightbringer
 }
 
 STRING 72
+// Sound\Dialogue\HumanCampaign\Human06\H06Uther11.mp3
 {
 Treason? Have you lost your mind, Arthas?
 }
@@ -279,6 +258,7 @@ Arthas
 }
 
 STRING 74
+// Sound\Dialogue\HumanCampaign\Human06\H06Arthas12.mp3
 {
 Have I? Lord Uther, by my right of succession and the sovereignty of my crown, I hereby relieve you of your command and suspend your paladins from service.
 }
@@ -289,6 +269,7 @@ Jaina Proudmoore
 }
 
 STRING 76
+// Sound\Dialogue\HumanCampaign\Human06\H06Jaina13.mp3
 {
 Arthas! You can't just--
 }
@@ -299,6 +280,7 @@ Arthas
 }
 
 STRING 78
+// Sound\Dialogue\HumanCampaign\Human06\H06Arthas14.mp3
 {
 It's done! Those of you who have the will to save this land, follow me! The rest of you... get out of my sight!
 }
@@ -309,6 +291,7 @@ Uther the Lightbringer
 }
 
 STRING 80
+// Sound\Dialogue\HumanCampaign\Human06\H06Uther15.mp3
 {
 You've just crossed a terrible threshold, Arthas.
 }
@@ -319,6 +302,7 @@ Arthas
 }
 
 STRING 82
+// Sound\Dialogue\HumanCampaign\Human06\H06Arthas16.mp3
 {
 Jaina?
 }
@@ -329,6 +313,7 @@ Jaina Proudmoore
 }
 
 STRING 84
+// Sound\Dialogue\HumanCampaign\Human06\H06Jaina17.mp3
 {
 I'm sorry, Arthas. I can't watch you do this.
 }
@@ -339,6 +324,7 @@ Arthas
 }
 
 STRING 86
+// Sound\Dialogue\HumanCampaign\Human06\H06Arthas43.mp3
 {
 We're going to finish this right now, Mal'Ganis. Just you and me.
 }
@@ -349,6 +335,7 @@ Mal'Ganis
 }
 
 STRING 88
+// Sound\Dialogue\HumanCampaign\Human06\H06MalGanis44.mp3
 {
 Brave words. Unfortunately for you, it won't end here. Your journey has just begun, young prince.
 }
@@ -359,6 +346,7 @@ Mal'Ganis
 }
 
 STRING 90
+// Sound\Dialogue\HumanCampaign\Human06\H06MalGanis45.mp3
 {
 Gather your forces and meet me in the arctic land of Northrend. It is there that we shall settle the score between us. It is there that your true destiny will unfold.
 }
@@ -369,6 +357,7 @@ Arthas
 }
 
 STRING 92
+// Sound\Dialogue\HumanCampaign\Human06\H06Arthas46.mp3
 {
 I'll hunt you to the ends of the earth if I have to! Do you hear me? To the ends of the earth!
 }
@@ -379,6 +368,7 @@ Mal'Ganis
 }
 
 STRING 94
+// Sound\Dialogue\HumanCampaign\Human06\H06MalGanis42.mp3
 {
 Obviously, you are not as strong as the Dark Lord believed. Now, feel the wrath of the Scourge as you drown under the flood of the living dead!
 }
@@ -389,6 +379,7 @@ Plagued Villager Buildings
 }
 
 STRING 99
+// Sound\Dialogue\HumanCampaign\Human06\H06Arthas30.mp3
 {
 Father, forgive me for what I must do.
 }
@@ -408,13 +399,9 @@ Mal'Ganis
 }
 
 STRING 102
+// Sound\Dialogue\HumanCampaign\Human06\H06MalGanis31.mp3
 {
 I've been waiting for you, young prince. I am Mal'Ganis.
-}
-
-STRING 103
-{
-Filson the Rat
 }
 
 STRING 104

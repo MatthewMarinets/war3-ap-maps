@@ -1,6 +1,6 @@
 # Warcraft 3 Map Objects File (.w3o)
 # See w3o.py for type definitions
-version = 1
+version = 2
 has_levels = false
 
 [blizzard_objects]
@@ -12,7 +12,7 @@ modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'siege'
+value = "siege"
 object_id = 'null'
 
 [[blizzard_objects.entities.modifications]]
@@ -20,7 +20,7 @@ modification_id = 'uhab'  # UnitAbilities.Hero
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'ANsl,AUcs,AUsl,ANdc'
+value = "ANsl,AUcs,AUsl,ANdc"
 object_id = 'null'
 
 [[blizzard_objects.entities.modifications]]
@@ -96,7 +96,7 @@ modification_id = 'usei'  # Profile.Items Sold
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'phea,pman,shea,spro,wneg,gemt,stwp'
+value = "phea,pman,shea,spro,wneg,gemt,stwp"
 object_id = 'null'
 
 [[blizzard_objects.entities.modifications]]
@@ -108,58 +108,14 @@ value = 3
 object_id = 'null'
 
 [[blizzard_objects.entities]]
-parent_id = 'pman'  # Potion of Mana
+parent_id = 'hfoo'  # Footman
 entity_id = 'null'
 [[blizzard_objects.entities.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
 variation_level = 0
 table_column = 0
-value = 0
-object_id = 'null'
-
-[[blizzard_objects.entities]]
-parent_id = 'phea'  # Potion of Healing
-entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
-[[blizzard_objects.entities]]
-parent_id = 'stwp'  # Scroll of Town Portal
-entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
-[[blizzard_objects.entities]]
-parent_id = 'shea'  # Scroll of Healing
-entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
-[[blizzard_objects.entities]]
-parent_id = 'spro'  # Scroll of Protection
-entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
+value = "Adef,Aihn,AP00"
 object_id = 'null'
 
 [map_objects]
@@ -171,7 +127,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_028'
+value = "Plagued Male Villager"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -206,7 +162,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_029'
+value = "Plagued Female Villager"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -241,7 +197,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_030'
+value = "Plagued Child Villager"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -273,7 +229,7 @@ modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Apts'
+value = "Apts"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -284,7 +240,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_031'
+value = "''Zombie of Mal'Ganis''"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -343,7 +299,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_028'
+value = "Plagued Male Villager"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -378,7 +334,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_017'
+value = "CONVERSIONMAN"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -386,7 +342,7 @@ modification_id = 'upro'  # Profile.Proper Names
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_034'
+value = "Conversion Man"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -394,7 +350,7 @@ modification_id = 'umvt'  # UnitData.Type
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'fly'
+value = "fly"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -402,7 +358,7 @@ modification_id = 'uhab'  # UnitAbilities.Hero
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'SNdc'
+value = "SNdc"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -418,7 +374,7 @@ modification_id = 'utpr'  # Profile.Tooltip - Revive
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_050'
+value = "Revive Conversion Man"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -426,7 +382,7 @@ modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'units\critters\FlyingSheep\FlyingSheep'
+value = "units\\critters\\FlyingSheep\\FlyingSheep"
 object_id = 'nshf'  # Flying Sheep
 
 [[map_objects.entities.modifications]]
@@ -434,7 +390,7 @@ modification_id = 'uico'  # Profile.Icon - Game Interface
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'ReplaceableTextures\CommandButtons\BTNSheep.tga'
+value = "ReplaceableTextures\\CommandButtons\\BTNSheep.tga"
 object_id = 'nshf'  # Flying Sheep
 
 [[map_objects.entities.modifications]]
@@ -461,7 +417,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_103'
+value = "Filson the Rat"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -477,5 +433,48 @@ modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'Awan,Arng,ACes,ACmi'
+value = "Awan,Arng,ACes,ACmi"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'hmil'  # Militia
+entity_id = 'hA00'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Irregular"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 9
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "APPh"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'udaa'  # UnitAbilities.Default Active Ability
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ubui'  # Profile.Structures Built
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
 object_id = 'null'
