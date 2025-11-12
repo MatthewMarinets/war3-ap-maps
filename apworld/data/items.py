@@ -56,12 +56,12 @@ class QuestItem:
 
 @dataclasses.dataclass
 class CaptainPromotion:
-    mission: Wc3Mission
+    game_id: Tech = Tech.CAPTAIN
 
 
 @dataclasses.dataclass
 class Resources:
-    code: GameID
+    game_id: GameID
     amount: int
 
 
@@ -353,10 +353,10 @@ class Wc3Item(enum.Enum):
     # ILLIDAN_TFT_LEVEL = _, "Illidan (TFT) Level",   Level(HeroSlot.DEMON_ILLIDAN, 10, 10)
 
     # Captains
-    H1_CAPTAIN = 1100, "Human 01: Captain", CaptainPromotion(Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD)
+    H1_CAPTAIN = 1100, "Human 01: Captain", CaptainPromotion()
 
     # Resource Fillers
-    FILLER_GOLD = 1200, "+100 Gold", Resources('gold', 100)
+    FILLER_GOLD = 1200, "+100 Gold", Resources(GameID.GOLD_COINS, 100)
 
     # Human Campaign Items
     H_BOOTS_OF_SPEED =               2100, "Boots of Speed (Human)",                PickupItem(1, GameID.BOOTS_OF_SPEED, ItemChannel.HUMAN)
