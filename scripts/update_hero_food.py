@@ -57,6 +57,11 @@ def update_units(units_file: str) -> None:
         fp.write(text)
 
 
+def main(map_dir: str) -> None:
+    print(f'Hero Food: updating {map_dir}')
+    update_units(f'{map_dir}/{common.UNIT_DATA_FILE_NAME}')
+
+
 HELP = f"""
 Script to upgrade unpacked map unit data. Usage:
 {os.path.basename(__file__)}.py <map_dir>
@@ -70,5 +75,4 @@ if __name__ == '__main__':
     if '-h' in sys.argv:
         print(HELP)
         sys.exit(0)
-    print(f'Hero Food: updating {sys.argv[1]}')
-    update_units(f'{sys.argv[1]}/{common.UNIT_DATA_FILE_NAME}')
+    main(sys.argv[1])

@@ -8,9 +8,9 @@ from dataclasses import dataclass, field
 
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
-from mapfile import doo, w3i, wtg, wct, w3o, imp
+from mapfile import doo, w3i, wtg, wct, w3o, imp, common
 from apworld.data import missions, tables, heroes
-from scripts import update_irregulars
+from scripts import update_irregulars, update_hero_food
 
 sys.path.pop()
 
@@ -330,6 +330,7 @@ def main(map_dir: str) -> int:
     update_triggers(map_dir)
 
     update_irregulars.main(map_dir)
+    update_hero_food.main(map_dir)
 
 
 HELP = """
