@@ -181,7 +181,7 @@ def update_units(units_file: str) -> None:
     
     entities = mod_entity.Entities(data.map_objects.entities)
     entities.set_entity(
-        'hA00', GameID.MILITIA.value, {
+        cid.UNIT_IRREGULAR, GameID.MILITIA.value, {
         editor_ids.FIELD_UNIT_GENERAL_NAME: "Irregular",
         editor_ids.FIELD_UNIT_ATTACK_1_DAMAGE_BASE: 9,
         editor_ids.FIELD_UNIT_ABILITIES_NORMAL: SPELLBOOK_ABIL_ID,
@@ -192,7 +192,7 @@ def update_units(units_file: str) -> None:
     blizz_entities = mod_entity.Entities(data.blizzard_objects.entities, False)
     blizz_entities.set_entity(
         'null', 'hfoo', {
-            editor_ids.FIELD_UNIT_ABILITIES_NORMAL: 'Adef,Aihn,AP00',
+            editor_ids.FIELD_UNIT_ABILITIES_NORMAL: f'Adef,Aihn,{cid.ABIL_SELECT_TRANSFORM_CAPTAIN}',
         }
     )
 
@@ -225,16 +225,16 @@ def main(map_dir: str) -> int:
     if '(listfile)' not in files:
         print(f'Error: Missing (listfile) in {map_dir}')
         return 1
-    print(f'Processing {map_dir}')
+    print(f'Irregulars: updating {map_dir}')
 
     update_abilities_human(f'{map_dir}/o_abilities.w3a.toml')
     update_units(f'{map_dir}/o_units.w3u.toml')
     update_upgrades(f'{map_dir}/o_upgrades.w3q.toml')
 
 
-HELP = """
-Script to upgrade unpacked RoC maps to TFT. Usage:
-upgrade_roc.py <map_dir>
+HELP = f"""
+Script to update unpacked maps to add irregulars. Usage:
+{os.path.basename(__file__)}.py <map_dir>
 """
 if __name__ == '__main__':
     if len(sys.argv) < 2:
