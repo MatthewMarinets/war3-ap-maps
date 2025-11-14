@@ -6,7 +6,7 @@ file_format_version = 0
 [[icons]]
 
 icon_type = "GoldMine"
-x = 217
+x = 214
 y = 170
 colour_blue = 255
 colour_green = 255
@@ -16,7 +16,7 @@ colour_alpha = 255
 [[icons]]
 
 icon_type = "GoldMine"
-x = 46
+x = 49
 y = 38
 colour_blue = 255
 colour_green = 255
@@ -26,7 +26,7 @@ colour_alpha = 255
 [[icons]]
 
 icon_type = "GoldMine"
-x = 217
+x = 214
 y = 38
 colour_blue = 255
 colour_green = 255
@@ -36,7 +36,7 @@ colour_alpha = 255
 [[icons]]
 
 icon_type = "PlayerStart"
-x = 68
+x = 70
 y = 206
 colour_blue = 241
 colour_green = 191
@@ -46,7 +46,7 @@ colour_alpha = 255
 [[icons]]
 
 icon_type = "PlayerStart"
-x = 212
+x = 209
 y = 25
 colour_blue = 151
 colour_green = 150
@@ -56,7 +56,7 @@ colour_alpha = 255
 [[icons]]
 
 icon_type = "PlayerStart"
-x = 57
+x = 59
 y = 45
 colour_blue = 0
 colour_green = 192
@@ -66,7 +66,7 @@ colour_alpha = 255
 [[icons]]
 
 icon_type = "PlayerStart"
-x = 56
+x = 58
 y = 215
 colour_blue = 255
 colour_green = 66
@@ -86,7 +86,7 @@ colour_alpha = 255
 [[icons]]
 
 icon_type = "PlayerStart"
-x = 166
+x = 165
 y = 39
 colour_blue = 129
 colour_green = 0

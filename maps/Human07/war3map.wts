@@ -9,6 +9,7 @@ Arthas
 }
 
 STRING 4
+// Sound\Dialogue\HumanCampaign\Human07\H07Arthas08.mp3
 {
 We're under attack! Take cover!
 }
@@ -24,6 +25,7 @@ Captain
 }
 
 STRING 9
+// Sound\Dialogue\HumanCampaign\Human07\H07Captain01.mp3
 {
 This is a Light-forsaken land, isn't it? You can barely even see the sun! This howling wind cuts to the bone and you're not even shaking. Milord, are you alright?
 }
@@ -39,6 +41,7 @@ Human07
 }
 
 STRING 12
+// Sound\Dialogue\HumanCampaign\Human07\H07Arthas02.mp3
 {
 Captain, are all my forces accounted for?
 }
@@ -79,11 +82,13 @@ Captain
 }
 
 STRING 21
+// Sound\Dialogue\HumanCampaign\Human07\H07Captain03.mp3
 {
 Nearly. There are only a few ships that--
 }
 
 STRING 23
+// Sound\Dialogue\HumanCampaign\Human07\H07Muradin09.mp3
 {
 Bloody hell! You're not undead! You're all alive!
 }
@@ -104,6 +109,7 @@ Arthas
 }
 
 STRING 28
+// Sound\Dialogue\HumanCampaign\Human07\H07Arthas07.mp3
 {
 Ah, a gold mine! We'll set up our base there.
 }
@@ -137,6 +143,7 @@ Establish a Base Camp
 }
 
 STRING 34
+// Sound\Dialogue\HumanCampaign\Human07\H07Arthas06.mp3
 {
 Ice trolls.
 }
@@ -157,6 +164,7 @@ There are many threats, both seen and unseen, in this frozen wasteland. Thus, be
 }
 
 STRING 39
+// Sound\Dialogue\HumanCampaign\Human07\H07Arthas10.mp3
 {
 Muradin? Muradin Bronzebeard, is that you? 
 }
@@ -228,6 +236,7 @@ Rescue Muradin's Men
 }
 
 STRING 57
+// Sound\Dialogue\HumanCampaign\Human07\H07Muradin13.mp3
 {
 Damn, boy. I never imagined that you'd be the one to come to our rescue!
 }
@@ -238,6 +247,7 @@ Arthas
 }
 
 STRING 59
+// Sound\Dialogue\HumanCampaign\Human07\H07Arthas14.mp3
 {
 Rescue? Muradin, I didn't even know you were here.
 }
@@ -248,6 +258,7 @@ Muradin Bronzebeard
 }
 
 STRING 61
+// Sound\Dialogue\HumanCampaign\Human07\H07Muradin15.mp3
 {
 Just the same, lad, I could use your help. My mates and I were attacked, and we got separated. I'd appreciate any backup you could give me.
 }
@@ -258,6 +269,7 @@ Arthas
 }
 
 STRING 63
+// Sound\Dialogue\HumanCampaign\Human07\H07Arthas16.mp3
 {
 Of course I'll help, Muradin. Let's move!
 }
@@ -287,6 +299,7 @@ Arthas
 }
 
 STRING 79
+// Sound\Dialogue\HumanCampaign\Human07\H07Arthas20.mp3
 {
 All right, Muradin. What were you doing up here, anyway?
 }
@@ -297,6 +310,7 @@ Muradin Bronzebeard
 }
 
 STRING 81
+// Sound\Dialogue\HumanCampaign\Human07\H07Muradin21.mp3
 {
 Well, lad, there's an ancient way gate that lies somewhere in this glacial wasteland. Supposedly, it transports you to a hidden vault where a runeblade named Frostmourne is held.
 }
@@ -307,6 +321,7 @@ Muradin Bronzebeard
 }
 
 STRING 83
+// Sound\Dialogue\HumanCampaign\Human07\H07Muradin22.mp3
 {
 We came here to recover Frostmourne, but the closer we came to finding the way gate, the more undead we encountered.
 }
@@ -317,6 +332,7 @@ Arthas
 }
 
 STRING 85
+// Sound\Dialogue\HumanCampaign\Human07\H07Arthas26.mp3
 {
 That has to be where Mal'Ganis is hiding! I want that base leveled!
 }
@@ -327,6 +343,7 @@ Arthas
 }
 
 STRING 90
+// Sound\Dialogue\HumanCampaign\Human07\H07Arthas26.mp3
 {
 That has to be where Mal'Ganis is hiding! I want that base leveled!
 }
@@ -337,6 +354,7 @@ Arthas
 }
 
 STRING 92
+// Sound\Dialogue\HumanCampaign\Human07\H07Arthas04.mp3
 {
 Very well. Our first priority is to set up a base camp with proper defenses. There's no telling what's waiting for us out there in the shadows.
 }
@@ -347,6 +365,7 @@ Captain
 }
 
 STRING 94
+// Sound\Dialogue\HumanCampaign\Human07\H07Knight27.mp3
 {
 Prince Arthas, we haven't found any trace of Mal'Ganis.
 }
@@ -357,6 +376,7 @@ Arthas
 }
 
 STRING 96
+// Sound\Dialogue\HumanCampaign\Human07\H07Arthas28.mp3
 {
 No matter. He can't hide from me forever. Captain, I want you to establish this site as our primary base.
 }
@@ -367,6 +387,7 @@ Captain
 }
 
 STRING 98
+// Sound\Dialogue\HumanCampaign\Human07\H07Knight29.mp3
 {
 Yes, milord.
 }
