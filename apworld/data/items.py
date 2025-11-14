@@ -147,11 +147,11 @@ class Wc3Item(enum.Enum):
     TROLL_HEADHUNTER =   102, "Troll Headhunter",   Unit(Tech.TROLL_HEADHUNTER, Wc3Race.ORC)
     DEMOLISHER =         103, "Demolisher",         Unit(Tech.DEMOLISHER, Wc3Race.ORC)
     RAIDER =             104, "Raider",             Unit(Tech.RAIDER, Wc3Race.ORC)
-    KODO_BEAST =          105, "Kodo Beast",        Unit(Tech.KODO_BEAST, Wc3Race.ORC)
+    KODO_BEAST =         105, "Kodo Beast",         Unit(Tech.KODO_BEAST, Wc3Race.ORC)
     WIND_RIDER =         106, "Wind Rider",         Unit(Tech.WIND_RIDER, Wc3Race.ORC)
     TROLL_BATRIDER =     107, "Troll Batrider",     Unit(Tech.TROLL_BATRIDER, Wc3Race.ORC)
     SHAMAN =             108, "Shaman",             Unit(Tech.SHAMAN, Wc3Race.ORC)
-    TROLL_WITCH_DOCTOR = 109, "TrollWitch Doctor",  Unit(Tech.TROLL_WITCH_DOCTOR, Wc3Race.ORC)
+    TROLL_WITCH_DOCTOR = 109, "Troll Witch Doctor", Unit(Tech.TROLL_WITCH_DOCTOR, Wc3Race.ORC)
     SPIRIT_WALKER =      110, "Spirit Walker",      Unit(Tech.SPIRIT_WALKER, Wc3Race.ORC)
     TAUREN =             111, "Tauren",             Unit(Tech.TAUREN, Wc3Race.ORC)
 
@@ -353,7 +353,7 @@ class Wc3Item(enum.Enum):
     # ILLIDAN_TFT_LEVEL = _, "Illidan (TFT) Level",   Level(HeroSlot.DEMON_ILLIDAN, 10, 10)
 
     # Captains
-    H1_CAPTAIN = 1100, "Human 01: Captain", CaptainPromotion()
+    H1_CAPTAIN = 1100, "Captain Promotion", CaptainPromotion()
 
     # Resource Fillers
     FILLER_GOLD = 1200, "+100 Gold", Resources(GameID.GOLD_COINS, 100)
