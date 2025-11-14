@@ -20,7 +20,7 @@ modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'AIva'
+value = "AIva"
 object_id = 'null'
 
 [[blizzard_objects.entities.modifications]]
@@ -55,6 +55,17 @@ table_column = 0
 value = 150
 object_id = 'null'
 
+[[blizzard_objects.entities]]
+parent_id = 'hfoo'  # Footman
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Adef,Aihn,AP00"
+object_id = 'null'
+
 [map_objects]
 [[map_objects.entities]]
 parent_id = 'nrvi'  # Ice Revenant
@@ -64,7 +75,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'TRIGSTR_003'
+value = "TRIGSTR_003"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -104,7 +115,7 @@ modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = 'ACfa,ACfn'
+value = "ACfa,ACfn"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -137,4 +148,47 @@ data_type = "Integer"
 variation_level = 0
 table_column = 0
 value = 1200
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'hmil'  # Militia
+entity_id = 'hA00'
+[[map_objects.entities.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Irregular"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 9
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "APPh"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'udaa'  # UnitAbilities.Default Active Ability
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ubui'  # Profile.Structures Built
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
 object_id = 'null'
