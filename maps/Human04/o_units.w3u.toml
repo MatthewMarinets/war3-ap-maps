@@ -170,6 +170,292 @@ table_column = 0
 value = "Adef,Aihn,AP00"
 object_id = 'null'
 
+[[blizzard_objects.entities]]
+parent_id = 'Hpal'  # Paladin
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Hamg'  # Archmage
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Hmkg'  # Mountain King
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Hblm'  # Blood Mage
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Udea'  # Death Knight
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Ulic'  # Lich
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Udre'  # Dreadlord
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Ucrl'  # Crypt Lord
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Obla'  # Blademaster
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Ofar'  # Far Seer
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Otch'  # Tauren Chieftain
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Oshd'  # Shadow Hunter
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Emoo'  # Priestess of the Moon
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Ekee'  # Keeper of the Grove
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Edem'  # Demon Hunter
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Ewar'  # Warden
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Nalc'  # Alchemist
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Nbst'  # Beastmaster
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Nbrn'  # Dark Ranger
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Nfir'  # Firelord
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Ntin'  # Tinker
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Nngs'  # Naga Sea Witch
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Npbm'  # Pandaren Brewmaster
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Nplh'  # Pit Lord
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Naka'  # Elder Sage
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Ekgg'  # Keeper of the Grove
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
 [map_objects]
 [[map_objects.entities]]
 parent_id = 'nvlw'  # Villager

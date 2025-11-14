@@ -596,7 +596,7 @@ function hero_set_max_level takes integer slot, integer level returns nothing
     call hero_apply_max_level(hero, level)
 endfunction
 
-function hero_load takes integer hero_slot returns boolean
+function hero_load_global takes integer global_slot returns boolean
     local player p = Player(0)
     call SetPlayerTechMaxAllowed(p, 'nech', -1)
     call SetPlayerTechMaxAllowed(p, 'nske', -1)
@@ -625,19 +625,23 @@ function hero_load takes integer hero_slot returns boolean
     call SetPlayerTechMaxAllowed(Player(4), 'nvul', 0)
     call SetPlayerTechMaxAllowed(Player(5), 'nvul', 0)
 
-    call SetPlayerTechMaxAllowed(p, 'nalb', hero_global_slots[hero_slot])
+    call SetPlayerTechMaxAllowed(p, 'nalb', global_slot)
     call io_read_file("heroes.txt")
 
-    if GetPlayerTechMaxAllowed(p, 'nske') == 1 then
-        set HERO_MAX_LEVEL[hero_slot] = GetPlayerTechMaxAllowed(p, 'nder')
+    return GetPlayerTechMaxAllowed(p, 'nske') == 1
+endfunction
+
+function hero_load takes integer hero_slot returns boolean
+    local boolean success = hero_load_global(hero_global_slots[hero_slot])
+    if success then
+        set HERO_MAX_LEVEL[hero_slot] = GetPlayerTechMaxAllowed(Player(0), 'nder')
         set hero_abil_1[hero_slot] = GetPlayerTechMaxAllowed(Player(0), 'nfro')
         set hero_abil_2[hero_slot] = GetPlayerTechMaxAllowed(Player(1), 'nfro')
         set hero_abil_3[hero_slot] = GetPlayerTechMaxAllowed(Player(2), 'nfro')
         set hero_abil_4[hero_slot] = GetPlayerTechMaxAllowed(Player(3), 'nfro')
-        set last_hero_packet = GetPlayerTechMaxAllowed(p, 'nech')
+        set last_hero_packet = GetPlayerTechMaxAllowed(Player(0), 'nech')
     endif
-
-    return GetPlayerTechMaxAllowed(p, 'nske') == 1
+    return success
 endfunction
 
 // should be called after hero_load()
@@ -737,6 +741,18 @@ endfunction
 function hero_create takes integer hero_slot, player for_player, real x, real y, real facing returns unit
     local unit hero = null
     if not hero_load(hero_slot) then
+        return null
+    endif
+    set hero = CreateUnit(for_player, GetPlayerTechMaxAllowed(Player(0), 'npng'), x, y, facing)
+    return hero
+endfunction
+
+// Create and return a hero units from a global hero slot
+// Does not configure ability data for reporting
+// Returns null if the hero could not be loaded
+function hero_create_global takes integer global_slot, player for_player, real x, real y, real facing returns unit
+    local unit hero = null
+    if not hero_load_global(global_slot) then
         return null
     endif
     set hero = CreateUnit(for_player, GetPlayerTechMaxAllowed(Player(0), 'npng'), x, y, facing)
@@ -908,8 +924,7 @@ globals
 trigger t_location_found = null
 endglobals
 
-function trigger_function_item_locations takes nothing returns nothing
-    local integer item_id = GetItemTypeId(GetManipulatedItem())
+function item_location_send takes integer item_id returns nothing
     if (item_id == 'I010') then
         call status_check_location(0)
     elseif (item_id == 'I011') then
@@ -930,17 +945,17 @@ function trigger_function_item_locations takes nothing returns nothing
         call status_check_location(8)
     elseif (item_id == 'I019') then
         call status_check_location(9)
-    elseif (item_id == 'I01A') then
+    elseif (item_id == 'I01a') then
         call status_check_location(10)
-    elseif (item_id == 'I01B') then
+    elseif (item_id == 'I01b') then
         call status_check_location(11)
-    elseif (item_id == 'I01C') then
+    elseif (item_id == 'I01c') then
         call status_check_location(12)
-    elseif (item_id == 'I01D') then
+    elseif (item_id == 'I01d') then
         call status_check_location(13)
-    elseif (item_id == 'I01E') then
+    elseif (item_id == 'I01e') then
         call status_check_location(14)
-    elseif (item_id == 'I01F') then
+    elseif (item_id == 'I01f') then
         call status_check_location(15)
     elseif (item_id == 'I020') then
         call status_check_location(16)
@@ -962,25 +977,39 @@ function trigger_function_item_locations takes nothing returns nothing
         call status_check_location(24)
     elseif (item_id == 'I029') then
         call status_check_location(25)
-    elseif (item_id == 'I02A') then
+    elseif (item_id == 'I02a') then
         call status_check_location(26)
-    elseif (item_id == 'I02B') then
+    elseif (item_id == 'I02b') then
         call status_check_location(27)
-    elseif (item_id == 'I02C') then
+    elseif (item_id == 'I02c') then
         call status_check_location(28)
-    elseif (item_id == 'I02D') then
+    elseif (item_id == 'I02d') then
         call status_check_location(29)
-    elseif (item_id == 'I02E') then
+    elseif (item_id == 'I02e') then
         call status_check_location(30)
-    elseif (item_id == 'I02F') then
+    elseif (item_id == 'I02f') then
         call status_check_location(31)
+    endif
+endfunction
+
+function item_location_in_range takes integer item_id returns boolean
+    if item_id < 'I010' or item_id > 'I02f' then
+        return false
+    endif
+    return true
+endfunction
+
+function trigger_function_pick_up_item takes nothing returns nothing
+    local integer item_id = GetItemTypeId(GetManipulatedItem())
+    if item_location_in_range(item_id) then
+        call item_location_send(item_id)
     endif
 endfunction
 
 function InitTrig_item_locations takes nothing returns nothing
     set t_location_found = CreateTrigger()
     call TriggerRegisterPlayerUnitEventSimple(t_location_found, USER_PLAYER, EVENT_PLAYER_UNIT_PICKUP_ITEM)
-    call TriggerAddAction(t_location_found, function trigger_function_item_locations)
+    call TriggerAddAction(t_location_found, function trigger_function_pick_up_item)
 endfunction
 
 //\\// Trigger #6
