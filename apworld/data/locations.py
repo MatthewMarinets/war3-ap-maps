@@ -164,12 +164,12 @@ class Wc3Location(enum.Enum):
     # (Main) Mal'Ganis
     # (Side) Rescue Muradin's Men
     HU7_VICTORY =                10700, "Victory",                   Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.VICTORY
-    HU7_NERUBIAN_ITEM =          10701, "Nerubian Item",             Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.ITEM, "Orb of Frost"
-    HU7_ICE_TROLL_ITEM =         10702, "Ice Troll Item",            Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.ITEM, "Manual of Health"
-    HU7_WENDIGO_ITEM =           10703, "Wendigo Item",              Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.ITEM, "Gauntlets of Ogre Strength +3"
-    HU7_ICE_TROLL_WARLORD_ITEM = 10704, "Ice Troll Warlord Item",    Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.ITEM, "Potion of Greater Healing"
-    HU7_DIRE_FROST_WOLF_ITEM =   10705, "Dire Frost Wolf Item",      Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.ITEM, "Scroll of the Beast"
-    HU7_ICE_TROLL_HUT_ITEM =     10706, "Ice Troll Hut Item",        Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.ITEM, "Potion of Mana"
+    HU7_DIRE_FROST_WOLF_ITEM =   10701, "Dire Frost Wolf Item",      Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.ITEM, "Scroll of the Beast"
+    HU7_NERUBIAN_QUEEN_ITEM =    10702, "Nerubian Queen Item",       Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.ITEM, "Orb of Frost"
+    HU7_ICE_TROLL_WARLORD_ITEM = 10703, "Ice Troll Warlord Item",    Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.ITEM, "Potion of Greater Healing"
+    HU7_ICE_TROLL_HUT_ITEM =     10704, "Ice Troll Hut Item",        Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.ITEM, "Potion of Mana"
+    HU7_ICE_TROLL_ITEM =         10705, "Ice Troll Warlord 2 Item",  Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.ITEM, "Manual of Health"
+    HU7_WENDIGO_ITEM =           10706, "Wendigo Item",              Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.ITEM, "Gauntlets of Ogre Strength +3"
     HU7_SLAY_LICH =              10720, "Slay Lich",                 Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.HERO
     HU7_ESTABLISH_BASE =         10721, "Establish Base Camp",       Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.QUEST
     HU7_RESCUE_MURADINS_MEN =    10722, "Rescue Muradin's Men",      Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.QUEST_RESCUE
