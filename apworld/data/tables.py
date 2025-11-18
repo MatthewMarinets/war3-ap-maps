@@ -2,6 +2,7 @@
 
 from .missions import Wc3Mission, Wc3Campaign
 from .heroes import HeroSlot, SuperheroSlot, ItemChannel
+from .items import Wc3Item
 from . import items
 
 MISSION_TO_HERO_SLOT = {
@@ -124,8 +125,8 @@ SUPERHERO_SLOT_TO_MISSION: dict[SuperheroSlot, Wc3Mission] = {
     _superhero: _mission for _mission, _superhero in MISSION_TO_SUPERHERO_SLOT.items()
 }
 
-HERO_SLOT_TO_ITEM: dict[HeroSlot, items.Wc3Item] = {
-    _item.type.slot: _item for _item in items.Wc3Item if isinstance(_item.type, items.Level)
+HERO_SLOT_TO_ITEM: dict[HeroSlot, Wc3Item] = {
+    _item.type.slot: _item for _item in Wc3Item if isinstance(_item.type, items.Level)
 }
 CAMPAIGN_TO_ITEM_SLOT: dict[Wc3Campaign, tuple[ItemChannel, ItemChannel]] = {
     Wc3Campaign.HUMAN_1: (ItemChannel.HUMAN, ItemChannel.NONE),
@@ -172,4 +173,27 @@ ITEM_CHANNEL_TO_DEFAULT_HERO: dict[ItemChannel, HeroSlot] = {
     ItemChannel.BLOOD_ELF: HeroSlot.KAEL,
     ItemChannel.SCOURGE: HeroSlot.ARTHAS_TFT,
     ItemChannel.FORSAKEN: HeroSlot.SYLVANAS,
+}
+
+MISSION_TO_VANILLA_MERCENARIES = {
+    # Each mission contains a mapping of vanilla item slot to merc item.
+    # In the case of multiple mercenary camps, slots round-robin around the mercenary camps,
+    # so that adding more mercs to this list will smoothly distribute new mercs across the camps.
+    Wc3Mission.H8_DISSENSION: {
+        0: Wc3Item.MERC_ICE_TROLL,
+        1: Wc3Item.MERC_ICE_TROLL_BERSERKER,
+        2: Wc3Item.MERC_ICE_TROLL_TRAPPER,
+        3: Wc3Item.MERC_ICE_TROLL_PRIEST,
+        4: Wc3Item.MERC_OGRE_MAGI,
+        5: Wc3Item.MERC_ICE_TROLL_HIGH_PRIEST,
+        6: Wc3Item.MERC_OGRE_WARRIOR,
+        # 7: Merc camp 2 doesn't use the 3rd slot :P
+        8: Wc3Item.MERC_OGRE_MAULER,
+    },
+    Wc3Mission.H9_FROSTMOURNE: {
+        0: Wc3Item.MERC_NERUBIAN_WARRIOR,
+        1: Wc3Item.MERC_ICE_TROLL_BERSERKER,
+        2: Wc3Item.MERC_FROST_REVENANT,
+        3: Wc3Item.MERC_NERUBIAN_WEBSPINNER,
+    },
 }

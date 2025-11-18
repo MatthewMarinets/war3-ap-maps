@@ -1,8 +1,8 @@
 
 import enum
 import dataclasses
-from .missions import Wc3Race, Wc3Campaign, Wc3Mission
-from .game_ids import Tech, GameID
+from .missions import Wc3Race, Wc3Mission
+from .game_ids import Tech, GameID, CreepSpecies
 from .heroes import HeroSlot, ItemChannel
 
 
@@ -60,13 +60,21 @@ class CaptainPromotion:
 
 
 @dataclasses.dataclass
+class Mercenary:
+    game_id: GameID
+    species: CreepSpecies
+
+
+@dataclasses.dataclass
 class Resources:
     game_id: GameID
     amount: int
 
 
-ItemType = (
-    Unit | Building | Level | Upgrade | ShopItem | PickupItem | QuestItem | CaptainPromotion | Resources
+type ItemType = (
+    Unit | Building | Level | Upgrade
+    | ShopItem | PickupItem | QuestItem
+    | CaptainPromotion | Mercenary | Resources
 )
 
 
@@ -447,6 +455,35 @@ class Wc3Item(enum.Enum):
 
     # Night Elf Campaign Items
     N_HORN_OF_CENARIUS =             2400, "Horn of Cenarius (Night Elf)",          PickupItem(1, GameID.HORN_OF_CENARIUS, ItemChannel.NIGHT_ELF)
+
+    # Mercenaries
+    # Note(mm): Lining up the middle two digits of the IDs with the species in game_ids
+    MERC_NERUBIAN_WARRIOR       = 3320, "Nerubian Warrior (Mercenary)", Mercenary(GameID.NERUBIAN_WARRIOR, CreepSpecies.Nerubians)
+    MERC_NERUBIAN_WEBSPINNER    = 3321, "Nerubian Webspinner (Mercenary)", Mercenary(GameID.NERUBIAN_WEBSPINNER, CreepSpecies.Nerubians)
+    # MERC_NERUBIAN_SEER          = 3322, "Nerubian Seer (Mercenary)", Mercenary(GameID.NERUBIAN_SEER, CreepSpecies.Nerubians)
+    # MERC_NERUBIAN_SPIDER_LORD   = 3323, "Nerubian Spider Lord (Mercenary)", Mercenary(GameID.NERUBIAN_SPIDER_LORD, CreepSpecies.Nerubians)
+    # MERC_NERUBIAN_QUEEN         = 3324, "Nerubian Queen (Mercenary)", Mercenary(GameID.NERUBIAN_QUEEN, CreepSpecies.Nerubians)
+
+    MERC_OGRE_WARRIOR           = 3330, "Ogre Warrior (Mercenary)", Mercenary(GameID.OGRE_WARRIOR, CreepSpecies.Ogres)
+    MERC_OGRE_MAGI              = 3331, "Ogre Magi (Mercenary)", Mercenary(GameID.OGRE_MAGI, CreepSpecies.Ogres)
+    MERC_OGRE_MAULER            = 3332, "Ogre Mauler (Mercenary)", Mercenary(GameID.OGRE_MAULER, CreepSpecies.Ogres)
+    # MERC_OGRE_LORD              = 3333, "Ogre Lord (Mercenary)", Mercenary(GameID.OGRE_LORD, CreepSpecies.Ogres)
+
+    MERC_ICE_TROLL              = 3520, "Ice Troll (Mercenary)", Mercenary(GameID.ICE_TROLL, CreepSpecies.Ice_Trolls)
+    MERC_ICE_TROLL_PRIEST       = 3521, "Ice Troll Priest (Mercenary)", Mercenary(GameID.ICE_TROLL_PRIEST, CreepSpecies.Ice_Trolls)
+    MERC_ICE_TROLL_TRAPPER      = 3522, "Ice Troll Trapper (Mercenary)", Mercenary(GameID.ICE_TROLL_TRAPPER, CreepSpecies.Ice_Trolls)
+    MERC_ICE_TROLL_BERSERKER    = 3523, "Ice Troll Berserker (Mercenary)", Mercenary(GameID.ICE_TROLL_BERSERKER, CreepSpecies.Ice_Trolls)
+    MERC_ICE_TROLL_HIGH_PRIEST  = 3524, "Ice Troll High Priest (Mercenary)", Mercenary(GameID.ICE_TROLL_HIGH_PRIEST, CreepSpecies.Ice_Trolls)
+    # MERC_ICE_TROLL_WARLORD      = 3525, "Ice Troll Warlord (Mercenary)", Mercenary(GameID.ICE_TROLL_WARLORD, CreepSpecies.Ice_Trolls)
+
+    # MERC_FIRE_REVENANT          = 3370, "Fire Revenant (Mercenary)", Mercenary(GameID.FIRE_REVENANT, CreepSpecies.Revenants)
+    MERC_FROST_REVENANT         = 3371, "Frost Revenant (Mercenary)", Mercenary(GameID.FROST_REVENANT, CreepSpecies.Revenants)
+    # MERC_REVENANT_OF_THE_SEAS   = 3372, "Revenant of the Seas (Mercenary)", Mercenary(GameID.REVENANT_OF_THE_SEAS, CreepSpecies.Revenants)
+    # MERC_LIGHTNING_REVENANT     = 3373, "Lightning Revenant (Mercenary)", Mercenary(GameID.LIGHTNING_REVENANT, CreepSpecies.Revenants)
+    # MERC_ICE_REVENANT           = 3374, "Ice Revenant (Mercenary)", Mercenary(GameID.ICE_REVENANT, CreepSpecies.Revenants)
+    # MERC_REVENANT_OF_THE_DEPTHS = 3375, "Revenant of the Depths (Mercenary)", Mercenary(GameID.REVENANT_OF_THE_DEPTHS, CreepSpecies.Revenants)
+    # MERC_DEATH_REVENANT         = 3376, "Death Revenant (Mercenary)", Mercenary(GameID.DEATH_REVENANT, CreepSpecies.Revenants)
+    # MERC_DEEPLORD_REVENANT      = 3377, "Deeplord Revenant (Mercenary)", Mercenary(GameID.DEEPLORD_REVENANT, CreepSpecies.Revenants)
 
 
 NAME_TO_ITEM: dict[str, Wc3Item] = {}

@@ -684,9 +684,10 @@ class GameID(enum.StrEnum):
     DEMON_GATE = 'ndmg'
     ZOMBIE = 'nzom'
     SKY_BARGE = 'uarb'
-    FEL_STALKER = 'nfel'
-    INFERNAL = 'ninf'
-    DOOM_GUARD = 'nbal'
+    # These use the purple fel stalker model; not sure where they're used
+    LESSER_SPIRIT_BEAST = 'nsw1'
+    SPIRIT_BEAST = 'nsw2'
+    GREATER_SPIRIT_BEAST = 'nsw3'
 
     CORRUPTED_TREE_OF_LIFE = 'nctl'
     CORRUPTED_TREE_OF_AGES = 'ncta'
@@ -695,9 +696,6 @@ class GameID(enum.StrEnum):
     CORRUPTED_ANCIENT_OF_WAR = 'ncaw'
     CORRUPTED_MOON_WELL = 'ncmw'  # Under Neutral Passive/Campaign instead of NE
     TREANT = 'efon'
-    CORRUPTED_TREANT = 'nenc'
-    POISON_TREANT = 'nenp'
-    PLAGUE_TREANT = 'nepl'
     RUNNER = 'enec'
     SENTRY = 'nwat'
     NAISHA = 'ensh'
@@ -880,6 +878,24 @@ class GameID(enum.StrEnum):
     MARKETPLACE = 'nmrk'
     GOBLIN_SHIPYARD = 'nshp'
 
+    # Mercenary Camps
+    MERC_CAMP_LORDAERON_SUMMER = 'nmer'
+    MERC_CAMP_LORDAERON_FALL = 'nmr2'
+    MERC_CAMP_LORDAERON_WINTER = 'nmr3'
+    MERC_CAMP_BARRENS = 'nmr4'
+    MERC_CAMP_ASHENVALE = 'nm5'
+    MERC_CAMP_FELWOOD = 'nmr6'
+    MERC_CAMP_NORTHREND = 'nmr7'
+    MERC_CAMP_CITYSCAPE = 'nmr8'
+    MERC_CAMP_DALARAN = 'nmr9'
+    MERC_CAMP_VILLAGE = 'nmr0'
+    MERC_CAMP_DUNGEON = 'nmra'
+    MERC_CAMP_UNDERGROUND = 'nmrb'
+    MERC_CAMP_SUNKEN_RUINS = 'nmrc'
+    MERC_CAMP_ICECROWN_GLACIER = 'nmrd'
+    MERC_CAMP_OUTLAND = 'nmre'
+    MERC_CAMP_BLACK_CITADEL = 'nmrf'
+
     # Critters
     CRITTER_ALBATROSS = 'nalb'
     CRITTER_CHICKEN = 'nech'
@@ -901,6 +917,7 @@ class GameID(enum.StrEnum):
     CRITTER_SNOWY_OWL = 'nsno'
     CRITTER_STAG = 'nder'
     CRITTER_VULTURE = 'nvul'
+    SHIP = 'nbsp'
 
     CRITTER_SKELETON = 'nske'
     CRITTER_CHILD = 'nvlk'
@@ -950,6 +967,343 @@ class GameID(enum.StrEnum):
     CITY_BUILDING_13 = 'ncbd'
     CITY_BUILDING_14 = 'ncbe'
     CITY_BUILDING_15 = 'ncbf'
+
+    # Creeps
+    BARBED_ARACHNATHID_1 = 'nanm'  # This one has burrow
+    BARBED_ARACHNATHID_2 = 'nanb'
+    CRYSTAL_ARACHNATHID = 'nanc'
+    WARRIOR_ARACHNATHID = 'nanw'
+    ARACHNATHID_EARTH_BORER = 'nane'
+    OVERLORD_ARACHNATHID = 'nano'
+    BURROWED_BARBED_ARACHNATHID = 'nbnb'
+
+    BANDIT = 'nban'
+    BRIGAND = 'nbrg'
+    ROGUE = 'nrog'
+    ASSASSIN = 'nass'
+    ENFORCER = 'nenf'
+    BANDIT_LORD = 'nbld'
+
+    BLUE_DRAGONSPAWN_MEDDLER = 'nbdm'
+    BLUE_DRAGONSPAWN_APPRENTICE = 'nbda'
+    BLUE_DRAGONSPAWN_WARRIOR = 'nbdw'
+    BLUE_DRAGONSPAWN_SORCERER = 'nbds'
+    BLUE_DRAGONSPAWN_OVERSEER  ='nbdo'
+
+    CENTAUR_ARCHER = 'ncea'
+    CENTAUR_DRUDGE = 'ncer'
+    CENTAUR_IMPALER = 'ncim'
+    CENTAUR_OUTRUNNER = 'ncen'
+    CENTAUR_SORCERER = 'ncks'
+    CENTAUR_KHAN = 'ncnk'
+
+    SPIDER_CRAB_SHORECRAWLER = 'nscb'
+    SPIDER_CRAB_LIMBRIPPER = 'nsc2'
+    SPIDER_CRAB_BEHEMOTH = 'nsc3'
+
+    DARK_TROLL = 'ndtr'
+    DARK_TROLL_SHADOW_PRIEST = 'ndtp'
+    DARK_TROLL_TRAPPER = 'ndtt'
+    DARK_TROLL_BERSERKER = 'ndtb'
+    DARK_TROLL_HIGH_PRIEST = 'ndth'
+    DARK_TROLL_WARLORD = 'ndtw'
+
+    DRAENEI_GUARDIAN = 'ndrf'
+    DRAENEI_DISCIPLE = 'ndrm'
+    DRAENEI_PROTECTOR = 'ndrp'
+    DRAENEI_WATCHER = 'ndrw'
+    DRAENEI_HARBINGER = 'ndrh'
+    DRAENEI_DARKSLAYER = 'ndrd'
+    DRAENEI_SEER = 'ndrs'
+
+    RED_DRAGON_WHELP = 'nrdk'
+    RED_DRAKE = 'nrdr'
+    RED_DRAGON = 'nrwm'
+    BLACK_DRAGON_WHELP = 'nbdr'
+    BLACK_DRAKE = 'nbdk'
+    BLACK_DRAGON = 'nbwm'
+    BRONZE_DRAGON_WHELP = 'nbzw'
+    BRONZE_DRAKE = 'nbzk'
+    BRONZE_DRAGON = 'nbzd'
+    GREEN_DRAGON_WHELP = 'ngrw'
+    GREEN_DRAKE = 'ngdk'
+    GREEN_DRAGON = 'ngrd'
+    BLUE_DRAGON_WHELP = 'nadw'
+    BLUE_DRAKE = 'nadk'
+    BLUE_DRAGON = 'nadr'
+    NETHER_DRAGON_HATCHLING = 'nnht'
+    NETHER_DRAKE = 'nndk'
+    NETHER_DRAGON = 'nndr'
+
+    REEF_ELEMENTAL = 'nrel'
+    ENRAGED_ELEMENTAL = 'nele'
+    SEA_ELEMENTAL = 'nsel'
+    BERSERK_ELEMENTAL = 'nelb'
+
+    CORRUPTED_TREANT = 'nenc'
+    POISON_TREANT = 'nenp'
+    PLAGUE_TREANT = 'nepl'
+
+    EREDAR_SORCERER = 'ners'
+    EREDAR_DIABOLIST = 'nerd'
+    EREDAR_WARLOCK = 'nerw'
+
+    FACELESS_ONE_TRICKSTER = 'nfor'
+    FACELESS_ONE_TERROR = 'nfot'
+    FACELESS_ONE_DEATHBRINGER = 'nfod'
+
+    FELGUARD = 'nfgu'
+    BLOODFIEND = 'nfgb'
+    OVERLORD = 'nfov'
+
+    FEL_BEAST = 'npfl'
+    FEL_STALKER = 'nfel'
+    FEL_RAVAGER = 'npfm'
+
+    FOREST_TROLL = 'nftr'
+    FOREST_TROLL_SHADOW_PRIEST = 'nfsp'
+    FOREST_TROLL_TRAPPER = 'nftt'
+    FOREST_TROLL_BERSERKER = 'nftb'
+    FOREST_TROLL_HIGH_PRIEST = 'nfsh'
+    FOREST_TROLL_WARLORD = 'nftk'
+
+    FURBOLG = 'nfrl'
+    FURBOLG_SHAMAN = 'nfrs'
+    FURBOLG_TRACKER = 'nfrb'
+    FURBOLG_CHAMPION = 'nfrg'
+    FURBOLG_ELDER_SHAMAN = 'nfre'
+    FURBOLG_URSA_WARRIOR = 'nfra'
+    PANDAREN = 'nfrp'
+
+    GHOST = 'ngh1'
+    WRAITH = 'ngh2'
+
+    SEA_GIANT = 'nsgn'
+    SEA_GIANT_HUNTER = 'nsgh'
+    SEA_GIANT_BEHEMOTH = 'nsgb'
+
+    BLACK_SPIDER = 'nspb'
+    FOREST_SPIDER = 'nspg'
+    SPIDER = 'nspr'
+    SPITTING_SPIDER = 'nssp'
+    GIANT_SPIDER = 'nsgt'
+    BROOD_MOTHER = 'nsbm'
+
+    GNOLL = 'ngno'
+    GNOLL_POACHER = 'ngna'
+    GNOLL_ASSASSIN = 'ngns'
+    GNOLL_BRUTE = 'ngnb'
+    GNOLL_WARDEN = 'ngnw'
+    GNOLL_OVERSEER = 'ngnv'
+
+    MUD_GOLEM = 'ngrk'
+    ROCK_GOLEM = 'ngst'
+    GRANITE_GOLEM = 'nggr'
+    BATTLE_GOLEM = 'narg'
+    WAR_GOLEM = 'nwrg'
+    SIEGE_GOLEM = 'nsgg'
+    FLESH_GOLEM = 'nfgl'
+
+    HARPY_SCOUT = 'nhar'
+    HARPY_ROGUE = 'nhrr'
+    HARPY_WINDWITCH = 'nhrw'
+    HARPY_STORM_HAG = 'nhrh'
+    HARPY_QUEEN = 'nhrq'
+
+    FALLEN_PRIEST = 'nhfp'
+    DECEIVER = 'nhdc'
+    HERETIC = 'nhhr'
+
+    HYDRA_HATCHLING = 'nhyh'
+    HYDRA = 'nhyd'
+    ELDER_HYDRA = 'nehy'
+    ANCIENT_HYDRA = 'nahy'
+
+    ICE_TROLL = 'nitr'
+    ICE_TROLL_PRIEST = 'nitp'
+    ICE_TROLL_TRAPPER = 'nitt'
+    ICE_TROLL_BERSERKER = 'nits'
+    ICE_TROLL_HIGH_PRIEST = 'nith'
+    ICE_TROLL_WARLORD = 'nitw'
+
+    INFERNAL_CONTRAPTION = 'ninc'
+    INFERNAL_MACHINE = 'ninm'
+    INFERNAL_JUGGERNAUT = 'nina'
+
+    KOBOLD = 'nkob'
+    KOBOLD_GEOMANCER = 'nkog'
+    KOBOLD_TUNNELER = 'nkot'
+    KOBOLD_TASKMASTER = 'nkol'
+
+    LIGHTNING_LIZARD = 'nltl'
+    THUNDER_LIZARD = 'nthl'
+    STORM_WYRM = 'nstw'
+
+    MAKRURA_PRAWN = 'nlpr'
+    MARKRURA_POOLDWELLER = 'nlpd'
+    MARKRURA_TIDECALLER = 'nltc'
+    MARKRURA_DEEPSEER = 'nlds'
+    MARKRURA_SNAPPER = 'nlsn'
+    MARKRURA_TIDAL_LORD = 'nlkl'
+    SUMMONED_PRAWN = 'nlps'
+
+    APPRENTICE_WIZARD = 'nwiz'
+    ROGUE_WIZARD = 'nwzr'
+    RENEGADE_WIZARD = 'nwzg'
+    DARK_WIZARD = 'nwzd'
+
+    MAGNATAUR_WARRIOR = 'nmgw'
+    MAGNATAUR_REAVER = 'nmgr'
+    MAGNATAUR_DESTROYER = 'nmgd'
+
+    MAMMOTH = 'nmam'
+    ICETUSK_MAMMOTH = 'nmit'
+    DIRE_MAMMOTH = 'nmdr'
+
+    MUR_GUL_CLIFFRUNNER = 'nmcf'
+    MUR_GUL_BLOOD_GILL = 'nmbg'
+    MUR_GUL_SNARECASTER = 'nmsn'
+    MUR_GUL_MARAUDER = 'nmrv'
+    MUR_GUL_SHADOWCASTER = 'nmsc'
+    WATERY_MINION_1 = 'ncfs'
+    WATERY_MINION_2 = 'ntws'
+    WATERY_MINION_3 = 'nsns'
+
+    MURLOC_TIDERUNNER = 'nmrl'
+    MURLOC_HUNTSMAN = 'nmrr'
+    MURLOC_NIGHTCRAWLER = 'nmrm'
+    MURLOC_PLAGUEBEARER = 'nmpg'
+    MURLOC_FLESHEATER = 'nmfs'
+    MURLOC_MUTANT = 'nmmu'
+
+    SPIDERLING = 'nspd'
+    NERUBIAN_WARRIOR = 'nnwa'
+    NERUBIAN_WEBSPINNER = 'nnwl'
+    NERUBIAN_SEER = 'nnwr'
+    NERUBIAN_SPIDER_LORD = 'nnws'
+    NERUBIAN_QUEEN = 'nnwq'
+
+    OGRE_WARRIOR = 'nogr'
+    OGRE_MAGI = 'nomg'
+    OGRE_MAULER = 'nogm'
+    OGRE_LORD = 'nogl'
+
+    WILDKIN = 'nowb'
+    ENRAGED_WILDKIN = 'nowe'
+    BERSERK_WILDKIN = 'nowk'
+
+    POLAR_BEAR = 'nplb'
+    GIANT_POLAR_BEAR = 'nplg'
+
+    POLAR_FURBOLG = 'nfpl'
+    POLAR_FURBOLG_SHAMAN = 'nfps'
+    POLAR_FURBOLG_TRACKER = 'nfpt'
+    POLAR_FURBOLG_CHAMPION = 'nfpc'
+    POLAR_FURBOLG_ELDER_SHAMAN = 'nfpe'
+    POLAR_FURBOLG_URSA_WARRIOR = 'nfpu'
+
+    QUILLBOAR = 'nrzt'
+    RAZORMANE_SCOUT = 'nrzs'
+    QUILLBOAR_HUNTER = 'nqbh'
+    RAZORMANE_BRUTE = 'nrzb'
+    RAZORMANE_MEDICINE_MAN = 'nrzm'
+    RAZORMANE_CHIEFTAIN = 'nrzg'
+    SPIRIT_PIG = 'nspp'
+
+    FIRE_REVENANT = 'nrvf'
+    FROST_REVENANT = 'nrvs'
+    REVENANT_OF_THE_SEAS = 'nsrv'
+    LIGHTNING_REVENANT = 'nrvl'
+    ICE_REVENANT = 'nrvi'
+    REVENANT_OF_THE_DEPTHS = 'ndrv'
+    DEATH_REVENANT = 'nrvd'
+    DEEPLORD_REVENANT = 'nlrv'
+
+    SALAMANDER_HATCHLING = 'nslh'
+    SALAMANDER = 'nslr'
+    SALAMANDER_VIZIER = 'nslv'
+    SALAMANDER_LORD = 'nsll'
+
+    SASQUATCH = 'nsqt'
+    ELDER_SASQUATCH = 'nsqe'
+    SASQUATCH_ORACLE = 'nsqo'
+    ANCIENT_SASQUATCH = 'nsqa'
+
+    SATYR = 'nsty'
+    SATYR_TRICKSTER = 'nsat'
+    SATYR_SHADOWDANCER = 'nsts'
+    SATYR_SOULSTEALER = 'nstl'
+    SATYR_HELLCALLER = 'nsth'
+
+    SKELETAL_ORC = 'nsko'
+    SKELETAL_ORC_GRUNT = 'nsog'
+    SKELETAL_ORC_CHAMPION = 'nsoc'
+
+    SLUDGE_MINION = 'nslm'
+    SLUDGE_FLINGER = 'nslf'
+    SLUDGE_MONSTROSITY = 'nsln'
+
+    STORMREAVER_APPRENTICE = 'nsra'
+    STORMREAVER_HERMIT = 'nsrh'
+    STORMREAVER_NECROLYTE = 'nsrn'
+    STORMREAVER_WARLOCK = 'nsrw'
+
+    SUCCUBUS = 'ndqn'
+    VILE_TORMENTER = 'ndqv'
+    VILE_TEMPTRESS = 'ndqt'
+    MAIDEN_OF_PAIN = 'ndqp'
+    QUEEN_OF_SUFFERING = 'ndqs'
+
+    SEA_TURTLE_HATCHLING = 'ntrh'
+    SEA_TURTLE = 'ntrs'
+    GIANT_SEA_TURTLE = 'ntrt'
+    GARGANTUAN_SEA_TURTLE = 'ntrg'
+    DRAGON_TURTLE_CREEP = 'ntrd'
+
+    TUSKARR_FIGHTER = 'ntkf'
+    TUSKARR_SPEARMAN = 'ntka'
+    TUSKARR_HEALER = 'ntkh'
+    TUSKARR_TRAPPER = 'ntkt'
+    TUSKARR_WARRIOR = 'ntkw'
+    TUSKARR_SORCERER = 'ntks'
+    TUSKARR_CHIEFTAIN = 'ntkc'
+
+    UNBROKEN_DARKHUNTER = 'nubk'
+    UNBROKEN_RAGER = 'nubr'
+    UNBROKEN_DARKWEAVER = 'nubw'
+
+    LESSER_VOIDWALKER = 'nvdl'
+    VOIDWALKER = 'nvdw'
+    GREATER_VOIDWALKER = 'nvdg'
+    ELDER_VOIDWALKER = 'nvde'
+
+    WENDIGO = 'nwen'
+    ELDER_WENDIGO = 'nwnr'
+    WENDIGO_SHAMAN = 'nwns'
+    ANCIENT_WENDIGO = 'nwna'
+
+    FROST_WOLF = 'nwwf'
+    GIANT_FROST_WOLF = 'nwwg'
+    DIRE_FROST_WOLF = 'nwwd'
+    TIMBER_WOLF = 'nwlt'
+    GIANT_WOLF = 'nwlg'
+    DIRE_WOLF = 'nwld'
+
+    SKELETON_ARCHER = 'nska'
+    BURNING_ARCHER = 'nskf'
+    SKELETAL_MARKSMAN = 'nskm'
+    GIANT_SKELETON_WARRIOR = 'nskg'
+
+    DOOM_GUARD = 'nbal'
+    INFERNAL = 'ninf'
+    DOOM_GUARD_SUMMONED = 'nba2'
+
+    DALARAN_REJECT = 'ndrj'
+    DALARAN_MUTANT = 'ndmu'
+    
+    JUNGLE_STALKER = 'njg1'
+    ELDER_JUNGLE_STALKER = 'njga'
+    ENRAGED_JUNGLE_STALKER = 'njgb'
 
 
 class Tech(enum.StrEnum):
@@ -1720,6 +2074,71 @@ HERO_ABILITIES[GameID.LADY_VASHJ] = HERO_ABILITIES[GameID.NAGA_SEA_WITCH]
 HERO_ABILITIES[GameID.MAGTHERIDON] = HERO_ABILITIES[GameID.PIT_LORD]
 HERO_ABILITIES[GameID.AZGALOR] = HERO_ABILITIES[GameID.MANNOROTH]
 HERO_ABILITIES[GameID.DALVENGYR] = HERO_ABILITIES[GameID.DREADLORD]
+
+
+class CreepSpecies(enum.IntEnum):
+    Arachnathids = 0
+    Bandits = 1
+    Blue_Dragonspawn = 2
+    Centaur = 3
+    Draenei = 4
+    Black_Dragons = 5
+    Blue_Dragons = 6
+    Bronze_Dragons = 7
+    Green_Dragons = 8
+    Nether_Dragons = 9
+    Red_Dragons = 10
+    Elementals = 11
+    Eredar = 12
+    Faceless_Ones = 13
+    Felguard = 14
+    Fel_Hounds = 15
+    Furbolgs = 16
+    Ghosts = 17
+    Gnolls = 18
+    Golems = 19
+    Harpies = 20
+    Heretics = 21
+    Hydras = 22
+    Infernal_Engines = 23
+    Jungle_Stalkers = 24
+    Kobolds = 25
+    Lizards = 26
+    Makrura = 27
+    Magnataurs = 28
+    Mammoths = 29
+    Mur_gul = 30
+    Murlocs = 31
+    Nerubians = 32
+    Ogres = 33
+    Polar_Bears = 34
+    Polar_Furbolgs = 35
+    Razormanes_Quillboar = 36
+    Revenants = 37
+    Salamanders = 38
+    Sasquatch = 39
+    Satyrs = 40
+    Sea_Giants = 41
+    Skeletal_Orcs = 42
+    Skeletons = 43
+    Sludges = 44
+    Spiders = 45
+    Spider_Crabs = 46
+    Stormreavers = 47
+    Succubi = 48
+    Sea_Turtles = 49
+    Treants = 50
+    Dark_Trolls = 51
+    Ice_Trolls = 52
+    Forest_Trolls = 53
+    Tuskarr = 54
+    Unbroken = 55
+    Voidwalkers = 56
+    Wendigo = 57
+    Wildkin = 59
+    Wizards = 60
+    Wolves = 61
+    Zombies = 62
 
 
 def int_to_id(integer_id: int) -> GameID|None:
