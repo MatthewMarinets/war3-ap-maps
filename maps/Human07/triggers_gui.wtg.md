@@ -31,6 +31,7 @@ version = TFT
 | ---- | ---- | ---------- | ------------- |
 | Arthas | unit | . | . |
 | Muradin | unit | . | . |
+| storm_bolter | unit | . | . |
 | Vis1 | fogmodifier | . | . |
 | Vis2 | fogmodifier | . | . |
 | IntroCinematicRunning | boolean | . | false |
@@ -166,6 +167,122 @@ version = TFT
 ### Functions
 
 
+## AP Load Arthas
+- enabled: True
+- category: [21] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String set udg_Arthas = hero_create(0, USER_PLAYER, GetRectCenterX(gg_rct_IntroArthasInitial), GetRectCenterY(gg_rct_IntroArthasInitial), 257)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable Arthas
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CustomScriptCode
+  - param String set udg_Arthas = CreateUnit(USER_PLAYER, 'Hart', GetRectCenterX(gg_rct_IntroArthasInitial), GetRectCenterY(gg_rct_IntroArthasInitial), 257)
+- Action CustomScriptCode
+  - param String set hero_abil_1[0] = 'AHhb'
+- Action CustomScriptCode
+  - param String set hero_abil_2[0] = 'AHds'
+- Action CustomScriptCode
+  - param String set hero_abil_3[0] = 'AHad'
+- Action CustomScriptCode
+  - param String set hero_abil_4[0] = 'AHre'
+
+
+## AP Load Muradin
+- enabled: True
+- category: [21] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String set udg_Muradin = hero_create(HERO_ID_MURADIN_BRONZEBEARD, Player(7), 3993.21, -3015.25, 1.0248675346374512)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable Muradin
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CustomScriptCode
+  - param String set udg_Muradin = CreateUnit(Player(7), 'Hmbr', 3993.21, -3015.25, 1.0248675346374512)
+- Action CustomScriptCode
+  - param String set hero_abil_1[1] = 'AHtb'
+- Action CustomScriptCode
+  - param String set hero_abil_2[1] = 'AHtc'
+- Action CustomScriptCode
+  - param String set hero_abil_3[1] = 'AHbh'
+- Action CustomScriptCode
+  - param String set hero_abil_4[1] = 'AHav'
+
+
+## Purple Base Location
+- enabled: True
+- category: [21] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_unpl_0036
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(23)
+
+
+## Green Lich Location
+- enabled: True
+- category: [21] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_Ulic_0100
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(20)
+
+
 ## StartInitializationSequence
 - enabled: True
 - category: [0] Initialization
@@ -178,6 +295,10 @@ version = TFT
 ### Functions
 - Action SetCampaignMenuRaceBJ
   - param Preset CampaignIndexH
+- Action TriggerExecute
+  - param Variable gg_trg_AP_Load_Arthas
+- Action TriggerExecute
+  - param Variable gg_trg_AP_Load_Muradin
 - Action TriggerExecute
   - param Variable gg_trg_InitializeVariables
 - Action TriggerExecute
@@ -216,11 +337,8 @@ version = TFT
 ```
 ### Functions
 - Action SetVariable
-  - param Variable Muradin
-  - param Variable gg_unit_Hmbr_0038
-- Action SetVariable
   - param Variable Captain
-  - param Variable gg_unit_hcth_0023
+  - param Variable gg_unit_hfoo_0023
 
 
 ## ChangePeonOwner
@@ -1018,7 +1136,7 @@ This trigger exists for use by Normal and Easy difficulties, where the Nerubian 
 ```
 ### Functions
 - Action CreateItemLoc
-  - param String ofro
+  - param String I012
   - param Function GetUnitLoc
     - Function GetUnitLoc
       - param Function GetDyingUnit
@@ -1046,101 +1164,6 @@ This trigger exists for use by Normal and Easy difficulties, where the Nerubian 
 - Action SetPlayerHandicapXPBJ
   - param Preset Player01
   - param String 50.00
-- Action InitGameCacheBJ
-  - param String Campaigns.w3v
-- Action TriggerExecute
-  - param Variable gg_trg_Load_Arthas
-
-
-## Load Arthas
-- enabled: True
-- category: [5] Heroes
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action RestoreUnitLocFacingPointBJ
-  - param String Arthas
-  - param String Human07
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-  - param Preset Player01
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_IntroArthasInitial
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_IntroArthasInitialFacing
-- Action SetVariable
-  - param Variable Arthas
-  - param Function GetLastRestoredUnitBJ
-    - Function GetLastRestoredUnitBJ
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareUnit
-      - param Variable Arthas
-      - param Preset OperatorNotEqualENE
-      - param Preset UnitNull
-  - param Function DoNothing
-    - Action ReturnAction
-  - param Function DoNothing
-    - Action DoNothing
-- Action CreateNUnitsAtLocFacingLocBJ
-  - param String 1
-  - param String Hart
-  - param Preset Player01
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_IntroArthasInitial
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_IntroArthasInitialFacing
-- Action SetVariable
-  - param Variable Arthas
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-- Action TriggerExecute
-  - param Variable gg_trg_SetArthasLevelsSkills
-
-
-## SetArthasLevelsSkills
-- enabled: True
-- category: [5] Heroes
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action SetHeroLevel
-  - param Variable Arthas
-  - param String 7
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillHolyBolt
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillHolyBolt
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDevotionAura
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDevotionAura
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDivineShield
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDivineShield
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillResurrection
 
 
 ## SetMuradinLichLevelsSkills
@@ -1155,22 +1178,6 @@ Set and define skills for Level 6 Arthas.
 Set and definte skills for Level 3 Muradin.
 ```
 ### Functions
-- Action SetHeroLevel
-  - param Variable Muradin
-  - param String 5
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable Muradin
-  - param Preset HeroSkillThunderClap
-- Action SelectHeroSkill
-  - param Variable Muradin
-  - param Preset HeroSkillThunderClap
-- Action SelectHeroSkill
-  - param Variable Muradin
-  - param Preset HeroSkillStormBolt
-- Action SelectHeroSkill
-  - param Variable Muradin
-  - param Preset HeroSkillBash
 - Action SetHeroLevel
   - param Variable gg_unit_Ulic_0100
   - param String 5
@@ -1190,64 +1197,6 @@ Set and definte skills for Level 3 Muradin.
 - Action SelectHeroSkill
   - param Variable gg_unit_Ulic_0100
   - param Preset HeroSkillFrostArmor
-
-
-## LimitArthasXP
-- enabled: True
-- category: [5] Heroes
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Condition OperatorCompareUnit
-  - param Function GetLevelingUnit
-    - Function GetLevelingUnit
-  - param Preset OperatorEqualENE
-  - param Variable Arthas
-- Condition OperatorCompareInteger
-  - param Function GetHeroLevel
-    - Function GetHeroLevel
-      - param Variable Arthas
-  - param Preset OperatorGreaterEq
-  - param String 8
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableDisable
-  - param Variable Arthas
-- Event TriggerRegisterPlayerUnitEventSimple
-  - param Preset Player01
-  - param Preset PlayerUnitEventHero_Level
-
-
-## LimitMuradinXP
-- enabled: True
-- category: [5] Heroes
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Condition OperatorCompareUnit
-  - param Function GetLevelingUnit
-    - Function GetLevelingUnit
-  - param Preset OperatorEqualENE
-  - param Variable Muradin
-- Condition OperatorCompareInteger
-  - param Function GetHeroLevel
-    - Function GetHeroLevel
-      - param Variable Muradin
-  - param Preset OperatorGreaterEq
-  - param String 7
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableDisable
-  - param Variable Muradin
-- Event TriggerRegisterPlayerUnitEventSimple
-  - param Preset Player01
-  - param Preset PlayerUnitEventHero_Level
 
 
 ## TriggerIntroCinematic
@@ -2194,7 +2143,7 @@ Set and definte skills for Level 3 Muradin.
 - Action TriggerSleepAction
   - param String 0.20
 - Action CreateItemLoc
-  - param String pman
+  - param String I014
   - param Function GetRandomLocInRect
     - Function GetRandomLocInRect
       - param Variable gg_rct_IceTrollHut
@@ -2377,6 +2326,8 @@ Set and definte skills for Level 3 Muradin.
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(21)
 - Action QueuedTriggerAddBJ
   - param Variable gg_trg_PlayMuradinIntroCinematic
   - param Preset CheckingIgnoringChecking
@@ -2633,12 +2584,12 @@ Set and definte skills for Level 3 Muradin.
     - Function GetRectCenter
       - param Variable gg_rct_TeleportFootman01
 - Action SetUnitPositionLoc
-  - param Variable gg_unit_hfoo_0022
+  - param Variable gg_unit_hA00_0022
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_TeleportFootman02
 - Action SetUnitPositionLoc
-  - param Variable gg_unit_hfoo_0110
+  - param Variable gg_unit_hA00_0110
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_TeleportFootman03
@@ -2684,13 +2635,13 @@ Set and definte skills for Level 3 Muradin.
     - Function GetRectCenter
       - param Variable gg_rct_MuradinIntro_Footman01Move
 - Action IssuePointOrderLoc
-  - param Variable gg_unit_hfoo_0022
+  - param Variable gg_unit_hA00_0022
   - param Preset UnitOrderMove
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_MuradinIntro_Footman02Move
 - Action IssuePointOrderLoc
-  - param Variable gg_unit_hfoo_0110
+  - param Variable gg_unit_hA00_0110
   - param Preset UnitOrderMove
   - param Function GetRectCenter
     - Function GetRectCenter
@@ -2978,12 +2929,21 @@ Set and definte skills for Level 3 Muradin.
     - Action ReturnAction
   - param Function DoNothing
     - Action DoNothing
+- Action CommentString
+  - param String AP - changing things here to create a temporary unit to shoot the stormbolt
+- Action CustomScriptCode
+  - param String set udg_storm_bolter = CreateUnit(Player(7), 'Hmbr', 3893.21, -3115.25, 1.0248675346374512)
+- Action SelectHeroSkill
+  - param Variable storm_bolter
+  - param Preset HeroSkillStormBolt
 - Action IssueTargetOrder
-  - param Variable Muradin
+  - param Variable storm_bolter
   - param Preset UnitOrderThunderBolt
   - param Variable gg_unit_hpea_0087
 - Action TriggerSleepAction
   - param String 1.00
+- Action RemoveUnit
+  - param Variable storm_bolter
 - Action IfThenElse
   - param Function 
     - Condition OperatorCompareBoolean
@@ -3204,19 +3164,19 @@ Set and definte skills for Level 3 Muradin.
     - Function GetRectCenter
       - param Variable gg_rct_MuradinIntro_Footman01MoveAfter
 - Action IssuePointOrderLoc
-  - param Variable gg_unit_hfoo_0022
+  - param Variable gg_unit_hA00_0022
   - param Preset UnitOrderMove
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_MuradinIntro_Footman02MoveAfter
 - Action IssuePointOrderLoc
-  - param Variable gg_unit_hfoo_0110
+  - param Variable gg_unit_hA00_0110
   - param Preset UnitOrderMove
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_MuradinIntro_Footman03MoveAfter
 - Action IssuePointOrderLoc
-  - param Variable gg_unit_hcth_0023
+  - param Variable Captain
   - param Preset UnitOrderMove
   - param Function GetRectCenter
     - Function GetRectCenter
@@ -3801,12 +3761,12 @@ Set and definte skills for Level 3 Muradin.
     - Function GetRectCenter
       - param Variable gg_rct_MuradinIntro_Footman01MoveAfter
 - Action SetUnitPositionLoc
-  - param Variable gg_unit_hfoo_0022
+  - param Variable gg_unit_hA00_0022
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_MuradinIntro_Footman02MoveAfter
 - Action SetUnitPositionLoc
-  - param Variable gg_unit_hfoo_0110
+  - param Variable gg_unit_hA00_0110
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_MuradinIntro_Footman03MoveAfter
@@ -4215,6 +4175,8 @@ Set and definte skills for Level 3 Muradin.
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(22)
 - Action FlashQuestDialogButtonBJ
 - Action ForGroup
   - param Function GetUnitsOfPlayerAll
@@ -4527,8 +4489,6 @@ Set and definte skills for Level 3 Muradin.
 
 ```
 ### Functions
-- Action TriggerExecute
-  - param Variable gg_trg_Level_Enable
 - Action SetVariable
   - param Variable ExitCinematicRunning
   - param String true
@@ -5115,36 +5075,6 @@ Set and definte skills for Level 3 Muradin.
   - param Preset Player01
 
 
-## Level Enable
-- enabled: True
-- category: [20] Level Changing
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action StoreUnitBJ
-  - param Variable Arthas
-  - param String Arthas
-  - param String Human08
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action StoreUnitBJ
-  - param Variable Muradin
-  - param String Muradin
-  - param String Human08
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action SaveGameCacheBJ
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action SetMissionAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset MissionIndexH10
-
-
 ## Level Victory
 - enabled: True
 - category: [20] Level Changing
@@ -5156,7 +5086,7 @@ Set and definte skills for Level 3 Muradin.
 ```
 ### Functions
 - Action SetNextLevelBJ
-  - param String Maps\Campaign\Human08.w3m
+  - param String Maps\Archipelago\Human08.w3x
 - Action CustomVictoryBJ
   - param Preset Player01
   - param Preset UseSkipOptionUse
@@ -5260,6 +5190,8 @@ Set and definte skills for Level 3 Muradin.
     - Function GetTriggeringTrigger
 - Action DisableTrigger
   - param Variable gg_trg_CheckPlayerBuildings
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Action QuestSetCompletedBJ
   - param Variable QuestUndeadCitadel
   - param Preset CompletionOptionCompleted
@@ -5391,8 +5323,6 @@ Set and definte skills for Level 3 Muradin.
 
 ```
 ### Functions
-- Action TriggerExecute
-  - param Variable gg_trg_Level_Enable
 - Action TriggerExecute
   - param Variable gg_trg_Level_Victory
 - Event TriggerRegisterPlayerEventVictory

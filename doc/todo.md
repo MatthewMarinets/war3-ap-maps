@@ -15,14 +15,14 @@
   - [x] Purge any unlock tech functions
   - [x] Creep bounty
 - [ ] Human07
-  - [ ] Eliminate gamecache usage
-  - [ ] Redirect starting next mission
-  - [ ] Hero init
-  - [ ] Remove hero level cap triggers
-  - [ ] Special considerations for first hero appearances
-  - [ ] Replace items -> AP items
-  - [ ] Location sending functions
-  - [ ] Purge any unlock tech functions
+  - [x] Eliminate gamecache usage
+  - [x] Redirect starting next mission
+  - [x] Hero init
+  - [x] Remove hero level cap triggers
+  - [x] Special considerations for first hero appearances
+  - [x] Replace items -> AP items
+  - [x] Location sending functions
+  - [x] Purge any unlock tech functions
   - [x] Creep bounty
 - [ ] Human08
   - [ ] Eliminate gamecache usage

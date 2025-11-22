@@ -2440,8 +2440,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # ofro = Orb of Frost
-        { item_id = "ofro", chance_percent = 100 }
+        { item_id = "I012", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -2564,7 +2563,7 @@ entity_id = 20
 
 [[units]]
 
-type_id = 'hfoo'  # Footman
+type_id = 'hA00'
 variation = 0
 x = -3665.487060546875
 y = -5374.54833984375
@@ -2745,8 +2744,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # manh = Manual of Health
-        { item_id = "manh", chance_percent = 100 }
+        { item_id = "I015", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -2785,8 +2783,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # pghe = Potion of Greater Healing
-        { item_id = "pghe", chance_percent = 100 }
+        { item_id = "I013", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -2809,7 +2806,7 @@ item_class = 0
 
 [[units]]
 
-type_id = 'hfoo'  # Footman
+type_id = 'hA00'
 variation = 0
 x = -3904.272705078125
 y = -5357.95751953125
@@ -3640,8 +3637,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # rst1 = Gauntlets of Ogre Strength +3
-        { item_id = "rst1", chance_percent = 100 }
+        { item_id = "I016", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 0
@@ -3689,7 +3685,7 @@ entity_id = 112
 
 [[units]]
 
-type_id = 'hcth'  # Captain
+type_id = 'hfoo'  # Footman
 variation = 0
 x = -3620.4658203125
 y = -5559.20458984375
@@ -3910,8 +3906,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # sror = Scroll of the Beast
-        { item_id = "sror", chance_percent = 100 }
+        { item_id = "I011", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -4001,53 +3996,6 @@ entity_id = 74
 random_type = 'class'
 level = 0
 item_class = 0
-
-[[units]]
-
-type_id = 'Hmbr'  # Mountain King
-variation = 0
-x = 3993.212646484375
-y = -3015.247314453125
-z = 373.1250915527344
-facing = 1.0248675346374512
-scale_x = 1.0
-scale_y = 1.0
-scale_z = 1.0
-flags = "ENABLED"
-player_owner = 7
-hit_points = -1
-mana_points = -1
-random_item_table_id = -1
-item_drops = []
-goldmine_gold_amount = 0
-target_acquisition = -1.0
-hero_level = 1
-hero_strength = 0
-hero_agility = 0
-hero_intelligence = 0
-inventory_items = []
-random_unit_info = -1
-custom_colour = -1
-waygate_destination = -1
-entity_id = 38
-
-[[units.modified_abilities]]
-
-abil_id = 'AHtc'  # Thunder Clap
-autocast_active = false
-abil_level = 0
-
-[[units.modified_abilities]]
-
-abil_id = 'AHtb'  # Storm Bolt
-autocast_active = false
-abil_level = 0
-
-[[units.modified_abilities]]
-
-abil_id = 'AHav'  # Avatar
-autocast_active = false
-abil_level = 0
 
 [[units]]
 

@@ -165,7 +165,7 @@ class Wc3Location(enum.Enum):
     # (Side) Rescue Muradin's Men
     HU7_VICTORY =                10700, "Victory",                   Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.VICTORY
     HU7_DIRE_FROST_WOLF_ITEM =   10701, "Dire Frost Wolf Item",      Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.ITEM, "Scroll of the Beast"
-    HU7_NERUBIAN_QUEEN_ITEM =    10702, "Nerubian Queen Item",       Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.ITEM, "Orb of Frost"
+    HU7_NERUBIAN_ITEM =          10702, "Nerubian Item",             Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.ITEM, "Orb of Frost"  # Note: This is a Nerubian Queen on Hard and a Nerubian Seer otherwise
     HU7_ICE_TROLL_WARLORD_ITEM = 10703, "Ice Troll Warlord Item",    Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.ITEM, "Potion of Greater Healing"
     HU7_ICE_TROLL_HUT_ITEM =     10704, "Ice Troll Hut Item",        Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.ITEM, "Potion of Mana"
     HU7_ICE_TROLL_ITEM =         10705, "Ice Troll Warlord 2 Item",  Wc3Mission.H7_THE_SHORES_OF_NORTHREND, Wc3LocationType.ITEM, "Manual of Health"
