@@ -30,3 +30,15 @@
 
 ## Human 5
 None
+
+## Human 6
+None
+
+## Human 7
+* 2 starting footmen replaced with irregulars
+* Starting captain replaced with a footman
+* Muradin throwing the storm bolt in the gold mine cinematic is now faked
+
+## Human 8
+
+## Human 9
