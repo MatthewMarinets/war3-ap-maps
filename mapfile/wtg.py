@@ -610,6 +610,7 @@ def from_text(text: str) -> W3TriggerData:
             indent = len(indent_spaces)
             assert not (indent & 1), f"Trigger function indent is not even on line {line_number}"
             indent = indent >> 1
+            assert ' ' in content, f'Line {line_number}: missing element in "{content}", expected "<ECA_type> <element>"'
             content_type, content = content.split(' ', 1)
             while len(trigger_element_stack) > indent:
                 trigger_element_stack.pop()
