@@ -3523,9 +3523,6 @@ Set and definte skills for Level 3 Muradin.
         - Function GetEnumUnit
       - param Preset Player01
       - param Preset ChangeColorTrue
-- Action SelectHeroSkill
-  - param Variable Muradin
-  - param Preset HeroSkillStormBolt
 - Action CommentString
   - param String ACTIVATE AI
 - Action CommandAI
