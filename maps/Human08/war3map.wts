@@ -39,6 +39,7 @@ Chapter Eight: Dissension
 }
 
 STRING 9
+// Sound\Dialogue\HumanCampaign\Human08\H08Captain05.mp3
 {
 To hell with the undead! We'll cut our way through the woods, men!
 }
@@ -49,6 +50,7 @@ Captain
 }
 
 STRING 11
+// Sound\Dialogue\HumanCampaign\Human08\H08Captain01.mp3
 {
 I apologize, emissary, but the prince is away on an errand. What brings you to this desolate place?
 }
@@ -59,6 +61,7 @@ Emissary
 }
 
 STRING 13
+// Sound\Dialogue\HumanCampaign\Human08\H08Emissary02.mp3
 {
 By royal edict, you men are to return to Lordaeron immediately. Lord Uther has convinced the king to recall this expedition.
 }
@@ -69,6 +72,7 @@ Captain
 }
 
 STRING 15
+// Sound\Dialogue\HumanCampaign\Human08\H08Captain03.mp3
 {
 We're to just pick up and leave?
 }
@@ -79,6 +83,7 @@ Emissary
 }
 
 STRING 17
+// Sound\Dialogue\HumanCampaign\Human08\H08Emissary04.mp3
 {
 That's correct. My men report that the roads from here to the shore are held by the undead. You'll need to find an alternate route back to your ships.
 }
@@ -89,6 +94,7 @@ Arthas
 }
 
 STRING 19
+// Sound\Dialogue\HumanCampaign\Human08\H08Arthas06.mp3
 {
 Captain, why are the guards not at their posts?
 }
@@ -99,6 +105,7 @@ Captain
 }
 
 STRING 21
+// Sound\Dialogue\HumanCampaign\Human08\H08Captain07.mp3
 {
 Well, milord, your father had our troops recalled at Lord Uther's request.
 }
@@ -109,6 +116,7 @@ Arthas
 }
 
 STRING 23
+// Sound\Dialogue\HumanCampaign\Human08\H08Arthas08.mp3
 {
 Uther had my troops recalled? Damn it! If my warriors abandon me, I'll never defeat Mal'Ganis. The ships must be burned before the men reach the shore!
 }
@@ -119,6 +127,7 @@ Muradin Bronzebeard
 }
 
 STRING 25
+// Sound\Dialogue\HumanCampaign\Human08\H08Muradin09.mp3
 {
 Isn't that a bit much, lad?
 }
@@ -129,6 +138,7 @@ Arthas
 }
 
 STRING 27
+// Sound\Dialogue\HumanCampaign\Human08\H08Arthas10.mp3
 {
 Burned down to their frames! No one goes home until our job here is done! 
 }
@@ -140,7 +150,7 @@ Dissension
 
 STRING 29
 {
-
+(null)
 }
 
 STRING 30
@@ -159,6 +169,7 @@ Footman
 }
 
 STRING 33
+// Sound\Dialogue\HumanCampaign\Human08\H08Footman16.mp3
 {
 We've done it, lads! Let's board the ships and go home!
 }
@@ -205,6 +216,7 @@ Burn the Boats
 }
 
 STRING 42
+// Sound\Dialogue\HumanCampaign\Human08\H08Captain20.mp3
 {
 Prince Arthas?
 }
@@ -215,6 +227,7 @@ Arthas
 }
 
 STRING 44
+// Sound\Dialogue\HumanCampaign\Human08\H08Arthas21.mp3
 {
 Quickly, my warriors! These murderous creatures have burned our ships and robbed you of your way home! Slay them all in the name of Lordaeron!
 }
@@ -225,6 +238,7 @@ Footman
 }
 
 STRING 46
+// Sound\Dialogue\HumanCampaign\Human08\H08Footman22.mp3
 {
 Damn beasts!
 }
@@ -235,6 +249,7 @@ Knight
 }
 
 STRING 48
+// Sound\Dialogue\HumanCampaign\Human08\H08Knight23.mp3
 {
 Kill them all!
 }
@@ -245,6 +260,7 @@ Footman
 }
 
 STRING 51
+// Sound\Dialogue\HumanCampaign\Human08\H08Footman24.mp3
 {
 Our ships are ruined. What will we do now?
 }
@@ -255,6 +271,7 @@ Arthas
 }
 
 STRING 53
+// Sound\Dialogue\HumanCampaign\Human08\H08Arthas25.mp3
 {
 Listen to me, all of you! There is no way home for any of us, save through victory! In this land we will stand or fall together. Now, return to the base and man your posts.
 }
