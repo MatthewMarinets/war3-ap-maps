@@ -1,7 +1,7 @@
 # Warcraft 3 Map Info File(.w3i)
 # See w3i.py for type definitions
 
-version = "ROC"
+version = "TFT"
 map_revision = 432
 editor_version = 4414
 map_name = 'TRIGSTR_000'
@@ -15,7 +15,7 @@ map_padding_top = 12
 map_padding_bottom = 8
 map_playable_width = 116
 map_playable_height = 108
-flags = "HIDE_MINIMAP|FIXED_FORCES|CUSTOM_FORCES|CUSTOM_TECH_TREE|CUSTOM_UPGRADES|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS|WAVES_ON_SHORES"
+flags = "HIDE_MINIMAP|FIXED_FORCES|CUSTOM_FORCES|CUSTOM_TECH_TREE|CUSTOM_UPGRADES|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS|WAVES_ON_SHORES|REQUIRES_EXPANSION"
 tileset = { type = "bytes", value = "N" }
 campaign_background = 12
 tft_loading_screen_model_path = ''
@@ -35,7 +35,7 @@ tft_fog_red = 0
 tft_fog_green = 0
 tft_fog_blue = 0
 tft_fog_alpha = 0
-tft_weather = ''
+tft_weather = 'null'
 tft_custom_sound_environment = ''
 tft_custom_light_tileset = { type = "bytes", value = "0" }
 tft_water_tint_red = 0
@@ -327,3 +327,23 @@ tech_id = 'hgtw'  # Guard Tower
 
 player_flags = 0x202
 tech_id = 'hctw'  # Cannon Tower
+
+[[technologies]]
+
+player_flags = 0xf
+tech_id = 'Hblm'  # Blood Mage
+
+[[technologies]]
+
+player_flags = 0xf
+tech_id = 'Oshd'  # Shadow Hunter
+
+[[technologies]]
+
+player_flags = 0xf
+tech_id = 'Ucrl'  # Crypt Lord
+
+[[technologies]]
+
+player_flags = 0xf
+tech_id = 'Ewar'  # Warden
