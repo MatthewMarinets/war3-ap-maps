@@ -20,6 +20,8 @@ MESSAGES_FILE = f'{PRELOADER_DIR}/messages.txt'
 HEROES_FILE = f'{PRELOADER_DIR}/heroes.txt'
 ITEMS_FILE = f'{PRELOADER_DIR}/items.txt'
 ITEM_CHANNELS_FILE = f'{PRELOADER_DIR}/item_channels.txt'
+MERCENARIES_FILE = f'{PRELOADER_DIR}/mercenaries.txt'
+SETTINGS_FILE = f'{PRELOADER_DIR}/settings.txt'
 
 NUM_FILE_LINES = 10
 MAX_LOCATIONS = 30  # Should match status.j
@@ -58,6 +60,11 @@ class DefaultClientInterface:
             location_status[k] = 0
 
 
+@dataclass
+class Wc3GameSettings:
+    extra_merc_camps: bool = False
+
+
 class Wc3Inventory:
     def __init__(self) -> None:
         self.tech = {t: 0 for t in Tech}
@@ -65,6 +72,7 @@ class Wc3Inventory:
             channel: [] for channel in heroes.ItemChannel if channel != heroes.ItemChannel.NONE
         }
         """Items currently in a hero's inventory"""
+        self.mercenaries: set[GameID] = set()
 
     def add_tech_and_prereqs(self, tech: Tech, amount: int = -1) -> int:
         queue = [tech]
@@ -89,6 +97,10 @@ class PacketType(enum.IntFlag):
     ITEMS = 0x10
     ITEM_CHANNELS = 0x20
     HERO_LEVEL = 0x40
+    MERCENARIES = 0x80
+    SETTINGS = 0x100
+
+    mission_start_packets = UNLOCKS | LOCATIONS | MERCENARIES | SETTINGS
 NUM_PACKET_TYPES = len(PacketType)
 
 
@@ -168,6 +180,13 @@ def init_item_channels() -> dict[heroes.ItemChannel, ItemChannelState]:
     return {channel: ItemChannelState() for channel in heroes.ItemChannel if channel != heroes.ItemChannel.NONE}
 
 
+def default_mercenary_allocation() -> dict[missions.Wc3Mission, dict[int, GameID]]:
+    return {
+        mission: {index: item for index, item in v.items()}
+        for mission, v in tables.MISSION_TO_VANILLA_MERCENARIES.items()
+    }
+
+
 @dataclass
 class GameStatus:
     world_id: int = field(default_factory=lambda: (time.time_ns() >> 17) & 0x7fff_ffff)
@@ -182,6 +201,10 @@ class GameStatus:
     next_hero_update: int = -1
     hero_data: dict[heroes.HeroSlot, HeroStatus] = field(default_factory=init_hero_data, repr=False)
     inventory: Wc3Inventory = field(default_factory=Wc3Inventory)
+    mercenary_allocation: dict[missions.Wc3Mission, dict[int, GameID]] = (
+        field(default_factory=default_mercenary_allocation)
+    )
+    settings: Wc3GameSettings = field(default_factory=Wc3GameSettings)
 
 
 @dataclass
@@ -194,8 +217,12 @@ class AsyncContext:
 
 PRELOAD_FUNCTION_PROTOTYPE = 'function PreloadFiles takes nothing returns nothing\n'
 ENDFUNCTION = 'endfunction\n'
-def send_int(message: int|str, channel: str = 'nske', player: str|int = 0) -> str:
+def send_int(message: int, channel: str = 'nske', player: str|int = 0) -> str:
     return f"call SetPlayerTechMaxAllowed(Player({player}), '{channel}', {message})\n"
+
+
+def send_gameid(message: str, channel: str = 'nske', player: str|int = 0) -> str:
+    return f"call SetPlayerTechMaxAllowed(Player({player}), '{channel}', '{message}')\n"
 
 
 def set_tech(game_id: GameID|Tech, player_literal: str, amount: int = 1) -> str:
@@ -224,6 +251,7 @@ def update_unlocks(game_status: GameStatus, mission_status: MissionStatus) -> No
         and packet_status.last_sent == packet_status.last_received
     ):
         return
+    game_status.pending_update |= PacketType.UNLOCKS
     packet_status.last_sent = (packet_status.last_sent + 1) & 0xffff
     with open(UNLOCKS_FILE, 'w') as fp:
         fp.write(PRELOAD_FUNCTION_PROTOTYPE)
@@ -305,7 +333,7 @@ def update_heroes(game_status: GameStatus, status: MissionStatus) -> None:
             else:
                 fp.write(f'elseif slot == {slot.value} then\n')
             fp.write(send_string(data.name))
-            fp.write(send_int(f"'{data.hero.game_id}'", 'npng'))
+            fp.write(send_gameid(data.hero.game_id, 'npng'))
             fp.write(send_int(data.agility, 'ndog'))
             fp.write(send_int(data.strength, 'nskk'))
             fp.write(send_int(data.intelligence, 'npig'))
@@ -313,12 +341,12 @@ def update_heroes(game_status: GameStatus, status: MissionStatus) -> None:
             fp.write(send_int(data.xp, 'ncrb'))
             fp.write(send_int(data.max_level, 'nder'))
             for abil_index, (abil_id, abil_level) in enumerate(data.abilities.items()):
-                fp.write(send_int(f"'{abil_id}'", 'nfro', player=abil_index))
+                fp.write(send_gameid(abil_id, 'nfro', player=abil_index))
                 fp.write(send_int(abil_level, 'nrac', player=abil_index))
             for item_index, item in enumerate(data.items):
                 if item.item_id is None:
                     continue
-                fp.write(send_int(f"'{item.item_id}'", 'nvul', player=item_index))
+                fp.write(send_gameid(item.item_id, 'nvul', player=item_index))
                 fp.write(send_int(item.charges, 'nsno', player=item_index))
             fp.write(send_int(1, 'nske'))
         fp.write('endif\n')
@@ -378,12 +406,50 @@ def update_items(game_status: GameStatus, mission_status: MissionStatus) -> None
             fp.write(send_int(num_items, channel='nalb'))
             fp.write(send_int(local_item_channel_id, 'ndog'))
             for index, item_id in enumerate(state.items_received[state.items_acked:state.items_acked+num_items]):
-                fp.write(send_int(f"'{item_id}'", channel='ncrb', player=index))
+                fp.write(send_gameid(item_id, channel='ncrb', player=index))
             fp.write(ENDFUNCTION)
         game_status.in_flight_item_channel = item_channel
         game_status.pending_update |= PacketType.ITEMS
     else:
         game_status.pending_update &= ~PacketType.ITEMS
+
+
+def update_mercenaries(game_status: GameStatus, mission_status: MissionStatus) -> None:
+    packet_status = mission_status.packet_status[PacketType.MERCENARIES]
+    if PacketType.MERCENARIES not in game_status.pending_update:
+        return
+    game_status.pending_update |= PacketType.MERCENARIES
+    packet_status.last_sent = (packet_status.last_sent + 1) & 0xffff
+    mission = missions.ID_TO_MISSION[mission_status.mission_id]
+    acquired_mercenaries = game_status.inventory.mercenaries
+    map_mercenaries = game_status.mercenary_allocation.get(mission, {})
+    CHANNEL = {0: 'ncrb', 1: 'ndog', 2: 'ndwm',}
+    with open(MERCENARIES_FILE, 'w') as fp:
+        fp.write(PRELOAD_FUNCTION_PROTOTYPE)
+        fp.write(send_int(packet_status.last_sent, 'nech'))
+        for index, mercenary in map_mercenaries.items():
+            if mercenary not in acquired_mercenaries:
+                continue
+            section, player = divmod(index, 10)
+            fp.write(send_gameid(mercenary, CHANNEL[section], player))
+        fp.write(ENDFUNCTION)
+
+
+def update_settings(game_status: GameStatus, mission_status: MissionStatus) -> None:
+    packet_status = mission_status.packet_status[PacketType.SETTINGS]
+    if (PacketType.SETTINGS not in game_status.pending_update
+        and packet_status.last_sent == packet_status.last_received
+    ):
+        return
+    game_status.pending_update |= PacketType.SETTINGS
+    packet_status.last_sent = (packet_status.last_sent + 1) & 0xffff
+    # mission = missions.ID_TO_MISSION[mission_status.mission_id]
+    with open(SETTINGS_FILE, 'w') as fp:
+        fp.write(PRELOAD_FUNCTION_PROTOTYPE)
+        fp.write(send_int(packet_status.last_sent, 'nech'))
+        if game_status.settings.extra_merc_camps:
+            fp.write(send_int(1, 'nmer'))
+        fp.write(ENDFUNCTION)
 
 
 def line_contents(raw_line: str) -> str:
@@ -532,7 +598,7 @@ def update_game_status_for_new_mission(ctx: AsyncContext, mission_id: int) -> No
     ctx.client_interface.fetch_locations_collected(ctx.mission_status.locations_collected, mission_id)
     ctx.game_status.num_in_flight_messages = 0
     ctx.game_status.in_flight_item_channel = heroes.ItemChannel.NONE
-    ctx.game_status.pending_update |= PacketType.UNLOCKS | PacketType.LOCATIONS
+    ctx.game_status.pending_update |= PacketType.mission_start_packets
 
 
 def sync_mission_status(
@@ -578,6 +644,7 @@ async def short_sleep() -> None:
 
 async def long_sleep() -> None:
     # Note(mm): One big sleep messes with the standalone stdout reader
+    # 2s
     await asyncio.sleep(0.2)
     await asyncio.sleep(0.2)
     await asyncio.sleep(0.2)
@@ -637,6 +704,8 @@ async def status_loop(ctx: AsyncContext) -> None:
         update_locations(ctx.game_status, ctx.mission_status)
         update_messages(ctx.game_status, ctx.mission_status.packet_status[PacketType.MESSAGES])
         update_items(ctx.game_status, ctx.mission_status)
+        update_mercenaries(ctx.game_status, ctx.mission_status)
+        update_settings(ctx.game_status, ctx.mission_status)
         if (ctx.mission_status.update_number != old_update_number
             or ctx.game_status.pending_update
         ):

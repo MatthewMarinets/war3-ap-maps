@@ -5,6 +5,10 @@ from .heroes import HeroSlot, SuperheroSlot, ItemChannel
 from .items import Wc3Item
 from . import items
 
+MAXIMUM_MERCENARIES_PER_CAMP = 10
+MAXIMUM_MERCENARIES_PER_MISSION = 30
+
+
 MISSION_TO_HERO_SLOT = {
     Wc3Mission.P1_CHASING_VISIONS: [HeroSlot.THRALL],
     Wc3Mission.P2_DEPARTURES: [HeroSlot.THRALL],
@@ -177,18 +181,18 @@ ITEM_CHANNEL_TO_DEFAULT_HERO: dict[ItemChannel, HeroSlot] = {
 
 MISSION_TO_VANILLA_MERCENARIES = {
     # Each mission contains a mapping of vanilla item slot to merc item.
-    # In the case of multiple mercenary camps, slots round-robin around the mercenary camps,
-    # so that adding more mercs to this list will smoothly distribute new mercs across the camps.
+    # In the case of multiple mercenary camps, each camp gets a range of 10 indices
     Wc3Mission.H8_DISSENSION: {
         0: Wc3Item.MERC_ICE_TROLL,
-        1: Wc3Item.MERC_ICE_TROLL_BERSERKER,
-        2: Wc3Item.MERC_ICE_TROLL_TRAPPER,
-        3: Wc3Item.MERC_ICE_TROLL_PRIEST,
-        4: Wc3Item.MERC_OGRE_MAGI,
-        5: Wc3Item.MERC_ICE_TROLL_HIGH_PRIEST,
-        6: Wc3Item.MERC_OGRE_WARRIOR,
-        # 7: Merc camp 2 doesn't use the 3rd slot :P
-        8: Wc3Item.MERC_OGRE_MAULER,
+        1: Wc3Item.MERC_ICE_TROLL_PRIEST,
+        2: Wc3Item.MERC_OGRE_WARRIOR,
+
+        10: Wc3Item.MERC_OGRE_MAGI,
+        11: Wc3Item.MERC_ICE_TROLL_BERSERKER,
+
+        20: Wc3Item.MERC_ICE_TROLL_TRAPPER,
+        21: Wc3Item.MERC_ICE_TROLL_HIGH_PRIEST,
+        22: Wc3Item.MERC_OGRE_MAULER,
     },
     Wc3Mission.H9_FROSTMOURNE: {
         0: Wc3Item.MERC_NERUBIAN_WARRIOR,

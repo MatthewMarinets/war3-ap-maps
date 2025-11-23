@@ -2,6 +2,7 @@
 // depends: status
 globals
 trigger t_location_found = null
+trigger t_item_purchased = null
 endglobals
 
 function item_location_send takes integer item_id returns nothing
@@ -86,8 +87,18 @@ function trigger_function_pick_up_item takes nothing returns nothing
     endif
 endfunction
 
+function trigger_function_remove_from_stock takes nothing returns nothing
+    local integer item_type = GetItemTypeId(GetSoldItem())
+    if item_location_in_range(item_type) then
+        call RemoveItemFromStock(GetSellingUnit(), item_type)
+    endif
+endfunction
+
 function InitTrig_item_locations takes nothing returns nothing
     set t_location_found = CreateTrigger()
     call TriggerRegisterPlayerUnitEventSimple(t_location_found, USER_PLAYER, EVENT_PLAYER_UNIT_PICKUP_ITEM)
     call TriggerAddAction(t_location_found, function trigger_function_pick_up_item)
+    set t_item_purchased = CreateTrigger()
+    call TriggerRegisterPlayerUnitEvent(t_item_purchased, Player(PLAYER_NEUTRAL_PASSIVE), EVENT_PLAYER_UNIT_SELL_ITEM, null)
+    call TriggerAddAction(t_item_purchased, function trigger_function_remove_from_stock)
 endfunction

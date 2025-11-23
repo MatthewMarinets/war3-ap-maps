@@ -3,7 +3,6 @@ Standalone client
 """
 from typing import Callable, Any
 import asyncio
-import inspect
 import time
 import threading
 import sys
@@ -12,7 +11,7 @@ from dataclasses import dataclass
 
 from .. import logger
 from .comm import PacketType, AsyncContext, GameStatus, status_loop, InventoryItem
-from ..data import heroes, game_ids, locations
+from ..data import heroes, game_ids, locations, missions, tables
 from ..data.game_ids import Tech, GameID
 
 # ===================================== #
@@ -67,6 +66,12 @@ def try_parse_int(user_input: str) -> int | None:
     except ValueError:
         return None
 
+
+def try_parse_mission_id(user_input: str) -> missions.Wc3Mission | None:
+    user_input = user_input.upper().replace('X', 'x')
+    return missions.SHORT_NAME_TO_MISSION.get(user_input)
+
+
 # ===================================== #
 #                Handlers               #
 # ===================================== #
@@ -87,8 +92,38 @@ def print_help(ctx: AsyncContext, *args) -> None:
 
 
 def print_status(ctx: AsyncContext, *args) -> None:
-    logger.info(ctx.game_status)
-    logger.info(ctx.mission_status)
+    if not args:
+        logger.info(ctx.game_status)
+        logger.info(ctx.mission_status)
+        return
+    parts = args[0].split('.')
+    current: dict|list|object = ctx
+    part: str | int
+    for index, part in enumerate(parts):
+        try:
+            if part.isnumeric():
+                part = int(part)
+            if part == '*':
+                if isinstance(current, dict):
+                    for key in current:
+                        logger.info(key)
+                elif isinstance(current, list):
+                    logger.info(f"length: {len(current)}")
+                else:
+                    for key in dir(current):
+                        if not key.startswith('_'):
+                            logger.info(key)
+                return
+            if isinstance(current, dict):
+                current = current[part]
+            elif isinstance(current, list):
+                current = current[part]
+            else:
+                current = getattr(current, part)
+        except (KeyError, AttributeError) as ex:
+            logger.info(f"{'.'.join(parts[:index])} has no member {part}")
+            break
+    logger.info(current)
 
 
 def print_location_status(ctx: AsyncContext, *args) -> None:
@@ -116,6 +151,12 @@ def handle_set_name(ctx: AsyncContext, hero_slot: heroes.HeroSlot, name: str, *a
 def handle_send_item(ctx: AsyncContext, channel_id: heroes.ItemChannel, item_id: GameID) -> None:
     ctx.game_status.item_channel_state[channel_id].items_received.append(item_id)
     ctx.game_status.pending_update |= PacketType.ITEMS
+
+
+def handle_send_merc(ctx: AsyncContext, unit_id: GameID) -> None:
+    ctx.game_status.inventory.mercenaries.add(unit_id)
+    ctx.game_status.pending_update |= PacketType.MERCENARIES
+    logger.info(f"Sent {unit_id}")
 
 
 def handle_send_check(ctx: AsyncContext, *args: str) -> None:
@@ -159,6 +200,17 @@ def handle_level(ctx: AsyncContext, hero_slot: heroes.HeroSlot, amount: int, *ar
     )
 
 
+def handle_add_mission_merc(ctx: AsyncContext, mission: missions.Wc3Mission, unit_id: GameID) -> None:
+    mission_mercs = ctx.game_status.mercenary_allocation.setdefault(mission, {})
+    for index in range(tables.MAXIMUM_MERCENARIES_PER_MISSION):
+        if index not in mission_mercs:
+            mission_mercs[index] = unit_id
+            logger.info(f"Added {unit_id} to slot {index} of {mission.short_name}: {mission.mission_name}")
+            ctx.game_status.pending_update |= PacketType.MERCENARIES
+            return
+    logger.info(f"Unable to add mercenary to {mission}: Item table is full")
+
+
 def handle_msg(ctx: AsyncContext, *args: str) -> None:
     message = ' '.join(args)
     ctx.game_status.pending_messages.append(message)
@@ -188,6 +240,9 @@ COMMANDS: dict[str, tuple[Callable[[AsyncContext], None], list[CommandArg]]] = {
         CommandArg('item channel ID', try_parse_item_channel_id),
         CommandArg('item ID', try_parse_game_id),
     ]),
+    '/sendmerc': (handle_send_merc, [
+        CommandArg('merc ID', try_parse_game_id),
+    ]),
     '/check': (handle_send_check, [
         CommandArg('locations'),
     ]),
@@ -205,19 +260,27 @@ COMMANDS: dict[str, tuple[Callable[[AsyncContext], None], list[CommandArg]]] = {
         CommandArg('hero slot ID', try_parse_hero_slot),
         CommandArg('amount', try_parse_int, 1),
     ]),
+    '/addmerc': (handle_add_mission_merc, [
+        CommandArg('mission ID', try_parse_mission_id),
+        CommandArg('merc ID', try_parse_game_id),
+    ]),
 }
 
 
-def start_stdin_reader_thread(queue: asyncio.Queue[str]) -> threading.Thread:
+def start_stdin_reader_thread(queue: asyncio.Queue[str], ctx: AsyncContext) -> threading.Thread:
     def put_in_queue() -> None:
-        while True:
+        local_running = True
+        while ctx.running and local_running:
             try:
-                text = sys.stdin.readline().strip()
+                text = input().strip()  # Necessary to work with readline module
+                # text = sys.stdin.readline().strip()
             except UnicodeDecodeError as ex:
                 logger.exception(ex)
             else:
                 if text:
                     queue.put_nowait(text)
+                    if text == '/exit':
+                        local_running = False
                 else:
                     time.sleep(0.01)  # this only blocks the thread, not the process
     thread = threading.Thread(target=put_in_queue, name="stdin stream handler", daemon=True)
@@ -227,7 +290,7 @@ def start_stdin_reader_thread(queue: asyncio.Queue[str]) -> threading.Thread:
 
 async def _stdin_reader(ctx: AsyncContext) -> None:
     queue: asyncio.Queue[str] = asyncio.Queue()
-    start_stdin_reader_thread(queue)
+    reader_thread = start_stdin_reader_thread(queue, ctx)
     while ctx.running:
         try:
             text: str = await queue.get()
@@ -270,6 +333,7 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
 
         except Exception as ex:
             logger.exception(ex)
+    reader_thread.join()
     logger.info("Shutting down console")
 
 
@@ -283,6 +347,7 @@ def init_test_data(game_status: GameStatus) -> None:
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].items[2] = InventoryItem(GameID.BRACER_OF_AGILITY)
     game_status.hero_data[heroes.HeroSlot.JAINA].hero = heroes.HeroChoice.FIRELORD
     game_status.hero_data[heroes.HeroSlot.JAINA].name = "Jenna"
+    game_status.settings.extra_merc_camps = True
 
 
 def init_game_status(game_status: GameStatus) -> None:
@@ -299,6 +364,7 @@ async def main() -> None:
 
 
 if __name__ == "__main__":
+    import readline
     import colorama
     colorama.init()
     asyncio.run(main())

@@ -95,7 +95,7 @@ Taking notes on all the mercenary camp rosters to decide how to tackle itemizati
 | Mission | Camp       | Type          | Unit 1                | Unit 2                   | Unit 3              | Unit 4  |
 | ------- | ---------- | ------------- | --------------------- | ------------------------ | ------------------- | ------- |
 | HU8     | North      | red/nc00      | Ice Troll             | Ice Troll Priest         | Ogre Warrior        |
-| HU8     | Southwest  | brgndy/nc03   | Ice Troll Berserker   | Ogre Magi                |
+| HU8     | Southwest  | brgndy/nc03   | Ogre Magi             | Ice Troll Berserker      |
 | HU8     | Mid/island | blue/nc01     | Ice Troll Trapper     | Ice Troll High Priest    | Ogre Mauler         |
 | HU9     | Southeast  | Northrend     | Nerubian Warrior      | Ice Troll Berserker      | Frost Revenant      | Nerubian Webspinner  |
 | UD5     | West       | v Lordaeron S | F Troll Shadow Priest | F Troll Berserker        | Mud Golem           | Ogre Mauler          |
@@ -110,6 +110,8 @@ Taking notes on all the mercenary camp rosters to decide how to tackle itemizati
 | HUx4    | North      | Outland       | Draenei Darkslayer    | Fel Stalker              | Eredar Diabolist    |
 | HUx5    | Northwest  | Outland       | Draenei Vindicator    | Draenei Seer             | Draenei Stalker     |
 | UDx5    | Northeast  | v Cityscape   | Rogue                 | Assassin                 | Kobold Geomancer    | F Troll High Priest  |
+
+\* Note on HU8 mid/island, the ogre mauler is in slot 4 and slot 3 is a gap
 
 Total: 51
 

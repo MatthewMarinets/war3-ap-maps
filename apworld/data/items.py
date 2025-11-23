@@ -78,10 +78,10 @@ type ItemType = (
 )
 
 
-class Wc3Item(enum.Enum):
-    def __new__(cls, id: int, *args, **kwargs):
+class Wc3Item(enum.IntEnum):
+    def __new__(cls, id: int, name: str, type: ItemType) -> 'Wc3Item':
         value = id
-        obj = object.__new__(cls)
+        obj = int.__new__(cls, value)
         obj._value_ = value
         return obj
 

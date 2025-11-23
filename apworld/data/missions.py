@@ -40,10 +40,11 @@ class Wc3Campaign(enum.Enum):
     UNDEAD_2 =    7, "U2", "Scourge", "Legacy of the Damned"
 
 
-class Wc3Mission(enum.Enum):
+class Wc3Mission(enum.IntEnum):
     def __new__(cls, name: str, short_name: str, campaign: Wc3Campaign, chapter: int, race: Wc3Race):
-        obj = object.__new__(cls)
-        obj._value_ = campaign.value * 100 + chapter
+        value = campaign.value * 100 + chapter
+        obj = int.__new__(cls, value)
+        obj._value_ = value
         return obj
 
     def __init__(
@@ -130,4 +131,5 @@ class Wc3Mission(enum.Enum):
     UX8_A_SYMPHONY_OF_FROST_AND_FLAME = "A Symphony of Frost and Flame", "Ux8", Wc3Campaign.UNDEAD_2, 10, Wc3Race.UNDEAD
 
 
-ID_TO_MISSION = {_mission.value: _mission for _mission in Wc3Mission}
+ID_TO_MISSION: dict[int, Wc3Mission] = {_mission.value: _mission for _mission in Wc3Mission}
+SHORT_NAME_TO_MISSION: dict[str, Wc3Mission] = {_mission.short_name: _mission for _mission in Wc3Mission}

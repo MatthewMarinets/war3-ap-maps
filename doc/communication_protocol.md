@@ -137,15 +137,17 @@ and an outdated client can still work with older packet types.
 | MaxTech(0, 'nvlk')    | mission ID                                  |
 | MaxTech(0, 'nvk2')    | reload packets bitmask                      |
 
-| bitmask | meaning                            |
-| ------- | ---------------------------------- |
-| 0x    1 | reload unlocks                     |
-| 0x    2 | reload locations                   |
-| 0x    4 | load messages                      |
-| 0x    8 | reload heroes                      |
-| 0x   10 | load items                         |
-| 0x   20 | item channels                      |
-| 0x   40 | hero levels                        |
+| bitmask | dec | meaning                            |
+| ------- | --- | ---------------------------------- |
+| 0x    1 |   1 | reload unlocks                     |
+| 0x    2 |   2 | reload locations                   |
+| 0x    4 |   4 | load messages                      |
+| 0x    8 |   8 | reload heroes                      |
+| 0x   10 |  16 | load items                         |
+| 0x   20 |  32 | item channels                      |
+| 0x   40 |  64 | hero levels                        |
+| 0x   80 | 128 | mercenaries                        |
+| 0x  100 | 256 | settings                           |
 
 ### unlocks.txt
 * Client -> Game
@@ -255,3 +257,25 @@ Encoded IDs are two-character stringified integers. Ex: " 0 710" says locations 
 | MaxTech(Player(9), 'ncrb')  | Item 10 ID                                    |
 | MaxTech(Player(10), 'ncrb') | Item 11 ID                                    |
 | MaxTech(Player(11), 'ncrb') | Item 12 ID                                    |
+
+### mercenaries.txt
+* Client -> Game
+* Fills a mission's "mercenary slots" with item IDs
+* Missions can support up to 10 mercenaries per camp
+  * Maximum camps per mission = 3 => max 30 mercenaries per map
+
+| Line                        | Contains                                          |
+| --------------------------- | ------------------------------------------------- |
+| MaxTech(Player(0), 'nech')  | Message ID; echoed back in status.txt             |
+| MaxTech(Player(N), 'ncrb')  | Mercenary in slot N for this merc camp, N < 10    |
+| MaxTech(Player(N), 'ndog')  | Mercenary in slot 10+N for this merc camp, N < 10 |
+| MaxTech(Player(N), 'ndwm')  | Mercenary in slot 20+N for this merc camp, N < 10 |
+
+### settings.txt
+* Client -> Game
+* Tells the game to apply miscellaneous settings
+
+| Line                        | Contains                                          |
+| --------------------------- | ------------------------------------------------- |
+| MaxTech(Player(0), 'nech')  | Message ID; echoed back in status.txt             |
+| MaxTech(Player(0), 'nmer')  | Enable bonus mercenary camps                      |

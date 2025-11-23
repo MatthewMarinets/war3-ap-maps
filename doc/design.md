@@ -15,12 +15,59 @@ Format: `call DisplayTextToPlayer(GetLocalPlayeR(), 0, 0, "Got an |cffee1166Arch
   * Storing items
   * Checking progress / selecting next level
 
+## Mercenary Camps
+Some missions have mercenary camps (see [mercenary_camps.md](./mercenary_camps.md)).
+It would be nice to itemize mercenaries somehow,
+but that runs the risk of those items being very rarely useful.
+Players have also shown interest in more general usefulness for mercs
+outside the limited missions they appear in.
+
+### Unlock methods
+There were a few ideas on how to organize the items that unlock mercenaries
+* One item per merc unit type
+* One item per mercenary camp slot (unlocks whatever merc is in that slot on that mission)
+* Progressive item types for each merc species (e.g. Progressive Forest Troll, Progressive Revenant)
+
+**I chose to go for the first option, one item per merc unit type.**
+
+Progressive per species would mean that there would be no way to get a higher-tier unit
+without first unlocking an earlier one.
+As most merc types appeared on only one mission in vanilla, this would mean higher-tier mercs would be
+very uncommon.
+Getting lower-tier mercenaries after higher-tier ones would still be helpful given how slow cooldown times
+are.
+It's also unclear how this option would behave in the context of adding non-vanilla mercs to a species,
+such as baseline Forest Trolls.
+
+Items per slot could work, with missions with multiple merc camps simply unlocking the slot at all camps.
+Adding mercenaries to camps via triggers tends to put them at the first available slot,
+so the UI may not be very clear here.
+
+### Proposal 1: Option to include bonus mercs
+* yaml option
+* Include more mercs per camp
+* Include additional merc species
+* Option can choose vanilla + new mercs, or replace mercs
+* Limit: 10 mercs per camp (2 slots for merc camp location item + change item sell target)
+
+### Proposal 2: Bonus merc camps
+* yaml option
+* Spawn merc camps in build missions that didn't have them in vanilla
+
+| M    | Location                                             |
+| ---- | ---------------------------------------------------- |
+| H2   | Gnoll camp north of base                             |
+| H4   | High Ground east of Murloc Nightcrawler camp         |
+| H5   | Clearing between southwest base exit and Mark recue  |
+| H6   | Bandit camp west of base                             |
+| H7   | Troll High Priest camp? East Troll Camp?             |
+
 ## No-builds
 No-builds get kind of samey if you start with vanilla units, as that's enough to beat the mission.
 To integrate with items, the baseline should be lowered and items used to bring the mission back
 to baseline power level.
 
-### Proposal 1: Irregulars
+### Proposal 1: Irregulars (implemented)
 Replace some starting units with "irregulars", which have lower stats but may be upgraded to other units.
 
 What units work as an irregular?
@@ -71,15 +118,10 @@ What additional units can be accessed?
   * Makrura (Markrura Prawn, Markrura Pooldweller, Markrura Tidecaller, Makrura Deepseer, Makrura Snapper, Makrura Tidal Lord)
   * Draenei (Draenei Guardian, Draenei Disciple, Draenei Protector, Draenei Watcher, Draenei Harbinger, Draenei Darkslayer, Draenei Seer)
 
-### Proposal 2: Captains
-Some starting units are replaced with a captain.
-Captains are unlocked on a per-mission basis with an item.
-Example: item for "Human02: Captain".
+### Proposal 2: Captains (implemented)
+Starting captains are removed.
 
-How should the game handle getting a captain mid-mission?
-* Upgrade a random unit?
-* Spawn a new unit? (at hero1 location)
-* Allow irregulars to upgrade to a captain?
+Footmen and irregulars gain the ability to upgrade to a captain.
 
 What captains are there?
 * Human
@@ -90,12 +132,16 @@ What captains are there?
   * Marine
 * Undead
   * Sylvanas Windrunner (Banshee)
+  * Skeletal Orc Champion?
 * Orc
   * Space Fel Orc
   * Orc Warchief
+  * Orc Warlock
 * Night Elf
   * Shandris
   * Naisha
+* Blood Elves
+  * Blood Elf Lieutenant (from Hx3)
 * Naga
   * Naga Royal Guard
 
@@ -125,6 +171,10 @@ Possibilities:
 
 ## Shopsanity
 * Allow buying checks from goblin merchants
+* Allow buying checks from mercenary camps
+* Allow buying checks from goblin laboratories
+
+Note scripts should probably be updated to support custom check item costs per-location.
 
 ## Mission Unlocks
 * Human 1: "It is a father's right to dream, isn't it?"
