@@ -60,11 +60,11 @@ class Wc3Mission(enum.IntEnum):
     GENERAL = "General", "wc3", Wc3Campaign.GENERAL, 0, Wc3Race.NONE
     """Used for locations that are not tied to any particular mission"""
 
-    P1_CHASING_VISIONS =            "Chasing Visions", "T1", Wc3Campaign.PROLOGUE, 1, Wc3Race.ORC
-    P2_DEPARTURES =                 "Departures", "T2", Wc3Campaign.PROLOGUE, 2, Wc3Race.ORC
-    P3_RIDERS_ON_THE_STORM =        "Riders on the Storm", "T3", Wc3Campaign.PROLOGUE, 3, Wc3Race.ORC
-    P4_THE_FIRES_DOWN_BELOW =       "The Fires Down Below", "T4", Wc3Campaign.PROLOGUE, 4, Wc3Race.ORC
-    P5_COUNTDOWN_TO_EXTINCTION =    "Countdown to Extinction", "T5", Wc3Campaign.PROLOGUE, 5, Wc3Race.ORC
+    # P1_CHASING_VISIONS =            "Chasing Visions", "T1", Wc3Campaign.PROLOGUE, 1, Wc3Race.ORC
+    # P2_DEPARTURES =                 "Departures", "T2", Wc3Campaign.PROLOGUE, 2, Wc3Race.ORC
+    # P3_RIDERS_ON_THE_STORM =        "Riders on the Storm", "T3", Wc3Campaign.PROLOGUE, 3, Wc3Race.ORC
+    # P4_THE_FIRES_DOWN_BELOW =       "The Fires Down Below", "T4", Wc3Campaign.PROLOGUE, 4, Wc3Race.ORC
+    # P5_COUNTDOWN_TO_EXTINCTION =    "Countdown to Extinction", "T5", Wc3Campaign.PROLOGUE, 5, Wc3Race.ORC
 
     H1_DEFENSE_OF_STRAHNBRAD =      "Defense of Strahnbrad", "H1", Wc3Campaign.HUMAN_1, 1, Wc3Race.HUMAN
     H2_BLACKROCK_AND_ROLL =         "Blackrock and Roll", "H2", Wc3Campaign.HUMAN_1, 2, Wc3Race.HUMAN
@@ -131,5 +131,79 @@ class Wc3Mission(enum.IntEnum):
     UX8_A_SYMPHONY_OF_FROST_AND_FLAME = "A Symphony of Frost and Flame", "Ux8", Wc3Campaign.UNDEAD_2, 10, Wc3Race.UNDEAD
 
 
+class MissionFlag(enum.IntFlag):
+    NONE = 0
+    BUILD = enum.auto()
+    NO_BUILD = enum.auto()
+    SEMI_BUILD = enum.auto()
+    MULTI_FACTION = enum.auto()
+
+
 ID_TO_MISSION: dict[int, Wc3Mission] = {_mission.value: _mission for _mission in Wc3Mission}
 SHORT_NAME_TO_MISSION: dict[str, Wc3Mission] = {_mission.short_name: _mission for _mission in Wc3Mission}
+
+MISSION_TO_FLAG: dict[Wc3Mission, MissionFlag] = {
+    # Wc3Mission.P1_CHASING_VISIONS: MissionFlag.NO_BUILD,
+    # Wc3Mission.P2_DEPARTURES: MissionFlag.BUILD,
+    # Wc3Mission.P3_RIDERS_ON_THE_STORM: MissionFlag.BUILD,
+    # Wc3Mission.P4_THE_FIRES_DOWN_BELOW: MissionFlag.NO_BUILD,
+    # Wc3Mission.P5_COUNTDOWN_TO_EXTINCTION: MissionFlag.BUILD,
+
+    Wc3Mission.H1_DEFENSE_OF_STRAHNBRAD: MissionFlag.NO_BUILD,
+    Wc3Mission.H2_BLACKROCK_AND_ROLL: MissionFlag.BUILD,
+    Wc3Mission.H3_RAVAGES_OF_THE_PLAGUE: MissionFlag.NO_BUILD,
+    Wc3Mission.H4_THE_CULT_OF_THE_DAMNED: MissionFlag.BUILD,
+    Wc3Mission.H5_MARCH_OF_THE_SCOURGE: MissionFlag.BUILD,
+    Wc3Mission.H6_THE_CULLING: MissionFlag.BUILD,
+    Wc3Mission.H7_THE_SHORES_OF_NORTHREND: MissionFlag.BUILD,
+    Wc3Mission.H8_DISSENSION: MissionFlag.NO_BUILD,
+    Wc3Mission.H9_FROSTMOURNE: MissionFlag.BUILD,
+    Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES: MissionFlag.NO_BUILD,
+    Wc3Mission.U2_DIGGING_UP_THE_DEAD: MissionFlag.BUILD,
+    Wc3Mission.U3_INTO_THE_REALM_ETERNAL: MissionFlag.BUILD,
+    Wc3Mission.U4_KEY_OF_THE_THREE_MOONS: MissionFlag.BUILD,
+    Wc3Mission.U5_THE_FALL_OF_SILVERMOON: MissionFlag.BUILD,
+    Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO: MissionFlag.BUILD,
+    Wc3Mission.U7_THE_SIEGE_OF_DALARAN: MissionFlag.BUILD,
+    Wc3Mission.U8_UNDER_THE_BURNING_SKY: MissionFlag.BUILD,
+    Wc3Mission.O1_LANDFALL: MissionFlag.NO_BUILD,
+    Wc3Mission.O2_THE_LONG_MARCH: MissionFlag.NO_BUILD,
+    Wc3Mission.O3_CRY_OF_THE_WARSONG: MissionFlag.BUILD,
+    Wc3Mission.O4_THE_SPIRITS_OF_ASHENVALE: MissionFlag.BUILD,
+    Wc3Mission.O5_THE_HUNTER_OF_SHADOWS: MissionFlag.BUILD,
+    Wc3Mission.O6_WHERE_WYVERNS_DARE: MissionFlag.BUILD,
+    Wc3Mission.O7_THE_ORACLE: MissionFlag.NO_BUILD,
+    Wc3Mission.O8_BY_DEMONS_BE_DRIVEN: MissionFlag.BUILD,
+    Wc3Mission.N1_ENEMIES_AT_THE_GATE: MissionFlag.BUILD,
+    Wc3Mission.N2_DAUGHTERS_OF_THE_MOON: MissionFlag.NO_BUILD,
+    Wc3Mission.N3_THE_AWAKENING_OF_STORMRAGE: MissionFlag.BUILD,
+    Wc3Mission.N4_THE_DRUIDS_ARISE: MissionFlag.BUILD,
+    Wc3Mission.N5_BROTHERS_IN_BLOOD: MissionFlag.NO_BUILD,
+    Wc3Mission.N6_A_DESTINY_OF_FLAME_AND_SORROW: MissionFlag.BUILD,
+    Wc3Mission.N7_TWILIGHT_OF_THE_GODS: MissionFlag.BUILD,
+
+    Wc3Mission.NX1_RISE_OF_THE_NAGA: MissionFlag.NO_BUILD,
+    Wc3Mission.NX2_THE_BROKEN_ISLES: MissionFlag.BUILD,
+    Wc3Mission.NX3_THE_TOMB_OF_SARGERAS: MissionFlag.NO_BUILD,
+    Wc3Mission.NX4_WRATH_OF_THE_BETRAYER: MissionFlag.BUILD,
+    Wc3Mission.NX5_BALANCING_THE_SCALES: MissionFlag.BUILD,
+    Wc3Mission.NX6_SHARDS_OF_THE_ALLIANCE: MissionFlag.NO_BUILD,
+    Wc3Mission.NX7_THE_RUINS_OF_DALARAN: MissionFlag.BUILD,
+    Wc3Mission.NX8_THE_BROTHERS_STORMRAGE: MissionFlag.BUILD | MissionFlag.MULTI_FACTION,
+    Wc3Mission.HX1_MISCONCEPTIONS: MissionFlag.BUILD,
+    Wc3Mission.HX2_A_DARK_COVENANT: MissionFlag.BUILD,
+    Wc3Mission.HX3_THE_DUNGEONS_OF_DALARAN: MissionFlag.NO_BUILD,
+    Wc3Mission.HX4_THE_SEARCH_FOR_ILLIDAN: MissionFlag.NO_BUILD,
+    Wc3Mission.HX5_GATES_OF_THE_ABYSS: MissionFlag.BUILD,
+    Wc3Mission.HX6_LORD_OF_OUTLAND: MissionFlag.SEMI_BUILD,
+    Wc3Mission.UX1_KING_ARTHAS: MissionFlag.SEMI_BUILD,
+    Wc3Mission.UX2_THE_FLIGHT_FROM_LORDAERON: MissionFlag.NO_BUILD,
+    Wc3Mission.UX3_THE_DARK_LADY: MissionFlag.BUILD,
+    Wc3Mission.UX4_THE_RETURN_TO_NORTHREND: MissionFlag.BUILD,
+    Wc3Mission.UX5_DREADLORDS_FALL: MissionFlag.BUILD,
+    Wc3Mission.UX6_A_NEW_POWER_IN_LORDAERON: MissionFlag.BUILD | MissionFlag.MULTI_FACTION,
+    Wc3Mission.UX7A_INTO_THE_SHADOW_WEB_CAVERNS: MissionFlag.NO_BUILD,
+    Wc3Mission.UX7B_THE_FORGOTTEN_ONES: MissionFlag.NO_BUILD,
+    Wc3Mission.UX7C_ASCENT_TO_THE_UPPER_KINGDOM: MissionFlag.NO_BUILD,
+    Wc3Mission.UX8_A_SYMPHONY_OF_FROST_AND_FLAME: MissionFlag.BUILD,
+}

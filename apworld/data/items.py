@@ -361,7 +361,7 @@ class Wc3Item(enum.IntEnum):
     # ILLIDAN_TFT_LEVEL = _, "Illidan (TFT) Level",   Level(HeroSlot.DEMON_ILLIDAN, 10, 10)
 
     # Captains
-    H1_CAPTAIN = 1100, "Captain Promotion", CaptainPromotion()
+    CAPTAIN = 1100, "Captain Promotion", CaptainPromotion()
 
     # Resource Fillers
     FILLER_GOLD = 1200, "+100 Gold", Resources(GameID.GOLD_COINS, 100)

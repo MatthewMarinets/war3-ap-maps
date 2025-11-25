@@ -179,10 +179,10 @@ class Wc3Location(enum.Enum):
     # (Main) Burn the Boats
     HU8_VICTORY =                  10800, "Victory",                  Wc3Mission.H8_DISSENSION, Wc3LocationType.VICTORY
     HU8_SKELETON_ITEM =            10801, "Skeleton Item",            Wc3Mission.H8_DISSENSION, Wc3LocationType.ITEM, "Goblin Night Scope"
-    HU8_NERUBIAN_ITEM =            10802, "Nerubian Item",            Wc3Mission.H8_DISSENSION, Wc3LocationType.ITEM, "Claws of Attack +12"
-    HU8_REVENTANT_ITEM =           10803, "Revenant Item",            Wc3Mission.H8_DISSENSION, Wc3LocationType.ITEM, "Sobi Mask"
+    HU8_NERUBIAN_QUEEN_ITEM =      10802, "Nerubian Queen Item",      Wc3Mission.H8_DISSENSION, Wc3LocationType.ITEM, "Claws of Attack +12"
+    HU8_FROST_REVENTANT_ITEM =     10803, "Frost Revenant Item",      Wc3Mission.H8_DISSENSION, Wc3LocationType.ITEM, "Sobi Mask"
     HU8_PANDAREN_ITEM =            10804, "Pandaren Item",            Wc3Mission.H8_DISSENSION, Wc3LocationType.SECRET_ITEM, "Pendant of Mana"
-    HU8_FIEND_ITEM =               10805, "Crypt Fiend Item",         Wc3Mission.H8_DISSENSION, Wc3LocationType.ITEM, "Ring of Regeneration"
+    HU8_CRYPT_FIEND_ITEM =         10805, "Crypt Fiend Item",         Wc3Mission.H8_DISSENSION, Wc3LocationType.ITEM, "Ring of Regeneration"
     HU8_NECROMANCER_ITEM =         10806, "Necromancer Item",         Wc3Mission.H8_DISSENSION, Wc3LocationType.ITEM, "Potion of Mana"
     HU8_NERUBIAN_SEER_ITEM =       10807, "Nerubian Seer Item",       Wc3Mission.H8_DISSENSION, Wc3LocationType.ITEM, "Potion of Greater Mana"
     HU8_NERUBIAN_WARRIOR_ITEM =    10808, "Nerubian Warrior Item",    Wc3Mission.H8_DISSENSION, Wc3LocationType.ITEM, "Potion of Healing"
@@ -192,10 +192,12 @@ class Wc3Location(enum.Enum):
     HU8_BOAT_2 =                   10821, "Boat 2",                   Wc3Mission.H8_DISSENSION, Wc3LocationType.QUEST
     HU8_BOAT_3 =                   10822, "Boat 3",                   Wc3Mission.H8_DISSENSION, Wc3LocationType.QUEST
     HU8_BOAT_4 =                   10823, "Boat 4",                   Wc3Mission.H8_DISSENSION, Wc3LocationType.QUEST
-    HU8_GOBLIN_MERCHANT =          10824, "Goblin Merchant",          Wc3Mission.H8_DISSENSION, Wc3LocationType.SHOP
-    HU8_MERCENARY_CAMP_1 =         10825, "Mercenary Camp 1",         Wc3Mission.H8_DISSENSION, Wc3LocationType.SHOP
-    HU8_MERCENARY_CAMP_2 =         10826, "Mercenary Camp 2",         Wc3Mission.H8_DISSENSION, Wc3LocationType.SHOP
-    HU8_MERCENARY_CAMP_3 =         10827, "Mercenary Camp 3",         Wc3Mission.H8_DISSENSION, Wc3LocationType.SHOP
+    HU8_BOAT_5 =                   10824, "Boat 4",                   Wc3Mission.H8_DISSENSION, Wc3LocationType.QUEST
+    HU8_GOBLIN_MERCHANT =          10825, "Goblin Merchant",          Wc3Mission.H8_DISSENSION, Wc3LocationType.SHOP
+    HU8_MERCENARY_CAMP_1 =         10826, "Mercenary Camp 1",         Wc3Mission.H8_DISSENSION, Wc3LocationType.SHOP
+    HU8_MERCENARY_CAMP_2 =         10827, "Mercenary Camp 2",         Wc3Mission.H8_DISSENSION, Wc3LocationType.SHOP
+    HU8_MERCENARY_CAMP_3 =         10828, "Mercenary Camp 3",         Wc3Mission.H8_DISSENSION, Wc3LocationType.SHOP
+    HU8_GOBLIN_LABORATORY =        10829, "Goblin Laboratory",        Wc3Mission.H8_DISSENSION, Wc3LocationType.SHOP
 
     # Quests:
     # (Main) Frostmourne
