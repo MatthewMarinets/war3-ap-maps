@@ -166,6 +166,7 @@ class MissionStatus:
         for k in self.locations_collected:
             self.locations_collected[k] = 0
 
+
 def init_hero_data() -> dict[heroes.HeroSlot, HeroStatus]:
     return {slot: HeroStatus(heroes.HERO_SLOT_TO_DEFAULT_CHOICE[slot]) for slot in heroes.HeroSlot}
 
@@ -182,7 +183,7 @@ def init_item_channels() -> dict[heroes.ItemChannel, ItemChannelState]:
 
 def default_mercenary_allocation() -> dict[missions.Wc3Mission, dict[int, GameID]]:
     return {
-        mission: {index: item for index, item in v.items()}
+        mission: {index: item.type.game_id for index, item in v.items()}
         for mission, v in tables.MISSION_TO_VANILLA_MERCENARIES.items()
     }
 
@@ -416,7 +417,9 @@ def update_items(game_status: GameStatus, mission_status: MissionStatus) -> None
 
 def update_mercenaries(game_status: GameStatus, mission_status: MissionStatus) -> None:
     packet_status = mission_status.packet_status[PacketType.MERCENARIES]
-    if PacketType.MERCENARIES not in game_status.pending_update:
+    if (PacketType.MERCENARIES not in game_status.pending_update
+        and packet_status.last_received == packet_status.last_sent
+    ):
         return
     game_status.pending_update |= PacketType.MERCENARIES
     packet_status.last_sent = (packet_status.last_sent + 1) & 0xffff

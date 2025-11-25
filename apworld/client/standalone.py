@@ -297,7 +297,11 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
             queue.task_done()
 
             logger.debug(f'User: {text}')
-            tokens = shlex.split(text)
+            try:
+                tokens = shlex.split(text)
+            except ValueError as ex:
+                logger.error(f"Error: {ex}")
+                continue
             if not tokens:
                 continue
             handlers = COMMANDS.get(tokens[0])
@@ -347,6 +351,8 @@ def init_test_data(game_status: GameStatus) -> None:
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].items[2] = InventoryItem(GameID.BRACER_OF_AGILITY)
     game_status.hero_data[heroes.HeroSlot.JAINA].hero = heroes.HeroChoice.FIRELORD
     game_status.hero_data[heroes.HeroSlot.JAINA].name = "Jenna"
+    game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].hero = heroes.HeroChoice.BEASTMASTER
+    game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].name = "Murray"
     game_status.settings.extra_merc_camps = True
 
 

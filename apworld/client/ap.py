@@ -108,8 +108,8 @@ class Wc3Context(CommonContext):
                 self.comm_ctx.game_status.inventory.tech[item_data.type.gameid] += 1
                 self.comm_ctx.game_status.pending_update |= comm.PacketType.UNLOCKS
             elif isinstance(item_data.type, items.Mercenary):
-                # todo(mm): Handle sending mercenaries
-                pass
+                self.comm_ctx.game_status.inventory.mercenaries.add(item_data.type.game_id)
+                self.comm_ctx.game_status.pending_update |= comm.PacketType.MERCENARIES
             else:
                 logger.error(f"Received unknown item type: {item_data.type}")
     
