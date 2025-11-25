@@ -1363,7 +1363,7 @@ object_id = 'null'
 [[map_objects.entities.modifications]]
 modification_id = 'atp1'  # Profile.Tooltip - Normal
 data_type = "String"
-variation_level = 0
+variation_level = 1
 table_column = 0
 value = "Promote this unit to a regular Human unit."
 object_id = 'null'

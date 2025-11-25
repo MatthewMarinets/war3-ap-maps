@@ -161,7 +161,7 @@ def update_abilities_human(abils_file: str) -> None:
         editor_ids.FIELD_ABIL_ICON_NORMAL: r"ReplaceableTextures\CommandButtons\BTNHumanCaptureFlag.blp",
         editor_ids.FIELD_ABIL_BUTTON_POSITION_NORMAL_Y: 2,
         editor_ids.FIELD_ABIL_STATS_IS_ITEM_ABILITY: 0,
-        editor_ids.FIELD_ABIL_TOOLTIP_NORMAL: "Promote this unit to a regular Human unit.",
+        (editor_ids.FIELD_ABIL_TOOLTIP_NORMAL, 1): "Promote this unit to a regular Human unit.",
         (editor_ids.FIELD_ABIL_DATA_SPELL_BOOK_MIN_SPELLS, 1): len(HUMAN_ABIL_INFO),
         (editor_ids.FIELD_ABIL_DATA_SPELL_BOOK_MAX_SPELLS, 1): len(HUMAN_ABIL_INFO),
         (editor_ids.FIELD_ABIL_DATA_SPELL_BOOK_SPELL_LIST, 1):
