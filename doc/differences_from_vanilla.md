@@ -40,5 +40,8 @@ None
 * Muradin throwing the storm bolt in the gold mine cinematic is now faked
 
 ## Human 8
+* 1 starting mortar team replaced with an irregular
+* Mercenaries must now be unlocked with items
+* Mercenary camps, the goblin merchant, and the gobling laboratory now sell locations as items
 
 ## Human 9

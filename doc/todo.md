@@ -24,17 +24,16 @@
   - [x] Location sending functions
   - [x] Purge any unlock tech functions
   - [x] Creep bounty
-- [ ] Human08
-  - [ ] Eliminate gamecache usage
-  - [ ] Redirect starting next mission
-  - [ ] Hero init
-  - [ ] Remove hero level cap triggers
-  - [ ] Special considerations for first hero appearances
-  - [ ] Replace items -> AP items
-  - [ ] Location sending functions
-  - [ ] Purge any unlock tech functions
-  - [ ] Creep bounty
-  - [ ] Figure out mercenary camps
+- [x] Human08
+  - [x] Eliminate gamecache usage
+  - [x] Redirect starting next mission
+  - [x] Hero init
+  - [x] Remove hero level cap triggers
+  - [x] Replace items -> AP items
+  - [x] Location sending functions
+  - [x] Purge any unlock tech functions
+  - [x] Creep bounty
+  - [x] Figure out mercenary camps
 
 ### Item check conditions boilerplate
 ```markdown

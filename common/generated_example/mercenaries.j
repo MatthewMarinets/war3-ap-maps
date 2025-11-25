@@ -24,9 +24,11 @@ function mercenaries_apply takes nothing returns nothing
         if mask == 524288 then  // 1 << 19
             set signal = 'ndog'
             set index = 0
+            set target_camp = null
         elseif mask == 512 then  // 1 << 9
             set signal = 'ndwm'
             set index = 0
+            set target_camp = null
         endif
         set u = GetPlayerTechMaxAllowed(Player(index), signal)
         if units_added - scanned >= mask then
