@@ -61,7 +61,7 @@ def round1(n: float) -> float:
 
 def escape_name(gui_name: str) -> str:
     return (
-        gui_name.replace(' ', '_')
+        gui_name.rstrip().replace(' ', '_')
     )
 
 
@@ -112,6 +112,8 @@ def generate_user_defined_globals(gui_triggers: wtg.W3TriggerData) -> list[str]:
         elif variable.variable_type == 'boolean':
             val = '= false'
         elif variable.variable_type == 'integer':
+            val = '= 0'
+        elif variable.variable_type == 'real':
             val = '= 0'
         elif variable.variable_type == 'string':
             val = ''
@@ -1101,7 +1103,7 @@ def generate_triggers(
         result.append('//===========================================================================')
         result.append(f'// Trigger: {gui_trigger.name}',)
         if gui_trigger.description:
-            lines = gui_trigger.description.strip().split('\n')
+            lines = gui_trigger.description.rstrip().replace('\n\n', '\n').split('\n')
             result.append('//')
             for line in lines:
                 result.append(f'// {line}')
