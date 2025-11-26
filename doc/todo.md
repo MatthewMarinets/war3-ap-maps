@@ -4,7 +4,7 @@
 - [x] Human03
 - [x] Human04
 - [x] Human05
-  - [ ] Opening cinematic: fake Jaina teleporting away
+  - [x] Opening cinematic: fake Jaina teleporting away
 - [x] Human06
   - [x] Eliminate gamecache usage
   - [x] Redirect starting next mission
@@ -51,7 +51,7 @@
 - [x] Add packet to send a new item to a campaign
 - [x] Add packet to set/update hero state
 - [x] comm: Global <--> local location conversion
-- [ ] All heroes should cost 0 food
+- [x] All heroes should cost 0 food
 - [ ] Begin converting missions
   - [ ] Eliminate gamecache usage
   - [ ] Redirect starting next mission

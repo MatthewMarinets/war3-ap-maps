@@ -196,6 +196,7 @@ version = TFT
 | GAMEOVER | boolean | . | false |
 | CaravanCorruptionPulse | timer | . | . |
 | REQCaravanquest | questitem | . | . |
+| mass_teleport_effect | effect | . | . |
 
 # Triggers
 ## fileio
@@ -283,6 +284,18 @@ version = TFT
 
 
 ## irregulars
+- enabled: True
+- category: [33] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## AP mercenaries
 - enabled: True
 - category: [33] Archipelago
 - starts off: False
@@ -564,13 +577,6 @@ Learn Skill Mass Teleport
     - Function GetUnitStateSwap
       - param Preset UnitStateMaxMana
       - param Variable Jaina
-- Action SetHeroLevel
-  - param Variable Jaina
-  - param String 6
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable Jaina
-  - param Preset HeroSkillMassTeleport
 - Action SuspendHeroXPBJ
   - param Preset EnableDisableDisable
   - param Variable gg_unit_Ulic_0022
@@ -1575,10 +1581,10 @@ The AI alliance settings
   - param Variable gg_unit_hfoo_0118
 - Action SetVariable
   - param Variable Footman1
-  - param Variable gg_unit_hfoo_0024
+  - param Variable gg_unit_hA00_0024
 - Action SetVariable
   - param Variable Footman2
-  - param Variable gg_unit_hfoo_0025
+  - param Variable gg_unit_hA00_0025
 - Action SetVariable
   - param Variable Priest1
   - param Variable gg_unit_hmpr_0028
@@ -3323,10 +3329,16 @@ Run Trigger DIALOGUE C
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_01Town_Priest_C
-- Action IssueTargetOrder
+- Action TriggerSleepAction
+  - param String 0.2
+- Action IssueImmediateOrder
   - param Variable Jaina
-  - param Preset UnitOrderMassTeleport
-  - param Variable TeleportUnit
+  - param Preset UnitOrderStop
+- Action SetUnitAnimation
+  - param Variable Jaina
+  - param String spell
+- Action CustomScriptCode
+  - param String set udg_mass_teleport_effect = AddSpecialEffect("Abilities\\Spells\\Human\\MassTeleport\\MassTeleportTo.mdl", GetUnitX(udg_Jaina), GetUnitY(udg_Jaina))
 - Action AttachSoundToUnitBJ
   - param Variable gg_snd_MassTeleportTarget
   - param Variable Jaina
@@ -3338,7 +3350,19 @@ Run Trigger DIALOGUE C
 - Action CommentString
   - param String --------------------------------------------------------------------------------------------------------------------------
 - Action TriggerSleepAction
-  - param String 6.00
+  - param String 2.8
+- Action CustomScriptCode
+  - param String call DestroyEffect(udg_mass_teleport_effect)
+- Action CustomScriptCode
+  - param String set udg_mass_teleport_effect = AddSpecialEffect("Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl", GetUnitX(udg_Jaina), GetUnitY(udg_Jaina))
+- Action TriggerSleepAction
+  - param String 0.5
+- Action ShowUnitHide
+  - param Variable Jaina
+- Action TriggerSleepAction
+  - param String 2.5
+- Action CustomScriptCode
+  - param String call DestroyEffect(udg_mass_teleport_effect)
 - Action IfThenElse
   - param Function 
     - Condition OperatorCompareBoolean
@@ -3357,8 +3381,6 @@ Run Trigger DIALOGUE C
   - param String 0
   - param String 0
   - param String 0
-- Action ShowUnitHide
-  - param Variable Jaina
 - Action SetUnitOwner
   - param Variable Jaina
   - param Preset PlayerNP

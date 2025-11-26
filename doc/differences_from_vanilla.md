@@ -24,12 +24,18 @@
 * Starting captain replaced with footman
 * Starting footman replaced with irregular
 * Defend is no longer unlocked at the footman rescue
-
-## Human 4
 * Jaina summoning the water elemental in the opening cinematic is now faked
 
+## Human 4
+* If bonus merc camps are on:
+  * A bonus merc camp is created northeast of the player's base
+
 ## Human 5
-None
+* Two starting footmen are replaced with Irregulars
+* Jaina mass teleporting away in the opening cinematic is now faked
+* If bonus merc camps are on:
+  * A bonus merc camp is created north of the player's base
+  * The bonus merc camp is defended by creeps - 1x Ogre Warrior, 1x Brigand
 
 ## Human 6
 None

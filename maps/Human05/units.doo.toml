@@ -164,7 +164,7 @@ entity_id = 108
 
 [[units]]
 
-type_id = 'hfoo'  # Footman
+type_id = 'hA00'
 variation = 0
 x = 6645.9189453125
 y = -7613.7177734375
@@ -194,7 +194,7 @@ entity_id = 25
 
 [[units]]
 
-type_id = 'hfoo'  # Footman
+type_id = 'hA00'
 variation = 0
 x = 6722.1494140625
 y = -7859.15869140625
