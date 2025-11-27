@@ -423,6 +423,25 @@ table_column = 0
 value = 0
 object_id = 'null'
 
+[[blizzard_objects.entities]]
+parent_id = 'nmrd'  # Mercenary Camp
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Asud,Ane2,Avul"
+object_id = 'nmrd'  # Mercenary Camp
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'useu'  # Profile.Units Sold
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'nmrd'  # Mercenary Camp
+
 [map_objects]
 [[map_objects.entities]]
 parent_id = 'nvil'  # Villager
@@ -545,7 +564,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "''Zombie of Mal'Ganis''"
+value = "Zombie of Mal'Ganis"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
