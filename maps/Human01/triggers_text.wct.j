@@ -145,6 +145,8 @@ integer last_location_packet = -1
 integer last_message_packet = -1
 integer last_hero_packet = -1
 integer last_item_packet = -1
+integer last_mercenaries_packet = -1
+integer last_settings_packet = -1
 integer last_item_channel_packet = -1
 integer checks_before_timeout = 2
 boolean array locations_checked
@@ -157,6 +159,8 @@ integer num_channel_2_items_received = 0
 integer array gold_granted
 timer status_ack_ping_timer
 trigger t_captain_promoted
+trigger t_apply_mercenaries
+trigger t_create_mercenary_camps
 endglobals
 
 function status_send takes nothing returns nothing
@@ -166,7 +170,7 @@ function status_send takes nothing returns nothing
     call io_write(COMM_VERSION)
     call io_write(I2S(world_id))
     call io_write(I2S(MISSION_ID))
-    call io_write(I2S(last_unlock_packet) + "," + I2S(last_location_packet) + "," + I2S(last_message_packet) + "," + I2S(last_hero_packet) + "," + I2S(last_item_packet) + "," + I2S(last_item_channel_packet) + ",-1")
+    call io_write(I2S(last_unlock_packet) + "," + I2S(last_location_packet) + "," + I2S(last_message_packet) + "," + I2S(last_hero_packet) + "," + I2S(last_item_packet) + "," + I2S(last_item_channel_packet) + ",-1," + I2S(last_mercenaries_packet) + "," + I2S(last_settings_packet))
     call io_write(I2S(hero_status_index))
     call io_write(I2S(num_channel_1_items_received) + "," + I2S(num_channel_2_items_received))
     call io_write("_")
@@ -368,6 +372,32 @@ function status_init_item_channels takes integer local_channel_id returns nothin
     endif
 endfunction
 
+function status_load_mercenaries takes nothing returns nothing
+    local integer i = 0
+    call SetPlayerTechMaxAllowed(Player(0), 'nech', -1)
+    call SetPlayerTechMaxAllowed(Player(0), 'nalb', 0)
+    loop
+        exitwhen i >= 10
+        call SetPlayerTechMaxAllowed(Player(i), 'ncrb', 0)
+        call SetPlayerTechMaxAllowed(Player(i), 'ndog', 0)
+        call SetPlayerTechMaxAllowed(Player(i), 'ndwm', 0)
+        set i = i + 1
+    endloop
+    call io_read_file_simple("mercenaries.txt")
+    set last_mercenaries_packet = GetPlayerTechMaxAllowed(Player(0), 'nech')
+    call TriggerExecute(t_apply_mercenaries)
+endfunction
+
+function status_load_settings takes nothing returns nothing
+    call SetPlayerTechMaxAllowed(Player(0), 'nech', -1)
+    call SetPlayerTechMaxAllowed(Player(0), 'nmer', 0)
+    call io_read_file_simple("settings.txt")
+    set last_settings_packet = GetPlayerTechMaxAllowed(Player(0), 'nech')
+    if GetPlayerTechMaxAllowed(Player(0), 'nmer') > 0 then
+        call TriggerExecute(t_create_mercenary_camps)
+    endif
+endfunction
+
 function status_check_ping takes nothing returns nothing
     local integer bitmask = 0
     local boolean should_send = false
@@ -404,16 +434,23 @@ function status_check_ping takes nothing returns nothing
     if bitmask > 0 then
         set should_send = true
     endif
+    if bitmask >= 512 then
+        // bitmask & 511
+        set bitmask = bitmask - ((bitmask / 512) * 512)
+    endif
     if bitmask >= 256 then
-        // bitmask & 255
-        set bitmask = bitmask - ((bitmask / 256) * 256)
+        set bitmask = bitmask - 256
+        // settings
+        call status_load_settings()
     endif
     if bitmask >= 128 then
         set bitmask = bitmask - 128
-        // unused
+        // mercenaries
+        call status_load_mercenaries()
     endif
     if bitmask >= 64 then
         set bitmask = bitmask - 64
+        // hero levels
         call TriggerExecute(t_hero_set_all_max_level)
     endif
     if bitmask >= 32 then
@@ -466,6 +503,11 @@ function InitTrig_status takes nothing returns nothing
     call TimerStart(status_ack_ping_timer, 1, true, function status_check_ping)
     // Captains
     call captains_init()
+    // Disable marketplace behaviour
+    call PauseTimer(bj_stockUpdateTimer)
+    call DestroyTimer(bj_stockUpdateTimer)
+    set bj_stockUpdateTimer = null
+    call DisableTrigger(bj_stockItemPurchased)
 endfunction
 
 //\\// Trigger #3
@@ -828,6 +870,7 @@ endfunction
 // depends: status
 globals
 trigger t_location_found = null
+trigger t_item_purchased = null
 endglobals
 
 function item_location_send takes integer item_id returns nothing
@@ -912,10 +955,20 @@ function trigger_function_pick_up_item takes nothing returns nothing
     endif
 endfunction
 
+function trigger_function_remove_from_stock takes nothing returns nothing
+    local integer item_type = GetItemTypeId(GetSoldItem())
+    if item_location_in_range(item_type) then
+        call RemoveItemFromStock(GetSellingUnit(), item_type)
+    endif
+endfunction
+
 function InitTrig_item_locations takes nothing returns nothing
     set t_location_found = CreateTrigger()
     call TriggerRegisterPlayerUnitEventSimple(t_location_found, USER_PLAYER, EVENT_PLAYER_UNIT_PICKUP_ITEM)
     call TriggerAddAction(t_location_found, function trigger_function_pick_up_item)
+    set t_item_purchased = CreateTrigger()
+    call TriggerRegisterPlayerUnitEvent(t_item_purchased, Player(PLAYER_NEUTRAL_PASSIVE), EVENT_PLAYER_UNIT_SELL_ITEM, null)
+    call TriggerAddAction(t_item_purchased, function trigger_function_remove_from_stock)
 endfunction
 
 //\\// Trigger #5
