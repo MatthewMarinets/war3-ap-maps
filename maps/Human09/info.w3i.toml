@@ -2,8 +2,8 @@
 # See w3i.py for type definitions
 
 version = "TFT"
-map_revision = 487
-editor_version = 4422
+map_revision = 488
+editor_version = 6061
 map_name = 'TRIGSTR_004'
 map_author = 'TRIGSTR_007'
 map_description = 'TRIGSTR_006'

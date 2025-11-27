@@ -81,72 +81,6 @@ value = 0
 object_id = 'null'
 
 [[blizzard_objects.entities]]
-parent_id = 'phea'  # Potion of Healing
-entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
-[[blizzard_objects.entities]]
-parent_id = 'pman'  # Potion of Mana
-entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
-[[blizzard_objects.entities]]
-parent_id = 'pinv'  # Potion of Invisibility
-entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
-[[blizzard_objects.entities]]
-parent_id = 'shea'  # Scroll of Healing
-entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
-[[blizzard_objects.entities]]
-parent_id = 'spro'  # Scroll of Protection
-entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
-[[blizzard_objects.entities]]
-parent_id = 'stwp'  # Scroll of Town Portal
-entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
-[[blizzard_objects.entities]]
 parent_id = 'ngme'  # Goblin Merchant
 entity_id = 'null'
 [[blizzard_objects.entities.modifications]]
@@ -463,7 +397,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_091"
+value = "The Guardian"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -543,7 +477,7 @@ modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_220"
+value = "Medium"
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -554,7 +488,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_091"
+value = "The Guardian"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -562,7 +496,7 @@ modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_221"
+value = "Hard"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]

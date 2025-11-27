@@ -4,7 +4,71 @@ version = 2
 has_levels = false
 
 [blizzard_objects]
-entities = []
+[[blizzard_objects.entities]]
+parent_id = 'phea'  # Potion of Healing
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'pman'  # Potion of Mana
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'pinv'  # Potion of Invisibility
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'shea'  # Scroll of Healing
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'spro'  # Scroll of Protection
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'stwp'  # Scroll of Town Portal
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
 
 [map_objects]
 [[map_objects.entities]]
