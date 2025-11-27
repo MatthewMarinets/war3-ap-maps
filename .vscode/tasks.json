@@ -118,7 +118,29 @@
                 "clear": false,
                 "close": false
             }
-        }
+        },
+        {
+            "label": "round64",
+            "type": "shell",
+            "command": ["python3"],
+            "args": [
+                "-m", "scripts.round_64", "${input:value}"
+            ],
+            "group": {
+                "kind": "none",
+                "isDefault": false
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false,
+                "close": false
+            }
+        },
     ],
     "inputs": [
         {
@@ -126,6 +148,12 @@
             "description": "4-character game ID",
             "default": "ogru",
             "type": "promptString"
-        }
+        },
+        {
+            "id": "value",
+            "description": "a number",
+            "default": "480",
+            "type": "promptString"
+        },
     ]
 }
