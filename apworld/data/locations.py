@@ -203,9 +203,9 @@ class Wc3Location(enum.Enum):
     # (Main) Frostmourne
     # (Main) Mal'Ganis
     HU9_VICTORY =                   10900, "Victory",                   Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.VICTORY
-    HU9_WOLF_ITEM =                 10901, "Wolf Item 1",               Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.ITEM, "Periapt of Vitality"
-    HU9_WOLF_ITEM_2 =               10902, "Wolf Item 2",               Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.ITEM, "Ring of Protection +3"
-    HU9_WENDIGO_SHAMAN_ITEM =       10903, "Wendigo Shaman Item",       Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.ITEM, "Tome of Agility"
+    HU9_DIRE_FROST_WOLF_ITEM =      10901, "Dire Frost Wolf Item 1",    Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.ITEM, "Ring of Protection +3"
+    HU9_DIRE_FROST_WOLF_ITEM_2 =    10902, "Dire Frost Wolf Item 2",    Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.ITEM, "Periapt of Vitality"
+    HU9_WENDIGO_SHAMAN_ITEM =       10903, "Wendigo Shaman Item 1",     Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.ITEM, "Tome of Agility"
     HU9_WENDIGO_SHAMAN_ITEM_2 =     10904, "Wendigo Shaman Item 2",     Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.ITEM, "Potion of Greater Mana"
     HU9_ICE_TROLL_WARLORD_ITEM =    10905, "Ice Troll Warlord Item",    Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.ITEM, "Health Stone"
     HU9_NERUBIAN_SEER_ITEM =        10906, "Nerubian Seer Item",        Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.ITEM, "Potion of Mana"
