@@ -143,6 +143,18 @@ def update_imp_file(imp_file: str) -> None:
         fp.write(imp.as_text(imp_data))
 
 
+def update_unit_data(unit_data_file: str) -> None:
+    if os.path.isfile(unit_data_file):
+        with open(unit_data_file, 'r') as fp:
+            imp_text = fp.read()
+        units_data = w3o.from_text(imp_text)
+    else:
+        units_data = w3o.War3ObjectData(2, has_levels=False)
+    units_data.version = 2
+    with open(unit_data_file, 'w') as fp:
+        fp.write(w3o.as_text(units_data))
+
+
 def update_listfile(listfile_path: str) -> None:
     with open(listfile_path, 'r') as fp:
         lines = fp.readlines()
@@ -327,6 +339,7 @@ def main(map_dir: str) -> int:
     add_ap_models(f'{map_dir}/war3mapImported')
     update_listfile(f'{map_dir}/(listfile)')
     update_imp_file(f'{map_dir}/imports.imp.toml')
+    update_unit_data(f'{map_dir}/o_units.w3u.toml')
     update_triggers(map_dir)
 
     update_irregulars.main(map_dir)
