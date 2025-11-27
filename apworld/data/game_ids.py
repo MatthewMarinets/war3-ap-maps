@@ -2138,7 +2138,8 @@ class CreepSpecies(enum.IntEnum):
     Wildkin = 59
     Wizards = 60
     Wolves = 61
-    Zombies = 62
+    Frost_Wolves = 62
+    Zombies = 63
 
 
 def int_to_id(integer_id: int) -> GameID|None:

@@ -55,7 +55,8 @@ so the UI may not be very clear here.
 * Spawn merc camps in build missions that didn't have them in vanilla
 * Using `nmrd` (Icecrown Glacier mercenary camp), as that is never used in the campaign
   * Clear units sold lost
-  * Add "Sell Units" ability (Final list looks like `Asud,Ane2,Avul`)
+  * Add "Sell Units" (`Asud`) ability
+    * Final list looks like `Asud,Ane2,Avul`, + `Asid` if vanilla selling location items
 
 #### Possible locations
 Noting possible locations, including rejected ones.

@@ -20,6 +20,37 @@ class IncludedCampaigns(baseoptions.OptionSet):
     )
 
 
+class BonusMercenaryCamps(baseoptions.Toggle):
+    """Adds mercenary camps to build missions that did not have them in vanilla."""
+
+
+class MercenaryAllocation(baseoptions.Choice):
+    """
+    Specifies what mercenaries can be hired in what missions.
+    vanilla:      Mercenary camps have their vanilla rosters.
+                  Non-vanilla camps will have 3-4 fixed tileset-appropriate mercs.
+    vanilla_plus: Random additional mercs are added to the mercenary camp pools
+                  in addition to vanilla/tileset rosters.
+    species:      Mercenary camps will supply mercenaries from 2~3 randomly-selected species.
+    full_random:  Mercenary camps will supply a random collection of mercenaries.
+    """
+    option_vanilla = 0
+    option_vanilla_plus = 1
+    option_species = 2
+    option_full_random = 3
+    default = option_vanilla
+
+
+class MercenariesPerCamp(baseoptions.Range):
+    """
+    Specifies how many mercenaries a single camp can offer.
+    Will not eliminate fixed/vanilla mercs specified by `vanilla` or `vanilla_plus` allocations.
+    """
+    range_start = 3
+    range_end = 10
+    default = 4
+
+
 class OptionHeroChoice(baseoptions.Choice):
     option_paladin_arthas = HeroChoice.PALADIN_ARTHAS.id
     option_jaina = HeroChoice.JAINA.id
@@ -170,27 +201,27 @@ class GromHellscreamName(OptionHeroName):
     """The name for the hero unit in the Grom Hellscream slot"""
     default = HeroChoice.GROM_HELLSCREAM.hero_name
 
-class TyrandeHero(OptionHeroChoice):
+class TyrandeRocHero(OptionHeroChoice):
     """What hero will appear everywhere Tyrande (RoC) appears"""
     default = HeroChoice.TYRANDE.id
 
-class TyrandeName(OptionHeroName):
+class TyrandeRocName(OptionHeroName):
     """The name for the hero unit in the Tyrande (RoC) slot"""
     default = HeroChoice.TYRANDE.hero_name
 
-class FurionHero(OptionHeroChoice):
+class FurionRocHero(OptionHeroChoice):
     """What hero will appear everywhere Furion (RoC) appears"""
     default = HeroChoice.FURION.id
 
-class FurionName(OptionHeroName):
+class FurionRocName(OptionHeroName):
     """The name for the hero unit in the Furion (RoC) slot"""
     default = HeroChoice.FURION.hero_name
 
-class IllidanHero(OptionHeroChoice):
+class IllidanRocHero(OptionHeroChoice):
     """What hero will appear everywhere Illidan (RoC) appears"""
     default = HeroChoice.ILLIDAN.id
 
-class IllidanName(OptionHeroName):
+class IllidanRocName(OptionHeroName):
     """The name for the hero unit in the Illidan (RoC) slot"""
     default = HeroChoice.ILLIDAN.hero_name
 
@@ -202,31 +233,150 @@ class MaievName(OptionHeroName):
     """The name for the hero unit in the Maiev slot"""
     default = HeroChoice.MAIEV.hero_name
 
+class TyrandeTftHero(OptionHeroChoice):
+    """What hero will appear everywhere Tyrande (TFT) appears"""
+    default = HeroChoice.TYRANDE.id
+
+class TyrandeTftName(OptionHeroName):
+    """The name for the hero unit in the Tyrande (TFT) slot"""
+    default = HeroChoice.TYRANDE.hero_name
+
+class MalfurionTftHero(OptionHeroChoice):
+    """What hero will appear everywhere Malfurion (TFT) appears"""
+    default = HeroChoice.MALFURION.id
+
+class MalfurionTftName(OptionHeroName):
+    """The name for the hero unit in the Malfurion (TFT) slot"""
+    default = HeroChoice.MALFURION.hero_name
+
+class IllidanTftHero(OptionHeroChoice):
+    """What hero will appear everywhere Illidan (TFT) appears"""
+    default = HeroChoice.DEMON_ILLIDAN.id
+
+class IllidanTftName(OptionHeroName):
+    """The name for the hero unit in the Illidan (TFT) slot"""
+    default = HeroChoice.DEMON_ILLIDAN.hero_name
+
+class KaelHero(OptionHeroChoice):
+    """What hero will appear everywhere Kael appears"""
+    default = HeroChoice.KAEL.id
+
+class KaelName(OptionHeroName):
+    """The name for the hero unit in the Kael slot"""
+    default = HeroChoice.KAEL.hero_name
+
+class LadyVashjHero(OptionHeroChoice):
+    """What hero will appear everywhere Lady Vashj appears"""
+    default = HeroChoice.LADY_VASHJ.id
+
+class LadyVashjName(OptionHeroName):
+    """The name for the hero unit in the Lady Vashj slot"""
+    default = HeroChoice.LADY_VASHJ.hero_name
+
+class AkamaHero(OptionHeroChoice):
+    """What hero will appear everywhere Akama appears"""
+    default = HeroChoice.AKAMA.id
+
+class AkamaName(OptionHeroName):
+    """The name for the hero unit in the Akama slot"""
+    default = HeroChoice.AKAMA.hero_name
+
+class ArthasTftHero(OptionHeroChoice):
+    """What hero will appear everywhere Arthas (TFT) appears"""
+    default = HeroChoice.DEATH_KNIGHT_ARTHAS.id
+
+class ArthasTftName(OptionHeroName):
+    """The name for the hero unit in the Arthas (TFT) slot"""
+    default = HeroChoice.DEATH_KNIGHT_ARTHAS.hero_name
+
+class KelThuzadTftHero(OptionHeroChoice):
+    """What hero will appear everywhere Kel'Thuzad (TFT) appears"""
+    default = HeroChoice.KEL_THUZAD.id
+
+class KelThuzadTftName(OptionHeroName):
+    """The name for the hero unit in the Kel'Thuzad (TFT) slot"""
+    default = HeroChoice.KEL_THUZAD.hero_name
+
+class SylvanasHero(OptionHeroChoice):
+    """What hero will appear everywhere Sylvanas (TFT) appears"""
+    default = HeroChoice.SYLVANAS.id
+
+class SylvanasName(OptionHeroName):
+    """The name for the hero unit in the Sylvanas (TFT) slot"""
+    default = HeroChoice.SYLVANAS.hero_name
+
+class VarimathrasHero(OptionHeroChoice):
+    """What hero will appear everywhere Varimathras appears"""
+    default = HeroChoice.VARIMATHRAS.id
+
+class VarimathrasName(OptionHeroName):
+    """The name for the hero unit in the Varimathras slot"""
+    default = HeroChoice.VARIMATHRAS.hero_name
+
+class AnubarakHero(OptionHeroChoice):
+    """What hero will appear everywhere Anub'arak appears"""
+    default = HeroChoice.VARIMATHRAS.id
+
+class AnubarakName(OptionHeroName):
+    """The name for the hero unit in the Anub'arak slot"""
+    default = HeroChoice.ANUB_ARAK.hero_name
+
+class LordGarithosHero(OptionHeroChoice):
+    """What hero will appear everywhere Lord Garithos appears"""
+    default = HeroChoice.VARIMATHRAS.id
+
+class LordGarithosName(OptionHeroName):
+    """The name for the hero unit in the Lord Garithos slot"""
+    default = HeroChoice.LORD_GARITHOS.hero_name
+    # default = "Garibon"
+    # default = "Gilithos"
+
 
 @dataclass
 class Wc3Options(baseoptions.PerGameCommonOptions):
     included_campaigns: IncludedCampaigns
+    bonus_mercenary_camps: BonusMercenaryCamps
+    mercenary_allocation: MercenaryAllocation
+    mercenaries_per_camp: MercenariesPerCamp
     paladin_arthas_hero: PaladinArthasHero
     paladin_arthas_name: PaladinArthasName
     jaina_hero: JainaHero
     jaina_name: JainaName
     muradin_bronzebeard_hero: MuradinBronzebeardHero
     muradin_bronzebeard_name: MuradinBronzebeardName
-    death_knight_arthas_hero: DeathKnightArthasHero
-    death_knight_arthas_name: DeathKnightArthasName
-    kel_thuzad_hero: KelThuzadHero
-    kel_thuzad_name: KelThuzadName
-    thrall_hero: ThrallHero
-    thrall_name: ThrallName
-    cairne_bloodhoof_hero: CairneBloodhoofHero
-    cairne_bloodhoof_name: CairneBloodhoofName
-    grom_hellscream_hero: GromHellscreamHero
-    grom_hellscream_name: GromHellscreamName
-    tyrande_hero: TyrandeHero
-    tyrande_name: TyrandeName
-    furion_hero: FurionHero
-    furion_name: FurionName
-    illidan_hero: IllidanHero
-    illidan_name: IllidanName
-    maiev_hero: MaievHero
-    maiev_name: MaievName
+    # death_knight_arthas_hero: DeathKnightArthasHero
+    # death_knight_arthas_name: DeathKnightArthasName
+    # kel_thuzad_hero: KelThuzadHero
+    # kel_thuzad_name: KelThuzadName
+    # thrall_hero: ThrallHero
+    # thrall_name: ThrallName
+    # cairne_bloodhoof_hero: CairneBloodhoofHero
+    # cairne_bloodhoof_name: CairneBloodhoofName
+    # grom_hellscream_hero: GromHellscreamHero
+    # grom_hellscream_name: GromHellscreamName
+    # tyrande_hero: TyrandeRocHero
+    # tyrande_name: TyrandeRocName
+    # furion_hero: FurionRocHero
+    # furion_name: FurionRocName
+    # illidan_roc_hero: IllidanRocHero
+    # illidan_roc_name: IllidanRocName
+    # maiev_hero: MaievHero
+    # maiev_name: MaievName
+    # tyrande_tft_hero: TyrandeTftHero
+    # tyrande_tft_name: TyrandeTftName
+    # malfurion_tft_hero: MalfurionTftHero
+    # malfurion_tft_name: MalfurionTftName
+    # illidan_tft_hero: IllidanTftHero
+    # illidan_tft_name: IllidanTftName
+    # kael_hero: KaelHero
+    # kael_name: KaelName
+    # lady_vashj_hero: LadyVashjHero
+    # lady_vashj_name: LadyVashjName
+    # akama_hero: AkamaHero
+    # akama_name: AkamaName
+    # arthas_tft_hero: ArthasTftHero
+    # arthas_tft_name: ArthasTftName
+    # kel_thuzad_tft_hero: KelThuzadTftHero
+    # kel_thuzad_tft_name: KelThuzadTftName
+    # sylvanas_hero: SylvanasHero
+    # sylvanas_name: SylvanasName
