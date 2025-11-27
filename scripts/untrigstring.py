@@ -25,9 +25,7 @@ def un_trig_string(filename: str, wts_strings: dict[int, str]) -> set[str]:
         result = wts_strings[match.group()]
         result = result.replace('\\', '\\\\')
         result = result.replace('\n', '\\n')
-        if "'" in result:
-            return f"''{result}''"
-        return result.replace("'", r"\'")
+        return result
 
     matches = re.findall(TRIG_STRING_PATTERN, contents)
     for match in matches:
