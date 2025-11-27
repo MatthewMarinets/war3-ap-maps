@@ -230,6 +230,18 @@ version = TFT
 ### Functions
 
 
+## AP mercenaries
+- enabled: True
+- category: [14] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
 ## AP Load Arthas
 - enabled: True
 - category: [14] Archipelago
