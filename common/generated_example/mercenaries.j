@@ -7,7 +7,6 @@ function mercenaries_create_camp takes nothing returns nothing
     if mercenary_camp != null then
         return
     endif
-    // grid hexes are multiples of 64
     set mercenary_camp = CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), 'nmrd', -960.0, -896.0, 270.0)
     call SetUnitColor(mercenary_camp, ConvertPlayerColor(7))
 endfunction

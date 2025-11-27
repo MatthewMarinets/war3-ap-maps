@@ -53,14 +53,34 @@ so the UI may not be very clear here.
 ### Proposal 2: Bonus merc camps
 * yaml option
 * Spawn merc camps in build missions that didn't have them in vanilla
+* Using `nmrd` (Icecrown Glacier mercenary camp), as that is never used in the campaign
+  * Clear units sold lost
+  * Add "Sell Units" ability (Final list looks like `Asud,Ane2,Avul`)
 
-| M    | Location                                             |
-| ---- | ---------------------------------------------------- |
-| H2   | Gnoll camp north of base                             |
-| H4   | High Ground east of Murloc Nightcrawler camp         |
-| H5   | Clearing between southwest base exit and Mark recue  |
-| H6   | Bandit camp west of base                             |
-| H7   | Troll High Priest camp? East Troll Camp?             |
+#### Possible locations
+Noting possible locations, including rejected ones.
+In case I want to allow multiple bonus camps per mission or randomize merc camp locations.
+
+* H2
+  * [Implemented] Orc Campfire (-960, -832)
+  * Murloc area entrance (-3200, 640)
+  * Black Dragon entrance (3136, -3264)
+* H4
+  * [Implemented] High ground east of Murloc Nightcrawlers (-960, -896)
+* H5
+  * [Implemented] Gap in trees north of base (4864, -1984)
+    * Defended by creep camp: Brigand, Ogre Warrior
+  * East of Murloc ramp (896, -4160)
+  * High ground east of Green base, west of zombie farm (64.0, -7616.0)
+* H6
+  * [Implemented] Bandit camp west of base (2496, 7488)
+  * Center-east plaza (7934, -2880)
+  * South city trees (8384, -7424)
+    * Replace trees YTct_3178, YTct_3177
+* H7
+  * [Implemented] No-build troll camp (2176, -4672)
+  * Wendigo camp (64, 1024)
+  * Purple Undead base (2688, 3968)
 
 ## No-builds
 No-builds get kind of samey if you start with vanilla units, as that's enough to beat the mission.
