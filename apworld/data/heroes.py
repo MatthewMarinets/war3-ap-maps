@@ -18,23 +18,24 @@ class HeroSlot(enum.IntEnum):
     DEATH_KNIGHT_ARTHAS = 7
     KEL_THUZAD = 8
     ARTHAS_TFT = 9
-    SYLVANAS = 10
-    VARIMATHRAS = 11
-    ANUB_ARAK = 12
+    KEL_THUZAD_TFT = 10
+    SYLVANAS = 11
+    VARIMATHRAS = 12
+    ANUB_ARAK = 13
 
-    TYRANDE = 13
-    FURION = 14
-    ILLIDAN = 15
-    TYRANDE_TFT = 16
-    MALFURION = 17
-    MAIEV = 18
+    TYRANDE = 14
+    FURION = 15
+    ILLIDAN = 16
+    TYRANDE_TFT = 17
+    MALFURION = 18
+    MAIEV = 19
 
-    KAEL = 19
-    DEMON_ILLIDAN = 20
-    LADY_VASHJ = 21
-    AKAMA = 22
+    KAEL = 20
+    DEMON_ILLIDAN = 21
+    LADY_VASHJ = 22
+    AKAMA = 23
 
-    LORD_GARITHOS = 23
+    LORD_GARITHOS = 24
 
 
 class HeroSource(enum.IntEnum):
@@ -232,6 +233,7 @@ HERO_SLOT_TO_DEFAULT_CHOICE = {
 }
 HERO_SLOT_TO_DEFAULT_CHOICE[HeroSlot.TYRANDE_TFT] = HeroChoice.TYRANDE
 HERO_SLOT_TO_DEFAULT_CHOICE[HeroSlot.ARTHAS_TFT] = HeroChoice.DEATH_KNIGHT_ARTHAS
+HERO_SLOT_TO_DEFAULT_CHOICE[HeroSlot.KEL_THUZAD_TFT] = HeroChoice.KEL_THUZAD
 assert len(HERO_SLOT_TO_DEFAULT_CHOICE) == len(HeroSlot)
 HERO_CHOICE_ID_TO_DATA = {_choice.id: _choice for _choice in HeroChoice}
 

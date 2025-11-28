@@ -74,20 +74,20 @@ constant integer HERO_ID_GROM_HELLSCREAM = 6
 constant integer HERO_ID_DEATH_KNIGHT_ARTHAS = 7
 constant integer HERO_ID_KEL_THUZAD = 8
 constant integer HERO_ID_ARTHAS_TFT = 9
-constant integer HERO_ID_SYLVANAS = 10
-constant integer HERO_ID_VARIMATHRAS = 11
-constant integer HERO_ID_ANUB_ARAK = 12
-constant integer HERO_ID_TYRANDE = 13
-constant integer HERO_ID_FURION = 14
-constant integer HERO_ID_ILLIDAN = 15
-constant integer HERO_ID_TYRANDE_TFT = 16
-constant integer HERO_ID_MALFURION = 17
-constant integer HERO_ID_MAIEV = 18
-constant integer HERO_ID_KAEL_THAS = 19
-constant integer HERO_ID_DEMON_ILLIDAN = 20
-constant integer HERO_ID_LADY_VASHJ = 21
-constant integer HERO_ID_AKAMA = 22
-constant integer HERO_ID_LORD_GARITHOS = 23
+constant integer HERO_ID_SYLVANAS = 11
+constant integer HERO_ID_VARIMATHRAS = 12
+constant integer HERO_ID_ANUB_ARAK = 13
+constant integer HERO_ID_TYRANDE = 14
+constant integer HERO_ID_FURION = 15
+constant integer HERO_ID_ILLIDAN = 16
+constant integer HERO_ID_TYRANDE_TFT = 17
+constant integer HERO_ID_MALFURION = 18
+constant integer HERO_ID_MAIEV = 19
+constant integer HERO_ID_KAEL_THAS = 20
+constant integer HERO_ID_DEMON_ILLIDAN = 21
+constant integer HERO_ID_LADY_VASHJ = 22
+constant integer HERO_ID_AKAMA = 23
+constant integer HERO_ID_LORD_GARITHOS = 24
 endglobals
 
 function hero_get_unit_from_index takes integer slot returns unit
