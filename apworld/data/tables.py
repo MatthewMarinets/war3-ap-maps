@@ -215,7 +215,7 @@ MISSION_TO_PRESET_MERCENARIES = {
         2: Wc3Item.MERC_MUD_GOLEM,
         3: Wc3Item.MERC_GNOLL_ASSASSIN,
     },
-    Wc3Mission.H5_THE_CULT_OF_THE_DAMNED: {
+    Wc3Mission.H5_MARCH_OF_THE_SCOURGE: {
         0: Wc3Item.MERC_ROGUE,
         1: Wc3Item.MERC_BRIGAND,
         2: Wc3Item.MERC_MURLOC_FLESHEATER,
