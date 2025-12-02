@@ -22,6 +22,10 @@
 * [Ability Insight Google doc](https://docs.google.com/document/d/1z17FTnhyfVL87tJgLmwWks3Low6TuQ0tjfKHXBELWpo/edit)
 * [Dynamic ability modification field table](https://www.hiveworkshop.com/pastebin/b2769ab71109c3634b3115937deaa34a.24187)
 
+## jass
+* [AddUnitToStock and AddItemToStock explanation + fix](https://www.hiveworkshop.com/threads/about-natives-additemtostock-additemtoallstock-addunittostock-addunittoallstock.251815/)
+* [WaterKnight's guide to sounds in jass](http://hiveworkshop.com/threads/quirks-of-sounds.201362/)
+
 ## General (not Warcraft 3-specific)
 * [zlib RFC](https://www.rfc-editor.org/rfc/rfc1950)
 * [SO answer for getting raw inflate/deflate algorithms in Python](https://stackoverflow.com/questions/1089662/python-inflate-and-deflate-implementations)
@@ -30,6 +34,5 @@
 
 ## Misc
 * [Warcraft 3 Liquipedia](https://liquipedia.net/warcraft/Main_Page)
-* [WaterKnight's guide to sounds in jass](http://hiveworkshop.com/threads/quirks-of-sounds.201362/)
 * [Text colour modes basic intro](https://world-editor-tutorials.thehelper.net/colors.php)
 * [JHCR Writeup](https://lep.duckdns.org/blog/2020-09-25-jhcr-a-high-level-overview.html)
