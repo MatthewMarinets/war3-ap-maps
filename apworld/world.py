@@ -1,7 +1,7 @@
 """Defines the top-level world class. Requires core imports."""
 from typing import TYPE_CHECKING, Mapping, Any, ClassVar
 from worlds.AutoWorld import World
-from .data import items, locations
+from .data import items, locations, item_groups
 from . import options, generation, rules
 
 
@@ -22,7 +22,9 @@ class Wc3World(World):
     item_id_to_name = items.item_id_to_name
     location_name_to_id = locations.location_name_to_id
     location_id_to_name = locations.location_id_to_name
-    item_name_groups: ClassVar[dict[str, set[str]]] = {}
+    item_name_groups: ClassVar[dict[str, set[str]]] = {
+        k: set(v) for k, v in item_groups.item_name_groups.items()
+    }
     location_name_groups: ClassVar[dict[str, set[str]]] = {}
     options_dataclass = options.Wc3Options
     options: options.Wc3Options

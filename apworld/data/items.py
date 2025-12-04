@@ -1,7 +1,7 @@
 
 import enum
 import dataclasses
-from .missions import Wc3Race, Wc3Mission
+from .missions import Wc3Race, Wc3Mission, Wc3Campaign
 from .game_ids import Tech, GameID, CreepSpecies
 from .heroes import HeroSlot, ItemChannel
 
@@ -56,7 +56,8 @@ class QuestItem:
 
 @dataclasses.dataclass
 class CaptainPromotion:
-    game_id: Tech = Tech.CAPTAIN
+    game_id: Tech
+    campaign: Wc3Campaign
 
 
 @dataclasses.dataclass
@@ -361,7 +362,7 @@ class Wc3Item(enum.IntEnum):
     # ILLIDAN_TFT_LEVEL = _, "Illidan (TFT) Level",   Level(HeroSlot.DEMON_ILLIDAN, 10, 10)
 
     # Captains
-    CAPTAIN = 1100, "Captain Promotion", CaptainPromotion()
+    CAPTAIN = 1100, "Captain Promotion", CaptainPromotion(Tech.CAPTAIN, Wc3Campaign.HUMAN_1)
 
     # Resource Fillers
     FILLER_GOLD = 1200, "+100 Gold", Resources(GameID.GOLD_COINS, 100)
@@ -524,6 +525,11 @@ class Wc3Item(enum.IntEnum):
     MERC_WENDIGO_SHAMAN              = 3572, "Wendigo Shaman (Mercenary)", Mercenary(GameID.WENDIGO_SHAMAN, CreepSpecies.Wendigo)
     MERC_ANCIENT_WENDIGO             = 3573, "Ancient Wendigo (Mercenary)", Mercenary(GameID.ANCIENT_WENDIGO, CreepSpecies.Wendigo)
 
+    MERC_APPRENTICE_WIZARD           = 3600, "Apprentice Wizard (Mercenary)", Mercenary(GameID.APPRENTICE_WIZARD, CreepSpecies.Wizards)
+    MERC_ROGUE_WIZARD                = 3601, "Rogue Wizard (Mercenary)", Mercenary(GameID.ROGUE_WIZARD, CreepSpecies.Wizards)
+    MERC_RENEGADE_WIZARD             = 3602, "Renegade Wizard (Mercenary)", Mercenary(GameID.RENEGADE_WIZARD, CreepSpecies.Wizards)
+    MERC_DARK_WIZARD                 = 3603, "Dark Wizard (Mercenary)", Mercenary(GameID.DARK_WIZARD, CreepSpecies.Wizards)
+
     MERC_FROST_WOLF                  = 3620, "Frost Wolf (Mercenary)", Mercenary(GameID.FROST_WOLF, CreepSpecies.Frost_Wolves)
     MERC_GIANT_FROST_WOLF            = 3621, "Giant Frost Wolf (Mercenary)", Mercenary(GameID.GIANT_FROST_WOLF, CreepSpecies.Frost_Wolves)
     MERC_DIRE_FROST_WOLF             = 3622, "Dire Frost Wolf (Mercenary)", Mercenary(GameID.DIRE_FROST_WOLF, CreepSpecies.Frost_Wolves)
@@ -531,6 +537,7 @@ class Wc3Item(enum.IntEnum):
 
 NAME_TO_ITEM: dict[str, Wc3Item] = {}
 ID_TO_ITEM: dict[int, Wc3Item] = {}
+CATEGORY_TO_ITEMS: dict[type, list[Wc3Item]] = {}
 item_id_to_name: dict[int, str] = {}
 item_name_to_id: dict[str, int] = {}
 for item in Wc3Item:
@@ -540,11 +547,4 @@ for item in Wc3Item:
     ID_TO_ITEM[item.id] = item
     item_id_to_name[item.id] = item.item_name
     item_name_to_id[item.item_name] = item.id
-
-legacy_names_to_modern_names = {
-    "Gyrocopter": Wc3Item.FLYING_MACHINE.item_name,
-    "Steam Tank": Wc3Item.SIEGE_ENGINE.item_name,
-    "Catapult": Wc3Item.DEMOLISHER.item_name,
-    "Wyvern": Wc3Item.WIND_RIDER.item_name,
-    "Ballista": Wc3Item.GLAIVE_THROWER.item_name,
-}
+    CATEGORY_TO_ITEMS.setdefault(item.type.__class__, []).append(item)

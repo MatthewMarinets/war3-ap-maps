@@ -4,7 +4,7 @@ from dataclasses import dataclass
 
 import Options as baseoptions
 
-from .data.heroes import HeroSlot, HeroChoice
+from .data.heroes import HeroChoice
 from .data import missions
 
 if TYPE_CHECKING:
@@ -13,15 +13,19 @@ if TYPE_CHECKING:
 
 
 class IncludedCampaigns(baseoptions.OptionSet):
-    valid_keys = tuple(
-        campaign.title_faction
-        for campaign in missions.Wc3Campaign
-        if campaign != missions.Wc3Campaign.GENERAL
-    )
+    """Controls which campaigns will be included in the output world."""
+    # valid_keys = tuple(
+    #     campaign.title_faction
+    #     for campaign in missions.Wc3Campaign
+    #     if campaign not in (missions.Wc3Campaign.GENERAL, missions.Wc3Campaign.PROLOGUE)
+    # )
+    valid_keys = (missions.Wc3Campaign.HUMAN_1.title_faction,)
+    default = frozenset(valid_keys)
 
 
 class BonusMercenaryCamps(baseoptions.Toggle):
     """Adds mercenary camps to build missions that did not have them in vanilla."""
+    default = 0
 
 
 class MercenaryAllocation(baseoptions.Choice):
@@ -43,7 +47,7 @@ class MercenaryAllocation(baseoptions.Choice):
 
 class MercenariesPerCamp(baseoptions.Range):
     """
-    Specifies how many mercenaries a single camp can offer.
+    Specifies the maximum number of mercenaries a single camp can offer.
     Will not eliminate fixed/vanilla mercs specified by `vanilla` or `vanilla_plus` allocations.
     """
     range_start = 3
@@ -52,6 +56,8 @@ class MercenariesPerCamp(baseoptions.Range):
 
 
 class OptionHeroChoice(baseoptions.Choice):
+    suppress_choices_help = True
+
     option_paladin_arthas = HeroChoice.PALADIN_ARTHAS.id
     option_jaina = HeroChoice.JAINA.id
     option_muradin_bronzebeard = HeroChoice.MURADIN_BRONZEBEARD.id
@@ -132,7 +138,7 @@ class OptionHeroName(baseoptions.FreeText):
                         f"Character '{char}' in option {self} (offset {index}) is not a valid letter"
                     )
         if len(self.value) > self.max_length:
-            raise Exception(
+            raise baseoptions.OptionError(
                 f"Option {self} cannot be longer than {self.max_length} characters, got {len(self.value)}"
             )
 
@@ -140,6 +146,7 @@ class OptionHeroName(baseoptions.FreeText):
 class PaladinArthasHero(OptionHeroChoice):
     """What hero will appear everywhere Paladin Arthas appears"""
     default = HeroChoice.PALADIN_ARTHAS.id
+    suppress_choices_help = False
 
 class PaladinArthasName(OptionHeroName):
     """The name for the hero unit in the Paladin Arthas slot"""
@@ -313,11 +320,12 @@ class VarimathrasName(OptionHeroName):
     """The name for the hero unit in the Varimathras slot"""
     default = HeroChoice.VARIMATHRAS.hero_name
 
-class AnubarakHero(OptionHeroChoice):
+class AnubArakHero(OptionHeroChoice):
     """What hero will appear everywhere Anub'arak appears"""
+    # Note(mm): The in-game name has lowercase second a, "Anub'arak"
     default = HeroChoice.VARIMATHRAS.id
 
-class AnubarakName(OptionHeroName):
+class AnubArakName(OptionHeroName):
     """The name for the hero unit in the Anub'arak slot"""
     default = HeroChoice.ANUB_ARAK.hero_name
 
@@ -380,3 +388,13 @@ class Wc3Options(baseoptions.PerGameCommonOptions):
     # kel_thuzad_tft_name: KelThuzadTftName
     # sylvanas_hero: SylvanasHero
     # sylvanas_name: SylvanasName
+    # anub_arak_hero: AnubArakHero
+    # anub_arak_name: AnubArakName
+    # varimathras_hero: VarimathrasHero
+    # varimathras_name: VarimathrasName
+    # lord_garithos_hero: LordGarithosHero
+    # lord_garithos_name: LordGarithosName
+
+
+# Store the names of all options
+OPTION_NAME = {option_type: name for name, option_type in Wc3Options.type_hints.items()}

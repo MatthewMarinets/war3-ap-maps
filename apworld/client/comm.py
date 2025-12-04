@@ -62,7 +62,7 @@ class DefaultClientInterface:
 
 @dataclass
 class Wc3GameSettings:
-    extra_merc_camps: bool = False
+    extra_merc_camps: int = 0
 
 
 class Wc3Inventory:
@@ -210,7 +210,7 @@ class GameStatus:
 
 @dataclass
 class AsyncContext:
-    running: bool
+    running: bool = True
     game_status: GameStatus = field(default_factory=GameStatus)
     mission_status: MissionStatus = field(default_factory=MissionStatus)
     client_interface: ClientInterface = field(default_factory=DefaultClientInterface)

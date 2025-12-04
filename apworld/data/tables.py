@@ -179,7 +179,7 @@ ITEM_CHANNEL_TO_DEFAULT_HERO: dict[ItemChannel, HeroSlot] = {
     ItemChannel.FORSAKEN: HeroSlot.SYLVANAS,
 }
 
-MISSION_TO_VANILLA_MERCENARIES = {
+MISSION_TO_VANILLA_MERCENARIES: dict[Wc3Mission, dict[int, Wc3Item]] = {
     # Each mission contains a mapping of vanilla item slot to merc item.
     # In the case of multiple mercenary camps, each camp gets a range of 10 indices
     Wc3Mission.H8_DISSENSION: {
@@ -201,8 +201,12 @@ MISSION_TO_VANILLA_MERCENARIES = {
         3: Wc3Item.MERC_NERUBIAN_WEBSPINNER,
     },
 }
+MISSION_TO_NUM_VANILLA_MERC_CAMPS = {
+    mission: max(values) // 10 + 1
+    for mission, values in MISSION_TO_VANILLA_MERCENARIES.items()
+}
 
-MISSION_TO_PRESET_MERCENARIES = {
+MISSION_TO_PRESET_MERCENARIES: dict[Wc3Mission, dict[int, Wc3Item]] = {
     Wc3Mission.H2_BLACKROCK_AND_ROLL: {
         0: Wc3Item.MERC_FOREST_TROLL_BERSERKER,
         1: Wc3Item.MERC_FOREST_TROLL_SHADOW_PRIEST,
@@ -234,3 +238,7 @@ MISSION_TO_PRESET_MERCENARIES = {
         3: Wc3Item.MERC_GIANT_FROST_WOLF,
     },
 }
+
+CREEP_SPECIES_TO_ITEMS: dict[items.CreepSpecies, list[items.Wc3Item]] = {}
+for item in items.CATEGORY_TO_ITEMS[items.Mercenary]:
+    CREEP_SPECIES_TO_ITEMS.setdefault(item.type.species, []).append(item)

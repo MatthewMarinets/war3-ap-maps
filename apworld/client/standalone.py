@@ -352,8 +352,8 @@ def init_test_data(game_status: GameStatus) -> None:
     game_status.hero_data[heroes.HeroSlot.JAINA].hero = heroes.HeroChoice.FIRELORD
     game_status.hero_data[heroes.HeroSlot.JAINA].name = "Jenna"
     game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].hero = heroes.HeroChoice.BEASTMASTER
-    game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].name = "Murray"
-    game_status.settings.extra_merc_camps = True
+    game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].name = "Muradout Silverbeard"
+    game_status.settings.extra_merc_camps = 1
 
 
 def init_game_status(game_status: GameStatus) -> None:
@@ -361,7 +361,7 @@ def init_game_status(game_status: GameStatus) -> None:
 
 
 async def main() -> None:
-    async_context = AsyncContext(True)
+    async_context = AsyncContext()
     init_test_data(async_context.game_status)
     init_game_status(async_context.game_status)
     console_task = asyncio.create_task(_stdin_reader(async_context))

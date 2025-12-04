@@ -35,10 +35,10 @@ class Wc3LocationType(enum.Flag):
     HARD_HERO = CHALLENGE|HERO
 
 
-class Wc3Location(enum.Enum):
+class Wc3Location(enum.IntEnum):
     def __new__(cls, id: int, *args, **kwargs):
         value = id
-        obj = object.__new__(cls)
+        obj = int.__new__(cls)
         obj._value_ = value
         return obj
 
@@ -192,7 +192,7 @@ class Wc3Location(enum.Enum):
     HU8_BOAT_2 =                   10821, "Boat 2",                   Wc3Mission.H8_DISSENSION, Wc3LocationType.QUEST
     HU8_BOAT_3 =                   10822, "Boat 3",                   Wc3Mission.H8_DISSENSION, Wc3LocationType.QUEST
     HU8_BOAT_4 =                   10823, "Boat 4",                   Wc3Mission.H8_DISSENSION, Wc3LocationType.QUEST
-    HU8_BOAT_5 =                   10824, "Boat 4",                   Wc3Mission.H8_DISSENSION, Wc3LocationType.QUEST
+    HU8_BOAT_5 =                   10824, "Boat 5",                   Wc3Mission.H8_DISSENSION, Wc3LocationType.QUEST
     HU8_GOBLIN_MERCHANT =          10825, "Goblin Merchant",          Wc3Mission.H8_DISSENSION, Wc3LocationType.SHOP
     HU8_MERCENARY_CAMP_1 =         10826, "Mercenary Camp 1",         Wc3Mission.H8_DISSENSION, Wc3LocationType.SHOP
     HU8_MERCENARY_CAMP_2 =         10827, "Mercenary Camp 2",         Wc3Mission.H8_DISSENSION, Wc3LocationType.SHOP

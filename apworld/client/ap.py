@@ -10,8 +10,8 @@ from Utils import async_start
 
 from ..world import Wc3World
 from ..data.locations import Wc3Location, global_location_id
-from ..data import items, heroes
-from .. import logger
+from ..data import items, heroes, missions
+from .. import logger, options
 from . import comm
 
 
@@ -55,6 +55,7 @@ class Wc3Context(CommonContext):
         super().__init__(*args, **kwargs)
         self.generation_version = (-1, -1)
         self.comm_ctx = comm.AsyncContext(True, client_interface=self)
+        self.bonus_mercenary_camps = options.BonusMercenaryCamps.default
 
     async def server_auth(self, password_requested: bool = False) -> None:
         self.game = Wc3World.game
@@ -70,14 +71,28 @@ class Wc3Context(CommonContext):
             self._handle_received_items(args)
 
     def _handle_connected(self, args: dict) -> None:
-        self.generation_version = (args["slot_data"]["version_major"], args["slot_data"]["version_minor"])
-        hero_class: dict[int, int] = args["slot_data"]["hero_class"]
-        hero_names: dict[int, str] = args["slot_data"]["hero_names"]
+        self.generation_version = (
+            args["slot_data"]["version_public"],
+            args["slot_data"]["version_major"],
+            args["slot_data"]["version_minor"],
+        )
+        self.comm_ctx.game_status.world_id = args["slot_data"]["world_id"]
+        self.comm_ctx.game_status.settings.extra_merc_camps = int(
+            args["slot_data"][options.OPTION_NAME[options.BonusMercenaryCamps]]
+        )
+        self.comm_ctx.game_status.mercenary_allocation = {
+            missions.ID_TO_MISSION[int(mission)]: {
+                int(k): v
+                for k, v in allocation.items()
+            }
+            for mission, allocation in args["slot_data"]["mercenary_allocation"].items()
+        }
+        hero_class: dict[str, int] = args["slot_data"]["hero_class"]
+        hero_names: dict[str, str] = args["slot_data"]["hero_names"]
         for hero_id, hero_class_id in hero_class.items():
             self.comm_ctx.game_status.hero_data[int(hero_id)].hero = heroes.HERO_CHOICE_ID_TO_DATA[hero_class_id]
         for hero_id, hero_name in hero_names.items():
             self.comm_ctx.game_status.hero_data[int(hero_id)].name = hero_name
-        self.comm_ctx.game_status.world_id = args["slot_data"]["world_id"]
         self.comm_ctx.game_status.do_startup = True
         logger.info(f"Connected. World version {self.generation_version}")
 

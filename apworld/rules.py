@@ -27,14 +27,24 @@ class Wc3Logic:
         )
         # Note: Don't hold a reference to world here, as that will make a circular reference
 
+    # ========================== #
+    #      Library functions     #
+    # ========================== #
+
     def has(self, state: 'CollectionState', item: Wc3Item, count: int = 1) -> bool:
         return state.has(item.item_name, self.player, count=count)
 
     def has_all(self, state: 'CollectionState', items: Iterable[Wc3Item]) -> bool:
-        return state.has_all(tuple(x.item_name for x in items), self.player)
+        for item in items:
+            if not state.has(item.item_name, self.player):
+                return False
+        return True
 
     def has_any(self, state: 'CollectionState', items: Iterable[Wc3Item]) -> bool:
-        return state.has_any(tuple(x.item_name for x in items), self.player)
+        for item in items:
+            if state.has(item.item_name, self.player):
+                return True
+        return False
 
     def has_all_from_any_group(
         self, state: 'CollectionState', items: Iterable[Iterable[str]],
@@ -47,6 +57,10 @@ class Wc3Logic:
     def has_level(self, state: 'CollectionState', item: Wc3Item, level: int) -> bool:
         assert isinstance(item.type, Level)
         return state.has(item.item_name, self.player, count=max(0, level - item.type.start_level_cap))
+
+    # ========================== #
+    #      Faction functions     #
+    # ========================== #
 
     def human_has_military_unit(self, state: 'CollectionState') -> bool:
         return self.has_any(state, (
@@ -79,9 +93,25 @@ class Wc3Logic:
             (Wc3Item.PEASANT.item_name, Wc3Item.ARCANE_TOWER.item_name,),
             (Wc3Item.PEASANT.item_name, Wc3Item.GUARD_TOWER.item_name,),
         ))
+    
+    def human_worker_and_ground_attacker(self, state: 'CollectionState') -> bool:
+        return self.has(state, Wc3Item.PEASANT) and self.human_has_ground_attacker(state)
 
     def human_has_healing(self, state: 'CollectionState') -> bool:
         return self.has_any(state, (Wc3Item.PRIEST, Wc3Item.SHOP_ITEM_SCROLL_OF_REGENERATION))
+    
+    def human_has_building_attack(self, state: 'CollectionState') -> bool:
+        return (
+            self.has_any(state, (
+                Wc3Item.FOOTMAN,
+                Wc3Item.RIFLEMAN,
+                Wc3Item.KNIGHT,
+                Wc3Item.MORTAR_TEAM,
+                Wc3Item.SIEGE_ENGINE,
+                Wc3Item.GRYPHON_RIDER,
+            ))
+            or self.has_all(state, (Wc3Item.FLYING_MACHINE, Wc3Item.FLYING_MACHINE_BOMBS))
+        )
 
     def human_has_dispel(self, state: 'CollectionState') -> bool:
         return (
@@ -123,21 +153,50 @@ class Wc3Logic:
     # Mission-Specific Functions #
     # ========================== #
 
+    def human_1_has_gerards_ledger(self, state: 'CollectionState') -> bool:
+        return self.has(state, Wc3Item.GERARDS_LEDGER)
+
+    def human_2_has_searinox_heart(self, state: 'CollectionState') -> bool:
+        return self.has(state, Wc3Item.HEART_OF_SEARINOX)
+
     def human_2_orc_base(self, state: 'CollectionState') -> bool:
         return (
             self.human_has_ground_attacker(state)
             or self.has(state, Wc3Item.SIEGE_ENGINE)
             or self.has_level(state, Wc3Item.ARTHAS_LEVEL, 6)
         )
+    
+    def arthas_level_3(self, state: 'CollectionState') -> bool:
+        return self.has(state, Wc3Item.ARTHAS_LEVEL, 2)
+    
+    def human_5_victory(self, state: 'CollectionState') -> bool:
+        return self.human_worker_and_ground_attacker(state) and self.has(state, Wc3Item.ARTHAS_LEVEL, 4)
+    
+    def human_5_undead_bases(self, state: 'CollectionState') -> bool:
+        return (
+            self.human_worker_and_ground_attacker(state)
+            and self.human_has_building_attack(state)
+            and self.human_has_healing(state)
+            and self.has_level(state, Wc3Item.ARTHAS_LEVEL, 6)
+        )
 
 
 def set_rules(world: 'Wc3World') -> None:
     logic = Wc3Logic(world)
     location_to_rule: dict[int, Callable[['CollectionState'], bool]] = {
-        Wc3Location.HU2_ESTABLISH_BASE.id: logic.human_has_military_unit,
-        Wc3Location.HU2_ORC_BASE.id: logic.human_2_orc_base,
-        Wc3Location.HU2_WEST_OGRE_ITEM.id: logic.human_can_clear_trees_on_arthas_level,
-        Wc3Location.HU2_GNOLL_WARDEN_ITEM.id: logic.human_can_clear_trees_on_arthas_level,
+        Wc3Location.HU1_RETURN_LEDGER: logic.human_1_has_gerards_ledger,
+
+        Wc3Location.HU2_RETURN_SEARINOX_HEART: logic.human_2_has_searinox_heart,
+        Wc3Location.HU2_ESTABLISH_BASE: logic.human_has_military_unit,
+        Wc3Location.HU2_ORC_BASE: logic.human_2_orc_base,
+        Wc3Location.HU2_WEST_OGRE_ITEM: logic.human_can_clear_trees_on_arthas_level,
+        Wc3Location.HU2_GNOLL_WARDEN_ITEM: logic.human_can_clear_trees_on_arthas_level,
+
+        Wc3Location.HU4_VICTORY: logic.arthas_level_3,
+
+        Wc3Location.HU5_VICTORY: logic.human_5_victory,
+        Wc3Location.HU5_DESTROY_GREEN_BASE: logic.human_5_undead_bases,
+        Wc3Location.HU5_DESTROY_PURPLE_BASE: logic.human_5_undead_bases,
     }
     assert world.generation_info is not None
     for location in world.generation_info.locations:
