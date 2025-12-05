@@ -67,7 +67,7 @@ class Wc3GameSettings:
 
 class Wc3Inventory:
     def __init__(self) -> None:
-        self.tech = {t: 0 for t in Tech}
+        self.tech: dict[GameID | Tech, int] = {t: 0 for t in Tech}
         self.items: dict[heroes.ItemChannel, list[GameID]] = {
             channel: [] for channel in heroes.ItemChannel if channel != heroes.ItemChannel.NONE
         }
@@ -167,7 +167,7 @@ class MissionStatus:
             self.locations_collected[k] = 0
 
 
-def init_hero_data() -> dict[heroes.HeroSlot, HeroStatus]:
+def init_hero_data() -> dict[heroes.HeroSlot | int, HeroStatus]:
     return {slot: HeroStatus(heroes.HERO_SLOT_TO_DEFAULT_CHOICE[slot]) for slot in heroes.HeroSlot}
 
 
@@ -183,7 +183,7 @@ def init_item_channels() -> dict[heroes.ItemChannel, ItemChannelState]:
 
 def default_mercenary_allocation() -> dict[missions.Wc3Mission, dict[int, GameID]]:
     return {
-        mission: {index: item.type.game_id for index, item in v.items()}
+        mission: {index: item.type.game_id for index, item in v.items()}  # type: ignore
         for mission, v in tables.MISSION_TO_VANILLA_MERCENARIES.items()
     }
 
@@ -200,7 +200,7 @@ class GameStatus:
     pending_update: PacketType = PacketType.HEROES  # read on mission start
     last_hero_update: int = -1
     next_hero_update: int = -1
-    hero_data: dict[heroes.HeroSlot, HeroStatus] = field(default_factory=init_hero_data, repr=False)
+    hero_data: dict[heroes.HeroSlot | int, HeroStatus] = field(default_factory=init_hero_data, repr=False)
     inventory: Wc3Inventory = field(default_factory=Wc3Inventory)
     mercenary_allocation: dict[missions.Wc3Mission, dict[int, GameID]] = (
         field(default_factory=default_mercenary_allocation)
@@ -329,6 +329,7 @@ def update_heroes(game_status: GameStatus, status: MissionStatus) -> None:
         fp.write("local integer slot = GetPlayerTechMaxAllowed(Player(0), 'nalb')\n")
         fp.write(send_int(packet_status.last_sent, 'nech'))
         for index, (slot, data) in enumerate(game_status.hero_data.items()):
+            assert isinstance(slot, heroes.HeroSlot)
             if index == 0:
                 fp.write(f'if slot == {slot.value} then\n')
             else:

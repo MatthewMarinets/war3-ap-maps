@@ -14,6 +14,8 @@ class Wc3Logic:
     def __init__(self, world: 'Wc3World') -> None:
         self.player = world.player
         self.options: 'options.Wc3Options' = world.options
+        # Note: Don't hold a reference to world here, as that will make a circular reference
+
         self.heroes_that_clear_trees = (
             HeroChoice.KAEL.value,
             HeroChoice.BLOOD_MAGE.value,
@@ -25,7 +27,21 @@ class Wc3Logic:
             # Lich - Death and Decay works, but it's really slow
             # Far Seer - Earthquake works, but it's really slow
         )
-        # Note: Don't hold a reference to world here, as that will make a circular reference
+        self.human_ground_attackers = (
+            (Wc3Item.FOOTMAN.item_name,),
+            (Wc3Item.RIFLEMAN.item_name,),
+            (Wc3Item.KNIGHT.item_name,),
+            (Wc3Item.MORTAR_TEAM.item_name,),
+            (Wc3Item.FLYING_MACHINE.item_name, Wc3Item.FLYING_MACHINE_BOMBS.item_name,),
+            (Wc3Item.PRIEST.item_name,),
+            (Wc3Item.SORCERESS.item_name,),
+            (Wc3Item.SPELL_BREAKER.item_name,),
+            (Wc3Item.GRYPHON_RIDER.item_name,),
+            (Wc3Item.DRAGONHAWK_RIDER.item_name,),
+            (Wc3Item.PEASANT.item_name, Wc3Item.CANNON_TOWER.item_name,),
+            (Wc3Item.PEASANT.item_name, Wc3Item.ARCANE_TOWER.item_name,),
+            (Wc3Item.PEASANT.item_name, Wc3Item.GUARD_TOWER.item_name,),
+        )
 
     # ========================== #
     #      Library functions     #
@@ -46,13 +62,18 @@ class Wc3Logic:
                 return True
         return False
 
-    def has_all_from_any_group(
-        self, state: 'CollectionState', items: Iterable[Iterable[str]],
-    ) -> bool:
+    def has_all_from_any_group(self, state: 'CollectionState', items: Iterable[Iterable[str]]) -> bool:
         for group in items:
             if state.has_all(group, self.player):
                 return True
         return False
+    
+    def count_groups_all_satisfied(self, state: 'CollectionState', items: Iterable[Iterable[str]]) -> int:
+        result = 0
+        for group in items:
+            if state.has_all(group, self.player):
+                result += 1
+        return result
 
     def has_level(self, state: 'CollectionState', item: Wc3Item, level: int) -> bool:
         assert isinstance(item.type, Level)
@@ -78,21 +99,10 @@ class Wc3Logic:
         ))
 
     def human_has_ground_attacker(self, state: 'CollectionState') -> bool:
-        return self.has_all_from_any_group(state, (
-            (Wc3Item.FOOTMAN.item_name,),
-            (Wc3Item.RIFLEMAN.item_name,),
-            (Wc3Item.KNIGHT.item_name,),
-            (Wc3Item.MORTAR_TEAM.item_name,),
-            (Wc3Item.FLYING_MACHINE.item_name, Wc3Item.FLYING_MACHINE_BOMBS.item_name,),
-            (Wc3Item.PRIEST.item_name,),
-            (Wc3Item.SORCERESS.item_name,),
-            (Wc3Item.SPELL_BREAKER.item_name,),
-            (Wc3Item.GRYPHON_RIDER.item_name,),
-            (Wc3Item.DRAGONHAWK_RIDER.item_name,),
-            (Wc3Item.PEASANT.item_name, Wc3Item.CANNON_TOWER.item_name,),
-            (Wc3Item.PEASANT.item_name, Wc3Item.ARCANE_TOWER.item_name,),
-            (Wc3Item.PEASANT.item_name, Wc3Item.GUARD_TOWER.item_name,),
-        ))
+        return self.has_all_from_any_group(state, self.human_ground_attackers)
+    
+    def human_count_ground_attackers(self, state: 'CollectionState') -> int:
+        return self.count_groups_all_satisfied(state, self.human_ground_attackers)
     
     def human_worker_and_ground_attacker(self, state: 'CollectionState') -> bool:
         return self.has(state, Wc3Item.PEASANT) and self.human_has_ground_attacker(state)
@@ -166,11 +176,11 @@ class Wc3Logic:
             or self.has_level(state, Wc3Item.ARTHAS_LEVEL, 6)
         )
     
-    def arthas_level_3(self, state: 'CollectionState') -> bool:
-        return self.has(state, Wc3Item.ARTHAS_LEVEL, 2)
+    def arthas_level_4(self, state: 'CollectionState') -> bool:
+        return self.has_level(state, Wc3Item.ARTHAS_LEVEL, 4)
     
     def human_5_victory(self, state: 'CollectionState') -> bool:
-        return self.human_worker_and_ground_attacker(state) and self.has(state, Wc3Item.ARTHAS_LEVEL, 4)
+        return self.human_worker_and_ground_attacker(state) and self.has_level(state, Wc3Item.ARTHAS_LEVEL, 5)
     
     def human_5_undead_bases(self, state: 'CollectionState') -> bool:
         return (
@@ -179,11 +189,18 @@ class Wc3Logic:
             and self.human_has_healing(state)
             and self.has_level(state, Wc3Item.ARTHAS_LEVEL, 6)
         )
+    
+    def human_7_victory(self, state: 'CollectionState') -> bool:
+        return (
+            self.has_level(state, Wc3Item.ARTHAS_LEVEL, 7)
+            and self.has(state, Wc3Item.PEASANT)
+            and self.human_count_ground_attackers(state) >= 2
+        )
 
 
-def set_rules(world: 'Wc3World') -> None:
+def get_location_to_rules(world: 'Wc3World') -> dict[Wc3Location | int, Callable[['CollectionState'], bool]]:
     logic = Wc3Logic(world)
-    location_to_rule: dict[int, Callable[['CollectionState'], bool]] = {
+    location_to_rule: dict[Wc3Location | int, Callable[['CollectionState'], bool]] = {
         Wc3Location.HU1_RETURN_LEDGER: logic.human_1_has_gerards_ledger,
 
         Wc3Location.HU2_RETURN_SEARINOX_HEART: logic.human_2_has_searinox_heart,
@@ -192,13 +209,20 @@ def set_rules(world: 'Wc3World') -> None:
         Wc3Location.HU2_WEST_OGRE_ITEM: logic.human_can_clear_trees_on_arthas_level,
         Wc3Location.HU2_GNOLL_WARDEN_ITEM: logic.human_can_clear_trees_on_arthas_level,
 
-        Wc3Location.HU4_VICTORY: logic.arthas_level_3,
+        Wc3Location.HU4_VICTORY: logic.arthas_level_4,
 
         Wc3Location.HU5_VICTORY: logic.human_5_victory,
         Wc3Location.HU5_DESTROY_GREEN_BASE: logic.human_5_undead_bases,
         Wc3Location.HU5_DESTROY_PURPLE_BASE: logic.human_5_undead_bases,
+
+        Wc3Location.HU7_VICTORY: logic.human_7_victory,
     }
+    return location_to_rule
+
+
+def set_rules(world: 'Wc3World') -> None:
     assert world.generation_info is not None
+    location_to_rule = world.generation_info.location_to_rule
     for location in world.generation_info.locations:
         if location.address is None:
             continue

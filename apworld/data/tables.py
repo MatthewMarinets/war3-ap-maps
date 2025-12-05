@@ -241,4 +241,5 @@ MISSION_TO_PRESET_MERCENARIES: dict[Wc3Mission, dict[int, Wc3Item]] = {
 
 CREEP_SPECIES_TO_ITEMS: dict[items.CreepSpecies, list[items.Wc3Item]] = {}
 for item in items.CATEGORY_TO_ITEMS[items.Mercenary]:
+    assert isinstance(item.type, items.Mercenary)
     CREEP_SPECIES_TO_ITEMS.setdefault(item.type.species, []).append(item)

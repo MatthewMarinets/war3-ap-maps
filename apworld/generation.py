@@ -2,12 +2,12 @@
 from typing import Mapping, Any, Callable, TYPE_CHECKING
 from dataclasses import fields
 import time
+from collections import Counter
 
 from BaseClasses import Region, CollectionState, Entrance, Item, Location, ItemClassification
 from .data import locations, items, missions, heroes, tables
-from .data.game_ids import GameID
 
-from . import options
+from . import options, rules
 
 if TYPE_CHECKING:
     from .world import Wc3World
@@ -72,16 +72,21 @@ def connect_region(
 
 
 class Generation:
-    def __init__(self) -> None:
+    def __init__(self, world: 'Wc3World') -> None:
+        self.player = world.player
         self.regions: list[Region] = []
         self.locations: list[Location] = []
         self.items: list[Item] = []
-        self.hero_slots: set[heroes.HeroSlot] = set()
+        self.locked_items: Counter[items.Wc3Item] = Counter()
+        self.missions: list[missions.Wc3Mission] = []
+        self.hero_slots: Counter[heroes.HeroSlot] = Counter()
         self.item_channels: set[heroes.ItemChannel] = set()
         self.included_races: missions.Wc3Race = missions.Wc3Race.NONE
-        self.included_campaigns: set[missions.Wc3Campaign] = set()
+        self.included_campaigns: frozenset[missions.Wc3Campaign] = frozenset()
         self.mercenary_allocation: dict[missions.Wc3Mission, dict[int, items.Wc3Item]] = {}
         self.used_mercenaries: set[items.Wc3Item] = set()
+        self.location_to_rule = rules.get_location_to_rules(world)
+        # Note: Don't hold a reference to world here, as that will make a circular reference
 
     def process_options(self, world: 'Wc3World') -> None:
         self._options_randomize_empty_hero_names(world)
@@ -103,36 +108,65 @@ class Generation:
                 for campaign in missions.Wc3Campaign
                 if campaign.title_faction in world.options.included_campaigns
             )
+        last_victory_location: locations.Wc3Location | None = None
         for mission in missions.Wc3Mission:
             if mission.campaign not in self.included_campaigns:
                 continue
-            new_region = Region(mission.mission_name, world.player, world.multiworld)
-            connect_region(world, self.regions[-1], new_region)
-            for location in REGION_TO_LOCATIONS.get(mission.mission_name, ()):
+            self.missions.append(mission)
+            new_region = Region(f'{mission.short_name} {mission.mission_name}', world.player, world.multiworld)
+            connect_region(
+                world,
+                self.regions[-1],
+                new_region,
+                self.location_to_rule.get(last_victory_location)  # type: ignore
+            )
+            for location in REGION_TO_LOCATIONS[mission.mission_name]:
+                if location.type & locations.Wc3LocationType.VICTORY:
+                    last_victory_location = location
                 new_location = Location(world.player, location.global_name(), location.id, new_region)
                 new_region.locations.append(new_location)
                 self.locations.append(new_location)
             self.regions.append(new_region)
             self.included_races |= mission.race
             for hero_slot in tables.MISSION_TO_HERO_SLOT[mission]:
-                self.hero_slots.add(hero_slot)
+                self.hero_slots[hero_slot] += 1
             for item_channel in tables.mission_to_item_channel(mission):
                 if item_channel != heroes.ItemChannel.NONE:
                     self.item_channels.add(item_channel)
         world.multiworld.regions += self.regions
 
+        self._set_completion_condition(world)
         self._regions_assign_mercs(world)
-    
+
+    def _set_completion_condition(self, world: 'Wc3World') -> None:
+        victory_region: Region = self.regions[-1]
+        victory_event_location = Location(world.player, "Victory", None, victory_region)
+        victory_region.locations.append(victory_event_location)
+        victory_name = f"Win ({victory_region.name})"
+        victory_event_item = Item(victory_name, ItemClassification.progression, None, world.player)
+        victory_event_location.place_locked_item(victory_event_item)
+        def completion(state: CollectionState) -> bool:
+            return state.has(victory_name, world.player)
+        world.multiworld.completion_condition[world.player] = completion
+
+        # Set access rule
+        victory_mission = self.missions[-1]
+        victory_wc3_location = locations.MISSION_TO_LOCATIONS[victory_mission][0]
+        victory_event_location.access_rule = self.location_to_rule.get(
+            victory_wc3_location, victory_event_location.access_rule
+        )
+
     def _assign_random_mercs_to_camp(
         self, random: 'Random', mercs: dict[int, items.Wc3Item], camp: int, target_count: int
     ) -> None:
+        MAX_PER_CAMP = tables.MAXIMUM_MERCENARIES_PER_CAMP
         merc_pool = list(items.CATEGORY_TO_ITEMS[items.Mercenary])
-        for index in range(10*camp, 10*(camp+1)):
+        for index in range(MAX_PER_CAMP*camp, MAX_PER_CAMP*(camp+1)):
             if index in mercs:
                 merc_pool.remove(mercs[index])
         random.shuffle(merc_pool)
         draw_index = 0
-        for index in range(10*camp, 10*camp + target_count):
+        for index in range(MAX_PER_CAMP*camp, MAX_PER_CAMP*camp + target_count):
             if index not in mercs:
                 mercs[index] = merc_pool[draw_index]
                 draw_index += 1
@@ -147,7 +181,7 @@ class Generation:
         if (world.options.mercenary_allocation.value == options.MercenaryAllocation.option_vanilla_plus
             or world.options.mercenary_allocation.value == options.MercenaryAllocation.option_full_random
         ):
-            for mission in missions.Wc3Mission:
+            for mission in self.missions:
                 num_camps = get_num_mercenary_camps(mission, world.options.bonus_mercenary_camps.value)
                 if num_camps < 1:
                     continue
@@ -157,8 +191,9 @@ class Generation:
                     self._assign_random_mercs_to_camp(world.random, mission_mercs, camp, mercs_per_camp)
                     camp += 1
         if world.options.mercenary_allocation.value == options.MercenaryAllocation.option_species:
-            species_pool = world.random.shuffle(list(tables.CREEP_SPECIES_TO_ITEMS))
-            for mission in missions.Wc3Mission:
+            species_pool = list(tables.CREEP_SPECIES_TO_ITEMS)
+            world.random.shuffle(species_pool)
+            for mission in self.missions:
                 num_camps = get_num_mercenary_camps(mission, world.options.bonus_mercenary_camps.value)
                 if num_camps < 1:
                     continue
@@ -167,53 +202,108 @@ class Generation:
                 species_offset = 0
                 for camp in range(num_camps):
                     for index in range(mercs_per_camp):
-                        mission_mercs[10*camp + index] = (
+                        mission_mercs[tables.MAXIMUM_MERCENARIES_PER_CAMP*camp + index] = (
                             tables.CREEP_SPECIES_TO_ITEMS[species_pool[species]][species_offset]
                         )
                         species_offset += 1
                         if species_offset >= len(tables.CREEP_SPECIES_TO_ITEMS[species_pool[species]]):
                             species += 1
                             species_offset = 0
+        
+        # Lock at least one merc in every H8 camp
+        if missions.Wc3Mission.H8_DISSENSION in self.missions:
+            dissension_mercs = self.mercenary_allocation.get(missions.Wc3Mission.H8_DISSENSION, {})
+            locked_camps = {0: False, 1: False, 2: False}
+            shuffled_keys = list(dissension_mercs)
+            world.random.shuffle(shuffled_keys)
+            for key in shuffled_keys:
+                camp = key // tables.MAXIMUM_MERCENARIES_PER_CAMP
+                if not locked_camps[camp]:
+                    locked_camps[camp] = True
+                    merc_item = dissension_mercs[key]
+                    self.locked_items[merc_item] = min(1, self.locked_items[merc_item])
+
+    _item_type_to_classification = {
+        items.Unit: ItemClassification.progression,
+        items.Building: ItemClassification.progression,
+        items.Level: ItemClassification.progression,
+        items.Upgrade: ItemClassification.useful,
+        items.ShopItem: ItemClassification.useful,
+        items.PickupItem: ItemClassification.useful,
+        items.QuestItem: ItemClassification.progression,
+        items.CaptainPromotion: ItemClassification.progression,
+        items.Resources: ItemClassification.filler,
+        items.Mercenary: ItemClassification.useful,
+    }
+
+    def new_item(self, item_type: items.Wc3Item) -> Item:
+        return Item(
+            item_type.item_name,
+            self._item_type_to_classification[item_type.type.__class__],
+            item_type.id,
+            self.player
+        )
+
 
     def create_items(self, world: 'Wc3World') -> None:
         used_mercenaries: set[items.Wc3Item] = set()
         for mercs in self.mercenary_allocation.values():
             used_mercenaries.update(mercs.values())
+
+        tentative_items: list[Item] = []
         for item_type in items.Wc3Item:
             if isinstance(item_type.type, items.Unit):
                 if item_type.type.race & self.included_races:
-                    self.items.append(Item(item_type.item_name, ItemClassification.progression, item_type.id, world.player))
+                    self.items.append(self.new_item(item_type))
             elif isinstance(item_type.type, items.Building):
                 if item_type.type.race & self.included_races:
-                    self.items.append(Item(item_type.item_name, ItemClassification.progression, item_type.id, world.player))
+                    self.items.append(self.new_item(item_type))
             elif isinstance(item_type.type, items.Level):
-                if item_type.type.slot in self.hero_slots:
-                    for _ in range(10 - item_type.type.start_level_cap):
-                        self.items.append(Item(item_type.item_name, ItemClassification.progression, item_type.id, world.player))
+                num_missions = self.hero_slots[item_type.type.slot]
+                if num_missions:
+                    for index in range(10 - item_type.type.start_level_cap):
+                        new_item = self.new_item(item_type)
+                        if index < num_missions:
+                            self.items.append(new_item)
+                        else:
+                            tentative_items.append(new_item)
             elif isinstance(item_type.type, items.Upgrade):
                 if item_type.type.race in self.included_races:
                     for _ in range(item_type.type.quantity):
-                        self.items.append(Item(item_type.item_name, ItemClassification.useful, item_type.id, world.player))
+                        self.items.append(self.new_item(item_type))
             elif isinstance(item_type.type, items.ShopItem):
                 if item_type.type.race in self.included_races:
-                    self.items.append(Item(item_type.item_name, ItemClassification.useful, item_type.id, world.player))
+                    tentative_items.append(self.new_item(item_type))
             elif isinstance(item_type.type, items.PickupItem):
                 if item_type.type.channel in self.item_channels:
-                    for _ in range(item_type.type.quantity):
-                        self.items.append(Item(item_type.item_name, ItemClassification.useful, item_type.id, world.player))
+                    for index in range(item_type.type.quantity):
+                        new_item = self.new_item(item_type)
+                        if index >= item_type.type.locked:
+                            tentative_items.append(new_item)
+                        else:
+                            self.items.append(new_item)
             elif isinstance(item_type.type, items.QuestItem):
-                if item_type.type.vanilla_mission.mission_name in [region.name for region in self.regions]:
-                    self.items.append(Item(item_type.item_name, ItemClassification.progression, item_type.id, world.player))
+                if item_type.type.vanilla_mission in self.missions:
+                    self.items.append(self.new_item(item_type))
             elif isinstance(item_type.type, items.CaptainPromotion):
                 if item_type.type.campaign in self.included_campaigns:
-                    self.items.append(Item(item_type.item_name, ItemClassification.progression, item_type.id, world.player))
+                    self.items.append(self.new_item(item_type))
             elif isinstance(item_type.type, items.Resources):
-                self.items.append(Item(item_type.item_name, ItemClassification.filler, item_type.id, world.player))
+                tentative_items.append(self.new_item(item_type))
             elif isinstance(item_type.type, items.Mercenary):
                 if item_type in used_mercenaries:
-                    self.items.append(Item(item_type.item_name, ItemClassification.useful, item_type.id, world.player))
+                    new_item = self.new_item(item_type)
+                    if item_type in self.locked_items:
+                        self.items.append(new_item)
+                    else:
+                        tentative_items.append(new_item)
             else:
                 raise ValueError(f"Item {item_type} has unknown type {type(item_type.type)}")
+        
+        if len(self.items) < len(self.locations):
+            world.random.shuffle(tentative_items)
+            print('\n'.join(map(str, tentative_items[len(self.locations) - len(self.items):])))
+            self.items.extend(tentative_items[:len(self.locations) - len(self.items)])
 
         world.multiworld.itempool += self.items
 
@@ -227,7 +317,7 @@ class Generation:
             # "included_campaigns": world.options.included_campaigns.value,
             options.OPTION_NAME[options.BonusMercenaryCamps]: world.options.bonus_mercenary_camps.value,
             "mercenary_allocation": {
-                mission: {index: item.type.game_id for index, item in allocation.items()}
+                mission: {index: item.type.game_id for index, item in allocation.items()}  # type: ignore
                 for mission, allocation in self.mercenary_allocation.items()
             },
             "hero_class": {

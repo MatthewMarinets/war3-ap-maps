@@ -31,7 +31,7 @@ class Wc3CommandProcessor(ClientCommandProcessor):
         current: dict|list|object = self.ctx.comm_ctx
         for part in parts:
             if part.isnumeric():
-                part = int(part)
+                part = int(part)  # type: ignore
             if isinstance(current, dict):
                 current = current[part]
             elif isinstance(current, list):
@@ -53,7 +53,7 @@ class Wc3Context(CommonContext):
 
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
-        self.generation_version = (-1, -1)
+        self.generation_version = (-1, -1, -1)
         self.comm_ctx = comm.AsyncContext(True, client_interface=self)
         self.bonus_mercenary_camps = options.BonusMercenaryCamps.default
 
@@ -150,11 +150,11 @@ def parse_uri(uri: str) -> str:
     return uri.split('?', 1)[0]
 
 
-async def main(args: Sequence[str] | None):
+async def main(cli_args: Sequence[str] | None):
     multiprocessing.freeze_support()
     parser = get_base_parser()
     parser.add_argument('--name', default=None, help="Slot Name to connect as.")
-    args, uri = parser.parse_known_args(args)
+    args, uri = parser.parse_known_args(cli_args)
 
     if uri and uri[0].startswith('archipelago://'):
         args.url = uri[0]

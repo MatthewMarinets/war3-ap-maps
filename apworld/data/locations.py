@@ -36,9 +36,9 @@ class Wc3LocationType(enum.Flag):
 
 
 class Wc3Location(enum.IntEnum):
-    def __new__(cls, id: int, *args, **kwargs):
+    def __new__(cls, id: int, *args, **kwargs) -> 'Wc3Location':
         value = id
-        obj = int.__new__(cls)
+        obj = int.__new__(cls, value)
         obj._value_ = value
         return obj
 
@@ -54,7 +54,7 @@ class Wc3Location(enum.IntEnum):
         self.vanilla_item = vanilla_item
     
     def global_name(self) -> str:
-        return f"{self.mission.mission_name}: {self.location_name}"
+        return f"{self.mission.short_name} {self.mission.mission_name}: {self.location_name}"
 
     # Quests
     # (Main) Defend Strahnbrad

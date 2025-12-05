@@ -44,6 +44,7 @@ class PickupItem:
     game_id: GameID
     channel: ItemChannel
     charged: bool = False
+    locked: int = 0
 
 
 @dataclasses.dataclass
@@ -368,7 +369,7 @@ class Wc3Item(enum.IntEnum):
     FILLER_GOLD = 1200, "+100 Gold", Resources(GameID.GOLD_COINS, 100)
 
     # Human Campaign Items
-    H_BOOTS_OF_SPEED =               2100, "Boots of Speed (Human)",                PickupItem(1, GameID.BOOTS_OF_SPEED, ItemChannel.HUMAN)
+    H_BOOTS_OF_SPEED =               2100, "Boots of Speed (Human)",                PickupItem(1, GameID.BOOTS_OF_SPEED, ItemChannel.HUMAN, locked=1)
     H_BRACER_OF_AGILITY =            2101, "Bracer of Agility +1 (Human)",          PickupItem(1, GameID.BRACER_OF_AGILITY, ItemChannel.HUMAN)
     H_CLAWS_OF_ATTACK_3 =            2102, "Claws of Attack +3 (Human)",            PickupItem(1, GameID.CLAWS_OF_ATTACK_3, ItemChannel.HUMAN)
     H_CLAWS_OF_ATTACK_6 =            2103, "Claws of Attack +6 (Human)",            PickupItem(1, GameID.CLAWS_OF_ATTACK_6, ItemChannel.HUMAN)
@@ -378,8 +379,8 @@ class Wc3Item(enum.IntEnum):
     H_MANTLE_OF_INTELLIGENCE_3 =     2107, "Mantle of Intelligence +3 (Human)",     PickupItem(1, GameID.MANTLE_OF_INTELLIGENCE_3, ItemChannel.HUMAN)
     H_MAUL_OF_STRENGTH =             2108, "Maul of Strength +1 (Human)",           PickupItem(1, GameID.MAUL_OF_STRENGTH, ItemChannel.HUMAN)
     H_MEDALLION_OF_COURAGE =         2109, "Medallion of Courage (Human)",          PickupItem(1, GameID.MEDALLION_OF_COURAGE, ItemChannel.HUMAN)
-    H_ORB_OF_FROST =                 2110, "Orb of Frost (Human)",                  PickupItem(1, GameID.ORB_OF_FROST, ItemChannel.HUMAN)
-    H_ORB_OF_FIRE =                  2111, "Orb of Fire (Human)",                   PickupItem(1, GameID.ORB_OF_FIRE, ItemChannel.HUMAN)
+    H_ORB_OF_FROST =                 2110, "Orb of Frost (Human)",                  PickupItem(1, GameID.ORB_OF_FROST, ItemChannel.HUMAN, locked=1)
+    H_ORB_OF_FIRE =                  2111, "Orb of Fire (Human)",                   PickupItem(1, GameID.ORB_OF_FIRE, ItemChannel.HUMAN, locked=1)
     H_PENDANT_OF_MANA =              2112, "Pendant of Mana (Human)",               PickupItem(1, GameID.PENDANT_OF_MANA, ItemChannel.HUMAN)
     H_PERIAPT_OF_VITALITY =          2113, "Periapt of Vitality (Human)",           PickupItem(2, GameID.PERIAPT_OF_VITALITY, ItemChannel.HUMAN)
     H_RING_OF_PROTECTION_1 =         2114, "Ring of Protection +1 (Human)",         PickupItem(1, GameID.RING_OF_PROTECTION_1, ItemChannel.HUMAN)

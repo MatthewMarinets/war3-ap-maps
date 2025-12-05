@@ -34,7 +34,7 @@ class Wc3World(World):
         self.generation_info: generation.Generation | None = None
 
     def generate_early(self) -> None:
-        self.generation_info = generation.Generation()
+        self.generation_info = generation.Generation(self)
         self.generation_info.process_options(self)
 
     def create_regions(self) -> None:
