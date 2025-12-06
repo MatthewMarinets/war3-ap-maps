@@ -37,7 +37,7 @@ def extract_map_files(map_file: str, target_dir: str) -> Error[str] | None:
             continue
         _, ext = os.path.splitext(basename)
         convert, target_name = CONVERT_HANDLERS.get(ext, (None, basename))
-        if basename == 'war3mapUnits.doo':
+        if basename.casefold() == 'war3mapunits.doo':
             assert convert is not None
             convert(filename, f'{target_dir}/{UNITS_FILE_NAME}')
         elif convert:

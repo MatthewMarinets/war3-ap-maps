@@ -108,7 +108,7 @@ def _parse_entity_table(reader: binary.ByteArrayParser, has_levels: bool = False
             reader.read_id(),
         )
         num_modifications = reader.read_int32()
-        for _ in range(num_modifications):
+        for __ in range(num_modifications):
             modification = Modification(
                 reader.read_id(),
                 DataType(reader.read_int32()),
@@ -137,14 +137,20 @@ def _parse_entity_table(reader: binary.ByteArrayParser, has_levels: bool = False
     return table
 
 
-def read_binary(raw_data: bytes, has_levels: bool = False) -> War3ObjectData:
+def read_binary(raw_data: bytes, has_levels: int = 0) -> War3ObjectData:
+    """
+    When has_levels is 0, assumed never has levels
+    When has_levels is 1, assumed always has levels
+    When has_levels is 2, will assume data has levels if version > 1 (used for .w3d)
+    """
     reader = binary.ByteArrayParser(raw_data)
     version = reader.read_int32()
     assert version in (1, 2), f'Unknown .w3u version: {version}'
-    blizzard_table = _parse_entity_table(reader, has_levels, version)
-    map_table = _parse_entity_table(reader, has_levels, version)
+    _has_levels = has_levels == 1 or (has_levels == 2 and version > 1)
+    blizzard_table = _parse_entity_table(reader, _has_levels, version)
+    map_table = _parse_entity_table(reader, _has_levels, version)
     assert reader.index == len(reader.raw_bytes), 'Extra bytes remain'
-    return War3ObjectData(version, has_levels, blizzard_table, map_table)
+    return War3ObjectData(version, _has_levels, blizzard_table, map_table)
 
 
 def to_binary(data: War3ObjectData) -> bytes:

@@ -22,7 +22,6 @@ def read_wts(filename: str) -> dict[str, str]:
     for line in lines:
         if m := re.match(r'^STRING\s+(\d+)', line):
             current_key = m.group(1)
-            assert len(current_key) <= 3, 'String keys can only be up to 3 digits'
             current_key = 'TRIGSTR_' + ('0' * (3 - len(current_key))) + current_key
         elif line.strip().startswith('{') and current_string is None:
             current_string = []

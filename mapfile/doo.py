@@ -124,7 +124,7 @@ def convert(source: str, target: str) -> None:
     if source_ext == EXTENSION:
         with open(source, 'rb') as fp:
             contents = fp.read()
-        data = read_binary(contents, os.path.basename(source) == 'war3mapUnits.doo' )
+        data = read_binary(contents, os.path.basename(source).casefold() == 'war3mapunits.doo')
     else:
         with open(source, 'r') as fp:
             str_contents = fp.read()
@@ -188,7 +188,7 @@ def read_binary(raw_bytes: bytes, describes_units: bool = False) -> War3Placemen
         if result.version == War3PlacementVersion.TFT:
             doodad.random_table_id = reader.read_int32()
             num_item_drop_sets = reader.read_int32()
-            assert doodad.random_table_id == -1 or num_item_drop_sets == -1, f'table_id={doodad.random_table_id}, num_sets={num_item_drop_sets}'
+            assert doodad.random_table_id == -1 or num_item_drop_sets in (0, -1), f'table_id={doodad.random_table_id}, num_sets={num_item_drop_sets}'
             for _ in range(num_item_drop_sets):
                 doodad.item_drops.append(_read_item_drop_sets(reader))
         doodad.entity_id = reader.read_int32()
@@ -425,7 +425,7 @@ if __name__ == '__main__':
     # os.makedirs('scratch/doo', exist_ok=True)
     os.makedirs('scratch/units', exist_ok=True)
     for filename in filenames:
-        describes_units = 'war3mapUnits.doo' in filename
+        describes_units = 'war3mapunits.doo' in filename.casefold()
         print(filename)
         map_name = os.path.basename(os.path.dirname(filename))
         with open(filename, 'rb') as fp2:

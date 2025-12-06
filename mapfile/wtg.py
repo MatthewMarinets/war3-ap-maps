@@ -241,7 +241,7 @@ def read_binary(raw_data: bytes, lib_info: dict[str, ParamInfo] = LIB_INFO) -> W
         trigger.is_map_init = reader.read_bool32()  # @TFT: This is "run on map init"?
         trigger.category_id = reader.read_int32()
         num_functions = reader.read_int32()
-        for _ in range(num_functions):
+        for __ in range(num_functions):
             func = _parse_function(reader, lib_info, parse_state)
             assert func is not None
             trigger.eca_functions.append(func)
@@ -275,7 +275,7 @@ def _parse_function(reader: binary.ByteArrayParser, lib_info: dict[str, ParamInf
     for _ in range(num_parameters):
         parameter = _parse_parameter(reader, lib_info, parse_state)
         func.parameters.append(parameter)
-    if parse_state.version == Version.TFT and lib_info[func.name].has_subfunctions:
+    if parse_state.version == Version.TFT:
         num_subfuncs = reader.read_int32()
         parse_state.scope_depth = 1
         for _ in range(num_subfuncs):
@@ -284,9 +284,6 @@ def _parse_function(reader: binary.ByteArrayParser, lib_info: dict[str, ParamInf
                 break
             func.subfunctions.append(subfunc)
         parse_state.scope_depth = 0
-    elif parse_state.version == Version.TFT:
-        finished_loop_scope = reader.read_bool32()
-        assert not finished_loop_scope, "Finished loop scope flag set for non-loop"
     return func
 
 

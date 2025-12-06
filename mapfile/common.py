@@ -83,7 +83,7 @@ CONVERT_HANDLERS: dict[str, tuple[Callable[[str, str], None], str]] = {
     '.w3u': (general_converter(w3o, '.w3u'), UNIT_DATA_FILE_NAME),
     '.w3t': (general_converter(w3o, '.w3t'), ITEM_DATA_FILE_NAME),
     '.w3b': (general_converter(w3o, '.w3b'), DESTRUCTABLE_DATA_FILE_NAME),
-    '.w3d': (general_converter(w3o, '.w3d'), DOODAD_DATA_FILE_NAME),
+    '.w3d': (general_converter(w3o, '.w3d', (2,)), DOODAD_DATA_FILE_NAME),
     '.w3a': (general_converter(w3o, '.w3a', (True,)), ABILITY_DATA_FILE_NAME),
     '.w3h': (general_converter(w3o, '.w3h'), BUFF_DATA_FILE_NAME),
     '.w3q': (general_converter(w3o, '.w3q', (True,)), UPGRADE_DATA_FILE_NAME),

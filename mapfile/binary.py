@@ -62,7 +62,10 @@ class ByteArrayParser:
         id_bytes = self.read_bytes(4)
         if id_bytes == b'\0\0\0\0':
             return NULL_ID
-        return id_bytes.decode('utf-8')
+        try:
+            return id_bytes.decode('utf-8')
+        except UnicodeDecodeError:
+            raise ValueError(f'Invalid ID bytes: {id_bytes}')
     def read_cstring(self) -> str:
         bytes_parts = self.raw_bytes[self.index:].split(b'\x00', 1)
         if len(bytes_parts) != 2:
