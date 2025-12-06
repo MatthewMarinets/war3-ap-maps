@@ -96,3 +96,46 @@ def create_w3x(source_dir: str, target_file: str) -> Error[tuple[int, str]] | No
         assert bytes_written == zero_length
         # Note(mm): It's possible to write my own metadata in the header here to be picked up by other tools
     return None
+
+
+def main(args: list[str]) -> None:
+    from inspect import cleandoc
+    USAGE = cleandoc(
+        f"""{os.path.basename(__file__)} [-h] [-u] source target
+        Packs from directory <source> to file <target>
+        If -u is specified, unpacks from file <source> to directory <target>
+        """
+    )
+    brief_help = USAGE.split('\n')[0]
+    unpack = False
+    source = ''
+    target = ''
+    for arg in args:
+        if arg in ('-h', '-help', '--help'):
+            print(USAGE)
+            return
+        elif arg == '-u':
+            unpack = True
+        elif arg.startswith('-'):
+            print(f'Unknown option "{arg}"')
+            print(brief_help)
+            return
+        elif not source:
+            source = arg
+        elif not target:
+            target = arg
+        else:
+            print(f'Unexpected argument {arg}')
+            print(brief_help)
+            return
+    if unpack:
+        print(f'Extracting {source} to {target}')
+        extract_w3x(source, target)
+    else:
+        print(f'Compiling {target} into {source}')
+        create_w3x(source, target)
+
+
+if __name__ == '__main__':
+    import sys
+    main(sys.argv[1:])
