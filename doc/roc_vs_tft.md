@@ -2,6 +2,52 @@
 Changes between the expansions to track.
 RoC campaign balance is 1.01, TFT campaign balance is 1.07.
 
+## Demo Campaign Example
+The voice-over demo campaign changes some stats to RoC values.
+I've omitted notes about differences in researches/upgrades, such as burning oil.
+* Priest "Art - Model File - Extra Versions": None (`fileVerFlags`: `0`)
+* Priest "Combat - Attack 1 - Attack Type": pierce
+* Priest "Combat - Defense Type": small
+* Sorceress "Art - Model File - Extra Versions": None (`fileVerFlags`: `0`)
+* Demolisher "Art - Icon - Game Interface": `ReplaceableTextures\CommandButtons\BTNCatapult.blp`
+* Demolisher "Art - Model File - Extra Versions": Reign of Chaos (`fileVerFlags`: `1`)
+* Demolisher "Combat - Acquisition Range": 1000.0
+* Demolisher "Combat - Attack 1 - Projectile Art": `abilities\weapons\catapult\catapultmissile.mdl`
+  * This might not be safe the change back if burning oil stays a thing
+* Demolisher "Combat - Attack 1 - Range": 1000
+  * TFT value: 1150
+* Demolisher "Combat - Defense Type": Medium
+* Demolisher "Movement - Speed Base": 180
+  * TFT value: 220
+* Demolisher "Stats - Build Time": 45
+  * TFT value: 40
+* Demolisher "Stats - Gold Cost": 260
+  * TFT value: 220
+* Demolisher "Stats - Level": 4
+  * TFT value: 2
+* Demolisher "Stats - Sight Radius (Night)": 1200
+  * TFT value: 1100
+* Demolisher "Text - Name": "Catapult"
+* Demolisher "Text - Hotkey": "C"
+* Demolisher "Text - Tooltip - Basic": "Train |cffffcc00C|ratapult"
+* Demolisher "Text - Tooltip - Extended": "Long-range siege weaponry. Effective against buildings but slow and vulnerable. |n|n|cffffcc00Attacks land units and trees.|r"
+* Troll Witch Doctor "Combat - Attack 1 - Attack Type": pierce
+* Troll Witch Doctor "Combat - Defense Type": small
+* Thrall "Combat - Attack 1 - Attack Type": Normal
+* Thrall "Combat - Attack 2 - Attack Type": Normal
+
+### Themes
+* Hero attack type was normal
+* Caster attack type was pierce
+* High Elf models changed to Blood Elf
+* Nighttime vision radius reduced
+* Siege rework
+  * Different models (Orc and NE)
+  * Name changes (Orc and NE)
+  * Range went 1000 -> 1150
+  * Costs changed
+  * Level reduced 4 -> 2
+
 ## Balance
 ### 1.02
 * Necklace of Spell Immunity no longer drops in melee

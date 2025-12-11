@@ -1,6 +1,11 @@
 # Miscellaneous knowledge
 ## Item models
-Items have a model. For the model to disappear after picking up the item, it needs a Ref Chest attachment
+Items have a model. For the model to disappear after picking up the item, it needs a Ref Chest attachment.
+
+I've updated the question mark model to have that so it works in-game.
+
+Another candidate model: `Objects\InventoryItems\BundleofGifts\BundleofGifts.mdl`
+* This is a wrapped present, from the Azeroth Grand Prix
 
 ## Colours
 Game text can be coloured. Use a tag formatted like `|cff<hex>` to start a coloured region, where
