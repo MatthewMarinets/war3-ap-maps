@@ -19,6 +19,7 @@ from mapfile.util import savetext
 
 
 class CampaignFlag(enum.IntEnum):
+    # Campaign, difficulty control
     ROC_Fixed = 0
     ROC_Variable = 1
     TFT_Fixed = 2
@@ -169,3 +170,21 @@ def from_text(text: str) -> War3CampaignInfo:
     map_paths = [War3MapPathInfo(**x) for x in result.pop('map_paths', [])]
     flags = CampaignFlag[result.pop('flags')]
     return War3CampaignInfo(**result, flags=flags, map_titles=map_titles, map_paths=map_paths)
+
+
+if __name__ == '__main__':
+    import sys
+    _USAGE = 'w3f.py <w3f file> <target file>\nConverts a .w3f file to text'
+    if '-h' in sys.argv or '--help' in sys.argv:
+        print(_USAGE)
+        sys.exit()
+    if len(sys.argv) < 3:
+        print('Not enough arguments')
+        print(_USAGE)
+        sys.exit(1)
+    with open(sys.argv[1], 'rb') as fp:
+        _contents = fp.read()
+    _data = read_binary(_contents)
+    with open(sys.argv[2], 'w') as fp:
+        fp.write(as_text(_data))
+

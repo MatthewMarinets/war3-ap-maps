@@ -16,6 +16,8 @@ class ByteArrayParser:
     def __init__(self, raw_bytes: bytes) -> None:
         self.index = 0
         self.raw_bytes = raw_bytes
+    def peek(self, num_bytes: int = 1) -> bytes:
+        return self.raw_bytes[self.index:self.index+num_bytes]
     def read(self, format: str) -> tuple:
         start_index = self.index
         self.index += struct.calcsize(format)
@@ -65,12 +67,16 @@ class ByteArrayParser:
         try:
             return id_bytes.decode('utf-8')
         except UnicodeDecodeError:
-            raise ValueError(f'Invalid ID bytes: {id_bytes}')
+            raise ValueError(f'Invalid ID bytes: {id_bytes!r}')
     def read_cstring(self) -> str:
         bytes_parts = self.raw_bytes[self.index:].split(b'\x00', 1)
         if len(bytes_parts) != 2:
             raise struct.error('bytes does not contain a null character')
         self.index += len(bytes_parts[0]) + 1
+        return bytes_parts[0].decode('utf-8')
+    def read_buffer_string(self, length: int) -> str:
+        string_bytes = self.read_bytes(length)
+        bytes_parts = string_bytes.split(b'\0', 1)
         return bytes_parts[0].decode('utf-8')
 
 def read_string_from_buffer(buffer: io.BufferedReader) -> str:
@@ -131,6 +137,11 @@ class ByteArrayWriter:
         return self
     def write_string(self, value: str) -> 'ByteArrayWriter':
         return self.write_cstring(value)
+    def write_buffer_string(self, value: str, length: int) -> 'ByteArrayWriter':
+        assert len(value) < length
+        self.data.extend(value.encode('utf-8'))
+        self.data.extend(b'\0' * (length - len(value)))
+        return self
     def write_float(self, value: float) -> 'ByteArrayWriter':
         self.data.extend(struct.pack('f', value))
         return self
