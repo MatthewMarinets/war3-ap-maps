@@ -60,6 +60,7 @@ class Track(Generic[T]):
 class ModelChunk:
     model_name: str = ''
     file_path: str = ''
+    unknown: int = 0
     extent: Extent = field(default_factory=Extent)
     blend_time: int = 0
 
@@ -124,6 +125,7 @@ class Layer:
     # KFC3 (v > 900)
     # KFCA (v > 900)
     # KFTC (v > 900)
+
 
 @dataclass
 class Material:
@@ -494,7 +496,8 @@ def read_model_chunk(reader: binary.ByteArrayParser, result: MdxModel) -> None:
     start_index = reader.index
     data = result.model_chunk
     data.model_name = reader.read_buffer_string(80)
-    data.file_path = reader.read_buffer_string(PATH_LENGTH)
+    data.file_path = reader.read_buffer_string(PATH_LENGTH - 8)
+    data.unknown = reader.read_buffer_string(8)
     _read_extent(reader, data.extent)
     data.blend_time = reader.read_int32()
     assert reader.index == start_index + chunk_size
@@ -504,7 +507,8 @@ def write_model_chunk(writer: binary.ByteArrayWriter, data: MdxModel) -> None:
     writer.write_id('MODL')
     chunk_writer = binary.ByteArrayWriter()
     chunk_writer.write_buffer_string(data.model_chunk.model_name, 80)
-    chunk_writer.write_buffer_string(data.model_chunk.file_path, PATH_LENGTH)
+    chunk_writer.write_buffer_string(data.model_chunk.file_path, PATH_LENGTH - 8)
+    chunk_writer.write_buffer_string(data.model_chunk.unknown, 8)
     _write_extent(chunk_writer, data.model_chunk.extent)
     chunk_writer.write_int32(data.model_chunk.blend_time)
 
