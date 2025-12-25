@@ -50,6 +50,7 @@ class War3CampaignInfo:
     campaign_description: str
     flags: CampaignFlag
     background_screen_index: int
+    """-1 for custom background"""
     custom_background_screen_path: str
     minimap_picture_path: str
     ambient_sound_index: int
@@ -63,6 +64,7 @@ class War3CampaignInfo:
     fog_blue: int   # 1 byte
     fog_alpha: int  # 1 byte
     ui_race_index: int
+    """Human=0, Orc=1, Undead=2, Night Elf=3"""
     map_titles: list[War3MapTitleInfo]
     map_paths: list[War3MapPathInfo]
 
