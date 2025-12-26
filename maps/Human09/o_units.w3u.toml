@@ -123,6 +123,14 @@ table_column = 0
 value = "phea,pman,shea,spro,wneg,gemt,stwp"
 object_id = 'null'
 
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Asid,Aneu,Avul,Apit"
+object_id = 'null'
+
 [[blizzard_objects.entities]]
 parent_id = 'hfoo'  # Footman
 entity_id = 'null'
@@ -696,6 +704,25 @@ variation_level = 0
 table_column = 0
 value = 4
 object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'nmr7'  # Mercenary Camp
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'useu'  # Profile.Units Sold
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'nmr7'  # Mercenary Camp
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Ane2,Asid,Asud,Avul"
+object_id = 'nmr7'  # Mercenary Camp
 
 [map_objects]
 [[map_objects.entities]]

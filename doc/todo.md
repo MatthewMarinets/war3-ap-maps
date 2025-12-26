@@ -34,6 +34,16 @@
   - [x] Purge any unlock tech functions
   - [x] Creep bounty
   - [x] Figure out mercenary camps
+- [ ] Human09
+  - [x] Eliminate gamecache usage
+  - [x] Redirect starting next mission
+  - [x] Hero init
+  - [n/a] Remove hero level cap triggers
+  - [x] Replace items -> AP items
+  - [x] Location sending functions
+  - [x] Creep bounty
+  - [x] Figure out mercenary camps
+  - [ ] Evil Arthas
 
 ### Item check conditions boilerplate
 ```markdown

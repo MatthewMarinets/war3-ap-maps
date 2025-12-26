@@ -200,6 +200,161 @@ version = TFT
 ### Functions
 
 
+## AP mercenaries
+- enabled: True
+- category: [19] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## AP Load Arthas
+- enabled: True
+- category: [19] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String local real facing = bj_RADTODEG * Atan2(GetRectCenterY(gg_rct_InitArthasLooks) - GetRectCenterY(gg_rct_InitPlaceArthas), GetRectCenterX(gg_rct_InitArthasLooks) - GetRectCenterX(gg_rct_InitPlaceArthas))
+- Action CustomScriptCode
+  - param String set udg_Arthas = hero_create(0, USER_PLAYER, GetRectCenterX(gg_rct_InitPlaceArthas), GetRectCenterY(gg_rct_InitPlaceArthas), facing)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable Arthas
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CustomScriptCode
+  - param String set udg_Arthas = CreateUnit(USER_PLAYER, 'Hart', GetRectCenterX(gg_rct_InitPlaceArthas), GetRectCenterY(gg_rct_InitPlaceArthas), facing)
+- Action CustomScriptCode
+  - param String set hero_abil_1[0] = 'AHhb'
+- Action CustomScriptCode
+  - param String set hero_abil_2[0] = 'AHds'
+- Action CustomScriptCode
+  - param String set hero_abil_3[0] = 'AHad'
+- Action CustomScriptCode
+  - param String set hero_abil_4[0] = 'AHre'
+
+
+## AP Load Muradin
+- enabled: True
+- category: [19] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String local real facing = bj_RADTODEG * Atan2(GetUnitY(gg_unit_hmpr_0130) - GetRectCenterY(gg_rct_InitPlaceMuradin), GetUnitX(gg_unit_hmpr_0130) - GetRectCenterX(gg_rct_InitPlaceMuradin))
+- Action CustomScriptCode
+  - param String set udg_Muradin = hero_create(1, USER_PLAYER, GetRectCenterX(gg_rct_InitPlaceMuradin), GetRectCenterY(gg_rct_InitPlaceMuradin), facing)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable Muradin
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CustomScriptCode
+  - param String set udg_Muradin = CreateUnit(USER_PLAYER, 'Hmbr', GetRectCenterX(gg_rct_InitPlaceMuradin), GetRectCenterY(gg_rct_InitPlaceMuradin), facing)
+- Action CustomScriptCode
+  - param String set hero_abil_1[1] = 'AHtb'
+- Action CustomScriptCode
+  - param String set hero_abil_2[1] = 'AHtc'
+- Action CustomScriptCode
+  - param String set hero_abil_3[1] = 'AHbh'
+- Action CustomScriptCode
+  - param String set hero_abil_4[1] = 'AHav'
+
+
+## Shop Locations
+- enabled: True
+- category: [19] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event MapInitializationEvent
+- Action AddItemToStockBJ
+  - param String I025
+  - param Variable gg_unit_ngme_0043
+  - param String 1
+  - param String 1
+- Action AddItemToStockBJ
+  - param String I026
+  - param Variable gg_unit_nmr7_0044
+  - param String 1
+  - param String 1
+
+
+## MalGanis Location
+- enabled: True
+- category: [19] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_Umal_0177
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(20)
+
+
+## Purple Base Location
+- enabled: True
+- category: [19] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(23)
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_unp2_0051
+  - param Preset UnitEventDeath
+
+
 ## StartInitializationSequence
 - enabled: True
 - category: [0] Initialization
@@ -736,12 +891,12 @@ version = TFT
 
 ```
 ### Functions
-- Action InitGameCacheBJ
-  - param String Campaigns.w3v
 - Action TriggerExecute
-  - param Variable gg_trg_Load_Arthas
+  - param Variable gg_trg_AP_Load_Arthas
 - Action TriggerExecute
-  - param Variable gg_trg_Load_Muradin
+  - param Variable gg_trg_AP_Load_Muradin
+- Action CustomScriptCode
+  - param String set item_channel_1_target = udg_Arthas
 - Action SetHeroLevel
   - param Variable Malganis
   - param String 9
@@ -782,166 +937,6 @@ version = TFT
 - Action SuspendHeroXPBJ
   - param Preset EnableDisableDisable
   - param Variable Malganis
-
-
-## Load Arthas
-- enabled: True
-- category: [17] Heroes
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action RestoreUnitLocFacingPointBJ
-  - param String Arthas
-  - param String Human09
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-  - param Preset Player01
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_InitPlaceArthas
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_InitArthasLooks
-- Action SetVariable
-  - param Variable Arthas
-  - param Function GetLastRestoredUnitBJ
-    - Function GetLastRestoredUnitBJ
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareUnit
-      - param Variable Arthas
-      - param Preset OperatorNotEqualENE
-      - param Preset UnitNull
-  - param Function DoNothing
-    - Action ReturnAction
-  - param Function DoNothing
-    - Action DoNothing
-- Action CreateNUnitsAtLocFacingLocBJ
-  - param String 1
-  - param String Hart
-  - param Preset Player01
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_InitPlaceArthas
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_InitArthasLooks
-- Action SetVariable
-  - param Variable Arthas
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-- Action SetHeroLevel
-  - param Variable Arthas
-  - param String 9
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillHolyBolt
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillHolyBolt
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillHolyBolt
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDivineShield
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDivineShield
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDevotionAura
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDevotionAura
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDevotionAura
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillResurrection
-
-
-## Load Muradin
-- enabled: True
-- category: [17] Heroes
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action RestoreUnitLocFacingPointBJ
-  - param String Muradin
-  - param String Human09
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-  - param Preset Player01
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_InitPlaceMuradin
-  - param Function GetUnitLoc
-    - Function GetUnitLoc
-      - param Variable gg_unit_hmpr_0130
-- Action SetVariable
-  - param Variable Muradin
-  - param Function GetLastRestoredUnitBJ
-    - Function GetLastRestoredUnitBJ
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareUnit
-      - param Variable Muradin
-      - param Preset OperatorNotEqualENE
-      - param Preset UnitNull
-  - param Function DoNothing
-    - Action ReturnAction
-  - param Function DoNothing
-    - Action DoNothing
-- Action CreateNUnitsAtLocFacingLocBJ
-  - param String 1
-  - param String Hmbr
-  - param Preset Player01
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_InitPlaceMuradin
-  - param Function GetUnitLoc
-    - Function GetUnitLoc
-      - param Variable gg_unit_hmpr_0130
-- Action SetVariable
-  - param Variable Muradin
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-- Action SetHeroLevel
-  - param Variable Muradin
-  - param String 7
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable Muradin
-  - param Preset HeroSkillStormBolt
-- Action SelectHeroSkill
-  - param Variable Muradin
-  - param Preset HeroSkillStormBolt
-- Action SelectHeroSkill
-  - param Variable Muradin
-  - param Preset HeroSkillThunderClap
-- Action SelectHeroSkill
-  - param Variable Muradin
-  - param Preset HeroSkillThunderClap
-- Action SelectHeroSkill
-  - param Variable Muradin
-  - param Preset HeroSkillBash
-- Action SelectHeroSkill
-  - param Variable Muradin
-  - param Preset HeroSkillBash
-- Action SelectHeroSkill
-  - param Variable Muradin
-  - param Preset HeroSkillAvatar
 
 
 ## Arthas Leans a Skill
@@ -3410,6 +3405,11 @@ version = TFT
 
 ```
 ### Functions
+- Condition OperatorCompareUnit
+  - param Function GetTriggerUnit
+    - Function GetTriggerUnit
+  - param Preset OperatorEqualENE
+  - param Variable Muradin
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
@@ -3498,13 +3498,6 @@ version = TFT
     - Action DoNothing
 - Action TriggerExecute
   - param Variable gg_trg_IntroUndeadApproach
-- Condition OperatorCompareUnitCode
-  - param Function GetUnitTypeId
-    - Function GetUnitTypeId
-      - param Function GetEnteringUnit
-        - Function GetEnteringUnit
-  - param Preset OperatorEqualENE
-  - param String Hmbr
 - Event TriggerRegisterEnterRectSimple
   - param Variable gg_rct_IntroMuradinToArthas
 
@@ -3914,6 +3907,11 @@ version = TFT
 
 ```
 ### Functions
+- Condition OperatorCompareUnit
+  - param Function GetTriggerUnit
+    - Function GetTriggerUnit
+  - param Preset OperatorEqualENE
+  - param Variable Arthas
 - Action TriggerSleepAction
   - param String 0.20
 - Action IfThenElse
@@ -4012,13 +4010,6 @@ version = TFT
     - Action ReturnAction
   - param Function DoNothing
     - Action DoNothing
-- Condition OperatorCompareUnitCode
-  - param Function GetUnitTypeId
-    - Function GetUnitTypeId
-      - param Function GetEnteringUnit
-        - Function GetEnteringUnit
-  - param Preset OperatorEqualENE
-  - param String Hart
 - Event TriggerRegisterEnterRectSimple
   - param Variable gg_rct_IntroArthasToCaptain
 
@@ -6412,6 +6403,8 @@ version = TFT
     - Action ReturnAction
   - param Function DoNothing
     - Action DoNothing
+- Action CustomScriptCode
+  - param String call status_check_location(23)
 - Action CinematicFadeBJ
   - param Preset FadeTypeOptionFadeOut
   - param String 0.25
@@ -7113,6 +7106,8 @@ version = TFT
     - Function GetTriggeringTrigger
 - Action DisableTrigger
   - param Variable gg_trg_FrostmourneCinematicEscapeEvil
+- Action CustomScriptCode
+  - param String call status_check_location(23)
 - Action SetVariable
   - param Variable FrostmourneCinematicEscape
   - param String true
@@ -7444,6 +7439,8 @@ version = TFT
     - Function GetTriggeringTrigger
 - Action DisableTrigger
   - param Variable gg_trg_FrostmourneCinematicEscapeGood
+- Action CustomScriptCode
+  - param String call status_check_location(23)
 - Action VolumeGroupResetBJ
 - Action SetVariable
   - param Variable FrostmourneCinematicEscape
@@ -7693,6 +7690,8 @@ version = TFT
     - Function GetPlayersAll
   - param Preset QuestMessageTypeCompleted
   - param String TRIGSTR_072
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Action TriggerSleepAction
   - param Preset RealQueueDelayQuest
 - Action EnableTrigger
@@ -8802,15 +8801,6 @@ version = TFT
 
 ```
 ### Functions
-- Action SetCampaignAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset CampaignIndexU
-- Action SetCinematicAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset CinematicIndexHED
-- Action SetMissionAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset MissionIndexU00
 
 
 ## Level Victory
@@ -8823,6 +8813,8 @@ version = TFT
 
 ```
 ### Functions
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Action CustomVictoryBJ
   - param Preset Player01
   - param Preset UseSkipOptionSkip

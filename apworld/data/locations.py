@@ -215,6 +215,7 @@ class Wc3Location(enum.IntEnum):
     HU9_GOBLIN_MERCHANT =           10921, "Goblin Merchant",           Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.SHOP
     HU9_MERCENARY_CAMP =            10922, "Mercenary Camp",            Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.SHOP
     HU9_FROSTMOURNE =               10923, "Obtain Frostmourne",        Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.QUEST
+    HU9_DESTROY_PURPLE_BASE =       10924, "Destroy Purple Base (Black Citadel)", Wc3Mission.H9_FROSTMOURNE, Wc3LocationType.BASE
 
     # Quests:
     # (Main) Rescue Acolytes

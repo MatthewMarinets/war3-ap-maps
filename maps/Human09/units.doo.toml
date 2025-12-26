@@ -1875,8 +1875,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # prvt = Periapt of Vitality
-        { item_id = "prvt", chance_percent = 100 }
+        { item_id = "I012", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -2405,8 +2404,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # hlst = Health Stone
-        { item_id = "hlst", chance_percent = 100 }
+        { item_id = "I015", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -3035,8 +3033,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # rde2 = Ring of Protection +3
-        { item_id = "rde2", chance_percent = 100 }
+        { item_id = "I011", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -4225,12 +4222,10 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # pgma = Potion of Greater Mana
-        { item_id = "pgma", chance_percent = 100 }
+        { item_id = "I013", chance_percent = 100 }
     ],
     [
-        # tdex = Tome of Agility
-        { item_id = "tdex", chance_percent = 100 }
+        { item_id = "I014", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -4994,8 +4989,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # pman = Potion of Mana
-        { item_id = "pman", chance_percent = 100 }
+        { item_id = "I016", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -6027,10 +6021,7 @@ player_owner = 24
 hit_points = -1
 mana_points = -1
 random_item_table_id = -1
-item_drops = [
-    [
-    ]
-]
+item_drops = []
 goldmine_gold_amount = 12500
 target_acquisition = -1.0
 hero_level = 1
@@ -6102,8 +6093,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # whwd = Healing Wards
-        { item_id = "whwd", chance_percent = 100 }
+        { item_id = "I017", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -6472,8 +6462,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # pghe = Potion of Greater Healing
-        { item_id = "pghe", chance_percent = 100 }
+        { item_id = "I018", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
