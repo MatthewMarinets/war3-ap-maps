@@ -2,8 +2,10 @@
 Utilities for handling .mdx (model) files
 """
 
-from dataclasses import dataclass, field, fields
-from typing import Generic, TypeVar, Callable, Any
+from dataclasses import dataclass, field, fields, is_dataclass
+from typing import Generic, TypeVar, Callable, Any, Union
+from types import GenericAlias
+import tomllib
 from logging import getLogger
 import enum
 from . import binary
@@ -52,15 +54,26 @@ class Track(Generic[T]):
             f'<{len(self.interp_values)} interp values>'
             ')'
         )
+
     def __repr__(self) -> str:
         return str(self)
+
+    def __eq__(self, other: 'Track') -> bool:
+        return (
+            isinstance(other, Track)
+            and self.interpolation_type == other.interpolation_type
+            and self.global_sequence_id == other.global_sequence_id
+            and self.frames == other.frames
+            and self.values == other.values
+            and self.interp_values == other.interp_values
+        )
 
 
 @dataclass
 class ModelChunk:
     model_name: str = ''
     file_path: str = ''
-    unknown: int = 0
+    unknown: str = ''
     extent: Extent = field(default_factory=Extent)
     blend_time: int = 0
 
@@ -1414,6 +1427,17 @@ def write_inline_toml(data: object, indent: str = '') -> str:
         if not data:
             return '[]'
         if isinstance(data[0], (float, int, bool)):
+            if len(data) > 12:
+                parts = ['[\n', indent]
+                for part_start in range(0, len(data), 12):
+                    parts.append('  ')
+                    for index in range(part_start, part_start+12):
+                        parts.append(write_inline_toml(data[index], indent))
+                        parts.append(', ')
+                    parts.append(f' # {part_start}~{part_start+11}')
+                    parts.append(f'\n{indent}')
+                parts.append(']')
+                return ''.join(parts)
             return f'[{", ".join(map(write_inline_toml, data))}]'
         parts = ['[\n', indent]
         for value in data:
@@ -1473,6 +1497,86 @@ def write_toml_to_file(data: object, file: str) -> None:
         fp.write(text)
 
 
+class DictReadError(Exception):
+    pass
+
+
+def dataclass_from_dict(
+    key: str,
+    class_: GenericAlias | type,
+    data: dict | list | int | float | str | bool,
+) -> object:
+    # Use __origin__ and __args__
+    if is_dataclass(class_):
+        if not isinstance(data, dict):
+            raise DictReadError(f"{key} got {data} ({type(data)}), expected dict")
+        field_types = {_field.name: _field.type for _field in fields(class_)}
+        return class_(
+            **{
+                field_name: dataclass_from_dict(f'{key}.{field_name}', field_types[field_name], value)
+                for field_name, value in data.items()
+            }
+        )
+    if isinstance(class_, GenericAlias):
+        if issubclass(class_.__origin__, tuple):
+            element_types = class_.__args__
+            if not isinstance(data, list):
+                raise DictReadError(f"{key} got {data} ({type(data)}), expected list")
+            if not len(element_types) == len(data):
+                raise DictReadError(f"{key} got {len(data)} elements, expected {len(element_types)}")
+            return tuple(
+                dataclass_from_dict(f'{key}.{index}', element_types[index], x)
+                for index, x in enumerate(data)
+            )
+        if issubclass(class_.__origin__, list):
+            element_type = class_.__args__[0]
+            if not isinstance(data, list):
+                raise DictReadError(f"{key} got {data} ({type(data)}), expected list")
+            return [dataclass_from_dict(f'{key}.{index}', element_type, x) for index, x in enumerate(data)]
+        raise DictReadError(f"Unknown generic type {class_.__origin__}")
+    if hasattr(class_, '__args__'):
+        non_null_classes = [c for c in class_.__args__ if c is not type(None)]
+        assert len(non_null_classes) == 1
+        assert issubclass(non_null_classes[0].__origin__, Track)
+        if not isinstance(data, dict):
+            raise DictReadError(f"{key} got {data} ({type(data)}), expected dict")
+        result = Track(data['interpolation_type'], data['global_sequence_id'])
+        result.frames = dataclass_from_dict(f'{key}.frames', list[int], data['frames'])
+        if data['interp_values'] and len(data['values']) != len(data['interp_values']):
+            raise DictReadError(
+                f'{key} got mismatching values and interp_values lengths: '
+                f'{len(data["values"])}, {len(data["interp_values"])}'
+            )
+        if data['values']:
+            if isinstance(data['values'][0], list):
+                target_type = tuple
+            elif isinstance(data['values'][0], int):
+                target_type = int
+            elif isinstance(data['values'][0], float):
+                target_type = float
+            else:
+                raise DictReadError(
+                    f'{key} got unknown type {type(data["values"][0])}, expected tuple|float|int'
+                )
+            result.values = [target_type(value) for value in data['values']]
+            if 'interp_values' in data:
+                result.interp_values = [
+                    (target_type(left), target_type(right)) for left, right in data['interp_values']
+                ]
+        return result
+    if issubclass(class_, enum.Enum):
+        return class_(data)
+    if not isinstance(data, class_):
+        raise DictReadError(f"{key} got {data} ({type(data)}), expected {class_}")
+    return data
+
+
+def read_toml_file(filename: str) -> MdxModel:
+    with open(filename, 'rb') as fp:
+        data = tomllib.load(fp)
+    return dataclass_from_dict('top', MdxModel, data)
+
+
 if __name__ == '__main__':
     MODEL_FILE = 'mods/general/war3mapImported/questionmark_item.mdx'
     with open(MODEL_FILE, 'rb') as fp:
@@ -1485,11 +1589,12 @@ if __name__ == '__main__':
         print(_data.__dict__[f.name])
         print()
     write_toml_to_file(_data, 'output.toml')
-    
+    round_tripped_data = read_toml_file('output.toml')
+
     writer = binary.ByteArrayWriter()
     writer.write_id('MDLX')
     for index, writer_function in enumerate(CHUNK_WRITERS):
-        writer_function(writer, _data)
+        writer_function(writer, round_tripped_data)
         bytes_so_far = writer.as_bytes()
         with open('output.bin', 'wb') as fp:
             fp.write(bytes_so_far)
