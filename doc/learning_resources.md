@@ -32,6 +32,13 @@
 * [DEFLATE algorithm flush / block details](https://www.bolet.org/~pornin/deflate-flush-fr.html)
 * [Old spec for .slk format](https://outflank.nl/upload/sylksum.txt)
 
+### Images
+* [Text explanation on jfif headers](https://www.ccoderun.ca/programming/2017-01-31_jpeg/)
+* [Wikipedia's jpeg encoding example is decent](https://en.wikipedia.org/wiki/JPEG#Encoding)
+* [Video tutorial series on jpeg](https://www.youtube.com/watch?v=CPT4FSkFUgs)
+  * [Code is posted on github](https://github.com/dannye/jed)
+* [Wikipedia fully explains the tga file format well](https://en.wikipedia.org/wiki/Truevision_TGA#Technical_details)
+
 ## Misc
 * [Warcraft 3 Liquipedia](https://liquipedia.net/warcraft/Main_Page)
 * [Text colour modes basic intro](https://world-editor-tutorials.thehelper.net/colors.php)

@@ -1,7 +1,13 @@
 """
 Utilities for working with .blp (Blizzard image) files
 """
+
+# Sources:
+# ## Jpeg
+# Frame data explainer: https://www.ccoderun.ca/programming/2017-01-31_jpeg/
+
 from typing import NamedTuple
+from .common import ImageData
 from mapfile import binary
 
 blp_version = {
@@ -9,6 +15,7 @@ blp_version = {
     b'BLP1': 1,  # Warcraft 3
     b'BLP2': 2,  # World of Warcraft
 }
+
 
 class BlpInfo(NamedTuple):
     version: int
@@ -18,7 +25,8 @@ class BlpInfo(NamedTuple):
     has_mipmaps: bool
     image_width: int
     image_height: int
-    image_data: bytes
+    image_data: list[bytes]
+
 
 def read_blp(filename: str, dest: str | None = None) -> BlpInfo:
     """
@@ -49,7 +57,6 @@ def read_blp(filename: str, dest: str | None = None) -> BlpInfo:
         has_mipmaps = reader.read_int32() != 0
     mipmap_offsets = reader.read('I' * 16)
     mipmap_sizes = reader.read('I' * 16)
-    assert not has_mipmaps, 'Mipmaps are currently not supported'
 
     # content start
     ## jpeg
@@ -64,14 +71,15 @@ def read_blp(filename: str, dest: str | None = None) -> BlpInfo:
         image_bytes.append(jpeg_header_bytes + reader.read_bytes(mipmap_sizes[mipmap_level]))
         if not has_mipmaps:
             break
-    
+
     if dest is not None:
+        # pip install opencv-python
         import cv2
         import numpy as np
         image = cv2.imdecode(np.asarray(bytearray(image_bytes[0]), dtype=np.uint8), cv2.IMREAD_COLOR)
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         cv2.imwrite(dest, image)
-    
+
     return BlpInfo(
         version=version,
         content_type=content_type,
@@ -80,11 +88,5 @@ def read_blp(filename: str, dest: str | None = None) -> BlpInfo:
         has_mipmaps=has_mipmaps,
         image_width=image_width,
         image_height=image_height,
-        image_data=image_bytes[0],
+        image_data=image_bytes,
     )
-
-if __name__ == '__main__':
-    image_path = 'work/HumanX02/war3mapMap.blp'
-    result = read_blp(image_path, 'test_cv.jpg')
-    with open('test_raw.jpg', 'wb') as fp:
-        fp.write(result.image_data)
