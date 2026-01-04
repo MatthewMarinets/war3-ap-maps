@@ -6,6 +6,7 @@ This implementation is based on jed by Daniel Harding -- https://github.com/dann
 """
 from typing import Literal
 from dataclasses import dataclass, field
+from collections import Counter
 import math
 from .. import binary
 from .common import ImageData
@@ -15,7 +16,7 @@ from . import dct
 @dataclass
 class HuffmanTable:
     is_ac: bool = False
-    length_to_symbols: list[bytes] = field(default_factory=list)
+    symbol_map: dict[tuple[int, int], int] = field(default_factory=dict)
 
 
 @dataclass
@@ -35,21 +36,37 @@ class JpgData:
     is_bgr_format: bool = False
 
 
+def clamp(value: int, _min: int, _max: int) -> int:
+    if value < _min:
+        return _min
+    if value > _max:
+        return _max
+    return value
+
+
 def YCbCr_to_BGR(ycrcb: list[int] | tuple[int, int, int]) -> bytes:
-    """This assumes Y in [0,255] and Cr, Cb in [-128, 127]"""
+    """This assumes Y, Cr, Cb in [-128, 127]"""
     assert len(ycrcb) == 3
     Y, Cb, Cr = ycrcb
     # green = int(Y - 0.344136*Cb - 0.714136*Cr + 128)
-    red = int(Y              + 1.402*Cr + 128)
-    green = int(Y - 0.344*Cb - 0.714*Cr + 128)
-    blue = int(Y  + 1.772*Cb            + 128)
-    if red < 0: red = 0
-    if red > 255: red = 255
-    if green < 0: green = 0
-    if green > 255: green = 255
-    if blue < 0: blue = 0
-    if blue > 255: blue = 255
+    red = math.floor(Y                 + 1.402*Cr    + 128.5)
+    green = math.floor(Y - 0.344136*Cb - 0.714146*Cr + 128.5)
+    blue = math.floor(Y  + 1.772*Cb                  + 128.5)
+    red = clamp(red, 0, 255)
+    green = clamp(green, 0, 255)
+    blue = clamp(blue, 0, 255)
     return bytes([blue, green, red])
+
+
+def BGR_to_YCbCr(bgr: bytes | tuple[int, int, int] | list[int]) -> tuple[int, int, int]:
+    b, g, r = bgr
+    Y =  math.floor(0.299*r     + 0.587*g    + 0.114*b    - 127.5)
+    Cb = math.floor(-0.168736*r - 0.331264*g + 0.5*b      + 0.5)
+    Cr = math.floor(0.5*r       - 0.418688*g - 0.081312*b + 0.5)
+    Y = clamp(Y, -128, 127)
+    Cb = clamp(Cb, -128, 127)
+    Cr = clamp(Cr, -128, 127)
+    return Y, Cb, Cr
 
 
 # ################## #
@@ -105,13 +122,15 @@ def _read_huffman_table(reader: binary.ByteArrayParser, data: JpgData) -> None:
         table = HuffmanTable()
         table_id = reader.read_u8()
         table.is_ac = (table_id & 0xf0) != 0
-        table.length_to_symbols.append(b'')
+        length_to_symbols = [b'']
         character_sizes = reader.read_bytes(16)
         if sum(character_sizes) > 176:
             raise ValueError(f'Too many symbols in Huffman table: {sum(character_sizes)} > 176')
         for character_size in character_sizes:
-            table.length_to_symbols.append(reader.read_bytes(character_size))
-        assert table_id not in data.huffman_tables
+            length_to_symbols.append(reader.read_bytes(character_size))
+        if table_id in data.huffman_tables:
+            raise ValueError(f'Multiple huffman tables defined for ID {table_id}')
+        table.symbol_map = _huffman_table_to_dict(length_to_symbols)
         data.huffman_tables[table_id] = table
     assert reader.index == frame_start + length
 
@@ -257,6 +276,116 @@ def read_jpg_file(filename: str) -> JpgData:
     return read_jpg_data(raw_bytes)
 
 
+def _write_app0(writer: binary.ByteArrayWriter, data: JpgData) -> None:
+    writer.write_u16_be(16)
+    writer.write_cstring('JFIF')
+    writer.write_bytes(b'\x01\x01')
+    writer.write_u8(1)  # Units
+    writer.write_u16_be(1)  # pixel density X
+    writer.write_u16_be(1)  # pixel density Y
+    writer.write_u8(0)  # Thumbnail width
+    writer.write_u8(0)  # Thumbnail height
+
+
+def _write_quantization_table(writer: binary.ByteArrayWriter, quantization_tables: dict[int, bytes]) -> None:
+    frame_start = len(writer.data)
+    writer.write_u16_be(0)  # filled in later
+    for table_id, quantization_table in quantization_tables.items():
+        if table_id >= 0x10:
+            raise NotImplementedError("16 bit quantization tables are not supported")
+        writer.write_u8(table_id)
+        assert len(quantization_table) == 64
+        writer.write_bytes(quantization_table)
+    # Handle length
+    frame_length = len(writer.data) - frame_start
+    writer.data[frame_start] = frame_length >> 8
+    writer.data[frame_start+1] = frame_length & 0xff
+
+
+def _write_huffman_table(writer: binary.ByteArrayWriter, data: JpgData) -> None:
+    frame_start = len(writer.data)
+    writer.write_u16_be(0)  # filled in later
+    for table_id, huffman_table in data.huffman_tables.items():
+        writer.write_u8(table_id)
+        writer.write_bytes(_huffman_table_to_bytes(huffman_table.symbol_map))
+    # Handle length
+    frame_length = len(writer.data) - frame_start
+    writer.data[frame_start] = frame_length >> 8
+    writer.data[frame_start+1] = frame_length & 0xff
+
+
+def _write_sof0(writer: binary.ByteArrayWriter, data: JpgData) -> None:
+    frame_start = len(writer.data)
+    writer.write_u16_be(0)  # filled in later
+    writer.write_u8(8)  # bits per colour channel
+    writer.write_u16_be(data.height)
+    writer.write_u16_be(data.width)
+    writer.write_u8(data.num_components)
+    for index in range(data.num_components):
+        writer.write_u8(index + data.are_components_1_indexed)
+        sampling_factors = data.channel_to_sampling_factor[index]
+        sampling_factor_bitfield = (sampling_factors[0] << 4) | sampling_factors[1]
+        writer.write_u8(sampling_factor_bitfield)  # Sampling factors
+        writer.write_u8(data.channel_to_quantization_table[index])
+    # Handle length
+    frame_length = len(writer.data) - frame_start
+    writer.data[frame_start] = frame_length >> 8
+    writer.data[frame_start+1] = frame_length & 0xff
+
+
+def _write_start_of_scan(writer: binary.ByteArrayWriter, data: JpgData) -> None:
+    frame_start = len(writer.data)
+    writer.write_u16_be(0)  # filled in later
+    writer.write_u8(data.num_components)
+    for index in range(data.num_components):
+        writer.write_u8(index + data.are_components_1_indexed)
+        huffman_tables = data.channel_to_huffman_tables[index]
+        huffman_table_bitfield = (huffman_tables[0] << 4) | huffman_tables[1]
+        writer.write_u8(huffman_table_bitfield)
+    writer.write_bytes(b'\x00\x3f\x00')  # Spectral info
+    # Handle length
+    frame_length = len(writer.data) - frame_start
+    writer.data[frame_start] = frame_length >> 8
+    writer.data[frame_start+1] = frame_length & 0xff
+
+
+def _write_scan(writer: binary.ByteArrayWriter, data: JpgData) -> None:
+    writer.write_bytes(data.pixel_data.replace(b'\xff', b'\xff\x00'))
+
+
+def write_jpg(data: JpgData, for_blp: bool = False) -> bytes:
+    writer = binary.ByteArrayWriter()
+    # SOI
+    writer.write_bytes(b'\xff\xd8')
+    # APP0
+    if not for_blp:
+        writer.write_bytes(b'\xff\xe0')
+        _write_app0(writer, data)
+    # DQT
+    # Note(mm): The headers I see in .blp files use separate frames per Huffman/Quantization table
+    writer.write_bytes(b'\xff\xdb')
+    _write_quantization_table(writer, data.quantization_tables)
+    # DHT
+    writer.write_bytes(b'\xff\xc4')
+    _write_huffman_table(writer, data)
+    # SOF0
+    writer.write_bytes(b'\xff\xc0')
+    _write_sof0(writer, data)
+    # SOS
+    writer.write_bytes(b'\xff\xda')
+    _write_start_of_scan(writer, data)
+    _write_scan(writer, data)
+    # EOI
+    writer.write_bytes(b'\xff\xd9')
+    return writer.as_bytes()
+
+
+def write_jpg_file(data: JpgData, filename: str, for_blp: bool = False) -> None:
+    raw_bytes = write_jpg(data, for_blp)
+    with open(filename, 'wb') as fp:
+        fp.write(raw_bytes)
+
+
 # ################## #
 #        Jpeg        #
 # ################## #
@@ -312,12 +441,11 @@ class BitReader:
         self.byte_index += 1
 
 
-def _huffman_table_to_dict(huffman_table: HuffmanTable) -> dict[tuple[int, int], int]:
+def _huffman_table_to_dict(length_to_symbols: list[bytes]) -> dict[tuple[int, int], int]:
     """
     @returns a map of symbol value -> symbol
     """
     result: dict[tuple[int, int], int] = {}
-    length_to_symbols = huffman_table.length_to_symbols
     code_candidate = 0
     for code_length, symbols in enumerate(length_to_symbols):
         for symbol in symbols:
@@ -325,6 +453,21 @@ def _huffman_table_to_dict(huffman_table: HuffmanTable) -> dict[tuple[int, int],
             code_candidate += 1
         code_candidate = code_candidate << 1
     return result
+
+
+def _huffman_table_to_bytes(table: dict[tuple[int, int], int]) -> bytes:
+    result = bytearray()
+    # write length->num symbols info
+    num_symbols_per_length: Counter[int] = Counter()
+    for code_length, code in table:
+        num_symbols_per_length[code_length] += 1
+    for code_length in range(1, 17):
+        result.append(num_symbols_per_length[code_length])
+    assert len(result) == 16
+    # @assume the table is already sorted (should be if generated by _huffman_table_to_dict())
+    for symbol in table.values():
+        result.append(symbol)
+    return bytes(result)
 
 
 def _get_next_symbol(
@@ -346,6 +489,12 @@ def _get_next_symbol(
 def _decode_negative(word: int, word_length: int) -> int:
     if word < (1 << (word_length - 1)):
         return word - (1 << word_length) + 1
+    return word
+
+
+def _encode_negative(word_length: int, word: int) -> int:
+    if word < 0:
+        return word + (1 << word_length) - 1
     return word
 
 
@@ -393,14 +542,6 @@ def decode_mcu_component(
     return dc_coefficient
 
 
-def clamp(value: int, _min: int, _max: int) -> int:
-    if value < _min:
-        return _min
-    if value > _max:
-        return _max
-    return value
-
-
 def decompress_jpg(jpg: JpgData) -> ImageData:
     bytes_per_pixel = jpg.num_components
     result = ImageData(
@@ -419,10 +560,6 @@ def decompress_jpg(jpg: JpgData) -> ImageData:
         )
         for m in range(mcu_width * mcu_height)
     )
-    huffmans = {
-        _id: _huffman_table_to_dict(jpg.huffman_tables[_id])
-        for _id in jpg.huffman_tables
-    }
     reader = BitReader(jpg.pixel_data)
     last_dc_value = [0 for _ in range(jpg.num_components)]
     for mcu_index, mcu in enumerate(mcus):
@@ -431,8 +568,8 @@ def decompress_jpg(jpg: JpgData) -> ImageData:
                 last_dc_value[x] = 0
             reader.align_to_next_byte()
         for component_index, mcu_component in enumerate(mcu):
-            dc_huffman = huffmans[jpg.channel_to_huffman_tables[component_index][0]]
-            ac_huffman = huffmans[jpg.channel_to_huffman_tables[component_index][1] + 16]
+            dc_huffman = jpg.huffman_tables[jpg.channel_to_huffman_tables[component_index][0]].symbol_map
+            ac_huffman = jpg.huffman_tables[jpg.channel_to_huffman_tables[component_index][1] + 16].symbol_map
             dc_value = decode_mcu_component(
                 reader,
                 mcu_component,
@@ -508,8 +645,105 @@ for _index, _x in enumerate(ZIG_ZAG_TO_LINEAR):
     LINEAR_TO_ZIG_ZAG[_x] = _index
 
 
-def compress_jpg(image: ImageData) -> JpgData:
-    raise NotImplementedError("Not implemented yet")
+class BitWriter:
+    def __init__(self) -> None:
+        self.raw_bytes = bytearray()
+        self.bit_index = 0
+
+    def write_zero(self) -> None:
+        if self.bit_index == 0:
+            self.raw_bytes.append(0)
+        self.bit_index += 1
+        if self.bit_index >= 8:
+            self.bit_index = 0
+
+    def write_one(self) -> None:
+        if self.bit_index == 0:
+            self.raw_bytes.append(0x80)
+            self.bit_index += 1
+        else:
+            self.raw_bytes[-1] |= 1 << (7 - self.bit_index)
+            self.bit_index += 1
+            if self.bit_index >= 8:
+                self.bit_index = 0
+    
+    def write_bit(self, bit: int) -> None:
+        if bit:
+            self.write_one()
+        else:
+            self.write_zero()
+    
+    def write_code(self, length: int, code: int) -> None:
+        for bit in reversed(range(length)):
+            self.write_bit(code & (1 << bit))
+
+
+def _invert_dict(d: dict) -> dict:
+    result = {}
+    for key, value in d.items():
+        result[value] = key
+    return result
+
+
+def get_value_bit_length(value: int) -> int:
+    value_length = 1
+    while abs(value) & ((1 << value_length) - 1) != abs(value):
+        value_length += 1
+    assert value_length < 16
+    return value_length
+
+
+def encode_mcu_component(
+    writer: BitWriter,
+    block: list[int],
+    dc_huffman_table: dict[int, tuple[int, int]],
+    ac_huffman_table: dict[int, tuple[int, int]],
+    last_dc_value: int,
+) -> int:
+    # Get DC value
+    dc_value = block[0] - last_dc_value
+    if dc_value == 0:
+        writer.write_code(*dc_huffman_table[0])
+    else:
+        dc_value_length = get_value_bit_length(dc_value)
+        encoded_dc_value = _encode_negative(dc_value_length, dc_value)
+        writer.write_code(*dc_huffman_table[dc_value_length])
+        writer.write_code(dc_value_length, encoded_dc_value)
+
+    # Find the last value to actually encode
+    last_nonzero_index = 63
+    while last_nonzero_index > 0 and block[last_nonzero_index] == 0:
+        last_nonzero_index -= 1
+
+    zero_run_length = 0
+    for mcu_index in range(1, last_nonzero_index+1):
+        ac_value = block[mcu_index]
+        if ac_value == 0:
+            zero_run_length += 1
+            if zero_run_length == 16:
+                writer.write_code(*ac_huffman_table[0xf0])
+                zero_run_length = 0
+            continue
+        ac_value_length = get_value_bit_length(ac_value)
+        ac_value = _encode_negative(ac_value_length, ac_value)
+        value_to_encode = (zero_run_length << 4) | ac_value_length
+        zero_run_length = 0
+        writer.write_code(*ac_huffman_table[value_to_encode])
+        writer.write_code(ac_value_length, ac_value)
+
+    # Encode end of block
+    if last_nonzero_index < 63:
+        writer.write_code(*ac_huffman_table[0])
+    return block[0]
+
+
+def compress_jpg(
+    image: ImageData,
+    quantization_tables: dict[int, bytes],
+    huffman_tables: dict[int, HuffmanTable] | None = None,
+) -> JpgData:
+    if huffman_tables is None:
+        raise NotImplementedError("Only pre-defined huffman tables are supported")
     # 4 channels isn't standard jpg, but .blp uses it for alpha
     num_channels = 4 if image.alpha_bits else 3
     result = JpgData(
@@ -517,53 +751,67 @@ def compress_jpg(image: ImageData) -> JpgData:
         height=image.height,
         num_components=num_channels,
         channel_to_sampling_factor=[(1, 1)]*num_channels,
+        quantization_tables=quantization_tables,
+        huffman_tables=huffman_tables,
     )
-    # Thes quantization tables seem to be used for all blizzard .blp files
-    quantization_table_0 = (
-        b"\x06\x04\x05\x06\x05\x04\x06\x06\x05\x06\x07\x07\x06\x08\n\x10\n\n\t\t\n\x14\x0e\x0f\x0c\x10\x17"
-        b"\x14\x18\x18\x17\x14\x16\x16\x1a\x1d%\x1f\x1a\x1b#\x1c\x16\x16 , #&')*)\x19\x1f-0-(0%()("
-    )
-    quantization_table_1 = (
-        b'\x01\x07\x07\x07\n\x08\n\x13\n\n\x13(\x1a\x16\x1a(((((((((((((((((((((((((((((((((((((((((((((((((('
-    )
-    result.quantization_tables = {
-        0: quantization_table_0,
-        1: quantization_table_1,
+    if num_channels == 4:
+        result.is_bgr_format = True
+
+    # @assume always using quantization table 0
+    result.channel_to_quantization_table = [0] * num_channels
+
+    # @assume always using huffman table 0
+    result.channel_to_huffman_tables = [(0, 0)] * num_channels
+
+    huffman_symbol_to_codes: dict[int, dict[int, tuple[int, int]]] = {
+        index: _invert_dict(table.symbol_map)
+        for index, table in huffman_tables.items()
     }
-    huffman_table = (
-        b'\x11\x00\x02\x01\x02\x04\x04\x03\x04\x07\x05\x04\x04\x00\x01\x02w\x00\x01\x02\x03\x11\x04\x05'
-        b'!1\x06\x12AQ\x07aq\x13"2\x81\x08\x14B\x91\xa1\xb1\xc1\t#3R\xf0\x15br\xd1\n\x16$4\xe1%\xf1\x17'
-        b'\x18\x19\x1a&\'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x82\x83\x84\x85\x86\x87\x88\x89\x8a'
-        b'\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6'
-        b'\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca\xd2\xd3\xd4\xd5\xd6\xd7\xd8\xd9\xda\xe2'
-        b'\xe3\xe4\xe5\xe6\xe7\xe8\xe9\xea\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa'
-    )
 
     # Skipping - colour space conversion
     # Skipping - channel-specific downsampling
     # Block splitting
-    encoded_image = bytearray()
+    writer = BitWriter()
+    last_dc_value = [0 for _ in range(result.num_components)]
     stride = image.width
-    for channel in range(num_channels):
-        for y_start in range(0, image.width, 8):
-            for x_start in range(0, image.width, 8):
+    for y_start in range(0, image.width, 8):
+        for x_start in range(0, image.width, 8):
+            for channel in range(num_channels):
                 block = []
+                quantization_table = quantization_tables[result.channel_to_quantization_table[channel]]
+                dc_huffman_table = huffman_symbol_to_codes[result.channel_to_huffman_tables[channel][0]]
+                ac_huffman_table = huffman_symbol_to_codes[result.channel_to_huffman_tables[channel][1] + 16]
                 for dy in range(8):
                     y = y_start + dy
+                    if y > image.height:
+                        y = image.height
                     for dx in range(8):
                         x = x_start + dx
-                        offset = num_channels * (y*stride + x) + channel
-                        value = image.pixels[offset]
-                        value -= 128  # Downshift
-                        block.append(value)
+                        if x > image.width:
+                            x = image.width
+                        offset = num_channels * (y*stride + x)
+                        if result.is_bgr_format:
+                            value = image.pixels[offset+channel]
+                            value -= 128  # Downshift
+                            block.append(value)
+                        else:
+                            bgr_value = image.pixels[offset:offset+3]
+                            ycc = BGR_to_YCbCr(bgr_value)
+                            # Downshift is handled by the colourspace conversion
+                            value = ycc[channel]
+                            block.append(value)
                 # Discrete Cosine Transform
-                dct_block = dct.dct(block)
+                dct_block = dct.fast_dct(block)
                 # Quantization
-                # This might have to go after zig-zagify?
-                q_block: list[int] = [round(d / q) for d, q in zip(dct_block, quantization_table_1)]
-                # Entropy coding
-                zig_zag_block = zigzagify(q_block)
+                for index in range(64):
+                    block[index] = round(dct_block[index] / quantization_table[LINEAR_TO_ZIG_ZAG[index]])
+                # Zig-zag ordering
+                block = zigzagify(block)
                 # Huffman coding
+                last_dc_value[channel] = encode_mcu_component(
+                    writer, block, dc_huffman_table, ac_huffman_table, last_dc_value[channel]
+                )
+    result.pixel_data = writer.raw_bytes
     return result
 
 

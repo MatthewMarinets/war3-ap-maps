@@ -111,6 +111,11 @@ class ByteArrayWriter:
         assert value >= 0 and value < 65536, f'{value} is not a valid u16'
         self.data.extend(struct.pack('<H', value))
         return self
+    def write_u16_be(self, value: int) -> 'ByteArrayWriter':
+        """Big-endian write"""
+        assert value >= 0 and value < 65536, f'{value} is not a valid u16'
+        self.data.extend(struct.pack('>H', value))
+        return self
     def write_s16(self, value: int) -> 'ByteArrayWriter':
         assert value >= -0x8000 and value < 0x8000, f'{value} is not a valid s16'
         self.data.extend(struct.pack('<h', value))

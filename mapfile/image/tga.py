@@ -41,7 +41,7 @@ def read_tga(raw_bytes: bytes, verbose: bool = False) -> ImageData:
     assert is_top_to_bottom
     interleaving_mode = (bitfield >> 6)
     assert interleaving_mode == 0
-    # offset = 18 bytes
+    # offset = 18 bytes (0x12)
     image_id = reader.read_bytes(image_id_length)
     if verbose:
         print(f'width: {result.width}')
