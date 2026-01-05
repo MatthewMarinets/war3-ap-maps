@@ -7,7 +7,11 @@ Utilities for working with .blp (Blizzard image) files
 # Frame data explainer: https://www.ccoderun.ca/programming/2017-01-31_jpeg/
 
 from typing import NamedTuple
+import os
+import shutil
+import glob
 from .common import ImageData
+from . import jpg, tga
 from mapfile import binary
 
 blp_version = {
@@ -90,6 +94,22 @@ def read_blp(filename: str, dest: str | None = None) -> BlpInfo:
         image_height=image_height,
         image_data=image_bytes,
     )
+
+
+def unpack_to_folder(filename: str, destination: str) -> None:
+    blp_info = read_blp(filename)
+    stem = os.path.splitext(os.path.basename(filename))[0]
+    if os.path.exists(destination):
+        shutil.rmtree(destination)
+    os.makedirs(destination)
+    with open(f'{destination}/info.toml', 'w') as fp:
+        fp.write(f'version = {blp_info.version}\n')
+        fp.write(f'width = {blp_info.image_width}\n')
+        fp.write(f'height = {blp_info.image_height}\n')
+    for index, jpg_bytes in enumerate(blp_info.image_data):
+        jpg_data = jpg.read_jpg_data(jpg_bytes, came_from_blp=True)
+        image = jpg.decompress_jpg(jpg_data)
+        tga.write_tga_file(image, f'{destination}/mipmap_{index}.tga')
 
 
 # Common table values used within the blp jpg header
