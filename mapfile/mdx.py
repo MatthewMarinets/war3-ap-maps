@@ -1,7 +1,7 @@
 """
 Utilities for handling .mdx (model) files
 """
-
+import os
 from dataclasses import dataclass, field, fields, is_dataclass
 from typing import Generic, TypeVar, Callable, Any, Union
 from types import GenericAlias
@@ -290,6 +290,28 @@ class ParticleEmitter2:
 
 
 @dataclass
+class Ribbon:
+    node: Node = field(default_factory=Node)
+    height_above: float = 0.0
+    height_below: float = 0.0
+    alpha: float = 0.0
+    colour: tuple[float, float, float] = (0.0, 0.0, 0.0)
+    lifespan: float = 0.0
+    texture_id: int = -1
+    emission_rate: int = 0
+    rows: int = 0
+    columns: int = 0
+    material_id: int = -1
+    gravity: float = 0.0
+    height_above_track: Track[float] | None = None
+    height_below_track: Track[float] | None = None
+    alpha_track: Track[float] | None = None
+    colour_track: Track[tuple[float, float, float]] | None = None
+    texture_id_track: Track[int] | None = None
+    visibility_track: Track[int] | None = None
+
+
+@dataclass
 class Event:
     node: Node = field(default_factory=Node)
     global_sequence_id: int = 0
@@ -340,6 +362,7 @@ class MdxModel:
     attachments: list[Attachment] = field(default_factory=list)
     pivots: list[tuple[float, float, float]] = field(default_factory=list)
     particle_emitter_2s: list[ParticleEmitter2] = field(default_factory=list)
+    ribbons: list[Ribbon] = field(default_factory=list)
     events: list[Event] = field(default_factory=list)
     cameras: list[Camera] = field(default_factory=list)
     collision_shapes: list[CollisionShape] = field(default_factory=list)
@@ -1194,6 +1217,79 @@ def write_particle_emitter_2_chunk(writer: binary.ByteArrayWriter, data: MdxMode
     writer.write_bytes(chunk_bytes)
 
 
+def read_ribbon_chunk(reader: binary.ByteArrayParser, result: MdxModel) -> None:
+    chunk_size = reader.read_int32()
+    start_index = reader.index
+
+    tag_to_getter = {
+        b'KRHA': (reader.read_float, (), 'height_above_track'),
+        b'KRHB': (reader.read_float, (), 'height_below_track'),
+        b'KRAL': (reader.read_float, (), 'alpha_track'),
+        b'KRCO': (reader.read, ('=fff'), 'colour_track'),
+        b'KRTX': (reader.read_u32, (), 'texture_id_track'),
+        b'KRVS': (reader.read_float, (), 'visibility_track'),
+    }
+    while reader.index < start_index + chunk_size:
+        ribbon = Ribbon()
+        ribbon_start_index = reader.index
+        ribbon_element_size = reader.read_int32()
+        _read_node(reader, ribbon.node)
+        ribbon.height_above = reader.read_float()
+        ribbon.height_below = reader.read_float()
+        ribbon.alpha = reader.read_float()
+        ribbon.colour = reader.read('=fff')
+        ribbon.lifespan = reader.read_float()
+        ribbon.texture_id = reader.read_u32()
+        ribbon.emission_rate = reader.read_u32()
+        ribbon.rows = reader.read_u32()
+        ribbon.columns = reader.read_u32()
+        ribbon.material_id = reader.read_u32()
+        ribbon.gravity = reader.read_float()
+        _read_all_tracks(reader, tag_to_getter, ribbon)
+
+        result.ribbons.append(ribbon)
+        assert reader.index == ribbon_start_index + ribbon_element_size, (
+            f'{hex(reader.index)} != {hex(ribbon_start_index + ribbon_element_size)}'
+        )
+    assert reader.index == start_index + chunk_size
+
+
+def write_ribbon_chunk(writer: binary.ByteArrayWriter, data: MdxModel) -> None:
+    if not data.ribbons:
+        return
+    writer.write_id('RIBB')
+    chunk_writer = binary.ByteArrayWriter()
+    for ribbon in data.ribbons:
+        element_start = len(chunk_writer.data)
+        chunk_writer.write_int32(0)
+        _write_node(chunk_writer, ribbon.node)
+        chunk_writer.write_float(ribbon.height_above)
+        chunk_writer.write_float(ribbon.height_below)
+        chunk_writer.write_float(ribbon.alpha)
+        for colour in ribbon.colour:
+            chunk_writer.write_float(colour)
+        chunk_writer.write_float(ribbon.lifespan)
+        chunk_writer.write_int32(ribbon.texture_id)
+        chunk_writer.write_u32(ribbon.emission_rate)
+        chunk_writer.write_u32(ribbon.rows)
+        chunk_writer.write_u32(ribbon.columns)
+        chunk_writer.write_int32(ribbon.material_id)
+        chunk_writer.write_float(ribbon.gravity)
+        _write_track(chunk_writer, ribbon.height_above_track, 'KRHA')
+        _write_track(chunk_writer, ribbon.height_below_track, 'KRHB')
+        _write_track(chunk_writer, ribbon.alpha_track, 'KRAL')
+        _write_track(chunk_writer, ribbon.colour_track, 'KRCO')
+        _write_track(chunk_writer, ribbon.texture_id_track, 'KRTX')
+        _write_track(chunk_writer, ribbon.visibility_track, 'KRVS')
+
+        chunk_writer.data[element_start:element_start+4] = (
+            (len(chunk_writer.data)-element_start).to_bytes(length=4, byteorder='little')
+        )
+    chunk_bytes = chunk_writer.as_bytes()
+    writer.write_int32(len(chunk_bytes))
+    writer.write_bytes(chunk_bytes)
+
+
 def read_event_chunk(reader: binary.ByteArrayParser, result: MdxModel) -> None:
     chunk_size = reader.read_int32()
     start_index = reader.index
@@ -1344,7 +1440,7 @@ CHUNK_ID_TO_PARSER = {
     'PIVT': read_pivot_chunk,
     # 'PREM': read_particle_emitter_chunk,
     'PRE2': read_particle_emitter_2_chunk,
-    # 'RIBB': read_ribbon_chunk,
+    'RIBB': read_ribbon_chunk,
     'EVTS': read_event_chunk,
     'CAMS': read_camera_chunk,
     'CLID': read_collision_shape_chunk,
@@ -1369,6 +1465,12 @@ def read_binary(raw_bytes: bytes) -> MdxModel:
     return result
 
 
+def read_binary_file(filename: str) -> MdxModel:
+    with open(filename, 'rb') as fp:
+        raw_bytes = fp.read()
+    return read_binary(raw_bytes)
+
+
 CHUNK_WRITERS = [
     write_version,
     write_model_chunk,
@@ -1386,7 +1488,7 @@ CHUNK_WRITERS = [
     write_pivot_chunk,
     # write_particle_emitter_chunk,
     write_particle_emitter_2_chunk,
-    # write_ribbon_chunk,
+    write_ribbon_chunk,
     write_event_chunk,
     write_camera_chunk,
     write_collision_shape_chunk,
@@ -1403,6 +1505,15 @@ def write_binary(data: MdxModel) -> bytes:
     for write_function in CHUNK_WRITERS:
         write_function(writer, data)
     return writer.as_bytes()
+
+
+def write_binary_file(data: MdxModel, filename: str) -> None:
+    raw_bytes = write_binary(data)
+    dirname = os.path.dirname(filename)
+    if dirname:
+        os.makedirs(dirname, exist_ok=True)
+    with open(filename, 'wb') as fp:
+        fp.write(raw_bytes)
 
 
 def is_simple_type(data: object) -> bool:
@@ -1432,9 +1543,11 @@ def write_inline_toml(data: object, indent: str = '') -> str:
                 for part_start in range(0, len(data), 12):
                     parts.append('  ')
                     for index in range(part_start, part_start+12):
+                        if index >= len(data):
+                            break
                         parts.append(write_inline_toml(data[index], indent))
                         parts.append(', ')
-                    parts.append(f' # {part_start}~{part_start+11}')
+                    parts.append(f' # {part_start}~{index}')
                     parts.append(f'\n{indent}')
                 parts.append(']')
                 return ''.join(parts)
@@ -1491,9 +1604,12 @@ def write_toml(data: object, nesting: list[str] = []) -> str:
     return '\n'.join(early_lines + lines)
 
 
-def write_toml_to_file(data: object, file: str) -> None:
+def write_toml_to_file(data: object, filename: str) -> None:
     text = write_toml(data)
-    with open(file, 'w') as fp:
+    dirname = os.path.dirname(filename)
+    if dirname:
+        os.makedirs(dirname, exist_ok=True)
+    with open(filename, 'w') as fp:
         fp.write(text)
 
 
@@ -1565,6 +1681,8 @@ def dataclass_from_dict(
                 ]
         return result
     if issubclass(class_, enum.Enum):
+        return class_(data)
+    if issubclass(class_, tuple):
         return class_(data)
     if not isinstance(data, class_):
         raise DictReadError(f"{key} got {data} ({type(data)}), expected {class_}")
