@@ -1,5 +1,5 @@
 
-from typing import *
+from typing import TypeVar, Generic
 
 E = TypeVar('E')
 
