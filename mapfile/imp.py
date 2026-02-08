@@ -66,6 +66,11 @@ def from_text(text: str) -> Imports:
     return Imports(result['version'], [ImportedPath(**x) for x in result['imports']])
 
 
+def from_text_file(filename: str) -> Imports:
+    with open(filename, 'r') as fp:
+        text = fp.read()
+    return from_text(text)
+
 
 if __name__ == '__main__':
     from work import manifest

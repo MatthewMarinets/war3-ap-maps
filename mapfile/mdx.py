@@ -224,6 +224,7 @@ class Bone:
 
 @dataclass
 class Light:
+    node: Node = field(default_factory=Node)
     type: int = 0
     """omni=0, directional=1, ambient=2"""
     attenuation_start: float = 0.0
@@ -973,9 +974,10 @@ def read_light_chunk(reader: binary.ByteArrayParser, result: MdxModel) -> None:
         b'KLAV': (reader.read_float, (), 'visibility_track',),
     }
     while reader.index < start_index + chunk_size:
-        light = GeosetAnimation()
+        light = Light()
         light_start_index = reader.index
         light_element_size = reader.read_int32()
+        _read_node(reader, light.node)
         light.type = reader.read_int32()
         light.attenuation_start = reader.read_float()
         light.attenuation_end = reader.read_float()
@@ -986,7 +988,9 @@ def read_light_chunk(reader: binary.ByteArrayParser, result: MdxModel) -> None:
         _read_all_tracks(reader, tag_to_getter, light)
 
         result.lights.append(light)
-        assert reader.index == light_start_index + light_element_size
+        assert reader.index == light_start_index + light_element_size, (
+            f"{reader.index} != {light_start_index + light_element_size}"
+        )
     assert reader.index == start_index + chunk_size
 
 
@@ -997,7 +1001,8 @@ def write_light_chunk(writer: binary.ByteArrayWriter, data: MdxModel) -> None:
     chunk_writer = binary.ByteArrayWriter()
     for light in data.lights:
         element_start = len(chunk_writer.data)
-        chunk_writer.write_int32(0)
+        chunk_writer.write_int32(0)  # Inclusive Length
+        _write_node(chunk_writer, light.node)
         chunk_writer.write_int32(light.type)
         chunk_writer.write_float(light.attenuation_start)
         chunk_writer.write_float(light.attenuation_end)
@@ -1341,7 +1346,6 @@ def read_camera_chunk(reader: binary.ByteArrayParser, result: MdxModel) -> None:
         camera.far_clipping_plane = reader.read_float()
         camera.near_clipping_plane = reader.read_float()
         camera.look_at = reader.read('=fff')
-        print(hex(reader.index))
         _read_all_tracks(reader, tag_to_getter, camera)
 
         result.cameras.append(camera)
