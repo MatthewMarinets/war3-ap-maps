@@ -94,6 +94,8 @@ def read_string_from_buffer(buffer: io.BufferedReader) -> str:
 class ByteArrayWriter:
     def __init__(self) -> None:
         self.data = bytearray()
+    def index(self) -> int:
+        return len(self.data)
     def as_bytes(self) -> bytes:
         return bytes(self.data)
     def write_bytes(self, value: bytes) -> 'ByteArrayWriter':

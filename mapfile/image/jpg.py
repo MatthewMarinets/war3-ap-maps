@@ -8,15 +8,13 @@ from typing import Literal
 from dataclasses import dataclass, field
 from collections import Counter
 import math
+import enum
 from .. import binary
 from .common import ImageData
 from . import dct
 
 
-@dataclass
-class HuffmanTable:
-    is_ac: bool = False
-    symbol_map: dict[tuple[int, int], int] = field(default_factory=dict)
+HuffmanTable = dict[tuple[int, int], int]
 
 
 @dataclass
@@ -34,6 +32,28 @@ class JpgData:
     quantization_tables: dict[int, bytes] = field(default_factory=dict)
     # blp-specific
     is_bgr_format: bool = False
+
+
+class FrameMarker(enum.Enum):
+    def __new__(cls, *args, **kwargs) -> 'FrameMarker':
+        value = len(cls.__members__) + 1
+        obj = object.__new__(cls)
+        obj._value_ = value
+        return obj
+
+    def __init__(self, code: bytes, marker_name: str) -> None:
+        self.code = code
+        self.marker_name = marker_name
+
+    SOI = b'\xff\xd8', "Start of Image"
+    APP0 = b'\xff\xe0', "Application 0"
+    COM = b'\xff\xfe', "Comment"
+    EOI = b'\xff\xd9', "End of Image"
+    DQT = b'\xff\xdb', "Define Quantization Table"
+    DHT = b'\xff\xc4', "Define Huffman Table"
+    DRI = b'\xff\xdd', "Define Restart Interval"
+    SOF0 = b'\xff\xc0', "Start of Frame (type 0)"
+    SOS = b'\xff\xda', "Start of Scan"
 
 
 def clamp(value: int, _min: int, _max: int) -> int:
@@ -119,9 +139,7 @@ def _read_huffman_table(reader: binary.ByteArrayParser, data: JpgData) -> None:
     frame_start = reader.index
     length = reader.read('>H')[0]
     while reader.index < frame_start + length:
-        table = HuffmanTable()
         table_id = reader.read_u8()
-        table.is_ac = (table_id & 0xf0) != 0
         length_to_symbols = [b'']
         character_sizes = reader.read_bytes(16)
         if sum(character_sizes) > 176:
@@ -130,7 +148,7 @@ def _read_huffman_table(reader: binary.ByteArrayParser, data: JpgData) -> None:
             length_to_symbols.append(reader.read_bytes(character_size))
         if table_id in data.huffman_tables:
             raise ValueError(f'Multiple huffman tables defined for ID {table_id}')
-        table.symbol_map = _huffman_table_to_dict(length_to_symbols)
+        table = _huffman_table_to_dict(length_to_symbols)
         data.huffman_tables[table_id] = table
     assert reader.index == frame_start + length
 
@@ -228,25 +246,25 @@ def read_jpg_data(raw_bytes: bytes, came_from_blp: bool = False) -> JpgData:
     result = JpgData()
     result.is_bgr_format = came_from_blp
     soi = reader.read_bytes(2)
-    assert soi == b'\xff\xd8'
+    assert soi == FrameMarker.SOI.code
     next_marker = reader.read_bytes(2)
     while next_marker:
-        if next_marker == b'\xff\xe0':  # APP0
+        if next_marker == FrameMarker.APP0.code:
             _read_app0(reader)
-        elif next_marker == b'\xff\xfe':  # COM - Comment
+        elif next_marker == FrameMarker.COM.code:  # Comment
             _read_comment_block(reader)
-        elif next_marker == b'\xff\xd9':  # EOI - End of Image
+        elif next_marker == FrameMarker.EOI.code:  # End of Image
             # EOF
             break
-        elif next_marker == b'\xff\xdb':  # DQT - Define Quantization Table
+        elif next_marker == FrameMarker.DQT.code:  # Define Quantization Table
             _read_quantization_table(reader, result)
-        elif next_marker == b'\xff\xc4':  # DHT - Define Huffman Table
+        elif next_marker == FrameMarker.DHT.code:  # Define Huffman Table
             _read_huffman_table(reader, result)
-        elif next_marker == b'\xff\xdd':  # DRI - Define Restart Interval
+        elif next_marker == FrameMarker.DRI.code:  # Define Restart Interval
             _read_restart_interval(reader, result)
-        elif next_marker == b'\xff\xc0':  # SOF0 - Start of Frame (type 0)
+        elif next_marker == FrameMarker.SOF0.code:  # Start of Frame (type 0)
             _read_start_of_frame(reader, result)
-        elif next_marker == b'\xff\xda':  # SOS - Start of Scan
+        elif next_marker == FrameMarker.SOS.code:  # Start of Scan
             _read_start_of_scan(reader, result)
             _read_scan(reader, result)
             break
@@ -307,7 +325,7 @@ def _write_huffman_table(writer: binary.ByteArrayWriter, data: JpgData) -> None:
     writer.write_u16_be(0)  # filled in later
     for table_id, huffman_table in data.huffman_tables.items():
         writer.write_u8(table_id)
-        writer.write_bytes(_huffman_table_to_bytes(huffman_table.symbol_map))
+        writer.write_bytes(_huffman_table_to_bytes(huffman_table))
     # Handle length
     frame_length = len(writer.data) - frame_start
     writer.data[frame_start] = frame_length >> 8
@@ -353,31 +371,43 @@ def _write_scan(writer: binary.ByteArrayWriter, data: JpgData) -> None:
     writer.write_bytes(data.pixel_data.replace(b'\xff', b'\xff\x00'))
 
 
-def write_jpg(data: JpgData, for_blp: bool = False) -> bytes:
+def write_jpg_get_offsets(data: JpgData, for_blp: bool = False) -> tuple[bytes, dict[FrameMarker, list[int]]]:
+    offsets: dict[FrameMarker, list[int]] = {}
     writer = binary.ByteArrayWriter()
     # SOI
+    offsets[FrameMarker.SOF0] = [writer.index()]
     writer.write_bytes(b'\xff\xd8')
     # APP0
     if not for_blp:
+        offsets[FrameMarker.APP0] = [writer.index()]
         writer.write_bytes(b'\xff\xe0')
         _write_app0(writer, data)
     # DQT
     # Note(mm): The headers I see in .blp files use separate frames per Huffman/Quantization table
+    offsets[FrameMarker.DQT] = [writer.index()]
     writer.write_bytes(b'\xff\xdb')
     _write_quantization_table(writer, data.quantization_tables)
     # DHT
+    offsets[FrameMarker.DHT] = [writer.index()]
     writer.write_bytes(b'\xff\xc4')
     _write_huffman_table(writer, data)
     # SOF0
+    offsets[FrameMarker.SOF0] = [writer.index()]
     writer.write_bytes(b'\xff\xc0')
     _write_sof0(writer, data)
     # SOS
+    offsets[FrameMarker.SOS] = [writer.index()]
     writer.write_bytes(b'\xff\xda')
     _write_start_of_scan(writer, data)
     _write_scan(writer, data)
     # EOI
+    offsets[FrameMarker.EOI] = [writer.index()]
     writer.write_bytes(b'\xff\xd9')
-    return writer.as_bytes()
+    return writer.as_bytes(), offsets
+
+
+def write_jpg(data: JpgData, for_blp: bool = False) -> bytes:
+    return write_jpg_get_offsets(data, for_blp)[0]
 
 
 def write_jpg_file(data: JpgData, filename: str, for_blp: bool = False) -> None:
@@ -568,8 +598,8 @@ def decompress_jpg(jpg: JpgData) -> ImageData:
                 last_dc_value[x] = 0
             reader.align_to_next_byte()
         for component_index, mcu_component in enumerate(mcu):
-            dc_huffman = jpg.huffman_tables[jpg.channel_to_huffman_tables[component_index][0]].symbol_map
-            ac_huffman = jpg.huffman_tables[jpg.channel_to_huffman_tables[component_index][1] + 16].symbol_map
+            dc_huffman = jpg.huffman_tables[jpg.channel_to_huffman_tables[component_index][0]]
+            ac_huffman = jpg.huffman_tables[jpg.channel_to_huffman_tables[component_index][1] + 16]
             dc_value = decode_mcu_component(
                 reader,
                 mcu_component,
@@ -764,7 +794,7 @@ def compress_jpg(
     result.channel_to_huffman_tables = [(0, 0)] * num_channels
 
     huffman_symbol_to_codes: dict[int, dict[int, tuple[int, int]]] = {
-        index: _invert_dict(table.symbol_map)
+        index: _invert_dict(table)
         for index, table in huffman_tables.items()
     }
 
@@ -783,12 +813,12 @@ def compress_jpg(
                 ac_huffman_table = huffman_symbol_to_codes[result.channel_to_huffman_tables[channel][1] + 16]
                 for dy in range(8):
                     y = y_start + dy
-                    if y > image.height:
-                        y = image.height
+                    if y > image.height - 1:
+                        y = image.height - 1
                     for dx in range(8):
                         x = x_start + dx
-                        if x > image.width:
-                            x = image.width
+                        if x > image.width - 1:
+                            x = image.width - 1
                         offset = num_channels * (y*stride + x)
                         if result.is_bgr_format:
                             value = image.pixels[offset+channel]

@@ -1500,7 +1500,7 @@ CHUNK_WRITERS = [
 
 
 def write_binary(data: MdxModel) -> bytes:
-    writer = binary.ByteArrayWriter
+    writer = binary.ByteArrayWriter()
     writer.write_id('MDLX')
     for write_function in CHUNK_WRITERS:
         write_function(writer, data)

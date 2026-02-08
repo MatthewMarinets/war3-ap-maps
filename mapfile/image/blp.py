@@ -10,7 +10,8 @@ from typing import NamedTuple
 import os
 import shutil
 import glob
-from .common import ImageData
+import tomllib
+from .common import ImageData, generate_mip_map
 from . import jpg, tga
 from mapfile import binary
 
@@ -18,6 +19,9 @@ blp_version = {
     b'BLP0': 0,  # Warcraft 3 ROC beta
     b'BLP1': 1,  # Warcraft 3
     b'BLP2': 2,  # World of Warcraft
+}
+version_to_code = {
+    _version: _code for _code, _version in blp_version.items()
 }
 
 
@@ -96,6 +100,76 @@ def read_blp(filename: str, dest: str | None = None) -> BlpInfo:
     )
 
 
+def write_blp(blp_info: BlpInfo, jpg_data: list[tuple[bytes, dict[jpg.FrameMarker, list[int]]]]) -> bytes:
+    writer = binary.ByteArrayWriter()
+    writer.write_bytes(version_to_code[blp_info.version])
+    writer.write_int32(0)  # content_type
+    assert blp_info.version < 2
+    if blp_info.version < 2:
+        writer.write_int32(blp_info.alpha_bits)
+    else:
+        # todo: v2 encoding_type, alpha_bits, sample_type, has_mipmaps
+        pass
+    writer.write_int32(blp_info.image_width)
+    writer.write_int32(blp_info.image_height)
+    if blp_info.version < 2:
+        writer.write_int32(blp_info.extra_flags)
+        writer.write_int32(blp_info.has_mipmaps)
+
+    jpg_header_size = jpg_data[0][1][jpg.FrameMarker.SOF0][0]
+    jpg_header_bytes = jpg_data[0][0][:jpg_header_size]
+
+    # Calculate mipmap stats
+    mipmap_sizes: list[int] = []
+    mipmap_offsets: list[int] = []
+    cumulative_length = (
+        writer.index()
+        + 16 * 4  # mipmap_offsets
+        + 16 * 4  # mipmap_sizes
+        + 4  # sizeof(jpg_header_size)
+        + jpg_header_size
+    )
+    for mipmap_level in range(16):
+        if len(jpg_data) <= mipmap_level:
+            mipmap_sizes.append(0)
+            mipmap_offsets.append(0)
+        else:
+            mipmap_data = jpg_data[mipmap_level]
+            mipmap_size = len(mipmap_data[0]) - mipmap_data[1][jpg.FrameMarker.SOF0][0]
+            mipmap_sizes.append(mipmap_size)
+            mipmap_offsets.append(cumulative_length)
+            cumulative_length += mipmap_size
+
+    # Write mipmap stats
+    for mipmap_offset in mipmap_offsets:
+        writer.write_int32(mipmap_offset)
+    for mipmap_size in mipmap_sizes:
+        writer.write_int32(mipmap_size)
+
+    writer.write_int32(jpg_header_size)
+    writer.write_bytes(jpg_header_bytes)
+
+    for mipmap_index, mipmap_data in enumerate(jpg_data):
+        assert writer.index() == mipmap_offsets[mipmap_index], (
+            f"index {mipmap_index}: write pos {writer.index()} != {mipmap_offsets[mipmap_index]}"
+        )
+        assert mipmap_data[1][jpg.FrameMarker.SOF0][0] == jpg_header_size
+        writer.write_bytes(mipmap_data[0][jpg_header_size:])
+
+    return writer.as_bytes()
+
+
+def write_blp_file(
+    blp_info: BlpInfo,
+    jpg_data: list[tuple[bytes, dict[jpg.FrameMarker, list[int]]]],
+    filename: str
+) -> None:
+    raw_bytes = write_blp(blp_info, jpg_data)
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
+    with open(filename, 'wb') as fp:
+        fp.write(raw_bytes)
+
+
 def unpack_to_folder(filename: str, destination: str) -> None:
     blp_info = read_blp(filename)
     stem = os.path.splitext(os.path.basename(filename))[0]
@@ -112,6 +186,41 @@ def unpack_to_folder(filename: str, destination: str) -> None:
         tga.write_tga_file(image, f'{destination}/mipmap_{index}.tga')
 
 
+def pack_folder_to_blp(folder: str, dest: str, regenerate_mipmaps: bool = True) -> None:
+    info_file = f'{folder}/info.toml'
+    with open(info_file, 'rb') as fp:
+        info = tomllib.load(fp)
+    mipmap_files = sorted(glob.glob(f'{folder}/mipmap_*.tga'))
+    image_data = tga.read_tga_file(mipmap_files[0])
+    compressed_data = [compress_image_data(image_data)]
+    last_image_data = image_data
+    for mipmap_file in mipmap_files[1:]:
+        if regenerate_mipmaps:
+            this_image_data = generate_mip_map(last_image_data)
+            last_image_data = this_image_data
+            tga.write_tga_file(this_image_data, mipmap_file)
+        else:
+            this_image_data = tga.read_tga_file(mipmap_file)
+        compressed_data.append(compress_image_data(this_image_data))
+    result = BlpInfo(
+        version=info['version'],
+        content_type=0,
+        alpha_bits=image_data.alpha_bits,
+        extra_flags=5,
+        has_mipmaps=len(mipmap_files) > 1,
+        image_width=image_data.width,
+        image_height=image_data.height,
+        image_data=[],
+    )
+    os.makedirs(os.path.dirname(dest), exist_ok=True)
+    write_blp_file(result, compressed_data, dest)
+
+
+def compress_image_data(image: ImageData) -> tuple[bytes, dict[jpg.FrameMarker, list[int]]]:
+    jpg_data = jpg.compress_jpg(image, DEFAULT_QUANTIZATION_TABLES, DEFAULT_HUFFMAN_TABLES)
+    return jpg.write_jpg_get_offsets(jpg_data, for_blp=True)
+
+
 # Common table values used within the blp jpg header
 DEFAULT_QUANTIZATION_TABLES = {
     0: (
@@ -123,7 +232,7 @@ DEFAULT_QUANTIZATION_TABLES = {
 }
 
 
-DEFAULT_HUFFMAN_TABLES = {
+DEFAULT_HUFFMAN_TABLES: dict[int, jpg.HuffmanTable] = {
     0: {
         (2, 0): 0,
         (3, 2): 1,

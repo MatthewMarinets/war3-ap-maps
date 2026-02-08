@@ -51,7 +51,7 @@ def read_tga(raw_bytes: bytes, verbose: bool = False) -> ImageData:
         print(f'colour map type: {colour_map_type}')
         print(f'x origin: {x_origin}')
         print(f'y origin: {y_origin}')
-        print(f'image ID: {image_id}')
+        print(f'image ID: {image_id!r}')
     if colour_map_type:
         # Colour map data, assumed absent
         pass
