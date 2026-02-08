@@ -408,7 +408,22 @@ class Wc3Location(enum.IntEnum):
     OR2_RAIDER_RESCUE =                 30222, "Raider Rescue", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.RESCUE
     OR2_CENTER_SHOP =                   30223, "Goblin Merchant", Wc3Mission.O2_THE_LONG_MARCH, Wc3LocationType.SHOP
 
-    OR3_VICTORY = 30300, "Victory", Wc3Mission.O3_CRY_OF_THE_WARSONG, Wc3LocationType.VICTORY
+    OR3_VICTORY =                       30300, "Victory", Wc3Mission.O3_CRY_OF_THE_WARSONG, Wc3LocationType.VICTORY
+    OR3_WEST_CENTAUR_SORCERER_ITEM_1 =  30301, "Centaur Sorcerer Item 1", Wc3Mission.O3_CRY_OF_THE_WARSONG, Wc3LocationType.ITEM, "Tome of Intelligence"
+    OR3_WEST_CENTAUR_SORCERER_ITEM_2 =  30302, "Centaur Sorcerer Item 2", Wc3Mission.O3_CRY_OF_THE_WARSONG, Wc3LocationType.ITEM, "Potion of Greater Mana"
+    OR3_BERSERK_WILDKIN_ITEM =          30303, "Berserk Wildkin Item", Wc3Mission.O3_CRY_OF_THE_WARSONG, Wc3LocationType.ITEM, "Claws of Attack +9"  # Northeast
+    OR3_HARPY_QUEEN_ITEM =              30304, "Harpy Queen Item", Wc3Mission.O3_CRY_OF_THE_WARSONG, Wc3LocationType.ITEM, "Circlet of Nobility"
+    OR3_NORTH_CENTAUR_SORCERER_ITEM =   30305, "North Centaur Sorcerer Item", Wc3Mission.O3_CRY_OF_THE_WARSONG, Wc3LocationType.ITEM, "Scroll of Healing"
+    OR3_CENTAUR_IMPALER_ITEM =          30306, "Centaur Impaler Item", Wc3Mission.O3_CRY_OF_THE_WARSONG, Wc3LocationType.ITEM, "Potion of Healing"
+    OR3_CENTAUR_KHAN_ITEM =             30307, "Centaur Khan Item", Wc3Mission.O3_CRY_OF_THE_WARSONG, Wc3LocationType.ITEM, "Gauntlets of Ogre Strength +3"
+    OR3_ESTABLISH_A_BASE =              30320, "Establish a Base", Wc3Mission.O3_CRY_OF_THE_WARSONG, Wc3LocationType.QUEST
+    OR3_BROWN_HUMAN_BASE =              30321, "Brown Human Base", Wc3Mission.O3_CRY_OF_THE_WARSONG, Wc3LocationType.QUEST_BASE, "Stromgarde Brigade"
+    OR3_BLUE_HUMAN_BASE =               30322, "Blue Human Base", Wc3Mission.O3_CRY_OF_THE_WARSONG, Wc3LocationType.QUEST_BASE, "Human Expedition"
+    OR3_DARK_GREEN_HUMAN_BASE =         30323, "Dark Green Human Base", Wc3Mission.O3_CRY_OF_THE_WARSONG, Wc3LocationType.QUEST_BASE, "Kul Tiras Elite Corps"
+    OR3_LIGHT_BLUE_HUMAN_BASE =         30324, "Light Blue Human Base", Wc3Mission.O3_CRY_OF_THE_WARSONG, Wc3LocationType.QUEST_BASE, "Lordaeron Corps"
+    OR3_GRAY_HUMAN_BASE =               30325, "Gray Human Base", Wc3Mission.O3_CRY_OF_THE_WARSONG, Wc3LocationType.QUEST_BASE, "Gilneas Brigade"
+    OR3_GROMS_BASE =                    30326, "Grom's Base", Wc3Mission.O3_CRY_OF_THE_WARSONG, Wc3LocationType.HARD_BASE, "Warsong Clan"
+
     OR4_VICTORY = 30400, "Victory", Wc3Mission.O4_THE_SPIRITS_OF_ASHENVALE, Wc3LocationType.VICTORY
     OR5_VICTORY = 30500, "Victory", Wc3Mission.O5_THE_HUNTER_OF_SHADOWS, Wc3LocationType.VICTORY
     OR6_VICTORY = 30600, "Victory", Wc3Mission.O6_WHERE_WYVERNS_DARE, Wc3LocationType.VICTORY
