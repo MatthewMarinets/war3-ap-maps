@@ -40,6 +40,9 @@ def general_converter(module: FileFormatModule, extension: str | None = None, ar
 
 PROXY_FILES = {
     'questionmark_item.mdx': 'mods/general/war3mapImported/questionmark_item.mdx',
+    'eviljaina.mdx': 'mods/apimports/eviljaina.mdx',
+    'eviljaina_portrait.mdx': 'mods/apimports/eviljaina_portrait.mdx',
+    'eviljaina.blp': 'mods/apimports/eviljaina.blp',
 }
 def make_proxy(actual_file: str, proxy_file: str) -> None:
     with open(proxy_file, 'w') as fp:

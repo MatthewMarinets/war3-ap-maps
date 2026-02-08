@@ -190,6 +190,52 @@ Possibilities:
 
 --Sraw
 
+### Chaos heroes
+There are 3 points in the RoC campaign where a hero gets corrupted, with an accompanying chas damage type buff
+* H9: Arthas claims Frostmourne
+* O5: Grom drinks from the well
+* N6: Illidan consumes the Skull of Gul'dan
+
+Illidan's morph takes the place of his ultimate ability,
+so when generalizing it may be better to use the TFT Illidan unit as a base instead.
+
+The stat changes:
+* Arthas (Hart -> Harf):
+  * Base HP: 100 -> 150 (modified from 100)
+  * Start AGI: 13 -> 15 (modified from 13)
+  * Start INT: 17 -> 19 (modified from 17)
+  * Start STR: 22 -> 24 (modified from 22)
+  * Damage Base: 0 -> 12 (modified from 22)
+  * Damage Type: normal -> chaos
+* Grom (Ogrh -> Opgh):
+  * Damage Base: 0 -> 12
+  * Damage type: normal -> chaos
+* Illidan (Eill -> Eidm):
+  * HP Regen: 0.5 -> 1
+  * Start STR: 21 -> 26
+  * Start AGI: 22 -> 20
+  * Damage Base: 0 -> 12
+  * Damage Type: normal -> chaos
+  * Changes to a missile attack / can target air
+* Illidan RoC -> TFT (Eill -> Eevi):
+  * Attack Type: normal -> hero
+  * Build time: 55 -> 40
+  * No more Ultravision
+
+The consistent points are that a chaos hero gains +12 base damage and changes their attack type to chaos.
+
+It would be nice to switch to alternative models or retexture heroes for their chaos counterparts.
+That's a lot of work for 57 units, though.
+Until then I think I'll fall back to scaling up by 20%, darkening, and applying a red hue.
+Note Grom scales up by 20% when he gets corrupted.
+
+When making custom models, note many of the campaign-specific heroes have subtly different models.
+Still, it may be expedient to have corrupted heroes share some models.
+
+In vanilla, no Undead heroes are ever corrupted.
+It would be funny if corruption instead "un-corrupted" them,
+giving them a more light/living aesthetic.
+
 ## Shopsanity
 * Allow buying checks from goblin merchants
 * Allow buying checks from mercenary camps

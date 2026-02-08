@@ -234,7 +234,7 @@ def main(map_dir: str) -> int:
 
 HELP = f"""
 Script to update unpacked maps to add irregulars. Usage:
-{os.path.basename(__file__)}.py <map_dir>
+{os.path.basename(__file__)} <map_dir>
 """
 if __name__ == '__main__':
     if len(sys.argv) < 2:

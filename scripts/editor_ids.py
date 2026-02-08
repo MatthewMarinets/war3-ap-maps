@@ -1213,6 +1213,133 @@ FIELD_UNIT_UI_TINT_RED = 'uclr'  # integer
 ## Upgrades
 FIELD_UPGRADE_NAME = 'gnam'  # string
 
+# Paths
+## Missiles
+PATH_MODEL_PRIEST_MISSILE = r'Abilities\Weapons\PriestMissile\PriestMissile.mdl'
+PATH_MODEL_SORCERESS_MISSILE = r'Abilities\Weapons\SorceressMissile\SorceressMissile.mdl'
+"""Also used by Spirit Walker"""
+PATH_MODEL_GRYPHON_RIDER_MISSILE = r'Abilities\Weapons\GryphonRiderMissile\GryphonRiderMissile.mdl'
+PATH_MODEL_SPELL_BREAKER_MISSILE = r'Abilities\Weapons\BloodElfSpellThiefMISSILE\BloodElfSpellThiefMISSILE.mdl'
+PATH_MODEL_DRAGONHAWK_RIDER_MISSILE = r'Abilities\Weapons\DragonHawkMissile\DragonHawkMissile.mdl'
+PATH_MODEL_GUARD_TOWER_MISSILE = r'Abilities\Weapons\GuardTowerMissile\GuardTowerMissile.mdl'
+"""Also used by Watch Tower"""
+PATH_MODEL_CANNON_TOWER_MISSILE = r'Abilities\Weapons\CannonTowerMissile\CannonTowerMissile.mdl'
+PATH_MODEL_ARCANE_TOWER_MISSILE = r'Abilities\Spells\Undead\OrbOfDeath\OrbOfDeathMissile.mdl'
+PATH_MODEL_ARCHMAGE_MISSILE = r'Abilities\Weapons\FireBallMissile\FireBallMissile.mdl'
+"""Also used by Orc Warlock, Forest Troll Priests, Centaur Sorcerers"""
+PATH_MODEL_BLOOD_MAGE_MISSILE = r'Abilities\Weapons\BloodElfMissile\BloodElfMissile.mdl'
+PATH_MODEL_WATER_ELEMENTAL_MISSILE = r'Abilities\Weapons\WaterElementalMissile\WaterElementalMissile.mdl'
+PATH_MODEL_PHOENIX_MISSILE = r'Abilities\Weapons\PhoenixMissile\Phoenix_Missile.mdl'
+PATH_MODEL_BATTLESHIP_MISSILE = r'Abilities\Weapons\BoatMissile\BoatMissile.mdl'
+"""Also used by Frigates"""
+PATH_MODEL_SKY_FURY_TOWER_MISSILE = r'Abilities\Weapons\AncestralGuardianMissile\AncestralGuardianMissile.mdl'
+PATH_MODEL_DEATH_TOWER_MISSILE = r'Abilities\Spells\NightElf\CorrosiveBreath\CorrosiveBreathMissile.mdl'
+
+PATH_MODEL_TROLL_HEADHUNTER_MISSILE = r'abilities\weapons\huntermissile\huntermissile.mdl'
+"""Also used by Orc Burrow"""
+PATH_MODEL_DEMOLISHER_MISSILE = r'abilities\weapons\DemolisherMissile\DemolisherMissile.mdl'
+"""Spiky ball"""
+PATH_MODEL_DEMOLISHER_BURNING_OIL_MISSILE = r'Abilities\Weapons\DemolisherFireMissile\DemolisherFireMissile.mdl'
+PATH_MODEL_CATAPULT_MISSILE = r'Abilities\Weapons\AncientProtectorMissile\AncientProtectorMissile.mdl'
+"""Also used by Draenei Demolisher, Advanced Boulder Tower"""
+PATH_MODEL_KODO_BEAST_MISSILE = r'Abilities\Weapons\Axe\AxeMissile.mdl'
+"""Also used by Trolls"""
+PATH_MODEL_WYVERN_MISSILE = r'abilities\weapons\WyvernSpear\WyvernSpearMissile.mdl'
+PATH_MODEL_TROLL_BATRIDER_MISSILE = r'Abilities\Weapons\BatTrollMissile\BatTrollMissile.mdl'
+PATH_MODEL_TROLL_WITCH_DOCTOR_MISSILE = r'Abilities\Weapons\WitchDoctorMissile\WitchDoctorMissile.mdl'
+PATH_MODEL_FAR_SEER_MISSILE = r'Abilities\Weapons\FarseerMissile\FarseerMissile.mdl'
+"""Also used by Shaman, Obsidian Statue, Naga Tidal Guardian, Gnoll Warden, Harpy Storm-Hag, Energy Tower, etc"""
+PATH_MODEL_SHADOW_HUNTER_MISSILE = r'Abilities\Weapons\ShadowHunterMissile\ShadowHunterMissile.mdl'
+PATH_MODEL_SERPENT_WARD_MISSILE = r'Abilities\Weapons\ShadowHunterMissile\ShadowHunterMissile.mdl'
+PATH_MODEL_REXXAR_MISSILE = r'Abilities\Weapons\RexxarMissile\RexxarMissile.mdl'
+PATH_MODEL_SHOCKWAVE_MISSILE = r'Abilities\Spells\Orc\Shockwave\ShockwaveMissile.mdl'
+
+PATH_MODEL_CRYPT_FIEND_MISSILE = r'Abilities\Weapons\CryptFiendMissile\CryptFiendMissile.mdl'
+PATH_MODEL_GARGOYLE_MISSILE = r'Abilities\Weapons\GargoyleMissile\GargoyleMissile.mdl'
+PATH_MODEL_MEAT_WAGON_MISSILE = r'Abilities\Weapons\MeatwagonMissile\MeatwagonMissile.mdl'
+PATH_MODEL_BANSHEE_MISSILE = r'Abilities\Weapons\GargoyleMissile\GargoyleMissile.mdl'
+PATH_MODEL_NECROMANCER_MISSILE = r'Abilities\Weapons\NecromancerMissile\NecromancerMissile.mdl'
+"""Also used by Naga Sirens"""
+PATH_MODEL_FROST_WYRM_MISSILE = r'Abilities\Weapons\FrostWyrmMissile\FrostWyrmMissile.mdl'
+"""Also used by Blue Dragons"""
+PATH_MODEL_SPIRIT_TOWER_MISSILE = r'Abilities\Weapons\ZigguratMissile\ZigguratMissile.mdl'
+PATH_MODEL_NERUBIAN_TOWER_MISSILE = r'Abilities\Weapons\ZigguratFrostMissile\ZigguratFrostMissile.mdl'
+PATH_MODEL_LICH_MISSILE = r'Abilities\Weapons\LichMissile\LichMissile.mdl'
+PATH_MODEL_SKELETAL_MAGE_MISSILE = r'Abilities\Weapons\SkeletalMageMissile\SkeletalMageMissile.mdl'
+PATH_MODEL_DESTROYER_MISSILE = r'Abilities\Weapons\AvengerMissile\AvengerMissile.mdl'
+"""Also used by Nether Dragons"""
+PATH_MODEL_DEATH_COIL_MISSILE = r'Abilities\Spells\Undead\DeathCoil\DeathCoilMissile.mdl'
+PATH_MODEL_CARRION_SWARM_MISSILE = r'Abilities\Spells\Undead\CarrionSwarm\CarrionSwarmMissile.mdl'
+
+PATH_MODEL_ARCHER_MISSILE = r'Abilities\Weapons\Arrow\ArrowMissile.mdl'
+PATH_MODEL_HUNTRESS_MISSILE = r'Abilities\Weapons\SentinelMissile\SentinelMissile.mdl'
+PATH_MODEL_DRYAD_MISSILE = r'Abilities\Weapons\Dryadmissile\Dryadmissile.mdl'
+PATH_MODEL_GLAIVE_THROWER_MISSILE = r'Abilities\Weapons\GlaiveMissile\GlaiveMissile.mdl'
+PATH_MODEL_DRUID_OF_THE_TALON_MISSILE = r'Abilities\Weapons\DruidoftheTalonMissile\DruidoftheTalonMissile.mdl'
+PATH_MODEL_CHIMAERA_LIGHTNING_MISSILE = r'Abilities\Weapons\ChimaeraLightningMissile\ChimaeraLightningMissile.mdl'
+"""Also used by Bronze Dragons"""
+PATH_MODEL_CHIMAERA_ACID_MISSILE = r'Abilities\Weapons\ChimaeraAcidMissile\ChimaeraAcidMissile.mdl'
+PATH_MODEL_FAERIE_DRAGON_MISSILE = r'Abilities\Weapons\FaerieDragonMissile\FaerieDragonMissile.mdl'
+"""Also used by spitting spider, Searinox"""
+PATH_MODEL_ANCIENT_PROTECTOR_MISSILE = r'Abilities\Weapons\AncientProtectorMissile\AncientProtectorMissile.mdl'
+"""Also used by Golems, Boulder Tower, Dragon Turtle"""
+PATH_MODEL_KEEPER_OF_THE_GROVE_MISSILE = r'Abilities\Weapons\KeeperGroveMissile\KeeperGroveMissile.mdl'
+PATH_MODEL_PRIESTESS_OF_THE_MOON_MISSILE = r'Abilities\Weapons\MoonPriestessMissile\MoonPriestessMissile.mdl'
+"""Also used by Sylvanas (alive)"""
+PATH_MODEL_DEMON_HUNTER_MISSILE = r'Abilities\Weapons\DemonHunterMissile\DemonHunterMissile.mdl'
+"""Also used by Archimonde, Doom Guard"""
+PATH_MODEL_AVATAR_OF_VENGEANCE_MISSILE = r'Abilities\Weapons\SpiritOfVengeanceMissile\SpiritOfVengeanceMissile.mdl'
+PATH_MODEL_SPIRIT_OF_VENGEANCE_MISSILE = r'Abilities\Weapons\VengeanceMissile\VengeanceMissile.mdl'
+PATH_MODEL_SENTINEL_MISSILE = r'Units\NightElf\Owl\Owl.mdl'
+PATH_MODEL_FAN_OF_KNIVES_MISSILE = r'Abilities\Spells\NightElf\FanOfKnives\FanOfKnivesMissile.mdl'
+PATH_MODEL_SEARING_ARROWS_MISSILE = r'Abilities\Weapons\SearingArrow\SearingArrowMissile.mdl'
+PATH_MODEL_SHADOW_STRIKE_MISSILE = r'Abilities\Spells\NightElf\shadowstrike\ShadowStrikeMissile.mdl'
+
+PATH_MODEL_COUATL_MISSILE = r'Abilities\Weapons\WingedSerpentMissile\WingedSerpentMissile.mdl'
+PATH_MODEL_SNAP_DRAGON_MISSILE = r'Abilities\Weapons\snapMissile\snapMissile.mdl'
+PATH_MODEL_NAGA_SEA_WITCH_MISSILE = r'Abilities\Weapons\NagaArrowMissile\NagaArrowMissile.mdl'
+
+PATH_MODEL_RED_DRAGON_MISSILE = r'Abilities\Weapons\RedDragonBreath\RedDragonMissile.mdl'
+"""Also used by Black Dragons, Infernal Contraptions, Earth-Fury Towers"""
+PATH_MODEL_GREEN_DRAGON_MISSILE = r'Abilities\Weapons\GreenDragonMissile\GreenDragonMissile.mdl'
+PATH_MODEL_HARPY_MISSILE = r'Abilities\Weapons\HarpyMissile\HarpyMissile.mdl'
+"""Also used by Arachnathids"""
+PATH_MODEL_BANDIT_MISSILE = r'Abilities\Weapons\Banditmissile\Banditmissile.mdl'
+PATH_MODEL_REEF_ELEMENTAL_MISSILE = r'Abilities\Weapons\SeaElementalMissile\SeaElementalMissile.mdl'
+PATH_MODEL_GNOLL_ASSASSIN_MISSILE = r'Abilities\Weapons\PoisonArrow\PoisonArrowMissile.mdl'
+PATH_MODEL_MAKRURA_MISSILE = r'Abilities\Weapons\MakuraMissile\MakuraMissile.mdl'
+PATH_MODEL_QUILLBOARD_MISSILE = r'Abilities\Weapons\BristleBackMissile\BristleBackMissile.mdl'
+PATH_MODEL_SATYR_SHADOWDANCER_MISSILE = r'Abilities\Weapons\BlackKeeperMissile\BlackKeeperMissile.mdl'
+"""Doesn't preview?"""
+PATH_MODEL_SLUDGE_FLINGER_MISSILE = r'Abilities\Weapons\SludgeMissile\SludgeMissile.mdl'
+PATH_MODEL_TUSKARR_MISSILE = r'abilities\weapons\TuskarSpear\TuskarSpear.mdl'
+PATH_MODEL_VOIDWALKER_MISSILE = r'Abilities\Weapons\VoidWalkerMissile\VoidWalkerMissile.mdl'
+"""Looks like a purple version of Necromancer missile"""
+PATH_MODEL_GOBLIN_ALCHEMIST_MISSILE = r'Abilities\Weapons\BrewmasterMissile\BrewmasterMissile.mdl'
+PATH_MODEL_FIRELORD_MISSILE = r'Abilities\Weapons\LordofFlameMissile\LordofFlameMissile.mdl'
+PATH_MODEL_LAVA_SPAWN_MISSILE = r'Abilities\Weapons\LavaSpawnMissile\LavaSpawnMissile.mdl'
+
+PATH_MODEL_ENSNARE_MISSILE = r'Abilities\Weapons\LavaSpawnMissile\LavaSpawnMissile.mdl'
+
+## Missile Impacts
+PATH_MODEL_SIEGE_ENGINE_IMPACT = r'Abilities\Weapons\SteamTank\SteamTankImpact.mdl'
+PATH_MODEL_RIFLEMAN_IMPACT = r'Abilities\Weapons\Rifle\RifleImpact.mdl'
+PATH_MODEL_GOBLIN_BLASTER_IMPACT = r'Abilities\Weapons\FragDriller\FragDriller.mdl'
+PATH_MODEL_DEATH_COIL_IMPACT = r'Abilities\Spells\Undead\DeathCoil\DeathCoilSpecialArt.mdl'
+PATH_MODEL_HEALING_WAVE_IMPACT = r'Abilities\Spells\Orc\HealingWave\HealingWaveTarget.mdl'
+PATH_MODEL_DEATH_AND_DECAY_IMPACT = r'Abilities\Spells\Undead\DeathandDecay\DeathandDecayDamage.mdl'
+PATH_MODEL_POLYMORPH_IMPACT = r'Abilities\Spells\Human\Polymorph\PolyMorphDoneGround.mdl'
+PATH_MODEL_CHAIN_LIGHTNING_IMPACT = r'Abilities\Weapons\Bolt\BoltImpact.mdl'
+PATH_MODEL_ABOLISH_MAGIC_IMPACT = r'Abilities\Spells\Human\DispelMagic\DispelMagicTarget.mdl'
+
+PATH_MODEL_FROST_NOVA_TARGET = r'Abilities\Spells\Undead\FrostNova\FrostNovaTarget.mdl'
+PATH_MODEL_INFERNO_TARGET = r'Units\Demon\Infernal\InfernalBirth.mdl'
+PATH_MODEL_DEATH_AND_DECAY_EFFECT = r'Abilities\Spells\Undead\DeathandDecay\DeathandDecayTarget.mdl'
+PATH_MODEL_STARFALL_EFFECT = r'Abilities\Spells\NightElf\Starfall\StarfallCaster.mdl'
+PATH_MODEL_TRANQUILITY_EFFECT = r'Abilities\Spells\NightElf\Tranquility\Tranquility.mdl'
+PATH_MODEL_DOOM_EFFECT = r'Abilities\Spells\Other\Doom\DoomTarget.mdl'
+PATH_MODEL_INCINERATE_EFFECT = r'Abilities\Spells\Other\Incinerate\IncinerateBuff.mdl'
+
 # Base Order IDs
 BASE_ORDER_IDS = [
     'absorb',

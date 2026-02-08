@@ -949,3 +949,46 @@ variation_level = 0
 table_column = 0
 value = ""
 object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Hjai'  # Archmage
+entity_id = 'HE01'
+[[map_objects.entities.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "apimports\\eviljaina.mdl"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 12
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "chaos"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Abilities\\Weapons\\RedDragonBreath\\RedDragonMissile.mdl"
+object_id = 'null'
