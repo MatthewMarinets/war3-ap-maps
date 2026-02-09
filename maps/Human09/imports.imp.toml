@@ -16,3 +16,15 @@ path = 'apimports\eviljaina_portrait.mdx'
 [[imports]]
 path_type = 13
 path = 'apimports\eviljaina.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilmuradin.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilmuradin_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilmountainking.blp'

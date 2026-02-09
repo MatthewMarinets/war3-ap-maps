@@ -9,26 +9,41 @@ from mapfile import w3o, imp, common
 from apworld.data.game_ids import GameID, CustomIDs
 
 
+DEFAULT_UI_SCALING = 1.1
+DEFAULT_DAMAGE_BASE = 12
+
+
 @dataclass
 class HeroInfo:
     parent_id: GameID
     entity_id: str
     updated_model: str
+    scaling: float = DEFAULT_UI_SCALING
+    damage_base: int = DEFAULT_DAMAGE_BASE
     other_updates: dict[str | tuple[str, int], Any] = field(default_factory=dict)
 
 
-DEFAULT_UI_SCALING = 1.1
-DEFAULT_DAMAGE_BASE = 12
 HERO_INFO = [
     HeroInfo(
-        GameID.JAINA, CustomIDs.UNIT_CORRUPTED_JAINA, r'apimports\eviljaina.mdx',
-        {
-            eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_RED_DRAGON_MISSILE,
-        }
+        GameID.JAINA, CustomIDs.UNIT_CORRUPTED_JAINA,
+        r'apimports\eviljaina.mdx',
+        other_updates={eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_RED_DRAGON_MISSILE,},
+    ),
+    HeroInfo(
+        GameID.MURADIN_BRONZEBEARD, CustomIDs.UNIT_CORRUPTED_MURADIN_BRONZEBEARD,
+        r'apimports\evilmuradin.mdx',
+        scaling=1.25,
+    ),
+
+    HeroInfo(
+        GameID.MOUNTAIN_KING, CustomIDs.UNIT_CORRUPTED_MOUNTAIN_KING,
+        r'apimports\evilmuradin.mdx',
+        scaling=1.25,
     ),
 ]
 TEXTURE_DEPENDENCIES = {
     r'apimports\eviljaina.mdx': [r'apimports\eviljaina.blp'],
+    r'apimports\evilmuradin.mdx': [r'apimports\evilmountainking.blp'],
 }
 
 
@@ -52,8 +67,8 @@ def update_units(units_file: str) -> None:
         entities.set_entity(
             hero_info.entity_id, hero_info.parent_id, {
                 eid.FIELD_UNIT_UI_MODEL_FILE: hero_info.updated_model.replace('.mdx', '.mdl'),
-                eid.FIELD_UNIT_UI_SCALING_VALUE: DEFAULT_UI_SCALING,
-                eid.FIELD_UNIT_ATTACK_1_DAMAGE_BASE: DEFAULT_DAMAGE_BASE,
+                eid.FIELD_UNIT_UI_SCALING_VALUE: hero_info.scaling,
+                eid.FIELD_UNIT_ATTACK_1_DAMAGE_BASE: hero_info.damage_base,
                 eid.FIELD_UNIT_ATTACK_1_ATTACK_TYPE: "chaos",
                 **hero_info.other_updates,
             }

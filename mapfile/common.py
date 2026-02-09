@@ -1,6 +1,7 @@
 from typing import Callable, Protocol, TypeVar
 import os
 import shutil
+import glob
 from . import doo, imp, mmp, w3c, w3f, w3i, w3o, w3r, w3s, wct, wtg, wts
 
 
@@ -40,10 +41,11 @@ def general_converter(module: FileFormatModule, extension: str | None = None, ar
 
 PROXY_FILES = {
     'questionmark_item.mdx': 'mods/general/war3mapImported/questionmark_item.mdx',
-    'eviljaina.mdx': 'mods/apimports/eviljaina.mdx',
-    'eviljaina_portrait.mdx': 'mods/apimports/eviljaina_portrait.mdx',
-    'eviljaina.blp': 'mods/apimports/eviljaina.blp',
 }
+for _apimport in glob.glob('mods/apimports/*'):
+    PROXY_FILES[os.path.basename(_apimport)] = _apimport
+
+
 def make_proxy(actual_file: str, proxy_file: str) -> None:
     with open(proxy_file, 'w') as fp:
         fp.write(actual_file)
