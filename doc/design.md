@@ -236,6 +236,19 @@ In vanilla, no Undead heroes are ever corrupted.
 It would be funny if corruption instead "un-corrupted" them,
 giving them a more light/living aesthetic.
 
+#### Visuals
+* Jaina
+  * Robe changed purple -> dark red
+  * Highlights changed golden -> sickly green
+  * Eyes changed blue -> pink
+  * Red stain added to sleeves
+* Muradin / Mountain King
+  * Eyes changed sclerae white -> black, irises blue -> orange
+  * Beard changed blond -> brown with red/orange streaks
+  * Bloodstain added to horns
+  * Bloodstain added to axe
+  * Hammer darkened, highlights hue shifted teal -> red/orange
+
 ## Shopsanity
 * Allow buying checks from goblin merchants
 * Allow buying checks from mercenary camps
