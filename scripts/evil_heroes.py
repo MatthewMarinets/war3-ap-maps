@@ -27,12 +27,24 @@ HERO_INFO = [
     HeroInfo(
         GameID.JAINA, CustomIDs.UNIT_CORRUPTED_JAINA,
         r'apimports\eviljaina.mdx',
-        other_updates={eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_RED_DRAGON_MISSILE,},
+        other_updates={eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_RED_DRAGON,},
     ),
     HeroInfo(
         GameID.MURADIN_BRONZEBEARD, CustomIDs.UNIT_CORRUPTED_MURADIN_BRONZEBEARD,
         r'apimports\evilmuradin.mdx',
         scaling=1.25,
+    ),
+    HeroInfo(
+        GameID.UTHER, CustomIDs.UNIT_CORRUPTED_UTHER,
+        r'apimports\evilpaladin.mdx',
+    ),
+    HeroInfo(
+        GameID.KAEL_THAS, CustomIDs.UNIT_CORRUPTED_KAEL,
+        r'apimports\evilkael.mdx',
+        other_updates={
+            eid.FIELD_UNIT_ABILITIES_NORMAL: f'{eid.ABIL_INVENTORY_HERO},{CustomIDs.ABIL_CORRUPTED_SPHERE}',
+            eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_PHOENIX,
+        }
     ),
 
     HeroInfo(
@@ -40,10 +52,24 @@ HERO_INFO = [
         r'apimports\evilmuradin.mdx',
         scaling=1.25,
     ),
+    HeroInfo(
+        GameID.PALADIN, CustomIDs.UNIT_CORRUPTED_PALADIN,
+        r'apimports\evilpaladin.mdx',
+    ),
+    HeroInfo(
+        GameID.BLOOD_MAGE, CustomIDs.UNIT_CORRUPTED_BLOOD_MAGE,
+        r'apimports\evilkael.mdx',
+        other_updates={
+            eid.FIELD_UNIT_ABILITIES_NORMAL: f'{eid.ABIL_INVENTORY_HERO},{CustomIDs.ABIL_CORRUPTED_SPHERE}',
+            eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_PHOENIX,
+        }
+    ),
 ]
 TEXTURE_DEPENDENCIES = {
     r'apimports\eviljaina.mdx': [r'apimports\eviljaina.blp'],
     r'apimports\evilmuradin.mdx': [r'apimports\evilmountainking.blp'],
+    r'apimports\evilpaladin.mdx': [r'apimports\evilpaladin.blp'],
+    r'apimports\evilkael.mdx': [r'apimports\evilkael.blp'],
 }
 
 
@@ -70,12 +96,31 @@ def update_units(units_file: str) -> None:
                 eid.FIELD_UNIT_UI_SCALING_VALUE: hero_info.scaling,
                 eid.FIELD_UNIT_ATTACK_1_DAMAGE_BASE: hero_info.damage_base,
                 eid.FIELD_UNIT_ATTACK_1_ATTACK_TYPE: "chaos",
+                eid.FIELD_UNIT_GENERAL_EDITOR_SUFFIX: "(Corrupted)",
                 **hero_info.other_updates,
             }
         )
 
     text = w3o.as_text(data)
     with open(units_file, 'w') as fp:
+        fp.write(text)
+
+
+def update_abils(abils_file: str) -> None:
+    if not os.path.isfile(abils_file):
+        data = w3o.War3ObjectData(2, has_levels=True)
+    else:
+        data = w3o.from_text_file(abils_file)
+
+    entities = mod_entity.Entities(data.map_objects.entities)
+    entities.set_entity(
+        CustomIDs.ABIL_CORRUPTED_SPHERE, eid.ABIL_SPHERE, {
+            eid.FIELD_ABIL_ART_TARGET: eid.PATH_MODEL_EFFECT_BLOODLUST,
+        }
+    )
+
+    text = w3o.as_text(data)
+    with open(abils_file, 'w') as fp:
         fp.write(text)
 
 
@@ -110,6 +155,10 @@ def update_listfile(listfile: str) -> None:
             for dependency in dependencies(hero_info.updated_model):
                 if dependency not in lines:
                     lines.append(dependency)
+    if 'war3map.w3u' not in lines:
+        lines.append('war3map.w3u')
+    if 'war3map.w3a' not in lines:
+        lines.append('war3map.w3a')
     with open(listfile, 'w') as fp:
         fp.write('\n'.join(lines) + '\n')
 
@@ -131,6 +180,7 @@ def make_proxies(map_dir: str) -> None:
 
 def main(map_dir: str) -> None:
     update_units(f'{map_dir}/{common.UNIT_DATA_FILE_NAME}')
+    update_abils(f'{map_dir}/{common.ABILITY_DATA_FILE_NAME}')
     update_imports(f'{map_dir}/{common.IMPORTS_FILE_NAME}')
     update_listfile(f'{map_dir}/(listfile)')
     make_proxies(map_dir)

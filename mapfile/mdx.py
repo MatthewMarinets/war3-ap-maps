@@ -1528,10 +1528,12 @@ def is_inline_tuple(data: tuple | list) -> bool:
     return isinstance(data[0], (int, float, bool, str, list, tuple))
 
 
-def write_inline_toml(data: object, indent: str = '') -> str:
+def write_inline_toml(data: object, indent: str = '', key: str = '') -> str:
     if isinstance(data, (float, int)):
         if isinstance(data, enum.IntEnum):
             return f'{data}  # {data.name}'
+        elif isinstance(data, int) and key.endswith('flags'):
+            return hex(data)
         return str(data)
     if isinstance(data, bool):
         return str(data).lower()
@@ -1589,7 +1591,7 @@ def write_toml(data: object, nesting: list[str] = []) -> str:
         value = data.__dict__[_field]
         full_key = '.'.join(nesting + [_field])
         if is_simple_type(value):
-            early_lines.append(f'{_field} = {write_inline_toml(value)}')
+            early_lines.append(f'{_field} = {write_inline_toml(value, key=_field)}')
         elif value is None:
             early_lines.append(f'# {_field} = null')
         elif isinstance(value, (list, tuple)) and not value:

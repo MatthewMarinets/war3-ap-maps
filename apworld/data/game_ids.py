@@ -1370,6 +1370,8 @@ class CustomIDs:
     UNIT_CORRUPTED_PANDAREN_BREWMASTER = 'HE0T'
     UNIT_CORRUPTED_PIT_LORD = 'HE0U'
 
+    ABIL_CORRUPTED_SPHERE = 'A;00'
+
 
 class Tech(enum.StrEnum):
     """Defines which Game IDs are set in the unlocks.txt packet"""

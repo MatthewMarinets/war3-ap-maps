@@ -1391,3 +1391,14 @@ variation_level = 1
 table_column = 1
 value = "AP00,AP01,AP02,AP03,AP04,AP05,AP06,AP07,AP08"
 object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Asph'  # Sphere
+entity_id = 'A;00'
+[[map_objects.entities.modifications]]
+modification_id = 'atat'  # Profile.Target
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Abilities\\Spells\\Orc\\Bloodlust\\BloodlustTarget.mdl"
+object_id = 'null'

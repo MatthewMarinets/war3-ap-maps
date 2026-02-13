@@ -242,12 +242,35 @@ giving them a more light/living aesthetic.
   * Highlights changed golden -> sickly green
   * Eyes changed blue -> pink
   * Red stain added to sleeves
+  * Crystal on staff changed blue -> pink
 * Muradin / Mountain King
   * Eyes changed sclerae white -> black, irises blue -> orange
   * Beard changed blond -> brown with red/orange streaks
   * Bloodstain added to horns
   * Bloodstain added to axe
   * Hammer darkened, highlights hue shifted teal -> red/orange
+  * Skulls on back given faint red glowy eyes
+* Uther / Paladin (Paladin model base)
+  * Eyes changed green/white -> black
+  * Dark aura particle added to hammer
+  * Hair changed to be darker/faded
+  * Leather armour changed brown -> grey/black
+  * Mouth changed to be darker
+  * Facial lines darkened
+  * Lion emblem given faint red glowy eyes
+* Kael / Blood Mage (Kael model base)
+  * Sphere orbiters changed to:
+    * Abilities\Spells\Orc\Bloodlust\BloodlustTarget.mdl  (Translucent red fire orb)
+  * Cloak changed black -> white
+  * Cloak highlights changed gold -> off-red
+  * Armour changed red -> black
+  * Attack changed green fireball -> phoenix attack
+
+## Model Notes
+See [this guide](https://world-editor-tutorials.thehelper.net/attachments.php) for how to use attachments
+
+This model looks the most like a disco ball so far:
+`Abilities\Spells\Other\FrostBolt\FrostBoltMissile.mdl`
 
 ## Shopsanity
 * Allow buying checks from goblin merchants

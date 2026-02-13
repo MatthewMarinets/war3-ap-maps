@@ -28,3 +28,27 @@ path = 'apimports\evilmuradin_portrait.mdx'
 [[imports]]
 path_type = 13
 path = 'apimports\evilmountainking.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilpaladin.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilpaladin_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilpaladin.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilkael.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilkael_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilkael.blp'

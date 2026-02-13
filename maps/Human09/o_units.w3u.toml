@@ -993,6 +993,14 @@ table_column = 0
 value = "Abilities\\Weapons\\RedDragonBreath\\RedDragonMissile.mdl"
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Corrupted)"
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'Hmbr'  # Mountain King
 entity_id = 'HE02'
@@ -1028,6 +1036,14 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Corrupted)"
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'Hmkg'  # Mountain King
 entity_id = 'HE0z'
@@ -1061,4 +1077,216 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = "chaos"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Corrupted)"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Huth'  # Paladin
+entity_id = 'HE0o'
+[[map_objects.entities.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "apimports\\evilpaladin.mdl"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 12
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "chaos"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Corrupted)"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Hpal'  # Paladin
+entity_id = 'HE0x'
+[[map_objects.entities.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "apimports\\evilpaladin.mdl"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 12
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "chaos"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Corrupted)"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Hkal'  # Blood Mage
+entity_id = 'HE0g'
+[[map_objects.entities.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "apimports\\evilkael.mdl"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 12
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "chaos"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Corrupted)"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,A;00"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile.mdl"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Hblm'  # Blood Mage
+entity_id = 'HE0A'
+[[map_objects.entities.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "apimports\\evilkael.mdl"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.1
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 12
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "chaos"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Corrupted)"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,A;00"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile.mdl"
 object_id = 'null'
