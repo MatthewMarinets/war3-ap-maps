@@ -5,7 +5,7 @@ import multiprocessing
 import colorama
 
 from CommonClient import CommonContext, server_loop, ClientCommandProcessor, gui_enabled, get_base_parser, handle_url_arg
-from NetUtils import NetworkItem
+from NetUtils import NetworkItem, ClientStatus
 from Utils import async_start
 
 from ..world import Wc3World
@@ -42,9 +42,6 @@ class Wc3CommandProcessor(ClientCommandProcessor):
         return True
 
 
-# await self.ctx.send_msgs([{"cmd": 'LocationChecks', "locations": victory_locations}])
-# await self.ctx.send_msgs([{"cmd": 'StatusUpdate', "status": ClientStatus.CLIENT_GOAL}])
-
 class Wc3Context(CommonContext):
     game = Wc3World.game
     command_processor = Wc3CommandProcessor
@@ -56,6 +53,8 @@ class Wc3Context(CommonContext):
         self.generation_version = (-1, -1, -1)
         self.comm_ctx = comm.AsyncContext(True, client_interface=self)
         self.bonus_mercenary_camps = options.BonusMercenaryCamps.default
+        # todo(mm): Proper configurable goal location
+        self.goal_location = Wc3Location.HU8_VICTORY
 
     async def server_auth(self, password_requested: bool = False) -> None:
         self.game = Wc3World.game
@@ -130,10 +129,15 @@ class Wc3Context(CommonContext):
     
     def on_location_received(self, mission_id: int, location_ids: list[int]) -> None:
         logger.info(f"Found location {mission_id}:{','.join(map(str, location_ids))}")
+        global_locations = [global_location_id(mission_id, location_id) for location_id in location_ids]
         async_start(self.send_msgs([{
             "cmd": "LocationChecks",
-            "locations": [global_location_id(mission_id, location_id) for location_id in location_ids],
+            "locations": global_locations,
         }]))
+        if self.goal_location.value in global_locations:
+            async_start(self.send_msgs([{
+                "cmd": 'StatusUpdate', "status": ClientStatus.CLIENT_GOAL,
+            }]))
     
     def fetch_locations_collected(self, location_status: dict[int, int], new_mission_id: int) -> None:
         for k in location_status:

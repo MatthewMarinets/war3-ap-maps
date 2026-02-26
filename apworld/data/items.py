@@ -91,7 +91,7 @@ class Wc3Item(enum.IntEnum):
         self.id = id
         self.item_name = name
         self.type = type
-    
+
     # Human - Units
     PEASANT =           1,  "Peasant",          Unit(Tech.PEASANT, Wc3Race.HUMAN)
     FOOTMAN =           2,  "Footman",          Unit(Tech.FOOTMAN, Wc3Race.HUMAN)
