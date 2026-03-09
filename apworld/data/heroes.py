@@ -145,37 +145,37 @@ class HeroChoice(enum.Enum):
     # SIR_GREGORY_EDMUNDSON = _, "Sir Gregory Edmundson", HeroClass.PALADIN, HeroSource.ENEMY, GameID.SIR_GREGORY_EDMUNDSON
     # AZGALOR =               _, "Azgalor", HeroClass.PIT_LORD, HeroSource.ENEMY, GameID.AZGALOR  # Copy-paste of Mannoroth
 
-    REXXAR =                40, "Tavern", HeroClass.BEASTMASTER, HeroSource.BONUS, GameID.BEASTMASTER
+    REXXAR =                40, "Rexxar", HeroClass.BEASTMASTER, HeroSource.BONUS, GameID.BEASTMASTER
     ROKHAN =                41, "Rokhan", HeroClass.SHADOW_HUNTER, HeroSource.BONUS, GameID.SHADOW_HUNTER
     CHEN_STORMSTOUT =       42, "Chen Stormstout", HeroClass.PANDAREN_BREWMASTER, HeroSource.BONUS, GameID.PANDAREN_BREWMASTER
     # DREK_THAR =              _, "Drek'Thar", HeroClass.FAR_SEER, HeroSource.BONUS, GameID.DREK_THAR
     # SAMURO =                 _, "Samuro", HeroClass.BLADEMASTER, HeroSource.BONUS, GameID.SAMURO
 
-    PALADIN =               50, "Gavinrad the Dire", HeroClass.PALADIN, HeroSource.MELEE, GameID.PALADIN
-    ARCHMAGE =              51, "Kelen the Seeker", HeroClass.ARCHMAGE, HeroSource.MELEE, GameID.ARCHMAGE
-    MOUNTAIN_KING =         52, "Kelv Sternhammer", HeroClass.MOUNTAIN_KING, HeroSource.MELEE, GameID.MOUNTAIN_KING
-    BLOOD_MAGE =            53, "Eldin Sunstrider", HeroClass.BLOOD_MAGE, HeroSource.MELEE, GameID.BLOOD_MAGE
-    BLADEMASTER =           54, "Nikoro", HeroClass.BLADEMASTER, HeroSource.MELEE, GameID.BLADEMASTER
-    FAR_SEER =              55, "Morg Wolfsong", HeroClass.FAR_SEER, HeroSource.MELEE, GameID.FAR_SEER
-    TAUREN_CHIEFTAIN =      56, "Kel Stonebull", HeroClass.TAUREN_CHIEFTAIN, HeroSource.MELEE, GameID.TAUREN_CHIEFTAIN
-    SHADOW_HUNTER =         57, "Shaka'zahn", HeroClass.SHADOW_HUNTER, HeroSource.MELEE, GameID.SHADOW_HUNTER
-    DEATH_KNIGHT =          58, "Duke Wintermaul", HeroClass.DEATH_KNIGHT, HeroSource.MELEE, GameID.DEATH_KNIGHT
-    LICH =                  59, "Ras Splinterspine", HeroClass.LICH, HeroSource.MELEE, GameID.LICH
-    DREADLORD =             60, "Mullioch", HeroClass.DREADLORD, HeroSource.MELEE, GameID.DREADLORD
-    CRYPT_LORD =            61, "Typhis-Ahn", HeroClass.CRYPT_LORD, HeroSource.MELEE, GameID.CRYPT_LORD
-    PRIESTESS_OF_THE_MOON = 62, "Adora Nightshade", HeroClass.PRIESTESS_OF_THE_MOON, HeroSource.MELEE, GameID.PRIESTESS_OF_THE_MOON
+    PALADIN =               50, "Paladin", HeroClass.PALADIN, HeroSource.MELEE, GameID.PALADIN
+    ARCHMAGE =              51, "Archmage", HeroClass.ARCHMAGE, HeroSource.MELEE, GameID.ARCHMAGE
+    MOUNTAIN_KING =         52, "Mountain King", HeroClass.MOUNTAIN_KING, HeroSource.MELEE, GameID.MOUNTAIN_KING
+    BLOOD_MAGE =            53, "Blood Mage", HeroClass.BLOOD_MAGE, HeroSource.MELEE, GameID.BLOOD_MAGE
+    BLADEMASTER =           54, "Blademaster", HeroClass.BLADEMASTER, HeroSource.MELEE, GameID.BLADEMASTER
+    FAR_SEER =              55, "Far Seer", HeroClass.FAR_SEER, HeroSource.MELEE, GameID.FAR_SEER
+    TAUREN_CHIEFTAIN =      56, "Tauren Chieftain", HeroClass.TAUREN_CHIEFTAIN, HeroSource.MELEE, GameID.TAUREN_CHIEFTAIN
+    SHADOW_HUNTER =         57, "Shadow Hunter", HeroClass.SHADOW_HUNTER, HeroSource.MELEE, GameID.SHADOW_HUNTER
+    DEATH_KNIGHT =          58, "Death Knight", HeroClass.DEATH_KNIGHT, HeroSource.MELEE, GameID.DEATH_KNIGHT
+    LICH =                  59, "Lich", HeroClass.LICH, HeroSource.MELEE, GameID.LICH
+    DREADLORD =             60, "Dreadlord", HeroClass.DREADLORD, HeroSource.MELEE, GameID.DREADLORD
+    CRYPT_LORD =            61, "Crypt Lord", HeroClass.CRYPT_LORD, HeroSource.MELEE, GameID.CRYPT_LORD
+    PRIESTESS_OF_THE_MOON = 62, "Priestess of the Moon", HeroClass.PRIESTESS_OF_THE_MOON, HeroSource.MELEE, GameID.PRIESTESS_OF_THE_MOON
     KEEPER_OF_THE_GROVE =   63, "Keeper of the Grove", HeroClass.KEEPER_OF_THE_GROVE, HeroSource.MELEE, GameID.KEEPER_OF_THE_GROVE
-    DEMON_HUNTER =          64, "Darksorrow", HeroClass.DEMON_HUNTER, HeroSource.MELEE, GameID.DEMON_HUNTER
-    WARDEN =                65, "The Iron Raven", HeroClass.WARDEN, HeroSource.MELEE, GameID.WARDEN
+    DEMON_HUNTER =          64, "Demon Hunter", HeroClass.DEMON_HUNTER, HeroSource.MELEE, GameID.DEMON_HUNTER
+    WARDEN =                65, "Warden", HeroClass.WARDEN, HeroSource.MELEE, GameID.WARDEN
 
-    ALCHEMIST =             66, "Razzil Naypolm", HeroClass.ALCHEMIST, HeroSource.TAVERN, GameID.ALCHEMIST
-    NAGA_SEA_WITCH =        67, "Ursula Snakemane", HeroClass.NAGA_SEA_WITCH, HeroSource.TAVERN, GameID.NAGA_SEA_WITCH
-    TINKER =                68, "Gazz Stripbolt", HeroClass.TINKER, HeroSource.TAVERN, GameID.TINKER
-    BEASTMASTER =           69, "Gorsh Talonfang", HeroClass.BEASTMASTER, HeroSource.TAVERN, GameID.BEASTMASTER
-    DARK_RANGER =           70, "Anya Eversong", HeroClass.DARK_RANGER, HeroSource.TAVERN, GameID.DARK_RANGER
-    FIRELORD =              71, "Blazefury", HeroClass.FIRELORD, HeroSource.TAVERN, GameID.FIRELORD
-    PANDAREN_BREWMASTER =   72, "Mushi Ale-Hearth", HeroClass.PANDAREN_BREWMASTER, HeroSource.TAVERN, GameID.PANDAREN_BREWMASTER
-    PIT_LORD =              73, "Destromath", HeroClass.PIT_LORD, HeroSource.TAVERN, GameID.PIT_LORD
+    ALCHEMIST =             66, "Alchemist", HeroClass.ALCHEMIST, HeroSource.TAVERN, GameID.ALCHEMIST
+    NAGA_SEA_WITCH =        67, "Naga Sea Witch", HeroClass.NAGA_SEA_WITCH, HeroSource.TAVERN, GameID.NAGA_SEA_WITCH
+    TINKER =                68, "Tinker", HeroClass.TINKER, HeroSource.TAVERN, GameID.TINKER
+    BEASTMASTER =           69, "Beastmaster", HeroClass.BEASTMASTER, HeroSource.TAVERN, GameID.BEASTMASTER
+    DARK_RANGER =           70, "Dark Ranger", HeroClass.DARK_RANGER, HeroSource.TAVERN, GameID.DARK_RANGER
+    FIRELORD =              71, "Firelord", HeroClass.FIRELORD, HeroSource.TAVERN, GameID.FIRELORD
+    PANDAREN_BREWMASTER =   72, "Pandaren Brewmaster", HeroClass.PANDAREN_BREWMASTER, HeroSource.TAVERN, GameID.PANDAREN_BREWMASTER
+    PIT_LORD =              73, "Pit Lord", HeroClass.PIT_LORD, HeroSource.TAVERN, GameID.PIT_LORD
 
 
 class SuperheroSlot(enum.IntEnum):
@@ -315,8 +315,330 @@ LEVEL_THRESHOLDS = [
     5400,   # 10
 ]
 
-ALL_HERO_NAMES = [
-    *[_choice.name for _choice in HeroChoice],
+HERO_CLASS_TO_NAME = {
+    "Paladin": [
+        "Granis Darkhammer",
+        "Jorn the Redeemer",
+        "Sage Truthbearer",
+        "Malak the Avenger",
+        "Gavinrad the Dire",
+        "Morlune the Mighty",
+        "Agamand the True",
+        "Ballador the Bright",
+        "Manadar the Healer",
+        "Zann the Defender",
+        "Arius the Seeker",
+        "Aurrius the Pure",
+        "Karnwield the Seeker",
+        "Buzan the Fearless",
+    ],
+    "Archmage": [
+        "Tenn Flamecaster",
+        "Nilas Arcanister",
+        "Andromath",
+        "Shal Lightbinder",
+        "Aran Spellweaver",
+        "Manath Magesinger",
+        "Landazar",
+        "Doril Magefont",
+        "Peril Spellbinder",
+        "Conjurus Rex",
+        "Fordred Aran",
+        "Dalar Dawnweaver",
+        "Kelen the Seeker",
+    ],
+    "Mountain King": [
+        "Bor Stonebreaker",
+        "Munin Ironcliff",
+        "Thorgas Broadaxe",
+        "Kelv Sternhammer",
+        "Grim Thunderbrew",
+        "Buri Frostbeard",
+        "Huginn Ironcliff",
+        "Thordin Rockbeard",
+        "Bandis Forgefire",
+        "Gar Doomforge",
+        "Beazel Bludstone",
+        "Modi Stonesmith",
+        "Aggronor the Mighty",
+    ],
+    "Blood Mage": [
+        "Eldin Sunstrider",
+        "Tanin Hawkwing",
+        "Lorn Bloodseeker",
+        "Aldos Firestar",
+        "Gilaras Drakeson",
+        "Hale Magefire",
+        "Kath'ranis Remar",
+        "Tyoril Sunchaser",
+        "Sylvos Windrunner",
+        "Tenris Mirkblood",
+        "Marakanis Starfury",
+        "Geldor Earthfire",
+        "Halendor Burnkin",
+        "Kelen the Destroyer",
+    ],
+    "Blademaster": [
+        "Tojara",
+        "Nikoro",
+        "Kajind",
+        "Mikasa",
+        "Samuro",
+        "Akinos",
+        "Mazuru",
+        "Yozshura",
+        "Daisho",
+        "Kigami",
+        "Arashicage",
+        "Moogul the Sly",
+        "Jubei",
+    ],
+    "Far Seer": [
+        "Gar'dal Grimsight",
+        "Negal Fireye",
+        "Kazil Darkeye",
+        "Magis Coldeye",
+        "Bale Bleakstare",
+        "Gorr Grimwolf",
+        "Kag'ar Winterfang",
+        "Nazgrel",
+        "Morg Wolfsong",
+        "Kazragore",
+        "Fenris'ar Gul",
+    ],
+    "Tauren Chieftain": [
+        "Marn Thunderhorn",
+        "Tygore Dusthoof",
+        "Tam Windtotem",
+        "Durn Harpyslayer",
+        "Kam Ghoststeer",
+        "Kel Stonebull",
+        "Mull Stormhoof",
+        "Grok Bloodhorn",
+        "Malar Plainstrider",
+        "Taur Runetotem",
+    ],
+    "Shadow Hunter": [
+        "Zul'kis",
+        "Zul'abar",
+        "Zul'rajas",
+        "Zul'maran",
+        "Jo Jo Headshrinker",
+        "Shaka-zahn",
+        "Shakti-lar",
+        "Mezil-kree",
+    ],
+    "Death Knight": [
+        "Lord Nightsorrow",
+        "Lord Soulrender",
+        "Lord Dethstorm",
+        "Lord Maldazzar",
+        "Lord Darkhallow",
+        "Lord Lightstalker",
+        "Baron Bloodbane",
+        "Baron Felblade",
+        "Duke Dreadmoore",
+        "Duke Ragereaver",
+        "Baron Frostfel",
+        "Lord Darkscythe",
+        "Duke Wintermaul",
+        "Baron Perenolde",
+        "Baron Morte",
+    ],
+    "Lich": [
+        "Ordin Frostbane",
+        "Ras Splinterspine",
+        "Morbent Fell",
+        "Rage Winterchill",
+        "Araj the Summoner",
+        "Kali'naj Dethknell",
+        "Rak Coldskull",
+        "Din Frostfire",
+        "Calis Wraithson",
+        "Venim Iceblade",
+        "Naze the Eternal",
+        "Ras Frostwhisper",
+        "Coldreaver",
+        "Cho'Nammoth",
+        "Kryptikk Soulslayer",
+        "Alandil Lieng",
+    ],
+    "Dreadlord": [
+        "Terrordar",
+        "Nerothos",
+        "Bleakill",
+        "Necros",
+        "Fearoth",
+        "Dethecus",
+        "Maldibion",
+        "Nochthitus",
+        "Gholbine",
+        "Rashgarroth",
+        "Aramachus",
+        "Zilfallon",
+        "Lorthiras",
+        "Zenedar",
+        "Mullioch",
+        "Algammon",
+        "Banehallow",
+        "Ven'Gyr",
+    ],
+    "Crypt Lord": [
+        "Thebis-Ra",
+        "Typhis-Ahn",
+        "Anubiros",
+        "Memphis-Ahn",
+        "Horus'aman",
+        "Nephri'thos",
+        "Arak-arahm",
+        "Tuten'arak",
+        "Pharoh-moth",
+    ],
+    "Priestess of the Moon": [
+        "Kathris Starsong",
+        "Adora Nightshade",
+        "Mora Moonsinger",
+        "Felore Moonray",
+        "Anara Chillwind",
+        "Kera Stardragon",
+        "Mave Whisperwind",
+        "Delas Moonfang",
+        "Mira Whitemane",
+        "Theta Saberfang",
+        "Tygra Snowscar",
+        "Ariel Darkmoon",
+        "Diana Windwood",
+    ],
+    "Keeper of the Grove": [
+        "Larodar",
+        "Anubris",
+        "Nandieb",
+        "Califax",
+        "Bandalar",
+        "Malorne",
+        "Gholbine",
+        "Dagda",
+        "Nuada",
+        "Oghma",
+        "Centrius",
+        "Ceredwyn",
+    ],
+    "Demon Hunter": [
+        "Shadowsong",
+        "Shadowfury",
+        "Shadowstalker",
+        "Flameseeker",
+        "Darkweaver",
+        "Darkterror",
+        "Darksorrow",
+        "Sindweller",
+        "Painkiller",
+        "Hellbourne",
+        "Wrathbringer",
+        "Ragerunner",
+        "Firebrand",
+        "Bloodwrath",
+        "Terrorblade",
+    ],
+    "Warden": [
+        "Alsa Iron-cell",
+        "The Iron Raven",
+        "Marin Bladewing",
+        "Shalis Darkhunter",
+        "Sira Moonwarden",
+        "Saithis",
+        "Malace Shade",
+        "Kiri Starstalker",
+        "Anaya Felgrove",
+        "Mirana Starlight",
+        "Felhala Starmoon",
+        "Drelanim Whisperwind",
+        "Cordana Felsong",
+        "Nalmeena Darkfollow",
+    ],
+    "Alchemist": [
+        "Razzil Naypolm",
+        "Niffy Gurglebeaker",
+        "Ezzel Darkbrewer",
+        "Lapis Concocter",
+        "Savvy Foulmixer",
+        "Fictious Warpotion",
+    ],
+    "Naga Sea Witch": [
+        "Anna Kondra",
+        "Scilla Murkshadow",
+        "Ursula Snakemane",
+        "Lady Venomtongue",
+        "Lady Serpentra",
+        "Lady Darkscale",
+        "Serena Scarscale",
+        "Asprah Serpus",
+        "Venna Seastorm",
+        "Charib'dishal",
+    ],
+    "Tinker": [
+        "Gazz Stripbolt",
+        "Riket Contraption",
+        "Mekka Gobb",
+        "Tek Piecetinker",
+        "Plug Rattletrap",
+        "Ratso Steamwheedle",
+    ],
+    "Beastmaster": [
+        "Mag Bearmaul",
+        "Tagar Bearclaw",
+        "Gorsh Talonfang",
+        "Maxx Rocmane",
+        "Gaz Boartusk",
+        "Mok Rocksnout",
+        "Gish Eagle Eye",
+    ],
+    "Dark Ranger": [
+        "Nara Pathstrider",
+        "Anya Eversong",
+        "Anthis Sunbow",
+        "Clea Deathstrider",
+        "Cyndia Hawkspear",
+        "Mira Shadewither",
+        "Amora Eagleye",
+        "Siren Ghostsong",
+        "Somand Wayfinder",
+    ],
+    "Firelord": [
+        "Ragepyre",
+        "Hatespark",
+        "Blazefury",
+        "Heatflayer",
+        "Volcanus",
+        "Flashfire",
+        "Kar the Everburning",
+        "Smolderas",
+        "Singeslayer",
+    ],
+    "Pandaren Brewmaster": [
+        "Mojo Dark-Ale",
+        "Sinjo Honeybrew",
+        "Kesha Wildbarley",
+        "Tatsa Sweetbarrow",
+        "Mushi Ale-Hearth",
+        "Jinto Reedwine",
+        "Masha Storm-Stout",
+        "Polo Barrel-keg",
+    ],
+    "Pit Lord": [
+        "Azgalor",
+        "Brutillus",
+        "Mongrethod",
+        "Destromath",
+        "Gogonnash",
+    ],
+}
+
+ALL_HERO_NAMES: list[str] = []
+for _hero in HeroChoice:
+    ALL_HERO_NAMES.extend(HERO_CLASS_TO_NAME.get(_hero.hero_name, [_hero.hero_name]))
+
+ALL_HERO_NAMES.extend([
     # Other heroes
     "Dagren the Orcslayer",
     "Halahk the Lifebringer",
@@ -387,4 +709,4 @@ ALL_HERO_NAMES = [
     "Llane Wrynn",
     "Blackhand",
     "Garona",
-]
+])
