@@ -25,18 +25,28 @@ def set_channel(image: ImageData, channel: int, value: int) -> None:
 
 
 def generate_mip_map(image: ImageData) -> ImageData:
-    if image.width & 1:
+    if image.width > 1 and (image.width & 1):
         raise ValueError('Width is not a multiple of 2')
-    if image.height & 1:
+    if image.height > 1 and (image.height & 1):
         raise ValueError('Height is not a multiple of 2')
     bytes_per_pixel = image.bits_per_pixel // 8
+    result_width = max(1, image.width // 2)
+    result_height = max(1, image.height // 2)
     result = ImageData(
-        width=image.width // 2,
-        height=image.height // 2,
+        width=result_width,
+        height=result_height,
         bits_per_pixel=image.bits_per_pixel,
         alpha_bits=image.alpha_bits,
-        pixels=bytearray((image.width // 2) * (image.height // 2) * bytes_per_pixel),
+        pixels=bytearray(result_width * result_height * bytes_per_pixel),
     )
+    if image.height == 1 or image.width == 1:
+        for x in range(result.width * result.height):
+            for b in range(bytes_per_pixel):
+                result.pixels[bytes_per_pixel * x + b] = int(math.sqrt((
+                    image.pixels[bytes_per_pixel * 2 * x + b] ** 2
+                    + image.pixels[bytes_per_pixel * (2*x + 1) + b] ** 2
+                ) // 2) + 0.5)
+        return result
     for y in range(result.height):
         for x in range(result.width):
             # interpolation directly in RGB
