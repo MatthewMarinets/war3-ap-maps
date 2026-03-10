@@ -46,6 +46,13 @@ HERO_INFO = [
             eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_PHOENIX,
         }
     ),
+    HeroInfo(
+        GameID.ANTONIDAS, CustomIDs.UNIT_CORRUPTED_ANTONIDAS,
+        r'apimports\evilarchmage.mdx',
+        other_updates={
+            eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_RED_DRAGON,
+        }
+    ),
 
     HeroInfo(
         GameID.MOUNTAIN_KING, CustomIDs.UNIT_CORRUPTED_MOUNTAIN_KING,
@@ -55,6 +62,13 @@ HERO_INFO = [
     HeroInfo(
         GameID.PALADIN, CustomIDs.UNIT_CORRUPTED_PALADIN,
         r'apimports\evilpaladin.mdx',
+    ),
+    HeroInfo(
+        GameID.ARCHMAGE, CustomIDs.UNIT_CORRUPTED_ARCHMAGE,
+        r'apimports\evilarchmage.mdx',
+        other_updates={
+            eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_RED_DRAGON,
+        }
     ),
     HeroInfo(
         GameID.BLOOD_MAGE, CustomIDs.UNIT_CORRUPTED_BLOOD_MAGE,
@@ -69,6 +83,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\eviljaina.mdx': [r'apimports\eviljaina.blp'],
     r'apimports\evilmuradin.mdx': [r'apimports\evilmountainking.blp'],
     r'apimports\evilpaladin.mdx': [r'apimports\evilpaladin.blp'],
+    r'apimports\evilarchmage.mdx': [r'apimports\evilarchmage.blp'],
     r'apimports\evilkael.mdx': [r'apimports\evilkael.blp'],
 }
 
