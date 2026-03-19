@@ -53,6 +53,12 @@ HERO_INFO = [
             eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_RED_DRAGON,
         }
     ),
+    HeroInfo(
+        GameID.LORD_GARITHOS, CustomIDs.UNIT_CORRUPTED_LORD_GARITHOS,
+        r'apimports\evilgarithos.mdx',
+        # Note: default Garithos scaling is 1.2
+        scaling=1.35,
+    ),
 
     HeroInfo(
         GameID.MOUNTAIN_KING, CustomIDs.UNIT_CORRUPTED_MOUNTAIN_KING,
@@ -85,6 +91,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilpaladin.mdx': [r'apimports\evilpaladin.blp'],
     r'apimports\evilarchmage.mdx': [r'apimports\evilarchmage.blp'],
     r'apimports\evilkael.mdx': [r'apimports\evilkael.blp'],
+    r'apimports\evilgarithos.mdx': [r'apimports\evilgarithos.blp'],
 }
 
 
@@ -144,7 +151,7 @@ def update_imports(imports_file: str) -> None:
         data = imp.Imports()
     else:
         data = imp.from_text_file(imports_file)
-    
+
     imported_paths = [_import.path for _import in data.imports]
     for hero_info in HERO_INFO:
         if hero_info.updated_model not in imported_paths:

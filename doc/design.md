@@ -273,6 +273,11 @@ giving them a more light/living aesthetic.
   * Cloak highlights changed gold -> off-red
   * Armour changed red -> black
   * Attack changed green fireball -> phoenix attack
+* Garithos
+  * Armour darkened
+  * Armour trim gold -> blue
+  * Hair darkened
+  * Mouth hue shifted to be slightly colder/bluer
 
 ## Model Notes
 See [this guide](https://world-editor-tutorials.thehelper.net/attachments.php) for how to use attachments
@@ -301,7 +306,7 @@ Note scripts should probably be updated to support custom check item costs per-l
   * Human 6: "Then I must consider this an act of treason."
   * Human 6: "Treason? Have you lost your mind, Arthas?"
 * Human 8: "The ships must be burned before the men reach the shore."
-* Human 9: "I will give anything or pay any price, if only you will help me save my people." 
+* Human 9: "I will give anything or pay any price, if only you will help me save my people."
 * Undead 8: "Tremble, mortals, and despair. Doom has come to this world."
 * Orc 1: "Is there nothing in this land but dust and carngage?"
 * Orc 3: "I can wait no longer. The humans must be slaughtered!"
@@ -311,7 +316,7 @@ Note scripts should probably be updated to support custom check item costs per-l
 * Human 01: Slay Menag without letting him run away
 * Human 02: Win without losing a building?
 * Human 03: Don't kill a skeleton after you've killed a necromancer?
-* Human 04: 
+* Human 04:
 * Human 05: Kill an undead base
 * Human 06: Kill 3 undead buildings
 * Human 06: Win without killing Mal'Ganis more than once
