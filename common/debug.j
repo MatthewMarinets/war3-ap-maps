@@ -7,31 +7,45 @@ trigger t_xp2
 trigger t_health
 trigger t_dragon
 trigger t_speed
+trigger t_colour_unit
 endglobals
 
+function debug_get_selected_unit takes nothing returns unit
+    return FirstOfGroup(GetUnitsSelectedAll(USER_PLAYER))
+endfunction
+
 function debug_print_help takes nothing returns nothing
-    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Commands: '-print', '-xp', '-xp2', '-health', '-dragon', '-speed'")
+    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Commands: '-print', '-xp', '-xp2', '-health', '-dragon', '-speed', '-colourunit'")
 endfunction
 
 function debug_xp_tome takes nothing returns nothing
-    // call CreateItem('texp', GetStartLocationX(GetPlayerId(USER_PLAYER)), GetStartLocationY(GetPlayerId(USER_PLAYER)))
-    call CreateItem('texp', GetUnitX(item_channel_1_target), GetUnitY(item_channel_1_target))
+    local unit target_unit = debug_get_selected_unit()
+    call CreateItem('texp', GetUnitX(target_unit), GetUnitY(target_unit))
 endfunction
 
 function debug_xp2_tome takes nothing returns nothing
-    call CreateItem('tkno', GetUnitX(item_channel_1_target), GetUnitY(item_channel_1_target))
+    local unit target_unit = debug_get_selected_unit()
+    call CreateItem('tkno', GetUnitX(target_unit), GetUnitY(target_unit))
 endfunction
 
 function debug_health_tome takes nothing returns nothing
-    call CreateItem('manh', GetUnitX(item_channel_1_target), GetUnitY(item_channel_1_target))
+    local unit target_unit = debug_get_selected_unit()
+    call CreateItem('manh', GetUnitX(target_unit), GetUnitY(target_unit))
 endfunction
 
 function debug_dragon_egg takes nothing returns nothing
-    call CreateItem('fgrd', GetUnitX(item_channel_1_target), GetUnitY(item_channel_1_target))
+    local unit target_unit = debug_get_selected_unit()
+    call CreateItem('fgrd', GetUnitX(target_unit), GetUnitY(target_unit))
 endfunction
 
 function debug_speed takes nothing returns nothing
-    call CreateItem('rspd', GetUnitX(item_channel_1_target), GetUnitY(item_channel_1_target))
+    local unit target_unit = debug_get_selected_unit()
+    call CreateItem('rspd', GetUnitX(target_unit), GetUnitY(target_unit))
+endfunction
+
+function debug_colour_unit takes nothing returns nothing
+    local unit target_unit = debug_get_selected_unit()
+    call SetUnitColor(target_unit, ConvertPlayerColor(S2I(SubStringBJ(GetEventPlayerChatString(), 12, 14))))
 endfunction
 
 function debug_print takes nothing returns nothing
@@ -73,6 +87,9 @@ function InitTrig_debug takes nothing returns nothing
     set t_speed=CreateTrigger()
     call TriggerRegisterPlayerChatEvent(t_speed, USER_PLAYER, "-speed", false)
     call TriggerAddAction(t_speed, function debug_speed)
+    set t_colour_unit = CreateTrigger()
+    call TriggerRegisterPlayerChatEvent( t_colour_unit, USER_PLAYER, "-colourunit", false )
+    call TriggerAddAction(t_colour_unit, function debug_colour_unit)
     set t_print=CreateTrigger()
     call TriggerRegisterPlayerChatEvent(t_print, USER_PLAYER, "-print", false)
     call TriggerAddAction(t_print, function debug_print)
