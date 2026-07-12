@@ -143,6 +143,36 @@ def print_hero_status(ctx: AsyncContext, hero_slot: heroes.HeroSlot) -> None:
     logger.info(ctx.game_status.hero_data[hero_slot])
 
 
+def debug_get(ctx: AsyncContext, attribute: str) -> None:
+    parts = attribute.split('.')
+    current: dict|list|object = ctx
+    for index, part in enumerate(parts):
+        if part.isnumeric():
+            part = int(part)  # type: ignore
+        if isinstance(current, dict):
+            try:
+                current = current[part]
+            except KeyError:
+                logger.warning(f'Dict member {".".join(parts[:index])} has no key {part}')
+                logger.warning(f'Valid keys are: {list(current)}')
+                return
+        elif isinstance(current, list):
+            try:
+                current = current[int(part)]
+            except IndexError:
+                logger.warning(f'List member {".".join(parts[:index])} has no index {part}')
+                logger.warning(f'The length of the member is: {len(current)}')
+                return
+        else:
+            try:
+                current = getattr(current, part)
+            except AttributeError:
+                logger.warning(f'Object member {".".join(parts[:index])} has no member {part}')
+                logger.warning(f'Valid attributes are: {[x for x in dir(current) if not x.startswith("_")]}')
+                return
+    logger.info(current)
+
+
 def handle_set_name(ctx: AsyncContext, hero_slot: heroes.HeroSlot, name: str, *args) -> None:
     ctx.game_status.hero_data[hero_slot].name = name
     ctx.game_status.pending_update |= PacketType.HEROES
@@ -232,6 +262,7 @@ COMMANDS: dict[str, tuple[Callable[[AsyncContext], None], list[CommandArg]]] = {
     '/herostatus': (print_hero_status,
         [CommandArg('hero slot ID', try_parse_hero_slot)]
     ),
+    '/debug': (debug_get, [CommandArg('attribute')]),
     '/setname': (handle_set_name, [
         CommandArg('hero slot ID', try_parse_hero_slot),
         CommandArg('name'),
@@ -342,17 +373,23 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
 
 
 def init_test_data(game_status: GameStatus) -> None:
-    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].hero = heroes.HeroChoice.FEL_ORC_BLADEMASTER
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].hero = heroes.HeroChoice.JAINA
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].reset_abils()
-    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].name = "«§upa¢ool»"
-    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].xp = 240
-    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].max_level = 3
-    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].abilities[GameID.BLADEMASTER_CRITICAL_STRIKE] = 1
+    # game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].name = "«§upa¢ool»"
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].xp = 1500
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].max_level = 7
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].abilities[GameID.ARCHMAGE_BRILLIANCE_AURA] = 2
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].items[2] = InventoryItem(GameID.BRACER_OF_AGILITY)
     game_status.hero_data[heroes.HeroSlot.JAINA].hero = heroes.HeroChoice.FIRELORD
+    game_status.hero_data[heroes.HeroSlot.JAINA].reset_abils()
     game_status.hero_data[heroes.HeroSlot.JAINA].name = "Jenna"
     game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].hero = heroes.HeroChoice.BEASTMASTER
+    game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].reset_abils()
     game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].name = "Muradout Silverbeard"
+    game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].xp = 1500
+    game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].abilities[GameID.BEASTMASTER_SUMMON_QUILBEAST] = 2
+    game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].items[3] = InventoryItem(GameID.CROWN_OF_KINGS_5)
+    game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].max_level = 7
     game_status.settings.extra_merc_camps = 1
 
 

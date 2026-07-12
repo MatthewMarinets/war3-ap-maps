@@ -86,7 +86,7 @@ class Wc3Inventory:
                     queue.extend(reqs)
             self.tech[new_id] += amount
         return self.tech[tech]
-    
+
 
 class PacketType(enum.IntFlag):
     NONE = 0
@@ -145,7 +145,7 @@ class HeroStatus:
         self.reset_abils()
         if not self.name:
             self.name = self.hero.hero_name
-    
+
     def reset_abils(self) -> None:
         self.abilities.clear()
         for abil_id in HERO_ABILITIES[self.hero.game_id]:
@@ -574,7 +574,7 @@ def read_hero_status(slot: int, game_status: GameStatus) -> None:
     hero_data.strength = int(line_contents(lines.pop(0)))
     hero_data.intelligence = int(line_contents(lines.pop(0)))
     hero_data.max_health = int(float(line_contents(lines.pop(0))))
-    assert len(hero_data.abilities) == 4
+    assert len(hero_data.abilities) == 4, hero_data.abilities
     for abil_id in hero_data.abilities:
         hero_data.abilities[abil_id] = int(line_contents(lines.pop(0)))
     for item_slot in range(6):
@@ -669,7 +669,7 @@ async def status_loop(ctx: AsyncContext) -> None:
         if ctx.game_status.do_startup:
             update_heroes(ctx.game_status, ctx.mission_status)
             ctx.game_status.do_startup = False
-        
+
         # Await status
         if not os.path.isfile(STATUS_FILE):
             await short_sleep()
