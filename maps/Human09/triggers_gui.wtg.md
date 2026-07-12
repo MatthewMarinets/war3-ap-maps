@@ -6469,14 +6469,13 @@ version = TFT
     - Action ReturnAction
   - param Function DoNothing
     - Action DoNothing
-- Action ReplaceUnitBJ
-  - param Variable Arthas
-  - param String Harf
-  - param Preset UnitStateMethodRelative
+- Action SetPlayerTechResearchedSwap
+  - param String Roch
+  - param String 1
+  - param Preset Player01
 - Action SetVariable
   - param Variable EvilArthas
-  - param Function GetLastReplacedUnitBJ
-    - Function GetLastReplacedUnitBJ
+  - param Variable Arthas
 - Action TriggerExecute
   - param Variable gg_trg_RecreateArthasSkills
 - Action SetVariable
@@ -7319,14 +7318,13 @@ version = TFT
   - param Variable gg_trg_DestroyMalganisItems
 - Action DisableTrigger
   - param Variable gg_trg_GiveAnkh
-- Action ReplaceUnitBJ
-  - param Variable Arthas
-  - param String Harf
-  - param Preset UnitStateMethodRelative
+- Action SetPlayerTechResearchedSwap
+  - param String Roch
+  - param String 1
+  - param Preset Player01
 - Action SetVariable
   - param Variable EvilArthas
-  - param Function GetLastReplacedUnitBJ
-    - Function GetLastReplacedUnitBJ
+  - param Variable Arthas
 - Action TriggerExecute
   - param Variable gg_trg_RecreateArthasSkills
 - Action SetUnitPositionLoc
