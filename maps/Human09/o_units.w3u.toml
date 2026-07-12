@@ -153,6 +153,14 @@ table_column = 0
 value = 0
 object_id = 'null'
 
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,A;Cx"
+object_id = 'null'
+
 [[blizzard_objects.entities]]
 parent_id = 'Hamg'  # Archmage
 entity_id = 'null'
@@ -162,6 +170,14 @@ data_type = "Integer"
 variation_level = 0
 table_column = 0
 value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,A;Cy"
 object_id = 'null'
 
 [[blizzard_objects.entities]]
@@ -175,6 +191,14 @@ table_column = 0
 value = 0
 object_id = 'null'
 
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,A;Cz"
+object_id = 'null'
+
 [[blizzard_objects.entities]]
 parent_id = 'Hblm'  # Blood Mage
 entity_id = 'null'
@@ -184,6 +208,14 @@ data_type = "Integer"
 variation_level = 0
 table_column = 0
 value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,Asph,A;CA"
 object_id = 'null'
 
 [[blizzard_objects.entities]]
@@ -217,6 +249,14 @@ data_type = "Integer"
 variation_level = 0
 table_column = 0
 value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,A;CH"
 object_id = 'null'
 
 [[blizzard_objects.entities]]
@@ -724,6 +764,94 @@ table_column = 0
 value = "Ane2,Asid,Asud,Avul"
 object_id = 'nmr7'  # Mercenary Camp
 
+[[blizzard_objects.entities]]
+parent_id = 'Hart'  # Paladin
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,A;C0"
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Hjai'  # Archmage
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,A;C1"
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Hmbr'  # Mountain King
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,A;C2"
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Huth'  # Paladin
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,A;Co"
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Hkal'  # Blood Mage
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,Asph,A;Cg"
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Hant'  # Archmage
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,A;Cq"
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Hlgr'  # Dark Knight
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,A;Ck"
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Udth'  # Dreadlord
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,A;Cm"
+object_id = 'null'
+
 [map_objects]
 [[map_objects.entities]]
 parent_id = 'nrvi'  # Ice Revenant
@@ -966,7 +1094,7 @@ modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
 table_column = 0
-value = 1.1
+value = 1.100000023841858
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1099,14 +1227,6 @@ value = "apimports\\evilpaladin.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
-modification_id = 'usca'  # UnitUI.Scaling Value
-data_type = "Float"
-variation_level = 0
-table_column = 0
-value = 1.1
-object_id = 'null'
-
-[[map_objects.entities.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -1130,6 +1250,14 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.2
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'Hpal'  # Paladin
 entity_id = 'HE0x'
@@ -1146,7 +1274,7 @@ modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
 table_column = 0
-value = 1.1
+value = 1.100000023841858
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1189,7 +1317,7 @@ modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
 table_column = 0
-value = 1.1
+value = 1.100000023841858
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1248,7 +1376,7 @@ modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
 table_column = 0
-value = 1.1
+value = 1.100000023841858
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1307,7 +1435,7 @@ modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
 table_column = 0
-value = 1.1
+value = 1.100000023841858
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1358,7 +1486,7 @@ modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
 table_column = 0
-value = 1.1
+value = 1.100000023841858
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1409,7 +1537,7 @@ modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
 table_column = 0
-value = 1.35
+value = 1.350000023841858
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1452,7 +1580,7 @@ modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
 table_column = 0
-value = 1.55
+value = 1.5499999523162842
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1495,7 +1623,7 @@ modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
 table_column = 0
-value = 1.1
+value = 1.100000023841858
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
