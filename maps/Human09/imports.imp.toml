@@ -76,3 +76,15 @@ path = 'apimports\evilgarithos_portrait.mdx'
 [[imports]]
 path_type = 13
 path = 'apimports\evilgarithos.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evildreadlord.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evildreadlord_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evildreadlord.blp'

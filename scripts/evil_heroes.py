@@ -24,6 +24,7 @@ class HeroInfo:
 
 
 HERO_INFO = [
+    # Human
     HeroInfo(
         GameID.JAINA, CustomIDs.UNIT_CORRUPTED_JAINA,
         r'apimports\eviljaina.mdx',
@@ -84,6 +85,22 @@ HERO_INFO = [
             eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_PHOENIX,
         }
     ),
+
+    # Undead
+    HeroInfo(
+        GameID.DREADLORD, CustomIDs.UNIT_CORRUPTED_MAL_GANIS,
+        r'apimports\evildreadlord.mdx',
+    ),
+    HeroInfo(
+        GameID.DETHEROC, CustomIDs.UNIT_CORRUPTED_DETHEROC,
+        r'apimports\evildreadlord.mdx',
+        # Note: default detheroc is 1.4
+        scaling=1.55,
+    ),
+    HeroInfo(
+        GameID.DREADLORD, CustomIDs.UNIT_CORRUPTED_DREADLORD,
+        r'apimports\evildreadlord.mdx',
+    ),
 ]
 TEXTURE_DEPENDENCIES = {
     r'apimports\eviljaina.mdx': [r'apimports\eviljaina.blp'],
@@ -92,6 +109,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilarchmage.mdx': [r'apimports\evilarchmage.blp'],
     r'apimports\evilkael.mdx': [r'apimports\evilkael.blp'],
     r'apimports\evilgarithos.mdx': [r'apimports\evilgarithos.blp'],
+    r'apimports\evildreadlord.mdx': [r'apimports\evildreadlord.blp'],
 }
 
 

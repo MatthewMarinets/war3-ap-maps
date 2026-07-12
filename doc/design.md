@@ -278,6 +278,12 @@ giving them a more light/living aesthetic.
   * Armour trim gold -> blue
   * Hair darkened
   * Mouth hue shifted to be slightly colder/bluer
+* Dreadlord / Mal'Ganis / Detheroc
+  * Bat wing replaced with angelic wing
+  * Wing spike changed gold
+  * Horns get a gold tip
+  * Marks around lips made much fainter
+  * Face made _slightly_ brighter/more saturated/livelier
 
 ## Model Notes
 See [this guide](https://world-editor-tutorials.thehelper.net/attachments.php) for how to use attachments
