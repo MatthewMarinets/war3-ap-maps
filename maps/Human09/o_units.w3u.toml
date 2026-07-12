@@ -1437,49 +1437,6 @@ value = "(Corrupted)"
 object_id = 'null'
 
 [[map_objects.entities]]
-parent_id = 'Udre'  # Dreadlord
-entity_id = 'HE0l'
-[[map_objects.entities.modifications]]
-modification_id = 'umdl'  # UnitUI.Model File
-data_type = "String"
-variation_level = 0
-table_column = 0
-value = "apimports\\evildreadlord.mdl"
-object_id = 'null'
-
-[[map_objects.entities.modifications]]
-modification_id = 'usca'  # UnitUI.Scaling Value
-data_type = "Float"
-variation_level = 0
-table_column = 0
-value = 1.1
-object_id = 'null'
-
-[[map_objects.entities.modifications]]
-modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 12
-object_id = 'null'
-
-[[map_objects.entities.modifications]]
-modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
-data_type = "String"
-variation_level = 0
-table_column = 0
-value = "chaos"
-object_id = 'null'
-
-[[map_objects.entities.modifications]]
-modification_id = 'unsf'  # Profile.Name - Editor Suffix
-data_type = "String"
-variation_level = 0
-table_column = 0
-value = "(Corrupted)"
-object_id = 'null'
-
-[[map_objects.entities]]
 parent_id = 'Udth'  # Dreadlord
 entity_id = 'HE0m'
 [[map_objects.entities.modifications]]
