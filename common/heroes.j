@@ -237,6 +237,10 @@ function hero_publish_status takes integer slot returns nothing
     if this_hash == hero_hashes[slot] then
         return
     endif
+    if GetUnitState(hero, UNIT_STATE_LIFE) <= 0 then
+        // the hero is dead
+        return
+    endif
     set hero_hashes[slot] = this_hash
     call io_open_write("hero_" + I2S(hero_global_slots[slot]) + ".txt")
     call io_write(I2S(hero_global_slots[slot]))
