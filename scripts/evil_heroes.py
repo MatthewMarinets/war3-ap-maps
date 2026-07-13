@@ -109,6 +109,14 @@ HERO_INFO = [
         GameID.FAR_SEER, CustomIDs.UNIT_CORRUPTED_FAR_SEER,
         r'apimports\evilfarseer.mdx', CustomIDs.ABIL_CHAOS_FAR_SEER,
     ),
+    HeroInfo(
+        GameID.BLADEMASTER, CustomIDs.UNIT_CORRUPTED_BLADEMASTER,
+        r'apimports\evilblademaster.mdx', CustomIDs.ABIL_CHAOS_BLADEMASTER,
+    ),
+    HeroInfo(
+        GameID.CHAOS_BLADEMASTER, CustomIDs.UNIT_CORRUPTED_FEL_ORC_BLADEMASTER,
+        r'apimports\evilchaosblademaster.mdx', CustomIDs.ABIL_CHAOS_FEL_ORC_BLADEMASTER,
+    ),
 
     # Undead
     HeroInfo(
@@ -131,6 +139,8 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilgarithos.mdx': [r'apimports\evilgarithos.blp'],
     r'apimports\evilthrall.mdx': [r'apimports\evilthrall.blp'],
     r'apimports\evilfarseer.mdx': [r'apimports\evilfarseer.blp'],
+    r'apimports\evilblademaster.mdx': [r'apimports\evilblademaster.blp'],
+    r'apimports\evilchaosblademaster.mdx': [r'apimports\evilchaosblademaster.blp'],
     r'apimports\evildreadlord.mdx': [r'apimports\evildreadlord.blp'],
 }
 
