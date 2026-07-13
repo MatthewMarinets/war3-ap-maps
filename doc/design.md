@@ -271,6 +271,7 @@ giving them a more light/living aesthetic.
     * Abilities\Spells\Orc\Bloodlust\BloodlustTarget.mdl  (Translucent red fire orb)
   * Cloak changed black -> white
   * Cloak highlights changed gold -> off-red
+  * Hair changed blond -> grey-white
   * Armour changed red -> black
   * Attack changed green fireball -> phoenix attack
 * Garithos
