@@ -1294,7 +1294,7 @@ PATH_MODEL_MISSILE_DRYAD = r'Abilities\Weapons\Dryadmissile\Dryadmissile.mdl'
 PATH_MODEL_MISSILE_GLAIVE_THROWER = r'Abilities\Weapons\GlaiveMissile\GlaiveMissile.mdl'
 PATH_MODEL_MISSILE_DRUID_OF_THE_TALON = r'Abilities\Weapons\DruidoftheTalonMissile\DruidoftheTalonMissile.mdl'
 PATH_MODEL_MISSILE_CHIMAERA_LIGHTNING = r'Abilities\Weapons\ChimaeraLightningMissile\ChimaeraLightningMissile.mdl'
-"""Also used by Bronze Dragons"""
+"""Also used by Bronze Dragons, Thunder Lizards"""
 PATH_MODEL_MISSILE_CHIMAERA_ACID = r'Abilities\Weapons\ChimaeraAcidMissile\ChimaeraAcidMissile.mdl'
 PATH_MODEL_MISSILE_FAERIE_DRAGON = r'Abilities\Weapons\FaerieDragonMissile\FaerieDragonMissile.mdl'
 """Also used by spitting spider, Searinox"""

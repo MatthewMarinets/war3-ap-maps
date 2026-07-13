@@ -284,6 +284,10 @@ giving them a more light/living aesthetic.
   * Horns get a gold tip
   * Marks around lips made much fainter
   * Face made _slightly_ brighter/more saturated/livelier
+  * Glowy eyes changed 
+* Thrall
+  * Skin changed red
+  * Gave him Grom's glowy eyes, but green
 
 ## Model Notes
 See [this guide](https://world-editor-tutorials.thehelper.net/attachments.php) for how to use attachments

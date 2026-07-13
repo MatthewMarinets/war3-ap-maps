@@ -99,6 +99,13 @@ HERO_INFO = [
         }
     ),
 
+    # Orc
+    HeroInfo(
+        GameID.THRALL, CustomIDs.UNIT_CORRUPTED_THRALL,
+        r'apimports\evilthrall.mdx', CustomIDs.ABIL_CHAOS_THRALL,
+        other_updates={eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_GREEN_DRAGON,},
+    ),
+
     # Undead
     HeroInfo(
         GameID.DETHEROC, CustomIDs.UNIT_CORRUPTED_DETHEROC,
@@ -118,6 +125,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilarchmage.mdx': [r'apimports\evilarchmage.blp'],
     r'apimports\evilkael.mdx': [r'apimports\evilkael.blp'],
     r'apimports\evilgarithos.mdx': [r'apimports\evilgarithos.blp'],
+    r'apimports\evilthrall.mdx': [r'apimports\evilthrall.blp'],
     r'apimports\evildreadlord.mdx': [r'apimports\evildreadlord.blp'],
 }
 

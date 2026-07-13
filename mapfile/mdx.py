@@ -1701,6 +1701,37 @@ def read_toml_file(filename: str) -> MdxModel:
     return dataclass_from_dict('top', MdxModel, data)
 
 
+def print_nodes(data: MdxModel) -> None:
+    nodes: list[tuple[str, Node]] = []
+    parent_id_to_child_index: dict[int, list[int]] = {}
+    for attribute in dir(data):
+        if attribute.startswith('_'):
+            continue
+        subdata = getattr(data, attribute)
+        if not isinstance(subdata, list):
+            data_list = [subdata]
+        else:
+            data_list = subdata
+        for index, entry in enumerate(data_list):
+            if hasattr(entry, 'node'):
+                parent_id_to_child_index.setdefault(entry.node.parent_id, []).append(len(nodes))
+                nodes.append((f"{attribute}[{index}]", entry.node))
+    for index, helper in enumerate(data.helpers):
+        parent_id_to_child_index.setdefault(helper.parent_id, []).append(len(nodes))
+        nodes.append((f"helpers[{index}]", helper))
+
+    def print_node(index: int, indent: int = 0) -> None:
+        this_node = nodes[index]
+        print(f"{'  '*indent}{this_node[0]}: {this_node[1].name}, id={this_node[1].object_id}, flags={this_node[1].flags.name}")
+        children = parent_id_to_child_index.get(this_node[1].object_id, [])
+        for child in children:
+            print_node(child, indent+1)
+    assert -1 in parent_id_to_child_index
+    print(f'{len(nodes)} nodes')
+    for child_index in parent_id_to_child_index[-1]:
+        print_node(child_index)
+
+
 if __name__ == '__main__':
     MODEL_FILE = 'mods/general/war3mapImported/questionmark_item.mdx'
     with open(MODEL_FILE, 'rb') as fp:
