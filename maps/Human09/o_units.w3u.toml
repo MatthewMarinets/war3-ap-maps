@@ -281,6 +281,14 @@ table_column = 0
 value = 0
 object_id = 'null'
 
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,A;CB"
+object_id = 'null'
+
 [[blizzard_objects.entities]]
 parent_id = 'Ofar'  # Far Seer
 entity_id = 'null'
@@ -869,6 +877,17 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = "AInv,A;C3"
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Nbbc'  # Blademaster
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,A;Cr"
 object_id = 'null'
 
 [map_objects]
@@ -1729,6 +1748,92 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = "apimports\\evilfarseer.mdl"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.100000023841858
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 12
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "chaos"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Corrupted)"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Obla'  # Blademaster
+entity_id = 'HE0B'
+[[map_objects.entities.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "apimports\\evilblademaster.mdl"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.100000023841858
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 12
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "chaos"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Corrupted)"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Nbbc'  # Blademaster
+entity_id = 'HE0r'
+[[map_objects.entities.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "apimports\\evilchaosblademaster.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]

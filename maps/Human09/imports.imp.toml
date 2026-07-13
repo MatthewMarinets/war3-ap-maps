@@ -112,3 +112,27 @@ path = 'apimports\evilfarseer_portrait.mdx'
 [[imports]]
 path_type = 13
 path = 'apimports\evilfarseer.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilblademaster.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilblademaster_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilblademaster.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilchaosblademaster.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilchaosblademaster_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilchaosblademaster.blp'
