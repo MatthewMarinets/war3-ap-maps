@@ -105,6 +105,10 @@ HERO_INFO = [
         r'apimports\evilthrall.mdx', CustomIDs.ABIL_CHAOS_THRALL,
         other_updates={eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_GREEN_DRAGON,},
     ),
+    HeroInfo(
+        GameID.FAR_SEER, CustomIDs.UNIT_CORRUPTED_FAR_SEER,
+        r'apimports\evilfarseer.mdx', CustomIDs.ABIL_CHAOS_FAR_SEER,
+    ),
 
     # Undead
     HeroInfo(
@@ -126,6 +130,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilkael.mdx': [r'apimports\evilkael.blp'],
     r'apimports\evilgarithos.mdx': [r'apimports\evilgarithos.blp'],
     r'apimports\evilthrall.mdx': [r'apimports\evilthrall.blp'],
+    r'apimports\evilfarseer.mdx': [r'apimports\evilfarseer.blp'],
     r'apimports\evildreadlord.mdx': [r'apimports\evildreadlord.blp'],
 }
 

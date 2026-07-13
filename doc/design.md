@@ -289,6 +289,10 @@ giving them a more light/living aesthetic.
 * Thrall
   * Skin changed red
   * Gave him Grom's glowy eyes, but green
+  * Attack replaced with green dragon attack
+* Far Seer
+  * Skin changed red
+  * Same glowy green eyes as Thrall
 
 ## Model Notes
 See [this guide](https://world-editor-tutorials.thehelper.net/attachments.php) for how to use attachments
