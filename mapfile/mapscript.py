@@ -423,7 +423,7 @@ def generate_unit_setup(
             result.append(f'    local real life\n')
             result.extend(sections[key])
             result.append(f'endfunction\n')
-    
+
     result.append('//===========================================================================')
     result.append('function CreatePlayerBuildings takes nothing returns nothing')
     for player_id in range(24):
@@ -740,7 +740,7 @@ def generate_map_configuration(info: GenInfo, map_info: w3i.War3MapInformation) 
     if w3i.MapFlags.HIDE_MINIMAP in map_info.flags:
         result.append(f'    call SetGamePlacement(MAP_PLACEMENT_USE_MAP_SETTINGS)')
     result.append('')
-    
+
     index = 0
     for player in map_info.players:
         result.append((
@@ -1051,7 +1051,7 @@ def generate_gui_trigger(trigger: wtg.Trigger, info: GenInfo) -> list[str]:
         else:
             body_result.extend(generate_gui_action(eca, info, prepend_info))
         assert len(prepend_info.action_index) == 1
-    
+
     # Conditions
     if has_conditions:
         condition_result.append('    return true')
@@ -1241,7 +1241,7 @@ def generate(map_dir: str) -> None:
         for part in result:
             fp.write(part)
             fp.write('\n')
-    
+
 
 if __name__ == '__main__':
     import sys
@@ -1256,5 +1256,5 @@ if __name__ == '__main__':
         print("Usage: mapscript.py <map dir> [-i]")
         print("  -i: Use improved generation (inline if conditions)")
         sys.exit()
-    print(f'Generating script for {_target}')
+    print(f'Generating script for {_target}/war3map.j')
     generate(_target)

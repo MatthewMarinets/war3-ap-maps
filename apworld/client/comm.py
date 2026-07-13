@@ -60,7 +60,7 @@ class DefaultClientInterface:
             location_status[k] = 0
 
 
-@dataclass
+@dataclass(slots=True)
 class Wc3GameSettings:
     extra_merc_camps: int = 0
 
@@ -89,11 +89,11 @@ class Wc3Inventory:
 
 
 class PacketType(enum.IntFlag):
-    NONE = 0
-    UNLOCKS = 1
-    LOCATIONS = 2
-    MESSAGES = 4
-    HEROES = 8
+    NONE = 0x0
+    UNLOCKS = 0x1
+    LOCATIONS = 0x2
+    MESSAGES = 0x4
+    HEROES = 0x8
     ITEMS = 0x10
     ITEM_CHANNELS = 0x20
     HERO_LEVEL = 0x40
@@ -120,13 +120,13 @@ class MissionError(enum.Flag):
     MINOR_VERSION_MISMATCH = enum.auto()
 
 
-@dataclass
+@dataclass(slots=True)
 class InventoryItem:
     item_id: GameID | None
     charges: int = 0
 
 
-@dataclass
+@dataclass(slots=True)
 class HeroStatus:
     hero: heroes.HeroChoice
     name: str = ''
@@ -152,7 +152,7 @@ class HeroStatus:
             self.abilities[abil_id] = 0
 
 
-@dataclass
+@dataclass(slots=True)
 class MissionStatus:
     update_number: int = -100
     world_id: int = -1
@@ -171,7 +171,7 @@ def init_hero_data() -> dict[heroes.HeroSlot | int, HeroStatus]:
     return {slot: HeroStatus(heroes.HERO_SLOT_TO_DEFAULT_CHOICE[slot]) for slot in heroes.HeroSlot}
 
 
-@dataclass
+@dataclass(slots=True)
 class ItemChannelState:
     items_received: list[GameID] = field(default_factory=list)
     items_acked: int = 0
@@ -208,7 +208,7 @@ class GameStatus:
     settings: Wc3GameSettings = field(default_factory=Wc3GameSettings)
 
 
-@dataclass
+@dataclass(slots=True)
 class AsyncContext:
     running: bool = True
     game_status: GameStatus = field(default_factory=GameStatus)
