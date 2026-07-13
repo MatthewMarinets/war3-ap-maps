@@ -509,6 +509,9 @@ function InitTrig_status takes nothing returns nothing
     call DestroyTimer(bj_stockUpdateTimer)
     set bj_stockUpdateTimer = null
     call DisableTrigger(bj_stockItemPurchased)
+    // Mercenaries
+    set t_create_mercenary_camps = CreateTrigger()
+    set t_apply_mercenaries = CreateTrigger()
 endfunction
 
 //\\// Trigger #3

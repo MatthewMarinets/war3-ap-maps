@@ -2985,6 +2985,9 @@ function InitTrig_status takes nothing returns nothing
     call DestroyTimer(bj_stockUpdateTimer)
     set bj_stockUpdateTimer=null
     call DisableTrigger(bj_stockItemPurchased)
+    // Mercenaries
+    set t_create_mercenary_camps=CreateTrigger()
+    set t_apply_mercenaries=CreateTrigger()
 endfunction
 //===========================================================================
 // Trigger: heroes
@@ -12119,9 +12122,7 @@ function mercenaries_apply takes nothing returns nothing
 endfunction
 
 function InitTrig_AP_mercenaries takes nothing returns nothing
-    set t_create_mercenary_camps=CreateTrigger()
     call TriggerAddAction(t_create_mercenary_camps, function mercenaries_create_camp)
-    set t_apply_mercenaries=CreateTrigger()
     call TriggerAddAction(t_apply_mercenaries, function mercenaries_apply)
 endfunction
 //===========================================================================

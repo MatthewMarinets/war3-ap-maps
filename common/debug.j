@@ -87,7 +87,7 @@ function InitTrig_debug takes nothing returns nothing
     set t_speed=CreateTrigger()
     call TriggerRegisterPlayerChatEvent(t_speed, USER_PLAYER, "-speed", false)
     call TriggerAddAction(t_speed, function debug_speed)
-    set t_colour_unit = CreateTrigger()
+    set t_colour_unit=CreateTrigger()
     call TriggerRegisterPlayerChatEvent( t_colour_unit, USER_PLAYER, "-colourunit", false )
     call TriggerAddAction(t_colour_unit, function debug_colour_unit)
     set t_print=CreateTrigger()

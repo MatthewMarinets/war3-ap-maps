@@ -509,6 +509,9 @@ function InitTrig_status takes nothing returns nothing
     call DestroyTimer(bj_stockUpdateTimer)
     set bj_stockUpdateTimer = null
     call DisableTrigger(bj_stockItemPurchased)
+    // Mercenaries
+    set t_create_mercenary_camps=CreateTrigger()
+    set t_apply_mercenaries=CreateTrigger()
 endfunction
 
 //\\// Trigger #3
@@ -1228,9 +1231,7 @@ function mercenaries_apply takes nothing returns nothing
 endfunction
 
 function InitTrig_AP_mercenaries takes nothing returns nothing
-    set t_create_mercenary_camps = CreateTrigger()
     call TriggerAddAction(t_create_mercenary_camps, function mercenaries_create_camp)
-    set t_apply_mercenaries = CreateTrigger()
     call TriggerAddAction(t_apply_mercenaries, function mercenaries_apply)
 endfunction
 
@@ -1243,7 +1244,7 @@ function Trig_Malganis_Continuously_Attacks_Buildings_Actions takes nothing retu
     endif
 
     loop
-        exitwhen udg_MaySendCommands 
+        exitwhen udg_MaySendCommands
         call TriggerSleepAction( 0.1 )
     endloop
     set udg_MaySendCommands = false
@@ -1270,7 +1271,7 @@ function Trig_Malganis_Booting_Player_Actions takes nothing returns nothing
     endif
 
     loop
-        exitwhen udg_MaySendCommands 
+        exitwhen udg_MaySendCommands
         call TriggerSleepAction( 0.1 )
     endloop
     set udg_MaySendCommands = false
@@ -1301,7 +1302,7 @@ function Trig_Convert_Villager_Actions takes nothing returns nothing
     if IsUnitDeadBJ(villager) then
         return
     endif
-        
+
     // Handle Conversion
     call CreateNUnitsAtLocFacingLocBJ( 1, 'UC05', Player(7), GetUnitLoc(villager), GetUnitLoc(villager) )
     call ShowUnitHide( GetLastCreatedUnit() )
