@@ -136,3 +136,27 @@ path = 'apimports\evilchaosblademaster_portrait.mdx'
 [[imports]]
 path_type = 13
 path = 'apimports\evilchaosblademaster.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilundeadarthas.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilundeadarthas_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilundeadarthas.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evildeathknight.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evildeathknight_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evildeathknight.blp'
