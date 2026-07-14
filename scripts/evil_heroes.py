@@ -120,6 +120,14 @@ HERO_INFO = [
 
     # Undead
     HeroInfo(
+        GameID.ARTHAS_EVIL, CustomIDs.UNIT_CORRUPTED_DEATH_KNIGHT_ARTHAS,
+        r'apimports\evilundeadarthas.mdx', CustomIDs.ABIL_CHAOS_DEATH_KNIGHT_ARTHAS,
+    ),
+    HeroInfo(
+        GameID.DEATH_KNIGHT, CustomIDs.UNIT_CORRUPTED_DEATH_KNIGHT,
+        r'apimports\evildeathknight.mdx', CustomIDs.ABIL_CHAOS_DEATH_KNIGHT,
+    ),
+    HeroInfo(
         GameID.DETHEROC, CustomIDs.UNIT_CORRUPTED_DETHEROC,
         r'apimports\evildreadlord.mdx', CustomIDs.ABIL_CHAOS_DETHEROC,
         # Note: default detheroc is 1.4
@@ -141,6 +149,8 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilfarseer.mdx': [r'apimports\evilfarseer.blp'],
     r'apimports\evilblademaster.mdx': [r'apimports\evilblademaster.blp'],
     r'apimports\evilchaosblademaster.mdx': [r'apimports\evilchaosblademaster.blp'],
+    r'apimports\evilundeadarthas.mdx': [r'apimports\evilundeadarthas.blp'],
+    r'apimports\evildeathknight.mdx': [r'apimports\evildeathknight.blp'],
     r'apimports\evildreadlord.mdx': [r'apimports\evildreadlord.blp'],
 }
 

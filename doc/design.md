@@ -279,6 +279,14 @@ giving them a more light/living aesthetic.
   * Armour trim gold -> blue
   * Hair darkened
   * Mouth hue shifted to be slightly colder/bluer
+* Arthas / Death Knight
+  * Horse skull head replaced with living horse head
+  * Shield emblem replaced with a lion (traced from Garithos's shield)
+  * Cape emblem replaced with a lion (traced from Garithos's shield)
+  * Hair colour returned. Arthas: blond, DK: ginger
+  * Skin tone returned to normal human range
+  * Arthas: faint veins on face removed
+  * Riding cloths changed colour from purple. Arthas: magenta, DK: red
 * Dreadlord / Mal'Ganis / Detheroc
   * Bat wing replaced with angelic wing
   * Wing spike changed gold
