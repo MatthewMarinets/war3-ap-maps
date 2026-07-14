@@ -43,3 +43,4 @@
 * [Warcraft 3 Liquipedia](https://liquipedia.net/warcraft/Main_Page)
 * [Text colour modes basic intro](https://world-editor-tutorials.thehelper.net/colors.php)
 * [JHCR Writeup](https://lep.duckdns.org/blog/2020-09-25-jhcr-a-high-level-overview.html)
+* [Warcraft 3 1.30.4 on the Hive](https://www.hiveworkshop.com/threads/patch-1-30-4-backup-game-files.314891/)
