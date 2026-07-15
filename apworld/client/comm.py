@@ -8,7 +8,7 @@ import time
 
 from ..data.game_ids import Tech, TECH_REQUIREMENTS, GameID, HERO_ABILITIES, int_to_id
 from .. import logger
-from ..data import heroes, missions, tables
+from ..data import heroes, missions, tables, items
 
 
 PRELOADER_DIR = os.path.expanduser('~/Documents/Warcraft III/CustomMapData')
@@ -68,6 +68,9 @@ class Wc3GameSettings:
 class Wc3Inventory:
     def __init__(self) -> None:
         self.tech: dict[GameID | Tech, int] = {t: 0 for t in Tech}
+        for item in items.CATEGORY_TO_ITEMS[items.Resources]:
+            assert isinstance(item.type, items.Resources)
+            self.tech[item.type.game_id] = 0
         self.items: dict[heroes.ItemChannel, list[GameID]] = {
             channel: [] for channel in heroes.ItemChannel if channel != heroes.ItemChannel.NONE
         }
