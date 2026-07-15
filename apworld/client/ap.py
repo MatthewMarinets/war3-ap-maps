@@ -10,21 +10,21 @@ from Utils import async_start
 
 from ..world import Wc3World
 from ..data.locations import Wc3Location, global_location_id
-from ..data import items, heroes, missions
+from ..data import items, heroes, missions, locations
 from .. import logger, options
 from . import comm
 
 
 class Wc3CommandProcessor(ClientCommandProcessor):
     ctx: 'Wc3Context'
-    
+
     def _cmd_scan_location(self) -> bool:
         """Debug: scouts the bandit camp location"""
         async_start(self.ctx.send_msgs([
             {"cmd": "LocationScouts", "locations": [Wc3Location.HU1_BANDIT_ITEM.id, Wc3Location.HU1_ENLIST_THORNBY.id]}
         ]))
         return True
-    
+
     def _cmd_debug(self, key: str) -> bool:
         """Debug: prints current value of a member of the communication client"""
         parts = key.split('.')
@@ -54,7 +54,7 @@ class Wc3Context(CommonContext):
         self.comm_ctx = comm.AsyncContext(True, client_interface=self)
         self.bonus_mercenary_camps = options.BonusMercenaryCamps.default
         # todo(mm): Proper configurable goal location
-        self.goal_location = Wc3Location.HU8_VICTORY
+        self.goal_location = Wc3Location.HU9_VICTORY
 
     async def server_auth(self, password_requested: bool = False) -> None:
         self.game = Wc3World.game
@@ -126,10 +126,15 @@ class Wc3Context(CommonContext):
                 self.comm_ctx.game_status.pending_update |= comm.PacketType.MERCENARIES
             else:
                 logger.error(f"Received unknown item type: {item_data.type}")
-    
+
     def on_location_received(self, mission_id: int, location_ids: list[int]) -> None:
-        logger.info(f"Found location {mission_id}:{','.join(map(str, location_ids))}")
-        global_locations = [global_location_id(mission_id, location_id) for location_id in location_ids]
+        global_locations: list[int] = []
+        for location_id in location_ids:
+            global_location = global_location_id(mission_id, location_id)
+            global_locations.append(global_location)
+            if location_id == 0:
+                for index in range(locations.MAX_VICTORY_CACHE_SIZE):
+                    global_locations.append(global_location + locations.VICTORY_CACHE_OFFSET + index)
         async_start(self.send_msgs([{
             "cmd": "LocationChecks",
             "locations": global_locations,
@@ -138,7 +143,7 @@ class Wc3Context(CommonContext):
             async_start(self.send_msgs([{
                 "cmd": 'StatusUpdate', "status": ClientStatus.CLIENT_GOAL,
             }]))
-    
+
     def fetch_locations_collected(self, location_status: dict[int, int], new_mission_id: int) -> None:
         for k in location_status:
             location_status[k] = global_location_id(new_mission_id, k) in self.locations_checked
@@ -168,7 +173,7 @@ async def main(cli_args: Sequence[str] | None):
     ctx.auth = args.name
     if ctx.server_task is None:
         ctx.server_task = asyncio.create_task(server_loop(ctx), name="ServerLoop")
-    
+
     if gui_enabled:
         ctx.run_gui()
     ctx.run_cli()

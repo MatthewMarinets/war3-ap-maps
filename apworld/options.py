@@ -1,15 +1,35 @@
 """Defines options. Requires core imports."""
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Type, Iterable
 from dataclasses import dataclass
 
 import Options as baseoptions
 
 from .data.heroes import HeroChoice
-from .data import missions
+from .data import missions, locations
 
 if TYPE_CHECKING:
     from worlds.AutoWorld import World
     from . import Wc3World
+
+
+def resolve_set_option(option: baseoptions.OptionSet, key_map: dict[str, str]) -> str | None:
+    result: set[str] = set()
+    invalid_keys: list[str] = []
+    for key in option.value:
+        lower = key.lower()
+        if lower not in key_map:
+            invalid_keys.append(key)
+        else:
+            result.add(key_map[lower])
+    if invalid_keys:
+        if len(invalid_keys) > 1:
+            plural = "s"
+        else:
+            plural = ""
+        raise baseoptions.OptionError(
+            f"Option {OPTION_NAME[option.__class__]} got invalid key{plural}: {invalid_keys}"
+        )
+    option.value = result
 
 
 class IncludedCampaigns(baseoptions.OptionSet):
@@ -21,6 +41,38 @@ class IncludedCampaigns(baseoptions.OptionSet):
     # )
     valid_keys = (missions.Wc3Campaign.HUMAN_1.title_faction,)
     default = frozenset(valid_keys)
+    key_map = {
+        "human": missions.Wc3Campaign.HUMAN_1.title_faction,
+        "human 1": missions.Wc3Campaign.HUMAN_1.title_faction,
+        "h": missions.Wc3Campaign.HUMAN_1.title_faction,
+        "h1": missions.Wc3Campaign.HUMAN_1.title_faction,
+        # "undead": missions.Wc3Campaign.UNDEAD_1.title_faction,
+        # "undead 1": missions.Wc3Campaign.UNDEAD_1.title_faction,
+        # "u": missions.Wc3Campaign.UNDEAD_1.title_faction,
+        # "u1": missions.Wc3Campaign.UNDEAD_1.title_faction,
+        # "orc": missions.Wc3Campaign.UNDEAD_1.title_faction,
+        # "orc 1": missions.Wc3Campaign.ORC_1.title_faction,
+        # "o": missions.Wc3Campaign.ORC_1.title_faction,
+        # "o1": missions.Wc3Campaign.ORC_1.title_faction,
+        # "night elf": missions.Wc3Campaign.NIGHT_ELF_1.title_faction,
+        # "night elf 1": missions.Wc3Campaign.NIGHT_ELF_1.title_faction,
+        # "n": missions.Wc3Campaign.NIGHT_ELF_1.title_faction,
+        # "ne": missions.Wc3Campaign.NIGHT_ELF_1.title_faction,
+        # "nelf": missions.Wc3Campaign.NIGHT_ELF_1.title_faction,
+        # "n1": missions.Wc3Campaign.NIGHT_ELF_1.title_faction,
+    }
+
+    def verify(
+        self, world: Type['Wc3World'], player_name: str, plando_options: 'baseoptions.PlandoOptions'
+    ) -> None:
+        resolve_set_option(self, self.key_map)
+
+
+class VictoryCache(baseoptions.Range):
+    """Adds additional locations received on mission victory."""
+    range_start = 0
+    range_end = locations.MAX_VICTORY_CACHE_SIZE
+    default = 1
 
 
 class BonusMercenaryCamps(baseoptions.Toggle):
@@ -343,6 +395,7 @@ class LordGarithosName(OptionHeroName):
 @dataclass
 class Wc3Options(baseoptions.PerGameCommonOptions):
     included_campaigns: IncludedCampaigns
+    victory_cache: VictoryCache
     bonus_mercenary_camps: BonusMercenaryCamps
     mercenary_allocation: MercenaryAllocation
     mercenaries_per_camp: MercenariesPerCamp

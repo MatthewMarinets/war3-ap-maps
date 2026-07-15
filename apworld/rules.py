@@ -1,6 +1,6 @@
 from typing import TYPE_CHECKING, Callable, Iterable
 
-from .data.locations import Wc3Location
+from .data.locations import Wc3Location, LOCATION_RANGE_PER_MISSION, VICTORY_CACHE_OFFSET
 from .data.items import Wc3Item, Level
 from .data.heroes import HeroChoice
 
@@ -67,7 +67,7 @@ class Wc3Logic:
             if state.has_all(group, self.player):
                 return True
         return False
-    
+
     def count_groups_all_satisfied(self, state: 'CollectionState', items: Iterable[Iterable[str]]) -> int:
         result = 0
         for group in items:
@@ -100,16 +100,16 @@ class Wc3Logic:
 
     def human_has_ground_attacker(self, state: 'CollectionState') -> bool:
         return self.has_all_from_any_group(state, self.human_ground_attackers)
-    
+
     def human_count_ground_attackers(self, state: 'CollectionState') -> int:
         return self.count_groups_all_satisfied(state, self.human_ground_attackers)
-    
+
     def human_worker_and_ground_attacker(self, state: 'CollectionState') -> bool:
         return self.has(state, Wc3Item.PEASANT) and self.human_has_ground_attacker(state)
 
     def human_has_healing(self, state: 'CollectionState') -> bool:
         return self.has_any(state, (Wc3Item.PRIEST, Wc3Item.SHOP_ITEM_SCROLL_OF_REGENERATION))
-    
+
     def human_has_building_attack(self, state: 'CollectionState') -> bool:
         return (
             self.has_any(state, (
@@ -133,7 +133,7 @@ class Wc3Logic:
         return (
             self.has_any(state, (Wc3Item.PEASANT, Wc3Item.MORTAR_TEAM, Wc3Item.CANNON_TOWER))
         )
-    
+
     def human_can_clear_trees_on_arthas_level(self, state: 'CollectionState') -> bool:
         return (
             self.human_can_clear_trees_with_units(state)
@@ -175,13 +175,13 @@ class Wc3Logic:
             or self.has(state, Wc3Item.SIEGE_ENGINE)
             or self.has_level(state, Wc3Item.ARTHAS_LEVEL, 6)
         )
-    
+
     def arthas_level_4(self, state: 'CollectionState') -> bool:
         return self.has_level(state, Wc3Item.ARTHAS_LEVEL, 4)
-    
+
     def human_5_victory(self, state: 'CollectionState') -> bool:
         return self.human_worker_and_ground_attacker(state) and self.has_level(state, Wc3Item.ARTHAS_LEVEL, 5)
-    
+
     def human_5_undead_bases(self, state: 'CollectionState') -> bool:
         return (
             self.human_worker_and_ground_attacker(state)
@@ -189,7 +189,7 @@ class Wc3Logic:
             and self.human_has_healing(state)
             and self.has_level(state, Wc3Item.ARTHAS_LEVEL, 6)
         )
-    
+
     def human_7_victory(self, state: 'CollectionState') -> bool:
         return (
             self.has_level(state, Wc3Item.ARTHAS_LEVEL, 7)
@@ -225,8 +225,13 @@ def set_rules(world: 'Wc3World') -> None:
     location_to_rule = world.generation_info.location_to_rule
     for location in world.generation_info.locations:
         if location.address is None:
+            # Event
             continue
-        rule = location_to_rule.get(location.address)
+        location_address = location.address
+        local_address = location_address % LOCATION_RANGE_PER_MISSION
+        if local_address >= VICTORY_CACHE_OFFSET:
+            location_address -= local_address
+        rule = location_to_rule.get(location_address)
         if rule is None:
             continue
         location.access_rule = rule

@@ -108,7 +108,6 @@ class Generation:
                 for campaign in missions.Wc3Campaign
                 if campaign.title_faction in world.options.included_campaigns
             )
-        last_victory_location: locations.Wc3Location | None = None
         for mission in missions.Wc3Mission:
             if mission.campaign not in self.included_campaigns:
                 continue
@@ -118,11 +117,20 @@ class Generation:
                 world,
                 self.regions[-1],
                 new_region,
-                self.location_to_rule.get(last_victory_location)  # type: ignore
+                self.location_to_rule.get(locations.MISSION_TO_VICTORY_LOCATION[mission])
             )
             for location in REGION_TO_LOCATIONS[mission.mission_name]:
                 if location.type & locations.Wc3LocationType.VICTORY:
-                    last_victory_location = location
+                    for victory_cache_index in range(world.options.victory_cache.value):
+                        victory_cache_id = location.id + locations.VICTORY_CACHE_OFFSET + victory_cache_index
+                        new_location = Location(
+                            world.player,
+                            locations.location_id_to_name[victory_cache_id],
+                            victory_cache_id,
+                            new_region,
+                        )
+                        new_region.locations.append(new_location)
+                        self.locations.append(new_location)
                 new_location = Location(world.player, location.global_name(), location.id, new_region)
                 new_region.locations.append(new_location)
                 self.locations.append(new_location)
@@ -209,7 +217,7 @@ class Generation:
                         if species_offset >= len(tables.CREEP_SPECIES_TO_ITEMS[species_pool[species]]):
                             species += 1
                             species_offset = 0
-        
+
         # Lock at least one merc in every H8 camp
         if missions.Wc3Mission.H8_DISSENSION in self.missions:
             dissension_mercs = self.mercenary_allocation.get(missions.Wc3Mission.H8_DISSENSION, {})
@@ -243,7 +251,6 @@ class Generation:
             item_type.id,
             self.player
         )
-
 
     def create_items(self, world: 'Wc3World') -> None:
         used_mercenaries: set[items.Wc3Item] = set()
@@ -299,7 +306,7 @@ class Generation:
                         tentative_items.append(new_item)
             else:
                 raise ValueError(f"Item {item_type} has unknown type {type(item_type.type)}")
-        
+
         if len(self.items) < len(self.locations):
             world.random.shuffle(tentative_items)
             print('\n'.join(map(str, tentative_items[len(self.locations) - len(self.items):])))

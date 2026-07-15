@@ -7,12 +7,18 @@ import enum
 from .missions import Wc3Mission
 
 
+LOCATION_RANGE_PER_MISSION = 100
+VICTORY_CACHE_OFFSET = 90
+MAX_VICTORY_CACHE_SIZE = 9
+
+
 def global_location_id(mission_id: int, local_location_id: int) -> int:
     return mission_id * 100 + local_location_id
 
 
 class Wc3LocationType(enum.Flag):
     VICTORY = enum.auto()
+    VICTORY_CACHE = enum.auto()
     QUEST = enum.auto()
     HERO = enum.auto()
     BASE = enum.auto()
@@ -52,7 +58,7 @@ class Wc3Location(enum.IntEnum):
         self.mission = mission
         self.type = type
         self.vanilla_item = vanilla_item
-    
+
     def global_name(self) -> str:
         return f"{self.mission.short_name} {self.mission.mission_name}: {self.location_name}"
 
@@ -442,6 +448,27 @@ class Wc3Location(enum.IntEnum):
 location_from_id = {_location.id: _location for _location in Wc3Location}
 location_name_to_id = {_location.global_name(): _location.id for _location in Wc3Location}
 location_id_to_name = {_location.id: _location.global_name() for _location in Wc3Location}
+MISSION_TO_VICTORY_LOCATION = {
+    _location.mission: _location
+    for _location in Wc3Location
+    if _location.type == Wc3LocationType.VICTORY
+}
+
+
+def init_victory_cache(
+    location_name_to_id: dict[str, int],
+    location_id_to_name: dict[int, str],
+) -> None:
+    for location in MISSION_TO_VICTORY_LOCATION.values():
+        for index in range(MAX_VICTORY_CACHE_SIZE):
+            location_id = location.id + VICTORY_CACHE_OFFSET + index
+            location_name = f'{location.global_name()} Cache ({index+1})'
+            location_name_to_id[location_name] = location_id
+            location_id_to_name[location_id] = location_name
+
+
+init_victory_cache(location_name_to_id, location_id_to_name)
+
 MISSION_TO_LOCATIONS: dict[Wc3Mission, list[Wc3Location]] = {_mission: [] for _mission in Wc3Mission}
 for _location in Wc3Location:
     MISSION_TO_LOCATIONS[_location.mission].append(_location)
