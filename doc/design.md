@@ -301,6 +301,11 @@ giving them a more light/living aesthetic.
   * Face marks removed except around eyes
   * Eye marks changed black -> purple
   * Glowy eyes changed to emit faint golden particles instead of black ones, which float up
+* Crypt Lord / Anub'arak (using Crypt Lord base)
+  * Note the models are distinct, but differ only very slightly in collision shape and events
+  * Main armour turned very dark
+  * Armour trim turned bright cyan
+  * Eyes turned red, additional eyes added
 * Thrall
   * Skin changed red
   * Gave him Grom's glowy eyes, but green
