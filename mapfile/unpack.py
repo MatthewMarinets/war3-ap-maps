@@ -24,7 +24,7 @@ def extract_map_files(map_file: str, target_dir: str) -> Error[str] | None:
         return Error(f'{map_file} does not exist')
     if os.path.isdir(target_dir):
         shutil.rmtree(target_dir)
-    
+
     build_dir = f'{target_dir}/.build'
     result = mpq.extract_w3x(map_file, build_dir)
     if isinstance(result, Error):
@@ -46,7 +46,7 @@ def extract_map_files(map_file: str, target_dir: str) -> Error[str] | None:
             shutil.copy(filename, f'{target_dir}/{target_name}')
     shutil.rmtree(build_dir)
     return None
-    
+
 
 if __name__ == '__main__':
     import sys

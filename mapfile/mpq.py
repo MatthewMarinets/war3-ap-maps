@@ -38,27 +38,52 @@ def create_w3x(source_dir: str, target_file: str) -> Error[tuple[int, str]] | No
     Packs a directory into a .w3m/.w3x map file using MPQEditor
     """
     # Note(mm): MPQEditor's commands are documented by running `MPQEditor /console` and typing `help`
-    # commands:
-    # /new to create a file
-    # /add to add files (paths remain relative to working directory)
+    # Pulled from https://www.hiveworkshop.com/threads/ladiks-mpq-editor.249562/post-3551165:
+    # new (n) <filename> [maxfiles] - create new MPQ
+    # open (o) - open existing MPQ. Fail if it doesn't exist
+    # openpatch (op) - open multiple MPQs in patch mode
+    # add (a) <source> [target] - adds file to MPQ
+    # extract (e) <filename> [target dir] - extract file from MPQ
+    # rename (r) <oldname> <newname> - rename file within MPQ
+    # move (m) <filename> <newdir> - move file within MPQ
+    # delete (d) <filename>
+    # flush (f) - compact the MPQ, removing empty space
+    # compact - compact the MPQ, removing empty space
+    # htsize (t) <size> - changes the hash table size of the archive
+    # list (l) [filemask] - list files in MPQ
+    # mksvf - create an MD5 hash file
+    # close (c) - closes current MPQ
+    # script (s) <scriptfile> - run a script
+    # chdir (cd) <newdir> - change current working directory
+    # exit (x)
+    # quit (q)
+    # help (h)
+    # ver (v)
+    # version
+    # console
     assert shutil.which(mpq_editor_exe) or os.path.isfile(mpq_editor_exe), 'MPQEditor is not installed and on the path'
     os.makedirs(os.path.dirname(target_file), exist_ok=True)
     if os.path.exists(target_file):
         os.remove(target_file)
-    
-    # See doc/workflow.md, under Background heading
-    # Problem: Creating a new map / mpq file with MPQEditor causes it to be 50% larger than if it was saved with WorldEdit
-    # Idea: Try copying a pre-saved .w3m and simply deleting files within the map and adding our desired files
-    shutil.copy('pack/empty.w3x', target_file)
+
     with open(f'{source_dir}/(listfile)', 'r', encoding='utf-8') as file_handle:
         files = file_handle.readlines()
     files = [x.strip() for x in files]
     script_file = f'{source_dir}/.mpq_editor_script'
     relative_path = os.path.relpath(target_file, source_dir)
+    # See doc/workflow.md, under Background heading
+    # Problem: Creating a new map / mpq file with MPQEditor causes it to be 50% larger than if it was saved with WorldEdit
+    # Idea: Try copying a pre-saved .w3m and simply deleting files within the map and adding our desired files
+    shutil.copy('pack/empty.w3x', target_file)
+    commands: list[str] = []
+    if len(files) > 60:
+        # Add 3 extra slots for safety -- in testing, 1 wasn't enough, but 2 was
+        commands.append(f'htsize {relative_path} {len(files) + 3}')
+    commands.extend([f'add {relative_path} {file}' for file in files])
+    commands.append(f'compact {relative_path}')
     with open(script_file, 'w') as fp:
-        for file in files:
-            print(f'add {relative_path} {file}', file=fp, end='\r\n')
-        print(f'compact {relative_path}', file=fp, end='\r\n')
+        for command_line in commands:
+            print(command_line, file=fp, end='\r\n')
     result = command([mpq_editor_exe, '/script', os.path.relpath(script_file, source_dir)], cwd=source_dir)
     if isinstance(result, Error):
         return result
