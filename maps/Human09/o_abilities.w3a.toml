@@ -1915,3 +1915,30 @@ variation_level = 1
 table_column = 0
 value = "HE0F"
 object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Sca6'
+entity_id = 'A;C9'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Chaos Varimathras"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Cha1'  # AbilityData.New Unit Type
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "HE09"
+object_id = 'null'

@@ -160,3 +160,15 @@ path = 'apimports\evildeathknight_portrait.mdx'
 [[imports]]
 path_type = 13
 path = 'apimports\evildeathknight.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\eviltichondrius.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\eviltichondrius_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\eviltichondrius.blp'
