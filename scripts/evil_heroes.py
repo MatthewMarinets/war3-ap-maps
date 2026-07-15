@@ -137,6 +137,10 @@ HERO_INFO = [
         GameID.DREADLORD, CustomIDs.UNIT_CORRUPTED_DREADLORD,
         r'apimports\evildreadlord.mdx', CustomIDs.ABIL_CHAOS_DREADLORD,
     ),
+    HeroInfo(
+        GameID.VARIMATHRAS, CustomIDs.UNIT_CORRUPTED_VARIMATHRAS,
+        r'apimports\eviltichondrius.mdx', CustomIDs.ABIL_CHAOS_VARIMATHRAS,
+    ),
 ]
 TEXTURE_DEPENDENCIES = {
     r'apimports\eviljaina.mdx': [r'apimports\eviljaina.blp'],
@@ -152,6 +156,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilundeadarthas.mdx': [r'apimports\evilundeadarthas.blp'],
     r'apimports\evildeathknight.mdx': [r'apimports\evildeathknight.blp'],
     r'apimports\evildreadlord.mdx': [r'apimports\evildreadlord.blp'],
+    r'apimports\eviltichondrius.mdx': [r'apimports\eviltichondrius.blp'],
 }
 
 DEFAULT_HERO_ABILS = eid.ABIL_INVENTORY_HERO

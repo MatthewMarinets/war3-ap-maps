@@ -288,12 +288,19 @@ giving them a more light/living aesthetic.
   * Arthas: faint veins on face removed
   * Riding cloths changed colour from purple. Arthas: magenta, DK: red
 * Dreadlord / Mal'Ganis / Detheroc
-  * Bat wing replaced with angelic wing
+  * Bat wing replaced with angelic wing (white)
   * Wing spike changed gold
   * Horns get a gold tip
   * Marks around lips made much fainter
   * Face made _slightly_ brighter/more saturated/livelier
-  * Glowy eyes changed 
+  * Glowy eyes changed to emit faint golden particles instead of black ones
+* Varimathras / Tichondius model
+  * Bat wing replaced with angelic wing (gold)
+  * Wing spike changed gold
+  * Skin tone changed to be much less pale
+  * Face marks removed except around eyes
+  * Eye marks changed black -> purple
+  * Glowy eyes changed to emit faint golden particles instead of black ones, which float up
 * Thrall
   * Skin changed red
   * Gave him Grom's glowy eyes, but green
