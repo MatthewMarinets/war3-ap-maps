@@ -280,6 +280,12 @@ giving them a more light/living aesthetic.
   * facial hair made grey
   * Mouth hue shifted to be slightly colder/bluer
   * Eye sclera changed white -> orange, iris changed blue -> purple
+* Ranger Sylvanas
+  * Skin made paler
+  * Hair darkened to grey
+  * Leather darkened
+  * Armour trim gold -> purple
+  * Bow changed brown -> purple
 * Arthas / Death Knight
   * Horse skull head replaced with living horse head
   * Shield emblem replaced with a lion (traced from Garithos's shield)

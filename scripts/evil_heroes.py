@@ -73,6 +73,12 @@ HERO_INFO = [
         # Note: default Garithos scaling is 1.2
         scaling=1.35,
     ),
+    HeroInfo(
+        GameID.SYLVANAS_ELF, CustomIDs.UNIT_CORRUPTED_RANGER_SYLVANAS,
+        r'apimports\evilsylvanasranger.mdx', CustomIDs.ABIL_CHAOS_RANGER_SYLVANAS,
+        # Note: default Garithos scaling is 1.1
+        scaling=1.2,
+    ),
 
     HeroInfo(
         GameID.MOUNTAIN_KING, CustomIDs.UNIT_CORRUPTED_MOUNTAIN_KING,
@@ -189,6 +195,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilarchmage.mdx': [r'apimports\evilarchmage.blp'],
     r'apimports\evilkael.mdx': [r'apimports\evilkael.blp'],
     r'apimports\evilgarithos.mdx': [r'apimports\evilgarithos.blp'],
+    r'apimports\evilsylvanasranger.mdx': [r'apimports\evilsylvanasranger.blp'],
     r'apimports\evilthrall.mdx': [r'apimports\evilthrall.blp'],
     r'apimports\evilfarseer.mdx': [r'apimports\evilfarseer.blp'],
     r'apimports\evilblademaster.mdx': [r'apimports\evilblademaster.blp'],
