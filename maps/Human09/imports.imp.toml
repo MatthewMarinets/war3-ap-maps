@@ -172,3 +172,27 @@ path = 'apimports\eviltichondrius_portrait.mdx'
 [[imports]]
 path_type = 13
 path = 'apimports\eviltichondrius.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evillich.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evillich_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evillich.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilcryptlord.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilcryptlord_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilcryptlord.blp'
