@@ -301,6 +301,18 @@ giving them a more light/living aesthetic.
   * Face marks removed except around eyes
   * Eye marks changed black -> purple
   * Glowy eyes changed to emit faint golden particles instead of black ones, which float up
+* Lich
+  * Bones changed purple -> brown/gold
+  * orbs changed purple -> brown/gold
+  * Cloak flap changed black -> dark brown
+  * Armour trim changed gold -> green
+  * Horns changed black -> green
+  * Teeth changed white -> black
+  * Eyes changed purple -> amber
+  * Exhalation particles changed blue -> amber
+  * Cloak studs changed white -> green
+  * Added a wood grain texture to the face
+  * Projectile changed to green bird attack (Keeper of the Grove)
 * Crypt Lord / Anub'arak (using Crypt Lord base)
   * Note the models are distinct, but differ only very slightly in collision shape and events
   * Main armour turned white

@@ -117,6 +117,14 @@ HERO_INFO = [
         GameID.CHAOS_BLADEMASTER, CustomIDs.UNIT_CORRUPTED_FEL_ORC_BLADEMASTER,
         r'apimports\evilchaosblademaster.mdx', CustomIDs.ABIL_CHAOS_FEL_ORC_BLADEMASTER,
     ),
+    # HeroInfo(
+    #     GameID.ROKHAN, CustomIDs.UNIT_CORRUPTED_ROKHAN,
+    #     r'apimports\evilshadowhunter.mdx', CustomIDs.ABIL_CHAOS_ROKHAN,
+    # ),
+    # HeroInfo(
+    #     GameID.SHADOW_HUNTER, CustomIDs.UNIT_CORRUPTED_SHADOW_HUNTER,
+    #     r'apimports\evilshadowhunter.mdx', CustomIDs.ABIL_CHAOS_SHADOW_HUNTER,
+    # ),
 
     # Undead
     HeroInfo(
@@ -142,6 +150,20 @@ HERO_INFO = [
         r'apimports\eviltichondrius.mdx', CustomIDs.ABIL_CHAOS_VARIMATHRAS,
     ),
     HeroInfo(
+        GameID.KEL_THUZAD, CustomIDs.UNIT_CORRUPTED_KEL_THUZAD,
+        r'apimports\evillich.mdx', CustomIDs.ABIL_CHAOS_KEL_THUZAD,
+        other_updates={
+            eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_KEEPER_OF_THE_GROVE,
+        },
+    ),
+    HeroInfo(
+        GameID.LICH, CustomIDs.UNIT_CORRUPTED_LICH,
+        r'apimports\evillich.mdx', CustomIDs.ABIL_CHAOS_LICH,
+        other_updates={
+            eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_KEEPER_OF_THE_GROVE,
+        },
+    ),
+    HeroInfo(
         GameID.ANUB_ARAK, CustomIDs.UNIT_CORRUPTED_ANUB_ARAK,
         r'apimports\evilcryptlord.mdx', CustomIDs.ABIL_CHAOS_ANUB_ARAK,
     ),
@@ -165,6 +187,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evildeathknight.mdx': [r'apimports\evildeathknight.blp'],
     r'apimports\evildreadlord.mdx': [r'apimports\evildreadlord.blp'],
     r'apimports\eviltichondrius.mdx': [r'apimports\eviltichondrius.blp'],
+    r'apimports\evillich.mdx': [r'apimports\evillich.blp'],
     r'apimports\evilcryptlord.mdx': [r'apimports\evilcryptlord.blp'],
 }
 
