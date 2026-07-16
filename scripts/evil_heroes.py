@@ -110,6 +110,7 @@ HERO_INFO = [
         r'apimports\evilfarseer.mdx', CustomIDs.ABIL_CHAOS_FAR_SEER,
         other_updates={eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_RED_DRAGON,},
     ),
+    # Grom already covered
     HeroInfo(
         GameID.BLADEMASTER, CustomIDs.UNIT_CORRUPTED_BLADEMASTER,
         r'apimports\evilblademaster.mdx', CustomIDs.ABIL_CHAOS_BLADEMASTER,
@@ -117,6 +118,14 @@ HERO_INFO = [
     HeroInfo(
         GameID.CHAOS_BLADEMASTER, CustomIDs.UNIT_CORRUPTED_FEL_ORC_BLADEMASTER,
         r'apimports\evilchaosblademaster.mdx', CustomIDs.ABIL_CHAOS_FEL_ORC_BLADEMASTER,
+    ),
+    HeroInfo(
+        GameID.CAIRNE_BLOODHOOF, CustomIDs.UNIT_CORRUPTED_CAIRNE_BLOODHOOF,
+        r'apimports\eviltaurenchieftain.mdx', CustomIDs.ABIL_CHAOS_CAIRNE_BLOODHOOF,
+    ),
+    HeroInfo(
+        GameID.TAUREN_CHIEFTAIN, CustomIDs.UNIT_CORRUPTED_TAUREN_CHIEFTAIN,
+        r'apimports\eviltaurenchieftain.mdx', CustomIDs.ABIL_CHAOS_TAUREN_CHIEFTAIN,
     ),
     HeroInfo(
         GameID.ROKHAN, CustomIDs.UNIT_CORRUPTED_ROKHAN,
@@ -184,6 +193,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilfarseer.mdx': [r'apimports\evilfarseer.blp'],
     r'apimports\evilblademaster.mdx': [r'apimports\evilblademaster.blp'],
     r'apimports\evilchaosblademaster.mdx': [r'apimports\evilchaosblademaster.blp'],
+    r'apimports\eviltaurenchieftain.mdx': [r'apimports\eviltaurenchieftain.blp'],
     r'apimports\evilshadowhunter.mdx': [r'apimports\evilshadowhunter.blp'],
     r'apimports\evilundeadarthas.mdx': [r'apimports\evilundeadarthas.blp'],
     r'apimports\evildeathknight.mdx': [r'apimports\evildeathknight.blp'],

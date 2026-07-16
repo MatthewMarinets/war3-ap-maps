@@ -332,6 +332,14 @@ giving them a more light/living aesthetic.
   * Skin changed to dark grey
   * Tattoos changed to bright red
   * Added glowy red eyes
+* Shadow Hunter
+  * Skin turned red
+* Tauren Chieftain
+  * Fur turned white
+  * Skin turned black
+  * Eyes turned red
+  * Wood made darker and more orangeish
+  * Axehead slightly darkened
 
 ## Model Notes
 See [this guide](https://world-editor-tutorials.thehelper.net/attachments.php) for how to use attachments
