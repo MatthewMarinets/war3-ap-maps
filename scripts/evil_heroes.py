@@ -108,6 +108,7 @@ HERO_INFO = [
     HeroInfo(
         GameID.FAR_SEER, CustomIDs.UNIT_CORRUPTED_FAR_SEER,
         r'apimports\evilfarseer.mdx', CustomIDs.ABIL_CHAOS_FAR_SEER,
+        other_updates={eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_RED_DRAGON,},
     ),
     HeroInfo(
         GameID.BLADEMASTER, CustomIDs.UNIT_CORRUPTED_BLADEMASTER,
