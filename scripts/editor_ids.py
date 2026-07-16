@@ -1258,6 +1258,7 @@ PATH_MODEL_MISSILE_DEMOLISHER = r'abilities\weapons\DemolisherMissile\Demolisher
 PATH_MODEL_MISSILE_DEMOLISHER_BURNING_OIL = r'Abilities\Weapons\DemolisherFireMissile\DemolisherFireMissile.mdl'
 PATH_MODEL_MISSILE_CATAPULT = r'Abilities\Weapons\AncientProtectorMissile\AncientProtectorMissile.mdl'
 """Also used by Draenei Demolisher, Advanced Boulder Tower"""
+PATH_MODEL_MISSILE_FLAMING_CATAPULT = r'Abilities\Weapons\BallsOfFireMissile\BallsOfFireMissile.mdl'
 PATH_MODEL_MISSILE_KODO_BEAST = r'Abilities\Weapons\Axe\AxeMissile.mdl'
 """Also used by Trolls"""
 PATH_MODEL_MISSILE_WYVERN = r'abilities\weapons\WyvernSpear\WyvernSpearMissile.mdl'
@@ -1310,6 +1311,7 @@ PATH_MODEL_MISSILE_AVATAR_OF_VENGEANCE = r'Abilities\Weapons\SpiritOfVengeanceMi
 """Medium bluey white sphere with nice trail; dim explodey death sound"""
 PATH_MODEL_MISSILE_SPIRIT_OF_VENGEANCE = r'Abilities\Weapons\VengeanceMissile\VengeanceMissile.mdl'
 """Red lightning ball"""
+PATH_MODEL_MISSILE_BALLISTA = r'Abilities\Weapons\ballistamissile\ballistamissile.mdl'
 PATH_MODEL_MISSILE_SENTINEL = r'Units\NightElf\Owl\Owl.mdl'
 PATH_MODEL_MISSILE_FAN_OF_KNIVES = r'Abilities\Spells\NightElf\FanOfKnives\FanOfKnivesMissile.mdl'
 PATH_MODEL_MISSILE_SEARING_ARROWS = r'Abilities\Weapons\SearingArrow\SearingArrowMissile.mdl'
@@ -1382,6 +1384,7 @@ PATH_MODEL_IMPACT_DEATH_AND_DECAY = r'Abilities\Spells\Undead\DeathandDecay\Deat
 PATH_MODEL_IMPACT_POLYMORPH = r'Abilities\Spells\Human\Polymorph\PolyMorphDoneGround.mdl'
 PATH_MODEL_IMPACT_CHAIN_LIGHTNING = r'Abilities\Weapons\Bolt\BoltImpact.mdl'
 PATH_MODEL_IMPACT_ABOLISH_MAGIC = r'Abilities\Spells\Human\DispelMagic\DispelMagicTarget.mdl'
+PATH_MODEL_IMPACT_BLOOD = r'Abilities\Weapons\Blood\BloodImpact.mdl'
 
 ## Other Effects
 PATH_MODEL_TARGET_FROST_NOVA = r'Abilities\Spells\Undead\FrostNova\FrostNovaTarget.mdl'
