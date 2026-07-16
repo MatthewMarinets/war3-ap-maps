@@ -696,13 +696,13 @@ class BitWriter:
             self.bit_index += 1
             if self.bit_index >= 8:
                 self.bit_index = 0
-    
+
     def write_bit(self, bit: int) -> None:
         if bit:
             self.write_one()
         else:
             self.write_zero()
-    
+
     def write_code(self, length: int, code: int) -> None:
         for bit in reversed(range(length)):
             self.write_bit(code & (1 << bit))
@@ -804,7 +804,7 @@ def compress_jpg(
     writer = BitWriter()
     last_dc_value = [0 for _ in range(result.num_components)]
     stride = image.width
-    for y_start in range(0, image.width, 8):
+    for y_start in range(0, image.height, 8):
         for x_start in range(0, image.width, 8):
             for channel in range(num_channels):
                 block = []
