@@ -187,6 +187,14 @@ HERO_INFO = [
         GameID.CRYPT_LORD, CustomIDs.UNIT_CORRUPTED_CRYPT_LORD,
         r'apimports\evilcryptlord.mdx', CustomIDs.ABIL_CHAOS_CRYPT_LORD,
     ),
+    HeroInfo(
+        GameID.SYLVANAS, CustomIDs.UNIT_CORRUPTED_SYLVANAS,
+        r'apimports\evilundeadsylvanas.mdx', CustomIDs.ABIL_CHAOS_SYLVANAS,
+    ),
+    HeroInfo(
+        GameID.DARK_RANGER, CustomIDs.UNIT_CORRUPTED_DARK_RANGER,
+        r'apimports\evilundeadsylvanas.mdx', CustomIDs.ABIL_CHAOS_DARK_RANGER,
+    ),
 ]
 TEXTURE_DEPENDENCIES = {
     r'apimports\eviljaina.mdx': [r'apimports\eviljaina.blp'],
@@ -208,6 +216,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\eviltichondrius.mdx': [r'apimports\eviltichondrius.blp'],
     r'apimports\evillich.mdx': [r'apimports\evillich.blp'],
     r'apimports\evilcryptlord.mdx': [r'apimports\evilcryptlord.blp'],
+    r'apimports\evilundeadsylvanas.mdx': [r'apimports\evilundeadsylvanas.blp'],
 }
 
 DEFAULT_HERO_ABILS = eid.ABIL_INVENTORY_HERO

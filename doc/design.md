@@ -325,6 +325,13 @@ giving them a more light/living aesthetic.
   * Main armour turned white
   * Armour trim turned dark dark red
   * Eyes turned cyan, additional eyes added
+* Undead Sylvanas / Dark Ranger
+  * Based texture off living ranger with modifications
+  * Pale living skin
+  * Dark grey hair
+  * Cloak repaired and made off-white
+  * Bow and trim made purple
+  * Pant leg repaired
 * Thrall
   * Skin changed red
   * Gave him Grom's glowy eyes, but green
