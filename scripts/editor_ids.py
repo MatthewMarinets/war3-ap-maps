@@ -1301,6 +1301,7 @@ PATH_MODEL_MISSILE_FAERIE_DRAGON = r'Abilities\Weapons\FaerieDragonMissile\Faeri
 PATH_MODEL_MISSILE_ANCIENT_PROTECTOR = r'Abilities\Weapons\AncientProtectorMissile\AncientProtectorMissile.mdl'
 """Also used by Golems, Boulder Tower, Dragon Turtle"""
 PATH_MODEL_MISSILE_KEEPER_OF_THE_GROVE = r'Abilities\Weapons\KeeperGroveMissile\KeeperGroveMissile.mdl'
+"""Green @bird attack"""
 PATH_MODEL_MISSILE_PRIESTESS_OF_THE_MOON = r'Abilities\Weapons\MoonPriestessMissile\MoonPriestessMissile.mdl'
 """Also used by Sylvanas (alive)"""
 PATH_MODEL_MISSILE_DEMON_HUNTER = r'Abilities\Weapons\DemonHunterMissile\DemonHunterMissile.mdl'

@@ -117,14 +117,14 @@ HERO_INFO = [
         GameID.CHAOS_BLADEMASTER, CustomIDs.UNIT_CORRUPTED_FEL_ORC_BLADEMASTER,
         r'apimports\evilchaosblademaster.mdx', CustomIDs.ABIL_CHAOS_FEL_ORC_BLADEMASTER,
     ),
-    # HeroInfo(
-    #     GameID.ROKHAN, CustomIDs.UNIT_CORRUPTED_ROKHAN,
-    #     r'apimports\evilshadowhunter.mdx', CustomIDs.ABIL_CHAOS_ROKHAN,
-    # ),
-    # HeroInfo(
-    #     GameID.SHADOW_HUNTER, CustomIDs.UNIT_CORRUPTED_SHADOW_HUNTER,
-    #     r'apimports\evilshadowhunter.mdx', CustomIDs.ABIL_CHAOS_SHADOW_HUNTER,
-    # ),
+    HeroInfo(
+        GameID.ROKHAN, CustomIDs.UNIT_CORRUPTED_ROKHAN,
+        r'apimports\evilshadowhunter.mdx', CustomIDs.ABIL_CHAOS_ROKHAN,
+    ),
+    HeroInfo(
+        GameID.SHADOW_HUNTER, CustomIDs.UNIT_CORRUPTED_SHADOW_HUNTER,
+        r'apimports\evilshadowhunter.mdx', CustomIDs.ABIL_CHAOS_SHADOW_HUNTER,
+    ),
 
     # Undead
     HeroInfo(
@@ -183,6 +183,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilfarseer.mdx': [r'apimports\evilfarseer.blp'],
     r'apimports\evilblademaster.mdx': [r'apimports\evilblademaster.blp'],
     r'apimports\evilchaosblademaster.mdx': [r'apimports\evilchaosblademaster.blp'],
+    r'apimports\evilshadowhunter.mdx': [r'apimports\evilshadowhunter.blp'],
     r'apimports\evilundeadarthas.mdx': [r'apimports\evilundeadarthas.blp'],
     r'apimports\evildeathknight.mdx': [r'apimports\evildeathknight.blp'],
     r'apimports\evildreadlord.mdx': [r'apimports\evildreadlord.blp'],
