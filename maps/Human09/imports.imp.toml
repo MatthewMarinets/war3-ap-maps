@@ -196,3 +196,27 @@ path = 'apimports\evilcryptlord_portrait.mdx'
 [[imports]]
 path_type = 13
 path = 'apimports\evilcryptlord.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\eviltaurenchieftain.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\eviltaurenchieftain_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\eviltaurenchieftain.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilshadowhunter.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilshadowhunter_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilshadowhunter.blp'

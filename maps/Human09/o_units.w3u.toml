@@ -343,6 +343,14 @@ table_column = 0
 value = 0
 object_id = 'null'
 
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,A;CD"
+object_id = 'null'
+
 [[blizzard_objects.entities]]
 parent_id = 'Oshd'  # Shadow Hunter
 entity_id = 'null'
@@ -352,6 +360,14 @@ data_type = "Integer"
 variation_level = 0
 table_column = 0
 value = 0
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,A;CE"
 object_id = 'null'
 
 [[blizzard_objects.entities]]
@@ -956,6 +972,28 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = "AInv,A;Ca"
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Ocbh'  # Tauren Chieftain
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,A;C4"
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'Orkn'  # Shadow Hunter
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AInv,A;Cv"
 object_id = 'null'
 
 [map_objects]
@@ -1850,6 +1888,14 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Abilities\\Weapons\\RedDragonBreath\\RedDragonMissile.mdl"
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'Obla'  # Blademaster
 entity_id = 'HE0B'
@@ -2219,6 +2265,178 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = "apimports\\evilcryptlord.mdl"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.100000023841858
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 12
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "chaos"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Corrupted)"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Ocbh'  # Tauren Chieftain
+entity_id = 'HE04'
+[[map_objects.entities.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "apimports\\eviltaurenchieftain.mdl"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.100000023841858
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 12
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "chaos"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Corrupted)"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Otch'  # Tauren Chieftain
+entity_id = 'HE0D'
+[[map_objects.entities.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "apimports\\eviltaurenchieftain.mdl"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.100000023841858
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 12
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "chaos"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Corrupted)"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Orkn'  # Shadow Hunter
+entity_id = 'HE0v'
+[[map_objects.entities.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "apimports\\evilshadowhunter.mdl"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.100000023841858
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 12
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "chaos"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Corrupted)"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Oshd'  # Shadow Hunter
+entity_id = 'HE0E'
+[[map_objects.entities.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "apimports\\evilshadowhunter.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
