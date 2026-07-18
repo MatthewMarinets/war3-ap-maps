@@ -5,12 +5,19 @@ from typing import Callable, Any
 import asyncio
 import time
 import threading
-import sys
 import shlex
 from dataclasses import dataclass
 
 from .. import logger
-from .comm import PacketType, AsyncContext, GameStatus, status_loop, InventoryItem
+from .comm import (
+    PacketType,
+    AsyncContext,
+    GameStatus,
+    status_loop,
+    InventoryItem,
+    MissionSlotInfo,
+    MissionAvailability
+)
 from ..data import heroes, game_ids, locations, missions, tables
 from ..data.game_ids import Tech, GameID
 
@@ -373,6 +380,13 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
 
 
 def init_test_data(game_status: GameStatus) -> None:
+    from ..data import mission_orders
+    game_status.mission_order = {
+        (mission_slot.x, mission_slot.y): MissionSlotInfo(mission_slot.mission_pool[0])
+        for mission_slot in mission_orders.H1_SOLO_CAMPAIGN
+    }
+    game_status.mission_order[4, 3].availability = MissionAvailability.BEATEN
+    game_status.mission_order[5, 6].availability = MissionAvailability.LOCKED
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].hero = heroes.HeroChoice.JAINA
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].reset_abils()
     # game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].name = "«§upa¢ool»"

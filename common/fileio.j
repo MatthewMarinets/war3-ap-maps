@@ -9,6 +9,10 @@ constant integer NUM_FILE_LINES = 10
 string last_filename = ""
 endglobals
 
+function print takes string message returns nothing
+    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, message)
+endfunction
+
 function InitTrig_fileio takes nothing returns nothing
     local integer i = 0
 

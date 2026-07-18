@@ -12,6 +12,7 @@ integer last_hero_packet = -1
 integer last_item_packet = -1
 integer last_mercenaries_packet = -1
 integer last_settings_packet = -1
+integer last_missions_packet = -1
 integer last_item_channel_packet = -1
 integer checks_before_timeout = 2
 boolean array locations_checked
@@ -26,6 +27,7 @@ timer status_ack_ping_timer
 trigger t_captain_promoted
 trigger t_apply_mercenaries
 trigger t_create_mercenary_camps
+trigger t_init_mission_board
 endglobals
 
 function status_send takes nothing returns nothing
@@ -35,7 +37,9 @@ function status_send takes nothing returns nothing
     call io_write(COMM_VERSION)
     call io_write(I2S(world_id))
     call io_write(I2S(MISSION_ID))
-    call io_write(I2S(last_unlock_packet) + "," + I2S(last_location_packet) + "," + I2S(last_message_packet) + "," + I2S(last_hero_packet) + "," + I2S(last_item_packet) + "," + I2S(last_item_channel_packet) + ",-1," + I2S(last_mercenaries_packet) + "," + I2S(last_settings_packet))
+    // unlocks, locations, messages, heroes, items,
+    // item_channels, hero_levels (always -1), mercenaries, settings, missions
+    call io_write(I2S(last_unlock_packet) + "," + I2S(last_location_packet) + "," + I2S(last_message_packet) + "," + I2S(last_hero_packet) + "," + I2S(last_item_packet) + "," + I2S(last_item_channel_packet) + ",-1," + I2S(last_mercenaries_packet) + "," + I2S(last_settings_packet) + "," + I2S(last_missions_packet))
     call io_write(I2S(hero_status_index))
     call io_write(I2S(num_channel_1_items_received) + "," + I2S(num_channel_2_items_received))
     call io_write("_")
@@ -263,6 +267,19 @@ function status_load_settings takes nothing returns nothing
     endif
 endfunction
 
+function status_load_missions takes nothing returns nothing
+    local integer i = 100
+    local player p = Player(0)
+    loop
+        exitwhen i >= 300
+        call SetPlayerTechMaxAllowed(p, i, 0)
+        set i = i + 1
+    endloop
+    call io_read_file_simple("missions.txt")
+    set last_missions_packet = GetPlayerTechMaxAllowed(Player(0), 'nech')
+    call TriggerExecute(t_init_mission_board)
+endfunction
+
 function status_check_ping takes nothing returns nothing
     local integer bitmask = 0
     local boolean should_send = false
@@ -299,9 +316,14 @@ function status_check_ping takes nothing returns nothing
     if bitmask > 0 then
         set should_send = true
     endif
+    if bitmask >= 1024 then
+        // bitmask & 1023
+        set bitmask = bitmask - ((bitmask / 1024) * 1024)
+    endif
     if bitmask >= 512 then
-        // bitmask & 511
-        set bitmask = bitmask - ((bitmask / 512) * 512)
+        set bitmask = bitmask - 512
+        // settings
+        call status_load_missions()
     endif
     if bitmask >= 256 then
         set bitmask = bitmask - 256
@@ -376,4 +398,6 @@ function InitTrig_status takes nothing returns nothing
     // Mercenaries
     set t_create_mercenary_camps = CreateTrigger()
     set t_apply_mercenaries = CreateTrigger()
+    // Missions
+    set t_init_mission_board = CreateTrigger()
 endfunction

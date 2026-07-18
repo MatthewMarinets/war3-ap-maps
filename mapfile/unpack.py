@@ -35,6 +35,8 @@ def extract_map_files(map_file: str, target_dir: str) -> Error[str] | None:
             assert not basename.startswith('.'), f"mpq contains a .directory: {basename}"
             copy_imports(filename, f'{target_dir}/{basename}')
             continue
+        if os.path.basename(filename) == '(attributes)':
+            continue
         _, ext = os.path.splitext(basename)
         convert, target_name = CONVERT_HANDLERS.get(ext, (None, basename))
         if basename.casefold() == 'war3mapunits.doo':

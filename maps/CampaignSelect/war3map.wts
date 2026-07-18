@@ -1,0 +1,55 @@
+﻿STRING 1
+{
+Player 1
+}
+
+STRING 2
+{
+Force 1
+}
+
+STRING 3
+{
+Level select
+}
+
+STRING 4
+{
+1
+}
+
+STRING 5
+{
+This is the entry-point to playing a randomizer mission
+}
+
+STRING 6
+{
+phaneros
+}
+
+STRING 9
+{
+Level select
+}
+
+STRING 10
+{
+The randomizer spirit wanders the halls of mission select switches, deciding where to go next.
+}
+
+STRING 12
+{
+Under Construction
+}
+
+STRING 13
+{
+Item Groups
+}
+
+STRING 14
+{
+Item Channels
+}
+

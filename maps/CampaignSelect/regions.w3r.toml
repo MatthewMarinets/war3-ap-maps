@@ -1,0 +1,60 @@
+# Warcraft 3 Region file (.w3r)
+# See w3r.py for type definitions
+
+version = 5
+
+[[regions]]
+
+left = 288.0
+bottom = 1824.0
+right = 480.0
+top = 2016.0
+region_name = 'mission00'
+region_id = 0
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = 544.0
+bottom = 1824.0
+right = 736.0
+top = 2016.0
+region_name = 'mission10'
+region_id = 1
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -320.0
+bottom = -1120.0
+right = 3392.0
+top = 2624.0
+region_name = 'mission_select_vision'
+region_id = 2
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128
+
+[[regions]]
+
+left = -2592.0
+bottom = 2592.0
+right = -2496.0
+top = 2720.0
+region_name = 'under construction'
+region_id = 3
+weather_effect_id = 'null'
+ambient_sound = ''
+colour_b = 255
+colour_g = 128
+colour_r = 128

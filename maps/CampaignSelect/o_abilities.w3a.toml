@@ -1,0 +1,51 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 2
+has_levels = true
+
+[blizzard_objects]
+entities = []
+
+[map_objects]
+[[map_objects.entities]]
+parent_id = 'ANbl'  # Blink
+entity_id = 'A000'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Blink (Neutral)"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'aher'  # AbilityData.Hero Ability
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'acdn'  # AbilityData.Cooldown
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.5
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Teleports a short distance"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'aart'  # Profile.Icon - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNBlink.blp"
+object_id = 'null'

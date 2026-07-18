@@ -279,3 +279,25 @@ Encoded IDs are two-character stringified integers. Ex: " 0 710" says locations 
 | --------------------------- | ------------------------------------------------- |
 | MaxTech(Player(0), 'nech')  | Message ID; echoed back in status.txt             |
 | MaxTech(Player(0), 'nmer')  | Enable bonus mercenary camps                      |
+
+### missions.txt
+* Client -> Game
+* Tells the game about the mission order
+  * What missions are in each slot
+  * What missions are unlocked
+  * What missions are available
+
+| Line                        | Contains                                          |
+| --------------------------- | ------------------------------------------------- |
+| MaxTech(Player(0), 'nech')  | Message ID; echoed back in status.txt             |
+| MaxTech(Player(0), 'size')  | Mission order grid side length                    |
+| MaxTech(Player(0), 100~199) | Mission IDs for missions in slots 0~64            |
+| MaxTech(Player(0), 200~299) | Mission slot enablement state                     |
+
+#### Enablement states
+| Value | Meaning               |
+| ----- | --------------------- |
+| 0     | empty                 |
+| 1     | locked                |
+| 2     | available             |
+| 3     | available+beaten      |

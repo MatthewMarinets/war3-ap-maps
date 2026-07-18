@@ -4,8 +4,10 @@ import re
 def get_target(args: list[str]) -> tuple[bool, str]:
     """Returns a tuple of [success, mission file stem] from a list of CLI arguments"""
     if len(args) < 2:
-        return True, "Human01"
+        return True, 'CampaignSelect'
     arg = args[1].lower()
+    if arg in ('level', 'select', 'ls', 'levelselect'):
+        return True, 'CampaignSelect'
     parts = re.match(r'(hu?|or?|ud?|n?e?)?(x?)(\d*)', arg)
     if parts is None:
         return False, f"Couldn't parse argument {arg}"
