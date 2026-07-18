@@ -90,6 +90,7 @@ MODIFICATION_TYPES: dict[LiteralString, DataType] = {
 
     # Units
     eid.FIELD_UNIT_ABILITIES_NORMAL: DataType.String,
+    eid.FIELD_UNIT_ABILITIES_HERO: DataType.String,
     eid.FIELD_UNIT_ABILITIES_DEFAULT: DataType.String,
     eid.FIELD_UNIT_ATTACK_1_ATTACK_TYPE: DataType.String,
     eid.FIELD_UNIT_ATTACK_1_DAMAGE_BASE: DataType.Integer,

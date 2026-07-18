@@ -354,6 +354,12 @@ giving them a more light/living aesthetic.
   * Eyes turned red
   * Wood made darker and more orangeish
   * Axehead slightly darkened
+* Akama
+  * Skin turned grey
+  * Eye particles changed blue -> red (red background makes appearance go purple -> red)
+  * beak changed white -> dark grey
+  * Cloak trim made more saturated and consistently gold-ish
+  * Cloak jewels changed silver -> purple
 
 ## Model Notes
 See [this guide](https://world-editor-tutorials.thehelper.net/attachments.php) for how to use attachments

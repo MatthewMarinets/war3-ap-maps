@@ -195,6 +195,17 @@ HERO_INFO = [
         GameID.DARK_RANGER, CustomIDs.UNIT_CORRUPTED_DARK_RANGER,
         r'apimports\evilundeadsylvanas.mdx', CustomIDs.ABIL_CHAOS_DARK_RANGER,
     ),
+
+    # Other
+    HeroInfo(
+        GameID.AKAMA, CustomIDs.UNIT_CORRUPTED_AKAMA,
+        r'apimports\evilakama.mdx', CustomIDs.ABIL_CHAOS_AKAMA,
+        # Note: default scaling is 1.5
+        scaling=1.0,
+        other_updates={
+            eid.FIELD_UNIT_ABILITIES_HERO: 'ACs7,AOcl,AEsh,AOre',
+        },
+    ),
 ]
 TEXTURE_DEPENDENCIES = {
     r'apimports\eviljaina.mdx': [r'apimports\eviljaina.blp'],
@@ -217,6 +228,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evillich.mdx': [r'apimports\evillich.blp'],
     r'apimports\evilcryptlord.mdx': [r'apimports\evilcryptlord.blp'],
     r'apimports\evilundeadsylvanas.mdx': [r'apimports\evilundeadsylvanas.blp'],
+    r'apimports\evilakama.mdx': [r'apimports\evilakama.blp'],
 }
 
 DEFAULT_HERO_ABILS = eid.ABIL_INVENTORY_HERO
@@ -238,7 +250,8 @@ HERO_TO_DEFAULT_ABILS = {
     GameID.MALFURION: f'{eid.ABIL_INVENTORY_HERO},{eid.ABIL_ULTRAVISION}',
     GameID.MALFURION_UNMOUNTED: f'{eid.ABIL_INVENTORY_HERO},{eid.ABIL_ULTRAVISION}',
     GameID.TYRANDE: f'{eid.ABIL_SHADOW_MELD},{eid.ABIL_INVENTORY_HERO},{eid.ABIL_ULTRAVISION}',
-    GameID.AKAMA: f'{eid.ABIL_INVENTORY_HERO},{eid.ABIL_PERMANENT_INVISIBILITY},{eid.ABIL_SHADOW_MELD_AKAMA}',
+    # GameID.AKAMA: f'{eid.ABIL_INVENTORY_HERO},{eid.ABIL_PERMANENT_INVISIBILITY},{eid.ABIL_SHADOW_MELD_AKAMA}',
+    GameID.AKAMA: f'{eid.ABIL_INVENTORY_HERO}',
 }
 
 
