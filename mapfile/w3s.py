@@ -42,7 +42,7 @@ class SoundChannel(enum.IntEnum):
     Fire = 14
 
 
-@dataclass
+@dataclass(slots=True)
 class War3Sound:
     name: str = ''
     file: str = ''
@@ -52,10 +52,12 @@ class War3Sound:
     fade_out: int = 0
     volume: int = -1
     pitch: float = UNSET_FLOAT
+    file_format: int = 0  # 8 = .mp3, 0 or -1 = .wav
     channel: SoundChannel = SoundChannel.General
     min_distance: float = UNSET_FLOAT
     max_distance: float = UNSET_FLOAT
     distance_cutoff: float = UNSET_FLOAT
+    unknown4: int = 0  # Possibly max volume?
 
 
 @dataclass
@@ -88,18 +90,24 @@ def read_binary(raw_bytes: bytes) -> War3SoundInfo:
             unset_int = -1
         # Note(mm): These "unset" values seem to vary more in the Scenario maps
         # and may need to be stored for a successful round-trip
-        assert reader.read_float() == unset_float
-        assert reader.read_int32() == unset_int
+        unknown0 = reader.read_float()
+        sound.file_format = reader.read_int32()
         sound.channel = SoundChannel(reader.read_int32())
         sound.min_distance = reader.read_float()
         sound.max_distance = reader.read_float()
         sound.distance_cutoff = reader.read_float()
-        assert reader.read_float() == unset_float
-        assert reader.read_float() == unset_float
-        assert reader.read_int32() == unset_int
-        assert reader.read_float() == unset_float
-        assert reader.read_float() == unset_float
-        assert reader.read_float() == unset_float
+        unknown2 = reader.read_float()
+        unknown3 = reader.read_float()
+        sound.unknown4 = reader.read_int32()
+        unknown5 = reader.read_float()
+        unknown6 = reader.read_float()
+        unknown7 = reader.read_float()
+        assert unknown0 in (0.0, UNSET_FLOAT), f"{unknown0} was supposed to be {unset_float}"
+        assert unknown2 in (0.0, UNSET_FLOAT), f"{unknown2} was supposed to be {unset_float}"
+        assert unknown3 in (0.0, UNSET_FLOAT), f"{unknown3} was supposed to be {unset_float}"
+        assert unknown5 in (0.0, UNSET_FLOAT), f"{unknown5} was supposed to be {unset_int}"
+        assert unknown6 in (0.0, UNSET_FLOAT), f"{unknown6} was supposed to be {unset_int}"
+        assert unknown7 in (0.0, UNSET_FLOAT), f"{unknown7} was supposed to be {unset_int}"
         data.sounds.append(sound)
     assert reader.index == len(raw_bytes)
     return data
@@ -125,7 +133,7 @@ def to_binary(data: War3SoundInfo) -> bytes:
         writer.write_int32(sound.volume)
         writer.write_float(sound.pitch)
         writer.write_float(unset_float)
-        writer.write_int32(unset_int)
+        writer.write_int32(sound.file_format)
         writer.write_int32(sound.channel.value)
         writer.write_float(sound.min_distance)
         writer.write_float(sound.max_distance)
@@ -150,6 +158,11 @@ def as_text(data: War3SoundInfo) -> str:
 def _parse_sound(sound: dict) -> War3Sound:
     sound['flags'] = savetext.parse_enum_flags(sound['flags'], SoundFlags)
     sound['channel'] = savetext.parse_enum_flags(sound['channel'], SoundChannel)
+    if not sound['flags'] & SoundFlags.Music:
+        if 'file_format' not in sound:
+            sound['file_format'] = -1
+        if 'unknown4' not in sound:
+            sound['unknown4'] = -1
     return War3Sound(**sound)
 
 
