@@ -5,7 +5,7 @@ import multiprocessing
 import colorama
 
 from CommonClient import CommonContext, server_loop, ClientCommandProcessor, gui_enabled, get_base_parser, handle_url_arg
-from NetUtils import NetworkItem, ClientStatus
+from NetUtils import NetworkItem, ClientStatus, JSONtoTextParser, JSONMessagePart
 from Utils import async_start
 
 from ..world import Wc3World
@@ -50,6 +50,7 @@ class Wc3Context(CommonContext):
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.generation_version = (-1, -1, -1)
+        self.message_parser = Wc3JSONtoTextParser(self)
         self.comm_ctx = comm.AsyncContext(True, client_interface=self)
         self.bonus_mercenary_camps = options.BonusMercenaryCamps.default
         # todo(mm): Proper configurable goal location
@@ -67,6 +68,23 @@ class Wc3Context(CommonContext):
             self._handle_connected(args)
         elif cmd == "ReceivedItems":
             self._handle_received_items(args)
+
+    def on_print_json(self, args: dict) -> None:
+        super().on_print_json(args)
+
+        # goes to this world
+        if "receiving" in args and self.slot_concerns_self(args["receiving"]):
+            relevant = True
+        # found in this world
+        elif "item" in args and self.slot_concerns_self(args["item"].player):
+            relevant = True
+        # not related
+        else:
+            relevant = False
+
+        if relevant:
+            self.comm_ctx.game_status.pending_messages.append(self.message_parser(args["data"]))
+            self.comm_ctx.game_status.pending_update |= comm.PacketType.MESSAGES
 
     def _handle_connected(self, args: dict) -> None:
         self.generation_version = (
@@ -150,6 +168,26 @@ class Wc3Context(CommonContext):
     def run_gui(self) -> None:
         from .gui import start_gui
         start_gui(self)
+
+
+class Wc3JSONtoTextParser(JSONtoTextParser):
+    def __init__(self, ctx: Wc3Context) -> None:
+        self.handlers = {
+            "ItemSend": self._handle_color,
+            "ItemCheat": self._handle_color,
+            "Hint": self._handle_color,
+        }
+        super().__init__(ctx)
+
+    def _handle_color(self, node: JSONMessagePart) -> str:
+        codes = node["color"].split(";")
+        codes = [code for code in codes if code in self.color_codes]
+        if not codes:
+            return self._handle_text(node)
+        code = codes[0]
+        result = f"|cff{self.color_codes[code]}" + self._handle_text(node) + "|r"
+        logger.info(result)
+        return result
 
 
 def parse_uri(uri: str) -> str:
