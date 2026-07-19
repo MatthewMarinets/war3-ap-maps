@@ -6,8 +6,10 @@ def get_target(args: list[str]) -> tuple[bool, str]:
     if len(args) < 2:
         return True, 'CampaignSelect'
     arg = args[1].lower()
-    if arg in ('level', 'select', 'ls', 'levelselect'):
+    if arg in ('level', 'select', 'ls', 'levelselect', 'mission', 'missionselect'):
         return True, 'CampaignSelect'
+    if arg in ('ap', 'campaign', 'client', 'menu'):
+        return True, 'archipelago'
     parts = re.match(r'(hu?|or?|ud?|n?e?)?(x?)(\d*)', arg)
     if parts is None:
         return False, f"Couldn't parse argument {arg}"

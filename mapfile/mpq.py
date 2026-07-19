@@ -7,7 +7,7 @@ import subprocess
 import shutil
 from .util.failable import Error
 from . import config, binary
-from . import w3i, wts
+from . import w3i, wts, w3f
 
 mpq_editor_exe = config.workspace.get('mpqeditor_path', 'MPQEditor.exe')
 
@@ -33,7 +33,7 @@ def extract_w3x(map_file: str, target_dir: str) -> Error[tuple[int, str]] | None
     return command(cmd)
 
 
-def create_w3x(source_dir: str, target_file: str) -> Error[tuple[int, str]] | None:
+def create_w3x(source_dir: str, target_file: str, target_type: str = 'map') -> Error[tuple[int, str]] | None:
     """
     Packs a directory into a .w3m/.w3x map file using MPQEditor
     """
@@ -90,23 +90,40 @@ def create_w3x(source_dir: str, target_file: str) -> Error[tuple[int, str]] | No
     os.remove(script_file)
 
     # Retrive map metadata from .w3i file
-    w3i_file = os.path.join(source_dir, 'war3map.w3i')
-    wts_file = os.path.join(source_dir, 'war3map.wts')
-    map_info = w3i.read_w3i_file(w3i_file)
-    map_strings = wts.read_wts(wts_file)
-    map_name = map_info.map_name
-    if map_name.startswith('TRIGSTR_'):
-        map_name = map_strings[map_name]
-    encoded_map_name = map_name.encode('utf-8')
+    encoded_map_name = b''
+    header_flags = 0
+    if target_type == 'map':
+        w3i_file = os.path.join(source_dir, 'war3map.w3i')
+        wts_file = os.path.join(source_dir, 'war3map.wts')
+        map_info = w3i.read_w3i_file(w3i_file)
+        map_strings = wts.read_wts(wts_file)
+        map_name = map_info.map_name
+        if map_name.startswith('TRIGSTR_'):
+            map_name = map_strings[map_name]
+        encoded_map_name = map_name.encode('utf-8')
+        header_flags = map_info.flags
+    elif target_type == 'campaign':
+        w3f_file = os.path.join(source_dir, 'war3campaign.w3f')
+        wts_file = os.path.join(source_dir, 'war3campaign.wts')
+        campaign_info = w3f.read_w3f_file(w3f_file)
+        map_strings = wts.read_wts(wts_file)
+        map_name = campaign_info.campaign_name
+        if map_name.startswith('TRIGSTR'):
+            map_name = map_strings[map_name]
+        encoded_map_name = map_name.encode('utf-8')
+        header_flags = campaign_info.flags
 
     # Write map file header metadata
     # This is used by the map selection GUI to show the map name and supported players
     with open(target_file, 'r+b') as file_handle:
+        file_handle.seek(0)
+        bytes_written = file_handle.write(b'HM3W')
+        assert bytes_written == 4
         file_handle.seek(8)
         bytes_written = file_handle.write(encoded_map_name)
         assert bytes_written == len(map_name)
         file_handle.write(b'\0')
-        bytes_written = file_handle.write(int.to_bytes(map_info.flags, 4, binary.ENDIANNESS))
+        bytes_written = file_handle.write(int.to_bytes(header_flags, 4, binary.ENDIANNESS))
         assert bytes_written == 4
         # Note(mm): max players is force-set to 1
         bytes_written = file_handle.write(int.to_bytes(1, 4, binary.ENDIANNESS))

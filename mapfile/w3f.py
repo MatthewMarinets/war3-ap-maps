@@ -10,12 +10,15 @@ Notes:
 """
 
 from typing import *
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass, asdict, field
 import enum
 import tomllib
 
 from mapfile import binary
 from mapfile.util import savetext
+
+
+EXTENSION = '.w3f'
 
 
 class CampaignFlag(enum.IntEnum):
@@ -26,7 +29,7 @@ class CampaignFlag(enum.IntEnum):
     TFT_Variable = 3
 
 
-@dataclass
+@dataclass(slots=True)
 class War3MapTitleInfo:
     starts_visible: bool = False
     chapter_title: str = ''
@@ -34,39 +37,45 @@ class War3MapTitleInfo:
     path: str = ''
 
 
-@dataclass
+@dataclass(slots=True)
 class War3MapPathInfo:
     path: str = ''
 
 
-@dataclass
+@dataclass(slots=True)
 class War3CampaignInfo:
-    file_format_version: int
-    times_saved: int
-    editor_version: int
-    campaign_name: str
-    campaign_difficulty: str
-    author_name: str
-    campaign_description: str
-    flags: CampaignFlag
-    background_screen_index: int
+    file_format_version: int = 1
+    times_saved: int = 0
+    editor_version: int = 0
+    campaign_name: str = ''
+    campaign_difficulty: str = ''
+    author_name: str = ''
+    campaign_description: str = ''
+    flags: CampaignFlag = CampaignFlag.TFT_Variable
+    background_screen_index: int = 0
     """-1 for custom background"""
-    custom_background_screen_path: str
-    minimap_picture_path: str
-    ambient_sound_index: int
-    custom_ambient_sound_path: str
-    terrain_fog: int
-    fog_start_z: float
-    fog_end_z: float
-    fog_density: float
-    fog_red: int    # 1 byte
-    fog_green: int  # 1 byte
-    fog_blue: int   # 1 byte
-    fog_alpha: int  # 1 byte
-    ui_race_index: int
+    custom_background_screen_path: str = ''
+    minimap_picture_path: str = ''
+    ambient_sound_index: int = 0
+    custom_ambient_sound_path: str = ''
+    terrain_fog: int = 0
+    fog_start_z: float = 0.0
+    fog_end_z: float = 2000.0
+    fog_density: float = 0.0
+    fog_red: int = 0
+    fog_green: int = 0
+    fog_blue: int = 0
+    fog_alpha: int = 255
+    ui_race_index: int = 0
     """Human=0, Orc=1, Undead=2, Night Elf=3"""
-    map_titles: list[War3MapTitleInfo]
-    map_paths: list[War3MapPathInfo]
+    map_titles: list[War3MapTitleInfo] = field(default_factory=list)
+    map_paths: list[War3MapPathInfo] = field(default_factory=list)
+
+
+def read_w3f_file(filename: str) -> War3CampaignInfo:
+    with open(filename, 'rb') as fp:
+        raw_bytes = fp.read()
+    return read_binary(raw_bytes)
 
 
 def read_binary(raw_bytes: bytes) -> War3CampaignInfo:
@@ -148,7 +157,15 @@ def to_binary(data: War3CampaignInfo) -> bytes:
     writer.write_int32(data.ui_race_index)
 
     writer.write_int32(len(data.map_titles))
+    # starts_visible is _sometimes_ per-title and sometimes global
+    # `c1 02 09 00` seems to demarcate the first is available and the rest not (10)
+    # `bd 02 16 00` says first is available, per-title spec, spec 1101 0000 00
+    # writer.write_bytes(b'\xc1\x02\x09\x00')
     for title in data.map_titles:
+        if title.starts_visible:
+            writer.write_bytes(b'\xbd\x02\x16\x00')
+        else:
+            writer.write_int32(0)
         writer.write_cstring(title.chapter_title)
         writer.write_cstring(title.map_title)
         writer.write_cstring(title.path)
@@ -176,17 +193,28 @@ def from_text(text: str) -> War3CampaignInfo:
 
 if __name__ == '__main__':
     import sys
-    _USAGE = 'w3f.py <w3f file> <target file>\nConverts a .w3f file to text'
+    _USAGE = 'w3f.py [--to-binary] <w3f file> <target file>\nConverts a .w3f file to text'
     if '-h' in sys.argv or '--help' in sys.argv:
         print(_USAGE)
         sys.exit()
+    target_binary = False
+    if '--to-binary' in sys.argv:
+        target_binary = True
+        sys.argv.pop(sys.argv.index('--to-binary'))
     if len(sys.argv) < 3:
         print('Not enough arguments')
         print(_USAGE)
         sys.exit(1)
-    with open(sys.argv[1], 'rb') as fp:
-        _contents = fp.read()
-    _data = read_binary(_contents)
-    with open(sys.argv[2], 'w') as fp:
-        fp.write(as_text(_data))
+    if target_binary:
+        with open(sys.argv[1], 'r') as fp:
+            _text = fp.read()
+        _data = from_text(_text)
+        with open(sys.argv[2], 'wb') as fp:
+            fp.write(to_binary(_data))
+    else:
+        with open(sys.argv[1], 'rb') as fp:
+            _contents = fp.read()
+        _data = read_binary(_contents)
+        with open(sys.argv[2], 'w') as fp:
+            fp.write(as_text(_data))
 

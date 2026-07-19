@@ -1,0 +1,125 @@
+# Warcraft 3 Campaign Info File (.w3f)
+# See w3f.py for type definitions
+
+file_format_version = 1
+times_saved = 1
+editor_version = 6061
+campaign_name = 'TRIGSTR_001'
+campaign_difficulty = 'TRIGSTR_002'
+author_name = 'TRIGSTR_003'
+campaign_description = 'TRIGSTR_004'
+flags = "ROC_Variable"
+background_screen_index = 1
+custom_background_screen_path = ''
+minimap_picture_path = ''
+ambient_sound_index = -1
+custom_ambient_sound_path = ''
+terrain_fog = 0
+fog_start_z = 0.0
+fog_end_z = 9000.0
+fog_density = 0.5
+fog_red = 51
+fog_green = 77
+fog_blue = 77
+fog_alpha = 255
+ui_race_index = 0
+
+[[map_titles]]
+
+starts_visible = true
+chapter_title = 'TRIGSTR_001'
+map_title = 'TRIGSTR_006'
+path = 'CampaignSelect.w3x'
+
+[[map_titles]]
+
+starts_visible = false
+chapter_title = 'TRIGSTR_007'
+map_title = 'TRIGSTR_008'
+path = 'Human01.w3x'
+
+[[map_titles]]
+
+starts_visible = false
+chapter_title = 'TRIGSTR_009'
+map_title = 'TRIGSTR_010'
+path = 'Human02.w3x'
+
+[[map_titles]]
+
+starts_visible = false
+chapter_title = 'TRIGSTR_011'
+map_title = 'TRIGSTR_012'
+path = 'Human03.w3x'
+
+[[map_titles]]
+
+starts_visible = false
+chapter_title = 'TRIGSTR_013'
+map_title = 'TRIGSTR_014'
+path = 'Human04.w3x'
+
+[[map_titles]]
+
+starts_visible = false
+chapter_title = 'TRIGSTR_015'
+map_title = 'TRIGSTR_016'
+path = 'Human05.w3x'
+
+[[map_titles]]
+
+starts_visible = false
+chapter_title = 'TRIGSTR_017'
+map_title = 'TRIGSTR_018'
+path = 'Human06.w3x'
+
+[[map_titles]]
+
+starts_visible = false
+chapter_title = 'TRIGSTR_019'
+map_title = 'TRIGSTR_020'
+path = 'Human07.w3x'
+
+[[map_titles]]
+
+starts_visible = false
+chapter_title = 'TRIGSTR_021'
+map_title = 'TRIGSTR_022'
+path = 'Human08.w3x'
+
+[[map_titles]]
+
+starts_visible = false
+chapter_title = 'TRIGSTR_023'
+map_title = 'TRIGSTR_024'
+path = 'Human09.w3x'
+
+[[map_paths]]
+path = 'CampaignSelect.w3x'
+
+[[map_paths]]
+path = 'Human01.w3x'
+
+[[map_paths]]
+path = 'Human02.w3x'
+
+[[map_paths]]
+path = 'Human03.w3x'
+
+[[map_paths]]
+path = 'Human04.w3x'
+
+[[map_paths]]
+path = 'Human05.w3x'
+
+[[map_paths]]
+path = 'Human06.w3x'
+
+[[map_paths]]
+path = 'Human07.w3x'
+
+[[map_paths]]
+path = 'Human08.w3x'
+
+[[map_paths]]
+path = 'Human09.w3x'

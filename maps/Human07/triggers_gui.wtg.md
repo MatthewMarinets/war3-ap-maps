@@ -5095,7 +5095,7 @@ Set and definte skills for Level 3 Muradin.
 ```
 ### Functions
 - Action SetNextLevelBJ
-  - param String Maps\Archipelago\Human08.w3x
+  - param String CampaignSelect.w3x
 - Action CustomVictoryBJ
   - param Preset Player01
   - param Preset UseSkipOptionUse

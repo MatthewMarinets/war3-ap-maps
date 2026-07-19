@@ -74,6 +74,8 @@ ABILITY_DATA_FILE_NAME = 'o_abilities.w3a.toml'
 BUFF_DATA_FILE_NAME = 'o_buffs.w3h.toml'
 UPGRADE_DATA_FILE_NAME = 'o_upgrades.w3q.toml'
 
+CAMPAIGN_INFO_FILE_NAME = 'campaign_info.w3f.toml'
+
 CONVERT_HANDLERS: dict[str, tuple[Callable[[str, str], None], str]] = {
     '.doo': (doo.convert, DOODADS_FILE_NAME),
     '.imp': (general_converter(imp), IMPORTS_FILE_NAME),
@@ -84,6 +86,7 @@ CONVERT_HANDLERS: dict[str, tuple[Callable[[str, str], None], str]] = {
     '.w3s': (general_converter(w3s), SOUNDS_FILE_NAME),
     '.wct': (general_converter(wct), TRIGGERS_CUSTOM_TEXT_FILE_NAME),
     '.wtg': (general_converter(wtg), TRIGGERS_GUI_FILE_NAME),
+    '.w3f': (general_converter(w3f), CAMPAIGN_INFO_FILE_NAME),
     # .w3o
     '.w3u': (general_converter(w3o, '.w3u'), UNIT_DATA_FILE_NAME),
     '.w3t': (general_converter(w3o, '.w3t'), ITEM_DATA_FILE_NAME),

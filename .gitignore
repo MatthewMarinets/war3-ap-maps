@@ -11,3 +11,4 @@ workspace.ini
 doc/generated/
 logs/
 venv/
+campaigns/*.w3x

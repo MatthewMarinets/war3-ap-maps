@@ -8341,7 +8341,7 @@ Victory Save Cache enables the proper campaign levels and saves Arthas.
 - Event TriggerRegisterPlayerEventVictory
   - param Preset Player01
 - Action SetNextLevelBJ
-  - param String Maps\Archipelago\Human07.w3x
+  - param String CampaignSelect.w3x
 - Action CustomVictoryBJ
   - param Variable ThePlayer
   - param Preset UseSkipOptionUse

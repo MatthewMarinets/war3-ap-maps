@@ -3567,7 +3567,7 @@ endfunction
 //===========================================================================
 function Trig_Next_Level_Run_Actions takes nothing returns nothing
     // Run next level
-    call SetNextLevelBJ("Maps\\Archipelago\\Human04.w3x")
+    call SetNextLevelBJ("CampaignSelect.w3x")
     call CustomVictoryBJ(Player(1), true, true)
 endfunction
 

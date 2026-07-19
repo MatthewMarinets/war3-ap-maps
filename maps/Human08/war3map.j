@@ -5670,7 +5670,7 @@ endfunction
 //===========================================================================
 function Trig_Level_Victory_Actions takes nothing returns nothing
     call status_check_location(0)
-    call SetNextLevelBJ("Maps\\Archipelago\\Human09.w3x")
+    call SetNextLevelBJ("CampaignSelect.w3x")
     call CustomVictoryBJ(Player(1), true, true)
 endfunction
 

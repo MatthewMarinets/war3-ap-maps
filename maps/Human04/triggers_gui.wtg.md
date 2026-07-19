@@ -1352,7 +1352,7 @@ Run from 'FarmDone'
 - Action CommentString
   - param String Run the next level
 - Action SetNextLevelBJ
-  - param String Maps\Archipelago\Human05.w3x
+  - param String CampaignSelect.w3x
 - Action CustomVictoryBJ
   - param Preset Player01
   - param Preset UseSkipOptionUse

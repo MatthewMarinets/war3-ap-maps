@@ -8813,6 +8813,8 @@ version = TFT
 ### Functions
 - Action CustomScriptCode
   - param String call status_check_location(0)
+- Action SetNextLevelBJ
+  - param String CampaignSelect.w3x
 - Action CustomVictoryBJ
   - param Preset Player01
   - param Preset UseSkipOptionSkip

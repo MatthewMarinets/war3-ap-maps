@@ -20,12 +20,26 @@ def start_mission(mission_file: str) -> None:
     print(' '.join(cmd))
     subprocess.call(cmd)
 
+
+def start_windowed() -> None:
+    cmd = [
+        path_to_wc3,
+        '-nowfpause',
+        '-window',
+    ]
+    print(' '.join(cmd))
+    subprocess.call(cmd)
+
+
 if __name__ == '__main__':
     import sys
     okay, target = get_target(sys.argv)
     if not okay:
         print(target)
         sys.exit(1)
+    if target == 'archipelago':
+        start_windowed()
+        sys.exit(0)
     map_file = f'out/{target}.w3x'
     print(f'Starting: {map_file}')
     if sys.platform.startswith('linux'):

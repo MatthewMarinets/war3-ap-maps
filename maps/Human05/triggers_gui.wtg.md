@@ -12561,7 +12561,7 @@ Diable Victory Condition1
 - Action CustomScriptCode
   - param String call status_check_location(0)
 - Action SetNextLevelBJ
-  - param String Maps\Archipelago\Human06.w3x
+  - param String CampaignSelect.w3x
 - Action CustomVictoryBJ
   - param Preset Player01
   - param Preset UseSkipOptionUse

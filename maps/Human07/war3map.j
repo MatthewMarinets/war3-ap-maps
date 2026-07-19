@@ -5098,7 +5098,7 @@ endfunction
 // Trigger: Level Victory
 //===========================================================================
 function Trig_Level_Victory_Actions takes nothing returns nothing
-    call SetNextLevelBJ("Maps\\Archipelago\\Human08.w3x")
+    call SetNextLevelBJ("CampaignSelect.w3x")
     call CustomVictoryBJ(Player(1), true, true)
 endfunction
 

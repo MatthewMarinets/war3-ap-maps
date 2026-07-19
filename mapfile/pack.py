@@ -18,7 +18,7 @@ def copy_imports(source_dir: str, target_dir: str) -> None:
         dereference_proxy(file, f'{target_dir}/{target_basename}')
 
 
-def compile_map_file(map_file: str, source_dir: str) -> Error[str] | None:
+def compile_map_file(map_file: str, source_dir: str, target_type: str = 'map') -> Error[str] | None:
     if not os.path.isdir(source_dir):
         return Error(f'{source_dir} does not exist')
     if os.path.isfile(map_file):
@@ -40,12 +40,12 @@ def compile_map_file(map_file: str, source_dir: str) -> Error[str] | None:
         convert, _ = CONVERT_HANDLERS.get(ext, (None, basename))
         if stem == 'units':
             assert convert is not None
-            convert(filename, f'{build_dir}/war3mapUnits.doo')
+            convert(filename, f'{build_dir}/war3{target_type}Units.doo')
         elif convert:
-            convert(filename, f'{build_dir}/war3map{ext}')
+            convert(filename, f'{build_dir}/war3{target_type}{ext}')
         else:
             shutil.copy(filename, f'{build_dir}/{basename}')
-    result = mpq.create_w3x(build_dir, map_file)
+    result = mpq.create_w3x(build_dir, map_file, target_type)
     if isinstance(result, Error):
         return Error(f"Error running command '{result.message[1]}': error code {result.message[0]}")
     shutil.rmtree(build_dir)

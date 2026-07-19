@@ -7303,7 +7303,7 @@ function Trig_VICTORY_Actions takes nothing returns nothing
     call status_check_location(0)
     call CinematicFadeBJ(bj_CINEFADETYPE_FADEOUT, 2.00, "ReplaceableTextures\\CameraMasks\\Black_mask.blp", 0, 0, 0, 0)
     call TriggerSleepAction(2.00)
-    call SetNextLevelBJ("Maps\\Archipelago\\Human07.w3x")
+    call SetNextLevelBJ("CampaignSelect.w3x")
     call CustomVictoryBJ(udg_ThePlayer, true, true)
 endfunction
 
