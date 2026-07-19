@@ -221,9 +221,9 @@ def get_location_to_rules(world: 'Wc3World') -> dict[Wc3Location | int, Callable
 
 
 def set_rules(world: 'Wc3World') -> None:
-    assert world.generation_info is not None
-    location_to_rule = world.generation_info.location_to_rule
-    for location in world.generation_info.locations:
+    assert world.g.location_to_rule
+    location_to_rule = world.g.location_to_rule
+    for location in world.g.locations:
         if location.address is None:
             # Event
             continue

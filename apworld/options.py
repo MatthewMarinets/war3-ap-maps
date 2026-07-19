@@ -12,7 +12,7 @@ if TYPE_CHECKING:
     from . import Wc3World
 
 
-def resolve_set_option(option: baseoptions.OptionSet, key_map: dict[str, str]) -> str | None:
+def resolve_set_option(option: baseoptions.OptionSet, key_map: dict[str, str]) -> None:
     result: set[str] = set()
     invalid_keys: list[str] = []
     for key in option.value:
@@ -63,7 +63,10 @@ class IncludedCampaigns(baseoptions.OptionSet):
     }
 
     def verify(
-        self, world: Type['Wc3World'], player_name: str, plando_options: 'baseoptions.PlandoOptions'
+        self,
+        world: Type['Wc3World'],  # type: ignore [override]
+        player_name: str,
+        plando_options: 'baseoptions.PlandoOptions',
     ) -> None:
         resolve_set_option(self, self.key_map)
 

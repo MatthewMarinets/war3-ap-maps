@@ -45,7 +45,6 @@ class Wc3CommandProcessor(ClientCommandProcessor):
 class Wc3Context(CommonContext):
     game = Wc3World.game
     command_processor = Wc3CommandProcessor
-    comm_ctx: comm.AsyncContext
     items_handling = 0b111
 
     def __init__(self, *args, **kwargs) -> None:
