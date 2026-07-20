@@ -2,18 +2,33 @@
 Generation related to filling the slot data
 """
 
-from typing import TYPE_CHECKING, TypedDict
+from typing import TYPE_CHECKING, TypedDict, NotRequired
 import time
 
-from ..data import heroes
+from ..data import heroes, mission_orders
+
 
 if TYPE_CHECKING:
+    from .gen_regions import FinalizedMissionSlot
     from ..world import Wc3World
 
 
 VERSION_PUBLIC = 0
 VERSION_MAJOR = 0
 VERSION_MINOR = 1
+
+
+class RequirementSlotData(TypedDict):
+    missions: NotRequired[list[int]]
+    items: NotRequired[list[int]]
+    groups: NotRequired[list['RequirementSlotData']]
+    amount: int
+
+
+class MissionSlotData(TypedDict):
+    mission: int
+    flags: NotRequired[int]
+    requirements: NotRequired[RequirementSlotData]
 
 
 class Wc3SlotData(TypedDict):
@@ -25,6 +40,41 @@ class Wc3SlotData(TypedDict):
     mercenary_allocation: dict[int, dict[int, str]]
     hero_class: dict[str, int]
     hero_names: dict[str, str]
+    mission_order: dict[str, MissionSlotData]
+
+
+def requirement_slot_data(
+    mission_order: dict[tuple[int, int], 'FinalizedMissionSlot'],
+    requirement: mission_orders.Requirement,
+) -> RequirementSlotData:
+    result: RequirementSlotData = {
+        "amount": requirement.amount,
+    }
+    if requirement.slots:
+        result["missions"] = [mission_order[x, y].mission.id for (x, y) in requirement.slots]
+    if requirement.items:
+        result["items"] = [item.id for item in requirement.items]
+    if requirement.groups:
+        result["groups"] = [
+            requirement_slot_data(mission_order, subrequirement)
+            for subrequirement in requirement.groups
+        ]
+    return result
+
+
+def mission_order_slot_data(
+    mission_order: dict[tuple[int, int], 'FinalizedMissionSlot'],
+) -> dict[str, MissionSlotData]:
+    result: dict[str, MissionSlotData] = {}
+    for (x, y), slot in mission_order.items():
+        this_slot_data: MissionSlotData = {
+            "mission": slot.mission.id,
+            "flags": slot.flags,
+        }
+        if slot.requires:
+            this_slot_data["requirements"] = requirement_slot_data(mission_order, slot.requires)
+        result[f"{x},{y}"] = this_slot_data
+    return result
 
 
 def fill_slot_data(world: 'Wc3World') -> Wc3SlotData:
@@ -40,6 +90,7 @@ def fill_slot_data(world: 'Wc3World') -> Wc3SlotData:
             mission: {index: item.type.game_id for index, item in allocation.items()}  # type: ignore [union-attr]
             for mission, allocation in world.g.mercenary_allocation.items()
         },
+        "mission_order": mission_order_slot_data(world.g.mission_order),
         "hero_class": {
             str(heroes.HeroSlot.PALADIN_ARTHAS.value): world.options.paladin_arthas_hero.value,
             str(heroes.HeroSlot.JAINA.value): world.options.jaina_hero.value,

@@ -46,6 +46,7 @@ class IncludedCampaigns(baseoptions.OptionSet):
         "human 1": missions.Wc3Campaign.HUMAN_1.title_faction,
         "h": missions.Wc3Campaign.HUMAN_1.title_faction,
         "h1": missions.Wc3Campaign.HUMAN_1.title_faction,
+        missions.Wc3Campaign.HUMAN_1.campaign_name.lower(): missions.Wc3Campaign.HUMAN_1.title_faction,
         # "undead": missions.Wc3Campaign.UNDEAD_1.title_faction,
         # "undead 1": missions.Wc3Campaign.UNDEAD_1.title_faction,
         # "u": missions.Wc3Campaign.UNDEAD_1.title_faction,
@@ -69,6 +70,8 @@ class IncludedCampaigns(baseoptions.OptionSet):
         plando_options: 'baseoptions.PlandoOptions',
     ) -> None:
         resolve_set_option(self, self.key_map)
+        if not self.value:
+            self.value = set(self.default)
 
 
 class VictoryCache(baseoptions.Range):

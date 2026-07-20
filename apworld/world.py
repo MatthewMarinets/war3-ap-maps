@@ -1,10 +1,10 @@
 """Defines the top-level world class. Requires core imports."""
-from typing import TYPE_CHECKING, Mapping, Any, ClassVar, Callable
+from typing import TYPE_CHECKING, Mapping, Any, ClassVar
 from dataclasses import dataclass, field
 from collections import Counter
 
 from worlds.AutoWorld import World, WebWorld
-from BaseClasses import Item, Tutorial, ItemClassification
+from BaseClasses import Item, Tutorial
 from .data import (
     items as mitems,
     locations as mlocations,
@@ -17,7 +17,7 @@ from .generation import gen_options, gen_regions, gen_items, gen_slot_data
 
 
 if TYPE_CHECKING:
-    from BaseClasses import MultiWorld, CollectionState, Region, Location
+    from BaseClasses import MultiWorld, Region, Location
 
 
 class Wc3WebWorld(WebWorld):
@@ -40,6 +40,7 @@ class Wc3WebWorld(WebWorld):
 class GenerationData:
     regions: list['Region'] = field(default_factory=list)
     locations: list['Location'] = field(default_factory=list)
+    events: dict[mmissions.Wc3Mission, 'Location'] = field(default_factory=dict)
     items: list[Item] = field(default_factory=list)
     locked_items: Counter[mitems.Wc3Item] = field(default_factory=Counter)
     missions: list[mmissions.Wc3Mission] = field(default_factory=list)
@@ -49,9 +50,7 @@ class GenerationData:
     included_campaigns: frozenset[mmissions.Wc3Campaign] = frozenset()
     mercenary_allocation: dict[mmissions.Wc3Mission, dict[int, mitems.Wc3Item]] = field(default_factory=dict)
     used_mercenaries: set[mitems.Wc3Item] = field(default_factory=set)
-    location_to_rule: dict[mlocations.Wc3Location | int, Callable[['CollectionState'], bool]] = (
-        field(default_factory=dict)
-    )
+    mission_order: dict[tuple[int, int], gen_regions.FinalizedMissionSlot] = field(default_factory=dict)
 
 
 class Wc3World(World):
@@ -86,7 +85,6 @@ class Wc3World(World):
         gen_options.process_options(self)
 
     def create_regions(self) -> None:
-        self.g.location_to_rule = rules.get_location_to_rules(self)
         gen_regions.create_regions(self)
 
     def create_items(self) -> None:

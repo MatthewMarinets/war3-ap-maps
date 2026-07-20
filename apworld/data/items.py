@@ -304,7 +304,7 @@ class Wc3Item(enum.IntEnum):
     BLOOD_ELF_WORKER =    400, "Blood Elf Worker",      Unit(Tech.BLOOD_ELF_WORKER, Wc3Race.BLOOD_ELF)
     BLOOD_ELF_SWORDSMAN = 401, "Blood Elf Swordsman",   Unit(Tech.BLOOD_ELF_SWORDSMAN, Wc3Race.BLOOD_ELF)
     BLOOD_ELF_ARCHER =    402, "Blood Elf Archer",      Unit(Tech.BLOOD_ELF_ARCHER, Wc3Race.BLOOD_ELF)
-    
+
     # Naga - Units
     MUR_GUL_SLAVE =  403, "Mur'gul Slave",  Unit(Tech.MUR_GUL_SLAVE, Wc3Race.NAGA)
     MUR_GUL_REAVER = 404, "Mur'gul Reaver", Unit(Tech.MUR_GUL_REAVER, Wc3Race.NAGA)

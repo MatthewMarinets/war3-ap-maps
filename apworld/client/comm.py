@@ -637,7 +637,8 @@ def read_necessary_hero_status(status: MissionStatus, game_status: GameStatus) -
         return
     mission = missions.ID_TO_MISSION.get(status.mission_id)
     if mission is None:
-        logger.warning(f'Unable to read mission ID {status.mission_id}')
+        if status.mission_id != 0:
+            logger.warning(f'Unable to read mission ID {status.mission_id}')
         return
     mission_hero_slots = tables.MISSION_TO_HERO_SLOT[mission]
     for slot in mission_hero_slots:

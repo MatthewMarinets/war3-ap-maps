@@ -1,6 +1,11 @@
 from typing import TYPE_CHECKING, Callable, Iterable
 
-from .data.locations import Wc3Location, LOCATION_RANGE_PER_MISSION, VICTORY_CACHE_OFFSET
+from .data.locations import (
+    Wc3Location,
+    LOCATION_RANGE_PER_MISSION,
+    VICTORY_CACHE_OFFSET,
+    MISSION_TO_VICTORY_LOCATION,
+)
 from .data.items import Wc3Item, Level
 from .data.heroes import HeroChoice
 
@@ -221,12 +226,9 @@ def get_location_to_rules(world: 'Wc3World') -> dict[Wc3Location | int, Callable
 
 
 def set_rules(world: 'Wc3World') -> None:
-    assert world.g.location_to_rule
-    location_to_rule = world.g.location_to_rule
+    location_to_rule = get_location_to_rules(world)
     for location in world.g.locations:
-        if location.address is None:
-            # Event
-            continue
+        assert location.address
         location_address = location.address
         local_address = location_address % LOCATION_RANGE_PER_MISSION
         if local_address >= VICTORY_CACHE_OFFSET:
@@ -235,3 +237,8 @@ def set_rules(world: 'Wc3World') -> None:
         if rule is None:
             continue
         location.access_rule = rule
+    for mission, event in world.g.events.items():
+        victory_location = MISSION_TO_VICTORY_LOCATION[mission]
+        rule = location_to_rule.get(victory_location)
+        if rule:
+            event.access_rule = rule

@@ -1,19 +1,33 @@
 """
 Generation relating to regions and locations
 """
-from typing import TYPE_CHECKING, Callable
+from typing import TYPE_CHECKING, Callable, Iterable
+from dataclasses import dataclass, field
+import math
 
 from BaseClasses import Region, Entrance, CollectionState, Location, Item, ItemClassification
-from ..data import tables, missions, heroes, locations, items
+from Options import OptionError
+from ..data import tables, missions, heroes, locations, items, mission_orders
 from .. import options
 
 if TYPE_CHECKING:
     from ..world import Wc3World
 
 
-REGION_TO_LOCATIONS: dict[str, list[locations.Wc3Location]] = {}
-for location in locations.Wc3Location:
-    REGION_TO_LOCATIONS.setdefault(location.mission.mission_name, []).append(location)
+@dataclass
+class FinalizedMissionSlot:
+    mission: missions.Wc3Mission
+    flags: int
+    requires: mission_orders.Requirement | None
+    region: Region
+
+
+def region_name(mission: missions.Wc3Mission) -> str:
+    return f"{mission.short_name} {mission.mission_name}"
+
+
+def completion_event_name(mission: missions.Wc3Mission) -> str:
+    return f"Complete {mission.short_name} {mission.mission_name}"
 
 
 def _connect_region(
@@ -26,72 +40,230 @@ def _connect_region(
     connection.connect(target)
 
 
-def create_regions(world: 'Wc3World') -> None:
-        world.g.regions.append(Region(world.origin_region_name, world.player, world.multiworld))
-        if len(world.options.included_campaigns.value) == 0:
-            world.g.included_campaigns = options.IncludedCampaigns.default
+def grid_start_and_side_length(num_missions: int) -> tuple[int, int]:
+    side_length = math.ceil(math.sqrt(num_missions))
+    start_index = 5 - math.ceil(side_length / 2)
+    return start_index, side_length
+
+
+def _resolve_requirements(requirement: mission_orders.Requirement | None) -> mission_orders.Requirement | None:
+    if requirement is None:
+        return None
+    if requirement.amount < 0:
+        requirement.amount = (
+            len(requirement.slots)
+            + len(requirement.items)
+            + len(requirement.groups)
+            + requirement.amount
+            + 1
+        )
+    for subrequirement in requirement.groups:
+        _resolve_requirements(subrequirement)
+    return requirement
+
+
+def _get_mission_dependencies(
+    mission_order: dict[tuple[int, int], FinalizedMissionSlot],
+    requirement: mission_orders.Requirement | None,
+) -> list[tuple[int, int]]:
+    result: list[tuple[int, int]] = []
+    if requirement is None:
+        return result
+    for slot in requirement.slots:
+        result.append(slot)
+    for subrequirement in requirement.groups:
+        result.extend(_get_mission_dependencies(mission_order, subrequirement))
+    return result
+
+
+def _requirement_to_callable(
+    player: int,
+    mission_order: dict[tuple[int, int], FinalizedMissionSlot],
+    requirement: mission_orders.Requirement | None,
+) -> Callable[['CollectionState'], bool] | None:
+    if requirement is None:
+        return None
+    if requirement.amount == 0:
+        return None
+    if not requirement.slots and not requirement.items and not requirement.groups:
+        return None
+    target_amount = requirement.amount
+    item_list = [item.item_name for item in requirement.items]
+    required_missions = [mission_order[x, y].mission for (x, y) in requirement.slots]
+    completion_events = [completion_event_name(mission) for mission in required_missions]
+    raw_subrequirements = [
+        _requirement_to_callable(player, mission_order, subrequirement)
+        for subrequirement in requirement.groups
+    ]
+    free_count = 0
+    subrequirements: list[Callable[['CollectionState'], bool]] = []
+    for subreq in raw_subrequirements:
+        if subreq is None:
+            free_count += 1
         else:
-            world.g.included_campaigns = frozenset(
-                campaign
-                for campaign in missions.Wc3Campaign
-                if campaign.title_faction in world.options.included_campaigns
-            )
-        for mission in missions.Wc3Mission:
-            if mission.campaign not in world.g.included_campaigns:
-                continue
-            world.g.missions.append(mission)
-            new_region = Region(f'{mission.short_name} {mission.mission_name}', world.player, world.multiworld)
+            subrequirements.append(subreq)
+    if free_count >= target_amount:
+        return None
+
+
+    if not requirement.slots and not requirement.groups:
+        def item_rule(state: 'CollectionState') -> bool:
+            return state.count_from_list(item_list, player) >= target_amount
+        return item_rule
+    if not requirement.items and not requirement.groups:
+        def missions_rule(state: 'CollectionState') -> bool:
+            return state.count_from_list_unique(completion_events, player) >= target_amount
+        return missions_rule
+    if not requirement.slots and not requirement.items:
+        def groups_rule(state: 'CollectionState') -> bool:
+            count = free_count
+            for subrequirement in subrequirements:
+                if subrequirement(state):
+                    count += 1
+                    if count >= requirement.amount:
+                        return True
+            return False
+        return groups_rule
+    def composite_subrule(state: 'CollectionState') -> bool:
+        count = free_count
+        if count >= target_amount:
+            return True
+        count = state.count_from_list(item_list, player)
+        if count >= target_amount:
+            return True
+        return count + state.count_from_list_unique(completion_events, player) >= target_amount
+    return composite_subrule
+
+
+def configure_mission_order(world: 'Wc3World') -> None:
+    assert not world.g.mission_order
+    # Always linear for now
+    mission_order_spec: Iterable[mission_orders.MissionSlot]
+    if world.options.included_campaigns.value == {missions.Wc3Campaign.HUMAN_1.title_faction}:
+        mission_order_spec = mission_orders.H1_SOLO_CAMPAIGN
+    elif world.options.included_campaigns.value == {missions.Wc3Campaign.UNDEAD_1.title_faction}:
+        mission_order_spec = mission_orders.U1_SOLO_CAMPAIGN
+    elif world.options.included_campaigns.value == {missions.Wc3Campaign.ORC_1.title_faction}:
+        mission_order_spec = mission_orders.O1_SOLO_CAMPAIGN
+    else:
+        # Make a little centered grid
+        included_missions = [
+            mission
+            for mission in missions.Wc3Mission
+            if mission.campaign.title_faction in world.options.included_campaigns.value
+        ]
+        start_index, side_length = grid_start_and_side_length(len(included_missions))
+        world.random.shuffle(included_missions)
+        mission_order_spec = [mission_orders.MissionSlot(
+            start_index,
+            start_index,
+            mission_pool=(included_missions[0],),
+        )]
+        last_index = (start_index, start_index)
+        for index, included_mission in enumerate(included_missions):
+            grid_pos_y, grid_pos_x = divmod(index, side_length)
+            mission_order_spec.append(mission_orders.MissionSlot(
+                start_index + grid_pos_x,
+                start_index + grid_pos_y,
+                (included_mission,),
+                requires=mission_orders.Requirement(slots=[last_index], amount=1)
+            ))
+            last_index = (start_index + grid_pos_x, start_index + grid_pos_y)
+        mission_order_spec[-1].flags |= mission_orders.FLAG_GOAL
+    for slot in mission_order_spec:
+        # todo(mm): Mission pool resolution
+        mission = slot.mission_pool[0]
+        world.g.mission_order[slot.x, slot.y] = FinalizedMissionSlot(
+            mission=mission,
+            flags=slot.flags,
+            requires=_resolve_requirements(slot.requires),
+            region=Region(region_name(mission), world.player, world.multiworld),
+        )
+
+
+def create_regions(world: 'Wc3World') -> None:
+    configure_mission_order(world)
+    mission_order = world.g.mission_order
+
+    menu_region = Region(world.origin_region_name, world.player, world.multiworld)
+    world.g.regions.append(menu_region)
+
+    for (x, y), slot in mission_order.items():
+        mission = slot.mission
+        new_region = slot.region
+        world.g.missions.append(mission)
+        world.g.regions.append(slot.region)
+
+        # Access rules
+        depend_slots = _get_mission_dependencies(mission_order, slot.requires)
+        for depend_slot in depend_slots:
+            if depend_slot not in mission_order:
+                raise OptionError(
+                    f"Mission at slot {x}, {y} depends on slot "
+                    f"{depend_slot}, but that slot doesn't have a mission."
+                )
+            depend_mission_slot = mission_order[depend_slot]
             _connect_region(
                 world,
-                world.g.regions[-1],
+                depend_mission_slot.region,
                 new_region,
-                world.g.location_to_rule.get(locations.MISSION_TO_VICTORY_LOCATION[mission])
+                _requirement_to_callable(world.player, mission_order, slot.requires),
             )
-            for location in REGION_TO_LOCATIONS[mission.mission_name]:
-                if location.type & locations.Wc3LocationType.VICTORY:
-                    for victory_cache_index in range(world.options.victory_cache.value):
-                        victory_cache_id = location.id + locations.VICTORY_CACHE_OFFSET + victory_cache_index
-                        new_location = Location(
-                            world.player,
-                            locations.location_id_to_name[victory_cache_id],
-                            victory_cache_id,
-                            new_region,
-                        )
-                        new_region.locations.append(new_location)
-                        world.g.locations.append(new_location)
-                new_location = Location(world.player, location.global_name(), location.id, new_region)
-                new_region.locations.append(new_location)
-                world.g.locations.append(new_location)
-            world.g.regions.append(new_region)
-            world.g.included_races |= mission.race
-            for hero_slot in tables.MISSION_TO_HERO_SLOT[mission]:
-                world.g.hero_slots[hero_slot] += 1
-            for item_channel in tables.mission_to_item_channel(mission):
-                if item_channel != heroes.ItemChannel.NONE:
-                    world.g.item_channels.add(item_channel)
-        world.multiworld.regions += world.g.regions
+        if not depend_slots:
+            _connect_region(
+                world,
+                menu_region,
+                new_region,
+                _requirement_to_callable(world.player, mission_order, slot.requires)
+            )
 
-        _set_completion_condition(world)
-        _regions_assign_mercs(world)
+        # Locations
+        for location in locations.MISSION_TO_LOCATIONS[mission]:
+            new_location = Location(world.player, location.global_name(), location.id, new_region)
+            new_region.locations.append(new_location)
+            world.g.locations.append(new_location)
+            if location.type & locations.Wc3LocationType.VICTORY:
+                # Completion event
+                event_name = completion_event_name(mission)
+                completion_event = Location(world.player, completion_event_name(mission), None, new_region)
+                new_region.locations.append(completion_event)
+                completion_event_item = Item(event_name, ItemClassification.progression, None, world.player)
+                completion_event.place_locked_item(completion_event_item)
+                world.g.events[mission] = completion_event
+                # Victory Cache
+                for victory_cache_index in range(world.options.victory_cache.value):
+                    victory_cache_id = location.id + locations.VICTORY_CACHE_OFFSET + victory_cache_index
+                    new_location = Location(
+                        world.player,
+                        locations.location_id_to_name[victory_cache_id],
+                        victory_cache_id,
+                        new_region,
+                    )
+                    new_region.locations.append(new_location)
+                    world.g.locations.append(new_location)
+
+        # Stats accounting
+        world.g.included_races |= mission.race
+        for hero_slot in tables.MISSION_TO_HERO_SLOT[mission]:
+            world.g.hero_slots[hero_slot] += 1
+        for item_channel in tables.mission_to_item_channel(mission):
+            if item_channel != heroes.ItemChannel.NONE:
+                world.g.item_channels.add(item_channel)
+    world.multiworld.regions += world.g.regions
+
+    _set_completion_condition(world)
+    _regions_assign_mercs(world)
 
 
 def _set_completion_condition(world: 'Wc3World') -> None:
-    victory_region: Region = world.g.regions[-1]
-    victory_event_location = Location(world.player, "Victory", None, victory_region)
-    victory_region.locations.append(victory_event_location)
-    victory_name = f"Win ({victory_region.name})"
-    victory_event_item = Item(victory_name, ItemClassification.progression, None, world.player)
-    victory_event_location.place_locked_item(victory_event_item)
+    victory_events = [
+        completion_event_name(slot.mission)
+        for slot in world.g.mission_order.values()
+        if slot.flags & mission_orders.FLAG_GOAL
+    ]
     def completion(state: CollectionState) -> bool:
-        return state.has(victory_name, world.player)
+        return state.has_all(victory_events, world.player)
     world.multiworld.completion_condition[world.player] = completion
-
-    # Set access rule
-    victory_mission = world.g.missions[-1]
-    victory_wc3_location = locations.MISSION_TO_LOCATIONS[victory_mission][0]
-    victory_event_location.access_rule = world.g.location_to_rule.get(
-        victory_wc3_location, victory_event_location.access_rule
-    )
 
 
 def _regions_assign_mercs(world: 'Wc3World') -> None:
