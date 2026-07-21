@@ -38,18 +38,28 @@ STRING 10
 The randomizer spirit wanders the halls of mission select switches, deciding where to go next.
 }
 
-STRING 12
-{
-Under Construction
-}
-
 STRING 13
 {
 Item Groups
 }
 
-STRING 14
+STRING 21
+{
+Player 3
+}
+
+STRING 25
+{
+Under Construction
+}
+
+STRING 26
 {
 Item Channels
+}
+
+STRING 27
+{
+Victory Lights
 }
 

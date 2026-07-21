@@ -42,3 +42,13 @@ colour_blue = 255
 colour_green = 66
 colour_red = 0
 colour_alpha = 255
+
+[[icons]]
+
+icon_type = "PlayerStart"
+x = 160
+y = 103
+colour_blue = 185
+colour_green = 230
+colour_red = 28
+colour_alpha = 255

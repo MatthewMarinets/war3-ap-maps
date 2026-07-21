@@ -10,6 +10,7 @@ version = TFT
 # Variables
 | Name | Type | Array Size | Initial Value |
 | ---- | ---- | ---------- | ------------- |
+| adventurer | unit | . | UnitNull |
 
 # Triggers
 ## fileio
@@ -84,6 +85,18 @@ version = TFT
 ### Functions
 
 
+## start_victory
+- enabled: True
+- category: [1] Mission Select
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
 ## mission_select_init
 - enabled: True
 - category: [1] Mission Select
@@ -106,6 +119,8 @@ version = TFT
 
 ```
 ### Functions
+- Event TriggerRegisterTimerEventSingle
+  - param String 0.00
 - Action SetTimeOfDay
   - param String 12.00
 - Action SetTimeOfDayScalePercentBJ
@@ -124,7 +139,7 @@ version = TFT
       - param Variable gg_unit_haro_0007
   - param String 2048.00
 - Action CreateTextTagLocBJ
-  - param String TRIGSTR_012
+  - param String TRIGSTR_025
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_under_construction
@@ -136,8 +151,13 @@ version = TFT
   - param String 100.00
 - Action SetPlayerName
   - param Preset Player01
-  - param String TRIGSTR_014
-- Event MapInitializationEvent
+  - param String TRIGSTR_026
+- Action SetPlayerName
+  - param Preset Player01
+  - param String TRIGSTR_027
+- Action SetVariable
+  - param Variable adventurer
+  - param Variable gg_unit_e000_0000
 
 
 ## markets_init

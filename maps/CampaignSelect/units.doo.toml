@@ -1000,6 +1000,41 @@ scale_y = 1.0
 scale_z = 1.0
 flags = "ENABLED"
 player_owner = 1
+hit_points = -1
+mana_points = -1
+random_item_table_id = -1
+item_drops = []
+goldmine_gold_amount = 0
+target_acquisition = 0.0
+hero_level = 0
+hero_strength = 0
+hero_agility = 0
+hero_intelligence = 0
+inventory_items = []
+modified_abilities = []
+custom_colour = -1
+waygate_destination = -1
+entity_id = 28
+
+[units.random_unit_info]
+
+random_type = 'class'
+level = 1
+item_class = 0
+
+[[units]]
+
+type_id = 'sloc'  # Start Location
+variation = 2
+x = 1344.0
+y = 832.0
+z = 0.0
+facing = 4.71238899230957
+scale_x = 1.0
+scale_y = 1.0
+scale_z = 1.0
+flags = "ENABLED"
+player_owner = 2
 hit_points = 0
 mana_points = 0
 random_item_table_id = -1
@@ -1014,7 +1049,7 @@ inventory_items = []
 modified_abilities = []
 custom_colour = -1
 waygate_destination = -1
-entity_id = 28
+entity_id = 30
 
 [units.random_unit_info]
 

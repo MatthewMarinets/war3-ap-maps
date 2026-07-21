@@ -1,5 +1,5 @@
 // version: 1
-// Triggers: 9
+// Triggers: 10
 //\\// Trigger #0
 // This file defines file IO functions for the JASS side of things
 // Based off the FileIO module created by Nestharus, see:
@@ -886,7 +886,8 @@ trigger t_xp
 trigger t_xp2
 trigger t_health
 trigger t_dragon
-trigger t_speed
+trigger t_speed_rune
+trigger t_heal
 trigger t_colour_unit
 endglobals
 
@@ -895,7 +896,7 @@ function debug_get_selected_unit takes nothing returns unit
 endfunction
 
 function debug_print_help takes nothing returns nothing
-    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Commands: '-print', '-xp', '-xp2', '-health', '-dragon', '-speed', '-colourunit'")
+    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Debug commands: '-print', '-colourunit', '-xp', '-xp2', '-health', '-dragon', '-speed', '-heal'")
 endfunction
 
 function debug_xp_tome takes nothing returns nothing
@@ -918,9 +919,14 @@ function debug_dragon_egg takes nothing returns nothing
     call CreateItem('fgrd', GetUnitX(target_unit), GetUnitY(target_unit))
 endfunction
 
-function debug_speed takes nothing returns nothing
+function debug_speed_rune takes nothing returns nothing
     local unit target_unit = debug_get_selected_unit()
     call CreateItem('rspd', GetUnitX(target_unit), GetUnitY(target_unit))
+endfunction
+
+function debug_heal takes nothing returns nothing
+    local unit target_unit = debug_get_selected_unit()
+    call CreateItem('rhe3', GetUnitX(target_unit), GetUnitY(target_unit))
 endfunction
 
 function debug_colour_unit takes nothing returns nothing
@@ -931,7 +937,21 @@ endfunction
 function debug_print takes nothing returns nothing
     local string s_locations_checked = ""
     local integer index = 0
-    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Not implemented for level select")
+    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "world_id: " + I2S(world_id))
+    loop
+        exitwhen index >= MAX_LOCATIONS
+        if locations_checked[index] then
+            set s_locations_checked = s_locations_checked + "," + I2S(index)
+        endif
+        set index = index + 1
+    endloop
+    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "checked: " + s_locations_checked)
+    set index = 0
+    loop
+        exitwhen index >= NUM_HEROES
+        call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Hero " + I2S(index) + " max level: " + I2S(HERO_MAX_LEVEL[index]))
+        set index = index + 1
+    endloop
 endfunction
 
 function InitTrig_debug takes nothing returns nothing
@@ -950,9 +970,12 @@ function InitTrig_debug takes nothing returns nothing
     set t_dragon=CreateTrigger()
     call TriggerRegisterPlayerChatEvent(t_dragon, USER_PLAYER, "-dragon", false)
     call TriggerAddAction(t_dragon, function debug_dragon_egg)
-    set t_speed=CreateTrigger()
-    call TriggerRegisterPlayerChatEvent(t_speed, USER_PLAYER, "-speed", false)
-    call TriggerAddAction(t_speed, function debug_speed)
+    set t_speed_rune=CreateTrigger()
+    call TriggerRegisterPlayerChatEvent(t_speed_rune, USER_PLAYER, "-speed", false)
+    call TriggerAddAction(t_speed_rune, function debug_speed_rune)
+    set t_heal=CreateTrigger()
+    call TriggerRegisterPlayerChatEvent(t_heal, USER_PLAYER, "-heal", false)
+    call TriggerAddAction(t_heal, function debug_heal)
     set t_colour_unit=CreateTrigger()
     call TriggerRegisterPlayerChatEvent( t_colour_unit, USER_PLAYER, "-colourunit", false )
     call TriggerAddAction(t_colour_unit, function debug_colour_unit)
@@ -973,6 +996,125 @@ endfunction
 
 
 //\\// Trigger #6
+globals
+unit array disco_balls
+trigger recolour_disco_balls_t
+trigger resize_disco_balls_t
+trigger adventurer_lightning_t
+integer disco_ball_step = 0
+real disco_ball_resize_step = 0.0
+real arena_min_x
+real arena_max_x
+real arena_min_y
+real arena_max_y
+endglobals
+
+function start_victory_actions takes nothing returns nothing
+    local integer i = 0
+    set arena_min_x = GetRectMinX(gg_rct_mission_select_vision) + 512
+    set arena_max_x = GetRectMaxX(gg_rct_mission_select_vision) - 512
+    set arena_min_y = GetRectMinY(gg_rct_mission_select_vision) + 512
+    set arena_max_y = GetRectMaxY(gg_rct_mission_select_vision) - 512
+    call AddWeatherEffect(gg_rct_mission_select_vision, 'LRaa')
+    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 0, 2432)
+    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", -128, 2304)
+    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3072, 2432)
+    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3200, 2304)
+    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", -128, -768)
+    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 0, -896)
+    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3200, -768)
+    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3072, -896)
+    // torches
+    loop
+        exitwhen i >= 5
+        call AddSpecialEffect("Doodads\\LordaeronSummer\\Props\\TorchHumanOmni\\TorchHumanOmni.mdl", 512 + 512*i, 2432)
+        call AddSpecialEffect("Doodads\\LordaeronSummer\\Props\\TorchHumanOmni\\TorchHumanOmni.mdl", -128, 1792 - 512*i)
+        call AddSpecialEffect("Doodads\\LordaeronSummer\\Props\\TorchHumanOmni\\TorchHumanOmni.mdl", 512 + 512*i, -896)
+        call AddSpecialEffect("Doodads\\LordaeronSummer\\Props\\TorchHumanOmni\\TorchHumanOmni.mdl", 3200, 1792 - 512*i)
+        set i = i + 1
+    endloop
+    set i = 0
+    // disco balls
+    loop
+        exitwhen i >= 20
+        set disco_balls[i] = CreateUnit(Player(2), 'e001', GetRandomReal(arena_min_x, arena_max_x), GetRandomReal(arena_min_y, arena_max_y), GetRandomReal(0, 360))
+        call SetUnitColor(disco_balls[i], ConvertPlayerColor(i+1))
+        call IssuePointOrder(disco_balls[i], "move", GetUnitX(disco_balls[i]) + 500 * Cos(Deg2Rad(GetUnitFacing(disco_balls[i]))), GetUnitY(disco_balls[i]) + 500 * Sin(Deg2Rad(GetUnitFacing(disco_balls[i]))))
+        set i = i + 1
+    endloop
+    call EnableTrigger(recolour_disco_balls_t)
+    call EnableTrigger(resize_disco_balls_t)
+    call EnableTrigger(adventurer_lightning_t)
+endfunction
+
+function recolour_disco_balls takes nothing returns nothing
+    local integer i = 0
+    local integer offset = disco_ball_step
+    local real scale
+    set disco_ball_step = disco_ball_step + 1
+    if disco_ball_step >= 20 then
+        set disco_ball_step = 1
+    endif
+    loop
+        exitwhen i >= 20
+        call SetUnitColor(disco_balls[i], ConvertPlayerColor(offset))
+        if GetUnitX(disco_balls[i]) > arena_max_x or GetUnitX(disco_balls[i]) < arena_min_x or GetUnitY(disco_balls[i]) > arena_max_y or GetUnitY(disco_balls[i]) < arena_min_y then
+            call IssuePointOrder(disco_balls[i], "move", GetRandomReal(arena_min_x+512, arena_max_x-512), GetRandomReal(arena_min_y+512, arena_max_y-512))
+        else
+            call IssuePointOrder(disco_balls[i], "move", GetUnitX(disco_balls[i]) + 500 * Cos(Deg2Rad(GetUnitFacing(disco_balls[i]))), GetUnitY(disco_balls[i]) + 500 * Sin(Deg2Rad(GetUnitFacing(disco_balls[i]))))
+        endif
+        set offset = offset + 1
+        if offset >= 20 then
+            set offset = 1
+        endif
+        set i = i + 1
+    endloop
+endfunction
+
+function resize_disco_balls takes nothing returns nothing
+    local integer i = 0
+    local real scale
+    set disco_ball_resize_step = disco_ball_resize_step + 0.1
+    if disco_ball_resize_step > 4 * 3.14159 then
+        set disco_ball_resize_step = 0
+    endif
+    loop
+        exitwhen i >= 20
+        set scale = 1.0 + 0.4 * Sin(disco_ball_resize_step + i)
+        call SetUnitScale(disco_balls[i], scale, scale, scale)
+        set i = i + 1
+    endloop
+endfunction
+
+function adventurer_lightning takes nothing returns nothing
+    // local effect e1 = AddSpecialEffect("Doodads\\Cinematic\\Lightningbolt\\Lightningbolt.mdl", GetUnitX(udg_adventurer), GetUnitY(udg_adventurer))
+    local effect e2 = AddSpecialEffect("Abilities\\Spells\\Items\\AIfb\\AIfbTarget.mdl", GetUnitX(udg_adventurer), GetUnitY(udg_adventurer))
+    call TriggerSleepAction(2)
+    // call DestroyEffect(e1)
+    call DestroyEffect(e2)
+endfunction
+
+//===========================================================================
+function InitTrig_start_victory takes nothing returns nothing
+    set gg_trg_start_victory = CreateTrigger()
+    call TriggerRegisterPlayerChatEvent(gg_trg_start_victory, Player(0), "-victory", true)
+    call TriggerAddAction(gg_trg_start_victory, function start_victory_actions)
+    set recolour_disco_balls_t = CreateTrigger()
+    call TriggerAddAction(recolour_disco_balls_t, function recolour_disco_balls)
+    call DisableTrigger(recolour_disco_balls_t)
+    call TriggerRegisterTimerEventPeriodic(recolour_disco_balls_t, 1.0)
+    set resize_disco_balls_t = CreateTrigger()
+    call TriggerAddAction(resize_disco_balls_t, function resize_disco_balls)
+    call DisableTrigger(resize_disco_balls_t)
+    call TriggerRegisterTimerEventPeriodic(resize_disco_balls_t, 0.1)
+    set adventurer_lightning_t = CreateTrigger()
+    call TriggerAddAction(adventurer_lightning_t, function adventurer_lightning)
+    call DisableTrigger(adventurer_lightning_t)
+    call TriggerRegisterTimerEventPeriodic(adventurer_lightning_t, 0.2)
+endfunction
+
+
+//\\// Trigger #7
 
 globals
 constant integer MAX_MISSION_GRID_SIDE_LENGTH = 10
@@ -1277,7 +1419,7 @@ function InitTrig_mission_select_init takes nothing returns nothing
 endfunction
 
 
-//\\// Trigger #8
+//\\// Trigger #9
 
 //===========================================================================
 function InitTrig_markets_init takes nothing returns nothing
