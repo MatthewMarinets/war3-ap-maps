@@ -90,7 +90,11 @@ class Wc3Inventory:
                 reqs = TECH_REQUIREMENTS[self.tech[new_id]].get(new_id)
                 if reqs is not None:
                     queue.extend(reqs)
-            self.tech[new_id] += amount
+            if amount == -1:
+                self.tech[new_id] = amount
+            else:
+                self.tech[new_id] += amount
+            amount = -1
         return self.tech[tech]
 
 
@@ -196,7 +200,7 @@ def default_mercenary_allocation() -> dict[missions.Wc3Mission, dict[int, GameID
     }
 
 
-class MissionAvailability(enum.IntEnum):
+class MissionAvailability(enum.IntFlag):
     EMPTY = 0
     LOCKED = 1
     AVAILABLE = 2
