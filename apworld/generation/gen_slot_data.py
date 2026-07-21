@@ -69,8 +69,9 @@ def mission_order_slot_data(
     for (x, y), slot in mission_order.items():
         this_slot_data: MissionSlotData = {
             "mission": slot.mission.id,
-            "flags": slot.flags,
         }
+        if slot.flags:
+            this_slot_data["flags"] = slot.flags
         if slot.requires:
             this_slot_data["requirements"] = requirement_slot_data(mission_order, slot.requires)
         result[f"{x},{y}"] = this_slot_data
@@ -82,8 +83,8 @@ def fill_slot_data(world: 'Wc3World') -> Wc3SlotData:
         "version_public": VERSION_PUBLIC,
         "version_major": VERSION_MAJOR,
         "version_minor": VERSION_MINOR,
-        # New ID every ~0.13s; IDs loop once every 8.9 years
-        "world_id": ((time.time_ns() >> 17) + world.player) & 0x7fff_ffff,
+        # New ID every ~0.13s; IDs loop once every 9 years
+        "world_id": ((time.time_ns() >> 27) + world.player) & 0x7fff_ffff,
         # "included_campaigns": world.options.included_campaigns.value,
         "bonus_mercenary_camps": world.options.bonus_mercenary_camps.value,
         "mercenary_allocation": {
