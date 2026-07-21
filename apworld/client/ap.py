@@ -186,7 +186,6 @@ class Wc3JSONtoTextParser(JSONtoTextParser):
             return self._handle_text(node)
         code = codes[0]
         result = f"|cff{self.color_codes[code]}" + self._handle_text(node) + "|r"
-        logger.info(result)
         return result
 
 
