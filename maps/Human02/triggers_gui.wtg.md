@@ -5159,17 +5159,17 @@ If a building is cancelled, add to the counter to balance out the fact that we s
     - Function GetEnteringUnit
   - param Preset OperatorEqualENE
   - param Variable Arthas
-- Condition OperatorCompareInteger
-  - param Function GetPlayerTechMaxAllowedSwap
-    - Function GetPlayerTechMaxAllowedSwap
-      - param String I01b
-      - param Variable AAAP_Arthas
-  - param Preset OperatorGreaterEq
-  - param String 1
 - Condition OperatorCompareBoolean
   - param Variable GameOver
   - param Preset OperatorEqualENE
   - param String false
+- Condition OperatorCompareInteger
+  - param Function GetPlayerTechMaxAllowedSwap
+    - Function GetPlayerTechMaxAllowedSwap
+      - param String sehr
+      - param Variable AAAP_Arthas
+  - param Preset OperatorGreater
+  - param String 0
 - Event TriggerRegisterEnterRectSimple
   - param Variable gg_rct_Dwarves
 - Action DisableTrigger
