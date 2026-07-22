@@ -71,7 +71,7 @@ STRING 17
 {
 |cffffcc00MAIN QUEST|r
 Establish a Base
-  - Construct a Barracks
+  - Construct a Production Building
   - Construct 2 Farms
   - Train 6 Footmen
 }
@@ -80,7 +80,7 @@ STRING 18
 {
 |cffffcc00MAIN QUEST|r
 Establish a Base
-  - Construct a Barracks
+  - Construct a Production Building
   - Construct 2 Farms
   - Train 6 Footmen
 }
@@ -273,7 +273,7 @@ Establish Base
 
 STRING 82
 {
-To ensure that the Orc threat is dealt with effectively, you must establish a base camp and bolster your forces. Only when the camp is prepared can the area be considered properly garrisoned. 
+To ensure that the Orc threat is dealt with effectively, you must establish a base camp and bolster your forces. Only when the camp is prepared can the area be considered properly garrisoned.
 }
 
 STRING 109
@@ -288,7 +288,7 @@ The Blackrock clan appears to have re-embraced its Demon-worshipping heritage. S
 
 STRING 114
 {
-Construct a Barracks
+Construct a Production Building
 }
 
 STRING 115
@@ -551,7 +551,7 @@ STRING 525
 {
 |cffffcc00MAIN QUEST UPDATE|r
 Establish a Base
-  - |cff808080Construct a Barracks (Completed)|r
+  - |cff808080Construct a Production Building (Completed)|r
   - |cff808080Construct 2 Farms (Completed)|r
   - Train 6 Footmen
 }
@@ -560,7 +560,7 @@ STRING 530
 {
 |cffffcc00MAIN QUEST UPDATE|r
 Establish a Base
-  - Construct a Barracks
+  - Construct a Production Building
   - |cff808080Construct 2 Farms (Completed)|r
   - Train 6 Footmen
 }
@@ -569,7 +569,7 @@ STRING 535
 {
 |cffffcc00MAIN QUEST UPDATE|r
 Establish a Base
-  - |cff808080Construct a Barracks (Completed)|r
+  - |cff808080Construct a Production Building (Completed)|r
   - |cff808080Construct 2 Farms (Completed)|r
   - Train 6 Footmen
 }
@@ -578,7 +578,7 @@ STRING 540
 {
 |cffffcc00MAIN QUEST UPDATE|r
 Establish a Base
-  - |cff808080Construct a Barracks (Completed)|r
+  - |cff808080Construct a Production Building (Completed)|r
   - Construct 2 Farms
   - Train 6 Footmen
 }
@@ -624,7 +624,7 @@ STRING 564
 {
 |cffffcc00MAIN QUEST UPDATE|r
 Establish a Base
-  - |cff808080Construct a Barracks (Completed)|r
+  - |cff808080Construct a Production Building (Completed)|r
   - Construct 2 Farms
   - |cff808080Train 6 Footmen (Completed)|r
 }
