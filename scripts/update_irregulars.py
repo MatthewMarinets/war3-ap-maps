@@ -115,7 +115,7 @@ def update_abilities_human(abils_file: str) -> None:
         data = w3o.War3ObjectData(2, has_levels=True)
     else:
         data = w3o.from_text_file(abils_file)
-    
+
     entities = mod_entity.Entities(data.map_objects.entities)
 
     # Select abilities
@@ -151,11 +151,11 @@ def update_abilities_human(abils_file: str) -> None:
             (editor_ids.FIELD_ABIL_STATS_DURATION_NORMAL, 1): 0.0,
             editor_ids.FIELD_ABIL_EFFECT_SOUND: info.sound,
         })
-    
+
     # Spellbook ability
     entities.set_entity(
         SPELLBOOK_ABIL_ID, editor_ids.ABIL_SPELL_BOOK, {
-        editor_ids.FIELD_ABIL_NAME: "Promotion",
+        editor_ids.FIELD_ABIL_NAME: "Promotion [|ffffcc00T|r]",
         editor_ids.FIELD_ABIL_EDITOR_SUFFIX: "(Human)",
         editor_ids.FIELD_ABIL_HOTKEY: "T",
         editor_ids.FIELD_ABIL_ICON_NORMAL: r"ReplaceableTextures\CommandButtons\BTNHumanCaptureFlag.blp",
@@ -167,7 +167,7 @@ def update_abilities_human(abils_file: str) -> None:
         (editor_ids.FIELD_ABIL_DATA_SPELL_BOOK_SPELL_LIST, 1):
             ",".join(info.select_id for info in HUMAN_ABIL_INFO),
     })
-    
+
     text = w3o.as_text(data)
     with open(abils_file, 'w') as fp:
         fp.write(text)
@@ -178,7 +178,7 @@ def update_units(units_file: str) -> None:
         data = w3o.War3ObjectData(2, has_levels=False)
     else:
         data = w3o.from_text_file(units_file)
-    
+
     entities = mod_entity.Entities(data.map_objects.entities)
     entities.set_entity(
         cid.UNIT_IRREGULAR, GameID.MILITIA.value, {
@@ -206,7 +206,7 @@ def update_upgrades(upgrades_file: str) -> None:
         data = w3o.War3ObjectData(2, has_levels=True)
     else:
         data = w3o.from_text_file(upgrades_file)
-    
+
     entities = mod_entity.Entities(data.map_objects.entities)
     for info in HUMAN_ABIL_INFO:
         entities.set_entity(

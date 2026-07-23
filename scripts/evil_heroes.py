@@ -136,6 +136,16 @@ HERO_INFO = [
     HeroInfo(
         GameID.ROKHAN, CustomIDs.UNIT_CORRUPTED_ROKHAN,
         r'apimports\evilshadowhunter.mdx', CustomIDs.ABIL_CHAOS_ROKHAN,
+        other_updates={
+            eid.FIELD_UNIT_ABILITIES_HERO: ','.join([
+                eid.ABIL_HEALING_WAVE, eid.ABIL_HEX, eid.ABIL_SERPENT_WARD, eid.ABIL_VOODOO_SPIRITS,
+            ]),
+            eid.FIELD_UNIT_GENERAL_TOOLTIP_EXTENDED: (
+                "Cunning Hero, adept at healing magics and voodoo curses. "
+                "Can learn Healing Wave, Hex, Serpent Ward and Voodoo Spirits. "
+                "|n|n|cffffcc00Attacks land and air units.|r"
+            )
+        }
     ),
     HeroInfo(
         GameID.SHADOW_HUNTER, CustomIDs.UNIT_CORRUPTED_SHADOW_HUNTER,
@@ -202,9 +212,6 @@ HERO_INFO = [
         r'apimports\evilakama.mdx', CustomIDs.ABIL_CHAOS_AKAMA,
         # Note: default scaling is 1.5
         scaling=1.0,
-        other_updates={
-            eid.FIELD_UNIT_ABILITIES_HERO: 'ACs7,AOcl,AEsh,AOre',
-        },
     ),
 ]
 TEXTURE_DEPENDENCIES = {

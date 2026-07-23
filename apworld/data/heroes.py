@@ -146,7 +146,7 @@ class HeroChoice(enum.Enum):
     # AZGALOR =               _, "Azgalor", HeroClass.PIT_LORD, HeroSource.ENEMY, GameID.AZGALOR  # Copy-paste of Mannoroth
 
     REXXAR =                40, "Rexxar", HeroClass.BEASTMASTER, HeroSource.BONUS, GameID.BEASTMASTER
-    ROKHAN =                41, "Rokhan", HeroClass.SHADOW_HUNTER, HeroSource.BONUS, GameID.SHADOW_HUNTER
+    ROKHAN =                41, "Rokhan", HeroClass.SHADOW_HUNTER, HeroSource.BONUS, GameID.ROKHAN
     CHEN_STORMSTOUT =       42, "Chen Stormstout", HeroClass.PANDAREN_BREWMASTER, HeroSource.BONUS, GameID.PANDAREN_BREWMASTER
     # DREK_THAR =              _, "Drek'Thar", HeroClass.FAR_SEER, HeroSource.BONUS, GameID.DREK_THAR
     # SAMURO =                 _, "Samuro", HeroClass.BLADEMASTER, HeroSource.BONUS, GameID.SAMURO

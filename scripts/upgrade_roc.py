@@ -9,8 +9,8 @@ from dataclasses import dataclass, field
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from mapfile import doo, w3i, wtg, wct, w3o, imp, common
-from apworld.data import missions, tables, heroes
-from scripts import update_irregulars, update_hero_food
+from apworld.data import missions, tables, locations
+from scripts import update_irregulars, update_hero_food, helpers, mod_entity, editor_ids
 
 sys.path.pop()
 
@@ -85,33 +85,34 @@ def update_doo(doo_file: str) -> None:
     doo_data = doo.from_text_file(doo_file)
     doo_data.version = doo.War3PlacementVersion.TFT
     doo_data.sub_version = 11
-    
+
     new_text = doo.as_text(doo_data)
     with open(doo_file, 'w') as fp:
         fp.write(new_text)
 
 
-def add_ap_items(w3t_file: str) -> None:
+def add_ap_items(w3t_file: str, mission: missions.Wc3Mission | None) -> None:
     if os.path.isfile(w3t_file):
         items_data = w3o.from_text_file(w3t_file)
     else:
         items_data = w3o.War3ObjectData(version=2, has_levels=False)
-    modified_entity_ids = [item_data.entity_id for item_data in items_data.map_objects.entities]
+    entities = mod_entity.Entities(items_data.map_objects.entities)
     for location_number in range(0x20):
         item_id = f'I0{hex(location_number + 0x10)[2:]}'
-        if item_id in modified_entity_ids:
-            continue
-        items_data.map_objects.entities.append(
-            w3o.Entity('lmbr', item_id, [
-                w3o.Modification('unam', w3o.DataType.String, value=f'Archipelago Item {location_number}'),
-                w3o.Modification('utip', w3o.DataType.String, value=f'Purchase a check for map location {location_number}.'),
-                w3o.Modification('utub', w3o.DataType.String, value='Get a randomized item when used'),
-                w3o.Modification('ides', w3o.DataType.String, value=rf'Collects map location {location_number} for the player.'),
-                w3o.Modification('iico', w3o.DataType.String, value=r'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp'),
-                w3o.Modification('ifil', w3o.DataType.String, value=r'war3mapImported\questionmark_item.mdl'),
-                w3o.Modification('iabi', w3o.DataType.String, value=''),
-            ])
-        )
+        location_name = f'Archipelago Item {location_number}'
+        if mission is not None:
+            location = locations.ID_TO_LOCATION.get(locations.global_location_id(mission or 0, location_number))
+            if location is not None:
+                location_name = location.location_name
+        entities.set_entity(item_id, 'lmbr', fields={
+            editor_ids.FIELD_ITEM_NAME: location_name,
+            editor_ids.FIELD_ITEM_TOOLTIP_BASIC: f'Purchase a check for map location {location_number}.',
+            editor_ids.FIELD_ITEM_TOOLTIP_EXTENDED: 'Get a randomized item when used',
+            editor_ids.FIELD_ITEM_DESCRIPTION: f'Collects map location {location_number} for the player.',
+            editor_ids.FIELD_ITEM_INTERFACE_ICON: r'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp',
+            editor_ids.FIELD_ITEM_MODEL_USED: r'apimports\questionmark_item.mdl',
+            editor_ids.FIELD_ITEM_ABILITIES: '',
+        })
 
     new_text = w3o.as_text(items_data)
     with open(w3t_file, 'w') as fp:
@@ -120,6 +121,12 @@ def add_ap_items(w3t_file: str) -> None:
 
 def add_ap_models(imported_dir: str) -> None:
     target_file = f'{imported_dir}/questionmark_item.mdx.proxy'
+    # @nocheckin
+    w3mapimported = os.path.normpath(f'{imported_dir}/../war3mapImported')
+    if os.path.isdir(w3mapimported):
+        import shutil
+        shutil.rmtree(w3mapimported)
+    # /@nocheckin
     if os.path.isfile(target_file):
         return
     os.makedirs(imported_dir, exist_ok=True)
@@ -134,11 +141,19 @@ def update_imp_file(imp_file: str) -> None:
         imp_data = imp.from_text(imp_text)
     else:
         imp_data = imp.Imports()
-    imported_paths = [os.path.basename(import_path.path) for import_path in imp_data.imports]
     imp_data.version = 1
+    # @nocheckin
+    remove_indices = []
+    for index, import_ in enumerate(imp_data.imports):
+        if import_.path.startswith('war3mapImported'):
+            remove_indices.append(index)
+    for index in reversed(remove_indices):
+        imp_data.imports.pop(index)
+    # /@nocheckin
+    imported_paths = [os.path.basename(import_path.path) for import_path in imp_data.imports]
     model_basename = os.path.basename(QUESTION_MARK_MODEL_PATH)
     if model_basename not in imported_paths:
-        imp_data.imports.append(imp.ImportedPath(8, f'war3mapImported/{model_basename}'))
+        imp_data.imports.append(imp.ImportedPath(8, f'apimports/{model_basename}'))
     with open(imp_file, 'w') as fp:
         fp.write(imp.as_text(imp_data))
 
@@ -151,8 +166,52 @@ def update_unit_data(unit_data_file: str) -> None:
     else:
         units_data = w3o.War3ObjectData(2, has_levels=False)
     units_data.version = 2
+    entities = mod_entity.Entities(units_data.blizzard_objects.entities, is_map_entity=False)
+    entities.set_entity(
+        'null', editor_ids.UNIT_ROKHAN, {
+            editor_ids.FIELD_UNIT_ABILITIES_HERO: ','.join([
+                editor_ids.ABIL_HEALING_WAVE,
+                editor_ids.ABIL_HEX,
+                editor_ids.ABIL_SERPENT_WARD,
+                editor_ids.ABIL_VOODOO_SPIRITS,
+            ]),
+            editor_ids.FIELD_UNIT_GENERAL_TOOLTIP_EXTENDED: (
+                "Cunning Hero, adept at healing magics and voodoo curses. "
+                "Can learn Healing Wave, Hex, Serpent Ward and Voodoo Spirits. "
+                "|n|n|cffffcc00Attacks land and air units.|r"
+            )
+        }
+    )
     with open(unit_data_file, 'w') as fp:
         fp.write(w3o.as_text(units_data))
+
+
+def upgrade_abil_data(abil_data_file: str) -> None:
+    if os.path.isfile(abil_data_file):
+        with open(abil_data_file, 'r') as fp:
+            imp_text = fp.read()
+        data = w3o.from_text(imp_text)
+    else:
+        data = w3o.War3ObjectData(2, has_levels=True)
+    data.version = 2
+    entities = mod_entity.Entities(data.blizzard_objects.entities, is_map_entity=False)
+    entities.set_entity(
+        'null', editor_ids.ABIL_VOODOO_SPIRITS, {
+            editor_ids.FIELD_ABIL_STATS_LEVELS: 1,
+            editor_ids.FIELD_ABIL_TOOLTIP_LEARN_EXTENDED: (
+                "Creates a swarm of angry spirits that drain the life energies of nearby enemy units. "
+                "They store the life energy they drain from their victims and use it to replenish "
+                "Rokhan's hit points when they return.|n|nLasts <AOls,HeroDur1> seconds."
+            ),
+        }
+    )
+    entities.set_entity(
+        'null', editor_ids.ABIL_REINCARNATION_NEUTRAL_HOSTILE, {
+            editor_ids.FIELD_ABIL_REQUIREMENTS_LEVELS: '6',
+        }
+    )
+    with open(abil_data_file, 'w') as fp:
+        fp.write(w3o.as_text(data))
 
 
 def update_listfile(listfile_path: str) -> None:
@@ -164,7 +223,7 @@ def update_listfile(listfile_path: str) -> None:
         'war3map.w3q\n',
         'war3map.w3u\n',
         'war3map.imp\n',
-        'war3mapImported\\questionmark_item.mdx\n',
+        'apimports\\questionmark_item.mdx\n',
     ):
         if path not in lines:
             lines.append(path)
@@ -270,7 +329,7 @@ def update_triggers(map_dir: str) -> None:
         campaign = missions.Wc3Campaign.NIGHT_ELF_1
     else:
         campaign = missions.Wc3Campaign.GENERAL
-    
+
     if dir_basename[-2:].isnumeric():
         mission_id = campaign.id * 100 + int(dir_basename[-2:])
         mission = [
@@ -280,7 +339,7 @@ def update_triggers(map_dir: str) -> None:
     else:
         mission = missions.Wc3Mission.GENERAL
         mission_id = mission.value
-    
+
     # Get map info
     hero_slots = tables.MISSION_TO_HERO_SLOT[mission]
     human_players = [x for x in w3i_data.players if x.player_type == w3i.FactionController.User]
@@ -331,15 +390,17 @@ def main(map_dir: str) -> int:
         print(f'Error: Missing (listfile) in {map_dir}')
         return 1
     print(f'Processing {map_dir}')
-    
+    mission = helpers.get_mission(os.path.basename(map_dir))
+
     update_war3_info(f'{map_dir}/info.w3i.toml')
     update_doo(f'{map_dir}/doodads.doo.toml')
     update_doo(f'{map_dir}/units.doo.toml')
-    add_ap_items(f'{map_dir}/o_items.w3t.toml')
-    add_ap_models(f'{map_dir}/war3mapImported')
+    add_ap_items(f'{map_dir}/o_items.w3t.toml', mission)
+    add_ap_models(f'{map_dir}/apimports')
     update_listfile(f'{map_dir}/(listfile)')
     update_imp_file(f'{map_dir}/imports.imp.toml')
     update_unit_data(f'{map_dir}/o_units.w3u.toml')
+    upgrade_abil_data(f'{map_dir}/{common.ABILITY_DATA_FILE_NAME}')
     update_triggers(map_dir)
 
     update_irregulars.main(map_dir)

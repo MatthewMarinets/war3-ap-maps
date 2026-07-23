@@ -140,7 +140,7 @@ def print_location_status(ctx: AsyncContext, *args) -> None:
         if not location_value:
             continue
         global_id = locations.global_location_id(mission_id, location_id)
-        location = locations.location_from_id.get(global_id)
+        location = locations.ID_TO_LOCATION.get(global_id)
         if location is None:
             continue
         logger.info(f"{location_id} ({location.location_name}): {location_value}")
