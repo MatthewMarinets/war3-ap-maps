@@ -291,7 +291,8 @@ Encoded IDs are two-character stringified integers. Ex: " 0 710" says locations 
 | --------------------------- | ------------------------------------------------- |
 | MaxTech(Player(0), 'nech')  | Message ID; echoed back in status.txt             |
 | MaxTech(Player(0), 'size')  | Mission order grid side length                    |
-| MaxTech(Player(0), 100~199) | Mission IDs for missions in slots 0~64            |
+| MaxTech(Player(0), 'ndog')  | 1 if the mission order is won                     |
+| MaxTech(Player(0), 100~199) | Mission IDs for missions in slots 0~100           |
 | MaxTech(Player(0), 200~299) | Mission slot enablement state                     |
 
 #### Enablement states

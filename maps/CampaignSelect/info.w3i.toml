@@ -2,7 +2,7 @@
 # See w3i.py for type definitions
 
 version = "TFT"
-map_revision = 1
+map_revision = 155
 editor_version = 6061
 map_name = 'TRIGSTR_003'
 map_author = 'TRIGSTR_006'
@@ -73,7 +73,7 @@ ally_high_priorities_flags = 0x0
 
 player_id = 2
 player_type = "Neutral"
-player_faction = "Human"
+player_faction = "Undead"
 fixed_start_position = false
 name = 'TRIGSTR_021'
 start_pos = [1344.0, 832.0]

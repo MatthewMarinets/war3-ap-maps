@@ -22,7 +22,6 @@ constant integer AVAIL_AVAILABLE = 2
 constant integer AVAIL_BEATEN = 3
 gamecache mission_to_name
 fogmodifier visibility_modifier
-boolean missions_are_initialized = false
 endglobals
 
 //===========================================================================
@@ -91,6 +90,10 @@ function switch_y takes integer row returns real
     return switch_region_top - row * switch_spacing - switch_radius
 endfunction
 
+function filter_unit_belongs_to_player takes nothing returns boolean
+    return GetOwningPlayer(GetFilterUnit()) == USER_PLAYER
+endfunction
+
 function press_switch takes nothing returns nothing
     local integer region_index = 0
     local integer row
@@ -120,7 +123,11 @@ function release_switch takes nothing returns nothing
         exitwhen region_index > 100
         set region_index = region_index + 1
     endloop
-    call SetDestructableAnimation(switches[region_index], "Stand")
+    if GetPlayerTechMaxAllowed(Player(0), 200+region_index) == AVAIL_BEATEN then
+        call SetDestructableAnimation(switches[region_index], "Stand alternate")
+    else
+        call SetDestructableAnimation(switches[region_index], "Stand")
+    endif
     if region_index == current_button then
         set current_button = -1
         set button_held_seconds = 0
@@ -148,10 +155,9 @@ function init_mission_board takes nothing returns nothing
     local integer mission_id
     local integer mission_availability
     local string mission_name
-    if missions_are_initialized then
-        return
+    if GetPlayerTechMaxAllowed(p, 'ndog') == 1 then
+        call TriggerExecute(gg_trg_start_victory)
     endif
-    set missions_are_initialized = true
     set mission_grid_side_length = GetPlayerTechMaxAllowed(p, 'size')
     set switch_spacing = GetRectCenterX(offset_region) - GetRectCenterX(first_region)
     set switch_region_left = GetRectMinX(first_region)
@@ -173,40 +179,47 @@ function init_mission_board takes nothing returns nothing
             set mission_id = GetPlayerTechMaxAllowed(p, 100 + index)
             set mission_availability = GetPlayerTechMaxAllowed(p, 200 + index)
             if mission_availability >= AVAIL_AVAILABLE then
-                call print("Index " + I2S(j) + "," + I2S(i) + ": " + I2S(mission_availability))
-                set new_rect = Rect(GetRectMinX(first_region) + offsetx, GetRectMinY(first_region) + offsety, GetRectMaxX(first_region) + offsetx, GetRectMaxY(first_region) + offsety)
-                set new_region = CreateRegion()
-                call RegionAddRect(new_region, new_rect)
-                set mission_select_regions[i * mission_grid_side_length + j] = new_region
-                // trigger
-                call TriggerRegisterEnterRegion(press_switch_t, new_region, null)
-                call TriggerRegisterLeaveRegion(release_switch_t, new_region, null)
+                if mission_select_regions[index] == null then
+                    call print("Index " + I2S(j) + "," + I2S(i) + ": " + I2S(mission_availability))
+                    set new_rect = Rect(GetRectMinX(first_region) + offsetx, GetRectMinY(first_region) + offsety, GetRectMaxX(first_region) + offsetx, GetRectMaxY(first_region) + offsety)
+                    set new_region = CreateRegion()
+                    call RegionAddRect(new_region, new_rect)
+                    set mission_select_regions[index] = new_region
+                    // trigger
+                    call TriggerRegisterEnterRegion(press_switch_t, new_region, function filter_unit_belongs_to_player)
+                    call TriggerRegisterLeaveRegion(release_switch_t, new_region, function filter_unit_belongs_to_player)
+                endif
             endif
             if mission_availability >= AVAIL_LOCKED then
                 // destructable
-                set new_switch = CreateDestructable('DTfx', GetRectCenterX(first_region) + offsetx, GetRectCenterY(first_region) + offsety, 0.0, 1.0, 0)
-                set switches[i * mission_grid_side_length + j] = new_switch
+                if switches[index] == null then
+                    set new_switch = CreateDestructable('DTfx', GetRectCenterX(first_region) + offsetx, GetRectCenterY(first_region) + offsety, 0.0, 1.0, 0)
+                    set switches[index] = new_switch
+                else
+                    set new_switch = switches[index]
+                endif
                 // animation
                 if mission_availability == AVAIL_LOCKED then
                     call SetDestructableAnimation(new_switch, "Death")
                 elseif mission_availability == AVAIL_BEATEN then
                     call SetDestructableAnimation(new_switch, "Stand alternate")
                 endif
-                call print("Making tag for " + I2S(mission_id))
                 if HaveStoredString(mission_to_name, LEVEL_NAME, I2S(mission_id)) then
-                    // label
-                    set mission_name = GetStoredString(mission_to_name, LEVEL_NAME, I2S(mission_id))
-                    if ((i + j) / 2) * 2 == i + j then
-                        set label_offset_y = 64
-                    else
-                        set label_offset_y = -64
+                    if switch_labels[index] == null then
+                        // label
+                        set mission_name = GetStoredString(mission_to_name, LEVEL_NAME, I2S(mission_id))
+                        if ((i + j) / 2) * 2 == i + j then
+                            set label_offset_y = 64
+                        else
+                            set label_offset_y = -64
+                        endif
+                        set label_offset_x = -7 * StringLength(mission_name)
+                        set switch_labels[index] = CreateTextTag()
+                        call SetTextTagVisibility(switch_labels[index], true)
+                        call SetTextTagColor(switch_labels[index], 255, 200, 0, 255)
+                        call SetTextTagText(switch_labels[index], mission_name, 1.2 * 0.023)
+                        call SetTextTagPos(switch_labels[index], switch_x(j) + label_offset_x, switch_y(i) + label_offset_y, 0.023)
                     endif
-                    set label_offset_x = -7 * StringLength(mission_name)
-                    set switch_labels[index] = CreateTextTag()
-                    call SetTextTagVisibility(switch_labels[index], true)
-                    call SetTextTagColor(switch_labels[index], 255, 200, 0, 255)
-                    call SetTextTagText(switch_labels[index], mission_name, 1.2 * 0.023)
-                    call SetTextTagPos(switch_labels[index], switch_x(j) + label_offset_x, switch_y(i) + label_offset_y, 0.023)
                 endif
             endif
             set j = j + 1

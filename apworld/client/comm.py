@@ -218,6 +218,7 @@ class GameStatus:
     world_id: int = field(default_factory=lambda: (time.time_ns() >> 17) & 0x7fff_ffff)
     """Positive 32-bit int value identifying the world to avoid pulling data from another world"""
     do_startup: bool = True
+    is_victorious: bool = False
     pending_messages: list[str] = field(default_factory=list)
     num_in_flight_messages: int = 0
     item_channel_state: dict[heroes.ItemChannel, ItemChannelState] = field(default_factory=init_item_channels)
@@ -496,6 +497,7 @@ def update_missions(game_status: GameStatus, mission_status: MissionStatus) -> N
         fp.write(PRELOAD_FUNCTION_PROTOTYPE)
         fp.write(send_int(packet_status.last_sent, 'nech'))
         fp.write(send_int(side_length, 'size'))
+        fp.write(send_int(1 if game_status.is_victorious else 0, 'ndog'))
         for y in range(side_length):
             for x in range(side_length):
                 unlock_status = game_status.mission_order.get((x, y))

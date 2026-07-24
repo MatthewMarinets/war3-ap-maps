@@ -176,3 +176,35 @@ variation_level = 0
 table_column = 0
 value = 0.10000000149011612
 object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uept'  # UnitUI.Elevation - Sample Points
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 4
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'uerd'  # UnitUI.Elevation - Sample Radius
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 160.0
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'umxp'  # UnitUI.Maximum Pitch Angle (degrees)
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 0.0
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'umxr'  # UnitUI.Maximum Roll Angle (degrees)
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 0.0
+object_id = 'null'

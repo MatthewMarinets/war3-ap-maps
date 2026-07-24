@@ -270,6 +270,7 @@ endfunction
 function status_load_missions takes nothing returns nothing
     local integer i = 100
     local player p = Player(0)
+    call SetPlayerTechMaxAllowed(p, 'ndog', 0)
     loop
         exitwhen i >= 300
         call SetPlayerTechMaxAllowed(p, i, 0)
