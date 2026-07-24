@@ -74,7 +74,10 @@ def create_w3x(source_dir: str, target_file: str, target_type: str = 'map') -> E
     # See doc/workflow.md, under Background heading
     # Problem: Creating a new map / mpq file with MPQEditor causes it to be 50% larger than if it was saved with WorldEdit
     # Idea: Try copying a pre-saved .w3m and simply deleting files within the map and adding our desired files
-    shutil.copy('pack/empty.w3x', target_file)
+    if target_type == 'map':
+        shutil.copy('pack/empty.w3x', target_file)
+    else:
+        shutil.copy('pack/empty.w3n', target_file)
     commands: list[str] = []
     if len(files) > 60:
         # Add 3 extra slots for safety -- in testing, 1 wasn't enough, but 2 was
