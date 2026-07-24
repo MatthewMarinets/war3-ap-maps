@@ -45,9 +45,10 @@ def main() -> None:
     # Pack the campaign
     listfile_path = 'campaigns/(listfile)'
     with open(listfile_path, 'r') as fp:
-        original_listfile_contents = fp.read()
+        original_listfile_contents = fp.readlines()
     with open(listfile_path, 'w', encoding='utf-8') as fp:
-        fp.write(original_listfile_contents)
+        for line in original_listfile_contents:
+            fp.write(line.strip('\r\n') + '\r\n')
         for file in maps:
             print(f'{file}.w3x', end='\r\n', file=fp)
 
@@ -59,7 +60,8 @@ def main() -> None:
         pack.compile_map_file(campaign_out_file, 'campaigns', target_type='campaign')
     finally:
         with open(listfile_path, 'w', encoding='utf-8') as fp:
-            fp.write(original_listfile_contents)
+            for line in original_listfile_contents:
+                fp.write(line.strip('\r\n') + '\r\n')
 
 
 if __name__ == '__main__':
