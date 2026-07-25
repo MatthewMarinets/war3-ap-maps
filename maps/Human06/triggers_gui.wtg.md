@@ -315,6 +315,45 @@ version = TFT
   - param String call status_check_location(20)
 
 
+## Get Ahead Locations
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action IfThenElseMultiple
+  - Condition OperatorCompareReal
+    - param Function OperatorReal
+      - Function OperatorReal
+        - param Variable ArthasDenials
+        - param Preset OperatorSubtract
+        - param Variable MalganisConversions
+    - param Preset OperatorGreaterEq
+    - param String 80.00
+  - 1 (then)
+    - Action CustomScriptCode
+      - param String call status_check_location(24)
+  - 2 (else)
+    - Action IfThenElseMultiple
+      - Condition OperatorCompareReal
+        - param Function OperatorReal
+          - Function OperatorReal
+            - param Variable ArthasDenials
+            - param Preset OperatorSubtract
+            - param Variable MalganisConversions
+        - param Preset OperatorGreaterEq
+        - param String 50.00
+      - 1 (then)
+        - Action CustomScriptCode
+          - param String call status_check_location(23)
+      - 2 (else)
+        - Action DoNothing
+
+
 ## Initialize Initializations
 - enabled: True
 - category: [12] Initialization Phase

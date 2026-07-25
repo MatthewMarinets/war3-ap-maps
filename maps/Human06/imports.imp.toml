@@ -2,5 +2,5 @@
 version = 1
 
 [[imports]]
-path_type = 8
-path = 'war3mapImported/questionmark_item.mdx'
+path_type = 5
+path = 'apimports/questionmark_item.mdx'
