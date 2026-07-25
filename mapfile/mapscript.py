@@ -2,9 +2,12 @@
 Utility for regenerating war3map.j script files from other data
 """
 
-from . import wtg, wct, w3i, doo, w3r, w3c, w3s, wts, w3e, w3o, tables
 import tomllib
+from dataclasses import dataclass, field
 from datetime import datetime
+import math
+
+from . import wtg, wct, w3i, doo, w3r, w3c, w3s, wts, w3e, w3o, tables
 from .common import (
     TRIGGERS_CUSTOM_TEXT_FILE_NAME,
     TRIGGERS_GUI_FILE_NAME,
@@ -16,7 +19,6 @@ from .common import (
     SOUNDS_FILE_NAME,
     UNIT_DATA_FILE_NAME,
 )
-import math
 
 MAP_SCRIPT_FILE_NAME = 'war3map.j'
 
@@ -25,16 +27,20 @@ class Options:
     FORCE_INITIALIZE = True
 
 
+@dataclass(slots=True)
 class GenInfo:
-    def __init__(self, variables: list[wtg.TriggerVariable], indent_level: int = 0) -> None:
-        self.unit_vars_used: set[str] = set()
-        self.doodad_vars_used: set[str] = set()
-        self.custom_text_vars_used: list[str] = []
-        self.indent_level = indent_level
-        self.variables = {v.name: v for v in variables}
-        self.map_init_triggers: list[str] = []
-        self.item_drop_tables: dict[int, str] = {}
-        self.function_presence: set[str] = set()
+    variables: dict[str, wtg.TriggerVariable]
+    indent_level: int = 0
+    unit_vars_used: set[str] = field(default_factory=set)
+    doodad_vars_used: set[str] = field(default_factory=set)
+    custom_text_vars_used: list[str] = field(default_factory=list)
+    map_init_triggers: list[str] = field(default_factory=list)
+    item_drop_tables: dict[int, str] = field(default_factory=dict)
+    function_presence: set[str] = field(default_factory=set)
+
+    @staticmethod
+    def process_vars(variables: list[wtg.TriggerVariable]) -> dict[str, wtg.TriggerVariable]:
+        return {v.name: v for v in variables}
 
     def indent(self) -> str:
         return ' '*(self.indent_level)
@@ -1001,7 +1007,12 @@ def generate_gui_action(action: wtg.EcaFunction, info: GenInfo, prepend_info: Pr
         prepend_info.lines.append(f'function {prepend_func_name} takes nothing returns nothing')
         prepend_info.lines.extend(generate_gui_action(
             action.parameters[1].children,
-            GenInfo(list(info.variables.values()), 4),
+            GenInfo(
+                info.variables.copy(),
+                indent_level=4,
+                unit_vars_used=info.unit_vars_used,
+                doodad_vars_used=info.doodad_vars_used
+            ),
             prepend_info
         ))
         prepend_info.lines.append('endfunction\n')
@@ -1158,7 +1169,7 @@ def generate(map_dir: str) -> None:
         upgrade_data = tomllib.load(fp)
 
     result: list[str] = []
-    info = GenInfo(gui_triggers.variables)
+    info = GenInfo(GenInfo.process_vars(gui_triggers.variables))
 
     triggers_lines = generate_triggers(gui_triggers, text_triggers, info)
 
