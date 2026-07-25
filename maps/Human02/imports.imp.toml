@@ -2,5 +2,5 @@
 version = 1
 
 [[imports]]
-path_type = 8
+path_type = 5
 path = 'questionmark_item.mdx'

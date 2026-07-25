@@ -6,5 +6,5 @@ path_type = 0
 path = 'LargeCityGateOpen1.wav'
 
 [[imports]]
-path_type = 8
+path_type = 5
 path = 'apimports/questionmark_item.mdx'
