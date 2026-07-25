@@ -4,7 +4,35 @@ version = 2
 has_levels = true
 
 [blizzard_objects]
-entities = []
+[[blizzard_objects.entities]]
+parent_id = 'AOls'  # Voodoo Spirits
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'alev'  # AbilityData.Levels
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'arut'  # Profile.Tooltip - Learn - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Creates a swarm of angry spirits that drain the life energies of nearby enemy units. They store the life energy they drain from their victims and use it to replenish Rokhan's hit points when they return.|n|nLasts <AOls,HeroDur1> seconds."
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'ANr2'  # Reincarnation
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'arqa'  # Profile.Requirements - Levels
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "6"
+object_id = 'null'
 
 [map_objects]
 [[map_objects.entities]]
@@ -1389,7 +1417,7 @@ modification_id = 'anam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Promotion"
+value = "Promotion [|ffffcc00T|r]"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]

@@ -12,6 +12,10 @@ constant integer NUM_FILE_LINES = 10
 string last_filename = ""
 endglobals
 
+function print takes string message returns nothing
+    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, message)
+endfunction
+
 function InitTrig_fileio takes nothing returns nothing
     local integer i = 0
 
@@ -148,6 +152,7 @@ integer last_hero_packet = -1
 integer last_item_packet = -1
 integer last_mercenaries_packet = -1
 integer last_settings_packet = -1
+integer last_missions_packet = -1
 integer last_item_channel_packet = -1
 integer checks_before_timeout = 2
 boolean array locations_checked
@@ -162,6 +167,7 @@ timer status_ack_ping_timer
 trigger t_captain_promoted
 trigger t_apply_mercenaries
 trigger t_create_mercenary_camps
+trigger t_init_mission_board
 endglobals
 
 function status_send takes nothing returns nothing
@@ -171,7 +177,9 @@ function status_send takes nothing returns nothing
     call io_write(COMM_VERSION)
     call io_write(I2S(world_id))
     call io_write(I2S(MISSION_ID))
-    call io_write(I2S(last_unlock_packet) + "," + I2S(last_location_packet) + "," + I2S(last_message_packet) + "," + I2S(last_hero_packet) + "," + I2S(last_item_packet) + "," + I2S(last_item_channel_packet) + ",-1," + I2S(last_mercenaries_packet) + "," + I2S(last_settings_packet))
+    // unlocks, locations, messages, heroes, items,
+    // item_channels, hero_levels (always -1), mercenaries, settings, missions
+    call io_write(I2S(last_unlock_packet) + "," + I2S(last_location_packet) + "," + I2S(last_message_packet) + "," + I2S(last_hero_packet) + "," + I2S(last_item_packet) + "," + I2S(last_item_channel_packet) + ",-1," + I2S(last_mercenaries_packet) + "," + I2S(last_settings_packet) + "," + I2S(last_missions_packet))
     call io_write(I2S(hero_status_index))
     call io_write(I2S(num_channel_1_items_received) + "," + I2S(num_channel_2_items_received))
     call io_write("_")
@@ -399,6 +407,20 @@ function status_load_settings takes nothing returns nothing
     endif
 endfunction
 
+function status_load_missions takes nothing returns nothing
+    local integer i = 100
+    local player p = Player(0)
+    call SetPlayerTechMaxAllowed(p, 'ndog', 0)
+    loop
+        exitwhen i >= 300
+        call SetPlayerTechMaxAllowed(p, i, 0)
+        set i = i + 1
+    endloop
+    call io_read_file_simple("missions.txt")
+    set last_missions_packet = GetPlayerTechMaxAllowed(Player(0), 'nech')
+    call TriggerExecute(t_init_mission_board)
+endfunction
+
 function status_check_ping takes nothing returns nothing
     local integer bitmask = 0
     local boolean should_send = false
@@ -435,9 +457,14 @@ function status_check_ping takes nothing returns nothing
     if bitmask > 0 then
         set should_send = true
     endif
+    if bitmask >= 1024 then
+        // bitmask & 1023
+        set bitmask = bitmask - ((bitmask / 1024) * 1024)
+    endif
     if bitmask >= 512 then
-        // bitmask & 511
-        set bitmask = bitmask - ((bitmask / 512) * 512)
+        set bitmask = bitmask - 512
+        // settings
+        call status_load_missions()
     endif
     if bitmask >= 256 then
         set bitmask = bitmask - 256
@@ -512,6 +539,8 @@ function InitTrig_status takes nothing returns nothing
     // Mercenaries
     set t_create_mercenary_camps = CreateTrigger()
     set t_apply_mercenaries = CreateTrigger()
+    // Missions
+    set t_init_mission_board = CreateTrigger()
 endfunction
 
 //\\// Trigger #3
@@ -754,6 +783,10 @@ function hero_publish_status takes integer slot returns nothing
     if this_hash == hero_hashes[slot] then
         return
     endif
+    if GetUnitState(hero, UNIT_STATE_LIFE) <= 0 then
+        // the hero is dead
+        return
+    endif
     set hero_hashes[slot] = this_hash
     call io_open_write("hero_" + I2S(hero_global_slots[slot]) + ".txt")
     call io_write(I2S(hero_global_slots[slot]))
@@ -984,7 +1017,8 @@ trigger t_xp
 trigger t_xp2
 trigger t_health
 trigger t_dragon
-trigger t_speed
+trigger t_speed_rune
+trigger t_heal
 trigger t_colour_unit
 endglobals
 
@@ -993,7 +1027,7 @@ function debug_get_selected_unit takes nothing returns unit
 endfunction
 
 function debug_print_help takes nothing returns nothing
-    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Commands: '-print', '-xp', '-xp2', '-health', '-dragon', '-speed', '-colourunit'")
+    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Debug commands: '-print', '-colourunit', '-xp', '-xp2', '-health', '-dragon', '-speed', '-heal'")
 endfunction
 
 function debug_xp_tome takes nothing returns nothing
@@ -1016,9 +1050,14 @@ function debug_dragon_egg takes nothing returns nothing
     call CreateItem('fgrd', GetUnitX(target_unit), GetUnitY(target_unit))
 endfunction
 
-function debug_speed takes nothing returns nothing
+function debug_speed_rune takes nothing returns nothing
     local unit target_unit = debug_get_selected_unit()
     call CreateItem('rspd', GetUnitX(target_unit), GetUnitY(target_unit))
+endfunction
+
+function debug_heal takes nothing returns nothing
+    local unit target_unit = debug_get_selected_unit()
+    call CreateItem('rhe3', GetUnitX(target_unit), GetUnitY(target_unit))
 endfunction
 
 function debug_colour_unit takes nothing returns nothing
@@ -1062,10 +1101,13 @@ function InitTrig_debug takes nothing returns nothing
     set t_dragon=CreateTrigger()
     call TriggerRegisterPlayerChatEvent(t_dragon, USER_PLAYER, "-dragon", false)
     call TriggerAddAction(t_dragon, function debug_dragon_egg)
-    set t_speed=CreateTrigger()
-    call TriggerRegisterPlayerChatEvent(t_speed, USER_PLAYER, "-speed", false)
-    call TriggerAddAction(t_speed, function debug_speed)
-    set t_colour_unit = CreateTrigger()
+    set t_speed_rune=CreateTrigger()
+    call TriggerRegisterPlayerChatEvent(t_speed_rune, USER_PLAYER, "-speed", false)
+    call TriggerAddAction(t_speed_rune, function debug_speed_rune)
+    set t_heal=CreateTrigger()
+    call TriggerRegisterPlayerChatEvent(t_heal, USER_PLAYER, "-heal", false)
+    call TriggerAddAction(t_heal, function debug_heal)
+    set t_colour_unit=CreateTrigger()
     call TriggerRegisterPlayerChatEvent( t_colour_unit, USER_PLAYER, "-colourunit", false )
     call TriggerAddAction(t_colour_unit, function debug_colour_unit)
     set t_print=CreateTrigger()
@@ -1078,7 +1120,7 @@ globals
 trigger t_zoom
 endglobals
 
-function Trig_zoom_Actions takes nothing returns nothing
+function zoom_change_zoom takes nothing returns nothing
     call SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_TARGET_DISTANCE, S2R(SubStringBJ(GetEventPlayerChatString(), 7, 10)), 0)
 endfunction
 
@@ -1086,7 +1128,7 @@ endfunction
 function InitTrig_zoom takes nothing returns nothing
     set t_zoom = CreateTrigger()
     call TriggerRegisterPlayerChatEvent(t_zoom, USER_PLAYER, "-zoom ", false)
-    call TriggerAddAction(t_zoom, function Trig_zoom_Actions)
+    call TriggerAddAction(t_zoom, function zoom_change_zoom)
 endfunction
 
 //\\// Trigger #8
