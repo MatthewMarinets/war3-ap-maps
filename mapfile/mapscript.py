@@ -561,7 +561,12 @@ def generate_techtree_setup(map_info: w3i.War3MapInformation) -> list[str]:
                 if upgrade.tech_id in written[player_id]:
                     continue
                 lines = player_lines.setdefault(player_id, [])
-                lines.append(f"    call SetPlayerTechMaxAllowed(Player({player_id}), '{upgrade.tech_id}', 0)")
+                # Note(mm): This should probably be a more robust check
+                is_ability = upgrade.tech_id.startswith('A')
+                if is_ability:
+                    lines.append(f"    call SetPlayerAbilityAvailable(Player({player_id}), '{upgrade.tech_id}', false)")
+                else:
+                    lines.append(f"    call SetPlayerTechMaxAllowed(Player({player_id}), '{upgrade.tech_id}', 0)")
                 written[player_id].add(upgrade.tech_id)
     for player_id in range(24):
         if player_id not in players_present:
