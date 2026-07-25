@@ -475,6 +475,25 @@ table_column = 0
 value = ""
 object_id = 'nmrd'  # Mercenary Camp
 
+[[blizzard_objects.entities]]
+parent_id = 'Orkn'  # Shadow Hunter
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'uhab'  # UnitAbilities.Hero
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AOhw,AOhx,AOsw,AOls"
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Cunning Hero, adept at healing magics and voodoo curses. Can learn Healing Wave, Hex, Serpent Ward and Voodoo Spirits. |n|n|cffffcc00Attacks land and air units.|r"
+object_id = 'null'
+
 [map_objects]
 [[map_objects.entities]]
 parent_id = 'nvlw'  # Villager
