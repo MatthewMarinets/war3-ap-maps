@@ -5434,7 +5434,7 @@ Feranor is no longer made invulnerable and vulnerable on the fly, as he is now i
 - Action CommentString
   - param String Give Orb
 - Action CustomScriptCode
-  - param String call status_check_location(12)
+  - param String call status_check_location(24)
 - Action UnitAddItemSwapped
   - param Function GetLastCreatedItem
     - Function GetLastCreatedItem
@@ -5508,8 +5508,6 @@ Feranor is no longer made invulnerable and vulnerable on the fly, as he is now i
   - param String Blacksmith is Destroyed
 - Action CommentString
   - param String Give Orb
-- Action CustomScriptCode
-  - param String call status_check_location(12)
 - Action UnitAddItemSwapped
   - param Function GetLastCreatedItem
     - Function GetLastCreatedItem
@@ -5950,6 +5948,8 @@ Feranor is no longer made invulnerable and vulnerable on the fly, as he is now i
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(23)
 - Action CreateItemLoc
   - param String I01b
   - param Function GetUnitLoc

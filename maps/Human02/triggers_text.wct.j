@@ -106,6 +106,10 @@ constant integer NUM_FILE_LINES = 10
 string last_filename = ""
 endglobals
 
+function print takes string message returns nothing
+    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, message)
+endfunction
+
 function InitTrig_fileio takes nothing returns nothing
     local integer i = 0
 
@@ -500,6 +504,7 @@ endfunction
 function status_load_missions takes nothing returns nothing
     local integer i = 100
     local player p = Player(0)
+    call SetPlayerTechMaxAllowed(p, 'ndog', 0)
     loop
         exitwhen i >= 300
         call SetPlayerTechMaxAllowed(p, i, 0)
@@ -872,6 +877,10 @@ function hero_publish_status takes integer slot returns nothing
     if this_hash == hero_hashes[slot] then
         return
     endif
+    if GetUnitState(hero, UNIT_STATE_LIFE) <= 0 then
+        // the hero is dead
+        return
+    endif
     set hero_hashes[slot] = this_hash
     call io_open_write("hero_" + I2S(hero_global_slots[slot]) + ".txt")
     call io_write(I2S(hero_global_slots[slot]))
@@ -1205,7 +1214,7 @@ globals
 trigger t_zoom
 endglobals
 
-function Trig_zoom_Actions takes nothing returns nothing
+function zoom_change_zoom takes nothing returns nothing
     call SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_TARGET_DISTANCE, S2R(SubStringBJ(GetEventPlayerChatString(), 7, 10)), 0)
 endfunction
 
@@ -1213,7 +1222,7 @@ endfunction
 function InitTrig_zoom takes nothing returns nothing
     set t_zoom = CreateTrigger()
     call TriggerRegisterPlayerChatEvent(t_zoom, USER_PLAYER, "-zoom ", false)
-    call TriggerAddAction(t_zoom, function Trig_zoom_Actions)
+    call TriggerAddAction(t_zoom, function zoom_change_zoom)
 endfunction
 
 //\\// Trigger #8

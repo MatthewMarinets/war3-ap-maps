@@ -94,11 +94,11 @@ class Wc3Location(enum.IntEnum):
     HU2_EAST_CRATE_ITEM =       102007, "East Base Crate Item",    Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Healing"
     HU2_GNOLL_WARDEN_ITEM =     102010, "Gnoll Warden Item",       Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.SECRET_ITEM, "Wand of Negation"
     HU2_SEARINOX_ITEM =         102011, "Searinox Item",           Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Heart of Searinox"
-    HU2_RETURN_SEARINOX_HEART = 102012, "Return Searinox's Heart", Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST_ITEM, "Orb of Fire"
     HU2_SLAY_BLADEMASTER =      102020, "Slay Blademaster",        Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST_HERO
     HU2_ESTABLISH_BASE =        102021, "Establish Base",          Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST
     HU2_FERANOR_STEELTOE =      102022, "Meet Feranor Steeltoe",   Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.RESCUE
-    HU2_DEFEAT_SEARINOX =       102023, "Meet Feranor Steeltoe",   Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST
+    HU2_DEFEAT_SEARINOX =       102023, "Slay Searinox",           Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST
+    HU2_RETURN_SEARINOX_HEART = 102024, "Return Searinox's Heart", Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST_ITEM, "Orb of Fire"
     HU2_ORC_BASE =              102025, "Destroy the Orc Base",    Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.BASE
 
     # Quests:
