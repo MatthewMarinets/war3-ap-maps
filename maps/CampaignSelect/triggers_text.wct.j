@@ -1011,11 +1011,13 @@ endglobals
 
 function start_victory_actions takes nothing returns nothing
     local integer i = 0
+    local weathereffect we
     set arena_min_x = GetRectMinX(gg_rct_mission_select_vision) + 512
     set arena_max_x = GetRectMaxX(gg_rct_mission_select_vision) - 512
     set arena_min_y = GetRectMinY(gg_rct_mission_select_vision) + 512
     set arena_max_y = GetRectMaxY(gg_rct_mission_select_vision) - 512
-    call AddWeatherEffect(gg_rct_mission_select_vision, 'LRaa')
+    set we = AddWeatherEffect(gg_rct_mission_select_vision, 'LRma')
+    call EnableWeatherEffect(we, true)
     call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 0, 2432)
     call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", -128, 2304)
     call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3072, 2432)
@@ -1074,7 +1076,7 @@ endfunction
 function resize_disco_balls takes nothing returns nothing
     local integer i = 0
     local real scale
-    set disco_ball_resize_step = disco_ball_resize_step + 0.1
+    set disco_ball_resize_step = disco_ball_resize_step + 0.157
     if disco_ball_resize_step > 4 * 3.14159 then
         set disco_ball_resize_step = 0
     endif
