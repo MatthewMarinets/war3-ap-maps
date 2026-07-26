@@ -371,6 +371,7 @@ def generate_unit_setup(
     unit_info: doo.War3PlacementInfo,
     info: GenInfo,
     custom_units: dict[str, w3o.Entity],
+    regions_data: w3r.War3RegionInfo,
     item_data: dict[str, dict],
 ) -> list[str]:
     RADIANS_TO_DEGREES = 360.0 / 2 / math.pi
@@ -443,6 +444,20 @@ def generate_unit_setup(
                 f'    call TriggerRegisterUnitEvent(t, {unit_var}, EVENT_UNIT_CHANGE_OWNER)\n'
                 f'    call TriggerAddAction(t, function {drop_func_name})'
             ))
+        if unit.waygate_destination >= 0:
+            waygate_region = [
+                region
+                for region in regions_data.regions
+                if region.region_id == unit.waygate_destination
+            ]
+            if waygate_region:
+                region_name = f'gg_rct_{escape_name(waygate_region[0].region_name)}'
+                sections[section].append(
+                    f'    call WaygateSetDestination({unit_var}, '
+                    f'GetRectCenterX({region_name}), '
+                    f'GetRectCenterY({region_name}))'
+                )
+                sections[section].append(f'    call WaygateActivate({unit_var}, true)')
 
     NEUTRAL_PASSIVE_PLAYER = 27
     NEUTRAL_HOSTILE_PLAYER = 24
@@ -551,9 +566,10 @@ def generate_camera_setup(cameras: w3c.War3CameraInfo) -> list[str]:
     return result
 
 
-def generate_upgrades_setup(map_info: w3i.War3MapInformation, upgrade_data: dict[str, dict]) -> list[str]:
+def generate_upgrades_setup(map_info: w3i.War3MapInformation, info: GenInfo, upgrade_data: dict[str, dict]) -> list[str]:
     if not map_info.upgrades:
         return []
+    info.function_presence.add('InitUpgrades')
     result: list[str] = [section_header('Upgrades')]
     players_present = {player.player_id for player in map_info.players}
     # Note(mm): Upgrades can be listed multiple times; code uses the position of the first appearance but
@@ -780,7 +796,8 @@ def generate_main(
     result.append(f'    call InitSounds()')
     result.append(f'    call CreateRegions()')
     result.append(f'    call CreateCameras()')
-    result.append(f'    call InitUpgrades()')
+    if 'InitUpgrades' in info.function_presence:
+        result.append(f'    call InitUpgrades()')
     result.append(f'    call InitTechTree()')
     if 'CreateAllDestructables' in info.function_presence:
         result.append(f'    call CreateAllDestructables()')
@@ -1307,7 +1324,7 @@ def generate(map_dir: str) -> None:
 
     # Unit Creation
     result.append(section_header('Unit Creation'))
-    result.extend(generate_unit_setup(units, info, custom_units, item_data))
+    result.extend(generate_unit_setup(units, info, custom_units, regions, item_data))
 
     # Regions
     result.append(section_header('Regions'))
@@ -1325,7 +1342,7 @@ def generate(map_dir: str) -> None:
     result.extend(generate_custom_trigger_init(gui_triggers, info))
 
     # Upgrades
-    result.extend(generate_upgrades_setup(map_info, upgrade_data))
+    result.extend(generate_upgrades_setup(map_info, info, upgrade_data))
 
     # TechTree
     result.extend(generate_techtree_setup(map_info))

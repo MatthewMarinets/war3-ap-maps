@@ -1,22 +1,47 @@
 BUILDING_IDS = {
+    # Melee
     'htow', 'hkee', 'hcas', 'hhou', 'halt', 'hbar', 'hlum', 'hbla',
     'harm', 'hars', 'hgra', 'hwtw', 'hvlt', 'hgtw', 'hctw', 'hatw',
     'ogre', 'ostr', 'ofrt', 'oalt', 'obar', 'ofor', 'otto', 'osld', 'obea', 'otrb', 'ovln', 'owtw',
-    'npgf',
     'unpl', 'unp1', 'unp2', 'uzig', 'uaod', 'usep', 'usap', 'ugrv',
     'uslh', 'utod', 'ubon', 'ugol', 'utom', 'uzg1', 'uzg2',
     'etol', 'etoa', 'etoe', 'emow', 'eate', 'eaom', 'eaoe', 'eaow', 'edob', 'edos', 'eden', 'etrp',
 
+    # Neutral passive / Melee
     'ngol', 'ngme', 'nfoh', 'nmoo', 'ngad', 'nwgt', 'ndrk', 'ndru', 'ndrz', 'ndrg', 'ndro', 'ndrr',
     'nmer', 'nmr2', 'nmr3', 'nmr4', 'nmr5', 'nmr6', 'nmr7', 'nmr8', 'nmr9', 'nmr0', 'nmra', 'nmrb',
     'ntav', 'nmrk', 'nmrc', 'nmrd', 'nshp', 'nmre', 'nmrf',
 
+    # Neutral Passive / Melee / Special
     'ncnt', 'nct1', 'nct2', 'ndch', 'ndh0', 'ndh1', 'nfh0', 'nfh1', 'nfr1', 'nfr2', 'ngnh', 'ngt2', 'nhns',
-    'nth0', 'nth1', 'nmg0', 'nmg1', 'nmh0', 'nmh1', 'nnzg', 'ntnt', 'ntt2', 'nten', 'ntn2', 'ncb0', 'ncb1',
-    'ncb2', 'ncb3', 'ncb4', 'ncb5', 'ncb6', 'ncb7', 'ncb8', 'ncb9', 'ncba', 'ncbb', 'ncbc', 'ncbd', 'ncbe',
-    'ncbf',
+    'nth0', 'nth1', 'nmg0', 'nmg1', 'nmh0', 'nmh1', 'nnzg', 'ntnt', 'ntt2', 'nten', 'ntn2',
 
-    'ngwr', 'ngni',
+    # Neutral Passive / Campaign
+    'ncbd', 'ncbe', 'ncbf',
+    'ncmw', 'ncop', 'ncp2', 'ncp3', 'ndke', 'ndkw', 'nico', 'nbse', 'nbsw', 'nzin',
+
+    # Human / Campaign
+    'ngwr', 'negm', 'negf', 'negt', 'ndgt', 'nheb', 'nefm', 'nef0', 'nef1', 'nef2', 'nef3', 'nef4', 'nef5',
+    'nef6', 'nef7', 'haro', 'nfrt', 'hshy', 'nitb', 'nmgv', 'nbt2', 'ndt2', 'ntx2', 'net2', 'nft2',
+    'nbt1', 'ndt1', 'ntt1', 'net1', 'nft1',
+
+    # Orc / Campaign
+    'npgf', 'ndrb', 'nbfl', 'ndfl', 'ocbw', 'oshy', 'npgr', 'nwc1', 'nwc2',
+
+    # Undead / Campaign
+    'nshr', 'ndmg', 'ngni', 'nfrm', 'nbsm', 'ushp',
+
+    # Night Elf / Campaign
+    'nctl', 'ncta', 'ncte', 'ncap', 'ncaw', 'nfnp', 'nhcn', 'nbwd', 'ngob', 'eshy',
+    'nfv0', 'nfv1', 'nfv2', 'nfv3', 'nfv4',
+    'nvr0', 'nvr1', 'nvr2',
+
+    # Naga / Campaign
+    'nnad', 'nnfm', 'nnsa', 'nnsg', 'nntt', 'nntg',
+
+    # Neutral Hostile
+    'nfgo',
+
 }
 
 TILESET_TO_TERRAIN = {
