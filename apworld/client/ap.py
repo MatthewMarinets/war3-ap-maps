@@ -30,7 +30,7 @@ class MissionRequirement:
 
     def evaluate(
         self,
-        completed_missions: Iterable[missions.Wc3Mission],
+        completed_missions: Iterable[missions.Wc3Mission | int],
         held_items: Counter[items.Wc3Item],
     ) -> int:
         """Returns the surplus amount; >=0 means the rule is satisfied"""

@@ -40,7 +40,7 @@ def try_parse_unlock_id(user_input: str) -> Tech | None:
 def try_parse_hero_slot(user_input: str) -> heroes.HeroSlot | None:
     result: heroes.HeroSlot | None = None
     try:
-        result = heroes.HeroSlot(user_input)
+        result = heroes.HeroSlot(int(user_input))
     except ValueError: pass
     try:
         result = heroes.HeroSlot[user_input.upper().replace(' ', '_').replace("'", '')]
@@ -103,7 +103,7 @@ def print_status(ctx: AsyncContext, *args) -> None:
         logger.info(ctx.game_status)
         logger.info(ctx.mission_status)
         return
-    parts = args[0].split('.')
+    parts: str = args[0].split('.')
     current: dict|list|object = ctx
     part: str | int
     for index, part in enumerate(parts):
@@ -261,7 +261,7 @@ class CommandArg:
     default: Any | None = None
 
 
-COMMANDS: dict[str, tuple[Callable[[AsyncContext], None], list[CommandArg]]] = {
+COMMANDS: dict[str, tuple[Callable[..., None], list[CommandArg]]] = {
     '/exit': (handle_exit, []),
     '/help': (print_help, []),
     '/location_status': (print_location_status, []),
