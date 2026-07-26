@@ -379,6 +379,24 @@ async def _stdin_reader(ctx: AsyncContext) -> None:
     logger.info("Shutting down console")
 
 
+class EchoClientInterface:
+    def __init__(self, context: AsyncContext) -> None:
+        self.context = context
+
+    def on_location_received(self, mission_id: int, location_ids: list[int]) -> None:
+        new_messages: list[str] = []
+        for location_id in location_ids:
+            global_location_id = locations.global_location_id(mission_id, location_id)
+            location_name = locations.location_id_to_name.get(global_location_id, f"Unknown #{global_location_id}")
+            new_messages.append(f"Checked |cff3366ff{location_name}|r")
+        self.context.game_status.pending_messages.extend(new_messages)
+        self.context.game_status.pending_update |= PacketType.MESSAGES
+
+    def fetch_locations_collected(self, location_status: dict[int, int], new_mission_id: int) -> None:
+        for k in location_status:
+            location_status[k] = 0
+
+
 def init_test_data(game_status: GameStatus) -> None:
     from ..data import mission_orders
     game_status.mission_order = {
@@ -413,11 +431,13 @@ def init_game_status(game_status: GameStatus) -> None:
 
 async def main() -> None:
     async_context = AsyncContext()
+    async_context.client_interface = EchoClientInterface(async_context)
     init_test_data(async_context.game_status)
     init_game_status(async_context.game_status)
     console_task = asyncio.create_task(_stdin_reader(async_context))
     await status_loop(async_context)
     console_task.cancel()
+    del async_context.client_interface
 
 
 if __name__ == "__main__":
