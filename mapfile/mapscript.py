@@ -8,7 +8,7 @@ from datetime import datetime
 import math
 
 from scripts import editor_ids
-from . import wtg, wct, w3i, doo, w3r, w3c, w3s, wts, w3e, w3o, tables
+from . import script_tables, wtg, wct, w3i, doo, w3r, w3c, w3s, wts, w3e, w3o
 from .common import (
     TRIGGERS_CUSTOM_TEXT_FILE_NAME,
     TRIGGERS_GUI_FILE_NAME,
@@ -302,7 +302,7 @@ def generate_sound_setup(sounds: w3s.War3SoundInfo) -> list[str]:
             f'{"true" if w3s.SoundFlags.Stop_Outside_Range in sound.flags else "false"}, '
             f'{sound.fade_in}, {sound.fade_out}, "{sound.effects}")'
         )
-        sound_label, sound_duration = tables.SOUND_DATA.get((escaped_path, sound.fade_out), (None, None))
+        sound_label, sound_duration = script_tables.SOUND_DATA.get((escaped_path, sound.fade_out), (None, None))
         if sound_label is None:
             result.append(f'    call SetSoundParamsFromLabel({sound.name}, "{sound.name[7:]}")')
         else:
@@ -385,9 +385,9 @@ def generate_unit_setup(
         if unit.type_id in item_data or unit.type_id[0] == 'I':
             continue
         if unit.type_id in custom_units:
-            is_building = custom_units[unit.type_id].parent_id in tables.BUILDING_IDS
+            is_building = custom_units[unit.type_id].parent_id in script_tables.BUILDING_IDS
         else:
-            is_building = unit.type_id in tables.BUILDING_IDS
+            is_building = unit.type_id in script_tables.BUILDING_IDS
         section = (is_building, unit.player_owner)
         unit_var = f'gg_unit_{unit.type_id}_{unit.entity_id:04}'
         create_func = f"CreateUnit(p, '{unit.type_id}'"
@@ -407,11 +407,11 @@ def generate_unit_setup(
         if unit.type_id == 'ngol' or unit.type_id == 'ugol' or unit.type_id == 'egol':
             sections[section].append(f'    call SetResourceAmount({unit_var}, {unit.goldmine_gold_amount})')
         player_colour = -1
-        if unit.type_id in tables.UNIT_TO_COLOUR:
-            player_colour = tables.UNIT_TO_COLOUR[unit.type_id]
+        if unit.type_id in script_tables.UNIT_TO_COLOUR:
+            player_colour = script_tables.UNIT_TO_COLOUR[unit.type_id]
         elif unit.type_id in custom_units:
             parent_id = custom_units[unit.type_id].parent_id
-            player_colour = tables.UNIT_TO_COLOUR.get(parent_id, -1)
+            player_colour = script_tables.UNIT_TO_COLOUR.get(parent_id, -1)
         if player_colour > -1:
             sections[section].append(f'    call SetUnitColor({unit_var}, ConvertPlayerColor({player_colour}))')
         if unit.hero_level > 1:
@@ -783,9 +783,9 @@ def generate_main(
         ')'
     ).replace('-', '- '))
 
-    terrain_model = tables.TILESET_TO_TERRAIN[map_info.tileset]
-    unit_model = tables.TILESET_TO_UNIT_MODEL[map_info.tileset]
-    day_sound, night_sound = tables.TILESET_TO_SOUND[map_info.tileset]
+    terrain_model = script_tables.TILESET_TO_TERRAIN[map_info.tileset]
+    unit_model = script_tables.TILESET_TO_UNIT_MODEL[map_info.tileset]
+    day_sound, night_sound = script_tables.TILESET_TO_SOUND[map_info.tileset]
 
     result.append(f'    call SetDayNightModels("{terrain_model}", "{unit_model}")')
     sound_environment = map_info.tft_custom_sound_environment or 'Default'
