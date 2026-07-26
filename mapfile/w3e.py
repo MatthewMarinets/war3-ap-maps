@@ -77,12 +77,15 @@ class War3Environment:
         result.tile_type = self.tile_ids[packed & 0xf]
         result.texture_variation = reader.read_u8()
         packed = reader.read_u8()
-        result.cliff_type = self.cliff_ids[packed >> 4]
+        cliff_index = packed >> 4
+        if cliff_index == 15:
+            cliff_index = -1
+        result.cliff_type = self.cliff_ids[cliff_index]
         result.cliff_level = packed & 0xf
 
         result.height += (result.cliff_level - 2) * 0x200 / 4
         return result
-    
+
     def coord_to_height(self, x: float, y: float) -> float:
         x_point = (x - self.min_x) / 128
         y_point = (y - self.min_y) / 128
