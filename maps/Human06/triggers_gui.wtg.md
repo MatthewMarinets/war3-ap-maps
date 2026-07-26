@@ -2662,6 +2662,8 @@ Turns on Villagers Run District 1 (to stop possible problem with intro cinematic
       - param Variable ArthasDenials
       - param Preset OperatorAdd
       - param String 1.00
+- Action TriggerExecute
+  - param Variable gg_trg_Get_Ahead_Locations
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Leaderboard_Tracking
 - Event TriggerRegisterPlayerUnitEventSimple
