@@ -73,6 +73,20 @@
   - [ ] Purge any unlock tech functions
   - [ ] Creep bounty
 
+- [x] mission unlocks don't work
+- [x] client: debug text on colours
+- [x] Beaten display doesn't work
+- [x] Knight didn't unlock barracks
+- [ ] Hero items and abils didn't persist across resets
+- [x] level select: debug text when generating buttons
+- [x] all maps: Update status.j with missions
+- [x] level select: button update on secondary mission packets
+- [x] upgrade scripts: change Akama ultimate abil
+- [x] upgrade scripts: Rokhan voicelines instead of Shadow Hunter voicelines
+- [ ] upgrade scripts: Sylvanas ranger movement voicelines are broken
+- [x] H2: Feranor gave check without Searinox item
+- [x] Irregulars submenu missing a hotkey
+
 ### Longer term
 - [ ] No-builds: unlock tech for usage based on max allowed
 - [x] Irregulars: have some kind of resource cost to upgrade
