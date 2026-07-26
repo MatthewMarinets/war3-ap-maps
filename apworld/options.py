@@ -140,7 +140,6 @@ class OptionHeroChoice(baseoptions.Choice):
 
     option_mal_ganis = HeroChoice.MAL_GANIS.id
     option_detheroc = HeroChoice.DETHEROC.id
-    option_magtheridon = HeroChoice.MAGTHERIDON.id
     option_uther = HeroChoice.UTHER.id
     option_ranger_sylvanas = HeroChoice.RANGER_SYLVANAS.id
     option_antonidas = HeroChoice.ANTONIDAS.id

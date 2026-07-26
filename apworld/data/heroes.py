@@ -131,7 +131,7 @@ class HeroChoice(enum.Enum):
     DETHEROC =            31, "Detheroc", HeroClass.DREADLORD, HeroSource.ENEMY, GameID.DETHEROC  # Aura -> Shadow Strike, Inferno -> Death and Decay
     # DALVENGYR =           _, "Dalvengyr", HeroClass.DREADLORD, HeroSource.ENEMY, GameID.DALVENGYR
     # MANNOROTH =           _, "Mannoroth", HeroClass.PIT_LORD, HeroSource.ENEMY, GameID.MANNOROTH  # Shockwave, Thunder Clap, Reincarnation, Earthquake
-    MAGTHERIDON =         32, "Magtheridon", HeroClass.PIT_LORD, HeroSource.ENEMY, GameID.MAGTHERIDON
+    # MAGTHERIDON =         32, "Magtheridon", HeroClass.PIT_LORD, HeroSource.ENEMY, GameID.MAGTHERIDON
     UTHER =               33, "Uther", HeroClass.PALADIN, HeroSource.ENEMY, GameID.UTHER
     RANGER_SYLVANAS =     34, "Sylvanas Windrunner", HeroClass.RANGER, HeroSource.ENEMY, GameID.SYLVANAS_ELF  # Cold Arrows, Scout, Trueshot Aura, Starfall
     ANTONIDAS =           35, "Antonidas", HeroClass.ARCHMAGE, HeroSource.ENEMY, GameID.ANTONIDAS
@@ -266,7 +266,7 @@ HERO_CHOICE_TO_CHAOS_HERO_ID: dict[HeroChoice, str] = {
     HeroChoice.LORD_GARITHOS: CustomIDs.UNIT_CORRUPTED_LORD_GARITHOS,
     HeroChoice.MAL_GANIS: CustomIDs.UNIT_CORRUPTED_DREADLORD,  # UNIT_CORRUPTED_MAL_GANIS
     HeroChoice.DETHEROC: CustomIDs.UNIT_CORRUPTED_DETHEROC,
-    HeroChoice.MAGTHERIDON: CustomIDs.UNIT_CORRUPTED_MAGTHERIDON,
+    # HeroChoice.MAGTHERIDON: CustomIDs.UNIT_CORRUPTED_MAGTHERIDON,
     HeroChoice.UTHER: CustomIDs.UNIT_CORRUPTED_UTHER,
     HeroChoice.RANGER_SYLVANAS: CustomIDs.UNIT_CORRUPTED_SYLVANAS,
     HeroChoice.ANTONIDAS: CustomIDs.UNIT_CORRUPTED_ANTONIDAS,

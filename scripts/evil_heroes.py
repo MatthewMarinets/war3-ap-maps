@@ -205,6 +205,10 @@ HERO_INFO = [
         GameID.DARK_RANGER, CustomIDs.UNIT_CORRUPTED_DARK_RANGER,
         r'apimports\evilundeadsylvanas.mdx', CustomIDs.ABIL_CHAOS_DARK_RANGER,
     ),
+    HeroInfo(
+        GameID.PIT_LORD, CustomIDs.UNIT_CORRUPTED_PIT_LORD,
+        r'apimports\evilpitlord.mdx', CustomIDs.ABIL_CHAOS_PIT_LORD,
+    ),
 
     # Other
     HeroInfo(
@@ -235,6 +239,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evillich.mdx': [r'apimports\evillich.blp'],
     r'apimports\evilcryptlord.mdx': [r'apimports\evilcryptlord.blp'],
     r'apimports\evilundeadsylvanas.mdx': [r'apimports\evilundeadsylvanas.blp'],
+    r'apimports\evilpitlord.mdx': [r'apimports\evilpitlord.blp'],
     r'apimports\evilakama.mdx': [r'apimports\evilakama.blp'],
 }
 

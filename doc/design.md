@@ -332,6 +332,11 @@ giving them a more light/living aesthetic.
   * Cloak repaired and made off-white
   * Bow and trim made purple
   * Pant leg repaired
+* Pit Lord
+  * Skin purple -> red
+  * Chains darkened
+  * Teeth darkened, made grey
+  * Stomach plates gold -> grey
 * Thrall
   * Skin changed red
   * Gave him Grom's glowy eyes, but green
