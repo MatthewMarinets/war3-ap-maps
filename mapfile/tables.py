@@ -458,3 +458,24 @@ SOUND_DATA = {
     (r"Units\\Undead\\Skeleton\\SkeletonYesAttack3.wav", 12700): ("SkeletonYesAttack", 2237),
 }
 """Sound path, fadeout -> Sound label, duration"""
+
+UNIT_TO_COLOUR = {
+    'nmer': 0,  # Lordaeron Summer camp
+    'nmr2': 12,  # Lordaeron Fall camp
+    'nmr3': 1,  # Lordaeron Winter camp
+    'nmr4': 11,  # Barrens camp
+    'nmr5': 10,  # Ashenvale camp
+    'nmr6': 6,  # Felwood camp
+    'nmr7': 3,  # Northrend camp
+    'nmr8': 9,  # Cityscape camp
+    'nmr9': 8,  # Dalaran camp
+    'nmr0': 5,  # Village camp
+    'nmra': 0,  # Dungeon camp
+    'nmrb': 0,  # Underground camp
+    'nmrc': 1,  # Sunken Ruins camp
+    'nmrd': 9,  # Icecrown Glacier camp
+    'nmre': 12,  # Outland camp
+    'nmre': 3,  # Black Citadel camp
+    'ntav': 0,  # Tavern
+    'nmrk': 0,  # Marketplace
+}

@@ -2078,8 +2078,8 @@ ABIL_TO_ON_ORDER_ID = {
     ABIL_RAISE_DEAD: 'raisedeadon',
     ABIL_WEB: 'webon',
 
-    ABIL_ABOLISH_MAGIC_NEUTRAL_HOSTILE: 'autodispellon',
-    ABIL_ABOLISH_MAGIC_NEUTRAL_HOSTILE_2: 'autodispellon',
+    ABIL_ABOLISH_MAGIC_NEUTRAL_HOSTILE: 'autodispelon',
+    ABIL_ABOLISH_MAGIC_NEUTRAL_HOSTILE_2: 'autodispelon',
     ABIL_BLACK_ARROW_UNIT: 'balckarrowon',
     ABIL_BLOODLUST_NEUTRAL_HOSTILE_1: 'bloodluston',
     ABIL_BLOODLUST_NEUTRAL_HOSTILE_2: 'bloodluston',
@@ -2111,8 +2111,8 @@ ABIL_TO_OFF_ORDER_ID = {
     ABIL_RAISE_DEAD: 'raisedeadoff',
     ABIL_WEB: 'weboff',
 
-    ABIL_ABOLISH_MAGIC_NEUTRAL_HOSTILE: 'autodispelloff',
-    ABIL_ABOLISH_MAGIC_NEUTRAL_HOSTILE_2: 'autodispelloff',
+    ABIL_ABOLISH_MAGIC_NEUTRAL_HOSTILE: 'autodispeloff',
+    ABIL_ABOLISH_MAGIC_NEUTRAL_HOSTILE_2: 'autodispeloff',
     ABIL_BLACK_ARROW_UNIT: 'balckarrowoff',
     ABIL_BLOODLUST_NEUTRAL_HOSTILE_1: 'bloodlustoff',
     ABIL_BLOODLUST_NEUTRAL_HOSTILE_2: 'bloodlustoff',

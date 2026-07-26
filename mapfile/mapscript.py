@@ -403,12 +403,16 @@ def generate_unit_setup(
                 f"    set u={create_func}, {unit.x:.1f}, {unit.y:.1f}, "
                 f"{unit.facing * RADIANS_TO_DEGREES:.3f})"
             ).replace(' -', ' - '))
-        for modified_ability in unit.modified_abilities:
-            on_order_id, off_order_id = abil_to_autocast_orders(modified_ability.abil_id)
-            if off_order_id and not modified_ability.autocast_active:
-                sections[section].append(f'    call IssueImmediateOrder({unit_var}, "{off_order_id}")')
         if unit.type_id == 'ngol' or unit.type_id == 'ugol' or unit.type_id == 'egol':
             sections[section].append(f'    call SetResourceAmount({unit_var}, {unit.goldmine_gold_amount})')
+        player_colour = -1
+        if unit.type_id in tables.UNIT_TO_COLOUR:
+            player_colour = tables.UNIT_TO_COLOUR[unit.type_id]
+        elif unit.type_id in custom_units:
+            parent_id = custom_units[unit.type_id].parent_id
+            player_colour = tables.UNIT_TO_COLOUR.get(parent_id, -1)
+        if player_colour > -1:
+            sections[section].append(f'    call SetUnitColor({unit_var}, ConvertPlayerColor({player_colour}))')
         if unit.hero_level > 1:
             sections[section].append(f'    call SetHeroLevel({unit_var}, {unit.hero_level}, false)')
         if unit.hit_points > -1:
@@ -422,6 +426,10 @@ def generate_unit_setup(
             sections[section].append((
                 f'    call SetUnitAcquireRange({unit_var}, 200.0)'
             ))
+        for modified_ability in unit.modified_abilities:
+            on_order_id, off_order_id = abil_to_autocast_orders(modified_ability.abil_id)
+            if off_order_id and not modified_ability.autocast_active:
+                sections[section].append(f'    call IssueImmediateOrder({unit_var}, "{off_order_id}")')
         for abil in unit.modified_abilities:
             for _ in range(abil.abil_level):
                 sections[section].append(f"    call SelectHeroSkill({unit_var}, '{abil.abil_id}')")
@@ -638,7 +646,8 @@ def generate_players(info: GenInfo, map_info: w3i.War3MapInformation) -> list[st
         active_players_mask |= 1 << player_id
         result.append(f'    // Player {player_id}')
         result.append(f'    call SetPlayerStartLocation(Player({player_id}), {index})')
-        result.append(f'    call ForcePlayerStartLocation(Player({player_id}), {index})')
+        if player.fixed_start_position:
+            result.append(f'    call ForcePlayerStartLocation(Player({player_id}), {index})')
         result.append(f'    call SetPlayerColor(Player({player_id}), ConvertPlayerColor({player_id}))')
         result.append(f'    call SetPlayerRacePreference(Player({player_id}), RACE_PREF_{player.player_faction.name.upper()})')
         result.append(f'    call SetPlayerRaceSelectable(Player({player_id}), false)')
