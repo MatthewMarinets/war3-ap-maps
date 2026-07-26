@@ -91,6 +91,8 @@ def escape_custom_code(line: str) -> str:
         line = line.replace(' =', '=')
     elif stripped.startswith('function'):
         line = line.replace(', ', ',')
+    line = line.replace('( ', '(')
+    line = line.replace(' )', ')')
     # Note(mm): This seems to only apply within the parens of a custom-text trigger:
     # elif stripped.startswith('call'):
     #     line = re.sub(r'(\w),', lambda m: f'{m.group(1)} ,', line)
@@ -311,12 +313,15 @@ def generate_sound_setup(sounds: w3s.War3SoundInfo) -> list[str]:
             result.append(f'    call SetSoundDuration({sound.name}, {sound_duration})')
         if sound.volume > 0:
             result.append(f'    call SetSoundVolume({sound.name}, {sound.volume})')
+        if sound.pitch != 1.0 and sound.pitch != w3s.UNSET_FLOAT:
+            result.append(f'    call SetSoundPitch({sound.name}, {round1(sound.pitch)})')
     result.append('endfunction\n')
     return result
 
 
 def generate_destructable_setup(doodads: doo.War3PlacementInfo, info: GenInfo) -> list[str]:
     RADIANS_TO_DEGREES = 360.0 / 2 / math.pi
+    info.function_presence.add('CreateAllDestructables')
     result = ['function CreateAllDestructables takes nothing returns nothing']
     result.append('    local destructable d')
     result.append('    local trigger t')
@@ -644,11 +649,14 @@ def generate_players(info: GenInfo, map_info: w3i.War3MapInformation) -> list[st
 
     result.append('function InitCustomTeams takes nothing returns nothing')
     for index, force in enumerate(map_info.forces):
+        start_state = len(result)
         result.append(f'    // Force: {force.name}')
         for player in map_info.players:
             mask = 1 << player.player_id
             if mask & force.player_mask_flags:
                 result.append(f'    call SetPlayerTeam(Player({player.player_id}), {index})')
+                if force.force_flags & w3i.ForcesFlags.AlliedVictory:
+                    result.append(f'    call SetPlayerState(Player({player.player_id}), PLAYER_STATE_ALLIED_VICTORY, {index})')
         result.append('')
         allied_section = ['    //   Allied']
         shared_vision_section = ['    //   Shared Vision']
@@ -671,6 +679,11 @@ def generate_players(info: GenInfo, map_info: w3i.War3MapInformation) -> list[st
                 result.extend(allied_section)
             if (w3i.ForcesFlags.ShareVision & force.force_flags) and functions_written:
                 result.extend(shared_vision_section)
+
+        # Don't print out force comments if we didn't print anything else
+        if len(result) - start_state == 2:
+            result.pop()
+            result.pop()
     result.append('endfunction\n')
     result.extend(init_ally_priorities(info, map_info, active_players_mask, player_id_to_index))
     return result
@@ -760,7 +773,8 @@ def generate_main(
     result.append(f'    call CreateCameras()')
     result.append(f'    call InitUpgrades()')
     result.append(f'    call InitTechTree()')
-    result.append(f'    call CreateAllDestructables()')
+    if 'CreateAllDestructables' in info.function_presence:
+        result.append(f'    call CreateAllDestructables()')
     if 'CreateAllItems' in info.function_presence:
         result.append(f'    call CreateAllItems()')
     if 'CreateAllUnits' in info.function_presence:
@@ -943,6 +957,8 @@ def generate_gui_parameter(
             result = f'{parameter.value}{subscript}'
         else:
             result = f'udg_{parameter.value}{subscript}'
+        if 'AsString' in paramtype:
+            result = f'"{result}"'
     elif parameter.parameter_type == wtg.EcaParameterType.String:
         if (paramtype == 'string'
             or parameter.value.startswith('TRIGSTR')
@@ -972,7 +988,6 @@ def generate_gui_parameter(
     prepend_info.action_index.pop()
     prepend_info.action_index[-1] += 1
     return result
-
 
 
 def generate_gui_action(action: wtg.EcaFunction, info: GenInfo, prepend_info: PrependInfo) -> list[str]:
@@ -1019,6 +1034,40 @@ def generate_gui_action(action: wtg.EcaFunction, info: GenInfo, prepend_info: Pr
         result.extend(generate_gui_action(action.parameters[2].children, info, prepend_info))
         info.indent_level -= 4
         result.append(f'{info.indent()}endif')
+    elif action.name == 'IfThenElseMultiple':
+        result = []
+        conditions_lines: list[str] = []
+        action_if_lines: list[str] = []
+        action_else_lines: list[str] = []
+
+        info.indent_level += 4
+        for subfunction in action.subfunctions:
+            if subfunction.subscope == 0:
+                contents = generate_condition(subfunction, info, prepend_info)
+                conditions_lines.append(f'    if ( not {contents} ) then')
+                conditions_lines.append(f'        return false')
+                conditions_lines.append(f'    endif')
+            elif subfunction.subscope == 1:
+                action_if_lines.extend(generate_gui_action(subfunction, info, prepend_info))
+            elif subfunction.subscope == 2:
+                action_else_lines.extend(generate_gui_action(subfunction, info, prepend_info))
+            else:
+                assert False, f"Unknown subfunction scope {subfunction.subscope}"
+        info.indent_level -= 4
+
+        prepend_func_name = prepend_info.func_name()[:-3] + 'C'
+
+        prepend_info.lines.append(f'function {prepend_func_name} takes nothing returns boolean')
+        prepend_info.lines.extend(conditions_lines)
+        prepend_info.lines.append(f'    return true')
+        prepend_info.lines.append(f'endfunction\n')
+
+        result.append(f'{info.indent()}if ( {prepend_func_name}() ) then')
+        result.extend(action_if_lines)
+        result.append(f'{info.indent()}else')
+        result.extend(action_else_lines)
+        result.append(f'{info.indent()}endif')
+
     elif action.name == 'ForLoopA':
         assert len(action.parameters) == 3
         result = []
