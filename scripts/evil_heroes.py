@@ -158,6 +158,19 @@ HERO_INFO = [
         GameID.SHADOW_HUNTER, CustomIDs.UNIT_CORRUPTED_SHADOW_HUNTER,
         r'apimports\evilshadowhunter.mdx', CustomIDs.ABIL_CHAOS_SHADOW_HUNTER,
     ),
+    HeroInfo(
+        GameID.REXXAR, CustomIDs.UNIT_CORRUPTED_REXXAR,
+        r'apimports\evilrexxar.mdx', CustomIDs.ABIL_CHAOS_REXXAR,
+        other_updates={
+            eid.FIELD_UNIT_ABILITIES_HERO: ','.join([
+                eid.ABIL_SUMMON_MISHA_REXXAR, eid.ABIL_SUMMON_QUILBEAST, eid.ABIL_STORM_BOLT, eid.ABIL_STAMPEDE,
+            ]),
+        }
+    ),
+    HeroInfo(
+        GameID.BEASTMASTER, CustomIDs.UNIT_CORRUPTED_BEASTMASTER,
+        r'apimports\evilrexxar.mdx', CustomIDs.ABIL_CHAOS_BEASTMASTER,
+    ),
 
     # Undead
     HeroInfo(
@@ -240,6 +253,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilchaosblademaster.mdx': [r'apimports\evilchaosblademaster.blp'],
     r'apimports\eviltaurenchieftain.mdx': [r'apimports\eviltaurenchieftain.blp'],
     r'apimports\evilshadowhunter.mdx': [r'apimports\evilshadowhunter.blp'],
+    r'apimports\evilrexxar.mdx': [r'apimports\evilrexxar.blp'],
     r'apimports\evilundeadarthas.mdx': [r'apimports\evilundeadarthas.blp'],
     r'apimports\evildeathknight.mdx': [r'apimports\evildeathknight.blp'],
     r'apimports\evildreadlord.mdx': [r'apimports\evildreadlord.blp'],

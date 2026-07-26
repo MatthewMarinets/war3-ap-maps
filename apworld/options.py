@@ -146,7 +146,7 @@ class OptionHeroChoice(baseoptions.Choice):
     option_fel_orc_blademaster = HeroChoice.FEL_ORC_BLADEMASTER.id
     option_ghostly_archmage = HeroChoice.GHOSTLY_ARCHMAGE.id
     # option_ancient_guardian = HeroChoice.ANCIENT_GUARDIAN.id
-    # option_rexxar = HeroChoice.REXXAR.id
+    option_rexxar = HeroChoice.REXXAR.id
     option_rokhan = HeroChoice.ROKHAN.id
     # option_chen_stormstout = HeroChoice.CHEN_STORMSTOUT.id
 
@@ -169,7 +169,7 @@ class OptionHeroChoice(baseoptions.Choice):
     # option_alchemist = HeroChoice.ALCHEMIST.id
     # option_naga_sea_witch = HeroChoice.NAGA_SEA_WITCH.id
     # option_tinker = HeroChoice.TINKER.id
-    # option_beastmaster = HeroChoice.BEASTMASTER.id
+    option_beastmaster = HeroChoice.BEASTMASTER.id
     option_dark_ranger = HeroChoice.DARK_RANGER.id
     # option_firelord = HeroChoice.FIRELORD.id
     # option_pandaren_brewmaster = HeroChoice.PANDAREN_BREWMASTER.id

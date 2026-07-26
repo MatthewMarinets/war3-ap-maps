@@ -367,6 +367,11 @@ giving them a more light/living aesthetic.
   * Eyes turned red
   * Wood made darker and more orangeish
   * Axehead slightly darkened
+* Rexxar / Beastmaster
+  * Unit models are the same; Rexxar portrait model has more detail. Using Rexxar as a base
+  * Skin changed to red
+  * Pelts changed to light tan
+  * Axe trim changed gold -> red
 * Akama
   * Skin turned grey
   * Eye particles changed blue -> red (red background makes appearance go purple -> red)
