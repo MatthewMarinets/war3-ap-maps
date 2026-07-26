@@ -84,7 +84,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 0"
+value = "Victory"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -124,7 +124,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -143,7 +143,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 1"
+value = "Skeleton Item"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -183,7 +183,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -202,7 +202,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 2"
+value = "Nerubian Queen Item"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -242,7 +242,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -261,7 +261,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 3"
+value = "Frost Revenant Item"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -301,7 +301,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -320,7 +320,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 4"
+value = "Pandaren Item"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -360,7 +360,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -379,7 +379,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 5"
+value = "Crypt Fiend Item"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -419,7 +419,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -438,7 +438,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 6"
+value = "Necromancer Item"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -478,7 +478,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -497,7 +497,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 7"
+value = "Nerubian Seer Item"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -537,7 +537,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -556,7 +556,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 8"
+value = "Nerubian Warrior Item"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -596,7 +596,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -615,7 +615,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 9"
+value = "Blue Drake Item"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -655,7 +655,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -674,7 +674,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 10"
+value = "Murloc Nightcrawler Item"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -714,7 +714,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -773,7 +773,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -832,7 +832,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -891,7 +891,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -950,7 +950,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1009,7 +1009,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1068,7 +1068,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1127,7 +1127,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1186,7 +1186,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1245,7 +1245,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1264,7 +1264,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 20"
+value = "Boat 1"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1304,7 +1304,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1323,7 +1323,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 21"
+value = "Boat 2"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1363,7 +1363,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1382,7 +1382,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 22"
+value = "Boat 3"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1422,7 +1422,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1441,7 +1441,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 23"
+value = "Boat 4"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1481,7 +1481,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1500,7 +1500,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 24"
+value = "Boat 5"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1540,7 +1540,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1559,7 +1559,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 25"
+value = "Goblin Merchant"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1599,7 +1599,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1618,7 +1618,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 26"
+value = "Mercenary Camp 1"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1658,7 +1658,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1677,7 +1677,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 27"
+value = "Mercenary Camp 2"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1717,7 +1717,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1736,7 +1736,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 28"
+value = "Mercenary Camp 3"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1776,7 +1776,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1795,7 +1795,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 29"
+value = "Goblin Laboratory"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1835,7 +1835,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1894,7 +1894,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1953,7 +1953,7 @@ modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "war3mapImported\\questionmark_item.mdl"
+value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
