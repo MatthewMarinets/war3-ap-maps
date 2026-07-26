@@ -7,6 +7,7 @@ from dataclasses import dataclass, field
 from datetime import datetime
 import math
 
+from scripts import editor_ids
 from . import wtg, wct, w3i, doo, w3r, w3c, w3s, wts, w3e, w3o, tables
 from .common import (
     TRIGGERS_CUSTOM_TEXT_FILE_NAME,
@@ -97,6 +98,10 @@ def escape_custom_code(line: str) -> str:
     # spaces before ',', and spaces after negative signs like '- 1'.
     # It looks so gross I'm not doing that.
     return line
+
+
+def abil_to_autocast_orders(abil_id: str) -> tuple[str, str]:
+    return editor_ids.ABIL_TO_ON_ORDER_ID.get(abil_id, ''), editor_ids.ABIL_TO_OFF_ORDER_ID.get(abil_id, '')
 
 
 def generate_user_defined_globals(gui_triggers: wtg.W3TriggerData) -> list[str]:
@@ -371,6 +376,10 @@ def generate_unit_setup(
                 f"    set u={create_func}, {unit.x:.1f}, {unit.y:.1f}, "
                 f"{unit.facing * RADIANS_TO_DEGREES:.3f})"
             ).replace(' -', ' - '))
+        for modified_ability in unit.modified_abilities:
+            on_order_id, off_order_id = abil_to_autocast_orders(modified_ability.abil_id)
+            if off_order_id and not modified_ability.autocast_active:
+                sections[section].append(f'    call IssueImmediateOrder({unit_var}, "{off_order_id}")')
         if unit.type_id == 'ngol' or unit.type_id == 'ugol' or unit.type_id == 'egol':
             sections[section].append(f'    call SetResourceAmount({unit_var}, {unit.goldmine_gold_amount})')
         if unit.hero_level > 1:
