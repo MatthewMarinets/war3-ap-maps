@@ -152,7 +152,10 @@ def generate_automatic_globals(
     for camera in cameras.cameras:
         result.append(f'camerasetup gg_cam_{escape_name(camera.name)}= null')
     for sound in sounds.sounds:
-        result.append(f'sound {escape_name(sound.name)}= null')
+        if sound.flags == w3s.SoundFlags.Music:
+            result.append(f'string {escape_name(sound.name)}')
+        else:
+            result.append(f'sound {escape_name(sound.name)}= null')
     for trigger in gui_triggers.triggers:
         result.append(f'trigger gg_trg_{escape_name(trigger.name)}= null')
     for unit in units.units:
@@ -201,7 +204,17 @@ def generate_global_variable_init(gui_triggers: wtg.W3TriggerData) -> list[str]:
             elif variable.variable_type == 'string':
                 initial_value = f'"{initial_value}"'
         if initial_value:
-            result.append(f'    set udg_{escape_name(variable.name)}={initial_value}')
+            if variable.is_array:
+                array_size = variable.array_size
+                variable_name = escape_name(variable.name)
+                result.append('    set i=0')
+                result.append('    loop')
+                result.append(f'        exitwhen ( i > {array_size} )')
+                result.append(f'        set udg_{variable_name}[i]={initial_value}')
+                result.append(f'        set i=i + 1')
+                result.append('    endloop\n')
+            else:
+                result.append(f'    set udg_{escape_name(variable.name)}={initial_value}')
     result.append('endfunction\n')
     return result
 
@@ -277,6 +290,9 @@ def generate_sound_setup(sounds: w3s.War3SoundInfo) -> list[str]:
     result = ['function InitSounds takes nothing returns nothing']
     for sound in sounds.sounds:
         escaped_path = sound.file.replace('\\', '\\\\')
+        if sound.flags == w3s.SoundFlags.Music:
+            result.append(f'    set {sound.name}="{escaped_path}"')
+            continue
         result.append(
             f'    set {sound.name}=CreateSound("{escaped_path}", '
             f'{"true" if w3s.SoundFlags.Looping in sound.flags else "false"}, '
@@ -284,9 +300,15 @@ def generate_sound_setup(sounds: w3s.War3SoundInfo) -> list[str]:
             f'{"true" if w3s.SoundFlags.Stop_Outside_Range in sound.flags else "false"}, '
             f'{sound.fade_in}, {sound.fade_out}, "{sound.effects}")'
         )
-        sound_label, sound_duration = tables.SOUND_DATA[escaped_path, sound.fade_out]
-        result.append(f'    call SetSoundParamsFromLabel({sound.name}, "{sound_label}")')
-        result.append(f'    call SetSoundDuration({sound.name}, {sound_duration})')
+        sound_label, sound_duration = tables.SOUND_DATA.get((escaped_path, sound.fade_out), (None, None))
+        if sound_label is None:
+            result.append(f'    call SetSoundParamsFromLabel({sound.name}, "{sound.name[7:]}")')
+        else:
+            result.append(f'    call SetSoundParamsFromLabel({sound.name}, "{sound_label}")')
+        if sound_duration is None:
+            result.append(f'    call SetSoundDuration({sound.name}, GetSoundDuration({sound.name}))')
+        else:
+            result.append(f'    call SetSoundDuration({sound.name}, {sound_duration})')
         if sound.volume > 0:
             result.append(f'    call SetSoundVolume({sound.name}, {sound.volume})')
     result.append('endfunction\n')
@@ -1218,8 +1240,9 @@ def generate(map_dir: str) -> None:
     result.extend(generate_sound_setup(sounds))
 
     # Destructables
-    result.append(section_header('Destructable Objects'))
-    result.extend(generate_destructable_setup(doodads, info))
+    if info.doodad_vars_used:
+        result.append(section_header('Destructable Objects'))
+        result.extend(generate_destructable_setup(doodads, info))
 
     # Pre-placed items
     result.extend(generate_preplaced_items(units, info, item_data))
