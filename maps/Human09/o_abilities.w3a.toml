@@ -34,6 +34,25 @@ table_column = 0
 value = "6"
 object_id = 'null'
 
+[[blizzard_objects.entities]]
+parent_id = 'Arsg'  # Summon Misha
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'alev'  # AbilityData.Levels
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'arut'  # Profile.Tooltip - Learn - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Summons Misha, a powerful bear, to attack your enemies. |n|n|cffffcc00Level 1|r - <ngzc,realHP> hit points, <ngzc,mindmg1> to <ngzc,maxdmg1> damage. |n|cffffcc00Level 2|r - <ngzd,realHP> hit points, <ngzd,mindmg1> to <ngzd,maxdmg1> damage, has Bash. |n|cffffcc00Level 3|r - <ngza,realHP> hit points, <ngza,mindmg1> to <ngza,maxdmg1> damage, has Maul."
+object_id = 'null'
+
 [map_objects]
 [[map_objects.entities]]
 parent_id = 'ANcl'  # Channel
