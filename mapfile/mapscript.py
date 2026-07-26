@@ -480,6 +480,9 @@ def generate_region_setup(regions: w3r.War3RegionInfo, geometry: w3e.War3Environ
             f'    set gg_rct_{region_name}=Rect({region.left:.1f}, {region.bottom:.1f}, '
             f'{region.right:.1f}, {region.top:.1f})'
         ).replace('-', '- '))
+        if region.weather_effect_id != 'null':
+            result.append(f'    set we=AddWeatherEffect(gg_rct_{region_name}, \'{region.weather_effect_id}\')')
+            result.append(f'    call EnableWeatherEffect(we, true)')
         if region.ambient_sound:
             mid_x = (region.right + region.left) / 2
             mid_y = (region.top + region.bottom) / 2
