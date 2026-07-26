@@ -182,6 +182,21 @@ def update_unit_data(unit_data_file: str) -> None:
             )
         }
     )
+    entities.set_entity(
+        'null', editor_ids.UNIT_REXXAR, {
+            editor_ids.FIELD_UNIT_ABILITIES_HERO: ','.join([
+                editor_ids.ABIL_SUMMON_MISHA_REXXAR,
+                editor_ids.ABIL_SUMMON_QUILBEAST,
+                editor_ids.ABIL_STORM_BOLT,
+                editor_ids.ABIL_STAMPEDE,
+            ]),
+            editor_ids.FIELD_UNIT_GENERAL_TOOLTIP_EXTENDED: (
+                "Warrior Hero, adept at summoning beasts into battle. "
+                "Can learn Summon Misha, Summon Quilbeast, Storm Bolt, and Stampede. "
+                "|n|n|cffffcc00Attacks land and air units.|r"
+            )
+        }
+    )
     with open(unit_data_file, 'w') as fp:
         fp.write(w3o.as_text(units_data))
 
@@ -202,6 +217,18 @@ def upgrade_abil_data(abil_data_file: str) -> None:
                 "Creates a swarm of angry spirits that drain the life energies of nearby enemy units. "
                 "They store the life energy they drain from their victims and use it to replenish "
                 "Rokhan's hit points when they return.|n|nLasts <AOls,HeroDur1> seconds."
+            ),
+        }
+    )
+    entities.set_entity(
+        'null', editor_ids.ABIL_SUMMON_MISHA_REXXAR, {
+            editor_ids.FIELD_ABIL_STATS_LEVELS: 3,
+            editor_ids.FIELD_ABIL_TOOLTIP_LEARN_EXTENDED: (
+                "Summons Misha, a powerful bear, to attack your enemies. "
+                "|n|n|cffffcc00Level 1|r - <ngzc,realHP> hit points, <ngzc,mindmg1> to <ngzc,maxdmg1> damage. "
+                "|n|cffffcc00Level 2|r - <ngzd,realHP> hit points, <ngzd,mindmg1> to <ngzd,maxdmg1> damage, has Bash. "
+                "|n|cffffcc00Level 3|r - <ngza,realHP> hit points, <ngza,mindmg1> to <ngza,maxdmg1> damage, has Maul."
+                # "|n|cffffcc00Level 4|r - <ngz4,realHP> hit points, <ngz4,mindmg1> to <ngz4,maxdmg1> damage, has Maul."
             ),
         }
     )

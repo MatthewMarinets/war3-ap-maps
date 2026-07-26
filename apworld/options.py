@@ -127,14 +127,14 @@ class OptionHeroChoice(baseoptions.Choice):
     option_sylvanas = HeroChoice.SYLVANAS.id
     option_varimathras = HeroChoice.VARIMATHRAS.id
     option_anub_arak = HeroChoice.ANUB_ARAK.id
-    option_tyrande = HeroChoice.TYRANDE.id
-    option_furion = HeroChoice.FURION.id
-    option_illidan = HeroChoice.ILLIDAN.id
-    option_maiev = HeroChoice.MAIEV.id
-    option_malfurion = HeroChoice.MALFURION.id
+    # option_tyrande = HeroChoice.TYRANDE.id
+    # option_furion = HeroChoice.FURION.id
+    # option_illidan = HeroChoice.ILLIDAN.id
+    # option_maiev = HeroChoice.MAIEV.id
+    # option_malfurion = HeroChoice.MALFURION.id
     option_kael = HeroChoice.KAEL.id
-    option_lady_vashj = HeroChoice.LADY_VASHJ.id
-    option_demon_illidan = HeroChoice.DEMON_ILLIDAN.id
+    # option_lady_vashj = HeroChoice.LADY_VASHJ.id
+    # option_demon_illidan = HeroChoice.DEMON_ILLIDAN.id
     option_akama = HeroChoice.AKAMA.id
     option_lord_garithos = HeroChoice.LORD_GARITHOS.id
 
@@ -145,10 +145,10 @@ class OptionHeroChoice(baseoptions.Choice):
     option_antonidas = HeroChoice.ANTONIDAS.id
     option_fel_orc_blademaster = HeroChoice.FEL_ORC_BLADEMASTER.id
     option_ghostly_archmage = HeroChoice.GHOSTLY_ARCHMAGE.id
-    option_ancient_guardian = HeroChoice.ANCIENT_GUARDIAN.id
-    option_rexxar = HeroChoice.REXXAR.id
+    # option_ancient_guardian = HeroChoice.ANCIENT_GUARDIAN.id
+    # option_rexxar = HeroChoice.REXXAR.id
     option_rokhan = HeroChoice.ROKHAN.id
-    option_chen_stormstout = HeroChoice.CHEN_STORMSTOUT.id
+    # option_chen_stormstout = HeroChoice.CHEN_STORMSTOUT.id
 
     option_paladin = HeroChoice.PALADIN.id
     option_archmage = HeroChoice.ARCHMAGE.id
@@ -162,17 +162,17 @@ class OptionHeroChoice(baseoptions.Choice):
     option_lich = HeroChoice.LICH.id
     option_dreadlord = HeroChoice.DREADLORD.id
     option_crypt_lord = HeroChoice.CRYPT_LORD.id
-    option_priestess_of_the_moon = HeroChoice.PRIESTESS_OF_THE_MOON.id
-    option_keeper_of_the_grove = HeroChoice.KEEPER_OF_THE_GROVE.id
-    option_demon_hunter = HeroChoice.DEMON_HUNTER.id
-    option_warden = HeroChoice.WARDEN.id
-    option_alchemist = HeroChoice.ALCHEMIST.id
-    option_naga_sea_witch = HeroChoice.NAGA_SEA_WITCH.id
-    option_tinker = HeroChoice.TINKER.id
-    option_beastmaster = HeroChoice.BEASTMASTER.id
+    # option_priestess_of_the_moon = HeroChoice.PRIESTESS_OF_THE_MOON.id
+    # option_keeper_of_the_grove = HeroChoice.KEEPER_OF_THE_GROVE.id
+    # option_demon_hunter = HeroChoice.DEMON_HUNTER.id
+    # option_warden = HeroChoice.WARDEN.id
+    # option_alchemist = HeroChoice.ALCHEMIST.id
+    # option_naga_sea_witch = HeroChoice.NAGA_SEA_WITCH.id
+    # option_tinker = HeroChoice.TINKER.id
+    # option_beastmaster = HeroChoice.BEASTMASTER.id
     option_dark_ranger = HeroChoice.DARK_RANGER.id
-    option_firelord = HeroChoice.FIRELORD.id
-    option_pandaren_brewmaster = HeroChoice.PANDAREN_BREWMASTER.id
+    # option_firelord = HeroChoice.FIRELORD.id
+    # option_pandaren_brewmaster = HeroChoice.PANDAREN_BREWMASTER.id
     option_pit_lord = HeroChoice.PIT_LORD.id
 
 
