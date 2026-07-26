@@ -136,7 +136,7 @@ class HeroChoice(enum.Enum):
     RANGER_SYLVANAS =     34, "Sylvanas Windrunner", HeroClass.RANGER, HeroSource.ENEMY, GameID.SYLVANAS_ELF  # Cold Arrows, Scout, Trueshot Aura, Starfall
     ANTONIDAS =           35, "Antonidas", HeroClass.ARCHMAGE, HeroSource.ENEMY, GameID.ANTONIDAS
     FEL_ORC_BLADEMASTER = 36, "Rend", HeroClass.BLADEMASTER, HeroSource.ENEMY, GameID.CHAOS_BLADEMASTER
-    GHOST_ANTONIDAS =     37, "Ghost Antonidas", HeroClass.ARCHMAGE, HeroSource.ENEMY, GameID.GHOST_ANTONIDAS
+    GHOSTLY_ARCHMAGE =    37, "Ghost Antonidas", HeroClass.ARCHMAGE, HeroSource.ENEMY, GameID.GHOSTLY_ARCHMAGE
     ANCIENT_GUARDIAN =    38, "Ghost", HeroClass.KEEPER_OF_THE_GROVE, HeroSource.ENEMY, GameID.GHOST_KEEPER_OF_THE_GROVE
     # DAGREN_THE_ORCSLAYER = _, "Dagren the Orcslayer", HeroClass.PALADIN, HeroSource.ENEMY, GameID.DAGREN_THE_ORCSLAYER
     # HALAHK_THE_LIFEBRINGER = _, "Halahk the Lifebringer", HeroClass.PALADIN, HeroSource.ENEMY, GameID.HALAHK_THE_LIFEBRINGER
@@ -271,7 +271,7 @@ HERO_CHOICE_TO_CHAOS_HERO_ID: dict[HeroChoice, str] = {
     HeroChoice.RANGER_SYLVANAS: CustomIDs.UNIT_CORRUPTED_SYLVANAS,
     HeroChoice.ANTONIDAS: CustomIDs.UNIT_CORRUPTED_ANTONIDAS,
     HeroChoice.FEL_ORC_BLADEMASTER: CustomIDs.UNIT_CORRUPTED_FEL_ORC_BLADEMASTER,
-    HeroChoice.GHOST_ANTONIDAS: CustomIDs.UNIT_CORRUPTED_GHOST_ANTONIDAS,
+    HeroChoice.GHOSTLY_ARCHMAGE: CustomIDs.UNIT_CORRUPTED_GHOSTLY_ARCHMAGE,
     HeroChoice.ANCIENT_GUARDIAN: CustomIDs.UNIT_CORRUPTED_ANCIENT_GUARDIAN,
     HeroChoice.REXXAR: CustomIDs.UNIT_CORRUPTED_REXXAR,
     HeroChoice.ROKHAN: CustomIDs.UNIT_CORRUPTED_ROKHAN,

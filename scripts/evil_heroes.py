@@ -79,6 +79,13 @@ HERO_INFO = [
         # Note: default Garithos scaling is 1.1
         scaling=1.2,
     ),
+    HeroInfo(
+        GameID.GHOSTLY_ARCHMAGE, CustomIDs.UNIT_CORRUPTED_GHOSTLY_ARCHMAGE,
+        r'apimports\evilarchmageghost.mdx', CustomIDs.ABIL_CHAOS_GHOSTLY_ARCHMAGE,
+        other_updates={
+            eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_DEMON_HUNTER,
+        }
+    ),
 
     HeroInfo(
         GameID.MOUNTAIN_KING, CustomIDs.UNIT_CORRUPTED_MOUNTAIN_KING,
@@ -223,6 +230,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilmuradin.mdx': [r'apimports\evilmountainking.blp'],
     r'apimports\evilpaladin.mdx': [r'apimports\evilpaladin.blp'],
     r'apimports\evilarchmage.mdx': [r'apimports\evilarchmage.blp'],
+    r'apimports\evilarchmageghost.mdx': [r'apimports\evilarchmage.blp'],
     r'apimports\evilkael.mdx': [r'apimports\evilkael.blp'],
     r'apimports\evilgarithos.mdx': [r'apimports\evilgarithos.blp'],
     r'apimports\evilsylvanasranger.mdx': [r'apimports\evilsylvanasranger.blp'],

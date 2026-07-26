@@ -259,13 +259,21 @@ giving them a more light/living aesthetic.
   * Facial lines darkened
   * Lion emblem given faint red glowy eyes
 * Antonidas / Archmage
+  * Skin made paler
+  * Beard darkened
   * Eyes changed green -> dark red
   * Horse eyes changed to red
   * Staff changed darker wood, crystal tip blue -> pink
   * Horse mane changed white -> off-red
   * Robe trim darkened
   * Runes on robe trim changed yellow -> red
-  * Beard slightly darkened
+  * Attack changed to dragon fire breath
+  * Channeling particle changed blue -> pink
+* Ghostly Archmage
+  * Shares a texture with Archmage, inherits all texture changes
+  * Channeling particle changed blue -> pink
+  * Attack windup particle changed to green fire
+  * Attack changed to flaming green rock
 * Kael / Blood Mage (Kael model base)
   * Sphere orbiters changed to:
     * Abilities\Spells\Orc\Bloodlust\BloodlustTarget.mdl  (Translucent red fire orb)
