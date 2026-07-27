@@ -220,10 +220,9 @@ class ItemChannel(enum.IntEnum):
     NIGHT_ELF =      5   # Tyrande, Furion
     ROC_ILLIDAN =    6   # Illidan
     TFT_NIGHT_ELF =  7   # Maiev, Tyrande, Malfurion
-    TFT_ILLIDAN =    8   # Illidan
-    BLOOD_ELF =      9   # Kael, Lady Vashj, (Illidan), Akama
-    SCOURGE =        10  # Arthas, Kel'Thuzad (UDx1), Anub'arak
-    FORSAKEN =       11  # Sylvanas, Varimathras, Garithos
+    ILLIDAN_KAEL =   8   # Illidan, Kael, Lady Vashj, Akama
+    SCOURGE =        9   # Arthas, Kel'Thuzad (UDx1), Anub'arak
+    FORSAKEN =       10  # Sylvanas, Varimathras, Garithos
 
 
 HERO_SLOT_TO_DEFAULT_CHOICE = {
