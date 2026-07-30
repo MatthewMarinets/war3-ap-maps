@@ -24,6 +24,7 @@ MERCENARIES_FILE = f'{PRELOADER_DIR}/mercenaries.txt'
 SETTINGS_FILE = f'{PRELOADER_DIR}/settings.txt'
 MISSIONS_FILE = f'{PRELOADER_DIR}/missions.txt'
 
+FIRST_TRANSMISSION_UNSET = -100
 NUM_FILE_LINES = 10
 MAX_LOCATIONS = 30  # Should match status.j
 MAX_UPDATE_ID = 100000  # Should match status.j
@@ -166,13 +167,14 @@ class HeroStatus:
 
 @dataclass(slots=True)
 class MissionStatus:
-    update_number: int = -100
+    update_number: int = FIRST_TRANSMISSION_UNSET
     world_id: int = -1
     mission_id: int = -1
     packet_status: dict[PacketType, PacketStatus] = field(default_factory=default_packet_status)
     locations_collected: dict[int, int] = field(default_factory=default_locations_collected)
     """Mapping location ID -> state. 0=uncollected, 1=collected, -1=pending force-uncollect"""
     errors: MissionError = MissionError.NONE
+    first_transmission: int = FIRST_TRANSMISSION_UNSET
 
     def clear_locations(self) -> None:
         for k in self.locations_collected:
@@ -544,6 +546,10 @@ def read_status(status: MissionStatus, game_status: GameStatus) -> None:
         status.update_number = (int(line_contents(lines.pop(0))) + 1) % MAX_UPDATE_ID
     except IndexError:
         return
+    if status.first_transmission == FIRST_TRANSMISSION_UNSET:
+        status.first_transmission = status.update_number
+    elif status.update_number != status.first_transmission:
+        status.first_transmission = FIRST_TRANSMISSION_UNSET - 1
     game_comm_version = tuple(map(int, line_contents(lines.pop(0)).split('.')))
     if not game_comm_version or game_comm_version[0] != COMM_VERSION[0]:
         if not (status.errors & MissionError.VERSION_MISMATCH):
@@ -574,14 +580,15 @@ def read_status(status: MissionStatus, game_status: GameStatus) -> None:
     last_transmissions = [int(x) for x in line_contents(lines.pop(0)).split(',')]
     game_status.next_hero_update = int(line_contents(lines.pop(0)))
     num_items_received = [int(x) for x in line_contents(lines.pop(0)).split(',')]
-    for item_channel, num_received in zip(
-        tables.mission_to_item_channel(
-            missions.ID_TO_MISSION.get(status.mission_id, missions.Wc3Mission.GENERAL)
-        ),
-        num_items_received
-    ):
-        if item_channel != heroes.ItemChannel.NONE:
-            game_status.item_channel_state[item_channel].items_acked = num_received
+    if status.update_number != status.first_transmission:
+        for item_channel, num_received in zip(
+            tables.mission_to_item_channel(
+                missions.ID_TO_MISSION.get(status.mission_id, missions.Wc3Mission.GENERAL)
+            ),
+            num_items_received
+        ):
+            if item_channel != heroes.ItemChannel.NONE:
+                game_status.item_channel_state[item_channel].items_acked = num_received
     lines.pop(0)  # reserved
     lines.pop(0)  # reserved
     if len(last_transmissions) > NUM_PACKET_TYPES:
@@ -640,6 +647,10 @@ def read_necessary_hero_status(status: MissionStatus, game_status: GameStatus) -
     if status.mission_id < 0:
         return
     if game_status.last_hero_update == game_status.next_hero_update:
+        return
+    if (status.first_transmission == FIRST_TRANSMISSION_UNSET
+        or status.first_transmission == status.update_number
+    ):
         return
     mission = missions.ID_TO_MISSION.get(status.mission_id)
     if mission is None:

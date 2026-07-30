@@ -1,11 +1,14 @@
 """Runtime client for communicating with the AP server. Requires core imports."""
-from typing import Sequence, cast, Iterable
+from typing import Sequence, cast, Iterable, Any
 import asyncio
 import multiprocessing
 from collections import Counter
 from dataclasses import dataclass, field
 import time
-from datetime import datetime
+import os
+import shutil
+import time
+import tomllib
 import colorama
 
 from CommonClient import CommonContext, server_loop, ClientCommandProcessor, gui_enabled, get_base_parser, handle_url_arg
@@ -111,16 +114,41 @@ class Wc3CommandProcessor(ClientCommandProcessor):
         """Debug: prints current value of a member of the communication client"""
         parts = key.split('.')
         current: dict|list|object = self.ctx.comm_ctx
-        for part in parts:
+        for index, part in enumerate(parts):
             if part.isnumeric():
                 part = int(part)  # type: ignore
             if isinstance(current, dict):
-                current = current[part]
+                try:
+                    current = current[part]
+                except KeyError:
+                    logger.warning(f'Dict member {".".join(parts[:index])} has no key {part}')
+                    logger.warning(f'Valid keys are: {list(current)}')
+                    return
             elif isinstance(current, list):
-                current = current[int(part)]
+                try:
+                    current = current[int(part)]
+                except IndexError:
+                    logger.warning(f'List member {".".join(parts[:index])} has no index {part}')
+                    logger.warning(f'The length of the member is: {len(current)}')
+                    return
             else:
-                current = getattr(current, part)
+                try:
+                    current = getattr(current, part)
+                except AttributeError:
+                    logger.warning(f'Object member {".".join(parts[:index])} has no member {part}')
+                    logger.warning(f'Valid attributes are: {[x for x in dir(current) if not x.startswith("_")]}')
+                    return
         logger.info(current)
+        return True
+
+    def _cmd_save(self) -> bool:
+        """Save the hero state to a local file"""
+        save_hero_state(self.ctx.comm_ctx.game_status)
+        return True
+
+    def _cmd_load(self) -> bool:
+        """Load the hero state from a local file"""
+        load_hero_state(self.ctx.comm_ctx.game_status)
         return True
 
 
@@ -204,8 +232,10 @@ class Wc3Context(CommonContext):
                 allocation[int(key)] = cast(GameID, value)
         for hero_id, hero_class_id in slot_data["hero_class"].items():
             self.comm_ctx.game_status.hero_data[int(hero_id)].hero = heroes.HERO_CHOICE_ID_TO_DATA[hero_class_id]
+            self.comm_ctx.game_status.hero_data[int(hero_id)].reset_abils()
         for hero_id, hero_name in slot_data["hero_names"].items():
             self.comm_ctx.game_status.hero_data[int(hero_id)].name = hero_name
+        load_hero_state(self.comm_ctx.game_status)
 
         # Mission Order
         self.comm_ctx.game_status.mission_order.clear()
@@ -359,6 +389,7 @@ class Wc3Context(CommonContext):
             async_start(self.send_msgs([{
                 "cmd": 'StatusUpdate', "status": ClientStatus.CLIENT_GOAL,
             }]))
+        save_hero_state(self.comm_ctx.game_status)
 
     def evaluate_requirements(self, affected_slots: list[tuple[int, int]]) -> None:
         removal_indices: list[int] = []
@@ -416,6 +447,169 @@ class Wc3Context(CommonContext):
         start_gui(self)
 
 
+def load_hero_state(game_status: comm.GameStatus) -> None:
+    save_file_dir = os.path.expanduser("~/Documents/Archipelago")
+    save_file_path = f"{save_file_dir}/wc3save.toml"
+    if not os.path.isfile(save_file_path):
+        logger.debug(f"No save file data found at {save_file_path}")
+        return
+    try:
+        with open(save_file_path, "rb") as fp:
+            all_save_data = tomllib.load(fp)
+    except tomllib.TOMLDecodeError:
+        logger.debug(f"Invalid save data format at {save_file_path}")
+        return
+    save_data = all_save_data.get(str(game_status.world_id))
+    if save_data is None:
+        logger.debug(f"No save data for world ID {game_status.world_id} in {save_file_path}")
+        return
+    if not isinstance(save_data, dict):
+        logger.debug(f"Invalid data format for world ID {game_status.world_id} in {save_file_path}")
+        return
+    all_hero_save_data = save_data.get("heroes", {})
+    for hero_id, hero_data in game_status.hero_data.items():
+        hero_save_data = all_hero_save_data.get(str(hero_id))
+        if not isinstance(hero_save_data, dict):
+            continue
+        xp_data = hero_save_data.get("xp")
+        if isinstance(xp_data, int):
+            hero_data.xp = xp_data
+        strength = hero_save_data.get("strength")
+        if isinstance(strength, int):
+            hero_data.strength = strength
+        agility = hero_save_data.get("agility")
+        if isinstance(agility, int):
+            hero_data.agility = agility
+        intelligence = hero_save_data.get("intelligence")
+        if isinstance(intelligence, int):
+            hero_data.intelligence = intelligence
+        max_health = hero_save_data.get("max_health")
+        if isinstance(max_health, int):
+            hero_data.max_health = max_health
+        abilities = hero_save_data.get("abilities")
+        if isinstance(abilities, dict):
+            for abil_key in hero_data.abilities:
+                abil_level = abilities.get(abil_key)
+                if isinstance(abil_level, int) and abil_level >= 0:
+                    hero_data.abilities[abil_key] = abil_level
+        inventory_items = hero_save_data.get("items")
+        if isinstance(inventory_items, list):
+            for index, inventory_item in enumerate(inventory_items):
+                hero_data.items[index].item_id = None
+                hero_data.items[index].charges = 0
+                if not isinstance(inventory_item, dict):
+                    continue
+                item_id = inventory_item.get("item_id")
+                if isinstance(item_id, str) and item_id:
+                    hero_data.items[index].item_id = item_id
+                charges = inventory_item.get("charges", 0)
+                if isinstance(charges, int) and charges >= 0:
+                    hero_data.items[index].charges = charges
+
+    all_item_channel_save_data = save_data.get("items", {})
+    for item_channel, item_channel_state in game_status.item_channel_state.items():
+        item_channel_save_data = all_item_channel_save_data.get(str(item_channel), {})
+        item_channel_state.items_acked = item_channel_save_data.get("count", 0)
+
+
+def save_hero_state(game_status: comm.GameStatus) -> None:
+    save_file_dir = os.path.expanduser("~/Documents/Archipelago")
+    save_file_path = f"{save_file_dir}/wc3save.toml"
+    save_data: dict[str, Any] = {}
+    if os.path.isdir(save_file_path):
+        logger.debug(f"Save file path {save_file_path} exists as a directory; removing it")
+        shutil.rmtree(save_file_path)
+    # Load existing save file data
+    if os.path.isfile(save_file_path):
+        try:
+            with open(save_file_path, "rb") as fp:
+                save_data = tomllib.load(fp)
+        except tomllib.TOMLDecodeError:
+            logger.debug(f"Save data at {save_file_path} could not be read; resetting it")
+
+    this_save_data: dict[str, Any] = save_data.get(str(game_status.world_id), {})
+
+    # Clear keys that have a save time and are more than two months out of date
+    now = time.time()
+    pop_keys: list[str] = []
+    SECONDS_PER_60_DAYS = 60 * 60 * 24 * 60
+    for key, value in save_data.items():
+        if isinstance(value, dict):
+            save_time = value.get("save_time", now)
+            if isinstance(save_time, float) and now - save_time > SECONDS_PER_60_DAYS:
+                pop_keys.append(key)
+    for pop_key in pop_keys:
+        save_data.pop(pop_key)
+
+    # Fill save data
+    save_data[str(game_status.world_id)] = this_save_data
+    this_save_data["save_time"] = now
+    # Heroes
+    hero_save_data = this_save_data.setdefault("heroes", {})
+    for hero, hero_status in game_status.hero_data.items():
+        hero_data = {
+            "xp": hero_status.xp,
+            "strength": hero_status.strength,
+            "agility": hero_status.agility,
+            "intelligence": hero_status.intelligence,
+            "max_health": hero_status.max_health,
+            "abilities": hero_status.abilities,
+            "items": [
+                {"item_id": inventory_item.item_id or "", "charges": inventory_item.charges}
+                for inventory_item in hero_status.items
+            ]
+        }
+        hero_save_data[str(hero)] = hero_data
+    # Item channels
+    item_save_data = this_save_data.setdefault("items", {})
+    for item_channel, item_channel_data in game_status.item_channel_state.items():
+        if item_channel_data.items_acked:
+            item_save_data[str(item_channel)] = {"count": item_channel_data.items_acked}
+
+    # Write the toml
+    def write_toml_table(
+        keys: list[str],
+        table_value: dict[str, Any],
+        result_lines: list[str],
+        table_levels: int = 2
+    ) -> None:
+        if keys:
+            result_lines.append(f"[{'.'.join(keys)}]")
+        for key, value in table_value.items():
+            if isinstance(value, dict) and table_levels > 0:
+                continue
+            write_toml_key(key, value, result_lines)
+        if table_levels > 0:
+            for key, value in table_value.items():
+                if not isinstance(value, dict):
+                    continue
+                write_toml_table(keys + [key], value, result_lines, table_levels - 1)
+
+    def write_toml_key(key: str, value: Any, result_lines: list[str]) -> None:
+        result_lines.append(f"{key} = {write_toml_inline(value)}")
+
+    def write_toml_inline(value: Any) -> str:
+        if isinstance(value, bool):
+            return str(value).lower()
+        if isinstance(value, (int, float)):
+            return str(value)
+        if isinstance(value, str):
+            return f'"{value.replace("\\", "\\\\")}"'
+        if isinstance(value, list):
+            return f"[\n    {',\n    '.join(write_toml_inline(v) for v in value)},\n]"
+        if isinstance(value, dict):
+            parts = [f"{key} = {write_toml_inline(v)}" for key, v in value.items()]
+            return f"{{ {', '.join(parts)} }}"
+        raise ValueError(f"Unknown argument type: {type(value).__name__}")
+
+    result_lines: list[str] = []
+    write_toml_table([], save_data, result_lines, table_levels=3)
+
+    os.makedirs(os.path.dirname(save_file_path), exist_ok=True)
+    with open(save_file_path, "w") as fp:
+        fp.write("\n".join(result_lines))
+
+
 class Wc3JSONtoTextParser(JSONtoTextParser):
     def __init__(self, ctx: Wc3Context) -> None:
         self.handlers = {
@@ -463,6 +657,7 @@ async def main(cli_args: Sequence[str] | None):
     asyncio.create_task(comm.status_loop(ctx.comm_ctx))
 
     await ctx.exit_event.wait()
+    save_hero_state(ctx.comm_ctx.game_status)
     ctx.comm_ctx.running = False
     await ctx.shutdown()
 
