@@ -3,7 +3,7 @@
     "configurations": [
         {
             "name": "Python: current file",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "program": "${file}",
             "cwd": "${workspaceFolder}",
@@ -19,11 +19,27 @@
         },
         {
             "name": "Python: comm",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "module": "apworld.client.standalone",
             "cwd": "${workspaceFolder}",
             "args": [],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "presentation": {
+                "hidden": false,
+                "group": "python",
+                "order": 1,
+            }
+        },
+        {
+            "name": "mapscript",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "mapfile.mapscript",
+            "cwd": "${workspaceFolder}",
+            "args": ["maps/Human07"],
             "env": {
                 "PYTHONPATH": "${workspaceFolder}"
             },

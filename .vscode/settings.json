@@ -11,6 +11,11 @@
         // "*.slk": "blpPreview.previewEditor",
     },
     "editor.rulers": [110],
+    "files.exclude": {
+        "venv/**": true,
+        "mypy_cache/**": true,
+        "**/__pycache__": true,
+    },
     // disable default slk by going to the extension and changing the
     // filename pattern on line 78
     // C:\Users\<user>\.vscode-oss\extensions\hugehardzhang.blp-preview-0.4.2\package.json
