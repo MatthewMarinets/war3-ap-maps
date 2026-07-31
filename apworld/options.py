@@ -1,6 +1,7 @@
 """Defines options. Requires core imports."""
 from typing import TYPE_CHECKING, Type, Iterable
 from dataclasses import dataclass
+import random
 
 import Options as baseoptions
 
@@ -175,6 +176,67 @@ class OptionHeroChoice(baseoptions.Choice):
     # option_pandaren_brewmaster = HeroChoice.PANDAREN_BREWMASTER.id
     option_pit_lord = HeroChoice.PIT_LORD.id
 
+    alias_cairne = HeroChoice.CAIRNE_BLOODHOOF.id
+    alias_muradin = HeroChoice.MURADIN_BRONZEBEARD.id
+    alias_arthas = HeroChoice.PALADIN_ARTHAS.id
+    alias_arthas_paladin = HeroChoice.PALADIN_ARTHAS.id
+    alias_arthas_death_knight = HeroChoice.DEATH_KNIGHT_ARTHAS.id
+    alias_kelthuzad = HeroChoice.KEL_THUZAD.id
+    alias_anubarak = HeroChoice.KEL_THUZAD.id
+    alias_grom = HeroChoice.GROM_HELLSCREAM.id
+    alias_kaelthas = HeroChoice.KAEL.id
+    alias_kael_thas = HeroChoice.KAEL.id
+    alias_garithos = HeroChoice.LORD_GARITHOS.id
+    alias_sylvanas_ranger = HeroChoice.RANGER_SYLVANAS.id
+
+    @classmethod
+    def from_text(cls, text: str) -> baseoptions.Choice:
+        text = text.replace("'", "_").replace(" ", "_")
+        if text.lower() == "random-human":
+            return cls(random.choice((
+                HeroChoice.PALADIN_ARTHAS.id,
+                HeroChoice.JAINA.id,
+                HeroChoice.MURADIN_BRONZEBEARD.id,
+                HeroChoice.KAEL.id,
+                HeroChoice.LORD_GARITHOS.id,
+                HeroChoice.UTHER.id,
+                HeroChoice.ANTONIDAS.id,
+                HeroChoice.RANGER_SYLVANAS.id,
+                HeroChoice.GHOSTLY_ARCHMAGE.id,
+                HeroChoice.PALADIN.id,
+                HeroChoice.ARCHMAGE.id,
+                HeroChoice.MOUNTAIN_KING.id,
+                HeroChoice.BLOOD_MAGE.id,
+            )))
+        if text.lower() == "random-orc":
+            return cls(random.choice((
+                HeroChoice.THRALL.id,
+                HeroChoice.CAIRNE_BLOODHOOF.id,
+                HeroChoice.GROM_HELLSCREAM.id,
+                HeroChoice.FEL_ORC_BLADEMASTER.id,
+                HeroChoice.REXXAR.id,
+                HeroChoice.ROKHAN.id,
+                HeroChoice.BLADEMASTER.id,
+                HeroChoice.FAR_SEER.id,
+                HeroChoice.TAUREN_CHIEFTAIN.id,
+                HeroChoice.SHADOW_HUNTER.id,
+            )))
+        if text.lower() == "random-undead":
+            return cls(random.choice((
+                HeroChoice.DEATH_KNIGHT_ARTHAS.id,
+                HeroChoice.KEL_THUZAD.id,
+                HeroChoice.SYLVANAS.id,
+                HeroChoice.VARIMATHRAS.id,
+                HeroChoice.ANUB_ARAK.id,
+                HeroChoice.MAL_GANIS.id,
+                HeroChoice.DETHEROC.id,
+                HeroChoice.DEATH_KNIGHT.id,
+                HeroChoice.LICH.id,
+                HeroChoice.DREADLORD.id,
+                HeroChoice.CRYPT_LORD.id,
+            )))
+        return super().from_text(text)
+
 
 class OptionHeroName(baseoptions.FreeText):
     max_length = 30
@@ -191,7 +253,7 @@ class OptionHeroName(baseoptions.FreeText):
         for index, char in enumerate(self.value):
             if ord(char) < ord(' ') or ord(char) > ord('~'):
                 if char not in self.valid_nonascii_letters:
-                    raise Exception(
+                    raise baseoptions.OptionError(
                         f"Character '{char}' in option {self} (offset {index}) is not a valid letter"
                     )
         if len(self.value) > self.max_length:
