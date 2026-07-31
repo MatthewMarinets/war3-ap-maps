@@ -165,6 +165,11 @@ HERO_INFO = [
             eid.FIELD_UNIT_ABILITIES_HERO: ','.join([
                 eid.ABIL_SUMMON_MISHA_REXXAR, eid.ABIL_SUMMON_QUILBEAST, eid.ABIL_STORM_BOLT, eid.ABIL_STAMPEDE,
             ]),
+            eid.FIELD_UNIT_GENERAL_TOOLTIP_EXTENDED: (
+                "Warrior Hero, adept at summoning beasts into battle. "
+                "Can learn Summon Misha, Summon Quilbeast, Storm Bolt, and Stampede. "
+                "|n|n|cffffcc00Attacks land and air units.|r"
+            )
         }
     ),
     HeroInfo(

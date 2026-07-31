@@ -220,3 +220,71 @@ path = 'apimports\evilshadowhunter_portrait.mdx'
 [[imports]]
 path_type = 13
 path = 'apimports\evilshadowhunter.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilsylvanasranger.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilsylvanasranger_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilsylvanasranger.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilarchmageghost.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilarchmageghost_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilrexxar.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilrexxar_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilrexxar.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilundeadsylvanas.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilundeadsylvanas_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilundeadsylvanas.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilpitlord.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilpitlord_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilpitlord.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilakama.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilakama_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilakama.blp'
