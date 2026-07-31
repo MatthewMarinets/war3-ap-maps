@@ -97,7 +97,7 @@ function InitTrig_debug takes nothing returns nothing
     call TriggerRegisterPlayerChatEvent(t_heal, USER_PLAYER, "-heal", false)
     call TriggerAddAction(t_heal, function debug_heal)
     set t_colour_unit=CreateTrigger()
-    call TriggerRegisterPlayerChatEvent( t_colour_unit, USER_PLAYER, "-colourunit", false )
+    call TriggerRegisterPlayerChatEvent(t_colour_unit, USER_PLAYER, "-colourunit", false )
     call TriggerAddAction(t_colour_unit, function debug_colour_unit)
     set t_print=CreateTrigger()
     call TriggerRegisterPlayerChatEvent(t_print, USER_PLAYER, "-print", false)

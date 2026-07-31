@@ -136,8 +136,8 @@ constant integer MAX_LOCATIONS = 30
 constant integer MAX_ITEMS_PER_PACKET = 12
 integer update_index = -1
 integer hero_status_index = -1
-integer num_channel_1_items_received = 0
-integer num_channel_2_items_received = 0
+integer num_channel_1_items_received = -1
+integer num_channel_2_items_received = -1
 integer array gold_granted
 timer status_ack_ping_timer
 trigger t_captain_promoted
@@ -293,6 +293,13 @@ function status_load_items takes nothing returns nothing
     local integer item_id = 0
     local player p = Player(0)
     local unit target_unit = null
+
+    if bj_cineModeAlreadyIn then
+        return
+    endif
+    if num_channel_1_items_received == -1 then
+        return
+    endif
     call SetPlayerTechMaxAllowed(p, 'nech', -1)
     call SetPlayerTechMaxAllowed(p, 'nalb', 0)
     call SetPlayerTechMaxAllowed(p, 'ndog', 0)
@@ -337,7 +344,9 @@ function status_load_items takes nothing returns nothing
 endfunction
 
 function status_init_item_channels takes integer local_channel_id returns nothing
-    if local_channel_id == 1 then
+    if local_channel_id < 1 or local_channel_id > 2 then
+        call print("|cffff1111ERROR: Calling init_item_channels() with out of bounds local_channel_id " + I2S(local_channel_id) + "|r")
+    elseif local_channel_id == 1 then
         call SetPlayerTechMaxAllowed(Player(0), 'nalb', item_channel_1)
     else
         call SetPlayerTechMaxAllowed(Player(0), 'nalb', item_channel_2)
@@ -346,10 +355,10 @@ function status_init_item_channels takes integer local_channel_id returns nothin
     call SetPlayerTechMaxAllowed(Player(0), 'nske', 0)
     call SetPlayerTechMaxAllowed(Player(0), 'npng', -1)
     call io_read_file_simple("item_channels.txt")
-    set last_item_channel_packet = GetPlayerTechMaxAllowed(Player(0), 'nech')
-    if GetPlayerTechMaxAllowed(Player(0), 'nech') == 0 then
+    if GetPlayerTechMaxAllowed(Player(0), 'nech') == 2147483647 then
         return
     endif
+    set last_item_channel_packet = GetPlayerTechMaxAllowed(Player(0), 'nech')
     if local_channel_id == 1 then
         set num_channel_1_items_received = GetPlayerTechMaxAllowed(Player(0), 'npng')
     else
@@ -386,6 +395,7 @@ endfunction
 function status_load_missions takes nothing returns nothing
     local integer i = 100
     local player p = Player(0)
+    call SetPlayerTechMaxAllowed(p, 'ndog', 0)
     loop
         exitwhen i >= 300
         call SetPlayerTechMaxAllowed(p, i, 0)
@@ -458,9 +468,9 @@ function status_check_ping takes nothing returns nothing
     endif
     if bitmask >= 32 then
         set bitmask = bitmask - 32
-        call status_init_item_channels(0)
+        call status_init_item_channels(1)
         if item_channel_2 > 0 then
-            call status_init_item_channels(1)
+            call status_init_item_channels(2)
         endif
     endif
     if bitmask >= 16 then
@@ -977,7 +987,7 @@ function InitTrig_debug takes nothing returns nothing
     call TriggerRegisterPlayerChatEvent(t_heal, USER_PLAYER, "-heal", false)
     call TriggerAddAction(t_heal, function debug_heal)
     set t_colour_unit=CreateTrigger()
-    call TriggerRegisterPlayerChatEvent( t_colour_unit, USER_PLAYER, "-colourunit", false )
+    call TriggerRegisterPlayerChatEvent(t_colour_unit, USER_PLAYER, "-colourunit", false )
     call TriggerAddAction(t_colour_unit, function debug_colour_unit)
     set t_print=CreateTrigger()
     call TriggerRegisterPlayerChatEvent(t_print, USER_PLAYER, "-print", false)

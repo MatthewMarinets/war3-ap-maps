@@ -388,6 +388,12 @@ def update_heroes(game_status: GameStatus, status: MissionStatus) -> None:
 
 def update_item_channels(game_status: GameStatus, mission_status: MissionStatus) -> None:
     packet_status = mission_status.packet_status[PacketType.ITEM_CHANNELS]
+    if packet_status.last_received != packet_status.last_sent:
+        # Don't want to obliterate any location removal data after we've already cleared it locally
+        game_status.pending_update |= PacketType.ITEM_CHANNELS
+        return
+    if PacketType.ITEM_CHANNELS not in game_status.pending_update:
+        return
     packet_status.last_sent = (packet_status.last_sent + 1) & 0xffff
     with open(ITEM_CHANNELS_FILE, 'w') as fp:
         fp.write(PRELOAD_FUNCTION_PROTOTYPE)
@@ -426,7 +432,10 @@ def update_items(game_status: GameStatus, mission_status: MissionStatus) -> None
         if item_channel == heroes.ItemChannel.NONE:
             continue
         state = game_status.item_channel_state[item_channel]
-        num_items = len(state.items_received) - state.items_acked
+        if state.items_acked < 0:
+            num_items = 0
+        else:
+            num_items = len(state.items_received) - state.items_acked
         if num_items > 0:
             break
     if num_items > 12:
@@ -588,7 +597,10 @@ def read_status(status: MissionStatus, game_status: GameStatus) -> None:
             num_items_received
         ):
             if item_channel != heroes.ItemChannel.NONE:
-                game_status.item_channel_state[item_channel].items_acked = num_received
+                if num_received >= 0:
+                    game_status.item_channel_state[item_channel].items_acked = num_received
+                else:
+                    game_status.pending_update |= PacketType.ITEM_CHANNELS
     lines.pop(0)  # reserved
     lines.pop(0)  # reserved
     if len(last_transmissions) > NUM_PACKET_TYPES:
@@ -683,6 +695,7 @@ def sync_mission_status(
     target.update_number = source.update_number
     target.world_id = source.world_id
     target.mission_id = source.mission_id
+    target.first_transmission = source.first_transmission
     for packet_type, packet_status in source.packet_status.items():
         target.packet_status[packet_type].last_received = packet_status.last_received
         if mission_change:
@@ -756,7 +769,9 @@ async def status_loop(ctx: AsyncContext) -> None:
             continue
         if (new_status.mission_id != ctx.mission_status.mission_id
             or new_status.world_id < 0
+            or (new_status.update_number - ctx.mission_status.update_number) % MAX_UPDATE_ID > 20
         ):
+            new_status.first_transmission = new_status.update_number
             update_game_status_for_new_mission(ctx, new_status.mission_id)
         old_update_number = ctx.mission_status.update_number
         sync_locations(new_status, ctx.mission_status, ctx.client_interface)
@@ -764,7 +779,6 @@ async def status_loop(ctx: AsyncContext) -> None:
         if new_status.world_id < 0:
             update_heroes(ctx.game_status, ctx.mission_status)
             ctx.game_status.pending_update |= PacketType.HEROES
-            update_item_channels(ctx.game_status, ctx.mission_status)
             ctx.game_status.pending_update |= PacketType.ITEM_CHANNELS
         else:
             read_necessary_hero_status(ctx.mission_status, ctx.game_status)
@@ -776,6 +790,7 @@ async def status_loop(ctx: AsyncContext) -> None:
         update_unlocks(ctx.game_status, ctx.mission_status)
         update_locations(ctx.game_status, ctx.mission_status)
         update_messages(ctx.game_status, ctx.mission_status.packet_status[PacketType.MESSAGES])
+        update_item_channels(ctx.game_status, ctx.mission_status)
         update_items(ctx.game_status, ctx.mission_status)
         update_mercenaries(ctx.game_status, ctx.mission_status)
         update_settings(ctx.game_status, ctx.mission_status)
