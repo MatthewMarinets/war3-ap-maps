@@ -1,5 +1,5 @@
 """Runtime client for communicating with the AP server. Requires core imports."""
-from typing import Sequence, cast, Iterable, Any
+from typing import Sequence, cast, Iterable, Any, IO
 import asyncio
 import multiprocessing
 from collections import Counter
@@ -103,17 +103,17 @@ def requirement_to_item_mission_requirements(
 class Wc3CommandProcessor(ClientCommandProcessor):
     ctx: 'Wc3Context'
 
-    def _cmd_scan_location(self) -> bool:
+    def _cmd_scan_location(self) -> None:
         """Debug: scouts the bandit camp location"""
         async_start(self.ctx.send_msgs([
             {"cmd": "LocationScouts", "locations": [Wc3Location.HU1_BANDIT_ITEM.id, Wc3Location.HU1_ENLIST_THORNBY.id]}
         ]))
-        return True
+        return None
 
-    def _cmd_debug(self, key: str) -> bool:
+    def _cmd_debug(self, key: str) -> None:
         """Debug: prints current value of a member of the communication client"""
         parts = key.split('.')
-        current: dict|list|object = self.ctx.comm_ctx
+        current: dict | list | object = self.ctx.comm_ctx
         for index, part in enumerate(parts):
             if part.isnumeric():
                 part = int(part)  # type: ignore
@@ -122,14 +122,14 @@ class Wc3CommandProcessor(ClientCommandProcessor):
                     current = current[part]
                 except KeyError:
                     logger.warning(f'Dict member {".".join(parts[:index])} has no key {part}')
-                    logger.warning(f'Valid keys are: {list(current)}')
+                    logger.warning(f'Valid keys are: {list(current)}')  # type: ignore [arg-type]
                     return
             elif isinstance(current, list):
                 try:
                     current = current[int(part)]
                 except IndexError:
                     logger.warning(f'List member {".".join(parts[:index])} has no index {part}')
-                    logger.warning(f'The length of the member is: {len(current)}')
+                    logger.warning(f'The length of the member is: {len(current)}')  # type: ignore [arg-type]
                     return
             else:
                 try:
@@ -139,17 +139,17 @@ class Wc3CommandProcessor(ClientCommandProcessor):
                     logger.warning(f'Valid attributes are: {[x for x in dir(current) if not x.startswith("_")]}')
                     return
         logger.info(current)
-        return True
+        return
 
-    def _cmd_save(self) -> bool:
+    def _cmd_save(self) -> None:
         """Save the hero state to a local file"""
         save_hero_state(self.ctx.comm_ctx.game_status)
-        return True
+        return
 
-    def _cmd_load(self) -> bool:
+    def _cmd_load(self) -> None:
         """Load the hero state from a local file"""
         load_hero_state(self.ctx.comm_ctx.game_status)
-        return True
+        return
 
 
 class Wc3Context(CommonContext):
@@ -293,6 +293,7 @@ class Wc3Context(CommonContext):
         }]))
 
         # Finalize
+        self.comm_ctx.game_status.is_victorious = False
         self.comm_ctx.game_status.do_startup = True
         logger.info(f"Connected. World version {self.generation_version}")
 
@@ -389,6 +390,7 @@ class Wc3Context(CommonContext):
             async_start(self.send_msgs([{
                 "cmd": 'StatusUpdate', "status": ClientStatus.CLIENT_GOAL,
             }]))
+            self.comm_ctx.game_status.is_victorious = True
         save_hero_state(self.comm_ctx.game_status)
 
     def evaluate_requirements(self, affected_slots: list[tuple[int, int]]) -> None:
@@ -411,7 +413,7 @@ class Wc3Context(CommonContext):
             mission_slot.availability = comm.MissionAvailability.BEATEN
             self.completed_missions.add(mission)
         else:
-            mission.availability = comm.MissinoAvailability.BEATEN
+            mission.availability = comm.MissionAvailability.BEATEN
             self.completed_missions.add(mission.mission)
 
     def signal_mission_beaten(self, mission_id: int) -> None:
@@ -501,7 +503,12 @@ def load_hero_state(game_status: comm.GameStatus) -> None:
                     continue
                 item_id = inventory_item.get("item_id")
                 if isinstance(item_id, str) and item_id:
-                    hero_data.items[index].item_id = item_id
+                    typed_item_id: str | GameID
+                    try:
+                        typed_item_id = GameID(item_id)
+                    except ValueError:
+                        typed_item_id = item_id
+                    hero_data.items[index].item_id = typed_item_id
                 charges = inventory_item.get("charges", 0)
                 if isinstance(charges, int) and charges >= 0:
                     hero_data.items[index].charges = charges
@@ -520,6 +527,7 @@ def save_hero_state(game_status: comm.GameStatus) -> None:
         logger.debug(f"Save file path {save_file_path} exists as a directory; removing it")
         shutil.rmtree(save_file_path)
     # Load existing save file data
+    fp: IO
     if os.path.isfile(save_file_path):
         try:
             with open(save_file_path, "rb") as fp:

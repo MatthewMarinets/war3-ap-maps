@@ -135,7 +135,7 @@ class MissionError(enum.Flag):
 
 @dataclass(slots=True)
 class InventoryItem:
-    item_id: GameID | None
+    item_id: GameID | str | None
     charges: int = 0
 
 
