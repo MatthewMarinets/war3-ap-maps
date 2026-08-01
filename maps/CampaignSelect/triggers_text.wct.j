@@ -1309,7 +1309,6 @@ function init_mission_board takes nothing returns nothing
             set mission_availability = GetPlayerTechMaxAllowed(p, 200 + index)
             if mission_availability >= AVAIL_AVAILABLE then
                 if mission_select_regions[index] == null then
-                    call print("Index " + I2S(j) + "," + I2S(i) + ": " + I2S(mission_availability))
                     set new_rect = Rect(GetRectMinX(first_region) + offsetx, GetRectMinY(first_region) + offsety, GetRectMaxX(first_region) + offsetx, GetRectMaxY(first_region) + offsety)
                     set new_region = CreateRegion()
                     call RegionAddRect(new_region, new_rect)
