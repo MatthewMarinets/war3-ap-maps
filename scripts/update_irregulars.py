@@ -39,7 +39,7 @@ HUMAN_ABIL_INFO = [
         cid.UPGRADE_HAS_CAPTAIN,
         "T", 1, 2,
         "CaptainWhat", "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp",
-        80,  # vanilla: 130
+        120,  # vanilla: 130
         upgrade_name="Captain Promotion"
     ),
     AbilInfo(
@@ -48,7 +48,7 @@ HUMAN_ABIL_INFO = [
         cid.UPGRADE_HAS_FOOTMAN,
         "F", 0, 0,
         "FootmanReady", "ReplaceableTextures\\CommandButtons\\BTNFootman.blp",
-        80,  # vanilla: 135
+        120,  # vanilla: 135
     ),
     AbilInfo(
         "Rifleman", GameID.RIFLEMAN,
@@ -56,7 +56,7 @@ HUMAN_ABIL_INFO = [
         cid.UPGRADE_HAS_RIFLEMAN,
         "R", 1, 0,
         "RiflemanReady", "ReplaceableTextures\\CommandButtons\\BTNRifleman.blp",
-        125,  # vanilla: 205
+        180,  # vanilla: 205
     ),
     AbilInfo(
         "Archer", GameID.BLOOD_ELF_ARCHER,
@@ -64,7 +64,7 @@ HUMAN_ABIL_INFO = [
         cid.UPGRADE_HAS_BLOOD_ELF_ARCHER,
         "H", 2, 0,
         "ArcherReady", "ReplaceableTextures\\CommandButtons\\BTNHighElvenArcher.blp",
-        80,  # vanilla: 130
+        120,  # vanilla: 130
         joke=" (Magic makes for fast transition)."
     ),
     AbilInfo(
@@ -73,7 +73,7 @@ HUMAN_ABIL_INFO = [
         cid.UPGRADE_HAS_KNIGHT,
         "G", 3, 0,
         "KnightReady", "ReplaceableTextures\\CommandButtons\\BTNKnight.blp",
-        225,  # vanilla: 245
+        240,  # vanilla: 245
     ),
     AbilInfo(
         "Priest", GameID.PRIEST,
@@ -81,7 +81,7 @@ HUMAN_ABIL_INFO = [
         cid.UPGRADE_HAS_PRIEST,
         "E", 0, 1,
         "PriestReady", "ReplaceableTextures\\CommandButtons\\BTNPriest.blp",
-        80,  # vanilla: 135
+        125,  # vanilla: 135
     ),
     AbilInfo(
         "Sorceress", GameID.SORCERESS,
@@ -89,7 +89,7 @@ HUMAN_ABIL_INFO = [
         cid.UPGRADE_HAS_SORCERESS,
         "X", 1, 1,
         "SorceressReady", "ReplaceableTextures\\CommandButtons\\BTNSorceress.blp",
-        90,  # vanilla: 155
+        140,  # vanilla: 155
         joke=" (Magic makes for fast transition)."
     ),
     AbilInfo(
@@ -98,7 +98,7 @@ HUMAN_ABIL_INFO = [
         cid.UPGRADE_HAS_SPELL_BREAKER,
         "B", 2, 1,
         "SpellBreakerReady", "ReplaceableTextures\\CommandButtons\\BTNSpellBreaker.blp",
-        150,  # vanilla: 215
+        200,  # vanilla: 215
     ),
     AbilInfo(
         "Mortar Team", GameID.MORTAR_TEAM,
@@ -106,7 +106,7 @@ HUMAN_ABIL_INFO = [
         cid.UPGRADE_HAS_MORTAR_TEAM,
         "M", 0, 2,
         "MortarTeamReady", "ReplaceableTextures\\CommandButtons\\BTNMortarTeam.blp",
-        150,  # vanilla: 180
+        160,  # vanilla: 180
     ),
 ]
 
@@ -155,13 +155,14 @@ def update_abilities_human(abils_file: str) -> None:
     # Spellbook ability
     entities.set_entity(
         SPELLBOOK_ABIL_ID, editor_ids.ABIL_SPELL_BOOK, {
-        editor_ids.FIELD_ABIL_NAME: "Promotion [|ffffcc00T|r]",
+        editor_ids.FIELD_ABIL_NAME: "Promotion",
         editor_ids.FIELD_ABIL_EDITOR_SUFFIX: "(Human)",
         editor_ids.FIELD_ABIL_HOTKEY: "T",
         editor_ids.FIELD_ABIL_ICON_NORMAL: r"ReplaceableTextures\CommandButtons\BTNHumanCaptureFlag.blp",
         editor_ids.FIELD_ABIL_BUTTON_POSITION_NORMAL_Y: 2,
         editor_ids.FIELD_ABIL_STATS_IS_ITEM_ABILITY: 0,
-        (editor_ids.FIELD_ABIL_TOOLTIP_NORMAL, 1): "Promote this unit to a regular Human unit.",
+        (editor_ids.FIELD_ABIL_TOOLTIP_NORMAL, 1): "Promotion [|cffffcc00T|r]",
+        (editor_ids.FIELD_ABIL_TOOLTIP_NORMAL_EXTENDED, 1): "Promote this unit to a regular Human unit.",
         (editor_ids.FIELD_ABIL_DATA_SPELL_BOOK_MIN_SPELLS, 1): len(HUMAN_ABIL_INFO),
         (editor_ids.FIELD_ABIL_DATA_SPELL_BOOK_MAX_SPELLS, 1): len(HUMAN_ABIL_INFO),
         (editor_ids.FIELD_ABIL_DATA_SPELL_BOOK_SPELL_LIST, 1):

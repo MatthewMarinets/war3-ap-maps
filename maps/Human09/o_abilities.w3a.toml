@@ -86,7 +86,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "|cfffed312¤ 80 Gold|r\nPromote this unit to a Captain."
+value = "|cfffed312¤ 120 Gold|r\nPromote this unit to a Captain."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -193,7 +193,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "|cfffed312¤ 80 Gold|r\nPromote this unit to a Footman."
+value = "|cfffed312¤ 120 Gold|r\nPromote this unit to a Footman."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -292,7 +292,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "|cfffed312¤ 125 Gold|r\nPromote this unit to a Rifleman."
+value = "|cfffed312¤ 180 Gold|r\nPromote this unit to a Rifleman."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -391,7 +391,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "|cfffed312¤ 80 Gold|r\nPromote this unit to an Archer. (Magic makes for fast transition)."
+value = "|cfffed312¤ 120 Gold|r\nPromote this unit to an Archer. (Magic makes for fast transition)."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -482,7 +482,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "|cfffed312¤ 225 Gold|r\nPromote this unit to a Knight."
+value = "|cfffed312¤ 240 Gold|r\nPromote this unit to a Knight."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -581,7 +581,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "|cfffed312¤ 80 Gold|r\nPromote this unit to a Priest."
+value = "|cfffed312¤ 125 Gold|r\nPromote this unit to a Priest."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -688,7 +688,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "|cfffed312¤ 90 Gold|r\nPromote this unit to a Sorceress. (Magic makes for fast transition)."
+value = "|cfffed312¤ 140 Gold|r\nPromote this unit to a Sorceress. (Magic makes for fast transition)."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -795,7 +795,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "|cfffed312¤ 150 Gold|r\nPromote this unit to a Spell Breaker."
+value = "|cfffed312¤ 200 Gold|r\nPromote this unit to a Spell Breaker."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -894,7 +894,7 @@ modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "|cfffed312¤ 150 Gold|r\nPromote this unit to a Mortar Team."
+value = "|cfffed312¤ 160 Gold|r\nPromote this unit to a Mortar Team."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1364,7 +1364,7 @@ modification_id = 'anam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Promotion [|ffffcc00T|r]"
+value = "Promotion"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1412,7 +1412,7 @@ modification_id = 'atp1'  # Profile.Tooltip - Normal
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "Promote this unit to a regular Human unit."
+value = "Promotion [|cffffcc00T|r]"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1437,6 +1437,14 @@ data_type = "String"
 variation_level = 1
 table_column = 1
 value = "AP00,AP01,AP02,AP03,AP04,AP05,AP06,AP07,AP08"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Promote this unit to a regular Human unit."
 object_id = 'null'
 
 [[map_objects.entities]]
