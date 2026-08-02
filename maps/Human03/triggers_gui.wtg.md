@@ -3793,6 +3793,8 @@ Disabled the .01 second wait because it was preventing the ogre from running awa
 - Action QuestItemSetCompletedBJ
   - param Variable GranaryReq
   - param Preset CompletionOptionCompleted
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Action ForGroup
   - param Function GetUnitsOfPlayerAll
     - Function GetUnitsOfPlayerAll

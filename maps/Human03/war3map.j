@@ -4969,39 +4969,39 @@ endfunction
 //===========================================================================
 // Trigger: Ending01 Queue
 //===========================================================================
-function Trig_Ending01_Queue_Func005002 takes nothing returns nothing
+function Trig_Ending01_Queue_Func006002 takes nothing returns nothing
     call SetUnitLifePercentBJ(GetEnumUnit(), 100)
-endfunction
-
-function Trig_Ending01_Queue_Func017002 takes nothing returns nothing
-    call ShowUnitHide(GetEnumUnit())
 endfunction
 
 function Trig_Ending01_Queue_Func018002 takes nothing returns nothing
     call ShowUnitHide(GetEnumUnit())
 endfunction
 
-function Trig_Ending01_Queue_Func028001 takes nothing returns boolean
+function Trig_Ending01_Queue_Func019002 takes nothing returns nothing
+    call ShowUnitHide(GetEnumUnit())
+endfunction
+
+function Trig_Ending01_Queue_Func029001 takes nothing returns boolean
     return ( IsUnitAliveBJ(udg_Abomination) == true )
 endfunction
 
-function Trig_Ending01_Queue_Func034001 takes nothing returns boolean
+function Trig_Ending01_Queue_Func035001 takes nothing returns boolean
     return ( udg_EndingCancelled == true )
 endfunction
 
-function Trig_Ending01_Queue_Func039001 takes nothing returns boolean
+function Trig_Ending01_Queue_Func040001 takes nothing returns boolean
     return ( udg_EndingCancelled == true )
 endfunction
 
-function Trig_Ending01_Queue_Func043001 takes nothing returns boolean
+function Trig_Ending01_Queue_Func044001 takes nothing returns boolean
     return ( udg_EndingCancelled == true )
 endfunction
 
-function Trig_Ending01_Queue_Func046001 takes nothing returns boolean
+function Trig_Ending01_Queue_Func047001 takes nothing returns boolean
     return ( udg_EndingCancelled == true )
 endfunction
 
-function Trig_Ending01_Queue_Func049001 takes nothing returns boolean
+function Trig_Ending01_Queue_Func050001 takes nothing returns boolean
     return ( udg_EndingCancelled == true )
 endfunction
 
@@ -5010,7 +5010,8 @@ function Trig_Ending01_Queue_Actions takes nothing returns nothing
     call QuestMessageBJ(GetPlayersAll(), bj_QUESTMESSAGE_COMPLETED, "TRIGSTR_593")
     call QuestSetCompletedBJ(udg_QuestDestroyGranary, true)
     call QuestItemSetCompletedBJ(udg_GranaryReq, true)
-    call ForGroupBJ(GetUnitsOfPlayerAll(Player(1)), function Trig_Ending01_Queue_Func005002)
+    call status_check_location(0)
+    call ForGroupBJ(GetUnitsOfPlayerAll(Player(1)), function Trig_Ending01_Queue_Func006002)
     call TriggerSleepAction(bj_QUEUE_DELAY_QUEST)
     call UseTimeOfDayBJ(false)
     call CinematicFadeBJ(bj_CINEFADETYPE_FADEOUT, 1.00, "ReplaceableTextures\\CameraMasks\\White_mask.blp", 0, 0, 0, 0)
@@ -5022,8 +5023,8 @@ function Trig_Ending01_Queue_Actions takes nothing returns nothing
     call ClearSelection()
     call UnitRemoveBuffsBJ(bj_REMOVEBUFFS_ALL, udg_Arthas)
     call UnitRemoveBuffsBJ(bj_REMOVEBUFFS_ALL, udg_Jaina)
-    call ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(1)), function Trig_Ending01_Queue_Func017002)
-    call ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(6)), function Trig_Ending01_Queue_Func018002)
+    call ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(1)), function Trig_Ending01_Queue_Func018002)
+    call ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(6)), function Trig_Ending01_Queue_Func019002)
     call ShowUnitShow(udg_Abomination)
     call ShowUnitShow(udg_Arthas)
     call ShowUnitShow(udg_Jaina)
@@ -5033,7 +5034,7 @@ function Trig_Ending01_Queue_Actions takes nothing returns nothing
     call CameraSetupApplyForPlayer(true, gg_cam_FinalCin1, Player(1), 0)
     call SetUnitPositionLoc(udg_Arthas, GetRectCenter(gg_rct_FinalCin_Arthas))
     call SetUnitPositionLocFacingLocBJ(udg_Jaina, GetRectCenter(gg_rct_FinalCin_Jaina), GetUnitLoc(udg_Arthas))
-    if ( Trig_Ending01_Queue_Func028001() ) then
+    if ( Trig_Ending01_Queue_Func029001() ) then
         call SetUnitPositionLoc(udg_Abomination, GetRectCenter(gg_rct_FinalCin_Abomination))
     else
         call DoNothing()
@@ -5043,7 +5044,7 @@ function Trig_Ending01_Queue_Actions takes nothing returns nothing
     // NOW SKIPPABLE
     call EnableTrigger(gg_trg_EndingCancelled)
     call TriggerSleepAction(1.50)
-    if ( Trig_Ending01_Queue_Func034001() ) then
+    if ( Trig_Ending01_Queue_Func035001() ) then
         return
     else
         call DoNothing()
@@ -5052,7 +5053,7 @@ function Trig_Ending01_Queue_Actions takes nothing returns nothing
     call SetUnitFacingToFaceUnitTimed(udg_Arthas, udg_Jaina, 0.30)
     call SetPlayerAllianceStateBJ(Player(6), Player(1), bj_ALLIANCE_ALLIED)
     call SetPlayerAllianceStateBJ(Player(1), Player(6), bj_ALLIANCE_ALLIED)
-    if ( Trig_Ending01_Queue_Func039001() ) then
+    if ( Trig_Ending01_Queue_Func040001() ) then
         return
     else
         call DoNothing()
@@ -5060,21 +5061,21 @@ function Trig_Ending01_Queue_Actions takes nothing returns nothing
     call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_Arthas, "TRIGSTR_594", gg_snd_H03Arthas36, "TRIGSTR_595", bj_TIMETYPE_ADD, 0.00, false)
     call CameraSetupApplyForPlayer(true, gg_cam_FinalCin2, Player(0), 10.00)
     call WaitForSoundBJ(gg_snd_H03Arthas36, 0)
-    if ( Trig_Ending01_Queue_Func043001() ) then
+    if ( Trig_Ending01_Queue_Func044001() ) then
         return
     else
         call DoNothing()
     endif
     call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_Jaina, "TRIGSTR_596", gg_snd_H03Jaina37, "TRIGSTR_597", bj_TIMETYPE_ADD, 0.00, false)
     call WaitForSoundBJ(gg_snd_H03Jaina37, 0)
-    if ( Trig_Ending01_Queue_Func046001() ) then
+    if ( Trig_Ending01_Queue_Func047001() ) then
         return
     else
         call DoNothing()
     endif
     call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_Arthas, "TRIGSTR_598", gg_snd_H03Arthas38, "TRIGSTR_599", bj_TIMETYPE_ADD, 0.00, false)
     call WaitForSoundBJ(gg_snd_H03Arthas38, 0)
-    if ( Trig_Ending01_Queue_Func049001() ) then
+    if ( Trig_Ending01_Queue_Func050001() ) then
         return
     else
         call DoNothing()
