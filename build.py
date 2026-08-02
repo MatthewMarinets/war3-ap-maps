@@ -3,6 +3,7 @@
 Map build script
 """
 import glob
+import zipfile
 import os
 import multiprocessing as mp
 # import threading
@@ -15,7 +16,7 @@ def compile_map(target_file: str, source_dir: str) -> None:
     pack.compile_map_file(target_file, source_dir)
 
 
-def main() -> None:
+def build_mod() -> None:
     maps = (
         'CampaignSelect',
         'Human01',
@@ -64,5 +65,31 @@ def main() -> None:
                 fp.write(line.strip('\r\n') + '\r\n')
 
 
+def zip_apworld() -> None:
+    OUTPUT_PATH = 'out/wc3.apworld'
+    print(f'Making {OUTPUT_PATH}')
+    APWORLD_PATH = 'apworld'
+    with zipfile.ZipFile(OUTPUT_PATH, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
+        for file in glob.glob('apworld/**', recursive=True):
+            if '__pycache__' in file:
+                continue
+            zf.write(file, arcname=f'wc3/{os.path.relpath(file, "apworld")}')
+
+
+def main(mod: bool, apworld: bool) -> None:
+    if mod:
+        build_mod()
+    if apworld:
+        zip_apworld()
+
+
 if __name__ == '__main__':
-    main()
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--mod', action='store_true')
+    parser.add_argument('--apworld', action='store_true')
+    args = parser.parse_args()
+    if not args.mod and not args.apworld:
+        args.mod = True
+        args.apworld = True
+    main(mod=args.mod, apworld=args.apworld)
