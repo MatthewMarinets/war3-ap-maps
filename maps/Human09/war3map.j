@@ -330,8 +330,6 @@ trigger gg_trg_GreenGold= null
 trigger gg_trg_GreenLumber= null
 trigger gg_trg_GiveAnkh= null
 trigger gg_trg_DestroyMalganisItems= null
-trigger gg_trg_ItemFailsafeDetect= null
-trigger gg_trg_ItemFailsafeReplace= null
 trigger gg_trg_TriggerIntroCinematic= null
 trigger gg_trg_IntroEnvironment= null
 trigger gg_trg_IntroCinematicMode= null
@@ -3982,704 +3980,6 @@ function InitTrig_DestroyMalganisItems takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: ItemFailsafeDetect
-//===========================================================================
-function Trig_ItemFailsafeDetect_Func002001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 1)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func003001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 1)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func004001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 2)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func005001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 2)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func006001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 3)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func007001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 3)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func008001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 4)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func009001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 4)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func010001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 5)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func011001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 5)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func012001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 6)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func013001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 6)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func014001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 1)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func015001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 1)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func016001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 2)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func017001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 2)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func018001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 3)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func019001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 3)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func020001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 4)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func021001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 4)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func022001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 5)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func023001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 5)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func024001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 6)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func025001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 6)) == 'stwp' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func027001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 1)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func028001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 1)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func029001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 2)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func030001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 2)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func031001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 3)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func032001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 3)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func033001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 4)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func034001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 4)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func035001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 5)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func036001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 5)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func037001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 6)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func038001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Arthas, 6)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func039001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 1)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func040001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 1)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func041001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 2)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func042001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 2)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func043001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 3)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func044001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 3)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func045001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 4)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func046001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 4)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func047001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 5)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func048001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 5)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func049001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 6)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Func050001 takes nothing returns boolean
-    return ( GetItemTypeId(UnitItemInSlotBJ(udg_Muradin, 6)) == 'amrc' )
-endfunction
-
-function Trig_ItemFailsafeDetect_Actions takes nothing returns nothing
-    // SCROLLS
-    if ( Trig_ItemFailsafeDetect_Func002001() ) then
-        set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func003001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Arthas, 1))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func004001() ) then
-        set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func005001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Arthas, 2))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func006001() ) then
-        set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func007001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Arthas, 3))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func008001() ) then
-        set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func009001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Arthas, 4))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func010001() ) then
-        set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func011001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Arthas, 5))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func012001() ) then
-        set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func013001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Arthas, 6))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func014001() ) then
-        set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func015001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Muradin, 1))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func016001() ) then
-        set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func017001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Muradin, 2))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func018001() ) then
-        set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func019001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Muradin, 3))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func020001() ) then
-        set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func021001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Muradin, 4))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func022001() ) then
-        set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func023001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Muradin, 5))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func024001() ) then
-        set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func025001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Muradin, 6))
-    else
-        call DoNothing()
-    endif
-    // AMULETS OF RECALL
-    if ( Trig_ItemFailsafeDetect_Func027001() ) then
-        set udg_AmuletsOfRecall=( udg_AmuletsOfRecall + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func028001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Arthas, 1))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func029001() ) then
-        set udg_AmuletsOfRecall=( udg_AmuletsOfRecall + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func030001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Arthas, 2))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func031001() ) then
-        set udg_AmuletsOfRecall=( udg_AmuletsOfRecall + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func032001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Arthas, 3))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func033001() ) then
-        set udg_AmuletsOfRecall=( udg_AmuletsOfRecall + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func034001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Arthas, 4))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func035001() ) then
-        set udg_AmuletsOfRecall=( udg_AmuletsOfRecall + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func036001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Arthas, 5))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func037001() ) then
-        set udg_AmuletsOfRecall=( udg_AmuletsOfRecall + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func038001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Arthas, 6))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func039001() ) then
-        set udg_AmuletsOfRecall=( udg_AmuletsOfRecall + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func040001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Muradin, 1))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func041001() ) then
-        set udg_AmuletsOfRecall=( udg_AmuletsOfRecall + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func042001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Muradin, 2))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func043001() ) then
-        set udg_AmuletsOfRecall=( udg_AmuletsOfRecall + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func044001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Muradin, 3))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func045001() ) then
-        set udg_AmuletsOfRecall=( udg_AmuletsOfRecall + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func046001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Muradin, 4))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func047001() ) then
-        set udg_AmuletsOfRecall=( udg_AmuletsOfRecall + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func048001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Muradin, 5))
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func049001() ) then
-        set udg_AmuletsOfRecall=( udg_AmuletsOfRecall + 1 )
-    else
-        call DoNothing()
-    endif
-    if ( Trig_ItemFailsafeDetect_Func050001() ) then
-        call RemoveItem(UnitItemInSlotBJ(udg_Muradin, 6))
-    else
-        call DoNothing()
-    endif
-endfunction
-
-//===========================================================================
-function InitTrig_ItemFailsafeDetect takes nothing returns nothing
-    set gg_trg_ItemFailsafeDetect=CreateTrigger()
-    call TriggerAddAction(gg_trg_ItemFailsafeDetect, function Trig_ItemFailsafeDetect_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: ItemFailsafeReplace
-//===========================================================================
-function Trig_ItemFailsafeReplace_Func001001 takes nothing returns boolean
-    return ( udg_ScrollsOfTownPortal > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func003001 takes nothing returns boolean
-    return ( udg_ScrollsOfTownPortal > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func005001 takes nothing returns boolean
-    return ( udg_ScrollsOfTownPortal > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func007001 takes nothing returns boolean
-    return ( udg_ScrollsOfTownPortal > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func009001 takes nothing returns boolean
-    return ( udg_ScrollsOfTownPortal > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func011001 takes nothing returns boolean
-    return ( udg_ScrollsOfTownPortal > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func013001 takes nothing returns boolean
-    return ( udg_ScrollsOfTownPortal > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func015001 takes nothing returns boolean
-    return ( udg_ScrollsOfTownPortal > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func017001 takes nothing returns boolean
-    return ( udg_ScrollsOfTownPortal > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func019001 takes nothing returns boolean
-    return ( udg_ScrollsOfTownPortal > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func021001 takes nothing returns boolean
-    return ( udg_ScrollsOfTownPortal > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func023001 takes nothing returns boolean
-    return ( udg_ScrollsOfTownPortal > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func025001 takes nothing returns boolean
-    return ( udg_AmuletsOfRecall > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func027001 takes nothing returns boolean
-    return ( udg_AmuletsOfRecall > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func029001 takes nothing returns boolean
-    return ( udg_AmuletsOfRecall > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func031001 takes nothing returns boolean
-    return ( udg_AmuletsOfRecall > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func033001 takes nothing returns boolean
-    return ( udg_AmuletsOfRecall > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func035001 takes nothing returns boolean
-    return ( udg_AmuletsOfRecall > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func037001 takes nothing returns boolean
-    return ( udg_AmuletsOfRecall > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func039001 takes nothing returns boolean
-    return ( udg_AmuletsOfRecall > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func041001 takes nothing returns boolean
-    return ( udg_AmuletsOfRecall > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func043001 takes nothing returns boolean
-    return ( udg_AmuletsOfRecall > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func045001 takes nothing returns boolean
-    return ( udg_AmuletsOfRecall > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Func047001 takes nothing returns boolean
-    return ( udg_AmuletsOfRecall > 0 )
-endfunction
-
-function Trig_ItemFailsafeReplace_Actions takes nothing returns nothing
-    if ( Trig_ItemFailsafeReplace_Func001001() ) then
-        call CreateItemLoc('stwp', GetRectCenter(gg_rct_ScrollReplace01))
-    else
-        return
-    endif
-    set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal - 1 )
-    if ( Trig_ItemFailsafeReplace_Func003001() ) then
-        call CreateItemLoc('stwp', GetRectCenter(gg_rct_ScrollReplace02))
-    else
-        return
-    endif
-    set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal - 1 )
-    if ( Trig_ItemFailsafeReplace_Func005001() ) then
-        call CreateItemLoc('stwp', GetRectCenter(gg_rct_ScrollReplace03))
-    else
-        return
-    endif
-    set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal - 1 )
-    if ( Trig_ItemFailsafeReplace_Func007001() ) then
-        call CreateItemLoc('stwp', GetRectCenter(gg_rct_ScrollReplace01))
-    else
-        return
-    endif
-    set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal - 1 )
-    if ( Trig_ItemFailsafeReplace_Func009001() ) then
-        call CreateItemLoc('stwp', GetRectCenter(gg_rct_ScrollReplace02))
-    else
-        return
-    endif
-    set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal - 1 )
-    if ( Trig_ItemFailsafeReplace_Func011001() ) then
-        call CreateItemLoc('stwp', GetRectCenter(gg_rct_ScrollReplace03))
-    else
-        return
-    endif
-    set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal - 1 )
-    if ( Trig_ItemFailsafeReplace_Func013001() ) then
-        call CreateItemLoc('stwp', GetRectCenter(gg_rct_ScrollReplace01))
-    else
-        return
-    endif
-    set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal - 1 )
-    if ( Trig_ItemFailsafeReplace_Func015001() ) then
-        call CreateItemLoc('stwp', GetRectCenter(gg_rct_ScrollReplace02))
-    else
-        return
-    endif
-    set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal - 1 )
-    if ( Trig_ItemFailsafeReplace_Func017001() ) then
-        call CreateItemLoc('stwp', GetRectCenter(gg_rct_ScrollReplace03))
-    else
-        return
-    endif
-    set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal - 1 )
-    if ( Trig_ItemFailsafeReplace_Func019001() ) then
-        call CreateItemLoc('stwp', GetRectCenter(gg_rct_ScrollReplace01))
-    else
-        return
-    endif
-    set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal - 1 )
-    if ( Trig_ItemFailsafeReplace_Func021001() ) then
-        call CreateItemLoc('stwp', GetRectCenter(gg_rct_ScrollReplace02))
-    else
-        return
-    endif
-    set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal - 1 )
-    if ( Trig_ItemFailsafeReplace_Func023001() ) then
-        call CreateItemLoc('stwp', GetRectCenter(gg_rct_ScrollReplace03))
-    else
-        return
-    endif
-    set udg_ScrollsOfTownPortal=( udg_ScrollsOfTownPortal - 1 )
-    if ( Trig_ItemFailsafeReplace_Func025001() ) then
-        call CreateItemLoc('amrc', GetRectCenter(gg_rct_AmuletReplace01))
-    else
-        return
-    endif
-    set udg_AmuletsOfRecall=( udg_AmuletsOfRecall - 1 )
-    if ( Trig_ItemFailsafeReplace_Func027001() ) then
-        call CreateItemLoc('amrc', GetRectCenter(gg_rct_AmuletReplace02))
-    else
-        return
-    endif
-    set udg_AmuletsOfRecall=( udg_AmuletsOfRecall - 1 )
-    if ( Trig_ItemFailsafeReplace_Func029001() ) then
-        call CreateItemLoc('amrc', GetRectCenter(gg_rct_AmuletReplace03))
-    else
-        return
-    endif
-    set udg_AmuletsOfRecall=( udg_AmuletsOfRecall - 1 )
-    if ( Trig_ItemFailsafeReplace_Func031001() ) then
-        call CreateItemLoc('amrc', GetRectCenter(gg_rct_AmuletReplace01))
-    else
-        return
-    endif
-    set udg_AmuletsOfRecall=( udg_AmuletsOfRecall - 1 )
-    if ( Trig_ItemFailsafeReplace_Func033001() ) then
-        call CreateItemLoc('amrc', GetRectCenter(gg_rct_AmuletReplace02))
-    else
-        return
-    endif
-    set udg_AmuletsOfRecall=( udg_AmuletsOfRecall - 1 )
-    if ( Trig_ItemFailsafeReplace_Func035001() ) then
-        call CreateItemLoc('amrc', GetRectCenter(gg_rct_AmuletReplace03))
-    else
-        return
-    endif
-    set udg_AmuletsOfRecall=( udg_AmuletsOfRecall - 1 )
-    if ( Trig_ItemFailsafeReplace_Func037001() ) then
-        call CreateItemLoc('amrc', GetRectCenter(gg_rct_AmuletReplace01))
-    else
-        return
-    endif
-    set udg_AmuletsOfRecall=( udg_AmuletsOfRecall - 1 )
-    if ( Trig_ItemFailsafeReplace_Func039001() ) then
-        call CreateItemLoc('amrc', GetRectCenter(gg_rct_AmuletReplace02))
-    else
-        return
-    endif
-    set udg_AmuletsOfRecall=( udg_AmuletsOfRecall - 1 )
-    if ( Trig_ItemFailsafeReplace_Func041001() ) then
-        call CreateItemLoc('amrc', GetRectCenter(gg_rct_AmuletReplace03))
-    else
-        return
-    endif
-    set udg_AmuletsOfRecall=( udg_AmuletsOfRecall - 1 )
-    if ( Trig_ItemFailsafeReplace_Func043001() ) then
-        call CreateItemLoc('amrc', GetRectCenter(gg_rct_AmuletReplace01))
-    else
-        return
-    endif
-    set udg_AmuletsOfRecall=( udg_AmuletsOfRecall - 1 )
-    if ( Trig_ItemFailsafeReplace_Func045001() ) then
-        call CreateItemLoc('amrc', GetRectCenter(gg_rct_AmuletReplace02))
-    else
-        return
-    endif
-    set udg_AmuletsOfRecall=( udg_AmuletsOfRecall - 1 )
-    if ( Trig_ItemFailsafeReplace_Func047001() ) then
-        call CreateItemLoc('amrc', GetRectCenter(gg_rct_AmuletReplace03))
-    else
-        return
-    endif
-    set udg_AmuletsOfRecall=( udg_AmuletsOfRecall - 1 )
-endfunction
-
-//===========================================================================
-function InitTrig_ItemFailsafeReplace takes nothing returns nothing
-    set gg_trg_ItemFailsafeReplace=CreateTrigger()
-    call TriggerAddAction(gg_trg_ItemFailsafeReplace, function Trig_ItemFailsafeReplace_Actions)
-endfunction
-
-//===========================================================================
 // Trigger: TriggerIntroCinematic
 //===========================================================================
 function Trig_TriggerIntroCinematic_Actions takes nothing returns nothing
@@ -5405,7 +4705,6 @@ function Trig_IntroCinematicEnd_Actions takes nothing returns nothing
     call SetPlayerStateBJ(Player(1), PLAYER_STATE_RESOURCE_LUMBER, 500)
     call SetResourceAmount(gg_unit_ngol_0003, 30000)
     // HANDLE SCROLLS
-    call TriggerExecute(gg_trg_ItemFailsafeDetect)
 endfunction
 
 //===========================================================================
@@ -5504,7 +4803,6 @@ function Trig_IntroCinematicEscape_Actions takes nothing returns nothing
     call SetPlayerStateBJ(Player(1), PLAYER_STATE_RESOURCE_LUMBER, 500)
     call SetResourceAmount(gg_unit_ngol_0003, 30000)
     // HANDLE SCROLLS
-    call TriggerExecute(gg_trg_ItemFailsafeDetect)
 endfunction
 
 //===========================================================================
@@ -6454,27 +5752,27 @@ function Trig_FrostmourneCinematicEnd_Func005001 takes nothing returns boolean
     return ( udg_FrostmourneCinematicEscape == true )
 endfunction
 
-function Trig_FrostmourneCinematicEnd_Func022002 takes nothing returns nothing
+function Trig_FrostmourneCinematicEnd_Func009002 takes nothing returns nothing
     call RemoveUnit(GetEnumUnit())
 endfunction
 
-function Trig_FrostmourneCinematicEnd_Func029001 takes nothing returns boolean
+function Trig_FrostmourneCinematicEnd_Func016001 takes nothing returns boolean
     return ( IsUnitAliveBJ(udg_Captain) == true )
 endfunction
 
-function Trig_FrostmourneCinematicEnd_Func031001 takes nothing returns boolean
+function Trig_FrostmourneCinematicEnd_Func018001 takes nothing returns boolean
     return ( udg_FrostmourneCinematicEscape == true )
 endfunction
 
-function Trig_FrostmourneCinematicEnd_Func038001 takes nothing returns boolean
+function Trig_FrostmourneCinematicEnd_Func025001 takes nothing returns boolean
     return ( udg_FrostmourneCinematicEscape == true )
 endfunction
 
-function Trig_FrostmourneCinematicEnd_Func040001 takes nothing returns boolean
+function Trig_FrostmourneCinematicEnd_Func027001 takes nothing returns boolean
     return ( udg_FrostmourneCinematicEscape == true )
 endfunction
 
-function Trig_FrostmourneCinematicEnd_Func042001 takes nothing returns boolean
+function Trig_FrostmourneCinematicEnd_Func029001 takes nothing returns boolean
     return ( udg_FrostmourneCinematicEscape == true )
 endfunction
 
@@ -6490,34 +5788,21 @@ function Trig_FrostmourneCinematicEnd_Actions takes nothing returns nothing
     endif
     call CinematicFadeBJ(bj_CINEFADETYPE_FADEIN, 1.00, "ReplaceableTextures\\CameraMasks\\White_mask.blp", 0, 0, 0, 0)
     call CameraSetupApplyForPlayer(true, gg_cam_FrostmourneArthasDone, Player(1), 0)
-    set udg_ItemMuradin01=UnitItemInSlotBJ(udg_Muradin, 1)
-    set udg_ItemMuradin02=UnitItemInSlotBJ(udg_Muradin, 2)
-    set udg_ItemMuradin03=UnitItemInSlotBJ(udg_Muradin, 3)
-    set udg_ItemMuradin04=UnitItemInSlotBJ(udg_Muradin, 4)
-    set udg_ItemMuradin05=UnitItemInSlotBJ(udg_Muradin, 5)
-    set udg_ItemMuradin06=UnitItemInSlotBJ(udg_Muradin, 6)
-    call CreateItemLoc(GetItemTypeId(udg_ItemMuradin01), GetRectCenter(gg_rct_ItemMuradin01))
-    call CreateItemLoc(GetItemTypeId(udg_ItemMuradin02), GetRectCenter(gg_rct_ItemMuradin02))
-    call CreateItemLoc(GetItemTypeId(udg_ItemMuradin03), GetRectCenter(gg_rct_ItemMuradin03))
-    call CreateItemLoc(GetItemTypeId(udg_ItemMuradin04), GetRectCenter(gg_rct_ItemMuradin04))
-    call CreateItemLoc(GetItemTypeId(udg_ItemMuradin05), GetRectCenter(gg_rct_ItemMuradin05))
-    call CreateItemLoc(GetItemTypeId(udg_ItemMuradin06), GetRectCenter(gg_rct_ItemMuradin06))
-    call TriggerExecute(gg_trg_ItemFailsafeReplace)
     call GroupRemoveUnitSimple(udg_Arthas, udg_ValleyGroup)
-    call ForGroupBJ(udg_ValleyGroup, function Trig_FrostmourneCinematicEnd_Func022002)
+    call ForGroupBJ(udg_ValleyGroup, function Trig_FrostmourneCinematicEnd_Func009002)
     // MAKE MALGANIS VULNERABLE
     call TriggerExecute(gg_trg_DestroyMalganisItems)
     call DisableTrigger(gg_trg_GiveAnkh)
     call CreateFogModifierRectBJ(true, Player(1), FOG_OF_WAR_MASKED, gg_rct_FrostmourneDiasVisibility)
     set udg_DiasVisA=GetLastCreatedFogModifier()
     call SetUnitAnimation(udg_EvilArthas, "Stand")
-    if ( Trig_FrostmourneCinematicEnd_Func029001() ) then
+    if ( Trig_FrostmourneCinematicEnd_Func016001() ) then
         call SetUnitPositionLoc(udg_Captain, GetRectCenter(gg_rct_FrostmourneCaptainSpawn))
     else
         call TriggerExecute(gg_trg_FrostmourneEndCaptainFailsafe)
     endif
     call TriggerSleepAction(1.00)
-    if ( Trig_FrostmourneCinematicEnd_Func031001() ) then
+    if ( Trig_FrostmourneCinematicEnd_Func018001() ) then
         return
     else
         call DoNothing()
@@ -6528,19 +5813,19 @@ function Trig_FrostmourneCinematicEnd_Actions takes nothing returns nothing
     call PauseUnitBJ(false, udg_Captain)
     call IssuePointOrderLocBJ(udg_Captain, "move", GetRectCenter(gg_rct_FrostmourneCaptainToArthas))
     call TriggerSleepAction(1.00)
-    if ( Trig_FrostmourneCinematicEnd_Func038001() ) then
+    if ( Trig_FrostmourneCinematicEnd_Func025001() ) then
         return
     else
         call DoNothing()
     endif
     call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_Captain, "TRIGSTR_064", gg_snd_H09Captain20, "TRIGSTR_065", bj_TIMETYPE_ADD, 0, true)
-    if ( Trig_FrostmourneCinematicEnd_Func040001() ) then
+    if ( Trig_FrostmourneCinematicEnd_Func027001() ) then
         return
     else
         call DoNothing()
     endif
     call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_EvilArthas, "TRIGSTR_066", gg_snd_H09Arthas21, "TRIGSTR_067", bj_TIMETYPE_ADD, 0, true)
-    if ( Trig_FrostmourneCinematicEnd_Func042001() ) then
+    if ( Trig_FrostmourneCinematicEnd_Func029001() ) then
         return
     else
         call DoNothing()
@@ -6664,11 +5949,11 @@ function Trig_FrostmourneCinematicEscapeGood_Func015001 takes nothing returns bo
     return ( IsLocationMaskedToPlayer(GetRectCenter(gg_rct_FrostmourneValleyVisibilityC), Player(1)) == true )
 endfunction
 
-function Trig_FrostmourneCinematicEscapeGood_Func044002 takes nothing returns nothing
+function Trig_FrostmourneCinematicEscapeGood_Func031002 takes nothing returns nothing
     call RemoveUnit(GetEnumUnit())
 endfunction
 
-function Trig_FrostmourneCinematicEscapeGood_Func055001 takes nothing returns boolean
+function Trig_FrostmourneCinematicEscapeGood_Func042001 takes nothing returns boolean
     return ( IsUnitAliveBJ(udg_Captain) == true )
 endfunction
 
@@ -6710,23 +5995,10 @@ function Trig_FrostmourneCinematicEscapeGood_Actions takes nothing returns nothi
     call UseTimeOfDayBJ(true)
     // ENABLE VICTORY
     call EnableTrigger(gg_trg_Green_Base_Dead)
-    set udg_ItemMuradin01=UnitItemInSlotBJ(udg_Muradin, 1)
-    set udg_ItemMuradin02=UnitItemInSlotBJ(udg_Muradin, 2)
-    set udg_ItemMuradin03=UnitItemInSlotBJ(udg_Muradin, 3)
-    set udg_ItemMuradin04=UnitItemInSlotBJ(udg_Muradin, 4)
-    set udg_ItemMuradin05=UnitItemInSlotBJ(udg_Muradin, 5)
-    set udg_ItemMuradin06=UnitItemInSlotBJ(udg_Muradin, 6)
-    call CreateItemLoc(GetItemTypeId(udg_ItemMuradin01), GetRectCenter(gg_rct_ItemMuradin01))
-    call CreateItemLoc(GetItemTypeId(udg_ItemMuradin02), GetRectCenter(gg_rct_ItemMuradin02))
-    call CreateItemLoc(GetItemTypeId(udg_ItemMuradin03), GetRectCenter(gg_rct_ItemMuradin03))
-    call CreateItemLoc(GetItemTypeId(udg_ItemMuradin04), GetRectCenter(gg_rct_ItemMuradin04))
-    call CreateItemLoc(GetItemTypeId(udg_ItemMuradin05), GetRectCenter(gg_rct_ItemMuradin05))
-    call CreateItemLoc(GetItemTypeId(udg_ItemMuradin06), GetRectCenter(gg_rct_ItemMuradin06))
-    call TriggerExecute(gg_trg_ItemFailsafeReplace)
     call GroupRemoveUnitSimple(udg_Arthas, udg_ValleyGroup)
     call ShowUnitHide(udg_Muradin)
     call SetUnitOwner(udg_Muradin, Player(PLAYER_NEUTRAL_PASSIVE), true)
-    call ForGroupBJ(udg_ValleyGroup, function Trig_FrostmourneCinematicEscapeGood_Func044002)
+    call ForGroupBJ(udg_ValleyGroup, function Trig_FrostmourneCinematicEscapeGood_Func031002)
     // MAKE MALGANIS VULNERABLE
     call TriggerExecute(gg_trg_DestroyMalganisItems)
     call DisableTrigger(gg_trg_GiveAnkh)
@@ -6737,7 +6009,7 @@ function Trig_FrostmourneCinematicEscapeGood_Actions takes nothing returns nothi
     call SetUnitFacingTimed(udg_EvilArthas, 315.00, 0)
     // RESELECT ARTHAS
     call SelectUnitSingle(udg_EvilArthas)
-    if ( Trig_FrostmourneCinematicEscapeGood_Func055001() ) then
+    if ( Trig_FrostmourneCinematicEscapeGood_Func042001() ) then
         call SetUnitPositionLocFacingBJ(udg_Captain, GetRectCenter(gg_rct_FrostmourneCaptainToArthas), 150.00)
     else
         call CreateNUnitsAtLoc(1, 'hcth', Player(1), GetRectCenter(gg_rct_FrostmourneCaptainToArthas), 150.00)
@@ -6775,11 +6047,11 @@ function Trig_FrostmourneCinematicEscapeEvil_Conditions takes nothing returns bo
     return true
 endfunction
 
-function Trig_FrostmourneCinematicEscapeEvil_Func037002 takes nothing returns nothing
+function Trig_FrostmourneCinematicEscapeEvil_Func023002 takes nothing returns nothing
     call RemoveUnit(GetEnumUnit())
 endfunction
 
-function Trig_FrostmourneCinematicEscapeEvil_Func043001 takes nothing returns boolean
+function Trig_FrostmourneCinematicEscapeEvil_Func029001 takes nothing returns boolean
     return ( IsUnitAliveBJ(udg_Captain) == true )
 endfunction
 
@@ -6801,28 +6073,14 @@ function Trig_FrostmourneCinematicEscapeEvil_Actions takes nothing returns nothi
     call ResetToGameCameraForPlayer(Player(1), 0.00)
     call SetSkyModel(null)
     call UseTimeOfDayBJ(true)
-    // MURADIN ITEMS
-    set udg_ItemMuradin01=UnitItemInSlotBJ(udg_Muradin, 1)
-    set udg_ItemMuradin02=UnitItemInSlotBJ(udg_Muradin, 2)
-    set udg_ItemMuradin03=UnitItemInSlotBJ(udg_Muradin, 3)
-    set udg_ItemMuradin04=UnitItemInSlotBJ(udg_Muradin, 4)
-    set udg_ItemMuradin05=UnitItemInSlotBJ(udg_Muradin, 5)
-    set udg_ItemMuradin06=UnitItemInSlotBJ(udg_Muradin, 6)
-    call CreateItemLoc(GetItemTypeId(udg_ItemMuradin01), GetRectCenter(gg_rct_ItemMuradin01))
-    call CreateItemLoc(GetItemTypeId(udg_ItemMuradin02), GetRectCenter(gg_rct_ItemMuradin02))
-    call CreateItemLoc(GetItemTypeId(udg_ItemMuradin03), GetRectCenter(gg_rct_ItemMuradin03))
-    call CreateItemLoc(GetItemTypeId(udg_ItemMuradin04), GetRectCenter(gg_rct_ItemMuradin04))
-    call CreateItemLoc(GetItemTypeId(udg_ItemMuradin05), GetRectCenter(gg_rct_ItemMuradin05))
-    call CreateItemLoc(GetItemTypeId(udg_ItemMuradin06), GetRectCenter(gg_rct_ItemMuradin06))
-    call TriggerExecute(gg_trg_ItemFailsafeReplace)
     call GroupRemoveUnitSimple(udg_Arthas, udg_ValleyGroup)
-    call ForGroupBJ(udg_ValleyGroup, function Trig_FrostmourneCinematicEscapeEvil_Func037002)
+    call ForGroupBJ(udg_ValleyGroup, function Trig_FrostmourneCinematicEscapeEvil_Func023002)
     // MAKE MALGANIS VULNERABLE
     call TriggerExecute(gg_trg_DestroyMalganisItems)
     call DisableTrigger(gg_trg_GiveAnkh)
     call SetUnitPositionLoc(udg_EvilArthas, GetRectCenter(gg_rct_FrostmourneArthasOutside))
     call SetUnitFacingTimed(udg_EvilArthas, 315.00, 0)
-    if ( Trig_FrostmourneCinematicEscapeEvil_Func043001() ) then
+    if ( Trig_FrostmourneCinematicEscapeEvil_Func029001() ) then
         call SetUnitPositionLocFacingBJ(udg_Captain, GetRectCenter(gg_rct_FrostmourneCaptainToArthas), 150.00)
     else
         call CreateNUnitsAtLoc(1, 'hcth', Player(1), GetRectCenter(gg_rct_FrostmourneCaptainToArthas), 150.00)
@@ -7543,8 +6801,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_GreenLumber()
     call InitTrig_GiveAnkh()
     call InitTrig_DestroyMalganisItems()
-    call InitTrig_ItemFailsafeDetect()
-    call InitTrig_ItemFailsafeReplace()
     call InitTrig_TriggerIntroCinematic()
     call InitTrig_IntroEnvironment()
     call InitTrig_IntroCinematicMode()

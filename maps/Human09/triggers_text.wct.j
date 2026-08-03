@@ -1,5 +1,5 @@
 // version: 1
-// Triggers: 105
+// Triggers: 103
 //\\// Trigger #0
 // This file defines file IO functions for the JASS side of things
 // Based off the FileIO module created by Nestharus, see:
