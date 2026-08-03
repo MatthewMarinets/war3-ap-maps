@@ -552,6 +552,14 @@ def format_version(version: tuple[int, ...]) -> str:
     return '.'.join(map(str, version))
 
 
+def get_first_line(lines: list[str]) -> str:
+    # Note(mm): On Reforged, `call PreloadStart()` is included at the start of packet reads
+    first_line = lines.pop(0).strip()
+    if first_line.startswith('call PreloadStart'):
+        first_line = lines.pop(0)
+    return first_line
+
+
 def read_status(status: MissionStatus, game_status: GameStatus) -> None:
     if not os.path.exists(STATUS_FILE):
         status.update_number = -1
@@ -560,8 +568,9 @@ def read_status(status: MissionStatus, game_status: GameStatus) -> None:
     with open(STATUS_FILE, 'r') as fp:
         lines = fp.readlines()
     lines = lines[2:]
+    first_line = get_first_line(lines)
     try:
-        status.update_number = (int(line_contents(lines.pop(0))) + 1) % MAX_UPDATE_ID
+        status.update_number = (int(first_line) + 1) % MAX_UPDATE_ID
     except IndexError:
         return
     if status.first_transmission == FIRST_TRANSMISSION_UNSET:
@@ -646,7 +655,8 @@ def read_hero_status(slot: int, game_status: GameStatus) -> None:
     with open(filename, 'r', encoding='utf-8') as fp:
         lines = fp.readlines()
     lines = lines[2:]
-    slot_index = int(line_contents(lines.pop(0)))
+    first_line = get_first_line(lines)
+    slot_index = int(line_contents(first_line))
     assert slot_index == slot
     hero_name = line_contents(lines.pop(0))
     slot = heroes.HeroSlot(slot_index)
