@@ -205,6 +205,48 @@ function B2I takes boolean b returns integer
     return 0
 endfunction
 
+function int_to_nibble takes integer i returns string
+    if i < 0 then
+        set i = 0
+    endif
+    if i >= 15 then
+        return "F"
+    elseif i == 14 then
+        return "E"
+    elseif i == 13 then
+        return "D"
+    elseif i == 12 then
+        return "C"
+    elseif i == 11 then
+        return "B"
+    elseif i == 10 then
+        return "A"
+    else
+        return I2S(i)
+    endif
+endfunction
+
+function I2H_16 takes integer i returns string
+    local integer aggregator_1 = 0
+    local integer aggregator_2 = 0
+    local integer aggregator_3 = 0
+    if i >= 65536 then
+        set i = 65535
+    endif
+    set aggregator_1 = i / 4096
+    set i = i - aggregator_1 * 4096
+    set aggregator_2 = i / 256
+    set i = i - aggregator_2 * 256
+    set aggregator_3 = i / 16
+    set i = i - aggregator_3 * 16
+    return int_to_nibble(aggregator_1) + int_to_nibble(aggregator_2) + int_to_nibble(aggregator_3) + int_to_nibble(i)
+endfunction
+
+function I2H takes integer i returns string
+    local integer hi = i / 65536
+    return "0x" + I2H_16(hi) + "_" + I2H_16(i - hi * 65536)
+endfunction
+
 function captains_set_ability_usable takes player p returns nothing
     local integer available = GetPlayerTechMaxAllowed(p, 'hcth') - GetPlayerTechCount(p, 'AP00', true)
     if available < 0 then

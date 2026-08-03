@@ -13,10 +13,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -28,10 +30,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -43,10 +47,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -58,10 +64,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -73,10 +81,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -88,10 +98,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -103,10 +115,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -118,10 +132,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -133,10 +149,12 @@ fade_in = 10
 fade_out = 10
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -148,10 +166,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -163,10 +183,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -178,10 +200,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -193,10 +217,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -208,10 +234,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -223,10 +251,12 @@ fade_in = 10
 fade_out = 10
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -238,10 +268,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -253,10 +285,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -268,10 +302,12 @@ fade_in = 10
 fade_out = 10
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -283,10 +319,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -298,10 +336,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -313,10 +353,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -328,10 +370,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -343,10 +387,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -358,10 +404,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -373,10 +421,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -388,10 +438,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -403,10 +455,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -418,10 +472,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -433,10 +489,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -448,10 +506,12 @@ fade_in = 10
 fade_out = 10
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -463,10 +523,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -478,10 +540,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -493,10 +557,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -508,10 +574,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -523,10 +591,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -538,10 +608,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -553,10 +625,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -568,10 +642,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -583,10 +659,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -598,10 +676,12 @@ fade_in = 12700
 fade_out = 12700
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -613,10 +693,12 @@ fade_in = 10
 fade_out = 10
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -628,10 +710,12 @@ fade_in = 10
 fade_out = 10
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -643,10 +727,12 @@ fade_in = 10
 fade_out = 10
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -658,10 +744,12 @@ fade_in = 10
 fade_out = 10
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -673,10 +761,12 @@ fade_in = 10
 fade_out = 10
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1
 
 [[sounds]]
 
@@ -688,7 +778,9 @@ fade_in = 10
 fade_out = 10
 volume = -1
 pitch = 4294967296.0
+file_format = -1
 channel = "Default"
 min_distance = 4294967296.0
 max_distance = 4294967296.0
 distance_cutoff = 4294967296.0
+unknown4 = -1

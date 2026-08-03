@@ -939,9 +939,9 @@ def generate_condition(condition: wtg.EcaFunction, info: GenInfo, prepend_info: 
     elif condition.name.startswith('Operator'):
         result = f'( {generate_operator(condition, "Operator", info, prepend_info)} )'
     elif condition.name == 'OrMultiple':
-        result = ' or '.join(f'({generate_condition(subfunc, info, prepend_info)})' for subfunc in condition.subfunctions)
+        result = '(' + ' or '.join(f'({generate_condition(subfunc, info, prepend_info)})' for subfunc in condition.subfunctions) + ')'
     elif condition.name == 'AndMultiple':
-        result = ' and '.join(f'({generate_condition(subfunc, info, prepend_info)})' for subfunc in condition.subfunctions)
+        result = '(' + ' and '.join(f'({generate_condition(subfunc, info, prepend_info)})' for subfunc in condition.subfunctions) + ')'
     else:
         param_info = wtg.LIB_INFO[condition.name]
         assert len(condition.parameters) == len(param_info.arg_types)
