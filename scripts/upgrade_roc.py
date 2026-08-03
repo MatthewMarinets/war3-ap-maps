@@ -63,6 +63,7 @@ def update_war3_info(w3i_file: str) -> None:
     war3_info = w3i.from_text_file(w3i_file)
     war3_info.version = w3i.W3iVersions.TFT
     war3_info.flags |= w3i.MapFlags.REQUIRES_EXPANSION
+    war3_info.map_game_data_set = 0  # Current melee balance, gives Gryphons magic attack
     war3_info.tft_weather = 'null'
 
     existing_tech_entries = [tech.tech_id for tech in war3_info.technologies]

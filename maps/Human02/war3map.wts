@@ -73,7 +73,7 @@ STRING 17
 Establish a Base
   - Construct a Production Building
   - Construct 2 Farms
-  - Train 6 Footmen
+  - Train 6 Military Units
 }
 
 STRING 18
@@ -82,7 +82,7 @@ STRING 18
 Establish a Base
   - Construct a Production Building
   - Construct 2 Farms
-  - Train 6 Footmen
+  - Train 6 Military Units
 }
 
 STRING 19
@@ -298,7 +298,7 @@ Construct 2 Farms
 
 STRING 116
 {
-Train 6 Footmen
+Train 6 Military Units
 }
 
 STRING 118
@@ -313,12 +313,12 @@ Bring the Heart of Searinox to Feranor Steeltoe
 
 STRING 201
 {
-(null)
+(wo)men
 }
 
 STRING 202
 {
-Footmen
+(wo)men
 }
 
 STRING 222
@@ -553,7 +553,7 @@ STRING 525
 Establish a Base
   - |cff808080Construct a Production Building (Completed)|r
   - |cff808080Construct 2 Farms (Completed)|r
-  - Train 6 Footmen
+  - Train 6 Military Units
 }
 
 STRING 530
@@ -562,7 +562,7 @@ STRING 530
 Establish a Base
   - Construct a Production Building
   - |cff808080Construct 2 Farms (Completed)|r
-  - Train 6 Footmen
+  - Train 6 Military Units
 }
 
 STRING 535
@@ -571,7 +571,7 @@ STRING 535
 Establish a Base
   - |cff808080Construct a Production Building (Completed)|r
   - |cff808080Construct 2 Farms (Completed)|r
-  - Train 6 Footmen
+  - Train 6 Military Units
 }
 
 STRING 540
@@ -580,7 +580,7 @@ STRING 540
 Establish a Base
   - |cff808080Construct a Production Building (Completed)|r
   - Construct 2 Farms
-  - Train 6 Footmen
+  - Train 6 Military Units
 }
 
 STRING 543
@@ -626,7 +626,7 @@ STRING 564
 Establish a Base
   - |cff808080Construct a Production Building (Completed)|r
   - Construct 2 Farms
-  - |cff808080Train 6 Footmen (Completed)|r
+  - |cff808080Train 6 Military Units (Completed)|r
 }
 
 STRING 658
