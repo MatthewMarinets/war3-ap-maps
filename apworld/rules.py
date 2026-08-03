@@ -124,6 +124,14 @@ class Wc3Logic:
             or self.has_all(state, (Wc3Item.FLYING_MACHINE, Wc3Item.FLYING_MACHINE_BOMBS))
         )
 
+    def human_has_core_unit(self, state: 'CollectionState') -> bool:
+        return self.has_any(state, (
+            Wc3Item.RIFLEMAN,
+            Wc3Item.KNIGHT,
+            Wc3Item.SPELL_BREAKER,
+            Wc3Item.GRYPHON_RIDER,
+        ))
+
     def human_has_upgraded_core_unit(self, state: 'CollectionState', upgrade: int = 2) -> bool:
         has_swords = self.has(state, Wc3Item.UPGRADE_HUMAN_FORGED_SWORDS, count=upgrade)
         has_plating = self.has(state, Wc3Item.UPGRADE_HUMAN_PLATING, count=upgrade)
@@ -230,6 +238,10 @@ def get_location_to_rules(world: 'Wc3World') -> dict[Wc3Location | int, Callable
         Wc3Location.HU5_DESTROY_GREEN_BASE: logic.human_5_undead_bases,
         Wc3Location.HU5_DESTROY_PURPLE_BASE: logic.human_5_undead_bases,
         Wc3Location.HU5_SLAY_GREEN_LICH: logic.human_has_upgraded_core_unit,
+
+        Wc3Location.HU6_VICTORY: logic.human_has_ground_attacker,
+        Wc3Location.HU6_AHEAD_BY_50_ZOMBIES: logic.human_has_core_unit,
+        Wc3Location.HU6_AHEAD_BY_80_ZOMBIES: logic.human_has_upgraded_core_unit,
 
         Wc3Location.HU7_VICTORY: logic.human_7_victory,
     }
