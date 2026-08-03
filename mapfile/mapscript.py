@@ -1005,6 +1005,12 @@ def generate_gui_parameter(
             prepend_info.lines.append(f'function {func_name} takes nothing returns boolean')
             prepend_info.lines.append(f'    return {contents}')
             prepend_info.lines.append(f'endfunction\n')
+        elif paramtype == 'code':
+            result = f'function {func_name}'
+            contents = generate_condition(f, info, prepend_info)
+            prepend_info.lines.append(f'function {func_name} takes nothing returns nothing')
+            prepend_info.lines.append(f'    call {contents}')
+            prepend_info.lines.append(f'endfunction\n')
         else:
             result = generate_condition(f, info, prepend_info)
     elif parameter.parameter_type == wtg.EcaParameterType.Preset:
