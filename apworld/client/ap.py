@@ -230,6 +230,8 @@ class Wc3Context(CommonContext):
                     )
                     continue
                 allocation[int(key)] = cast(GameID, value)
+        self.comm_ctx.game_status.hero_data = comm.init_hero_data()
+        self.comm_ctx.game_status.item_channel_state = comm.init_item_channels()
         for hero_id, hero_class_id in slot_data["hero_class"].items():
             self.comm_ctx.game_status.hero_data[int(hero_id)].hero = heroes.HERO_CHOICE_ID_TO_DATA[hero_class_id]
             self.comm_ctx.game_status.hero_data[int(hero_id)].reset_abils()
@@ -472,28 +474,52 @@ def load_hero_state(game_status: comm.GameStatus) -> None:
     for hero_id, hero_data in game_status.hero_data.items():
         hero_save_data = all_hero_save_data.get(str(hero_id))
         if not isinstance(hero_save_data, dict):
-            continue
+            hero_save_data = {}
         xp_data = hero_save_data.get("xp")
         if isinstance(xp_data, int):
             hero_data.xp = xp_data
+        else:
+            level_data = items.HERO_SLOT_TO_LEVEL_ITEM.get(hero_id)
+            if level_data is None:
+                hero_data.xp = 0
+            else:
+                assert isinstance(level_data.type, items.Level)
+                hero_data.xp = heroes.LEVEL_THRESHOLDS[level_data.type.start_level - 1]
         strength = hero_save_data.get("strength")
         if isinstance(strength, int):
             hero_data.strength = strength
+        else:
+            hero_data.strength = 0
         agility = hero_save_data.get("agility")
         if isinstance(agility, int):
             hero_data.agility = agility
+        else:
+            hero_data.agility = 0
         intelligence = hero_save_data.get("intelligence")
         if isinstance(intelligence, int):
             hero_data.intelligence = intelligence
+        else:
+            hero_data.intelligence = 0
         max_health = hero_save_data.get("max_health")
         if isinstance(max_health, int):
             hero_data.max_health = max_health
+        else:
+            hero_data.max_health = 0
+
+        # Abilities
+        for abil_key in hero_data.abilities:
+            hero_data.abilities[abil_key] = 0
         abilities = hero_save_data.get("abilities")
         if isinstance(abilities, dict):
             for abil_key in hero_data.abilities:
                 abil_level = abilities.get(abil_key)
                 if isinstance(abil_level, int) and abil_level >= 0:
                     hero_data.abilities[abil_key] = abil_level
+
+        # Inventory items
+        for current_item in hero_data.items:
+            current_item.item_id = ""
+            current_item.charges = 0
         inventory_items = hero_save_data.get("items")
         if isinstance(inventory_items, list):
             for index, inventory_item in enumerate(inventory_items):

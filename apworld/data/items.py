@@ -549,3 +549,8 @@ for item in Wc3Item:
     item_id_to_name[item.id] = item.item_name
     item_name_to_id[item.item_name] = item.id
     CATEGORY_TO_ITEMS.setdefault(item.type.__class__, []).append(item)
+
+HERO_SLOT_TO_LEVEL_ITEM: dict[HeroSlot | int, Wc3Item] = {}
+for item in CATEGORY_TO_ITEMS[Level]:
+    assert isinstance(item.type, Level)
+    HERO_SLOT_TO_LEVEL_ITEM[item.type.slot] = item

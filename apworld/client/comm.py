@@ -182,7 +182,16 @@ class MissionStatus:
 
 
 def init_hero_data() -> dict[heroes.HeroSlot | int, HeroStatus]:
-    return {slot: HeroStatus(heroes.HERO_SLOT_TO_DEFAULT_CHOICE[slot]) for slot in heroes.HeroSlot}
+    result: dict[heroes.HeroSlot | int, HeroStatus] = {
+        slot: HeroStatus(heroes.HERO_SLOT_TO_DEFAULT_CHOICE[slot]) for slot in heroes.HeroSlot
+    }
+    for slot, status in result.items():
+        level_item = items.HERO_SLOT_TO_LEVEL_ITEM.get(slot)
+        if level_item is None:
+            continue
+        status.max_level = level_item.type.start_level_cap
+        status.xp = heroes.LEVEL_THRESHOLDS[level_item.type.start_level - 1]
+    return result
 
 
 @dataclass(slots=True)
