@@ -188,6 +188,7 @@ def update_units(units_file: str) -> None:
         editor_ids.FIELD_UNIT_ABILITIES_NORMAL: SPELLBOOK_ABIL_ID,
         editor_ids.FIELD_UNIT_ABILITIES_DEFAULT: '',
         editor_ids.FIELD_UNIT_GENERAL_STRUCTURES_BUILT: '',
+        editor_ids.FIELD_UNIT_STATS_MANA_MAXIMUM: 1,
     })
 
     blizz_entities = mod_entity.Entities(data.blizzard_objects.entities, False)

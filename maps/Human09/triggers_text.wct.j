@@ -1200,16 +1200,19 @@ function irregulars_on_cast takes nothing returns nothing
         // priest
         if irregular_check_money(u, 125) then
             set e = irregular_transform(u, 'AP0f')
+            call SetUnitState(u, UNIT_STATE_MANA, 0.5)
         endif
     elseif a == 'AP06' then
         // sorceress
         if irregular_check_money(u, 140) then
             set e = irregular_transform(u, 'AP0g')
+            call SetUnitState(u, UNIT_STATE_MANA, 0.5)
         endif
     elseif a == 'AP07' then
         // spell breaker
         if irregular_check_money(u, 200) then
             set e = irregular_transform(u, 'AP0h')
+            call SetUnitState(u, UNIT_STATE_MANA, 0.5)
         endif
     elseif a == 'AP08' then
         // mortar team
