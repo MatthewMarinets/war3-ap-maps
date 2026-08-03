@@ -349,7 +349,7 @@ version = TFT
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
 - Action CustomScriptCode
-  - param String call status_check_location(23)
+  - param String call status_check_location(24)
 - Event TriggerRegisterUnitEvent
   - param Variable gg_unit_unp2_0051
   - param Preset UnitEventDeath

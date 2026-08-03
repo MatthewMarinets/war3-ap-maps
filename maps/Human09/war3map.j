@@ -3275,7 +3275,7 @@ endfunction
 //===========================================================================
 function Trig_Purple_Base_Location_Actions takes nothing returns nothing
     call DisableTrigger(GetTriggeringTrigger())
-    call status_check_location(23)
+    call status_check_location(24)
 endfunction
 
 //===========================================================================
