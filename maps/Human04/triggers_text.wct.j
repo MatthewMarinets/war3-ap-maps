@@ -1273,7 +1273,7 @@ function mercenaries_apply takes nothing returns nothing
             set scanned = scanned + mask
         elseif u > 0 then
             // add the unit
-            call AddUnitToStock(target_camp, u, 0, 2)
+            call AddUnitToStock(target_camp, u, 1, 2)
             set scanned = scanned + mask
             set units_added = units_added + mask
         endif
