@@ -14,7 +14,7 @@ ITEM_TYPE_TO_CLASSIFICATION = {
     items.Unit: ItemClassification.progression,
     items.Building: ItemClassification.progression,
     items.Level: ItemClassification.progression,
-    items.Upgrade: ItemClassification.useful,
+    items.Upgrade: ItemClassification.progression,
     items.ShopItem: ItemClassification.useful,
     items.PickupItem: ItemClassification.useful,
     items.QuestItem: ItemClassification.progression,
