@@ -570,7 +570,7 @@ def read_status(status: MissionStatus, game_status: GameStatus) -> None:
     lines = lines[2:]
     first_line = get_first_line(lines)
     try:
-        status.update_number = (int(first_line) + 1) % MAX_UPDATE_ID
+        status.update_number = (int(line_contents(first_line)) + 1) % MAX_UPDATE_ID
     except IndexError:
         return
     if status.first_transmission == FIRST_TRANSMISSION_UNSET:
