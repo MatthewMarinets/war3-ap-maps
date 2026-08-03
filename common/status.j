@@ -211,9 +211,15 @@ function status_load_items takes nothing returns nothing
 
     if GetPlayerTechMaxAllowed(p, 'ndog') == 0 then
         set target_unit = item_channel_1_target
-        set num_channel_1_items_received = num_channel_1_items_received + num_items
     else
         set target_unit = item_channel_2_target
+    endif
+    if IsUnitType(target_unit, UNIT_TYPE_DEAD) then
+        return
+    endif
+    if GetPlayerTechMaxAllowed(p, 'ndog') == 0 then
+        set num_channel_1_items_received = num_channel_1_items_received + num_items
+    else
         set num_channel_2_items_received = num_channel_2_items_received + num_items
     endif
 
