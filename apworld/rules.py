@@ -115,18 +115,27 @@ class Wc3Logic:
     def human_has_healing(self, state: 'CollectionState') -> bool:
         return self.has_any(state, (Wc3Item.PRIEST, Wc3Item.SHOP_ITEM_SCROLL_OF_REGENERATION))
 
-    def human_has_building_attack(self, state: 'CollectionState') -> bool:
+    def human_has_siege(self, state: 'CollectionState') -> bool:
         return (
             self.has_any(state, (
-                Wc3Item.FOOTMAN,
-                Wc3Item.RIFLEMAN,
-                Wc3Item.KNIGHT,
                 Wc3Item.MORTAR_TEAM,
                 Wc3Item.SIEGE_ENGINE,
-                Wc3Item.GRYPHON_RIDER,
             ))
             or self.has_all(state, (Wc3Item.FLYING_MACHINE, Wc3Item.FLYING_MACHINE_BOMBS))
         )
+
+    def human_has_upgraded_core_unit(self, state: 'CollectionState', upgrade: int = 2) -> bool:
+        has_swords = self.has(state, Wc3Item.UPGRADE_HUMAN_FORGED_SWORDS, count=upgrade)
+        has_plating = self.has(state, Wc3Item.UPGRADE_HUMAN_PLATING, count=upgrade)
+        has_gunpowder = self.has(state, Wc3Item.UPGRADE_HUMAN_GUNPOWDER, count=upgrade)
+        has_leather_armour = self.has(state, Wc3Item.UPGRADE_HUMAN_LEATHER_ARMOR, count=upgrade)
+        if self.has(state, Wc3Item.GRYPHON_RIDER) and has_swords and has_leather_armour:
+            return True
+        if self.has_any(state, (Wc3Item.SPELL_BREAKER, Wc3Item.KNIGHT)) and has_swords and has_plating:
+            return True
+        if self.has(state, Wc3Item.RIFLEMAN) and has_gunpowder and has_leather_armour:
+            return True
+        return False
 
     def human_has_dispel(self, state: 'CollectionState') -> bool:
         return (
@@ -190,7 +199,8 @@ class Wc3Logic:
     def human_5_undead_bases(self, state: 'CollectionState') -> bool:
         return (
             self.human_worker_and_ground_attacker(state)
-            and self.human_has_building_attack(state)
+            and self.human_has_siege(state)
+            and self.human_has_upgraded_core_unit(state, 3)
             and self.human_has_healing(state)
             and self.has_level(state, Wc3Item.ARTHAS_LEVEL, 6)
         )
@@ -219,6 +229,7 @@ def get_location_to_rules(world: 'Wc3World') -> dict[Wc3Location | int, Callable
         Wc3Location.HU5_VICTORY: logic.human_5_victory,
         Wc3Location.HU5_DESTROY_GREEN_BASE: logic.human_5_undead_bases,
         Wc3Location.HU5_DESTROY_PURPLE_BASE: logic.human_5_undead_bases,
+        Wc3Location.HU5_SLAY_GREEN_LICH: logic.human_has_upgraded_core_unit,
 
         Wc3Location.HU7_VICTORY: logic.human_7_victory,
     }
