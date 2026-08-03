@@ -13,6 +13,7 @@ DEFAULT_UI_SCALING = 1.1
 DEFAULT_DAMAGE_BASE = 12
 FLOAT_MAP = {
     1.1: 1.100000023841858,
+    1.2: 1.2000000476837158,
     1.35: 1.350000023841858,
     1.55: 1.5499999523162842,
 }
@@ -139,6 +140,8 @@ HERO_INFO = [
     HeroInfo(
         GameID.TAUREN_CHIEFTAIN, CustomIDs.UNIT_CORRUPTED_TAUREN_CHIEFTAIN,
         r'apimports\eviltaurenchieftain.mdx', CustomIDs.ABIL_CHAOS_TAUREN_CHIEFTAIN,
+        # Note: Default value is 1.1
+        scaling=1.2,
     ),
     HeroInfo(
         GameID.ROKHAN, CustomIDs.UNIT_CORRUPTED_ROKHAN,

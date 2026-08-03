@@ -1515,7 +1515,7 @@ modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
 table_column = 0
-value = 1.2
+value = 1.2000000476837158
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -2470,14 +2470,6 @@ value = "apimports\\eviltaurenchieftain.mdl"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
-modification_id = 'usca'  # UnitUI.Scaling Value
-data_type = "Float"
-variation_level = 0
-table_column = 0
-value = 1.100000023841858
-object_id = 'null'
-
-[[map_objects.entities.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2499,6 +2491,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = "(Corrupted)"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.2000000476837158
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -2619,7 +2619,7 @@ modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
 table_column = 0
-value = 1.2
+value = 1.2000000476837158
 object_id = 'null'
 
 [[map_objects.entities.modifications]]

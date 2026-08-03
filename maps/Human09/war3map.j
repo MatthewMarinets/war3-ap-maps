@@ -6324,40 +6324,41 @@ endfunction
 //===========================================================================
 // Trigger: FrostmourneMuradinHit
 //===========================================================================
-function Trig_FrostmourneMuradinHit_Func010001 takes nothing returns boolean
+function Trig_FrostmourneMuradinHit_Func011001 takes nothing returns boolean
     return ( udg_FrostmourneCinematicEscape == true )
 endfunction
 
-function Trig_FrostmourneMuradinHit_Func019001 takes nothing returns boolean
+function Trig_FrostmourneMuradinHit_Func020001 takes nothing returns boolean
     return ( udg_FrostmourneCinematicEscape == true )
 endfunction
 
-function Trig_FrostmourneMuradinHit_Func023001 takes nothing returns boolean
+function Trig_FrostmourneMuradinHit_Func024001 takes nothing returns boolean
     return ( udg_FrostmourneCinematicEscape == true )
 endfunction
 
-function Trig_FrostmourneMuradinHit_Func026001 takes nothing returns boolean
+function Trig_FrostmourneMuradinHit_Func027001 takes nothing returns boolean
     return ( udg_FrostmourneCinematicEscape == true )
 endfunction
 
-function Trig_FrostmourneMuradinHit_Func032001 takes nothing returns boolean
+function Trig_FrostmourneMuradinHit_Func033001 takes nothing returns boolean
     return ( udg_FrostmourneCinematicEscape == true )
 endfunction
 
-function Trig_FrostmourneMuradinHit_Func038001 takes nothing returns boolean
+function Trig_FrostmourneMuradinHit_Func039001 takes nothing returns boolean
     return ( udg_FrostmourneCinematicEscape == true )
 endfunction
 
-function Trig_FrostmourneMuradinHit_Func043001 takes nothing returns boolean
+function Trig_FrostmourneMuradinHit_Func044001 takes nothing returns boolean
     return ( udg_FrostmourneCinematicEscape == true )
 endfunction
 
-function Trig_FrostmourneMuradinHit_Func048001 takes nothing returns boolean
+function Trig_FrostmourneMuradinHit_Func049001 takes nothing returns boolean
     return ( udg_FrostmourneCinematicEscape == true )
 endfunction
 
 function Trig_FrostmourneMuradinHit_Actions takes nothing returns nothing
     call CinematicFadeBJ(bj_CINEFADETYPE_FADEIN, 3.00, "ReplaceableTextures\\CameraMasks\\White_mask.blp", 100.00, 100.00, 100.00, 0.00)
+    call SetUnitOwner(udg_Muradin, Player(PLAYER_NEUTRAL_PASSIVE), false)
     call SetUnitTimeScalePercent(udg_Muradin, 80.00)
     call SetUnitAnimation(udg_Muradin, "death second")
     call AttachSoundToUnitBJ(gg_snd_HeroMountainKingDeath, udg_Muradin)
@@ -6366,7 +6367,7 @@ function Trig_FrostmourneMuradinHit_Actions takes nothing returns nothing
     call CameraSetupApplyForPlayer(true, gg_cam_FrostmourneMuradinDeath_01, Player(1), 0.01)
     call SetUnitFacingToFaceUnitTimed(udg_Arthas, udg_Muradin, 0.00)
     call TriggerSleepAction(1.00)
-    if ( Trig_FrostmourneMuradinHit_Func010001() ) then
+    if ( Trig_FrostmourneMuradinHit_Func011001() ) then
         return
     else
         call DoNothing()
@@ -6379,7 +6380,7 @@ function Trig_FrostmourneMuradinHit_Actions takes nothing returns nothing
     call CameraSetSmoothingFactorBJ(0.00)
     call CameraSetupApplyForPlayer(true, gg_cam_FrostmourneMuradinDeath_02, Player(1), 0.01)
     call TriggerSleepAction(1.00)
-    if ( Trig_FrostmourneMuradinHit_Func019001() ) then
+    if ( Trig_FrostmourneMuradinHit_Func020001() ) then
         return
     else
         call DoNothing()
@@ -6387,14 +6388,14 @@ function Trig_FrostmourneMuradinHit_Actions takes nothing returns nothing
     call CameraSetSmoothingFactorBJ(0.00)
     call CameraSetupApplyForPlayer(true, gg_cam_FrostmourneMuradinDeath_03, Player(1), 0.01)
     call TriggerSleepAction(2.50)
-    if ( Trig_FrostmourneMuradinHit_Func023001() ) then
+    if ( Trig_FrostmourneMuradinHit_Func024001() ) then
         return
     else
         call DoNothing()
     endif
     call SetUnitAnimation(udg_EvilArthas, "Stand Fifth")
     call TriggerSleepAction(0.50)
-    if ( Trig_FrostmourneMuradinHit_Func026001() ) then
+    if ( Trig_FrostmourneMuradinHit_Func027001() ) then
         return
     else
         call DoNothing()
@@ -6404,7 +6405,7 @@ function Trig_FrostmourneMuradinHit_Actions takes nothing returns nothing
     call SetSoundPositionLocBJ(gg_snd_BalrogAttack1, GetRectCenter(gg_rct_FrostmourneArthasAfterMalsDeath), 0)
     call SetSoundVolumeBJ(gg_snd_BalrogAttack1, 40.00)
     call PlaySoundBJ(gg_snd_BalrogAttack1)
-    if ( Trig_FrostmourneMuradinHit_Func032001() ) then
+    if ( Trig_FrostmourneMuradinHit_Func033001() ) then
         return
     else
         call DoNothing()
@@ -6414,7 +6415,7 @@ function Trig_FrostmourneMuradinHit_Actions takes nothing returns nothing
     call SetSoundVolumeBJ(gg_snd_ColdArrow2, 45.00)
     call PlaySoundBJ(gg_snd_ColdArrow2)
     call TriggerSleepAction(3.20)
-    if ( Trig_FrostmourneMuradinHit_Func038001() ) then
+    if ( Trig_FrostmourneMuradinHit_Func039001() ) then
         return
     else
         call DoNothing()
@@ -6423,7 +6424,7 @@ function Trig_FrostmourneMuradinHit_Actions takes nothing returns nothing
     call SetSoundVolumeBJ(gg_snd_MetalMediumBashStone1, 60.00)
     call PlaySoundBJ(gg_snd_MetalMediumBashStone1)
     call TriggerSleepAction(0.60)
-    if ( Trig_FrostmourneMuradinHit_Func043001() ) then
+    if ( Trig_FrostmourneMuradinHit_Func044001() ) then
         return
     else
         call DoNothing()
@@ -6432,7 +6433,7 @@ function Trig_FrostmourneMuradinHit_Actions takes nothing returns nothing
     call SetSoundVolumeBJ(gg_snd_WoodLightBashStone3, 60.00)
     call PlaySoundBJ(gg_snd_WoodLightBashStone3)
     call TriggerSleepAction(0.60)
-    if ( Trig_FrostmourneMuradinHit_Func048001() ) then
+    if ( Trig_FrostmourneMuradinHit_Func049001() ) then
         return
     else
         call DoNothing()

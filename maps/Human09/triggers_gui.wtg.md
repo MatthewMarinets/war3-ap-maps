@@ -6435,6 +6435,10 @@ version = TFT
   - param String 100.00
   - param String 100.00
   - param String 0.00
+- Action SetUnitOwner
+  - param Variable Muradin
+  - param Preset PlayerNP
+  - param Preset ChangeColorFalse
 - Action SetUnitTimeScalePercent
   - param Variable Muradin
   - param String 80.00
