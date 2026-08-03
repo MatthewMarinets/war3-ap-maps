@@ -230,7 +230,7 @@ version = TFT
 - Action CommentString
   - param String Load the hero data
 - Action CustomScriptCode
-  - param String set udg_Muradin = hero_create(HERO_ID_MURADIN_BRONZEBEARD, Player(7), 3993.21, -3015.25, 1.0248675346374512)
+  - param String set udg_Muradin = hero_create(1, Player(7), 3993.21, -3015.25, 1.0248675346374512)
 - Action IfThenElse
   - param Function 
     - Condition OperatorCompareUnit
