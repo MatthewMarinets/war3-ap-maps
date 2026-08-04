@@ -7881,18 +7881,22 @@ Turned on from 'VillagerBridgeOutMessage'
 - Action ForGroup
   - param Variable FootmenDefending
   - param Function DoNothing
+    - Action IssueImmediateOrder
+      - param Function GetEnumUnit
+        - Function GetEnumUnit
+      - param Preset UnitOrderUnDefend
+- Action SetPlayerTechResearchedSwap
+  - param String Rhde
+  - param String 0
+  - param Preset Player09
+- Action ForGroup
+  - param Variable FootmenDefending
+  - param Function DoNothing
     - Action RescueUnitBJ
       - param Function GetEnumUnit
         - Function GetEnumUnit
       - param Preset Player01
       - param Preset ChangeColorTrue
-- Action ForGroup
-  - param Variable FootmenDefending
-  - param Function DoNothing
-    - Action IssueImmediateOrder
-      - param Function GetEnumUnit
-        - Function GetEnumUnit
-      - param Preset UnitOrderUnDefend
 - Action QueuedTriggerRemoveBJ
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger

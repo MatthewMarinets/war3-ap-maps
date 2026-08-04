@@ -121,13 +121,6 @@ name = 'TRIGSTR_044'
 [[upgrades]]
 
 player_flags = 0x200
-upgrade_id = 'Rhpt'  # Priest Adept Training,Priest Master Training
-level = 0
-availability = "Researched"
-
-[[upgrades]]
-
-player_flags = 0x200
 upgrade_id = 'Rhde'  # Defend
 level = 0
 availability = "Researched"
@@ -141,20 +134,10 @@ availability = "Unavailable"
 
 [[upgrades]]
 
-player_flags = 0xa
+player_flags = 0x8
 upgrade_id = 'Rhpt'  # Priest Adept Training,Priest Master Training
 level = 1
 availability = "Unavailable"
-
-[[technologies]]
-
-player_flags = 0x24a
-tech_id = 'Stpm'
-
-[[technologies]]
-
-player_flags = 0x24a
-tech_id = 'Stpr'
 
 [[technologies]]
 

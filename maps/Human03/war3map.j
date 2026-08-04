@@ -7387,14 +7387,14 @@ function Trig_SkeletonsAllDead_Func013001 takes nothing returns boolean
 endfunction
 
 function Trig_SkeletonsAllDead_Func016002 takes nothing returns nothing
-    call RescueUnitBJ(GetEnumUnit(), Player(1), true)
-endfunction
-
-function Trig_SkeletonsAllDead_Func017002 takes nothing returns nothing
     call IssueImmediateOrderBJ(GetEnumUnit(), "undefend")
 endfunction
 
-function Trig_SkeletonsAllDead_Func019001 takes nothing returns boolean
+function Trig_SkeletonsAllDead_Func018002 takes nothing returns nothing
+    call RescueUnitBJ(GetEnumUnit(), Player(1), true)
+endfunction
+
+function Trig_SkeletonsAllDead_Func020001 takes nothing returns boolean
     return ( udg_GameOver == true )
 endfunction
 
@@ -7434,9 +7434,10 @@ function Trig_SkeletonsAllDead_Actions takes nothing returns nothing
     call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_Arthas, "TRIGSTR_069", gg_snd_H03Arthas16, "TRIGSTR_070", bj_TIMETYPE_ADD, 0.00, true)
     call VolumeGroupResetBJ()
     call ForGroupBJ(udg_FootmenDefending, function Trig_SkeletonsAllDead_Func016002)
-    call ForGroupBJ(udg_FootmenDefending, function Trig_SkeletonsAllDead_Func017002)
+    call SetPlayerTechResearchedSwap('Rhde', 0, Player(9))
+    call ForGroupBJ(udg_FootmenDefending, function Trig_SkeletonsAllDead_Func018002)
     call QueuedTriggerRemoveBJ(GetTriggeringTrigger())
-    if ( Trig_SkeletonsAllDead_Func019001() ) then
+    if ( Trig_SkeletonsAllDead_Func020001() ) then
         return
     else
         call DoNothing()
@@ -8080,7 +8081,6 @@ endfunction
 
 function InitUpgrades_Player1 takes nothing returns nothing
     call SetPlayerTechMaxAllowed(Player(1), 'Rhfl', 0)
-    call SetPlayerTechMaxAllowed(Player(1), 'Rhpt', 1)
 endfunction
 
 function InitUpgrades_Player3 takes nothing returns nothing
@@ -8089,7 +8089,6 @@ function InitUpgrades_Player3 takes nothing returns nothing
 endfunction
 
 function InitUpgrades_Player9 takes nothing returns nothing
-    call SetPlayerTechResearched(Player(9), 'Rhpt', 1)
     call SetPlayerTechResearched(Player(9), 'Rhde', 1)
 endfunction
 
@@ -8106,8 +8105,6 @@ endfunction
 //***************************************************************************
 
 function InitTechTree_Player1 takes nothing returns nothing
-    call SetPlayerTechMaxAllowed(Player(1), 'Stpm', 0)
-    call SetPlayerTechMaxAllowed(Player(1), 'Stpr', 0)
     call SetPlayerTechMaxAllowed(Player(1), 'Hblm', 0)
     call SetPlayerTechMaxAllowed(Player(1), 'Oshd', 0)
     call SetPlayerTechMaxAllowed(Player(1), 'Ucrl', 0)
@@ -8122,30 +8119,16 @@ function InitTechTree_Player2 takes nothing returns nothing
 endfunction
 
 function InitTechTree_Player3 takes nothing returns nothing
-    call SetPlayerTechMaxAllowed(Player(3), 'Stpm', 0)
-    call SetPlayerTechMaxAllowed(Player(3), 'Stpr', 0)
     call SetPlayerTechMaxAllowed(Player(3), 'Hblm', 0)
     call SetPlayerTechMaxAllowed(Player(3), 'Oshd', 0)
     call SetPlayerTechMaxAllowed(Player(3), 'Ucrl', 0)
     call SetPlayerTechMaxAllowed(Player(3), 'Ewar', 0)
 endfunction
 
-function InitTechTree_Player6 takes nothing returns nothing
-    call SetPlayerTechMaxAllowed(Player(6), 'Stpm', 0)
-    call SetPlayerTechMaxAllowed(Player(6), 'Stpr', 0)
-endfunction
-
-function InitTechTree_Player9 takes nothing returns nothing
-    call SetPlayerTechMaxAllowed(Player(9), 'Stpm', 0)
-    call SetPlayerTechMaxAllowed(Player(9), 'Stpr', 0)
-endfunction
-
 function InitTechTree takes nothing returns nothing
     call InitTechTree_Player1()
     call InitTechTree_Player2()
     call InitTechTree_Player3()
-    call InitTechTree_Player6()
-    call InitTechTree_Player9()
 endfunction
 
 //***************************************************************************
