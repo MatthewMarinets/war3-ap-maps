@@ -597,13 +597,13 @@ Run from Opening07 and OpeningCancelled
 ```
 ### Functions
 - Action GroupAddUnitSimple
-  - param Variable gg_unit_hfoo_0016
+  - param Variable gg_unit_hA00_0016
   - param Variable StartingNonHeroGroup
 - Action GroupAddUnitSimple
-  - param Variable gg_unit_hfoo_0017
+  - param Variable gg_unit_hA00_0017
   - param Variable StartingNonHeroGroup
 - Action GroupAddUnitSimple
-  - param Variable gg_unit_hfoo_0018
+  - param Variable gg_unit_hA00_0018
   - param Variable StartingNonHeroGroup
 - Action GroupAddUnitSimple
   - param Variable gg_unit_hmpr_0070
@@ -1444,17 +1444,17 @@ Run from 'FarmDone'
 - Action RemoveUnit
   - param Variable Barracks
 - Action SetUnitPositionLoc
-  - param Variable gg_unit_hfoo_0016
+  - param Variable gg_unit_hA00_0016
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Footmen01Attack
 - Action SetUnitPositionLoc
-  - param Variable gg_unit_hfoo_0017
+  - param Variable gg_unit_hA00_0017
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Footman02Attack
 - Action SetUnitPositionLoc
-  - param Variable gg_unit_hfoo_0018
+  - param Variable gg_unit_hA00_0018
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Footman03Attack
@@ -1795,13 +1795,13 @@ Gold given to player 7 no necros can build a haunted mine.
   - param Function DoNothing
     - Action DoNothing
 - Action IssuePointOrderLoc
-  - param Variable gg_unit_hfoo_0016
+  - param Variable gg_unit_hA00_0016
   - param Preset UnitOrderMove
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_OpeningFootman01
 - Action IssuePointOrderLoc
-  - param Variable gg_unit_hfoo_0017
+  - param Variable gg_unit_hA00_0017
   - param Preset UnitOrderMove
   - param Function GetRectCenter
     - Function GetRectCenter
@@ -1813,7 +1813,7 @@ Gold given to player 7 no necros can build a haunted mine.
     - Function GetRectCenter
       - param Variable gg_rct_OpeningFootman03
 - Action IssuePointOrderLoc
-  - param Variable gg_unit_hfoo_0018
+  - param Variable gg_unit_hA00_0018
   - param Preset UnitOrderMove
   - param Function GetRectCenter
     - Function GetRectCenter
@@ -1993,7 +1993,7 @@ Gold given to player 7 no necros can build a haunted mine.
   - param Function DoNothing
     - Action DoNothing
 - Action IssuePointOrderLoc
-  - param Variable gg_unit_hfoo_0016
+  - param Variable gg_unit_hA00_0016
   - param Preset UnitOrderMove
   - param Function GetRectCenter
     - Function GetRectCenter
@@ -2103,19 +2103,19 @@ Gold given to player 7 no necros can build a haunted mine.
   - param Function DoNothing
     - Action DoNothing
 - Action IssuePointOrderLoc
-  - param Variable gg_unit_hfoo_0016
+  - param Variable gg_unit_hA00_0016
   - param Preset UnitOrderAttack
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Footmen01Attack
 - Action IssuePointOrderLoc
-  - param Variable gg_unit_hfoo_0017
+  - param Variable gg_unit_hA00_0017
   - param Preset UnitOrderAttack
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Footman02Attack
 - Action IssuePointOrderLoc
-  - param Variable gg_unit_hfoo_0018
+  - param Variable gg_unit_hA00_0018
   - param Preset UnitOrderAttack
   - param Function GetRectCenter
     - Function GetRectCenter
@@ -2662,7 +2662,7 @@ Gold given to player 7 no necros can build a haunted mine.
 - Action TriggerSleepAction
   - param String 0.20
 - Action SetUnitFacingToFaceLocTimed
-  - param Variable gg_unit_hfoo_0016
+  - param Variable gg_unit_hA00_0016
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Footman01Facing
@@ -2671,7 +2671,7 @@ Gold given to player 7 no necros can build a haunted mine.
   - param Function GetEnteringUnit
     - Function GetEnteringUnit
   - param Preset OperatorEqualENE
-  - param Variable gg_unit_hfoo_0016
+  - param Variable gg_unit_hA00_0016
 - Event TriggerRegisterEnterRectSimple
   - param Variable gg_rct_Footmen01Attack
 

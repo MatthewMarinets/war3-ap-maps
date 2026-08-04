@@ -548,7 +548,7 @@ item_class = 0
 
 [[units]]
 
-type_id = 'hfoo'  # Footman
+type_id = 'hA00'  # Irregular
 variation = 0
 x = -3331.145751953125
 y = -5965.01806640625
@@ -578,7 +578,7 @@ entity_id = 16
 
 [[units]]
 
-type_id = 'hfoo'  # Footman
+type_id = 'hA00'  # Irregular
 variation = 0
 x = -3427.04345703125
 y = -6076.923828125
@@ -608,7 +608,7 @@ entity_id = 17
 
 [[units]]
 
-type_id = 'hfoo'  # Footman
+type_id = 'hA00'  # Irregular
 variation = 0
 x = -3472.031982421875
 y = -6005.69384765625

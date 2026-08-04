@@ -276,9 +276,9 @@ unit gg_unit_uaco_0005= null
 unit gg_unit_uaco_0011= null
 unit gg_unit_hpea_0023= null
 unit gg_unit_nvlw_0085= null
-unit gg_unit_hfoo_0016= null
-unit gg_unit_hfoo_0017= null
-unit gg_unit_hfoo_0018= null
+unit gg_unit_hA00_0016= null
+unit gg_unit_hA00_0017= null
+unit gg_unit_hA00_0018= null
 unit gg_unit_hmtm_0055= null
 unit gg_unit_hpea_0020= null
 unit gg_unit_hpea_0021= null
@@ -786,9 +786,9 @@ function CreateUnitsForPlayer1 takes nothing returns nothing
     local trigger t
     local real life
 
-    set gg_unit_hfoo_0016=CreateUnit(p, 'hfoo', - 3331.1, - 5965.0, 252.452)
-    set gg_unit_hfoo_0017=CreateUnit(p, 'hfoo', - 3427.0, - 6076.9, 351.002)
-    set gg_unit_hfoo_0018=CreateUnit(p, 'hfoo', - 3472.0, - 6005.7, 51.198)
+    set gg_unit_hA00_0016=CreateUnit(p, 'hA00', - 3331.1, - 5965.0, 252.452)
+    set gg_unit_hA00_0017=CreateUnit(p, 'hA00', - 3427.0, - 6076.9, 351.002)
+    set gg_unit_hA00_0018=CreateUnit(p, 'hA00', - 3472.0, - 6005.7, 51.198)
     set gg_unit_hpea_0020=CreateUnit(p, 'hpea', - 3709.8, - 6104.5, 309.675)
     set gg_unit_hpea_0021=CreateUnit(p, 'hpea', - 3814.2, - 6050.2, 314.247)
     set gg_unit_hpea_0023=CreateUnit(p, 'hpea', - 3692.6, - 5993.4, 322.944)
@@ -2822,9 +2822,9 @@ endfunction
 // Trigger: SetupNonHeroGroup
 //===========================================================================
 function Trig_SetupNonHeroGroup_Actions takes nothing returns nothing
-    call GroupAddUnitSimple(gg_unit_hfoo_0016, udg_StartingNonHeroGroup)
-    call GroupAddUnitSimple(gg_unit_hfoo_0017, udg_StartingNonHeroGroup)
-    call GroupAddUnitSimple(gg_unit_hfoo_0018, udg_StartingNonHeroGroup)
+    call GroupAddUnitSimple(gg_unit_hA00_0016, udg_StartingNonHeroGroup)
+    call GroupAddUnitSimple(gg_unit_hA00_0017, udg_StartingNonHeroGroup)
+    call GroupAddUnitSimple(gg_unit_hA00_0018, udg_StartingNonHeroGroup)
     call GroupAddUnitSimple(gg_unit_hmpr_0070, udg_StartingNonHeroGroup)
     call GroupAddUnitSimple(gg_unit_hmtm_0055, udg_StartingNonHeroGroup)
     call GroupAddUnitSimple(gg_unit_hpea_0020, udg_StartingNonHeroGroup)
@@ -3376,9 +3376,9 @@ function Trig_OpeningCancelled_Actions takes nothing returns nothing
     call RemoveUnit(udg_Farm)
     call RemoveUnit(udg_Townhall)
     call RemoveUnit(udg_Barracks)
-    call SetUnitPositionLoc(gg_unit_hfoo_0016, GetRectCenter(gg_rct_Footmen01Attack))
-    call SetUnitPositionLoc(gg_unit_hfoo_0017, GetRectCenter(gg_rct_Footman02Attack))
-    call SetUnitPositionLoc(gg_unit_hfoo_0018, GetRectCenter(gg_rct_Footman03Attack))
+    call SetUnitPositionLoc(gg_unit_hA00_0016, GetRectCenter(gg_rct_Footmen01Attack))
+    call SetUnitPositionLoc(gg_unit_hA00_0017, GetRectCenter(gg_rct_Footman02Attack))
+    call SetUnitPositionLoc(gg_unit_hA00_0018, GetRectCenter(gg_rct_Footman03Attack))
     call SetUnitPositionLoc(gg_unit_hmpr_0070, GetRectCenter(gg_rct_PriestAttack))
     call SetUnitPositionLoc(gg_unit_hmtm_0055, GetRectCenter(gg_rct_MortarAttack))
     call SetUnitAcquireRangeBJ(udg_Jaina, GetUnitDefaultAcquireRange(udg_Jaina))
@@ -3516,10 +3516,10 @@ function Trig_Opening02_Actions takes nothing returns nothing
     else
         call DoNothing()
     endif
-    call IssuePointOrderLocBJ(gg_unit_hfoo_0016, "move", GetRectCenter(gg_rct_OpeningFootman01))
-    call IssuePointOrderLocBJ(gg_unit_hfoo_0017, "move", GetRectCenter(gg_rct_OpeningFootman02))
+    call IssuePointOrderLocBJ(gg_unit_hA00_0016, "move", GetRectCenter(gg_rct_OpeningFootman01))
+    call IssuePointOrderLocBJ(gg_unit_hA00_0017, "move", GetRectCenter(gg_rct_OpeningFootman02))
     call IssuePointOrderLocBJ(gg_unit_hmtm_0055, "move", GetRectCenter(gg_rct_OpeningFootman03))
-    call IssuePointOrderLocBJ(gg_unit_hfoo_0018, "move", GetRectCenter(gg_rct_OpeningFootman04))
+    call IssuePointOrderLocBJ(gg_unit_hA00_0018, "move", GetRectCenter(gg_rct_OpeningFootman04))
     call IssuePointOrderLocBJ(gg_unit_hmpr_0070, "move", GetRectCenter(gg_rct_OpeningPriest01))
     call TriggerSleepAction(2.00)
     if ( Trig_Opening02_Func016001() ) then
@@ -3636,7 +3636,7 @@ function Trig_Opening03_Actions takes nothing returns nothing
     else
         call DoNothing()
     endif
-    call IssuePointOrderLocBJ(gg_unit_hfoo_0016, "move", GetRectCenter(gg_rct_OpeningFootmanReposition))
+    call IssuePointOrderLocBJ(gg_unit_hA00_0016, "move", GetRectCenter(gg_rct_OpeningFootmanReposition))
     call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_Arthas, "TRIGSTR_037", gg_snd_H04Arthas02, "TRIGSTR_038", bj_TIMETYPE_ADD, 0.00, false)
     call TriggerSleepAction(2.00)
     if ( Trig_Opening03_Func024001() ) then
@@ -3716,9 +3716,9 @@ function Trig_Opening04_Actions takes nothing returns nothing
     else
         call DoNothing()
     endif
-    call IssuePointOrderLocBJ(gg_unit_hfoo_0016, "attack", GetRectCenter(gg_rct_Footmen01Attack))
-    call IssuePointOrderLocBJ(gg_unit_hfoo_0017, "attack", GetRectCenter(gg_rct_Footman02Attack))
-    call IssuePointOrderLocBJ(gg_unit_hfoo_0018, "attack", GetRectCenter(gg_rct_Footman03Attack))
+    call IssuePointOrderLocBJ(gg_unit_hA00_0016, "attack", GetRectCenter(gg_rct_Footmen01Attack))
+    call IssuePointOrderLocBJ(gg_unit_hA00_0017, "attack", GetRectCenter(gg_rct_Footman02Attack))
+    call IssuePointOrderLocBJ(gg_unit_hA00_0018, "attack", GetRectCenter(gg_rct_Footman03Attack))
     call IssuePointOrderLocBJ(gg_unit_hmtm_0055, "attack", GetRectCenter(gg_rct_MortarAttack))
     call IssuePointOrderLocBJ(gg_unit_hmpr_0070, "attack", GetRectCenter(gg_rct_PriestAttack))
     if ( Trig_Opening04_Func013001() ) then
@@ -4049,7 +4049,7 @@ endfunction
 // Trigger: Footman01Facing
 //===========================================================================
 function Trig_Footman01Facing_Conditions takes nothing returns boolean
-    if ( not ( GetEnteringUnit() == gg_unit_hfoo_0016 ) ) then
+    if ( not ( GetEnteringUnit() == gg_unit_hA00_0016 ) ) then
         return false
     endif
     return true
@@ -4057,7 +4057,7 @@ endfunction
 
 function Trig_Footman01Facing_Actions takes nothing returns nothing
     call TriggerSleepAction(0.20)
-    call SetUnitFacingToFaceLocTimed(gg_unit_hfoo_0016, GetRectCenter(gg_rct_Footman01Facing), 0.20)
+    call SetUnitFacingToFaceLocTimed(gg_unit_hA00_0016, GetRectCenter(gg_rct_Footman01Facing), 0.20)
 endfunction
 
 //===========================================================================
