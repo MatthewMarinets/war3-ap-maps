@@ -465,7 +465,7 @@ class Wc3Item(enum.IntEnum):
     MERC_ROGUE                       = 3012, "Rogue (Mercenary)", Mercenary(GameID.ROGUE, CreepSpecies.Bandits)
     MERC_ASSASSIN                    = 3013, "Assassin (Mercenary)", Mercenary(GameID.ASSASSIN, CreepSpecies.Bandits)
     MERC_ENFORCER                    = 3014, "Enforcer (Mercenary)", Mercenary(GameID.ENFORCER, CreepSpecies.Bandits)
-    MERC_BANDIT_LORD                 = 3015, "Bandit_lord (Mercenary)", Mercenary(GameID.BANDIT_LORD, CreepSpecies.Bandits)
+    MERC_BANDIT_LORD                 = 3015, "Bandit Lord (Mercenary)", Mercenary(GameID.BANDIT_LORD, CreepSpecies.Bandits)
 
     # MERC_BLUE_DRAGONSPAWN_APPRENTICE = 3020, "Blue Dragonspawn Apprentice (Mercenary)", Mercenary(GameID.BLUE_DRAGONSPAWN_APPRENTICE, CreepSpecies.Blue_Dragonspawn)
 
