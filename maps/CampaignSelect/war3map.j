@@ -1447,6 +1447,9 @@ function init_mission_board takes nothing returns nothing
         call TriggerExecute(gg_trg_start_victory)
     endif
     set mission_grid_side_length=GetPlayerTechMaxAllowed(p, 'size')
+    if mission_grid_side_length > MAX_MISSION_GRID_SIDE_LENGTH then
+        set mission_grid_side_length = MAX_MISSION_GRID_SIDE_LENGTH
+    endif
     set switch_spacing=GetRectCenterX(offset_region) - GetRectCenterX(first_region)
     set switch_region_left=GetRectMinX(first_region)
     set switch_region_top=GetRectMaxY(first_region)
