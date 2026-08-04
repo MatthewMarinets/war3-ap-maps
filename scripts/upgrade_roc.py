@@ -154,7 +154,7 @@ def update_imp_file(imp_file: str) -> None:
     imported_paths = [os.path.basename(import_path.path) for import_path in imp_data.imports]
     model_basename = os.path.basename(QUESTION_MARK_MODEL_PATH)
     if model_basename not in imported_paths:
-        imp_data.imports.append(imp.ImportedPath(5, f'apimports/{model_basename}'))
+        imp_data.imports.append(imp.ImportedPath(5, f'apimports\{model_basename}'))
     with open(imp_file, 'w') as fp:
         fp.write(imp.as_text(imp_data))
 

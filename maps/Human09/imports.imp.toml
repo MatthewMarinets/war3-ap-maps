@@ -3,7 +3,7 @@ version = 1
 
 [[imports]]
 path_type = 5
-path = 'apimports/questionmark_item.mdx'
+path = 'apimports\questionmark_item.mdx'
 
 [[imports]]
 path_type = 13
@@ -288,3 +288,7 @@ path = 'apimports\evilakama_portrait.mdx'
 [[imports]]
 path_type = 13
 path = 'apimports\evilakama.blp'
+
+[[imports]]
+path_type = 5
+path = 'apimports\questionmark_item.mdx'

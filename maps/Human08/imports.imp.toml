@@ -3,4 +3,8 @@ version = 1
 
 [[imports]]
 path_type = 5
-path = 'apimports/questionmark_item.mdx'
+path = 'apimports\questionmark_item.mdx'
+
+[[imports]]
+path_type = 5
+path = 'apimports\questionmark_item.mdx'
