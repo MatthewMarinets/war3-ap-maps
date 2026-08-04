@@ -228,6 +228,7 @@ def get_location_to_rules(world: 'Wc3World') -> dict[Wc3Location | int, Callable
 
         Wc3Location.HU2_RETURN_SEARINOX_HEART: logic.human_2_has_searinox_heart,
         Wc3Location.HU2_ESTABLISH_BASE: logic.human_has_military_unit,
+        Wc3Location.HU2_VICTORY: logic.human_has_military_unit,
         Wc3Location.HU2_ORC_BASE: logic.human_2_orc_base,
         Wc3Location.HU2_WEST_OGRE_ITEM: logic.human_can_clear_trees_on_arthas_level,
         Wc3Location.HU2_GNOLL_WARDEN_ITEM: logic.human_can_clear_trees_on_arthas_level,
