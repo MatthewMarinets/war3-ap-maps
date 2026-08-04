@@ -196,6 +196,17 @@ class OptionHeroChoice(baseoptions.Choice):
     alias_garithos = HeroChoice.LORD_GARITHOS.id
     alias_sylvanas_ranger = HeroChoice.RANGER_SYLVANAS.id
 
+    extra_options = (
+        "random-human",
+        "random-orc",
+        "random-undead",
+        # "random-night-elf",
+        "random-tavern",
+        "random-strength",
+        "random-agility",
+        "random-intelligence",
+    )
+
     @classmethod
     def from_text(cls, text: str) -> baseoptions.Choice:
         text = text.replace("'", "_").replace(" ", "_")
