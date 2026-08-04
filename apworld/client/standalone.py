@@ -407,9 +407,8 @@ def init_test_data(game_status: GameStatus) -> None:
     game_status.mission_order[5, 6].availability = MissionAvailability.LOCKED
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].hero = heroes.HeroChoice.JAINA
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].reset_abils()
-    # game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].name = "«§upa¢ool»"
-    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].xp = 1500
-    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].max_level = 7
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].xp = 100
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].max_level = 3
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].abilities[GameID.ARCHMAGE_BRILLIANCE_AURA] = 2
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].items[2] = InventoryItem(GameID.BRACER_OF_AGILITY)
     game_status.hero_data[heroes.HeroSlot.JAINA].hero = heroes.HeroChoice.FIRELORD
@@ -418,7 +417,6 @@ def init_test_data(game_status: GameStatus) -> None:
     game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].hero = heroes.HeroChoice.BEASTMASTER
     game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].reset_abils()
     game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].name = "Muradout Silverbeard"
-    game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].xp = 1500
     game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].abilities[GameID.BEASTMASTER_SUMMON_QUILBEAST] = 2
     game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].items[3] = InventoryItem(GameID.CROWN_OF_KINGS_5)
     game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].max_level = 7

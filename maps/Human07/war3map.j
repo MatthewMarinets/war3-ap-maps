@@ -386,6 +386,7 @@ trigger t_dragon
 trigger t_speed_rune
 trigger t_heal
 trigger t_colour_unit
+trigger t_bugs
 trigger t_zoom
 trigger t_irregulars_on_cast
 sound human_no_gold_sound
@@ -2350,42 +2351,93 @@ function debug_get_selected_unit takes nothing returns unit
 endfunction
 
 function debug_print_help takes nothing returns nothing
-    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Debug commands: '-print', '-colourunit', '-xp', '-xp2', '-health', '-dragon', '-speed', '-heal'")
+    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Debug commands: '-print', '-colourunit', '-xp', '-xp2', '-health', '-dragon', '-speed', '-heal', '-bugs'")
 endfunction
 
 function debug_xp_tome takes nothing returns nothing
     local unit target_unit= debug_get_selected_unit()
+    if target_unit == null then
+        call print("|cffff3333Nothing selected|r")
+        return
+    endif
     call CreateItem('texp', GetUnitX(target_unit), GetUnitY(target_unit))
 endfunction
 
 function debug_xp2_tome takes nothing returns nothing
     local unit target_unit= debug_get_selected_unit()
+    if target_unit == null then
+        call print("|cffff3333Nothing selected|r")
+        return
+    endif
     call CreateItem('tkno', GetUnitX(target_unit), GetUnitY(target_unit))
 endfunction
 
 function debug_health_tome takes nothing returns nothing
     local unit target_unit= debug_get_selected_unit()
+    if target_unit == null then
+        call print("|cffff3333Nothing selected|r")
+        return
+    endif
     call CreateItem('manh', GetUnitX(target_unit), GetUnitY(target_unit))
 endfunction
 
 function debug_dragon_egg takes nothing returns nothing
     local unit target_unit= debug_get_selected_unit()
+    if target_unit == null then
+        call print("|cffff3333Nothing selected|r")
+        return
+    endif
     call CreateItem('fgrd', GetUnitX(target_unit), GetUnitY(target_unit))
 endfunction
 
 function debug_speed_rune takes nothing returns nothing
     local unit target_unit= debug_get_selected_unit()
+    if target_unit == null then
+        call print("|cffff3333Nothing selected|r")
+        return
+    endif
     call CreateItem('rspd', GetUnitX(target_unit), GetUnitY(target_unit))
 endfunction
 
 function debug_heal takes nothing returns nothing
     local unit target_unit= debug_get_selected_unit()
+    if target_unit == null then
+        call print("|cffff3333Nothing selected|r")
+        return
+    endif
     call CreateItem('rhe3', GetUnitX(target_unit), GetUnitY(target_unit))
 endfunction
 
 function debug_colour_unit takes nothing returns nothing
     local unit target_unit= debug_get_selected_unit()
     call SetUnitColor(target_unit, ConvertPlayerColor(S2I(SubStringBJ(GetEventPlayerChatString(), 12, 14))))
+endfunction
+
+function debug_bugs takes nothing returns nothing
+    local unit target_unit= debug_get_selected_unit()
+    local player p= Player(PLAYER_NEUTRAL_AGGRESSIVE)
+    local integer i= 6
+    local integer arg= -1
+    loop
+        exitwhen i >= StringLength(GetEventPlayerChatString())
+        exitwhen SubString(GetEventPlayerChatString(), i, i+1) == " "
+        set i=i + 1
+    endloop
+    if i > 6 then
+        set arg=S2I(SubString(GetEventPlayerChatString(), 6, i))
+        if arg > PLAYER_NEUTRAL_AGGRESSIVE then
+            set arg=PLAYER_NEUTRAL_AGGRESSIVE
+        endif
+        if arg < 0 then
+            set arg=0
+        endif
+        set p=Player(arg)
+    endif
+    if target_unit == null then
+        call print("|cffff3333Nothing selected|r")
+        return
+    endif
+    call CreateUnit(p, 'zzrg', GetUnitX(target_unit), GetUnitY(target_unit), 0.0)
 endfunction
 
 function debug_print takes nothing returns nothing
@@ -2413,7 +2465,7 @@ function InitTrig_debug takes nothing returns nothing
     call TriggerRegisterPlayerChatEvent(t_help, USER_PLAYER, "-help", false)
     call TriggerAddAction(t_help, function debug_print_help)
     set t_xp=CreateTrigger()
-    call TriggerRegisterPlayerChatEvent(t_xp, USER_PLAYER, "-xp", false)
+    call TriggerRegisterPlayerChatEvent(t_xp, USER_PLAYER, "-xp", true)
     call TriggerAddAction(t_xp, function debug_xp_tome)
     set t_xp2=CreateTrigger()
     call TriggerRegisterPlayerChatEvent(t_xp2, USER_PLAYER, "-xp2", false)
@@ -2436,6 +2488,9 @@ function InitTrig_debug takes nothing returns nothing
     set t_print=CreateTrigger()
     call TriggerRegisterPlayerChatEvent(t_print, USER_PLAYER, "-print", false)
     call TriggerAddAction(t_print, function debug_print)
+    set t_bugs=CreateTrigger()
+    call TriggerRegisterPlayerChatEvent(t_bugs, USER_PLAYER, "-bugs", false)
+    call TriggerAddAction(t_bugs, function debug_bugs)
 endfunction
 //===========================================================================
 // Trigger: zoom
