@@ -15,23 +15,60 @@ if TYPE_CHECKING:
     from BaseClasses import CollectionState
 
 
+HEROES_THAT_CLEAR_TREES = frozenset((
+    HeroChoice.KAEL.value,
+    HeroChoice.BLOOD_MAGE.value,
+    HeroChoice.KEEPER_OF_THE_GROVE.value,
+    HeroChoice.FURION.value,
+    HeroChoice.MALFURION.value,
+    HeroChoice.ANCIENT_GUARDIAN.value,
+    # Dreadlord - Inferno could work
+    # Lich - Death and Decay works, but it's really slow
+    # Far Seer - Earthquake works, but it's really slow
+))
+HEROES_ANTI_AIR = frozenset((
+    HeroChoice.JAINA.value,
+    HeroChoice.THRALL.value,
+    HeroChoice.KEL_THUZAD.value,
+    HeroChoice.SYLVANAS.value,
+    HeroChoice.TYRANDE.value,
+    HeroChoice.FURION.value,
+    HeroChoice.MALFURION.value,
+    HeroChoice.KAEL.value,
+    HeroChoice.LADY_VASHJ.value,
+    HeroChoice.REXXAR.value,
+    HeroChoice.ROKHAN.value,
+    HeroChoice.ANTONIDAS.value,
+    HeroChoice.RANGER_SYLVANAS.value,
+    HeroChoice.GHOSTLY_ARCHMAGE.value,
+    HeroChoice.ANCIENT_GUARDIAN.value,
+    HeroChoice.ARCHMAGE.value,
+    HeroChoice.BLOOD_MAGE.value,
+    HeroChoice.FAR_SEER.value,
+    HeroChoice.SHADOW_HUNTER.value,
+    HeroChoice.LICH.value,
+    HeroChoice.PRIESTESS_OF_THE_MOON.value,
+    HeroChoice.KEEPER_OF_THE_GROVE.value,
+    HeroChoice.ALCHEMIST.value,
+    HeroChoice.NAGA_SEA_WITCH.value,
+    HeroChoice.DARK_RANGER.value,
+    HeroChoice.FIRELORD.value,
+))
+HEROES_THAT_BURST_HEAL = {
+    HeroChoice.PALADIN_ARTHAS,
+    HeroChoice.LORD_GARITHOS,
+    HeroChoice.ROKHAN,
+    HeroChoice.UTHER,
+    HeroChoice.PALADIN,
+    HeroChoice.SHADOW_HUNTER,
+}
+
+
 class Wc3Logic:
     def __init__(self, world: 'Wc3World') -> None:
         self.player = world.player
         self.options: 'options.Wc3Options' = world.options
         # Note: Don't hold a reference to world here, as that will make a circular reference
-
-        self.heroes_that_clear_trees = (
-            HeroChoice.KAEL.value,
-            HeroChoice.BLOOD_MAGE.value,
-            HeroChoice.KEEPER_OF_THE_GROVE.value,
-            HeroChoice.FURION.value,
-            HeroChoice.MALFURION.value,
-            HeroChoice.ANCIENT_GUARDIAN.value,
-            # Dreadlord - Inferno could work
-            # Lich - Death and Decay works, but it's really slow
-            # Far Seer - Earthquake works, but it's really slow
-        )
         self.human_ground_attackers = (
             (Wc3Item.FOOTMAN.item_name,),
             (Wc3Item.RIFLEMAN.item_name,),
@@ -112,6 +149,20 @@ class Wc3Logic:
     def human_worker_and_ground_attacker(self, state: 'CollectionState') -> bool:
         return self.has(state, Wc3Item.PEASANT) and self.human_has_ground_attacker(state)
 
+    def human_any_anti_air(self, state: 'CollectionState') -> bool:
+        return (
+            self.has_any(state, (
+                Wc3Item.RIFLEMAN,
+                Wc3Item.PRIEST,
+                Wc3Item.SORCERESS,
+                Wc3Item.GRYPHON_RIDER,
+                Wc3Item.DRAGONHAWK_RIDER,
+                Wc3Item.GUARD_TOWER,
+                Wc3Item.ARCANE_TOWER,
+            ))
+            or self.has_all(state, (Wc3Item.SIEGE_ENGINE, Wc3Item.SIEGE_ENGINE_BARRAGE))
+        )
+
     def human_has_healing(self, state: 'CollectionState') -> bool:
         return self.has_any(state, (Wc3Item.PRIEST, Wc3Item.SHOP_ITEM_SCROLL_OF_REGENERATION))
 
@@ -159,7 +210,7 @@ class Wc3Logic:
     def human_can_clear_trees_on_arthas_level(self, state: 'CollectionState') -> bool:
         return (
             self.human_can_clear_trees_with_units(state)
-            or self.options.paladin_arthas_hero.value in self.heroes_that_clear_trees
+            or self.options.paladin_arthas_hero.value in HEROES_THAT_CLEAR_TREES
         )
 
     def orc_has_healing(self, state: 'CollectionState') -> bool:
@@ -190,6 +241,13 @@ class Wc3Logic:
 
     def human_2_has_searinox_heart(self, state: 'CollectionState') -> bool:
         return self.has(state, Wc3Item.HEART_OF_SEARINOX)
+
+    def human_2_defeat_searinox(self, state: 'CollectionState') -> bool:
+        return (
+            self.options.paladin_arthas_hero in HEROES_ANTI_AIR
+            or self.human_any_anti_air(state)
+            or self.options.paladin_arthas_hero in HEROES_THAT_BURST_HEAL
+        )
 
     def human_2_orc_base(self, state: 'CollectionState') -> bool:
         return (
@@ -227,6 +285,8 @@ def get_location_to_rules(world: 'Wc3World') -> dict[Wc3Location | int, Callable
         Wc3Location.HU1_RETURN_LEDGER: logic.human_1_has_gerards_ledger,
 
         Wc3Location.HU2_RETURN_SEARINOX_HEART: logic.human_2_has_searinox_heart,
+        Wc3Location.HU2_DEFEAT_SEARINOX: logic.human_2_defeat_searinox,
+        Wc3Location.HU2_SEARINOX_ITEM: logic.human_2_defeat_searinox,
         Wc3Location.HU2_ESTABLISH_BASE: logic.human_has_military_unit,
         Wc3Location.HU2_VICTORY: logic.human_has_military_unit,
         Wc3Location.HU2_ORC_BASE: logic.human_2_orc_base,
