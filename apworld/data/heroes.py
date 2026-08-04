@@ -46,6 +46,20 @@ class HeroSource(enum.IntEnum):
     TAVERN = 5
 
 
+class HeroFaction(enum.IntEnum):
+    HUMAN = 1
+    ORC = 2
+    UNDEAD = 3
+    NIGHT_ELF = 4
+    TAVERN = 5
+
+
+class HeroAttribute(enum.IntEnum):
+    STRENGTH = 1
+    AGILITY = 2
+    INTELLIGENCE = 3
+
+
 class HeroClass(enum.IntEnum):
     PALADIN = 1
     ARCHMAGE = enum.auto()
@@ -91,13 +105,20 @@ class HeroChoice(enum.Enum):
         obj._value_ = id
         return obj
 
-    def __init__(self, id: int, hero_name: str, hero_class: HeroClass, source: HeroSource, game_id: GameID) -> None:
+    def __init__(
+        self,
+        id: int,
+        hero_name: str,
+        hero_class: HeroClass,
+        source: HeroSource,
+        game_id: GameID,
+    ) -> None:
         self.id = id
         self.hero_name = hero_name
         self.hero_class = hero_class
         self.source = source
         self.game_id = game_id
-        self.vanilla_slot: HeroSlot|None = None
+        self.vanilla_slot: HeroSlot | None = None
         if source == HeroSource.VANILLA:
             for hero_slot in HeroSlot:
                 if hero_slot.name == self.name:
@@ -313,6 +334,73 @@ LEVEL_THRESHOLDS = [
     4400,   # 9
     5400,   # 10
 ]
+
+HERO_CLASS_TO_PRIMARY_ATTRIBUTE = {
+    HeroClass.PALADIN: HeroAttribute.STRENGTH,
+    HeroClass.ARCHMAGE: HeroAttribute.INTELLIGENCE,
+    HeroClass.MOUNTAIN_KING: HeroAttribute.STRENGTH,
+    HeroClass.BLOOD_MAGE: HeroAttribute.INTELLIGENCE,
+    HeroClass.DEATH_KNIGHT: HeroAttribute.STRENGTH,
+    HeroClass.LICH: HeroAttribute.INTELLIGENCE,
+    HeroClass.DREADLORD: HeroAttribute.STRENGTH,
+    HeroClass.CRYPT_LORD: HeroAttribute.STRENGTH,
+    HeroClass.FAR_SEER: HeroAttribute.INTELLIGENCE,
+    HeroClass.TAUREN_CHIEFTAIN: HeroAttribute.STRENGTH,
+    HeroClass.BLADEMASTER: HeroAttribute.AGILITY,
+    HeroClass.SHADOW_HUNTER: HeroAttribute.AGILITY,
+    HeroClass.PRIESTESS_OF_THE_MOON: HeroAttribute.AGILITY,
+    HeroClass.KEEPER_OF_THE_GROVE: HeroAttribute.INTELLIGENCE,
+    HeroClass.DEMON_HUNTER: HeroAttribute.AGILITY,
+    HeroClass.WARDEN: HeroAttribute.AGILITY,
+
+    HeroClass.ALCHEMIST: HeroAttribute.STRENGTH,
+    HeroClass.NAGA_SEA_WITCH: HeroAttribute.INTELLIGENCE,
+    HeroClass.TINKER: HeroAttribute.INTELLIGENCE,
+    HeroClass.BEASTMASTER: HeroAttribute.STRENGTH,
+    HeroClass.DARK_RANGER: HeroAttribute.AGILITY,
+    HeroClass.FIRELORD: HeroAttribute.AGILITY,
+    HeroClass.PANDAREN_BREWMASTER: HeroAttribute.STRENGTH,
+    HeroClass.PIT_LORD: HeroAttribute.STRENGTH,
+    HeroClass.DARK_KNIGHT: HeroAttribute.STRENGTH,
+    HeroClass.ELDER_SAGE: HeroAttribute.INTELLIGENCE,
+    HeroClass.RANGER: HeroAttribute.AGILITY,
+    HeroClass.DEMIGOD: HeroAttribute.INTELLIGENCE,
+}
+HERO_TO_FACTION = {
+    HeroChoice.SYLVANAS: HeroFaction.UNDEAD,
+    HeroChoice.REXXAR: HeroFaction.ORC,
+}
+HERO_CLASS_TO_FACTION = {
+    HeroClass.PALADIN: HeroFaction.HUMAN,
+    HeroClass.ARCHMAGE: HeroFaction.HUMAN,
+    HeroClass.MOUNTAIN_KING: HeroFaction.HUMAN,
+    HeroClass.BLOOD_MAGE: HeroFaction.HUMAN,
+    HeroClass.DEATH_KNIGHT: HeroFaction.UNDEAD,
+    HeroClass.LICH: HeroFaction.UNDEAD,
+    HeroClass.DREADLORD: HeroFaction.UNDEAD,
+    HeroClass.CRYPT_LORD: HeroFaction.UNDEAD,
+    HeroClass.FAR_SEER: HeroFaction.ORC,
+    HeroClass.TAUREN_CHIEFTAIN: HeroFaction.ORC,
+    HeroClass.BLADEMASTER: HeroFaction.ORC,
+    HeroClass.SHADOW_HUNTER: HeroFaction.ORC,
+    HeroClass.PRIESTESS_OF_THE_MOON: HeroFaction.NIGHT_ELF,
+    HeroClass.KEEPER_OF_THE_GROVE: HeroFaction.NIGHT_ELF,
+    HeroClass.DEMON_HUNTER: HeroFaction.NIGHT_ELF,
+    HeroClass.WARDEN: HeroFaction.NIGHT_ELF,
+
+    HeroClass.ALCHEMIST: HeroFaction.TAVERN,
+    HeroClass.NAGA_SEA_WITCH: HeroFaction.TAVERN,
+    HeroClass.TINKER: HeroFaction.TAVERN,
+    HeroClass.BEASTMASTER: HeroFaction.TAVERN,
+    HeroClass.DARK_RANGER: HeroFaction.TAVERN,
+    HeroClass.FIRELORD: HeroFaction.TAVERN,
+    HeroClass.PANDAREN_BREWMASTER: HeroFaction.TAVERN,
+    HeroClass.PIT_LORD: HeroFaction.TAVERN,
+    HeroClass.DARK_KNIGHT: HeroFaction.HUMAN,
+    HeroClass.ELDER_SAGE: HeroFaction.TAVERN,
+    HeroClass.RANGER: HeroFaction.HUMAN,
+    HeroClass.DEMIGOD: HeroFaction.NIGHT_ELF,
+}
 
 HERO_CLASS_TO_NAME = {
     "Paladin": [

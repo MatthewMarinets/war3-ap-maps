@@ -5,7 +5,14 @@ import random
 
 import Options as baseoptions
 
-from .data.heroes import HeroChoice
+from .data.heroes import (
+    HeroChoice,
+    HeroFaction,
+    HeroAttribute,
+    HERO_CLASS_TO_PRIMARY_ATTRIBUTE,
+    HERO_CLASS_TO_FACTION,
+    HERO_TO_FACTION,
+)
 from .data import missions, locations
 
 if TYPE_CHECKING:
@@ -192,49 +199,60 @@ class OptionHeroChoice(baseoptions.Choice):
     @classmethod
     def from_text(cls, text: str) -> baseoptions.Choice:
         text = text.replace("'", "_").replace(" ", "_")
-        if text.lower() == "random-human":
-            return cls(random.choice((
-                HeroChoice.PALADIN_ARTHAS.id,
-                HeroChoice.JAINA.id,
-                HeroChoice.MURADIN_BRONZEBEARD.id,
-                HeroChoice.KAEL.id,
-                HeroChoice.LORD_GARITHOS.id,
-                HeroChoice.UTHER.id,
-                HeroChoice.ANTONIDAS.id,
-                HeroChoice.RANGER_SYLVANAS.id,
-                HeroChoice.GHOSTLY_ARCHMAGE.id,
-                HeroChoice.PALADIN.id,
-                HeroChoice.ARCHMAGE.id,
-                HeroChoice.MOUNTAIN_KING.id,
-                HeroChoice.BLOOD_MAGE.id,
-            )))
-        if text.lower() == "random-orc":
-            return cls(random.choice((
-                HeroChoice.THRALL.id,
-                HeroChoice.CAIRNE_BLOODHOOF.id,
-                HeroChoice.GROM_HELLSCREAM.id,
-                HeroChoice.FEL_ORC_BLADEMASTER.id,
-                HeroChoice.REXXAR.id,
-                HeroChoice.ROKHAN.id,
-                HeroChoice.BLADEMASTER.id,
-                HeroChoice.FAR_SEER.id,
-                HeroChoice.TAUREN_CHIEFTAIN.id,
-                HeroChoice.SHADOW_HUNTER.id,
-            )))
-        if text.lower() == "random-undead":
-            return cls(random.choice((
-                HeroChoice.DEATH_KNIGHT_ARTHAS.id,
-                HeroChoice.KEL_THUZAD.id,
-                HeroChoice.SYLVANAS.id,
-                HeroChoice.VARIMATHRAS.id,
-                HeroChoice.ANUB_ARAK.id,
-                HeroChoice.MAL_GANIS.id,
-                HeroChoice.DETHEROC.id,
-                HeroChoice.DEATH_KNIGHT.id,
-                HeroChoice.LICH.id,
-                HeroChoice.DREADLORD.id,
-                HeroChoice.CRYPT_LORD.id,
-            )))
+        lower_text = text.lower()
+        if lower_text == "random-human":
+            return cls(random.choice([
+                hero_choice.id for hero_choice in HeroChoice
+                if HERO_TO_FACTION.get(hero_choice, HERO_CLASS_TO_FACTION.get(hero_choice.hero_class))
+                    == HeroFaction.HUMAN
+                and hero_choice.id in cls.name_lookup
+            ]))
+        if lower_text == "random-orc":
+            return cls(random.choice([
+                hero_choice.id for hero_choice in HeroChoice
+                if HERO_TO_FACTION.get(hero_choice, HERO_CLASS_TO_FACTION.get(hero_choice.hero_class))
+                    == HeroFaction.ORC
+                and hero_choice.id in cls.name_lookup
+            ]))
+        if lower_text == "random-undead":
+            return cls(random.choice([
+                hero_choice.id for hero_choice in HeroChoice
+                if HERO_TO_FACTION.get(hero_choice, HERO_CLASS_TO_FACTION.get(hero_choice.hero_class))
+                    == HeroFaction.UNDEAD
+                and hero_choice.id in cls.name_lookup
+            ]))
+        # if lower_text in ("random-night-elf", "random-nightelf", "random-elf"):
+        #     return cls(random.choice([
+        #         hero_choice.id for hero_choice in HeroChoice
+        #         if HERO_TO_FACTION.get(hero_choice, HERO_CLASS_TO_FACTION.get(hero_choice.hero_class))
+        #             == HeroFaction.NIGHT_ELF
+        #         and hero_choice.id in cls.name_lookup
+        #     ]))
+        if lower_text == "random-tavern":
+            return cls(random.choice([
+                hero_choice.id for hero_choice in HeroChoice
+                if HERO_TO_FACTION.get(hero_choice, HERO_CLASS_TO_FACTION.get(hero_choice.hero_class))
+                    == HeroFaction.TAVERN
+                and hero_choice.id in cls.name_lookup
+            ]))
+        if lower_text in ("random-strength", "random-str"):
+            return cls(random.choice([
+                hero_choice.id for hero_choice in HeroChoice
+                if HERO_CLASS_TO_PRIMARY_ATTRIBUTE.get(hero_choice.hero_class) == HeroAttribute.STRENGTH
+                and hero_choice.id in cls.name_lookup
+            ]))
+        if lower_text in ("random-agility", "random-agi"):
+            return cls(random.choice([
+                hero_choice.id for hero_choice in HeroChoice
+                if HERO_CLASS_TO_PRIMARY_ATTRIBUTE.get(hero_choice.hero_class) == HeroAttribute.AGILITY
+                and hero_choice.id in cls.name_lookup
+            ]))
+        if lower_text in ("random-intelligence", "random-int"):
+            return cls(random.choice([
+                hero_choice.id for hero_choice in HeroChoice
+                if HERO_CLASS_TO_PRIMARY_ATTRIBUTE.get(hero_choice.hero_class) == HeroAttribute.INTELLIGENCE
+                and hero_choice.id in cls.name_lookup
+            ]))
         return super().from_text(text)
 
 
