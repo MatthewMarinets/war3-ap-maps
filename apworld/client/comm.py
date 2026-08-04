@@ -6,7 +6,7 @@ import os
 from dataclasses import dataclass, field
 import time
 
-from ..data.game_ids import Tech, TECH_REQUIREMENTS, GameID, HERO_ABILITIES, int_to_id
+from ..data.game_ids import Tech, TECH_REQUIREMENTS, GameID, HERO_ABILITIES, int_to_id, RESEARCHES
 from .. import logger
 from ..data import heroes, missions, tables, items
 
@@ -189,6 +189,7 @@ def init_hero_data() -> dict[heroes.HeroSlot | int, HeroStatus]:
         level_item = items.HERO_SLOT_TO_LEVEL_ITEM.get(slot)
         if level_item is None:
             continue
+        assert isinstance(level_item.type, items.Level)
         status.max_level = level_item.type.start_level_cap
         status.xp = heroes.LEVEL_THRESHOLDS[level_item.type.start_level - 1]
     return result
@@ -270,6 +271,10 @@ def set_tech(game_id: GameID|Tech, player_literal: str, amount: int = 1) -> str:
     return f"call SetPlayerTechMaxAllowed({player_literal}, '{game_id}', {amount})\n"
 
 
+def set_tech_researched(game_id: GameID|Tech, player_literal: str, amount: int = 1) -> str:
+    return f"call SetPlayerTechResearched({player_literal}, '{game_id}', {amount})\n"
+
+
 def send_string(message: str, player: str|int = 0) -> str:
     # Note(mm): Attempting to change a player name to empty-string instead just no-ops;
     # make sure to always send at least one character
@@ -294,12 +299,21 @@ def update_unlocks(game_status: GameStatus, mission_status: MissionStatus) -> No
         return
     game_status.pending_update |= PacketType.UNLOCKS
     packet_status.last_sent = (packet_status.last_sent + 1) & 0xffff
+    mission = missions.ID_TO_MISSION.get(mission_status.mission_id)
+    if mission is not None:
+        flags = missions.MISSION_TO_FLAG.get(mission, missions.MissionFlag.NONE)
+    else:
+        flags = missions.MissionFlag.NONE
     with open(UNLOCKS_FILE, 'w') as fp:
         fp.write(PRELOAD_FUNCTION_PROTOTYPE)
         fp.write("local player p = Player(GetPlayerTechMaxAllowed(Player(0), 'nvil'))\n")
         fp.write(send_int(packet_status.last_sent, channel='nech'))
         for tech_id, unlock_level in game_status.inventory.tech.items():
             fp.write(set_tech(tech_id, 'p', unlock_level))
+        if flags & (missions.MissionFlag.NO_BUILD | missions.MissionFlag.SEMI_BUILD):
+            for tech_id, unlock_level in game_status.inventory.tech.items():
+                if tech_id in RESEARCHES:
+                    fp.write(set_tech_researched(tech_id, 'p', unlock_level))
         fp.write(ENDFUNCTION)
 
 

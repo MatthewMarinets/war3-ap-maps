@@ -56,7 +56,7 @@ class Wc3Mission(enum.IntEnum):
         self.campaign = campaign
         self.chapter = chapter
         self.race = race
-    
+
     GENERAL = "General", "wc3", Wc3Campaign.GENERAL, 0, Wc3Race.NONE
     """Used for locations that are not tied to any particular mission"""
 
