@@ -3,6 +3,7 @@ from typing import Protocol
 import enum
 import asyncio
 import os
+import sys
 from dataclasses import dataclass, field
 import time
 
@@ -779,6 +780,14 @@ async def long_sleep() -> None:
 async def status_loop(ctx: AsyncContext) -> None:
     new_status = MissionStatus()
     initialize_messages()
+    os.path.makedirs(PRELOADER_DIR, exist_ok=True)
+    if sys.platform in ("win32", "cygwin", "msys"):
+        onedrive_documents = os.path.expanduser('~/OneDrive/Documents/Warcraft III')
+        if os.path.isdir(onedrive_documents):
+            logger.warning(
+                f'The onedrive documents folder "{onedrive_documents}" exists. '
+                'If this is your user documents folder, this will cause problems; migrate away from onedrive.'
+            )
     while ctx.running:
         # Update on-startup packets immediately
         if ctx.game_status.do_startup:
