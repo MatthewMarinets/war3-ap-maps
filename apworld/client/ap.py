@@ -132,7 +132,7 @@ class Wc3CommandProcessor(ClientCommandProcessor):
                     current = current[part]
                 except KeyError:
                     logger.warning(f'Dict member {".".join(parts[:index])} has no key {part}')
-                    logger.warning(f'Valid keys are: {list(current)}')  # type: ignore [call-overload]
+                    logger.warning(f'Valid keys are: {list(current)}')  # type: ignore
                     return
             elif isinstance(current, list):
                 try:

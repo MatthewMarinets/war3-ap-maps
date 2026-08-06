@@ -1,10 +1,11 @@
 """
 Generation relating to items
 """
-from typing import TYPE_CHECKING, Mapping, Any
+from typing import TYPE_CHECKING
+from collections import Counter
 
 from BaseClasses import Item, ItemClassification
-from ..data import items
+from ..data import items, heroes, tables
 
 if TYPE_CHECKING:
     from ..world import Wc3World
@@ -25,12 +26,17 @@ ITEM_TYPE_TO_CLASSIFICATION = {
 
 
 def _new_item(world: 'Wc3World', item_type: items.Wc3Item) -> Item:
+    if isinstance(item_type.type, items.PickupItem) and item_type.type.charged:
+        classification = ItemClassification.filler
+    else:
+        classification = ITEM_TYPE_TO_CLASSIFICATION[item_type.type.__class__]
     return Item(
         item_type.item_name,
         ITEM_TYPE_TO_CLASSIFICATION[item_type.type.__class__],
         item_type.id,
         world.player
     )
+
 
 def create_items(world: 'Wc3World') -> None:
     used_mercenaries: set[items.Wc3Item] = set()
@@ -91,6 +97,29 @@ def create_items(world: 'Wc3World') -> None:
         world.random.shuffle(tentative_items)
         print('\n'.join(map(str, tentative_items[len(world.g.locations) - len(world.g.items):])))
         world.g.items.extend(tentative_items[:len(world.g.locations) - len(world.g.items)])
+
+    # Fill with filler
+    if len(world.g.items) < len(world.g.locations):
+        item_channels: Counter[heroes.ItemChannel] = Counter()
+        for mission in world.g.missions:
+            for item_channel in tables.mission_to_item_channel(mission):
+                if item_channel is not heroes.ItemChannel.NONE:
+                    item_channels[item_channel] += 1
+        filler_items = [items.Wc3Item.FILLER_GOLD]
+        filler_weights = [1]
+        for item in items.CATEGORY_TO_ITEMS[items.PickupItem]:
+            assert isinstance(item.type, items.PickupItem)
+            if item.type.charged and item.type.channel in item_channels:
+                filler_items.append(item)
+                filler_weights.append(item_channels[item.type.channel])
+        world.g.items.extend(
+            _new_item(world, item)
+            for item in world.random.choices(
+                filler_items,
+                weights=filler_weights,
+                k=len(world.g.locations) - len(world.g.items)
+            )
+        )
 
     world.multiworld.itempool += world.g.items
 
