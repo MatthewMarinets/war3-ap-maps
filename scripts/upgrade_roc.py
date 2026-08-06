@@ -107,12 +107,13 @@ def add_ap_items(w3t_file: str, mission: missions.Wc3Mission | None) -> None:
                 location_name = location.location_name
         entities.set_entity(item_id, 'lmbr', fields={
             editor_ids.FIELD_ITEM_NAME: location_name,
-            editor_ids.FIELD_ITEM_TOOLTIP_BASIC: f'Purchase a check for map location {location_number}.',
-            editor_ids.FIELD_ITEM_TOOLTIP_EXTENDED: 'Get a randomized item when used',
-            editor_ids.FIELD_ITEM_DESCRIPTION: f'Collects map location {location_number} for the player.',
+            editor_ids.FIELD_ITEM_TOOLTIP_BASIC: f'Purchase {location_name}',
+            editor_ids.FIELD_ITEM_TOOLTIP_EXTENDED: f'Collects the "{location_name}" location.',
+            editor_ids.FIELD_ITEM_DESCRIPTION: f'Collects the "{location_name}" location.',
             editor_ids.FIELD_ITEM_INTERFACE_ICON: r'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp',
             editor_ids.FIELD_ITEM_MODEL_USED: r'apimports\questionmark_item.mdl',
             editor_ids.FIELD_ITEM_ABILITIES: '',
+            editor_ids.FIELD_ITEM_GOLD_COST: 300,
         })
 
     new_text = w3o.as_text(items_data)

@@ -1575,9 +1575,21 @@ FIELD_ITEM_NAME = 'unam'  # string
 FIELD_ITEM_TOOLTIP_BASIC = 'utip'  # string
 FIELD_ITEM_TOOLTIP_EXTENDED = 'utub'  # string
 FIELD_ITEM_DESCRIPTION = 'ides'  # string
-FIELD_ITEM_INTERFACE_ICON = 'iico'  # string
-FIELD_ITEM_MODEL_USED = 'ifil'  # string
 FIELD_ITEM_ABILITIES = 'iabi'  # string
+FIELD_ITEM_ARMOR_TYPE = 'iarm'  # string
+FIELD_ITEM_CAN_BE_DROPPED = 'idro'  # integer
+FIELD_ITEM_COOLDOWN_GROUP = 'icid'  # string
+FIELD_ITEM_DROPPED_WHEN_CARRIER_DIES = 'idrp'  # integer
+FIELD_ITEM_GOLD_COST = 'igol'  # integer
+FIELD_ITEM_HIT_POINTS = 'ihtp'  # integer
+FIELD_ITEM_IGNORE_COOLDOWN = 'iicd'  # integer
+FIELD_ITEM_INTERFACE_ICON = 'iico'  # string
+FIELD_ITEM_LEVEL = 'ilev'  # integer
+FIELD_ITEM_LUMBER_COST = 'ilum'  # integer
+FIELD_ITEM_MODEL_USED = 'ifil'  # string
+FIELD_ITEM_TINT_BLUE = 'iclb'  # integer
+FIELD_ITEM_TINT_GREEN = 'iclg'  # integer
+FIELD_ITEM_TINT_RED = 'iclr'  # integer
 
 ## Units
 FIELD_UNIT_ABILITIES_NORMAL = 'uabi'  # string

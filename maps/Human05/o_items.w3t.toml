@@ -23,7 +23,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 0."
+value = "Purchase Victory"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -31,7 +31,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Victory\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -39,7 +39,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 0 for the player."
+value = "Collects the \"Victory\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -64,6 +64,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -82,7 +90,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 1."
+value = "Purchase Ogre Lord Item"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -90,7 +98,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Ogre Lord Item\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -98,7 +106,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 1 for the player."
+value = "Collects the \"Ogre Lord Item\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -123,6 +131,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -141,7 +157,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 2."
+value = "Purchase Ogre Lord Item 2"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -149,7 +165,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Ogre Lord Item 2\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -157,7 +173,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 2 for the player."
+value = "Collects the \"Ogre Lord Item 2\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -182,6 +198,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -200,7 +224,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 3."
+value = "Purchase Ogre Mauler Item"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -208,7 +232,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Ogre Mauler Item\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -216,7 +240,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 3 for the player."
+value = "Collects the \"Ogre Mauler Item\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -241,6 +265,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -259,7 +291,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 4."
+value = "Purchase Grain Caravan Item"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -267,7 +299,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Grain Caravan Item\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -275,7 +307,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 4 for the player."
+value = "Collects the \"Grain Caravan Item\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -300,6 +332,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -318,7 +358,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 5."
+value = "Purchase Grain Caravan Item 2"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -326,7 +366,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Grain Caravan Item 2\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -334,7 +374,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 5 for the player."
+value = "Collects the \"Grain Caravan Item 2\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -359,6 +399,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -377,7 +425,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 6."
+value = "Purchase Murloc Huntsman Item"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -385,7 +433,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Murloc Huntsman Item\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -393,7 +441,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 6 for the player."
+value = "Collects the \"Murloc Huntsman Item\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -418,6 +466,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -436,7 +492,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 7."
+value = "Purchase Secret Sheep Item"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -444,7 +500,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Secret Sheep Item\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -452,7 +508,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 7 for the player."
+value = "Collects the \"Secret Sheep Item\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -477,6 +533,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -495,7 +559,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 8."
+value = "Purchase Zombie Farm Crate"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -503,7 +567,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Zombie Farm Crate\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -511,7 +575,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 8 for the player."
+value = "Collects the \"Zombie Farm Crate\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -536,6 +600,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -554,7 +626,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 9."
+value = "Purchase Free Villager Mark"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -562,7 +634,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Free Villager Mark\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -570,7 +642,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 9 for the player."
+value = "Collects the \"Free Villager Mark\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -595,6 +667,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -613,7 +693,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 10."
+value = "Purchase Archipelago Item 10"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -621,7 +701,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Archipelago Item 10\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -629,7 +709,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 10 for the player."
+value = "Collects the \"Archipelago Item 10\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -654,6 +734,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -672,7 +760,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 11."
+value = "Purchase Archipelago Item 11"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -680,7 +768,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Archipelago Item 11\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -688,7 +776,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 11 for the player."
+value = "Collects the \"Archipelago Item 11\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -713,6 +801,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -731,7 +827,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 12."
+value = "Purchase Archipelago Item 12"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -739,7 +835,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Archipelago Item 12\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -747,7 +843,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 12 for the player."
+value = "Collects the \"Archipelago Item 12\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -772,6 +868,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -790,7 +894,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 13."
+value = "Purchase Archipelago Item 13"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -798,7 +902,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Archipelago Item 13\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -806,7 +910,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 13 for the player."
+value = "Collects the \"Archipelago Item 13\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -831,6 +935,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -849,7 +961,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 14."
+value = "Purchase Archipelago Item 14"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -857,7 +969,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Archipelago Item 14\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -865,7 +977,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 14 for the player."
+value = "Collects the \"Archipelago Item 14\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -890,6 +1002,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -908,7 +1028,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 15."
+value = "Purchase Archipelago Item 15"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -916,7 +1036,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Archipelago Item 15\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -924,7 +1044,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 15 for the player."
+value = "Collects the \"Archipelago Item 15\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -949,6 +1069,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -967,7 +1095,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 16."
+value = "Purchase Archipelago Item 16"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -975,7 +1103,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Archipelago Item 16\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -983,7 +1111,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 16 for the player."
+value = "Collects the \"Archipelago Item 16\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1008,6 +1136,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -1026,7 +1162,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 17."
+value = "Purchase Archipelago Item 17"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1034,7 +1170,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Archipelago Item 17\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1042,7 +1178,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 17 for the player."
+value = "Collects the \"Archipelago Item 17\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1067,6 +1203,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -1085,7 +1229,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 18."
+value = "Purchase Archipelago Item 18"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1093,7 +1237,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Archipelago Item 18\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1101,7 +1245,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 18 for the player."
+value = "Collects the \"Archipelago Item 18\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1126,6 +1270,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -1144,7 +1296,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 19."
+value = "Purchase Archipelago Item 19"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1152,7 +1304,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Archipelago Item 19\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1160,7 +1312,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 19 for the player."
+value = "Collects the \"Archipelago Item 19\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1185,6 +1337,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -1203,7 +1363,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 20."
+value = "Purchase Slay Purple Lich"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1211,7 +1371,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Slay Purple Lich\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1219,7 +1379,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 20 for the player."
+value = "Collects the \"Slay Purple Lich\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1244,6 +1404,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -1262,7 +1430,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 21."
+value = "Purchase Slay Green Lich"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1270,7 +1438,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Slay Green Lich\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1278,7 +1446,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 21 for the player."
+value = "Collects the \"Slay Green Lich\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1303,6 +1471,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -1321,7 +1497,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 22."
+value = "Purchase Roadside Rescue"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1329,7 +1505,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Roadside Rescue\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1337,7 +1513,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 22 for the player."
+value = "Collects the \"Roadside Rescue\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1362,6 +1538,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -1380,7 +1564,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 23."
+value = "Purchase Destroy Purple Base (Black Citadel)"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1388,7 +1572,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Destroy Purple Base (Black Citadel)\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1396,7 +1580,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 23 for the player."
+value = "Collects the \"Destroy Purple Base (Black Citadel)\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1421,6 +1605,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -1439,7 +1631,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 24."
+value = "Purchase Destroy Green Base (Black Citadel)"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1447,7 +1639,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Destroy Green Base (Black Citadel)\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1455,7 +1647,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 24 for the player."
+value = "Collects the \"Destroy Green Base (Black Citadel)\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1480,6 +1672,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -1498,7 +1698,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 25."
+value = "Purchase Goblin Merchant"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1506,7 +1706,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Goblin Merchant\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1514,7 +1714,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 25 for the player."
+value = "Collects the \"Goblin Merchant\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1539,6 +1739,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -1557,7 +1765,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 26."
+value = "Purchase Archipelago Item 26"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1565,7 +1773,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Archipelago Item 26\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1573,7 +1781,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 26 for the player."
+value = "Collects the \"Archipelago Item 26\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1598,6 +1806,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -1616,7 +1832,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 27."
+value = "Purchase Archipelago Item 27"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1624,7 +1840,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Archipelago Item 27\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1632,7 +1848,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 27 for the player."
+value = "Collects the \"Archipelago Item 27\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1657,6 +1873,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -1675,7 +1899,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 28."
+value = "Purchase Archipelago Item 28"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1683,7 +1907,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Archipelago Item 28\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1691,7 +1915,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 28 for the player."
+value = "Collects the \"Archipelago Item 28\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1716,6 +1940,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -1734,7 +1966,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 29."
+value = "Purchase Archipelago Item 29"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1742,7 +1974,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Archipelago Item 29\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1750,7 +1982,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 29 for the player."
+value = "Collects the \"Archipelago Item 29\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1775,6 +2007,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -1793,7 +2033,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 30."
+value = "Purchase Archipelago Item 30"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1801,7 +2041,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Archipelago Item 30\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1809,7 +2049,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 30 for the player."
+value = "Collects the \"Archipelago Item 30\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1834,6 +2074,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -1852,7 +2100,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase a check for map location 31."
+value = "Purchase Archipelago Item 31"
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1860,7 +2108,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Get a randomized item when used"
+value = "Collects the \"Archipelago Item 31\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1868,7 +2116,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects map location 31 for the player."
+value = "Collects the \"Archipelago Item 31\" location."
 object_id = 'null'
 
 [[map_objects.entities.modifications]]
@@ -1893,4 +2141,12 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'igol'  # ItemData.Gold Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
 object_id = 'null'

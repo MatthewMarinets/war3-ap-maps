@@ -104,7 +104,8 @@ class TomlWriter:
     def _write_stringify(self, key: str, value: Any, path: str) -> None:
         self.lines.append(f'{key} = {value!r}'.replace('\\\\', '\\'))
     def _write_escaped_string(self, key: str, value: Any, path: str) -> None:
-        self.lines.append(f'{key} = "{value}"'.replace('\\', '\\\\').replace('\n', '\\n'))
+        escaped_value = value.replace('\\', '\\\\').replace('\n', '\\n').replace('"', '\\"')
+        self.lines.append(f'{key} = "{escaped_value}"')
     def _write_int(self, key: str, value: int, path: str) -> None:
         self.lines.append(f'{key} = {value}')
     def _write_flags(self, key: str, value: int, path: str) -> None:
@@ -126,7 +127,7 @@ class TomlWriter:
         if not isinstance(value, enum.Enum):
             raise ValueError(f"key {key} has invalid value {value}, expected enum")
         self.lines.append(f'{key} = "{value.name}"')
-    
+
     def _write_any_value(self, key: str, value: Any, path: str) -> None:
         if isinstance(value, bool):
             self._write_bool(key, value, path)
