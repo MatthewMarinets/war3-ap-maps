@@ -12,7 +12,12 @@ from .. import logger
 from ..data import heroes, missions, tables, items
 
 
-PRELOADER_DIR = os.path.expanduser('~/Documents/Warcraft III/CustomMapData')
+if sys.platform == 'win32':
+    from . import windows_helpers
+    DOCUMENTS_DIR = windows_helpers.win32_get_documents_folder()
+else:
+    DOCUMENTS_DIR = os.path.expanduser('~/Documents')
+PRELOADER_DIR = f'{DOCUMENTS_DIR}/Warcraft III/CustomMapData'
 STATUS_FILE = f'{PRELOADER_DIR}/status.txt'
 PING_FILE = f'{PRELOADER_DIR}/ping.txt'
 UNLOCKS_FILE = f'{PRELOADER_DIR}/unlocks.txt'
@@ -781,13 +786,13 @@ async def status_loop(ctx: AsyncContext) -> None:
     new_status = MissionStatus()
     initialize_messages()
     os.path.makedirs(PRELOADER_DIR, exist_ok=True)
-    if sys.platform in ("win32", "cygwin", "msys"):
-        onedrive_documents = os.path.expanduser('~/OneDrive/Documents/Warcraft III')
-        if os.path.isdir(onedrive_documents):
+    if sys.platform == 'win32':
+        if 'onedrive' in DOCUMENTS_DIR.lower():
             logger.warning(
-                f'The onedrive documents folder "{onedrive_documents}" exists. '
-                'If this is your user documents folder, this will cause problems; migrate away from onedrive.'
+                f'Your documents folder is in onedrive: {DOCUMENTS_DIR}. '
+                'You may want to change this to avoid communication latency and storing all your files in onedrive.'
             )
+        windows_helpers.win32_check_allow_local_files(logger)
     while ctx.running:
         # Update on-startup packets immediately
         if ctx.game_status.do_startup:

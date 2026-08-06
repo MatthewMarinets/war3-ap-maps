@@ -1,6 +1,7 @@
 """Runtime client for communicating with the AP server. Requires core imports."""
 from typing import Sequence, cast, Iterable, Any, IO
 import asyncio
+import sys
 import multiprocessing
 from collections import Counter
 from dataclasses import dataclass, field
@@ -103,12 +104,21 @@ def requirement_to_item_mission_requirements(
 class Wc3CommandProcessor(ClientCommandProcessor):
     ctx: 'Wc3Context'
 
-    def _cmd_scan_location(self) -> None:
-        """Debug: scouts the bandit camp location"""
-        async_start(self.ctx.send_msgs([
-            {"cmd": "LocationScouts", "locations": [Wc3Location.HU1_BANDIT_ITEM.id, Wc3Location.HU1_ENLIST_THORNBY.id]}
-        ]))
-        return None
+    def _cmd_setup(self) -> None:
+        """Sets up the registry to play on 1.29 or older. Windows-only"""
+        if sys.platform == "win32":
+            logger.info(
+                "Cannot perform registry operations outside Windows. You must set the "
+                r"'HKEY_CURRENT_USER\Software\Blizzard Entertainment\Warcraft III\Allow Local Files' key "
+                "to 1 manually"
+            )
+            return
+        import winreg
+        wc3_key = winreg.CreateKey(
+            winreg.HKEY_CURRENT_USER,
+            r'Software\Blizzard Entertainment\Warcraft III'
+        )
+        winreg.SetValueEx(wc3_key, 'Allow Local Files', 0, winreg.REG_DWORD, 1)
 
     def _cmd_debug(self, key: str) -> None:
         """Debug: prints current value of a member of the communication client"""
