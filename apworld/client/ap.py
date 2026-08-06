@@ -106,7 +106,7 @@ class Wc3CommandProcessor(ClientCommandProcessor):
 
     def _cmd_setup(self) -> None:
         """Sets up the registry to play on 1.29 or older. Windows-only"""
-        if sys.platform == "win32":
+        if sys.platform != "win32":
             logger.info(
                 "Cannot perform registry operations outside Windows. You must set the "
                 r"'HKEY_CURRENT_USER\Software\Blizzard Entertainment\Warcraft III\Allow Local Files' key "
