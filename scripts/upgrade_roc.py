@@ -63,7 +63,7 @@ def update_war3_info(w3i_file: str) -> None:
     war3_info = w3i.from_text_file(w3i_file)
     war3_info.version = w3i.W3iVersions.TFT
     war3_info.flags |= w3i.MapFlags.REQUIRES_EXPANSION
-    war3_info.map_game_data_set = 0  # Current melee balance, gives Gryphons magic attack
+    war3_info.map_game_data_set = 1  # Fixed balance, on 1.07
     war3_info.tft_weather = 'null'
 
     existing_tech_entries = [tech.tech_id for tech in war3_info.technologies]
@@ -122,12 +122,6 @@ def add_ap_items(w3t_file: str, mission: missions.Wc3Mission | None) -> None:
 
 def add_ap_models(imported_dir: str) -> None:
     target_file = f'{imported_dir}/questionmark_item.mdx.proxy'
-    # @nocheckin
-    w3mapimported = os.path.normpath(f'{imported_dir}/../war3mapImported')
-    if os.path.isdir(w3mapimported):
-        import shutil
-        shutil.rmtree(w3mapimported)
-    # /@nocheckin
     if os.path.isfile(target_file):
         return
     os.makedirs(imported_dir, exist_ok=True)
@@ -143,18 +137,11 @@ def update_imp_file(imp_file: str) -> None:
     else:
         imp_data = imp.Imports()
     imp_data.version = 1
-    # @nocheckin
-    remove_indices = []
-    for index, import_ in enumerate(imp_data.imports):
-        if import_.path.startswith('war3mapImported'):
-            remove_indices.append(index)
-    for index in reversed(remove_indices):
-        imp_data.imports.pop(index)
-    # /@nocheckin
-    imported_paths = [os.path.basename(import_path.path) for import_path in imp_data.imports]
+    imported_paths = [import_path.path for import_path in imp_data.imports]
     model_basename = os.path.basename(QUESTION_MARK_MODEL_PATH)
-    if model_basename not in imported_paths:
-        imp_data.imports.append(imp.ImportedPath(5, f'apimports\{model_basename}'))
+    import_path = f'apimports\\{model_basename}'
+    if import_path not in imported_paths:
+        imp_data.imports.append(imp.ImportedPath(5, import_path))
     with open(imp_file, 'w') as fp:
         fp.write(imp.as_text(imp_data))
 
@@ -197,6 +184,21 @@ def update_unit_data(unit_data_file: str) -> None:
                 "|n|n|cffffcc00Attacks land and air units.|r"
             )
         }
+    )
+    # Update ultimate flyers to magic attack
+    entities.set_entity(
+        'null', editor_ids.UNIT_GRYPHON_RIDER, {
+            editor_ids.FIELD_UNIT_ATTACK_1_ATTACK_TYPE: "magic",
+            editor_ids.FIELD_UNIT_ATTACK_2_ATTACK_TYPE: "magic",
+        },
+    )
+    entities.set_entity(
+        'null', editor_ids.UNIT_FROST_WYRM, {
+            editor_ids.FIELD_UNIT_ATTACK_1_ATTACK_TYPE: "magic",
+            editor_ids.FIELD_UNIT_ATTACK_1_DAMAGE_BASE: 91,
+            editor_ids.FIELD_UNIT_ATTACK_1_DAMAGE_SIDES_PER_DIE: 12,
+            editor_ids.FIELD_UNIT_ATTACK_2_ATTACK_TYPE: "magic",
+        },
     )
     with open(unit_data_file, 'w') as fp:
         fp.write(w3o.as_text(units_data))

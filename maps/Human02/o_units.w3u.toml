@@ -625,6 +625,60 @@ table_column = 0
 value = "Warrior Hero, adept at summoning beasts into battle. Can learn Summon Misha, Summon Quilbeast, Storm Bolt, and Stampede. |n|n|cffffcc00Attacks land and air units.|r"
 object_id = 'null'
 
+[[blizzard_objects.entities]]
+parent_id = 'hgry'  # Gryphon Rider
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "magic"
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ua2t'  # UnitWeapons.Attack 2 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "magic"
+object_id = 'null'
+
+[[blizzard_objects.entities]]
+parent_id = 'ufro'  # Frost Wyrm
+entity_id = 'null'
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "magic"
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 91
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ua1s'  # UnitWeapons.Attack 1 - Damage Sides per Die
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 12
+object_id = 'null'
+
+[[blizzard_objects.entities.modifications]]
+modification_id = 'ua2t'  # UnitWeapons.Attack 2 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "magic"
+object_id = 'null'
+
 [map_objects]
 [[map_objects.entities]]
 parent_id = 'hrif'  # Rifleman
