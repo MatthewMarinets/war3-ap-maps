@@ -785,7 +785,7 @@ async def long_sleep() -> None:
 async def status_loop(ctx: AsyncContext) -> None:
     new_status = MissionStatus()
     initialize_messages()
-    os.path.makedirs(PRELOADER_DIR, exist_ok=True)
+    os.makedirs(PRELOADER_DIR, exist_ok=True)
     if sys.platform == 'win32':
         if 'onedrive' in DOCUMENTS_DIR.lower():
             logger.warning(
