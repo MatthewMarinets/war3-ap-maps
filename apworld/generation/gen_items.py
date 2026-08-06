@@ -32,7 +32,7 @@ def _new_item(world: 'Wc3World', item_type: items.Wc3Item) -> Item:
         classification = ITEM_TYPE_TO_CLASSIFICATION[item_type.type.__class__]
     return Item(
         item_type.item_name,
-        ITEM_TYPE_TO_CLASSIFICATION[item_type.type.__class__],
+        classification,
         item_type.id,
         world.player
     )
