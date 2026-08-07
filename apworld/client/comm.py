@@ -548,12 +548,45 @@ def update_missions(game_status: GameStatus, mission_status: MissionStatus) -> N
         fp.write(ENDFUNCTION)
 
 
-def line_contents(raw_line: str) -> str:
+END_TRANSMISSION = 'call PreloadEnd'
+def line_contents(raw_line: str, filename: str) -> str:
     parts = raw_line.split('( "', 1)
     if len(parts) != 2 or 'PreloadEnd' in parts[0]:
-        raise ValueError(f'Invalid line format in status.txt. Line: "{raw_line}"')
+        raise ValueError(f'Invalid line format in {filename}. Line: "{raw_line}"')
     return parts[1].rsplit('"', 1)[0]
-END_TRANSMISSION = 'call PreloadEnd'
+
+
+class LineReader:
+    __slots__ = ('lines', 'filename')
+    def __init__(self, lines: list[str], filename: str) -> None:
+        self.filename = filename
+        self.lines = lines[2:]  # First 2 lines are the preload function start
+        if 'call PreloadStart' in lines[0]:
+            # Reforged adds an extra line
+            lines.pop(0)
+
+    def eof(self) -> str:
+        return END_TRANSMISSION in self.lines[0]
+
+    def read_string(self) -> str:
+        line = self.lines.pop(0)
+        content = line_contents(line, self.filename)
+        while ('\\\\' in content
+            and (
+                content.endswith('.j')
+                or content.endswith('.wav')
+                or content.endswith('.mp3')
+                or content.endswith('.mdx')
+                or content.endswith('.mdl')
+                or content.endswith('.blp')
+            )
+        ):
+            line = self.lines.pop(0)
+            content = line_contents(line, self.filename)
+        return content
+
+    def read_int(self) -> str:
+        return int(self.read_string())
 
 
 def log_message_to_game(game_status: GameStatus, message: str, level: ColorCode) -> None:
@@ -587,17 +620,16 @@ def read_status(status: MissionStatus, game_status: GameStatus) -> None:
         return
     with open(STATUS_FILE, 'r') as fp:
         lines = fp.readlines()
-    lines = lines[2:]
-    first_line = get_first_line(lines)
+    reader = LineReader(lines, 'status.txt')
     try:
-        status.update_number = (int(line_contents(first_line)) + 1) % MAX_UPDATE_ID
+        status.update_number = (reader.read_int() + 1) % MAX_UPDATE_ID
     except IndexError:
         return
     if status.first_transmission == FIRST_TRANSMISSION_UNSET:
         status.first_transmission = status.update_number
     elif status.update_number != status.first_transmission:
         status.first_transmission = FIRST_TRANSMISSION_UNSET - 1
-    game_comm_version = tuple(map(int, line_contents(lines.pop(0)).split('.')))
+    game_comm_version = tuple(map(int, reader.read_string().split('.')))
     if not game_comm_version or game_comm_version[0] != COMM_VERSION[0]:
         if not (status.errors & MissionError.VERSION_MISMATCH):
             msg = (
@@ -622,11 +654,11 @@ def read_status(status: MissionStatus, game_status: GameStatus) -> None:
             )
             log_message_to_game(game_status, msg, ColorCode.WARNING)
             status.errors |= MissionError.MINOR_VERSION_MISMATCH
-    status.world_id = int(line_contents(lines.pop(0)))
-    status.mission_id = int(line_contents(lines.pop(0)))
-    last_transmissions = [int(x) for x in line_contents(lines.pop(0)).split(',')]
-    game_status.next_hero_update = int(line_contents(lines.pop(0)))
-    num_items_received = [int(x) for x in line_contents(lines.pop(0)).split(',')]
+    status.world_id = reader.read_int()
+    status.mission_id = reader.read_int()
+    last_transmissions = [int(x) for x in reader.read_string().split(',')]
+    game_status.next_hero_update = reader.read_int()
+    num_items_received = [int(x) for x in reader.read_string().split(',')]
     if status.update_number != status.first_transmission:
         for item_channel, num_received in zip(
             tables.mission_to_item_channel(
@@ -639,8 +671,8 @@ def read_status(status: MissionStatus, game_status: GameStatus) -> None:
                     game_status.item_channel_state[item_channel].items_acked = num_received
                 else:
                     game_status.pending_update |= PacketType.ITEM_CHANNELS
-    lines.pop(0)  # reserved
-    lines.pop(0)  # reserved
+    reader.read_string()  # reserved
+    reader.read_string()  # reserved
     if len(last_transmissions) > NUM_PACKET_TYPES:
         if not (status.errors & MissionError.MINOR_VERSION_MISMATCH):
             logger.error(
@@ -661,10 +693,8 @@ def read_status(status: MissionStatus, game_status: GameStatus) -> None:
     for packet_status, transmission_id in zip(status.packet_status.values(), last_transmissions):
         packet_status.last_received = transmission_id
     # locations collected
-    for line in lines:
-        if END_TRANSMISSION in line:
-            break
-        status.locations_collected[int(line_contents(line))] = 1
+    while not reader.eof():
+        status.locations_collected[reader.read_int()] = 1
 
 
 def read_hero_status(slot: int, game_status: GameStatus) -> None:
@@ -674,24 +704,23 @@ def read_hero_status(slot: int, game_status: GameStatus) -> None:
         return
     with open(filename, 'r', encoding='utf-8') as fp:
         lines = fp.readlines()
-    lines = lines[2:]
-    first_line = get_first_line(lines)
-    slot_index = int(line_contents(first_line))
+    reader = LineReader(lines, f'hero_{slot}.txt')
+    slot_index = reader.read_int()
     assert slot_index == slot
-    hero_name = line_contents(lines.pop(0))
+    hero_name = reader.read_string()
     slot = heroes.HeroSlot(slot_index)
     hero_data = game_status.hero_data[slot]
-    hero_data.xp = int(line_contents(lines.pop(0)))
-    hero_data.agility = int(line_contents(lines.pop(0)))
-    hero_data.strength = int(line_contents(lines.pop(0)))
-    hero_data.intelligence = int(line_contents(lines.pop(0)))
-    hero_data.max_health = int(float(line_contents(lines.pop(0))))
+    hero_data.xp = reader.read_int()
+    hero_data.agility = reader.read_int()
+    hero_data.strength = reader.read_int()
+    hero_data.intelligence = reader.read_int()
+    hero_data.max_health = int(float(reader.read_string()))
     assert len(hero_data.abilities) == 4, hero_data.abilities
     for abil_id in hero_data.abilities:
-        hero_data.abilities[abil_id] = int(line_contents(lines.pop(0)))
+        hero_data.abilities[abil_id] = reader.read_int()
     for item_slot in range(6):
-        hero_data.items[item_slot].item_id = int_to_id(int(line_contents(lines.pop(0))))
-        hero_data.items[item_slot].charges = int(line_contents(lines.pop(0)))
+        hero_data.items[item_slot].item_id = int_to_id(reader.read_int())
+        hero_data.items[item_slot].charges = reader.read_int()
 
 
 def read_necessary_hero_status(status: MissionStatus, game_status: GameStatus) -> None:
