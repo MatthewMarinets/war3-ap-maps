@@ -119,6 +119,7 @@ class Wc3CommandProcessor(ClientCommandProcessor):
             r'Software\Blizzard Entertainment\Warcraft III'
         )
         winreg.SetValueEx(wc3_key, 'Allow Local Files', 0, winreg.REG_DWORD, 1)
+        logger.info("Set up registry key to allow communication on wc3 1.29")
 
     def _cmd_debug(self, key: str) -> None:
         """Debug: prints current value of a member of the communication client"""
