@@ -6,6 +6,9 @@ The original campaign maps are property of Blizzard Entertainment, used per thei
 
 Tools used to handle warcraft 3 files are under the MIT License, included at [license/LICENSE](license/LICENSE)
 
+## AI disclosure
+AI was not used or consulted in any way while working on this project.
+
 ## Development
 ### Example workspace.ini file:
 ```ini
