@@ -5,10 +5,11 @@ Update unpacked RoC map files to TFT.
 import os
 import sys
 from dataclasses import dataclass, field
+from typing import Any
 
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
-from mapfile import doo, w3i, wtg, wct, w3o, imp, common
+from mapfile import doo, w3i, wtg, wct, w3o, imp, common, map_constants
 from apworld.data import missions, tables, locations
 from scripts import update_irregulars, update_hero_food, helpers, mod_entity, editor_ids
 
@@ -254,6 +255,7 @@ def update_listfile(listfile_path: str) -> None:
         'war3map.w3q\n',
         'war3map.w3u\n',
         'war3map.imp\n',
+        'war3mapMisc.txt\n',
         'apimports\\questionmark_item.mdx\n',
     ):
         if path not in lines:
@@ -415,6 +417,30 @@ def update_triggers(map_dir: str) -> None:
         fp.write(new_wct_text)
 
 
+def update_constants(constants_path: str) -> None:
+    if not os.path.isfile(constants_path):
+        data: dict[str, dict[str, Any]] = {}
+    else:
+        data = map_constants.from_text_file(constants_path)
+    misc_data = data.setdefault('Misc', {})
+    misc_data['DrainTransfersLife'] = 1
+    misc_data['DrainTransfersMana'] = 1
+    misc_data['DrainGivesBonusMana'] = 1
+    misc_data['DrainGivesBonusLife'] = 1
+    misc_data['DefendDeflection'] = 1
+    misc_data['EtherealDamageBonusAlly'] = 0
+    misc_data['IllusionsGetAttackBonus'] = 1
+    misc_data['IllusionsGetAttackSpeedBonus'] = 1
+    misc_data['IllusionsGetMoveSpeedBonus'] = 1
+    misc_data['IllusionsGetDefenseBonus'] = 1
+    misc_data['IllusionsCanRestoreLife'] = 1
+    misc_data['IllusionsCanRestoreMana'] = 1
+
+    new_text = map_constants.as_text(data)
+    with open(constants_path, 'w', newline='\r\n') as fp:
+        fp.write(new_text)
+
+
 def main(map_dir: str) -> int:
     files = os.listdir(map_dir)
     if '(listfile)' not in files:
@@ -433,6 +459,7 @@ def main(map_dir: str) -> int:
     update_unit_data(f'{map_dir}/o_units.w3u.toml')
     upgrade_abil_data(f'{map_dir}/{common.ABILITY_DATA_FILE_NAME}')
     update_triggers(map_dir)
+    update_constants(f'{map_dir}/war3mapMisc.txt')
 
     update_irregulars.main(map_dir)
     update_hero_food.main(map_dir)

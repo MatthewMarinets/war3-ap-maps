@@ -1,0 +1,13 @@
+[Misc]
+DrainTransfersLife=1
+DrainTransfersMana=1
+DrainGivesBonusMana=1
+DrainGivesBonusLife=1
+DefendDeflection=1
+EtherealDamageBonusAlly=0
+IllusionsGetAttackBonus=1
+IllusionsGetAttackSpeedBonus=1
+IllusionsGetMoveSpeedBonus=1
+IllusionsGetDefenseBonus=1
+IllusionsCanRestoreLife=1
+IllusionsCanRestoreMana=1
