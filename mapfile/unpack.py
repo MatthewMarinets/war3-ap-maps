@@ -72,4 +72,6 @@ if __name__ == '__main__':
 
     assert os.path.exists(file), f'{file} does not exist'
     print(f'Extracting: {file} to {dest}')
-    extract_map_files(os.path.abspath(file), os.path.abspath(dest))
+    result = extract_map_files(os.path.abspath(file), os.path.abspath(dest))
+    if isinstance(result, Error):
+        print(result.message)
