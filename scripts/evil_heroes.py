@@ -283,6 +283,9 @@ HERO_INFO = [
         r'apimports\evilakama.mdx', CustomIDs.ABIL_CHAOS_AKAMA,
         # Note: default scaling is 1.5
         scaling=1.0,
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
     ),
 ]
 TEXTURE_DEPENDENCIES = {
