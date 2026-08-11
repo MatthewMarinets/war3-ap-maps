@@ -92,17 +92,24 @@ HERO_INFO = [
         GameID.MOUNTAIN_KING, CustomIDs.UNIT_CORRUPTED_MOUNTAIN_KING,
         r'apimports\evilmuradin.mdx', CustomIDs.ABIL_CHAOS_MOUNTAIN_KING,
         scaling=1.25,
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
     ),
     HeroInfo(
         GameID.PALADIN, CustomIDs.UNIT_CORRUPTED_PALADIN,
         r'apimports\evilpaladin.mdx', CustomIDs.ABIL_CHAOS_PALADIN,
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
     ),
     HeroInfo(
         GameID.ARCHMAGE, CustomIDs.UNIT_CORRUPTED_ARCHMAGE,
         r'apimports\evilarchmage.mdx', CustomIDs.ABIL_CHAOS_ARCHMAGE,
         other_updates={
             eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_RED_DRAGON,
-        }
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
     ),
     HeroInfo(
         GameID.BLOOD_MAGE, CustomIDs.UNIT_CORRUPTED_BLOOD_MAGE,
@@ -110,7 +117,8 @@ HERO_INFO = [
         other_updates={
             eid.FIELD_UNIT_ABILITIES_NORMAL: f'{eid.ABIL_INVENTORY_HERO},{CustomIDs.ABIL_CORRUPTED_SPHERE}',
             eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_PHOENIX,
-        }
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
     ),
 
     # Orc
@@ -122,12 +130,18 @@ HERO_INFO = [
     HeroInfo(
         GameID.FAR_SEER, CustomIDs.UNIT_CORRUPTED_FAR_SEER,
         r'apimports\evilfarseer.mdx', CustomIDs.ABIL_CHAOS_FAR_SEER,
-        other_updates={eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_RED_DRAGON,},
+        other_updates={
+            eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_RED_DRAGON,
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
     ),
     # Grom already covered
     HeroInfo(
         GameID.BLADEMASTER, CustomIDs.UNIT_CORRUPTED_BLADEMASTER,
         r'apimports\evilblademaster.mdx', CustomIDs.ABIL_CHAOS_BLADEMASTER,
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
     ),
     HeroInfo(
         GameID.CHAOS_BLADEMASTER, CustomIDs.UNIT_CORRUPTED_FEL_ORC_BLADEMASTER,
@@ -142,6 +156,9 @@ HERO_INFO = [
         r'apimports\eviltaurenchieftain.mdx', CustomIDs.ABIL_CHAOS_TAUREN_CHIEFTAIN,
         # Note: Default value is 1.1
         scaling=1.2,
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
     ),
     HeroInfo(
         GameID.ROKHAN, CustomIDs.UNIT_CORRUPTED_ROKHAN,
@@ -160,6 +177,9 @@ HERO_INFO = [
     HeroInfo(
         GameID.SHADOW_HUNTER, CustomIDs.UNIT_CORRUPTED_SHADOW_HUNTER,
         r'apimports\evilshadowhunter.mdx', CustomIDs.ABIL_CHAOS_SHADOW_HUNTER,
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
     ),
     HeroInfo(
         GameID.REXXAR, CustomIDs.UNIT_CORRUPTED_REXXAR,
@@ -178,6 +198,9 @@ HERO_INFO = [
     HeroInfo(
         GameID.BEASTMASTER, CustomIDs.UNIT_CORRUPTED_BEASTMASTER,
         r'apimports\evilrexxar.mdx', CustomIDs.ABIL_CHAOS_BEASTMASTER,
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
     ),
 
     # Undead
@@ -188,6 +211,9 @@ HERO_INFO = [
     HeroInfo(
         GameID.DEATH_KNIGHT, CustomIDs.UNIT_CORRUPTED_DEATH_KNIGHT,
         r'apimports\evildeathknight.mdx', CustomIDs.ABIL_CHAOS_DEATH_KNIGHT,
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
     ),
     HeroInfo(
         GameID.DETHEROC, CustomIDs.UNIT_CORRUPTED_DETHEROC,
@@ -198,6 +224,9 @@ HERO_INFO = [
     HeroInfo(
         GameID.DREADLORD, CustomIDs.UNIT_CORRUPTED_DREADLORD,
         r'apimports\evildreadlord.mdx', CustomIDs.ABIL_CHAOS_DREADLORD,
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
     ),
     HeroInfo(
         GameID.VARIMATHRAS, CustomIDs.UNIT_CORRUPTED_VARIMATHRAS,
@@ -215,6 +244,7 @@ HERO_INFO = [
         r'apimports\evillich.mdx', CustomIDs.ABIL_CHAOS_LICH,
         other_updates={
             eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_KEEPER_OF_THE_GROVE,
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
         },
     ),
     HeroInfo(
@@ -224,6 +254,9 @@ HERO_INFO = [
     HeroInfo(
         GameID.CRYPT_LORD, CustomIDs.UNIT_CORRUPTED_CRYPT_LORD,
         r'apimports\evilcryptlord.mdx', CustomIDs.ABIL_CHAOS_CRYPT_LORD,
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
     ),
     HeroInfo(
         GameID.SYLVANAS, CustomIDs.UNIT_CORRUPTED_SYLVANAS,
@@ -232,10 +265,16 @@ HERO_INFO = [
     HeroInfo(
         GameID.DARK_RANGER, CustomIDs.UNIT_CORRUPTED_DARK_RANGER,
         r'apimports\evilundeadsylvanas.mdx', CustomIDs.ABIL_CHAOS_DARK_RANGER,
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
     ),
     HeroInfo(
         GameID.PIT_LORD, CustomIDs.UNIT_CORRUPTED_PIT_LORD,
         r'apimports\evilpitlord.mdx', CustomIDs.ABIL_CHAOS_PIT_LORD,
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
     ),
 
     # Other
@@ -401,7 +440,7 @@ def update_listfile(listfile: str) -> None:
         lines.append('war3map.w3u')
     if 'war3map.w3a' not in lines:
         lines.append('war3map.w3a')
-    with open(listfile, 'w') as fp:
+    with open(listfile, 'w', newline='\r\n') as fp:
         fp.write('\n'.join(lines) + '\n')
 
 

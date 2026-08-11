@@ -1529,6 +1529,14 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'Huth'  # Paladin
 entity_id = 'HE0o'
@@ -1613,6 +1621,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = "(Corrupted)"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -1733,6 +1749,14 @@ table_column = 0
 value = "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile.mdl"
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'Hant'  # Archmage
 entity_id = 'HE0q'
@@ -1833,6 +1857,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = "Abilities\\Weapons\\RedDragonBreath\\RedDragonMissile.mdl"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -1964,6 +1996,14 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'Othr'  # Far Seer
 entity_id = 'HE03'
@@ -2066,6 +2106,14 @@ table_column = 0
 value = "Abilities\\Weapons\\RedDragonBreath\\RedDragonMissile.mdl"
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'Obla'  # Blademaster
 entity_id = 'HE0B'
@@ -2107,6 +2155,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = "(Corrupted)"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -2236,6 +2292,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = "(Corrupted)"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -2383,6 +2447,14 @@ table_column = 0
 value = "Abilities\\Weapons\\KeeperGroveMissile\\KeeperGroveMissile.mdl"
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'Uanb'  # Crypt Lord
 entity_id = 'HE0a'
@@ -2469,6 +2541,14 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'Ocbh'  # Tauren Chieftain
 entity_id = 'HE04'
@@ -2553,6 +2633,14 @@ data_type = "Float"
 variation_level = 0
 table_column = 0
 value = 1.2000000476837158
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -2655,6 +2743,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = "(Corrupted)"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
 object_id = 'null'
 
 [[map_objects.entities]]
@@ -2853,6 +2949,14 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'Usyl'  # Dark Ranger
 entity_id = 'HE08'
@@ -2939,6 +3043,14 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
+[[map_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
 [[map_objects.entities]]
 parent_id = 'Nplh'  # Pit Lord
 entity_id = 'HE0U'
@@ -2980,6 +3092,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = "(Corrupted)"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
 object_id = 'null'
 
 [[map_objects.entities]]
