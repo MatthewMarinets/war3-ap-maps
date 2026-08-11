@@ -277,6 +277,15 @@ HERO_INFO = [
         },
     ),
 
+    HeroInfo(
+        GameID.KEEPER_OF_THE_GROVE, CustomIDs.UNIT_CORRUPTED_KEEPER_OF_THE_GROVE,
+        r'apimports\evilkeeperofthegrove.mdx', CustomIDs.ABIL_CHAOS_KEEPER_OF_THE_GROVE,
+        other_updates={
+            eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_SATYR_SHADOWDANCER,
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
+    ),
+
     # Other
     HeroInfo(
         GameID.AKAMA, CustomIDs.UNIT_CORRUPTED_AKAMA,
@@ -312,6 +321,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilcryptlord.mdx': [r'apimports\evilcryptlord.blp'],
     r'apimports\evilundeadsylvanas.mdx': [r'apimports\evilundeadsylvanas.blp'],
     r'apimports\evilpitlord.mdx': [r'apimports\evilpitlord.blp'],
+    r'apimports\evilkeeperofthegrove.mdx': [r'apimports\evilkeeperofthegrove.blp'],
     r'apimports\evilakama.mdx': [r'apimports\evilakama.blp'],
 }
 
