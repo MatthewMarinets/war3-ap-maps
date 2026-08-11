@@ -153,7 +153,7 @@ class OptionHeroChoice(baseoptions.Choice):
     option_antonidas = HeroChoice.ANTONIDAS.id
     option_fel_orc_blademaster = HeroChoice.FEL_ORC_BLADEMASTER.id
     option_ghostly_archmage = HeroChoice.GHOSTLY_ARCHMAGE.id
-    # option_ancient_guardian = HeroChoice.ANCIENT_GUARDIAN.id
+    # option_ghostly_keeper = HeroChoice.GHOSTLY_KEEPER.id
     option_rexxar = HeroChoice.REXXAR.id
     option_rokhan = HeroChoice.ROKHAN.id
     # option_chen_stormstout = HeroChoice.CHEN_STORMSTOUT.id

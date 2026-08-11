@@ -278,6 +278,14 @@ HERO_INFO = [
     ),
 
     HeroInfo(
+        GameID.GHOST_KEEPER_OF_THE_GROVE, CustomIDs.UNIT_CORRUPTED_GHOSTLY_KEEPER,
+        r'apimports\evilkeeperofthegroveghost.mdx', CustomIDs.ABIL_CHAOS_GHOSTLY_KEEPER,
+        other_updates={
+            eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_SATYR_SHADOWDANCER,
+        }
+    ),
+
+    HeroInfo(
         GameID.KEEPER_OF_THE_GROVE, CustomIDs.UNIT_CORRUPTED_KEEPER_OF_THE_GROVE,
         r'apimports\evilkeeperofthegrove.mdx', CustomIDs.ABIL_CHAOS_KEEPER_OF_THE_GROVE,
         other_updates={
@@ -322,6 +330,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilundeadsylvanas.mdx': [r'apimports\evilundeadsylvanas.blp'],
     r'apimports\evilpitlord.mdx': [r'apimports\evilpitlord.blp'],
     r'apimports\evilkeeperofthegrove.mdx': [r'apimports\evilkeeperofthegrove.blp'],
+    r'apimports\evilkeeperofthegroveghost.mdx': [r'apimports\evilkeeperofthegrove.blp'],
     r'apimports\evilakama.mdx': [r'apimports\evilakama.blp'],
 }
 

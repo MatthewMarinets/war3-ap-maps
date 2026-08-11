@@ -403,21 +403,21 @@ def init_test_data(game_status: GameStatus) -> None:
         (mission_slot.x, mission_slot.y): MissionSlotInfo(mission_slot.mission_pool[0])
         for mission_slot in mission_orders.H1_SOLO_CAMPAIGN
     }
-    game_status.mission_order[4, 3].availability = MissionAvailability.BEATEN
-    game_status.mission_order[5, 6].availability = MissionAvailability.LOCKED
-    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].hero = heroes.HeroChoice.JAINA
+    # game_status.mission_order[4, 3].availability = MissionAvailability.BEATEN
+    # game_status.mission_order[5, 6].availability = MissionAvailability.LOCKED
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].hero = heroes.HeroChoice.FEL_ORC_BLADEMASTER
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].reset_abils()
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].xp = 100
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].max_level = 3
-    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].abilities[GameID.ARCHMAGE_BRILLIANCE_AURA] = 2
+    # game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].abilities[GameID.BLOOD_MAGE_SIPHON_MANA] = 1
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].items[2] = InventoryItem(GameID.BRACER_OF_AGILITY)
     game_status.hero_data[heroes.HeroSlot.JAINA].hero = heroes.HeroChoice.FIRELORD
     game_status.hero_data[heroes.HeroSlot.JAINA].reset_abils()
     game_status.hero_data[heroes.HeroSlot.JAINA].name = "Jenna"
-    game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].hero = heroes.HeroChoice.BEASTMASTER
+    game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].hero = heroes.HeroChoice.CRYPT_LORD
     game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].reset_abils()
     game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].name = "Muradout Silverbeard"
-    game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].abilities[GameID.BEASTMASTER_SUMMON_QUILBEAST] = 2
+    # game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].abilities[GameID.BEASTMASTER_SUMMON_QUILBEAST] = 2
     game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].items[3] = InventoryItem(GameID.CROWN_OF_KINGS_5)
     game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].max_level = 7
     game_status.settings.extra_merc_camps = 1

@@ -21,7 +21,7 @@ HEROES_THAT_CLEAR_TREES = frozenset((
     HeroChoice.KEEPER_OF_THE_GROVE.value,
     HeroChoice.FURION.value,
     HeroChoice.MALFURION.value,
-    HeroChoice.ANCIENT_GUARDIAN.value,
+    HeroChoice.GHOSTLY_KEEPER.value,
     # Dreadlord - Inferno could work
     # Lich - Death and Decay works, but it's really slow
     # Far Seer - Earthquake works, but it's really slow
@@ -41,7 +41,7 @@ HEROES_ANTI_AIR = frozenset((
     HeroChoice.ANTONIDAS.value,
     HeroChoice.RANGER_SYLVANAS.value,
     HeroChoice.GHOSTLY_ARCHMAGE.value,
-    HeroChoice.ANCIENT_GUARDIAN.value,
+    HeroChoice.GHOSTLY_KEEPER.value,
     HeroChoice.ARCHMAGE.value,
     HeroChoice.BLOOD_MAGE.value,
     HeroChoice.FAR_SEER.value,
