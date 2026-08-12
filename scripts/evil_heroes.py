@@ -277,6 +277,11 @@ HERO_INFO = [
         },
     ),
 
+
+    HeroInfo(
+        GameID.TYRANDE, CustomIDs.UNIT_CORRUPTED_TYRANDE,
+        r'apimports\evilpriestessofthemoon.mdx', CustomIDs.ABIL_CHAOS_TYRANDE,
+    ),
     HeroInfo(
         GameID.GHOST_KEEPER_OF_THE_GROVE, CustomIDs.UNIT_CORRUPTED_GHOSTLY_KEEPER,
         r'apimports\evilkeeperofthegroveghost.mdx', CustomIDs.ABIL_CHAOS_GHOSTLY_KEEPER,
@@ -285,6 +290,13 @@ HERO_INFO = [
         }
     ),
 
+    HeroInfo(
+        GameID.PRIESTESS_OF_THE_MOON, CustomIDs.UNIT_CORRUPTED_PRIESTESS_OF_THE_MOON,
+        r'apimports\evilpriestessofthemoon.mdx', CustomIDs.ABIL_CHAOS_PRIESTESS_OF_THE_MOON,
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        }
+    ),
     HeroInfo(
         GameID.KEEPER_OF_THE_GROVE, CustomIDs.UNIT_CORRUPTED_KEEPER_OF_THE_GROVE,
         r'apimports\evilkeeperofthegrove.mdx', CustomIDs.ABIL_CHAOS_KEEPER_OF_THE_GROVE,
@@ -329,6 +341,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilcryptlord.mdx': [r'apimports\evilcryptlord.blp'],
     r'apimports\evilundeadsylvanas.mdx': [r'apimports\evilundeadsylvanas.blp'],
     r'apimports\evilpitlord.mdx': [r'apimports\evilpitlord.blp'],
+    r'apimports\evilpriestessofthemoon.mdx': [r'apimports\evilpriestessofthemoon.blp'],
     r'apimports\evilkeeperofthegrove.mdx': [r'apimports\evilkeeperofthegrove.blp'],
     r'apimports\evilkeeperofthegroveghost.mdx': [r'apimports\evilkeeperofthegrove.blp'],
     r'apimports\evilakama.mdx': [r'apimports\evilakama.blp'],
