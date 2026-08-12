@@ -372,12 +372,24 @@ giving them a more light/living aesthetic.
   * Skin changed to red
   * Pelts changed to light tan
   * Axe trim changed gold -> red
+* Tyrande / Priestess of the Moon
+  * Tiger fur changed white -> black
+  * Tiger stripes changed black -> dark purple
+  * Elf skin changed purple -> cyan
 * Furion / Malfurion
   * Skin changed purple -> cyan (troll shadow hunter-esque)
   * Hair changed blue -> white
   * Horns changed to be slightly redder
   * Malfurion pelt tan -> reddish
   * Furion leaf cloak yellow/green -> purple/red/yellow
+  * Attack animation changed green bird -> purple bird (Satyr Shadowdancer)
+* Keeper of the Grove / Ghost Keeper
+  * Hair changed green -> red
+  * Leaves changed green -> red
+  * Skin changed purple -> dark volcanic grey
+  * Eye changed yellow -> orange
+  * Face cracks/scars given a faint highlight
+  * Attack animation changed green bird -> purple bird (Satyr Shadowdancer)
 * Akama
   * Skin turned grey
   * Eye particles changed blue -> red (red background makes appearance go purple -> red)
