@@ -283,11 +283,25 @@ HERO_INFO = [
         r'apimports\evilpriestessofthemoon.mdx', CustomIDs.ABIL_CHAOS_TYRANDE,
     ),
     HeroInfo(
+        GameID.FURION, CustomIDs.UNIT_CORRUPTED_FURION,
+        r'apimports\evilfurion.mdx', CustomIDs.ABIL_CHAOS_FURION,
+        other_updates={
+            eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_SATYR_SHADOWDANCER,
+        },
+    ),
+    HeroInfo(
+        GameID.MALFURION, CustomIDs.UNIT_CORRUPTED_MALFURION,
+        r'apimports\evilmalfurion.mdx', CustomIDs.ABIL_CHAOS_MALFURION,
+        other_updates={
+            eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_SATYR_SHADOWDANCER,
+        },
+    ),
+    HeroInfo(
         GameID.GHOST_KEEPER_OF_THE_GROVE, CustomIDs.UNIT_CORRUPTED_GHOSTLY_KEEPER,
         r'apimports\evilkeeperofthegroveghost.mdx', CustomIDs.ABIL_CHAOS_GHOSTLY_KEEPER,
         other_updates={
             eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_SATYR_SHADOWDANCER,
-        }
+        },
     ),
 
     HeroInfo(
@@ -342,6 +356,8 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilundeadsylvanas.mdx': [r'apimports\evilundeadsylvanas.blp'],
     r'apimports\evilpitlord.mdx': [r'apimports\evilpitlord.blp'],
     r'apimports\evilpriestessofthemoon.mdx': [r'apimports\evilpriestessofthemoon.blp'],
+    r'apimports\evilmalfurion.mdx': [r'apimports\evilmalfurion.blp'],
+    r'apimports\evilfurion.mdx': [r'apimports\evilfurion.blp'],
     r'apimports\evilkeeperofthegrove.mdx': [r'apimports\evilkeeperofthegrove.blp'],
     r'apimports\evilkeeperofthegroveghost.mdx': [r'apimports\evilkeeperofthegrove.blp'],
     r'apimports\evilakama.mdx': [r'apimports\evilakama.blp'],

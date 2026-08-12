@@ -372,6 +372,12 @@ giving them a more light/living aesthetic.
   * Skin changed to red
   * Pelts changed to light tan
   * Axe trim changed gold -> red
+* Furion / Malfurion
+  * Skin changed purple -> cyan (troll shadow hunter-esque)
+  * Hair changed blue -> white
+  * Horns changed to be slightly redder
+  * Malfurion pelt tan -> reddish
+  * Furion leaf cloak yellow/green -> purple/red/yellow
 * Akama
   * Skin turned grey
   * Eye particles changed blue -> red (red background makes appearance go purple -> red)
