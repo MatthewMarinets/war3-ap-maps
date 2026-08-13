@@ -1669,6 +1669,10 @@ FIELD_UNIT_UI_TINT_RED = 'uclr'  # integer
 FIELD_UPGRADE_NAME = 'gnam'  # string
 
 # Paths
+## Units
+PATH_MODEL_UNIT_DEMON_HUNTER = r'units\nightelf\HeroDemonHunter\HeroDemonHunter.mdl'
+PATH_MODEL_UNIT_ILLIDAN_TFT = r'units\nightelf\EvilIllidan\IllidanEvil.mdl'
+
 ## Missiles
 PATH_MODEL_MISSILE_PRIEST = r'Abilities\Weapons\PriestMissile\PriestMissile.mdl'
 """Blue @bird attack"""

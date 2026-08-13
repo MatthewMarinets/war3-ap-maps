@@ -29,6 +29,7 @@ class HeroInfo:
     damage_base: int = DEFAULT_DAMAGE_BASE
     other_updates: dict[str | tuple[str, int], Any] = field(default_factory=dict)
     skip_unit_creation: bool = False
+    skip_model_addition: bool = False
 
 
 HERO_INFO = [
@@ -297,6 +298,11 @@ HERO_INFO = [
         },
     ),
     HeroInfo(
+        GameID.ILLIDAN, CustomIDs.UNIT_CORRUPTED_ILLIDAN,
+        eid.PATH_MODEL_UNIT_ILLIDAN_TFT, CustomIDs.ABIL_CHAOS_ILLIDAN,
+        skip_model_addition=True,
+    ),
+    HeroInfo(
         GameID.GHOST_KEEPER_OF_THE_GROVE, CustomIDs.UNIT_CORRUPTED_GHOSTLY_KEEPER,
         r'apimports\evilkeeperofthegroveghost.mdx', CustomIDs.ABIL_CHAOS_GHOSTLY_KEEPER,
         other_updates={
@@ -309,7 +315,7 @@ HERO_INFO = [
         r'apimports\evilpriestessofthemoon.mdx', CustomIDs.ABIL_CHAOS_PRIESTESS_OF_THE_MOON,
         other_updates={
             eid.FIELD_UNIT_STATS_FOOD_COST: 0,
-        }
+        },
     ),
     HeroInfo(
         GameID.KEEPER_OF_THE_GROVE, CustomIDs.UNIT_CORRUPTED_KEEPER_OF_THE_GROVE,
@@ -318,6 +324,14 @@ HERO_INFO = [
             eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_SATYR_SHADOWDANCER,
             eid.FIELD_UNIT_STATS_FOOD_COST: 0,
         },
+    ),
+    HeroInfo(
+        GameID.DEMON_HUNTER, CustomIDs.UNIT_CORRUPTED_DEMON_HUNTER,
+        eid.PATH_MODEL_UNIT_ILLIDAN_TFT, CustomIDs.ABIL_CHAOS_DEMON_HUNTER,
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
+        skip_model_addition=True,
     ),
 
     # Other
@@ -464,6 +478,8 @@ def update_imports(imports_file: str) -> None:
 
     imported_paths = [_import.path for _import in data.imports]
     for hero_info in HERO_INFO:
+        if hero_info.skip_model_addition:
+            continue
         if hero_info.updated_model and (hero_info.updated_model not in imported_paths):
             imported_paths.append(hero_info.updated_model)
             data.imports.append(imp.ImportedPath(13, hero_info.updated_model))
@@ -482,6 +498,8 @@ def update_listfile(listfile: str) -> None:
         lines = fp.read().split('\n')
     lines = [line for line in lines if line]
     for hero_info in HERO_INFO:
+        if hero_info.skip_model_addition:
+            continue
         if hero_info.updated_model and (hero_info.updated_model not in lines):
             lines.append(hero_info.updated_model)
             for dependency in dependencies(hero_info.updated_model):
@@ -497,6 +515,8 @@ def update_listfile(listfile: str) -> None:
 
 def make_proxies(map_dir: str) -> None:
     for hero_info in HERO_INFO:
+        if hero_info.skip_model_addition:
+            continue
         if not hero_info.updated_model:
             continue
         model_path = hero_info.updated_model.replace('\\', '/')

@@ -390,6 +390,8 @@ giving them a more light/living aesthetic.
   * Eye changed yellow -> orange
   * Face cracks/scars given a faint highlight
   * Attack animation changed green bird -> purple bird (Satyr Shadowdancer)
+* Demon Hunter / RoC Illidan
+  * Used TFT Illidan model
 * Akama
   * Skin turned grey
   * Eye particles changed blue -> red (red background makes appearance go purple -> red)
