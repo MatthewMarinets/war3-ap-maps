@@ -20,8 +20,9 @@ def _randomize_empty_hero_names(world: 'Wc3World') -> None:
     for field in fields(world.options):
         if not field.name.endswith('_name'):
             continue
-        if not getattr(world.options, field.name):
-            setattr(world.options, field.name, world.random.choice(heroes.ALL_HERO_NAMES))
+        option_class = getattr(world.options, field.name)
+        if not option_class.value:
+            option_class.value = world.random.choice(heroes.ALL_HERO_NAMES)
 
 
 def get_included_races_and_campaigns(
