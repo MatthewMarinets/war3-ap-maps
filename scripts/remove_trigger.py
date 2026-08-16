@@ -32,11 +32,11 @@ if __name__ == '__main__':
     import sys
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument('target_map')
+    parser.add_argument('target_map_code')
     parser.add_argument('trigger_name')
     args = parser.parse_args()
 
-    success, target_map = helpers.get_target(['', args.target_map])
+    success, target_map = helpers.get_target(['', args.target_map_code])
     if not success:
         print(f"Invalid map code {args.target_map}")
         sys.exit(1)

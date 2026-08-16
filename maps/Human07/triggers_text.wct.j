@@ -1,5 +1,5 @@
 // version: 1
-// Triggers: 96
+// Triggers: 94
 //\\// Trigger #0
 // This file defines file IO functions for the JASS side of things
 // Based off the FileIO module created by Nestharus, see:
@@ -1427,7 +1427,7 @@ function InitTrig_AP_mercenaries takes nothing returns nothing
     call TriggerAddAction(t_apply_mercenaries, function mercenaries_apply)
 endfunction
 
-//\\// Trigger #61
+//\\// Trigger #59
 function Trig_Muradin_DwarfVisibilityMods_Actions takes nothing returns nothing
     call CreateFogModifierRadiusLocSimple( Player(1), FOG_OF_WAR_MASKED, GetRectCenter(gg_rct_VisibilityDwarves01), 640.00, true )
     set udg_VisibilityDwarf01 = GetLastCreatedFogModifier()
