@@ -561,12 +561,12 @@ class LineReader:
     def __init__(self, lines: list[str], filename: str) -> None:
         self.filename = filename
         self.lines = lines[2:]  # First 2 lines are the preload function start
-        if 'call PreloadStart' in lines[0]:
+        if self.lines and 'call PreloadStart' in self.lines[0]:
             # Reforged adds an extra line
-            lines.pop(0)
+            self.lines.pop(0)
 
     def eof(self) -> str:
-        return END_TRANSMISSION in self.lines[0]
+        return not self.lines or END_TRANSMISSION in self.lines[0]
 
     def read_string(self) -> str:
         line = self.lines.pop(0)
