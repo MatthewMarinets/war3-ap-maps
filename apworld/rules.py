@@ -204,7 +204,7 @@ class Wc3Logic:
 
     def human_can_clear_trees_with_units(self, state: 'CollectionState') -> bool:
         return (
-            self.has_any(state, (Wc3Item.PEASANT, Wc3Item.MORTAR_TEAM, Wc3Item.CANNON_TOWER))
+            self.has_any(state, (Wc3Item.PEASANT, Wc3Item.MORTAR_TEAM))
         )
 
     def human_can_clear_trees_on_arthas_level(self, state: 'CollectionState') -> bool:
@@ -274,8 +274,14 @@ class Wc3Logic:
     def human_7_victory(self, state: 'CollectionState') -> bool:
         return (
             self.has_level(state, Wc3Item.ARTHAS_LEVEL, 7)
+            and self.human_has_ground_attacker(state)
+        )
+
+    def human_9_victory(self, state: 'CollectionState') -> bool:
+        return (
+            self.has_level(state, Wc3Item.ARTHAS_LEVEL, 7)
             and self.has(state, Wc3Item.PEASANT)
-            and self.human_count_ground_attackers(state) >= 2
+            and self.human_has_ground_attacker(state)
         )
 
 
@@ -305,6 +311,8 @@ def get_location_to_rules(world: 'Wc3World') -> dict[Wc3Location | int, Callable
         Wc3Location.HU6_AHEAD_BY_80_ZOMBIES: logic.human_has_upgraded_core_unit,
 
         Wc3Location.HU7_VICTORY: logic.human_7_victory,
+
+        Wc3Location.HU9_VICTORY: logic.human_9_victory,
     }
     return location_to_rule
 
