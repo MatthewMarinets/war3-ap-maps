@@ -47,7 +47,7 @@ class GenerationData:
     hero_slots: Counter[heroes.HeroSlot] = field(default_factory=Counter)
     item_channels: set[heroes.ItemChannel] = field(default_factory=set)
     included_races: mmissions.Wc3Race = mmissions.Wc3Race.NONE
-    included_campaigns: frozenset[mmissions.Wc3Campaign] = frozenset()
+    included_campaigns: set[mmissions.Wc3Campaign] = field(default_factory=set)
     mercenary_allocation: dict[mmissions.Wc3Mission, dict[int, mitems.Wc3Item]] = field(default_factory=dict)
     used_mercenaries: set[mitems.Wc3Item] = field(default_factory=set)
     mission_order: dict[tuple[int, int], gen_regions.FinalizedMissionSlot] = field(default_factory=dict)

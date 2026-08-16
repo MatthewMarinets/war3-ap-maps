@@ -244,6 +244,7 @@ def create_regions(world: 'Wc3World') -> None:
 
         # Stats accounting
         world.g.included_races |= mission.race
+        world.g.included_campaigns.add(mission.campaign)
         for hero_slot in tables.MISSION_TO_HERO_SLOT[mission]:
             world.g.hero_slots[hero_slot] += 1
         for item_channel in tables.mission_to_item_channel(mission):
