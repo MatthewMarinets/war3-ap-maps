@@ -303,6 +303,10 @@ HERO_INFO = [
         skip_model_addition=True,
     ),
     HeroInfo(
+        GameID.ILLIDAN_EVIL, CustomIDs.UNIT_CORRUPTED_DEMON_ILLIDAN,
+        r'apimports\evildemonillidan.mdx', CustomIDs.ABIL_CHAOS_DEMON_ILLIDAN,
+    ),
+    HeroInfo(
         GameID.GHOST_KEEPER_OF_THE_GROVE, CustomIDs.UNIT_CORRUPTED_GHOSTLY_KEEPER,
         r'apimports\evilkeeperofthegroveghost.mdx', CustomIDs.ABIL_CHAOS_GHOSTLY_KEEPER,
         other_updates={
@@ -372,6 +376,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilpriestessofthemoon.mdx': [r'apimports\evilpriestessofthemoon.blp'],
     r'apimports\evilmalfurion.mdx': [r'apimports\evilmalfurion.blp'],
     r'apimports\evilfurion.mdx': [r'apimports\evilfurion.blp'],
+    r'apimports\evildemonillidan.mdx': [r'apimports\evildemonillidan.blp'],
     r'apimports\evilkeeperofthegrove.mdx': [r'apimports\evilkeeperofthegrove.blp'],
     r'apimports\evilkeeperofthegroveghost.mdx': [r'apimports\evilkeeperofthegrove.blp'],
     r'apimports\evilakama.mdx': [r'apimports\evilakama.blp'],
