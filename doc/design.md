@@ -397,6 +397,14 @@ giving them a more light/living aesthetic.
   * Tattoos made slightly orange
   * Hair changed blue -> silvery grey
   * Wings changed dark blue -> purplish with a red gradient at the top
+* Maiev / Warden
+  * Note they have two separate models, but they seem identical. Using Maiev as a base
+  * Armour darkened
+  * Cloak and feathers green -> pale pink
+  * Armour trim gold -> pale pink
+  * skin pale purple -> shadow hunter cyan
+  * Eye green -> orange
+  * Hair purple -> white
 * Akama
   * Skin turned grey
   * Eye particles changed blue -> red (red background makes appearance go purple -> red)

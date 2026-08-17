@@ -307,6 +307,10 @@ HERO_INFO = [
         r'apimports\evildemonillidan.mdx', CustomIDs.ABIL_CHAOS_DEMON_ILLIDAN,
     ),
     HeroInfo(
+        GameID.MAIEV, CustomIDs.UNIT_CORRUPTED_MAIEV,
+        r'apimports\evilmaiev.mdx', CustomIDs.ABIL_CHAOS_MAIEV,
+    ),
+    HeroInfo(
         GameID.GHOST_KEEPER_OF_THE_GROVE, CustomIDs.UNIT_CORRUPTED_GHOSTLY_KEEPER,
         r'apimports\evilkeeperofthegroveghost.mdx', CustomIDs.ABIL_CHAOS_GHOSTLY_KEEPER,
         other_updates={
@@ -336,6 +340,13 @@ HERO_INFO = [
             eid.FIELD_UNIT_STATS_FOOD_COST: 0,
         },
         skip_model_addition=True,
+    ),
+    HeroInfo(
+        GameID.WARDEN, CustomIDs.UNIT_CORRUPTED_WARDEN,
+        r'apimports\evilmaiev.mdx', CustomIDs.ABIL_CHAOS_WARDEN,
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
     ),
 
     # Other
@@ -377,6 +388,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilmalfurion.mdx': [r'apimports\evilmalfurion.blp'],
     r'apimports\evilfurion.mdx': [r'apimports\evilfurion.blp'],
     r'apimports\evildemonillidan.mdx': [r'apimports\evildemonillidan.blp'],
+    r'apimports\evilmaiev.mdx': [r'apimports\evilmaiev.blp'],
     r'apimports\evilkeeperofthegrove.mdx': [r'apimports\evilkeeperofthegrove.blp'],
     r'apimports\evilkeeperofthegroveghost.mdx': [r'apimports\evilkeeperofthegrove.blp'],
     r'apimports\evilakama.mdx': [r'apimports\evilakama.blp'],
