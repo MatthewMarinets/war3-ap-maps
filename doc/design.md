@@ -405,6 +405,12 @@ giving them a more light/living aesthetic.
   * skin pale purple -> shadow hunter cyan
   * Eye green -> orange
   * Hair purple -> white
+* Naga Sea Witch / Lady Vashj
+  * Note they have two separate models, but they seem identical. Using Lady Vashj as a base
+  * Skin changed teal -> purple
+  * Center scales changed yellow -> cyan
+  * armour trim changed gold -> dark metallic
+  * Given yellow glowy eyes
 * Pandaren Brewmaster / Chen Stormstout
   * Robe changed black -> red
   * Facial markings changed from panda bear -> spirit bear

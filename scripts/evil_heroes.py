@@ -351,6 +351,17 @@ HERO_INFO = [
 
     # Other
     HeroInfo(
+        GameID.LADY_VASHJ, CustomIDs.UNIT_CORRUPTED_LADY_VASHJ,
+        r'apimports\evilladyvashj.mdx', CustomIDs.ABIL_CHAOS_LADY_VASHJ,
+    ),
+    HeroInfo(
+        GameID.NAGA_SEA_WITCH, CustomIDs.UNIT_CORRUPTED_NAGA_SEA_WITCH,
+        r'apimports\evilladyvashj.mdx', CustomIDs.ABIL_CHAOS_NAGA_SEA_WITCH,
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
+    ),
+    HeroInfo(
         GameID.PANDAREN_BREWMASTER, CustomIDs.UNIT_CORRUPTED_PANDAREN_BREWMASTER,
         r'apimports\evilpandarenbrewmaster.mdx', CustomIDs.ABIL_CHAOS_PANDAREN_BREWMASTER,
         other_updates={
@@ -399,6 +410,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilkeeperofthegrove.mdx': [r'apimports\evilkeeperofthegrove.blp'],
     r'apimports\evilkeeperofthegroveghost.mdx': [r'apimports\evilkeeperofthegrove.blp'],
     r'apimports\evilpandarenbrewmaster.mdx': [r'apimports\evilpandarenbrewmaster.blp'],
+    r'apimports\evilladyvashj.mdx': [r'apimports\evilladyvashj.blp'],
     r'apimports\evilakama.mdx': [r'apimports\evilakama.blp'],
 }
 
