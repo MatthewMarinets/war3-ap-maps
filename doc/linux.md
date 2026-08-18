@@ -39,6 +39,29 @@
     * Not sure if necessary, but it was necessary to keep the editor from crashing
 * The first time you run the game, it will prompt you for your CD keys
 
+### Gracefully handling windowed mode and fullscreen
+When playing fullscreen wc3, it claims a graphical lock that adds alt-tab latency and instability.
+Alt-tabbing and clicking back in can result in all textures just rendering as black.
+
+Using a wine emulated virtual desktop can get around this,
+but it creates a full desktop even when running in windowed mode with the `-window` argument.
+
+In my wc3 startup script, I've added the following snippet, and launched the game with:
+```sh
+if [[ $* == "-window" ]] then
+    EXPLORER=()
+else
+    EXPLORER=('explorer' '/desktop=wc3,2560x1440')
+fi
+
+# Command
+# 1.30
+gamemoderun $WINE "${EXPLORER[@]}" '/home/matthew/Games/WarcraftIII_130_4/Warcraft III/Warcraft III.exe' "$@"
+```
+
+Which uses `wine explorer` to conditionally make the virtual desktop at resolution 2560x1440 if `-window`
+is not in the command line arguments.
+
 ### Editor using pre-existing 1.30 install
 * Lutris: [export script for wc3](#setting-games-up-to-run-outside-lutris)
 * Ensure the `WINEARCH` variable in the script is set to win32
