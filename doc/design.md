@@ -405,6 +405,12 @@ giving them a more light/living aesthetic.
   * skin pale purple -> shadow hunter cyan
   * Eye green -> orange
   * Hair purple -> white
+* Pandaren Brewmaster / Chen Stormstout
+  * Robe changed black -> red
+  * Facial markings changed from panda bear -> spirit bear
+  * Hat design changed to be like a Haida spruce root hat with a frog design
+  * Rope belt saturated and made more orange
+  * Panda logo on the barrel got red eyes
 * Akama
   * Skin turned grey
   * Eye particles changed blue -> red (red background makes appearance go purple -> red)

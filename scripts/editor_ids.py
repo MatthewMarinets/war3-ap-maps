@@ -1670,8 +1670,17 @@ FIELD_UPGRADE_NAME = 'gnam'  # string
 
 # Paths
 ## Units
+PATH_MODEL_UNIT_KEEPER_OF_THE_GROVE = r'units\nightelf\herokeeperofthegrove\herokeeperofthegrove.mdl'
+PATH_MODEL_UNIT_PRIESTESSS_OF_THE_MOON = r'units\nightelf\heromoonpriestess\heromoonpriestess.mdl'
 PATH_MODEL_UNIT_DEMON_HUNTER = r'units\nightelf\HeroDemonHunter\HeroDemonHunter.mdl'
+PATH_MODEL_UNIT_WARDEN = r'units\nightelf\herowarden\herowarden.mdl'
 PATH_MODEL_UNIT_ILLIDAN_TFT = r'units\nightelf\EvilIllidan\IllidanEvil.mdl'
+PATH_MODEL_UNIT_FURION = r'units\nightelf\furion\furion.mdl'
+PATH_MODEL_UNIT_MAL_FURION = r'units\nightelf\malfurion\malfurion.mdl'
+PATH_MODEL_UNIT_MAIEV = r'units\nightelf\maiev\maiev.mdl'
+PATH_MODEL_UNIT_GHOSTLY_KEEPER_OF_THE_GROVE = r'units\nightelf\herokeeperofthegroveghost\herokeeperofthegroveghost.mdl'
+
+PATH_MODEL_UNIT_PANDAREN_BREWMASTER = r'units\creeps\PandarenBrewmaster\PandarenBrewmaster.mdl'
 
 ## Missiles
 PATH_MODEL_MISSILE_PRIEST = r'Abilities\Weapons\PriestMissile\PriestMissile.mdl'

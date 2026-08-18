@@ -351,6 +351,13 @@ HERO_INFO = [
 
     # Other
     HeroInfo(
+        GameID.PANDAREN_BREWMASTER, CustomIDs.UNIT_CORRUPTED_PANDAREN_BREWMASTER,
+        r'apimports\evilpandarenbrewmaster.mdx', CustomIDs.ABIL_CHAOS_PANDAREN_BREWMASTER,
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
+    ),
+    HeroInfo(
         GameID.AKAMA, CustomIDs.UNIT_CORRUPTED_AKAMA,
         r'apimports\evilakama.mdx', CustomIDs.ABIL_CHAOS_AKAMA,
         # Note: default scaling is 1.5
@@ -391,6 +398,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilmaiev.mdx': [r'apimports\evilmaiev.blp'],
     r'apimports\evilkeeperofthegrove.mdx': [r'apimports\evilkeeperofthegrove.blp'],
     r'apimports\evilkeeperofthegroveghost.mdx': [r'apimports\evilkeeperofthegrove.blp'],
+    r'apimports\evilpandarenbrewmaster.mdx': [r'apimports\evilpandarenbrewmaster.blp'],
     r'apimports\evilakama.mdx': [r'apimports\evilakama.blp'],
 }
 
