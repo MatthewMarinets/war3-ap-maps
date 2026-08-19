@@ -90,11 +90,18 @@ class Sequence:
     extent: Extent = field(default_factory=Extent)
 
 
-@dataclass
+@dataclass(slots=True)
 class Texture:
     id: int = -1
     file_path: str = ''
     flags: int = 0
+
+
+@dataclass(slots=True)
+class TextureAnimation:
+    translation: Track[tuple[float, float, float]] | None = None
+    rotation: Track[tuple[float, float, float, float]] | None = None
+    scaling: Track[tuple[float, float, float]] | None = None
 
 
 class LayerFilterMode(enum.IntEnum):
@@ -347,13 +354,14 @@ class CollisionShape:
     radius: float = 0.0
 
 
-@dataclass
+@dataclass(slots=True)
 class MdxModel:
     version: int = -1
     model_chunk: ModelChunk = field(default_factory=ModelChunk)
     sequences: list[Sequence] = field(default_factory=list)
     global_sequences: list[int] = field(default_factory=list)
     textures: list[Texture] = field(default_factory=list)
+    texture_animations: list[TextureAnimation] = field(default_factory=list)
     materials: list[Material] = field(default_factory=list)
     geosets: list[GeoSet] = field(default_factory=list)
     geoset_animations: list[GeosetAnimation] = field(default_factory=list)
@@ -699,6 +707,42 @@ def write_texture_chunk(writer: binary.ByteArrayWriter, data: MdxModel) -> None:
         chunk_writer.write_int32(texture.id)
         chunk_writer.write_buffer_string(texture.file_path, PATH_LENGTH)
         chunk_writer.write_int32(texture.flags)
+
+    chunk_bytes = chunk_writer.as_bytes()
+    writer.write_int32(len(chunk_bytes))
+    writer.write_bytes(chunk_bytes)
+
+
+def read_texture_animation_chunk(reader: binary.ByteArrayParser, result: MdxModel) -> None:
+    chunk_size = reader.read_int32()
+    start_index = reader.index
+    tag_to_getter = {
+        b'KTAT': (reader.read, ('=fff',), 'translation'),
+        b'KTAR': (reader.read, ('=ffff',), 'rotation'),
+        b'KTAS': (reader.read, ('=fff',), 'scaling'),
+    }
+    while reader.index < start_index + chunk_size:
+        texture_animation = TextureAnimation()
+        element_start_index = reader.index
+        element_size = reader.read_int32()
+        _read_all_tracks(reader, tag_to_getter, texture_animation)
+        result.texture_animations.append(texture_animation)
+        assert reader.index == element_start_index + element_size, f"{reader.index} != {element_start_index} + {element_size}"
+    assert reader.index == start_index + chunk_size
+
+
+def write_texture_animation_chunk(writer: binary.ByteArrayWriter, data: MdxModel) -> None:
+    if not data.texture_animations:
+        return
+    writer.write_id('TXAN')
+    chunk_writer = binary.ByteArrayWriter()
+    for texture_animation in data.texture_animations:
+        element_writer = binary.ByteArrayWriter()
+        _write_track(element_writer, texture_animation.translation, 'KTAT')
+        _write_track(element_writer, texture_animation.rotation, 'KTAR')
+        _write_track(element_writer, texture_animation.scaling, 'KTAS')
+        chunk_writer.write_int32(len(element_writer.data) + 4)
+        chunk_writer.write_bytes(element_writer.as_bytes())
 
     chunk_bytes = chunk_writer.as_bytes()
     writer.write_int32(len(chunk_bytes))
@@ -1434,7 +1478,7 @@ CHUNK_ID_TO_PARSER = {
     'GLBS': read_global_sequence_chunk,
     'MTLS': read_materials_chunk,
     'TEXS': read_texture_chunk,
-    # 'TXAN': read_texture_animation_chunk,
+    'TXAN': read_texture_animation_chunk,
     'GEOS': read_geoset_chunk,
     'GEOA': read_geoset_animation_chunk,
     'BONE': read_bone_chunk,
@@ -1482,7 +1526,7 @@ CHUNK_WRITERS = [
     write_global_sequence_chunk,
     write_materials_chunk,
     write_texture_chunk,
-    # write_texture_animation_chunk,
+    write_texture_animation_chunk,
     write_geoset_chunk,
     write_geoset_animation_chunk,
     write_bone_chunk,
