@@ -29,7 +29,7 @@ class MdxVersions:
     Reforged_2 = 1000
 
 
-@dataclass
+@dataclass(slots=True)
 class Extent:
     bounds_radius: float = 0.0
     minimum: tuple[float, float, float] = (0.0, 0.0, 0.0)
@@ -69,7 +69,7 @@ class Track(Generic[T]):
         )
 
 
-@dataclass
+@dataclass(slots=True)
 class ModelChunk:
     model_name: str = ''
     file_path: str = ''
@@ -78,7 +78,7 @@ class ModelChunk:
     blend_time: int = 0
 
 
-@dataclass
+@dataclass(slots=True)
 class Sequence:
     name: str = ''
     start_time: int = 0
@@ -119,7 +119,7 @@ class LayerShadingFlags(enum.IntFlag):
     NO_DEPTH_SET = 0x80
 
 
-@dataclass
+@dataclass(slots=True)
 class Layer:
     # element_size = 28
     filter_mode: LayerFilterMode = LayerFilterMode.NONE
@@ -140,7 +140,7 @@ class Layer:
     # KFTC (v > 900)
 
 
-@dataclass
+@dataclass(slots=True)
 class Material:
     # element_size: int = 0
     priority_plane: int = 0
@@ -149,7 +149,7 @@ class Material:
     layers: list[Layer] = field(default_factory=list)
 
 
-@dataclass
+@dataclass(slots=True)
 class GeoSet:
     vertices: list[tuple[float, float, float]] = field(default_factory=list)
     normals: list[tuple[float, float, float]] = field(default_factory=list)
@@ -169,7 +169,7 @@ class GeoSet:
     uv_groups: list[list[tuple[float, float]]] = field(default_factory=list)
 
 
-@dataclass
+@dataclass(slots=True)
 class GeosetAnimation:
     alpha: float = 0.0
     flags: int = 0
@@ -204,7 +204,7 @@ class NodeFlag(enum.IntFlag):
     XY_QUAD = 0x100000
 
 
-@dataclass
+@dataclass(slots=True)
 class Node:
     name: str = ''
     object_id: int = 0
@@ -215,14 +215,14 @@ class Node:
     scaling: Track[tuple[float, float, float]] | None = None
 
 
-@dataclass
+@dataclass(slots=True)
 class Bone:
     node: Node = field(default_factory=Node)
     geoset_id: int = 0
     geoset_animation_id: int = 0
 
 
-@dataclass
+@dataclass(slots=True)
 class Light:
     node: Node = field(default_factory=Node)
     type: int = 0
@@ -242,7 +242,7 @@ class Light:
     visibility_track: Track[float] | None = None
 
 
-@dataclass
+@dataclass(slots=True)
 class Attachment:
     node: Node = field(default_factory=Node)
     path: str = ''
@@ -250,7 +250,7 @@ class Attachment:
     visibility_track: Track[float] | None = None
 
 
-@dataclass
+@dataclass(slots=True)
 class ParticleEmitter2:
     node: Node = field(default_factory=Node)
     speed: float = 0.0
@@ -290,7 +290,7 @@ class ParticleEmitter2:
     visibility_track: Track[float] | None = None
 
 
-@dataclass
+@dataclass(slots=True)
 class Ribbon:
     node: Node = field(default_factory=Node)
     height_above: float = 0.0
@@ -312,14 +312,14 @@ class Ribbon:
     visibility_track: Track[int] | None = None
 
 
-@dataclass
+@dataclass(slots=True)
 class Event:
     node: Node = field(default_factory=Node)
     global_sequence_id: int = 0
     tracks: list[int] = field(default_factory=list)
 
 
-@dataclass
+@dataclass(slots=True)
 class Camera:
     name: str = ''
     position: tuple[float, float, float] = (0.0, 0.0, 0.0)
@@ -339,7 +339,7 @@ class CollisionShapeType(enum.IntEnum):
     CYLINDER = 3
 
 
-@dataclass
+@dataclass(slots=True)
 class CollisionShape:
     node: Node = field(default_factory=Node)
     type: CollisionShapeType = CollisionShapeType.CUBE
@@ -369,7 +369,7 @@ class MdxModel:
     collision_shapes: list[CollisionShape] = field(default_factory=list)
 
 
-@dataclass
+@dataclass(slots=True)
 class TrackInfo:
     tag: bytes = b''
     num_tracks: int = 0
@@ -412,8 +412,8 @@ def _read_all_tracks(
     while track_tag in tag_to_getter:
         track = _read_track(reader, tag_to_getter)
         _, _, target_field = tag_to_getter[track_tag]
-        assert target_field in result.__dict__
-        result.__dict__[target_field] = track
+        assert hasattr(result, target_field)
+        setattr(result, target_field, track)
         track_tag = reader.peek(4)
 
 
@@ -1569,9 +1569,10 @@ def write_inline_toml(data: object, indent: str = '', key: str = '') -> str:
         raise NotImplemented
     parts = ['{']
     has_printed = False
-    for key, value in data.__dict__.items():
+    for key in dir(data):
         if key.startswith('_'):
             continue
+        value = getattr(data, key)
         if has_printed:
             parts.append(', ')
         has_printed = True
@@ -1585,10 +1586,10 @@ def write_inline_toml(data: object, indent: str = '', key: str = '') -> str:
 def write_toml(data: object, nesting: list[str] = []) -> str:
     lines: list[str] = []
     early_lines: list[str] = []
-    for _field in data.__dict__:
+    for _field in dir(data):
         if _field.startswith('_'):
             continue
-        value = data.__dict__[_field]
+        value = getattr(data, _field)
         full_key = '.'.join(nesting + [_field])
         if is_simple_type(value):
             early_lines.append(f'{_field} = {write_inline_toml(value, key=_field)}')
@@ -1741,7 +1742,7 @@ if __name__ == '__main__':
         if f.name in ('geosets', 'helpers'):
             continue
         print(f'# {f.name}')
-        print(_data.__dict__[f.name])
+        print(getattr(_data, f.name))
         print()
     write_toml_to_file(_data, 'output.toml')
     round_tripped_data = read_toml_file('output.toml')
