@@ -176,7 +176,7 @@ def parse_lib_parameters_from_trigger_strings(lines: list[str]) -> dict[str, Par
         args = trigger_args.split(',')
         assert args
         arg_types = [arg for arg in args[readable_section:] if arg != 'nothing']
-        
+
         result[function_name] = ParamInfo(arg_types, '', function_name in have_subfuncs)
 
     return result
@@ -199,7 +199,7 @@ def read_binary(raw_data: bytes, lib_info: dict[str, ParamInfo] = LIB_INFO) -> W
     header = reader.read_id()
     assert header == 'WTG!'
     result.version = reader.read_int32()
-    assert result.version in (Version.ROC, Version.TFT)
+    assert result.version in (Version.ROC, Version.TFT), f'Unknown version {result.version}'
     parse_state = ParseState(version=result.version)
     num_categories = reader.read_int32()
     for _ in range(num_categories):
@@ -212,9 +212,9 @@ def read_binary(raw_data: bytes, lib_info: dict[str, ParamInfo] = LIB_INFO) -> W
         result.categories.append(category)
     sub_version = reader.read_int32()
     if result.version == Version.ROC:
-        assert sub_version == 1
+        assert sub_version == 1, f'offset {hex(reader.index-4)}: {sub_version}'
     else:
-        assert sub_version == 2
+        assert sub_version == 2, f'offset {hex(reader.index-4)}: {sub_version}'
     num_variables = reader.read_int32()
     for _ in range(num_variables):
         trigger_variable = TriggerVariable(
