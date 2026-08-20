@@ -12,6 +12,7 @@ from .data.heroes import (
     HERO_CLASS_TO_PRIMARY_ATTRIBUTE,
     HERO_CLASS_TO_FACTION,
     HERO_TO_FACTION,
+    HERO_CHOICE_ID_TO_DATA,
 )
 from .data import missions, locations
 
@@ -205,12 +206,24 @@ class OptionHeroChoice(baseoptions.Choice):
         "random-strength",
         "random-agility",
         "random-intelligence",
+        "random-non-vanilla",
+        "random-non-vanilla-class",
     )
 
     @classmethod
     def from_text(cls, text: str) -> baseoptions.Choice:
         text = text.replace("'", "_").replace(" ", "_")
         lower_text = text.lower()
+        if lower_text == "random-non-vanilla":
+            choices = [x for x in cls.name_lookup if x != cls.default]
+            return cls(random.choice(choices))
+        if lower_text == "random-non-vanilla-class":
+            default_hero_class = HERO_CHOICE_ID_TO_DATA[cls.default].hero_class
+            choices = [
+                x for x in cls.name_lookup
+                if HERO_CHOICE_ID_TO_DATA[x].hero_class != default_hero_class
+            ]
+            return cls(random.choice(choices))
         if lower_text == "random-human":
             return cls(random.choice([
                 hero_choice.id for hero_choice in HeroChoice
