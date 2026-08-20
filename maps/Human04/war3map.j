@@ -2070,7 +2070,7 @@ function hero_publish_status takes integer slot returns nothing
     elseif GetUnitTypeId(hero) == 'HE0N' or GetUnitTypeId(hero) == 'HE0V' or GetUnitTypeId(hero) == 'HE0W' or GetUnitTypeId(hero) == 'HE0X' then
         // special handling for corrupted Goblin Alchemist
         call io_write(I2S(GetUnitAbilityLevel(hero, hero_abil_1[slot])))
-        call io_write(I2S(GetUnitAbilityLevel(hero, 'A;00')))
+        call io_write(I2S(GetUnitAbilityLevel(hero, 'A;01')))
         call io_write(I2S(GetUnitAbilityLevel(hero, hero_abil_3[slot])))
         call io_write(I2S(GetUnitAbilityLevel(hero, hero_abil_4[slot])))
     else
