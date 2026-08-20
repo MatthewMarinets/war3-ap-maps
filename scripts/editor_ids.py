@@ -1680,6 +1680,7 @@ PATH_MODEL_UNIT_MAL_FURION = r'units\nightelf\malfurion\malfurion.mdl'
 PATH_MODEL_UNIT_MAIEV = r'units\nightelf\maiev\maiev.mdl'
 PATH_MODEL_UNIT_GHOSTLY_KEEPER_OF_THE_GROVE = r'units\nightelf\herokeeperofthegroveghost\herokeeperofthegroveghost.mdl'
 
+PATH_MODEL_UNIT_FIRELORD = r'units\creeps\heroflamelord\heroflamelord.mdl'
 PATH_MODEL_UNIT_PANDAREN_BREWMASTER = r'units\creeps\PandarenBrewmaster\PandarenBrewmaster.mdl'
 
 ## Missiles

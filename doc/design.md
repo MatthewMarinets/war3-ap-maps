@@ -417,6 +417,12 @@ giving them a more light/living aesthetic.
   * Hat design changed to be like a Haida spruce root hat with a frog design
   * Rope belt saturated and made more orange
   * Panda logo on the barrel got red eyes
+* Firelord
+  * Lava texture changed red/orange -> blue
+  * Fire ring changed to waves of water
+  * Projectile changed to lich projectile
+  * Many particle effects changed red -> blue/white
+  * Rising blood blobs texture changed to blue shockwave (blue ring)
 * Akama
   * Skin turned grey
   * Eye particles changed blue -> red (red background makes appearance go purple -> red)

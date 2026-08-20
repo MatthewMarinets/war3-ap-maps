@@ -369,6 +369,14 @@ HERO_INFO = [
         },
     ),
     HeroInfo(
+        GameID.FIRELORD, CustomIDs.UNIT_CORRUPTED_FIRELORD,
+        r'apimports\evilfirelord.mdx', CustomIDs.ABIL_CHAOS_FIRELORD,
+        other_updates={
+            eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_LICH,
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
+    ),
+    HeroInfo(
         GameID.AKAMA, CustomIDs.UNIT_CORRUPTED_AKAMA,
         r'apimports\evilakama.mdx', CustomIDs.ABIL_CHAOS_AKAMA,
         # Note: default scaling is 1.5
@@ -409,8 +417,9 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilmaiev.mdx': [r'apimports\evilmaiev.blp'],
     r'apimports\evilkeeperofthegrove.mdx': [r'apimports\evilkeeperofthegrove.blp'],
     r'apimports\evilkeeperofthegroveghost.mdx': [r'apimports\evilkeeperofthegrove.blp'],
-    r'apimports\evilpandarenbrewmaster.mdx': [r'apimports\evilpandarenbrewmaster.blp'],
     r'apimports\evilladyvashj.mdx': [r'apimports\evilladyvashj.blp'],
+    r'apimports\evilpandarenbrewmaster.mdx': [r'apimports\evilpandarenbrewmaster.blp'],
+    r'apimports\evilfirelord.mdx': [r'apimports\evilfirelord.blp'],
     r'apimports\evilakama.mdx': [r'apimports\evilakama.blp'],
 }
 
