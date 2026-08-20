@@ -48,7 +48,7 @@ but it creates a full desktop even when running in windowed mode with the `-wind
 
 In my wc3 startup script, I've added the following snippet, and launched the game with:
 ```sh
-if [[ $* == "-window" ]] then
+if [[ "$*" == *"-window"* ]] then
     EXPLORER=()
 else
     EXPLORER=('explorer' '/desktop=wc3,2560x1440')
