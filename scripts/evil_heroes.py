@@ -356,6 +356,9 @@ def update_units(units_file: str) -> None:
 
     entities = mod_entity.Entities(data.map_objects.entities)
     blizzard_entities = mod_entity.Entities(data.blizzard_objects.entities, is_map_entity=False)
+    blizzard_entities.set_entity('null', eid.UNIT_GROM_HELLSCREAM, {
+        eid.FIELD_UNIT_ABILITIES_NORMAL: f"{DEFAULT_HERO_ABILS},{eid.ABIL_CHAOS_GROM}"
+    })
     for hero_info in HERO_INFO:
         if not hero_info.skip_unit_creation:
             entities.set_entity(
