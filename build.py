@@ -73,6 +73,8 @@ def zip_apworld() -> None:
         for file in glob.glob('apworld/**', recursive=True):
             if '__pycache__' in file:
                 continue
+            if '/test' in file:
+                continue
             zf.write(file, arcname=f'wc3/{os.path.relpath(file, "apworld")}')
 
 
