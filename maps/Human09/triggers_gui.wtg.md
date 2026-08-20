@@ -355,6 +355,18 @@ version = TFT
   - param Preset UnitEventDeath
 
 
+## Chaos heroes
+- enabled: True
+- category: [19] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
 ## StartInitializationSequence
 - enabled: True
 - category: [0] Initialization
@@ -4977,10 +4989,8 @@ version = TFT
     - Action ReturnAction
   - param Function DoNothing
     - Action DoNothing
-- Action SetPlayerTechResearchedSwap
-  - param String Roch
-  - param String 1
-  - param Preset Player01
+- Action CustomScriptCode
+  - param String call activate_chaos()
 - Action SetVariable
   - param Variable EvilArthas
   - param Variable Arthas
@@ -5666,10 +5676,8 @@ version = TFT
   - param Variable gg_trg_DestroyMalganisItems
 - Action DisableTrigger
   - param Variable gg_trg_GiveAnkh
-- Action SetPlayerTechResearchedSwap
-  - param String Roch
-  - param String 1
-  - param Preset Player01
+- Action CustomScriptCode
+  - param String call activate_chaos()
 - Action SetVariable
   - param Variable EvilArthas
   - param Variable Arthas
