@@ -573,9 +573,13 @@ def update_abils(abils_file: str) -> None:
     for hero_info in HERO_INFO:
         if not hero_info.abil_id:
             continue
+        if hasattr(hero_info.parent_id, 'name'):
+            field_name = hero_info.parent_id.name.replace("_", " ").title()
+        else:
+            field_name = hero_info.parent_id
         entities.set_entity(
             hero_info.abil_id, 'Sca6', {
-                eid.FIELD_ABIL_NAME: f'Chaos {hero_info.parent_id.replace("_", " ").title()}',
+                eid.FIELD_ABIL_NAME: f'Chaos {field_name}',
                 eid.FIELD_ABIL_EDITOR_SUFFIX: '',
                 (eid.FIELD_ABIL_DATA_CHAOS_NEW_UNIT_TYPE, 1): hero_info.entity_id,
             }
