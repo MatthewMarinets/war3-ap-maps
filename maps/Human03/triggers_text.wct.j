@@ -855,7 +855,7 @@ function hero_publish_status takes integer slot returns nothing
     call io_write(I2S(GetHeroStr(hero, false)))
     call io_write(I2S(GetHeroInt(hero, false)))
     call io_write(I2S(R2I(GetUnitState(hero, UNIT_STATE_MAX_LIFE))))
-    if GetUnitTypeId(hero) == 'Ntin' or GetUnitTypeId(hero) == 'Nrob' then
+    if GetUnitTypeId(hero) == 'Ntin' or GetUnitTypeId(hero) == 'Nrob' or GetUnitTypeId(hero) == 'HE0P' then
         // special handling for Goblin Tinker
         if GetUnitAbilityLevel(hero, 'ANeg') == 0 then
             call io_write(I2S(GetUnitAbilityLevel(hero, 'ANsy')))
