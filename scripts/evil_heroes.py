@@ -14,6 +14,7 @@ DEFAULT_DAMAGE_BASE = 12
 FLOAT_MAP = {
     1.1: 1.100000023841858,
     1.2: 1.2000000476837158,
+    1.3: 1.2999999523162842,
     1.35: 1.350000023841858,
     1.55: 1.5499999523162842,
 }
@@ -21,7 +22,7 @@ FLOAT_MAP = {
 
 @dataclass
 class HeroInfo:
-    parent_id: GameID
+    parent_id: str
     entity_id: str
     updated_model: str
     abil_id: str
@@ -30,6 +31,13 @@ class HeroInfo:
     other_updates: dict[str | tuple[str, int], Any] = field(default_factory=dict)
     skip_unit_creation: bool = False
     skip_model_addition: bool = False
+
+
+@dataclass(slots=True)
+class AbilInfo:
+    parent_id: str
+    entity_id: str
+    modifications: dict
 
 
 HERO_INFO = [
@@ -371,9 +379,49 @@ HERO_INFO = [
     HeroInfo(
         GameID.FIRELORD, CustomIDs.UNIT_CORRUPTED_FIRELORD,
         r'apimports\evilfirelord.mdx', CustomIDs.ABIL_CHAOS_FIRELORD,
+        # Note: default scaling is 1.15
+        scaling=1.3,
         other_updates={
             eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_LICH,
             eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
+    ),
+    HeroInfo(
+        GameID.ALCHEMIST, CustomIDs.UNIT_CORRUPTED_ALCHEMIST,
+        r'apimports\evilgoblinalchemist.mdx', CustomIDs.ABIL_CHAOS_ALCHEMIST,
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+            eid.FIELD_UNIT_ABILITIES_HERO: ','.join((
+                GameID.GOBLIN_ALCHEMIST_HEALING_SPRAY,
+                CustomIDs.ABIL_CHAOS_ALCHEMIST_ENRAGE,
+                GameID.GOBLIN_ALCHEMIST_ACID_BOMB,
+                GameID.GOBLIN_ALCHEMIST_TRANSMUTE,
+            )),
+            eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_DEMON_HUNTER,
+        },
+    ),
+    HeroInfo(
+        eid.UNIT_ALCHEMIST_ENRAGED_1, CustomIDs.UNIT_CORRUPTED_ALCHEMIST_ENRAGED_1,
+        r'apimports\evilgoblinalchemist.mdx', '',
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+            eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_DEMON_HUNTER,
+        },
+    ),
+    HeroInfo(
+        eid.UNIT_ALCHEMIST_ENRAGED_2, CustomIDs.UNIT_CORRUPTED_ALCHEMIST_ENRAGED_2,
+        r'apimports\evilgoblinalchemist.mdx', '',
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+            eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_DEMON_HUNTER,
+        },
+    ),
+    HeroInfo(
+        eid.UNIT_ALCHEMIST_ENRAGED_3, CustomIDs.UNIT_CORRUPTED_ALCHEMIST_ENRAGED_3,
+        r'apimports\evilgoblinalchemist.mdx', '',
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+            eid.FIELD_UNIT_ATTACK_1_PROJECTILE_ART: eid.PATH_MODEL_MISSILE_DEMON_HUNTER,
         },
     ),
     HeroInfo(
@@ -420,6 +468,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilladyvashj.mdx': [r'apimports\evilladyvashj.blp'],
     r'apimports\evilpandarenbrewmaster.mdx': [r'apimports\evilpandarenbrewmaster.blp'],
     r'apimports\evilfirelord.mdx': [r'apimports\evilfirelord.blp'],
+    r'apimports\evilgoblinalchemist.mdx': [r'apimports\evilgoblinalchemistbase.blp', r'apimports\evilgoblinalchemistenraged.blp'],
     r'apimports\evilakama.mdx': [r'apimports\evilakama.blp'],
 }
 
@@ -442,9 +491,16 @@ HERO_TO_DEFAULT_ABILS = {
     GameID.MALFURION: f'{eid.ABIL_INVENTORY_HERO},{eid.ABIL_ULTRAVISION}',
     GameID.MALFURION_UNMOUNTED: f'{eid.ABIL_INVENTORY_HERO},{eid.ABIL_ULTRAVISION}',
     GameID.TYRANDE: f'{eid.ABIL_SHADOW_MELD},{eid.ABIL_INVENTORY_HERO},{eid.ABIL_ULTRAVISION}',
-    # GameID.AKAMA: f'{eid.ABIL_INVENTORY_HERO},{eid.ABIL_PERMANENT_INVISIBILITY},{eid.ABIL_SHADOW_MELD_AKAMA}',
-    GameID.AKAMA: f'{eid.ABIL_INVENTORY_HERO}',
+    GameID.AKAMA: f'{eid.ABIL_INVENTORY_HERO},{eid.ABIL_PERMANENT_INVISIBILITY},{eid.ABIL_SHADOW_MELD_AKAMA}',
 }
+
+EXTRA_ABILS = [
+    AbilInfo(eid.ABIL_CHEMICAL_RAGE, CustomIDs.ABIL_CHAOS_ALCHEMIST_ENRAGE, {
+        (eid.FIELD_ABIL_DATA_CHEMICAL_RAGE_ALTERNATE_FORM_UNIT, 1): CustomIDs.UNIT_CORRUPTED_ALCHEMIST_ENRAGED_1,
+        (eid.FIELD_ABIL_DATA_CHEMICAL_RAGE_ALTERNATE_FORM_UNIT, 2): CustomIDs.UNIT_CORRUPTED_ALCHEMIST_ENRAGED_2,
+        (eid.FIELD_ABIL_DATA_CHEMICAL_RAGE_ALTERNATE_FORM_UNIT, 3): CustomIDs.UNIT_CORRUPTED_ALCHEMIST_ENRAGED_3,
+    }),
+]
 
 
 def portrait_path(model_path: str) -> str:
@@ -479,13 +535,14 @@ def update_units(units_file: str) -> None:
                     **hero_info.other_updates,
                 }
             )
-        blizzard_entities.set_entity(
-            'null', hero_info.parent_id, {
-                eid.FIELD_UNIT_ABILITIES_NORMAL:
-                    f"{HERO_TO_DEFAULT_ABILS.get(hero_info.parent_id, DEFAULT_HERO_ABILS)},"
-                    f"{hero_info.abil_id}",
-            }
-        )
+        if hero_info.abil_id:
+            blizzard_entities.set_entity(
+                'null', hero_info.parent_id, {
+                    eid.FIELD_UNIT_ABILITIES_NORMAL:
+                        f"{HERO_TO_DEFAULT_ABILS.get(hero_info.parent_id, DEFAULT_HERO_ABILS)},"
+                        f"{hero_info.abil_id}",
+                }
+            )
 
     text = w3o.as_text(data)
     with open(units_file, 'w') as fp:
@@ -506,13 +563,17 @@ def update_abils(abils_file: str) -> None:
     )
 
     for hero_info in HERO_INFO:
+        if not hero_info.abil_id:
+            continue
         entities.set_entity(
             hero_info.abil_id, 'Sca6', {
-                eid.FIELD_ABIL_NAME: f'Chaos {hero_info.parent_id.name.replace("_", " ").title()}',
+                eid.FIELD_ABIL_NAME: f'Chaos {hero_info.parent_id.replace("_", " ").title()}',
                 eid.FIELD_ABIL_EDITOR_SUFFIX: '',
                 (eid.FIELD_ABIL_DATA_CHAOS_NEW_UNIT_TYPE, 1): hero_info.entity_id,
             }
         )
+    for abil_info in EXTRA_ABILS:
+        entities.set_entity(abil_info.entity_id, abil_info.parent_id, abil_info.modifications)
 
     text = w3o.as_text(data)
     with open(abils_file, 'w') as fp:
