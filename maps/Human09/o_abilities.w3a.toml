@@ -2429,3 +2429,489 @@ variation_level = 1
 table_column = 0
 value = "HE0j"
 object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Sca6'
+entity_id = 'A;Cb'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Chaos Tyrande"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Cha1'  # AbilityData.New Unit Type
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "HE0b"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Sca6'
+entity_id = 'A;Cc'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Chaos Furion"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Cha1'  # AbilityData.New Unit Type
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "HE0c"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Sca6'
+entity_id = 'A;Cf'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Chaos Malfurion"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Cha1'  # AbilityData.New Unit Type
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "HE0f"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Sca6'
+entity_id = 'A;Cd'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Chaos Illidan"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Cha1'  # AbilityData.New Unit Type
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "HE0d"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Sca6'
+entity_id = 'A;Ci'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Chaos Illidan Evil"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Cha1'  # AbilityData.New Unit Type
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "HE0i"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Sca6'
+entity_id = 'A;Ce'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Chaos Maiev"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Cha1'  # AbilityData.New Unit Type
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "HE0e"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Sca6'
+entity_id = 'A;Ct'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Chaos Ghost Keeper Of The Grove"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Cha1'  # AbilityData.New Unit Type
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "HE0t"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Sca6'
+entity_id = 'A;CJ'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Chaos Priestess Of The Moon"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Cha1'  # AbilityData.New Unit Type
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "HE0J"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Sca6'
+entity_id = 'A;CK'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Chaos Keeper Of The Grove"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Cha1'  # AbilityData.New Unit Type
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "HE0K"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Sca6'
+entity_id = 'A;CL'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Chaos Demon Hunter"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Cha1'  # AbilityData.New Unit Type
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "HE0L"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Sca6'
+entity_id = 'A;CM'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Chaos Warden"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Cha1'  # AbilityData.New Unit Type
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "HE0M"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Sca6'
+entity_id = 'A;Ch'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Chaos Lady Vashj"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Cha1'  # AbilityData.New Unit Type
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "HE0h"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Sca6'
+entity_id = 'A;CO'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Chaos Naga Sea Witch"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Cha1'  # AbilityData.New Unit Type
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "HE0O"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Sca6'
+entity_id = 'A;CT'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Chaos Pandaren Brewmaster"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Cha1'  # AbilityData.New Unit Type
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "HE0T"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Sca6'
+entity_id = 'A;CS'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Chaos Firelord"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Cha1'  # AbilityData.New Unit Type
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "HE0S"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Sca6'
+entity_id = 'A;CN'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Chaos Alchemist"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Cha1'  # AbilityData.New Unit Type
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "HE0N"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'Sca6'
+entity_id = 'A;CP'
+[[map_objects.entities.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Chaos Tinker"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Cha1'  # AbilityData.New Unit Type
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "HE0P"
+object_id = 'null'
+
+[[map_objects.entities]]
+parent_id = 'ANcr'  # Chemical Rage
+entity_id = 'A;01'
+[[map_objects.entities.modifications]]
+modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "HE0V"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
+data_type = "String"
+variation_level = 2
+table_column = 0
+value = "HE0W"
+object_id = 'null'
+
+[[map_objects.entities.modifications]]
+modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
+data_type = "String"
+variation_level = 3
+table_column = 0
+value = "HE0X"
+object_id = 'null'

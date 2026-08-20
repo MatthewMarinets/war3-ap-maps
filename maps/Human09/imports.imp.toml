@@ -292,3 +292,147 @@ path = 'apimports\evilakama.blp'
 [[imports]]
 path_type = 5
 path = 'apimports\questionmark_item.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilpriestessofthemoon.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilpriestessofthemoon_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilpriestessofthemoon.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilfurion.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilfurion_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilfurion.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilmalfurion.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilmalfurion_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilmalfurion.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evildemonillidan.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evildemonillidan_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evildemonillidan.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilmaiev.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilmaiev_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilmaiev.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilkeeperofthegroveghost.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilkeeperofthegroveghost_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilkeeperofthegrove.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilkeeperofthegrove.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilkeeperofthegrove_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilladyvashj.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilladyvashj_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilladyvashj.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilpandarenbrewmaster.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilpandarenbrewmaster_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilpandarenbrewmaster.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilfirelord.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilfirelord_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilfirelord.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilgoblinalchemist.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilgoblinalchemist_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilgoblinalchemistbase.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\evilgoblinalchemistenraged.blp'
+
+[[imports]]
+path_type = 13
+path = 'apimports\eviltinker.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\eviltinker_portrait.mdx'
+
+[[imports]]
+path_type = 13
+path = 'apimports\eviltinker.blp'
