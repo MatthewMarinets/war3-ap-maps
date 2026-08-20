@@ -425,6 +425,13 @@ HERO_INFO = [
         },
     ),
     HeroInfo(
+        GameID.TINKER, CustomIDs.UNIT_CORRUPTED_TINKER,
+        r'apimports\eviltinker.mdx', CustomIDs.ABIL_CHAOS_TINKER,
+        other_updates={
+            eid.FIELD_UNIT_STATS_FOOD_COST: 0,
+        },
+    ),
+    HeroInfo(
         GameID.AKAMA, CustomIDs.UNIT_CORRUPTED_AKAMA,
         r'apimports\evilakama.mdx', CustomIDs.ABIL_CHAOS_AKAMA,
         # Note: default scaling is 1.5
@@ -469,6 +476,7 @@ TEXTURE_DEPENDENCIES = {
     r'apimports\evilpandarenbrewmaster.mdx': [r'apimports\evilpandarenbrewmaster.blp'],
     r'apimports\evilfirelord.mdx': [r'apimports\evilfirelord.blp'],
     r'apimports\evilgoblinalchemist.mdx': [r'apimports\evilgoblinalchemistbase.blp', r'apimports\evilgoblinalchemistenraged.blp'],
+    r'apimports\eviltinker.mdx': [r'apimports\eviltinker.blp'],
     r'apimports\evilakama.mdx': [r'apimports\evilakama.blp'],
 }
 
