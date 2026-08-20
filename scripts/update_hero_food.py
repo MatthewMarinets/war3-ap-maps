@@ -8,7 +8,7 @@ from scripts import mod_entity, editor_ids as eid
 from mapfile import w3o, common
 from apworld.data.game_ids import GameID
 
-HERO_IDS = [
+HERO_IDS: list[str] = [
     GameID.PALADIN,
     GameID.ARCHMAGE,
     GameID.MOUNTAIN_KING,
@@ -35,15 +35,21 @@ HERO_IDS = [
     GameID.PIT_LORD,
     GameID.AKAMA,
     GameID.GHOST_KEEPER_OF_THE_GROVE,
+
+    eid.UNIT_DEMON_HUNTER_DEMON_FORM,
+    eid.UNIT_ALCHEMIST_ENRAGED_1,
+    eid.UNIT_ALCHEMIST_ENRAGED_2,
+    eid.UNIT_ALCHEMIST_ENRAGED_3,
+    eid.UNIT_TINKER_ROBO_GOBO,
 ]
 
 def update_units(units_file: str) -> None:
-    
+
     if not os.path.isfile(units_file):
         data = w3o.War3ObjectData(2, has_levels=False)
     else:
         data = w3o.from_text_file(units_file)
-    
+
     entities = mod_entity.Entities(data.blizzard_objects.entities, is_map_entity=False)
     for hero_id in HERO_IDS:
         entities.set_entity(
