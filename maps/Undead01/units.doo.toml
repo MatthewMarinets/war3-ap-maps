@@ -312,8 +312,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # pghe = Potion of Greater Healing
-        { item_id = "pghe", chance_percent = 100 }
+        { item_id = "I014", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -383,8 +382,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # rde1 = Ring of Protection +2
-        { item_id = "rde1", chance_percent = 100 }
+        { item_id = "I011", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -1088,58 +1086,6 @@ waygate_destination = -1
 entity_id = 85
 
 [[units]]
-type_id = 'Uear'  # Death Knight
-variation = 0
-x = 3891.34521484375
-y = -2988.15380859375
-z = 318.7798156738281
-facing = 1.2217305898666382
-scale_x = 1.0
-scale_y = 1.0
-scale_z = 1.0
-flags = "ENABLED"
-player_owner = 3
-hit_points = -1
-mana_points = -1
-random_item_table_id = -1
-item_drops = []
-goldmine_gold_amount = 12500
-target_acquisition = -1.0
-hero_level = 1
-hero_strength = 0
-hero_agility = 0
-hero_intelligence = 0
-inventory_items = []
-custom_colour = -1
-waygate_destination = -1
-entity_id = 5
-
-[[units.modified_abilities]]
-abil_id = 'AUdc'  # Death Coil
-autocast_active = false
-abil_level = 1
-
-[[units.modified_abilities]]
-abil_id = 'AUdp'  # Death Pact
-autocast_active = false
-abil_level = 0
-
-[[units.modified_abilities]]
-abil_id = 'AUau'  # Unholy Aura
-autocast_active = false
-abil_level = 0
-
-[[units.modified_abilities]]
-abil_id = 'AUan'  # Animate Dead
-autocast_active = false
-abil_level = 0
-
-[units.random_unit_info]
-random_type = 'class'
-level = 0
-item_class = 0
-
-[[units]]
 type_id = 'hfoo'  # Footman
 variation = 0
 x = 1337.073486328125
@@ -1218,8 +1164,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # phea = Potion of Healing
-        { item_id = "phea", chance_percent = 100 }
+        { item_id = "I015", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -2533,8 +2478,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # sprn = Spider Ring
-        { item_id = "sprn", chance_percent = 100 }
+        { item_id = "I012", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -3387,8 +3331,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # phea = Potion of Healing
-        { item_id = "phea", chance_percent = 100 }
+        { item_id = "I016", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -4297,8 +4240,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # pghe = Potion of Greater Healing
-        { item_id = "pghe", chance_percent = 100 }
+        { item_id = "I017", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -5045,8 +4987,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # rst1 = Gauntlets of Ogre Strength +3
-        { item_id = "rst1", chance_percent = 100 }
+        { item_id = "I013", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500

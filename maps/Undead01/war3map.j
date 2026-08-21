@@ -498,6 +498,8 @@ trigger gg_trg_item_locations= null
 trigger gg_trg_debug= null
 trigger gg_trg_zoom= null
 trigger gg_trg_irregulars= null
+trigger gg_trg_AP_Load_Arthas= null
+trigger gg_trg_Post_hero_init= null
 trigger gg_trg_Initialization= null
 trigger gg_trg_Init_01A_Difficulty_Easy= null
 trigger gg_trg_Init_01B_Difficulty_Normal= null
@@ -525,7 +527,6 @@ trigger gg_trg_Hint_Death_Coil_Q= null
 trigger gg_trg_Ending_Cinematic= null
 trigger gg_trg_Ending_Cancel= null
 trigger gg_trg_Load_Heroes= null
-trigger gg_trg_Next_Level_Prep= null
 trigger gg_trg_Next_Level_Run= null
 trigger gg_trg_Victory_Cheat= null
 trigger gg_trg_Defeat_Cheat= null
@@ -553,7 +554,6 @@ trigger gg_trg_Hint_Cannibalize= null
 trigger gg_trg_Acolyte_Leaderboard_Create= null
 trigger gg_trg_Acolyte_Leaderboard_Update= null
 trigger gg_trg_Acolyte_Leaderboard_Hide= null
-trigger gg_trg_Arthas_Gains_A_Level= null
 trigger gg_trg_Crate01= null
 trigger gg_trg_Crate02= null
 trigger gg_trg_Crate03= null
@@ -714,7 +714,6 @@ unit gg_unit_nban_0082= null
 unit gg_unit_hC03_0016= null
 unit gg_unit_nC00_0021= null
 unit gg_unit_nC00_0015= null
-unit gg_unit_Uear_0005= null
 unit gg_unit_nban_0081= null
 unit gg_unit_hwtw_0019= null
 unit gg_unit_hwtw_0069= null
@@ -1050,7 +1049,7 @@ function Unit000008_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem('pghe', 100)
+        call RandomDistAddItem('I014', 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -1085,7 +1084,7 @@ function Unit000010_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem('rde1', 100)
+        call RandomDistAddItem('I011', 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -1099,7 +1098,7 @@ function Unit000010_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
-function Unit000037_DropItems takes nothing returns nothing
+function Unit000036_DropItems takes nothing returns nothing
     local widget trigWidget= null
     local unit trigUnit= null
     local integer itemID= 0
@@ -1120,7 +1119,7 @@ function Unit000037_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem('phea', 100)
+        call RandomDistAddItem('I015', 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -1134,7 +1133,7 @@ function Unit000037_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
-function Unit000079_DropItems takes nothing returns nothing
+function Unit000078_DropItems takes nothing returns nothing
     local widget trigWidget= null
     local unit trigUnit= null
     local integer itemID= 0
@@ -1155,7 +1154,7 @@ function Unit000079_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem('sprn', 100)
+        call RandomDistAddItem('I012', 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -1169,7 +1168,7 @@ function Unit000079_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
-function Unit000108_DropItems takes nothing returns nothing
+function Unit000107_DropItems takes nothing returns nothing
     local widget trigWidget= null
     local unit trigUnit= null
     local integer itemID= 0
@@ -1190,7 +1189,7 @@ function Unit000108_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem('phea', 100)
+        call RandomDistAddItem('I016', 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -1204,7 +1203,7 @@ function Unit000108_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
-function Unit000137_DropItems takes nothing returns nothing
+function Unit000136_DropItems takes nothing returns nothing
     local widget trigWidget= null
     local unit trigUnit= null
     local integer itemID= 0
@@ -1225,7 +1224,7 @@ function Unit000137_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem('pghe', 100)
+        call RandomDistAddItem('I017', 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -1239,7 +1238,7 @@ function Unit000137_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
-function Unit000160_DropItems takes nothing returns nothing
+function Unit000159_DropItems takes nothing returns nothing
     local widget trigWidget= null
     local unit trigUnit= null
     local integer itemID= 0
@@ -1260,7 +1259,7 @@ function Unit000160_DropItems takes nothing returns nothing
     if ( canDrop ) then
         // Item set 0
         call RandomDistReset()
-        call RandomDistAddItem('rst1', 100)
+        call RandomDistAddItem('I013', 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -1553,7 +1552,7 @@ function CreateUnitsForPlayer1 takes nothing returns nothing
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000108_DropItems)
+    call TriggerAddAction(t, function Unit000107_DropItems)
     set u=CreateUnit(p, 'hfoo', 1730.0, 2754.2, 272.913)
     set u=CreateUnit(p, 'hfoo', 1860.6, 2749.4, 260.233)
     set u=CreateUnit(p, 'hfoo', 3922.6, 1560.2, 182.918)
@@ -1561,7 +1560,7 @@ function CreateUnitsForPlayer1 takes nothing returns nothing
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000137_DropItems)
+    call TriggerAddAction(t, function Unit000136_DropItems)
     set u=CreateUnit(p, 'hfoo', - 2719.1, - 1036.6, 329.191)
     set u=CreateUnit(p, 'hfoo', - 2654.1, - 1189.9, 61.419)
     set u=CreateUnit(p, 'hkni', - 2627.8, - 705.5, 93.388)
@@ -1651,18 +1650,6 @@ function CreateUnitsForPlayer2 takes nothing returns nothing
 endfunction
 
 //===========================================================================
-function CreateUnitsForPlayer3 takes nothing returns nothing
-    local player p= Player(3)
-    local unit u
-    local integer unitID
-    local trigger t
-    local real life
-
-    set gg_unit_Uear_0005=CreateUnit(p, 'Uear', 3891.3, - 2988.2, 70.000)
-    call SelectHeroSkill(gg_unit_Uear_0005, 'AUdc')
-endfunction
-
-//===========================================================================
 function CreateUnitsForPlayer6 takes nothing returns nothing
     local player p= Player(6)
     local unit u
@@ -1703,18 +1690,18 @@ function CreateNeutralHostile takes nothing returns nothing
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000160_DropItems)
+    call TriggerAddAction(t, function Unit000159_DropItems)
     set gg_unit_nass_0079=CreateUnit(p, 'nass', - 3972.7, 3240.6, 229.970)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, gg_unit_nass_0079, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, gg_unit_nass_0079, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000079_DropItems)
+    call TriggerAddAction(t, function Unit000078_DropItems)
     set gg_unit_nban_0080=CreateUnit(p, 'nban', - 3100.5, 1835.7, 356.509)
     set gg_unit_nban_0081=CreateUnit(p, 'nban', - 3860.1, 3178.9, 230.150)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, gg_unit_nban_0081, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, gg_unit_nban_0081, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000037_DropItems)
+    call TriggerAddAction(t, function Unit000036_DropItems)
     set gg_unit_nban_0082=CreateUnit(p, 'nban', - 4083.2, 3315.7, 232.505)
     set gg_unit_nban_0083=CreateUnit(p, 'nban', - 3097.3, 1764.6, 6.690)
     set u=CreateUnit(p, 'ngrk', 4425.5, - 289.8, 274.856)
@@ -1785,7 +1772,6 @@ function CreatePlayerUnits takes nothing returns nothing
     call CreateUnitsForPlayer0()
     call CreateUnitsForPlayer1()
     call CreateUnitsForPlayer2()
-    call CreateUnitsForPlayer3()
     call CreateUnitsForPlayer6()
 endfunction
 
@@ -2479,10 +2465,11 @@ function InitTrig_map_config takes nothing returns nothing
     set location_names[4]="Captain Item"
     set location_names[5]="Bandit Item"
     set location_names[6]="Footman Item"
-    set location_names[7]="Entrance Crate Item"
-    set location_names[8]="Lumber Mill Crate Item"
-    set location_names[9]="Fistfight Crate Item"
-    set location_names[10]="Boat Crate Item"
+    set location_names[7]="Captain 2 Item"
+    set location_names[8]="Entrance Crate Item"
+    set location_names[9]="Lumber Mill Crate Item"
+    set location_names[10]="Fistfight Crate Item"
+    set location_names[11]="Boat Crate Item"
     set location_names[20]="Reach the Graveyard"
 endfunction
 //===========================================================================
@@ -3667,6 +3654,51 @@ function InitTrig_irregulars takes nothing returns nothing
     call Preload("Abilities\\Spells\\Human\\Polymorph\\PolyMorphDoneGround.mdl")
 endfunction
 //===========================================================================
+// Trigger: AP Load Arthas
+//===========================================================================
+function Trig_AP_Load_Arthas_Func003001 takes nothing returns boolean
+    return ( udg_Arthas != null )
+endfunction
+
+function Trig_AP_Load_Arthas_Actions takes nothing returns nothing
+    // Load the hero data
+    set udg_Arthas=hero_create(0, USER_PLAYER, 3891.34521484375, -2988.15380859375, 1.2217305898666382)
+    if ( Trig_AP_Load_Arthas_Func003001() ) then
+        return
+    else
+        call DoNothing()
+    endif
+    // If the hero data wasn't found, create a default hero
+    set udg_Arthas=CreateUnit(USER_PLAYER, 'Uear', 3891.34521484375, -2988.15380859375, 1.2217305898666382)
+    set hero_abil_1[0]='AUdc'
+    set hero_abil_2[0]='AUdp'
+    set hero_abil_3[0]='AUau'
+    set hero_abil_4[0]='AUan'
+endfunction
+
+//===========================================================================
+function InitTrig_AP_Load_Arthas takes nothing returns nothing
+    set gg_trg_AP_Load_Arthas=CreateTrigger()
+    call DisableTrigger(gg_trg_AP_Load_Arthas)
+    call TriggerAddAction(gg_trg_AP_Load_Arthas, function Trig_AP_Load_Arthas_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Post hero init
+//===========================================================================
+function Trig_Post_hero_init_Actions takes nothing returns nothing
+    call TriggerRegisterUnitInRangeSimple(gg_trg_Acolyte_Touched, 256.00, udg_Arthas)
+    call TriggerRegisterUnitInRangeSimple(gg_trg_Unit_Scared, 256.00, udg_Arthas)
+endfunction
+
+//===========================================================================
+function InitTrig_Post_hero_init takes nothing returns nothing
+    set gg_trg_Post_hero_init=CreateTrigger()
+    call DisableTrigger(gg_trg_Post_hero_init)
+    call TriggerAddAction(gg_trg_Post_hero_init, function Trig_Post_hero_init_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: Initialization
 //===========================================================================
 function Trig_Initialization_Actions takes nothing returns nothing
@@ -4112,7 +4144,7 @@ endfunction
 //===========================================================================
 // Trigger: Init 03 Units
 //===========================================================================
-function Trig_Init_03_Units_Func024002 takes nothing returns nothing
+function Trig_Init_03_Units_Func025002 takes nothing returns nothing
     call ShowUnitHide(GetEnumUnit())
 endfunction
 
@@ -4122,7 +4154,8 @@ function Trig_Init_03_Units_Actions takes nothing returns nothing
     call SetUnitInvulnerable(udg_Tichondrius, true)
     call SuspendHeroXPBJ(false, udg_Tichondrius)
     // Init Player Units
-    set udg_Arthas=gg_unit_Uear_0005
+    call ConditionalTriggerExecute(gg_trg_AP_Load_Arthas)
+    call ConditionalTriggerExecute(gg_trg_Post_hero_init)
     set udg_Ghoul01=gg_unit_ugho_0153
     set udg_Ghoul02=gg_unit_ugho_0152
     set udg_Ghoul05=GroupPickRandomUnit(GetUnitsInRectOfPlayer(gg_rct_Ghoul05_Start, udg_P7_Tichondrius))
@@ -4140,7 +4173,7 @@ function Trig_Init_03_Units_Actions takes nothing returns nothing
     call GroupAddUnitSimple(udg_Skeleton01, udg_GraveGuys)
     call GroupAddUnitSimple(udg_Skeleton02, udg_GraveGuys)
     call GroupAddUnitSimple(udg_Skeleton03, udg_GraveGuys)
-    call ForGroupBJ(udg_GraveGuys, function Trig_Init_03_Units_Func024002)
+    call ForGroupBJ(udg_GraveGuys, function Trig_Init_03_Units_Func025002)
 endfunction
 
 //===========================================================================
@@ -5153,12 +5186,8 @@ endfunction
 //
 // The ending cinematic does not need to be dequeued, as nothing needs to run after it.
 //===========================================================================
-function Trig_Ending_Cinematic_Func013001002 takes nothing returns boolean
+function Trig_Ending_Cinematic_Func014001002 takes nothing returns boolean
     return ( GetFilterUnit() != udg_Arthas )
-endfunction
-
-function Trig_Ending_Cinematic_Func013002 takes nothing returns nothing
-    call ShowUnitHide(GetEnumUnit())
 endfunction
 
 function Trig_Ending_Cinematic_Func014002 takes nothing returns nothing
@@ -5169,27 +5198,31 @@ function Trig_Ending_Cinematic_Func015002 takes nothing returns nothing
     call ShowUnitHide(GetEnumUnit())
 endfunction
 
-function Trig_Ending_Cinematic_Func026001 takes nothing returns boolean
+function Trig_Ending_Cinematic_Func016002 takes nothing returns nothing
+    call ShowUnitHide(GetEnumUnit())
+endfunction
+
+function Trig_Ending_Cinematic_Func027001 takes nothing returns boolean
     return ( udg_EndingCancelled == true )
 endfunction
 
-function Trig_Ending_Cinematic_Func030001 takes nothing returns boolean
+function Trig_Ending_Cinematic_Func031001 takes nothing returns boolean
     return ( udg_EndingCancelled == true )
 endfunction
 
-function Trig_Ending_Cinematic_Func035001 takes nothing returns boolean
+function Trig_Ending_Cinematic_Func036001 takes nothing returns boolean
     return ( udg_EndingCancelled == true )
 endfunction
 
-function Trig_Ending_Cinematic_Func038001 takes nothing returns boolean
+function Trig_Ending_Cinematic_Func039001 takes nothing returns boolean
     return ( udg_EndingCancelled == true )
 endfunction
 
-function Trig_Ending_Cinematic_Func042001 takes nothing returns boolean
+function Trig_Ending_Cinematic_Func043001 takes nothing returns boolean
     return ( udg_EndingCancelled == true )
 endfunction
 
-function Trig_Ending_Cinematic_Func045001 takes nothing returns boolean
+function Trig_Ending_Cinematic_Func046001 takes nothing returns boolean
     return ( udg_EndingCancelled == true )
 endfunction
 
@@ -5201,14 +5234,15 @@ function Trig_Ending_Cinematic_Actions takes nothing returns nothing
     call CinematicFadeBJ(bj_CINEFADETYPE_FADEOUT, 2.00, "ReplaceableTextures\\CameraMasks\\White_mask.blp", 0, 0, 0, 0)
     call TriggerSleepAction(2.00)
     call CinematicModeBJ(true, udg_APG4_Undead)
+    call status_check_location(0)
     // CINEMATIC BEGINS - Cinematic is now cancelable
     call EnableTrigger(gg_trg_Ending_Cancel)
     // Hide unnecessary units
     call PauseAllUnitsBJ(true)
     call UnitRemoveBuffsBJ(bj_REMOVEBUFFS_ALL, udg_Arthas)
-    call ForGroupBJ(GetUnitsOfPlayerMatching(udg_AP4_Undead, Condition(function Trig_Ending_Cinematic_Func013001002)), function Trig_Ending_Cinematic_Func013002)
-    call ForGroupBJ(GetUnitsOfPlayerAll(udg_P2_LocalDefense), function Trig_Ending_Cinematic_Func014002)
-    call ForGroupBJ(GetUnitsOfPlayerAll(udg_P3_LocalPopulace), function Trig_Ending_Cinematic_Func015002)
+    call ForGroupBJ(GetUnitsOfPlayerMatching(udg_AP4_Undead, Condition(function Trig_Ending_Cinematic_Func014001002)), function Trig_Ending_Cinematic_Func014002)
+    call ForGroupBJ(GetUnitsOfPlayerAll(udg_P2_LocalDefense), function Trig_Ending_Cinematic_Func015002)
+    call ForGroupBJ(GetUnitsOfPlayerAll(udg_P3_LocalPopulace), function Trig_Ending_Cinematic_Func016002)
     call ClearSelection()
     // Set up the scene
     call PlayThematicMusicBJ("Sound\\Music\\mp3Music\\DarkAgents.mp3")
@@ -5219,7 +5253,7 @@ function Trig_Ending_Cinematic_Actions takes nothing returns nothing
     call SetUnitFacingToFaceUnitTimed(udg_Arthas, udg_Tichondrius, 0)
     call SetUnitFacingToFaceLocTimed(udg_Tichondrius, GetRectCenter(gg_rct_Ending_Tichondrius_FaceTarget), 0)
     call TriggerSleepAction(0.10)
-    if ( Trig_Ending_Cinematic_Func026001() ) then
+    if ( Trig_Ending_Cinematic_Func027001() ) then
         return
     else
         call DoNothing()
@@ -5227,7 +5261,7 @@ function Trig_Ending_Cinematic_Actions takes nothing returns nothing
     // Fade back in and start the action
     call CinematicFadeBJ(bj_CINEFADETYPE_FADEIN, 1.00, "ReplaceableTextures\\CameraMasks\\White_mask.blp", 0, 0, 0, 0)
     call TriggerSleepAction(1.00)
-    if ( Trig_Ending_Cinematic_Func030001() ) then
+    if ( Trig_Ending_Cinematic_Func031001() ) then
         return
     else
         call DoNothing()
@@ -5236,14 +5270,14 @@ function Trig_Ending_Cinematic_Actions takes nothing returns nothing
     call SetUnitFacingToFaceUnitTimed(udg_Tichondrius, udg_Arthas, 0.40)
     call TransmissionFromUnitWithNameBJ(udg_APG4_Undead, udg_Tichondrius, "TRIGSTR_068", gg_snd_U01Tichondrius25, "TRIGSTR_069", bj_TIMETYPE_ADD, 0.00, false)
     call WaitForSoundBJ(gg_snd_U01Tichondrius25, 0.00)
-    if ( Trig_Ending_Cinematic_Func035001() ) then
+    if ( Trig_Ending_Cinematic_Func036001() ) then
         return
     else
         call DoNothing()
     endif
     call TransmissionFromUnitWithNameBJ(udg_APG4_Undead, udg_Arthas, "TRIGSTR_070", gg_snd_U01Arthas26, "TRIGSTR_071", bj_TIMETYPE_ADD, 0.00, false)
     call WaitForSoundBJ(gg_snd_U01Arthas26, 0.00)
-    if ( Trig_Ending_Cinematic_Func038001() ) then
+    if ( Trig_Ending_Cinematic_Func039001() ) then
         return
     else
         call DoNothing()
@@ -5251,14 +5285,14 @@ function Trig_Ending_Cinematic_Actions takes nothing returns nothing
     call SetUnitFacingToFaceLocTimed(udg_Tichondrius, GetRectCenter(gg_rct_Ending_Tichondrius_FaceTarget), 0)
     call TransmissionFromUnitWithNameBJ(udg_APG4_Undead, udg_Tichondrius, "TRIGSTR_072", gg_snd_U01Tichondrius27, "TRIGSTR_073", bj_TIMETYPE_ADD, 0.00, false)
     call WaitForSoundBJ(gg_snd_U01Tichondrius27, 0.00)
-    if ( Trig_Ending_Cinematic_Func042001() ) then
+    if ( Trig_Ending_Cinematic_Func043001() ) then
         return
     else
         call DoNothing()
     endif
     call TransmissionFromUnitWithNameBJ(udg_APG4_Undead, udg_Arthas, "TRIGSTR_074", gg_snd_U01Arthas28, "TRIGSTR_075", bj_TIMETYPE_ADD, 0.00, false)
     call WaitForSoundBJ(gg_snd_U01Arthas28, 0.00)
-    if ( Trig_Ending_Cinematic_Func045001() ) then
+    if ( Trig_Ending_Cinematic_Func046001() ) then
         return
     else
         call DoNothing()
@@ -5322,29 +5356,11 @@ function InitTrig_Load_Heroes takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: Next Level Prep
-//===========================================================================
-function Trig_Next_Level_Prep_Actions takes nothing returns nothing
-    // Save hero data
-    call InitGameCacheBJ("Campaigns.w3v")
-    call StoreUnitBJ(udg_Arthas, "Arthas", "Undead02", GetLastCreatedGameCacheBJ())
-    call SaveGameCacheBJ(GetLastCreatedGameCacheBJ())
-    // Enable next level
-    call SetMissionAvailableBJ(true, bj_MISSION_INDEX_U01)
-endfunction
-
-//===========================================================================
-function InitTrig_Next_Level_Prep takes nothing returns nothing
-    set gg_trg_Next_Level_Prep=CreateTrigger()
-    call TriggerAddAction(gg_trg_Next_Level_Prep, function Trig_Next_Level_Prep_Actions)
-endfunction
-
-//===========================================================================
 // Trigger: Next Level Run
 //===========================================================================
 function Trig_Next_Level_Run_Actions takes nothing returns nothing
     // Run next level
-    call SetNextLevelBJ("Maps\\Campaign\\Undead02.w3m")
+    call SetNextLevelBJ("CampaignSelect.w3x")
     call CustomVictoryBJ(udg_AP4_Undead, true, true)
 endfunction
 
@@ -5358,7 +5374,7 @@ endfunction
 // Trigger: Victory Cheat
 //===========================================================================
 function Trig_Victory_Cheat_Actions takes nothing returns nothing
-    call ConditionalTriggerExecute(gg_trg_Next_Level_Prep)
+    call status_check_location(0)
     call ConditionalTriggerExecute(gg_trg_Next_Level_Run)
 endfunction
 
@@ -5404,7 +5420,6 @@ function Trig_Victory_Test_Actions takes nothing returns nothing
     call SetUnitInvulnerable(udg_Arthas, true)
     call UnitRemoveBuffsBJ(bj_REMOVEBUFFS_NEGATIVE, udg_Arthas)
     // Ending cinematic
-    call ConditionalTriggerExecute(gg_trg_Next_Level_Prep)
     call QueuedTriggerAddBJ(gg_trg_Ending_Cinematic, false)
 endfunction
 
@@ -5422,6 +5437,9 @@ function Trig_Defeat_Arthas_Dies_Conditions takes nothing returns boolean
     if ( not ( udg_GameOver == false ) ) then
         return false
     endif
+    if ( not ( GetTriggerUnit() == udg_Arthas ) ) then
+        return false
+    endif
     return true
 endfunction
 
@@ -5435,7 +5453,7 @@ endfunction
 //===========================================================================
 function InitTrig_Defeat_Arthas_Dies takes nothing returns nothing
     set gg_trg_Defeat_Arthas_Dies=CreateTrigger()
-    call TriggerRegisterUnitEvent(gg_trg_Defeat_Arthas_Dies, gg_unit_Uear_0005, EVENT_UNIT_DEATH)
+    call TriggerRegisterPlayerUnitEventSimple(gg_trg_Defeat_Arthas_Dies, Player(3), EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(gg_trg_Defeat_Arthas_Dies, Condition(function Trig_Defeat_Arthas_Dies_Conditions))
     call TriggerAddAction(gg_trg_Defeat_Arthas_Dies, function Trig_Defeat_Arthas_Dies_Actions)
 endfunction
@@ -5964,34 +5982,10 @@ function InitTrig_Acolyte_Leaderboard_Hide takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: Arthas Gains A Level
-//
-// If Arthas gains a level, deny him experience for the rest of the mission.
-//===========================================================================
-function Trig_Arthas_Gains_A_Level_Conditions takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetLevelingUnit()) == 'Uear' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Arthas_Gains_A_Level_Actions takes nothing returns nothing
-    call SuspendHeroXPBJ(false, GetLevelingUnit())
-endfunction
-
-//===========================================================================
-function InitTrig_Arthas_Gains_A_Level takes nothing returns nothing
-    set gg_trg_Arthas_Gains_A_Level=CreateTrigger()
-    call TriggerRegisterPlayerUnitEventSimple(gg_trg_Arthas_Gains_A_Level, Player(3), EVENT_PLAYER_HERO_LEVEL)
-    call TriggerAddCondition(gg_trg_Arthas_Gains_A_Level, Condition(function Trig_Arthas_Gains_A_Level_Conditions))
-    call TriggerAddAction(gg_trg_Arthas_Gains_A_Level, function Trig_Arthas_Gains_A_Level_Actions)
-endfunction
-
-//===========================================================================
 // Trigger: Crate01
 //===========================================================================
 function Trig_Crate01_Actions takes nothing returns nothing
-    call CreateItemLoc('phea', GetDestructableLoc(GetDyingDestructable()))
+    call CreateItemLoc('I018', GetDestructableLoc(GetDyingDestructable()))
 endfunction
 
 //===========================================================================
@@ -6005,7 +5999,7 @@ endfunction
 // Trigger: Crate02
 //===========================================================================
 function Trig_Crate02_Actions takes nothing returns nothing
-    call CreateItemLoc('phea', GetDestructableLoc(GetDyingDestructable()))
+    call CreateItemLoc('I019', GetDestructableLoc(GetDyingDestructable()))
 endfunction
 
 //===========================================================================
@@ -6019,7 +6013,7 @@ endfunction
 // Trigger: Crate03
 //===========================================================================
 function Trig_Crate03_Actions takes nothing returns nothing
-    call CreateItemLoc('shea', GetDestructableLoc(GetDyingDestructable()))
+    call CreateItemLoc('I01b', GetDestructableLoc(GetDyingDestructable()))
 endfunction
 
 //===========================================================================
@@ -6033,7 +6027,7 @@ endfunction
 // Trigger: Crate04
 //===========================================================================
 function Trig_Crate04_Actions takes nothing returns nothing
-    call CreateItemLoc('pgma', GetDestructableLoc(GetDyingDestructable()))
+    call CreateItemLoc('I01a', GetDestructableLoc(GetDyingDestructable()))
 endfunction
 
 //===========================================================================
@@ -6473,7 +6467,6 @@ endfunction
 //===========================================================================
 function InitTrig_Acolyte_Touched takes nothing returns nothing
     set gg_trg_Acolyte_Touched=CreateTrigger()
-    call TriggerRegisterUnitInRangeSimple(gg_trg_Acolyte_Touched, 256.00, gg_unit_Uear_0005)
     call TriggerAddCondition(gg_trg_Acolyte_Touched, Condition(function Trig_Acolyte_Touched_Conditions))
     call TriggerAddAction(gg_trg_Acolyte_Touched, function Trig_Acolyte_Touched_Actions)
 endfunction
@@ -6720,7 +6713,6 @@ function InitTrig_Unit_Scared takes nothing returns nothing
     set gg_trg_Unit_Scared=CreateTrigger()
     call TriggerRegisterPlayerUnitEventSimple(gg_trg_Unit_Scared, Player(2), EVENT_PLAYER_UNIT_DEATH)
     call TriggerRegisterPlayerUnitEventSimple(gg_trg_Unit_Scared, Player(2), EVENT_PLAYER_UNIT_ATTACKED)
-    call TriggerRegisterUnitInRangeSimple(gg_trg_Unit_Scared, 256.00, gg_unit_Uear_0005)
     call TriggerRegisterUnitInRangeSimple(gg_trg_Unit_Scared, 256.00, gg_unit_ugho_0153)
     call TriggerRegisterUnitInRangeSimple(gg_trg_Unit_Scared, 256.00, gg_unit_ugho_0152)
     call TriggerRegisterUnitInRangeSimple(gg_trg_Unit_Scared, 256.00, gg_unit_ugho_0062)
@@ -9663,15 +9655,16 @@ function Trig_Graveyard_Scene_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_Graveyard_Scene_Func012002 takes nothing returns nothing
+function Trig_Graveyard_Scene_Func013002 takes nothing returns nothing
     call ShowUnitShow(GetEnumUnit())
 endfunction
 
-function Trig_Graveyard_Scene_Func013002 takes nothing returns nothing
+function Trig_Graveyard_Scene_Func014002 takes nothing returns nothing
     call RescueUnitBJ(GetEnumUnit(), udg_AP4_Undead, true)
 endfunction
 
 function Trig_Graveyard_Scene_Actions takes nothing returns nothing
+    call status_check_location(20)
     // Revert the behavior of the GraveHint acolyte to normal
     call ConditionalTriggerExecute(gg_trg_GraveTip_Revert_Acolyte)
     // Arthas says his lines, acts all tough-like
@@ -9682,8 +9675,8 @@ function Trig_Graveyard_Scene_Actions takes nothing returns nothing
     call VolumeGroupResetBJ()
     call TriggerSleepAction(0.50)
     // Rescue the reinforcements
-    call ForGroupBJ(udg_GraveGuys, function Trig_Graveyard_Scene_Func012002)
     call ForGroupBJ(udg_GraveGuys, function Trig_Graveyard_Scene_Func013002)
+    call ForGroupBJ(udg_GraveGuys, function Trig_Graveyard_Scene_Func014002)
     call IssuePointOrderLocBJ(udg_Ghoul03, "attack", GetRectCenter(gg_rct_Ghoul03_Dest))
     call IssuePointOrderLocBJ(udg_Ghoul04, "attack", GetRectCenter(gg_rct_Ghoul04_Dest))
     call IssuePointOrderLocBJ(udg_Skeleton01, "attack", GetRectCenter(gg_rct_Skeleton01_Dest))
@@ -10656,6 +10649,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_debug()
     call InitTrig_zoom()
     call InitTrig_irregulars()
+    call InitTrig_AP_Load_Arthas()
+    call InitTrig_Post_hero_init()
     call InitTrig_Initialization()
     call InitTrig_Init_01A_Difficulty_Easy()
     call InitTrig_Init_01B_Difficulty_Normal()
@@ -10680,7 +10675,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Ending_Cinematic()
     call InitTrig_Ending_Cancel()
     call InitTrig_Load_Heroes()
-    call InitTrig_Next_Level_Prep()
     call InitTrig_Next_Level_Run()
     call InitTrig_Victory_Cheat()
     call InitTrig_Defeat_Cheat()
@@ -10708,7 +10702,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Acolyte_Leaderboard_Create()
     call InitTrig_Acolyte_Leaderboard_Update()
     call InitTrig_Acolyte_Leaderboard_Hide()
-    call InitTrig_Arthas_Gains_A_Level()
     call InitTrig_Crate01()
     call InitTrig_Crate02()
     call InitTrig_Crate03()

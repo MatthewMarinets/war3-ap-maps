@@ -236,11 +236,11 @@ class Wc3Location(enum.IntEnum):
     UD1_CAPTAIN_ITEM =           201004, "Captain Item",           Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Greater Healing"
     UD1_BANDIT_ITEM =            201005, "Bandit Item",            Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Healing"
     UD1_FOOTMAN_ITEM =           201006, "Footman Item",           Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Healing"
-    UD1_CAPTAIN_2_ITEM =         201006, "Captain 2 Item",         Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Greater Healing"
-    UD1_ENTRANCE_CRATE_ITEM =    201007, "Entrance Crate Item",    Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Healing"
-    UD1_LUMBER_MILL_CRATE_ITEM = 201008, "Lumber Mill Crate Item", Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Healing"
-    UD1_FISTFIGHT_CRATE_ITEM =   201009, "Fistfight Crate Item",   Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Greater Mana"
-    UD1_BOAT_CRATE_ITEM =        201010, "Boat Crate Item",        Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Scroll of Healing"
+    UD1_CAPTAIN_2_ITEM =         201007, "Captain 2 Item",         Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Greater Healing"
+    UD1_ENTRANCE_CRATE_ITEM =    201008, "Entrance Crate Item",    Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Healing"
+    UD1_LUMBER_MILL_CRATE_ITEM = 201009, "Lumber Mill Crate Item", Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Healing"
+    UD1_FISTFIGHT_CRATE_ITEM =   201010, "Fistfight Crate Item",   Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Greater Mana"
+    UD1_BOAT_CRATE_ITEM =        201011, "Boat Crate Item",        Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Scroll of Healing"
     UD1_GRAVEYARD =              201020, "Reach the Graveyard",    Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.QUEST_RESCUE
 
     # Quests:

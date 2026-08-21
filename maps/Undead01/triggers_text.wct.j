@@ -143,10 +143,11 @@ function InitTrig_map_config takes nothing returns nothing
     set location_names[4] = "Captain Item"
     set location_names[5] = "Bandit Item"
     set location_names[6] = "Footman Item"
-    set location_names[7] = "Entrance Crate Item"
-    set location_names[8] = "Lumber Mill Crate Item"
-    set location_names[9] = "Fistfight Crate Item"
-    set location_names[10] = "Boat Crate Item"
+    set location_names[7] = "Captain 2 Item"
+    set location_names[8] = "Entrance Crate Item"
+    set location_names[9] = "Lumber Mill Crate Item"
+    set location_names[10] = "Fistfight Crate Item"
+    set location_names[11] = "Boat Crate Item"
     set location_names[20] = "Reach the Graveyard"
 endfunction
 

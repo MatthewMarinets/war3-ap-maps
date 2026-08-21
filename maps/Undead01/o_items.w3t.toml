@@ -491,7 +491,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Entrance Crate Item"
+value = "Captain 2 Item"
 object_id = 'null'
 
 [[map_objects.I017.modifications]]
@@ -499,7 +499,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Entrance Crate Item"
+value = "Purchase Captain 2 Item"
 object_id = 'null'
 
 [[map_objects.I017.modifications]]
@@ -507,7 +507,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Entrance Crate Item\" location."
+value = "Collects the \"Captain 2 Item\" location."
 object_id = 'null'
 
 [[map_objects.I017.modifications]]
@@ -515,7 +515,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Entrance Crate Item\" location."
+value = "Collects the \"Captain 2 Item\" location."
 object_id = 'null'
 
 [[map_objects.I017.modifications]]
@@ -559,7 +559,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Lumber Mill Crate Item"
+value = "Entrance Crate Item"
 object_id = 'null'
 
 [[map_objects.I018.modifications]]
@@ -567,7 +567,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Lumber Mill Crate Item"
+value = "Purchase Entrance Crate Item"
 object_id = 'null'
 
 [[map_objects.I018.modifications]]
@@ -575,7 +575,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Lumber Mill Crate Item\" location."
+value = "Collects the \"Entrance Crate Item\" location."
 object_id = 'null'
 
 [[map_objects.I018.modifications]]
@@ -583,7 +583,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Lumber Mill Crate Item\" location."
+value = "Collects the \"Entrance Crate Item\" location."
 object_id = 'null'
 
 [[map_objects.I018.modifications]]
@@ -627,7 +627,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Fistfight Crate Item"
+value = "Lumber Mill Crate Item"
 object_id = 'null'
 
 [[map_objects.I019.modifications]]
@@ -635,7 +635,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Fistfight Crate Item"
+value = "Purchase Lumber Mill Crate Item"
 object_id = 'null'
 
 [[map_objects.I019.modifications]]
@@ -643,7 +643,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Fistfight Crate Item\" location."
+value = "Collects the \"Lumber Mill Crate Item\" location."
 object_id = 'null'
 
 [[map_objects.I019.modifications]]
@@ -651,7 +651,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Fistfight Crate Item\" location."
+value = "Collects the \"Lumber Mill Crate Item\" location."
 object_id = 'null'
 
 [[map_objects.I019.modifications]]
@@ -695,7 +695,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Boat Crate Item"
+value = "Fistfight Crate Item"
 object_id = 'null'
 
 [[map_objects.I01a.modifications]]
@@ -703,7 +703,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Boat Crate Item"
+value = "Purchase Fistfight Crate Item"
 object_id = 'null'
 
 [[map_objects.I01a.modifications]]
@@ -711,7 +711,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Boat Crate Item\" location."
+value = "Collects the \"Fistfight Crate Item\" location."
 object_id = 'null'
 
 [[map_objects.I01a.modifications]]
@@ -719,7 +719,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Boat Crate Item\" location."
+value = "Collects the \"Fistfight Crate Item\" location."
 object_id = 'null'
 
 [[map_objects.I01a.modifications]]
@@ -763,7 +763,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 11"
+value = "Boat Crate Item"
 object_id = 'null'
 
 [[map_objects.I01b.modifications]]
@@ -771,7 +771,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 11"
+value = "Purchase Boat Crate Item"
 object_id = 'null'
 
 [[map_objects.I01b.modifications]]
@@ -779,7 +779,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 11\" location."
+value = "Collects the \"Boat Crate Item\" location."
 object_id = 'null'
 
 [[map_objects.I01b.modifications]]
@@ -787,7 +787,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 11\" location."
+value = "Collects the \"Boat Crate Item\" location."
 object_id = 'null'
 
 [[map_objects.I01b.modifications]]

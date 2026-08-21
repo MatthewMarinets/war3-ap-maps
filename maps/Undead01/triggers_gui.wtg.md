@@ -336,6 +336,60 @@ version = TFT
 ### Functions
 
 
+## AP Load Arthas
+- enabled: True
+- category: [47] Archipelago
+- starts off: True
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String set udg_Arthas = hero_create(0, USER_PLAYER, 3891.34521484375, -2988.15380859375, 1.2217305898666382)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable Arthas
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CustomScriptCode
+  - param String set udg_Arthas = CreateUnit(USER_PLAYER, 'Uear', 3891.34521484375, -2988.15380859375, 1.2217305898666382)
+- Action CustomScriptCode
+  - param String set hero_abil_1[0] = 'AUdc'
+- Action CustomScriptCode
+  - param String set hero_abil_2[0] = 'AUdp'
+- Action CustomScriptCode
+  - param String set hero_abil_3[0] = 'AUau'
+- Action CustomScriptCode
+  - param String set hero_abil_4[0] = 'AUan'
+
+
+## Post hero init
+- enabled: True
+- category: [47] Archipelago
+- starts off: True
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CustomScriptCode
+  - param String call TriggerRegisterUnitInRangeSimple(gg_trg_Acolyte_Touched, 256.00, udg_Arthas)
+- Action CustomScriptCode
+  - param String call TriggerRegisterUnitInRangeSimple(gg_trg_Unit_Scared, 256.00, udg_Arthas)
+
+
 ## Initialization
 - enabled: True
 - category: [0] Init
@@ -1110,9 +1164,10 @@ version = TFT
   - param Variable Tichondrius
 - Action CommentString
   - param String Init Player Units
-- Action SetVariable
-  - param Variable Arthas
-  - param Variable gg_unit_Uear_0005
+- Action ConditionalTriggerExecute
+  - param Variable gg_trg_AP_Load_Arthas
+- Action ConditionalTriggerExecute
+  - param Variable gg_trg_Post_hero_init
 - Action SetVariable
   - param Variable Ghoul01
   - param Variable gg_unit_ugho_0153
@@ -3671,6 +3726,8 @@ The ending cinematic does not need to be dequeued, as nothing needs to run after
 - Action CinematicModeBJ
   - param Preset OnOffOn
   - param Variable APG4_Undead
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Action CommentString
   - param String CINEMATIC BEGINS - Cinematic is now cancelable
 - Action EnableTrigger
@@ -3995,36 +4052,6 @@ The ending cinematic does not need to be dequeued, as nothing needs to run after
   - param String No heroes are loaded for this mission
 
 
-## Next Level Prep
-- enabled: True
-- category: [43] Level Data
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action CommentString
-  - param String Save hero data
-- Action InitGameCacheBJ
-  - param String Campaigns.w3v
-- Action StoreUnitBJ
-  - param Variable Arthas
-  - param String Arthas
-  - param String Undead02
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action SaveGameCacheBJ
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action CommentString
-  - param String Enable next level
-- Action SetMissionAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset MissionIndexU01
-
-
 ## Next Level Run
 - enabled: True
 - category: [43] Level Data
@@ -4038,7 +4065,7 @@ The ending cinematic does not need to be dequeued, as nothing needs to run after
 - Action CommentString
   - param String Run next level
 - Action SetNextLevelBJ
-  - param String Maps\Campaign\Undead02.w3m
+  - param String CampaignSelect.w3x
 - Action CustomVictoryBJ
   - param Variable AP4_Undead
   - param Preset UseSkipOptionUse
@@ -4055,8 +4082,8 @@ The ending cinematic does not need to be dequeued, as nothing needs to run after
 
 ```
 ### Functions
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Next_Level_Prep
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Next_Level_Run
 - Event TriggerRegisterPlayerEventVictory
@@ -4116,8 +4143,6 @@ The ending cinematic does not need to be dequeued, as nothing needs to run after
   - param Variable Arthas
 - Action CommentString
   - param String Ending cinematic
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Next_Level_Prep
 - Action QueuedTriggerAddBJ
   - param Variable gg_trg_Ending_Cinematic
   - param Preset CheckingIgnoringIgnoring
@@ -4137,9 +4162,14 @@ The ending cinematic does not need to be dequeued, as nothing needs to run after
   - param Variable GameOver
   - param Preset OperatorEqualENE
   - param String false
-- Event TriggerRegisterUnitEvent
-  - param Variable gg_unit_Uear_0005
-  - param Preset UnitEventDeath
+- Condition OperatorCompareUnit
+  - param Function GetTriggerUnit
+    - Function GetTriggerUnit
+  - param Preset OperatorEqualENE
+  - param Variable Arthas
+- Event TriggerRegisterPlayerUnitEventSimple
+  - param Preset Player03
+  - param Preset PlayerUnitEventDeath
 - Action SetVariable
   - param Variable GameOver
   - param String true
@@ -4827,32 +4857,6 @@ The ending cinematic does not need to be dequeued, as nothing needs to run after
   - param Variable AcolyteLeaderboard
 
 
-## Arthas Gains A Level
-- enabled: True
-- category: [8] Limit Hero Levels
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-If Arthas gains a level, deny him experience for the rest of the mission.
-```
-### Functions
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableDisable
-  - param Function GetLevelingUnit
-    - Function GetLevelingUnit
-- Condition OperatorCompareUnitCode
-  - param Function GetUnitTypeId
-    - Function GetUnitTypeId
-      - param Function GetLevelingUnit
-        - Function GetLevelingUnit
-  - param Preset OperatorEqualENE
-  - param String Uear
-- Event TriggerRegisterPlayerUnitEventSimple
-  - param Preset Player03
-  - param Preset PlayerUnitEventHero_Level
-
-
 ## Crate01
 - enabled: True
 - category: [20] Crates
@@ -4864,7 +4868,7 @@ If Arthas gains a level, deny him experience for the rest of the mission.
 ```
 ### Functions
 - Action CreateItemLoc
-  - param String phea
+  - param String I018
   - param Function GetDestructableLoc
     - Function GetDestructableLoc
       - param Function GetDyingDestructable
@@ -4884,7 +4888,7 @@ If Arthas gains a level, deny him experience for the rest of the mission.
 ```
 ### Functions
 - Action CreateItemLoc
-  - param String phea
+  - param String I019
   - param Function GetDestructableLoc
     - Function GetDestructableLoc
       - param Function GetDyingDestructable
@@ -4904,7 +4908,7 @@ If Arthas gains a level, deny him experience for the rest of the mission.
 ```
 ### Functions
 - Action CreateItemLoc
-  - param String shea
+  - param String I01b
   - param Function GetDestructableLoc
     - Function GetDestructableLoc
       - param Function GetDyingDestructable
@@ -4924,7 +4928,7 @@ If Arthas gains a level, deny him experience for the rest of the mission.
 ```
 ### Functions
 - Action CreateItemLoc
-  - param String pgma
+  - param String I01a
   - param Function GetDestructableLoc
     - Function GetDestructableLoc
       - param Function GetDyingDestructable
@@ -5591,9 +5595,6 @@ If Arthas gains a level, deny him experience for the rest of the mission.
       - param Variable RescuableAcolytes
   - param Preset OperatorEqualENE
   - param String true
-- Event TriggerRegisterUnitInRangeSimple
-  - param String 256.00
-  - param Variable gg_unit_Uear_0005
 
 
 ## Acolyte Summoning
@@ -6150,9 +6151,6 @@ Keeping track of the unit via a global variable is dangerous.  The trigger conta
 - Event TriggerRegisterPlayerUnitEventSimple
   - param Preset Player02
   - param Preset PlayerUnitEventAttacked
-- Event TriggerRegisterUnitInRangeSimple
-  - param String 256.00
-  - param Variable gg_unit_Uear_0005
 - Event TriggerRegisterUnitInRangeSimple
   - param String 256.00
   - param Variable gg_unit_ugho_0153
@@ -10869,6 +10867,8 @@ Reinforcements!  Yay!
   - param Variable GameOver
   - param Preset OperatorEqualENE
   - param String false
+- Action CustomScriptCode
+  - param String call status_check_location(20)
 - Action CommentString
   - param String Revert the behavior of the GraveHint acolyte to normal
 - Action ConditionalTriggerExecute
