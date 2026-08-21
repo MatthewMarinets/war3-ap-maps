@@ -23,5 +23,5 @@ def as_text(data: dict[str, dict[str, Any]]) -> str:
         for key, value in constants.items():
             result.append(f'{key}={value}')
         result.append('')
-    return '\n'.join(result)
+    return '\n'.join(result) + '\n'
 

@@ -197,6 +197,8 @@ def generate_global_variable_init(gui_triggers: wtg.W3TriggerData) -> list[str]:
                 initial_value = 'null'
             elif variable.variable_type == 'rect' and initial_value == 'RectNull':
                 initial_value = 'null'
+            elif variable.variable_type == 'destructable' and initial_value == 'DestructableNull':
+                initial_value = 'null'
             elif variable.variable_type == 'player' and not initial_value.endswith(')'):
                 index = int(initial_value[len('Player'):])
                 initial_value = f'Player({index})'
@@ -311,6 +313,10 @@ def generate_sound_setup(sounds: w3s.War3SoundInfo) -> list[str]:
             result.append(f'    call SetSoundDuration({sound.name}, GetSoundDuration({sound.name}))')
         else:
             result.append(f'    call SetSoundDuration({sound.name}, {sound_duration})')
+        if sound.max_distance != w3s.UNSET_FLOAT or sound.min_distance != w3s.UNSET_FLOAT:
+            max_distance = 800.0 if sound.max_distance == w3s.UNSET_FLOAT else sound.max_distance
+            min_distance = 600.0 if sound.min_distance == w3s.UNSET_FLOAT else sound.min_distance
+            result.append(f'    call SetSoundDistances({sound.name}, {min_distance}, {max_distance})')
         if sound.volume > 0:
             result.append(f'    call SetSoundVolume({sound.name}, {sound.volume})')
         if sound.pitch != 1.0 and sound.pitch != w3s.UNSET_FLOAT:
@@ -681,7 +687,7 @@ def generate_players(info: GenInfo, map_info: w3i.War3MapInformation) -> list[st
             if mask & force.player_mask_flags:
                 result.append(f'    call SetPlayerTeam(Player({player.player_id}), {index})')
                 if force.force_flags & w3i.ForcesFlags.AlliedVictory:
-                    result.append(f'    call SetPlayerState(Player({player.player_id}), PLAYER_STATE_ALLIED_VICTORY, {index})')
+                    result.append(f'    call SetPlayerState(Player({player.player_id}), PLAYER_STATE_ALLIED_VICTORY, 1)')
         result.append('')
         allied_section = ['    //   Allied']
         shared_vision_section = ['    //   Shared Vision']
@@ -1119,8 +1125,7 @@ def generate_gui_action(action: wtg.EcaFunction, info: GenInfo, prepend_info: Pr
         ]
         prepend_func_name = prepend_info.func_name()
         result[-1] += f'function {prepend_func_name})'
-        prepend_info.lines.append(f'function {prepend_func_name} takes nothing returns nothing')
-        prepend_info.lines.extend(generate_gui_action(
+        prepend_function_body = generate_gui_action(
             action.parameters[1].children,
             GenInfo(
                 info.variables.copy(),
@@ -1129,7 +1134,10 @@ def generate_gui_action(action: wtg.EcaFunction, info: GenInfo, prepend_info: Pr
                 doodad_vars_used=info.doodad_vars_used
             ),
             prepend_info
-        ))
+        )
+        prepend_info.lines.append(f'function {prepend_func_name} takes nothing returns nothing')
+        prepend_info.lines.extend(prepend_function_body)
+
         prepend_info.lines.append('endfunction\n')
     # todo: other special-case functions as necessary
     else:
