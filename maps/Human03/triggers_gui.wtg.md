@@ -8274,6 +8274,10 @@ Turned on from 'VillagerBridgeOutMessage'
     - Action ReturnAction
   - param Function DoNothing
     - Action DoNothing
+- Action CustomScriptCode
+  - param String call status_check_location(23)
+- Action CustomScriptCode
+  - param String call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Mortar Team Rescue)")
 - Action SetUnitInvulnerable
   - param Variable gg_unit_uske_0096
   - param Preset InvulnerabilityVulnerable
@@ -8376,10 +8380,6 @@ Turned on from 'VillagerBridgeOutMessage'
   - param String 0.5
 - Action TriggerSleepAction
   - param String 0.20
-- Action CustomScriptCode
-  - param String call status_check_location(23)
-- Action CustomScriptCode
-  - param String call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Mortar Team Rescue)")
 - Action SetSpeechVolumeGroupsBJ
 - Action IfThenElse
   - param Function 
