@@ -633,7 +633,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_059"
+value = "Acolyte In Hiding"
 object_id = 'null'
 
 [[map_objects.nC00.modifications]]
@@ -641,7 +641,7 @@ modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_060"
+value = " "
 object_id = 'null'
 
 [[map_objects.nC00.modifications]]
@@ -717,7 +717,7 @@ modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_146"
+value = " (Floating)"
 object_id = 'null'
 
 [[map_objects.nC01.modifications]]
@@ -737,7 +737,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_094"
+value = "Robert"
 object_id = 'null'
 
 [[map_objects.uC02.modifications]]
@@ -865,7 +865,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_005"
+value = "Train |cffffcc00R|robert"
 object_id = 'null'
 
 [[map_objects.uC02.modifications]]
@@ -873,7 +873,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_018"
+value = "Robert-Paul's son is slow and lumbering, but he makes up for this with great vitality and a mean left hook. |n|cffff8c00Attacks land units.|r"
 object_id = 'null'
 
 [[map_objects.uC02.modifications]]
@@ -881,7 +881,7 @@ modification_id = 'uhot'  # Profile.Hotkey
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_019"
+value = "R"
 object_id = 'null'
 
 [[map_objects.uC02.modifications]]
@@ -901,7 +901,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_089"
+value = "Tyler"
 object_id = 'null'
 
 [[map_objects.uC05.modifications]]
@@ -909,7 +909,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_046"
+value = "Train |cffffcc00T|ryler"
 object_id = 'null'
 
 [[map_objects.uC05.modifications]]
@@ -917,7 +917,7 @@ modification_id = 'uhot'  # Profile.Hotkey
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_047"
+value = "T"
 object_id = 'null'
 
 [[map_objects.uC05.modifications]]
@@ -1029,7 +1029,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_054"
+value = "Tyler Durd inevitably resorts to using his agility and patience to wear down opponents with a constant barrage of light blows. |n|cffff8c00Attacks land units.|r"
 object_id = 'null'
 
 [[map_objects.uC05.modifications]]
@@ -1049,7 +1049,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_178"
+value = "Villager"
 object_id = 'null'
 
 [[map_objects.hC03.modifications]]
@@ -1057,7 +1057,7 @@ modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_179"
+value = " (Harvester)"
 object_id = 'null'
 
 [[map_objects.hC03.modifications]]

@@ -18,11 +18,6 @@ STRING 3
 Blizzard Entertainment
 }
 
-STRING 5
-{
-Train |cffffcc00R|robert
-}
-
 STRING 9
 {
 Acolyte
@@ -44,6 +39,7 @@ Arthas
 }
 
 STRING 13
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Arthas03.mp3
 {
 Congratulate me?
 }
@@ -64,18 +60,9 @@ The Lich King's plague of undeath has spread through the Capital City and into t
 }
 
 STRING 17
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Acolyte13.mp3
 {
 Seek out the local graveyards. Those buried there will serve you well.
-}
-
-STRING 18
-{
-Robert-Paul's son is slow and lumbering, but he makes up for this with great vitality and a mean left hook. |n|cffff8c00Attacks land units.|r
-}
-
-STRING 19
-{
-R
 }
 
 STRING 20
@@ -84,6 +71,7 @@ Arthas
 }
 
 STRING 21
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Arthas05.mp3
 {
 Yes. I've damned everyone and everything I've ever loved in his name, and I still feel no remorse. No shame. No pity.
 }
@@ -94,6 +82,7 @@ Tichondrius
 }
 
 STRING 23
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Tichondrius04.mp3
 {
 By killing your own father and delivering this land to the Scourge, you have passed your first test. The Lich King is pleased with your... enthusiasm.
 }
@@ -104,6 +93,7 @@ Tichondrius
 }
 
 STRING 25
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Tichondrius06.mp3
 {
 The runeblade that you carry was forged by the Lich King and empowered to steal souls. Yours was the first one it claimed.
 }
@@ -114,6 +104,7 @@ Arthas
 }
 
 STRING 27
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Arthas07.mp3
 {
 Then I'll make do without one. What is the Lich King's will?
 }
@@ -124,6 +115,7 @@ Tichondrius
 }
 
 STRING 29
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Tichondrius08.mp3
 {
 The Cult of the Damned must be rallied once again. Many of the acolytes have been in hiding amongst the populace. Once you've rallied them, I will give you further instructions.
 }
@@ -134,6 +126,7 @@ Arthas
 }
 
 STRING 31
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Arthas01.mp3
 {
 What trickery is this?
 }
@@ -144,6 +137,7 @@ Arthas
 }
 
 STRING 33
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Arthas01a.mp3
 {
 Mal'Ganis! I don't know how you survived, but I will--
 }
@@ -154,6 +148,7 @@ Tichondrius
 }
 
 STRING 35
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Tichondrius02.mp3
 {
 Calm yourself, Prince Arthas. I am Tichondrius. Like Mal'Ganis, I am a dreadlord, but I am not your enemy. In truth, I've come to congratulate you.
 }
@@ -169,6 +164,7 @@ Acolyte
 }
 
 STRING 40
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Acolyte10.mp3
 {
 Greetings, great lord. Our master, Kel'Thuzad, told us that you would come.
 }
@@ -184,18 +180,9 @@ Knight
 }
 
 STRING 45
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Arthas11.mp3
 {
 Kel'Thuzad? How could he have known that--
-}
-
-STRING 46
-{
-Train |cffffcc00T|ryler
-}
-
-STRING 47
-{
-T
 }
 
 STRING 48
@@ -204,6 +191,7 @@ Acolyte
 }
 
 STRING 49
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Acolyte12.mp3
 {
 Be wary. If the townsfolk see your undead minions, they'll call the local guards to stop you.
 }
@@ -219,13 +207,9 @@ Rescue 20 Acolytes
 }
 
 STRING 52
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Knight19.mp3
 {
 How could you murder your own father?
-}
-
-STRING 54
-{
-Tyler Durd inevitably resorts to using his agility and patience to wear down opponents with a constant barrage of light blows. |n|cffff8c00Attacks land units.|r
 }
 
 STRING 57
@@ -234,18 +218,9 @@ Arthas
 }
 
 STRING 58
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Arthas16.mp3
 {
 I'm in luck. These graves were dug recently.
-}
-
-STRING 59
-{
-Acolyte In Hiding
-}
-
-STRING 60
-{
- 
 }
 
 STRING 61
@@ -254,6 +229,7 @@ Arthas
 }
 
 STRING 62
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Arthas17.mp3
 {
 Arise in the name of the Lich King.
 }
@@ -270,7 +246,7 @@ Defeat!
 
 STRING 65
 {
-
+(null)
 }
 
 STRING 66
@@ -289,6 +265,7 @@ Tichondrius
 }
 
 STRING 69
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Tichondrius25.mp3
 {
 Well done, death knight. The Cult is nearly assembled.
 }
@@ -299,6 +276,7 @@ Arthas
 }
 
 STRING 71
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Arthas26.mp3
 {
 Lordaeron lies in ashes. What good are these cultists to us now?
 }
@@ -309,6 +287,7 @@ Tichondrius
 }
 
 STRING 73
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Tichondrius27.mp3
 {
 They will aid you in your next undertaking.
 }
@@ -319,6 +298,7 @@ Arthas
 }
 
 STRING 75
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Arthas28.mp3
 {
 And what's that?
 }
@@ -329,6 +309,7 @@ Tichondrius
 }
 
 STRING 77
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Tichondrius29.mp3
 {
 You will go to Andorhal and recover the remains of the acolytes' former master, the necromancer, Kel'Thuzad.
 }
@@ -364,6 +345,7 @@ Footman
 }
 
 STRING 87
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Footman23.mp3
 {
 Kill them all!
 }
@@ -373,17 +355,13 @@ STRING 88
 Arthas must survive
 }
 
-STRING 89
-{
-Tyler
-}
-
 STRING 90
 {
 Knight
 }
 
 STRING 91
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Knight20.mp3
 {
 You've betrayed us all!
 }
@@ -394,13 +372,9 @@ Knight
 }
 
 STRING 93
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Knight21.mp3
 {
 You should burn in hell!
-}
-
-STRING 94
-{
-Robert
 }
 
 STRING 100
@@ -422,11 +396,6 @@ STRING 144
 Find the Graveyard
   - |cff808080Bring Arthas to the Graveyard (Completed)|r
   - |cff808080Arthas must survive (Completed)|r
-}
-
-STRING 146
-{
- (Floating)
 }
 
 STRING 147
@@ -456,18 +425,9 @@ Arthas
 }
 
 STRING 165
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Arthas24.mp3
 {
 I cannot afford to lose any more acolytes.
-}
-
-STRING 178
-{
-Villager
-}
-
-STRING 179
-{
- (Harvester)
 }
 
 STRING 180
@@ -525,6 +485,7 @@ Footman
 }
 
 STRING 260
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Footman18.mp3
 {
 Prince Arthas? Arm yourselves!
 }
@@ -535,6 +496,7 @@ Footman
 }
 
 STRING 262
+// Sound\Dialogue\UndeadCampaign\Undead01\U01Footman22.mp3
 {
 You bastard!
 }
