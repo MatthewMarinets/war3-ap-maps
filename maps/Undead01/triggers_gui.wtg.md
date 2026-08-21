@@ -390,8 +390,6 @@ version = TFT
   - param Variable gg_trg_PatrolE_Start
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_PatrolF_Start
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Brawl_Start
 - Action CommentString
   - param String Start Intro
 - Event MapInitializationEvent
@@ -3043,6 +3041,8 @@ version = TFT
   - param String CINEMATIC ENDS - Cinematic is not cancelable after this point
 - Action DisableTrigger
   - param Variable gg_trg_Intro_Cancel
+- Action ConditionalTriggerExecute
+  - param Variable gg_trg_Brawl_Start
 - Action RescueUnitBJ
   - param Variable Ghoul01
   - param Variable AP4_Undead
@@ -3163,6 +3163,8 @@ version = TFT
 - Action SetSkyModel
   - param Preset SkyModelNone
 - Action EndThematicMusicBJ
+- Action ConditionalTriggerExecute
+  - param Variable gg_trg_Brawl_Start
 - Action CommentString
   - param String Destroy special effects
 - Action ConditionalTriggerExecute
