@@ -7696,24 +7696,24 @@ function Trig_MortarTeamStart_Func012001 takes nothing returns boolean
     return ( udg_GameOver == true )
 endfunction
 
-function Trig_MortarTeamStart_Func014002 takes nothing returns nothing
+function Trig_MortarTeamStart_Func016002 takes nothing returns nothing
     call IssuePointOrderLocBJ(GetEnumUnit(), "move", GetRectCenter(gg_rct_SkeletonsMortarFodderEnd))
 endfunction
 
-function Trig_MortarTeamStart_Func015001 takes nothing returns boolean
+function Trig_MortarTeamStart_Func017001 takes nothing returns boolean
     return ( IsUnitAliveBJ(udg_MortarTeam01) == true )
-endfunction
-
-function Trig_MortarTeamStart_Func016001 takes nothing returns boolean
-    return ( IsUnitAliveBJ(udg_MortarTeam01) == true )
-endfunction
-
-function Trig_MortarTeamStart_Func018001001001002 takes nothing returns boolean
-    return ( GetFilterUnit() == udg_Arthas )
 endfunction
 
 function Trig_MortarTeamStart_Func018001 takes nothing returns boolean
-    return ( CountUnitsInGroup(GetUnitsInRectMatching(gg_rct_MortarTeam_ArthasNear, Condition(function Trig_MortarTeamStart_Func018001001001002))) >= 1 )
+    return ( IsUnitAliveBJ(udg_MortarTeam01) == true )
+endfunction
+
+function Trig_MortarTeamStart_Func020001001001002 takes nothing returns boolean
+    return ( GetFilterUnit() == udg_Arthas )
+endfunction
+
+function Trig_MortarTeamStart_Func020001 takes nothing returns boolean
+    return ( CountUnitsInGroup(GetUnitsInRectMatching(gg_rct_MortarTeam_ArthasNear, Condition(function Trig_MortarTeamStart_Func020001001001002))) >= 1 )
 endfunction
 
 function Trig_MortarTeamStart_Actions takes nothing returns nothing
@@ -7731,20 +7731,22 @@ function Trig_MortarTeamStart_Actions takes nothing returns nothing
     else
         call DoNothing()
     endif
+    call status_check_location(23)
+    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Mortar Team Rescue)")
     call SetUnitInvulnerable(gg_unit_uske_0096, false)
-    call ForGroupBJ(GetUnitsInRectAll(gg_rct_SkeletonsMortarFodderStart), function Trig_MortarTeamStart_Func014002)
-    if ( Trig_MortarTeamStart_Func015001() ) then
+    call ForGroupBJ(GetUnitsInRectAll(gg_rct_SkeletonsMortarFodderStart), function Trig_MortarTeamStart_Func016002)
+    if ( Trig_MortarTeamStart_Func017001() ) then
         call RescueUnitBJ(udg_MortarTeam01, Player(1), true)
     else
         call DoNothing()
     endif
-    if ( Trig_MortarTeamStart_Func016001() ) then
+    if ( Trig_MortarTeamStart_Func018001() ) then
         call QuestMessageBJ(GetPlayersAll(), bj_QUESTMESSAGE_HINT, "TRIGSTR_681")
     else
         call DoNothing()
     endif
     call DestroyFogModifier(udg_MortarTeamVis)
-    if ( Trig_MortarTeamStart_Func018001() ) then
+    if ( Trig_MortarTeamStart_Func020001() ) then
         call QueuedTriggerAddBJ(gg_trg_MortarTeamDialogue, true)
     else
         call DoNothing()
@@ -7772,6 +7774,14 @@ function Trig_MortarTeamDialogue_Conditions takes nothing returns boolean
     return true
 endfunction
 
+function Trig_MortarTeamDialogue_Func006001 takes nothing returns boolean
+    return ( IsUnitAliveBJ(udg_MortarTeam01) == true )
+endfunction
+
+function Trig_MortarTeamDialogue_Func007001 takes nothing returns boolean
+    return ( udg_GameOver == true )
+endfunction
+
 function Trig_MortarTeamDialogue_Func008001 takes nothing returns boolean
     return ( IsUnitAliveBJ(udg_MortarTeam01) == true )
 endfunction
@@ -7784,30 +7794,30 @@ function Trig_MortarTeamDialogue_Func010001 takes nothing returns boolean
     return ( IsUnitAliveBJ(udg_MortarTeam01) == true )
 endfunction
 
-function Trig_MortarTeamDialogue_Func011001 takes nothing returns boolean
-    return ( udg_GameOver == true )
-endfunction
-
 function Trig_MortarTeamDialogue_Func012001 takes nothing returns boolean
-    return ( IsUnitAliveBJ(udg_MortarTeam01) == true )
-endfunction
-
-function Trig_MortarTeamDialogue_Func014001 takes nothing returns boolean
     return ( udg_GameOver == true )
 endfunction
 
-function Trig_MortarTeamDialogue_Func015001 takes nothing returns boolean
+function Trig_MortarTeamDialogue_Func013001 takes nothing returns boolean
     return ( IsUnitAliveBJ(udg_MortarTeam01) == true )
 endfunction
 
 function Trig_MortarTeamDialogue_Actions takes nothing returns nothing
     call SmartCameraPanBJ(Player(1), GetRectCenter(gg_rct_MortarTeamCreate01), 0.5)
     call TriggerSleepAction(0.20)
-    call status_check_location(23)
-    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Mortar Team Rescue)")
     call SetSpeechVolumeGroupsBJ()
-    if ( Trig_MortarTeamDialogue_Func008001() ) then
+    if ( Trig_MortarTeamDialogue_Func006001() ) then
         call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_Arthas, "TRIGSTR_498", gg_snd_H03Arthas25, "TRIGSTR_499", bj_TIMETYPE_ADD, 0, true)
+    else
+        call DoNothing()
+    endif
+    if ( Trig_MortarTeamDialogue_Func007001() ) then
+        return
+    else
+        call DoNothing()
+    endif
+    if ( Trig_MortarTeamDialogue_Func008001() ) then
+        call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_MortarTeam01, "TRIGSTR_650", gg_snd_H03Dwarf26, "TRIGSTR_651", bj_TIMETYPE_ADD, 0, true)
     else
         call DoNothing()
     endif
@@ -7817,27 +7827,17 @@ function Trig_MortarTeamDialogue_Actions takes nothing returns nothing
         call DoNothing()
     endif
     if ( Trig_MortarTeamDialogue_Func010001() ) then
-        call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_MortarTeam01, "TRIGSTR_650", gg_snd_H03Dwarf26, "TRIGSTR_651", bj_TIMETYPE_ADD, 0, true)
-    else
-        call DoNothing()
-    endif
-    if ( Trig_MortarTeamDialogue_Func011001() ) then
-        return
-    else
-        call DoNothing()
-    endif
-    if ( Trig_MortarTeamDialogue_Func012001() ) then
         call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_Arthas, "TRIGSTR_591", gg_snd_H03Arthas27, "TRIGSTR_592", bj_TIMETYPE_ADD, 0, true)
     else
         call DoNothing()
     endif
     call AttachSoundToUnitBJ(gg_snd_MortarTeamWhat1, udg_MortarTeam01)
-    if ( Trig_MortarTeamDialogue_Func014001() ) then
+    if ( Trig_MortarTeamDialogue_Func012001() ) then
         return
     else
         call DoNothing()
     endif
-    if ( Trig_MortarTeamDialogue_Func015001() ) then
+    if ( Trig_MortarTeamDialogue_Func013001() ) then
         call PlaySoundBJ(gg_snd_MortarTeamWhat1)
     else
         call DoNothing()
