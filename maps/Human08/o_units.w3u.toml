@@ -3,11 +3,11 @@
 version = 2
 has_levels = false
 
-[blizzard_objects]
-[[blizzard_objects.entities]]
+[blizzard_objects.ngme]
 parent_id = 'ngme'  # Goblin Merchant
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.ngme.modifications]]
 modification_id = 'usei'  # Profile.Items Sold
 data_type = "String"
 variation_level = 0
@@ -15,7 +15,7 @@ table_column = 0
 value = "amrc,phea,pman,shea"
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.ngme.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -23,10 +23,11 @@ table_column = 0
 value = "Aneu,Asid,Avul,Apit"
 object_id = 'ngme'  # Goblin Merchant
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nbsp]
 parent_id = 'nbsp'  # Ship
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nbsp.modifications]]
 modification_id = 'umvr'  # UnitData.Turn Rate
 data_type = "Unreal"
 variation_level = 0
@@ -34,7 +35,7 @@ table_column = 0
 value = 0.10000000149011612
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nbsp.modifications]]
 modification_id = 'umvt'  # UnitData.Type
 data_type = "String"
 variation_level = 0
@@ -42,7 +43,7 @@ table_column = 0
 value = "hover"
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nbsp.modifications]]
 modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
 data_type = "Integer"
 variation_level = 0
@@ -50,7 +51,7 @@ table_column = 0
 value = 200
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nbsp.modifications]]
 modification_id = 'umvh'  # UnitData.Height
 data_type = "Unreal"
 variation_level = 0
@@ -58,7 +59,7 @@ table_column = 0
 value = 10.0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nbsp.modifications]]
 modification_id = 'udty'  # UnitBalance.Defense Type
 data_type = "String"
 variation_level = 0
@@ -66,7 +67,7 @@ table_column = 0
 value = "normal"
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nbsp.modifications]]
 modification_id = 'umvs'  # UnitBalance.Speed Base
 data_type = "Integer"
 variation_level = 0
@@ -74,18 +75,19 @@ table_column = 0
 value = 1
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.ngad]
 parent_id = 'ngad'  # Goblin Laboratory
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.ngad.modifications]]
 modification_id = 'useu'  # Profile.Units Sold
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "ngsp"
+value = 'ngsp'  # Goblin Sapper
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.ngad.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -93,10 +95,11 @@ table_column = 0
 value = "Asid,Aneu"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.ngsp]
 parent_id = 'ngsp'  # Goblin Sapper
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.ngsp.modifications]]
 modification_id = 'usst'  # UnitBalance.Stock Start Delay
 data_type = "Integer"
 variation_level = 0
@@ -104,10 +107,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nitt]
 parent_id = 'nitt'  # Ice Troll Trapper
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nitt.modifications]]
 modification_id = 'usma'  # UnitBalance.Stock Maximum
 data_type = "Integer"
 variation_level = 0
@@ -115,7 +119,7 @@ table_column = 0
 value = 3
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nitt.modifications]]
 modification_id = 'usrg'  # UnitBalance.Stock Replenish Interval
 data_type = "Integer"
 variation_level = 0
@@ -123,7 +127,7 @@ table_column = 0
 value = 30
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nitt.modifications]]
 modification_id = 'usst'  # UnitBalance.Stock Start Delay
 data_type = "Integer"
 variation_level = 0
@@ -131,10 +135,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nitp]
 parent_id = 'nitp'  # Ice Troll Priest
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nitp.modifications]]
 modification_id = 'usma'  # UnitBalance.Stock Maximum
 data_type = "Integer"
 variation_level = 0
@@ -142,7 +147,7 @@ table_column = 0
 value = 2
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nitp.modifications]]
 modification_id = 'usrg'  # UnitBalance.Stock Replenish Interval
 data_type = "Integer"
 variation_level = 0
@@ -150,7 +155,7 @@ table_column = 0
 value = 30
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nitp.modifications]]
 modification_id = 'usst'  # UnitBalance.Stock Start Delay
 data_type = "Integer"
 variation_level = 0
@@ -158,10 +163,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nits]
 parent_id = 'nits'  # Ice Troll Berserker
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nits.modifications]]
 modification_id = 'usma'  # UnitBalance.Stock Maximum
 data_type = "Integer"
 variation_level = 0
@@ -169,7 +175,7 @@ table_column = 0
 value = 2
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nits.modifications]]
 modification_id = 'usrg'  # UnitBalance.Stock Replenish Interval
 data_type = "Integer"
 variation_level = 0
@@ -177,7 +183,7 @@ table_column = 0
 value = 30
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nits.modifications]]
 modification_id = 'usst'  # UnitBalance.Stock Start Delay
 data_type = "Integer"
 variation_level = 0
@@ -185,10 +191,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nith]
 parent_id = 'nith'  # Ice Troll High Priest
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nith.modifications]]
 modification_id = 'usma'  # UnitBalance.Stock Maximum
 data_type = "Integer"
 variation_level = 0
@@ -196,7 +203,7 @@ table_column = 0
 value = 2
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nith.modifications]]
 modification_id = 'usrg'  # UnitBalance.Stock Replenish Interval
 data_type = "Integer"
 variation_level = 0
@@ -204,7 +211,7 @@ table_column = 0
 value = 30
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nith.modifications]]
 modification_id = 'usst'  # UnitBalance.Stock Start Delay
 data_type = "Integer"
 variation_level = 0
@@ -212,10 +219,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nitr]
 parent_id = 'nitr'  # Ice Troll
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nitr.modifications]]
 modification_id = 'usma'  # UnitBalance.Stock Maximum
 data_type = "Integer"
 variation_level = 0
@@ -223,7 +231,7 @@ table_column = 0
 value = 3
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nitr.modifications]]
 modification_id = 'usrg'  # UnitBalance.Stock Replenish Interval
 data_type = "Integer"
 variation_level = 0
@@ -231,7 +239,7 @@ table_column = 0
 value = 30
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nitr.modifications]]
 modification_id = 'usst'  # UnitBalance.Stock Start Delay
 data_type = "Integer"
 variation_level = 0
@@ -239,10 +247,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nogr]
 parent_id = 'nogr'  # Ogre Warrior
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nogr.modifications]]
 modification_id = 'usma'  # UnitBalance.Stock Maximum
 data_type = "Integer"
 variation_level = 0
@@ -250,7 +259,7 @@ table_column = 0
 value = 3
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nogr.modifications]]
 modification_id = 'usrg'  # UnitBalance.Stock Replenish Interval
 data_type = "Integer"
 variation_level = 0
@@ -258,7 +267,7 @@ table_column = 0
 value = 30
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nogr.modifications]]
 modification_id = 'usst'  # UnitBalance.Stock Start Delay
 data_type = "Integer"
 variation_level = 0
@@ -266,10 +275,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nomg]
 parent_id = 'nomg'  # Ogre Magi
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nomg.modifications]]
 modification_id = 'usma'  # UnitBalance.Stock Maximum
 data_type = "Integer"
 variation_level = 0
@@ -277,7 +287,7 @@ table_column = 0
 value = 2
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nomg.modifications]]
 modification_id = 'usrg'  # UnitBalance.Stock Replenish Interval
 data_type = "Integer"
 variation_level = 0
@@ -285,7 +295,7 @@ table_column = 0
 value = 30
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nomg.modifications]]
 modification_id = 'usst'  # UnitBalance.Stock Start Delay
 data_type = "Integer"
 variation_level = 0
@@ -293,10 +303,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nogm]
 parent_id = 'nogm'  # Ogre Mauler
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nogm.modifications]]
 modification_id = 'usma'  # UnitBalance.Stock Maximum
 data_type = "Integer"
 variation_level = 0
@@ -304,7 +315,7 @@ table_column = 0
 value = 2
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nogm.modifications]]
 modification_id = 'usrg'  # UnitBalance.Stock Replenish Interval
 data_type = "Integer"
 variation_level = 0
@@ -312,7 +323,7 @@ table_column = 0
 value = 30
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nogm.modifications]]
 modification_id = 'usst'  # UnitBalance.Stock Start Delay
 data_type = "Integer"
 variation_level = 0
@@ -320,10 +331,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.hfoo]
 parent_id = 'hfoo'  # Footman
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.hfoo.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -331,10 +343,11 @@ table_column = 0
 value = "Adef,Aihn,AP00"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Hpal]
 parent_id = 'Hpal'  # Paladin
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Hpal.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -342,10 +355,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Hamg]
 parent_id = 'Hamg'  # Archmage
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Hamg.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -353,10 +367,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Hmkg]
 parent_id = 'Hmkg'  # Mountain King
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Hmkg.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -364,10 +379,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Hblm]
 parent_id = 'Hblm'  # Blood Mage
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Hblm.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -375,10 +391,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Udea]
 parent_id = 'Udea'  # Death Knight
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Udea.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -386,10 +403,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Ulic]
 parent_id = 'Ulic'  # Lich
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Ulic.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -397,10 +415,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Udre]
 parent_id = 'Udre'  # Dreadlord
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Udre.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -408,10 +427,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Ucrl]
 parent_id = 'Ucrl'  # Crypt Lord
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Ucrl.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -419,10 +439,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Obla]
 parent_id = 'Obla'  # Blademaster
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Obla.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -430,10 +451,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Ofar]
 parent_id = 'Ofar'  # Far Seer
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Ofar.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -441,10 +463,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Otch]
 parent_id = 'Otch'  # Tauren Chieftain
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Otch.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -452,10 +475,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Oshd]
 parent_id = 'Oshd'  # Shadow Hunter
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Oshd.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -463,10 +487,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Emoo]
 parent_id = 'Emoo'  # Priestess of the Moon
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Emoo.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -474,10 +499,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Ekee]
 parent_id = 'Ekee'  # Keeper of the Grove
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Ekee.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -485,10 +511,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Edem]
 parent_id = 'Edem'  # Demon Hunter
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Edem.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -496,10 +523,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Ewar]
 parent_id = 'Ewar'  # Warden
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Ewar.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -507,10 +535,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nalc]
 parent_id = 'Nalc'  # Alchemist
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nalc.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -518,10 +547,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nbst]
 parent_id = 'Nbst'  # Beastmaster
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nbst.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -529,10 +559,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nbrn]
 parent_id = 'Nbrn'  # Dark Ranger
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nbrn.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -540,10 +571,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nfir]
 parent_id = 'Nfir'  # Firelord
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nfir.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -551,10 +583,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Ntin]
 parent_id = 'Ntin'  # Tinker
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Ntin.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -562,10 +595,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nngs]
 parent_id = 'Nngs'  # Naga Sea Witch
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nngs.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -573,10 +607,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Npbm]
 parent_id = 'Npbm'  # Pandaren Brewmaster
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Npbm.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -584,10 +619,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nplh]
 parent_id = 'Nplh'  # Pit Lord
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nplh.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -595,10 +631,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Naka]
 parent_id = 'Naka'  # Elder Sage
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Naka.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -606,10 +643,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Ekgg]
 parent_id = 'Ekgg'  # Keeper of the Grove
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Ekgg.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -617,10 +655,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nadk]
 parent_id = 'nadk'  # Blue Drake
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nadk.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -628,7 +667,7 @@ table_column = 0
 value = 85
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nadk.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -636,10 +675,11 @@ table_column = 0
 value = 6
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nadw]
 parent_id = 'nadw'  # Blue Dragon Whelp
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nadw.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -647,7 +687,7 @@ table_column = 0
 value = 40
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nadw.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -655,10 +695,11 @@ table_column = 0
 value = 3
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nfrp]
 parent_id = 'nfrp'  # Pandaren
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nfrp.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -666,7 +707,7 @@ table_column = 0
 value = 55
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nfrp.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -674,10 +715,11 @@ table_column = 0
 value = 4
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nmrl]
 parent_id = 'nmrl'  # Murloc Tiderunner
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nmrl.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -685,10 +727,11 @@ table_column = 0
 value = 25
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nmrm]
 parent_id = 'nmrm'  # Murloc Nightcrawler
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nmrm.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -696,7 +739,7 @@ table_column = 0
 value = 40
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nmrm.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -704,10 +747,11 @@ table_column = 0
 value = 3
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nmrr]
 parent_id = 'nmrr'  # Murloc Huntsman
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nmrr.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -715,7 +759,7 @@ table_column = 0
 value = 30
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nmrr.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -723,10 +767,11 @@ table_column = 0
 value = 2
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nnwa]
 parent_id = 'nnwa'  # Nerubian Warrior
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nnwa.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -734,7 +779,7 @@ table_column = 0
 value = 40
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nnwa.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -742,10 +787,11 @@ table_column = 0
 value = 3
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nnwl]
 parent_id = 'nnwl'  # Nerubian Webspinner
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nnwl.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -753,7 +799,7 @@ table_column = 0
 value = 40
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nnwl.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -761,10 +807,11 @@ table_column = 0
 value = 3
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nnwq]
 parent_id = 'nnwq'  # Nerubian Queen
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nnwq.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -772,7 +819,7 @@ table_column = 0
 value = 100
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nnwq.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -780,10 +827,11 @@ table_column = 0
 value = 7
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nnwr]
 parent_id = 'nnwr'  # Nerubian Seer
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nnwr.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -791,7 +839,7 @@ table_column = 0
 value = 70
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nnwr.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -799,10 +847,11 @@ table_column = 0
 value = 5
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nnws]
 parent_id = 'nnws'  # Nerubian Spider Lord
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nnws.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -810,7 +859,7 @@ table_column = 0
 value = 70
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nnws.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -818,10 +867,11 @@ table_column = 0
 value = 5
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nrvs]
 parent_id = 'nrvs'  # Frost Revenant
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nrvs.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -829,7 +879,7 @@ table_column = 0
 value = 55
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nrvs.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -837,10 +887,11 @@ table_column = 0
 value = 4
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nska]
 parent_id = 'nska'  # Skeleton Archer
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nska.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -848,10 +899,11 @@ table_column = 0
 value = 25
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nskm]
 parent_id = 'nskm'  # Skeletal Marksman
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nskm.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -859,7 +911,7 @@ table_column = 0
 value = 40
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nskm.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -867,10 +919,11 @@ table_column = 0
 value = 3
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nspd]
 parent_id = 'nspd'  # Spiderling
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nspd.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -878,10 +931,11 @@ table_column = 0
 value = 25
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Orkn]
 parent_id = 'Orkn'  # Shadow Hunter
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Orkn.modifications]]
 modification_id = 'uhab'  # UnitAbilities.Hero
 data_type = "String"
 variation_level = 0
@@ -889,7 +943,7 @@ table_column = 0
 value = "AOhw,AOhx,AOsw,AOls"
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Orkn.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -897,10 +951,11 @@ table_column = 0
 value = "Cunning Hero, adept at healing magics and voodoo curses. Can learn Healing Wave, Hex, Serpent Ward and Voodoo Spirits. |n|n|cffffcc00Attacks land and air units.|r"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Orex]
 parent_id = 'Orex'  # Beastmaster
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Orex.modifications]]
 modification_id = 'uhab'  # UnitAbilities.Hero
 data_type = "String"
 variation_level = 0
@@ -908,7 +963,7 @@ table_column = 0
 value = "Arsg,ANsq,AHtb,ANst"
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Orex.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -916,10 +971,11 @@ table_column = 0
 value = "Warrior Hero, adept at summoning beasts into battle. Can learn Summon Misha, Summon Quilbeast, Storm Bolt, and Stampede. |n|n|cffffcc00Attacks land and air units.|r"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.hgry]
 parent_id = 'hgry'  # Gryphon Rider
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.hgry.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -927,7 +983,7 @@ table_column = 0
 value = "magic"
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.hgry.modifications]]
 modification_id = 'ua2t'  # UnitWeapons.Attack 2 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -935,10 +991,11 @@ table_column = 0
 value = "magic"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.ufro]
 parent_id = 'ufro'  # Frost Wyrm
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.ufro.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -946,7 +1003,7 @@ table_column = 0
 value = "magic"
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.ufro.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -954,7 +1011,7 @@ table_column = 0
 value = 91
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.ufro.modifications]]
 modification_id = 'ua1s'  # UnitWeapons.Attack 1 - Damage Sides per Die
 data_type = "Integer"
 variation_level = 0
@@ -962,7 +1019,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.ufro.modifications]]
 modification_id = 'ua2t'  # UnitWeapons.Attack 2 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -970,10 +1027,11 @@ table_column = 0
 value = "magic"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Edmm]
 parent_id = 'Edmm'  # Demon Hunter
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Edmm.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -981,10 +1039,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nalm]
 parent_id = 'Nalm'  # Alchemist
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nalm.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -992,10 +1051,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nal2]
 parent_id = 'Nal2'  # Alchemist
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nal2.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -1003,10 +1063,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nal3]
 parent_id = 'Nal3'  # Alchemist
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nal3.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -1014,10 +1075,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nrob]
 parent_id = 'Nrob'  # Tinker
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nrob.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -1025,11 +1087,12 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[map_objects]
-[[map_objects.entities]]
+
+[map_objects.nC03]
 parent_id = 'nmr2'  # Mercenary Camp
 entity_id = 'nC03'
-[[map_objects.entities.modifications]]
+
+[[map_objects.nC03.modifications]]
 modification_id = 'useu'  # Profile.Units Sold
 data_type = "String"
 variation_level = 0
@@ -1037,7 +1100,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC03.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1045,10 +1108,11 @@ table_column = 0
 value = "Ane2,Asid,Asud,Avul"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.nC00]
 parent_id = 'nmer'  # Mercenary Camp
 entity_id = 'nC00'
-[[map_objects.entities.modifications]]
+
+[[map_objects.nC00.modifications]]
 modification_id = 'useu'  # Profile.Units Sold
 data_type = "String"
 variation_level = 0
@@ -1056,7 +1120,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC00.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1064,10 +1128,11 @@ table_column = 0
 value = "Ane2,Asid,Asud,Avul"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.nC01]
 parent_id = 'nmr3'  # Mercenary Camp
 entity_id = 'nC01'
-[[map_objects.entities.modifications]]
+
+[[map_objects.nC01.modifications]]
 modification_id = 'useu'  # Profile.Units Sold
 data_type = "String"
 variation_level = 0
@@ -1075,7 +1140,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC01.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1083,10 +1148,11 @@ table_column = 0
 value = "Ane2,Asid,Asud,Avul"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.hA00]
 parent_id = 'hmil'  # Militia
 entity_id = 'hA00'
-[[map_objects.entities.modifications]]
+
+[[map_objects.hA00.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1094,7 +1160,7 @@ table_column = 0
 value = "Irregular"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.hA00.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -1102,7 +1168,7 @@ table_column = 0
 value = 9
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.hA00.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1110,7 +1176,7 @@ table_column = 0
 value = "APPh"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.hA00.modifications]]
 modification_id = 'udaa'  # UnitAbilities.Default Active Ability
 data_type = "String"
 variation_level = 0
@@ -1118,7 +1184,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.hA00.modifications]]
 modification_id = 'ubui'  # Profile.Structures Built
 data_type = "String"
 variation_level = 0
@@ -1126,7 +1192,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.hA00.modifications]]
 modification_id = 'umpm'  # UnitBalance.Mana Maximum
 data_type = "Integer"
 variation_level = 0

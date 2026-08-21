@@ -3,11 +3,11 @@
 version = 2
 has_levels = false
 
-[blizzard_objects]
-[[blizzard_objects.entities]]
+[blizzard_objects.pman]
 parent_id = 'pman'  # Potion of Mana
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.pman.modifications]]
 modification_id = 'isst'  # ItemData.Stock Start Delay
 data_type = "Integer"
 variation_level = 0
@@ -15,10 +15,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.phea]
 parent_id = 'phea'  # Potion of Healing
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.phea.modifications]]
 modification_id = 'isst'  # ItemData.Stock Start Delay
 data_type = "Integer"
 variation_level = 0
@@ -26,10 +27,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.stwp]
 parent_id = 'stwp'  # Scroll of Town Portal
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.stwp.modifications]]
 modification_id = 'isst'  # ItemData.Stock Start Delay
 data_type = "Integer"
 variation_level = 0
@@ -37,10 +39,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.shea]
 parent_id = 'shea'  # Scroll of Healing
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.shea.modifications]]
 modification_id = 'isst'  # ItemData.Stock Start Delay
 data_type = "Integer"
 variation_level = 0
@@ -48,10 +51,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.spro]
 parent_id = 'spro'  # Scroll of Protection
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.spro.modifications]]
 modification_id = 'isst'  # ItemData.Stock Start Delay
 data_type = "Integer"
 variation_level = 0
@@ -59,11 +63,12 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[map_objects]
-[[map_objects.entities]]
+
+[map_objects.I010]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I010'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I010.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -71,7 +76,7 @@ table_column = 0
 value = "Victory"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I010.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -79,7 +84,7 @@ table_column = 0
 value = "Purchase Victory"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I010.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -87,7 +92,7 @@ table_column = 0
 value = "Collects the \"Victory\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I010.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -95,7 +100,7 @@ table_column = 0
 value = "Collects the \"Victory\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I010.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -103,7 +108,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I010.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -111,7 +116,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I010.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -119,7 +124,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I010.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -127,10 +132,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I011]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I011'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I011.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -138,7 +144,7 @@ table_column = 0
 value = "Tent Item"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I011.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -146,7 +152,7 @@ table_column = 0
 value = "Purchase Tent Item"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I011.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -154,7 +160,7 @@ table_column = 0
 value = "Collects the \"Tent Item\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I011.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -162,7 +168,7 @@ table_column = 0
 value = "Collects the \"Tent Item\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I011.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -170,7 +176,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I011.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -178,7 +184,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I011.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -186,7 +192,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I011.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -194,10 +200,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I012]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I012'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I012.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -205,7 +212,7 @@ table_column = 0
 value = "Filson the Rat Item"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I012.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -213,7 +220,7 @@ table_column = 0
 value = "Purchase Filson the Rat Item"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I012.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -221,7 +228,7 @@ table_column = 0
 value = "Collects the \"Filson the Rat Item\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I012.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -229,7 +236,7 @@ table_column = 0
 value = "Collects the \"Filson the Rat Item\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I012.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -237,7 +244,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I012.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -245,7 +252,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I012.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -253,7 +260,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I012.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -261,10 +268,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I013]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I013'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I013.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -272,7 +280,7 @@ table_column = 0
 value = "Enforcer Item"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I013.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -280,7 +288,7 @@ table_column = 0
 value = "Purchase Enforcer Item"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I013.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -288,7 +296,7 @@ table_column = 0
 value = "Collects the \"Enforcer Item\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I013.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -296,7 +304,7 @@ table_column = 0
 value = "Collects the \"Enforcer Item\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I013.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -304,7 +312,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I013.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -312,7 +320,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I013.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -320,7 +328,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I013.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -328,10 +336,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I014]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I014'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I014.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -339,7 +348,7 @@ table_column = 0
 value = "Archipelago Item 4"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I014.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -347,7 +356,7 @@ table_column = 0
 value = "Purchase Archipelago Item 4"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I014.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -355,7 +364,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 4\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I014.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -363,7 +372,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 4\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I014.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -371,7 +380,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I014.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -379,7 +388,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I014.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -387,7 +396,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I014.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -395,10 +404,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I015]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I015'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I015.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -406,7 +416,7 @@ table_column = 0
 value = "Archipelago Item 5"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I015.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -414,7 +424,7 @@ table_column = 0
 value = "Purchase Archipelago Item 5"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I015.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -422,7 +432,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 5\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I015.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -430,7 +440,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 5\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I015.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -438,7 +448,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I015.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -446,7 +456,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I015.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -454,7 +464,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I015.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -462,10 +472,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I016]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I016'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I016.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -473,7 +484,7 @@ table_column = 0
 value = "Archipelago Item 6"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I016.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -481,7 +492,7 @@ table_column = 0
 value = "Purchase Archipelago Item 6"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I016.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -489,7 +500,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 6\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I016.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -497,7 +508,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 6\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I016.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -505,7 +516,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I016.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -513,7 +524,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I016.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -521,7 +532,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I016.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -529,10 +540,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I017]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I017'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I017.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -540,7 +552,7 @@ table_column = 0
 value = "Archipelago Item 7"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I017.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -548,7 +560,7 @@ table_column = 0
 value = "Purchase Archipelago Item 7"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I017.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -556,7 +568,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 7\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I017.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -564,7 +576,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 7\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I017.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -572,7 +584,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I017.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -580,7 +592,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I017.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -588,7 +600,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I017.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -596,10 +608,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I018]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I018'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I018.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -607,7 +620,7 @@ table_column = 0
 value = "Archipelago Item 8"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I018.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -615,7 +628,7 @@ table_column = 0
 value = "Purchase Archipelago Item 8"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I018.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -623,7 +636,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 8\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I018.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -631,7 +644,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 8\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I018.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -639,7 +652,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I018.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -647,7 +660,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I018.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -655,7 +668,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I018.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -663,10 +676,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I019]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I019'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I019.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -674,7 +688,7 @@ table_column = 0
 value = "Archipelago Item 9"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I019.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -682,7 +696,7 @@ table_column = 0
 value = "Purchase Archipelago Item 9"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I019.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -690,7 +704,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 9\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I019.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -698,7 +712,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 9\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I019.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -706,7 +720,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I019.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -714,7 +728,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I019.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -722,7 +736,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I019.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -730,10 +744,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I01a]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I01a'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I01a.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -741,7 +756,7 @@ table_column = 0
 value = "Archipelago Item 10"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01a.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -749,7 +764,7 @@ table_column = 0
 value = "Purchase Archipelago Item 10"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01a.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -757,7 +772,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 10\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01a.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -765,7 +780,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 10\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01a.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -773,7 +788,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01a.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -781,7 +796,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01a.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -789,7 +804,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01a.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -797,10 +812,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I01b]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I01b'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I01b.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -808,7 +824,7 @@ table_column = 0
 value = "Archipelago Item 11"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01b.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -816,7 +832,7 @@ table_column = 0
 value = "Purchase Archipelago Item 11"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01b.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -824,7 +840,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 11\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01b.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -832,7 +848,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 11\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01b.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -840,7 +856,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01b.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -848,7 +864,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01b.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -856,7 +872,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01b.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -864,10 +880,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I01c]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I01c'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I01c.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -875,7 +892,7 @@ table_column = 0
 value = "Archipelago Item 12"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01c.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -883,7 +900,7 @@ table_column = 0
 value = "Purchase Archipelago Item 12"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01c.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -891,7 +908,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 12\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01c.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -899,7 +916,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 12\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01c.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -907,7 +924,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01c.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -915,7 +932,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01c.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -923,7 +940,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01c.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -931,10 +948,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I01d]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I01d'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I01d.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -942,7 +960,7 @@ table_column = 0
 value = "Archipelago Item 13"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01d.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -950,7 +968,7 @@ table_column = 0
 value = "Purchase Archipelago Item 13"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01d.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -958,7 +976,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 13\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01d.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -966,7 +984,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 13\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01d.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -974,7 +992,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01d.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -982,7 +1000,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01d.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -990,7 +1008,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01d.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -998,10 +1016,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I01e]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I01e'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I01e.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1009,7 +1028,7 @@ table_column = 0
 value = "Archipelago Item 14"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01e.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -1017,7 +1036,7 @@ table_column = 0
 value = "Purchase Archipelago Item 14"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01e.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -1025,7 +1044,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 14\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01e.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -1033,7 +1052,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 14\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01e.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -1041,7 +1060,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01e.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -1049,7 +1068,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01e.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -1057,7 +1076,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01e.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -1065,10 +1084,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I01f]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I01f'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I01f.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1076,7 +1096,7 @@ table_column = 0
 value = "Archipelago Item 15"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01f.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -1084,7 +1104,7 @@ table_column = 0
 value = "Purchase Archipelago Item 15"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01f.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -1092,7 +1112,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 15\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01f.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -1100,7 +1120,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 15\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01f.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -1108,7 +1128,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01f.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -1116,7 +1136,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01f.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -1124,7 +1144,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I01f.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -1132,10 +1152,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I020]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I020'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I020.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1143,7 +1164,7 @@ table_column = 0
 value = "Archipelago Item 16"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I020.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -1151,7 +1172,7 @@ table_column = 0
 value = "Purchase Archipelago Item 16"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I020.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -1159,7 +1180,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 16\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I020.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -1167,7 +1188,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 16\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I020.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -1175,7 +1196,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I020.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -1183,7 +1204,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I020.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -1191,7 +1212,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I020.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -1199,10 +1220,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I021]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I021'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I021.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1210,7 +1232,7 @@ table_column = 0
 value = "Archipelago Item 17"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I021.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -1218,7 +1240,7 @@ table_column = 0
 value = "Purchase Archipelago Item 17"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I021.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -1226,7 +1248,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 17\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I021.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -1234,7 +1256,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 17\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I021.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -1242,7 +1264,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I021.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -1250,7 +1272,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I021.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -1258,7 +1280,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I021.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -1266,10 +1288,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I022]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I022'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I022.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1277,7 +1300,7 @@ table_column = 0
 value = "Archipelago Item 18"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I022.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -1285,7 +1308,7 @@ table_column = 0
 value = "Purchase Archipelago Item 18"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I022.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -1293,7 +1316,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 18\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I022.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -1301,7 +1324,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 18\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I022.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -1309,7 +1332,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I022.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -1317,7 +1340,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I022.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -1325,7 +1348,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I022.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -1333,10 +1356,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I023]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I023'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I023.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1344,7 +1368,7 @@ table_column = 0
 value = "Archipelago Item 19"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I023.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -1352,7 +1376,7 @@ table_column = 0
 value = "Purchase Archipelago Item 19"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I023.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -1360,7 +1384,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 19\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I023.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -1368,7 +1392,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 19\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I023.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -1376,7 +1400,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I023.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -1384,7 +1408,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I023.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -1392,7 +1416,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I023.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -1400,10 +1424,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I024]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I024'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I024.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1411,7 +1436,7 @@ table_column = 0
 value = "Slay Mal'Ganis"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I024.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -1419,7 +1444,7 @@ table_column = 0
 value = "Purchase Slay Mal'Ganis"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I024.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -1427,7 +1452,7 @@ table_column = 0
 value = "Collects the \"Slay Mal'Ganis\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I024.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -1435,7 +1460,7 @@ table_column = 0
 value = "Collects the \"Slay Mal'Ganis\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I024.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -1443,7 +1468,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I024.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -1451,7 +1476,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I024.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -1459,7 +1484,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I024.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -1467,10 +1492,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I025]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I025'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I025.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1478,7 +1504,7 @@ table_column = 0
 value = "Goblin Merchant"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I025.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -1486,7 +1512,7 @@ table_column = 0
 value = "Purchase Goblin Merchant"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I025.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -1494,7 +1520,7 @@ table_column = 0
 value = "Collects the \"Goblin Merchant\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I025.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -1502,7 +1528,7 @@ table_column = 0
 value = "Collects the \"Goblin Merchant\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I025.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -1510,7 +1536,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I025.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -1518,7 +1544,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I025.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -1526,7 +1552,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I025.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -1534,10 +1560,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I026]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I026'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I026.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1545,7 +1572,7 @@ table_column = 0
 value = "Beg for Forgiveness"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I026.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -1553,7 +1580,7 @@ table_column = 0
 value = "Purchase Beg for Forgiveness"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I026.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -1561,7 +1588,7 @@ table_column = 0
 value = "Collects the \"Beg for Forgiveness\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I026.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -1569,7 +1596,7 @@ table_column = 0
 value = "Collects the \"Beg for Forgiveness\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I026.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -1577,7 +1604,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I026.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -1585,7 +1612,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I026.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -1593,7 +1620,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I026.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -1601,10 +1628,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I027]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I027'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I027.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1612,7 +1640,7 @@ table_column = 0
 value = "50 Zombies ahead of Mal'Ganis"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I027.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -1620,7 +1648,7 @@ table_column = 0
 value = "Purchase 50 Zombies ahead of Mal'Ganis"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I027.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -1628,7 +1656,7 @@ table_column = 0
 value = "Collects the \"50 Zombies ahead of Mal'Ganis\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I027.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -1636,7 +1664,7 @@ table_column = 0
 value = "Collects the \"50 Zombies ahead of Mal'Ganis\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I027.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -1644,7 +1672,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I027.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -1652,7 +1680,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I027.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -1660,7 +1688,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I027.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -1668,10 +1696,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I028]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I028'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I028.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1679,7 +1708,7 @@ table_column = 0
 value = "80 Zombies ahead of Mal'Ganis"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I028.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -1687,7 +1716,7 @@ table_column = 0
 value = "Purchase 80 Zombies ahead of Mal'Ganis"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I028.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -1695,7 +1724,7 @@ table_column = 0
 value = "Collects the \"80 Zombies ahead of Mal'Ganis\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I028.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -1703,7 +1732,7 @@ table_column = 0
 value = "Collects the \"80 Zombies ahead of Mal'Ganis\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I028.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -1711,7 +1740,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I028.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -1719,7 +1748,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I028.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -1727,7 +1756,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I028.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -1735,10 +1764,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I029]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I029'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I029.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1746,7 +1776,7 @@ table_column = 0
 value = "Archipelago Item 25"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I029.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -1754,7 +1784,7 @@ table_column = 0
 value = "Purchase Archipelago Item 25"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I029.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -1762,7 +1792,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 25\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I029.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -1770,7 +1800,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 25\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I029.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -1778,7 +1808,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I029.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -1786,7 +1816,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I029.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -1794,7 +1824,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I029.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -1802,10 +1832,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I02a]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I02a'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I02a.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1813,7 +1844,7 @@ table_column = 0
 value = "Archipelago Item 26"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02a.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -1821,7 +1852,7 @@ table_column = 0
 value = "Purchase Archipelago Item 26"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02a.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -1829,7 +1860,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 26\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02a.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -1837,7 +1868,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 26\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02a.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -1845,7 +1876,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02a.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -1853,7 +1884,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02a.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -1861,7 +1892,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02a.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -1869,10 +1900,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I02b]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I02b'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I02b.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1880,7 +1912,7 @@ table_column = 0
 value = "Archipelago Item 27"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02b.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -1888,7 +1920,7 @@ table_column = 0
 value = "Purchase Archipelago Item 27"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02b.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -1896,7 +1928,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 27\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02b.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -1904,7 +1936,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 27\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02b.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -1912,7 +1944,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02b.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -1920,7 +1952,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02b.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -1928,7 +1960,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02b.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -1936,10 +1968,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I02c]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I02c'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I02c.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1947,7 +1980,7 @@ table_column = 0
 value = "Archipelago Item 28"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02c.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -1955,7 +1988,7 @@ table_column = 0
 value = "Purchase Archipelago Item 28"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02c.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -1963,7 +1996,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 28\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02c.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -1971,7 +2004,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 28\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02c.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -1979,7 +2012,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02c.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -1987,7 +2020,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02c.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -1995,7 +2028,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02c.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -2003,10 +2036,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I02d]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I02d'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I02d.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -2014,7 +2048,7 @@ table_column = 0
 value = "Archipelago Item 29"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02d.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -2022,7 +2056,7 @@ table_column = 0
 value = "Purchase Archipelago Item 29"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02d.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -2030,7 +2064,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 29\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02d.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -2038,7 +2072,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 29\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02d.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -2046,7 +2080,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02d.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -2054,7 +2088,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02d.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -2062,7 +2096,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02d.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -2070,10 +2104,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I02e]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I02e'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I02e.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -2081,7 +2116,7 @@ table_column = 0
 value = "Archipelago Item 30"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02e.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -2089,7 +2124,7 @@ table_column = 0
 value = "Purchase Archipelago Item 30"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02e.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -2097,7 +2132,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 30\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02e.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -2105,7 +2140,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 30\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02e.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -2113,7 +2148,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02e.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -2121,7 +2156,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02e.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -2129,7 +2164,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02e.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0
@@ -2137,10 +2172,11 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.I02f]
 parent_id = 'lmbr'  # Bundle of Lumber
 entity_id = 'I02f'
-[[map_objects.entities.modifications]]
+
+[[map_objects.I02f.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -2148,7 +2184,7 @@ table_column = 0
 value = "Archipelago Item 31"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02f.modifications]]
 modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
@@ -2156,7 +2192,7 @@ table_column = 0
 value = "Purchase Archipelago Item 31"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02f.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -2164,7 +2200,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 31\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02f.modifications]]
 modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
@@ -2172,7 +2208,7 @@ table_column = 0
 value = "Collects the \"Archipelago Item 31\" location."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02f.modifications]]
 modification_id = 'iico'  # Profile.Interface Icon
 data_type = "String"
 variation_level = 0
@@ -2180,7 +2216,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02f.modifications]]
 modification_id = 'ifil'  # ItemData.Model Used
 data_type = "String"
 variation_level = 0
@@ -2188,7 +2224,7 @@ table_column = 0
 value = "apimports\\questionmark_item.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02f.modifications]]
 modification_id = 'iabi'  # ItemData.Abilities
 data_type = "String"
 variation_level = 0
@@ -2196,7 +2232,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.I02f.modifications]]
 modification_id = 'igol'  # ItemData.Gold Cost
 data_type = "Integer"
 variation_level = 0

@@ -1,14 +1,24 @@
 """
 Utilities for saving game data as a text-based format
 """
-from typing import *
+from typing import Literal, Iterable, Any
 import enum
 from .. import translate
 
 
-def to_toml(data: dict[str, Any], notes: Iterable[str] = (), array_nesting: tuple[str, ...] = ()) -> str:
+def escape(value: str) -> str:
+    return value.replace('\\', '\\\\').replace('\n', '\\n').replace('"', '\\"')
+
+
+def to_toml(
+    data: dict[str, Any],
+    notes: Iterable[str] = (),
+    array_nesting: tuple[str, ...] = (),
+    quote_style: Literal["'", '"'] = "'",
+) -> str:
     result: list[str] = [f"# {x}" for x in notes]
-    result.append('')
+    if result:
+        result.append('')
     list_results: list[str] = []
     for key, value in data.items():
         if isinstance(value, bool):
@@ -18,8 +28,17 @@ def to_toml(data: dict[str, Any], notes: Iterable[str] = (), array_nesting: tupl
         elif isinstance(value, str):
             if len(value) == 4 and value != 'null' and (human_readable := translate.get_name(value)):
                 result.append(f"{key} = '{value}'  # {human_readable}")
-            else:
+            elif len(value) == 4 and key.endswith('_id'):
                 result.append(f"{key} = '{value}'")
+            else:
+                if quote_style == "'":
+                    if "'" in value:
+                        quoted_value = f"'''{value}'''"
+                    else:
+                        quoted_value = f"'{value}'"
+                else:
+                    quoted_value = f'"{escape(value)}"'
+                result.append(f"{key} = {quoted_value}")
         elif isinstance(value, bytes):
             value = value.replace(b'\0', b'0')
             result.append(f'{key} = {{ type = "bytes", value = "{value.decode("utf-8")}" }}')
@@ -38,10 +57,10 @@ def to_toml(data: dict[str, Any], notes: Iterable[str] = (), array_nesting: tupl
         elif is_array:
             for val in value:
                 list_results.append(f'\n[[{".".join(array_nesting + (key,))}]]')
-                list_results.append(to_toml(val, array_nesting=array_nesting + (key,)))
+                list_results.append(to_toml(val, array_nesting=array_nesting + (key,), quote_style=quote_style))
         elif isinstance(value, dict):
             list_results.append(f'\n[{".".join(array_nesting + (key,))}]')
-            list_results.append(to_toml(value, array_nesting=array_nesting + (key,)))
+            list_results.append(to_toml(value, array_nesting=array_nesting + (key,), quote_style=quote_style))
         else:
             result.append(f'{key} = {value}')
     return '\n'.join(result + list_results)
@@ -49,7 +68,9 @@ def to_toml(data: dict[str, Any], notes: Iterable[str] = (), array_nesting: tupl
 
 def write_inline_toml(
     lines: list[str],
-    data: dict[str, Any] | list | int | str, indent: int = 0, ids: set[str] | None = None
+    data: dict[str, Any] | list | int | str,
+    indent: int = 0,
+    ids: set[str] | None = None
 ) -> None:
     if isinstance(data, dict):
         # Line-split version needs toml 1.1, which should go public any year now

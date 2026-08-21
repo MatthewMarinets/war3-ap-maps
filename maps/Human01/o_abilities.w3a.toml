@@ -3,11 +3,11 @@
 version = 2
 has_levels = true
 
-[blizzard_objects]
-[[blizzard_objects.entities]]
+[blizzard_objects.AOls]
 parent_id = 'AOls'  # Voodoo Spirits
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.AOls.modifications]]
 modification_id = 'alev'  # AbilityData.Levels
 data_type = "Integer"
 variation_level = 0
@@ -15,7 +15,7 @@ table_column = 0
 value = 1
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.AOls.modifications]]
 modification_id = 'arut'  # Profile.Tooltip - Learn - Extended
 data_type = "String"
 variation_level = 0
@@ -23,10 +23,11 @@ table_column = 0
 value = "Creates a swarm of angry spirits that drain the life energies of nearby enemy units. They store the life energy they drain from their victims and use it to replenish Rokhan's hit points when they return.|n|nLasts <AOls,HeroDur1> seconds."
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.ANr2]
 parent_id = 'ANr2'  # Reincarnation
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.ANr2.modifications]]
 modification_id = 'arqa'  # Profile.Requirements - Levels
 data_type = "String"
 variation_level = 0
@@ -34,10 +35,11 @@ table_column = 0
 value = "6"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Arsg]
 parent_id = 'Arsg'  # Summon Misha
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Arsg.modifications]]
 modification_id = 'alev'  # AbilityData.Levels
 data_type = "Integer"
 variation_level = 0
@@ -45,7 +47,7 @@ table_column = 0
 value = 3
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Arsg.modifications]]
 modification_id = 'arut'  # Profile.Tooltip - Learn - Extended
 data_type = "String"
 variation_level = 0
@@ -53,11 +55,12 @@ table_column = 0
 value = "Summons Misha, a powerful bear, to attack your enemies. |n|n|cffffcc00Level 1|r - <ngzc,realHP> hit points, <ngzc,mindmg1> to <ngzc,maxdmg1> damage. |n|cffffcc00Level 2|r - <ngzd,realHP> hit points, <ngzd,mindmg1> to <ngzd,maxdmg1> damage, has Bash. |n|cffffcc00Level 3|r - <ngza,realHP> hit points, <ngza,mindmg1> to <ngza,maxdmg1> damage, has Maul."
 object_id = 'null'
 
-[map_objects]
-[[map_objects.entities]]
+
+[map_objects.AP00]
 parent_id = 'ANcl'  # Channel
 entity_id = 'AP00'
-[[map_objects.entities.modifications]]
+
+[[map_objects.AP00.modifications]]
 modification_id = 'anam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -65,7 +68,7 @@ table_column = 0
 value = "Promote to Captain"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP00.modifications]]
 modification_id = 'aart'  # Profile.Icon - Normal
 data_type = "String"
 variation_level = 0
@@ -73,7 +76,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP00.modifications]]
 modification_id = 'atp1'  # Profile.Tooltip - Normal
 data_type = "String"
 variation_level = 1
@@ -81,7 +84,7 @@ table_column = 0
 value = "Promote to Captain [|cffffcc00T|r]"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP00.modifications]]
 modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
@@ -89,7 +92,7 @@ table_column = 0
 value = "|cfffed312¤ 120 Gold|r\nPromote this unit to a Captain."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP00.modifications]]
 modification_id = 'ahky'  # Profile.Hotkey - Normal
 data_type = "String"
 variation_level = 0
@@ -97,7 +100,7 @@ table_column = 0
 value = "T"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP00.modifications]]
 modification_id = 'aher'  # AbilityData.Hero Ability
 data_type = "Integer"
 variation_level = 0
@@ -105,7 +108,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP00.modifications]]
 modification_id = 'abpx'  # Profile.Button Position - Normal (X)
 data_type = "Integer"
 variation_level = 0
@@ -113,7 +116,7 @@ table_column = 0
 value = 1
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP00.modifications]]
 modification_id = 'Ncl3'  # AbilityData.Options
 data_type = "Integer"
 variation_level = 1
@@ -121,7 +124,7 @@ table_column = 3
 value = 1
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP00.modifications]]
 modification_id = 'Ncl4'  # AbilityData.Art Duration
 data_type = "Unreal"
 variation_level = 1
@@ -129,7 +132,7 @@ table_column = 4
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP00.modifications]]
 modification_id = 'Ncl5'  # AbilityData.Disable Other Abilities
 data_type = "Integer"
 variation_level = 1
@@ -137,7 +140,7 @@ table_column = 5
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP00.modifications]]
 modification_id = 'Ncl6'  # AbilityData.Base Order ID
 data_type = "String"
 variation_level = 1
@@ -145,7 +148,7 @@ table_column = 6
 value = "absorb"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP00.modifications]]
 modification_id = 'areq'  # Profile.Requirements
 data_type = "String"
 variation_level = 0
@@ -153,7 +156,7 @@ table_column = 0
 value = "RP00"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP00.modifications]]
 modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
 data_type = "Integer"
 variation_level = 0
@@ -161,10 +164,11 @@ table_column = 0
 value = 2
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.AP01]
 parent_id = 'ANcl'  # Channel
 entity_id = 'AP01'
-[[map_objects.entities.modifications]]
+
+[[map_objects.AP01.modifications]]
 modification_id = 'anam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -172,7 +176,7 @@ table_column = 0
 value = "Promote to Footman"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP01.modifications]]
 modification_id = 'aart'  # Profile.Icon - Normal
 data_type = "String"
 variation_level = 0
@@ -180,7 +184,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNFootman.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP01.modifications]]
 modification_id = 'atp1'  # Profile.Tooltip - Normal
 data_type = "String"
 variation_level = 1
@@ -188,7 +192,7 @@ table_column = 0
 value = "Promote to Footman [|cffffcc00F|r]"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP01.modifications]]
 modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
@@ -196,7 +200,7 @@ table_column = 0
 value = "|cfffed312¤ 120 Gold|r\nPromote this unit to a Footman."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP01.modifications]]
 modification_id = 'ahky'  # Profile.Hotkey - Normal
 data_type = "String"
 variation_level = 0
@@ -204,7 +208,7 @@ table_column = 0
 value = "F"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP01.modifications]]
 modification_id = 'aher'  # AbilityData.Hero Ability
 data_type = "Integer"
 variation_level = 0
@@ -212,7 +216,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP01.modifications]]
 modification_id = 'abpx'  # Profile.Button Position - Normal (X)
 data_type = "Integer"
 variation_level = 0
@@ -220,7 +224,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP01.modifications]]
 modification_id = 'Ncl3'  # AbilityData.Options
 data_type = "Integer"
 variation_level = 1
@@ -228,7 +232,7 @@ table_column = 3
 value = 1
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP01.modifications]]
 modification_id = 'Ncl4'  # AbilityData.Art Duration
 data_type = "Unreal"
 variation_level = 1
@@ -236,7 +240,7 @@ table_column = 4
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP01.modifications]]
 modification_id = 'Ncl5'  # AbilityData.Disable Other Abilities
 data_type = "Integer"
 variation_level = 1
@@ -244,7 +248,7 @@ table_column = 5
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP01.modifications]]
 modification_id = 'Ncl6'  # AbilityData.Base Order ID
 data_type = "String"
 variation_level = 1
@@ -252,7 +256,7 @@ table_column = 6
 value = "acidbomb"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP01.modifications]]
 modification_id = 'areq'  # Profile.Requirements
 data_type = "String"
 variation_level = 0
@@ -260,10 +264,11 @@ table_column = 0
 value = "RP01"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.AP02]
 parent_id = 'ANcl'  # Channel
 entity_id = 'AP02'
-[[map_objects.entities.modifications]]
+
+[[map_objects.AP02.modifications]]
 modification_id = 'anam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -271,7 +276,7 @@ table_column = 0
 value = "Promote to Rifleman"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP02.modifications]]
 modification_id = 'aart'  # Profile.Icon - Normal
 data_type = "String"
 variation_level = 0
@@ -279,7 +284,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNRifleman.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP02.modifications]]
 modification_id = 'atp1'  # Profile.Tooltip - Normal
 data_type = "String"
 variation_level = 1
@@ -287,7 +292,7 @@ table_column = 0
 value = "Promote to Rifleman [|cffffcc00R|r]"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP02.modifications]]
 modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
@@ -295,7 +300,7 @@ table_column = 0
 value = "|cfffed312¤ 180 Gold|r\nPromote this unit to a Rifleman."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP02.modifications]]
 modification_id = 'ahky'  # Profile.Hotkey - Normal
 data_type = "String"
 variation_level = 0
@@ -303,7 +308,7 @@ table_column = 0
 value = "R"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP02.modifications]]
 modification_id = 'aher'  # AbilityData.Hero Ability
 data_type = "Integer"
 variation_level = 0
@@ -311,7 +316,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP02.modifications]]
 modification_id = 'abpx'  # Profile.Button Position - Normal (X)
 data_type = "Integer"
 variation_level = 0
@@ -319,7 +324,7 @@ table_column = 0
 value = 1
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP02.modifications]]
 modification_id = 'Ncl3'  # AbilityData.Options
 data_type = "Integer"
 variation_level = 1
@@ -327,7 +332,7 @@ table_column = 3
 value = 1
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP02.modifications]]
 modification_id = 'Ncl4'  # AbilityData.Art Duration
 data_type = "Unreal"
 variation_level = 1
@@ -335,7 +340,7 @@ table_column = 4
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP02.modifications]]
 modification_id = 'Ncl5'  # AbilityData.Disable Other Abilities
 data_type = "Integer"
 variation_level = 1
@@ -343,7 +348,7 @@ table_column = 5
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP02.modifications]]
 modification_id = 'Ncl6'  # AbilityData.Base Order ID
 data_type = "String"
 variation_level = 1
@@ -351,7 +356,7 @@ table_column = 6
 value = "acolyteharvest"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP02.modifications]]
 modification_id = 'areq'  # Profile.Requirements
 data_type = "String"
 variation_level = 0
@@ -359,10 +364,11 @@ table_column = 0
 value = "RP02"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.AP03]
 parent_id = 'ANcl'  # Channel
 entity_id = 'AP03'
-[[map_objects.entities.modifications]]
+
+[[map_objects.AP03.modifications]]
 modification_id = 'anam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -370,7 +376,7 @@ table_column = 0
 value = "Promote to Archer"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP03.modifications]]
 modification_id = 'aart'  # Profile.Icon - Normal
 data_type = "String"
 variation_level = 0
@@ -378,7 +384,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNHighElvenArcher.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP03.modifications]]
 modification_id = 'atp1'  # Profile.Tooltip - Normal
 data_type = "String"
 variation_level = 1
@@ -386,7 +392,7 @@ table_column = 0
 value = "Promote to Archer [|cffffcc00H|r]"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP03.modifications]]
 modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
@@ -394,7 +400,7 @@ table_column = 0
 value = "|cfffed312¤ 120 Gold|r\nPromote this unit to an Archer. (Magic makes for fast transition)."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP03.modifications]]
 modification_id = 'ahky'  # Profile.Hotkey - Normal
 data_type = "String"
 variation_level = 0
@@ -402,7 +408,7 @@ table_column = 0
 value = "H"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP03.modifications]]
 modification_id = 'aher'  # AbilityData.Hero Ability
 data_type = "Integer"
 variation_level = 0
@@ -410,7 +416,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP03.modifications]]
 modification_id = 'Ncl3'  # AbilityData.Options
 data_type = "Integer"
 variation_level = 1
@@ -418,7 +424,7 @@ table_column = 3
 value = 1
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP03.modifications]]
 modification_id = 'Ncl4'  # AbilityData.Art Duration
 data_type = "Unreal"
 variation_level = 1
@@ -426,7 +432,7 @@ table_column = 4
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP03.modifications]]
 modification_id = 'Ncl5'  # AbilityData.Disable Other Abilities
 data_type = "Integer"
 variation_level = 1
@@ -434,7 +440,7 @@ table_column = 5
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP03.modifications]]
 modification_id = 'Ncl6'  # AbilityData.Base Order ID
 data_type = "String"
 variation_level = 1
@@ -442,7 +448,7 @@ table_column = 6
 value = "AImove"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP03.modifications]]
 modification_id = 'areq'  # Profile.Requirements
 data_type = "String"
 variation_level = 0
@@ -450,10 +456,11 @@ table_column = 0
 value = "RP03"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.AP04]
 parent_id = 'ANcl'  # Channel
 entity_id = 'AP04'
-[[map_objects.entities.modifications]]
+
+[[map_objects.AP04.modifications]]
 modification_id = 'anam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -461,7 +468,7 @@ table_column = 0
 value = "Promote to Knight"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP04.modifications]]
 modification_id = 'aart'  # Profile.Icon - Normal
 data_type = "String"
 variation_level = 0
@@ -469,7 +476,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNKnight.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP04.modifications]]
 modification_id = 'atp1'  # Profile.Tooltip - Normal
 data_type = "String"
 variation_level = 1
@@ -477,7 +484,7 @@ table_column = 0
 value = "Promote to Knight [|cffffcc00G|r]"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP04.modifications]]
 modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
@@ -485,7 +492,7 @@ table_column = 0
 value = "|cfffed312¤ 240 Gold|r\nPromote this unit to a Knight."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP04.modifications]]
 modification_id = 'ahky'  # Profile.Hotkey - Normal
 data_type = "String"
 variation_level = 0
@@ -493,7 +500,7 @@ table_column = 0
 value = "G"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP04.modifications]]
 modification_id = 'aher'  # AbilityData.Hero Ability
 data_type = "Integer"
 variation_level = 0
@@ -501,7 +508,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP04.modifications]]
 modification_id = 'abpx'  # Profile.Button Position - Normal (X)
 data_type = "Integer"
 variation_level = 0
@@ -509,7 +516,7 @@ table_column = 0
 value = 3
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP04.modifications]]
 modification_id = 'Ncl3'  # AbilityData.Options
 data_type = "Integer"
 variation_level = 1
@@ -517,7 +524,7 @@ table_column = 3
 value = 1
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP04.modifications]]
 modification_id = 'Ncl4'  # AbilityData.Art Duration
 data_type = "Unreal"
 variation_level = 1
@@ -525,7 +532,7 @@ table_column = 4
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP04.modifications]]
 modification_id = 'Ncl5'  # AbilityData.Disable Other Abilities
 data_type = "Integer"
 variation_level = 1
@@ -533,7 +540,7 @@ table_column = 5
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP04.modifications]]
 modification_id = 'Ncl6'  # AbilityData.Base Order ID
 data_type = "String"
 variation_level = 1
@@ -541,7 +548,7 @@ table_column = 6
 value = "ambush"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP04.modifications]]
 modification_id = 'areq'  # Profile.Requirements
 data_type = "String"
 variation_level = 0
@@ -549,10 +556,11 @@ table_column = 0
 value = "RP04"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.AP05]
 parent_id = 'ANcl'  # Channel
 entity_id = 'AP05'
-[[map_objects.entities.modifications]]
+
+[[map_objects.AP05.modifications]]
 modification_id = 'anam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -560,7 +568,7 @@ table_column = 0
 value = "Promote to Priest"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP05.modifications]]
 modification_id = 'aart'  # Profile.Icon - Normal
 data_type = "String"
 variation_level = 0
@@ -568,7 +576,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNPriest.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP05.modifications]]
 modification_id = 'atp1'  # Profile.Tooltip - Normal
 data_type = "String"
 variation_level = 1
@@ -576,7 +584,7 @@ table_column = 0
 value = "Promote to Priest [|cffffcc00E|r]"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP05.modifications]]
 modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
@@ -584,7 +592,7 @@ table_column = 0
 value = "|cfffed312¤ 125 Gold|r\nPromote this unit to a Priest."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP05.modifications]]
 modification_id = 'ahky'  # Profile.Hotkey - Normal
 data_type = "String"
 variation_level = 0
@@ -592,7 +600,7 @@ table_column = 0
 value = "E"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP05.modifications]]
 modification_id = 'aher'  # AbilityData.Hero Ability
 data_type = "Integer"
 variation_level = 0
@@ -600,7 +608,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP05.modifications]]
 modification_id = 'abpx'  # Profile.Button Position - Normal (X)
 data_type = "Integer"
 variation_level = 0
@@ -608,7 +616,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP05.modifications]]
 modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
 data_type = "Integer"
 variation_level = 0
@@ -616,7 +624,7 @@ table_column = 0
 value = 1
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP05.modifications]]
 modification_id = 'Ncl3'  # AbilityData.Options
 data_type = "Integer"
 variation_level = 1
@@ -624,7 +632,7 @@ table_column = 3
 value = 1
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP05.modifications]]
 modification_id = 'Ncl4'  # AbilityData.Art Duration
 data_type = "Unreal"
 variation_level = 1
@@ -632,7 +640,7 @@ table_column = 4
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP05.modifications]]
 modification_id = 'Ncl5'  # AbilityData.Disable Other Abilities
 data_type = "Integer"
 variation_level = 1
@@ -640,7 +648,7 @@ table_column = 5
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP05.modifications]]
 modification_id = 'Ncl6'  # AbilityData.Base Order ID
 data_type = "String"
 variation_level = 1
@@ -648,7 +656,7 @@ table_column = 6
 value = "ancestralspirit"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP05.modifications]]
 modification_id = 'areq'  # Profile.Requirements
 data_type = "String"
 variation_level = 0
@@ -656,10 +664,11 @@ table_column = 0
 value = "RP05"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.AP06]
 parent_id = 'ANcl'  # Channel
 entity_id = 'AP06'
-[[map_objects.entities.modifications]]
+
+[[map_objects.AP06.modifications]]
 modification_id = 'anam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -667,7 +676,7 @@ table_column = 0
 value = "Promote to Sorceress"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP06.modifications]]
 modification_id = 'aart'  # Profile.Icon - Normal
 data_type = "String"
 variation_level = 0
@@ -675,7 +684,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSorceress.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP06.modifications]]
 modification_id = 'atp1'  # Profile.Tooltip - Normal
 data_type = "String"
 variation_level = 1
@@ -683,7 +692,7 @@ table_column = 0
 value = "Promote to Sorceress [|cffffcc00X|r]"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP06.modifications]]
 modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
@@ -691,7 +700,7 @@ table_column = 0
 value = "|cfffed312¤ 140 Gold|r\nPromote this unit to a Sorceress. (Magic makes for fast transition)."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP06.modifications]]
 modification_id = 'ahky'  # Profile.Hotkey - Normal
 data_type = "String"
 variation_level = 0
@@ -699,7 +708,7 @@ table_column = 0
 value = "X"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP06.modifications]]
 modification_id = 'aher'  # AbilityData.Hero Ability
 data_type = "Integer"
 variation_level = 0
@@ -707,7 +716,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP06.modifications]]
 modification_id = 'abpx'  # Profile.Button Position - Normal (X)
 data_type = "Integer"
 variation_level = 0
@@ -715,7 +724,7 @@ table_column = 0
 value = 1
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP06.modifications]]
 modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
 data_type = "Integer"
 variation_level = 0
@@ -723,7 +732,7 @@ table_column = 0
 value = 1
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP06.modifications]]
 modification_id = 'Ncl3'  # AbilityData.Options
 data_type = "Integer"
 variation_level = 1
@@ -731,7 +740,7 @@ table_column = 3
 value = 1
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP06.modifications]]
 modification_id = 'Ncl4'  # AbilityData.Art Duration
 data_type = "Unreal"
 variation_level = 1
@@ -739,7 +748,7 @@ table_column = 4
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP06.modifications]]
 modification_id = 'Ncl5'  # AbilityData.Disable Other Abilities
 data_type = "Integer"
 variation_level = 1
@@ -747,7 +756,7 @@ table_column = 5
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP06.modifications]]
 modification_id = 'Ncl6'  # AbilityData.Base Order ID
 data_type = "String"
 variation_level = 1
@@ -755,7 +764,7 @@ table_column = 6
 value = "ancestralspirittaarget"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP06.modifications]]
 modification_id = 'areq'  # Profile.Requirements
 data_type = "String"
 variation_level = 0
@@ -763,10 +772,11 @@ table_column = 0
 value = "RP06"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.AP07]
 parent_id = 'ANcl'  # Channel
 entity_id = 'AP07'
-[[map_objects.entities.modifications]]
+
+[[map_objects.AP07.modifications]]
 modification_id = 'anam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -774,7 +784,7 @@ table_column = 0
 value = "Promote to Spell Breaker"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP07.modifications]]
 modification_id = 'aart'  # Profile.Icon - Normal
 data_type = "String"
 variation_level = 0
@@ -782,7 +792,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSpellBreaker.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP07.modifications]]
 modification_id = 'atp1'  # Profile.Tooltip - Normal
 data_type = "String"
 variation_level = 1
@@ -790,7 +800,7 @@ table_column = 0
 value = "Promote to Spell Breaker [|cffffcc00B|r]"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP07.modifications]]
 modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
@@ -798,7 +808,7 @@ table_column = 0
 value = "|cfffed312¤ 200 Gold|r\nPromote this unit to a Spell Breaker."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP07.modifications]]
 modification_id = 'ahky'  # Profile.Hotkey - Normal
 data_type = "String"
 variation_level = 0
@@ -806,7 +816,7 @@ table_column = 0
 value = "B"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP07.modifications]]
 modification_id = 'aher'  # AbilityData.Hero Ability
 data_type = "Integer"
 variation_level = 0
@@ -814,7 +824,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP07.modifications]]
 modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
 data_type = "Integer"
 variation_level = 0
@@ -822,7 +832,7 @@ table_column = 0
 value = 1
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP07.modifications]]
 modification_id = 'Ncl3'  # AbilityData.Options
 data_type = "Integer"
 variation_level = 1
@@ -830,7 +840,7 @@ table_column = 3
 value = 1
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP07.modifications]]
 modification_id = 'Ncl4'  # AbilityData.Art Duration
 data_type = "Unreal"
 variation_level = 1
@@ -838,7 +848,7 @@ table_column = 4
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP07.modifications]]
 modification_id = 'Ncl5'  # AbilityData.Disable Other Abilities
 data_type = "Integer"
 variation_level = 1
@@ -846,7 +856,7 @@ table_column = 5
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP07.modifications]]
 modification_id = 'Ncl6'  # AbilityData.Base Order ID
 data_type = "String"
 variation_level = 1
@@ -854,7 +864,7 @@ table_column = 6
 value = "animatedead"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP07.modifications]]
 modification_id = 'areq'  # Profile.Requirements
 data_type = "String"
 variation_level = 0
@@ -862,10 +872,11 @@ table_column = 0
 value = "RP07"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.AP08]
 parent_id = 'ANcl'  # Channel
 entity_id = 'AP08'
-[[map_objects.entities.modifications]]
+
+[[map_objects.AP08.modifications]]
 modification_id = 'anam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -873,7 +884,7 @@ table_column = 0
 value = "Promote to Mortar Team"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP08.modifications]]
 modification_id = 'aart'  # Profile.Icon - Normal
 data_type = "String"
 variation_level = 0
@@ -881,7 +892,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNMortarTeam.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP08.modifications]]
 modification_id = 'atp1'  # Profile.Tooltip - Normal
 data_type = "String"
 variation_level = 1
@@ -889,7 +900,7 @@ table_column = 0
 value = "Promote to Mortar Team [|cffffcc00M|r]"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP08.modifications]]
 modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
@@ -897,7 +908,7 @@ table_column = 0
 value = "|cfffed312¤ 160 Gold|r\nPromote this unit to a Mortar Team."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP08.modifications]]
 modification_id = 'ahky'  # Profile.Hotkey - Normal
 data_type = "String"
 variation_level = 0
@@ -905,7 +916,7 @@ table_column = 0
 value = "M"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP08.modifications]]
 modification_id = 'aher'  # AbilityData.Hero Ability
 data_type = "Integer"
 variation_level = 0
@@ -913,7 +924,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP08.modifications]]
 modification_id = 'abpx'  # Profile.Button Position - Normal (X)
 data_type = "Integer"
 variation_level = 0
@@ -921,7 +932,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP08.modifications]]
 modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
 data_type = "Integer"
 variation_level = 0
@@ -929,7 +940,7 @@ table_column = 0
 value = 2
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP08.modifications]]
 modification_id = 'Ncl3'  # AbilityData.Options
 data_type = "Integer"
 variation_level = 1
@@ -937,7 +948,7 @@ table_column = 3
 value = 1
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP08.modifications]]
 modification_id = 'Ncl4'  # AbilityData.Art Duration
 data_type = "Unreal"
 variation_level = 1
@@ -945,7 +956,7 @@ table_column = 4
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP08.modifications]]
 modification_id = 'Ncl5'  # AbilityData.Disable Other Abilities
 data_type = "Integer"
 variation_level = 1
@@ -953,7 +964,7 @@ table_column = 5
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP08.modifications]]
 modification_id = 'Ncl6'  # AbilityData.Base Order ID
 data_type = "String"
 variation_level = 1
@@ -961,7 +972,7 @@ table_column = 6
 value = "antimagicshell"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP08.modifications]]
 modification_id = 'areq'  # Profile.Requirements
 data_type = "String"
 variation_level = 0
@@ -969,18 +980,19 @@ table_column = 0
 value = "RP08"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.AP0a]
 parent_id = 'Amrf'  # Crow Form
 entity_id = 'AP0a'
-[[map_objects.entities.modifications]]
+
+[[map_objects.AP0a.modifications]]
 modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "hcth"
+value = 'hcth'  # Captain
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0a.modifications]]
 modification_id = 'Eme2'  # AbilityData.Morphing Flags
 data_type = "Integer"
 variation_level = 1
@@ -988,7 +1000,7 @@ table_column = 2
 value = 9
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0a.modifications]]
 modification_id = 'acas'  # AbilityData.Casting Time
 data_type = "Unreal"
 variation_level = 1
@@ -996,7 +1008,7 @@ table_column = 0
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0a.modifications]]
 modification_id = 'adur'  # AbilityData.Duration - Normal
 data_type = "Unreal"
 variation_level = 1
@@ -1004,7 +1016,7 @@ table_column = 0
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0a.modifications]]
 modification_id = 'aefs'  # Profile.Effect Sound
 data_type = "String"
 variation_level = 0
@@ -1012,18 +1024,19 @@ table_column = 0
 value = "CaptainWhat"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.AP0b]
 parent_id = 'Amrf'  # Crow Form
 entity_id = 'AP0b'
-[[map_objects.entities.modifications]]
+
+[[map_objects.AP0b.modifications]]
 modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "hfoo"
+value = 'hfoo'  # Footman
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0b.modifications]]
 modification_id = 'Eme2'  # AbilityData.Morphing Flags
 data_type = "Integer"
 variation_level = 1
@@ -1031,7 +1044,7 @@ table_column = 2
 value = 9
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0b.modifications]]
 modification_id = 'acas'  # AbilityData.Casting Time
 data_type = "Unreal"
 variation_level = 1
@@ -1039,7 +1052,7 @@ table_column = 0
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0b.modifications]]
 modification_id = 'adur'  # AbilityData.Duration - Normal
 data_type = "Unreal"
 variation_level = 1
@@ -1047,7 +1060,7 @@ table_column = 0
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0b.modifications]]
 modification_id = 'aefs'  # Profile.Effect Sound
 data_type = "String"
 variation_level = 0
@@ -1055,18 +1068,19 @@ table_column = 0
 value = "FootmanReady"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.AP0c]
 parent_id = 'Amrf'  # Crow Form
 entity_id = 'AP0c'
-[[map_objects.entities.modifications]]
+
+[[map_objects.AP0c.modifications]]
 modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "hrif"
+value = 'hrif'  # Rifleman
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0c.modifications]]
 modification_id = 'Eme2'  # AbilityData.Morphing Flags
 data_type = "Integer"
 variation_level = 1
@@ -1074,7 +1088,7 @@ table_column = 2
 value = 9
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0c.modifications]]
 modification_id = 'acas'  # AbilityData.Casting Time
 data_type = "Unreal"
 variation_level = 1
@@ -1082,7 +1096,7 @@ table_column = 0
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0c.modifications]]
 modification_id = 'adur'  # AbilityData.Duration - Normal
 data_type = "Unreal"
 variation_level = 1
@@ -1090,7 +1104,7 @@ table_column = 0
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0c.modifications]]
 modification_id = 'aefs'  # Profile.Effect Sound
 data_type = "String"
 variation_level = 0
@@ -1098,18 +1112,19 @@ table_column = 0
 value = "RiflemanReady"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.AP0d]
 parent_id = 'Amrf'  # Crow Form
 entity_id = 'AP0d'
-[[map_objects.entities.modifications]]
+
+[[map_objects.AP0d.modifications]]
 modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "nhea"
+value = 'nhea'  # Archer
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0d.modifications]]
 modification_id = 'Eme2'  # AbilityData.Morphing Flags
 data_type = "Integer"
 variation_level = 1
@@ -1117,7 +1132,7 @@ table_column = 2
 value = 9
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0d.modifications]]
 modification_id = 'acas'  # AbilityData.Casting Time
 data_type = "Unreal"
 variation_level = 1
@@ -1125,7 +1140,7 @@ table_column = 0
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0d.modifications]]
 modification_id = 'adur'  # AbilityData.Duration - Normal
 data_type = "Unreal"
 variation_level = 1
@@ -1133,7 +1148,7 @@ table_column = 0
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0d.modifications]]
 modification_id = 'aefs'  # Profile.Effect Sound
 data_type = "String"
 variation_level = 0
@@ -1141,18 +1156,19 @@ table_column = 0
 value = "ArcherReady"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.AP0e]
 parent_id = 'Amrf'  # Crow Form
 entity_id = 'AP0e'
-[[map_objects.entities.modifications]]
+
+[[map_objects.AP0e.modifications]]
 modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "hkni"
+value = 'hkni'  # Knight
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0e.modifications]]
 modification_id = 'Eme2'  # AbilityData.Morphing Flags
 data_type = "Integer"
 variation_level = 1
@@ -1160,7 +1176,7 @@ table_column = 2
 value = 9
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0e.modifications]]
 modification_id = 'acas'  # AbilityData.Casting Time
 data_type = "Unreal"
 variation_level = 1
@@ -1168,7 +1184,7 @@ table_column = 0
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0e.modifications]]
 modification_id = 'adur'  # AbilityData.Duration - Normal
 data_type = "Unreal"
 variation_level = 1
@@ -1176,7 +1192,7 @@ table_column = 0
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0e.modifications]]
 modification_id = 'aefs'  # Profile.Effect Sound
 data_type = "String"
 variation_level = 0
@@ -1184,18 +1200,19 @@ table_column = 0
 value = "KnightReady"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.AP0f]
 parent_id = 'Amrf'  # Crow Form
 entity_id = 'AP0f'
-[[map_objects.entities.modifications]]
+
+[[map_objects.AP0f.modifications]]
 modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "hmpr"
+value = 'hmpr'  # Priest
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0f.modifications]]
 modification_id = 'Eme2'  # AbilityData.Morphing Flags
 data_type = "Integer"
 variation_level = 1
@@ -1203,7 +1220,7 @@ table_column = 2
 value = 9
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0f.modifications]]
 modification_id = 'acas'  # AbilityData.Casting Time
 data_type = "Unreal"
 variation_level = 1
@@ -1211,7 +1228,7 @@ table_column = 0
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0f.modifications]]
 modification_id = 'adur'  # AbilityData.Duration - Normal
 data_type = "Unreal"
 variation_level = 1
@@ -1219,7 +1236,7 @@ table_column = 0
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0f.modifications]]
 modification_id = 'aefs'  # Profile.Effect Sound
 data_type = "String"
 variation_level = 0
@@ -1227,18 +1244,19 @@ table_column = 0
 value = "PriestReady"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.AP0g]
 parent_id = 'Amrf'  # Crow Form
 entity_id = 'AP0g'
-[[map_objects.entities.modifications]]
+
+[[map_objects.AP0g.modifications]]
 modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "hsor"
+value = 'hsor'  # Sorceress
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0g.modifications]]
 modification_id = 'Eme2'  # AbilityData.Morphing Flags
 data_type = "Integer"
 variation_level = 1
@@ -1246,7 +1264,7 @@ table_column = 2
 value = 9
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0g.modifications]]
 modification_id = 'acas'  # AbilityData.Casting Time
 data_type = "Unreal"
 variation_level = 1
@@ -1254,7 +1272,7 @@ table_column = 0
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0g.modifications]]
 modification_id = 'adur'  # AbilityData.Duration - Normal
 data_type = "Unreal"
 variation_level = 1
@@ -1262,7 +1280,7 @@ table_column = 0
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0g.modifications]]
 modification_id = 'aefs'  # Profile.Effect Sound
 data_type = "String"
 variation_level = 0
@@ -1270,18 +1288,19 @@ table_column = 0
 value = "SorceressReady"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.AP0h]
 parent_id = 'Amrf'  # Crow Form
 entity_id = 'AP0h'
-[[map_objects.entities.modifications]]
+
+[[map_objects.AP0h.modifications]]
 modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "hspt"
+value = 'hspt'  # Spell Breaker
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0h.modifications]]
 modification_id = 'Eme2'  # AbilityData.Morphing Flags
 data_type = "Integer"
 variation_level = 1
@@ -1289,7 +1308,7 @@ table_column = 2
 value = 9
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0h.modifications]]
 modification_id = 'acas'  # AbilityData.Casting Time
 data_type = "Unreal"
 variation_level = 1
@@ -1297,7 +1316,7 @@ table_column = 0
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0h.modifications]]
 modification_id = 'adur'  # AbilityData.Duration - Normal
 data_type = "Unreal"
 variation_level = 1
@@ -1305,7 +1324,7 @@ table_column = 0
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0h.modifications]]
 modification_id = 'aefs'  # Profile.Effect Sound
 data_type = "String"
 variation_level = 0
@@ -1313,7 +1332,7 @@ table_column = 0
 value = "SpellBreakerReady"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0h.modifications]]
 modification_id = 'anam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1321,7 +1340,7 @@ table_column = 0
 value = "Promote to Spell Breaker"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0h.modifications]]
 modification_id = 'aart'  # Profile.Icon - Normal
 data_type = "String"
 variation_level = 0
@@ -1329,7 +1348,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNSpellBreaker.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0h.modifications]]
 modification_id = 'atp1'  # Profile.Tooltip - Normal
 data_type = "String"
 variation_level = 1
@@ -1337,7 +1356,7 @@ table_column = 0
 value = "Promote to Spell Breaker [|cffffcc00B|r]"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0h.modifications]]
 modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1
@@ -1345,7 +1364,7 @@ table_column = 0
 value = "Promote this unit to a Spell Breaker."
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0h.modifications]]
 modification_id = 'ahky'  # Profile.Hotkey - Normal
 data_type = "String"
 variation_level = 0
@@ -1353,7 +1372,7 @@ table_column = 0
 value = "B"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0h.modifications]]
 modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
 data_type = "Integer"
 variation_level = 0
@@ -1361,7 +1380,7 @@ table_column = 0
 value = 1
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0h.modifications]]
 modification_id = 'areq'  # Profile.Requirements
 data_type = "String"
 variation_level = 0
@@ -1369,7 +1388,7 @@ table_column = 0
 value = "RP07"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0h.modifications]]
 modification_id = 'Ncl4'  # AbilityData.Art Duration
 data_type = "Unreal"
 variation_level = 1
@@ -1377,7 +1396,7 @@ table_column = 4
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0h.modifications]]
 modification_id = 'Ncl6'  # AbilityData.Base Order ID
 data_type = "String"
 variation_level = 1
@@ -1385,18 +1404,19 @@ table_column = 6
 value = "animatedead"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.AP0i]
 parent_id = 'Amrf'  # Crow Form
 entity_id = 'AP0i'
-[[map_objects.entities.modifications]]
+
+[[map_objects.AP0i.modifications]]
 modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
 data_type = "String"
 variation_level = 1
 table_column = 0
-value = "hmtm"
+value = 'hmtm'  # Mortar Team
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0i.modifications]]
 modification_id = 'Eme2'  # AbilityData.Morphing Flags
 data_type = "Integer"
 variation_level = 1
@@ -1404,7 +1424,7 @@ table_column = 2
 value = 9
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0i.modifications]]
 modification_id = 'acas'  # AbilityData.Casting Time
 data_type = "Unreal"
 variation_level = 1
@@ -1412,7 +1432,7 @@ table_column = 0
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0i.modifications]]
 modification_id = 'adur'  # AbilityData.Duration - Normal
 data_type = "Unreal"
 variation_level = 1
@@ -1420,7 +1440,7 @@ table_column = 0
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.AP0i.modifications]]
 modification_id = 'aefs'  # Profile.Effect Sound
 data_type = "String"
 variation_level = 0
@@ -1428,10 +1448,11 @@ table_column = 0
 value = "MortarTeamReady"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.APPh]
 parent_id = 'Aspb'  # Spell Book
 entity_id = 'APPh'
-[[map_objects.entities.modifications]]
+
+[[map_objects.APPh.modifications]]
 modification_id = 'anam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1439,7 +1460,7 @@ table_column = 0
 value = "Promotion"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.APPh.modifications]]
 modification_id = 'ansf'  # Profile.Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -1447,7 +1468,7 @@ table_column = 0
 value = "(Human)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.APPh.modifications]]
 modification_id = 'ahky'  # Profile.Hotkey - Normal
 data_type = "String"
 variation_level = 0
@@ -1455,7 +1476,7 @@ table_column = 0
 value = "T"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.APPh.modifications]]
 modification_id = 'aart'  # Profile.Icon - Normal
 data_type = "String"
 variation_level = 0
@@ -1463,7 +1484,7 @@ table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNHumanCaptureFlag.blp"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.APPh.modifications]]
 modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
 data_type = "Integer"
 variation_level = 0
@@ -1471,7 +1492,7 @@ table_column = 0
 value = 2
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.APPh.modifications]]
 modification_id = 'spb3'  # AbilityData.Minimum Spells
 data_type = "Integer"
 variation_level = 1
@@ -1479,7 +1500,7 @@ table_column = 3
 value = 9
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.APPh.modifications]]
 modification_id = 'spb4'  # AbilityData.Maximum Spells
 data_type = "Integer"
 variation_level = 1
@@ -1487,7 +1508,7 @@ table_column = 4
 value = 9
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.APPh.modifications]]
 modification_id = 'spb1'  # AbilityData.Spell List
 data_type = "String"
 variation_level = 1
@@ -1495,7 +1516,7 @@ table_column = 1
 value = "AP00,AP01,AP02,AP03,AP04,AP05,AP06,AP07,AP08"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.APPh.modifications]]
 modification_id = 'aite'  # AbilityData.Item Ability
 data_type = "Integer"
 variation_level = 0
@@ -1503,7 +1524,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.APPh.modifications]]
 modification_id = 'atp1'  # Profile.Tooltip - Normal
 data_type = "String"
 variation_level = 1
@@ -1511,7 +1532,7 @@ table_column = 0
 value = "Promotion [|cffffcc00T|r]"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.APPh.modifications]]
 modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
 data_type = "String"
 variation_level = 1

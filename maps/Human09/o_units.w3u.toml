@@ -3,11 +3,11 @@
 version = 2
 has_levels = false
 
-[blizzard_objects]
-[[blizzard_objects.entities]]
+[blizzard_objects.Harf]
 parent_id = 'Harf'  # Paladin
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Harf.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -15,7 +15,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Harf.modifications]]
 modification_id = 'ustr'  # UnitBalance.Starting Strength
 data_type = "Integer"
 variation_level = 0
@@ -23,7 +23,7 @@ table_column = 0
 value = 24
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Harf.modifications]]
 modification_id = 'uint'  # UnitBalance.Starting Intelligence
 data_type = "Integer"
 variation_level = 0
@@ -31,7 +31,7 @@ table_column = 0
 value = 19
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Harf.modifications]]
 modification_id = 'uagi'  # UnitBalance.Starting Agility
 data_type = "Integer"
 variation_level = 0
@@ -39,7 +39,7 @@ table_column = 0
 value = 15
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Harf.modifications]]
 modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
 data_type = "Integer"
 variation_level = 0
@@ -47,10 +47,11 @@ table_column = 0
 value = 150
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nnwa]
 parent_id = 'nnwa'  # Nerubian Warrior
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nnwa.modifications]]
 modification_id = 'usst'  # UnitBalance.Stock Start Delay
 data_type = "Integer"
 variation_level = 0
@@ -58,10 +59,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nits]
 parent_id = 'nits'  # Ice Troll Berserker
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nits.modifications]]
 modification_id = 'usst'  # UnitBalance.Stock Start Delay
 data_type = "Integer"
 variation_level = 0
@@ -69,7 +71,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nits.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -77,7 +79,7 @@ table_column = 0
 value = 55
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nits.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -85,10 +87,11 @@ table_column = 0
 value = 4
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nrvs]
 parent_id = 'nrvs'  # Frost Revenant
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nrvs.modifications]]
 modification_id = 'usst'  # UnitBalance.Stock Start Delay
 data_type = "Integer"
 variation_level = 0
@@ -96,7 +99,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nrvs.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -104,7 +107,7 @@ table_column = 0
 value = 55
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nrvs.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -112,10 +115,11 @@ table_column = 0
 value = 4
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.ngme]
 parent_id = 'ngme'  # Goblin Merchant
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.ngme.modifications]]
 modification_id = 'usei'  # Profile.Items Sold
 data_type = "String"
 variation_level = 0
@@ -123,7 +127,7 @@ table_column = 0
 value = "phea,pman,shea,spro,wneg,gemt,stwp"
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.ngme.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -131,10 +135,11 @@ table_column = 0
 value = "Asid,Aneu,Avul,Apit"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.hfoo]
 parent_id = 'hfoo'  # Footman
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.hfoo.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -142,10 +147,11 @@ table_column = 0
 value = "Adef,Aihn,AP00"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Hpal]
 parent_id = 'Hpal'  # Paladin
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Hpal.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -153,7 +159,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Hpal.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -161,10 +167,11 @@ table_column = 0
 value = "AInv,A;Cx"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Hamg]
 parent_id = 'Hamg'  # Archmage
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Hamg.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -172,7 +179,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Hamg.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -180,10 +187,11 @@ table_column = 0
 value = "AInv,A;Cy"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Hmkg]
 parent_id = 'Hmkg'  # Mountain King
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Hmkg.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -191,7 +199,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Hmkg.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -199,10 +207,11 @@ table_column = 0
 value = "AInv,A;Cz"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Hblm]
 parent_id = 'Hblm'  # Blood Mage
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Hblm.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -210,7 +219,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Hblm.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -218,10 +227,11 @@ table_column = 0
 value = "AInv,Asph,A;CA"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Udea]
 parent_id = 'Udea'  # Death Knight
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Udea.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -229,7 +239,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Udea.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -237,10 +247,11 @@ table_column = 0
 value = "AInv,A;CF"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Ulic]
 parent_id = 'Ulic'  # Lich
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Ulic.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -248,7 +259,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Ulic.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -256,10 +267,11 @@ table_column = 0
 value = "AInv,A;CG"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Udre]
 parent_id = 'Udre'  # Dreadlord
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Udre.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -267,7 +279,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Udre.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -275,10 +287,11 @@ table_column = 0
 value = "AInv,A;CH"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Ucrl]
 parent_id = 'Ucrl'  # Crypt Lord
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Ucrl.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -286,7 +299,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Ucrl.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -294,10 +307,11 @@ table_column = 0
 value = "AInv,A;CI"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Obla]
 parent_id = 'Obla'  # Blademaster
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Obla.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -305,7 +319,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Obla.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -313,10 +327,11 @@ table_column = 0
 value = "AInv,A;CB"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Ofar]
 parent_id = 'Ofar'  # Far Seer
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Ofar.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -324,7 +339,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Ofar.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -332,10 +347,11 @@ table_column = 0
 value = "AInv,A;CC"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Otch]
 parent_id = 'Otch'  # Tauren Chieftain
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Otch.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -343,7 +359,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Otch.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -351,10 +367,11 @@ table_column = 0
 value = "AInv,A;CD"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Oshd]
 parent_id = 'Oshd'  # Shadow Hunter
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Oshd.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -362,7 +379,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Oshd.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -370,10 +387,11 @@ table_column = 0
 value = "AInv,A;CE"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Emoo]
 parent_id = 'Emoo'  # Priestess of the Moon
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Emoo.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -381,7 +399,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Emoo.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -389,10 +407,11 @@ table_column = 0
 value = "Ashm,AInv,Ault,A;CJ"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Ekee]
 parent_id = 'Ekee'  # Keeper of the Grove
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Ekee.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -400,7 +419,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Ekee.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -408,10 +427,11 @@ table_column = 0
 value = "AInv,Ault,A;CK"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Edem]
 parent_id = 'Edem'  # Demon Hunter
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Edem.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -419,7 +439,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Edem.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -427,10 +447,11 @@ table_column = 0
 value = "AInv,Ault,A;CL"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Ewar]
 parent_id = 'Ewar'  # Warden
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Ewar.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -438,7 +459,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Ewar.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -446,10 +467,11 @@ table_column = 0
 value = "Ashm,AInv,Ault,A;CM"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nalc]
 parent_id = 'Nalc'  # Alchemist
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nalc.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -457,7 +479,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Nalc.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -465,10 +487,11 @@ table_column = 0
 value = "AInv,A;CN"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nbst]
 parent_id = 'Nbst'  # Beastmaster
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nbst.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -476,7 +499,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Nbst.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -484,10 +507,11 @@ table_column = 0
 value = "AInv,A;CQ"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nbrn]
 parent_id = 'Nbrn'  # Dark Ranger
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nbrn.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -495,7 +519,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Nbrn.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -503,10 +527,11 @@ table_column = 0
 value = "AInv,A;CR"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nfir]
 parent_id = 'Nfir'  # Firelord
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nfir.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -514,7 +539,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Nfir.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -522,10 +547,11 @@ table_column = 0
 value = "AInv,A;CS"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Ntin]
 parent_id = 'Ntin'  # Tinker
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Ntin.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -533,7 +559,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Ntin.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -541,10 +567,11 @@ table_column = 0
 value = "AInv,A;CP"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nngs]
 parent_id = 'Nngs'  # Naga Sea Witch
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nngs.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -552,7 +579,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Nngs.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -560,10 +587,11 @@ table_column = 0
 value = "AInv,A;CO"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Npbm]
 parent_id = 'Npbm'  # Pandaren Brewmaster
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Npbm.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -571,7 +599,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Npbm.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -579,10 +607,11 @@ table_column = 0
 value = "AInv,A;CT"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nplh]
 parent_id = 'Nplh'  # Pit Lord
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nplh.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -590,7 +619,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Nplh.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -598,10 +627,11 @@ table_column = 0
 value = "AInv,A;CU"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Naka]
 parent_id = 'Naka'  # Elder Sage
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Naka.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -609,7 +639,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Naka.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -617,10 +647,11 @@ table_column = 0
 value = "AInv,Apiv,Ahid,A;Cj"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Ekgg]
 parent_id = 'Ekgg'  # Keeper of the Grove
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Ekgg.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -628,7 +659,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Ekgg.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -636,10 +667,11 @@ table_column = 0
 value = "AInv,Ault,A;Ct"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nith]
 parent_id = 'nith'  # Ice Troll High Priest
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nith.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -647,7 +679,7 @@ table_column = 0
 value = 55
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nith.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -655,10 +687,11 @@ table_column = 0
 value = 4
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nitp]
 parent_id = 'nitp'  # Ice Troll Priest
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nitp.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -666,7 +699,7 @@ table_column = 0
 value = 30
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nitp.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -674,10 +707,11 @@ table_column = 0
 value = 2
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nitr]
 parent_id = 'nitr'  # Ice Troll
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nitr.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -685,7 +719,7 @@ table_column = 0
 value = 30
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nitr.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -693,10 +727,11 @@ table_column = 0
 value = 2
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nitw]
 parent_id = 'nitw'  # Ice Troll Warlord
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nitw.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -704,7 +739,7 @@ table_column = 0
 value = 85
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nitw.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -712,10 +747,11 @@ table_column = 0
 value = 6
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nnwl]
 parent_id = 'nnwl'  # Nerubian Webspinner
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nnwl.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -723,7 +759,7 @@ table_column = 0
 value = 40
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nnwl.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -731,10 +767,11 @@ table_column = 0
 value = 3
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nnwr]
 parent_id = 'nnwr'  # Nerubian Seer
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nnwr.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -742,7 +779,7 @@ table_column = 0
 value = 70
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nnwr.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -750,10 +787,11 @@ table_column = 0
 value = 5
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nnws]
 parent_id = 'nnws'  # Nerubian Spider Lord
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nnws.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -761,7 +799,7 @@ table_column = 0
 value = 70
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nnws.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -769,10 +807,11 @@ table_column = 0
 value = 5
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nskm]
 parent_id = 'nskm'  # Skeletal Marksman
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nskm.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -780,7 +819,7 @@ table_column = 0
 value = 40
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nskm.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -788,10 +827,11 @@ table_column = 0
 value = 3
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nspd]
 parent_id = 'nspd'  # Spiderling
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nspd.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -799,10 +839,11 @@ table_column = 0
 value = 25
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nwen]
 parent_id = 'nwen'  # Wendigo
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nwen.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -810,7 +851,7 @@ table_column = 0
 value = 55
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nwen.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -818,10 +859,11 @@ table_column = 0
 value = 4
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nwnr]
 parent_id = 'nwnr'  # Elder Wendigo
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nwnr.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -829,7 +871,7 @@ table_column = 0
 value = 85
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nwnr.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -837,10 +879,11 @@ table_column = 0
 value = 6
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nwns]
 parent_id = 'nwns'  # Wendigo Shaman
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nwns.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -848,7 +891,7 @@ table_column = 0
 value = 100
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nwns.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -856,10 +899,11 @@ table_column = 0
 value = 7
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nwwd]
 parent_id = 'nwwd'  # Dire Frost Wolf
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nwwd.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -867,7 +911,7 @@ table_column = 0
 value = 85
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nwwd.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -875,10 +919,11 @@ table_column = 0
 value = 6
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nwwf]
 parent_id = 'nwwf'  # Frost Wolf
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nwwf.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -886,7 +931,7 @@ table_column = 0
 value = 30
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nwwf.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -894,10 +939,11 @@ table_column = 0
 value = 2
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nwwg]
 parent_id = 'nwwg'  # Giant Frost Wolf
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nwwg.modifications]]
 modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
@@ -905,7 +951,7 @@ table_column = 0
 value = 55
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nwwg.modifications]]
 modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
@@ -913,10 +959,11 @@ table_column = 0
 value = 4
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.nmr7]
 parent_id = 'nmr7'  # Mercenary Camp
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.nmr7.modifications]]
 modification_id = 'useu'  # Profile.Units Sold
 data_type = "String"
 variation_level = 0
@@ -924,7 +971,7 @@ table_column = 0
 value = ""
 object_id = 'nmr7'  # Mercenary Camp
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.nmr7.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -932,10 +979,11 @@ table_column = 0
 value = "Ane2,Asid,Asud,Avul"
 object_id = 'nmr7'  # Mercenary Camp
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Hart]
 parent_id = 'Hart'  # Paladin
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Hart.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -943,10 +991,11 @@ table_column = 0
 value = "AInv,A;C0"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Hjai]
 parent_id = 'Hjai'  # Archmage
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Hjai.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -954,10 +1003,11 @@ table_column = 0
 value = "AInv,A;C1"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Hmbr]
 parent_id = 'Hmbr'  # Mountain King
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Hmbr.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -965,10 +1015,11 @@ table_column = 0
 value = "AInv,A;C2"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Huth]
 parent_id = 'Huth'  # Paladin
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Huth.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -976,10 +1027,11 @@ table_column = 0
 value = "AInv,A;Co"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Hkal]
 parent_id = 'Hkal'  # Blood Mage
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Hkal.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -987,10 +1039,11 @@ table_column = 0
 value = "AInv,Asph,A;Cg"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Hant]
 parent_id = 'Hant'  # Archmage
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Hant.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -998,10 +1051,11 @@ table_column = 0
 value = "AInv,A;Cq"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Hlgr]
 parent_id = 'Hlgr'  # Dark Knight
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Hlgr.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1009,10 +1063,11 @@ table_column = 0
 value = "AInv,A;Ck"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Udth]
 parent_id = 'Udth'  # Dreadlord
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Udth.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1020,10 +1075,11 @@ table_column = 0
 value = "AInv,A;Cm"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Othr]
 parent_id = 'Othr'  # Far Seer
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Othr.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1031,10 +1087,11 @@ table_column = 0
 value = "AInv,A;C3"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nbbc]
 parent_id = 'Nbbc'  # Blademaster
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nbbc.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1042,10 +1099,11 @@ table_column = 0
 value = "AInv,A;Cr"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Uear]
 parent_id = 'Uear'  # Death Knight
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Uear.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1053,10 +1111,11 @@ table_column = 0
 value = "AInv,A;C6"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Uvar]
 parent_id = 'Uvar'  # Dreadlord
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Uvar.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1064,10 +1123,11 @@ table_column = 0
 value = "AInv,A;C9"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Uktl]
 parent_id = 'Uktl'  # Lich
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Uktl.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1075,10 +1135,11 @@ table_column = 0
 value = "AInv,A;C7"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Uanb]
 parent_id = 'Uanb'  # Crypt Lord
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Uanb.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1086,10 +1147,11 @@ table_column = 0
 value = "AInv,A;Ca"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Ocbh]
 parent_id = 'Ocbh'  # Tauren Chieftain
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Ocbh.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1097,10 +1159,11 @@ table_column = 0
 value = "AInv,A;C4"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Orkn]
 parent_id = 'Orkn'  # Shadow Hunter
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Orkn.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1108,7 +1171,7 @@ table_column = 0
 value = "AInv,A;Cv"
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Orkn.modifications]]
 modification_id = 'uhab'  # UnitAbilities.Hero
 data_type = "String"
 variation_level = 0
@@ -1116,7 +1179,7 @@ table_column = 0
 value = "AOhw,AOhx,AOsw,AOls"
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Orkn.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -1124,10 +1187,11 @@ table_column = 0
 value = "Cunning Hero, adept at healing magics and voodoo curses. Can learn Healing Wave, Hex, Serpent Ward and Voodoo Spirits. |n|n|cffffcc00Attacks land and air units.|r"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Orex]
 parent_id = 'Orex'  # Beastmaster
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Orex.modifications]]
 modification_id = 'uhab'  # UnitAbilities.Hero
 data_type = "String"
 variation_level = 0
@@ -1135,7 +1199,7 @@ table_column = 0
 value = "Arsg,ANsq,AHtb,ANst"
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Orex.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -1143,7 +1207,7 @@ table_column = 0
 value = "Warrior Hero, adept at summoning beasts into battle. Can learn Summon Misha, Summon Quilbeast, Storm Bolt, and Stampede. |n|n|cffffcc00Attacks land and air units.|r"
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.Orex.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1151,10 +1215,11 @@ table_column = 0
 value = "AInv,A;Cu"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Hvwd]
 parent_id = 'Hvwd'  # Ranger
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Hvwd.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1162,10 +1227,11 @@ table_column = 0
 value = "AInv,Ault,A;Cp"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Hgam]
 parent_id = 'Hgam'  # Ghostly Archmage
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Hgam.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1173,10 +1239,11 @@ table_column = 0
 value = "AInv,A;Cs"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Usyl]
 parent_id = 'Usyl'  # Dark Ranger
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Usyl.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1184,10 +1251,11 @@ table_column = 0
 value = "AInv,A;C8"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.hgry]
 parent_id = 'hgry'  # Gryphon Rider
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.hgry.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -1195,7 +1263,7 @@ table_column = 0
 value = "magic"
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.hgry.modifications]]
 modification_id = 'ua2t'  # UnitWeapons.Attack 2 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -1203,10 +1271,11 @@ table_column = 0
 value = "magic"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.ufro]
 parent_id = 'ufro'  # Frost Wyrm
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.ufro.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -1214,7 +1283,7 @@ table_column = 0
 value = "magic"
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.ufro.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -1222,7 +1291,7 @@ table_column = 0
 value = 91
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.ufro.modifications]]
 modification_id = 'ua1s'  # UnitWeapons.Attack 1 - Damage Sides per Die
 data_type = "Integer"
 variation_level = 0
@@ -1230,7 +1299,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[blizzard_objects.entities.modifications]]
+[[blizzard_objects.ufro.modifications]]
 modification_id = 'ua2t'  # UnitWeapons.Attack 2 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -1238,10 +1307,11 @@ table_column = 0
 value = "magic"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Ogrh]
 parent_id = 'Ogrh'  # Blademaster
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Ogrh.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1249,10 +1319,11 @@ table_column = 0
 value = "AInv,Sca6"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Edmm]
 parent_id = 'Edmm'  # Demon Hunter
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Edmm.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -1260,10 +1331,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nalm]
 parent_id = 'Nalm'  # Alchemist
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nalm.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -1271,10 +1343,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nal2]
 parent_id = 'Nal2'  # Alchemist
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nal2.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -1282,10 +1355,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nal3]
 parent_id = 'Nal3'  # Alchemist
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nal3.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -1293,10 +1367,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Nrob]
 parent_id = 'Nrob'  # Tinker
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Nrob.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -1304,10 +1379,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Etyr]
 parent_id = 'Etyr'  # Priestess of the Moon
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Etyr.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1315,10 +1391,11 @@ table_column = 0
 value = "Ashm,AInv,Ault,A;Cb"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Efur]
 parent_id = 'Efur'  # Keeper of the Grove
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Efur.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1326,10 +1403,11 @@ table_column = 0
 value = "AInv,Ault,A;Cc"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Emfr]
 parent_id = 'Emfr'  # Keeper of the Grove
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Emfr.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1337,10 +1415,11 @@ table_column = 0
 value = "AInv,Ault,A;Cf"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Eill]
 parent_id = 'Eill'  # Demon Hunter
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Eill.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1348,10 +1427,11 @@ table_column = 0
 value = "AInv,Ault,A;Cd"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Eevi]
 parent_id = 'Eevi'  # Demon Hunter
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Eevi.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1359,10 +1439,11 @@ table_column = 0
 value = "AInv,Ault,ANcl,A;Ci"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Ewrd]
 parent_id = 'Ewrd'  # Warden
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Ewrd.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1370,10 +1451,11 @@ table_column = 0
 value = "Ashm,AInv,Ault,A;Ce"
 object_id = 'null'
 
-[[blizzard_objects.entities]]
+[blizzard_objects.Hvsh]
 parent_id = 'Hvsh'  # Naga Sea Witch
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.Hvsh.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1381,11 +1463,12 @@ table_column = 0
 value = "AInv,A;Ch"
 object_id = 'null'
 
-[map_objects]
-[[map_objects.entities]]
+
+[map_objects.nC00]
 parent_id = 'nrvi'  # Ice Revenant
 entity_id = 'nC00'
-[[map_objects.entities.modifications]]
+
+[[map_objects.nC00.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1393,7 +1476,7 @@ table_column = 0
 value = "The Guardian"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC00.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -1401,7 +1484,7 @@ table_column = 0
 value = 1.600000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC00.modifications]]
 modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
 data_type = "Integer"
 variation_level = 0
@@ -1409,7 +1492,7 @@ table_column = 0
 value = 2000
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC00.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -1417,7 +1500,7 @@ table_column = 0
 value = 64
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC00.modifications]]
 modification_id = 'ua1s'  # UnitWeapons.Attack 1 - Damage Sides per Die
 data_type = "Integer"
 variation_level = 0
@@ -1425,7 +1508,7 @@ table_column = 0
 value = 16
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC00.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1433,7 +1516,7 @@ table_column = 0
 value = "ACfa,ACfn"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC00.modifications]]
 modification_id = 'ulev'  # UnitBalance.Level
 data_type = "Integer"
 variation_level = 0
@@ -1441,7 +1524,7 @@ table_column = 0
 value = 10
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC00.modifications]]
 modification_id = 'udef'  # UnitBalance.Defense Base
 data_type = "Integer"
 variation_level = 0
@@ -1449,7 +1532,7 @@ table_column = 0
 value = 6
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC00.modifications]]
 modification_id = 'uacq'  # UnitWeapons.Acquisition Range
 data_type = "Unreal"
 variation_level = 0
@@ -1457,7 +1540,7 @@ table_column = 0
 value = 1000.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC00.modifications]]
 modification_id = 'usin'  # UnitBalance.Sight Radius (Night)
 data_type = "Integer"
 variation_level = 0
@@ -1465,7 +1548,7 @@ table_column = 0
 value = 1200
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC00.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -1473,10 +1556,11 @@ table_column = 0
 value = "Medium"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.nC01]
 parent_id = 'nrvi'  # Ice Revenant
 entity_id = 'nC01'
-[[map_objects.entities.modifications]]
+
+[[map_objects.nC01.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1484,7 +1568,7 @@ table_column = 0
 value = "The Guardian"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC01.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -1492,7 +1576,7 @@ table_column = 0
 value = "Hard"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC01.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -1500,7 +1584,7 @@ table_column = 0
 value = 1.600000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC01.modifications]]
 modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
 data_type = "Integer"
 variation_level = 0
@@ -1508,7 +1592,7 @@ table_column = 0
 value = 2400
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC01.modifications]]
 modification_id = 'udef'  # UnitBalance.Defense Base
 data_type = "Integer"
 variation_level = 0
@@ -1516,7 +1600,7 @@ table_column = 0
 value = 6
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC01.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -1524,7 +1608,7 @@ table_column = 0
 value = 70
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC01.modifications]]
 modification_id = 'ua1s'  # UnitWeapons.Attack 1 - Damage Sides per Die
 data_type = "Integer"
 variation_level = 0
@@ -1532,7 +1616,7 @@ table_column = 0
 value = 15
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC01.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1540,7 +1624,7 @@ table_column = 0
 value = "ACfa,ACfn"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC01.modifications]]
 modification_id = 'uacq'  # UnitWeapons.Acquisition Range
 data_type = "Unreal"
 variation_level = 0
@@ -1548,7 +1632,7 @@ table_column = 0
 value = 1000.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC01.modifications]]
 modification_id = 'usin'  # UnitBalance.Sight Radius (Night)
 data_type = "Integer"
 variation_level = 0
@@ -1556,7 +1640,7 @@ table_column = 0
 value = 1200
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.nC01.modifications]]
 modification_id = 'ulev'  # UnitBalance.Level
 data_type = "Integer"
 variation_level = 0
@@ -1564,10 +1648,11 @@ table_column = 0
 value = 10
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.hA00]
 parent_id = 'hmil'  # Militia
 entity_id = 'hA00'
-[[map_objects.entities.modifications]]
+
+[[map_objects.hA00.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -1575,7 +1660,7 @@ table_column = 0
 value = "Irregular"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.hA00.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -1583,7 +1668,7 @@ table_column = 0
 value = 9
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.hA00.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1591,7 +1676,7 @@ table_column = 0
 value = "APPh"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.hA00.modifications]]
 modification_id = 'udaa'  # UnitAbilities.Default Active Ability
 data_type = "String"
 variation_level = 0
@@ -1599,7 +1684,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.hA00.modifications]]
 modification_id = 'ubui'  # Profile.Structures Built
 data_type = "String"
 variation_level = 0
@@ -1607,7 +1692,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.hA00.modifications]]
 modification_id = 'umpm'  # UnitBalance.Mana Maximum
 data_type = "Integer"
 variation_level = 0
@@ -1615,10 +1700,11 @@ table_column = 0
 value = 1
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE01]
 parent_id = 'Hjai'  # Archmage
 entity_id = 'HE01'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE01.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -1626,7 +1712,7 @@ table_column = 0
 value = "apimports\\eviljaina.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE01.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -1634,7 +1720,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE01.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -1642,7 +1728,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE01.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -1650,7 +1736,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE01.modifications]]
 modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
 data_type = "String"
 variation_level = 0
@@ -1658,7 +1744,7 @@ table_column = 0
 value = "Abilities\\Weapons\\RedDragonBreath\\RedDragonMissile.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE01.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -1666,10 +1752,11 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE02]
 parent_id = 'Hmbr'  # Mountain King
 entity_id = 'HE02'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE02.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -1677,7 +1764,7 @@ table_column = 0
 value = "apimports\\evilmuradin.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE02.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -1685,7 +1772,7 @@ table_column = 0
 value = 1.25
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE02.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -1693,7 +1780,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE02.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -1701,7 +1788,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE02.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -1709,10 +1796,11 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0z]
 parent_id = 'Hmkg'  # Mountain King
 entity_id = 'HE0z'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0z.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -1720,7 +1808,7 @@ table_column = 0
 value = "apimports\\evilmuradin.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0z.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -1728,7 +1816,7 @@ table_column = 0
 value = 1.25
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0z.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -1736,7 +1824,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0z.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -1744,7 +1832,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0z.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -1752,7 +1840,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0z.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -1760,10 +1848,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0o]
 parent_id = 'Huth'  # Paladin
 entity_id = 'HE0o'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0o.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -1771,7 +1860,7 @@ table_column = 0
 value = "apimports\\evilpaladin.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0o.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -1779,7 +1868,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0o.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -1787,7 +1876,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0o.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -1795,7 +1884,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0o.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -1803,10 +1892,11 @@ table_column = 0
 value = 1.2000000476837158
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0x]
 parent_id = 'Hpal'  # Paladin
 entity_id = 'HE0x'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0x.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -1814,7 +1904,7 @@ table_column = 0
 value = "apimports\\evilpaladin.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0x.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -1822,7 +1912,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0x.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -1830,7 +1920,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0x.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -1838,7 +1928,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0x.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -1846,7 +1936,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0x.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -1854,10 +1944,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0g]
 parent_id = 'Hkal'  # Blood Mage
 entity_id = 'HE0g'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0g.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -1865,7 +1956,7 @@ table_column = 0
 value = "apimports\\evilkael.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0g.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -1873,7 +1964,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0g.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -1881,7 +1972,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0g.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -1889,7 +1980,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0g.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -1897,7 +1988,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0g.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1905,7 +1996,7 @@ table_column = 0
 value = "AInv,A;00"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0g.modifications]]
 modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
 data_type = "String"
 variation_level = 0
@@ -1913,10 +2004,11 @@ table_column = 0
 value = "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile.mdl"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0A]
 parent_id = 'Hblm'  # Blood Mage
 entity_id = 'HE0A'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0A.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -1924,7 +2016,7 @@ table_column = 0
 value = "apimports\\evilkael.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0A.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -1932,7 +2024,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0A.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -1940,7 +2032,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0A.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -1948,7 +2040,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0A.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -1956,7 +2048,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0A.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -1964,7 +2056,7 @@ table_column = 0
 value = "AInv,A;00"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0A.modifications]]
 modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
 data_type = "String"
 variation_level = 0
@@ -1972,7 +2064,7 @@ table_column = 0
 value = "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0A.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -1980,10 +2072,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0q]
 parent_id = 'Hant'  # Archmage
 entity_id = 'HE0q'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0q.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -1991,7 +2084,7 @@ table_column = 0
 value = "apimports\\evilarchmage.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0q.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -1999,7 +2092,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0q.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2007,7 +2100,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0q.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -2015,7 +2108,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0q.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -2023,7 +2116,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0q.modifications]]
 modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
 data_type = "String"
 variation_level = 0
@@ -2031,10 +2124,11 @@ table_column = 0
 value = "Abilities\\Weapons\\RedDragonBreath\\RedDragonMissile.mdl"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0y]
 parent_id = 'Hamg'  # Archmage
 entity_id = 'HE0y'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0y.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -2042,7 +2136,7 @@ table_column = 0
 value = "apimports\\evilarchmage.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0y.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -2050,7 +2144,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0y.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2058,7 +2152,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0y.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -2066,7 +2160,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0y.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -2074,7 +2168,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0y.modifications]]
 modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
 data_type = "String"
 variation_level = 0
@@ -2082,7 +2176,7 @@ table_column = 0
 value = "Abilities\\Weapons\\RedDragonBreath\\RedDragonMissile.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0y.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -2090,10 +2184,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0k]
 parent_id = 'Hlgr'  # Dark Knight
 entity_id = 'HE0k'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0k.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -2101,7 +2196,7 @@ table_column = 0
 value = "apimports\\evilgarithos.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0k.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -2109,7 +2204,7 @@ table_column = 0
 value = 1.350000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0k.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2117,7 +2212,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0k.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -2125,7 +2220,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0k.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -2133,10 +2228,11 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0m]
 parent_id = 'Udth'  # Dreadlord
 entity_id = 'HE0m'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0m.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -2144,7 +2240,7 @@ table_column = 0
 value = "apimports\\evildreadlord.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0m.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -2152,7 +2248,7 @@ table_column = 0
 value = 1.5499999523162842
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0m.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2160,7 +2256,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0m.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -2168,7 +2264,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0m.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -2176,10 +2272,11 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0H]
 parent_id = 'Udre'  # Dreadlord
 entity_id = 'HE0H'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0H.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -2187,7 +2284,7 @@ table_column = 0
 value = "apimports\\evildreadlord.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0H.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -2195,7 +2292,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0H.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2203,7 +2300,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0H.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -2211,7 +2308,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0H.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -2219,7 +2316,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0H.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -2227,10 +2324,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE03]
 parent_id = 'Othr'  # Far Seer
 entity_id = 'HE03'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE03.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -2238,7 +2336,7 @@ table_column = 0
 value = "apimports\\evilthrall.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE03.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -2246,7 +2344,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE03.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2254,7 +2352,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE03.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -2262,7 +2360,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE03.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -2270,7 +2368,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE03.modifications]]
 modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
 data_type = "String"
 variation_level = 0
@@ -2278,10 +2376,11 @@ table_column = 0
 value = "Abilities\\Weapons\\GreenDragonMissile\\GreenDragonMissile.mdl"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0C]
 parent_id = 'Ofar'  # Far Seer
 entity_id = 'HE0C'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0C.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -2289,7 +2388,7 @@ table_column = 0
 value = "apimports\\evilfarseer.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0C.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -2297,7 +2396,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0C.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2305,7 +2404,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0C.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -2313,7 +2412,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0C.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -2321,7 +2420,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0C.modifications]]
 modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
 data_type = "String"
 variation_level = 0
@@ -2329,7 +2428,7 @@ table_column = 0
 value = "Abilities\\Weapons\\RedDragonBreath\\RedDragonMissile.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0C.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -2337,10 +2436,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0B]
 parent_id = 'Obla'  # Blademaster
 entity_id = 'HE0B'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0B.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -2348,7 +2448,7 @@ table_column = 0
 value = "apimports\\evilblademaster.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0B.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -2356,7 +2456,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0B.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2364,7 +2464,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0B.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -2372,7 +2472,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0B.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -2380,7 +2480,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0B.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -2388,10 +2488,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0r]
 parent_id = 'Nbbc'  # Blademaster
 entity_id = 'HE0r'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0r.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -2399,7 +2500,7 @@ table_column = 0
 value = "apimports\\evilchaosblademaster.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0r.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -2407,7 +2508,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0r.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2415,7 +2516,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0r.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -2423,7 +2524,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0r.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -2431,10 +2532,11 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE06]
 parent_id = 'Uear'  # Death Knight
 entity_id = 'HE06'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE06.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -2442,7 +2544,7 @@ table_column = 0
 value = "apimports\\evilundeadarthas.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE06.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -2450,7 +2552,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE06.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2458,7 +2560,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE06.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -2466,7 +2568,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE06.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -2474,10 +2576,11 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0F]
 parent_id = 'Udea'  # Death Knight
 entity_id = 'HE0F'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0F.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -2485,7 +2588,7 @@ table_column = 0
 value = "apimports\\evildeathknight.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0F.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -2493,7 +2596,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0F.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2501,7 +2604,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0F.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -2509,7 +2612,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0F.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -2517,7 +2620,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0F.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -2525,10 +2628,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE09]
 parent_id = 'Uvar'  # Dreadlord
 entity_id = 'HE09'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE09.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -2536,7 +2640,7 @@ table_column = 0
 value = "apimports\\eviltichondrius.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE09.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -2544,7 +2648,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE09.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2552,7 +2656,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE09.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -2560,7 +2664,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE09.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -2568,10 +2672,11 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE07]
 parent_id = 'Uktl'  # Lich
 entity_id = 'HE07'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE07.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -2579,7 +2684,7 @@ table_column = 0
 value = "apimports\\evillich.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE07.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -2587,7 +2692,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE07.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2595,7 +2700,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE07.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -2603,7 +2708,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE07.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -2611,7 +2716,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE07.modifications]]
 modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
 data_type = "String"
 variation_level = 0
@@ -2619,10 +2724,11 @@ table_column = 0
 value = "Abilities\\Weapons\\KeeperGroveMissile\\KeeperGroveMissile.mdl"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0G]
 parent_id = 'Ulic'  # Lich
 entity_id = 'HE0G'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0G.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -2630,7 +2736,7 @@ table_column = 0
 value = "apimports\\evillich.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0G.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -2638,7 +2744,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0G.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2646,7 +2752,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0G.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -2654,7 +2760,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0G.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -2662,7 +2768,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0G.modifications]]
 modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
 data_type = "String"
 variation_level = 0
@@ -2670,7 +2776,7 @@ table_column = 0
 value = "Abilities\\Weapons\\KeeperGroveMissile\\KeeperGroveMissile.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0G.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -2678,10 +2784,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0a]
 parent_id = 'Uanb'  # Crypt Lord
 entity_id = 'HE0a'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0a.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -2689,7 +2796,7 @@ table_column = 0
 value = "apimports\\evilcryptlord.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0a.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -2697,7 +2804,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0a.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2705,7 +2812,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0a.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -2713,7 +2820,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0a.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -2721,10 +2828,11 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0I]
 parent_id = 'Ucrl'  # Crypt Lord
 entity_id = 'HE0I'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0I.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -2732,7 +2840,7 @@ table_column = 0
 value = "apimports\\evilcryptlord.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0I.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -2740,7 +2848,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0I.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2748,7 +2856,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0I.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -2756,7 +2864,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0I.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -2764,7 +2872,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0I.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -2772,10 +2880,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE04]
 parent_id = 'Ocbh'  # Tauren Chieftain
 entity_id = 'HE04'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE04.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -2783,7 +2892,7 @@ table_column = 0
 value = "apimports\\eviltaurenchieftain.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE04.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -2791,7 +2900,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE04.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2799,7 +2908,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE04.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -2807,7 +2916,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE04.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -2815,10 +2924,11 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0D]
 parent_id = 'Otch'  # Tauren Chieftain
 entity_id = 'HE0D'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0D.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -2826,7 +2936,7 @@ table_column = 0
 value = "apimports\\eviltaurenchieftain.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0D.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2834,7 +2944,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0D.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -2842,7 +2952,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0D.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -2850,7 +2960,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0D.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -2858,7 +2968,7 @@ table_column = 0
 value = 1.2000000476837158
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0D.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -2866,10 +2976,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0v]
 parent_id = 'Orkn'  # Shadow Hunter
 entity_id = 'HE0v'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0v.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -2877,7 +2988,7 @@ table_column = 0
 value = "apimports\\evilshadowhunter.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0v.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -2885,7 +2996,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0v.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2893,7 +3004,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0v.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -2901,7 +3012,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0v.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -2909,7 +3020,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0v.modifications]]
 modification_id = 'uhab'  # UnitAbilities.Hero
 data_type = "String"
 variation_level = 0
@@ -2917,7 +3028,7 @@ table_column = 0
 value = "AOhw,AOhx,AOsw,AOls"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0v.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -2925,10 +3036,11 @@ table_column = 0
 value = "Cunning Hero, adept at healing magics and voodoo curses. Can learn Healing Wave, Hex, Serpent Ward and Voodoo Spirits. |n|n|cffffcc00Attacks land and air units.|r"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0E]
 parent_id = 'Oshd'  # Shadow Hunter
 entity_id = 'HE0E'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0E.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -2936,7 +3048,7 @@ table_column = 0
 value = "apimports\\evilshadowhunter.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0E.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -2944,7 +3056,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0E.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -2952,7 +3064,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0E.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -2960,7 +3072,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0E.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -2968,7 +3080,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0E.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -2976,10 +3088,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0p]
 parent_id = 'Hvwd'  # Ranger
 entity_id = 'HE0p'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0p.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -2987,7 +3100,7 @@ table_column = 0
 value = "apimports\\evilsylvanasranger.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0p.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -2995,7 +3108,7 @@ table_column = 0
 value = 1.2000000476837158
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0p.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3003,7 +3116,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0p.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3011,7 +3124,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0p.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3019,10 +3132,11 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0s]
 parent_id = 'Hgam'  # Ghostly Archmage
 entity_id = 'HE0s'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0s.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -3030,7 +3144,7 @@ table_column = 0
 value = "apimports\\evilarchmageghost.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0s.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -3038,7 +3152,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0s.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3046,7 +3160,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0s.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3054,7 +3168,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0s.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3062,7 +3176,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0s.modifications]]
 modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
 data_type = "String"
 variation_level = 0
@@ -3070,10 +3184,11 @@ table_column = 0
 value = "Abilities\\Weapons\\DemonHunterMissile\\DemonHunterMissile.mdl"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0u]
 parent_id = 'Orex'  # Beastmaster
 entity_id = 'HE0u'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0u.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -3081,7 +3196,7 @@ table_column = 0
 value = "apimports\\evilrexxar.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0u.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -3089,7 +3204,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0u.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3097,7 +3212,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0u.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3105,7 +3220,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0u.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3113,7 +3228,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0u.modifications]]
 modification_id = 'uhab'  # UnitAbilities.Hero
 data_type = "String"
 variation_level = 0
@@ -3121,7 +3236,7 @@ table_column = 0
 value = "Arsg,ANsq,AHtb,ANst"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0u.modifications]]
 modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
@@ -3129,10 +3244,11 @@ table_column = 0
 value = "Warrior Hero, adept at summoning beasts into battle. Can learn Summon Misha, Summon Quilbeast, Storm Bolt, and Stampede. |n|n|cffffcc00Attacks land and air units.|r"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0Q]
 parent_id = 'Nbst'  # Beastmaster
 entity_id = 'HE0Q'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0Q.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -3140,7 +3256,7 @@ table_column = 0
 value = "apimports\\evilrexxar.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0Q.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -3148,7 +3264,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0Q.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3156,7 +3272,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0Q.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3164,7 +3280,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0Q.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3172,7 +3288,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0Q.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -3180,10 +3296,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE08]
 parent_id = 'Usyl'  # Dark Ranger
 entity_id = 'HE08'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE08.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -3191,7 +3308,7 @@ table_column = 0
 value = "apimports\\evilundeadsylvanas.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE08.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -3199,7 +3316,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE08.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3207,7 +3324,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE08.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3215,7 +3332,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE08.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3223,10 +3340,11 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0R]
 parent_id = 'Nbrn'  # Dark Ranger
 entity_id = 'HE0R'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0R.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -3234,7 +3352,7 @@ table_column = 0
 value = "apimports\\evilundeadsylvanas.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0R.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -3242,7 +3360,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0R.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3250,7 +3368,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0R.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3258,7 +3376,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0R.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3266,7 +3384,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0R.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -3274,10 +3392,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0U]
 parent_id = 'Nplh'  # Pit Lord
 entity_id = 'HE0U'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0U.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -3285,7 +3404,7 @@ table_column = 0
 value = "apimports\\evilpitlord.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0U.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -3293,7 +3412,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0U.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3301,7 +3420,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0U.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3309,7 +3428,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0U.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3317,7 +3436,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0U.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -3325,10 +3444,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0j]
 parent_id = 'Naka'  # Elder Sage
 entity_id = 'HE0j'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0j.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -3336,7 +3456,7 @@ table_column = 0
 value = "apimports\\evilakama.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0j.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -3344,7 +3464,7 @@ table_column = 0
 value = 1.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0j.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3352,7 +3472,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0j.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3360,7 +3480,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0j.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3368,7 +3488,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0j.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -3376,10 +3496,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0b]
 parent_id = 'Etyr'  # Priestess of the Moon
 entity_id = 'HE0b'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0b.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -3387,7 +3508,7 @@ table_column = 0
 value = "apimports\\evilpriestessofthemoon.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0b.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -3395,7 +3516,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0b.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3403,7 +3524,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0b.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3411,7 +3532,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0b.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3419,10 +3540,11 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0c]
 parent_id = 'Efur'  # Keeper of the Grove
 entity_id = 'HE0c'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0c.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -3430,7 +3552,7 @@ table_column = 0
 value = "apimports\\evilfurion.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0c.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -3438,7 +3560,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0c.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3446,7 +3568,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0c.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3454,7 +3576,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0c.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3462,7 +3584,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0c.modifications]]
 modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
 data_type = "String"
 variation_level = 0
@@ -3470,10 +3592,11 @@ table_column = 0
 value = "Abilities\\Weapons\\BlackKeeperMissile\\BlackKeeperMissile.mdl"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0f]
 parent_id = 'Emfr'  # Keeper of the Grove
 entity_id = 'HE0f'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0f.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -3481,7 +3604,7 @@ table_column = 0
 value = "apimports\\evilmalfurion.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0f.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -3489,7 +3612,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0f.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3497,7 +3620,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0f.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3505,7 +3628,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0f.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3513,7 +3636,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0f.modifications]]
 modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
 data_type = "String"
 variation_level = 0
@@ -3521,10 +3644,11 @@ table_column = 0
 value = "Abilities\\Weapons\\BlackKeeperMissile\\BlackKeeperMissile.mdl"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0d]
 parent_id = 'Eill'  # Demon Hunter
 entity_id = 'HE0d'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0d.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -3532,7 +3656,7 @@ table_column = 0
 value = "units\\nightelf\\EvilIllidan\\IllidanEvil.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0d.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -3540,7 +3664,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0d.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3548,7 +3672,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0d.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3556,7 +3680,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0d.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3564,10 +3688,11 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0i]
 parent_id = 'Eevi'  # Demon Hunter
 entity_id = 'HE0i'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0i.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -3575,7 +3700,7 @@ table_column = 0
 value = "apimports\\evildemonillidan.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0i.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -3583,7 +3708,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0i.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3591,7 +3716,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0i.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3599,7 +3724,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0i.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3607,10 +3732,11 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0e]
 parent_id = 'Ewrd'  # Warden
 entity_id = 'HE0e'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0e.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -3618,7 +3744,7 @@ table_column = 0
 value = "apimports\\evilmaiev.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0e.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -3626,7 +3752,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0e.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3634,7 +3760,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0e.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3642,7 +3768,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0e.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3650,10 +3776,11 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0t]
 parent_id = 'Ekgg'  # Keeper of the Grove
 entity_id = 'HE0t'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0t.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -3661,7 +3788,7 @@ table_column = 0
 value = "apimports\\evilkeeperofthegroveghost.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0t.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -3669,7 +3796,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0t.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3677,7 +3804,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0t.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3685,7 +3812,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0t.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3693,7 +3820,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0t.modifications]]
 modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
 data_type = "String"
 variation_level = 0
@@ -3701,10 +3828,11 @@ table_column = 0
 value = "Abilities\\Weapons\\BlackKeeperMissile\\BlackKeeperMissile.mdl"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0J]
 parent_id = 'Emoo'  # Priestess of the Moon
 entity_id = 'HE0J'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0J.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -3712,7 +3840,7 @@ table_column = 0
 value = "apimports\\evilpriestessofthemoon.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0J.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -3720,7 +3848,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0J.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3728,7 +3856,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0J.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3736,7 +3864,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0J.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3744,7 +3872,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0J.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -3752,10 +3880,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0K]
 parent_id = 'Ekee'  # Keeper of the Grove
 entity_id = 'HE0K'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0K.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -3763,7 +3892,7 @@ table_column = 0
 value = "apimports\\evilkeeperofthegrove.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0K.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -3771,7 +3900,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0K.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3779,7 +3908,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0K.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3787,7 +3916,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0K.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3795,7 +3924,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0K.modifications]]
 modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
 data_type = "String"
 variation_level = 0
@@ -3803,7 +3932,7 @@ table_column = 0
 value = "Abilities\\Weapons\\BlackKeeperMissile\\BlackKeeperMissile.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0K.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -3811,10 +3940,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0L]
 parent_id = 'Edem'  # Demon Hunter
 entity_id = 'HE0L'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0L.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -3822,7 +3952,7 @@ table_column = 0
 value = "units\\nightelf\\EvilIllidan\\IllidanEvil.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0L.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -3830,7 +3960,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0L.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3838,7 +3968,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0L.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3846,7 +3976,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0L.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3854,7 +3984,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0L.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -3862,10 +3992,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0M]
 parent_id = 'Ewar'  # Warden
 entity_id = 'HE0M'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0M.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -3873,7 +4004,7 @@ table_column = 0
 value = "apimports\\evilmaiev.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0M.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -3881,7 +4012,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0M.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3889,7 +4020,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0M.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3897,7 +4028,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0M.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3905,7 +4036,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0M.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -3913,10 +4044,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0h]
 parent_id = 'Hvsh'  # Naga Sea Witch
 entity_id = 'HE0h'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0h.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -3924,7 +4056,7 @@ table_column = 0
 value = "apimports\\evilladyvashj.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0h.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -3932,7 +4064,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0h.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3940,7 +4072,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0h.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3948,7 +4080,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0h.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3956,10 +4088,11 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0O]
 parent_id = 'Nngs'  # Naga Sea Witch
 entity_id = 'HE0O'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0O.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -3967,7 +4100,7 @@ table_column = 0
 value = "apimports\\evilladyvashj.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0O.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -3975,7 +4108,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0O.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -3983,7 +4116,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0O.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -3991,7 +4124,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0O.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -3999,7 +4132,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0O.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -4007,10 +4140,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0T]
 parent_id = 'Npbm'  # Pandaren Brewmaster
 entity_id = 'HE0T'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0T.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -4018,7 +4152,7 @@ table_column = 0
 value = "apimports\\evilpandarenbrewmaster.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0T.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -4026,7 +4160,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0T.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -4034,7 +4168,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0T.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -4042,7 +4176,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0T.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -4050,7 +4184,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0T.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -4058,10 +4192,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0S]
 parent_id = 'Nfir'  # Firelord
 entity_id = 'HE0S'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0S.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -4069,7 +4204,7 @@ table_column = 0
 value = "apimports\\evilfirelord.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0S.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -4077,7 +4212,7 @@ table_column = 0
 value = 1.2999999523162842
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0S.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -4085,7 +4220,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0S.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -4093,7 +4228,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0S.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -4101,7 +4236,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0S.modifications]]
 modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
 data_type = "String"
 variation_level = 0
@@ -4109,7 +4244,7 @@ table_column = 0
 value = "Abilities\\Weapons\\LichMissile\\LichMissile.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0S.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -4117,10 +4252,11 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0N]
 parent_id = 'Nalc'  # Alchemist
 entity_id = 'HE0N'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0N.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -4128,7 +4264,7 @@ table_column = 0
 value = "apimports\\evilgoblinalchemist.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0N.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -4136,7 +4272,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0N.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -4144,7 +4280,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0N.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -4152,7 +4288,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0N.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -4160,7 +4296,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0N.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -4168,7 +4304,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0N.modifications]]
 modification_id = 'uhab'  # UnitAbilities.Hero
 data_type = "String"
 variation_level = 0
@@ -4176,7 +4312,7 @@ table_column = 0
 value = "ANhs,A;01,ANab,ANtm"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0N.modifications]]
 modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
 data_type = "String"
 variation_level = 0
@@ -4184,10 +4320,11 @@ table_column = 0
 value = "Abilities\\Weapons\\DemonHunterMissile\\DemonHunterMissile.mdl"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0V]
 parent_id = 'Nalm'  # Alchemist
 entity_id = 'HE0V'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0V.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -4195,7 +4332,7 @@ table_column = 0
 value = "apimports\\evilgoblinalchemist.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0V.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -4203,7 +4340,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0V.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -4211,7 +4348,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0V.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -4219,7 +4356,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0V.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -4227,7 +4364,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0V.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -4235,7 +4372,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0V.modifications]]
 modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
 data_type = "String"
 variation_level = 0
@@ -4243,10 +4380,11 @@ table_column = 0
 value = "Abilities\\Weapons\\DemonHunterMissile\\DemonHunterMissile.mdl"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0W]
 parent_id = 'Nal2'  # Alchemist
 entity_id = 'HE0W'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0W.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -4254,7 +4392,7 @@ table_column = 0
 value = "apimports\\evilgoblinalchemist.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0W.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -4262,7 +4400,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0W.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -4270,7 +4408,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0W.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -4278,7 +4416,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0W.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -4286,7 +4424,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0W.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -4294,7 +4432,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0W.modifications]]
 modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
 data_type = "String"
 variation_level = 0
@@ -4302,10 +4440,11 @@ table_column = 0
 value = "Abilities\\Weapons\\DemonHunterMissile\\DemonHunterMissile.mdl"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0X]
 parent_id = 'Nal3'  # Alchemist
 entity_id = 'HE0X'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0X.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -4313,7 +4452,7 @@ table_column = 0
 value = "apimports\\evilgoblinalchemist.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0X.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -4321,7 +4460,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0X.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -4329,7 +4468,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0X.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -4337,7 +4476,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0X.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -4345,7 +4484,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0X.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
@@ -4353,7 +4492,7 @@ table_column = 0
 value = 0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0X.modifications]]
 modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
 data_type = "String"
 variation_level = 0
@@ -4361,10 +4500,11 @@ table_column = 0
 value = "Abilities\\Weapons\\DemonHunterMissile\\DemonHunterMissile.mdl"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.HE0P]
 parent_id = 'Ntin'  # Tinker
 entity_id = 'HE0P'
-[[map_objects.entities.modifications]]
+
+[[map_objects.HE0P.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -4372,7 +4512,7 @@ table_column = 0
 value = "apimports\\eviltinker.mdl"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0P.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -4380,7 +4520,7 @@ table_column = 0
 value = 1.100000023841858
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0P.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -4388,7 +4528,7 @@ table_column = 0
 value = 12
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0P.modifications]]
 modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
 data_type = "String"
 variation_level = 0
@@ -4396,7 +4536,7 @@ table_column = 0
 value = "chaos"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0P.modifications]]
 modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
@@ -4404,7 +4544,7 @@ table_column = 0
 value = "(Corrupted)"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.HE0P.modifications]]
 modification_id = 'ufoo'  # UnitBalance.Food Cost
 data_type = "Integer"
 variation_level = 0
