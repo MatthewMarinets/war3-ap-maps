@@ -1,0 +1,115 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 2
+has_levels = true
+
+[blizzard_objects]
+
+
+[map_objects.RP00]
+parent_id = 'Rhde'  # Defend
+entity_id = 'RP00'
+
+[[map_objects.RP00.modifications]]
+modification_id = 'gnam'  # Profile.Name
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Find Captain Promotion"
+object_id = 'null'
+
+[map_objects.RP01]
+parent_id = 'Rhde'  # Defend
+entity_id = 'RP01'
+
+[[map_objects.RP01.modifications]]
+modification_id = 'gnam'  # Profile.Name
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Find Footman"
+object_id = 'null'
+
+[map_objects.RP02]
+parent_id = 'Rhde'  # Defend
+entity_id = 'RP02'
+
+[[map_objects.RP02.modifications]]
+modification_id = 'gnam'  # Profile.Name
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Find Rifleman"
+object_id = 'null'
+
+[map_objects.RP03]
+parent_id = 'Rhde'  # Defend
+entity_id = 'RP03'
+
+[[map_objects.RP03.modifications]]
+modification_id = 'gnam'  # Profile.Name
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Find Archer"
+object_id = 'null'
+
+[map_objects.RP04]
+parent_id = 'Rhde'  # Defend
+entity_id = 'RP04'
+
+[[map_objects.RP04.modifications]]
+modification_id = 'gnam'  # Profile.Name
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Find Knight"
+object_id = 'null'
+
+[map_objects.RP05]
+parent_id = 'Rhde'  # Defend
+entity_id = 'RP05'
+
+[[map_objects.RP05.modifications]]
+modification_id = 'gnam'  # Profile.Name
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Find Priest"
+object_id = 'null'
+
+[map_objects.RP06]
+parent_id = 'Rhde'  # Defend
+entity_id = 'RP06'
+
+[[map_objects.RP06.modifications]]
+modification_id = 'gnam'  # Profile.Name
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Find Sorceress"
+object_id = 'null'
+
+[map_objects.RP07]
+parent_id = 'Rhde'  # Defend
+entity_id = 'RP07'
+
+[[map_objects.RP07.modifications]]
+modification_id = 'gnam'  # Profile.Name
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Find Spell Breaker"
+object_id = 'null'
+
+[map_objects.RP08]
+parent_id = 'Rhde'  # Defend
+entity_id = 'RP08'
+
+[[map_objects.RP08.modifications]]
+modification_id = 'gnam'  # Profile.Name
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Find Mortar Team"
+object_id = 'null'
