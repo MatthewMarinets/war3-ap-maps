@@ -367,6 +367,7 @@ constant integer MISSION_ID= 108
 integer NUM_HEROES= 2
 constant player USER_PLAYER= Player(1)
 integer array hero_global_slots
+string array location_names
 constant integer item_channel_1= 1
 constant integer item_channel_2= - 1
 constant integer item_channel_2_hero_slot= - 1
@@ -396,7 +397,7 @@ constant integer HERO_ID_DEMON_ILLIDAN= 21
 constant integer HERO_ID_LADY_VASHJ= 22
 constant integer HERO_ID_AKAMA= 23
 constant integer HERO_ID_LORD_GARITHOS= 24
-constant string COMM_VERSION= "1.0"
+constant string COMM_VERSION= "2.0"
 constant integer MAX_UPDATE_ID= 100000
 integer error_state= 0
 integer world_id= - 1
@@ -411,7 +412,7 @@ integer last_missions_packet= - 1
 integer last_item_channel_packet= - 1
 integer checks_before_timeout= 2
 boolean array locations_checked
-constant integer MAX_LOCATIONS= 30
+constant integer MAX_LOCATIONS= 60
 constant integer MAX_ITEMS_PER_PACKET= 12
 integer update_index= - 1
 integer hero_status_index= - 1
@@ -1649,6 +1650,27 @@ function InitTrig_map_config takes nothing returns nothing
     set hero_global_slots[1]=HERO_ID_MURADIN_BRONZEBEARD
     set hero_global_slots[2]=HERO_ID_NONE
     set hero_global_slots[3]=HERO_ID_NONE
+    set location_names[0]="Victory"
+    set location_names[1]="Skeleton Item"
+    set location_names[2]="Nerubian Queen Item"
+    set location_names[3]="Frost Revenant Item"
+    set location_names[4]="Pandaren Item"
+    set location_names[5]="Crypt Fiend Item"
+    set location_names[6]="Necromancer Item"
+    set location_names[7]="Nerubian Seer Item"
+    set location_names[8]="Nerubian Warrior Item"
+    set location_names[9]="Blue Drake Item"
+    set location_names[10]="Murloc Nightcrawler Item"
+    set location_names[20]="Boat 1"
+    set location_names[21]="Boat 2"
+    set location_names[22]="Boat 3"
+    set location_names[23]="Boat 4"
+    set location_names[24]="Boat 5"
+    set location_names[25]="Goblin Merchant"
+    set location_names[26]="Mercenary Camp 1"
+    set location_names[27]="Mercenary Camp 2"
+    set location_names[28]="Mercenary Camp 3"
+    set location_names[29]="Goblin Laboratory"
 endfunction
 //===========================================================================
 // Trigger: status
@@ -1786,34 +1808,36 @@ endfunction
 
 function status_load_locations takes nothing returns nothing
     local player p= Player(0)
-    local integer i= 0
     local integer loc_id= 0
     call SetPlayerTechMaxAllowed(p, 'nech', -1)
-    call io_read_file("locations.txt")
     loop
-        exitwhen i + 2 > StringLength(io_lines[0])
-        set loc_id=S2I(SubString(io_lines[0], i, i+2))
-        if loc_id < MAX_LOCATIONS then
+        exitwhen loc_id >= MAX_LOCATIONS
+        call SetPlayerTechMaxAllowed(p, 2000+loc_id, 0)
+        call SetPlayerTechMaxAllowed(p, 3000+loc_id, 0)
+        set loc_id=loc_id + 1
+    endloop
+    call io_read_file_simple("locations.txt")
+    set loc_id=0
+    loop
+        exitwhen loc_id >= MAX_LOCATIONS
+        if GetPlayerTechMaxAllowed(p, 2000+loc_id) == 1 then
             set locations_checked[loc_id]=true
         endif
-        set i=i + 2
-    endloop
-    set i=0
-    loop
-        exitwhen i + 2 > StringLength(io_lines[1])
-        set loc_id=S2I(SubString(io_lines[1], i, i+2))
-        if loc_id < MAX_LOCATIONS then
+        if GetPlayerTechMaxAllowed(p, 3000+loc_id) == 1 then
             set locations_checked[loc_id]=false
         endif
-        set i=i + 2
+        set loc_id=loc_id + 1
     endloop
     set last_location_packet=GetPlayerTechMaxAllowed(p, 'nech')
 endfunction
 
 function status_check_location takes integer location_id returns nothing
     if location_id >= MAX_LOCATIONS then
-        call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cffff2222Error: Attempted to check invalid location ID: " + I2S(location_id) + "|r")
+        call print("|cffff2222Error: Attempted to check invalid location ID: " + I2S(location_id) + "|r")
         return
+    endif
+    if location_names[location_id] != null then
+        call print("Got an |cffee1166Archipelago location|r (" + location_names[location_id] + ")")
     endif
     set locations_checked[location_id]=true
     call status_send()
@@ -1954,7 +1978,7 @@ function status_load_missions takes nothing returns nothing
     local player p= Player(0)
     call SetPlayerTechMaxAllowed(p, 'ndog', 0)
     loop
-        exitwhen i >= 300
+        exitwhen i >= 500
         call SetPlayerTechMaxAllowed(p, i, 0)
         set i=i + 1
     endloop

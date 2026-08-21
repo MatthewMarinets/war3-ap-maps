@@ -535,6 +535,7 @@ constant integer MISSION_ID= 103
 integer NUM_HEROES= 2
 constant player USER_PLAYER= Player(1)
 integer array hero_global_slots
+string array location_names
 constant integer item_channel_1= 1
 constant integer item_channel_2= - 1
 constant integer item_channel_2_hero_slot= - 1
@@ -564,7 +565,7 @@ constant integer HERO_ID_DEMON_ILLIDAN= 21
 constant integer HERO_ID_LADY_VASHJ= 22
 constant integer HERO_ID_AKAMA= 23
 constant integer HERO_ID_LORD_GARITHOS= 24
-constant string COMM_VERSION= "1.0"
+constant string COMM_VERSION= "2.0"
 constant integer MAX_UPDATE_ID= 100000
 integer error_state= 0
 integer world_id= - 1
@@ -579,7 +580,7 @@ integer last_missions_packet= - 1
 integer last_item_channel_packet= - 1
 integer checks_before_timeout= 2
 boolean array locations_checked
-constant integer MAX_LOCATIONS= 30
+constant integer MAX_LOCATIONS= 60
 constant integer MAX_ITEMS_PER_PACKET= 12
 integer update_index= - 1
 integer hero_status_index= - 1
@@ -1897,6 +1898,20 @@ function InitTrig_map_config takes nothing returns nothing
     set hero_global_slots[1]=HERO_ID_JAINA
     set hero_global_slots[2]=HERO_ID_NONE
     set hero_global_slots[3]=HERO_ID_NONE
+    set location_names[0]="Victory"
+    set location_names[1]="Ogre Sheep Item"
+    set location_names[2]="Murloc Hut Item"
+    set location_names[3]="Skeleton Island Item"
+    set location_names[4]="Bandit Hut Item"
+    set location_names[5]="Skeletal Ambush Item"
+    set location_names[6]="Mortar Skeleton Item"
+    set location_names[7]="Ogre Mauler Item"
+    set location_names[20]="Footman Rescue"
+    set location_names[21]="Fountain of Healing"
+    set location_names[22]="Priest Rescue"
+    set location_names[23]="Mortar Team Rescue"
+    set location_names[24]="Garglemel's Taxes"
+    set location_names[25]="Defeat the Bandits"
 endfunction
 //===========================================================================
 // Trigger: status
@@ -2034,34 +2049,36 @@ endfunction
 
 function status_load_locations takes nothing returns nothing
     local player p= Player(0)
-    local integer i= 0
     local integer loc_id= 0
     call SetPlayerTechMaxAllowed(p, 'nech', -1)
-    call io_read_file("locations.txt")
     loop
-        exitwhen i + 2 > StringLength(io_lines[0])
-        set loc_id=S2I(SubString(io_lines[0], i, i+2))
-        if loc_id < MAX_LOCATIONS then
+        exitwhen loc_id >= MAX_LOCATIONS
+        call SetPlayerTechMaxAllowed(p, 2000+loc_id, 0)
+        call SetPlayerTechMaxAllowed(p, 3000+loc_id, 0)
+        set loc_id=loc_id + 1
+    endloop
+    call io_read_file_simple("locations.txt")
+    set loc_id=0
+    loop
+        exitwhen loc_id >= MAX_LOCATIONS
+        if GetPlayerTechMaxAllowed(p, 2000+loc_id) == 1 then
             set locations_checked[loc_id]=true
         endif
-        set i=i + 2
-    endloop
-    set i=0
-    loop
-        exitwhen i + 2 > StringLength(io_lines[1])
-        set loc_id=S2I(SubString(io_lines[1], i, i+2))
-        if loc_id < MAX_LOCATIONS then
+        if GetPlayerTechMaxAllowed(p, 3000+loc_id) == 1 then
             set locations_checked[loc_id]=false
         endif
-        set i=i + 2
+        set loc_id=loc_id + 1
     endloop
     set last_location_packet=GetPlayerTechMaxAllowed(p, 'nech')
 endfunction
 
 function status_check_location takes integer location_id returns nothing
     if location_id >= MAX_LOCATIONS then
-        call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cffff2222Error: Attempted to check invalid location ID: " + I2S(location_id) + "|r")
+        call print("|cffff2222Error: Attempted to check invalid location ID: " + I2S(location_id) + "|r")
         return
+    endif
+    if location_names[location_id] != null then
+        call print("Got an |cffee1166Archipelago location|r (" + location_names[location_id] + ")")
     endif
     set locations_checked[location_id]=true
     call status_send()
@@ -2202,7 +2219,7 @@ function status_load_missions takes nothing returns nothing
     local player p= Player(0)
     call SetPlayerTechMaxAllowed(p, 'ndog', 0)
     loop
-        exitwhen i >= 300
+        exitwhen i >= 500
         call SetPlayerTechMaxAllowed(p, i, 0)
         set i=i + 1
     endloop
@@ -4938,39 +4955,39 @@ function Trig_Priest_Queue_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_Priest_Queue_Func014001 takes nothing returns boolean
+function Trig_Priest_Queue_Func013001 takes nothing returns boolean
+    return ( udg_GameOver == true )
+endfunction
+
+function Trig_Priest_Queue_Func021001 takes nothing returns boolean
     return ( udg_GameOver == true )
 endfunction
 
 function Trig_Priest_Queue_Func022001 takes nothing returns boolean
-    return ( udg_GameOver == true )
-endfunction
-
-function Trig_Priest_Queue_Func023001 takes nothing returns boolean
     return ( RectContainsUnit(gg_rct_Priest_ArthasJaina_Here, udg_Arthas) == true )
 endfunction
 
-function Trig_Priest_Queue_Func024001 takes nothing returns boolean
+function Trig_Priest_Queue_Func023001 takes nothing returns boolean
+    return ( udg_GameOver == true )
+endfunction
+
+function Trig_Priest_Queue_Func025001 takes nothing returns boolean
     return ( udg_GameOver == true )
 endfunction
 
 function Trig_Priest_Queue_Func026001 takes nothing returns boolean
-    return ( udg_GameOver == true )
-endfunction
-
-function Trig_Priest_Queue_Func027001 takes nothing returns boolean
     return ( RectContainsUnit(gg_rct_Priest_ArthasJaina_Here, udg_Arthas) == true )
 endfunction
 
-function Trig_Priest_Queue_Func029001 takes nothing returns boolean
+function Trig_Priest_Queue_Func028001 takes nothing returns boolean
     return ( udg_GameOver == true )
 endfunction
 
-function Trig_Priest_Queue_Func033001 takes nothing returns boolean
+function Trig_Priest_Queue_Func032001 takes nothing returns boolean
     return ( udg_GameOver == true )
 endfunction
 
-function Trig_Priest_Queue_Func039001 takes nothing returns boolean
+function Trig_Priest_Queue_Func038001 takes nothing returns boolean
     return ( udg_GameOver == true )
 endfunction
 
@@ -4979,7 +4996,6 @@ function Trig_Priest_Queue_Actions takes nothing returns nothing
     call IssuePointOrderLocBJ(gg_unit_hmpr_0073, "move", GetRectCenter(gg_rct_Priest01GranaryPost))
     call RescueUnitBJ(gg_unit_hmpr_0073, Player(1), true)
     call status_check_location(22)
-    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Priest Rescue)")
     call TriggerSleepAction(0.20)
     call IssuePointOrderLocBJ(gg_unit_hmpr_0072, "move", GetRectCenter(gg_rct_Priest02GranaryPost))
     call RescueUnitBJ(gg_unit_hmpr_0072, Player(1), true)
@@ -4987,7 +5003,7 @@ function Trig_Priest_Queue_Actions takes nothing returns nothing
     call CreateFogModifierRadiusLocBJ(true, Player(1), FOG_OF_WAR_VISIBLE, GetRectCenter(gg_rct_Priests), 1024.00)
     set udg_PriestsVis=GetLastCreatedFogModifier()
     call TriggerSleepAction(1.00)
-    if ( Trig_Priest_Queue_Func014001() ) then
+    if ( Trig_Priest_Queue_Func013001() ) then
         return
     else
         call DoNothing()
@@ -4999,34 +5015,34 @@ function Trig_Priest_Queue_Actions takes nothing returns nothing
     call SetPlayerAllianceStateBJ(Player(6), Player(9), bj_ALLIANCE_ALLIED)
     call SetSpeechVolumeGroupsBJ()
     call TransmissionFromUnitWithNameBJ(GetPlayersAll(), gg_unit_hmpr_0072, "TRIGSTR_608", gg_snd_H03Priest21, "TRIGSTR_609", bj_TIMETYPE_ADD, 0.00, true)
-    if ( Trig_Priest_Queue_Func022001() ) then
+    if ( Trig_Priest_Queue_Func021001() ) then
         return
     else
         call DoNothing()
     endif
-    if ( Trig_Priest_Queue_Func023001() ) then
+    if ( Trig_Priest_Queue_Func022001() ) then
         call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_Jaina, "TRIGSTR_639", gg_snd_H03Jaina22, "TRIGSTR_640", bj_TIMETYPE_ADD, 0, true)
     else
         call DoNothing()
     endif
-    if ( Trig_Priest_Queue_Func024001() ) then
+    if ( Trig_Priest_Queue_Func023001() ) then
         return
     else
         call DoNothing()
     endif
     call TransmissionFromUnitWithNameBJ(GetPlayersAll(), gg_unit_hmpr_0072, "TRIGSTR_614", gg_snd_H03Priest23, "TRIGSTR_615", bj_TIMETYPE_ADD, 0.00, true)
-    if ( Trig_Priest_Queue_Func026001() ) then
+    if ( Trig_Priest_Queue_Func025001() ) then
         return
     else
         call DoNothing()
     endif
-    if ( Trig_Priest_Queue_Func027001() ) then
+    if ( Trig_Priest_Queue_Func026001() ) then
         call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_Arthas, "TRIGSTR_629", gg_snd_H03Arthas24, "TRIGSTR_630", bj_TIMETYPE_ADD, 0, true)
     else
         call DoNothing()
     endif
     call VolumeGroupResetBJ()
-    if ( Trig_Priest_Queue_Func029001() ) then
+    if ( Trig_Priest_Queue_Func028001() ) then
         return
     else
         call DoNothing()
@@ -5034,7 +5050,7 @@ function Trig_Priest_Queue_Actions takes nothing returns nothing
     call QuestMessageBJ(GetPlayersAll(), bj_QUESTMESSAGE_HINT, "TRIGSTR_620")
     call TriggerSleepAction(bj_QUEUE_DELAY_HINT)
     // ***********************
-    if ( Trig_Priest_Queue_Func033001() ) then
+    if ( Trig_Priest_Queue_Func032001() ) then
         return
     else
         call DoNothing()
@@ -5044,7 +5060,7 @@ function Trig_Priest_Queue_Actions takes nothing returns nothing
     call QuestSetCompletedBJ(udg_QuestInvestigateVillages, true)
     call QuestItemSetCompletedBJ(udg_QuestInvestigateReq, true)
     call TriggerSleepAction(bj_QUEUE_DELAY_QUEST)
-    if ( Trig_Priest_Queue_Func039001() ) then
+    if ( Trig_Priest_Queue_Func038001() ) then
         return
     else
         call DoNothing()
@@ -6429,7 +6445,6 @@ endfunction
 //===========================================================================
 function Trig_PayoutGold_Actions takes nothing returns nothing
     call status_check_location(24)
-    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Garglemel's Taxes)")
     call AdjustPlayerStateBJ(( 21 * GetRandomInt(1, 10) ), Player(1), PLAYER_STATE_RESOURCE_GOLD)
 endfunction
 
@@ -6702,7 +6717,7 @@ function Trig_Que_Splendora_Speech_Func003001 takes nothing returns boolean
     return ( IsUnitDeadBJ(gg_unit_nC10_0121) == true )
 endfunction
 
-function Trig_Que_Splendora_Speech_Func010001 takes nothing returns boolean
+function Trig_Que_Splendora_Speech_Func009001 takes nothing returns boolean
     return ( udg_GameOver == true )
 endfunction
 
@@ -6721,9 +6736,8 @@ function Trig_Que_Splendora_Speech_Actions takes nothing returns nothing
     call TransmissionFromUnitWithNameBJ(GetPlayersAll(), gg_unit_nC10_0121, "TRIGSTR_671", gg_snd_H01VillagerF42, "TRIGSTR_672", bj_TIMETYPE_SUB, 0.00, true)
     call VolumeGroupResetBJ()
     call status_check_location(25)
-    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Defeat Bandits)")
     call TriggerSleepAction(bj_QUEUE_DELAY_HINT)
-    if ( Trig_Que_Splendora_Speech_Func010001() ) then
+    if ( Trig_Que_Splendora_Speech_Func009001() ) then
         return
     else
         call DoNothing()
@@ -7200,23 +7214,22 @@ function Trig_Fountain_Found_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_Fountain_Found_Func011001 takes nothing returns boolean
+function Trig_Fountain_Found_Func010001 takes nothing returns boolean
     return ( udg_GameOver == true )
 endfunction
 
-function Trig_Fountain_Found_Func017001 takes nothing returns boolean
+function Trig_Fountain_Found_Func016001 takes nothing returns boolean
     return ( udg_GameOver == true )
 endfunction
 
 function Trig_Fountain_Found_Actions takes nothing returns nothing
     call DisableTrigger(gg_trg_Fountain_Found)
     call status_check_location(21)
-    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Fountain of Healing)")
     call SetSpeechVolumeGroupsBJ()
     call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_Arthas, "TRIGSTR_115", gg_snd_H03Arthas12, "TRIGSTR_116", bj_TIMETYPE_ADD, 0.00, true)
     call VolumeGroupResetBJ()
     call TriggerSleepAction(1.00)
-    if ( Trig_Fountain_Found_Func011001() ) then
+    if ( Trig_Fountain_Found_Func010001() ) then
         return
     else
         call DoNothing()
@@ -7226,7 +7239,7 @@ function Trig_Fountain_Found_Actions takes nothing returns nothing
     call FlashQuestDialogButtonBJ()
     call QuestSetCompletedBJ(udg_QuestFountain, true)
     call TriggerSleepAction(bj_QUEUE_DELAY_QUEST)
-    if ( Trig_Fountain_Found_Func017001() ) then
+    if ( Trig_Fountain_Found_Func016001() ) then
         return
     else
         call DoNothing()
@@ -7368,39 +7381,39 @@ function Trig_SkeletonsAllDead_Func004001 takes nothing returns boolean
     return ( udg_GameOver == true )
 endfunction
 
-function Trig_SkeletonsAllDead_Func007002 takes nothing returns nothing
+function Trig_SkeletonsAllDead_Func006002 takes nothing returns nothing
     call IssueImmediateOrderBJ(GetEnumUnit(), "stop")
 endfunction
 
-function Trig_SkeletonsAllDead_Func008002 takes nothing returns nothing
+function Trig_SkeletonsAllDead_Func007002 takes nothing returns nothing
     call SetUnitFacingToFaceUnitTimed(GetEnumUnit(), udg_Arthas, 0.20)
 endfunction
 
-function Trig_SkeletonsAllDead_Func010001 takes nothing returns boolean
+function Trig_SkeletonsAllDead_Func009001 takes nothing returns boolean
     return ( IsUnitGroupDeadBJ(udg_DefendersGroup) == false )
+endfunction
+
+function Trig_SkeletonsAllDead_Func010001 takes nothing returns boolean
+    return ( udg_GameOver == true )
 endfunction
 
 function Trig_SkeletonsAllDead_Func011001 takes nothing returns boolean
-    return ( udg_GameOver == true )
-endfunction
-
-function Trig_SkeletonsAllDead_Func012001 takes nothing returns boolean
     return ( IsUnitGroupDeadBJ(udg_DefendersGroup) == false )
 endfunction
 
-function Trig_SkeletonsAllDead_Func013001 takes nothing returns boolean
+function Trig_SkeletonsAllDead_Func012001 takes nothing returns boolean
     return ( udg_GameOver == true )
 endfunction
 
-function Trig_SkeletonsAllDead_Func016002 takes nothing returns nothing
+function Trig_SkeletonsAllDead_Func015002 takes nothing returns nothing
     call IssueImmediateOrderBJ(GetEnumUnit(), "undefend")
 endfunction
 
-function Trig_SkeletonsAllDead_Func018002 takes nothing returns nothing
+function Trig_SkeletonsAllDead_Func017002 takes nothing returns nothing
     call RescueUnitBJ(GetEnumUnit(), Player(1), true)
 endfunction
 
-function Trig_SkeletonsAllDead_Func020001 takes nothing returns boolean
+function Trig_SkeletonsAllDead_Func019001 takes nothing returns boolean
     return ( udg_GameOver == true )
 endfunction
 
@@ -7413,37 +7426,36 @@ function Trig_SkeletonsAllDead_Actions takes nothing returns nothing
         call DoNothing()
     endif
     call status_check_location(20)
-    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Footman Rescue)")
+    call ForGroupBJ(udg_FootmenDefending, function Trig_SkeletonsAllDead_Func006002)
     call ForGroupBJ(udg_FootmenDefending, function Trig_SkeletonsAllDead_Func007002)
-    call ForGroupBJ(udg_FootmenDefending, function Trig_SkeletonsAllDead_Func008002)
     call SetSpeechVolumeGroupsBJ()
-    if ( Trig_SkeletonsAllDead_Func010001() ) then
+    if ( Trig_SkeletonsAllDead_Func009001() ) then
         call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_Arthas, "TRIGSTR_362", gg_snd_H03Arthas14, "TRIGSTR_363", bj_TIMETYPE_ADD, 0, true)
     else
         call DoNothing()
     endif
-    if ( Trig_SkeletonsAllDead_Func011001() ) then
+    if ( Trig_SkeletonsAllDead_Func010001() ) then
         return
     else
         call DoNothing()
     endif
-    if ( Trig_SkeletonsAllDead_Func012001() ) then
+    if ( Trig_SkeletonsAllDead_Func011001() ) then
         call TransmissionFromUnitWithNameBJ(GetPlayersAll(), GroupPickRandomUnit(udg_DefendersGroup), "TRIGSTR_334", gg_snd_H03Footman15, "TRIGSTR_335", bj_TIMETYPE_ADD, 0, true)
     else
         call DoNothing()
     endif
-    if ( Trig_SkeletonsAllDead_Func013001() ) then
+    if ( Trig_SkeletonsAllDead_Func012001() ) then
         return
     else
         call DoNothing()
     endif
     call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_Arthas, "TRIGSTR_069", gg_snd_H03Arthas16, "TRIGSTR_070", bj_TIMETYPE_ADD, 0.00, true)
     call VolumeGroupResetBJ()
-    call ForGroupBJ(udg_FootmenDefending, function Trig_SkeletonsAllDead_Func016002)
+    call ForGroupBJ(udg_FootmenDefending, function Trig_SkeletonsAllDead_Func015002)
     call SetPlayerTechResearchedSwap('Rhde', 0, Player(9))
-    call ForGroupBJ(udg_FootmenDefending, function Trig_SkeletonsAllDead_Func018002)
+    call ForGroupBJ(udg_FootmenDefending, function Trig_SkeletonsAllDead_Func017002)
     call QueuedTriggerRemoveBJ(GetTriggeringTrigger())
-    if ( Trig_SkeletonsAllDead_Func020001() ) then
+    if ( Trig_SkeletonsAllDead_Func019001() ) then
         return
     else
         call DoNothing()
@@ -7696,24 +7708,24 @@ function Trig_MortarTeamStart_Func012001 takes nothing returns boolean
     return ( udg_GameOver == true )
 endfunction
 
-function Trig_MortarTeamStart_Func016002 takes nothing returns nothing
+function Trig_MortarTeamStart_Func015002 takes nothing returns nothing
     call IssuePointOrderLocBJ(GetEnumUnit(), "move", GetRectCenter(gg_rct_SkeletonsMortarFodderEnd))
+endfunction
+
+function Trig_MortarTeamStart_Func016001 takes nothing returns boolean
+    return ( IsUnitAliveBJ(udg_MortarTeam01) == true )
 endfunction
 
 function Trig_MortarTeamStart_Func017001 takes nothing returns boolean
     return ( IsUnitAliveBJ(udg_MortarTeam01) == true )
 endfunction
 
-function Trig_MortarTeamStart_Func018001 takes nothing returns boolean
-    return ( IsUnitAliveBJ(udg_MortarTeam01) == true )
-endfunction
-
-function Trig_MortarTeamStart_Func020001001001002 takes nothing returns boolean
+function Trig_MortarTeamStart_Func019001001001002 takes nothing returns boolean
     return ( GetFilterUnit() == udg_Arthas )
 endfunction
 
-function Trig_MortarTeamStart_Func020001 takes nothing returns boolean
-    return ( CountUnitsInGroup(GetUnitsInRectMatching(gg_rct_MortarTeam_ArthasNear, Condition(function Trig_MortarTeamStart_Func020001001001002))) >= 1 )
+function Trig_MortarTeamStart_Func019001 takes nothing returns boolean
+    return ( CountUnitsInGroup(GetUnitsInRectMatching(gg_rct_MortarTeam_ArthasNear, Condition(function Trig_MortarTeamStart_Func019001001001002))) >= 1 )
 endfunction
 
 function Trig_MortarTeamStart_Actions takes nothing returns nothing
@@ -7732,21 +7744,20 @@ function Trig_MortarTeamStart_Actions takes nothing returns nothing
         call DoNothing()
     endif
     call status_check_location(23)
-    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Mortar Team Rescue)")
     call SetUnitInvulnerable(gg_unit_uske_0096, false)
-    call ForGroupBJ(GetUnitsInRectAll(gg_rct_SkeletonsMortarFodderStart), function Trig_MortarTeamStart_Func016002)
-    if ( Trig_MortarTeamStart_Func017001() ) then
+    call ForGroupBJ(GetUnitsInRectAll(gg_rct_SkeletonsMortarFodderStart), function Trig_MortarTeamStart_Func015002)
+    if ( Trig_MortarTeamStart_Func016001() ) then
         call RescueUnitBJ(udg_MortarTeam01, Player(1), true)
     else
         call DoNothing()
     endif
-    if ( Trig_MortarTeamStart_Func018001() ) then
+    if ( Trig_MortarTeamStart_Func017001() ) then
         call QuestMessageBJ(GetPlayersAll(), bj_QUESTMESSAGE_HINT, "TRIGSTR_681")
     else
         call DoNothing()
     endif
     call DestroyFogModifier(udg_MortarTeamVis)
-    if ( Trig_MortarTeamStart_Func020001() ) then
+    if ( Trig_MortarTeamStart_Func019001() ) then
         call QueuedTriggerAddBJ(gg_trg_MortarTeamDialogue, true)
     else
         call DoNothing()

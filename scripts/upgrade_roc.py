@@ -386,6 +386,10 @@ def update_triggers(map_dir: str) -> None:
         item_channel_2_hero_slot = -1
     else:
         item_channel_2_hero_slot = hero_slots.index(item_channel_2_global_hero_id)
+    location_name_init = '\n    '.join((
+        f'set location_names[{location.id % locations.LOCATION_RANGE_PER_MISSION}] = "{location.location_name}"'
+        for location in locations.MISSION_TO_LOCATIONS.get(mission, ())
+    ))
 
     # Format map_config trigger
     map_config = wct_data.triggers[trigger_indices['map_config']]
@@ -401,6 +405,7 @@ def update_triggers(map_dir: str) -> None:
         .replace('$(HERO_ID_1)', hero_global_slot_ids[1])
         .replace('$(HERO_ID_2)', hero_global_slot_ids[2])
         .replace('$(HERO_ID_3)', hero_global_slot_ids[3])
+        .replace('$(LOCATION_NAME_INIT)', location_name_init)
     )
     if trigger_vars is not None:
         for hero_slot in range(4):

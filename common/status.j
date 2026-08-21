@@ -185,8 +185,11 @@ endfunction
 
 function status_check_location takes integer location_id returns nothing
     if location_id >= MAX_LOCATIONS then
-        call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cffff2222Error: Attempted to check invalid location ID: " + I2S(location_id) + "|r")
+        call print("|cffff2222Error: Attempted to check invalid location ID: " + I2S(location_id) + "|r")
         return
+    endif
+    if location_names[location_id] != null then
+        call print("Got an |cffee1166Archipelago location|r (" + location_names[location_id] + ")")
     endif
     set locations_checked[location_id] = true
     call status_send()

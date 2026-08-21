@@ -64,6 +64,7 @@ constant integer MISSION_ID = 107
 integer NUM_HEROES = 2
 constant player USER_PLAYER = Player(1)
 integer array hero_global_slots
+string array location_names
 constant integer item_channel_1 = 1
 constant integer item_channel_2 = -1
 constant integer item_channel_2_hero_slot = -1
@@ -135,13 +136,24 @@ function InitTrig_map_config takes nothing returns nothing
     set hero_global_slots[1] = HERO_ID_MURADIN_BRONZEBEARD
     set hero_global_slots[2] = HERO_ID_NONE
     set hero_global_slots[3] = HERO_ID_NONE
+    set location_names[0] = "Victory"
+    set location_names[1] = "Dire Frost Wolf Item"
+    set location_names[2] = "Nerubian Item"
+    set location_names[3] = "Ice Troll Warlord Item"
+    set location_names[4] = "Ice Troll Hut Item"
+    set location_names[5] = "Ice Troll Warlord 2 Item"
+    set location_names[6] = "Wendigo Item"
+    set location_names[20] = "Slay Lich"
+    set location_names[21] = "Establish Base Camp"
+    set location_names[22] = "Rescue Muradin's Men"
+    set location_names[23] = "Destroy Purple Necropolis"
 endfunction
 
 //\\// Trigger #2
 // defines the packets that communicate with the client
 // depends: map_config, fileio
 globals
-constant string COMM_VERSION = "1.0"
+constant string COMM_VERSION = "2.0"
 constant integer MAX_UPDATE_ID = 100000
 integer error_state = 0
 integer world_id = -1
@@ -156,7 +168,7 @@ integer last_missions_packet = -1
 integer last_item_channel_packet = -1
 integer checks_before_timeout = 2
 boolean array locations_checked
-constant integer MAX_LOCATIONS = 30
+constant integer MAX_LOCATIONS = 60
 constant integer MAX_ITEMS_PER_PACKET = 12
 integer update_index = -1
 integer hero_status_index = -1
@@ -300,34 +312,36 @@ endfunction
 
 function status_load_locations takes nothing returns nothing
     local player p = Player(0)
-    local integer i = 0
     local integer loc_id = 0
     call SetPlayerTechMaxAllowed(p, 'nech', -1)
-    call io_read_file("locations.txt")
     loop
-        exitwhen i + 2 > StringLength(io_lines[0])
-        set loc_id = S2I(SubString(io_lines[0], i, i+2))
-        if loc_id < MAX_LOCATIONS then
+        exitwhen loc_id >= MAX_LOCATIONS
+        call SetPlayerTechMaxAllowed(p, 2000+loc_id, 0)
+        call SetPlayerTechMaxAllowed(p, 3000+loc_id, 0)
+        set loc_id = loc_id + 1
+    endloop
+    call io_read_file_simple("locations.txt")
+    set loc_id = 0
+    loop
+        exitwhen loc_id >= MAX_LOCATIONS
+        if GetPlayerTechMaxAllowed(p, 2000+loc_id) == 1 then
             set locations_checked[loc_id] = true
         endif
-        set i = i + 2
-    endloop
-    set i = 0
-    loop
-        exitwhen i + 2 > StringLength(io_lines[1])
-        set loc_id = S2I(SubString(io_lines[1], i, i+2))
-        if loc_id < MAX_LOCATIONS then
+        if GetPlayerTechMaxAllowed(p, 3000+loc_id) == 1 then
             set locations_checked[loc_id] = false
         endif
-        set i = i + 2
+        set loc_id = loc_id + 1
     endloop
     set last_location_packet = GetPlayerTechMaxAllowed(p, 'nech')
 endfunction
 
 function status_check_location takes integer location_id returns nothing
     if location_id >= MAX_LOCATIONS then
-        call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cffff2222Error: Attempted to check invalid location ID: " + I2S(location_id) + "|r")
+        call print("|cffff2222Error: Attempted to check invalid location ID: " + I2S(location_id) + "|r")
         return
+    endif
+    if location_names[location_id] != null then
+        call print("Got an |cffee1166Archipelago location|r (" + location_names[location_id] + ")")
     endif
     set locations_checked[location_id] = true
     call status_send()
@@ -469,7 +483,7 @@ function status_load_missions takes nothing returns nothing
     local player p = Player(0)
     call SetPlayerTechMaxAllowed(p, 'ndog', 0)
     loop
-        exitwhen i >= 300
+        exitwhen i >= 500
         call SetPlayerTechMaxAllowed(p, i, 0)
         set i = i + 1
     endloop

@@ -4,6 +4,7 @@ constant integer MISSION_ID = $(MISSION_ID)
 integer NUM_HEROES = $(NUM_HEROES)
 constant player USER_PLAYER = $(USER_PLAYER)
 integer array hero_global_slots
+string array location_names
 constant integer item_channel_1 = $(ITEM_CHANNEL_1)
 constant integer item_channel_2 = $(ITEM_CHANNEL_2)
 constant integer item_channel_2_hero_slot = $(ITEM_CHANNEL_2_HERO_SLOT)
@@ -75,4 +76,5 @@ function InitTrig_map_config takes nothing returns nothing
     set hero_global_slots[1] = $(HERO_ID_1)
     set hero_global_slots[2] = $(HERO_ID_2)
     set hero_global_slots[3] = $(HERO_ID_3)
+    $(LOCATION_NAME_INIT)
 endfunction

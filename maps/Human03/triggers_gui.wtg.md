@@ -3450,8 +3450,6 @@ Disabled the .01 second wait because it was preventing the ogre from running awa
   - param Preset ChangeColorTrue
 - Action CustomScriptCode
   - param String call status_check_location(22)
-- Action CustomScriptCode
-  - param String call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Priest Rescue)")
 - Action TriggerSleepAction
   - param String 0.20
 - Action IssuePointOrderLoc
@@ -6114,8 +6112,6 @@ Run by cinematic ending
 ### Functions
 - Action CustomScriptCode
   - param String call status_check_location(24)
-- Action CustomScriptCode
-  - param String call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Garglemel's Taxes)")
 - Action AdjustPlayerStateBJ
   - param Function OperatorInt
     - Function OperatorInt
@@ -6562,8 +6558,6 @@ Run from 'BanditsAllDie'
 - Action VolumeGroupResetBJ
 - Action CustomScriptCode
   - param String call status_check_location(25)
-- Action CustomScriptCode
-  - param String call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Defeat Bandits)")
 - Action TriggerSleepAction
   - param Preset RealQueueDelayHint
 - Action IfThenElse
@@ -7498,8 +7492,6 @@ Turned on from 'VillagerBridgeOutMessage'
   - param Variable gg_trg_Fountain_Found
 - Action CustomScriptCode
   - param String call status_check_location(21)
-- Action CustomScriptCode
-  - param String call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Fountain of Healing)")
 - Action SetSpeechVolumeGroupsBJ
 - Action TransmissionFromUnitWithNameBJ
   - param Function GetPlayersAll
@@ -7785,8 +7777,6 @@ Turned on from 'VillagerBridgeOutMessage'
     - Action DoNothing
 - Action CustomScriptCode
   - param String call status_check_location(20)
-- Action CustomScriptCode
-  - param String call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Footman Rescue)")
 - Action ForGroup
   - param Variable FootmenDefending
   - param Function DoNothing
@@ -8276,8 +8266,6 @@ Turned on from 'VillagerBridgeOutMessage'
     - Action DoNothing
 - Action CustomScriptCode
   - param String call status_check_location(23)
-- Action CustomScriptCode
-  - param String call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Mortar Team Rescue)")
 - Action SetUnitInvulnerable
   - param Variable gg_unit_uske_0096
   - param Preset InvulnerabilityVulnerable

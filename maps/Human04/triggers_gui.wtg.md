@@ -298,8 +298,6 @@ version = TFT
 ### Functions
 - Action CustomScriptCode
   - param String call status_check_location(20)
-- Action CustomScriptCode
-  - param String call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Got an |cffee1166Archipelago location|r (Undead Base)")
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
