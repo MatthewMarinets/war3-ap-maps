@@ -117,7 +117,7 @@ endfunction
 // defines the packets that communicate with the client
 // depends: map_config, fileio
 globals
-constant string COMM_VERSION = "1.0"
+constant string COMM_VERSION = "2.0"
 constant integer MAX_UPDATE_ID = 100000
 integer error_state = 0
 integer world_id = -1
@@ -132,7 +132,7 @@ integer last_missions_packet = -1
 integer last_item_channel_packet = -1
 integer checks_before_timeout = 2
 boolean array locations_checked
-constant integer MAX_LOCATIONS = 30
+constant integer MAX_LOCATIONS = 60
 constant integer MAX_ITEMS_PER_PACKET = 12
 integer update_index = -1
 integer hero_status_index = -1
@@ -179,6 +179,48 @@ function B2I takes boolean b returns integer
         return 1
     endif
     return 0
+endfunction
+
+function int_to_nibble takes integer i returns string
+    if i < 0 then
+        set i = 0
+    endif
+    if i >= 15 then
+        return "F"
+    elseif i == 14 then
+        return "E"
+    elseif i == 13 then
+        return "D"
+    elseif i == 12 then
+        return "C"
+    elseif i == 11 then
+        return "B"
+    elseif i == 10 then
+        return "A"
+    else
+        return I2S(i)
+    endif
+endfunction
+
+function I2H_16 takes integer i returns string
+    local integer aggregator_1 = 0
+    local integer aggregator_2 = 0
+    local integer aggregator_3 = 0
+    if i >= 65536 then
+        set i = 65535
+    endif
+    set aggregator_1 = i / 4096
+    set i = i - aggregator_1 * 4096
+    set aggregator_2 = i / 256
+    set i = i - aggregator_2 * 256
+    set aggregator_3 = i / 16
+    set i = i - aggregator_3 * 16
+    return int_to_nibble(aggregator_1) + int_to_nibble(aggregator_2) + int_to_nibble(aggregator_3) + int_to_nibble(i)
+endfunction
+
+function I2H takes integer i returns string
+    local integer hi = i / 65536
+    return "0x" + I2H_16(hi) + "_" + I2H_16(i - hi * 65536)
 endfunction
 
 function captains_set_ability_usable takes player p returns nothing
@@ -234,26 +276,25 @@ endfunction
 
 function status_load_locations takes nothing returns nothing
     local player p = Player(0)
-    local integer i = 0
     local integer loc_id = 0
     call SetPlayerTechMaxAllowed(p, 'nech', -1)
-    call io_read_file("locations.txt")
     loop
-        exitwhen i + 2 > StringLength(io_lines[0])
-        set loc_id = S2I(SubString(io_lines[0], i, i+2))
-        if loc_id < MAX_LOCATIONS then
+        exitwhen loc_id >= MAX_LOCATIONS
+        call SetPlayerTechMaxAllowed(p, 2000+loc_id, 0)
+        call SetPlayerTechMaxAllowed(p, 3000+loc_id, 0)
+        set loc_id = loc_id + 1
+    endloop
+    call io_read_file_simple("locations.txt")
+    set loc_id = 0
+    loop
+        exitwhen loc_id >= MAX_LOCATIONS
+        if GetPlayerTechMaxAllowed(p, 2000+loc_id) == 1 then
             set locations_checked[loc_id] = true
         endif
-        set i = i + 2
-    endloop
-    set i = 0
-    loop
-        exitwhen i + 2 > StringLength(io_lines[1])
-        set loc_id = S2I(SubString(io_lines[1], i, i+2))
-        if loc_id < MAX_LOCATIONS then
+        if GetPlayerTechMaxAllowed(p, 3000+loc_id) == 1 then
             set locations_checked[loc_id] = false
         endif
-        set i = i + 2
+        set loc_id = loc_id + 1
     endloop
     set last_location_packet = GetPlayerTechMaxAllowed(p, 'nech')
 endfunction
@@ -327,9 +368,15 @@ function status_load_items takes nothing returns nothing
 
     if GetPlayerTechMaxAllowed(p, 'ndog') == 0 then
         set target_unit = item_channel_1_target
-        set num_channel_1_items_received = num_channel_1_items_received + num_items
     else
         set target_unit = item_channel_2_target
+    endif
+    if IsUnitType(target_unit, UNIT_TYPE_DEAD) then
+        return
+    endif
+    if GetPlayerTechMaxAllowed(p, 'ndog') == 0 then
+        set num_channel_1_items_received = num_channel_1_items_received + num_items
+    else
         set num_channel_2_items_received = num_channel_2_items_received + num_items
     endif
 
@@ -397,7 +444,7 @@ function status_load_missions takes nothing returns nothing
     local player p = Player(0)
     call SetPlayerTechMaxAllowed(p, 'ndog', 0)
     loop
-        exitwhen i >= 300
+        exitwhen i >= 500
         call SetPlayerTechMaxAllowed(p, i, 0)
         set i = i + 1
     endloop
@@ -1135,6 +1182,7 @@ integer current_button = -1
 integer button_held_seconds = 0
 texttag switch_countdown_tag
 texttag array switch_labels
+texttag array locations_labels
 real switch_region_top
 real switch_region_left
 real switch_radius
@@ -1208,7 +1256,7 @@ function display_button_countdown takes nothing returns nothing
             call print("Mission " + I2S(GetPlayerTechMaxAllowed(Player(0), 100+current_button)))
         endif
     endif
-    call SetTextTagText(switch_countdown_tag, I2S(button_held_seconds), 1.2 * 0.023)
+    call SetTextTagText(switch_countdown_tag, I2S(button_held_seconds), 2.4 * 0.023)
 endfunction
 
 function switch_x takes integer column returns real
@@ -1239,9 +1287,9 @@ function press_switch takes nothing returns nothing
         set column = current_button - row * mission_grid_side_length
         call EnableTrigger(display_button_countdown_t)
         call SetTextTagVisibility(switch_countdown_tag, true)
-        call SetTextTagColor(switch_countdown_tag, 255, 200, 0, 255)
-        call SetTextTagText(switch_countdown_tag, "0", 1.2 * 0.023)
-        call SetTextTagPos(switch_countdown_tag, switch_x(column), switch_y(row), 0.023)
+        call SetTextTagColor(switch_countdown_tag, 255, 50, 25, 255)
+        call SetTextTagText(switch_countdown_tag, "0", 2.4 * 0.023)
+        call SetTextTagPos(switch_countdown_tag, switch_x(column)-5, switch_y(row), 0.023)
     endif
 endfunction
 
@@ -1283,6 +1331,7 @@ function init_mission_board takes nothing returns nothing
     local trigger new_trigger
     local integer mission_id
     local integer mission_availability
+    local integer max_locations
     local string mission_name
     if GetPlayerTechMaxAllowed(p, 'ndog') == 1 then
         call TriggerExecute(gg_trg_start_victory)
@@ -1349,8 +1398,21 @@ function init_mission_board takes nothing returns nothing
                         call SetTextTagVisibility(switch_labels[index], true)
                         call SetTextTagColor(switch_labels[index], 255, 200, 0, 255)
                         call SetTextTagText(switch_labels[index], mission_name, 1.2 * 0.023)
-                        call SetTextTagPos(switch_labels[index], switch_x(j) + label_offset_x, switch_y(i) + label_offset_y, 0.023)
+                        call SetTextTagPos(switch_labels[index], switch_x(j) + label_offset_x, switch_y(i) + label_offset_y, 40)
                     endif
+                endif
+            endif
+            set max_locations=GetPlayerTechMaxAllowed(p, 300+index)
+            if max_locations > 0 then
+                if locations_labels[index] == null then
+                    set locations_labels[index] = CreateTextTag()
+                    call SetTextTagVisibility(locations_labels[index], true)
+                    call SetTextTagColor(switch_labels[index], 255, 200, 0, 255)
+                    call SetTextTagPos(locations_labels[index], switch_x(j) - 32, switch_y(i), 0.023)
+                endif
+                call SetTextTagText(locations_labels[index], I2S(GetPlayerTechMaxAllowed(p, 400+index)) +"/"+ I2S(max_locations), 1.2*0.023)
+                if GetPlayerTechMaxAllowed(p, 400+index) == max_locations then
+                    call SetTextTagColor(locations_labels[index], 64, 255, 64, 255)
                 endif
             endif
             set j = j + 1

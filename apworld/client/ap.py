@@ -384,21 +384,21 @@ class Wc3Context(CommonContext):
 
 
     def on_location_received(self, mission_id: int, location_ids: list[int]) -> None:
-        global_locations: list[int] = []
+        global_locations: set[int] = set()
         mission_slot = self.comm_ctx.game_status.mission_order[self.mission_to_slot[mission_id]]
         for location_id in location_ids:
             global_location = global_location_id(mission_id, location_id)
-            global_locations.append(global_location)
+            global_locations.add(global_location)
             if location_id == 0:
                 for index in range(locations.MAX_VICTORY_CACHE_SIZE):
-                    global_locations.append(global_location + locations.VICTORY_CACHE_OFFSET + index)
+                    global_locations.add(global_location + locations.VICTORY_CACHE_OFFSET + index)
                 if mission_id not in self.completed_missions:
                     self.set_mission_beaten(mission_id)
                     self.signal_mission_beaten(mission_id)
                     self.evaluate_requirements(self.mission_unlock_effects.get(mission_id, []))
         async_start(self.send_msgs([{
             "cmd": "LocationChecks",
-            "locations": global_locations,
+            "locations": global_locations & self.missing_locations,
         }]))
         goal_progress = False
         for location_id in global_locations:
@@ -461,7 +461,13 @@ class Wc3Context(CommonContext):
 
     def fetch_locations_collected(self, location_status: dict[int, int], new_mission_id: int) -> None:
         for k in location_status:
-            location_status[k] = global_location_id(new_mission_id, k) in self.locations_checked
+            location_id = global_location_id(new_mission_id, k)
+            if location_id in self.locations_checked:
+                location_status[k] = 1
+            elif location_id not in self.missing_locations:
+                location_status[k] = -1
+            else:
+                location_status[k] = 0
 
     def run_gui(self) -> None:
         from .gui import start_gui

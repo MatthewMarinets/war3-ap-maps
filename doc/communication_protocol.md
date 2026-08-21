@@ -164,11 +164,11 @@ and an outdated client can still work with older packet types.
 * Mark locations as collected or uncollected
 * Locations greater than MAX_LOCATIONS are ignored
 
-| Line                       | Contains                                      |
-| -------------------------- | --------------------------------------------- |
-| MaxTech(Player(0), 'nech') | Locations ID; echoed back in status.txt       |
-| PlayerName(0)              | String encoding locations to mark collected   |
-| PlayerName(1)              | String encoding locations to mark uncollected |
+| Line                                    | Contains                                      |
+| --------------------------------------- | --------------------------------------------- |
+| MaxTech(Player(0), 'nech')              | Locations ID; echoed back in status.txt       |
+| MaxTech(Player(0), 2000~+MAX_LOCATIONS) | Locations to mark collected                   |
+| MaxTech(Player(0), 3000~+MAX_LOCATIONS) | Locations to mark uncollected                 |
 
 Encoded IDs are two-character stringified integers. Ex: " 0 710" says locations 0, 7, and 10 are collected.
 
@@ -294,6 +294,8 @@ Encoded IDs are two-character stringified integers. Ex: " 0 710" says locations 
 | MaxTech(Player(0), 'ndog')  | 1 if the mission order is won                     |
 | MaxTech(Player(0), 100~199) | Mission IDs for missions in slots 0~100           |
 | MaxTech(Player(0), 200~299) | Mission slot enablement state                     |
+| MaxTech(Player(0), 300~399) | Locations maximum per mission                     |
+| MaxTech(Player(0), 400~499) | Locations completed per mission                   |
 
 #### Enablement states
 | Value | Meaning               |

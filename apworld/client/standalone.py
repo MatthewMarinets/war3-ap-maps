@@ -207,7 +207,7 @@ def handle_send_check(ctx: AsyncContext, *args: str) -> None:
 def handle_unsend_check(ctx: AsyncContext, *args: str) -> None:
     for arg in args:
         if arg.isnumeric():
-            ctx.mission_status.locations_collected[int(arg)] = -1
+            ctx.mission_status.locations_collected[int(arg)] = -2
     print_location_status(ctx)
     ctx.game_status.pending_update |= PacketType.LOCATIONS
 
@@ -394,7 +394,11 @@ class EchoClientInterface:
 
     def fetch_locations_collected(self, location_status: dict[int, int], new_mission_id: int) -> None:
         for k in location_status:
-            location_status[k] = 0
+            global_id = locations.global_location_id(new_mission_id, k)
+            if locations.ID_TO_LOCATION.get(global_id) is not None:
+                location_status[k] = 0
+            else:
+                location_status[k] = -1
 
 
 def init_test_data(game_status: GameStatus) -> None:
@@ -405,10 +409,10 @@ def init_test_data(game_status: GameStatus) -> None:
     }
     # game_status.mission_order[4, 3].availability = MissionAvailability.BEATEN
     # game_status.mission_order[5, 6].availability = MissionAvailability.LOCKED
-    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].hero = heroes.HeroChoice.FEL_ORC_BLADEMASTER
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].hero = heroes.HeroChoice.ALCHEMIST
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].reset_abils()
-    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].xp = 100
-    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].max_level = 3
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].xp = 3000
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].max_level = 8
     # game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].abilities[GameID.BLOOD_MAGE_SIPHON_MANA] = 1
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].items[2] = InventoryItem(GameID.BRACER_OF_AGILITY)
     game_status.hero_data[heroes.HeroSlot.JAINA].hero = heroes.HeroChoice.FIRELORD

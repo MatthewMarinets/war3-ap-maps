@@ -6,6 +6,7 @@ integer current_button = -1
 integer button_held_seconds = 0
 texttag switch_countdown_tag
 texttag array switch_labels
+texttag array locations_labels
 real switch_region_top
 real switch_region_left
 real switch_radius
@@ -79,7 +80,7 @@ function display_button_countdown takes nothing returns nothing
             call print("Mission " + I2S(GetPlayerTechMaxAllowed(Player(0), 100+current_button)))
         endif
     endif
-    call SetTextTagText(switch_countdown_tag, I2S(button_held_seconds), 1.2 * 0.023)
+    call SetTextTagText(switch_countdown_tag, I2S(button_held_seconds), 2.4 * 0.023)
 endfunction
 
 function switch_x takes integer column returns real
@@ -110,9 +111,9 @@ function press_switch takes nothing returns nothing
         set column = current_button - row * mission_grid_side_length
         call EnableTrigger(display_button_countdown_t)
         call SetTextTagVisibility(switch_countdown_tag, true)
-        call SetTextTagColor(switch_countdown_tag, 255, 200, 0, 255)
-        call SetTextTagText(switch_countdown_tag, "0", 1.2 * 0.023)
-        call SetTextTagPos(switch_countdown_tag, switch_x(column), switch_y(row), 0.023)
+        call SetTextTagColor(switch_countdown_tag, 255, 50, 25, 255)
+        call SetTextTagText(switch_countdown_tag, "0", 2.4 * 0.023)
+        call SetTextTagPos(switch_countdown_tag, switch_x(column)-5, switch_y(row), 0.023)
     endif
 endfunction
 
@@ -154,6 +155,7 @@ function init_mission_board takes nothing returns nothing
     local trigger new_trigger
     local integer mission_id
     local integer mission_availability
+    local integer max_locations
     local string mission_name
     if GetPlayerTechMaxAllowed(p, 'ndog') == 1 then
         call TriggerExecute(gg_trg_start_victory)
@@ -220,8 +222,21 @@ function init_mission_board takes nothing returns nothing
                         call SetTextTagVisibility(switch_labels[index], true)
                         call SetTextTagColor(switch_labels[index], 255, 200, 0, 255)
                         call SetTextTagText(switch_labels[index], mission_name, 1.2 * 0.023)
-                        call SetTextTagPos(switch_labels[index], switch_x(j) + label_offset_x, switch_y(i) + label_offset_y, 0.023)
+                        call SetTextTagPos(switch_labels[index], switch_x(j) + label_offset_x, switch_y(i) + label_offset_y, 40)
                     endif
+                endif
+            endif
+            set max_locations=GetPlayerTechMaxAllowed(p, 300+index)
+            if max_locations > 0 then
+                if locations_labels[index] == null then
+                    set locations_labels[index] = CreateTextTag()
+                    call SetTextTagVisibility(locations_labels[index], true)
+                    call SetTextTagColor(switch_labels[index], 255, 200, 0, 255)
+                    call SetTextTagPos(locations_labels[index], switch_x(j) - 32, switch_y(i), 0.023)
+                endif
+                call SetTextTagText(locations_labels[index], I2S(GetPlayerTechMaxAllowed(p, 400+index)) +"/"+ I2S(max_locations), 1.2*0.023)
+                if GetPlayerTechMaxAllowed(p, 400+index) == max_locations then
+                    call SetTextTagColor(locations_labels[index], 64, 255, 64, 255)
                 endif
             endif
             set j = j + 1

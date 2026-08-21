@@ -32,14 +32,14 @@ MISSIONS_FILE = f'{PRELOADER_DIR}/missions.txt'
 
 FIRST_TRANSMISSION_UNSET = -100
 NUM_FILE_LINES = 10
-MAX_LOCATIONS = 30  # Should match status.j
+MAX_LOCATIONS = 60  # Should match status.j
 MAX_UPDATE_ID = 100000  # Should match status.j
 MISSION_SELECT_MISSION_ID = 0  # Should match CampaignSelect/map_info.j
 MAX_MISSION_GRID_SIDE_LENGTH = 10  # Should match CampaignSelect/mission_select_init.j
 
 HERO_INVENTORY_SIZE = 6
 
-COMM_VERSION = (1, 0)
+COMM_VERSION = (2, 0)
 
 
 class ColorCode(enum.StrEnum):
@@ -178,7 +178,7 @@ class MissionStatus:
     mission_id: int = -1
     packet_status: dict[PacketType, PacketStatus] = field(default_factory=default_packet_status)
     locations_collected: dict[int, int] = field(default_factory=default_locations_collected)
-    """Mapping location ID -> state. 0=uncollected, 1=collected, -1=pending force-uncollect"""
+    """Mapping location ID -> state. 0=uncollected, 1=collected, -1=nonexistent, -2=pending force-uncollect"""
     errors: MissionError = MissionError.NONE
     first_transmission: int = FIRST_TRANSMISSION_UNSET
 
@@ -363,21 +363,15 @@ def update_locations(game_status: GameStatus, status: MissionStatus) -> None:
     if PacketType.LOCATIONS not in game_status.pending_update:
         return
     packet_status.last_sent = (packet_status.last_sent + 1) & 0xffff
-    collected_parts: list[str] = []
-    uncollected_parts: list[str] = []
-    for location_id, location_status in status.locations_collected.items():
-        if location_status == 1:
-            collected_parts.append('%2s' % location_id)
-        elif location_status == -1:
-            uncollected_parts.append('%2s' % location_id)
-            status.locations_collected[location_id] = 0
-    collected_string = ''.join(collected_parts)
-    uncollected_string = ''.join(uncollected_parts)
     with open(LOCATIONS_FILE, 'w') as fp:
         fp.write(PRELOAD_FUNCTION_PROTOTYPE)
         fp.write(send_int(packet_status.last_sent, 'nech'))
-        fp.write(send_string(collected_string, player=0))
-        fp.write(send_string(uncollected_string, player=1))
+        for loc_id in range(MAX_LOCATIONS):
+            location_state = status.locations_collected.get(loc_id, 0)
+            if location_state > 0:
+                fp.write(send_int(1, 2000+loc_id))
+            elif location_state < -1:
+                fp.write(send_int(1, 3000+loc_id))
         fp.write(ENDFUNCTION)
 
 
@@ -525,7 +519,9 @@ def update_settings(game_status: GameStatus, mission_status: MissionStatus) -> N
         fp.write(ENDFUNCTION)
 
 
-def update_missions(game_status: GameStatus, mission_status: MissionStatus) -> None:
+def update_missions(
+    game_status: GameStatus, mission_status: MissionStatus, client_interface: ClientInterface | None = None
+) -> None:
     packet_status = mission_status.packet_status[PacketType.MISSIONS]
     if (PacketType.MISSIONS not in game_status.pending_update
         or mission_status.mission_id != MISSION_SELECT_MISSION_ID
@@ -538,6 +534,7 @@ def update_missions(game_status: GameStatus, mission_status: MissionStatus) -> N
         fp.write(send_int(packet_status.last_sent, 'nech'))
         fp.write(send_int(side_length, 'size'))
         fp.write(send_int(1 if game_status.is_victorious else 0, 'ndog'))
+        mission_locations = {x: 0 for x in range(MAX_LOCATIONS)}
         for y in range(side_length):
             for x in range(side_length):
                 unlock_status = game_status.mission_order.get((x, y))
@@ -545,6 +542,20 @@ def update_missions(game_status: GameStatus, mission_status: MissionStatus) -> N
                 if unlock_status:
                     fp.write(send_int(unlock_status.mission.id, 100+offset))
                     fp.write(send_int(unlock_status.availability.value, 200+offset))
+                    if client_interface:
+                        client_interface.fetch_locations_collected(mission_locations, unlock_status.mission.id)
+                        max_locations = 0
+                        checked_locations = 0
+                        for location_id in mission_locations.values():
+                            if location_id == -1:
+                                continue
+                            max_locations += 1
+                            if location_id == 1:
+                                checked_locations += 1
+                        if max_locations:
+                            fp.write(send_int(max_locations, 300+offset))
+                        if checked_locations:
+                            fp.write(send_int(checked_locations, 400+offset))
         fp.write(ENDFUNCTION)
 
 
@@ -870,7 +881,7 @@ async def status_loop(ctx: AsyncContext) -> None:
         update_items(ctx.game_status, ctx.mission_status)
         update_mercenaries(ctx.game_status, ctx.mission_status)
         update_settings(ctx.game_status, ctx.mission_status)
-        update_missions(ctx.game_status, ctx.mission_status)
+        update_missions(ctx.game_status, ctx.mission_status, ctx.client_interface)
         pending_update = ctx.game_status.pending_update
         if ctx.mission_status.mission_id != MISSION_SELECT_MISSION_ID:
             pending_update &= ~PacketType.MISSIONS

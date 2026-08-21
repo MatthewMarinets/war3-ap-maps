@@ -1,7 +1,7 @@
 // defines the packets that communicate with the client
 // depends: map_config, fileio
 globals
-constant string COMM_VERSION = "1.0"
+constant string COMM_VERSION = "2.0"
 constant integer MAX_UPDATE_ID = 100000
 integer error_state = 0
 integer world_id = -1
@@ -16,7 +16,7 @@ integer last_missions_packet = -1
 integer last_item_channel_packet = -1
 integer checks_before_timeout = 2
 boolean array locations_checked
-constant integer MAX_LOCATIONS = 30
+constant integer MAX_LOCATIONS = 60
 constant integer MAX_ITEMS_PER_PACKET = 12
 integer update_index = -1
 integer hero_status_index = -1
@@ -160,26 +160,25 @@ endfunction
 
 function status_load_locations takes nothing returns nothing
     local player p = Player(0)
-    local integer i = 0
     local integer loc_id = 0
     call SetPlayerTechMaxAllowed(p, 'nech', -1)
-    call io_read_file("locations.txt")
     loop
-        exitwhen i + 2 > StringLength(io_lines[0])
-        set loc_id = S2I(SubString(io_lines[0], i, i+2))
-        if loc_id < MAX_LOCATIONS then
+        exitwhen loc_id >= MAX_LOCATIONS
+        call SetPlayerTechMaxAllowed(p, 2000+loc_id, 0)
+        call SetPlayerTechMaxAllowed(p, 3000+loc_id, 0)
+        set loc_id = loc_id + 1
+    endloop
+    call io_read_file_simple("locations.txt")
+    set loc_id = 0
+    loop
+        exitwhen loc_id >= MAX_LOCATIONS
+        if GetPlayerTechMaxAllowed(p, 2000+loc_id) == 1 then
             set locations_checked[loc_id] = true
         endif
-        set i = i + 2
-    endloop
-    set i = 0
-    loop
-        exitwhen i + 2 > StringLength(io_lines[1])
-        set loc_id = S2I(SubString(io_lines[1], i, i+2))
-        if loc_id < MAX_LOCATIONS then
+        if GetPlayerTechMaxAllowed(p, 3000+loc_id) == 1 then
             set locations_checked[loc_id] = false
         endif
-        set i = i + 2
+        set loc_id = loc_id + 1
     endloop
     set last_location_packet = GetPlayerTechMaxAllowed(p, 'nech')
 endfunction
@@ -329,7 +328,7 @@ function status_load_missions takes nothing returns nothing
     local player p = Player(0)
     call SetPlayerTechMaxAllowed(p, 'ndog', 0)
     loop
-        exitwhen i >= 300
+        exitwhen i >= 500
         call SetPlayerTechMaxAllowed(p, i, 0)
         set i = i + 1
     endloop
