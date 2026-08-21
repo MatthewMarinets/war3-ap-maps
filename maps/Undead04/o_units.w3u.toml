@@ -1,0 +1,525 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 1
+has_levels = false
+
+[blizzard_objects.nefm]
+parent_id = 'nefm'  # High Elven Farm
+entity_id = 'null'
+
+[[blizzard_objects.nefm.modifications]]
+modification_id = 'ufma'  # UnitBalance.Food Produced
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 10
+object_id = 'null'
+
+[blizzard_objects.nheb]
+parent_id = 'nheb'  # High Elven Barracks
+entity_id = 'null'
+
+[[blizzard_objects.nheb.modifications]]
+modification_id = 'utra'  # Profile.Units Trained
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "hhes,nhea,ebal,nzep"
+object_id = 'null'
+
+[blizzard_objects.hars]
+parent_id = 'hars'  # Arcane Sanctum
+entity_id = 'null'
+
+[[blizzard_objects.hars.modifications]]
+modification_id = 'upgr'  # UnitBalance.Upgrades Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[blizzard_objects.hars.modifications]]
+modification_id = 'ures'  # Profile.Researches Available
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[blizzard_objects.hars.modifications]]
+modification_id = 'utra'  # Profile.Units Trained
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "nws1,hmpr,hsor"
+object_id = 'null'
+
+[blizzard_objects.hcas]
+parent_id = 'hcas'  # Castle
+entity_id = 'null'
+
+[[blizzard_objects.hcas.modifications]]
+modification_id = 'upgr'  # UnitBalance.Upgrades Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[blizzard_objects.hcas.modifications]]
+modification_id = 'utra'  # Profile.Units Trained
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'nhem'  # High Elf
+object_id = 'null'
+
+[[blizzard_objects.hcas.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Abdl,Argl"
+object_id = 'null'
+
+[[blizzard_objects.hcas.modifications]]
+modification_id = 'ufma'  # UnitBalance.Food Produced
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 32
+object_id = 'null'
+
+[blizzard_objects.hpea]
+parent_id = 'hpea'  # Peasant
+entity_id = 'null'
+
+[[blizzard_objects.hpea.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\HighElfPeasant\\HighElfPeasant"
+object_id = 'nhem'  # High Elf
+
+[[blizzard_objects.hpea.modifications]]
+modification_id = 'ubui'  # Profile.Structures Built
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "htow,nefm,nheb,negm,negf,hars,hlum"
+object_id = 'null'
+
+[[blizzard_objects.hpea.modifications]]
+modification_id = 'upgr'  # UnitBalance.Upgrades Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[blizzard_objects.hpea.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Ahar,Ahrp"
+object_id = 'null'
+
+[[blizzard_objects.hpea.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_013"
+object_id = 'null'
+
+[[blizzard_objects.hpea.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_009"
+object_id = 'null'
+
+[[blizzard_objects.hpea.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNElfVillager.tga"
+object_id = 'nhem'  # High Elf
+
+[blizzard_objects.htow]
+parent_id = 'htow'  # Town Hall
+entity_id = 'null'
+
+[[blizzard_objects.htow.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Abdl,Argl"
+object_id = 'null'
+
+[[blizzard_objects.htow.modifications]]
+modification_id = 'ufma'  # UnitBalance.Food Produced
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 32
+object_id = 'null'
+
+[blizzard_objects.hkee]
+parent_id = 'hkee'  # Keep
+entity_id = 'null'
+
+[[blizzard_objects.hkee.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Abdl,Argl"
+object_id = 'null'
+
+[[blizzard_objects.hkee.modifications]]
+modification_id = 'ufma'  # UnitBalance.Food Produced
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 32
+object_id = 'null'
+
+[blizzard_objects.nws1]
+parent_id = 'nws1'  # Dragon Hawk
+entity_id = 'null'
+
+[[blizzard_objects.nws1.modifications]]
+modification_id = 'ugol'  # Haunted Gold Mine
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
+object_id = 'null'
+
+[[blizzard_objects.nws1.modifications]]
+modification_id = 'ulum'  # UnitBalance.Lumber Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 75
+object_id = 'null'
+
+[[blizzard_objects.nws1.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[blizzard_objects.nspb]
+parent_id = 'nspb'  # Black Spider
+entity_id = 'null'
+
+[[blizzard_objects.nspb.modifications]]
+modification_id = 'usle'  # UnitData.Sleeps
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.nspg]
+parent_id = 'nspg'  # Forest Spider
+entity_id = 'null'
+
+[[blizzard_objects.nspg.modifications]]
+modification_id = 'usle'  # UnitData.Sleeps
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.ngsp]
+parent_id = 'ngsp'  # Goblin Sapper
+entity_id = 'null'
+
+[[blizzard_objects.ngsp.modifications]]
+modification_id = 'usst'  # UnitBalance.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.nzep]
+parent_id = 'nzep'  # Goblin Zeppelin
+entity_id = 'null'
+
+[[blizzard_objects.nzep.modifications]]
+modification_id = 'usst'  # UnitBalance.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.ebal]
+parent_id = 'ebal'  # Glaive Thrower
+entity_id = 'null'
+
+[[blizzard_objects.ebal.modifications]]
+modification_id = 'ureq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[blizzard_objects.Hvwd]
+parent_id = 'Hvwd'  # Ranger
+entity_id = 'null'
+
+[[blizzard_objects.Hvwd.modifications]]
+modification_id = 'ubld'  # UnitBalance.Build Time
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 120
+object_id = 'null'
+
+[blizzard_objects.ngad]
+parent_id = 'ngad'  # Goblin Laboratory
+entity_id = 'null'
+
+[[blizzard_objects.ngad.modifications]]
+modification_id = 'useu'  # Profile.Units Sold
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ngsp,nzep"
+object_id = 'null'
+
+
+[map_objects.nC03]
+parent_id = 'nzep'  # Goblin Zeppelin
+entity_id = 'nC03'
+
+[[map_objects.nC03.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_015"
+object_id = 'null'
+
+[[map_objects.nC03.modifications]]
+modification_id = 'ugol'  # Haunted Gold Mine
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 200
+object_id = 'null'
+
+[[map_objects.nC03.modifications]]
+modification_id = 'ulum'  # UnitBalance.Lumber Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 50
+object_id = 'null'
+
+[map_objects.UC00]
+parent_id = 'Uear'  # Death Knight
+entity_id = 'UC00'
+
+[[map_objects.UC00.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_012"
+object_id = 'null'
+
+[[map_objects.UC00.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_033"
+object_id = 'null'
+
+[[map_objects.UC00.modifications]]
+modification_id = 'ua1r'  # UnitWeapons.Attack 1 - Range
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1000
+object_id = 'null'
+
+[[map_objects.UC00.modifications]]
+modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "magic"
+object_id = 'null'
+
+[[map_objects.UC00.modifications]]
+modification_id = 'ua1w'  # UnitWeapons.Attack 1 - Weapon Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "msplash"
+object_id = 'null'
+
+[[map_objects.UC00.modifications]]
+modification_id = 'ua1m'  # Profile.Attack 1 - Projectile Art
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Abilities\\Weapons\\FrostWyrmMissile\\FrostWyrmMissile.mdl"
+object_id = 'null'
+
+[[map_objects.UC00.modifications]]
+modification_id = 'ua1z'  # Profile.Attack 1 - Projectile Speed
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 800
+object_id = 'null'
+
+[[map_objects.UC00.modifications]]
+modification_id = 'ua1g'  # UnitWeapons.Attack 1 - Targets Allowed
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "debris,ground,item,structure,wall,ward"
+object_id = 'null'
+
+[map_objects.uC01]
+parent_id = 'uban'  # Banshee
+entity_id = 'uC01'
+
+[[map_objects.uC01.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_039"
+object_id = 'null'
+
+[[map_objects.uC01.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_134"
+object_id = 'null'
+
+[[map_objects.uC01.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.2999999523162842
+object_id = 'null'
+
+[[map_objects.uC01.modifications]]
+modification_id = 'uclr'  # UnitUI.Tinting Color 1 (Red)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 120
+object_id = 'null'
+
+[[map_objects.uC01.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 150
+object_id = 'null'
+
+[[map_objects.uC01.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 400
+object_id = 'null'
+
+[[map_objects.uC01.modifications]]
+modification_id = 'uhrt'  # UnitBalance.Hit Points Regeneration Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "always"
+object_id = 'null'
+
+[[map_objects.uC01.modifications]]
+modification_id = 'umpm'  # UnitBalance.Mana Maximum
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 300
+object_id = 'null'
+
+[[map_objects.uC01.modifications]]
+modification_id = 'umpr'  # UnitBalance.Mana Regeneration
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 0.800000011920929
+object_id = 'null'
+
+[[map_objects.uC01.modifications]]
+modification_id = 'udef'  # UnitBalance.Defense Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[[map_objects.uC01.modifications]]
+modification_id = 'udty'  # UnitBalance.Defense Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'hero'  # Profile.Techtree - Dependency Equivalents - Hero
+object_id = 'null'
+
+[[map_objects.uC01.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 20
+object_id = 'null'
+
+[[map_objects.uC01.modifications]]
+modification_id = 'ua1s'  # UnitWeapons.Attack 1 - Damage Sides per Die
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 9
+object_id = 'null'
+
+[[map_objects.uC01.modifications]]
+modification_id = 'ua1c'  # UnitWeapons.Attack 1 - Cooldown Time
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 1.399999976158142
+object_id = 'null'
+
+[[map_objects.uC01.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Aams,Acrs"
+object_id = 'null'

@@ -1,0 +1,514 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 1
+has_levels = false
+
+[blizzard_objects.nheb]
+parent_id = 'nheb'  # High Elven Barracks
+entity_id = 'null'
+
+[[blizzard_objects.nheb.modifications]]
+modification_id = 'utra'  # Profile.Units Trained
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "hhes,nhea,ebal"
+object_id = 'null'
+
+[blizzard_objects.hpea]
+parent_id = 'hpea'  # Peasant
+entity_id = 'null'
+
+[[blizzard_objects.hpea.modifications]]
+modification_id = 'ubui'  # Profile.Structures Built
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "htow,nheb,hlum,negt,nefm,halt,hbla"
+object_id = 'null'
+
+[[blizzard_objects.hpea.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\HighElfPeasant\\HighElfPeasant"
+object_id = 'nhem'  # High Elf
+
+[[blizzard_objects.hpea.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Ahar,Ahrp"
+object_id = 'null'
+
+[[blizzard_objects.hpea.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNElfVillager.tga"
+object_id = 'nhem'  # High Elf
+
+[blizzard_objects.nhef]
+parent_id = 'nhef'  # High Elf
+entity_id = 'null'
+
+[[blizzard_objects.nhef.modifications]]
+modification_id = 'umvs'  # UnitBalance.Speed Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 170
+object_id = 'null'
+
+[blizzard_objects.nhem]
+parent_id = 'nhem'  # High Elf
+entity_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'utyp'  # UnitBalance.Unit Classification
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "peon"
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ubui'  # Profile.Structures Built
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "htow,nheb,hlum,nefm,halt,negt"
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ugol'  # Haunted Gold Mine
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 80
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ubld'  # UnitBalance.Build Time
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 15
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 150
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'uhpr'  # UnitBalance.Hit Points Regeneration Rate
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 0.25
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'upgr'  # UnitBalance.Upgrades Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Rhlh'  # Improved Lumber Harvesting,Advanced Lumber Harvesting
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'udty'  # UnitBalance.Defense Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "medium"
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'uaen'  # UnitWeapons.Attacks Enabled
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ua1r'  # UnitWeapons.Attack 1 - Range
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 90
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ua1w'  # UnitWeapons.Attack 1 - Weapon Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "normal"
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ua1g'  # UnitWeapons.Attack 1 - Targets Allowed
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "debris,ground,item,structure,ward"
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 4
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ua1d'  # UnitWeapons.Attack 1 - Damage Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ua1s'  # UnitWeapons.Attack 1 - Damage Sides per Die
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ua1c'  # UnitWeapons.Attack 1 - Cooldown Time
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 2.0
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ua2r'  # UnitWeapons.Attack 2 - Range
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 66
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ua2t'  # UnitWeapons.Attack 2 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "normal"
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ua2w'  # UnitWeapons.Attack 2 - Weapon Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "normal"
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ua2g'  # UnitWeapons.Attack 2 - Targets Allowed
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "tree"
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ua2d'  # UnitWeapons.Attack 2 - Damage Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ua2s'  # UnitWeapons.Attack 2 - Damage Sides per Die
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ua2c'  # UnitWeapons.Attack 2 - Cooldown Time
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 1.100000023841858
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Ahar,Amic,Ahrp"
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'umvr'  # UnitData.Turn Rate
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 0.6000000238418579
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'uacq'  # UnitWeapons.Acquisition Range
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 500.0
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'usid'  # UnitBalance.Sight Radius (Day)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 800
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'usin'  # UnitBalance.Sight Radius (Night)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 600
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ulev'  # UnitBalance.Level
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 15
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 5
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'ubsi'  # UnitBalance.Gold Bounty Awarded - Sides per Die
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'usma'  # UnitBalance.Stock Maximum
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'usrg'  # UnitBalance.Stock Replenish Interval
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 30
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_004"
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'uhot'  # Profile.Hotkey
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_006"
+object_id = 'null'
+
+[[blizzard_objects.nhem.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_010"
+object_id = 'null'
+
+[blizzard_objects.htow]
+parent_id = 'htow'  # Town Hall
+entity_id = 'null'
+
+[[blizzard_objects.htow.modifications]]
+modification_id = 'utra'  # Profile.Units Trained
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "hpea,nhem"
+object_id = 'null'
+
+[[blizzard_objects.htow.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Abdl,Argl"
+object_id = 'null'
+
+[blizzard_objects.ebal]
+parent_id = 'ebal'  # Glaive Thrower
+entity_id = 'null'
+
+[[blizzard_objects.ebal.modifications]]
+modification_id = 'ureq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[blizzard_objects.ogru]
+parent_id = 'ogru'  # Grunt
+entity_id = 'null'
+
+[[blizzard_objects.ogru.modifications]]
+modification_id = 'ua1g'  # UnitWeapons.Attack 1 - Targets Allowed
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "debris,ground,item,structure,wall,ward"
+object_id = 'null'
+
+[blizzard_objects.hkee]
+parent_id = 'hkee'  # Keep
+entity_id = 'null'
+
+[[blizzard_objects.hkee.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Abdl,Argl"
+object_id = 'null'
+
+[blizzard_objects.hcas]
+parent_id = 'hcas'  # Castle
+entity_id = 'null'
+
+[[blizzard_objects.hcas.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Abdl,Argl"
+object_id = 'null'
+
+[blizzard_objects.phea]
+parent_id = 'phea'  # Potion of Healing
+entity_id = 'null'
+
+[[blizzard_objects.phea.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.ngme]
+parent_id = 'ngme'  # Goblin Merchant
+entity_id = 'null'
+
+[[blizzard_objects.ngme.modifications]]
+modification_id = 'usei'  # Profile.Items Sold
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "phea,pman,shea,spro,wneg,gemt,stwp"
+object_id = 'null'
+
+[blizzard_objects.pman]
+parent_id = 'pman'  # Potion of Mana
+entity_id = 'null'
+
+[[blizzard_objects.pman.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.shea]
+parent_id = 'shea'  # Scroll of Healing
+entity_id = 'null'
+
+[[blizzard_objects.shea.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.spro]
+parent_id = 'spro'  # Scroll of Protection
+entity_id = 'null'
+
+[[blizzard_objects.spro.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.stwp]
+parent_id = 'stwp'  # Scroll of Town Portal
+entity_id = 'null'
+
+[[blizzard_objects.stwp.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[map_objects]

@@ -1,0 +1,172 @@
+# Warcraft 3 Camera file (.w3c)
+# See w3c.py for type definitions
+
+version = 0
+
+[[cameras]]
+target_x = -1713.430419921875
+target_y = -2708.6767578125
+z_offset = 0.0
+rotation = 134.98165893554688
+angle_of_attack = 311.696044921875
+distance = 1021.4024658203125
+roll = 0.0
+fov = 85.0
+far_z = 2600.0
+name = 'Arthas and Kel Talking'
+
+[[cameras]]
+target_x = -1405.9454345703125
+target_y = -2686.141357421875
+z_offset = 0.0
+rotation = 53.98519515991211
+angle_of_attack = 323.25079345703125
+distance = 1021.4024658203125
+roll = 0.0
+fov = 80.0
+far_z = 3000.0
+name = 'Arthas'
+
+[[cameras]]
+target_x = -1638.0421142578125
+target_y = -2822.053955078125
+z_offset = 0.0
+rotation = 108.40703582763672
+angle_of_attack = 321.1983947753906
+distance = 1324.1953125
+roll = 0.0
+fov = 70.0
+far_z = 3000.0
+name = 'Follow Arthas'
+
+[[cameras]]
+target_x = 5938.33154296875
+target_y = 4570.51025390625
+z_offset = 0.0
+rotation = 63.1406364440918
+angle_of_attack = 326.9112548828125
+distance = 1553.3990478515625
+roll = 0.0
+fov = 75.0
+far_z = 3500.0
+name = 'Start Ending'
+
+[[cameras]]
+target_x = -2410.41748046875
+target_y = -1486.1749267578125
+z_offset = 0.0
+rotation = 31.57025718688965
+angle_of_attack = 329.071533203125
+distance = 1815.0001220703125
+roll = 0.0
+fov = 70.0
+far_z = 4000.0
+name = 'Starting Town'
+
+[[cameras]]
+target_x = -1580.8328857421875
+target_y = -2985.613525390625
+z_offset = 0.0
+rotation = 284.46954345703125
+angle_of_attack = 328.6022033691406
+distance = 767.3947143554688
+roll = 0.0
+fov = 80.0
+far_z = 4000.0
+name = 'Cam1ArthasKelCounterShot'
+
+[[cameras]]
+target_x = -2192.46142578125
+target_y = -3133.84912109375
+z_offset = 0.0
+rotation = 301.2740478515625
+angle_of_attack = 323.6498718261719
+distance = 1132.9053955078125
+roll = 0.0
+fov = 80.0
+far_z = 3000.0
+name = 'Cam2IntroPanStart'
+
+[[cameras]]
+target_x = -1556.2257080078125
+target_y = -3021.8310546875
+z_offset = 0.0
+rotation = 300.360107421875
+angle_of_attack = 321.90509033203125
+distance = 899.7124633789062
+roll = 0.0
+fov = 80.0
+far_z = 2800.0
+name = 'Cam3IntroPanEnd'
+
+[[cameras]]
+target_x = -5089.66943359375
+target_y = -5552.80810546875
+z_offset = 0.0
+rotation = 72.89928436279297
+angle_of_attack = 315.109130859375
+distance = 1123.542724609375
+roll = 0.0
+fov = 90.0
+far_z = 2200.0
+name = 'Cam4IntroFlybyStart'
+
+[[cameras]]
+target_x = -3236.32373046875
+target_y = -3432.6943359375
+z_offset = 0.0
+rotation = 75.71174621582031
+angle_of_attack = 316.1192321777344
+distance = 1123.542724609375
+roll = 0.0
+fov = 90.0
+far_z = 2200.0
+name = 'Cam4IntroFlybyEnd'
+
+[[cameras]]
+target_x = -1664.2796630859375
+target_y = -2997.030517578125
+z_offset = 0.0
+rotation = 233.3523712158203
+angle_of_attack = 325.5467834472656
+distance = 844.1342163085938
+roll = 0.0
+fov = 80.0
+far_z = 3400.0
+name = 'Cam4KelCloseup'
+
+[[cameras]]
+target_x = 2986.69775390625
+target_y = 4626.6630859375
+z_offset = 0.0
+rotation = 54.68827819824219
+angle_of_attack = 331.1378479003906
+distance = 1164.136962890625
+roll = 0.0
+fov = 75.0
+far_z = 2600.0
+name = 'Cam5BlackrockOrcTown'
+
+[[cameras]]
+target_x = 5753.27197265625
+target_y = 4264.12841796875
+z_offset = 0.0
+rotation = 27.82891845703125
+angle_of_attack = 324.5198669433594
+distance = 1704.4129638671875
+roll = 0.0
+fov = 75.0
+far_z = 3000.0
+name = 'CamPortalPanStart'
+
+[[cameras]]
+target_x = 5864.8564453125
+target_y = 4338.57958984375
+z_offset = 0.0
+rotation = 33.53907012939453
+angle_of_attack = 328.83978271484375
+distance = 1194.4688720703125
+roll = 0.0
+fov = 75.0
+far_z = 3500.0
+name = 'StartEnding2'

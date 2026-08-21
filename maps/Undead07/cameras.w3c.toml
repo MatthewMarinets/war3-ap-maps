@@ -1,0 +1,160 @@
+# Warcraft 3 Camera file (.w3c)
+# See w3c.py for type definitions
+
+version = 0
+
+[[cameras]]
+target_x = 522.3718872070312
+target_y = 6067.62255859375
+z_offset = 0.0
+rotation = 246.0640106201172
+angle_of_attack = 337.1234130859375
+distance = 2329.0400390625
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Camera End Alternate'
+
+[[cameras]]
+target_x = 855.6199951171875
+target_y = -7787.990234375
+z_offset = 0.0
+rotation = 300.8999938964844
+angle_of_attack = 333.92999267578125
+distance = 962.5700073242188
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Camera End Alternate2'
+
+[[cameras]]
+target_x = 521.860107421875
+target_y = 6841.40673828125
+z_offset = 0.0
+rotation = 116.5982437133789
+angle_of_attack = 330.1685485839844
+distance = 1195.165771484375
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Ending01'
+
+[[cameras]]
+target_x = 546.4004516601562
+target_y = 8297.5
+z_offset = 0.0
+rotation = 90.35476684570312
+angle_of_attack = 325.8281555175781
+distance = 1252.509033203125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Ending02'
+
+[[cameras]]
+target_x = 584.0027465820312
+target_y = 8300.41015625
+z_offset = 0.0
+rotation = 203.7197723388672
+angle_of_attack = 329.36492919921875
+distance = 1377.760009765625
+roll = 0.0
+fov = 70.0
+far_z = 10000.0
+name = 'Ending02a'
+
+[[cameras]]
+target_x = -1363.7496337890625
+target_y = -9735.1015625
+z_offset = 0.0
+rotation = 179.11907958984375
+angle_of_attack = 325.50634765625
+distance = 1242.8475341796875
+roll = 0.0
+fov = 70.0
+far_z = 10000.0
+name = 'MeatWagon01'
+
+[[cameras]]
+target_x = -1471.7657470703125
+target_y = -9755.4765625
+z_offset = 0.0
+rotation = 197.5223388671875
+angle_of_attack = 330.3648986816406
+distance = 1262.3916015625
+roll = 0.0
+fov = 70.0
+far_z = 10000.0
+name = 'MeatWagon02'
+
+[[cameras]]
+target_x = -541.510009765625
+target_y = -9085.5
+z_offset = 200.0
+rotation = 222.11000061035156
+angle_of_attack = 325.94000244140625
+distance = 1025.6700439453125
+roll = 0.0
+fov = 70.0
+far_z = 3000.0
+name = 'MeatWagon03'
+
+[[cameras]]
+target_x = 805.0
+target_y = -7287.27001953125
+z_offset = 0.0
+rotation = 326.6807861328125
+angle_of_attack = 324.7402038574219
+distance = 1570.27001953125
+roll = 0.0
+fov = 70.0
+far_z = 6402.27001953125
+name = 'Opening 3a'
+
+[[cameras]]
+target_x = 587.0800170898438
+target_y = -8495.9404296875
+z_offset = 0.0
+rotation = 71.03999328613281
+angle_of_attack = 316.9200134277344
+distance = 1912.1300048828125
+roll = 0.0
+fov = 70.0
+far_z = 5500.27001953125
+name = 'Opening01'
+
+[[cameras]]
+target_x = 818.8472290039062
+target_y = -7097.49365234375
+z_offset = 100.0
+rotation = 88.72222137451172
+angle_of_attack = 334.2853088378906
+distance = 2267.140869140625
+roll = 0.0
+fov = 45.0
+far_z = 5000.0
+name = 'Opening02'
+
+[[cameras]]
+target_x = 805.0
+target_y = -7287.27001953125
+z_offset = 100.0
+rotation = 89.44999694824219
+angle_of_attack = 325.8800048828125
+distance = 1570.27001953125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Opening03'
+
+[[cameras]]
+target_x = 855.6199951171875
+target_y = -7787.990234375
+z_offset = 0.0
+rotation = 301.3205871582031
+angle_of_attack = 330.1535339355469
+distance = 962.5700073242188
+roll = 0.0
+fov = 70.0
+far_z = 5500.27001953125
+name = 'Opening04'

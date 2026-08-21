@@ -1,0 +1,309 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 1
+has_levels = false
+
+[blizzard_objects.hpea]
+parent_id = 'hpea'  # Peasant
+entity_id = 'null'
+
+[[blizzard_objects.hpea.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\HighElfPeasant\\HighElfPeasant"
+object_id = 'nhem'  # High Elf
+
+[[blizzard_objects.hpea.modifications]]
+modification_id = 'ubui'  # Profile.Structures Built
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "htow,hhou,nheb,hbla,halt,negt,hars,hlum"
+object_id = 'null'
+
+[[blizzard_objects.hpea.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Ahar,Ahrp"
+object_id = 'null'
+
+[[blizzard_objects.hpea.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNElfVillager.tga"
+object_id = 'nhem'  # High Elf
+
+[blizzard_objects.hmil]
+parent_id = 'hmil'  # Militia
+entity_id = 'null'
+
+[[blizzard_objects.hmil.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\HighElfPeasant\\HighElfPeasant"
+object_id = 'nhem'  # High Elf
+
+[[blizzard_objects.hmil.modifications]]
+modification_id = 'ubui'  # Profile.Structures Built
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "htow,hhou,nheb,hbla,halt,negt,hars,hlum"
+object_id = 'null'
+
+[blizzard_objects.hfoo]
+parent_id = 'hfoo'  # Footman
+entity_id = 'null'
+
+[[blizzard_objects.hfoo.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\human\\TheCaptain\\TheCaptain"
+object_id = 'hcth'  # Captain
+
+[blizzard_objects.nheb]
+parent_id = 'nheb'  # High Elven Barracks
+entity_id = 'null'
+
+[[blizzard_objects.nheb.modifications]]
+modification_id = 'utra'  # Profile.Units Trained
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "hhes,nhea,ebal,nws1"
+object_id = 'null'
+
+[[blizzard_objects.nheb.modifications]]
+modification_id = 'ures'  # Profile.Researches Available
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Rhde,Repb"
+object_id = 'null'
+
+[blizzard_objects.ebal]
+parent_id = 'ebal'  # Glaive Thrower
+entity_id = 'null'
+
+[[blizzard_objects.ebal.modifications]]
+modification_id = 'ureq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[blizzard_objects.hcas]
+parent_id = 'hcas'  # Castle
+entity_id = 'null'
+
+[[blizzard_objects.hcas.modifications]]
+modification_id = 'ufma'  # UnitBalance.Food Produced
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 50
+object_id = 'null'
+
+[[blizzard_objects.hcas.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Abdl,Argl"
+object_id = 'null'
+
+[blizzard_objects.hkee]
+parent_id = 'hkee'  # Keep
+entity_id = 'null'
+
+[[blizzard_objects.hkee.modifications]]
+modification_id = 'ufma'  # UnitBalance.Food Produced
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 50
+object_id = 'null'
+
+[[blizzard_objects.hkee.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Abdl,Argl"
+object_id = 'null'
+
+[blizzard_objects.htow]
+parent_id = 'htow'  # Town Hall
+entity_id = 'null'
+
+[[blizzard_objects.htow.modifications]]
+modification_id = 'ufma'  # UnitBalance.Food Produced
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 50
+object_id = 'null'
+
+[[blizzard_objects.htow.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Abdl,Argl"
+object_id = 'null'
+
+[blizzard_objects.ngme]
+parent_id = 'ngme'  # Goblin Merchant
+entity_id = 'null'
+
+[[blizzard_objects.ngme.modifications]]
+modification_id = 'usei'  # Profile.Items Sold
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "phea,pman,shea,spro,wneg,gemt,stwp"
+object_id = 'null'
+
+[blizzard_objects.nftb]
+parent_id = 'nftb'  # Forest Troll Berserker
+entity_id = 'null'
+
+[[blizzard_objects.nftb.modifications]]
+modification_id = 'usst'  # UnitBalance.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.nfsp]
+parent_id = 'nfsp'  # Forest Troll Shadow Priest
+entity_id = 'null'
+
+[[blizzard_objects.nfsp.modifications]]
+modification_id = 'usst'  # UnitBalance.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.nogm]
+parent_id = 'nogm'  # Ogre Mauler
+entity_id = 'null'
+
+[[blizzard_objects.nogm.modifications]]
+modification_id = 'usst'  # UnitBalance.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.phea]
+parent_id = 'phea'  # Potion of Healing
+entity_id = 'null'
+
+[[blizzard_objects.phea.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.pman]
+parent_id = 'pman'  # Potion of Mana
+entity_id = 'null'
+
+[[blizzard_objects.pman.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.shea]
+parent_id = 'shea'  # Scroll of Healing
+entity_id = 'null'
+
+[[blizzard_objects.shea.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.spro]
+parent_id = 'spro'  # Scroll of Protection
+entity_id = 'null'
+
+[[blizzard_objects.spro.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.stwp]
+parent_id = 'stwp'  # Scroll of Town Portal
+entity_id = 'null'
+
+[[blizzard_objects.stwp.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+
+[map_objects.hC00]
+parent_id = 'hpea'  # Peasant
+entity_id = 'hC00'
+
+[[map_objects.hC00.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\HighElfPeasant\\HighElfPeasant"
+object_id = 'nhem'  # High Elf
+
+[[map_objects.hC00.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_059"
+object_id = 'null'
+
+[[map_objects.hC00.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 150
+object_id = 'null'
+
+[[map_objects.hC00.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNElfVillager.tga"
+object_id = 'nhem'  # High Elf

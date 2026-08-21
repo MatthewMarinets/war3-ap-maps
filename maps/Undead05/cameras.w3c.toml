@@ -1,0 +1,136 @@
+# Warcraft 3 Camera file (.w3c)
+# See w3c.py for type definitions
+
+version = 0
+
+[[cameras]]
+target_x = 5622.6943359375
+target_y = 2354.896728515625
+z_offset = 0.0
+rotation = 18.561857223510742
+angle_of_attack = 327.7609558105469
+distance = 1102.3447265625
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'IntroInitialCam'
+
+[[cameras]]
+target_x = 5677.931640625
+target_y = 1887.6683349609375
+z_offset = 0.0
+rotation = 310.7647705078125
+angle_of_attack = 331.76190185546875
+distance = 860.8348999023438
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'IntroTichoCloseup'
+
+[[cameras]]
+target_x = 5474.947265625
+target_y = 2711.436767578125
+z_offset = 0.0
+rotation = 50.7849006652832
+angle_of_attack = 335.7021484375
+distance = 930.21435546875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'IntroArthasCloseup'
+
+[[cameras]]
+target_x = -764.3599853515625
+target_y = -6343.93994140625
+z_offset = 0.0
+rotation = 90.0
+angle_of_attack = 323.45001220703125
+distance = 1921.9970703125
+roll = 0.0
+fov = 70.0
+far_z = 5500.0
+name = 'IntroSunWell'
+
+[[cameras]]
+target_x = -764.3599853515625
+target_y = -6343.93994140625
+z_offset = 0.0
+rotation = 90.0
+angle_of_attack = 323.45001220703125
+distance = 1097.93994140625
+roll = 0.0
+fov = 70.0
+far_z = 5500.0
+name = 'IntroSunWellCloseup'
+
+[[cameras]]
+target_x = -3475.7177734375
+target_y = 3275.02001953125
+z_offset = 0.0
+rotation = 59.05838394165039
+angle_of_attack = 317.39715576171875
+distance = 1106.1357421875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'SylvanusCamera'
+
+[[cameras]]
+target_x = -3531.657470703125
+target_y = 3274.43017578125
+z_offset = 0.0
+rotation = 92.03498077392578
+angle_of_attack = 320.3359069824219
+distance = 831.0560913085938
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'SylvanusFight'
+
+[[cameras]]
+target_x = -784.1080932617188
+target_y = -6477.0771484375
+z_offset = 0.0
+rotation = 28.66340446472168
+angle_of_attack = 325.86163330078125
+distance = 1197.3931884765625
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'ExitInitialSunwell'
+
+[[cameras]]
+target_x = 225.4499969482422
+target_y = -2176.719970703125
+z_offset = 0.0
+rotation = 72.09999084472656
+angle_of_attack = 324.739990234375
+distance = 1126.199951171875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'ExitDeathSceneA'
+
+[[cameras]]
+target_x = -4868.5400390625
+target_y = -5201.85009765625
+z_offset = 0.0
+rotation = 88.66000366210938
+angle_of_attack = 306.25
+distance = 1561.5699462890625
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'ExitDeathSceneB'
+
+[[cameras]]
+target_x = -5554.595703125
+target_y = -434.4177551269531
+z_offset = 0.0
+rotation = 89.7890625
+angle_of_attack = 317.15240478515625
+distance = 2303.451416015625
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'GargoyleView'

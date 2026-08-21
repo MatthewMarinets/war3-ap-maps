@@ -1,0 +1,197 @@
+# Warcraft 3 Map Info File(.w3i)
+# See w3i.py for type definitions
+
+version = "ROC"
+map_revision = 642
+editor_version = 4422
+map_name = 'TRIGSTR_011'
+map_author = 'TRIGSTR_015'
+map_description = 'TRIGSTR_135'
+players_recommended = 'TRIGSTR_012'
+camera_bounds = [-4352.0, -11904.0, 3840.0, 9088.0, -4352.0, 9088.0, 3840.0, -11904.0]
+map_padding_left = 12
+map_padding_right = 12
+map_padding_top = 11
+map_padding_bottom = 13
+map_playable_width = 72
+map_playable_height = 168
+flags = "HIDE_MINIMAP|MODIFY_ALLY_PRIORITIES|FIXED_FORCES|CUSTOM_FORCES|CUSTOM_TECH_TREE|CUSTOM_ABILITIES|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS"
+tileset = { type = "bytes", value = "X" }
+campaign_background = 22
+tft_loading_screen_model_path = ''
+map_loading_screen_text = 'TRIGSTR_014'
+map_loading_screen_title = 'TRIGSTR_017'
+map_loading_screen_subtitle = 'TRIGSTR_018'
+map_game_data_set = 0
+tft_prologue_screen_path = ''
+prologue_screen_text = ''
+prologue_screen_title = ''
+prologue_screen_subtitle = ''
+tft_uses_terrain_fog = 0
+tft_fog_start_z = 0.0
+tft_fog_end_z = 0.0
+tft_fog_density = 0.0
+tft_fog_red = 0
+tft_fog_green = 0
+tft_fog_blue = 0
+tft_fog_alpha = 0
+tft_weather = ''
+tft_custom_sound_environment = ''
+tft_custom_light_tileset = { type = "bytes", value = "0" }
+tft_water_tint_red = 0
+tft_water_tint_green = 0
+tft_water_tint_blue = 0
+tft_water_tint_alpha = 0
+upgrades = []
+random_entities = []
+random_items = []
+
+[[players]]
+player_id = 1
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_033'
+start_pos = [-640.0, 6848.0]
+ally_low_priorities_flags = 0xa0
+ally_high_priorities_flags = 0x45600000
+
+[[players]]
+player_id = 3
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_130'
+start_pos = [-3520.0, -3456.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x44900000
+
+[[players]]
+player_id = 4
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_134'
+start_pos = [3008.0, 448.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+player_id = 5
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_033'
+start_pos = [-3392.0, 4928.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+player_id = 6
+player_type = "User"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_040'
+start_pos = [-384.0, -9856.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+player_id = 7
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_132'
+start_pos = [-576.0, -6912.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[forces]]
+force_flags = "None"
+player_mask_flags = 0xffffffc5
+name = 'TRIGSTR_040'
+
+[[forces]]
+force_flags = "Allied|ShareVision"
+player_mask_flags = 0x3a
+name = 'TRIGSTR_033'
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'Udea'  # Death Knight
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'Ulic'  # Lich
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'Udre'  # Dreadlord
+
+[[technologies]]
+player_flags = 0xc0
+tech_id = 'Hpal'  # Paladin
+
+[[technologies]]
+player_flags = 0xc0
+tech_id = 'Hamg'  # Archmage
+
+[[technologies]]
+player_flags = 0xc0
+tech_id = 'Hmkg'  # Mountain King
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'htow'  # Town Hall
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'hkee'  # Keep
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'hcas'  # Castle
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'hhou'  # Farm
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'halt'  # Altar of Kings
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'hbar'  # Barracks
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'hlum'  # Lumber Mill
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'hbla'  # Blacksmith
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'harm'  # Workshop
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'hars'  # Arcane Sanctum
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'hgra'  # Gryphon Aviary
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'hwtw'  # Scout Tower
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'hgtw'  # Guard Tower
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'hctw'  # Cannon Tower

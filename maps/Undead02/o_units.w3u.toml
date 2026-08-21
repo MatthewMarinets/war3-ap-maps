@@ -1,0 +1,533 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 1
+has_levels = false
+
+[blizzard_objects.unpl]
+parent_id = 'unpl'  # Necropolis
+entity_id = 'null'
+
+[[blizzard_objects.unpl.modifications]]
+modification_id = 'ubld'  # UnitBalance.Build Time
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 75
+object_id = 'null'
+
+[blizzard_objects.Hpb1]
+parent_id = 'Hpb1'  # Paladin
+entity_id = 'null'
+
+[[blizzard_objects.Hpb1.modifications]]
+modification_id = 'upro'  # Profile.Proper Names
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_011"
+object_id = 'null'
+
+[blizzard_objects.Hpb2]
+parent_id = 'Hpb2'  # Paladin
+entity_id = 'null'
+
+[[blizzard_objects.Hpb2.modifications]]
+modification_id = 'upro'  # Profile.Proper Names
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_038"
+object_id = 'null'
+
+
+[map_objects.HC00]
+parent_id = 'Hpal'  # Paladin
+entity_id = 'HC00'
+
+[[map_objects.HC00.modifications]]
+modification_id = 'upro'  # Profile.Proper Names
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_054"
+object_id = 'null'
+
+[[map_objects.HC00.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 0.8999999761581421
+object_id = 'null'
+
+[map_objects.nC02]
+parent_id = 'nshe'  # Sheep
+entity_id = 'nC02'
+
+[[map_objects.nC02.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_086"
+object_id = 'null'
+
+[[map_objects.nC02.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\VillagerMan\\VillagerMan"
+object_id = 'null'
+
+[[map_objects.nC02.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNTemp.tga"
+object_id = 'nvil'  # Villager
+
+[[map_objects.nC02.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 60
+object_id = 'null'
+
+[map_objects.nC03]
+parent_id = 'nshe'  # Sheep
+entity_id = 'nC03'
+
+[[map_objects.nC03.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_086"
+object_id = 'null'
+
+[[map_objects.nC03.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\VillagerMan1\\VillagerMan1"
+object_id = 'null'
+
+[[map_objects.nC03.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNTemp.tga"
+object_id = 'nvl2'  # Villager
+
+[map_objects.nC04]
+parent_id = 'nshe'  # Sheep
+entity_id = 'nC04'
+
+[[map_objects.nC04.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_085"
+object_id = 'null'
+
+[[map_objects.nC04.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\VillagerWoman\\VillagerWoman"
+object_id = 'null'
+
+[[map_objects.nC04.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNTemp.tga"
+object_id = 'nvlw'  # Villager
+
+[map_objects.nC05]
+parent_id = 'nshe'  # Sheep
+entity_id = 'nC05'
+
+[[map_objects.nC05.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_099"
+object_id = 'null'
+
+[[map_objects.nC05.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\VillagerKid\\VillagerKid"
+object_id = 'null'
+
+[[map_objects.nC05.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNTemp.tga"
+object_id = 'nvlk'  # Child
+
+[map_objects.nC06]
+parent_id = 'nvk2'  # Child
+entity_id = 'nC06'
+
+[[map_objects.nC06.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_099"
+object_id = 'null'
+
+[map_objects.hC07]
+parent_id = 'hpea'  # Peasant
+entity_id = 'hC07'
+
+[[map_objects.hC07.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_089"
+object_id = 'null'
+
+[[map_objects.hC07.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\VillagerMan1\\VillagerMan1"
+object_id = 'nvl2'  # Villager
+
+[[map_objects.hC07.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNVillagerMan1.tga"
+object_id = 'nvl2'  # Villager
+
+[[map_objects.hC07.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 60
+object_id = 'null'
+
+[map_objects.hC08]
+parent_id = 'hpea'  # Peasant
+entity_id = 'hC08'
+
+[[map_objects.hC08.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_442"
+object_id = 'null'
+
+[[map_objects.hC08.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\VillagerMan\\VillagerMan"
+object_id = 'nvil'  # Villager
+
+[[map_objects.hC08.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNVillagerMan.tga"
+object_id = 'nvil'  # Villager
+
+[[map_objects.hC08.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 60
+object_id = 'null'
+
+[[map_objects.hC08.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.100000023841858
+object_id = 'null'
+
+[map_objects.hC09]
+parent_id = 'hpea'  # Peasant
+entity_id = 'hC09'
+
+[[map_objects.hC09.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_443"
+object_id = 'null'
+
+[[map_objects.hC09.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\VillagerWoman\\VillagerWoman"
+object_id = 'nvlw'  # Villager
+
+[[map_objects.hC09.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNVillagerWoman.tga"
+object_id = 'nvlw'  # Villager
+
+[[map_objects.hC09.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Awan'  # Wander
+object_id = 'null'
+
+[[map_objects.hC09.modifications]]
+modification_id = 'ubui'  # Profile.Structures Built
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.hC09.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 60
+object_id = 'null'
+
+[map_objects.hC10]
+parent_id = 'hpea'  # Peasant
+entity_id = 'hC10'
+
+[[map_objects.hC10.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_444"
+object_id = 'null'
+
+[[map_objects.hC10.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\VillagerMan1\\VillagerMan1"
+object_id = 'nvl2'  # Villager
+
+[[map_objects.hC10.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNVillagerMan1.tga"
+object_id = 'nvl2'  # Villager
+
+[[map_objects.hC10.modifications]]
+modification_id = 'ubui'  # Profile.Structures Built
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.hC10.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 60
+object_id = 'null'
+
+[map_objects.hC11]
+parent_id = 'hpea'  # Peasant
+entity_id = 'hC11'
+
+[[map_objects.hC11.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_114"
+object_id = 'null'
+
+[[map_objects.hC11.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\ElfVillagerWoman\\ElfVillagerWoman"
+object_id = 'nhef'  # High Elf
+
+[[map_objects.hC11.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNFemaleElfVillager.tga"
+object_id = 'nhef'  # High Elf
+
+[[map_objects.hC11.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 60
+object_id = 'null'
+
+[map_objects.hC12]
+parent_id = 'hpea'  # Peasant
+entity_id = 'hC12'
+
+[[map_objects.hC12.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_445"
+object_id = 'null'
+
+[[map_objects.hC12.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNVillagerMan.tga"
+object_id = 'nvil'  # Villager
+
+[[map_objects.hC12.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\VillagerMan\\VillagerMan"
+object_id = 'nvil'  # Villager
+
+[[map_objects.hC12.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 60
+object_id = 'null'
+
+[map_objects.hC13]
+parent_id = 'hpea'  # Peasant
+entity_id = 'hC13'
+
+[[map_objects.hC13.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_117"
+object_id = 'null'
+
+[[map_objects.hC13.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNVillagerMan1.tga"
+object_id = 'nvl2'  # Villager
+
+[[map_objects.hC13.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\VillagerMan1\\VillagerMan1"
+object_id = 'nvl2'  # Villager
+
+[map_objects.hC14]
+parent_id = 'hpea'  # Peasant
+entity_id = 'hC14'
+
+[[map_objects.hC14.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_446"
+object_id = 'null'
+
+[[map_objects.hC14.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\VillagerWoman\\VillagerWoman"
+object_id = 'nvlw'  # Villager
+
+[[map_objects.hC14.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNVillagerWoman.tga"
+object_id = 'nvlw'  # Villager
+
+[map_objects.hC15]
+parent_id = 'hpea'  # Peasant
+entity_id = 'hC15'
+
+[[map_objects.hC15.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_119"
+object_id = 'null'
+
+[[map_objects.hC15.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\VillagerMan1\\VillagerMan1"
+object_id = 'nvl2'  # Villager
+
+[[map_objects.hC15.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNVillagerMan1.tga"
+object_id = 'nvl2'  # Villager
+
+[[map_objects.hC15.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 60
+object_id = 'null'

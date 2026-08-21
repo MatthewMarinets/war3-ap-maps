@@ -1,0 +1,138 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 1
+has_levels = false
+
+[blizzard_objects.htow]
+parent_id = 'htow'  # Town Hall
+entity_id = 'null'
+
+[[blizzard_objects.htow.modifications]]
+modification_id = 'ufma'  # UnitBalance.Food Produced
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 50
+object_id = 'null'
+
+[blizzard_objects.hkee]
+parent_id = 'hkee'  # Keep
+entity_id = 'null'
+
+[[blizzard_objects.hkee.modifications]]
+modification_id = 'ufma'  # UnitBalance.Food Produced
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 50
+object_id = 'null'
+
+[blizzard_objects.hcas]
+parent_id = 'hcas'  # Castle
+entity_id = 'null'
+
+[[blizzard_objects.hcas.modifications]]
+modification_id = 'ufma'  # UnitBalance.Food Produced
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 50
+object_id = 'null'
+
+[blizzard_objects.ngme]
+parent_id = 'ngme'  # Goblin Merchant
+entity_id = 'null'
+
+[[blizzard_objects.ngme.modifications]]
+modification_id = 'usei'  # Profile.Items Sold
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "phea,pman,shea,spro,wneg,gemt,stwp"
+object_id = 'null'
+
+[blizzard_objects.phea]
+parent_id = 'phea'  # Potion of Healing
+entity_id = 'null'
+
+[[blizzard_objects.phea.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.pman]
+parent_id = 'pman'  # Potion of Mana
+entity_id = 'null'
+
+[[blizzard_objects.pman.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.spro]
+parent_id = 'spro'  # Scroll of Protection
+entity_id = 'null'
+
+[[blizzard_objects.spro.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.shea]
+parent_id = 'shea'  # Scroll of Healing
+entity_id = 'null'
+
+[[blizzard_objects.shea.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.stwp]
+parent_id = 'stwp'  # Scroll of Town Portal
+entity_id = 'null'
+
+[[blizzard_objects.stwp.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.nwc1]
+parent_id = 'nwc1'  # Wyvern Cage
+entity_id = 'null'
+
+[[blizzard_objects.nwc1.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_137"
+object_id = 'null'
+
+[blizzard_objects.nwc2]
+parent_id = 'nwc2'  # Wyvern Cage
+entity_id = 'null'
+
+[[blizzard_objects.nwc2.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_137"
+object_id = 'null'
+
+[map_objects]

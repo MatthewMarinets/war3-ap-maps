@@ -1,0 +1,416 @@
+﻿STRING 0
+{
+Necromancer
+}
+
+STRING 1
+{
+Lord Arthas, the creatures of the forest are also resisting our invasion.
+}
+
+STRING 2
+{
+Necromancer
+}
+
+STRING 3
+{
+Lord Arthas, the creatures of the forest are also resisting our invasion.
+}
+
+STRING 4
+{
+Train High Elf |cffffcc00P|reasant
+}
+
+STRING 5
+{
+Undead03
+}
+
+STRING 6
+{
+P
+}
+
+STRING 7
+{
+1
+}
+
+STRING 8
+{
+Chapter Three: Into the Realm Eternal
+}
+
+STRING 9
+{
+Blizzard Entertainment
+}
+
+STRING 10
+{
+Basic worker unit. Can harvest gold and lumber, build structures and Repair. Can become Militia. |n|cffff8c00Attacks land units and trees.|r
+}
+
+STRING 12
+{
+Necromancer
+}
+
+STRING 13
+{
+Lord Arthas, the creatures of the forest are also resisting our invasion.
+}
+
+STRING 18
+{
+Necromancer
+}
+
+STRING 20
+{
+Elven Defenders
+}
+
+STRING 22
+{
+Arthas
+}
+
+STRING 23
+{
+Ah, wondrous, eternal Quel'Thalas. I haven't been here since I was a boy.
+}
+
+STRING 24
+{
+The Elfgate
+}
+
+STRING 25
+{
+In order to march upon the high elves' capital of Silvermoon, you must shatter the magical, heavily guarded Elfgate that protects the heart of their forested lands.
+}
+
+STRING 26
+{
+Elven Villagers
+}
+
+STRING 27
+{
+Kel'Thuzad
+}
+
+STRING 28
+{
+|cff32CD32HINT|r - The Acolyte can Repair Meat Wagons and other mechanical units.
+}
+
+STRING 29
+{
+Sylvanas Windrunner
+}
+
+STRING 30
+{
+Defeat!
+}
+
+STRING 31
+{
+Be wary. The elves likely wait in ambush.
+}
+
+STRING 32
+{
+Arthas
+}
+
+STRING 33
+{
+The frail elves do not concern me, necromancer. Our forces are strengthened with every foe we slay.
+}
+
+STRING 34
+{
+Kel'Thuzad
+}
+
+STRING 35
+{
+Don't be too overconfident, death knight. The elves must not be taken lightly.
+}
+
+STRING 36
+{
+We shall see. Bring forth the prisoner.
+}
+
+STRING 37
+{
+Arthas
+}
+
+STRING 38
+{
+Arthas
+}
+
+STRING 39
+{
+Where is the entrance to your land, elf?
+}
+
+STRING 40
+{
+Priest
+}
+
+STRING 41
+{
+You will never enter Quel'Thalas, fallen prince. The woods themselves protect our borders, and the enchanted elfgates protect our capital.
+}
+
+STRING 42
+{
+Your precious gates will not stop me any more than these trees, little elf. Bring up the meat wagons! We'll make our own entrance.
+}
+
+STRING 43
+{
+Arthas
+}
+
+STRING 44
+{
+|cffffcc00MAIN QUEST|r
+The Elfgate
+  - Destroy the High Elf base (blue) guarding the Elfgate
+}
+
+STRING 45
+{
+|cff32CD32HINT|r - Destroy trees with Ghouls or Meat Wagons to uncover pathways and Elven hamlets.
+}
+
+STRING 46
+{
+Lord Arthas, the creatures of the forest are also resisting our invasion.
+}
+
+STRING 49
+{
+Defeat!
+}
+
+STRING 51
+{
+Shindu fallah Na! Fall back to the second gate! Fall back!
+}
+
+STRING 58
+{
+Chapter Three
+}
+
+STRING 59
+{
+Into the Realm Eternal
+}
+
+STRING 60
+{
+Six days later, near the forested borderlands of Quel'Thalas...
+}
+
+STRING 64
+{
+Arthas
+}
+
+STRING 65
+{
+The elfgate has fallen! Onward, my warriors! Onward to victory!
+}
+
+STRING 67
+{
+|cff87ceebNEW UNIT AVAILABLE|r
+Necromancer - You may now build Necromancers from the Temple of the Damned. They can initially cast Raise Dead on corpses to summon Skeleton Warriors.
+}
+
+STRING 68
+{
+|cff32CD32HINT|r - The Acolyte can use Unsummon on Undead buildings to regain lost resources.
+}
+
+STRING 69
+{
+|cff32CD32HINT|r - Explore the region to locate additional gold mines for the Acolytes to haunt.
+}
+
+STRING 73
+{
+Undead Scourge
+}
+
+STRING 81
+{
+Kel'Thuzad
+}
+
+STRING 82
+{
+The energies of this place are strong. Kill the elves! Level their structures! This location is perfect for your base.
+}
+
+STRING 87
+{
+Arthas
+}
+
+STRING 88
+{
+It'll be a pleasure.
+}
+
+STRING 89
+{
+Destroy the High Elf base (blue) guarding the Elfgate
+}
+
+STRING 90
+{
+High Elf Archer
+}
+
+STRING 91
+{
+The undead are advancing! Alert the sentries!
+}
+
+STRING 132
+{
+Sylvanas Windrunner
+}
+
+STRING 133
+{
+You are not welcome here. I am Sylvanas Windrunner, Ranger-General of Silvermoon. I advise you to turn back now.
+}
+
+STRING 138
+{
+High Elf Villager
+}
+
+STRING 139
+{
+It is the traitorous human prince! Run for your lives!
+}
+
+STRING 142
+{
+High Elf Villager
+}
+
+STRING 143
+{
+Find Sylvanas. The undead advance!
+}
+
+STRING 144
+{
+High Elf Villager
+}
+
+STRING 145
+{
+Find Sylvanas. The undead advance!
+}
+
+STRING 148
+{
+High Elf Villager
+}
+
+STRING 149
+{
+It is the traitorous human prince! Run for your lives!
+}
+
+STRING 156
+{
+|cffffcc00MISSION FAILED|r
+All your units have been killed.
+}
+
+STRING 179
+{
+Arthas
+}
+
+STRING 180
+{
+It is you who should turn back, Sylvanas. Death itself has come to your land.
+}
+
+STRING 181
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 182
+{
+Defeat!
+}
+
+STRING 183
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+The Elfgate
+}
+
+STRING 184
+{
+Elven Ranger Corps
+}
+
+STRING 199
+{
+Arthas
+}
+
+STRING 200
+{
+Finally, we've reached the elfgate! Press the attack! Let none survive!
+}
+
+STRING 219
+{
+Sylvanas Windrunner
+}
+
+STRING 220
+{
+Summon the reinforcements! We must hold them back!
+}
+
+STRING 229
+{
+Sylvanas Windrunner
+}
+
+STRING 230
+{
+Do your worst. The elfgate to the inner kingdom is protected by our most powerful enchantments. You shall not pass.
+}
+
+STRING 231
+{
+|cff32cd32HINT|r - Destroy the High Elf base (blue) guarding the Elf gate to ensure victory.
+}
+

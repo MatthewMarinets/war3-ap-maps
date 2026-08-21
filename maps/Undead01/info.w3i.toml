@@ -1,0 +1,214 @@
+# Warcraft 3 Map Info File(.w3i)
+# See w3i.py for type definitions
+
+version = "ROC"
+map_revision = 592
+editor_version = 4421
+map_name = 'TRIGSTR_000'
+map_author = 'TRIGSTR_003'
+map_description = 'TRIGSTR_002'
+players_recommended = 'TRIGSTR_001'
+camera_bounds = [-4352.0, -4864.0, 4352.0, 3584.0, -4352.0, 3584.0, 4352.0, -4864.0]
+map_padding_left = 8
+map_padding_right = 44
+map_padding_top = 6
+map_padding_bottom = 20
+map_playable_width = 76
+map_playable_height = 70
+flags = "HIDE_MINIMAP|FIXED_FORCES|CUSTOM_FORCES|CUSTOM_UPGRADES|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS|WAVES_ON_SHORES"
+tileset = { type = "bytes", value = "F" }
+campaign_background = 14
+tft_loading_screen_model_path = ''
+map_loading_screen_text = 'TRIGSTR_016'
+map_loading_screen_title = 'TRIGSTR_014'
+map_loading_screen_subtitle = 'TRIGSTR_015'
+map_game_data_set = -1
+tft_prologue_screen_path = ''
+prologue_screen_text = ''
+prologue_screen_title = ''
+prologue_screen_subtitle = ''
+tft_uses_terrain_fog = 0
+tft_fog_start_z = 0.0
+tft_fog_end_z = 0.0
+tft_fog_density = 0.0
+tft_fog_red = 0
+tft_fog_green = 0
+tft_fog_blue = 0
+tft_fog_alpha = 0
+tft_weather = ''
+tft_custom_sound_environment = ''
+tft_custom_light_tileset = { type = "bytes", value = "0" }
+tft_water_tint_red = 0
+tft_water_tint_green = 0
+tft_water_tint_blue = 0
+tft_water_tint_alpha = 0
+random_entities = []
+random_items = []
+
+[[players]]
+player_id = 0
+player_type = "Neutral"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_180'
+start_pos = [3200.0, -4416.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+player_id = 1
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_220'
+start_pos = [3200.0, -4480.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+player_id = 2
+player_type = "Neutral"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_010'
+start_pos = [3200.0, -4544.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+player_id = 3
+player_type = "User"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_036'
+start_pos = [3776.0, -2752.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+player_id = 4
+player_type = "Neutral"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_010'
+start_pos = [3200.0, -4672.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+player_id = 6
+player_type = "Neutral"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_221'
+start_pos = [3200.0, -4736.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[forces]]
+force_flags = "Allied|AlliedVictory|ShareVision"
+player_mask_flags = 0xffffffe8
+name = 'TRIGSTR_036'
+
+[[forces]]
+force_flags = "Allied"
+player_mask_flags = 0x17
+name = 'TRIGSTR_010'
+
+[[upgrades]]
+player_flags = 0x8
+upgrade_id = 'Ruac'  # Cannibalize
+level = 0
+availability = "Researched"
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'uabo'  # Abomination
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'ugar'  # Gargoyle
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'ucry'  # Crypt Fiend
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'umtw'  # Meat Wagon
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'uban'  # Banshee
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'ufro'  # Frost Wyrm
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'unec'  # Necromancer
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'Udea'  # Death Knight
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'Ulic'  # Lich
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'Udre'  # Dreadlord
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'unpl'  # Necropolis
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'unp1'  # Halls of the Dead
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'unp2'  # Black Citadel
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'uzig'  # Ziggurat
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'uzg1'  # Spirit Tower
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'uaod'  # Altar of Darkness
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'usep'  # Crypt
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'usap'  # Sacrificial Pit
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'uslh'  # Slaughterhouse
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'ugrv'  # Graveyard
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'utod'  # Temple of the Damned
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'ubon'  # Boneyard
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'ugol'  # Haunted Gold Mine

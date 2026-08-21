@@ -1,0 +1,256 @@
+# Warcraft 3 Camera file (.w3c)
+# See w3c.py for type definitions
+
+version = 0
+
+[[cameras]]
+target_x = -466.05999755859375
+target_y = -4422.9599609375
+z_offset = 0.0
+rotation = 287.1399841308594
+angle_of_attack = 332.5400085449219
+distance = 1102.4599609375
+roll = 0.0
+fov = 70.0
+far_z = 5829.72998046875
+name = 'ArchimondeBirth01'
+
+[[cameras]]
+target_x = -1260.01123046875
+target_y = -3724.225341796875
+z_offset = 0.0
+rotation = 298.5509338378906
+angle_of_attack = 335.28118896484375
+distance = 2155.53173828125
+roll = 0.0
+fov = 70.0
+far_z = 7635.72021484375
+name = 'Opening01'
+
+[[cameras]]
+target_x = -588.912353515625
+target_y = -3754.165771484375
+z_offset = 0.0
+rotation = 286.422119140625
+angle_of_attack = 347.3371887207031
+distance = 1544.730224609375
+roll = 0.0
+fov = 70.0
+far_z = 7635.72021484375
+name = 'Opening02'
+
+[[cameras]]
+target_x = -1029.91455078125
+target_y = -4517.6484375
+z_offset = 0.0
+rotation = 297.76275634765625
+angle_of_attack = 325.8826904296875
+distance = 1189.537841796875
+roll = 0.0
+fov = 70.0
+far_z = 7635.72021484375
+name = 'Opening03'
+
+[[cameras]]
+target_x = -4476.57470703125
+target_y = 962.4797973632812
+z_offset = 0.0
+rotation = 89.35102081298828
+angle_of_attack = 316.4418640136719
+distance = 1193.71923828125
+roll = 0.0
+fov = 70.0
+far_z = 7635.72021484375
+name = 'OpeningArchmage01'
+
+[[cameras]]
+target_x = 3668.176025390625
+target_y = 2041.796142578125
+z_offset = 0.0
+rotation = 257.642578125
+angle_of_attack = 303.67498779296875
+distance = 1000.2490844726562
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'OpeningGryphons01'
+
+[[cameras]]
+target_x = 3287.584228515625
+target_y = 1728.62158203125
+z_offset = 0.0
+rotation = 258.0292663574219
+angle_of_attack = 332.0079040527344
+distance = 1590.733154296875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'OpeningGryphons02'
+
+[[cameras]]
+target_x = -4448.90478515625
+target_y = 391.11724853515625
+z_offset = 0.0
+rotation = 88.73622131347656
+angle_of_attack = 331.2857971191406
+distance = 1724.6590576171875
+roll = 0.0
+fov = 70.0
+far_z = 7635.72021484375
+name = 'OpeningArchmage02'
+
+[[cameras]]
+target_x = -532.0391235351562
+target_y = -4367.78857421875
+z_offset = 0.0
+rotation = 251.97772216796875
+angle_of_attack = 327.1007995605469
+distance = 850.0072021484375
+roll = 0.0
+fov = 70.0
+far_z = 5829.72998046875
+name = 'ArchimondeBirth02'
+
+[[cameras]]
+target_x = -1073.8299560546875
+target_y = -4861.60986328125
+z_offset = 0.0
+rotation = 156.77999877929688
+angle_of_attack = 314.8999938964844
+distance = 1102.989990234375
+roll = 0.0
+fov = 70.0
+far_z = 7635.72021484375
+name = 'Lich'
+
+[[cameras]]
+target_x = -1003.4027099609375
+target_y = -4597.19775390625
+z_offset = 0.0
+rotation = 98.94851684570312
+angle_of_attack = 332.45819091796875
+distance = 612.1976318359375
+roll = 0.0
+fov = 70.0
+far_z = 7635.72021484375
+name = 'DreadLord'
+
+[[cameras]]
+target_x = -963.6799926757812
+target_y = -4715.66015625
+z_offset = 0.0
+rotation = 242.02999877929688
+angle_of_attack = 331.04998779296875
+distance = 995.0900268554688
+roll = 0.0
+fov = 70.0
+far_z = 7635.72021484375
+name = 'Summoning01'
+
+[[cameras]]
+target_x = -539.207763671875
+target_y = -4282.3984375
+z_offset = 0.0
+rotation = 269.7201843261719
+angle_of_attack = 318.9933166503906
+distance = 995.0900268554688
+roll = 0.0
+fov = 70.0
+far_z = 7635.72021484375
+name = 'Summoning02'
+
+[[cameras]]
+target_x = -1073.8299560546875
+target_y = -4861.60986328125
+z_offset = 0.0
+rotation = 158.88999938964844
+angle_of_attack = 328.1099853515625
+distance = 1102.989990234375
+roll = 0.0
+fov = 70.0
+far_z = 7635.72021484375
+name = 'Lich02'
+
+[[cameras]]
+target_x = -765.6434326171875
+target_y = -4627.35498046875
+z_offset = 0.0
+rotation = 21.617887496948242
+angle_of_attack = 339.03253173828125
+distance = 982.6045532226562
+roll = 0.0
+fov = 70.0
+far_z = 5829.72998046875
+name = 'ArchimondeSpeaks'
+
+[[cameras]]
+target_x = -781.3499755859375
+target_y = -4460.5400390625
+z_offset = 0.0
+rotation = 208.02999877929688
+angle_of_attack = 318.7699890136719
+distance = 1103.52001953125
+roll = 0.0
+fov = 70.0
+far_z = 5829.72998046875
+name = 'AboveArchimonde'
+
+[[cameras]]
+target_x = -921.0900268554688
+target_y = -4697.2001953125
+z_offset = 0.0
+rotation = 164.25999450683594
+angle_of_attack = 329.4200134277344
+distance = 904.7999877929688
+roll = 0.0
+fov = 70.0
+far_z = 5829.72998046875
+name = 'ArthasJoke'
+
+[[cameras]]
+target_x = -886.9299926757812
+target_y = -4946.43017578125
+z_offset = 0.0
+rotation = 353.3699951171875
+angle_of_attack = 327.6199951171875
+distance = 936.6300048828125
+roll = 0.0
+fov = 70.0
+far_z = 5829.72998046875
+name = 'KelEnding01'
+
+[[cameras]]
+target_x = -886.9299926757812
+target_y = -4946.43017578125
+z_offset = 0.0
+rotation = 353.2799987792969
+angle_of_attack = 334.2900085449219
+distance = 697.9400024414062
+roll = 0.0
+fov = 70.0
+far_z = 5829.72998046875
+name = 'KelEnding02'
+
+[[cameras]]
+target_x = -987.8499755859375
+target_y = -4509.9501953125
+z_offset = 0.0
+rotation = 194.85000610351562
+angle_of_attack = 319.4100036621094
+distance = 634.6799926757812
+roll = 0.0
+fov = 70.0
+far_z = 5829.72998046875
+name = 'TichondriusUpClose'
+
+[[cameras]]
+target_x = -590.4180297851562
+target_y = -4470.9189453125
+z_offset = 0.0
+rotation = 12.567819595336914
+angle_of_attack = 350.1856689453125
+distance = 982.5999755859375
+roll = 0.0
+fov = 70.0
+far_z = 5829.72998046875
+name = 'VeryWell'

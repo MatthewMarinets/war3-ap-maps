@@ -1,0 +1,249 @@
+# Warcraft 3 Map Info File(.w3i)
+# See w3i.py for type definitions
+
+version = "ROC"
+map_revision = 911
+editor_version = 4426
+map_name = 'TRIGSTR_000'
+map_author = 'TRIGSTR_003'
+map_description = 'TRIGSTR_002'
+players_recommended = 'TRIGSTR_001'
+camera_bounds = [-5888.0, -6912.0, 6912.0, 6912.0, -5888.0, 6912.0, 6912.0, -6912.0]
+map_padding_left = 14
+map_padding_right = 6
+map_padding_top = 8
+map_padding_bottom = 8
+map_playable_width = 108
+map_playable_height = 112
+flags = "HIDE_MINIMAP|FIXED_FORCES|CUSTOM_FORCES|CUSTOM_TECH_TREE|CUSTOM_UPGRADES|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS"
+tileset = { type = "bytes", value = "X" }
+campaign_background = 23
+tft_loading_screen_model_path = ''
+map_loading_screen_text = 'TRIGSTR_019'
+map_loading_screen_title = 'TRIGSTR_004'
+map_loading_screen_subtitle = 'TRIGSTR_005'
+map_game_data_set = -1
+tft_prologue_screen_path = ''
+prologue_screen_text = ''
+prologue_screen_title = 'TRIGSTR_007'
+prologue_screen_subtitle = 'TRIGSTR_008'
+tft_uses_terrain_fog = 0
+tft_fog_start_z = 0.0
+tft_fog_end_z = 0.0
+tft_fog_density = 0.0
+tft_fog_red = 0
+tft_fog_green = 0
+tft_fog_blue = 0
+tft_fog_alpha = 0
+tft_weather = ''
+tft_custom_sound_environment = ''
+tft_custom_light_tileset = { type = "bytes", value = "0" }
+tft_water_tint_red = 0
+tft_water_tint_green = 0
+tft_water_tint_blue = 0
+tft_water_tint_alpha = 0
+upgrades = []
+random_entities = []
+random_items = []
+
+[[players]]
+player_id = 0
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_138'
+start_pos = [6144.0, -1408.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+player_id = 1
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_026'
+start_pos = [3136.0, 5760.0]
+ally_low_priorities_flags = 0x2000220
+ally_high_priorities_flags = 0x0
+
+[[players]]
+player_id = 2
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_134'
+start_pos = [-4352.0, 1792.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+player_id = 3
+player_type = "User"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_030'
+start_pos = [-512.0, -4416.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+player_id = 6
+player_type = "Neutral"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_020'
+start_pos = [-3840.0, 2304.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x2000200
+
+[[players]]
+player_id = 7
+player_type = "Neutral"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_026'
+start_pos = [2880.0, 2688.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[forces]]
+force_flags = "Allied|AlliedVictory|ShareVision"
+player_mask_flags = 0xffffff78
+name = 'TRIGSTR_030'
+
+[[forces]]
+force_flags = "Allied|AlliedVictory|ShareVision"
+player_mask_flags = 0x87
+name = 'TRIGSTR_026'
+
+[[technologies]]
+player_flags = 0x48
+tech_id = 'Ulic'  # Lich
+
+[[technologies]]
+player_flags = 0x48
+tech_id = 'Udre'  # Dreadlord
+
+[[technologies]]
+player_flags = 0x48
+tech_id = 'Udea'  # Death Knight
+
+[[technologies]]
+player_flags = 0xcf
+tech_id = 'Hpal'  # Paladin
+
+[[technologies]]
+player_flags = 0xcf
+tech_id = 'Hamg'  # Archmage
+
+[[technologies]]
+player_flags = 0xcf
+tech_id = 'Hmkg'  # Mountain King
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'htow'  # Town Hall
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hkee'  # Keep
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hcas'  # Castle
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hhou'  # Farm
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'halt'  # Altar of Kings
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hbar'  # Barracks
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hlum'  # Lumber Mill
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hbla'  # Blacksmith
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'harm'  # Workshop
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hars'  # Arcane Sanctum
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hgra'  # Gryphon Aviary
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hwtw'  # Scout Tower
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hhes'  # Swordsman
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'nhea'  # Archer
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'nws1'  # Dragon Hawk
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hpea'  # Peasant
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hfoo'  # Footman
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hkni'  # Knight
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hrif'  # Rifleman
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hmtm'  # Mortar Team
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hgyr'  # Flying Machine
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hgry'  # Gryphon Rider
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hmpr'  # Priest
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hsor'  # Sorceress
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hmtt'  # Siege Engine
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hgtw'  # Guard Tower
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hctw'  # Cannon Tower

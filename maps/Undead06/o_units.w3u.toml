@@ -1,0 +1,501 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 1
+has_levels = false
+
+[blizzard_objects.obar]
+parent_id = 'obar'  # Barracks
+entity_id = 'null'
+
+[[blizzard_objects.obar.modifications]]
+modification_id = 'utra'  # Profile.Units Trained
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ogru,ohun,ocat,nomg"
+object_id = 'null'
+
+[blizzard_objects.osld]
+parent_id = 'osld'  # Spirit Lodge
+entity_id = 'null'
+
+[[blizzard_objects.osld.modifications]]
+modification_id = 'utra'  # Profile.Units Trained
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "oshm,odoc,nw2w"
+object_id = 'null'
+
+[blizzard_objects.obea]
+parent_id = 'obea'  # Beastiary
+entity_id = 'null'
+
+[[blizzard_objects.obea.modifications]]
+modification_id = 'utra'  # Profile.Units Trained
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "orai,ngsp,nzep"
+object_id = 'null'
+
+[blizzard_objects.nw2w]
+parent_id = 'nw2w'  # Orc Warlock
+entity_id = 'null'
+
+[[blizzard_objects.nw2w.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_086"
+object_id = 'null'
+
+[[blizzard_objects.nw2w.modifications]]
+modification_id = 'uhot'  # Profile.Hotkey
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_087"
+object_id = 'null'
+
+[blizzard_objects.nrdk]
+parent_id = 'nrdk'  # Red Dragon Whelp
+entity_id = 'null'
+
+[[blizzard_objects.nrdk.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_089"
+object_id = 'null'
+
+[[blizzard_objects.nrdk.modifications]]
+modification_id = 'uhot'  # Profile.Hotkey
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_090"
+object_id = 'null'
+
+[blizzard_objects.ngsp]
+parent_id = 'ngsp'  # Goblin Sapper
+entity_id = 'null'
+
+[[blizzard_objects.ngsp.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_091"
+object_id = 'null'
+
+[blizzard_objects.nzep]
+parent_id = 'nzep'  # Goblin Zeppelin
+entity_id = 'null'
+
+[[blizzard_objects.nzep.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_094"
+object_id = 'null'
+
+[blizzard_objects.nomg]
+parent_id = 'nomg'  # Ogre Magi
+entity_id = 'null'
+
+[[blizzard_objects.nomg.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_095"
+object_id = 'null'
+
+[blizzard_objects.ofrt]
+parent_id = 'ofrt'  # Fortress
+entity_id = 'null'
+
+[[blizzard_objects.ofrt.modifications]]
+modification_id = 'ureq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[blizzard_objects.opeo]
+parent_id = 'opeo'  # Peon
+entity_id = 'null'
+
+[[blizzard_objects.opeo.modifications]]
+modification_id = 'ubui'  # Profile.Structures Built
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ogre,npgf,obar,ofor,oalt,obea,osld,otto,owtw"
+object_id = 'null'
+
+[blizzard_objects.ndrr]
+parent_id = 'ndrr'  # Red Dragon Roost
+entity_id = 'null'
+
+[[blizzard_objects.ndrr.modifications]]
+modification_id = 'utra'  # Profile.Units Trained
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'nrwm'  # Red Dragon
+object_id = 'null'
+
+[[blizzard_objects.ndrr.modifications]]
+modification_id = 'ides'  # Profile.Description
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_096"
+object_id = 'null'
+
+[[blizzard_objects.ndrr.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1200
+object_id = 'null'
+
+[[blizzard_objects.ndrr.modifications]]
+modification_id = 'udef'  # UnitBalance.Defense Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 4
+object_id = 'null'
+
+[[blizzard_objects.ndrr.modifications]]
+modification_id = 'useu'  # Profile.Units Sold
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[blizzard_objects.ndrr.modifications]]
+modification_id = 'upgr'  # UnitBalance.Upgrades Used
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Rosp,_"
+object_id = 'null'
+
+[[blizzard_objects.ndrr.modifications]]
+modification_id = 'udup'  # UnitBalance.Defense Upgrade Bonus
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[blizzard_objects.ndrr.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[blizzard_objects.Uwar]
+parent_id = 'Uwar'  # Warlock
+entity_id = 'null'
+
+[[blizzard_objects.Uwar.modifications]]
+modification_id = 'umvt'  # UnitData.Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "hover"
+object_id = 'null'
+
+[[blizzard_objects.Uwar.modifications]]
+modification_id = 'umvh'  # UnitData.Height
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 60.0
+object_id = 'null'
+
+[[blizzard_objects.Uwar.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.600000023841858
+object_id = 'null'
+
+[blizzard_objects.Nbbc]
+parent_id = 'Nbbc'  # Blademaster
+entity_id = 'null'
+
+[[blizzard_objects.Nbbc.modifications]]
+modification_id = 'uhab'  # UnitAbilities.Hero
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AOcr,AOmi,AOww"
+object_id = 'null'
+
+[blizzard_objects.phea]
+parent_id = 'phea'  # Potion of Healing
+entity_id = 'null'
+
+[[blizzard_objects.phea.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.pman]
+parent_id = 'pman'  # Potion of Mana
+entity_id = 'null'
+
+[[blizzard_objects.pman.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.pinv]
+parent_id = 'pinv'  # Potion of Invisibility
+entity_id = 'null'
+
+[[blizzard_objects.pinv.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.shea]
+parent_id = 'shea'  # Scroll of Healing
+entity_id = 'null'
+
+[[blizzard_objects.shea.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.spro]
+parent_id = 'spro'  # Scroll of Protection
+entity_id = 'null'
+
+[[blizzard_objects.spro.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.stwp]
+parent_id = 'stwp'  # Scroll of Town Portal
+entity_id = 'null'
+
+[[blizzard_objects.stwp.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.ngme]
+parent_id = 'ngme'  # Goblin Merchant
+entity_id = 'null'
+
+[[blizzard_objects.ngme.modifications]]
+modification_id = 'usei'  # Profile.Items Sold
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "phea,pman,shea,spro,wneg,gemt,stwp"
+object_id = 'null'
+
+
+[map_objects.OC00]
+parent_id = 'Obla'  # Blademaster
+entity_id = 'OC00'
+
+[[map_objects.OC00.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_383"
+object_id = 'null'
+
+[[map_objects.OC00.modifications]]
+modification_id = 'upro'  # Profile.Proper Names
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_383"
+object_id = 'null'
+
+[[map_objects.OC00.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_157"
+object_id = 'null'
+
+[map_objects.OC01]
+parent_id = 'Obla'  # Blademaster
+entity_id = 'OC01'
+
+[[map_objects.OC01.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_384"
+object_id = 'null'
+
+[[map_objects.OC01.modifications]]
+modification_id = 'upro'  # Profile.Proper Names
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_384"
+object_id = 'null'
+
+[[map_objects.OC01.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_222"
+object_id = 'null'
+
+[map_objects.OC02]
+parent_id = 'Obla'  # Blademaster
+entity_id = 'OC02'
+
+[[map_objects.OC02.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_385"
+object_id = 'null'
+
+[[map_objects.OC02.modifications]]
+modification_id = 'upro'  # Profile.Proper Names
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_385"
+object_id = 'null'
+
+[[map_objects.OC02.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_223"
+object_id = 'null'
+
+[map_objects.OC03]
+parent_id = 'Ofar'  # Far Seer
+entity_id = 'OC03'
+
+[[map_objects.OC03.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_386"
+object_id = 'null'
+
+[[map_objects.OC03.modifications]]
+modification_id = 'upro'  # Profile.Proper Names
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_386"
+object_id = 'null'
+
+[[map_objects.OC03.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_224"
+object_id = 'null'
+
+[map_objects.OC04]
+parent_id = 'Ofar'  # Far Seer
+entity_id = 'OC04'
+
+[[map_objects.OC04.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_387"
+object_id = 'null'
+
+[[map_objects.OC04.modifications]]
+modification_id = 'upro'  # Profile.Proper Names
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_387"
+object_id = 'null'
+
+[[map_objects.OC04.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_225"
+object_id = 'null'
+
+[map_objects.NC05]
+parent_id = 'Nbbc'  # Blademaster
+entity_id = 'NC05'
+
+[[map_objects.NC05.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_388"
+object_id = 'null'
+
+[[map_objects.NC05.modifications]]
+modification_id = 'upro'  # Profile.Proper Names
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_388"
+object_id = 'null'
+
+[[map_objects.NC05.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_226"
+object_id = 'null'

@@ -1,0 +1,354 @@
+# Warcraft 3 Map Info File(.w3i)
+# See w3i.py for type definitions
+
+version = "ROC"
+map_revision = 638
+editor_version = 4422
+map_name = 'TRIGSTR_005'
+map_author = 'TRIGSTR_009'
+map_description = 'TRIGSTR_008'
+players_recommended = 'TRIGSTR_007'
+camera_bounds = [-5376.0, -7936.0, 5632.0, 7680.0, -5376.0, 7680.0, 5632.0, -7936.0]
+map_padding_left = 18
+map_padding_right = 16
+map_padding_top = 18
+map_padding_bottom = 16
+map_playable_width = 94
+map_playable_height = 126
+flags = "HIDE_MINIMAP|FIXED_FORCES|CUSTOM_FORCES|CUSTOM_UPGRADES|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS"
+tileset = { type = "bytes", value = "L" }
+campaign_background = 17
+tft_loading_screen_model_path = ''
+map_loading_screen_text = 'TRIGSTR_060'
+map_loading_screen_title = 'TRIGSTR_058'
+map_loading_screen_subtitle = 'TRIGSTR_059'
+map_game_data_set = -1
+tft_prologue_screen_path = ''
+prologue_screen_text = ''
+prologue_screen_title = ''
+prologue_screen_subtitle = ''
+tft_uses_terrain_fog = 0
+tft_fog_start_z = 0.0
+tft_fog_end_z = 0.0
+tft_fog_density = 0.0
+tft_fog_red = 0
+tft_fog_green = 0
+tft_fog_blue = 0
+tft_fog_alpha = 0
+tft_weather = ''
+tft_custom_sound_environment = ''
+tft_custom_light_tileset = { type = "bytes", value = "0" }
+tft_water_tint_red = 0
+tft_water_tint_green = 0
+tft_water_tint_blue = 0
+tft_water_tint_alpha = 0
+random_entities = []
+random_items = []
+
+[[players]]
+player_id = 1
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_184'
+start_pos = [3392.0, -3392.0]
+ally_low_priorities_flags = 0x49
+ally_high_priorities_flags = 0x42
+
+[[players]]
+player_id = 2
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_020'
+start_pos = [4544.0, 512.0]
+ally_low_priorities_flags = 0x49
+ally_high_priorities_flags = 0x40
+
+[[players]]
+player_id = 3
+player_type = "User"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_073'
+start_pos = [-1472.0, 6208.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+player_id = 4
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_020'
+start_pos = [-4416.0, -3456.0]
+ally_low_priorities_flags = 0x40
+ally_high_priorities_flags = 0x40
+
+[[players]]
+player_id = 5
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_020'
+start_pos = [5376.0, 4992.0]
+ally_low_priorities_flags = 0x40
+ally_high_priorities_flags = 0x40
+
+[[players]]
+player_id = 6
+player_type = "Neutral"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_027'
+start_pos = [-5696.0, 5376.0]
+ally_low_priorities_flags = 0xeeeeeeee
+ally_high_priorities_flags = 0xeeeeeeee
+
+[[players]]
+player_id = 7
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_020'
+start_pos = [-1600.0, 5376.0]
+ally_low_priorities_flags = 0x40
+ally_high_priorities_flags = 0xc3400040
+
+[[players]]
+player_id = 10
+player_type = "Computer"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_026'
+start_pos = [4992.0, 7168.0]
+ally_low_priorities_flags = 0x40
+ally_high_priorities_flags = 0x40
+
+[[forces]]
+force_flags = "None"
+player_mask_flags = 0xfffffb49
+name = 'TRIGSTR_073'
+
+[[forces]]
+force_flags = "Allied|AlliedVictory|ShareVision"
+player_mask_flags = 0x4b6
+name = 'TRIGSTR_020'
+
+[[upgrades]]
+player_flags = 0x48
+upgrade_id = 'Rume'  # Unholy Strength,Improved Unholy Strength,Advanced Unholy Strength
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0x48
+upgrade_id = 'Rume'  # Unholy Strength,Improved Unholy Strength,Advanced Unholy Strength
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0x48
+upgrade_id = 'Rura'  # Creature Attack,Improved Creature Attack,Advanced Creature Attack
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0x48
+upgrade_id = 'Rura'  # Creature Attack,Improved Creature Attack,Advanced Creature Attack
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0x48
+upgrade_id = 'Rura'  # Creature Attack,Improved Creature Attack,Advanced Creature Attack
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0x48
+upgrade_id = 'Ruar'  # Unholy Armor,Improved Unholy Armor,Advanced Unholy Armor
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0x48
+upgrade_id = 'Ruar'  # Unholy Armor,Improved Unholy Armor,Advanced Unholy Armor
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0x48
+upgrade_id = 'Ruwb'  # Web
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0x48
+upgrade_id = 'Rusf'  # Stone Form
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0x48
+upgrade_id = 'Rugf'  # Ghoul Frenzy
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0x48
+upgrade_id = 'Ruba'  # Banshee Adept Training,Banshee Master Training
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0x48
+upgrade_id = 'Ruba'  # Banshee Adept Training,Banshee Master Training
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0x48
+upgrade_id = 'Rufb'  # Freezing Breath
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0x48
+upgrade_id = 'Rucr'  # Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0x48
+upgrade_id = 'Rucr'  # Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace
+level = 2
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0x48
+upgrade_id = 'Rucr'  # Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0x48
+upgrade_id = 'Rune'  # Necromancer Adept Training,Necromancer Master Training
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0x400
+upgrade_id = 'Rhpt'  # Priest Adept Training,Priest Master Training
+level = 1
+availability = "Researched"
+
+[[upgrades]]
+player_flags = 0xc00
+upgrade_id = 'Rhpt'  # Priest Adept Training,Priest Master Training
+level = 0
+availability = "Researched"
+
+[[upgrades]]
+player_flags = 0x100
+upgrade_id = 'Rhme'  # Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords
+level = 2
+availability = "Researched"
+
+[[upgrades]]
+player_flags = 0x100
+upgrade_id = 'Rhme'  # Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords
+level = 0
+availability = "Researched"
+
+[[upgrades]]
+player_flags = 0x100
+upgrade_id = 'Rhme'  # Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords
+level = 1
+availability = "Researched"
+
+[[upgrades]]
+player_flags = 0x100
+upgrade_id = 'Rhra'  # Black Gunpowder,Refined Gunpowder,Imbued Gunpowder
+level = 2
+availability = "Researched"
+
+[[upgrades]]
+player_flags = 0x100
+upgrade_id = 'Rhra'  # Black Gunpowder,Refined Gunpowder,Imbued Gunpowder
+level = 0
+availability = "Researched"
+
+[[upgrades]]
+player_flags = 0x100
+upgrade_id = 'Rhra'  # Black Gunpowder,Refined Gunpowder,Imbued Gunpowder
+level = 1
+availability = "Researched"
+
+[[upgrades]]
+player_flags = 0x100
+upgrade_id = 'Rhar'  # Iron Plating,Steel Plating,Mithril Plating
+level = 2
+availability = "Researched"
+
+[[upgrades]]
+player_flags = 0x100
+upgrade_id = 'Rhar'  # Iron Plating,Steel Plating,Mithril Plating
+level = 0
+availability = "Researched"
+
+[[upgrades]]
+player_flags = 0x100
+upgrade_id = 'Rhar'  # Iron Plating,Steel Plating,Mithril Plating
+level = 1
+availability = "Researched"
+
+[[upgrades]]
+player_flags = 0x8
+upgrade_id = 'Rupc'  # Disease Cloud
+level = 0
+availability = "Unavailable"
+
+[[technologies]]
+player_flags = 0x48
+tech_id = 'uabo'  # Abomination
+
+[[technologies]]
+player_flags = 0x48
+tech_id = 'ucry'  # Crypt Fiend
+
+[[technologies]]
+player_flags = 0x48
+tech_id = 'ugar'  # Gargoyle
+
+[[technologies]]
+player_flags = 0x48
+tech_id = 'ufro'  # Frost Wyrm
+
+[[technologies]]
+player_flags = 0x48
+tech_id = 'uban'  # Banshee
+
+[[technologies]]
+player_flags = 0x48
+tech_id = 'Udea'  # Death Knight
+
+[[technologies]]
+player_flags = 0x48
+tech_id = 'Ulic'  # Lich
+
+[[technologies]]
+player_flags = 0x48
+tech_id = 'Udre'  # Dreadlord
+
+[[technologies]]
+player_flags = 0x48
+tech_id = 'usap'  # Sacrificial Pit
+
+[[technologies]]
+player_flags = 0x48
+tech_id = 'ubon'  # Boneyard
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'unp2'  # Black Citadel

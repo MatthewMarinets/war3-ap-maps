@@ -1,0 +1,586 @@
+# Warcraft 3 Map Info File(.w3i)
+# See w3i.py for type definitions
+
+version = "ROC"
+map_revision = 283
+editor_version = 4414
+map_name = 'TRIGSTR_005'
+map_author = 'TRIGSTR_015'
+map_description = 'TRIGSTR_936'
+players_recommended = 'TRIGSTR_006'
+camera_bounds = [-7552.0, -5888.0, 6016.0, 5120.0, -7552.0, 5120.0, 6016.0, -5888.0]
+map_padding_left = 7
+map_padding_right = 7
+map_padding_top = 18
+map_padding_bottom = 20
+map_playable_width = 114
+map_playable_height = 90
+flags = "HIDE_MINIMAP|FIXED_FORCES|CUSTOM_FORCES|CUSTOM_TECH_TREE|CUSTOM_ABILITIES|CUSTOM_UPGRADES|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS|WAVES_ON_SHORES"
+tileset = { type = "bytes", value = "W" }
+campaign_background = 21
+tft_loading_screen_model_path = ''
+map_loading_screen_text = 'TRIGSTR_007'
+map_loading_screen_title = 'TRIGSTR_034'
+map_loading_screen_subtitle = 'TRIGSTR_035'
+map_game_data_set = 0
+tft_prologue_screen_path = ''
+prologue_screen_text = ''
+prologue_screen_title = ''
+prologue_screen_subtitle = ''
+tft_uses_terrain_fog = 0
+tft_fog_start_z = 0.0
+tft_fog_end_z = 0.0
+tft_fog_density = 0.0
+tft_fog_red = 0
+tft_fog_green = 0
+tft_fog_blue = 0
+tft_fog_alpha = 0
+tft_weather = ''
+tft_custom_sound_environment = ''
+tft_custom_light_tileset = { type = "bytes", value = "0" }
+tft_water_tint_red = 0
+tft_water_tint_green = 0
+tft_water_tint_blue = 0
+tft_water_tint_alpha = 0
+random_entities = []
+random_items = []
+
+[[players]]
+player_id = 0
+player_type = "Computer"
+player_faction = "Orc"
+fixed_start_position = true
+name = 'TRIGSTR_816'
+start_pos = [4032.0, 3648.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0xc59e0000
+
+[[players]]
+player_id = 1
+player_type = "Computer"
+player_faction = "Orc"
+fixed_start_position = true
+name = 'TRIGSTR_817'
+start_pos = [-6528.0, -4032.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x459e0000
+
+[[players]]
+player_id = 2
+player_type = "Neutral"
+player_faction = "Orc"
+fixed_start_position = true
+name = 'TRIGSTR_817'
+start_pos = [5888.0, 1280.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+player_id = 3
+player_type = "User"
+player_faction = "Undead"
+fixed_start_position = true
+name = 'TRIGSTR_150'
+start_pos = [-2240.0, -832.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[players]]
+player_id = 4
+player_type = "Neutral"
+player_faction = "Human"
+fixed_start_position = true
+name = 'TRIGSTR_816'
+start_pos = [5312.0, 3968.0]
+ally_low_priorities_flags = 0xeeeeeeee
+ally_high_priorities_flags = 0xeeeeeeee
+
+[[players]]
+player_id = 5
+player_type = "Computer"
+player_faction = "Orc"
+fixed_start_position = true
+name = 'TRIGSTR_818'
+start_pos = [-2048.0, 3840.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0xc54c0000
+
+[[players]]
+player_id = 7
+player_type = "Neutral"
+player_faction = "Orc"
+fixed_start_position = true
+name = 'TRIGSTR_921'
+start_pos = [1664.0, 64.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x44500000
+
+[[players]]
+player_id = 9
+player_type = "Computer"
+player_faction = "Orc"
+fixed_start_position = true
+name = 'TRIGSTR_819'
+start_pos = [5056.0, -1472.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x44500000
+
+[[players]]
+player_id = 11
+player_type = "Computer"
+player_faction = "Orc"
+fixed_start_position = true
+name = 'TRIGSTR_820'
+start_pos = [832.0, -4800.0]
+ally_low_priorities_flags = 0x0
+ally_high_priorities_flags = 0x0
+
+[[forces]]
+force_flags = "None"
+player_mask_flags = 0xfffff548
+name = 'TRIGSTR_150'
+
+[[forces]]
+force_flags = "Allied|AlliedVictory|ShareVision"
+player_mask_flags = 0xab7
+name = 'TRIGSTR_149'
+
+[[upgrades]]
+player_flags = 0x40
+upgrade_id = 'Rufb'  # Freezing Breath
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0x40
+upgrade_id = 'Ruax'
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0xa23
+upgrade_id = 'Rows'  # Pulverize
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0xa23
+upgrade_id = 'Rowt'  # Spirit Walker Adept Training,Spirit Walker Master Training
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0xa23
+upgrade_id = 'Rovs'  # Envenomed Spears
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0xa23
+upgrade_id = 'Rowd'  # Witch Doctor Adept Training,Witch Doctor Master Training
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0xa23
+upgrade_id = 'Rowd'  # Witch Doctor Adept Training,Witch Doctor Master Training
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0xa23
+upgrade_id = 'Rost'  # Shaman Adept Training,Shaman Master Training
+level = 0
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0xa23
+upgrade_id = 'Rost'  # Shaman Adept Training,Shaman Master Training
+level = 1
+availability = "Unavailable"
+
+[[upgrades]]
+player_flags = 0x800
+upgrade_id = 'Roen'  # Ensnare
+level = 0
+availability = "Researched"
+
+[[technologies]]
+player_flags = 0xa2b
+tech_id = 'otau'  # Tauren
+
+[[technologies]]
+player_flags = 0xa23
+tech_id = 'okod'  # Kodo Beast
+
+[[technologies]]
+player_flags = 0xa23
+tech_id = 'owyv'  # Wind Rider
+
+[[technologies]]
+player_flags = 0xa2b
+tech_id = 'odoc'  # Troll Witch Doctor
+
+[[technologies]]
+player_flags = 0xa2b
+tech_id = 'oshm'  # Shaman
+
+[[technologies]]
+player_flags = 0xa23
+tech_id = 'oeye'  # Sentry Ward
+
+[[technologies]]
+player_flags = 0xa23
+tech_id = 'otot'  # Stasis Trap
+
+[[technologies]]
+player_flags = 0xa23
+tech_id = 'oang'  # Ancestral Guardian
+
+[[technologies]]
+player_flags = 0x48
+tech_id = 'uabo'  # Abomination
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'ufro'  # Frost Wyrm
+
+[[technologies]]
+player_flags = 0xa2b
+tech_id = 'Obla'  # Blademaster
+
+[[technologies]]
+player_flags = 0xa2b
+tech_id = 'Ofar'  # Far Seer
+
+[[technologies]]
+player_flags = 0xa2b
+tech_id = 'Otch'  # Tauren Chieftain
+
+[[technologies]]
+player_flags = 0xa2b
+tech_id = 'oalt'  # Altar of Storms
+
+[[technologies]]
+player_flags = 0xa2b
+tech_id = 'otto'  # Tauren Totem
+
+[[technologies]]
+player_flags = 0xa0a
+tech_id = 'osld'  # Spirit Lodge
+
+[[technologies]]
+player_flags = 0x80a
+tech_id = 'obea'  # Beastiary
+
+[[technologies]]
+player_flags = 0x48
+tech_id = 'Udre'  # Dreadlord
+
+[[technologies]]
+player_flags = 0x48
+tech_id = 'Ulic'  # Lich
+
+[[technologies]]
+player_flags = 0x48
+tech_id = 'Udea'  # Death Knight
+
+[[technologies]]
+player_flags = 0x40
+tech_id = 'ubon'  # Boneyard
+
+[[technologies]]
+player_flags = 0xa62
+tech_id = 'nrdk'  # Red Dragon Whelp
+
+[[technologies]]
+player_flags = 0x863
+tech_id = 'nzep'  # Goblin Zeppelin
+
+[[technologies]]
+player_flags = 0x863
+tech_id = 'ngsp'  # Goblin Sapper
+
+[[technologies]]
+player_flags = 0x263
+tech_id = 'nomg'  # Ogre Magi
+
+[[technologies]]
+player_flags = 0xa4a
+tech_id = 'nw2w'  # Orc Warlock
+
+[[technologies]]
+player_flags = 0xa23
+tech_id = 'otrb'  # Orc Burrow
+
+[[technologies]]
+player_flags = 0xa22
+tech_id = 'nrwm'  # Red Dragon
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hhes'  # Swordsman
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hpea'  # Peasant
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hfoo'  # Footman
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hkni'  # Knight
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hrif'  # Rifleman
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hmtm'  # Mortar Team
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hgyr'  # Flying Machine
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hgry'  # Gryphon Rider
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hmpr'  # Priest
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hsor'  # Sorceress
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hmtt'  # Siege Engine
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'nhea'  # Archer
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'nws1'  # Dragon Hawk
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'ogru'  # Grunt
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'opeo'  # Peon
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'orai'  # Raider
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'ohun'  # Troll Headhunter
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'ocat'  # Demolisher
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'ogre'  # Great Hall
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'ostr'  # Stronghold
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'ofrt'  # Fortress
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'obar'  # Barracks
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'ofor'  # War Mill
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'owtw'  # Watch Tower
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'npgf'  # Pig Farm
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'Hpal'  # Paladin
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'Hamg'  # Archmage
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'Hmkg'  # Mountain King
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'htow'  # Town Hall
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hkee'  # Keep
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hcas'  # Castle
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hhou'  # Farm
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'halt'  # Altar of Kings
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hbar'  # Barracks
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hlum'  # Lumber Mill
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hbla'  # Blacksmith
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'harm'  # Workshop
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hars'  # Arcane Sanctum
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hgra'  # Gryphon Aviary
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hwtw'  # Scout Tower
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hgtw'  # Guard Tower
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'hctw'  # Cannon Tower
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'etol'  # Tree of Life
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'etoa'  # Tree of Ages
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'etoe'  # Tree of Eternity
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'emow'  # Moon Well
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'eate'  # Altar of Elders
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'eaom'  # Ancient of War
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'eaoe'  # Ancient of Lore
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'eaow'  # Ancient of Wind
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'edob'  # Hunter's Hall
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'etrp'  # Ancient Protector
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'edos'  # Chimaera Roost
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'ncta'  # Corrupted Tree of Ages
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'ncte'  # Corrupted Tree of Eternity
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'Ekee'  # Keeper of the Grove
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'Emoo'  # Priestess of the Moon
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'Edem'  # Demon Hunter
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'ewsp'  # Wisp
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'earc'  # Archer
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'esen'  # Huntress
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'edry'  # Dryad
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'ebal'  # Glaive Thrower
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'ehip'  # Hippogryph
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'echm'  # Chimaera
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'edot'  # Druid of the Talon
+
+[[technologies]]
+player_flags = 0x8
+tech_id = 'edoc'  # Druid of the Claw

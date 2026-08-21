@@ -1,0 +1,353 @@
+﻿STRING 9
+{
+Antonidas
+}
+
+STRING 10
+{
+It pains me to even look at you, Arthas.
+}
+
+STRING 11
+{
+Undead07
+}
+
+STRING 12
+{
+1
+}
+
+STRING 14
+{
+The next morning, at the gates of Dalaran...
+}
+
+STRING 15
+{
+Blizzard Entertainment
+}
+
+STRING 16
+{
+Arthas
+}
+
+STRING 17
+{
+Chapter Seven
+}
+
+STRING 18
+{
+The Siege of Dalaran
+}
+
+STRING 19
+{
+I'll be happy to end your torment, old man. I told you that your magics could not stop me.  
+}
+
+STRING 22
+{
+Siege of Dalaran
+}
+
+STRING 24
+{
+Archmagi Remain
+}
+
+STRING 26
+{
+Arthas
+}
+
+STRING 27
+{
+Three Archmagi
+}
+
+STRING 28
+{
+Each of the three Archmagi who power the city's defensive shield have hidden somewhere within Dalaran's streets. You must charge into the city and slay each Archmage in order to bring down the crippling shield.
+}
+
+STRING 29
+{
+The spellbook is all yours, lich. Let's take it and leave before the wizards amass for their final attack. 
+}
+
+STRING 30
+{
+Kel'Thuzad
+}
+
+STRING 31
+{
+Indeed. I will begin summoning Lord Archimonde at sunset.	
+}
+
+STRING 33
+{
+Kirin Tor
+}
+
+STRING 34
+{
+Arthas
+}
+
+STRING 35
+{
+Wizards of the Kirin Tor! I am Arthas, first of the Lich King's death knights! I demand that you open your gates and surrender to the might of the Scourge!
+}
+
+STRING 36
+{
+Antonidas
+}
+
+STRING 37
+{
+Greetings, Prince Arthas. How fares your noble father?
+}
+
+STRING 38
+{
+Arthas
+}
+
+STRING 39
+{
+Lord Antonidas. There's no need to be snide.
+}
+
+STRING 40
+{
+Undead Scourge
+}
+
+STRING 44
+{
+Antonidas
+}
+
+STRING 45
+{
+We've prepared for your coming, Arthas. My brethren and I have erected auras that will destroy any undead that pass through them.	
+}
+
+STRING 46
+{
+Arthas
+}
+
+STRING 47
+{
+Your petty magics will not stop me, Antonidas.
+}
+
+STRING 48
+{
+Antonidas
+}
+
+STRING 49
+{
+Pull your troops back, or we will be forced to unleash our full powers against you! Make your choice, death knight.	
+}
+
+STRING 51
+{
+Slay the first Archmage
+}
+
+STRING 52
+{
+Kel'Thuzad
+}
+
+STRING 53
+{
+I sense that three separate wizards are maintaining these auras. If you find and kill them, the auras will disperse.	
+}
+
+STRING 57
+{
+|cffffcc00MAIN QUEST|r
+Three Archmagi
+  - Slay the first Archmage
+  - Slay the second Archmage
+  - Slay Antonidas
+}
+
+STRING 59
+{
+Slay Antonidas
+}
+
+STRING 60
+{
+Slay the second Archmage
+}
+
+STRING 61
+{
+|cffffcc00MAIN QUEST|r
+Three Archmagi
+  - Slay the first Archmage
+  - Slay the second Archmage
+  - Slay Antonidas
+}
+
+STRING 118
+{
+|cff32CD32HINT|r - You must charge into the city and slay each Archmage in order to bring down the crippling shield. Your units will slowly take damage while in the shield.
+}
+
+STRING 120
+{
+Kel'Thuzad
+}
+
+STRING 121
+{
+The Kirin Tor keeps these creatures caged for study. If they were to be released, they would cause our enemies a great deal of pain!
+}
+
+STRING 122
+{
+|cff32CD32HINT|r - Destroy the cages to release the creatures.
+}
+
+STRING 123
+{
+|cffffcc00MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 124
+{
+Defeat!
+}
+
+STRING 129
+{
+|cff87ceebNEW UNIT AVAILABLE|r
+Abomination - You may now build Abominations from the Slaughterhouse.
+}
+
+STRING 130
+{
+Mages' Guild
+}
+
+STRING 132
+{
+Creatures
+}
+
+STRING 133
+{
+Defeat!
+}
+
+STRING 134
+{
+Sorcerers' League
+}
+
+STRING 135
+{
+Chapter Seven: The Siege of Dalaran
+}
+
+STRING 136
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Three Archmagi
+}
+
+STRING 137
+{
+Cage
+}
+
+STRING 160
+{
+Kel'thuzad
+}
+
+STRING 161
+{
+The archmage has been killed! The first aura is dispersing!
+}
+
+STRING 166
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Three Archmagi
+  - |cff808080Slay the first Archmage (Completed)|r
+  - |cff808080Slay the second Archmage(Completed)|r
+  - Slay Antonidas
+}
+
+STRING 175
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Three Archmagi
+  - |cff808080Slay the first Archmage (Completed)|r
+  - Slay the second Archmage
+  - Slay Antonidas
+}
+
+STRING 186
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Three Archmagi
+  - Slay the first Archmage
+  - |cff808080Slay the second Archmage(Completed)|r
+  - Slay Antonidas
+}
+
+STRING 192
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Three Archmagi
+  - |cff808080Slay the first Archmage (Completed)|r
+  - |cff808080Slay the second Archmage (Completed)|r
+  - Slay Antonidas
+}
+
+STRING 206
+{
+Kel'thuzad
+}
+
+STRING 207
+{
+The second wizard has fallen! Only one cursed aura remains!
+}
+
+STRING 230
+{
+Kel'thuzad
+}
+
+STRING 231
+{
+The wizards keep many enchanted items within that vault! Shatter it, and we can turn our enemies' own weapons against them!
+}
+
+STRING 232
+{
+|cff87ceebNEW UNIT AVAILABLE|r
+Abomination - You may now build Abominations from the Slaughterhouse.
+}
+
+STRING 234
+{
+|cff32CD32HINT|r - You must charge into the city and slay each Archmage in order to bring down the crippling shield. Your units will slowly take damage while in the shield.
+}
+

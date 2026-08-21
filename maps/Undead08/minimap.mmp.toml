@@ -1,0 +1,157 @@
+# Warcraft 3 Minimap Info File (.mmp)
+# See mmp.py for type definitions
+
+file_format_version = 0
+
+[[icons]]
+icon_type = "House"
+x = 93
+y = 240
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+icon_type = "House"
+x = 11
+y = 191
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+icon_type = "GoldMine"
+x = 177
+y = 11
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+icon_type = "House"
+x = 220
+y = 106
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+icon_type = "House"
+x = 35
+y = 66
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+icon_type = "GoldMine"
+x = 248
+y = 154
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+icon_type = "House"
+x = 207
+y = 218
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+icon_type = "GoldMine"
+x = 36
+y = 78
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+icon_type = "GoldMine"
+x = 47
+y = 227
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+icon_type = "House"
+x = 124
+y = 240
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+icon_type = "GoldMine"
+x = 192
+y = 240
+colour_blue = 255
+colour_green = 255
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+icon_type = "PlayerStart"
+x = 176
+y = 26
+colour_blue = 255
+colour_green = 66
+colour_red = 0
+colour_alpha = 255
+
+[[icons]]
+icon_type = "PlayerStart"
+x = 47
+y = 87
+colour_blue = 0
+colour_green = 192
+colour_red = 32
+colour_alpha = 255
+
+[[icons]]
+icon_type = "PlayerStart"
+x = 232
+y = 154
+colour_blue = 3
+colour_green = 3
+colour_red = 255
+colour_alpha = 255
+
+[[icons]]
+icon_type = "PlayerStart"
+x = 37
+y = 96
+colour_blue = 185
+colour_green = 230
+colour_red = 28
+colour_alpha = 255
+
+[[icons]]
+icon_type = "PlayerStart"
+x = 171
+y = 80
+colour_blue = 176
+colour_green = 91
+colour_red = 229
+colour_alpha = 255
+
+[[icons]]
+icon_type = "PlayerStart"
+x = 109
+y = 207
+colour_blue = 129
+colour_green = 0
+colour_red = 84
+colour_alpha = 255

@@ -1,0 +1,741 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 1
+has_levels = false
+
+[blizzard_objects.nvil]
+parent_id = 'nvil'  # Villager
+entity_id = 'null'
+
+[[blizzard_objects.nvil.modifications]]
+modification_id = 'uclr'  # UnitUI.Tinting Color 1 (Red)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 150
+object_id = 'null'
+
+[[blizzard_objects.nvil.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 170
+object_id = 'null'
+
+[[blizzard_objects.nvil.modifications]]
+modification_id = 'umvs'  # UnitBalance.Speed Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 140
+object_id = 'null'
+
+[blizzard_objects.nvlk]
+parent_id = 'nvlk'  # Child
+entity_id = 'null'
+
+[[blizzard_objects.nvlk.modifications]]
+modification_id = 'uclr'  # UnitUI.Tinting Color 1 (Red)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 160
+object_id = 'null'
+
+[[blizzard_objects.nvlk.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 192
+object_id = 'null'
+
+[[blizzard_objects.nvlk.modifications]]
+modification_id = 'umvs'  # UnitBalance.Speed Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 170
+object_id = 'null'
+
+[blizzard_objects.nvlw]
+parent_id = 'nvlw'  # Villager
+entity_id = 'null'
+
+[[blizzard_objects.nvlw.modifications]]
+modification_id = 'uclr'  # UnitUI.Tinting Color 1 (Red)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 160
+object_id = 'null'
+
+[[blizzard_objects.nvlw.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 192
+object_id = 'null'
+
+[[blizzard_objects.nvlw.modifications]]
+modification_id = 'umvs'  # UnitBalance.Speed Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 140
+object_id = 'null'
+
+[blizzard_objects.nvl2]
+parent_id = 'nvl2'  # Villager
+entity_id = 'null'
+
+[[blizzard_objects.nvl2.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 192
+object_id = 'null'
+
+[[blizzard_objects.nvl2.modifications]]
+modification_id = 'uclr'  # UnitUI.Tinting Color 1 (Red)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 160
+object_id = 'null'
+
+[[blizzard_objects.nvl2.modifications]]
+modification_id = 'umvs'  # UnitBalance.Speed Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 140
+object_id = 'null'
+
+[blizzard_objects.nvk2]
+parent_id = 'nvk2'  # Child
+entity_id = 'null'
+
+[[blizzard_objects.nvk2.modifications]]
+modification_id = 'uclr'  # UnitUI.Tinting Color 1 (Red)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 160
+object_id = 'null'
+
+[[blizzard_objects.nvk2.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 192
+object_id = 'null'
+
+[[blizzard_objects.nvk2.modifications]]
+modification_id = 'umvs'  # UnitBalance.Speed Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 170
+object_id = 'null'
+
+
+[map_objects.nC00]
+parent_id = 'nvil'  # Villager
+entity_id = 'nC00'
+
+[[map_objects.nC00.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_059"
+object_id = 'null'
+
+[[map_objects.nC00.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_060"
+object_id = 'null'
+
+[[map_objects.nC00.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 128
+object_id = 'null'
+
+[[map_objects.nC00.modifications]]
+modification_id = 'uclb'  # UnitUI.Tinting Color 3 (Blue)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 128
+object_id = 'null'
+
+[[map_objects.nC00.modifications]]
+modification_id = 'uhrt'  # UnitBalance.Hit Points Regeneration Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "blight"
+object_id = 'null'
+
+[[map_objects.nC00.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 210
+object_id = 'null'
+
+[[map_objects.nC00.modifications]]
+modification_id = 'uhpr'  # UnitBalance.Hit Points Regeneration Rate
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 1.0
+object_id = 'null'
+
+[[map_objects.nC00.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNAcolyte.blp"
+object_id = 'uaco'  # Acolyte
+
+[[map_objects.nC00.modifications]]
+modification_id = 'utyp'  # UnitBalance.Unit Classification
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "undead"
+object_id = 'null'
+
+[map_objects.nC01]
+parent_id = 'nshe'  # Sheep
+entity_id = 'nC01'
+
+[[map_objects.nC01.modifications]]
+modification_id = 'umvt'  # UnitData.Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "hover"
+object_id = 'null'
+
+[[map_objects.nC01.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_146"
+object_id = 'null'
+
+[[map_objects.nC01.modifications]]
+modification_id = 'umvh'  # UnitData.Height
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 64.0
+object_id = 'null'
+
+[map_objects.uC02]
+parent_id = 'uaco'  # Acolyte
+entity_id = 'uC02'
+
+[[map_objects.uC02.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_094"
+object_id = 'null'
+
+[[map_objects.uC02.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\VillagerMan1\\VillagerMan1"
+object_id = 'nvl2'  # Villager
+
+[[map_objects.uC02.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNVillagerMan1.tga"
+object_id = 'nvl2'  # Villager
+
+[[map_objects.uC02.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.399999976158142
+object_id = 'null'
+
+[[map_objects.uC02.modifications]]
+modification_id = 'uclr'  # UnitUI.Tinting Color 1 (Red)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 160
+object_id = 'null'
+
+[[map_objects.uC02.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 160
+object_id = 'null'
+
+[[map_objects.uC02.modifications]]
+modification_id = 'uclb'  # UnitUI.Tinting Color 3 (Blue)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 120
+object_id = 'null'
+
+[[map_objects.uC02.modifications]]
+modification_id = 'uhrt'  # UnitBalance.Hit Points Regeneration Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "always"
+object_id = 'null'
+
+[[map_objects.uC02.modifications]]
+modification_id = 'uhpr'  # UnitBalance.Hit Points Regeneration Rate
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 1.0
+object_id = 'null'
+
+[[map_objects.uC02.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 80
+object_id = 'null'
+
+[[map_objects.uC02.modifications]]
+modification_id = 'ubui'  # Profile.Structures Built
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.uC02.modifications]]
+modification_id = 'utyp'  # UnitBalance.Unit Classification
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "_"
+object_id = 'null'
+
+[[map_objects.uC02.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.uC02.modifications]]
+modification_id = 'ua1s'  # UnitWeapons.Attack 1 - Damage Sides per Die
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[[map_objects.uC02.modifications]]
+modification_id = 'ua1c'  # UnitWeapons.Attack 1 - Cooldown Time
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 2.4600000381469727
+object_id = 'null'
+
+[[map_objects.uC02.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.uC02.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_005"
+object_id = 'null'
+
+[[map_objects.uC02.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_018"
+object_id = 'null'
+
+[[map_objects.uC02.modifications]]
+modification_id = 'uhot'  # Profile.Hotkey
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_019"
+object_id = 'null'
+
+[[map_objects.uC02.modifications]]
+modification_id = 'umvs'  # UnitBalance.Speed Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 135
+object_id = 'null'
+
+[map_objects.uC05]
+parent_id = 'uaco'  # Acolyte
+entity_id = 'uC05'
+
+[[map_objects.uC05.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_089"
+object_id = 'null'
+
+[[map_objects.uC05.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_046"
+object_id = 'null'
+
+[[map_objects.uC05.modifications]]
+modification_id = 'uhot'  # Profile.Hotkey
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_047"
+object_id = 'null'
+
+[[map_objects.uC05.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.uC05.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.uC05.modifications]]
+modification_id = 'ua1c'  # UnitWeapons.Attack 1 - Cooldown Time
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 1.8300000429153442
+object_id = 'null'
+
+[[map_objects.uC05.modifications]]
+modification_id = 'ubui'  # Profile.Structures Built
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.uC05.modifications]]
+modification_id = 'uhrt'  # UnitBalance.Hit Points Regeneration Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "always"
+object_id = 'null'
+
+[[map_objects.uC05.modifications]]
+modification_id = 'uhpr'  # UnitBalance.Hit Points Regeneration Rate
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 1.0
+object_id = 'null'
+
+[[map_objects.uC05.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 70
+object_id = 'null'
+
+[[map_objects.uC05.modifications]]
+modification_id = 'utyp'  # UnitBalance.Unit Classification
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "_"
+object_id = 'null'
+
+[[map_objects.uC05.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 224
+object_id = 'null'
+
+[[map_objects.uC05.modifications]]
+modification_id = 'uclb'  # UnitUI.Tinting Color 3 (Blue)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 160
+object_id = 'null'
+
+[[map_objects.uC05.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\VillagerMan\\VillagerMan"
+object_id = 'nvil'  # Villager
+
+[[map_objects.uC05.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNVillagerMan.tga"
+object_id = 'nvil'  # Villager
+
+[[map_objects.uC05.modifications]]
+modification_id = 'usca'  # UnitUI.Scaling Value
+data_type = "Float"
+variation_level = 0
+table_column = 0
+value = 1.2999999523162842
+object_id = 'null'
+
+[[map_objects.uC05.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_054"
+object_id = 'null'
+
+[[map_objects.uC05.modifications]]
+modification_id = 'umvs'  # UnitBalance.Speed Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 145
+object_id = 'null'
+
+[map_objects.hC03]
+parent_id = 'hpea'  # Peasant
+entity_id = 'hC03'
+
+[[map_objects.hC03.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_178"
+object_id = 'null'
+
+[[map_objects.hC03.modifications]]
+modification_id = 'unsf'  # Profile.Name - Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "TRIGSTR_179"
+object_id = 'null'
+
+[[map_objects.hC03.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\VillagerMan\\VillagerMan"
+object_id = 'nvil'  # Villager
+
+[[map_objects.hC03.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNVillagerMan.tga"
+object_id = 'nvil'  # Villager
+
+[[map_objects.hC03.modifications]]
+modification_id = 'uhpm'  # UnitBalance.Hit Points Maximum (Base)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 60
+object_id = 'null'
+
+[[map_objects.hC03.modifications]]
+modification_id = 'uhpr'  # UnitBalance.Hit Points Regeneration Rate
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 0.5
+object_id = 'null'
+
+[[map_objects.hC03.modifications]]
+modification_id = 'ugol'  # Haunted Gold Mine
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.hC03.modifications]]
+modification_id = 'umvs'  # UnitBalance.Speed Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 140
+object_id = 'null'
+
+[[map_objects.hC03.modifications]]
+modification_id = 'umvr'  # UnitData.Turn Rate
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 0.5
+object_id = 'null'
+
+[[map_objects.hC03.modifications]]
+modification_id = 'usid'  # UnitBalance.Sight Radius (Day)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 600
+object_id = 'null'
+
+[[map_objects.hC03.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.hC03.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.hC03.modifications]]
+modification_id = 'ubsi'  # UnitBalance.Gold Bounty Awarded - Sides per Die
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.hC03.modifications]]
+modification_id = 'usrg'  # UnitBalance.Stock Replenish Interval
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.hC03.modifications]]
+modification_id = 'usma'  # UnitBalance.Stock Maximum
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.hC03.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.hC03.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'null'
+
+[[map_objects.hC03.modifications]]
+modification_id = 'udty'  # UnitBalance.Defense Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "small"
+object_id = 'null'
+
+[[map_objects.hC03.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.hC03.modifications]]
+modification_id = 'uclr'  # UnitUI.Tinting Color 1 (Red)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 150
+object_id = 'null'
+
+[[map_objects.hC03.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 170
+object_id = 'null'
+
+[[map_objects.hC03.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = 'Ahar'  # Harvest
+object_id = 'null'

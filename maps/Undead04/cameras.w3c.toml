@@ -1,0 +1,268 @@
+# Warcraft 3 Camera file (.w3c)
+# See w3c.py for type definitions
+
+version = 0
+
+[[cameras]]
+target_x = 3911.179931640625
+target_y = 1257.5999755859375
+z_offset = 0.0
+rotation = 130.22000122070312
+angle_of_attack = 332.8399963378906
+distance = 931.3800048828125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'End00A'
+
+[[cameras]]
+target_x = 3911.179931640625
+target_y = 1257.5999755859375
+z_offset = 0.0
+rotation = 121.8499984741211
+angle_of_attack = 331.80999755859375
+distance = 931.3800048828125
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'End00B'
+
+[[cameras]]
+target_x = 3780.659912109375
+target_y = 1173.9200439453125
+z_offset = 0.0
+rotation = 105.61000061035156
+angle_of_attack = 311.3299865722656
+distance = 1500.0
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'End01A'
+
+[[cameras]]
+target_x = 3960.501708984375
+target_y = 1321.5517578125
+z_offset = 0.0
+rotation = 73.61998748779297
+angle_of_attack = 322.8800048828125
+distance = 1500.0
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'End01B'
+
+[[cameras]]
+target_x = 4450.43017578125
+target_y = 1713.489990234375
+z_offset = 0.0
+rotation = 67.01156616210938
+angle_of_attack = 318.0522155761719
+distance = 1126.969970703125
+roll = 0.0
+fov = 110.0
+far_z = 4545.4501953125
+name = 'End02A'
+
+[[cameras]]
+target_x = 5018.080078125
+target_y = 2266.169921875
+z_offset = 0.0
+rotation = 66.66000366210938
+angle_of_attack = 320.44000244140625
+distance = 1126.969970703125
+roll = 0.0
+fov = 110.0
+far_z = 4545.4501953125
+name = 'End02B'
+
+[[cameras]]
+target_x = 4864.5498046875
+target_y = 2221.452392578125
+z_offset = 0.0
+rotation = 99.7021713256836
+angle_of_attack = 321.46917724609375
+distance = 931.3800048828125
+roll = 0.0
+fov = 110.0
+far_z = 4545.4501953125
+name = 'End05'
+
+[[cameras]]
+target_x = 4654.4599609375
+target_y = 1939.719970703125
+z_offset = 0.0
+rotation = 193.21995544433594
+angle_of_attack = 325.9800109863281
+distance = 1024.52001953125
+roll = 0.0
+fov = 80.0
+far_z = 5000.0
+name = 'EndArthas'
+
+[[cameras]]
+target_x = 4608.0576171875
+target_y = 2074.696533203125
+z_offset = 0.0
+rotation = 101.03683471679688
+angle_of_attack = 325.8952941894531
+distance = 1363.63623046875
+roll = 0.0
+fov = 80.0
+far_z = 5000.0
+name = 'EndSylvanas'
+
+[[cameras]]
+target_x = -6044.7001953125
+target_y = -5072.33984375
+z_offset = 0.0
+rotation = 191.32000732421875
+angle_of_attack = 320.3500061035156
+distance = 1500.0
+roll = 0.0
+fov = 70.0
+far_z = 8857.8095703125
+name = 'Intro00'
+
+[[cameras]]
+target_x = -6333.85009765625
+target_y = -5343.08984375
+z_offset = 0.0
+rotation = 191.32000732421875
+angle_of_attack = 320.3500061035156
+distance = 1024.52001953125
+roll = 0.0
+fov = 80.0
+far_z = 8857.8095703125
+name = 'Intro01'
+
+[[cameras]]
+target_x = -6747.55419921875
+target_y = -5120.52392578125
+z_offset = 0.0
+rotation = 101.95062255859375
+angle_of_attack = 317.1628112792969
+distance = 1996.4998779296875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Intro02'
+
+[[cameras]]
+target_x = -6549.15185546875
+target_y = -5097.44091796875
+z_offset = 0.0
+rotation = 153.21311950683594
+angle_of_attack = 317.8742980957031
+distance = 1649.9998779296875
+roll = 0.0
+fov = 70.0
+far_z = 5000.0
+name = 'Intro03'
+
+[[cameras]]
+target_x = -5637.017578125
+target_y = -4720.52490234375
+z_offset = 0.0
+rotation = 183.16000366210938
+angle_of_attack = 332.0
+distance = 1500.0
+roll = 0.0
+fov = 70.0
+far_z = 4545.4501953125
+name = 'Intro04'
+
+[[cameras]]
+target_x = -5542.2568359375
+target_y = -4740.466796875
+z_offset = 0.0
+rotation = 212.12997436523438
+angle_of_attack = 329.3699951171875
+distance = 1650.0
+roll = 0.0
+fov = 70.0
+far_z = 4545.4501953125
+name = 'Intro05'
+
+[[cameras]]
+target_x = -3443.06005859375
+target_y = -3263.949951171875
+z_offset = 0.0
+rotation = 240.11000061035156
+angle_of_attack = 306.9200134277344
+distance = 1239.6700439453125
+roll = 0.0
+fov = 70.0
+far_z = 4545.4501953125
+name = 'Intro06'
+
+[[cameras]]
+target_x = -4062.919921875
+target_y = -2725.3701171875
+z_offset = 0.0
+rotation = 240.11000061035156
+angle_of_attack = 306.9200134277344
+distance = 1239.6700439453125
+roll = 0.0
+fov = 70.0
+far_z = 4545.4501953125
+name = 'Intro07'
+
+[[cameras]]
+target_x = -3837.31005859375
+target_y = -2687.820068359375
+z_offset = 0.0
+rotation = 195.6699981689453
+angle_of_attack = 329.3699951171875
+distance = 1239.6700439453125
+roll = 0.0
+fov = 70.0
+far_z = 4545.4501953125
+name = 'Intro08'
+
+[[cameras]]
+target_x = -3837.31005859375
+target_y = -2687.820068359375
+z_offset = 0.0
+rotation = 217.67999267578125
+angle_of_attack = 321.3800048828125
+distance = 1239.6700439453125
+roll = 0.0
+fov = 70.0
+far_z = 4545.4501953125
+name = 'Intro09'
+
+[[cameras]]
+target_x = -4760.91015625
+target_y = -1905.6199951171875
+z_offset = 0.0
+rotation = 159.32000732421875
+angle_of_attack = 334.5400085449219
+distance = 1363.6400146484375
+roll = 0.0
+fov = 70.0
+far_z = 4545.4501953125
+name = 'Intro10'
+
+[[cameras]]
+target_x = -4760.91015625
+target_y = -1905.6199951171875
+z_offset = 0.0
+rotation = 223.08998107910156
+angle_of_attack = 326.54998779296875
+distance = 1126.969970703125
+roll = 0.0
+fov = 70.0
+far_z = 4545.4501953125
+name = 'Intro11'
+
+[[cameras]]
+target_x = -4349.4599609375
+target_y = -2461.179931640625
+z_offset = 0.0
+rotation = 271.6099853515625
+angle_of_attack = 323.45001220703125
+distance = 1996.5
+roll = 0.0
+fov = 70.0
+far_z = 4545.4501953125
+name = 'Intro12'

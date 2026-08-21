@@ -1,0 +1,576 @@
+﻿STRING 0
+{
+Undead04
+}
+
+STRING 1
+{
+1
+}
+
+STRING 2
+{
+Chapter Four: Key of the Three Moons
+}
+
+STRING 3
+{
+Blizzard Entertainment
+}
+
+STRING 4
+{
+Chapter Four
+}
+
+STRING 5
+{
+Key of the Three Moons
+}
+
+STRING 6
+{
+Moments later, just beyond the shattered elfgate...
+}
+
+STRING 7
+{
+The Scourge
+}
+
+STRING 9
+{
+ (Peasant)
+}
+
+STRING 11
+{
+|cff32CD32HINT|r - Units can move through Way Gates to reach distant lands.
+}
+
+STRING 12
+{
+Arthas
+}
+
+STRING 13
+{
+High Elf
+}
+
+STRING 14
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Three Moons
+  - |cff808080Destroy the three High Elf Altars (Completed)|r
+  - Collect all three Mooncrystals
+}
+
+STRING 15
+{
+ (AI Version)
+}
+
+STRING 16
+{
+|cff32CD32HINT|r - When appropriate, units will automatically move through Way Gates to reach their destination.
+}
+
+STRING 18
+{
+|cff32CD32HINT|r - Units can move through Way Gates to reach distant lands.
+}
+
+STRING 19
+{
+|cff32CD32HINT|r - Units can move through Way Gates to reach distant lands.
+}
+
+STRING 20
+{
+|cff32CD32HINT|r - Units can move through Way Gates to reach distant lands.
+}
+
+STRING 21
+{
+|cff32CD32HINT|r - Units can move through Way Gates to reach distant lands.
+}
+
+STRING 22
+{
+|cff32CD32HINT|r - Units can move through Way Gates to reach distant lands.
+}
+
+STRING 23
+{
+|cff32CD32HINT|r - When appropriate, units will automatically move through Way Gates to reach their destination.
+}
+
+STRING 24
+{
+|cff32CD32HINT|r - When appropriate, units will automatically move through Way Gates to reach their destination.
+}
+
+STRING 25
+{
+|cff32CD32HINT|r - When appropriate, units will automatically move through Way Gates to reach their destination.
+}
+
+STRING 26
+{
+|cff32CD32HINT|r - When appropriate, units will automatically move through Way Gates to reach their destination.
+}
+
+STRING 27
+{
+|cff32CD32HINT|r - When appropriate, units will automatically move through Way Gates to reach their destination.
+}
+
+STRING 31
+{
+Arthas
+}
+
+STRING 32
+{
+The gates have been opened! Once we've dealt with Sylvanas, the inner kingdom shall be ours!
+}
+
+STRING 33
+{
+ (Cinematic)
+}
+
+STRING 34
+{
+Arthas
+}
+
+STRING 35
+{
+Finally...
+}
+
+STRING 39
+{
+Sylvanas Windrunner
+}
+
+STRING 40
+{
+You've won through this gate, butcher, but you won't get through the second. The inner gate to Silvermoon can only be opened with a special key, and it shall never be yours!
+}
+
+STRING 43
+{
+|cff32CD32HINT|r - Acolytes can Unsummon Undead buildings to recover gold and lumber. This is very useful when moving to a new base. 
+}
+
+STRING 45
+{
+Arthas
+}
+
+STRING 46
+{
+You waste your time, woman. You cannot outrun the inevitable.
+}
+
+STRING 59
+{
+Sylvanas Windrunner
+}
+
+STRING 60
+{
+Damn you monsters!  What will it take to drive you back?
+}
+
+STRING 63
+{
+Sylvanas Windrunner
+}
+
+STRING 64
+{
+You think that I'm running from you? Apparently you've never fought elves before.
+}
+
+STRING 65
+{
+Arthas
+}
+
+STRING 66
+{
+Damn that woman! We must find a way to cross the river!
+}
+
+STRING 68
+{
+Three Moons
+}
+
+STRING 69
+{
+A second enchanted Elfgate blocks the path to Silvermoon City. To bypass the mighty gate, you must locate and combine the three separate Mooncrystals which, when pieced together, form the Key of the Three Moons.
+}
+
+STRING 70
+{
+Destroy the three High Elf Altars
+}
+
+STRING 71
+{
+Collect all three Mooncrystals
+}
+
+STRING 81
+{
+Kel'Thuzad
+}
+
+STRING 82
+{
+That mooncrystal is a component of the Key of the Three Moons. The other two crystals must be found... if the elfgate is to be unlocked.
+}
+
+STRING 92
+{
+Arthas
+}
+
+STRING 93
+{
+The second mooncrystal is ours!
+}
+
+STRING 113
+{
+Arthas
+}
+
+STRING 114
+{
+The second mooncrystal is ours!
+}
+
+STRING 115
+{
+Sylvanas Windrunner
+}
+
+STRING 116
+{
+Fall back to the trees!
+}
+
+STRING 118
+{
+|cffffcc00MAIN QUEST|r
+Gates of Silvermoon
+  - Bring Arthas to the Gate
+}
+
+STRING 119
+{
+Gates of Silvermoon
+}
+
+STRING 120
+{
+Now that the Key of the Three Moons has been completed, you must bring it to the heavily guarded Elfgate and unleash its ancient power.  
+}
+
+STRING 121
+{
+Bring Arthas to the Elfgate
+}
+
+STRING 134
+{
+ (Banshee)
+}
+
+STRING 135
+{
+|cffffcc00MAIN QUEST|r
+Three Moons
+  - Destroy the three High Elf Altars
+  - Collect all three Mooncrystals
+}
+
+STRING 146
+{
+Kel'Thuzad
+}
+
+STRING 148
+{
+That mooncrystal is a component of the Key of the Three Moons. The other two crystals must be found... if the elfgate is to be unlocked.
+}
+
+STRING 157
+{
+|cffffcc00MAIN QUEST|r
+Three Moons
+  - Destroy the three High Elf Altars
+  - Collect all three Mooncrystals
+}
+
+STRING 161
+{
+Kel'Thuzad
+}
+
+STRING 162
+{
+At last... the third mooncrystal! The Key of the Three Moons is complete!
+}
+
+STRING 172
+{
+Arthas
+}
+
+STRING 173
+{
+The second mooncrystal is ours!
+}
+
+STRING 182
+{
+Kel'Thuzad
+}
+
+STRING 183
+{
+That mooncrystal is a component of the Key of the Three Moons. The other two crystals must be found... if the elfgate is to be unlocked.
+}
+
+STRING 192
+{
+Kel'Thuzad
+}
+
+STRING 193
+{
+At last... the third mooncrystal! The Key of the Three Moons is complete!
+}
+
+STRING 436
+{
+Arthas
+}
+
+STRING 437
+{
+The crystal glows brightly, but there is no effect on the gate.
+}
+
+STRING 438
+{
+Kel'Thuzad
+}
+
+STRING 439
+{
+As I said, you must find all three mooncrystals for the key to be whole!
+}
+
+STRING 440
+{
+Defeat!
+}
+
+STRING 441
+{
+|cff32CD32MISSION FAILED|r
+All of your buildings have been destroyed.
+}
+
+STRING 443
+{
+|cff32CD32MISSION FAILED|r
+All of your units have been killed.
+}
+
+STRING 444
+{
+Defeat!
+}
+
+STRING 447
+{
+|cff87CEEBNEW UNIT ACQUIRED|r  
+Goblin Zeppelin - A flying unit that can transport your troops across rivers and can be purchased from the Goblin Laboratory.
+}
+
+STRING 448
+{
+|cff32CD32HINT|r - Use Zeppelins to transport your troops across rivers.
+}
+
+STRING 455
+{
+Kel'Thuzad
+}
+
+STRING 456
+{
+At last... the third mooncrystal! The Key of the Three Moons is complete!
+}
+
+STRING 457
+{
+Arthas
+}
+
+STRING 458
+{
+The ranger woman is starting to vex me greatly.
+}
+
+STRING 508
+{
+|cff32CD32HINT|r - Arthas must pick up all three Mooncrystals in order to form the Key of the Three Moons.
+}
+
+STRING 509
+{
+|cff32CD32HINT|r - Arthas must pick up all three Mooncrystals in order to form the Key of the Three Moons.
+}
+
+STRING 510
+{
+|cff32CD32HINT|r - Arthas must pick up all three Mooncrystals in order to form the Key of the Three Moons.
+}
+
+STRING 511
+{
+Defeat!
+}
+
+STRING 515
+{
+Arthas
+}
+
+STRING 516
+{
+Fear not. The crypt fiends can force them to the ground!
+}
+
+STRING 517
+{
+Necromancer
+}
+
+STRING 518
+{
+Lord Arthas, our forces cannot attack the flying beasts!
+}
+
+STRING 519
+{
+Elven Defenders
+}
+
+STRING 520
+{
+Elven Ranger Corps
+}
+
+STRING 521
+{
+Undead Scourge
+}
+
+STRING 526
+{
+|cff32cd32HINT|r - Arthas must gather the Mooncrystals by destroying the Altars in order to get through the gate.
+}
+
+STRING 530
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Three Moons
+  - Destroy the three High Elf Altars
+  - Collect all three Mooncrystals |cff808080(1 Part Acquired)|r
+}
+
+STRING 535
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Three Moons
+  - Destroy the three High Elf Altars
+  - Collect all three Mooncrystals |cff808080(2 Parts Acquired)|r
+}
+
+STRING 540
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Three Moons
+}
+
+STRING 550
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Three Moons
+  - Destroy the three High Elf Altars
+  - Collect all three Mooncrystals |cff808080(1 Part Acquired)|r
+}
+
+STRING 555
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Three Moons
+  - Destroy the three High Elf Altars
+  - Collect all three Mooncrystals |cff808080(2 Parts Acquired)|r
+}
+
+STRING 560
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Three Moons
+}
+
+STRING 565
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Three Moons
+  - Destroy the three High Elf Altars
+  - Collect all three Mooncrystals |cff808080(1 Part Acquired)|r
+}
+
+STRING 570
+{
+|cffffcc00MAIN QUEST UPDATE|r
+Three Moons
+  - Destroy the three High Elf Altars
+  - Collect all three Mooncrystals |cff808080(2 Parts Acquired)|r
+}
+
+STRING 575
+{
+|cffffcc00MAIN QUEST COMPLETED|r
+Three Moons
+}
+
+STRING 576
+{
+Crypt Fiend
+}
+
+STRING 577
+{
+Greetings, death knight.
+}
+
+STRING 578
+{
+|cff87ceebNEW UNIT ACQUIRED|r
+Crypt Fiend - Crypt Fiends possess the Web ability, which can pull flying units from the air.
+}
+
