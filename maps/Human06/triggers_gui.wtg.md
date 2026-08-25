@@ -754,35 +754,6 @@ Change Dark Green Player Color to Brown so it doesn't show up as weird on the mi
   - param Variable gg_unit_Umal_0000
 
 
-## XP Cap
-- enabled: True
-- category: [22] Arthas XP
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableDisable
-  - param Variable ArthasVariable
-- Condition OperatorCompareUnit
-  - param Function GetLevelingUnit
-    - Function GetLevelingUnit
-  - param Preset OperatorEqualENE
-  - param Variable ArthasVariable
-- Condition OperatorCompareInteger
-  - param Function GetHeroLevel
-    - Function GetHeroLevel
-      - param Variable ArthasVariable
-  - param Preset OperatorGreaterEq
-  - param String 7
-- Event TriggerRegisterPlayerUnitEventSimple
-  - param Preset Player01
-  - param Preset PlayerUnitEventHero_Level
-
-
 ## Alliance Sight Color
 - enabled: True
 - category: [9] Alliance and Sight Settings
