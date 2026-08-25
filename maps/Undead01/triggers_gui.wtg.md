@@ -1170,7 +1170,7 @@ version = TFT
   - param Variable gg_trg_Post_hero_init
 - Action SetVariable
   - param Variable Ghoul01
-  - param Variable gg_unit_ugho_0153
+  - param Variable gg_unit_uA00_0153
 - Action SetVariable
   - param Variable Ghoul02
   - param Variable gg_unit_ugho_0152
@@ -1202,7 +1202,7 @@ version = TFT
   - param Variable gg_unit_ugho_0062
 - Action SetVariable
   - param Variable Ghoul04
-  - param Variable gg_unit_ugho_0063
+  - param Variable gg_unit_uA00_0063
 - Action SetVariable
   - param Variable Skeleton01
   - param Variable gg_unit_uske_0070
@@ -6153,7 +6153,7 @@ Keeping track of the unit via a global variable is dangerous.  The trigger conta
   - param Preset PlayerUnitEventAttacked
 - Event TriggerRegisterUnitInRangeSimple
   - param String 256.00
-  - param Variable gg_unit_ugho_0153
+  - param Variable gg_unit_uA00_0153
 - Event TriggerRegisterUnitInRangeSimple
   - param String 256.00
   - param Variable gg_unit_ugho_0152
@@ -6162,13 +6162,13 @@ Keeping track of the unit via a global variable is dangerous.  The trigger conta
   - param Variable gg_unit_ugho_0062
 - Event TriggerRegisterUnitInRangeSimple
   - param String 256.00
-  - param Variable gg_unit_ugho_0063
+  - param Variable gg_unit_uA00_0063
 - Event TriggerRegisterUnitInRangeSimple
   - param String 256.00
   - param Variable gg_unit_ugho_0017
 - Event TriggerRegisterUnitInRangeSimple
   - param String 256.00
-  - param Variable gg_unit_ugho_0018
+  - param Variable gg_unit_uA00_0018
 - Event TriggerRegisterUnitInRangeSimple
   - param String 256.00
   - param Variable gg_unit_uske_0070

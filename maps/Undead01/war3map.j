@@ -718,13 +718,13 @@ unit gg_unit_nban_0081= null
 unit gg_unit_hwtw_0019= null
 unit gg_unit_hwtw_0069= null
 unit gg_unit_ugho_0152= null
-unit gg_unit_ugho_0153= null
+unit gg_unit_uA00_0153= null
 unit gg_unit_htow_0027= null
 unit gg_unit_nvl2_0144= null
 unit gg_unit_nass_0079= null
 unit gg_unit_nban_0080= null
 unit gg_unit_ugho_0062= null
-unit gg_unit_ugho_0063= null
+unit gg_unit_uA00_0063= null
 unit gg_unit_uske_0087= null
 unit gg_unit_uske_0067= null
 unit gg_unit_uske_0070= null
@@ -733,7 +733,7 @@ unit gg_unit_nC00_0104= null
 unit gg_unit_nC00_0106= null
 unit gg_unit_nshe_0118= null
 unit gg_unit_nC01_0195= null
-unit gg_unit_ugho_0018= null
+unit gg_unit_uA00_0018= null
 unit gg_unit_uC05_0112= null
 unit gg_unit_nvl2_0031= null
 unit gg_unit_uC02_0109= null
@@ -1673,10 +1673,10 @@ function CreateUnitsForPlayer6 takes nothing returns nothing
     call UnitAddItemToSlotById(gg_unit_Utic_0002, 'phlt', 4)
     call UnitAddItemToSlotById(gg_unit_Utic_0002, 'phlt', 5)
     set gg_unit_ugho_0017=CreateUnit(p, 'ugho', 3482.3, - 2233.1, 305.079)
-    set gg_unit_ugho_0018=CreateUnit(p, 'ugho', 3918.3, - 2195.6, 261.866)
+    set gg_unit_uA00_0018=CreateUnit(p, 'uA00', 3918.3, - 2195.6, 261.866)
     set gg_unit_ushd_0030=CreateUnit(p, 'ushd', 3776.5, - 2051.5, 262.352)
     set gg_unit_ugho_0152=CreateUnit(p, 'ugho', 3988.9, - 2259.3, 240.153)
-    set gg_unit_ugho_0153=CreateUnit(p, 'ugho', 3577.5, - 2271.3, 305.079)
+    set gg_unit_uA00_0153=CreateUnit(p, 'uA00', 3577.5, - 2271.3, 305.079)
 endfunction
 
 //===========================================================================
@@ -1749,7 +1749,7 @@ function CreateNeutralPassive takes nothing returns nothing
     set u=CreateUnit(p, 'nshe', - 3092.5, 1160.7, 25.379)
     set u=CreateUnit(p, 'nshe', - 2813.2, 3162.1, 40.673)
     set gg_unit_ugho_0062=CreateUnit(p, 'ugho', - 1088.3, - 126.0, 118.324)
-    set gg_unit_ugho_0063=CreateUnit(p, 'ugho', - 785.7, 4.1, 146.127)
+    set gg_unit_uA00_0063=CreateUnit(p, 'uA00', - 785.7, 4.1, 146.127)
     set gg_unit_uske_0067=CreateUnit(p, 'uske', - 1033.7, 111.1, 139.696)
     set gg_unit_uske_0070=CreateUnit(p, 'uske', - 1294.6, - 131.9, 98.100)
     set gg_unit_uske_0087=CreateUnit(p, 'uske', - 879.1, 329.2, 172.221)
@@ -4239,7 +4239,7 @@ function Trig_Init_03_Units_Actions takes nothing returns nothing
     // Init Player Units
     call ConditionalTriggerExecute(gg_trg_AP_Load_Arthas)
     call ConditionalTriggerExecute(gg_trg_Post_hero_init)
-    set udg_Ghoul01=gg_unit_ugho_0153
+    set udg_Ghoul01=gg_unit_uA00_0153
     set udg_Ghoul02=gg_unit_ugho_0152
     set udg_Ghoul05=GroupPickRandomUnit(GetUnitsInRectOfPlayer(gg_rct_Ghoul05_Start, udg_P7_Tichondrius))
     set udg_Ghoul06=GroupPickRandomUnit(GetUnitsInRectOfPlayer(gg_rct_Ghoul06_Start, udg_P7_Tichondrius))
@@ -4247,7 +4247,7 @@ function Trig_Init_03_Units_Actions takes nothing returns nothing
     call ShowUnitHide(udg_Arthas)
     // Init Graveyard Units
     set udg_Ghoul03=gg_unit_ugho_0062
-    set udg_Ghoul04=gg_unit_ugho_0063
+    set udg_Ghoul04=gg_unit_uA00_0063
     set udg_Skeleton01=gg_unit_uske_0070
     set udg_Skeleton02=gg_unit_uske_0067
     set udg_Skeleton03=gg_unit_uske_0087
@@ -6796,12 +6796,12 @@ function InitTrig_Unit_Scared takes nothing returns nothing
     set gg_trg_Unit_Scared=CreateTrigger()
     call TriggerRegisterPlayerUnitEventSimple(gg_trg_Unit_Scared, Player(2), EVENT_PLAYER_UNIT_DEATH)
     call TriggerRegisterPlayerUnitEventSimple(gg_trg_Unit_Scared, Player(2), EVENT_PLAYER_UNIT_ATTACKED)
-    call TriggerRegisterUnitInRangeSimple(gg_trg_Unit_Scared, 256.00, gg_unit_ugho_0153)
+    call TriggerRegisterUnitInRangeSimple(gg_trg_Unit_Scared, 256.00, gg_unit_uA00_0153)
     call TriggerRegisterUnitInRangeSimple(gg_trg_Unit_Scared, 256.00, gg_unit_ugho_0152)
     call TriggerRegisterUnitInRangeSimple(gg_trg_Unit_Scared, 256.00, gg_unit_ugho_0062)
-    call TriggerRegisterUnitInRangeSimple(gg_trg_Unit_Scared, 256.00, gg_unit_ugho_0063)
+    call TriggerRegisterUnitInRangeSimple(gg_trg_Unit_Scared, 256.00, gg_unit_uA00_0063)
     call TriggerRegisterUnitInRangeSimple(gg_trg_Unit_Scared, 256.00, gg_unit_ugho_0017)
-    call TriggerRegisterUnitInRangeSimple(gg_trg_Unit_Scared, 256.00, gg_unit_ugho_0018)
+    call TriggerRegisterUnitInRangeSimple(gg_trg_Unit_Scared, 256.00, gg_unit_uA00_0018)
     call TriggerRegisterUnitInRangeSimple(gg_trg_Unit_Scared, 256.00, gg_unit_uske_0070)
     call TriggerRegisterUnitInRangeSimple(gg_trg_Unit_Scared, 256.00, gg_unit_uske_0067)
     call TriggerRegisterUnitInRangeSimple(gg_trg_Unit_Scared, 256.00, gg_unit_uske_0087)

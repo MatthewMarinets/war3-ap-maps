@@ -1668,7 +1668,7 @@ level = 1
 item_class = 0
 
 [[units]]
-type_id = 'ugho'  # Ghoul
+type_id = 'uA00'
 variation = 0
 x = 3577.47216796875
 y = -2271.271484375
@@ -2582,7 +2582,7 @@ waygate_destination = -1
 entity_id = 62
 
 [[units]]
-type_id = 'ugho'  # Ghoul
+type_id = 'uA00'
 variation = 0
 x = -785.6680297851562
 y = 4.085569381713867
@@ -4389,7 +4389,7 @@ level = 1
 item_class = 0
 
 [[units]]
-type_id = 'ugho'  # Ghoul
+type_id = 'uA00'  # Ghoul
 variation = 0
 x = 3918.29248046875
 y = -2195.574462890625
