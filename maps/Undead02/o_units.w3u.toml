@@ -24,7 +24,7 @@ modification_id = 'upro'  # Profile.Proper Names
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_011"
+value = "Gavinrad the Dire"
 object_id = 'null'
 
 [blizzard_objects.Hpb2]
@@ -36,7 +36,7 @@ modification_id = 'upro'  # Profile.Proper Names
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_038"
+value = "Sage Truthbearer"
 object_id = 'null'
 
 [blizzard_objects.Orkn]
@@ -517,7 +517,7 @@ modification_id = 'upro'  # Profile.Proper Names
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_054"
+value = "Ballador the Bright"
 object_id = 'null'
 
 [[map_objects.HC00.modifications]]
@@ -537,7 +537,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_086"
+value = "Male Villager"
 object_id = 'null'
 
 [[map_objects.nC02.modifications]]
@@ -573,7 +573,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_086"
+value = "Male Villager"
 object_id = 'null'
 
 [[map_objects.nC03.modifications]]
@@ -601,7 +601,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_085"
+value = "Female Villager"
 object_id = 'null'
 
 [[map_objects.nC04.modifications]]
@@ -629,7 +629,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_099"
+value = "Villager Child"
 object_id = 'null'
 
 [[map_objects.nC05.modifications]]
@@ -657,7 +657,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_099"
+value = "Villager Child"
 object_id = 'null'
 
 [map_objects.hC07]
@@ -669,7 +669,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_089"
+value = "Joseph"
 object_id = 'null'
 
 [[map_objects.hC07.modifications]]
@@ -705,7 +705,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_442"
+value = "Hebon"
 object_id = 'null'
 
 [[map_objects.hC08.modifications]]
@@ -749,7 +749,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_443"
+value = "Helena"
 object_id = 'null'
 
 [[map_objects.hC09.modifications]]
@@ -801,7 +801,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_444"
+value = "Balcor"
 object_id = 'null'
 
 [[map_objects.hC10.modifications]]
@@ -845,7 +845,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_114"
+value = "Ai"
 object_id = 'null'
 
 [[map_objects.hC11.modifications]]
@@ -881,7 +881,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_445"
+value = "Dirk"
 object_id = 'null'
 
 [[map_objects.hC12.modifications]]
@@ -917,7 +917,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_117"
+value = "Kenshin"
 object_id = 'null'
 
 [[map_objects.hC13.modifications]]
@@ -945,7 +945,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_446"
+value = "Liana"
 object_id = 'null'
 
 [[map_objects.hC14.modifications]]
@@ -973,7 +973,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_119"
+value = "Garak"
 object_id = 'null'
 
 [[map_objects.hC15.modifications]]
@@ -1010,14 +1010,6 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = "Fresh Meat"
-object_id = 'null'
-
-[[map_objects.uA00.modifications]]
-modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 9
 object_id = 'null'
 
 [[map_objects.uA00.modifications]]

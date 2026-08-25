@@ -4,6 +4,7 @@ Arthas
 }
 
 STRING 1
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Arthas01.mp3
 {
 What the hell is that?
 }
@@ -14,6 +15,7 @@ Acolyte
 }
 
 STRING 3
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Acolyte02.mp3
 {
 This crude contraption will allow you to transport the remains of our master.
 }
@@ -29,6 +31,7 @@ Arthas
 }
 
 STRING 6
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Arthas03.mp3
 {
 Can you not simply raise the remains when we find them?
 }
@@ -39,6 +42,7 @@ Acolyte
 }
 
 STRING 8
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Acolyte04.mp3
 {
 Pardon, Lord, but a being of Kel'Thuzad's power can only be reanimated at a nexus of powerful ley-energies, and there are no such places in this land.
 }
@@ -49,6 +53,7 @@ Arthas
 }
 
 STRING 10
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Arthas05.mp3
 {
 Very well, then. Let's move out.
 }
@@ -59,6 +64,7 @@ Gavinrad the Dire
 }
 
 STRING 12
+// Sound\Dialogue\UndeadCampaign\Undead02\U02PaladinA06.mp3
 {
 Arthas! Stop this madness before it's too late!
 }
@@ -69,6 +75,7 @@ Arthas
 }
 
 STRING 14
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Arthas07.mp3
 {
 Stand aside, brother. I've come to collect some old bones, and I don't wish to be disturbed.
 }
@@ -89,6 +96,7 @@ Gavinrad the Dire
 }
 
 STRING 19
+// Sound\Dialogue\UndeadCampaign\Undead02\U02PaladinB08.mp3
 {
 I can't believe that we ever called you brother! I knew it was a mistake to accept a spoiled prince into our order! You've made a mockery of the Silver Hand!
 }
@@ -104,6 +112,7 @@ Tichondrius
 }
 
 STRING 24
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Tichondrius15.mp3
 {
 It took you long enough. These remains are badly decomposed. They will never survive the trip to Quel'Thalas.
 }
@@ -114,6 +123,7 @@ Arthas
 }
 
 STRING 26
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Arthas16.mp3
 {
 Quel'Thalas?
 }
@@ -134,6 +144,7 @@ Chapter Two: Digging up the Dead
 }
 
 STRING 30
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Tichondrius17.mp3
 {
 Yes. Only the energies of the high elves' sunwell can bring Kel'Thuzad back to life.
 }
@@ -144,6 +155,7 @@ Arthas
 }
 
 STRING 32
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Arthas18.mp3
 {
 Then what must be done?
 }
@@ -154,6 +166,7 @@ Tichondrius
 }
 
 STRING 34
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Tichondrius19.mp3
 {
 You must steal a very special urn from the paladins' keeping. Place the necromancer's remains within it, and he will be well protected for the journey.
 }
@@ -164,13 +177,9 @@ Arthas
 }
 
 STRING 36
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Arthas20.mp3
 {
 As you wish.
-}
-
-STRING 38
-{
-Sage Truthbearer
 }
 
 STRING 40
@@ -217,6 +226,7 @@ The special Urn required to hold Kel'Thuzad's remains is also guarded by the Kni
 }
 
 STRING 51
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Arthas01.mp3
 {
 What the hell is that?
 }
@@ -231,11 +241,6 @@ STRING 53
 Recover Remains
 }
 
-STRING 54
-{
-Ballador the Bright
-}
-
 STRING 55
 {
 Bring Arthas to Kel'Thuzad's tomb
@@ -247,6 +252,7 @@ Arthas
 }
 
 STRING 57
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Arthas11.mp3
 {
 Come along now, necromancer. The powers that you once served have need of you again.
 }
@@ -272,6 +278,7 @@ Uther the Lightbringer
 }
 
 STRING 65
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Uther21.mp3
 {
 Your father ruled this land for seventy years, and you've ground it to dust in a matter of days.
 }
@@ -282,6 +289,7 @@ Arthas
 }
 
 STRING 67
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Arthas22.mp3
 {
 Very dramatic, Uther. Give me the urn, and I'll make sure you die quickly.
 }
@@ -292,6 +300,7 @@ Uther the Lightbringer
 }
 
 STRING 69
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Uther23.mp3
 {
 The urn holds your father's ashes, Arthas! What, were you hoping to piss on them one last time before you left his kingdom to rot?
 }
@@ -302,6 +311,7 @@ Arthas
 }
 
 STRING 71
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Arthas24.mp3
 {
 I didn't know what it held. Nor does it matter. I'll take what I came for one way or another.
 }
@@ -322,6 +332,7 @@ Paladins To Kill
 }
 
 STRING 76
+// Sound\Dialogue\UndeadCampaign\Undead02\U02PaladinD10.mp3
 {
 Vile betrayer! You are not fit enough to even carry your father's name! Why Uther ever vouched for you is beyond me. You've stripped him of his honor by casting yours to the winds! You deserve a gruesome death, boy!
 }
@@ -332,6 +343,7 @@ Sage Truthbearer
 }
 
 STRING 78
+// Sound\Dialogue\UndeadCampaign\Undead02\U02PaladinC09.mp3
 {
 Light have mercy on you! Your betrayal has broken Uther's heart, boy. He would have given his life for yours in a second, and this is how you repay his loyalty?
 }
@@ -351,27 +363,13 @@ STRING 84
 Sasquatch
 }
 
-STRING 85
-{
-Female Villager
-}
-
-STRING 86
-{
-Male Villager
-}
-
 STRING 87
 {
 Kel'Thuzad
 }
 
-STRING 89
-{
-Joseph
-}
-
 STRING 90
+// Units\Creeps\Wendigo\WendigoPissed2.wav
 {
 |cff808080<Translated to English>|r
 What the hell is that!?
@@ -383,6 +381,7 @@ Uther the Lightbringer
 }
 
 STRING 92
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Uther25.mp3
 {
 I dearly hope that there's a special place in hell waiting for you, Arthas.
 }
@@ -398,19 +397,16 @@ Elder Sasquatch
 }
 
 STRING 95
+// Units\Creeps\Wendigo\WendigoYes1.wav
 {
 |cff808080<Translated to English>|r
 I don't know, but it can't be good. We should destroy them before they tell others about our secret society of Sasquatch, which lives out here in these ancient woods. None may know the incredible secrets that our race has withheld from the rest of the world....
 }
 
 STRING 97
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Necromancer39.mp3
 {
 Blight is created when undead structures are summoned. Buildings can only be summoned on to blight with the exception of the Necropolis.
-}
-
-STRING 99
-{
-Villager Child
 }
 
 STRING 106
@@ -435,24 +431,9 @@ STRING 113
 Recover Remains
 }
 
-STRING 114
-{
-Ai
-}
-
-STRING 117
-{
-Kenshin
-}
-
 STRING 118
 {
 |cff32CD32HINT|r - Select an Acolyte and tell him to build a Haunted Gold Mine.
-}
-
-STRING 119
-{
-Garak
 }
 
 STRING 122
@@ -520,6 +501,7 @@ Necromancer
 }
 
 STRING 153
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Necromancer41.mp3
 {
 Summoning a graveyard will supply the undead army with fresh corpses.
 }
@@ -546,6 +528,7 @@ Necromancer
 }
 
 STRING 161
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Necromancer42.mp3
 {
 Ghouls harvest lumber for the undead army.
 }
@@ -556,6 +539,7 @@ Kel'Thuzad
 }
 
 STRING 166
+// Sound\Dialogue\UndeadCampaign\Undead02\U02KelThuzad27.mp3
 {
 Told you my death would mean little.
 }
@@ -566,6 +550,7 @@ Arthas
 }
 
 STRING 168
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Arthas28.mp3
 {
 What the... Am I hearing ghosts now?
 }
@@ -576,6 +561,7 @@ Kel'Thuzad
 }
 
 STRING 170
+// Sound\Dialogue\UndeadCampaign\Undead02\U02KelThuzad29.mp3
 {
 It is I, Kel'Thuzad. I was right about you, Prince Arthas.
 }
@@ -586,6 +572,7 @@ Necromancer
 }
 
 STRING 174
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Necromancer40.mp3
 {
 When standing on blight, wounded undead units regenerate faster.
 }
@@ -616,6 +603,7 @@ Necromancer
 }
 
 STRING 187
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Necromancer38.mp3
 {
 The undead must haunt a gold mine before the acolytes can begin harvesting gold.
 }
@@ -681,6 +669,7 @@ Tichondrius
 }
 
 STRING 202
+// Units\Undead\Tichondrius\TichondriusPissed3.wav
 {
 I must feast on souls!
 }
@@ -691,33 +680,9 @@ Tichondrius
 }
 
 STRING 204
+// Units\Undead\Tichondrius\TichondriusWhat2.wav
 {
 I grow tired of waiting.
-}
-
-STRING 442
-{
-Hebon
-}
-
-STRING 443
-{
-Helena
-}
-
-STRING 444
-{
-Balcor
-}
-
-STRING 445
-{
-Dirk
-}
-
-STRING 446
-{
-Liana
 }
 
 STRING 447
@@ -895,6 +860,7 @@ Tichondrius
 }
 
 STRING 703
+// Sound\Dialogue\UndeadCampaign\Undead02\U02Tichondrius30.mp3
 {
 Excellent work. Now, your journey to Quel'Thalas can begin.
 }
@@ -905,6 +871,7 @@ Kel'Thuzad
 }
 
 STRING 705
+// Sound\Dialogue\UndeadCampaign\Undead02\U02KelThuzad31.mp3
 {
 Tell him nothing! Only you can hear me. The dreadlords cannot be trusted. They are the Lich King's jailors! I will tell you all... when I walk this world again.
 }
