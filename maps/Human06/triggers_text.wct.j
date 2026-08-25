@@ -1,5 +1,5 @@
 // version: 1
-// Triggers: 108
+// Triggers: 107
 //\\// Trigger #0
 // This file defines file IO functions for the JASS side of things
 // Based off the FileIO module created by Nestharus, see:
@@ -1445,7 +1445,7 @@ function InitTrig_AP_mercenaries takes nothing returns nothing
     call TriggerAddAction(t_apply_mercenaries, function mercenaries_apply)
 endfunction
 
-//\\// Trigger #88
+//\\// Trigger #87
 //===========================================================================
 function Trig_Malganis_Continuously_Attacks_Buildings_Actions takes nothing returns nothing
 
@@ -1472,7 +1472,7 @@ function InitTrig_Malganis_Continuously_Attacks_Buildings takes nothing returns 
 endfunction
 
 
-//\\// Trigger #89
+//\\// Trigger #88
 //===========================================================================
 function Trig_Malganis_Booting_Player_Actions takes nothing returns nothing
 
@@ -1500,7 +1500,7 @@ function InitTrig_Malganis_Booting_Player takes nothing returns nothing
 endfunction
 
 
-//\\// Trigger #93
+//\\// Trigger #92
 function Trig_Convert_Villager_Actions takes nothing returns nothing
     local unit villager
 
