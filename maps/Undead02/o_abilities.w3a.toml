@@ -1,0 +1,1557 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 2
+has_levels = true
+
+[blizzard_objects.AOls]
+parent_id = 'AOls'  # Voodoo Spirits
+entity_id = 'null'
+
+[[blizzard_objects.AOls.modifications]]
+modification_id = 'alev'  # AbilityData.Levels
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[blizzard_objects.AOls.modifications]]
+modification_id = 'arut'  # Profile.Tooltip - Learn - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Creates a swarm of angry spirits that drain the life energies of nearby enemy units. They store the life energy they drain from their victims and use it to replenish Rokhan's hit points when they return.|n|nLasts <AOls,HeroDur1> seconds."
+object_id = 'null'
+
+[blizzard_objects.Arsg]
+parent_id = 'Arsg'  # Summon Misha
+entity_id = 'null'
+
+[[blizzard_objects.Arsg.modifications]]
+modification_id = 'alev'  # AbilityData.Levels
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[[blizzard_objects.Arsg.modifications]]
+modification_id = 'arut'  # Profile.Tooltip - Learn - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Summons Misha, a powerful bear, to attack your enemies. |n|n|cffffcc00Level 1|r - <ngzc,realHP> hit points, <ngzc,mindmg1> to <ngzc,maxdmg1> damage. |n|cffffcc00Level 2|r - <ngzd,realHP> hit points, <ngzd,mindmg1> to <ngzd,maxdmg1> damage, has Bash. |n|cffffcc00Level 3|r - <ngza,realHP> hit points, <ngza,mindmg1> to <ngza,maxdmg1> damage, has Maul."
+object_id = 'null'
+
+[blizzard_objects.ANr2]
+parent_id = 'ANr2'  # Reincarnation
+entity_id = 'null'
+
+[[blizzard_objects.ANr2.modifications]]
+modification_id = 'arqa'  # Profile.Requirements - Levels
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "6"
+object_id = 'null'
+
+
+[map_objects.AP10]
+parent_id = 'ANcl'  # Channel
+entity_id = 'AP10'
+
+[[map_objects.AP10.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Promote to Ghoul"
+object_id = 'null'
+
+[[map_objects.AP10.modifications]]
+modification_id = 'aart'  # Profile.Icon - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNGhoul.blp"
+object_id = 'null'
+
+[[map_objects.AP10.modifications]]
+modification_id = 'atp1'  # Profile.Tooltip - Normal
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Promote to Ghoul [|cffffcc00G|r]"
+object_id = 'null'
+
+[[map_objects.AP10.modifications]]
+modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "|cfffed312¤ 110 Gold|r\nPromote this unit to a Ghoul."
+object_id = 'null'
+
+[[map_objects.AP10.modifications]]
+modification_id = 'ahky'  # Profile.Hotkey - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "G"
+object_id = 'null'
+
+[[map_objects.AP10.modifications]]
+modification_id = 'aher'  # AbilityData.Hero Ability
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.AP10.modifications]]
+modification_id = 'abpx'  # Profile.Button Position - Normal (X)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.AP10.modifications]]
+modification_id = 'areq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "RP10"
+object_id = 'null'
+
+[[map_objects.AP10.modifications]]
+modification_id = 'Ncl3'  # AbilityData.Options
+data_type = "Integer"
+variation_level = 1
+table_column = 3
+value = 1
+object_id = 'null'
+
+[[map_objects.AP10.modifications]]
+modification_id = 'Ncl4'  # AbilityData.Art Duration
+data_type = "Unreal"
+variation_level = 1
+table_column = 4
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP10.modifications]]
+modification_id = 'Ncl5'  # AbilityData.Disable Other Abilities
+data_type = "Integer"
+variation_level = 1
+table_column = 5
+value = 0
+object_id = 'null'
+
+[[map_objects.AP10.modifications]]
+modification_id = 'Ncl6'  # AbilityData.Base Order ID
+data_type = "String"
+variation_level = 1
+table_column = 6
+value = "absorb"
+object_id = 'null'
+
+[map_objects.AP11]
+parent_id = 'ANcl'  # Channel
+entity_id = 'AP11'
+
+[[map_objects.AP11.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Promote to Crypt Fiend"
+object_id = 'null'
+
+[[map_objects.AP11.modifications]]
+modification_id = 'aart'  # Profile.Icon - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNCryptFiend.blp"
+object_id = 'null'
+
+[[map_objects.AP11.modifications]]
+modification_id = 'atp1'  # Profile.Tooltip - Normal
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Promote to Crypt Fiend [|cffffcc00F|r]"
+object_id = 'null'
+
+[[map_objects.AP11.modifications]]
+modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "|cfffed312¤ 190 Gold|r\nPromote this unit to a Crypt Fiend."
+object_id = 'null'
+
+[[map_objects.AP11.modifications]]
+modification_id = 'ahky'  # Profile.Hotkey - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "F"
+object_id = 'null'
+
+[[map_objects.AP11.modifications]]
+modification_id = 'aher'  # AbilityData.Hero Ability
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.AP11.modifications]]
+modification_id = 'abpx'  # Profile.Button Position - Normal (X)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.AP11.modifications]]
+modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.AP11.modifications]]
+modification_id = 'areq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "RP11"
+object_id = 'null'
+
+[[map_objects.AP11.modifications]]
+modification_id = 'Ncl3'  # AbilityData.Options
+data_type = "Integer"
+variation_level = 1
+table_column = 3
+value = 1
+object_id = 'null'
+
+[[map_objects.AP11.modifications]]
+modification_id = 'Ncl4'  # AbilityData.Art Duration
+data_type = "Unreal"
+variation_level = 1
+table_column = 4
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP11.modifications]]
+modification_id = 'Ncl5'  # AbilityData.Disable Other Abilities
+data_type = "Integer"
+variation_level = 1
+table_column = 5
+value = 0
+object_id = 'null'
+
+[[map_objects.AP11.modifications]]
+modification_id = 'Ncl6'  # AbilityData.Base Order ID
+data_type = "String"
+variation_level = 1
+table_column = 6
+value = "acidbomb"
+object_id = 'null'
+
+[map_objects.AP12]
+parent_id = 'ANcl'  # Channel
+entity_id = 'AP12'
+
+[[map_objects.AP12.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Promote to Skeleton Archer"
+object_id = 'null'
+
+[[map_objects.AP12.modifications]]
+modification_id = 'aart'  # Profile.Icon - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNSkeletonArcher.blp"
+object_id = 'null'
+
+[[map_objects.AP12.modifications]]
+modification_id = 'atp1'  # Profile.Tooltip - Normal
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Promote to Skeleton Archer [|cffffcc00R|r]"
+object_id = 'null'
+
+[[map_objects.AP12.modifications]]
+modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "|cfffed312¤ 95 Gold|r\nPromote this unit to a Skeleton Archer."
+object_id = 'null'
+
+[[map_objects.AP12.modifications]]
+modification_id = 'ahky'  # Profile.Hotkey - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "R"
+object_id = 'null'
+
+[[map_objects.AP12.modifications]]
+modification_id = 'aher'  # AbilityData.Hero Ability
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.AP12.modifications]]
+modification_id = 'abpx'  # Profile.Button Position - Normal (X)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.AP12.modifications]]
+modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2
+object_id = 'null'
+
+[[map_objects.AP12.modifications]]
+modification_id = 'areq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "RP12"
+object_id = 'null'
+
+[[map_objects.AP12.modifications]]
+modification_id = 'Ncl3'  # AbilityData.Options
+data_type = "Integer"
+variation_level = 1
+table_column = 3
+value = 1
+object_id = 'null'
+
+[[map_objects.AP12.modifications]]
+modification_id = 'Ncl4'  # AbilityData.Art Duration
+data_type = "Unreal"
+variation_level = 1
+table_column = 4
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP12.modifications]]
+modification_id = 'Ncl5'  # AbilityData.Disable Other Abilities
+data_type = "Integer"
+variation_level = 1
+table_column = 5
+value = 0
+object_id = 'null'
+
+[[map_objects.AP12.modifications]]
+modification_id = 'Ncl6'  # AbilityData.Base Order ID
+data_type = "String"
+variation_level = 1
+table_column = 6
+value = "acolyteharvest"
+object_id = 'null'
+
+[map_objects.AP13]
+parent_id = 'ANcl'  # Channel
+entity_id = 'AP13'
+
+[[map_objects.AP13.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Promote to Necromancer"
+object_id = 'null'
+
+[[map_objects.AP13.modifications]]
+modification_id = 'aart'  # Profile.Icon - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNNecromancer.blp"
+object_id = 'null'
+
+[[map_objects.AP13.modifications]]
+modification_id = 'atp1'  # Profile.Tooltip - Normal
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Promote to Necromancer [|cffffcc00N|r]"
+object_id = 'null'
+
+[[map_objects.AP13.modifications]]
+modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "|cfffed312¤ 130 Gold|r\nPromote this unit to a Necromancer."
+object_id = 'null'
+
+[[map_objects.AP13.modifications]]
+modification_id = 'ahky'  # Profile.Hotkey - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "N"
+object_id = 'null'
+
+[[map_objects.AP13.modifications]]
+modification_id = 'aher'  # AbilityData.Hero Ability
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.AP13.modifications]]
+modification_id = 'abpx'  # Profile.Button Position - Normal (X)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.AP13.modifications]]
+modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[[map_objects.AP13.modifications]]
+modification_id = 'areq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "RP13"
+object_id = 'null'
+
+[[map_objects.AP13.modifications]]
+modification_id = 'Ncl3'  # AbilityData.Options
+data_type = "Integer"
+variation_level = 1
+table_column = 3
+value = 1
+object_id = 'null'
+
+[[map_objects.AP13.modifications]]
+modification_id = 'Ncl4'  # AbilityData.Art Duration
+data_type = "Unreal"
+variation_level = 1
+table_column = 4
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP13.modifications]]
+modification_id = 'Ncl5'  # AbilityData.Disable Other Abilities
+data_type = "Integer"
+variation_level = 1
+table_column = 5
+value = 0
+object_id = 'null'
+
+[[map_objects.AP13.modifications]]
+modification_id = 'Ncl6'  # AbilityData.Base Order ID
+data_type = "String"
+variation_level = 1
+table_column = 6
+value = "AImove"
+object_id = 'null'
+
+[map_objects.AP14]
+parent_id = 'ANcl'  # Channel
+entity_id = 'AP14'
+
+[[map_objects.AP14.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Promote to Banshee"
+object_id = 'null'
+
+[[map_objects.AP14.modifications]]
+modification_id = 'aart'  # Profile.Icon - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNBanshee.blp"
+object_id = 'null'
+
+[[map_objects.AP14.modifications]]
+modification_id = 'atp1'  # Profile.Tooltip - Normal
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Promote to Banshee [|cffffcc00B|r]"
+object_id = 'null'
+
+[[map_objects.AP14.modifications]]
+modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "|cfffed312¤ 140 Gold|r\nPromote this unit to a Banshee."
+object_id = 'null'
+
+[[map_objects.AP14.modifications]]
+modification_id = 'ahky'  # Profile.Hotkey - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "B"
+object_id = 'null'
+
+[[map_objects.AP14.modifications]]
+modification_id = 'aher'  # AbilityData.Hero Ability
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.AP14.modifications]]
+modification_id = 'abpx'  # Profile.Button Position - Normal (X)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.AP14.modifications]]
+modification_id = 'areq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "RP14"
+object_id = 'null'
+
+[[map_objects.AP14.modifications]]
+modification_id = 'Ncl3'  # AbilityData.Options
+data_type = "Integer"
+variation_level = 1
+table_column = 3
+value = 1
+object_id = 'null'
+
+[[map_objects.AP14.modifications]]
+modification_id = 'Ncl4'  # AbilityData.Art Duration
+data_type = "Unreal"
+variation_level = 1
+table_column = 4
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP14.modifications]]
+modification_id = 'Ncl5'  # AbilityData.Disable Other Abilities
+data_type = "Integer"
+variation_level = 1
+table_column = 5
+value = 0
+object_id = 'null'
+
+[[map_objects.AP14.modifications]]
+modification_id = 'Ncl6'  # AbilityData.Base Order ID
+data_type = "String"
+variation_level = 1
+table_column = 6
+value = "ambush"
+object_id = 'null'
+
+[map_objects.AP15]
+parent_id = 'ANcl'  # Channel
+entity_id = 'AP15'
+
+[[map_objects.AP15.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Promote to Meat Wagon"
+object_id = 'null'
+
+[[map_objects.AP15.modifications]]
+modification_id = 'aart'  # Profile.Icon - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNMeatWagon.blp"
+object_id = 'null'
+
+[[map_objects.AP15.modifications]]
+modification_id = 'atp1'  # Profile.Tooltip - Normal
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Promote to Meat Wagon [|cffffcc00W|r]"
+object_id = 'null'
+
+[[map_objects.AP15.modifications]]
+modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "|cfffed312¤ 210 Gold|r\nPromote this unit to a Meat Wagon."
+object_id = 'null'
+
+[[map_objects.AP15.modifications]]
+modification_id = 'ahky'  # Profile.Hotkey - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "W"
+object_id = 'null'
+
+[[map_objects.AP15.modifications]]
+modification_id = 'aher'  # AbilityData.Hero Ability
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.AP15.modifications]]
+modification_id = 'abpx'  # Profile.Button Position - Normal (X)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.AP15.modifications]]
+modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.AP15.modifications]]
+modification_id = 'areq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "RP15"
+object_id = 'null'
+
+[[map_objects.AP15.modifications]]
+modification_id = 'Ncl3'  # AbilityData.Options
+data_type = "Integer"
+variation_level = 1
+table_column = 3
+value = 1
+object_id = 'null'
+
+[[map_objects.AP15.modifications]]
+modification_id = 'Ncl4'  # AbilityData.Art Duration
+data_type = "Unreal"
+variation_level = 1
+table_column = 4
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP15.modifications]]
+modification_id = 'Ncl5'  # AbilityData.Disable Other Abilities
+data_type = "Integer"
+variation_level = 1
+table_column = 5
+value = 0
+object_id = 'null'
+
+[[map_objects.AP15.modifications]]
+modification_id = 'Ncl6'  # AbilityData.Base Order ID
+data_type = "String"
+variation_level = 1
+table_column = 6
+value = "ancestralspirit"
+object_id = 'null'
+
+[map_objects.AP16]
+parent_id = 'ANcl'  # Channel
+entity_id = 'AP16'
+
+[[map_objects.AP16.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Promote to Abomination"
+object_id = 'null'
+
+[[map_objects.AP16.modifications]]
+modification_id = 'aart'  # Profile.Icon - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNAbomination.blp"
+object_id = 'null'
+
+[[map_objects.AP16.modifications]]
+modification_id = 'atp1'  # Profile.Tooltip - Normal
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Promote to Abomination [|cffffcc00A|r]"
+object_id = 'null'
+
+[[map_objects.AP16.modifications]]
+modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "|cfffed312¤ 220 Gold|r\nPromote this unit to an Abomination."
+object_id = 'null'
+
+[[map_objects.AP16.modifications]]
+modification_id = 'ahky'  # Profile.Hotkey - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "A"
+object_id = 'null'
+
+[[map_objects.AP16.modifications]]
+modification_id = 'aher'  # AbilityData.Hero Ability
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.AP16.modifications]]
+modification_id = 'abpx'  # Profile.Button Position - Normal (X)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.AP16.modifications]]
+modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2
+object_id = 'null'
+
+[[map_objects.AP16.modifications]]
+modification_id = 'areq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "RP16"
+object_id = 'null'
+
+[[map_objects.AP16.modifications]]
+modification_id = 'Ncl3'  # AbilityData.Options
+data_type = "Integer"
+variation_level = 1
+table_column = 3
+value = 1
+object_id = 'null'
+
+[[map_objects.AP16.modifications]]
+modification_id = 'Ncl4'  # AbilityData.Art Duration
+data_type = "Unreal"
+variation_level = 1
+table_column = 4
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP16.modifications]]
+modification_id = 'Ncl5'  # AbilityData.Disable Other Abilities
+data_type = "Integer"
+variation_level = 1
+table_column = 5
+value = 0
+object_id = 'null'
+
+[[map_objects.AP16.modifications]]
+modification_id = 'Ncl6'  # AbilityData.Base Order ID
+data_type = "String"
+variation_level = 1
+table_column = 6
+value = "ancestralspirittaarget"
+object_id = 'null'
+
+[map_objects.AP17]
+parent_id = 'ANcl'  # Channel
+entity_id = 'AP17'
+
+[[map_objects.AP17.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Promote to Obsidian Statue"
+object_id = 'null'
+
+[[map_objects.AP17.modifications]]
+modification_id = 'aart'  # Profile.Icon - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNObsidianStatue.blp"
+object_id = 'null'
+
+[[map_objects.AP17.modifications]]
+modification_id = 'atp1'  # Profile.Tooltip - Normal
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Promote to Obsidian Statue [|cffffcc00D|r]"
+object_id = 'null'
+
+[[map_objects.AP17.modifications]]
+modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "|cfffed312¤ 180 Gold|r\nPromote this unit to an Obsidian Statue."
+object_id = 'null'
+
+[[map_objects.AP17.modifications]]
+modification_id = 'ahky'  # Profile.Hotkey - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "D"
+object_id = 'null'
+
+[[map_objects.AP17.modifications]]
+modification_id = 'aher'  # AbilityData.Hero Ability
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.AP17.modifications]]
+modification_id = 'abpx'  # Profile.Button Position - Normal (X)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.AP17.modifications]]
+modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[[map_objects.AP17.modifications]]
+modification_id = 'areq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "RP17"
+object_id = 'null'
+
+[[map_objects.AP17.modifications]]
+modification_id = 'Ncl3'  # AbilityData.Options
+data_type = "Integer"
+variation_level = 1
+table_column = 3
+value = 1
+object_id = 'null'
+
+[[map_objects.AP17.modifications]]
+modification_id = 'Ncl4'  # AbilityData.Art Duration
+data_type = "Unreal"
+variation_level = 1
+table_column = 4
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP17.modifications]]
+modification_id = 'Ncl5'  # AbilityData.Disable Other Abilities
+data_type = "Integer"
+variation_level = 1
+table_column = 5
+value = 0
+object_id = 'null'
+
+[[map_objects.AP17.modifications]]
+modification_id = 'Ncl6'  # AbilityData.Base Order ID
+data_type = "String"
+variation_level = 1
+table_column = 6
+value = "animatedead"
+object_id = 'null'
+
+[map_objects.AP18]
+parent_id = 'ANcl'  # Channel
+entity_id = 'AP18'
+
+[[map_objects.AP18.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Promote to Shade"
+object_id = 'null'
+
+[[map_objects.AP18.modifications]]
+modification_id = 'aart'  # Profile.Icon - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNShade.blp"
+object_id = 'null'
+
+[[map_objects.AP18.modifications]]
+modification_id = 'atp1'  # Profile.Tooltip - Normal
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Promote to Shade [|cffffcc00H|r]"
+object_id = 'null'
+
+[[map_objects.AP18.modifications]]
+modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "|cfffed312¤ 25 Gold|r\nPromote this unit to a Shade."
+object_id = 'null'
+
+[[map_objects.AP18.modifications]]
+modification_id = 'ahky'  # Profile.Hotkey - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "H"
+object_id = 'null'
+
+[[map_objects.AP18.modifications]]
+modification_id = 'aher'  # AbilityData.Hero Ability
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.AP18.modifications]]
+modification_id = 'areq'  # Profile.Requirements
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "RP18"
+object_id = 'null'
+
+[[map_objects.AP18.modifications]]
+modification_id = 'Ncl3'  # AbilityData.Options
+data_type = "Integer"
+variation_level = 1
+table_column = 3
+value = 1
+object_id = 'null'
+
+[[map_objects.AP18.modifications]]
+modification_id = 'Ncl4'  # AbilityData.Art Duration
+data_type = "Unreal"
+variation_level = 1
+table_column = 4
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP18.modifications]]
+modification_id = 'Ncl5'  # AbilityData.Disable Other Abilities
+data_type = "Integer"
+variation_level = 1
+table_column = 5
+value = 0
+object_id = 'null'
+
+[[map_objects.AP18.modifications]]
+modification_id = 'Ncl6'  # AbilityData.Base Order ID
+data_type = "String"
+variation_level = 1
+table_column = 6
+value = "antimagicshell"
+object_id = 'null'
+
+[map_objects.AP1a]
+parent_id = 'Amrf'  # Crow Form
+entity_id = 'AP1a'
+
+[[map_objects.AP1a.modifications]]
+modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = 'ugho'  # Ghoul
+object_id = 'null'
+
+[[map_objects.AP1a.modifications]]
+modification_id = 'Eme2'  # AbilityData.Morphing Flags
+data_type = "Integer"
+variation_level = 1
+table_column = 2
+value = 9
+object_id = 'null'
+
+[[map_objects.AP1a.modifications]]
+modification_id = 'acas'  # AbilityData.Casting Time
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP1a.modifications]]
+modification_id = 'adur'  # AbilityData.Duration - Normal
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP1a.modifications]]
+modification_id = 'aefs'  # Profile.Effect Sound
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "GhoulReady"
+object_id = 'null'
+
+[[map_objects.AP1a.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Ghoul)"
+object_id = 'null'
+
+[map_objects.AP1b]
+parent_id = 'Amrf'  # Crow Form
+entity_id = 'AP1b'
+
+[[map_objects.AP1b.modifications]]
+modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = 'ucry'  # Crypt Fiend
+object_id = 'null'
+
+[[map_objects.AP1b.modifications]]
+modification_id = 'Eme2'  # AbilityData.Morphing Flags
+data_type = "Integer"
+variation_level = 1
+table_column = 2
+value = 9
+object_id = 'null'
+
+[[map_objects.AP1b.modifications]]
+modification_id = 'acas'  # AbilityData.Casting Time
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP1b.modifications]]
+modification_id = 'adur'  # AbilityData.Duration - Normal
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP1b.modifications]]
+modification_id = 'aefs'  # Profile.Effect Sound
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "CryptFiendReady"
+object_id = 'null'
+
+[[map_objects.AP1b.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Crypt Fiend)"
+object_id = 'null'
+
+[map_objects.AP1c]
+parent_id = 'Amrf'  # Crow Form
+entity_id = 'AP1c'
+
+[[map_objects.AP1c.modifications]]
+modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = 'nska'  # Skeleton Archer
+object_id = 'null'
+
+[[map_objects.AP1c.modifications]]
+modification_id = 'Eme2'  # AbilityData.Morphing Flags
+data_type = "Integer"
+variation_level = 1
+table_column = 2
+value = 9
+object_id = 'null'
+
+[[map_objects.AP1c.modifications]]
+modification_id = 'acas'  # AbilityData.Casting Time
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP1c.modifications]]
+modification_id = 'adur'  # AbilityData.Duration - Normal
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP1c.modifications]]
+modification_id = 'aefs'  # Profile.Effect Sound
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "SkeletonReady"
+object_id = 'null'
+
+[[map_objects.AP1c.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Skeleton Archer)"
+object_id = 'null'
+
+[map_objects.AP1d]
+parent_id = 'Amrf'  # Crow Form
+entity_id = 'AP1d'
+
+[[map_objects.AP1d.modifications]]
+modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = 'unec'  # Necromancer
+object_id = 'null'
+
+[[map_objects.AP1d.modifications]]
+modification_id = 'Eme2'  # AbilityData.Morphing Flags
+data_type = "Integer"
+variation_level = 1
+table_column = 2
+value = 9
+object_id = 'null'
+
+[[map_objects.AP1d.modifications]]
+modification_id = 'acas'  # AbilityData.Casting Time
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP1d.modifications]]
+modification_id = 'adur'  # AbilityData.Duration - Normal
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP1d.modifications]]
+modification_id = 'aefs'  # Profile.Effect Sound
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "NecromancerReady"
+object_id = 'null'
+
+[[map_objects.AP1d.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Necromancer)"
+object_id = 'null'
+
+[map_objects.AP1e]
+parent_id = 'Amrf'  # Crow Form
+entity_id = 'AP1e'
+
+[[map_objects.AP1e.modifications]]
+modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = 'uban'  # Banshee
+object_id = 'null'
+
+[[map_objects.AP1e.modifications]]
+modification_id = 'Eme2'  # AbilityData.Morphing Flags
+data_type = "Integer"
+variation_level = 1
+table_column = 2
+value = 9
+object_id = 'null'
+
+[[map_objects.AP1e.modifications]]
+modification_id = 'acas'  # AbilityData.Casting Time
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP1e.modifications]]
+modification_id = 'adur'  # AbilityData.Duration - Normal
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP1e.modifications]]
+modification_id = 'aefs'  # Profile.Effect Sound
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "BansheeReady"
+object_id = 'null'
+
+[[map_objects.AP1e.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Banshee)"
+object_id = 'null'
+
+[map_objects.AP1f]
+parent_id = 'Amrf'  # Crow Form
+entity_id = 'AP1f'
+
+[[map_objects.AP1f.modifications]]
+modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = 'umtw'  # Meat Wagon
+object_id = 'null'
+
+[[map_objects.AP1f.modifications]]
+modification_id = 'Eme2'  # AbilityData.Morphing Flags
+data_type = "Integer"
+variation_level = 1
+table_column = 2
+value = 9
+object_id = 'null'
+
+[[map_objects.AP1f.modifications]]
+modification_id = 'acas'  # AbilityData.Casting Time
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP1f.modifications]]
+modification_id = 'adur'  # AbilityData.Duration - Normal
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP1f.modifications]]
+modification_id = 'aefs'  # Profile.Effect Sound
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "MeatWagonReady"
+object_id = 'null'
+
+[[map_objects.AP1f.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Meat Wagon)"
+object_id = 'null'
+
+[map_objects.AP1g]
+parent_id = 'Amrf'  # Crow Form
+entity_id = 'AP1g'
+
+[[map_objects.AP1g.modifications]]
+modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = 'uabo'  # Abomination
+object_id = 'null'
+
+[[map_objects.AP1g.modifications]]
+modification_id = 'Eme2'  # AbilityData.Morphing Flags
+data_type = "Integer"
+variation_level = 1
+table_column = 2
+value = 9
+object_id = 'null'
+
+[[map_objects.AP1g.modifications]]
+modification_id = 'acas'  # AbilityData.Casting Time
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP1g.modifications]]
+modification_id = 'adur'  # AbilityData.Duration - Normal
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP1g.modifications]]
+modification_id = 'aefs'  # Profile.Effect Sound
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AbominationReady"
+object_id = 'null'
+
+[[map_objects.AP1g.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Abomination)"
+object_id = 'null'
+
+[map_objects.AP1h]
+parent_id = 'Amrf'  # Crow Form
+entity_id = 'AP1h'
+
+[[map_objects.AP1h.modifications]]
+modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = 'uobs'  # Obsidian Statue
+object_id = 'null'
+
+[[map_objects.AP1h.modifications]]
+modification_id = 'Eme2'  # AbilityData.Morphing Flags
+data_type = "Integer"
+variation_level = 1
+table_column = 2
+value = 9
+object_id = 'null'
+
+[[map_objects.AP1h.modifications]]
+modification_id = 'acas'  # AbilityData.Casting Time
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP1h.modifications]]
+modification_id = 'adur'  # AbilityData.Duration - Normal
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP1h.modifications]]
+modification_id = 'aefs'  # Profile.Effect Sound
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ObsidianStatueReady"
+object_id = 'null'
+
+[[map_objects.AP1h.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Obsidian Statue)"
+object_id = 'null'
+
+[map_objects.AP1i]
+parent_id = 'Amrf'  # Crow Form
+entity_id = 'AP1i'
+
+[[map_objects.AP1i.modifications]]
+modification_id = 'Emeu'  # AbilityData.Alternate Form Unit
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = 'ushd'  # Shade
+object_id = 'null'
+
+[[map_objects.AP1i.modifications]]
+modification_id = 'Eme2'  # AbilityData.Morphing Flags
+data_type = "Integer"
+variation_level = 1
+table_column = 2
+value = 9
+object_id = 'null'
+
+[[map_objects.AP1i.modifications]]
+modification_id = 'acas'  # AbilityData.Casting Time
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP1i.modifications]]
+modification_id = 'adur'  # AbilityData.Duration - Normal
+data_type = "Unreal"
+variation_level = 1
+table_column = 0
+value = 0.0
+object_id = 'null'
+
+[[map_objects.AP1i.modifications]]
+modification_id = 'aefs'  # Profile.Effect Sound
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ShadeReady"
+object_id = 'null'
+
+[[map_objects.AP1i.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Shade)"
+object_id = 'null'
+
+[map_objects.APPu]
+parent_id = 'Aspb'  # Spell Book
+entity_id = 'APPu'
+
+[[map_objects.APPu.modifications]]
+modification_id = 'anam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Promotion"
+object_id = 'null'
+
+[[map_objects.APPu.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Undead)"
+object_id = 'null'
+
+[[map_objects.APPu.modifications]]
+modification_id = 'ahky'  # Profile.Hotkey - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "T"
+object_id = 'null'
+
+[[map_objects.APPu.modifications]]
+modification_id = 'aart'  # Profile.Icon - Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNUndeadCaptureFlag.blp"
+object_id = 'null'
+
+[[map_objects.APPu.modifications]]
+modification_id = 'abpy'  # Profile.Button Position - Normal (Y)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2
+object_id = 'null'
+
+[[map_objects.APPu.modifications]]
+modification_id = 'aite'  # AbilityData.Item Ability
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[[map_objects.APPu.modifications]]
+modification_id = 'atp1'  # Profile.Tooltip - Normal
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Promotion [|cffffcc00T|r]"
+object_id = 'null'
+
+[[map_objects.APPu.modifications]]
+modification_id = 'aub1'  # Profile.Tooltip - Normal - Extended
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Promote this unit to a regular Undead unit."
+object_id = 'null'
+
+[[map_objects.APPu.modifications]]
+modification_id = 'spb3'  # AbilityData.Minimum Spells
+data_type = "Integer"
+variation_level = 1
+table_column = 3
+value = 9
+object_id = 'null'
+
+[[map_objects.APPu.modifications]]
+modification_id = 'spb4'  # AbilityData.Maximum Spells
+data_type = "Integer"
+variation_level = 1
+table_column = 4
+value = 9
+object_id = 'null'
+
+[[map_objects.APPu.modifications]]
+modification_id = 'spb1'  # AbilityData.Spell List
+data_type = "String"
+variation_level = 1
+table_column = 1
+value = "AP10,AP11,AP12,AP13,AP14,AP15,AP16,AP17,AP18"
+object_id = 'null'
