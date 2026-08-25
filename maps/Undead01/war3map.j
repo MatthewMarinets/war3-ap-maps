@@ -4201,10 +4201,11 @@ function Trig_Init_02_Players_Actions takes nothing returns nothing
     call SetPlayerAllianceStateBJ(udg_P5_LocalPopulace, udg_AP4_Undead, bj_ALLIANCE_UNALLIED)
     call SetPlayerAllianceStateBJ(udg_P5_LocalPopulace, udg_P7_Tichondrius, bj_ALLIANCE_UNALLIED)
     // Init Creeps
-    call SetPlayerFlagBJ(PLAYER_STATE_GIVES_BOUNTY, false, Player(PLAYER_NEUTRAL_AGGRESSIVE))
     call SetPlayerAllianceBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), ALLIANCE_PASSIVE, true, udg_P1_RedVillagers)
     call SetPlayerAllianceBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), ALLIANCE_PASSIVE, true, udg_P3_LocalPopulace)
     call SetPlayerAllianceBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), ALLIANCE_PASSIVE, true, udg_P5_LocalPopulace)
+    call SetPlayerFlagBJ(PLAYER_STATE_GIVES_BOUNTY, true, udg_P3_LocalPopulace)
+    call SetPlayerFlagBJ(PLAYER_STATE_GIVES_BOUNTY, true, udg_P5_LocalPopulace)
     // Prevent allies from using Arthas's aura
     call SetPlayerAllianceBJ(udg_AP4_Undead, ALLIANCE_SHARED_SPELLS, false, udg_P1_RedVillagers)
     call SetPlayerAllianceBJ(udg_AP4_Undead, ALLIANCE_SHARED_SPELLS, false, udg_P3_LocalPopulace)

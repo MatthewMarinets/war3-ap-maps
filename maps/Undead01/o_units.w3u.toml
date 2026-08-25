@@ -31,6 +31,30 @@ table_column = 0
 value = 140
 object_id = 'null'
 
+[[blizzard_objects.nvil.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 13
+object_id = 'null'
+
+[[blizzard_objects.nvil.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[blizzard_objects.nvil.modifications]]
+modification_id = 'ubsi'  # UnitBalance.Gold Bounty Awarded - Sides per Die
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
 [blizzard_objects.nvlk]
 parent_id = 'nvlk'  # Child
 entity_id = 'null'
@@ -57,6 +81,14 @@ data_type = "Integer"
 variation_level = 0
 table_column = 0
 value = 170
+object_id = 'null'
+
+[[blizzard_objects.nvlk.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 5
 object_id = 'null'
 
 [blizzard_objects.nvlw]
@@ -87,6 +119,30 @@ table_column = 0
 value = 140
 object_id = 'null'
 
+[[blizzard_objects.nvlw.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 13
+object_id = 'null'
+
+[[blizzard_objects.nvlw.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[blizzard_objects.nvlw.modifications]]
+modification_id = 'ubsi'  # UnitBalance.Gold Bounty Awarded - Sides per Die
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
 [blizzard_objects.nvl2]
 parent_id = 'nvl2'  # Villager
 entity_id = 'null'
@@ -113,6 +169,30 @@ data_type = "Integer"
 variation_level = 0
 table_column = 0
 value = 140
+object_id = 'null'
+
+[[blizzard_objects.nvl2.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 13
+object_id = 'null'
+
+[[blizzard_objects.nvl2.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[blizzard_objects.nvl2.modifications]]
+modification_id = 'ubsi'  # UnitBalance.Gold Bounty Awarded - Sides per Die
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
 object_id = 'null'
 
 [blizzard_objects.nvk2]
@@ -1201,7 +1281,7 @@ modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
 data_type = "Integer"
 variation_level = 0
 table_column = 0
-value = 0
+value = 13
 object_id = 'null'
 
 [[map_objects.hC03.modifications]]
@@ -1209,7 +1289,7 @@ modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
 data_type = "Integer"
 variation_level = 0
 table_column = 0
-value = 0
+value = 1
 object_id = 'null'
 
 [[map_objects.hC03.modifications]]
@@ -1217,7 +1297,7 @@ modification_id = 'ubsi'  # UnitBalance.Gold Bounty Awarded - Sides per Die
 data_type = "Integer"
 variation_level = 0
 table_column = 0
-value = 0
+value = 3
 object_id = 'null'
 
 [[map_objects.hC03.modifications]]

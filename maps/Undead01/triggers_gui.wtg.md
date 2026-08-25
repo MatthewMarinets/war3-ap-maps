@@ -1084,10 +1084,6 @@ version = TFT
   - param Preset AllianceSettingUnallied
 - Action CommentString
   - param String Init Creeps
-- Action SetPlayerFlagBJ
-  - param Preset PlayerFlagGivesBounty
-  - param Preset OnOffOff
-  - param Preset PlayerNA
 - Action SetPlayerAllianceBJ
   - param Preset PlayerNA
   - param Preset AllianceTypePassive
@@ -1101,6 +1097,14 @@ version = TFT
 - Action SetPlayerAllianceBJ
   - param Preset PlayerNA
   - param Preset AllianceTypePassive
+  - param Preset OnOffOn
+  - param Variable P5_LocalPopulace
+- Action SetPlayerFlagBJ
+  - param Preset PlayerFlagGivesBounty
+  - param Preset OnOffOn
+  - param Variable P3_LocalPopulace
+- Action SetPlayerFlagBJ
+  - param Preset PlayerFlagGivesBounty
   - param Preset OnOffOn
   - param Variable P5_LocalPopulace
 - Action CommentString
