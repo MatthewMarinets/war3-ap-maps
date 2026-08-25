@@ -466,7 +466,11 @@ def main(map_dir: str) -> int:
     update_triggers(map_dir)
     update_constants(f'{map_dir}/war3mapMisc.txt')
 
-    update_irregulars.main(map_dir)
+    if mission is None:
+        race = missions.Wc3Race.HUMAN
+    else:
+        race = mission.race
+    update_irregulars.main(map_dir, race)
     update_hero_food.main(map_dir)
 
 

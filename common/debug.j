@@ -10,6 +10,7 @@ trigger t_speed_rune
 trigger t_heal
 trigger t_colour_unit
 trigger t_bugs
+trigger t_anim
 endglobals
 
 function debug_get_selected_unit takes nothing returns unit
@@ -106,10 +107,21 @@ function debug_bugs takes nothing returns nothing
     call CreateUnit(p, 'zzrg', GetUnitX(target_unit), GetUnitY(target_unit), 0.0)
 endfunction
 
+function debug_anim takes nothing returns nothing
+    local unit target_unit = debug_get_selected_unit()
+    local integer index = S2I(SubString(GetEventPlayerChatString(), 6, 100))
+    if target_unit == null then
+        call print("|cffff3333Nothing selected|r")
+        return
+    endif
+    call print("Playing animation " + I2S(index))
+    call SetUnitAnimationByIndex(target_unit, index)
+endfunction
+
 function debug_print takes nothing returns nothing
     local string s_locations_checked = ""
     local integer index = 0
-    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "world_id: " + I2S(world_id))
+    call print("world_id: " + I2S(world_id))
     loop
         exitwhen index >= MAX_LOCATIONS
         if locations_checked[index] then
@@ -117,11 +129,11 @@ function debug_print takes nothing returns nothing
         endif
         set index = index + 1
     endloop
-    call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "checked: " + s_locations_checked)
+    call print("checked: " + s_locations_checked)
     set index = 0
     loop
         exitwhen index >= NUM_HEROES
-        call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Hero " + I2S(index) + " max level: " + I2S(HERO_MAX_LEVEL[index]))
+        call print("Hero " + I2S(index) + " max level: " + I2S(HERO_MAX_LEVEL[index]))
         set index = index + 1
     endloop
 endfunction
@@ -157,4 +169,7 @@ function InitTrig_debug takes nothing returns nothing
     set t_bugs=CreateTrigger()
     call TriggerRegisterPlayerChatEvent(t_bugs, USER_PLAYER, "-bugs", false)
     call TriggerAddAction(t_bugs, function debug_bugs)
+    set t_anim=CreateTrigger()
+    call TriggerRegisterPlayerChatEvent(t_anim, USER_PLAYER, "-anim", false)
+    call TriggerAddAction(t_anim, function debug_anim)
 endfunction

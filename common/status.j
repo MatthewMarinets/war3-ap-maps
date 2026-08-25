@@ -113,7 +113,7 @@ function captains_set_ability_usable takes player p returns nothing
         set available = 0
     endif
     call SetPlayerTechResearched(p, 'RP00', available)
-    // General irregular unlocks
+    // Irregular upgrades - human
     call SetPlayerTechResearched(p, 'RP01', B2I(GetPlayerTechMaxAllowed(p, 'hfoo') != 0))
     call SetPlayerTechResearched(p, 'RP02', B2I(GetPlayerTechMaxAllowed(p, 'hrif') != 0))
     call SetPlayerTechResearched(p, 'RP03', B2I(GetPlayerTechMaxAllowed(p, 'nhea') != 0))
@@ -122,6 +122,16 @@ function captains_set_ability_usable takes player p returns nothing
     call SetPlayerTechResearched(p, 'RP06', B2I(GetPlayerTechMaxAllowed(p, 'hsor') != 0))
     call SetPlayerTechResearched(p, 'RP07', B2I(GetPlayerTechMaxAllowed(p, 'hspt') != 0))
     call SetPlayerTechResearched(p, 'RP08', B2I(GetPlayerTechMaxAllowed(p, 'hmtm') != 0))
+    // Irregular upgrades - undead
+    call SetPlayerTechResearched(p, 'RP10', B2I(GetPlayerTechMaxAllowed(p, 'ugho') != 0))
+    call SetPlayerTechResearched(p, 'RP11', B2I(GetPlayerTechMaxAllowed(p, 'ucry') != 0))
+    call SetPlayerTechResearched(p, 'RP12', B2I(GetPlayerTechMaxAllowed(p, 'nska') != 0))
+    call SetPlayerTechResearched(p, 'RP13', B2I(GetPlayerTechMaxAllowed(p, 'unec') != 0))
+    call SetPlayerTechResearched(p, 'RP14', B2I(GetPlayerTechMaxAllowed(p, 'uban') != 0))
+    call SetPlayerTechResearched(p, 'RP15', B2I(GetPlayerTechMaxAllowed(p, 'umtw') != 0))
+    call SetPlayerTechResearched(p, 'RP16', B2I(GetPlayerTechMaxAllowed(p, 'uabo') != 0))
+    call SetPlayerTechResearched(p, 'RP17', B2I(GetPlayerTechMaxAllowed(p, 'uobs') != 0))
+    call SetPlayerTechResearched(p, 'RP18', B2I(GetPlayerTechMaxAllowed(p, 'ushd') != 0))
 endfunction
 
 function status_load_unlocks_for_player takes integer target_player returns nothing
