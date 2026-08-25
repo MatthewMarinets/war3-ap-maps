@@ -10942,20 +10942,6 @@ endfunction
 
 //***************************************************************************
 //*
-//*  Upgrades
-//*
-//***************************************************************************
-
-function InitUpgrades_Player3 takes nothing returns nothing
-    call SetPlayerTechResearched(Player(3), 'Ruac', 1)
-endfunction
-
-function InitUpgrades takes nothing returns nothing
-    call InitUpgrades_Player3()
-endfunction
-
-//***************************************************************************
-//*
 //*  TechTree
 //*
 //***************************************************************************
@@ -11134,7 +11120,6 @@ function main takes nothing returns nothing
     call InitSounds()
     call CreateRegions()
     call CreateCameras()
-    call InitUpgrades()
     call InitTechTree()
     call CreateAllDestructables()
     call CreateAllUnits()

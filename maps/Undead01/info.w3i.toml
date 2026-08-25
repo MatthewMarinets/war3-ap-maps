@@ -115,12 +115,6 @@ force_flags = "Allied"
 player_mask_flags = 0x17
 name = 'TRIGSTR_010'
 
-[[upgrades]]
-player_flags = 0x8
-upgrade_id = 'Ruac'  # Cannibalize
-level = 0
-availability = "Researched"
-
 [[technologies]]
 player_flags = 0x40
 tech_id = 'uabo'  # Abomination
