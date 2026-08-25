@@ -1343,3 +1343,79 @@ variation_level = 0
 table_column = 0
 value = 1
 object_id = 'null'
+
+[map_objects.uA00]
+parent_id = 'nzom'  # Zombie
+entity_id = 'uA00'
+
+[[map_objects.uA00.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Fresh Meat"
+object_id = 'null'
+
+[[map_objects.uA00.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 9
+object_id = 'null'
+
+[[map_objects.uA00.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNVillagerMan1.blp"
+object_id = 'null'
+
+[[map_objects.uA00.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\VillagerMan1\\VillagerMan1.mdl"
+object_id = 'null'
+
+[[map_objects.uA00.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "APPu"
+object_id = 'null'
+
+[[map_objects.uA00.modifications]]
+modification_id = 'umpm'  # UnitBalance.Mana Maximum
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.uA00.modifications]]
+modification_id = 'usnd'  # UnitUI.Unit Sound Set
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Acolyte"
+object_id = 'null'
+
+[[map_objects.uA00.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 255
+object_id = 'null'
+
+[[map_objects.uA00.modifications]]
+modification_id = 'uclb'  # UnitUI.Tinting Color 3 (Blue)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 255
+object_id = 'null'
