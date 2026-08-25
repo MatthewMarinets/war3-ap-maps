@@ -1437,14 +1437,6 @@ value = "Fresh Meat"
 object_id = 'null'
 
 [[map_objects.uA00.modifications]]
-modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 9
-object_id = 'null'
-
-[[map_objects.uA00.modifications]]
 modification_id = 'uico'  # Profile.Icon - Game Interface
 data_type = "String"
 variation_level = 0

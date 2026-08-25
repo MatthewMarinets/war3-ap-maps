@@ -306,7 +306,6 @@ def update_units(units_file: str, race: Wc3Race) -> None:
         entities.set_entity(
             cid.UNIT_FRESH_MEAT, GameID.ZOMBIE.value, {
             editor_ids.FIELD_UNIT_GENERAL_NAME: 'Fresh Meat',
-            editor_ids.FIELD_UNIT_ATTACK_1_DAMAGE_BASE: 9,
             editor_ids.FIELD_UNIT_UI_ICON: editor_ids.PATH_ICON_UNIT_VILLAGER_MAN_GREY_SHIRT,
             editor_ids.FIELD_UNIT_UI_MODEL_FILE: editor_ids.PATH_MODEL_UNIT_VILLAGER_MAN_GREY_SHIRT,
             editor_ids.FIELD_UNIT_ABILITIES_NORMAL: cid.ABIL_IRREGULAR_SPELLBOOK_UNDEAD,
