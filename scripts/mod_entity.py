@@ -150,6 +150,10 @@ MODIFICATION_TYPES: dict[LiteralString, DataType] = {
     eid.FIELD_UNIT_GENERAL_STRUCTURES_BUILT: DataType.String,
     eid.FIELD_UNIT_GENERAL_TOOLTIP_BASIC: DataType.String,
     eid.FIELD_UNIT_GENERAL_TOOLTIP_EXTENDED: DataType.String,
+    eid.FIELD_UNIT_MOVEMENT_SPEED_BASE: DataType.Integer,
+    eid.FIELD_UNIT_PATHING_COLLISION_SIZE: DataType.Unreal,
+    eid.FIELD_UNIT_SOUND_MOVEMENT: DataType.String,
+    eid.FIELD_UNIT_SOUND_SET: DataType.String,
     eid.FIELD_UNIT_STATS_BUILD_TIME: DataType.Integer,
     eid.FIELD_UNIT_STATS_FOOD_COST: DataType.Integer,
     eid.FIELD_UNIT_STATS_FOOD_PRODUCED: DataType.Integer,
@@ -184,6 +188,7 @@ MODIFICATION_TYPES: dict[LiteralString, DataType] = {
     eid.FIELD_UNIT_STATS_STOCK_START_DELAY: DataType.Integer,
     eid.FIELD_UNIT_STATS_TRANSPORTED_SIZE: DataType.Integer,
     eid.FIELD_UNIT_STATS_UNIT_CLASSIFICATION: DataType.Integer,  # unitClass
+    eid.FIELD_UNIT_UI_ICON: DataType.String,
     eid.FIELD_UNIT_UI_MODEL_FILE: DataType.String,
     eid.FIELD_UNIT_UI_SCALING_VALUE: DataType.Float,
     eid.FIELD_UNIT_UI_TINT_BLUE: DataType.Integer,

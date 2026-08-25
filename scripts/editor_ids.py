@@ -1778,6 +1778,10 @@ FIELD_UNIT_GENERAL_NAME = 'unam'  # string
 FIELD_UNIT_GENERAL_TOOLTIP_BASIC = 'utip'  # string
 FIELD_UNIT_GENERAL_TOOLTIP_EXTENDED = 'utub'  # string
 FIELD_UNIT_GENERAL_STRUCTURES_BUILT = 'ubui'  # string
+FIELD_UNIT_MOVEMENT_SPEED_BASE = 'umvs'  # integer
+FIELD_UNIT_PATHING_COLLISION_SIZE = 'ucol'  # unreal
+FIELD_UNIT_SOUND_MOVEMENT = 'umsl'  # string
+FIELD_UNIT_SOUND_SET = 'usnd'  # string
 FIELD_UNIT_STATS_BUILD_TIME = 'ubld'
 FIELD_UNIT_STATS_FOOD_COST = 'ufoo'
 FIELD_UNIT_STATS_FOOD_PRODUCED = 'ufma'
@@ -1812,6 +1816,7 @@ FIELD_UNIT_STATS_STOCK_REPLENISH_INTERVAL = 'usrg'
 FIELD_UNIT_STATS_STOCK_START_DELAY = 'usst'
 FIELD_UNIT_STATS_TRANSPORTED_SIZE = 'ucar'
 FIELD_UNIT_STATS_UNIT_CLASSIFICATION = 'utyp'
+FIELD_UNIT_UI_ICON = 'uico'
 FIELD_UNIT_UI_MODEL_FILE = 'umdl'  # string
 FIELD_UNIT_UI_SCALING_VALUE = 'usca'  # float
 FIELD_UNIT_UI_TINT_BLUE = 'uclb'  # integer
@@ -1835,6 +1840,129 @@ PATH_MODEL_UNIT_GHOSTLY_KEEPER_OF_THE_GROVE = r'units\nightelf\herokeeperofthegr
 
 PATH_MODEL_UNIT_FIRELORD = r'units\creeps\heroflamelord\heroflamelord.mdl'
 PATH_MODEL_UNIT_PANDAREN_BREWMASTER = r'units\creeps\PandarenBrewmaster\PandarenBrewmaster.mdl'
+
+PATH_MODEL_UNIT_CHAOS_BERSERKER = r'units\demon\ChaosOrcRange\ChaosOrcRange.mdl'
+PATH_MODEL_UNIT_CHAOS_BLADEMASTER = r'units\demon\HeroChaosBladeMaster\HeroChaosBladeMaster.mdl'
+PATH_MODEL_UNIT_CHAOS_GROM_HELLSCREAM = r'units\demon\ChaosHellscream\ChaosHellscream.mdl'
+PATH_MODEL_UNIT_CHAOS_GRUNT = r'units\demon\ChaosGrunt\ChaosGrunt.mdl'
+PATH_MODEL_UNIT_CHAOS_KODO_BEAST = r'units\demon\ChaosKotoBeast\ChaosKotoBeast.mdl'
+PATH_MODEL_UNIT_CHAOS_PEON = r'units\demon\ChaosPeon\ChaosPeon.mdl'
+PATH_MODEL_UNIT_CHAOS_RAIDER = r'units\demon\ChaosWolfRider\ChaosWolfRider.mdl'
+PATH_MODEL_UNIT_CHAOS_WARLOCK = r'units\demon\ChaosWarlock\ChaosWarlock.mdl'
+PATH_MODEL_UNIT_CHAOS_SLAVE_DRIVER = r'units\demon\ChaosWarlord\ChaosWarlord.mdl'
+PATH_MODEL_UNIT_WARLOCK = r'units\demon\Warlock\Warlock.mdl'
+PATH_MODEL_UNIT_SPACE_FEL_ORC = r'units\critters\ChaosSpaceOrc\ChaosSpaceOrc.mdl'
+
+PATH_MODEL_UNIT_ACOLYTE = r'units\undead\Acolyte\Acolyte.mdl'
+PATH_MODEL_UNIT_SHADE = r'units\undead\Shade\Shade.mdl'
+PATH_MODEL_UNIT_GHOUL = r'units\undead\Ghoul\Ghoul.mdl'
+PATH_MODEL_UNIT_ABOMINATION = r'units\undead\Abomination\Abomination.mdl'
+PATH_MODEL_UNIT_MEAT_WAGON = r'units\undead\MeatWagon\MeatWagon.mdl'
+PATH_MODEL_UNIT_CRYPT_FIEND = r'units\undead\CryptFiend\CryptFiend.mdl'
+PATH_MODEL_UNIT_GARGOYLE = r'units\undead\Gargoyle\Gargoyle.mdl'
+PATH_MODEL_UNIT_BANSHEE = r'units\undead\Banshee\Banshee.mdl'
+PATH_MODEL_UNIT_NECROMANCER = r'units\undead\Necromancer\Necromancer.mdl'
+PATH_MODEL_UNIT_OBSIDIAN_STATUE = r'units\undead\ObsidianStatue\ObsidianStatue.mdl'
+PATH_MODEL_UNIT_FROST_WYRM = r'units\undead\FrostWyrm\FrostWyrm.mdl'
+PATH_MODEL_UNIT_UNDEAD_TRANSPORT_SHIP = r'units\creeps\UndeadTransportShip\UndeadTransportShip.mdl'
+PATH_MODEL_UNIT_UNDEAD_FRIGATE = r'units\creeps\UndeadDestroyerShip\UndeadDestroyerShip.mdl'
+PATH_MODEL_UNIT_UNDEAD_BATTLESHIP = r'units\creeps\UndeadShipBattleShip\UndeadShipBattleShip.mdl'
+PATH_MODEL_UNIT_UNDEAD_SKY_BARGE = r'units\creeps\UndeadAirBarge\UndeadAirBarge.mdl'
+PATH_MODEL_UNIT_ZOMBIE = r'units\creeps\Zombie\Zombie.mdl'
+
+PATH_MODEL_UNIT_FELGUARD = r'units\demon\Felgaurd\Felgaurd.mdl'
+PATH_MODEL_UNIT_BLUE_FELGUARD = r'units\demon\FelgaurdBlue\FelgaurdBlue.mdl'
+PATH_MODEL_UNIT_FELHOUND = r'units\demon\Felhound\Felhound_v1.mdl'
+PATH_MODEL_UNIT_INFERNAL = r'units\demon\Infernal\Infernal.mdl'
+
+PATH_MODEL_UNIT_NIGHT_ELF_FISHING_BOAT = r'units\nightelf\NightElfFishingBoat\NightElfFishingBoat.mdl'
+
+PATH_MODEL_UNIT_ILLIDAN_WAGON = r'units\other\IllidanWagon\IllidanWagon.mdl'
+PATH_MODEL_UNIT_VILLAGER_CHILD_BLOND = r'units\critters\VillagerKid\VillagerKid1.mdl'
+PATH_MODEL_UNIT_VILLAGER_CHILD_2 = r'units\critters\VillagerKid1\VillagerKid1.mdl'
+PATH_MODEL_UNIT_VILLAGER_MAN_GREY_SHIRT = r'units\critters\VillagerMan1\VillagerMan1.mdl'
+PATH_MODEL_UNIT_VILLAGER_MAN_WHITE_SHIRT = r'units\critters\VillagerMan\VillagerMan.mdl'
+PATH_MODEL_UNIT_VILLAGER_WOMAN = r'units\critters\VillagerWoman\VillagerWoman.mdl'
+
+PATH_MODEL_BUNDLE_OF_GIFTS = r'objects\inventoryitems\BundleOfGifts\BundleOfGifts.mdl'
+
+## Icons
+PATH_ICON_UNIT_MOUNTAIN_KING = r'ReplaceableTextures\CommandButtons\BTNHeroMountainKing.blp'
+PATH_ICON_UNIT_ADMIRAL_PROUDMOORE = r'ReplaceableTextures\CommandButtons\BTNProudmoore.blp'
+PATH_ICON_UNIT_MARINE = r'ReplaceableTextures\CommandButtons\BTNMarine.blp'
+PATH_ICON_UNIT_RANGER = r'ReplaceableTextures\CommandButtons\BTNHeroRanger.blp'
+
+PATH_ICON_UNIT_ZOMBIE = r'ReplaceableTextures\CommandButtons\BTNZombie.blp'
+
+PATH_ICON_UNIT_SPACE_FEL_ORC = r'ReplaceableTextures\CommandButtons\BTNChaosSpaceOrc.blp'
+PATH_ICON_UNIT_VILLAGER_CHILD_BLOND = r'ReplaceableTextures\CommandButtons\BTNVillagerKid.blp'
+PATH_ICON_UNIT_VILLAGER_CHILD_2 = r'ReplaceableTextures\CommandButtons\BTNVillagerKid2.blp'
+PATH_ICON_UNIT_VILLAGER_MAN_GREY_SHIRT = r'ReplaceableTextures\CommandButtons\BTNVillagerMan1.blp'
+PATH_ICON_UNIT_VILLAGER_MAN_WHITE_SHIRT = r'ReplaceableTextures\CommandButtons\BTNVillagerMan.blp'
+PATH_ICON_UNIT_VILLAGER_WOMAN = r'ReplaceableTextures\CommandButtons\BTNVillagerWoman.blp'
+
+PATH_ICON_ABIL_AVATAR_OFF = r'ReplaceableTextures\CommandButtons\BTNAvatarOff.blp'
+PATH_ICON_ABIL_DIVINE_SHIELD_OFF = r'ReplaceableTextures\CommandButtons\BTNDivineShieldOff.blp'
+PATH_ICON_ABIL_CRYPT_LORD_CARAPACE_OFF = r'ReplaceableTextures\CommandButtons\BTNThornyShieldOff.blp'
+PATH_ICON_ABIL_WIND_WALK_OFF = r'ReplaceableTextures\CommandButtons\BTNWindWalkOff.blp'
+
+PATH_ICON_ITEM_VOODOO_DOLL = r'ReplaceableTextures\CommandButtons\BTNShadowPact.blp'
+
+PATH_ICON_FLAG_HUMAN = r'ReplaceableTextures\CommandButtons\BTNHumanCaptureFlag.blp'
+PATH_ICON_FLAG_ORC = r'ReplaceableTextures\CommandButtons\BTNOrcCaptureFlag.blp'
+PATH_ICON_FLAG_UNDEAD = r'ReplaceableTextures\CommandButtons\BTNUndeadCaptureFlag.blp'
+PATH_ICON_FLAG_NIGHT_ELF = r'ReplaceableTextures\CommandButtons\BTNNightElfCaptureFlag.blp'
+
+PATH_ICON_UNUSED_ADVANCED_STRUCTURE = r'ReplaceableTextures\CommandButtons\BTNAdvStruct.blp'
+PATH_ICON_UNUSED_EXPANDED_VIEW = r'ReplaceableTextures\CommandButtons\BTNExpandedView.blp'
+"""Looks like a submarine spyglass"""
+PATH_ICON_UNUSED_MEATAPULT = r'ReplaceableTextures\CommandButtons\BTNMeatapult.blp'
+"""Looks related to meat wagon"""
+PATH_ICON_UNUSED_REGENERATION_AURA = r'ReplaceableTextures\CommandButtons\BTNRegenerationAura.blp'
+"""Looks like an undead hand holding a sword with green aura"""
+PATH_ICON_UNUSED_REGENERATION_AURA_2 = r'ReplaceableTextures\CommandButtons\BTNUpgradeRegenerationAura.blp'
+PATH_ICON_UNUSED_LAMENT = r'ReplaceableTextures\CommandButtons\BTNLament.blp'
+"""Looks like a spectral skull"""
+PATH_ICON_UNUSED_HAUNTED_GOLD_MINE = r'ReplaceableTextures\CommandButtons\BTNHauntedMine.blp'
+PATH_ICON_UNUSED_SHADOWMELD = r'ReplaceableTextures\CommandButtons\BTNShadowMeld.blp'
+PATH_ICON_UNUSED_DEN_OF_WONDERS = r'ReplaceableTextures\CommandButtons\BTNDenOfWonders.blp'
+PATH_ICON_UNUSED_BEAR_DEN = r'ReplaceableTextures\CommandButtons\BTNBearDen.blp'
+PATH_ICON_UNUSED_NIGHT_ELF_FISHING_VILLAGE = r'ReplaceableTextures\CommandButtons\BTNNightElfFishingVillage.blp'
+PATH_ICON_UNUSED_ENTANGLED_GOLD_MINE = r'ReplaceableTextures\CommandButtons\BTNEntangleMine.blp'
+PATH_ICON_UNUSED_VENGEANCE_INCARNATE = r'ReplaceableTextures\CommandButtons\BTNVengeanceIncarnate.blp'
+PATH_ICON_UNUSED_VENGEANCE_PASSIVE = r'ReplaceableTextures\CommandButtons\PASBTNSpiritOfVengeance.blp'
+PATH_ICON_UNUSED_ROAR_PASSIVE = r'ReplaceableTextures\CommandButtons\PASBTNBattleRoar.blp'
+PATH_ICON_UNUSED_POISON_ARROW = r'ReplaceableTextures\CommandButtons\BTNPoisonArrow.blp'
+PATH_ICON_UNUSED_BARK_SKIN = r'ReplaceableTextures\CommandButtons\BTNBarkSkin.blp'
+"""Looks like a grey shield on golden background"""
+PATH_ICON_UNUSED_FLAMING_ARROWS = r'ReplaceableTextures\CommandButtons\BTNFlamingArrows.blp'
+PATH_ICON_UNUSED_REGENERATION = r'ReplaceableTextures\CommandButtons\BTNRegeneration.blp'
+PATH_ICON_UNUSED_EXCHANGE_LUMBER_GOLD = r'ReplaceableTextures\CommandButtons\BTNLGExchange.blp'
+PATH_ICON_UNUSED_EXCHANGE_GOLD_LUMBER = r'ReplaceableTextures\CommandButtons\BTNGLExchange.blp'
+PATH_ICON_UNUSED_GOLD_COIN = r'ReplaceableTextures\CommandButtons\BTNMGExchange.blp'
+PATH_ICON_UNUSED_THIEVES_GUILD = r'ReplaceableTextures\CommandButtons\BTNThievesGuild.blp'
+PATH_ICON_UNUSED_HIRE = r'ReplaceableTextures\CommandButtons\BTNHire.blp'
+"""Looks like an red orc emblem, super stylized H"""
+PATH_ICON_UNUSED_SELL = r'ReplaceableTextures\CommandButtons\BTNSell.blp'
+"""Looks like a very stylized green $"""
+PATH_ICON_UNUSED_DRAIN = r'ReplaceableTextures\CommandButtons\BTNDrain.blp'
+"""Looks like a cross between siphon mana and drain life"""
+PATH_ICON_UNUSED_QUILL_SPRAY_ON = r'ReplaceableTextures\CommandButtons\BTNQuillSprayOn.blp'
+PATH_ICON_UNUSED_QUILL_SPRAY_OFF = r'ReplaceableTextures\CommandButtons\BTNQuillSprayOff.blp'
+PATH_ICON_UNUSED_INVULNERABLE = r'ReplaceableTextures\CommandButtons\BTNInvulnerable.blp'
+PATH_ICON_UNUSED_LAMP = r'ReplaceableTextures\CommandButtons\BTNLamp.blp'
+PATH_ICON_UNUSED_ORB = r'ReplaceableTextures\CommandButtons\BTNOrb.blp'
+PATH_ICON_UNUSED_ACORN = r'ReplaceableTextures\CommandButtons\BTNAcorn.blp'
+PATH_ICON_UNUSED_CRATE = r'ReplaceableTextures\CommandButtons\BTNCrate.blp'
+PATH_ICON_UNUSED_BOX = r'ReplaceableTextures\CommandButtons\BTNBox.blp'
+PATH_ICON_UNUSED_BRONZE_BOWL_EMPTY = r'ReplaceableTextures\CommandButtons\BTNBronzeBowl.blp'
+PATH_ICON_UNUSED_BRONZE_BOWL_FULL = r'ReplaceableTextures\CommandButtons\BTNBronzeBowlFull.blp'
+PATH_ICON_UNUSED_HOLY_WATER = r'ReplaceableTextures\CommandButtons\BTNHolyWater.blp'
+PATH_ICON_UNUSED_PEBBLE = r'ReplaceableTextures\CommandButtons\BTNPebble.blp'
+"""Looks like a hearthstone"""
+PATH_ICON_UNUSED_PICK_UP_ITEM = r'ReplaceableTextures\CommandButtons\BTNPickUpItem.blp'
+PATH_ICON_UNUSED_POTION_BLUE = r'ReplaceableTextures\CommandButtons\BTNPotionBlue.blp'
+"""Looks like potion of greater healing but blue"""
 
 ## Missiles
 PATH_MODEL_MISSILE_PRIEST = r'Abilities\Weapons\PriestMissile\PriestMissile.mdl'
@@ -1928,6 +2056,8 @@ PATH_MODEL_MISSILE_SENTINEL = r'Units\NightElf\Owl\Owl.mdl'
 PATH_MODEL_MISSILE_FAN_OF_KNIVES = r'Abilities\Spells\NightElf\FanOfKnives\FanOfKnivesMissile.mdl'
 PATH_MODEL_MISSILE_SEARING_ARROWS = r'Abilities\Weapons\SearingArrow\SearingArrowMissile.mdl'
 PATH_MODEL_MISSILE_SHADOW_STRIKE = r'Abilities\Spells\NightElf\shadowstrike\ShadowStrikeMissile.mdl'
+PATH_MODEL_MISSILE_FLAMING_ARROWS = r'Abilities\Weapons\FlamingArrow\FlamingArrowMissile.mdl'
+"""Unused, looks more like a flaming arrow than searing arrow"""
 
 PATH_MODEL_MISSILE_COUATL = r'Abilities\Weapons\WingedSerpentMissile\WingedSerpentMissile.mdl'
 PATH_MODEL_MISSILE_SNAP_DRAGON = r'Abilities\Weapons\snapMissile\snapMissile.mdl'
@@ -2019,6 +2149,11 @@ PATH_MODEL_ORBITER_ORB_OF_CORRUPTION = r'Abilities\Spells\Items\OrbCorruption\Or
 PATH_MODEL_ORBITER_ORB_OF_SLOW = r'Abilities\Spells\Items\OrbSlow\OrbSlow.mdl'
 PATH_MODEL_ORBITER_ORB_OF_VENOM = r'Abilities\Spells\Items\OrbVenom\OrbVenom.mdl'
 
+PATH_MODEL_SPURT_HUMAN_LARGE_DEATH_EXPLOSION = r'objects\SpawnModels\Human\HumanLargeDeathExplode\HumanLargeDeathExplode.mdl'
+PATH_MODEL_SPURT_NIGHT_ELF_LARGE_DEATH_EXPLOSION = r'objects\SpawnModels\NightElf\NightElfLargeDeathExplode\NightElfLargeDeathExplode.mdl'
+PATH_MODEL_SPURT_ORC_LARGE_DEATH_EXPLOSION = r'objects\SpawnModels\Orc\OrcLargeDeathExplode\OrcLargeDeathExplode.mdl'
+PATH_MODEL_SPURT_UNDEAD_LARGE_DEATH_EXPLOSION = r'objects\SpawnModels\Undead\UndeadLargeDeathExplode\UndeadLargeDeathExplode.mdl'
+
 ## Doodads
 PATH_MODEL_DOODAD_ALTAR = 'Doodads\\Outland\\Props\\Altar\\Altar.mdl'
 PATH_MODEL_DOODAD_ARCHERY_RANGE = 'Doodads\\LordaeronSummer\\Props\\ArcheryRange\\ArcheryRange.mdl'
@@ -2071,6 +2206,76 @@ PATH_MODEL_DOODAD_VILLAGE_FENCE_SHORT = 'Doodads\\Village\\Props\\Village_FenceS
 PATH_MODEL_DOODAD_VILLAGE_FENCE_SHORT_ANGLED = 'Doodads\\Village\\Props\\Village_FenceShortAngled\\Village_FenceShortAngled.mdl'
 PATH_MODEL_DOODAD_VILLAGE_LIGHT_POST = 'Doodads\\Village\\Props\\Village_LightPost\\Village_LightPost.mdl'
 
+## Other
+PATH_MODEL_EXCLAMATION_POINT = r'Abilities\Spells\Other\TalkToMe\TalkToMe.mdl'
+
+## Sounds
+PATH_SOUND_INTERFACE_HUMAN_ALLY_HERO_DIES = r'Sound\Interface\warning\human\knightallyherodies1.wav'
+PATH_SOUND_INTERFACE_HUMAN_ALLY_TOWN_UNDER_ATTACK = r'Sound\Interface\warning\human\knightallytownattack1.wav'
+PATH_SOUND_INTERFACE_HUMAN_ALLY_UNDER_ATTACK = r'Sound\Interface\warning\human\knightallyattack1.wav'
+PATH_SOUND_INTERFACE_HUMAN_GOLD_MINE_COLLAPSED = r'Sound\Interface\warning\human\knightgoldminecollapsed1.wav'
+PATH_SOUND_INTERFACE_HUMAN_GOLD_MINE_LOW = r'Sound\Interface\warning\human\knightgoldminelow1.wav'
+PATH_SOUND_INTERFACE_HUMAN_HERO_DIES = r'Sound\Interface\warning\human\knightherodies1.wav'
+PATH_SOUND_INTERFACE_HUMAN_INVENTORY_FULL = r'Sound\Interface\warning\human\knightinventoryfull1.wav'
+PATH_SOUND_INTERFACE_HUMAN_NO_ENERGY = r'Sound\Interface\warning\human\knightnoenergy1.wav'
+PATH_SOUND_INTERFACE_HUMAN_NO_FOOD = r'Sound\Interface\warning\human\knightnofood1.wav'
+PATH_SOUND_INTERFACE_HUMAN_NO_GOLD = r'Sound\Interface\warning\human\knightnogold1.wav'
+PATH_SOUND_INTERFACE_HUMAN_NO_LUMBER = r'Sound\Interface\warning\human\knightnolumber1.wav'
+PATH_SOUND_INTERFACE_HUMAN_TOWN_UNDER_ATTACK = r'Sound\Interface\warning\human\knighttownattack1.wav'
+PATH_SOUND_INTERFACE_HUMAN_UNIT_UNDER_ATTACK = r'Sound\Interface\warning\human\knightunitattack1.wav'
+PATH_SOUND_INTERFACE_HUMAN_CANNOT_BUILD_THERE = r'Sound\Interface\warning\human\peasantcannotbuildthere1.wav'
+
+PATH_SOUND_INTERFACE_UNDEAD_ALLY_HERO_DIES = r'Sound\Interface\warning\undead\necromancerallyherodies1.wav'
+PATH_SOUND_INTERFACE_UNDEAD_ALLY_TOWN_UNDER_ATTACK = r'Sound\Interface\warning\undead\necromancerallytownattack1.wav'
+PATH_SOUND_INTERFACE_UNDEAD_ALLY_UNDER_ATTACK = r'Sound\Interface\warning\undead\necromancerallyattack1.wav'
+PATH_SOUND_INTERFACE_UNDEAD_GOLD_MINE_COLLAPSED = r'Sound\Interface\warning\undead\necromancergoldminecollapsed1.wav'
+PATH_SOUND_INTERFACE_UNDEAD_GOLD_MINE_LOW = r'Sound\Interface\warning\undead\necromancergoldminelow1.wav'
+PATH_SOUND_INTERFACE_UNDEAD_HERO_DIES = r'Sound\Interface\warning\undead\necromancerherodies1.wav'
+PATH_SOUND_INTERFACE_UNDEAD_INVENTORY_FULL = r'Sound\Interface\warning\undead\necromancerinventoryfull1.wav'
+PATH_SOUND_INTERFACE_UNDEAD_NO_ENERGY = r'Sound\Interface\warning\undead\necromancernoenergy1.wav'
+PATH_SOUND_INTERFACE_UNDEAD_NO_FOOD = r'Sound\Interface\warning\undead\necromancernofood1.wav'
+PATH_SOUND_INTERFACE_UNDEAD_NO_GOLD = r'Sound\Interface\warning\undead\necromancernogold1.wav'
+PATH_SOUND_INTERFACE_UNDEAD_NO_LUMBER = r'Sound\Interface\warning\undead\necromancernolumber1.wav'
+PATH_SOUND_INTERFACE_UNDEAD_TOWN_UNDER_ATTACK = r'Sound\Interface\warning\undead\necromancertownattack1.wav'
+PATH_SOUND_INTERFACE_UNDEAD_UNIT_UNDER_ATTACK = r'Sound\Interface\warning\undead\necromancerunitattack1.wav'
+PATH_SOUND_INTERFACE_UNDEAD_CANNOT_BUILD_THERE = r'Sound\Interface\warning\undead\acolytecannotbuildthere1.wav'
+PATH_SOUND_INTERFACE_UNDEAD_PLACED_OFF_BLIGHT = r'Sound\Interface\warning\undead\acolyteplacedoffblight1.wav'
+
+PATH_SOUND_INTERFACE_ORC_ALLY_HERO_DIES = r'Sound\Interface\warning\orc\gruntallyherodies1.wav'
+PATH_SOUND_INTERFACE_ORC_ALLY_TOWN_UNDER_ATTACK = r'Sound\Interface\warning\orc\gruntallytownattack1.wav'
+PATH_SOUND_INTERFACE_ORC_ALLY_UNDER_ATTACK = r'Sound\Interface\warning\orc\gruntallyunderattack1.wav'
+PATH_SOUND_INTERFACE_ORC_GOLD_MINE_COLLAPSED = r'Sound\Interface\warning\orc\gruntgoldminecollapsed1.wav'
+PATH_SOUND_INTERFACE_ORC_GOLD_MINE_LOW = r'Sound\Interface\warning\orc\gruntgoldminelow1.wav'
+PATH_SOUND_INTERFACE_ORC_HERO_DIES = r'Sound\Interface\warning\orc\gruntherodies1.wav'
+PATH_SOUND_INTERFACE_ORC_INVENTORY_FULL = r'Sound\Interface\warning\orc\gruntinventoryfull1.wav'
+PATH_SOUND_INTERFACE_ORC_NO_ENERGY = r'Sound\Interface\warning\orc\gruntnoenergy1.wav'
+PATH_SOUND_INTERFACE_ORC_NO_FOOD = r'Sound\Interface\warning\orc\gruntnofood1.wav'
+PATH_SOUND_INTERFACE_ORC_NO_GOLD = r'Sound\Interface\warning\orc\gruntnogold1.wav'
+PATH_SOUND_INTERFACE_ORC_NO_LUMBER = r'Sound\Interface\warning\orc\gruntnolumber1.wav'
+PATH_SOUND_INTERFACE_ORC_TOWN_UNDER_ATTACK = r'Sound\Interface\warning\orc\grunttownattack1.wav'
+PATH_SOUND_INTERFACE_ORC_UNIT_UNDER_ATTACK = r'Sound\Interface\warning\orc\gruntunitattack1.wav'
+PATH_SOUND_INTERFACE_ORC_CANNOT_BUILD_THERE = r'Sound\Interface\warning\orc\peoncannotbuildthere1.wav'
+
+PATH_SOUND_INTERFACE_NIGHT_ELF_ALLY_HERO_DIES = r'Sound\Interface\warning\nightelf\sentinelallyherodies1.wav'
+PATH_SOUND_INTERFACE_NIGHT_ELF_ALLY_TOWN_UNDER_ATTACK = r'Sound\Interface\warning\nightelf\sentinelallytownattack1.wav'
+PATH_SOUND_INTERFACE_NIGHT_ELF_ALLY_UNDER_ATTACK = r'Sound\Interface\warning\nightelf\sentinelallyunderattack1.wav'
+PATH_SOUND_INTERFACE_NIGHT_ELF_GOLD_MINE_COLLAPSED = r'Sound\Interface\warning\nightelf\huntressgoldminecollapsed1.wav'
+PATH_SOUND_INTERFACE_NIGHT_ELF_GOLD_MINE_LOW = r'Sound\Interface\warning\nightelf\huntressgoldminelow1.wav'
+PATH_SOUND_INTERFACE_NIGHT_ELF_HERO_DIES = r'Sound\Interface\warning\nightelf\sentinelherodies1.wav'
+PATH_SOUND_INTERFACE_NIGHT_ELF_INVENTORY_FULL = r'Sound\Interface\warning\nightelf\sentinelinventoryfull1.wav'
+PATH_SOUND_INTERFACE_NIGHT_ELF_NO_ENERGY = r'Sound\Interface\warning\nightelf\sentinelnoenergy1.wav'
+PATH_SOUND_INTERFACE_NIGHT_ELF_NO_FOOD = r'Sound\Interface\warning\nightelf\huntressnofood1.wav'
+PATH_SOUND_INTERFACE_NIGHT_ELF_NO_GOLD = r'Sound\Interface\warning\nightelf\sentinelnogold1.wav'
+PATH_SOUND_INTERFACE_NIGHT_ELF_NO_LUMBER = r'Sound\Interface\warning\nightelf\sentinelnolumber1.wav'
+PATH_SOUND_INTERFACE_NIGHT_ELF_TOWN_UNDER_ATTACK = r'Sound\Interface\warning\nightelf\sentineltownattack1.wav'
+PATH_SOUND_INTERFACE_NIGHT_ELF_UNIT_UNDER_ATTACK = r'Sound\Interface\warning\nightelf\sentinelunitattack1.wav'
+PATH_SOUND_INTERFACE_NIGHT_ELF_CANNOT_BUILD_THERE = r'Sound\Interface\warning\nightelf\huntresscannotbuildthere1.wav'
+PATH_SOUND_INTERFACE_NIGHT_ELF_CANNOT_ROOT_THERE = r'Sound\Interface\warning\nightelf\sentinelnorootthere1.wav'
+
+PATH_SOUND_INTERFACE_NAGA_BUILDING_COMPLETE = r'Sound\Interface\warning\naga\murgulbuildingcomplete1.wav'
+PATH_SOUND_INTERFACE_NAGA_NO_GOLD = r'Sound\Interface\warning\naga\naganogold1.wav'
+
+# Order IDs
 ABIL_TO_ORDER_ID = {
     # Human
     ABIL_AERIAL_SHACKLES: 'magicleash',
@@ -2480,5 +2685,54 @@ BASE_ORDER_IDS = [
     # 'getitem',
     'gold2lumber',
     'grabtree',
+    'harvest',
+    'heal',
+    'healingspray',
+    'healingward',
+    'healingwave',
+    'healoff',
+    'healon',
+    'hex',
+    # 'holdposition',
+    'holybolt',
+    'holwofterror',
+    'humanbuild',
+    'immolation',
+    'impale',
+    'incineratearrow',
+    'incineratearrowoff',
+    'incineratearrowon',
+    'inferno',
+    'innerfire',
+    'innerfireoff',
+    'innerfireon',
+    'instant',
+    'invisibility',
+    'lavamonster',
+    'lightningshield',
+    'load',
+    'loadarcher',
+    'loadcorpse',
+    'loadcorpseinstant',
+    'locustswarm',
+    'lumber2gold',
+    'magicdefense',
+    'magicleash',
+    'magicundefense',
+    'manaburn',
+    'manaflareoff',
+    'manaflareon',
+    'manashieldoff',
+    'manashieldon',
+    'massteleport',
+    'mechanicalcritter',
+    'metamorphosis',
+    'militia',
+    'militiaconvert',
+    'militiaoff',
+    'militiaunconvert',
+    'mindrot',
+    'mirrorimage',
+    'monsoon',
     # ...
 ]
