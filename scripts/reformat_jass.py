@@ -44,6 +44,8 @@ def reformat_file(in_file: str, out_file: str) -> None:
                 pretty = f'{m.group(1)} {m.group(3)}= false\n'
             elif m.group(1) == 'integer':
                 pretty = f'{m.group(1)} {m.group(3)}= 0\n'
+            elif m.group(1) == 'real':
+                pretty = f'{m.group(1)} {m.group(3)}= 0.0\n'
             else:
                 pretty = f'{m.group(1)} {m.group(3)}= null\n'
         elif text == 'function InitGlobals takes nothing returns nothing':
