@@ -527,6 +527,118 @@ table_column = 0
 value = 0
 object_id = 'null'
 
+[blizzard_objects.nggr]
+parent_id = 'nggr'  # Granite Golem
+entity_id = 'null'
+
+[[blizzard_objects.nggr.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 200
+object_id = 'null'
+
+[[blizzard_objects.nggr.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 9
+object_id = 'null'
+
+[blizzard_objects.ngst]
+parent_id = 'ngst'  # Rock Golem
+entity_id = 'null'
+
+[[blizzard_objects.ngst.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 85
+object_id = 'null'
+
+[[blizzard_objects.ngst.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 6
+object_id = 'null'
+
+[blizzard_objects.nsqe]
+parent_id = 'nsqe'  # Elder Sasquatch
+entity_id = 'null'
+
+[[blizzard_objects.nsqe.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 85
+object_id = 'null'
+
+[[blizzard_objects.nsqe.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 6
+object_id = 'null'
+
+[blizzard_objects.nsqt]
+parent_id = 'nsqt'  # Sasquatch
+entity_id = 'null'
+
+[[blizzard_objects.nsqt.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 70
+object_id = 'null'
+
+[[blizzard_objects.nsqt.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 5
+object_id = 'null'
+
+[blizzard_objects.nwiz]
+parent_id = 'nwiz'  # Apprentice Wizard
+entity_id = 'null'
+
+[[blizzard_objects.nwiz.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 25
+object_id = 'null'
+
+[blizzard_objects.nwzr]
+parent_id = 'nwzr'  # Rogue Wizard
+entity_id = 'null'
+
+[[blizzard_objects.nwzr.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 40
+object_id = 'null'
+
+[[blizzard_objects.nwzr.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
 
 [map_objects.HC00]
 parent_id = 'Hpal'  # Paladin
