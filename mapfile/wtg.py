@@ -88,7 +88,7 @@ class Trigger:
     is_commented: int = 0
     is_enabled: bool = True
     is_custom_text: bool = False
-    is_initially_off: bool = True
+    is_initially_off: bool = False
     is_map_init: bool = False
     """Only enabled on OrcX01 initialization trigger"""
     category_id: int = -1

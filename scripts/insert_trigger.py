@@ -27,7 +27,7 @@ def main(map_dir: str, after_trigger: str, trigger_name: str, custom_text: bool)
         text_contents = '\n'.join((
             f'// function InitTrig_{trigger_code_name} takes nothing returns nothing',
             '//',
-            '//endfunction\n',
+            '// endfunction\n',
         ))
     wct_data.triggers[index:index] = [
         wct.War3TextTrigger(
