@@ -1,5 +1,5 @@
 // version: 1
-// Triggers: 166
+// Triggers: 168
 //\\// Trigger #0
 // This file defines file IO functions for the JASS side of things
 // Based off the FileIO module created by Nestharus, see:
@@ -156,6 +156,8 @@ function InitTrig_map_config takes nothing returns nothing
     set location_names[25] = "Slay Uther"
     set location_names[26] = "Feast on Souls"
     set location_names[27] = "Pandaren Relaxation Area"
+    set location_names[28] = "Secret Society of Sasquatch"
+    set location_names[29] = "Establish a Base"
 endfunction
 
 //\\// Trigger #2
@@ -1333,6 +1335,58 @@ function InitTrig_zoom takes nothing returns nothing
 endfunction
 
 //\\// Trigger #7
+globals
+unit mercenary_camp = null
+integer units_added = 0
+endglobals
+
+function mercenaries_create_camp takes nothing returns nothing
+    if mercenary_camp != null then
+        return
+    endif
+    set mercenary_camp = CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), 'nmrd', 1536.0, 7232.0, 270.0)
+    call SetUnitColor(mercenary_camp, ConvertPlayerColor(2))
+endfunction
+
+function mercenaries_apply takes nothing returns nothing
+    local integer index = 0
+    local integer mask = 536870912  // 1 << 29
+    local integer scanned = 0
+    local integer signal = 'ncrb'
+    local unit target_camp = mercenary_camp
+    local integer u
+    loop
+        exitwhen mask == 0
+        if mask == 524288 then  // 1 << 19
+            set signal = 'ndog'
+            set index = 0
+            set target_camp = null
+        elseif mask == 512 then  // 1 << 9
+            set signal = 'ndwm'
+            set index = 0
+            set target_camp = null
+        endif
+        set u = GetPlayerTechMaxAllowed(Player(index), signal)
+        if units_added - scanned >= mask then
+            // already added
+            set scanned = scanned + mask
+        elseif u > 0 then
+            // add the unit
+            call AddUnitToStock(target_camp, u, 1, 2)
+            set scanned = scanned + mask
+            set units_added = units_added + mask
+        endif
+        set mask = mask / 2
+        set index = index + 1
+    endloop
+endfunction
+
+function InitTrig_AP_mercenaries takes nothing returns nothing
+    call TriggerAddAction(t_create_mercenary_camps, function mercenaries_create_camp)
+    call TriggerAddAction(t_apply_mercenaries, function mercenaries_apply)
+endfunction
+
+//\\// Trigger #12
 globals
 trigger t_irregulars_on_cast
 sound human_no_gold_sound

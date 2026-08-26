@@ -1919,7 +1919,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 28"
+value = "Secret Society of Sasquatch"
 object_id = 'null'
 
 [[map_objects.I02c.modifications]]
@@ -1927,7 +1927,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 28"
+value = "Purchase Secret Society of Sasquatch"
 object_id = 'null'
 
 [[map_objects.I02c.modifications]]
@@ -1935,7 +1935,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 28\" location."
+value = "Collects the \"Secret Society of Sasquatch\" location."
 object_id = 'null'
 
 [[map_objects.I02c.modifications]]
@@ -1943,7 +1943,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 28\" location."
+value = "Collects the \"Secret Society of Sasquatch\" location."
 object_id = 'null'
 
 [[map_objects.I02c.modifications]]
@@ -1987,7 +1987,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 29"
+value = "Establish a Base"
 object_id = 'null'
 
 [[map_objects.I02d.modifications]]
@@ -1995,7 +1995,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 29"
+value = "Purchase Establish a Base"
 object_id = 'null'
 
 [[map_objects.I02d.modifications]]
@@ -2003,7 +2003,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 29\" location."
+value = "Collects the \"Establish a Base\" location."
 object_id = 'null'
 
 [[map_objects.I02d.modifications]]
@@ -2011,7 +2011,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 29\" location."
+value = "Collects the \"Establish a Base\" location."
 object_id = 'null'
 
 [[map_objects.I02d.modifications]]

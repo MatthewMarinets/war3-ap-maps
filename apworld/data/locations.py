@@ -267,6 +267,8 @@ class Wc3Location(enum.IntEnum):
     UD2_SLAY_UTHER =                202025, "Slay Uther",               Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.QUEST_HERO
     UD2_FEAST_ON_SOULS =            202026, "Feast on Souls",           Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.SECRET
     UD2_PANDAREN_RELAXATION_AREA =  202027, "Pandaren Relaxation Area", Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.SECRET
+    UD2_SECRET_SOCIETY_OF_SASQUATCH = 202028, "Secret Society of Sasquatch", Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.SECRET
+    UD2_ESTABLISH_A_BASE =          202029, "Establish a Base",         Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.QUEST
 
     # Quests:
     # (Main) The Elfgate

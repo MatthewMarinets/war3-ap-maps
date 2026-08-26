@@ -212,7 +212,7 @@ Arthas
 
 STRING 46
 {
-The Paladins maintain a strong hold over the surrounding area. You must establish a base and bolster your forces. Only aided by Ghouls and Meat Wagons will you be able to break through the Paladins' defenses. 
+The Paladins maintain a strong hold over the surrounding area. You must establish a base and bolster your forces. Only aided by Ghouls and Meat Wagons will you be able to break through the Paladins' defenses.
 }
 
 STRING 48
@@ -462,22 +462,17 @@ Haunt a gold mine
 
 STRING 136
 {
-|cff32CD32HINT|r - Build Graveyards near trees so that Ghouls can harvest lumber faster. 
+|cff32CD32HINT|r - Build Graveyards near trees so that Ghouls can harvest lumber faster.
 }
 
 STRING 138
 {
-Build a Crypt
+Build a Production Building
 }
 
 STRING 139
 {
 Build 3 Ziggurats
-}
-
-STRING 140
-{
-Build a Graveyard
 }
 
 STRING 147
@@ -635,7 +630,7 @@ Establish a Base
 
 STRING 195
 {
-The Paladins maintain a strong hold over the surrounding area. You must establish a base and bolster your forces. Only aided by Ghouls and Meat Wagons will you be able to break through the Paladins' defenses. 
+The Paladins maintain a strong hold over the surrounding area. You must establish a base and bolster your forces. Only aided by Ghouls and Meat Wagons will you be able to break through the Paladins' defenses.
 }
 
 STRING 196
@@ -650,7 +645,7 @@ Haunt a gold mine
 
 STRING 198
 {
-Build a Crypt
+Build a Production Building
 }
 
 STRING 199
@@ -795,22 +790,12 @@ STRING 617
 
 STRING 630
 {
-  - |cff808080Build a Crypt|r
+  - |cff808080Build a Production Building|r
 }
 
 STRING 631
 {
-  - Build a Crypt
-}
-
-STRING 644
-{
-  - |cff808080Build a Graveyard|r
-}
-
-STRING 645
-{
-  - Build a Graveyard
+  - Build a Production Building
 }
 
 STRING 657

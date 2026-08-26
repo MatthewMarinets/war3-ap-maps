@@ -8,7 +8,6 @@ version = TFT
 | 27 | AI Start | False |
 | 21 | DEFEAT CONDITIONS | False |
 | 15 | DayTime Until Tichondrius | False |
-| 3 | GameCache | False |
 | 4 | Arthas Stuck At Level 3 | False |
 | 2 | Alliance Settings | False |
 | 28 | Waterfall | False |
@@ -62,7 +61,6 @@ version = TFT
 | ReqHauntGoldmine | questitem | . | . |
 | ReqNecropolis | questitem | . | . |
 | Req3Ziggurats | questitem | . | . |
-| ReqGraveyard | questitem | . | . |
 | TeleportEffect | effect | . | . |
 | ArthasPosition | location | . | . |
 | TichondriusMeetingDone | boolean | . | false |
@@ -198,6 +196,98 @@ version = TFT
 ### Functions
 
 
+## AP mercenaries
+- enabled: True
+- category: [37] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## Orange Paladin Location
+- enabled: True
+- category: [37] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_Hpb1_0018
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(22)
+
+
+## Teal Paladin Location
+- enabled: True
+- category: [37] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_HC00_0049
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(23)
+
+
+## Blue Paladin Location
+- enabled: True
+- category: [37] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_Hpb2_0052
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(24)
+
+
+## Slay Uther Location
+- enabled: True
+- category: [37] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_Huth_0091
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(25)
+
+
 ## irregulars
 - enabled: True
 - category: [37] Archipelago
@@ -208,6 +298,44 @@ version = TFT
 
 ```
 ### Functions
+
+
+## AP Load Arthas
+- enabled: True
+- category: [37] Archipelago
+- starts off: True
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String set udg_Arthas = hero_create(0, USER_PLAYER, GetRectCenterX(gg_rct_ArthasOrDefaultArthas), GetRectCenterY(gg_rct_ArthasOrDefaultArthas), 220.0)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable Arthas
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CustomScriptCode
+  - param String set udg_Arthas = CreateUnit(USER_PLAYER, 'Uear', GetRectCenterX(gg_rct_ArthasOrDefaultArthas), GetRectCenterY(gg_rct_ArthasOrDefaultArthas), 220.0)
+- Action CustomScriptCode
+  - param String set hero_abil_1[0] = 'AUdc'
+- Action CustomScriptCode
+  - param String set hero_abil_2[0] = 'AUdp'
+- Action CustomScriptCode
+  - param String set hero_abil_3[0] = 'AUau'
+- Action CustomScriptCode
+  - param String set hero_abil_4[0] = 'AUan'
 
 
 ## Initialize Initializations
@@ -231,13 +359,11 @@ version = TFT
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Give_Uther_Mana_For_Hard
 - Action ConditionalTriggerExecute
-  - param Variable gg_trg_LoadGameCache
+  - param Variable gg_trg_AP_Load_Arthas
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Friendly_Friends
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Intro_Cinematic
-- Action EnableTrigger
-  - param Variable gg_trg_Level_3_Stop_XP
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Knights_Patrol
 - Action ConditionalTriggerExecute
@@ -717,110 +843,6 @@ version = TFT
   - param Preset OnOffOff
 
 
-## LoadGameCache
-- enabled: True
-- category: [3] GameCache
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action InitGameCacheBJ
-  - param String Campaigns.w3v
-- Action RestoreUnitLocFacingPointBJ
-  - param String Arthas
-  - param String Undead02
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-  - param Variable ThePlayer
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_ArthasOrDefaultArthas
-  - param Function GetUnitLoc
-    - Function GetUnitLoc
-      - param Variable gg_unit_ugho_0047
-- Action SetVariable
-  - param Variable Arthas
-  - param Function GetLastRestoredUnitBJ
-    - Function GetLastRestoredUnitBJ
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareUnit
-      - param Variable Arthas
-      - param Preset OperatorEqualENE
-      - param Preset UnitNull
-  - param Function DoNothing
-    - Action ConditionalTriggerExecute
-      - param Variable gg_trg_Default_Arthas
-  - param Function DoNothing
-    - Action DoNothing
-
-
-## Default Arthas
-- enabled: True
-- category: [3] GameCache
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action CreateNUnitsAtLoc
-  - param String 1
-  - param String Uear
-  - param Variable ThePlayer
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_ArthasOrDefaultArthas
-  - param String 0.00
-- Action SetVariable
-  - param Variable Arthas
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-- Action SetHeroLevel
-  - param Variable Arthas
-  - param String 2
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDeathCoil
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillUnholyAura
-
-
-## Level 3 Stop XP
-- enabled: True
-- category: [4] Arthas Stuck At Level 3
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableDisable
-  - param Variable Arthas
-- Condition OperatorCompareUnit
-  - param Function GetLevelingUnit
-    - Function GetLevelingUnit
-  - param Preset OperatorEqualENE
-  - param Variable Arthas
-- Condition OperatorCompareInteger
-  - param Function GetHeroLevel
-    - Function GetHeroLevel
-      - param Variable Arthas
-  - param Preset OperatorGreater
-  - param String 2
-- Event TriggerRegisterPlayerUnitEventSimple
-  - param Preset Player03
-  - param Preset PlayerUnitEventHero_Level
-
-
 ## Friendly Friends
 - enabled: True
 - category: [2] Alliance Settings
@@ -988,6 +1010,8 @@ version = TFT
   - param String 0
   - param String 0
   - param String 100.00
+- Action CustomScriptCode
+  - param String call status_check_location(27)
 
 
 ## Leave
@@ -1483,14 +1507,6 @@ After running this, set the unit facing for Arthas.
   - param String TRIGSTR_139
 - Action SetVariable
   - param Variable Req3Ziggurats
-  - param Function GetLastCreatedQuestItemBJ
-    - Function GetLastCreatedQuestItemBJ
-- Action CreateQuestItemBJ
-  - param Function GetLastCreatedQuestBJ
-    - Function GetLastCreatedQuestBJ
-  - param String TRIGSTR_140
-- Action SetVariable
-  - param Variable ReqGraveyard
   - param Function GetLastCreatedQuestItemBJ
     - Function GetLastCreatedQuestItemBJ
 - Action ForGroup
@@ -2188,14 +2204,6 @@ After running this, set the unit facing for Arthas.
   - param Variable Req3Ziggurats
   - param Function GetLastCreatedQuestItemBJ
     - Function GetLastCreatedQuestItemBJ
-- Action CreateQuestItemBJ
-  - param Function GetLastCreatedQuestBJ
-    - Function GetLastCreatedQuestBJ
-  - param String TRIGSTR_200
-- Action SetVariable
-  - param Variable ReqGraveyard
-  - param Function GetLastCreatedQuestItemBJ
-    - Function GetLastCreatedQuestItemBJ
 - Action RemoveUnit
   - param Variable gg_unit_uaco_0048
 - Action CinematicModeBJ
@@ -2284,6 +2292,8 @@ After running this, set the unit facing for Arthas.
   - param Preset OnOffOn
   - param Function GetPlayersAll
     - Function GetPlayersAll
+- Action CustomScriptCode
+  - param String call status_check_location(20)
 - Action PlayThematicMusicBJ
   - param Preset MusicThemeTension
 - Action ForGroup
@@ -4068,6 +4078,8 @@ Disables previous defeat condition.
   - param Preset OnOffOn
   - param Function GetPlayersAll
     - Function GetPlayersAll
+- Action CustomScriptCode
+  - param String call status_check_location(28)
 - Action LeaderboardDisplayBJ
   - param Preset ShowHideHide
   - param Variable LeaderboardPaladinsToKill
@@ -5078,8 +5090,8 @@ Disables previous defeat condition.
   - param Preset OnOffOn
   - param Function GetPlayersAll
     - Function GetPlayersAll
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Next_Level_Prep
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Action UseTimeOfDayBJ
   - param Preset OnOffOff
 - Action SetTimeOfDay
@@ -6805,7 +6817,7 @@ Disables previous defeat condition.
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
 - Action CreateItemLoc
-  - param String ktrm
+  - param String I014
   - param Variable DeadPaladinPosition
 - Action SetItemInvulnerableBJ
   - param Function GetLastCreatedItem
@@ -6862,7 +6874,7 @@ Disables previous defeat condition.
       - param Function GetManipulatedItem
         - Function GetManipulatedItem
   - param Preset OperatorEqualENE
-  - param String ktrm
+  - param String I014
 - Condition OperatorCompareUnit
   - param Function GetManipulatingUnit
     - Function GetManipulatingUnit
@@ -7335,6 +7347,8 @@ Villagers set invulnerable at map init.
   - param String 0
   - param Preset WaitDontWait
 - Action VolumeGroupResetBJ
+- Action CustomScriptCode
+  - param String call status_check_location(26)
 - Action TriggerSleepAction
   - param String 0.40
 - Action SetUnitFacingToFaceUnitTimed
@@ -8214,13 +8228,42 @@ Sends AI signal.
 - Action QueuedTriggerAddBJ
   - param Variable gg_trg_Hint_Ghouls_Crypt_Finished_Que
   - param Preset CheckingIgnoringIgnoring
-- Condition OperatorCompareUnitCode
-  - param Function GetUnitTypeId
-    - Function GetUnitTypeId
-      - param Function GetConstructedStructure
-        - Function GetConstructedStructure
-  - param Preset OperatorEqualENE
-  - param String usep
+- Condition OrMultiple
+  - Condition OperatorCompareUnitCode
+    - param Function GetUnitTypeId
+      - Function GetUnitTypeId
+        - param Function GetConstructedStructure
+          - Function GetConstructedStructure
+    - param Preset OperatorEqualENE
+    - param String usep
+  - Condition OperatorCompareUnitCode
+    - param Function GetUnitTypeId
+      - Function GetUnitTypeId
+        - param Function GetConstructedStructure
+          - Function GetConstructedStructure
+    - param Preset OperatorEqualENE
+    - param String uslh
+  - Condition OperatorCompareUnitCode
+    - param Function GetUnitTypeId
+      - Function GetUnitTypeId
+        - param Function GetConstructedStructure
+          - Function GetConstructedStructure
+    - param Preset OperatorEqualENE
+    - param String utod
+  - Condition OperatorCompareUnitCode
+    - param Function GetUnitTypeId
+      - Function GetUnitTypeId
+        - param Function GetConstructedStructure
+          - Function GetConstructedStructure
+    - param Preset OperatorEqualENE
+    - param String ubon
+  - Condition OperatorCompareUnitCode
+    - param Function GetUnitTypeId
+      - Function GetUnitTypeId
+        - param Function GetConstructedStructure
+          - Function GetConstructedStructure
+    - param Preset OperatorEqualENE
+    - param String usap
 - Condition OperatorCompareBoolean
   - param Variable ENDCINPlaying
   - param Preset OperatorEqualENE
@@ -8303,9 +8346,6 @@ Sends AI signal.
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
-- Action QuestItemSetCompletedBJ
-  - param Variable ReqGraveyard
-  - param Preset CompletionOptionCompleted
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Build_a_Base_Complete
 - Action ConditionalTriggerExecute
@@ -8528,12 +8568,6 @@ Sends AI signal.
 - Condition OperatorCompareBoolean
   - param Function IsQuestItemCompleted
     - Function IsQuestItemCompleted
-      - param Variable ReqGraveyard
-  - param Preset OperatorEqualENE
-  - param String true
-- Condition OperatorCompareBoolean
-  - param Function IsQuestItemCompleted
-    - Function IsQuestItemCompleted
       - param Variable ReqHauntGoldmine
   - param Preset OperatorEqualENE
   - param String true
@@ -8558,6 +8592,8 @@ Sends AI signal.
     - Function GetPlayersAll
   - param Preset QuestMessageTypeCompleted
   - param String TRIGSTR_661
+- Action CustomScriptCode
+  - param String call status_check_location(29)
 - Action TriggerSleepAction
   - param Preset RealQueueDelayQuest
 - Action ConditionalTriggerExecute
@@ -8698,26 +8734,6 @@ Sends AI signal.
     - Condition OperatorCompareBoolean
       - param Function IsQuestItemCompleted
         - Function IsQuestItemCompleted
-          - param Variable ReqGraveyard
-      - param Preset OperatorEqualENE
-      - param String true
-  - param Function DoNothing
-    - Action QuestMessageBJ
-      - param Function GetPlayersAll
-        - Function GetPlayersAll
-      - param Preset QuestMessageTypeRequirement
-      - param String TRIGSTR_644
-  - param Function DoNothing
-    - Action QuestMessageBJ
-      - param Function GetPlayersAll
-        - Function GetPlayersAll
-      - param Preset QuestMessageTypeRequirement
-      - param String TRIGSTR_645
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareBoolean
-      - param Function IsQuestItemCompleted
-        - Function IsQuestItemCompleted
           - param Variable Req3Ziggurats
       - param Preset OperatorEqualENE
       - param String true
@@ -8785,7 +8801,7 @@ Sends AI signal.
 ```
 ### Functions
 - Action CreateItemLoc
-  - param String pman
+  - param String I01a
   - param Function GetDestructableLoc
     - Function GetDestructableLoc
       - param Variable gg_dest_LTcr_1930
@@ -8804,7 +8820,7 @@ Sends AI signal.
 ```
 ### Functions
 - Action CreateItemLoc
-  - param String spro
+  - param String I01b
   - param Function GetDestructableLoc
     - Function GetDestructableLoc
       - param Variable gg_dest_LTcr_2256
@@ -8823,7 +8839,7 @@ Sends AI signal.
 ```
 ### Functions
 - Action CreateItemLoc
-  - param String phea
+  - param String I019
   - param Function GetDestructableLoc
     - Function GetDestructableLoc
       - param Variable gg_dest_LTcr_2410
@@ -9621,35 +9637,6 @@ Sends AI signal.
   - param Variable gg_rct_Name_me_06_House
 
 
-## Next Level Prep
-- enabled: True
-- category: [29] Level Data
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action InitGameCacheBJ
-  - param String Campaigns.w3v
-- Action StoreUnitBJ
-  - param Variable Arthas
-  - param String Arthas
-  - param String Undead03
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action SaveGameCacheBJ
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action SetMissionAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset MissionIndexU02
-- Action SetMissionAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset MissionIndexU03
-
-
 ## Next Level Run
 - enabled: True
 - category: [29] Level Data
@@ -9661,7 +9648,7 @@ Sends AI signal.
 ```
 ### Functions
 - Action SetNextLevelBJ
-  - param String Maps\Campaign\Undead02Interlude.w3m
+  - param String CampaignSelect.w3x
 - Action CustomVictoryBJ
   - param Variable ThePlayer
   - param Preset UseSkipOptionUse
@@ -9680,8 +9667,6 @@ Sends AI signal.
 ### Functions
 - Event TriggerRegisterPlayerEventVictory
   - param Preset Player03
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Next_Level_Prep
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Next_Level_Run
 

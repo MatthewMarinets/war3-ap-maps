@@ -639,8 +639,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # shea = Scroll of Healing
-        { item_id = "shea", chance_percent = 100 }
+        { item_id = "I011", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -894,8 +893,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # penr = Pendant of Energy
-        { item_id = "penr", chance_percent = 100 }
+        { item_id = "I015", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -1229,8 +1227,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # pghe = Potion of Greater Healing
-        { item_id = "pghe", chance_percent = 100 }
+        { item_id = "I012", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -1352,8 +1349,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # tels = Goblin Night Scope
-        { item_id = "tels", chance_percent = 100 }
+        { item_id = "I018", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -1423,8 +1419,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # rat6 = Claws of Attack +6
-        { item_id = "rat6", chance_percent = 100 }
+        { item_id = "I017", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -1824,8 +1819,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # gcel = Gloves of Haste
-        { item_id = "gcel", chance_percent = 100 }
+        { item_id = "I013", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -4045,8 +4039,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # vddl = Voodoo Doll
-        { item_id = "vddl", chance_percent = 100 }
+        { item_id = "I016", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
