@@ -747,7 +747,7 @@ Set units, sound, and alliances
   - param String -----Set Ghoul-----
 - Action SetVariable
   - param Variable Ghoul01
-  - param Variable gg_unit_ugho_0005
+  - param Variable gg_unit_uA00_0005
 - Action GroupAddUnitSimple
   - param Variable Ghoul01
   - param Variable StartingUnits
@@ -771,7 +771,7 @@ Set units, sound, and alliances
   - param Variable StartingUnits
 - Action SetVariable
   - param Variable Ghoul05
-  - param Variable gg_unit_ugho_0231
+  - param Variable gg_unit_uA00_0231
 - Action GroupAddUnitSimple
   - param Variable Ghoul05
   - param Variable StartingUnits

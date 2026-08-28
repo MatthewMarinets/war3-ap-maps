@@ -366,7 +366,7 @@ trigger gg_trg_Defeat_Cheat= null
 trigger gg_trg_Victory= null
 unit gg_unit_ngme_0139= null
 unit gg_unit_nhea_0224= null
-unit gg_unit_ugho_0005= null
+unit gg_unit_uA00_0005= null
 unit gg_unit_ugho_0006= null
 unit gg_unit_ugho_0007= null
 unit gg_unit_uaco_0022= null
@@ -378,7 +378,7 @@ unit gg_unit_ngol_0146= null
 unit gg_unit_uaco_0047= null
 unit gg_unit_htow_0031= null
 unit gg_unit_umtw_0166= null
-unit gg_unit_ugho_0231= null
+unit gg_unit_uA00_0231= null
 unit gg_unit_nhem_0030= null
 unit gg_unit_umtw_0138= null
 unit gg_unit_nhef_0242= null
@@ -1120,9 +1120,9 @@ function CreateUnitsForPlayer3 takes nothing returns nothing
     local trigger t
     local real life
 
-    set gg_unit_ugho_0005=CreateUnit(p, 'ugho', - 5238.4, 6663.8, 56.784)
-    set life=GetUnitState(gg_unit_ugho_0005, UNIT_STATE_LIFE)
-    call SetUnitState(gg_unit_ugho_0005, UNIT_STATE_LIFE, 0.90 * life)
+    set gg_unit_uA00_0005=CreateUnit(p, 'uA00', - 5238.4, 6663.8, 56.784)
+    set life=GetUnitState(gg_unit_uA00_0005, UNIT_STATE_LIFE)
+    call SetUnitState(gg_unit_uA00_0005, UNIT_STATE_LIFE, 0.90 * life)
     set gg_unit_ugho_0006=CreateUnit(p, 'ugho', - 5139.6, 6568.0, 105.949)
     set life=GetUnitState(gg_unit_ugho_0006, UNIT_STATE_LIFE)
     call SetUnitState(gg_unit_ugho_0006, UNIT_STATE_LIFE, 0.90 * life)
@@ -1140,7 +1140,7 @@ function CreateUnitsForPlayer3 takes nothing returns nothing
     set gg_unit_unec_0153=CreateUnit(p, 'unec', - 5017.0, 6921.9, 29.443)
     set gg_unit_umtw_0166=CreateUnit(p, 'umtw', - 5177.1, 6053.7, 79.080)
     set gg_unit_umtw_0225=CreateUnit(p, 'umtw', - 4988.8, 6077.7, 85.331)
-    set gg_unit_ugho_0231=CreateUnit(p, 'ugho', - 5398.4, 7058.5, 317.445)
+    set gg_unit_uA00_0231=CreateUnit(p, 'uA00', - 5398.4, 7058.5, 317.445)
 endfunction
 
 //===========================================================================
@@ -3405,7 +3405,7 @@ function Trig_Setup_Undead_Actions takes nothing returns nothing
     set udg_Acolyte05=gg_unit_uaco_0022
     call GroupAddUnitSimple(udg_Acolyte05, udg_StartingUnits)
     // -----Set Ghoul-----
-    set udg_Ghoul01=gg_unit_ugho_0005
+    set udg_Ghoul01=gg_unit_uA00_0005
     call GroupAddUnitSimple(udg_Ghoul01, udg_StartingUnits)
     set udg_Ghoul02=gg_unit_ugho_0006
     call GroupAddUnitSimple(udg_Ghoul02, udg_StartingUnits)
@@ -3413,7 +3413,7 @@ function Trig_Setup_Undead_Actions takes nothing returns nothing
     call GroupAddUnitSimple(udg_Ghoul03, udg_StartingUnits)
     set udg_Ghoul04=gg_unit_ugho_0152
     call GroupAddUnitSimple(udg_Ghoul04, udg_StartingUnits)
-    set udg_Ghoul05=gg_unit_ugho_0231
+    set udg_Ghoul05=gg_unit_uA00_0231
     call GroupAddUnitSimple(udg_Ghoul05, udg_StartingUnits)
     // -----Set Necromancer----
     set udg_Necromancer01=gg_unit_unec_0153
