@@ -4389,7 +4389,7 @@ level = 1
 item_class = 0
 
 [[units]]
-type_id = 'uA00'  # Ghoul
+type_id = 'uA00'
 variation = 0
 x = 3918.29248046875
 y = -2195.574462890625
