@@ -132,14 +132,6 @@ value = 'Rhlh'  # Improved Lumber Harvesting,Advanced Lumber Harvesting
 object_id = 'null'
 
 [[blizzard_objects.nhem.modifications]]
-modification_id = 'udty'  # UnitBalance.Defense Type
-data_type = "String"
-variation_level = 0
-table_column = 0
-value = "medium"
-object_id = 'null'
-
-[[blizzard_objects.nhem.modifications]]
 modification_id = 'uaen'  # UnitWeapons.Attacks Enabled
 data_type = "Integer"
 variation_level = 0
@@ -209,14 +201,6 @@ data_type = "Integer"
 variation_level = 0
 table_column = 0
 value = 66
-object_id = 'null'
-
-[[blizzard_objects.nhem.modifications]]
-modification_id = 'ua2t'  # UnitWeapons.Attack 2 - Attack Type
-data_type = "String"
-variation_level = 0
-table_column = 0
-value = "normal"
 object_id = 'null'
 
 [[blizzard_objects.nhem.modifications]]
@@ -352,7 +336,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_004"
+value = "Train High Elf |cffffcc00P|reasant"
 object_id = 'null'
 
 [[blizzard_objects.nhem.modifications]]
@@ -360,7 +344,7 @@ modification_id = 'uhot'  # Profile.Hotkey
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_006"
+value = "P"
 object_id = 'null'
 
 [[blizzard_objects.nhem.modifications]]
@@ -368,7 +352,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_010"
+value = "Basic worker unit. Can harvest gold and lumber, build structures and Repair. Can become Militia. |n|cffff8c00Attacks land units and trees.|r"
 object_id = 'null'
 
 [blizzard_objects.htow]
@@ -439,18 +423,6 @@ table_column = 0
 value = "Abdl,Argl"
 object_id = 'null'
 
-[blizzard_objects.phea]
-parent_id = 'phea'  # Potion of Healing
-entity_id = 'null'
-
-[[blizzard_objects.phea.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
 [blizzard_objects.ngme]
 parent_id = 'ngme'  # Goblin Merchant
 entity_id = 'null'
@@ -461,54 +433,6 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = "phea,pman,shea,spro,wneg,gemt,stwp"
-object_id = 'null'
-
-[blizzard_objects.pman]
-parent_id = 'pman'  # Potion of Mana
-entity_id = 'null'
-
-[[blizzard_objects.pman.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
-[blizzard_objects.shea]
-parent_id = 'shea'  # Scroll of Healing
-entity_id = 'null'
-
-[[blizzard_objects.shea.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
-[blizzard_objects.spro]
-parent_id = 'spro'  # Scroll of Protection
-entity_id = 'null'
-
-[[blizzard_objects.spro.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
-[blizzard_objects.stwp]
-parent_id = 'stwp'  # Scroll of Town Portal
-entity_id = 'null'
-
-[[blizzard_objects.stwp.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
 object_id = 'null'
 
 [blizzard_objects.Orkn]

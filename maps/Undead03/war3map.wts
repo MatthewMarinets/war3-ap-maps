@@ -4,6 +4,7 @@ Necromancer
 }
 
 STRING 1
+// Sound\Dialogue\UndeadCampaign\Undead03A\U03ANecromancer31.mp3
 {
 Lord Arthas, the creatures of the forest are also resisting our invasion.
 }
@@ -14,23 +15,14 @@ Necromancer
 }
 
 STRING 3
+// Sound\Dialogue\UndeadCampaign\Undead03A\U03ANecromancer31.mp3
 {
 Lord Arthas, the creatures of the forest are also resisting our invasion.
-}
-
-STRING 4
-{
-Train High Elf |cffffcc00P|reasant
 }
 
 STRING 5
 {
 Undead03
-}
-
-STRING 6
-{
-P
 }
 
 STRING 7
@@ -48,17 +40,13 @@ STRING 9
 Blizzard Entertainment
 }
 
-STRING 10
-{
-Basic worker unit. Can harvest gold and lumber, build structures and Repair. Can become Militia. |n|cffff8c00Attacks land units and trees.|r
-}
-
 STRING 12
 {
 Necromancer
 }
 
 STRING 13
+// Sound\Dialogue\UndeadCampaign\Undead03A\U03ANecromancer31.mp3
 {
 Lord Arthas, the creatures of the forest are also resisting our invasion.
 }
@@ -79,6 +67,7 @@ Arthas
 }
 
 STRING 23
+// Sound\Dialogue\UndeadCampaign\Undead03A\U03AArthas01.mp3
 {
 Ah, wondrous, eternal Quel'Thalas. I haven't been here since I was a boy.
 }
@@ -119,6 +108,7 @@ Defeat!
 }
 
 STRING 31
+// Sound\Dialogue\UndeadCampaign\Undead03A\U03AKelThuzad02.mp3
 {
 Be wary. The elves likely wait in ambush.
 }
@@ -129,6 +119,7 @@ Arthas
 }
 
 STRING 33
+// Sound\Dialogue\UndeadCampaign\Undead03A\U03AArthas03.mp3
 {
 The frail elves do not concern me, necromancer. Our forces are strengthened with every foe we slay.
 }
@@ -139,11 +130,13 @@ Kel'Thuzad
 }
 
 STRING 35
+// Sound\Dialogue\UndeadCampaign\Undead03A\U03AKelThuzad04.mp3
 {
 Don't be too overconfident, death knight. The elves must not be taken lightly.
 }
 
 STRING 36
+// Sound\Dialogue\UndeadCampaign\Undead03A\U03AArthas05.mp3
 {
 We shall see. Bring forth the prisoner.
 }
@@ -159,6 +152,7 @@ Arthas
 }
 
 STRING 39
+// Sound\Dialogue\UndeadCampaign\Undead03A\U03AArthas06.mp3
 {
 Where is the entrance to your land, elf?
 }
@@ -169,11 +163,13 @@ Priest
 }
 
 STRING 41
+// Sound\Dialogue\UndeadCampaign\Undead03B\U03BPriest07.mp3
 {
 You will never enter Quel'Thalas, fallen prince. The woods themselves protect our borders, and the enchanted elfgates protect our capital.
 }
 
 STRING 42
+// Sound\Dialogue\UndeadCampaign\Undead03B\U03BArthas08.mp3
 {
 Your precious gates will not stop me any more than these trees, little elf. Bring up the meat wagons! We'll make our own entrance.
 }
@@ -196,6 +192,7 @@ STRING 45
 }
 
 STRING 46
+// Sound\Dialogue\UndeadCampaign\Undead03A\U03ANecromancer31.mp3
 {
 Lord Arthas, the creatures of the forest are also resisting our invasion.
 }
@@ -206,6 +203,7 @@ Defeat!
 }
 
 STRING 51
+// Sound\Dialogue\UndeadCampaign\Undead03B\U03BSylvanas18.mp3
 {
 Shindu fallah Na! Fall back to the second gate! Fall back!
 }
@@ -231,6 +229,7 @@ Arthas
 }
 
 STRING 65
+// Sound\Dialogue\UndeadCampaign\Undead03B\U03BArthas19.mp3
 {
 The elfgate has fallen! Onward, my warriors! Onward to victory!
 }
@@ -262,6 +261,7 @@ Kel'Thuzad
 }
 
 STRING 82
+// Sound\Dialogue\UndeadCampaign\Undead03A\U03AKelThuzad09.mp3
 {
 The energies of this place are strong. Kill the elves! Level their structures! This location is perfect for your base.
 }
@@ -272,6 +272,7 @@ Arthas
 }
 
 STRING 88
+// Sound\Dialogue\UndeadCampaign\Undead03A\U03AArthas10.mp3
 {
 It'll be a pleasure.
 }
@@ -287,6 +288,7 @@ High Elf Archer
 }
 
 STRING 91
+// Sound\Dialogue\UndeadCampaign\Undead03A\U03AElfArcher11.mp3
 {
 The undead are advancing! Alert the sentries!
 }
@@ -297,6 +299,7 @@ Sylvanas Windrunner
 }
 
 STRING 133
+// Sound\Dialogue\UndeadCampaign\Undead03A\U03ASylvanas12.mp3
 {
 You are not welcome here. I am Sylvanas Windrunner, Ranger-General of Silvermoon. I advise you to turn back now.
 }
@@ -307,6 +310,7 @@ High Elf Villager
 }
 
 STRING 139
+// Sound\Dialogue\UndeadCampaign\Undead03B\U03BHighElfVillager32.mp3
 {
 It is the traitorous human prince! Run for your lives!
 }
@@ -317,6 +321,7 @@ High Elf Villager
 }
 
 STRING 143
+// Sound\Dialogue\UndeadCampaign\Undead03B\U03BHighElfVillager31.mp3
 {
 Find Sylvanas. The undead advance!
 }
@@ -327,6 +332,7 @@ High Elf Villager
 }
 
 STRING 145
+// Sound\Dialogue\UndeadCampaign\Undead03B\U03BHighElfVillager31.mp3
 {
 Find Sylvanas. The undead advance!
 }
@@ -337,6 +343,7 @@ High Elf Villager
 }
 
 STRING 149
+// Sound\Dialogue\UndeadCampaign\Undead03B\U03BHighElfVillager32.mp3
 {
 It is the traitorous human prince! Run for your lives!
 }
