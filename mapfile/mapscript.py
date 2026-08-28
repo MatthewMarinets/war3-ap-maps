@@ -304,11 +304,21 @@ def generate_sound_setup(sounds: w3s.War3SoundInfo) -> list[str]:
             f'{"true" if w3s.SoundFlags.Stop_Outside_Range in sound.flags else "false"}, '
             f'{sound.fade_in}, {sound.fade_out}, "{sound.effects}")'
         )
-        sound_label, sound_duration = script_tables.SOUND_DATA.get((escaped_path, sound.fade_out), (None, None))
+        sound_label = script_tables.SOUND_LABEL_DATA.get(sound.file)
+        sound_duration = script_tables.SOUND_DURATION_DATA.get((escaped_path, sound.fade_out))
         if sound_label is None:
-            result.append(f'    call SetSoundParamsFromLabel({sound.name}, "{sound.name[7:]}")')
-        else:
-            result.append(f'    call SetSoundParamsFromLabel({sound.name}, "{sound_label}")')
+            sound_label = sound.file.rsplit('\\', 1)[-1].rsplit('.', 1)[0]
+            sound_path = sound.file.lower()
+            if (
+                sound_path.startswith('units')
+                or (
+                    sound_path.startswith('sound')
+                    and 'dialog' not in sound_path
+                    and 'ambient' not in sound_path
+                )
+            ):
+                sound_label = sound_label.rstrip('0123456789')
+        result.append(f'    call SetSoundParamsFromLabel({sound.name}, "{sound_label}")')
         if sound_duration is None:
             result.append(f'    call SetSoundDuration({sound.name}, GetSoundDuration({sound.name}))')
         else:
