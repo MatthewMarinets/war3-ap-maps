@@ -1,8 +1,8 @@
 # Warcraft 3 Doodad placement file (.doo)
 # See doo.py for type definitions
 
-version = 7
-sub_version = 9
+version = 8
+sub_version = 11
 describes_units = true
 doodads = []
 immobile_doodads = []
