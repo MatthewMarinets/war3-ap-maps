@@ -731,8 +731,11 @@ def init_ally_priorities(
     for player in map_info.players:
         low_flags = player.ally_low_priorities_flags & active_players_mask
         high_flags = player.ally_high_priorities_flags & active_players_mask
+        low_bit_count = (low_flags & ~(1 << player.player_id)).bit_count()
+        high_bit_count = (high_flags & ~(1 << player.player_id)).bit_count()
         player_index = player_id_to_index[player.player_id]
-        if low_flags:
+        if low_bit_count:
+            # Note(mm): This seems to produce a lower bitcount on U3 player 1 for some reason
             result.append(f'\n    call SetStartLocPrioCount({player_index}, {low_flags.bit_count()})')
             slot = 0
             for player2 in map_info.players:
@@ -744,7 +747,7 @@ def init_ally_priorities(
                         f'{player_id_to_index[player2.player_id]}, MAP_LOC_PRIO_LOW)'
                     )
                     slot += 1
-        if high_flags:
+        if high_bit_count > 1 and (high_flags != low_flags):
             result.append(f'\n    call SetStartLocPrioCount({player_index}, {high_flags.bit_count()})')
             slot = 0
             for player2 in map_info.players:
