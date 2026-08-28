@@ -1501,7 +1501,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Destroy Pink Town Hall"
+value = "Destroy North Town Hall"
 object_id = 'null'
 
 [[map_objects.I025.modifications]]
@@ -1509,7 +1509,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Destroy Pink Town Hall"
+value = "Purchase Destroy North Town Hall"
 object_id = 'null'
 
 [[map_objects.I025.modifications]]
@@ -1517,7 +1517,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Destroy Pink Town Hall\" location."
+value = "Collects the \"Destroy North Town Hall\" location."
 object_id = 'null'
 
 [[map_objects.I025.modifications]]
@@ -1525,7 +1525,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Destroy Pink Town Hall\" location."
+value = "Collects the \"Destroy North Town Hall\" location."
 object_id = 'null'
 
 [[map_objects.I025.modifications]]
@@ -1569,7 +1569,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Destroy Orange Lumber Mill"
+value = "Destroy Northeast Lumber Mill"
 object_id = 'null'
 
 [[map_objects.I026.modifications]]
@@ -1577,7 +1577,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Destroy Orange Lumber Mill"
+value = "Purchase Destroy Northeast Lumber Mill"
 object_id = 'null'
 
 [[map_objects.I026.modifications]]
@@ -1585,7 +1585,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Destroy Orange Lumber Mill\" location."
+value = "Collects the \"Destroy Northeast Lumber Mill\" location."
 object_id = 'null'
 
 [[map_objects.I026.modifications]]
@@ -1593,7 +1593,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Destroy Orange Lumber Mill\" location."
+value = "Collects the \"Destroy Northeast Lumber Mill\" location."
 object_id = 'null'
 
 [[map_objects.I026.modifications]]
@@ -1637,7 +1637,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Destroy Teal Town Hall"
+value = "Destroy East Town Hall"
 object_id = 'null'
 
 [[map_objects.I027.modifications]]
@@ -1645,7 +1645,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Destroy Teal Town Hall"
+value = "Purchase Destroy East Town Hall"
 object_id = 'null'
 
 [[map_objects.I027.modifications]]
@@ -1653,7 +1653,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Destroy Teal Town Hall\" location."
+value = "Collects the \"Destroy East Town Hall\" location."
 object_id = 'null'
 
 [[map_objects.I027.modifications]]
@@ -1661,7 +1661,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Destroy Teal Town Hall\" location."
+value = "Collects the \"Destroy East Town Hall\" location."
 object_id = 'null'
 
 [[map_objects.I027.modifications]]
@@ -1705,7 +1705,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Destroy Yellow Town Hall"
+value = "Destroy West Town Hall"
 object_id = 'null'
 
 [[map_objects.I028.modifications]]
@@ -1713,7 +1713,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Destroy Yellow Town Hall"
+value = "Purchase Destroy West Town Hall"
 object_id = 'null'
 
 [[map_objects.I028.modifications]]
@@ -1721,7 +1721,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Destroy Yellow Town Hall\" location."
+value = "Collects the \"Destroy West Town Hall\" location."
 object_id = 'null'
 
 [[map_objects.I028.modifications]]
@@ -1729,7 +1729,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Destroy Yellow Town Hall\" location."
+value = "Collects the \"Destroy West Town Hall\" location."
 object_id = 'null'
 
 [[map_objects.I028.modifications]]
@@ -1841,7 +1841,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Goblin Merchant"
+value = "Northeast Goblin Merchant"
 object_id = 'null'
 
 [[map_objects.I02a.modifications]]
@@ -1849,7 +1849,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Goblin Merchant"
+value = "Purchase Northeast Goblin Merchant"
 object_id = 'null'
 
 [[map_objects.I02a.modifications]]
@@ -1857,7 +1857,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Goblin Merchant\" location."
+value = "Collects the \"Northeast Goblin Merchant\" location."
 object_id = 'null'
 
 [[map_objects.I02a.modifications]]
@@ -1865,7 +1865,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Goblin Merchant\" location."
+value = "Collects the \"Northeast Goblin Merchant\" location."
 object_id = 'null'
 
 [[map_objects.I02a.modifications]]
@@ -1909,7 +1909,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 27"
+value = "Center Goblin Merchant"
 object_id = 'null'
 
 [[map_objects.I02b.modifications]]
@@ -1917,7 +1917,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 27"
+value = "Purchase Center Goblin Merchant"
 object_id = 'null'
 
 [[map_objects.I02b.modifications]]
@@ -1925,7 +1925,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 27\" location."
+value = "Collects the \"Center Goblin Merchant\" location."
 object_id = 'null'
 
 [[map_objects.I02b.modifications]]
@@ -1933,7 +1933,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 27\" location."
+value = "Collects the \"Center Goblin Merchant\" location."
 object_id = 'null'
 
 [[map_objects.I02b.modifications]]

@@ -179,6 +179,199 @@ version = TFT
 ### Functions
 
 
+## AP Load Arthas
+- enabled: True
+- category: [20] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String set udg_Arthas = hero_create(0, USER_PLAYER, GetRectCenterX(gg_rct_01Arthas_A_Start), GetRectCenterY(gg_rct_01Arthas_A_Start), 95.0)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable Arthas
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CustomScriptCode
+  - param String set udg_Arthas = CreateUnit(USER_PLAYER, 'Uear', GetRectCenterX(gg_rct_01Arthas_A_Start), GetRectCenterY(gg_rct_01Arthas_A_Start), 95.0)
+- Action CustomScriptCode
+  - param String set hero_abil_1[0] = 'AUdc'
+- Action CustomScriptCode
+  - param String set hero_abil_2[0] = 'AUdp'
+- Action CustomScriptCode
+  - param String set hero_abil_3[0] = 'AUau'
+- Action CustomScriptCode
+  - param String set hero_abil_4[0] = 'AUan'
+
+
+## AP mercenaries
+- enabled: True
+- category: [20] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## Shop locations
+- enabled: True
+- category: [20] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action AddItemToStockBJ
+  - param String I02a
+  - param Variable gg_unit_ngme_0139
+  - param String 1
+  - param String 1
+- Action AddItemToStockBJ
+  - param String I02b
+  - param Variable gg_unit_ngme_0148
+  - param String 1
+  - param String 1
+- Event MapInitializationEvent
+
+
+## Slay Sylvanas
+- enabled: True
+- category: [20] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_Hvwd_0090
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(20)
+
+
+## Pink Base Location
+- enabled: True
+- category: [20] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_htow_0031
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(21)
+
+
+## Orange Base Location
+- enabled: True
+- category: [20] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_hlum_0020
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(22)
+
+
+## Teal Base Location
+- enabled: True
+- category: [20] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_htow_0012
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(23)
+
+
+## Yellow Base Location
+- enabled: True
+- category: [20] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_htow_0120
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(24)
+
+
+## Blue Base Location
+- enabled: True
+- category: [20] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_hcas_0015
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(25)
+
+
 ## Map Initilization
 - enabled: True
 - category: [0] Set Up
@@ -195,7 +388,7 @@ Runs all starting Triggers
   - param Preset CampaignIndexU
 - Action FogMaskEnableOn
 - Action ConditionalTriggerExecute
-  - param Variable gg_trg_Load_Hero
+  - param Variable gg_trg_AP_Load_Arthas
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Setup_Sylvanas
 - Action ConditionalTriggerExecute
@@ -225,111 +418,6 @@ Runs all starting Triggers
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Cinematic_Dialogue_A
 - Event MapInitializationEvent
-
-
-## Load Hero
-- enabled: True
-- category: [0] Set Up
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-Load the campaign game cache.
-Load all heroes.
-```
-### Functions
-- Action CommentString
-  - param String Load the saved data
-- Action InitGameCacheBJ
-  - param String Campaigns.w3v
-- Action CommentString
-  - param String Load each hero
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Load_Arthas
-
-
-## Load Arthas
-- enabled: True
-- category: [0] Set Up
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action RestoreUnitLocFacingAngleBJ
-  - param String Arthas
-  - param String Undead03
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-  - param Preset Player03
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_01Arthas_A_Start
-  - param String 95.00
-- Action SetVariable
-  - param Variable Arthas
-  - param Function GetLastRestoredUnitBJ
-    - Function GetLastRestoredUnitBJ
-- Action GroupAddUnitSimple
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-  - param Variable StartingUnits
-- Action SetUnitManaBJ
-  - param Variable Arthas
-  - param Function GetUnitStateSwap
-    - Function GetUnitStateSwap
-      - param Preset UnitStateMaxMana
-      - param Variable Arthas
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareUnit
-      - param Variable Arthas
-      - param Preset OperatorNotEqualENE
-      - param Preset UnitNull
-  - param Function DoNothing
-    - Action ReturnAction
-  - param Function DoNothing
-    - Action DoNothing
-- Action CommentString
-  - param String -----------------------Create Evil Arthas-------------------------
-- Action CreateNUnitsAtLoc
-  - param String 1
-  - param String Uear
-  - param Preset Player03
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_01Arthas_A_Start
-  - param String 95.00
-- Action SetVariable
-  - param Variable Arthas
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-- Action GroupAddUnitSimple
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-  - param Variable StartingUnits
-- Action SetHeroLevel
-  - param Variable Arthas
-  - param String 3
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDeathCoil
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDeathPact
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillUnholyAura
-- Action UnitAddItemByIdSwapped
-  - param String ktrm
-  - param Variable Arthas
-- Action SetItemDroppableBJ
-  - param Function GetLastCreatedItem
-    - Function GetLastCreatedItem
-  - param Preset DropNoDropOptionNoDrop
 
 
 ## Setup Sylvanas
@@ -6554,8 +6642,6 @@ This trigger is fired when player comes into view of High Elf Village after the 
   - param String true
 - Event TriggerRegisterPlayerEventEndCinematic
   - param Preset Player03
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Undead_03_Save
 - Action CinematicFadeBJ
   - param Preset FadeTypeOptionFadeOut
   - param String 2
@@ -6586,8 +6672,6 @@ This trigger is fired when player comes into view of High Elf Village after the 
   - param Variable GAMEOVER
   - param Preset OperatorEqualENE
   - param String false
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Undead_03_Save
 - Action SetSkyModel
   - param Preset SkyModelSky04
 - Action SetUnitInvulnerable
@@ -6662,6 +6746,8 @@ This trigger is fired when player comes into view of High Elf Village after the 
   - param Preset OnOffOn
   - param Function GetPlayersAll
     - Function GetPlayersAll
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Action CinematicFadeBJ
   - param Preset FadeTypeOptionFadeOut
   - param String 2.00
@@ -7321,8 +7407,8 @@ This trigger is fired when player comes into view of High Elf Village after the 
 
 ```
 ### Functions
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Undead_03_Save
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Victory
 - Event TriggerRegisterPlayerEventVictory
@@ -7346,37 +7432,6 @@ This trigger is fired when player comes into view of High Elf Village after the 
   - param Preset Player03
 
 
-## Undead 03 Save
-- enabled: True
-- category: [15] Victory Defeat
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-Save all heroes.
-Save the campaign game cache.
-Enable the next level.
-Start the next level.
-```
-### Functions
-- Action CommentString
-  - param String Store hero data for the next level(s)
-- Action StoreUnitBJ
-  - param Variable Arthas
-  - param String Arthas
-  - param String Undead04
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action SaveGameCacheBJ
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action CommentString
-  - param String Enable the next level in the glue screens
-- Action SetMissionAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset MissionIndexU05
-
-
 ## Victory
 - enabled: True
 - category: [15] Victory Defeat
@@ -7390,7 +7445,7 @@ Start the next level.
 - Action CommentString
   - param String -----Start Next Mission-----
 - Action SetNextLevelBJ
-  - param String Maps\Campaign\Undead04.w3m
+  - param String CampaignSelect.w3x
 - Action CustomVictoryBJ
   - param Preset Player03
   - param Preset UseSkipOptionUse

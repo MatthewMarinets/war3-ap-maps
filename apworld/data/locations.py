@@ -281,12 +281,13 @@ class Wc3Location(enum.IntEnum):
     UD3_CENTER_GNOLL_HUT_ITEM =      203006, "Center Gnoll Hut Item",      Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.ITEM, "Book of the Dead"
     UD3_ROCK_GOLEM_ITEM =            203007, "Rock Golem Item",            Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.ITEM, "Potion of Greater Healing"
     UD3_SLAY_SYLVANAS =              203020, "Slay Sylvanas",              Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.HERO
-    UD3_DESTROY_PINK_BASE =          203021, "Destroy Pink Town Hall",     Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.BASE
-    UD3_DESTROY_ORANGE_BASE =        203022, "Destroy Orange Lumber Mill", Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.BASE
-    UD3_DESTROY_TEAL_BASE =          203023, "Destroy Teal Town Hall",     Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.BASE
-    UD3_DESTROY_YELLOW_BASE =        203024, "Destroy Yellow Town Hall",   Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.BASE
+    UD3_DESTROY_PINK_BASE =          203021, "Destroy North Town Hall",    Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.BASE
+    UD3_DESTROY_ORANGE_BASE =        203022, "Destroy Northeast Lumber Mill", Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.BASE
+    UD3_DESTROY_TEAL_BASE =          203023, "Destroy East Town Hall",     Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.BASE
+    UD3_DESTROY_YELLOW_BASE =        203024, "Destroy West Town Hall",     Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.BASE
     UD3_DESTROY_BLUE_BASE =          203025, "Destroy Blue Castle",        Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.QUEST_BASE
-    UD3_GOBLIN_MERCHANT =            203026, "Goblin Merchant",            Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.SHOP
+    UD3_NORTHEAST_GOBLIN_MERCHANT =  203026, "Northeast Goblin Merchant",  Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.SHOP
+    UD3_CENTER_GOBLIN_MERCHANT =     203027, "Center Goblin Merchant",     Wc3Mission.U3_INTO_THE_REALM_ETERNAL, Wc3LocationType.SHOP
 
     # Quests:
     # (Main) Three Moons
