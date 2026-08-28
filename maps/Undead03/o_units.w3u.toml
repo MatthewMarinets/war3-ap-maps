@@ -931,6 +931,118 @@ table_column = 0
 value = 0
 object_id = 'null'
 
+[blizzard_objects.ngna]
+parent_id = 'ngna'  # Gnoll Poacher
+entity_id = 'null'
+
+[[blizzard_objects.ngna.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 25
+object_id = 'null'
+
+[blizzard_objects.ngns]
+parent_id = 'ngns'  # Gnoll Assassin
+entity_id = 'null'
+
+[[blizzard_objects.ngns.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 40
+object_id = 'null'
+
+[[blizzard_objects.ngns.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[blizzard_objects.ngnv]
+parent_id = 'ngnv'  # Gnoll Overseer
+entity_id = 'null'
+
+[[blizzard_objects.ngnv.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 70
+object_id = 'null'
+
+[[blizzard_objects.ngnv.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 5
+object_id = 'null'
+
+[blizzard_objects.ngnw]
+parent_id = 'ngnw'  # Gnoll Warden
+entity_id = 'null'
+
+[[blizzard_objects.ngnw.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 40
+object_id = 'null'
+
+[[blizzard_objects.ngnw.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[blizzard_objects.ngrk]
+parent_id = 'ngrk'  # Mud Golem
+entity_id = 'null'
+
+[[blizzard_objects.ngrk.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 30
+object_id = 'null'
+
+[[blizzard_objects.ngrk.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2
+object_id = 'null'
+
+[blizzard_objects.ngst]
+parent_id = 'ngst'  # Rock Golem
+entity_id = 'null'
+
+[[blizzard_objects.ngst.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 85
+object_id = 'null'
+
+[[blizzard_objects.ngst.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 6
+object_id = 'null'
+
 
 [map_objects.uA00]
 parent_id = 'nzom'  # Zombie
