@@ -6,7 +6,7 @@ file_format_version = 0
 [[icons]]
 icon_type = "House"
 x = 185
-y = 106
+y = 107
 colour_blue = 255
 colour_green = 255
 colour_red = 255
@@ -15,7 +15,7 @@ colour_alpha = 255
 [[icons]]
 icon_type = "House"
 x = 155
-y = 186
+y = 182
 colour_blue = 255
 colour_green = 255
 colour_red = 255
@@ -24,7 +24,7 @@ colour_alpha = 255
 [[icons]]
 icon_type = "GoldMine"
 x = 246
-y = 158
+y = 156
 colour_blue = 255
 colour_green = 255
 colour_red = 255
@@ -42,7 +42,7 @@ colour_alpha = 255
 [[icons]]
 icon_type = "House"
 x = 163
-y = 44
+y = 51
 colour_blue = 255
 colour_green = 255
 colour_red = 255
@@ -51,7 +51,7 @@ colour_alpha = 255
 [[icons]]
 icon_type = "GoldMine"
 x = 169
-y = 83
+y = 86
 colour_blue = 255
 colour_green = 255
 colour_red = 255
@@ -60,7 +60,7 @@ colour_alpha = 255
 [[icons]]
 icon_type = "GoldMine"
 x = 17
-y = 91
+y = 94
 colour_blue = 255
 colour_green = 255
 colour_red = 255
@@ -69,7 +69,7 @@ colour_alpha = 255
 [[icons]]
 icon_type = "House"
 x = 57
-y = 52
+y = 58
 colour_blue = 255
 colour_green = 255
 colour_red = 255
@@ -78,7 +78,7 @@ colour_alpha = 255
 [[icons]]
 icon_type = "House"
 x = 205
-y = 172
+y = 169
 colour_blue = 255
 colour_green = 255
 colour_red = 255
@@ -87,7 +87,7 @@ colour_alpha = 255
 [[icons]]
 icon_type = "House"
 x = 144
-y = 124
+y = 125
 colour_blue = 255
 colour_green = 255
 colour_red = 255
@@ -96,7 +96,7 @@ colour_alpha = 255
 [[icons]]
 icon_type = "House"
 x = 94
-y = 111
+y = 112
 colour_blue = 255
 colour_green = 255
 colour_red = 255
@@ -105,7 +105,7 @@ colour_alpha = 255
 [[icons]]
 icon_type = "GoldMine"
 x = 194
-y = 150
+y = 148
 colour_blue = 255
 colour_green = 255
 colour_red = 255
@@ -114,7 +114,7 @@ colour_alpha = 255
 [[icons]]
 icon_type = "GoldMine"
 x = 92
-y = 214
+y = 208
 colour_blue = 255
 colour_green = 255
 colour_red = 255
@@ -123,7 +123,7 @@ colour_alpha = 255
 [[icons]]
 icon_type = "PlayerStart"
 x = 263
-y = 218
+y = 211
 colour_blue = 0
 colour_green = 192
 colour_red = 32
@@ -132,7 +132,7 @@ colour_alpha = 255
 [[icons]]
 icon_type = "PlayerStart"
 x = 71
-y = 158
+y = 156
 colour_blue = 129
 colour_green = 0
 colour_red = 84
@@ -141,7 +141,7 @@ colour_alpha = 255
 [[icons]]
 icon_type = "PlayerStart"
 x = 263
-y = 218
+y = 211
 colour_blue = 151
 colour_green = 150
 colour_red = 149
@@ -150,7 +150,7 @@ colour_alpha = 255
 [[icons]]
 icon_type = "PlayerStart"
 x = 263
-y = 218
+y = 211
 colour_blue = 241
 colour_green = 191
 colour_red = 126
@@ -159,7 +159,7 @@ colour_alpha = 255
 [[icons]]
 icon_type = "PlayerStart"
 x = 263
-y = 218
+y = 211
 colour_blue = 4
 colour_green = 42
 colour_red = 78
@@ -168,7 +168,7 @@ colour_alpha = 255
 [[icons]]
 icon_type = "PlayerStart"
 x = 263
-y = 218
+y = 211
 colour_blue = 70
 colour_green = 98
 colour_red = 16
@@ -177,7 +177,7 @@ colour_alpha = 255
 [[icons]]
 icon_type = "PlayerStart"
 x = 3
-y = 203
+y = 198
 colour_blue = 185
 colour_green = 230
 colour_red = 28

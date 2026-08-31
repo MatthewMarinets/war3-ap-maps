@@ -112,6 +112,7 @@ Arthas
 }
 
 STRING 32
+// Sound\Dialogue\UndeadCampaign\Undead04A\U04AArthas18.mp3
 {
 The gates have been opened! Once we've dealt with Sylvanas, the inner kingdom shall be ours!
 }
@@ -122,11 +123,13 @@ Arthas
 }
 
 STRING 35
+// Units\Undead\EvilArthas\EvilArthasYes1.wav
 {
 Finally...
 }
 
 STRING 40
+// Sound\Dialogue\UndeadCampaign\Undead04A\U04ASylvanas01.mp3
 {
 You've won through this gate, butcher, but you won't get through the second. The inner gate to Silvermoon can only be opened with a special key, and it shall never be yours!
 }
@@ -142,6 +145,7 @@ Arthas
 }
 
 STRING 46
+// Sound\Dialogue\UndeadCampaign\Undead04A\U04AArthas04.mp3
 {
 You waste your time, woman. You cannot outrun the inevitable.
 }
@@ -152,6 +156,7 @@ Sylvanas Windrunner
 }
 
 STRING 60
+// Sound\Dialogue\UndeadCampaign\Undead04A\U04ASylvanas12.mp3
 {
 Damn you monsters!  What will it take to drive you back?
 }
@@ -162,6 +167,7 @@ Sylvanas Windrunner
 }
 
 STRING 64
+// Sound\Dialogue\UndeadCampaign\Undead04A\U04ASylvanas05.mp3
 {
 You think that I'm running from you? Apparently you've never fought elves before.
 }
@@ -172,6 +178,7 @@ Arthas
 }
 
 STRING 66
+// Sound\Dialogue\UndeadCampaign\Undead04A\U04AArthas06.mp3
 {
 Damn that woman! We must find a way to cross the river!
 }
@@ -232,6 +239,7 @@ Sylvanas Windrunner
 }
 
 STRING 116
+// Sound\Dialogue\UndeadCampaign\Undead04A\U04ASylvanas03.mp3
 {
 Fall back to the trees!
 }
@@ -330,6 +338,7 @@ Arthas
 }
 
 STRING 437
+// Sound\Dialogue\UndeadCampaign\Undead04A\U04AArthas16.mp3
 {
 The crystal glows brightly, but there is no effect on the gate.
 }
@@ -340,6 +349,7 @@ Kel'Thuzad
 }
 
 STRING 439
+// Sound\Dialogue\UndeadCampaign\Undead04A\U04AKelThuzad17.mp3
 {
 As I said, you must find all three mooncrystals for the key to be whole!
 }
@@ -393,6 +403,7 @@ Arthas
 }
 
 STRING 458
+// Sound\Dialogue\UndeadCampaign\Undead04A\U04AArthas11.mp3
 {
 The ranger woman is starting to vex me greatly.
 }
@@ -423,6 +434,7 @@ Arthas
 }
 
 STRING 516
+// Sound\Dialogue\UndeadCampaign\Undead04B\U04BArthas09.mp3
 {
 Fear not. The crypt fiends can force them to the ground!
 }
@@ -433,6 +445,7 @@ Necromancer
 }
 
 STRING 518
+// Sound\Dialogue\UndeadCampaign\Undead04B\U04BNecromancer08.mp3
 {
 Lord Arthas, our forces cannot attack the flying beasts!
 }
@@ -529,6 +542,7 @@ Crypt Fiend
 }
 
 STRING 577
+// Sound\Dialogue\UndeadCampaign\Undead04B\U04BCryptFiend06.mp3
 {
 Greetings, death knight.
 }
