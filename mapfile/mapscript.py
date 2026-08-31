@@ -1411,16 +1411,17 @@ def generate(map_dir: str) -> None:
 
 if __name__ == '__main__':
     import sys
-    if len(sys.argv) > 1:
-        _target = sys.argv[1]
-    else:
-        _target = 'maps/Human01'
+    _targets = [_x for _x in sys.argv[1:] if not _x.startswith('-')]
+    if not _targets:
+        print(f"No targets provided")
+        sys.exit(-1)
     if '-i' in sys.argv:
         Options.INLINE_IF_CONDITIONS = True
         Options.FORCE_INITIALIZE = False
     if '-h' in sys.argv:
-        print("Usage: mapscript.py <map dir> [-i]")
+        print("Usage: mapscript.py <map dir> [<map dir> ...] [-i]")
         print("  -i: Use improved generation (inline if conditions)")
         sys.exit()
-    print(f'Generating script for {_target}/war3map.j')
-    generate(_target)
+    for _target in _targets:
+        print(f'Generating script for {_target}/war3map.j')
+        generate(_target)
