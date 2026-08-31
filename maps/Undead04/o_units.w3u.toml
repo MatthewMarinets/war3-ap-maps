@@ -243,6 +243,14 @@ table_column = 0
 value = 0
 object_id = 'null'
 
+[[blizzard_objects.nspg.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 25
+object_id = 'null'
+
 [blizzard_objects.ngsp]
 parent_id = 'ngsp'  # Goblin Sapper
 entity_id = 'null'
