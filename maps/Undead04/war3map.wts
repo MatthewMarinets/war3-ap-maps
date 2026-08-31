@@ -38,24 +38,9 @@ STRING 7
 The Scourge
 }
 
-STRING 9
-{
- (Peasant)
-}
-
 STRING 11
 {
 |cff32CD32HINT|r - Units can move through Way Gates to reach distant lands.
-}
-
-STRING 12
-{
-Arthas
-}
-
-STRING 13
-{
-High Elf
 }
 
 STRING 14
@@ -64,11 +49,6 @@ STRING 14
 Three Moons
   - |cff808080Destroy the three High Elf Altars (Completed)|r
   - Collect all three Mooncrystals
-}
-
-STRING 15
-{
- (AI Version)
 }
 
 STRING 16
@@ -136,11 +116,6 @@ STRING 32
 The gates have been opened! Once we've dealt with Sylvanas, the inner kingdom shall be ours!
 }
 
-STRING 33
-{
- (Cinematic)
-}
-
 STRING 34
 {
 Arthas
@@ -149,11 +124,6 @@ Arthas
 STRING 35
 {
 Finally...
-}
-
-STRING 39
-{
-Sylvanas Windrunner
 }
 
 STRING 40
@@ -286,11 +256,6 @@ Now that the Key of the Three Moons has been completed, you must bring it to the
 STRING 121
 {
 Bring Arthas to the Elfgate
-}
-
-STRING 134
-{
- (Banshee)
 }
 
 STRING 135

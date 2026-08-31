@@ -1,7 +1,7 @@
 # Warcraft 3 Map Info File(.w3i)
 # See w3i.py for type definitions
 
-version = "ROC"
+version = "TFT"
 map_revision = 472
 editor_version = 4436
 map_name = 'TRIGSTR_000'
@@ -15,14 +15,14 @@ map_padding_top = 16
 map_padding_bottom = 8
 map_playable_width = 104
 map_playable_height = 72
-flags = "HIDE_MINIMAP|LARGE_MAP|FIXED_FORCES|CUSTOM_FORCES|CUSTOM_TECH_TREE|CUSTOM_UPGRADES|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS|WAVES_ON_SHORES"
+flags = "HIDE_MINIMAP|LARGE_MAP|FIXED_FORCES|CUSTOM_FORCES|CUSTOM_TECH_TREE|CUSTOM_UPGRADES|PROPERTIES_MENU_OPENED|WAVES_ON_CLIFFS|WAVES_ON_SHORES|REQUIRES_EXPANSION"
 tileset = { type = "bytes", value = "L" }
 campaign_background = 18
 tft_loading_screen_model_path = ''
 map_loading_screen_text = 'TRIGSTR_006'
 map_loading_screen_title = 'TRIGSTR_004'
 map_loading_screen_subtitle = 'TRIGSTR_005'
-map_game_data_set = -1
+map_game_data_set = 1
 tft_prologue_screen_path = ''
 prologue_screen_text = ''
 prologue_screen_title = ''
@@ -35,7 +35,7 @@ tft_fog_red = 0
 tft_fog_green = 0
 tft_fog_blue = 0
 tft_fog_alpha = 0
-tft_weather = ''
+tft_weather = 'null'
 tft_custom_sound_environment = ''
 tft_custom_light_tileset = { type = "bytes", value = "0" }
 tft_water_tint_red = 0
@@ -526,3 +526,19 @@ tech_id = 'nhem'  # High Elf
 [[technologies]]
 player_flags = 0x8
 tech_id = 'usap'  # Sacrificial Pit
+
+[[technologies]]
+player_flags = 0xf
+tech_id = 'Hblm'  # Blood Mage
+
+[[technologies]]
+player_flags = 0xf
+tech_id = 'Oshd'  # Shadow Hunter
+
+[[technologies]]
+player_flags = 0xf
+tech_id = 'Ucrl'  # Crypt Lord
+
+[[technologies]]
+player_flags = 0xf
+tech_id = 'Ewar'  # Warden
