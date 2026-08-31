@@ -197,6 +197,8 @@ def generate_global_variable_init(gui_triggers: wtg.W3TriggerData) -> list[str]:
                 initial_value = 'null'
             elif variable.variable_type == 'rect' and initial_value == 'RectNull':
                 initial_value = 'null'
+            elif variable.variable_type == 'item' and initial_value == 'ItemNull':
+                initial_value = 'null'
             elif variable.variable_type == 'destructable' and initial_value == 'DestructableNull':
                 initial_value = 'null'
             elif variable.variable_type == 'player' and not initial_value.endswith(')'):
@@ -352,6 +354,13 @@ def generate_destructable_setup(doodads: doo.War3PlacementInfo, info: GenInfo) -
                 f"{doodad.scale_x:.3f}, {doodad.variation})"
             ).replace('-', '- '))
             continue
+        if doodad.flags & 4:
+            result.append((
+                f"    set {doodad_var}=CreateDestructableZ('{doodad.type_id}', "
+                f"{doodad.x:.1f}, {doodad.y:.1f}, {round1(doodad.z):.1f}, {doodad.facing * RADIANS_TO_DEGREES:.3f}, "
+                f"{doodad.scale_x:.3f}, {doodad.variation})"
+            ).replace('-', '- '))
+            continue
         result.append((
             f"    set {doodad_var}=CreateDestructable('{doodad.type_id}', "
             f"{doodad.x:.1f}, {doodad.y:.1f}, {doodad.facing * RADIANS_TO_DEGREES:.3f}, {doodad.scale_x:.3f}, {doodad.variation})"
@@ -391,6 +400,8 @@ def generate_unit_setup(
     item_data: dict[str, dict],
 ) -> list[str]:
     RADIANS_TO_DEGREES = 360.0 / 2 / math.pi
+    NEUTRAL_PASSIVE_PLAYER = 27
+    NEUTRAL_HOSTILE_PLAYER = 24
     result: list[str] = []
 
     sections: dict[tuple[bool, int], list[str]] = {}
@@ -474,9 +485,10 @@ def generate_unit_setup(
                     f'GetRectCenterY({region_name}))'
                 )
                 sections[section].append(f'    call WaygateActivate({unit_var}, true)')
+        if unit.custom_colour >= 0 and unit.player_owner == NEUTRAL_PASSIVE_PLAYER:
+            sections[section].append(f'    call SetUnitColor({unit_var}, ConvertPlayerColor({unit.custom_colour}))')
 
-    NEUTRAL_PASSIVE_PLAYER = 27
-    NEUTRAL_HOSTILE_PLAYER = 24
+
     PLAYER_LIST = list(range(25)) + [NEUTRAL_PASSIVE_PLAYER]
     for player_id in PLAYER_LIST:
         if player_id == NEUTRAL_PASSIVE_PLAYER:
@@ -757,7 +769,7 @@ def init_ally_priorities(
                         f'{player_id_to_index[player2.player_id]}, MAP_LOC_PRIO_LOW)'
                     )
                     slot += 1
-        if high_bit_count > 1 and (high_flags != low_flags):
+        if high_bit_count > 1 and (high_flags != low_flags) or (high_bit_count == 1 and not low_bit_count):
             result.append(f'\n    call SetStartLocPrioCount({player_index}, {high_flags.bit_count()})')
             slot = 0
             for player2 in map_info.players:
@@ -1334,8 +1346,9 @@ def generate(map_dir: str) -> None:
     result.extend(generate_global_variable_init(gui_triggers))
 
     # Unit item tables
-    result.append(section_header('Unit Item Tables'))
-    result.extend(generate_item_tables(units, info))
+    if any(unit.item_drops for unit in units.units):
+        result.append(section_header('Unit Item Tables'))
+        result.extend(generate_item_tables(units, info))
 
     # Sounds
     result.append(section_header('Sounds'))
