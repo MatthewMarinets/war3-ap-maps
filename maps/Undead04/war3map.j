@@ -247,8 +247,13 @@ trigger gg_trg_item_locations= null
 trigger gg_trg_debug= null
 trigger gg_trg_zoom= null
 trigger gg_trg_irregulars= null
+trigger gg_trg_AP_Load_Arthas= null
+trigger gg_trg_AP_mercenaries= null
+trigger gg_trg_Shop_locations= null
+trigger gg_trg_Slay_Sylvanas= null
+trigger gg_trg_Northwest_base_location= null
+trigger gg_trg_North_base_location= null
 trigger gg_trg_Initialization= null
-trigger gg_trg___Load_Arthas= null
 trigger gg_trg_Handicap= null
 trigger gg_trg_Difficulty_Not_Hard= null
 trigger gg_trg_Intro_Cinematic= null
@@ -305,7 +310,6 @@ trigger gg_trg___Key03_and_Key2Part_Acquired= null
 trigger gg_trg_Rescue_Zeppelins= null
 trigger gg_trg_Rescue_Zeppelins_Queue= null
 trigger gg_trg_DisableVisibility= null
-trigger gg_trg_Cap_Arthas_Experience= null
 trigger gg_trg_Unsummon_Hint= null
 trigger gg_trg_Unsummon_QUE= null
 trigger gg_trg_Mooncrystal01Hint= null
@@ -320,7 +324,6 @@ trigger gg_trg_Victory_Cancel= null
 trigger gg_trg_Enable_Defeat= null
 trigger gg_trg_Unit_Defeat= null
 trigger gg_trg_Defeat= null
-trigger gg_trg_Next_Level_Prep= null
 trigger gg_trg_Next_Level_Run= null
 trigger gg_trg_Victory_Cheat= null
 trigger gg_trg_Defeat_Cheat= null
@@ -344,8 +347,10 @@ unit gg_unit_nhea_0077= null
 unit gg_unit_nhea_0264= null
 unit gg_unit_hpea_0158= null
 unit gg_unit_nwgt_0005= null
+unit gg_unit_hcas_0014= null
 unit gg_unit_nwgt_0019= null
 unit gg_unit_nheb_0026= null
+unit gg_unit_hcas_0028= null
 unit gg_unit_nheb_0030= null
 unit gg_unit_nwgt_0038= null
 unit gg_unit_hmpr_0075= null
@@ -356,6 +361,7 @@ unit gg_unit_nhea_0242= null
 unit gg_unit_nhea_0245= null
 unit gg_unit_nws1_0277= null
 unit gg_unit_nws1_0278= null
+unit gg_unit_ngad_0089= null
 unit gg_unit_hpea_0149= null
 unit gg_unit_hpea_0162= null
 unit gg_unit_nhea_0241= null
@@ -487,6 +493,8 @@ trigger t_zoom
 trigger t_irregulars_on_cast
 sound human_no_gold_sound
 sound undead_no_gold_sound
+unit mercenary_camp= null
+integer units_added= 0
 
 
 //JASSHelper struct globals:
@@ -859,7 +867,7 @@ function CreateBuildingsForPlayer9 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=CreateUnit(p, 'hcas', - 5824.0, 576.0, 270.000)
+    set gg_unit_hcas_0028=CreateUnit(p, 'hcas', - 5824.0, 576.0, 270.000)
     set u=CreateUnit(p, 'hars', - 5248.0, 1152.0, 270.000)
     set gg_unit_nheb_0030=CreateUnit(p, 'nheb', - 6016.0, - 704.0, 270.000)
     set u=CreateUnit(p, 'hlum', - 6944.0, - 352.0, 270.000)
@@ -960,7 +968,7 @@ function CreateBuildingsForPlayer10 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=CreateUnit(p, 'hcas', 704.0, 960.0, 270.000)
+    set gg_unit_hcas_0014=CreateUnit(p, 'hcas', 704.0, 960.0, 270.000)
     set u=CreateUnit(p, 'nheb', - 1216.0, 896.0, 270.000)
     set u=CreateUnit(p, 'hars', - 128.0, 768.0, 270.000)
     set u=CreateUnit(p, 'hlum', - 1760.0, 1760.0, 270.000)
@@ -1103,7 +1111,7 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     call WaygateActivate(gg_unit_nwgt_0038, true)
     call SetUnitColor(gg_unit_nwgt_0038, ConvertPlayerColor(1))
     set gg_unit_ngad_0047=CreateUnit(p, 'ngad', 640.0, - 4288.0, 270.000)
-    set u=CreateUnit(p, 'ngad', 3264.0, - 3648.0, 270.000)
+    set gg_unit_ngad_0089=CreateUnit(p, 'ngad', 3264.0, - 3648.0, 270.000)
     set gg_unit_nwgt_0108=CreateUnit(p, 'nwgt', 64.0, - 1344.0, 270.000)
     call WaygateSetDestination(gg_unit_nwgt_0108, GetRectCenterX(gg_rct_Waygate01B), GetRectCenterY(gg_rct_Waygate01B))
     call WaygateActivate(gg_unit_nwgt_0108, true)
@@ -1590,8 +1598,12 @@ function InitTrig_map_config takes nothing returns nothing
     set location_names[20]="Slay Sylvanas"
     set location_names[21]="Northwest Altar"
     set location_names[22]="North Altar"
-    set location_names[23]="North Altar"
+    set location_names[23]="Southeast Altar"
     set location_names[24]="Charter Zeppelins"
+    set location_names[25]="Northwest Castle"
+    set location_names[26]="North Castle"
+    set location_names[27]="South Goblin Laboratory"
+    set location_names[28]="Southeast Goblin Laboratory"
 endfunction
 //===========================================================================
 // Trigger: status
@@ -2856,13 +2868,150 @@ function InitTrig_irregulars takes nothing returns nothing
     call Preload("Abilities\\Spells\\Human\\Polymorph\\PolyMorphDoneGround.mdl")
 endfunction
 //===========================================================================
+// Trigger: AP Load Arthas
+//===========================================================================
+function Trig_AP_Load_Arthas_Func003001 takes nothing returns boolean
+    return ( udg_Arthas != null )
+endfunction
+
+function Trig_AP_Load_Arthas_Actions takes nothing returns nothing
+    // Load the hero data
+    set udg_Arthas=hero_create(0, USER_PLAYER, GetRectCenterX(gg_rct_ArthasStart), GetRectCenterY(gg_rct_ArthasStart), 285.0)
+    if ( Trig_AP_Load_Arthas_Func003001() ) then
+        return
+    else
+        call DoNothing()
+    endif
+    // If the hero data wasn't found, create a default hero
+    set udg_Arthas=CreateUnit(USER_PLAYER, 'Uear', GetRectCenterX(gg_rct_ArthasStart), GetRectCenterY(gg_rct_ArthasStart), 285.0)
+    set hero_abil_1[0]='AUdc'
+    set hero_abil_2[0]='AUdp'
+    set hero_abil_3[0]='AUau'
+    set hero_abil_4[0]='AUan'
+endfunction
+
+//===========================================================================
+function InitTrig_AP_Load_Arthas takes nothing returns nothing
+    set gg_trg_AP_Load_Arthas=CreateTrigger()
+    call TriggerAddAction(gg_trg_AP_Load_Arthas, function Trig_AP_Load_Arthas_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: AP mercenaries
+//===========================================================================
+
+function mercenaries_create_camp takes nothing returns nothing
+    if mercenary_camp != null then
+        return
+    endif
+    set mercenary_camp=CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), 'nmrd', 2176.0, -5632.0, 270.0)
+    call SetUnitColor(mercenary_camp, ConvertPlayerColor(2))
+endfunction
+
+function mercenaries_apply takes nothing returns nothing
+    local integer index= 0
+    local integer mask= 536870912  // 1 << 29
+    local integer scanned= 0
+    local integer signal= 'ncrb'
+    local unit target_camp= mercenary_camp
+    local integer u
+    loop
+        exitwhen mask == 0
+        if mask == 524288 then  // 1 << 19
+            set signal='ndog'
+            set index=0
+            set target_camp=null
+        elseif mask == 512 then  // 1 << 9
+            set signal='ndwm'
+            set index=0
+            set target_camp=null
+        endif
+        set u=GetPlayerTechMaxAllowed(Player(index), signal)
+        if units_added - scanned >= mask then
+            // already added
+            set scanned=scanned + mask
+        elseif u > 0 then
+            // add the unit
+            call AddUnitToStock(target_camp, u, 1, 2)
+            set scanned=scanned + mask
+            set units_added=units_added + mask
+        endif
+        set mask=mask / 2
+        set index=index + 1
+    endloop
+endfunction
+
+function InitTrig_AP_mercenaries takes nothing returns nothing
+    call TriggerAddAction(t_create_mercenary_camps, function mercenaries_create_camp)
+    call TriggerAddAction(t_apply_mercenaries, function mercenaries_apply)
+endfunction
+//===========================================================================
+// Trigger: Shop locations
+//===========================================================================
+function Trig_Shop_locations_Actions takes nothing returns nothing
+    call AddItemToStockBJ('I02b', gg_unit_ngad_0047, 1, 1)
+    call AddItemToStockBJ('I02c', gg_unit_ngad_0089, 1, 1)
+endfunction
+
+//===========================================================================
+function InitTrig_Shop_locations takes nothing returns nothing
+    set gg_trg_Shop_locations=CreateTrigger()
+    call TriggerAddAction(gg_trg_Shop_locations, function Trig_Shop_locations_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Slay Sylvanas
+//===========================================================================
+function Trig_Slay_Sylvanas_Actions takes nothing returns nothing
+    call DisableTrigger(GetTriggeringTrigger())
+    call status_check_location(20)
+endfunction
+
+//===========================================================================
+function InitTrig_Slay_Sylvanas takes nothing returns nothing
+    set gg_trg_Slay_Sylvanas=CreateTrigger()
+    call TriggerRegisterUnitEvent(gg_trg_Slay_Sylvanas, gg_unit_Hvwd_0033, EVENT_UNIT_DEATH)
+    call TriggerAddAction(gg_trg_Slay_Sylvanas, function Trig_Slay_Sylvanas_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Northwest base location
+//===========================================================================
+function Trig_Northwest_base_location_Actions takes nothing returns nothing
+    call DisableTrigger(GetTriggeringTrigger())
+    call status_check_location(25)
+endfunction
+
+//===========================================================================
+function InitTrig_Northwest_base_location takes nothing returns nothing
+    set gg_trg_Northwest_base_location=CreateTrigger()
+    call TriggerRegisterUnitEvent(gg_trg_Northwest_base_location, gg_unit_hcas_0028, EVENT_UNIT_DEATH)
+    call TriggerAddAction(gg_trg_Northwest_base_location, function Trig_Northwest_base_location_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: North base location
+//===========================================================================
+function Trig_North_base_location_Actions takes nothing returns nothing
+    call DisableTrigger(GetTriggeringTrigger())
+    call status_check_location(26)
+endfunction
+
+//===========================================================================
+function InitTrig_North_base_location takes nothing returns nothing
+    set gg_trg_North_base_location=CreateTrigger()
+    call TriggerRegisterUnitEvent(gg_trg_North_base_location, gg_unit_hcas_0014, EVENT_UNIT_DEATH)
+    call TriggerAddAction(gg_trg_North_base_location, function Trig_North_base_location_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: Initialization
 //===========================================================================
-function Trig_Initialization_Func164002 takes nothing returns nothing
+function Trig_Initialization_Func165002 takes nothing returns nothing
     call SetUnitPathing(GetEnumUnit(), false)
 endfunction
 
-function Trig_Initialization_Func165002 takes nothing returns nothing
+function Trig_Initialization_Func166002 takes nothing returns nothing
     call SetUnitPathing(GetEnumUnit(), false)
 endfunction
 
@@ -2988,7 +3137,8 @@ function Trig_Initialization_Actions takes nothing returns nothing
     call SetPlayerOnScoreScreenBJ(false, Player(2))
     call SetPlayerOnScoreScreenBJ(false, udg_P_Reinforcements)
     // Init Unit Properties
-    call ConditionalTriggerExecute(gg_trg___Load_Arthas)
+    call ConditionalTriggerExecute(gg_trg_AP_Load_Arthas)
+    call SetUnitInvulnerable(udg_Arthas, true)
     call SuspendHeroXPBJ(false, udg_Arthas)
     call SetHeroLevelBJ(udg_Sylvanas, 5, false)
     call SuspendHeroXPBJ(false, udg_Sylvanas)
@@ -3030,8 +3180,8 @@ function Trig_Initialization_Actions takes nothing returns nothing
     call RemoveGuardPosition(gg_unit_hmpr_0075)
     call RemoveGuardPosition(gg_unit_nhea_0077)
     // Init Funky No Pathing Towers
-    call ForGroupBJ(GetUnitsInRectAll(gg_rct_PATH_Guard_TowersA), function Trig_Initialization_Func164002)
-    call ForGroupBJ(GetUnitsInRectAll(gg_rct_PATH_Guard_TowersB), function Trig_Initialization_Func165002)
+    call ForGroupBJ(GetUnitsInRectAll(gg_rct_PATH_Guard_TowersA), function Trig_Initialization_Func165002)
+    call ForGroupBJ(GetUnitsInRectAll(gg_rct_PATH_Guard_TowersB), function Trig_Initialization_Func166002)
     call SetUnitPositionLoc(GroupPickRandomUnit(GetUnitsInRectAll(gg_rct_PATH_Guard_TowersA)), GetRectCenter(gg_rct_PATH_Guard_Tower01A))
     call SetUnitPositionLoc(GroupPickRandomUnit(GetUnitsInRectAll(gg_rct_PATH_Guard_TowersA)), GetRectCenter(gg_rct_PATH_Guard_Tower02A))
     call SetUnitPositionLoc(GroupPickRandomUnit(GetUnitsInRectAll(gg_rct_PATH_Guard_TowersA)), GetRectCenter(gg_rct_PATH_Guard_Tower03A))
@@ -3064,46 +3214,6 @@ endfunction
 function InitTrig_Initialization takes nothing returns nothing
     set gg_trg_Initialization=CreateTrigger()
     call TriggerAddAction(gg_trg_Initialization, function Trig_Initialization_Actions)
-endfunction
-
-//===========================================================================
-// Trigger:   Load Arthas
-//
-// Attempt to load the hero.
-// Upon failure, create a default version of the hero.
-//===========================================================================
-function Trig___Load_Arthas_Func006001 takes nothing returns boolean
-    return ( udg_Arthas != null )
-endfunction
-
-function Trig___Load_Arthas_Actions takes nothing returns nothing
-    // Load the hero data
-    call InitGameCacheBJ("Campaigns.w3v")
-    call RestoreUnitLocFacingAngleBJ("Arthas", "Undead04", GetLastCreatedGameCacheBJ(), udg_AAAP_Undead, GetRectCenter(gg_rct_ArthasStart), 285.00)
-    set udg_Arthas=GetLastRestoredUnitBJ()
-    call SetUnitInvulnerable(udg_Arthas, true)
-    if ( Trig___Load_Arthas_Func006001() ) then
-        return
-    else
-        call DoNothing()
-    endif
-    // If the hero data wasn't found, create a default hero
-    call CreateNUnitsAtLoc(1, 'Uear', udg_AAAP_Undead, GetRectCenter(gg_rct_ArthasStart), 285.00)
-    set udg_Arthas=GetLastCreatedUnit()
-    call SetUnitInvulnerable(udg_Arthas, true)
-    call SetHeroLevelBJ(udg_Arthas, 4, false)
-    call SelectHeroSkill(udg_Arthas, 'AUdc')
-    call SelectHeroSkill(udg_Arthas, 'AUdc')
-    call SelectHeroSkill(udg_Arthas, 'AUdp')
-    call SelectHeroSkill(udg_Arthas, 'AUau')
-    call UnitAddItemByIdSwapped('ktrm', udg_Arthas)
-    call SetItemDroppableBJ(GetLastCreatedItem(), false)
-endfunction
-
-//===========================================================================
-function InitTrig___Load_Arthas takes nothing returns nothing
-    set gg_trg___Load_Arthas=CreateTrigger()
-    call TriggerAddAction(gg_trg___Load_Arthas, function Trig___Load_Arthas_Actions)
 endfunction
 
 //===========================================================================
@@ -4536,7 +4646,7 @@ endfunction
 function Trig_Crate01_Actions takes nothing returns nothing
     call DisableTrigger(GetTriggeringTrigger())
     call TriggerSleepAction(0.10)
-    call CreateItemLoc('sman', GetRectCenter(gg_rct_Crate01))
+    call CreateItemLoc('I011', GetRectCenter(gg_rct_Crate01))
 endfunction
 
 //===========================================================================
@@ -4580,7 +4690,7 @@ endfunction
 function Trig_Crate03_Actions takes nothing returns nothing
     call DisableTrigger(GetTriggeringTrigger())
     call TriggerSleepAction(0.10)
-    call CreateItemLoc('pghe', GetRectCenter(gg_rct_Crate03))
+    call CreateItemLoc('I012', GetRectCenter(gg_rct_Crate03))
 endfunction
 
 //===========================================================================
@@ -4805,7 +4915,7 @@ endfunction
 function Trig_Kill_Altar01_Actions takes nothing returns nothing
     call DisableTrigger(GetTriggeringTrigger())
     call TriggerSleepAction(0.20)
-    call CreateItemLoc('k3m1', GetRectCenter(gg_rct_Altar01))
+    call CreateItemLoc('I025', GetRectCenter(gg_rct_Altar01))
     set udg_Key01=GetLastCreatedItem()
     set udg_Altar01Destroyed=true
     call SetItemInvulnerableBJ(udg_Key01, true)
@@ -4835,7 +4945,7 @@ endfunction
 function Trig_Kill_Altar02_Actions takes nothing returns nothing
     call DisableTrigger(GetTriggeringTrigger())
     call TriggerSleepAction(0.20)
-    call CreateItemLoc('k3m1', GetRectCenter(gg_rct_Altar02))
+    call CreateItemLoc('I026', GetRectCenter(gg_rct_Altar02))
     set udg_Key02=GetLastCreatedItem()
     set udg_Altar02Destroyed=true
     call SetItemInvulnerableBJ(udg_Key02, true)
@@ -4864,7 +4974,7 @@ endfunction
 function Trig_Kill_Altar03_Actions takes nothing returns nothing
     call DisableTrigger(GetTriggeringTrigger())
     call TriggerSleepAction(0.20)
-    call CreateItemLoc('k3m1', GetRectCenter(gg_rct_Altar03))
+    call CreateItemLoc('I027', GetRectCenter(gg_rct_Altar03))
     set udg_Key03=GetLastCreatedItem()
     set udg_Altar03Destroyed=true
     call SetItemInvulnerableBJ(udg_Key03, true)
@@ -5552,6 +5662,7 @@ function Trig_Rescue_Zeppelins_Queue_Actions takes nothing returns nothing
     call RescueUnitBJ(udg_Zeppelin01, udg_AAAP_Undead, true)
     call RescueUnitBJ(udg_Zeppelin02, udg_AAAP_Undead, true)
     call QuestMessageBJ(udg_AAAPG_Undead, bj_QUESTMESSAGE_HINT, "TRIGSTR_447")
+    call status_check_location(24)
     call PingMinimapLocForForce(GetPlayersAll(), GetRectCenter(gg_rct_GoblinLaboratory), 5.00)
     call SetCameraQuickPositionLocForPlayer(udg_AAAP_Undead, GetRectCenter(gg_rct_GoblinLaboratory))
     call PlaySoundBJ(gg_snd_GoblinZeppelinReady1)
@@ -5602,29 +5713,6 @@ function InitTrig_DisableVisibility takes nothing returns nothing
     call TriggerRegisterEnterRectSimple(gg_trg_DisableVisibility, gg_rct_RevealLandingSpot)
     call TriggerAddCondition(gg_trg_DisableVisibility, Condition(function Trig_DisableVisibility_Conditions))
     call TriggerAddAction(gg_trg_DisableVisibility, function Trig_DisableVisibility_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: Cap Arthas Experience
-//===========================================================================
-function Trig_Cap_Arthas_Experience_Conditions takes nothing returns boolean
-    if ( not ( GetHeroLevel(udg_Arthas) >= 5 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Cap_Arthas_Experience_Actions takes nothing returns nothing
-    call DisableTrigger(GetTriggeringTrigger())
-    call SuspendHeroXPBJ(false, udg_Arthas)
-endfunction
-
-//===========================================================================
-function InitTrig_Cap_Arthas_Experience takes nothing returns nothing
-    set gg_trg_Cap_Arthas_Experience=CreateTrigger()
-    call TriggerRegisterPlayerUnitEventSimple(gg_trg_Cap_Arthas_Experience, Player(3), EVENT_PLAYER_HERO_LEVEL)
-    call TriggerAddCondition(gg_trg_Cap_Arthas_Experience, Condition(function Trig_Cap_Arthas_Experience_Conditions))
-    call TriggerAddAction(gg_trg_Cap_Arthas_Experience, function Trig_Cap_Arthas_Experience_Actions)
 endfunction
 
 //===========================================================================
@@ -5988,11 +6076,11 @@ function Trig_Victory_Cinematic_Actions takes nothing returns nothing
     call UseTimeOfDayBJ(false)
     // Save Game Data
     call RemoveItem(udg_Key3Part)
-    call ConditionalTriggerExecute(gg_trg_Next_Level_Prep)
     call EnableTrigger(gg_trg_Victory_Cancel)
     // Start Cinematic
     call CameraSetupApplyForPlayer(true, gg_cam_End00A, udg_AAAP_Undead, 0)
     call CinematicModeBJ(true, udg_AAAPG_Undead)
+    call status_check_location(0)
     call SetSkyModel("Environment\\Sky\\DalaranSky\\DalaranSky.mdl")
     call SetTerrainFogExBJ(0, 900.00, 4500.00, 0, 0.00, 40.00, 60.00)
     if ( Trig_Victory_Cinematic_Func016001() ) then
@@ -6300,29 +6388,11 @@ function InitTrig_Defeat takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: Next Level Prep
-//===========================================================================
-function Trig_Next_Level_Prep_Actions takes nothing returns nothing
-    // Save hero data
-    call InitGameCacheBJ("Campaigns.w3v")
-    call StoreUnitBJ(udg_Arthas, "Arthas", "Undead05", GetLastCreatedGameCacheBJ())
-    call SaveGameCacheBJ(GetLastCreatedGameCacheBJ())
-    // Enable next level
-    call SetMissionAvailableBJ(true, bj_MISSION_INDEX_U07)
-endfunction
-
-//===========================================================================
-function InitTrig_Next_Level_Prep takes nothing returns nothing
-    set gg_trg_Next_Level_Prep=CreateTrigger()
-    call TriggerAddAction(gg_trg_Next_Level_Prep, function Trig_Next_Level_Prep_Actions)
-endfunction
-
-//===========================================================================
 // Trigger: Next Level Run
 //===========================================================================
 function Trig_Next_Level_Run_Actions takes nothing returns nothing
     // Run next level
-    call SetNextLevelBJ("Maps\\Campaign\\Undead05.w3m")
+    call SetNextLevelBJ("CampaignSelect.w3x")
     call CustomVictoryBJ(udg_AAAP_Undead, true, true)
 endfunction
 
@@ -6336,7 +6406,7 @@ endfunction
 // Trigger: Victory Cheat
 //===========================================================================
 function Trig_Victory_Cheat_Actions takes nothing returns nothing
-    call ConditionalTriggerExecute(gg_trg_Next_Level_Prep)
+    call status_check_location(0)
     call ConditionalTriggerExecute(gg_trg_Next_Level_Run)
 endfunction
 
@@ -6386,8 +6456,13 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_debug()
     call InitTrig_zoom()
     call InitTrig_irregulars()
+    call InitTrig_AP_Load_Arthas()
+    call InitTrig_AP_mercenaries()
+    call InitTrig_Shop_locations()
+    call InitTrig_Slay_Sylvanas()
+    call InitTrig_Northwest_base_location()
+    call InitTrig_North_base_location()
     call InitTrig_Initialization()
-    call InitTrig___Load_Arthas()
     call InitTrig_Handicap()
     call InitTrig_Difficulty_Not_Hard()
     call InitTrig_Intro_Cinematic()
@@ -6444,7 +6519,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Rescue_Zeppelins()
     call InitTrig_Rescue_Zeppelins_Queue()
     call InitTrig_DisableVisibility()
-    call InitTrig_Cap_Arthas_Experience()
     call InitTrig_Unsummon_Hint()
     call InitTrig_Unsummon_QUE()
     call InitTrig_Mooncrystal01Hint()
@@ -6458,7 +6532,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Enable_Defeat()
     call InitTrig_Unit_Defeat()
     call InitTrig_Defeat()
-    call InitTrig_Next_Level_Prep()
     call InitTrig_Next_Level_Run()
     call InitTrig_Victory_Cheat()
     call InitTrig_Defeat_Cheat()
@@ -6467,6 +6540,7 @@ endfunction
 
 //===========================================================================
 function RunInitializationTriggers takes nothing returns nothing
+    call ConditionalTriggerExecute(gg_trg_Shop_locations)
     call ConditionalTriggerExecute(gg_trg_Initialization)
 endfunction
 

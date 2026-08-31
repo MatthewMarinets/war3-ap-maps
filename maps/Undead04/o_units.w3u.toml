@@ -303,6 +303,34 @@ table_column = 0
 value = "ngsp,nzep"
 object_id = 'null'
 
+[[blizzard_objects.ngad.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Ane2,Andt,Avul,Asid"
+object_id = 'null'
+
+[blizzard_objects.nmrd]
+parent_id = 'nmrd'  # Mercenary Camp
+entity_id = 'null'
+
+[[blizzard_objects.nmrd.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Asud,Ane2,Avul"
+object_id = 'nmrd'  # Mercenary Camp
+
+[[blizzard_objects.nmrd.modifications]]
+modification_id = 'useu'  # Profile.Units Sold
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'nmrd'  # Mercenary Camp
+
 [blizzard_objects.Orkn]
 parent_id = 'Orkn'  # Shadow Hunter
 entity_id = 'null'

@@ -1579,7 +1579,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "North Altar"
+value = "Southeast Altar"
 object_id = 'null'
 
 [[map_objects.I027.modifications]]
@@ -1587,7 +1587,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase North Altar"
+value = "Purchase Southeast Altar"
 object_id = 'null'
 
 [[map_objects.I027.modifications]]
@@ -1595,7 +1595,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"North Altar\" location."
+value = "Collects the \"Southeast Altar\" location."
 object_id = 'null'
 
 [[map_objects.I027.modifications]]
@@ -1603,7 +1603,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"North Altar\" location."
+value = "Collects the \"Southeast Altar\" location."
 object_id = 'null'
 
 [[map_objects.I027.modifications]]
@@ -1715,7 +1715,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 25"
+value = "Northwest Castle"
 object_id = 'null'
 
 [[map_objects.I029.modifications]]
@@ -1723,7 +1723,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 25"
+value = "Purchase Northwest Castle"
 object_id = 'null'
 
 [[map_objects.I029.modifications]]
@@ -1731,7 +1731,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 25\" location."
+value = "Collects the \"Northwest Castle\" location."
 object_id = 'null'
 
 [[map_objects.I029.modifications]]
@@ -1739,7 +1739,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 25\" location."
+value = "Collects the \"Northwest Castle\" location."
 object_id = 'null'
 
 [[map_objects.I029.modifications]]
@@ -1783,7 +1783,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 26"
+value = "North Castle"
 object_id = 'null'
 
 [[map_objects.I02a.modifications]]
@@ -1791,7 +1791,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 26"
+value = "Purchase North Castle"
 object_id = 'null'
 
 [[map_objects.I02a.modifications]]
@@ -1799,7 +1799,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 26\" location."
+value = "Collects the \"North Castle\" location."
 object_id = 'null'
 
 [[map_objects.I02a.modifications]]
@@ -1807,7 +1807,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 26\" location."
+value = "Collects the \"North Castle\" location."
 object_id = 'null'
 
 [[map_objects.I02a.modifications]]
@@ -1851,7 +1851,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 27"
+value = "South Goblin Laboratory"
 object_id = 'null'
 
 [[map_objects.I02b.modifications]]
@@ -1859,7 +1859,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 27"
+value = "Purchase South Goblin Laboratory"
 object_id = 'null'
 
 [[map_objects.I02b.modifications]]
@@ -1867,7 +1867,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 27\" location."
+value = "Collects the \"South Goblin Laboratory\" location."
 object_id = 'null'
 
 [[map_objects.I02b.modifications]]
@@ -1875,7 +1875,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 27\" location."
+value = "Collects the \"South Goblin Laboratory\" location."
 object_id = 'null'
 
 [[map_objects.I02b.modifications]]
@@ -1919,7 +1919,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 28"
+value = "Southeast Goblin Laboratory"
 object_id = 'null'
 
 [[map_objects.I02c.modifications]]
@@ -1927,7 +1927,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 28"
+value = "Purchase Southeast Goblin Laboratory"
 object_id = 'null'
 
 [[map_objects.I02c.modifications]]
@@ -1935,7 +1935,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 28\" location."
+value = "Collects the \"Southeast Goblin Laboratory\" location."
 object_id = 'null'
 
 [[map_objects.I02c.modifications]]
@@ -1943,7 +1943,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 28\" location."
+value = "Collects the \"Southeast Goblin Laboratory\" location."
 object_id = 'null'
 
 [[map_objects.I02c.modifications]]

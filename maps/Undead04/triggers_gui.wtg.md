@@ -15,7 +15,6 @@ version = TFT
 | 8 | Altars | False |
 | 9 | Keys | False |
 | 1 | Rescue Zeppelins | False |
-| 12 | Cap Arthas Experience | False |
 | 17 | Hints | False |
 | 10 | Gate | False |
 | 11 | Sylvanas Dies | False |
@@ -206,6 +205,139 @@ version = TFT
 
 ```
 ### Functions
+
+
+## AP Load Arthas
+- enabled: True
+- category: [18] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String set udg_Arthas = hero_create(0, USER_PLAYER, GetRectCenterX(gg_rct_ArthasStart), GetRectCenterY(gg_rct_ArthasStart), 285.0)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable Arthas
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CustomScriptCode
+  - param String set udg_Arthas = CreateUnit(USER_PLAYER, 'Uear', GetRectCenterX(gg_rct_ArthasStart), GetRectCenterY(gg_rct_ArthasStart), 285.0)
+- Action CustomScriptCode
+  - param String set hero_abil_1[0] = 'AUdc'
+- Action CustomScriptCode
+  - param String set hero_abil_2[0] = 'AUdp'
+- Action CustomScriptCode
+  - param String set hero_abil_3[0] = 'AUau'
+- Action CustomScriptCode
+  - param String set hero_abil_4[0] = 'AUan'
+
+
+## AP mercenaries
+- enabled: True
+- category: [18] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## Shop locations
+- enabled: True
+- category: [18] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action AddItemToStockBJ
+  - param String I02b
+  - param Variable gg_unit_ngad_0047
+  - param String 1
+  - param String 1
+- Action AddItemToStockBJ
+  - param String I02c
+  - param Variable gg_unit_ngad_0089
+  - param String 1
+  - param String 1
+- Event MapInitializationEvent
+
+
+## Slay Sylvanas
+- enabled: True
+- category: [18] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_Hvwd_0033
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(20)
+
+
+## Northwest base location
+- enabled: True
+- category: [18] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_hcas_0028
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(25)
+
+
+## North base location
+- enabled: True
+- category: [18] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_hcas_0014
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(26)
 
 
 ## Initialization
@@ -641,7 +773,10 @@ version = TFT
 - Action CommentString
   - param String Init Unit Properties
 - Action ConditionalTriggerExecute
-  - param Variable gg_trg___Load_Arthas
+  - param Variable gg_trg_AP_Load_Arthas
+- Action SetUnitInvulnerable
+  - param Variable Arthas
+  - param Preset InvulnerabilityInvulnerable
 - Action SuspendHeroXPBJ
   - param Preset EnableDisableDisable
   - param Variable Arthas
@@ -881,90 +1016,6 @@ version = TFT
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Intro_Cinematic
 - Event MapInitializationEvent
-
-
-##   Load Arthas
-- enabled: True
-- category: [0] Initialization
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-Attempt to load the hero.
-Upon failure, create a default version of the hero.
-```
-### Functions
-- Action CommentString
-  - param String Load the hero data
-- Action InitGameCacheBJ
-  - param String Campaigns.w3v
-- Action RestoreUnitLocFacingAngleBJ
-  - param String Arthas
-  - param String Undead04
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-  - param Variable AAAP_Undead
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_ArthasStart
-  - param String 285.00
-- Action SetVariable
-  - param Variable Arthas
-  - param Function GetLastRestoredUnitBJ
-    - Function GetLastRestoredUnitBJ
-- Action SetUnitInvulnerable
-  - param Variable Arthas
-  - param Preset InvulnerabilityInvulnerable
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareUnit
-      - param Variable Arthas
-      - param Preset OperatorNotEqualENE
-      - param Preset UnitNull
-  - param Function DoNothing
-    - Action ReturnAction
-  - param Function DoNothing
-    - Action DoNothing
-- Action CommentString
-  - param String If the hero data wasn't found, create a default hero
-- Action CreateNUnitsAtLoc
-  - param String 1
-  - param String Uear
-  - param Variable AAAP_Undead
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_ArthasStart
-  - param String 285.00
-- Action SetVariable
-  - param Variable Arthas
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-- Action SetUnitInvulnerable
-  - param Variable Arthas
-  - param Preset InvulnerabilityInvulnerable
-- Action SetHeroLevel
-  - param Variable Arthas
-  - param String 4
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDeathCoil
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDeathCoil
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDeathPact
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillUnholyAura
-- Action UnitAddItemByIdSwapped
-  - param String ktrm
-  - param Variable Arthas
-- Action SetItemDroppableBJ
-  - param Function GetLastCreatedItem
-    - Function GetLastCreatedItem
-  - param Preset DropNoDropOptionNoDrop
 
 
 ## Handicap
@@ -3848,7 +3899,7 @@ Upon failure, create a default version of the hero.
 - Action TriggerSleepAction
   - param String 0.10
 - Action CreateItemLoc
-  - param String sman
+  - param String I011
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Crate01
@@ -3922,7 +3973,7 @@ Upon failure, create a default version of the hero.
 - Action TriggerSleepAction
   - param String 0.10
 - Action CreateItemLoc
-  - param String pghe
+  - param String I012
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Crate03
@@ -4263,7 +4314,7 @@ Upon failure, create a default version of the hero.
 - Action TriggerSleepAction
   - param String 0.20
 - Action CreateItemLoc
-  - param String k3m1
+  - param String I025
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Altar01
@@ -4310,7 +4361,7 @@ Upon failure, create a default version of the hero.
 - Action TriggerSleepAction
   - param String 0.20
 - Action CreateItemLoc
-  - param String k3m1
+  - param String I026
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Altar02
@@ -4355,7 +4406,7 @@ Upon failure, create a default version of the hero.
 - Action TriggerSleepAction
   - param String 0.20
 - Action CreateItemLoc
-  - param String k3m1
+  - param String I027
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_Altar03
@@ -5486,6 +5537,8 @@ Upon failure, create a default version of the hero.
   - param Variable AAAPG_Undead
   - param Preset QuestMessageTypeHint
   - param String TRIGSTR_447
+- Action CustomScriptCode
+  - param String call status_check_location(24)
 - Action PingMinimapLocForForce
   - param Function GetPlayersAll
     - Function GetPlayersAll
@@ -5586,33 +5639,6 @@ Upon failure, create a default version of the hero.
   - param String nzep
 - Event TriggerRegisterEnterRectSimple
   - param Variable gg_rct_RevealLandingSpot
-
-
-## Cap Arthas Experience
-- enabled: True
-- category: [12] Cap Arthas Experience
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action DisableTrigger
-  - param Function GetTriggeringTrigger
-    - Function GetTriggeringTrigger
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableDisable
-  - param Variable Arthas
-- Condition OperatorCompareInteger
-  - param Function GetHeroLevel
-    - Function GetHeroLevel
-      - param Variable Arthas
-  - param Preset OperatorGreaterEq
-  - param String 5
-- Event TriggerRegisterPlayerUnitEventSimple
-  - param Preset Player03
-  - param Preset PlayerUnitEventHero_Level
 
 
 ## Unsummon Hint
@@ -6128,8 +6154,6 @@ Upon failure, create a default version of the hero.
   - param String Save Game Data
 - Action RemoveItem
   - param Variable Key3Part
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Next_Level_Prep
 - Action EnableTrigger
   - param Variable gg_trg_Victory_Cancel
 - Action CommentString
@@ -6142,6 +6166,8 @@ Upon failure, create a default version of the hero.
 - Action CinematicModeBJ
   - param Preset OnOffOn
   - param Variable AAAPG_Undead
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Action SetSkyModel
   - param Preset SkyModelSky02
 - Action SetTerrainFogExBJ
@@ -6863,36 +6889,6 @@ Upon failure, create a default version of the hero.
   - param Preset PlayerUnitEventDeath
 
 
-## Next Level Prep
-- enabled: True
-- category: [16] Level Data
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action CommentString
-  - param String Save hero data
-- Action InitGameCacheBJ
-  - param String Campaigns.w3v
-- Action StoreUnitBJ
-  - param Variable Arthas
-  - param String Arthas
-  - param String Undead05
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action SaveGameCacheBJ
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action CommentString
-  - param String Enable next level
-- Action SetMissionAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset MissionIndexU07
-
-
 ## Next Level Run
 - enabled: True
 - category: [16] Level Data
@@ -6906,7 +6902,7 @@ Upon failure, create a default version of the hero.
 - Action CommentString
   - param String Run next level
 - Action SetNextLevelBJ
-  - param String Maps\Campaign\Undead05.w3m
+  - param String CampaignSelect.w3x
 - Action CustomVictoryBJ
   - param Variable AAAP_Undead
   - param Preset UseSkipOptionUse
@@ -6923,8 +6919,8 @@ Upon failure, create a default version of the hero.
 
 ```
 ### Functions
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Next_Level_Prep
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Next_Level_Run
 - Event TriggerRegisterPlayerEventVictory

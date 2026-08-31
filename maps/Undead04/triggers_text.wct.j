@@ -1,5 +1,5 @@
 // version: 1
-// Triggers: 86
+// Triggers: 89
 //\\// Trigger #0
 // This file defines file IO functions for the JASS side of things
 // Based off the FileIO module created by Nestharus, see:
@@ -142,8 +142,12 @@ function InitTrig_map_config takes nothing returns nothing
     set location_names[20] = "Slay Sylvanas"
     set location_names[21] = "Northwest Altar"
     set location_names[22] = "North Altar"
-    set location_names[23] = "North Altar"
+    set location_names[23] = "Southeast Altar"
     set location_names[24] = "Charter Zeppelins"
+    set location_names[25] = "Northwest Castle"
+    set location_names[26] = "North Castle"
+    set location_names[27] = "South Goblin Laboratory"
+    set location_names[28] = "Southeast Goblin Laboratory"
 endfunction
 
 //\\// Trigger #2
@@ -1473,6 +1477,58 @@ function InitTrig_irregulars takes nothing returns nothing
     call TriggerRegisterPlayerUnitEventSimple(t_irregulars_on_cast, USER_PLAYER, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddAction(t_irregulars_on_cast, function irregulars_on_cast)
     call Preload("Abilities\\Spells\\Human\\Polymorph\\PolyMorphDoneGround.mdl")
+endfunction
+
+//\\// Trigger #9
+globals
+unit mercenary_camp = null
+integer units_added = 0
+endglobals
+
+function mercenaries_create_camp takes nothing returns nothing
+    if mercenary_camp != null then
+        return
+    endif
+    set mercenary_camp = CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), 'nmrd', 2176.0, -5632.0, 270.0)
+    call SetUnitColor(mercenary_camp, ConvertPlayerColor(9))
+endfunction
+
+function mercenaries_apply takes nothing returns nothing
+    local integer index = 0
+    local integer mask = 536870912  // 1 << 29
+    local integer scanned = 0
+    local integer signal = 'ncrb'
+    local unit target_camp = mercenary_camp
+    local integer u
+    loop
+        exitwhen mask == 0
+        if mask == 524288 then  // 1 << 19
+            set signal = 'ndog'
+            set index = 0
+            set target_camp = null
+        elseif mask == 512 then  // 1 << 9
+            set signal = 'ndwm'
+            set index = 0
+            set target_camp = null
+        endif
+        set u = GetPlayerTechMaxAllowed(Player(index), signal)
+        if units_added - scanned >= mask then
+            // already added
+            set scanned = scanned + mask
+        elseif u > 0 then
+            // add the unit
+            call AddUnitToStock(target_camp, u, 1, 2)
+            set scanned = scanned + mask
+            set units_added = units_added + mask
+        endif
+        set mask = mask / 2
+        set index = index + 1
+    endloop
+endfunction
+
+function InitTrig_AP_mercenaries takes nothing returns nothing
+    call TriggerAddAction(t_create_mercenary_camps, function mercenaries_create_camp)
+    call TriggerAddAction(t_apply_mercenaries, function mercenaries_apply)
 endfunction
 
 //\\// End

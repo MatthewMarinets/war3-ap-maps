@@ -292,14 +292,18 @@ class Wc3Location(enum.IntEnum):
     # Quests:
     # (Main) Three Moons
     # (Main) Gates of Silvermoon
-    UD4_VICTORY =                  204000, "Victory",                  Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.VICTORY
-    UD4_FOREST_CRATE_ITEM =        204001, "Forest Crate Item",        Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.ITEM, "Scroll of Mana"
-    UD4_CENTER_ISLAND_CRATE_ITEM = 204002, "Center Island Crate Item", Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.ITEM, "Potion of Greater Healing"
-    UD4_SLAY_SYLVANAS =            204020, "Slay Sylvanas",            Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.HERO
-    UD4_NORTHWEST_ALTAR =          204021, "Northwest Altar",          Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.QUEST  # Key of 3 moons fragment
-    UD4_NORTH_ALTAR =              204022, "North Altar",              Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.QUEST  # Key of 3 moons fragment
-    UD4_SOUTHEAST_ALTAR =          204023, "North Altar",              Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.QUEST  # Key of 3 moons fragment
-    UD4_CHARTER_ZEPPELINS =        204024, "Charter Zeppelins",        Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.RESCUE
+    UD4_VICTORY =                     204000, "Victory",                     Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.VICTORY
+    UD4_FOREST_CRATE_ITEM =           204001, "Forest Crate Item",           Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.ITEM, "Scroll of Mana"
+    UD4_CENTER_ISLAND_CRATE_ITEM =    204002, "Center Island Crate Item",    Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.ITEM, "Potion of Greater Healing"
+    UD4_SLAY_SYLVANAS =               204020, "Slay Sylvanas",               Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.HERO
+    UD4_NORTHWEST_ALTAR =             204021, "Northwest Altar",             Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.QUEST_ITEM  # Key of 3 moons fragment
+    UD4_NORTH_ALTAR =                 204022, "North Altar",                 Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.QUEST_ITEM  # Key of 3 moons fragment
+    UD4_SOUTHEAST_ALTAR =             204023, "Southeast Altar",             Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.QUEST_ITEM  # Key of 3 moons fragment
+    UD4_CHARTER_ZEPPELINS =           204024, "Charter Zeppelins",           Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.RESCUE
+    UD4_NORTHWEST_BASE =              204025, "Northwest Castle",            Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.BASE
+    UD4_NORTH_BASE =                  204026, "North Castle",                Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.BASE
+    UD4_SOUTH_GOBLIN_LABORATORY =     204027, "South Goblin Laboratory",     Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.SHOP
+    UD4_SOUTHEAST_GOBLIN_LABORATORY = 204028, "Southeast Goblin Laboratory", Wc3Mission.U4_KEY_OF_THE_THREE_MOONS, Wc3LocationType.SHOP
 
     # Quests:
     # (Main) The Sunwell
