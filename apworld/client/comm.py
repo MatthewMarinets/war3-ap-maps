@@ -575,26 +575,34 @@ class LineReader:
         if self.lines and 'call PreloadStart' in self.lines[0]:
             # Reforged adds an extra line
             self.lines.pop(0)
+        self._filter_lines()
+
+    def _filter_lines(self) -> None:
+        index = 0
+        while index < len(self.lines):
+            if 'PreloadEnd' in self.lines[index]:
+                break
+            content = line_contents(self.lines[index], self.filename)
+            if ('\\\\' in content
+                and (
+                    content.endswith('.j')
+                    or content.endswith('.wav')
+                    or content.endswith('.mp3')
+                    or content.endswith('.mdx')
+                    or content.endswith('.mdl')
+                    or content.endswith('.blp')
+                )
+            ):
+                self.lines.pop(index)
+            else:
+                index += 1
 
     def eof(self) -> str:
         return not self.lines or END_TRANSMISSION in self.lines[0]
 
     def read_string(self) -> str:
         line = self.lines.pop(0)
-        content = line_contents(line, self.filename)
-        while ('\\\\' in content
-            and (
-                content.endswith('.j')
-                or content.endswith('.wav')
-                or content.endswith('.mp3')
-                or content.endswith('.mdx')
-                or content.endswith('.mdl')
-                or content.endswith('.blp')
-            )
-        ):
-            line = self.lines.pop(0)
-            content = line_contents(line, self.filename)
-        return content
+        return line_contents(line, self.filename)
 
     def read_int(self) -> str:
         return int(self.read_string())
