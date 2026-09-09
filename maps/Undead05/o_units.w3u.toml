@@ -1,6 +1,6 @@
 # Warcraft 3 Map Objects File (.w3o)
 # See w3o.py for type definitions
-version = 1
+version = 2
 has_levels = false
 
 [blizzard_objects.hpea]
@@ -271,6 +271,474 @@ table_column = 0
 value = 0
 object_id = 'null'
 
+[blizzard_objects.Orkn]
+parent_id = 'Orkn'  # Shadow Hunter
+entity_id = 'null'
+
+[[blizzard_objects.Orkn.modifications]]
+modification_id = 'uhab'  # UnitAbilities.Hero
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "AOhw,AOhx,AOsw,AOls"
+object_id = 'null'
+
+[[blizzard_objects.Orkn.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Cunning Hero, adept at healing magics and voodoo curses. Can learn Healing Wave, Hex, Serpent Ward and Voodoo Spirits. |n|n|cffffcc00Attacks land and air units.|r"
+object_id = 'null'
+
+[blizzard_objects.Orex]
+parent_id = 'Orex'  # Beastmaster
+entity_id = 'null'
+
+[[blizzard_objects.Orex.modifications]]
+modification_id = 'uhab'  # UnitAbilities.Hero
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Arsg,ANsq,AHtb,ANst"
+object_id = 'null'
+
+[[blizzard_objects.Orex.modifications]]
+modification_id = 'utub'  # Profile.Tooltip - Extended
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Warrior Hero, adept at summoning beasts into battle. Can learn Summon Misha, Summon Quilbeast, Storm Bolt, and Stampede. |n|n|cffffcc00Attacks land and air units.|r"
+object_id = 'null'
+
+[blizzard_objects.hgry]
+parent_id = 'hgry'  # Gryphon Rider
+entity_id = 'null'
+
+[[blizzard_objects.hgry.modifications]]
+modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "magic"
+object_id = 'null'
+
+[[blizzard_objects.hgry.modifications]]
+modification_id = 'ua2t'  # UnitWeapons.Attack 2 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "magic"
+object_id = 'null'
+
+[blizzard_objects.ufro]
+parent_id = 'ufro'  # Frost Wyrm
+entity_id = 'null'
+
+[[blizzard_objects.ufro.modifications]]
+modification_id = 'ua1t'  # UnitWeapons.Attack 1 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "magic"
+object_id = 'null'
+
+[[blizzard_objects.ufro.modifications]]
+modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 91
+object_id = 'null'
+
+[[blizzard_objects.ufro.modifications]]
+modification_id = 'ua1s'  # UnitWeapons.Attack 1 - Damage Sides per Die
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 12
+object_id = 'null'
+
+[[blizzard_objects.ufro.modifications]]
+modification_id = 'ua2t'  # UnitWeapons.Attack 2 - Attack Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "magic"
+object_id = 'null'
+
+[blizzard_objects.Hpal]
+parent_id = 'Hpal'  # Paladin
+entity_id = 'null'
+
+[[blizzard_objects.Hpal.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Hamg]
+parent_id = 'Hamg'  # Archmage
+entity_id = 'null'
+
+[[blizzard_objects.Hamg.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Hmkg]
+parent_id = 'Hmkg'  # Mountain King
+entity_id = 'null'
+
+[[blizzard_objects.Hmkg.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Hblm]
+parent_id = 'Hblm'  # Blood Mage
+entity_id = 'null'
+
+[[blizzard_objects.Hblm.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Udea]
+parent_id = 'Udea'  # Death Knight
+entity_id = 'null'
+
+[[blizzard_objects.Udea.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Ulic]
+parent_id = 'Ulic'  # Lich
+entity_id = 'null'
+
+[[blizzard_objects.Ulic.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Udre]
+parent_id = 'Udre'  # Dreadlord
+entity_id = 'null'
+
+[[blizzard_objects.Udre.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Ucrl]
+parent_id = 'Ucrl'  # Crypt Lord
+entity_id = 'null'
+
+[[blizzard_objects.Ucrl.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Obla]
+parent_id = 'Obla'  # Blademaster
+entity_id = 'null'
+
+[[blizzard_objects.Obla.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Ofar]
+parent_id = 'Ofar'  # Far Seer
+entity_id = 'null'
+
+[[blizzard_objects.Ofar.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Otch]
+parent_id = 'Otch'  # Tauren Chieftain
+entity_id = 'null'
+
+[[blizzard_objects.Otch.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Oshd]
+parent_id = 'Oshd'  # Shadow Hunter
+entity_id = 'null'
+
+[[blizzard_objects.Oshd.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Emoo]
+parent_id = 'Emoo'  # Priestess of the Moon
+entity_id = 'null'
+
+[[blizzard_objects.Emoo.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Ekee]
+parent_id = 'Ekee'  # Keeper of the Grove
+entity_id = 'null'
+
+[[blizzard_objects.Ekee.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Edem]
+parent_id = 'Edem'  # Demon Hunter
+entity_id = 'null'
+
+[[blizzard_objects.Edem.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Ewar]
+parent_id = 'Ewar'  # Warden
+entity_id = 'null'
+
+[[blizzard_objects.Ewar.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Nalc]
+parent_id = 'Nalc'  # Alchemist
+entity_id = 'null'
+
+[[blizzard_objects.Nalc.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Nbst]
+parent_id = 'Nbst'  # Beastmaster
+entity_id = 'null'
+
+[[blizzard_objects.Nbst.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Nbrn]
+parent_id = 'Nbrn'  # Dark Ranger
+entity_id = 'null'
+
+[[blizzard_objects.Nbrn.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Nfir]
+parent_id = 'Nfir'  # Firelord
+entity_id = 'null'
+
+[[blizzard_objects.Nfir.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Ntin]
+parent_id = 'Ntin'  # Tinker
+entity_id = 'null'
+
+[[blizzard_objects.Ntin.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Nngs]
+parent_id = 'Nngs'  # Naga Sea Witch
+entity_id = 'null'
+
+[[blizzard_objects.Nngs.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Npbm]
+parent_id = 'Npbm'  # Pandaren Brewmaster
+entity_id = 'null'
+
+[[blizzard_objects.Npbm.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Nplh]
+parent_id = 'Nplh'  # Pit Lord
+entity_id = 'null'
+
+[[blizzard_objects.Nplh.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Naka]
+parent_id = 'Naka'  # Elder Sage
+entity_id = 'null'
+
+[[blizzard_objects.Naka.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Ekgg]
+parent_id = 'Ekgg'  # Keeper of the Grove
+entity_id = 'null'
+
+[[blizzard_objects.Ekgg.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Edmm]
+parent_id = 'Edmm'  # Demon Hunter
+entity_id = 'null'
+
+[[blizzard_objects.Edmm.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Nalm]
+parent_id = 'Nalm'  # Alchemist
+entity_id = 'null'
+
+[[blizzard_objects.Nalm.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Nal2]
+parent_id = 'Nal2'  # Alchemist
+entity_id = 'null'
+
+[[blizzard_objects.Nal2.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Nal3]
+parent_id = 'Nal3'  # Alchemist
+entity_id = 'null'
+
+[[blizzard_objects.Nal3.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.Nrob]
+parent_id = 'Nrob'  # Tinker
+entity_id = 'null'
+
+[[blizzard_objects.Nrob.modifications]]
+modification_id = 'ufoo'  # UnitBalance.Food Cost
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
 
 [map_objects.hC00]
 parent_id = 'hpea'  # Peasant
@@ -307,3 +775,71 @@ variation_level = 0
 table_column = 0
 value = "ReplaceableTextures\\CommandButtons\\BTNElfVillager.tga"
 object_id = 'nhem'  # High Elf
+
+[map_objects.uA00]
+parent_id = 'nzom'  # Zombie
+entity_id = 'uA00'
+
+[[map_objects.uA00.modifications]]
+modification_id = 'unam'  # Profile.Name
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Fresh Meat"
+object_id = 'null'
+
+[[map_objects.uA00.modifications]]
+modification_id = 'uico'  # Profile.Icon - Game Interface
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "ReplaceableTextures\\CommandButtons\\BTNVillagerMan1.blp"
+object_id = 'null'
+
+[[map_objects.uA00.modifications]]
+modification_id = 'umdl'  # UnitUI.Model File
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "units\\critters\\VillagerMan1\\VillagerMan1.mdl"
+object_id = 'null'
+
+[[map_objects.uA00.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "APPu"
+object_id = 'null'
+
+[[map_objects.uA00.modifications]]
+modification_id = 'umpm'  # UnitBalance.Mana Maximum
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1
+object_id = 'null'
+
+[[map_objects.uA00.modifications]]
+modification_id = 'usnd'  # UnitUI.Unit Sound Set
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Acolyte"
+object_id = 'null'
+
+[[map_objects.uA00.modifications]]
+modification_id = 'uclg'  # UnitUI.Tinting Color 2 (Green)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 255
+object_id = 'null'
+
+[[map_objects.uA00.modifications]]
+modification_id = 'uclb'  # UnitUI.Tinting Color 3 (Blue)
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 255
+object_id = 'null'
