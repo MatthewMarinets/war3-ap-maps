@@ -41,6 +41,7 @@ Tichondrius
 }
 
 STRING 12
+// Sound\Dialogue\UndeadCampaign\Undead05A\U05ATichondrius01.mp3
 {
 You've done well... so far. But the true test still lies before you.
 }
@@ -51,6 +52,7 @@ Arthas
 }
 
 STRING 14
+// Sound\Dialogue\UndeadCampaign\Undead05A\U05AArthas02.mp3
 {
 I was wondering when you'd show up.
 }
@@ -61,6 +63,7 @@ Tichondrius
 }
 
 STRING 16
+// Sound\Dialogue\UndeadCampaign\Undead05A\U05ATichondrius03.mp3
 {
 I am here to ensure that you do your job, little human. Not do it for you.
 }
@@ -71,6 +74,7 @@ Arthas
 }
 
 STRING 18
+// Sound\Dialogue\UndeadCampaign\Undead05A\U05AArthas04.mp3
 {
 I will reach the Sunwell on my own, dreadlord.
 }
@@ -81,6 +85,7 @@ Tichondrius
 }
 
 STRING 20
+// Sound\Dialogue\UndeadCampaign\Undead05A\U05ATichondrius05.mp3
 {
 Be warned. It is a pool of mystical energy from which the elves draw their immortal powers. They will not give it up easily.
 }
@@ -91,6 +96,7 @@ Arthas
 }
 
 STRING 22
+// Sound\Dialogue\UndeadCampaign\Undead05A\U05AArthas06.mp3
 {
 Do you think that he suspects that you've been aiding me, necromancer?
 }
@@ -101,6 +107,7 @@ Kel'Thuzad
 }
 
 STRING 26
+// Sound\Dialogue\UndeadCampaign\Undead05A\U05AKelThuzad07.mp3
 {
 I'm sure he suspects quite a bit. It is his nature to assume the worst. Now steel yourself. The hour of my rebirth draws near.
 }
@@ -167,6 +174,7 @@ Arthas
 }
 
 STRING 49
+// Sound\Dialogue\UndeadCampaign\Undead04A\U04AArthas19.mp3
 {
 I salute your bravery, elf, but the chase is over.
 }
@@ -178,17 +186,13 @@ The Sunwell
   - Defeat the Sunwell's Guardians
 }
 
-STRING 59
-{
-Runner
-}
-
 STRING 62
 {
 Sylvanas Windrunner
 }
 
 STRING 63
+// Sound\Dialogue\UndeadCampaign\Undead04A\U04ASylvanas20.mp3
 {
 Then I'll make my stand here, butcher. Anar'alah belore.
 }
@@ -199,6 +203,7 @@ Sylvanas Windrunner
 }
 
 STRING 65
+// Sound\Dialogue\UndeadCampaign\Undead04A\U04ASylvanas21.mp3
 {
 Finish it! I deserve... a clean death.
 }
@@ -209,6 +214,7 @@ Arthas
 }
 
 STRING 67
+// Sound\Dialogue\UndeadCampaign\Undead04A\U04AArthas22.mp3
 {
 After all you've put me through, woman, the last thing I'll give you is the peace of death.
 }
@@ -219,6 +225,7 @@ Sylvanas Windrunner
 }
 
 STRING 69
+// Sound\Dialogue\UndeadCampaign\Undead04A\U04ASylvanas23.mp3
 {
 No! You wouldn't dare!
 }
@@ -229,6 +236,7 @@ Arthas
 }
 
 STRING 74
+// Sound\Dialogue\UndeadCampaign\Undead05A\U05AArthas22.mp3
 {
 Citizens of Silvermoon! I have given you ample opportunities to surrender, but you have stubbornly refused! Know that today, your entire race and your ancient heritage will end! Death itself has come to claim the high home of the elves!
 }
@@ -255,6 +263,7 @@ Defeat!
 }
 
 STRING 87
+// Sound\Dialogue\UndeadCampaign\Undead05A\U05AArthas30.mp3
 {
 Now, arise, Kel'Thuzad, and serve the Lich King once again!
 }
@@ -265,6 +274,7 @@ Kel'Thuzad
 }
 
 STRING 89
+// Sound\Dialogue\UndeadCampaign\Undead05A\U05AKelThuzad31.mp3
 {
 I am reborn, as promised! The Lich King has granted me eternal life!
 }
@@ -275,6 +285,7 @@ Arthas
 }
 
 STRING 91
+// Sound\Dialogue\UndeadCampaign\Undead05A\U05AArthas32.mp3
 {
 I've upheld my end of the bargain, lich. Are you ready to tell me about the dreadlords now?
 }
@@ -285,6 +296,7 @@ Kel'Thuzad
 }
 
 STRING 93
+// Sound\Dialogue\UndeadCampaign\Undead05A\U05AKelThuzad33.mp3
 {
 Certainly. But not here. They have eyes and ears everywhere. We'll talk where it's safe.
 }
@@ -327,6 +339,7 @@ Sylvanas Windrunner
 }
 
 STRING 115
+// Sound\Dialogue\UndeadCampaign\Undead05A\U05ASylvanas08.mp3
 {
 Did you forget about us, you wretches? Bash'a no falor talah!
 }
@@ -337,6 +350,7 @@ Kel'Thuzad
 }
 
 STRING 117
+// Sound\Dialogue\UndeadCampaign\Undead04A\U04AKelThuzad08.mp3
 {
 She is persistent. Reminds me of you, death knight.
 }
@@ -347,6 +361,7 @@ Arthas
 }
 
 STRING 119
+// Sound\Dialogue\UndeadCampaign\Undead04A\U04AArthas09.mp3
 {
 Shut up, you damned ghost.
 }
@@ -357,6 +372,7 @@ Necromancer
 }
 
 STRING 125
+// Sound\Dialogue\UndeadCampaign\Undead05A\U05ANecromancer11.mp3
 {
 Lord Arthas, the elf woman will likely attempt to summon reinforcements.
 }
@@ -394,6 +410,7 @@ Necromancer
 }
 
 STRING 133
+// Sound\Dialogue\UndeadCampaign\Undead05A\U05ANecromancer13.mp3
 {
 Lord Arthas, Sylvanas has sent a runner to Silvermoon. The elves are sure to send more forces at us!
 }
@@ -424,6 +441,7 @@ Necromancer
 }
 
 STRING 155
+// Sound\Dialogue\UndeadCampaign\Undead05A\U05ANecromancer16.mp3
 {
 Lord Arthas, the messenger has reached the city! We should expect an attack soon!
 }
@@ -440,6 +458,7 @@ Necromancer
 }
 
 STRING 158
+// Sound\Dialogue\UndeadCampaign\Undead05A\U05ANecromancer16.mp3
 {
 Lord Arthas, the messenger has reached the city! We should expect an attack soon!
 }
