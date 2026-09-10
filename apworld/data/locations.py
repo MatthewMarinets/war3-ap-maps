@@ -27,6 +27,7 @@ class Wc3LocationType(enum.Flag):
     SHOP = enum.auto()
     ITEM = enum.auto()
     CHALLENGE = enum.auto()
+    TREES = enum.auto()
 
     VH = VICTORY|HERO
     """Victory + Hero"""
@@ -34,6 +35,8 @@ class Wc3LocationType(enum.Flag):
     QUEST_ITEM = QUEST|ITEM
     QUEST_BASE = QUEST|BASE
     QUEST_HERO = QUEST|HERO
+    TREE_SECRET = SECRET|TREES
+    TREE_SECRET_ITEM = SECRET|ITEM|TREES
     SECRET_ITEM = SECRET|ITEM
     HARD_BASE = BASE|CHALLENGE
     QUEST_RESCUE = QUEST|RESCUE
@@ -86,13 +89,13 @@ class Wc3Location(enum.IntEnum):
     # (Side) Searinox
     HU2_VICTORY =               102000, "Victory",                 Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.VICTORY
     HU2_WEST_MURLOC_ITEM =      102001, "Western Murloc Item",     Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Claws of Attack +3"
-    HU2_WEST_OGRE_ITEM =        102002, "Western Ogre Item",       Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.SECRET_ITEM, "Gauntlets of Ogre Strength +3"
+    HU2_WEST_OGRE_ITEM =        102002, "Western Ogre Item",       Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.TREE_SECRET_ITEM, "Gauntlets of Ogre Strength +3"
     HU2_GNOLL_POACHER_ITEM =    102003, "Gnoll Poacher Item",      Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Mana"
     HU2_MURLOC_HUT_ITEM =       102004, "Murloc Hut Item",         Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Healing"
     HU2_GNOLL_ITEM =            102005, "Gnoll Item",              Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Healing"
     HU2_WEST_CRATE_ITEM =       102006, "West Base Crate Item",    Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Scroll of Protection"
     HU2_EAST_CRATE_ITEM =       102007, "East Base Crate Item",    Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Potion of Healing"
-    HU2_GNOLL_WARDEN_ITEM =     102010, "Gnoll Warden Item",       Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.SECRET_ITEM, "Wand of Negation"
+    HU2_GNOLL_WARDEN_ITEM =     102010, "Gnoll Warden Item",       Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.TREE_SECRET_ITEM, "Wand of Negation"
     HU2_SEARINOX_ITEM =         102011, "Searinox Item",           Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.ITEM, "Heart of Searinox"
     HU2_SLAY_BLADEMASTER =      102020, "Slay Blademaster",        Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST_HERO
     HU2_ESTABLISH_BASE =        102021, "Establish Base",          Wc3Mission.H2_BLACKROCK_AND_ROLL, Wc3LocationType.QUEST
@@ -189,8 +192,8 @@ class Wc3Location(enum.IntEnum):
     HU8_VICTORY =                  108000, "Victory",                  Wc3Mission.H8_DISSENSION, Wc3LocationType.VICTORY
     HU8_SKELETON_ITEM =            108001, "Skeleton Item",            Wc3Mission.H8_DISSENSION, Wc3LocationType.ITEM, "Goblin Night Scope"
     HU8_NERUBIAN_QUEEN_ITEM =      108002, "Nerubian Queen Item",      Wc3Mission.H8_DISSENSION, Wc3LocationType.ITEM, "Claws of Attack +12"
-    HU8_FROST_REVENTANT_ITEM =     108003, "Frost Revenant Item",      Wc3Mission.H8_DISSENSION, Wc3LocationType.ITEM, "Sobi Mask"
-    HU8_PANDAREN_ITEM =            108004, "Pandaren Item",            Wc3Mission.H8_DISSENSION, Wc3LocationType.SECRET_ITEM, "Pendant of Mana"
+    HU8_FROST_REVENTANT_ITEM =     108003, "Frost Revenant Item",      Wc3Mission.H8_DISSENSION, Wc3LocationType.TREE_SECRET_ITEM, "Sobi Mask"
+    HU8_PANDAREN_ITEM =            108004, "Pandaren Item",            Wc3Mission.H8_DISSENSION, Wc3LocationType.TREE_SECRET_ITEM, "Pendant of Mana"
     HU8_CRYPT_FIEND_ITEM =         108005, "Crypt Fiend Item",         Wc3Mission.H8_DISSENSION, Wc3LocationType.ITEM, "Ring of Regeneration"
     HU8_NECROMANCER_ITEM =         108006, "Necromancer Item",         Wc3Mission.H8_DISSENSION, Wc3LocationType.ITEM, "Potion of Mana"
     HU8_NERUBIAN_SEER_ITEM =       108007, "Nerubian Seer Item",       Wc3Mission.H8_DISSENSION, Wc3LocationType.ITEM, "Potion of Greater Mana"
@@ -232,7 +235,7 @@ class Wc3Location(enum.IntEnum):
     UD1_VICTORY =                201000, "Victory",                Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.VICTORY
     UD1_HORSE_ITEM =             201001, "Horse Item",             Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Ring of Protection +2"
     UD1_ASSASSIN_ITEM =          201002, "Assassin Item",          Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Spider Ring"
-    UD1_GOLEM_ITEM =             201003, "Rock Golem Item",        Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.SECRET_ITEM, "Gauntlets of Ogre Strength +3"
+    UD1_GOLEM_ITEM =             201003, "Rock Golem Item",        Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.TREE_SECRET_ITEM, "Gauntlets of Ogre Strength +3"
     UD1_CAPTAIN_ITEM =           201004, "Captain Item",           Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Greater Healing"
     UD1_BANDIT_ITEM =            201005, "Bandit Item",            Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Healing"
     UD1_FOOTMAN_ITEM =           201006, "Footman Item",           Wc3Mission.U1_TRUDGING_THROUGH_THE_ASHES, Wc3LocationType.ITEM, "Potion of Healing"
@@ -254,7 +257,7 @@ class Wc3Location(enum.IntEnum):
     UD2_UTHER_ITEM =                202004, "Uther Item",               Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.HERO_ITEM  # Urn of King Terenas
     UD2_GRANITE_GOLEM_ITEM =        202005, "Granite Golem Item",       Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.ITEM, "Pendant of Energy"
     UD2_ROGUE_WIZARD_ITEM =         202006, "Rogue Wizard Item",        Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.ITEM, "Voodoo Doll"
-    UD2_ELDER_SASQUATCH_ITEM =      202007, "Elder Sasquatch Item",     Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.SECRET_ITEM, "Claws of Attack +6"
+    UD2_ELDER_SASQUATCH_ITEM =      202007, "Elder Sasquatch Item",     Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.TREE_SECRET_ITEM, "Claws of Attack +6"
     UD2_SHEEP_ITEM =                202008, "Sheep Item",               Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.ITEM, "Goblin Night Scope"
     UD2_SASQUATCH_CRATE_ITEM =      202009, "Sasquatch Crate Item",     Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.ITEM, "Potion of Healing"
     UD2_KNIGHT_CRATE_ITEM =         202010, "Knight Crate Item",        Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.ITEM, "Potion of Mana"
@@ -266,8 +269,8 @@ class Wc3Location(enum.IntEnum):
     UD2_SLAY_SAGE_TRUTHBEARER =     202024, "Slay Sage Truthbearer",    Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.QUEST_HERO
     UD2_SLAY_UTHER =                202025, "Slay Uther",               Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.QUEST_HERO
     UD2_FEAST_ON_SOULS =            202026, "Feast on Souls",           Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.SECRET
-    UD2_PANDAREN_RELAXATION_AREA =  202027, "Pandaren Relaxation Area", Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.SECRET
-    UD2_SECRET_SOCIETY_OF_SASQUATCH = 202028, "Secret Society of Sasquatch", Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.SECRET
+    UD2_PANDAREN_RELAXATION_AREA =  202027, "Pandaren Relaxation Area", Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.TREE_SECRET
+    UD2_SECRET_SOCIETY_OF_SASQUATCH = 202028, "Secret Society of Sasquatch", Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.TREE_SECRET
     UD2_ESTABLISH_A_BASE =          202029, "Establish a Base",         Wc3Mission.U2_DIGGING_UP_THE_DEAD, Wc3LocationType.QUEST
 
     # Quests:
@@ -338,8 +341,8 @@ class Wc3Location(enum.IntEnum):
     UD6_TROLL_CAGE_ITEM =            206009, "Troll Cage Item",                    Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.ITEM, "Scroll of Mana"
     UD6_ICE_TROLL_HIGH_PRIEST_ITEM = 206010, "Ice Troll High Priest Item",         Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.ITEM, "Potion of Greater Healing"
     UD6_ICE_TROLL_BERSERKER_ITEM =   206011, "Ice Troll Berserker Item",           Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.ITEM, "Ring of Protection +3"
-    UD6_ICE_TROLL_WARLORD_ITEM =     206012, "Ice Troll Warlord Item",             Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.ITEM, "Sobi Mask"
-    UD6_MURLOC_NIGHTCRAWLER_ITEM =   206013, "Murloc Nightcrawler Item",           Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.SECRET_ITEM, "Mana Stone"
+    UD6_ICE_TROLL_WARLORD_ITEM =     206012, "Ice Troll Warlord Item",             Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.TREE_SECRET_ITEM, "Sobi Mask"
+    UD6_MURLOC_NIGHTCRAWLER_ITEM =   206013, "Murloc Nightcrawler Item",           Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.TREE_SECRET_ITEM, "Mana Stone"
     UD6_DESTROY_BLUE_BASE =          206020, "Destroy Blue Base (Great Hall)",     Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.BASE
     UD6_DESTROY_BROWN_BASE =         206021, "Destroy Brown Base (Stronghold)",    Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.BASE
     UD6_DESTROY_ORANGE_BASE =        206022, "Destroy Orange Base (Stronghold)",   Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO, Wc3LocationType.BASE
