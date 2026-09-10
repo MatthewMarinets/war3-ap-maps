@@ -3293,13 +3293,23 @@ Disables previous defeat condition.
     - Function GetUnitsInRectMatching
       - param Variable gg_rct_TichondriusGroup
       - param Function 
-        - Condition OperatorCompareUnitCode
-          - param Function GetUnitTypeId
-            - Function GetUnitTypeId
-              - param Function GetFilterUnit
-                - Function GetFilterUnit
-          - param Preset OperatorEqualENE
-          - param String ugho
+        - Condition GetBooleanOr
+          - param Function
+            - Condition OperatorCompareUnitCode
+              - param Function GetUnitTypeId
+                - Function GetUnitTypeId
+                  - param Function GetFilterUnit
+                    - Function GetFilterUnit
+              - param Preset OperatorEqualENE
+              - param String ugho
+          - param Function
+            - Condition OperatorCompareUnitCode
+              - param Function GetUnitTypeId
+                - Function GetUnitTypeId
+                  - param Function GetFilterUnit
+                    - Function GetFilterUnit
+              - param Preset OperatorEqualENE
+              - param String uA00
   - param Preset UnitOrderMove
   - param Function GetRectCenter
     - Function GetRectCenter

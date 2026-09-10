@@ -425,7 +425,7 @@ level = 0
 item_class = 0
 
 [[units]]
-type_id = 'ugho'  # Ghoul
+type_id = 'uA00'
 variation = 0
 x = 587.2763061523438
 y = 4044.82373046875
