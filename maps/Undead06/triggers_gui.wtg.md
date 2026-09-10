@@ -185,6 +185,332 @@ version = TFT
 ### Functions
 
 
+## AP Load Arthas
+- enabled: True
+- category: [17] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String set udg_EvilArthas = hero_create(0, USER_PLAYER, GetRectCenterX(gg_rct_Arthas), GetRectCenterY(gg_rct_Arthas), 202.67)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable EvilArthas
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CustomScriptCode
+  - param String set udg_EvilArthas = CreateUnit(USER_PLAYER, 'Uear', GetRectCenterX(gg_rct_Arthas), GetRectCenterY(gg_rct_Arthas), 202.67)
+- Action CustomScriptCode
+  - param String set hero_abil_1[0] = 'AUdc'
+- Action CustomScriptCode
+  - param String set hero_abil_2[0] = 'AUdp'
+- Action CustomScriptCode
+  - param String set hero_abil_3[0] = 'AUau'
+- Action CustomScriptCode
+  - param String set hero_abil_4[0] = 'AUan'
+
+
+## AP Load Kel Thuzad
+- enabled: True
+- category: [17] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String set udg_KelThuzad = hero_create(1, USER_PLAYER, GetRectCenterX(gg_rct_Kel_Thuzad), GetRectCenterY(gg_rct_Kel_Thuzad), 9.19)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable KelThuzad
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CustomScriptCode
+  - param String set udg_KelThuzad = CreateUnit(USER_PLAYER, 'Uktl', GetRectCenterX(gg_rct_Kel_Thuzad), GetRectCenterY(gg_rct_Kel_Thuzad), 9.19)
+- Action CustomScriptCode
+  - param String set hero_abil_1[0] = 'AUfn'
+- Action CustomScriptCode
+  - param String set hero_abil_2[0] = 'AUfu'
+- Action CustomScriptCode
+  - param String set hero_abil_3[0] = 'AUdr'
+- Action CustomScriptCode
+  - param String set hero_abil_4[0] = 'AUdd'
+
+
+## AP mercenaries
+- enabled: True
+- category: [17] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## Shop locations
+- enabled: True
+- category: [17] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action AddItemToStockBJ
+  - param String I02f
+  - param Variable gg_unit_ngme_0092
+  - param String 1
+  - param String 1
+- Event MapInitializationEvent
+
+
+## Slay Haomarush
+- enabled: True
+- category: [17] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_OC02_0094
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(25)
+
+
+## Slay Khanzo
+- enabled: True
+- category: [17] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_OC00_0078
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(26)
+
+
+## Slay Genjuros
+- enabled: True
+- category: [17] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_OC01_0088
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(27)
+
+
+## Slay ThrokFeroth
+- enabled: True
+- category: [17] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_OC03_0109
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(28)
+
+
+## Slay Mazrigos
+- enabled: True
+- category: [17] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_OC04_0115
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(29)
+
+
+## Slay JubeiThos
+- enabled: True
+- category: [17] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_NC05_0140
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(30)
+
+
+## Blue Base Location
+- enabled: True
+- category: [17] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_ogre_0040
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(20)
+
+
+## Brown Base Location
+- enabled: True
+- category: [17] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_ostr_0048
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(21)
+
+
+## Orange Base Location
+- enabled: True
+- category: [17] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_ostr_0007
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(22)
+
+
+## Light Blue Base Location
+- enabled: True
+- category: [17] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_ofrt_0068
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(23)
+
+
+## Red Base Location
+- enabled: True
+- category: [17] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_ofrt_0087
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(24)
+
+
 ## Map Initialization
 - enabled: True
 - category: [0] Starting
@@ -686,7 +1012,7 @@ version = TFT
   - param Variable gg_unit_umtw_0139
 - Action SetVariable
   - param Variable MeatWagon02
-  - param Variable gg_unit_umtw_0142
+  - param Variable gg_unit_uA00_0142
 - Action SetVariable
   - param Variable MeatWagons
   - param Function GetUnitsInRectAll
@@ -1090,7 +1416,7 @@ Orange Town
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
 - Action CreateItemLoc
-  - param String sman
+  - param String I019
   - param Function GetDestructableLoc
     - Function GetDestructableLoc
       - param Variable gg_dest_LOcg_0401
@@ -1320,228 +1646,11 @@ Load all heroes.
 ```
 ### Functions
 - Action CommentString
-  - param String Load the saved data
-- Action InitGameCacheBJ
-  - param String Campaigns.w3v
-- Action CommentString
   - param String Load each hero
 - Action ConditionalTriggerExecute
-  - param Variable gg_trg_Load_Arthas
+  - param Variable gg_trg_AP_Load_Arthas
 - Action ConditionalTriggerExecute
-  - param Variable gg_trg_Load_Kel_Thuzad
-
-
-## Load Arthas
-- enabled: True
-- category: [15] Load Heroes
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-Attempt to load the hero.
-Upon failure, create a default version of the hero.
-```
-### Functions
-- Action CommentString
-  - param String Load the hero data
-- Action RestoreUnitLocFacingAngleBJ
-  - param String Arthas
-  - param String Undead06
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-  - param Preset Player03
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_Arthas
-  - param String 202.67
-- Action SetVariable
-  - param Variable EvilArthas
-  - param Function GetLastRestoredUnitBJ
-    - Function GetLastRestoredUnitBJ
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareUnit
-      - param Variable EvilArthas
-      - param Preset OperatorNotEqualENE
-      - param Preset UnitNull
-  - param Function DoNothing
-    - Action ReturnAction
-  - param Function DoNothing
-    - Action DoNothing
-- Action CommentString
-  - param String If the hero data wasn't found, create a default hero
-- Action CreateNUnitsAtLoc
-  - param String 1
-  - param String Uear
-  - param Preset Player03
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_Arthas
-  - param String 202.67
-- Action SetVariable
-  - param Variable EvilArthas
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-- Action SetHeroLevel
-  - param Variable EvilArthas
-  - param String 6
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable EvilArthas
-  - param Preset HeroSkillDeathCoil
-- Action SelectHeroSkill
-  - param Variable EvilArthas
-  - param Preset HeroSkillDeathPact
-- Action SelectHeroSkill
-  - param Variable EvilArthas
-  - param Preset HeroSkillUnholyAura
-- Action SelectHeroSkill
-  - param Variable EvilArthas
-  - param Preset HeroSkillDeathCoil
-- Action SelectHeroSkill
-  - param Variable EvilArthas
-  - param Preset HeroSkillUnholyAura
-- Action SelectHeroSkill
-  - param Variable EvilArthas
-  - param Preset HeroSkillAnimateDead
-
-
-## Load Kel Thuzad
-- enabled: True
-- category: [15] Load Heroes
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-Attempt to load the hero.
-Upon failure, create a default version of the hero.
-```
-### Functions
-- Action CommentString
-  - param String Load the hero data
-- Action RestoreUnitLocFacingAngleBJ
-  - param String KelThuzad
-  - param String Undead06
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-  - param Preset Player03
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_Kel_Thuzad
-  - param String 9.19
-- Action SetVariable
-  - param Variable KelThuzad
-  - param Function GetLastRestoredUnitBJ
-    - Function GetLastRestoredUnitBJ
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareUnit
-      - param Variable KelThuzad
-      - param Preset OperatorNotEqualENE
-      - param Preset UnitNull
-  - param Function DoNothing
-    - Action ReturnAction
-  - param Function DoNothing
-    - Action DoNothing
-- Action CommentString
-  - param String If the hero data wasn't found, create a default hero
-- Action CreateNUnitsAtLoc
-  - param String 1
-  - param String Uktl
-  - param Preset Player03
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_Kel_Thuzad
-  - param String 9.19
-- Action SetVariable
-  - param Variable KelThuzad
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-- Action SetHeroLevel
-  - param Variable KelThuzad
-  - param String 5
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable KelThuzad
-  - param Preset HeroSkillFrostNova
-- Action SelectHeroSkill
-  - param Variable KelThuzad
-  - param Preset HeroSkillFrostArmor
-- Action SelectHeroSkill
-  - param Variable KelThuzad
-  - param Preset HeroSkillDarkRitual
-- Action SelectHeroSkill
-  - param Variable KelThuzad
-  - param Preset HeroSkillFrostNova
-- Action SelectHeroSkill
-  - param Variable KelThuzad
-  - param Preset HeroSkillFrostArmor
-
-
-## Arthas Lock Levels
-- enabled: True
-- category: [12] Hero Level Lock
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Condition OperatorCompareInteger
-  - param Function GetHeroLevel
-    - Function GetHeroLevel
-      - param Function GetLevelingUnit
-        - Function GetLevelingUnit
-  - param Preset OperatorGreaterEq
-  - param String 7
-- Condition OperatorCompareUnitCode
-  - param Function GetUnitTypeId
-    - Function GetUnitTypeId
-      - param Function GetLevelingUnit
-        - Function GetLevelingUnit
-  - param Preset OperatorEqualENE
-  - param String Uear
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableDisable
-  - param Function GetLevelingUnit
-    - Function GetLevelingUnit
-- Event TriggerRegisterPlayerUnitEventSimple
-  - param Preset Player03
-  - param Preset PlayerUnitEventHero_Level
-
-
-## KelThuzad Lock Levels
-- enabled: True
-- category: [12] Hero Level Lock
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Condition OperatorCompareInteger
-  - param Function GetHeroLevel
-    - Function GetHeroLevel
-      - param Function GetLevelingUnit
-        - Function GetLevelingUnit
-  - param Preset OperatorGreaterEq
-  - param String 7
-- Condition OperatorCompareUnitCode
-  - param Function GetUnitTypeId
-    - Function GetUnitTypeId
-      - param Function GetLevelingUnit
-        - Function GetLevelingUnit
-  - param Preset OperatorEqualENE
-  - param String Uktl
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableDisable
-  - param Function GetLevelingUnit
-    - Function GetLevelingUnit
-- Event TriggerRegisterPlayerUnitEventSimple
-  - param Preset Player03
-  - param Preset PlayerUnitEventHero_Level
+  - param Variable gg_trg_AP_Load_Kel_Thuzad
 
 
 ## Slow Exp Gain
@@ -4377,8 +4486,6 @@ Acolytes being told to harvest gold does not seem to work.
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Next_Level_Prep
 - Action DestroyLeaderboardBJ
   - param Function GetLastCreatedLeaderboard
     - Function GetLastCreatedLeaderboard
@@ -4386,6 +4493,8 @@ Acolytes being told to harvest gold does not seem to work.
   - param Preset OnOffOn
   - param Function GetPlayersAll
     - Function GetPlayersAll
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Action ForGroup
   - param Function GetUnitsOfPlayerAll
     - Function GetUnitsOfPlayerAll
@@ -4915,36 +5024,6 @@ Acolytes being told to harvest gold does not seem to work.
   - param Preset PlayerUnitEventDeath
 
 
-## Next Level Prep
-- enabled: True
-- category: [6] Level Data
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action StoreUnitBJ
-  - param Variable EvilArthas
-  - param String Arthas
-  - param String Undead07
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action StoreUnitBJ
-  - param Variable KelThuzad
-  - param String KelThuzad
-  - param String Undead07
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action SaveGameCacheBJ
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action SetMissionAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset MissionIndexU10
-
-
 ## Next Level Run
 - enabled: True
 - category: [6] Level Data
@@ -4956,7 +5035,7 @@ Acolytes being told to harvest gold does not seem to work.
 ```
 ### Functions
 - Action SetNextLevelBJ
-  - param String Maps\Campaign\Undead07.w3m
+  - param String CampaignSelect.w3x
 - Action CustomVictoryBJ
   - param Preset Player03
   - param Preset UseSkipOptionUse
@@ -4990,8 +5069,8 @@ Acolytes being told to harvest gold does not seem to work.
 
 ```
 ### Functions
-- Action ConditionalTriggerExecute
-  - param Variable gg_trg_Next_Level_Prep
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_Next_Level_Run
 - Event TriggerRegisterPlayerEventVictory
