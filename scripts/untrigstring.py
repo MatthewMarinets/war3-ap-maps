@@ -8,7 +8,7 @@ from collections import Counter
 from mapfile import wts
 
 
-TRIG_STRING_PATTERN = re.compile(r'TRIGSTR_\d\d\d')
+TRIG_STRING_PATTERN = re.compile(r"TRIGSTR_\d\d\d\d?")
 
 
 def un_trig_string(filename: str, wts_strings: dict[int, str]) -> set[str]:
