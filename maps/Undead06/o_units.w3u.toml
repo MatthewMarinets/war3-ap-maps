@@ -727,6 +727,126 @@ table_column = 0
 value = 0
 object_id = 'null'
 
+[blizzard_objects.nith]
+parent_id = 'nith'  # Ice Troll High Priest
+entity_id = 'null'
+
+[[blizzard_objects.nith.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 55
+object_id = 'null'
+
+[[blizzard_objects.nith.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 4
+object_id = 'null'
+
+[blizzard_objects.nitr]
+parent_id = 'nitr'  # Ice Troll
+entity_id = 'null'
+
+[[blizzard_objects.nitr.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 30
+object_id = 'null'
+
+[[blizzard_objects.nitr.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 2
+object_id = 'null'
+
+[blizzard_objects.nits]
+parent_id = 'nits'  # Ice Troll Berserker
+entity_id = 'null'
+
+[[blizzard_objects.nits.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 55
+object_id = 'null'
+
+[[blizzard_objects.nits.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 4
+object_id = 'null'
+
+[blizzard_objects.nitt]
+parent_id = 'nitt'  # Ice Troll Trapper
+entity_id = 'null'
+
+[[blizzard_objects.nitt.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 40
+object_id = 'null'
+
+[[blizzard_objects.nitt.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[blizzard_objects.nitw]
+parent_id = 'nitw'  # Ice Troll Warlord
+entity_id = 'null'
+
+[[blizzard_objects.nitw.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 85
+object_id = 'null'
+
+[[blizzard_objects.nitw.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 6
+object_id = 'null'
+
+[blizzard_objects.nmrm]
+parent_id = 'nmrm'  # Murloc Nightcrawler
+entity_id = 'null'
+
+[[blizzard_objects.nmrm.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 40
+object_id = 'null'
+
+[[blizzard_objects.nmrm.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
 
 [map_objects.OC00]
 parent_id = 'Obla'  # Blademaster
