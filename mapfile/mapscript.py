@@ -361,10 +361,14 @@ def generate_destructable_setup(doodads: doo.War3PlacementInfo, info: GenInfo) -
                 f"{doodad.scale_x:.3f}, {doodad.variation})"
             ).replace('-', '- '))
             continue
-        result.append((
-            f"    set {doodad_var}=CreateDestructable('{doodad.type_id}', "
-            f"{doodad.x:.1f}, {doodad.y:.1f}, {doodad.facing * RADIANS_TO_DEGREES:.3f}, {doodad.scale_x:.3f}, {doodad.variation})"
-        ).replace('-', '- '))
+        else:
+            result.append((
+                f"    set {doodad_var}=CreateDestructable('{doodad.type_id}', "
+                f"{doodad.x:.1f}, {doodad.y:.1f}, {doodad.facing * RADIANS_TO_DEGREES:.3f}, {doodad.scale_x:.3f}, {doodad.variation})"
+            ).replace('-', '- '))
+        if doodad.life_percent != 100:
+            result.append(f'    set life=GetDestructableLife({doodad_var})')
+            result.append(f'    call SetDestructableLife({doodad_var}, 0.{doodad.life_percent:02} * life)')
     result.append('endfunction\n')
     return result
 
