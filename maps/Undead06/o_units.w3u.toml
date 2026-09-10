@@ -48,7 +48,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_086"
+value = "Train |cffffcc00W|rarlock"
 object_id = 'null'
 
 [[blizzard_objects.nw2w.modifications]]
@@ -56,7 +56,7 @@ modification_id = 'uhot'  # Profile.Hotkey
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_087"
+value = "W"
 object_id = 'null'
 
 [blizzard_objects.nrdk]
@@ -68,7 +68,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_089"
+value = "Train |cffffcc00D|rragon"
 object_id = 'null'
 
 [[blizzard_objects.nrdk.modifications]]
@@ -76,7 +76,7 @@ modification_id = 'uhot'  # Profile.Hotkey
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_090"
+value = "D"
 object_id = 'null'
 
 [blizzard_objects.ngsp]
@@ -88,7 +88,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_091"
+value = "Train Goblin |cffffcc00S|rapper"
 object_id = 'null'
 
 [blizzard_objects.nzep]
@@ -100,7 +100,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_094"
+value = "Train Goblin |cffffcc00Z|reppelin"
 object_id = 'null'
 
 [blizzard_objects.nomg]
@@ -112,7 +112,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_095"
+value = "Train O|cffffcc00g|rre Magi"
 object_id = 'null'
 
 [blizzard_objects.ofrt]
@@ -156,7 +156,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_096"
+value = " "
 object_id = 'null'
 
 [[blizzard_objects.ndrr.modifications]]
@@ -245,78 +245,6 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = "AOcr,AOmi,AOww"
-object_id = 'null'
-
-[blizzard_objects.phea]
-parent_id = 'phea'  # Potion of Healing
-entity_id = 'null'
-
-[[blizzard_objects.phea.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
-[blizzard_objects.pman]
-parent_id = 'pman'  # Potion of Mana
-entity_id = 'null'
-
-[[blizzard_objects.pman.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
-[blizzard_objects.pinv]
-parent_id = 'pinv'  # Potion of Invisibility
-entity_id = 'null'
-
-[[blizzard_objects.pinv.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
-[blizzard_objects.shea]
-parent_id = 'shea'  # Scroll of Healing
-entity_id = 'null'
-
-[[blizzard_objects.shea.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
-[blizzard_objects.spro]
-parent_id = 'spro'  # Scroll of Protection
-entity_id = 'null'
-
-[[blizzard_objects.spro.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
-object_id = 'null'
-
-[blizzard_objects.stwp]
-parent_id = 'stwp'  # Scroll of Town Portal
-entity_id = 'null'
-
-[[blizzard_objects.stwp.modifications]]
-modification_id = 'isst'  # ItemData.Stock Start Delay
-data_type = "Integer"
-variation_level = 0
-table_column = 0
-value = 0
 object_id = 'null'
 
 [blizzard_objects.ngme]
@@ -809,7 +737,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_383"
+value = "Khanzo"
 object_id = 'null'
 
 [[map_objects.OC00.modifications]]
@@ -817,7 +745,7 @@ modification_id = 'upro'  # Profile.Proper Names
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_383"
+value = "Khanzo"
 object_id = 'null'
 
 [[map_objects.OC00.modifications]]
@@ -825,7 +753,7 @@ modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_157"
+value = "(Blue)"
 object_id = 'null'
 
 [map_objects.OC01]
@@ -837,7 +765,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_384"
+value = "Genjuros"
 object_id = 'null'
 
 [[map_objects.OC01.modifications]]
@@ -845,7 +773,7 @@ modification_id = 'upro'  # Profile.Proper Names
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_384"
+value = "Genjuros"
 object_id = 'null'
 
 [[map_objects.OC01.modifications]]
@@ -853,7 +781,7 @@ modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_222"
+value = "(Brown)"
 object_id = 'null'
 
 [map_objects.OC02]
@@ -865,7 +793,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_385"
+value = "Haomarush"
 object_id = 'null'
 
 [[map_objects.OC02.modifications]]
@@ -873,7 +801,7 @@ modification_id = 'upro'  # Profile.Proper Names
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_385"
+value = "Haomarush"
 object_id = 'null'
 
 [[map_objects.OC02.modifications]]
@@ -881,7 +809,7 @@ modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_223"
+value = "(Teal)"
 object_id = 'null'
 
 [map_objects.OC03]
@@ -893,7 +821,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_386"
+value = "Throk'Feroth"
 object_id = 'null'
 
 [[map_objects.OC03.modifications]]
@@ -901,7 +829,7 @@ modification_id = 'upro'  # Profile.Proper Names
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_386"
+value = "Throk'Feroth"
 object_id = 'null'
 
 [[map_objects.OC03.modifications]]
@@ -909,7 +837,7 @@ modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_224"
+value = "(Orange)"
 object_id = 'null'
 
 [map_objects.OC04]
@@ -921,7 +849,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_387"
+value = "Mazrigos"
 object_id = 'null'
 
 [[map_objects.OC04.modifications]]
@@ -929,7 +857,7 @@ modification_id = 'upro'  # Profile.Proper Names
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_387"
+value = "Mazrigos"
 object_id = 'null'
 
 [[map_objects.OC04.modifications]]
@@ -937,7 +865,7 @@ modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_225"
+value = "(Light Blue)"
 object_id = 'null'
 
 [map_objects.NC05]
@@ -949,7 +877,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_388"
+value = "Jubei'Thos"
 object_id = 'null'
 
 [[map_objects.NC05.modifications]]
@@ -957,7 +885,7 @@ modification_id = 'upro'  # Profile.Proper Names
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_388"
+value = "Jubei'Thos"
 object_id = 'null'
 
 [[map_objects.NC05.modifications]]
@@ -965,7 +893,7 @@ modification_id = 'unsf'  # Profile.Name - Editor Suffix
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "TRIGSTR_226"
+value = "(Red)"
 object_id = 'null'
 
 [map_objects.uA00]
