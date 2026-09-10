@@ -424,6 +424,13 @@ def init_test_data(game_status: GameStatus) -> None:
     # game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].abilities[GameID.BEASTMASTER_SUMMON_QUILBEAST] = 2
     game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].items[3] = InventoryItem(GameID.CROWN_OF_KINGS_5)
     game_status.hero_data[heroes.HeroSlot.MURADIN_BRONZEBEARD].max_level = 7
+    game_status.hero_data[heroes.HeroSlot.DEATH_KNIGHT_ARTHAS].hero = heroes.HeroChoice.GROM_HELLSCREAM
+    game_status.hero_data[heroes.HeroSlot.DEATH_KNIGHT_ARTHAS].reset_abils()
+    game_status.hero_data[heroes.HeroSlot.DEATH_KNIGHT_ARTHAS].xp = 3000
+    game_status.hero_data[heroes.HeroSlot.DEATH_KNIGHT_ARTHAS].max_level = 8
+    game_status.hero_data[heroes.HeroSlot.DEATH_KNIGHT_ARTHAS].items[2] = InventoryItem(GameID.CROWN_OF_THE_DEATHLORD)
+    game_status.hero_data[heroes.HeroSlot.KEL_THUZAD].hero = heroes.HeroChoice.DEMON_HUNTER
+    game_status.hero_data[heroes.HeroSlot.KEL_THUZAD].reset_abils()
     game_status.settings.extra_merc_camps = 1
 
 

@@ -345,7 +345,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Destroy Sylvanas's Base"
+value = "Sylvanas's Base Item"
 object_id = 'null'
 
 [[map_objects.I014.modifications]]
@@ -353,7 +353,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Destroy Sylvanas's Base"
+value = "Purchase Sylvanas's Base Item"
 object_id = 'null'
 
 [[map_objects.I014.modifications]]
@@ -361,7 +361,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Destroy Sylvanas's Base\" location."
+value = "Collects the \"Sylvanas's Base Item\" location."
 object_id = 'null'
 
 [[map_objects.I014.modifications]]
@@ -369,7 +369,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Destroy Sylvanas's Base\" location."
+value = "Collects the \"Sylvanas's Base Item\" location."
 object_id = 'null'
 
 [[map_objects.I014.modifications]]
@@ -413,7 +413,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Stop all Runners"
+value = "Stop all Runners Item"
 object_id = 'null'
 
 [[map_objects.I015.modifications]]
@@ -421,7 +421,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Stop all Runners"
+value = "Purchase Stop all Runners Item"
 object_id = 'null'
 
 [[map_objects.I015.modifications]]
@@ -429,7 +429,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Stop all Runners\" location."
+value = "Collects the \"Stop all Runners Item\" location."
 object_id = 'null'
 
 [[map_objects.I015.modifications]]
@@ -437,7 +437,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Stop all Runners\" location."
+value = "Collects the \"Stop all Runners Item\" location."
 object_id = 'null'
 
 [[map_objects.I015.modifications]]
@@ -1841,7 +1841,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 26"
+value = "Destroy Sylvanas's Castle"
 object_id = 'null'
 
 [[map_objects.I02a.modifications]]
@@ -1849,7 +1849,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 26"
+value = "Purchase Destroy Sylvanas's Castle"
 object_id = 'null'
 
 [[map_objects.I02a.modifications]]
@@ -1857,7 +1857,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 26\" location."
+value = "Collects the \"Destroy Sylvanas's Castle\" location."
 object_id = 'null'
 
 [[map_objects.I02a.modifications]]
@@ -1865,7 +1865,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 26\" location."
+value = "Collects the \"Destroy Sylvanas's Castle\" location."
 object_id = 'null'
 
 [[map_objects.I02a.modifications]]

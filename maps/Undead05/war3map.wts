@@ -119,7 +119,7 @@ The Sunwell
 
 STRING 30
 {
-The time for Kel'Thuzad's rebirth is at hand! You must place the Urn containing the Necromancer's remains within the Sunwell's sacred waters. Only then will Kel'Thuzad live again, to serve the Lich King.  
+The time for Kel'Thuzad's rebirth is at hand! You must place the Urn containing the Necromancer's remains within the Sunwell's sacred waters. Only then will Kel'Thuzad live again, to serve the Lich King.
 }
 
 STRING 31
@@ -160,7 +160,7 @@ Silvermoon Runners
 
 STRING 41
 {
-Sylvanas intends to warn Silvermoon of your approach. If any of her runners reach the city, the Elves will be alerted to your presence and attack. You must use your Gargoyles to intercept her runners before they reach the capital. 
+Sylvanas intends to warn Silvermoon of your approach. If any of her runners reach the city, the Elves will be alerted to your presence and attack. You must use your Gargoyles to intercept her runners before they reach the capital.
 }
 
 STRING 42
@@ -469,12 +469,6 @@ STRING 159
 Silvermoon Runners
 }
 
-STRING 160
-{
-|cff87ceebNEW UNIT AVAILABLE|r
-Banshee - You may now build Banshees from the Temple of the Damned. They are supporting casters that can initially cast Curse, which causes enemy units to occasionally miss in combat.
-}
-
 STRING 161
 {
 Bring Arthas to the Sunwell
@@ -507,7 +501,7 @@ Silvermoon Runners
 
 STRING 169
 {
-Next runner in 
+Next runner in
 }
 
 STRING 170

@@ -1344,8 +1344,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # pgma = Potion of Greater Mana
-        { item_id = "pgma", chance_percent = 100 }
+        { item_id = "I013", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -1910,8 +1909,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # sror = Scroll of the Beast
-        { item_id = "sror", chance_percent = 100 }
+        { item_id = "I012", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -2080,8 +2078,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # rlif = Ring of Regeneration
-        { item_id = "rlif", chance_percent = 100 }
+        { item_id = "I011", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -5699,7 +5696,7 @@ level = 1
 item_class = 0
 
 [[units]]
-type_id = 'ucry'  # Crypt Fiend
+type_id = 'uA00'
 variation = 0
 x = 5432.33837890625
 y = 2947.122802734375

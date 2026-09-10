@@ -313,14 +313,15 @@ class Wc3Location(enum.IntEnum):
     UD5_ROCK_GOLEM_ITEM =           205001, "Rock Golem Item",                Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.ITEM, "Ring of Regeneration"
     UD5_EAST_GNOLL_OVERSEER_ITEM =  205002, "East Gnoll Overseer Item",       Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.ITEM, "Scroll of the Beast"
     UD5_WEST_GNOLL_OVERSEER_ITEM =  205003, "West Gnoll Overseer Item",       Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.ITEM, "Potion of Greater Mana"
-    UD5_DESTROY_SYLVANAS_BASE =     205004, "Destroy Sylvanas's Base",        Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.QUEST_BASE, "Slippers of Agility +3"
-    UD5_BLOCK_RUNNERS =             205005, "Stop all Runners",               Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.QUEST_ITEM, "Hood of Cunning"
+    UD5_SYLVANAS_BASE_ITEM =        205004, "Sylvanas's Base Item",           Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.QUEST_BASE, "Slippers of Agility +3"
+    UD5_BLOCK_RUNNERS_ITEM =        205005, "Stop all Runners Item",          Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.QUEST_ITEM, "Hood of Cunning"
     UD5_SLAY_SYLVANAS =             205020, "Slay Sylvanas",                  Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.HERO
     UD5_SLAY_ARCHMAGE =             205021, "Slay Archmage",                  Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.HERO
     UD5_GOBLIN_MERCHANT =           205022, "Goblin Merchant",                Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.SHOP
     UD5_MERCENARY_CAMP =            205023, "Mercenary Camp",                 Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.SHOP
     UD5_EAST_SILVERMOON_CASTLE =    205024, "Destroy East Silvermoon Castle", Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.BASE
     UD5_WEST_SILVERMOON_CASTLE =    205025, "Destroy West Silvermoon Castle", Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.BASE
+    UD5_DESTROY_SYLVANAS_CASTLE =   205026, "Destroy Sylvanas's Castle",      Wc3Mission.U5_THE_FALL_OF_SILVERMOON, Wc3LocationType.BASE
 
     # Quests:
     # (Main) Demon Gate

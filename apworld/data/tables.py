@@ -199,6 +199,12 @@ MISSION_TO_VANILLA_MERCENARIES: dict[Wc3Mission, dict[int, Wc3Item]] = {
         2: Wc3Item.MERC_FROST_REVENANT,
         3: Wc3Item.MERC_NERUBIAN_WEBSPINNER,
     },
+    Wc3Mission.U5_THE_FALL_OF_SILVERMOON: {
+        0: Wc3Item.MERC_FOREST_TROLL_BERSERKER,
+        1: Wc3Item.MERC_FOREST_TROLL_SHADOW_PRIEST,
+        2: Wc3Item.MERC_OGRE_MAULER,
+        3: Wc3Item.MERC_MUD_GOLEM,
+    }
 }
 MISSION_TO_NUM_VANILLA_MERC_CAMPS = {
     mission: max(values) // 10 + 1

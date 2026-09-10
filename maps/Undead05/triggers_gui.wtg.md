@@ -20,7 +20,6 @@ version = TFT
 | 19 | RunnerSpawnLocation | False |
 | 18 | GargoyleCinematic | False |
 | 4 | SylvanusCinematic | False |
-| 10 | BansheesAvailable | False |
 | 5 | ExitCinematic | False |
 | 16 | Level Changing | False |
 | 8 | Victory | False |
@@ -206,6 +205,182 @@ version = TFT
 
 ```
 ### Functions
+
+
+## AP Load Arthas
+- enabled: True
+- category: [23] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action CommentString
+  - param String Load the hero data
+- Action CustomScriptCode
+  - param String set udg_Arthas = hero_create(0, USER_PLAYER, GetRectCenterX(gg_rct_InitialArthasLocation), GetRectCenterY(gg_rct_InitialArthasLocation), 180.0)
+- Action IfThenElse
+  - param Function 
+    - Condition OperatorCompareUnit
+      - param Variable Arthas
+      - param Preset OperatorNotEqualENE
+      - param Preset UnitNull
+  - param Function DoNothing
+    - Action ReturnAction
+  - param Function DoNothing
+    - Action DoNothing
+- Action CommentString
+  - param String If the hero data wasn't found, create a default hero
+- Action CustomScriptCode
+  - param String set udg_Arthas = CreateUnit(USER_PLAYER, 'Uear', GetRectCenterX(gg_rct_InitialArthasLocation), GetRectCenterY(gg_rct_InitialArthasLocation), 180.0)
+- Action CustomScriptCode
+  - param String set hero_abil_1[0] = 'AUdc'
+- Action CustomScriptCode
+  - param String set hero_abil_2[0] = 'AUdp'
+- Action CustomScriptCode
+  - param String set hero_abil_3[0] = 'AUau'
+- Action CustomScriptCode
+  - param String set hero_abil_4[0] = 'AUan'
+
+
+## AP mercenaries
+- enabled: True
+- category: [23] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## Shop locations
+- enabled: True
+- category: [23] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Action AddItemToStockBJ
+  - param String I027
+  - param Variable gg_unit_nmer_0076
+  - param String 1
+  - param String 1
+- Action AddItemToStockBJ
+  - param String I026
+  - param Variable gg_unit_ngme_0064
+  - param String 1
+  - param String 1
+- Event MapInitializationEvent
+
+
+## Slay Sylvanas
+- enabled: True
+- category: [23] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_Hvwd_0128
+  - param Preset UnitEventDeath
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_Hvwd_0167
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(20)
+
+
+## Slay Archmage
+- enabled: True
+- category: [23] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_Hamg_0203
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(21)
+
+
+## Sylvanas base location
+- enabled: True
+- category: [23] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_hcas_0004
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(26)
+
+
+## East Silvermoon base location
+- enabled: True
+- category: [23] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_hcas_0093
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(24)
+
+
+## West Silvermoon base location
+- enabled: True
+- category: [23] Archipelago
+- starts off: False
+- is custom text: False
+- run on map init: False
+```description
+
+```
+### Functions
+- Event TriggerRegisterUnitEvent
+  - param Variable gg_unit_hcas_0118
+  - param Preset UnitEventDeath
+- Action DisableTrigger
+  - param Function GetTriggeringTrigger
+    - Function GetTriggeringTrigger
+- Action CustomScriptCode
+  - param String call status_check_location(25)
 
 
 ## StartInitializationSequence
@@ -810,191 +985,85 @@ version = TFT
 ```
 ### Functions
 - Action TriggerExecute
-  - param Variable gg_trg_Load_Arthas
-- Action SetHeroLevel
-  - param Variable Sylvanas
-  - param String 7
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable Sylvanas
-  - param Preset HeroSkillColdArrows
-- Action SelectHeroSkill
-  - param Variable Sylvanas
-  - param Preset HeroSkillColdArrows
-- Action SelectHeroSkill
-  - param Variable Sylvanas
-  - param Preset HeroSkillColdArrows
-- Action SelectHeroSkill
-  - param Variable Sylvanas
-  - param Preset HeroSkillTrueshotAura
-- Action SelectHeroSkill
-  - param Variable Sylvanas
-  - param Preset HeroSkillTrueshotAura
-- Action SelectHeroSkill
-  - param Variable Sylvanas
-  - param Preset HeroSkillTrueshotAura
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableDisable
-  - param Variable Sylvanas
-- Action SetHeroLevel
-  - param Variable SilvermoonArchMage
-  - param String 6
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable SilvermoonArchMage
-  - param Preset HeroSkillBlizzard
-- Action SelectHeroSkill
-  - param Variable SilvermoonArchMage
-  - param Preset HeroSkillBlizzard
-- Action SelectHeroSkill
-  - param Variable SilvermoonArchMage
-  - param Preset HeroSkillWaterElemental
-- Action SelectHeroSkill
-  - param Variable SilvermoonArchMage
-  - param Preset HeroSkillWaterElemental
-- Action SelectHeroSkill
-  - param Variable SilvermoonArchMage
-  - param Preset HeroSkillBrillianceAura
-- Action SelectHeroSkill
-  - param Variable SilvermoonArchMage
-  - param Preset HeroSkillBrillianceAura
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableDisable
-  - param Variable SilvermoonArchMage
-- Action SetHeroLevel
-  - param Variable SylvanasIntro
-  - param String 7
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable SylvanasIntro
-  - param Preset HeroSkillColdArrows
-- Action SelectHeroSkill
-  - param Variable SylvanasIntro
-  - param Preset HeroSkillColdArrows
-- Action SelectHeroSkill
-  - param Variable SylvanasIntro
-  - param Preset HeroSkillColdArrows
-- Action SelectHeroSkill
-  - param Variable SylvanasIntro
-  - param Preset HeroSkillTrueshotAura
-- Action SelectHeroSkill
-  - param Variable SylvanasIntro
-  - param Preset HeroSkillTrueshotAura
-- Action SelectHeroSkill
-  - param Variable SylvanasIntro
-  - param Preset HeroSkillTrueshotAura
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableDisable
-  - param Variable SylvanasIntro
-
-
-## Load Arthas
-- enabled: True
-- category: [7] Heroes
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action InitGameCacheBJ
-  - param String Campaigns.w3v
-- Action RestoreUnitLocFacingAngleBJ
-  - param String Arthas
-  - param String Undead05
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-  - param Variable PlayerArthas
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_InitialArthasLocation
-  - param String 180.00
-- Action SetVariable
-  - param Variable Arthas
-  - param Function GetLastRestoredUnitBJ
-    - Function GetLastRestoredUnitBJ
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareUnit
-      - param Variable Arthas
-      - param Preset OperatorNotEqualENE
-      - param Preset UnitNull
-  - param Function DoNothing
-    - Action ReturnAction
-  - param Function DoNothing
-    - Action DoNothing
-- Action CreateNUnitsAtLoc
-  - param String 1
-  - param String Uear
-  - param Variable PlayerArthas
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_InitialArthasLocation
-  - param String 180.00
-- Action SetVariable
-  - param Variable Arthas
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
-- Action SetHeroLevel
-  - param Variable Arthas
-  - param String 5
-  - param Preset ShowHideHide
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDeathCoil
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDeathCoil
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillUnholyAura
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillUnholyAura
-- Action SelectHeroSkill
-  - param Variable Arthas
-  - param Preset HeroSkillDeathPact
+  - param Variable gg_trg_AP_Load_Arthas
 - Action SetPlayerHandicapXPBJ
   - param Preset Player03
   - param String 50.00
-- Action UnitAddItemByIdSwapped
-  - param String ktrm
-  - param Variable Arthas
-- Action SetItemDroppableBJ
-  - param Function GetLastCreatedItem
-    - Function GetLastCreatedItem
-  - param Preset DropNoDropOptionNoDrop
-
-
-## Limit Arthas XP
-- enabled: True
-- category: [7] Heroes
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
+- Action SetHeroLevel
+  - param Variable Sylvanas
+  - param String 7
+  - param Preset ShowHideHide
+- Action SelectHeroSkill
+  - param Variable Sylvanas
+  - param Preset HeroSkillColdArrows
+- Action SelectHeroSkill
+  - param Variable Sylvanas
+  - param Preset HeroSkillColdArrows
+- Action SelectHeroSkill
+  - param Variable Sylvanas
+  - param Preset HeroSkillColdArrows
+- Action SelectHeroSkill
+  - param Variable Sylvanas
+  - param Preset HeroSkillTrueshotAura
+- Action SelectHeroSkill
+  - param Variable Sylvanas
+  - param Preset HeroSkillTrueshotAura
+- Action SelectHeroSkill
+  - param Variable Sylvanas
+  - param Preset HeroSkillTrueshotAura
 - Action SuspendHeroXPBJ
   - param Preset EnableDisableDisable
-  - param Variable Arthas
-- Action TriggerSleepAction
-  - param String 0.10
-- Action SetHeroXP
-  - param Variable Arthas
-  - param String 2000
-  - param Preset ShowHideHide
-- Condition OperatorCompareInteger
-  - param Function GetHeroLevel
-    - Function GetHeroLevel
-      - param Variable Arthas
-  - param Preset OperatorGreaterEq
+  - param Variable Sylvanas
+- Action SetHeroLevel
+  - param Variable SilvermoonArchMage
   - param String 6
-- Event TriggerRegisterPlayerUnitEventSimple
-  - param Preset Player03
-  - param Preset PlayerUnitEventHero_Level
+  - param Preset ShowHideHide
+- Action SelectHeroSkill
+  - param Variable SilvermoonArchMage
+  - param Preset HeroSkillBlizzard
+- Action SelectHeroSkill
+  - param Variable SilvermoonArchMage
+  - param Preset HeroSkillBlizzard
+- Action SelectHeroSkill
+  - param Variable SilvermoonArchMage
+  - param Preset HeroSkillWaterElemental
+- Action SelectHeroSkill
+  - param Variable SilvermoonArchMage
+  - param Preset HeroSkillWaterElemental
+- Action SelectHeroSkill
+  - param Variable SilvermoonArchMage
+  - param Preset HeroSkillBrillianceAura
+- Action SelectHeroSkill
+  - param Variable SilvermoonArchMage
+  - param Preset HeroSkillBrillianceAura
+- Action SuspendHeroXPBJ
+  - param Preset EnableDisableDisable
+  - param Variable SilvermoonArchMage
+- Action SetHeroLevel
+  - param Variable SylvanasIntro
+  - param String 7
+  - param Preset ShowHideHide
+- Action SelectHeroSkill
+  - param Variable SylvanasIntro
+  - param Preset HeroSkillColdArrows
+- Action SelectHeroSkill
+  - param Variable SylvanasIntro
+  - param Preset HeroSkillColdArrows
+- Action SelectHeroSkill
+  - param Variable SylvanasIntro
+  - param Preset HeroSkillColdArrows
+- Action SelectHeroSkill
+  - param Variable SylvanasIntro
+  - param Preset HeroSkillTrueshotAura
+- Action SelectHeroSkill
+  - param Variable SylvanasIntro
+  - param Preset HeroSkillTrueshotAura
+- Action SelectHeroSkill
+  - param Variable SylvanasIntro
+  - param Preset HeroSkillTrueshotAura
+- Action SuspendHeroXPBJ
+  - param Preset EnableDisableDisable
+  - param Variable SylvanasIntro
 
 
 ## Villager01Patrol
@@ -5674,17 +5743,18 @@ version = TFT
       - param Preset OperatorEqualENE
       - param String true
   - param Function DoNothing
-    - Action CreateItemLoc
-      - param String rag1
-      - param Function GetRectCenter
-        - Function GetRectCenter
-          - param Variable gg_rct_SylvanasBansheeFacing
+    - Action DoNothing
   - param Function DoNothing
     - Action CreateItemLoc
-      - param String hcun
+      - param String I015
       - param Function GetRectCenter
         - Function GetRectCenter
           - param Variable gg_rct_SylvanasBansheeFacing
+- Action CreateItemLoc
+  - param String I014
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_SylvanasBansheeFacing
 - Action PauseAllUnitsBJ
   - param Preset PauseUnpauseOptionUnpause
 - Action RemoveUnit
@@ -5710,20 +5780,8 @@ version = TFT
   - param Preset SkyModelNone
 - Action UseTimeOfDayBJ
   - param Preset OnOffOn
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareInteger
-      - param Function GetHeroLevel
-        - Function GetHeroLevel
-          - param Variable Arthas
-      - param Preset OperatorLess
-      - param String 6
-  - param Function DoNothing
-    - Action SuspendHeroXPBJ
-      - param Preset EnableDisableEnable
-      - param Variable Arthas
-  - param Function DoNothing
-    - Action DoNothing
+- Action CustomScriptCode
+  - param String call hero_apply_max_level(udg_Arthas, HERO_MAX_LEVEL[0])
 - Action IfThenElse
   - param Function 
     - Condition OperatorCompareBoolean
@@ -5861,17 +5919,18 @@ version = TFT
       - param Preset OperatorEqualENE
       - param String true
   - param Function DoNothing
-    - Action CreateItemLoc
-      - param String rag1
-      - param Function GetRectCenter
-        - Function GetRectCenter
-          - param Variable gg_rct_SylvanasBansheeFacing
+    - Action DoNothing
   - param Function DoNothing
     - Action CreateItemLoc
-      - param String hcun
+      - param String I015
       - param Function GetRectCenter
         - Function GetRectCenter
           - param Variable gg_rct_SylvanasBansheeFacing
+- Action CreateItemLoc
+  - param String I014
+  - param Function GetRectCenter
+    - Function GetRectCenter
+      - param Variable gg_rct_SylvanasBansheeFacing
 - Action IfThenElse
   - param Function 
     - Condition OperatorCompareUnit
@@ -5941,20 +6000,8 @@ version = TFT
   - param Preset SkyModelNone
 - Action UseTimeOfDayBJ
   - param Preset OnOffOn
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareInteger
-      - param Function GetHeroLevel
-        - Function GetHeroLevel
-          - param Variable Arthas
-      - param Preset OperatorLess
-      - param String 6
-  - param Function DoNothing
-    - Action SuspendHeroXPBJ
-      - param Preset EnableDisableEnable
-      - param Variable Arthas
-  - param Function DoNothing
-    - Action DoNothing
+- Action CustomScriptCode
+  - param String call hero_apply_max_level(udg_Arthas, HERO_MAX_LEVEL[0])
 - Action IfThenElse
   - param Function 
     - Condition OperatorCompareBoolean
@@ -6003,61 +6050,6 @@ version = TFT
   - param Preset Player03
 
 
-## BansheesBuildable
-- enabled: True
-- category: [10] BansheesAvailable
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action QueuedTriggerAddBJ
-  - param Variable gg_trg_BansheesBuildableMessage
-  - param Preset CheckingIgnoringChecking
-- Event TriggerRegisterTimerExpireEventBJ
-  - param Variable TimerBansheeHint
-
-
-## BansheesBuildableMessage
-- enabled: True
-- category: [10] BansheesAvailable
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Condition OperatorCompareBoolean
-  - param Variable ExitCinematicRunning
-  - param Preset OperatorEqualENE
-  - param String false
-- Condition OperatorCompareBoolean
-  - param Variable GameOver
-  - param Preset OperatorEqualENE
-  - param String false
-- Action SetPlayerUnitAvailableBJ
-  - param String uban
-  - param Preset AvailabilityOptionAvailable
-  - param Preset Player03
-- Action SetPlayerTechMaxAllowedSwap
-  - param String Ruba
-  - param String 2
-  - param Preset Player03
-- Action QuestMessageBJ
-  - param Function GetPlayersAll
-    - Function GetPlayersAll
-  - param Preset QuestMessageTypeHint
-  - param String TRIGSTR_160
-- Action TriggerSleepAction
-  - param Preset RealQueueDelayHint
-- Action QueuedTriggerRemoveBJ
-  - param Function GetTriggeringTrigger
-    - Function GetTriggeringTrigger
-
-
 ## TriggerExitCinematic
 - enabled: True
 - category: [5] ExitCinematic
@@ -6068,8 +6060,6 @@ version = TFT
 
 ```
 ### Functions
-- Action TriggerExecute
-  - param Variable gg_trg_Level_Enabling
 - Action SetVariable
   - param Variable ExitCinematicRunning
   - param String true
@@ -6152,6 +6142,8 @@ version = TFT
   - param Variable gg_trg_ExitEnvironment
 - Action TriggerExecute
   - param Variable gg_trg_ExitCinematicMode
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Action PlayThematicMusicBJ
   - param Preset MusicThemeDarkVictory
 - Action EnableTrigger
@@ -6641,14 +6633,28 @@ version = TFT
   - param Variable gg_rct_WeatherSunlight
 - Action TriggerExecute
   - param Variable gg_trg_ExitLichRevive
-- Action CreateNUnitsAtLoc
-  - param String 1
-  - param String Uktl
-  - param Preset Player03
-  - param Function GetRectCenter
-    - Function GetRectCenter
-      - param Variable gg_rct_ExitSpawnKelThuzadGhost
-  - param String 180.00
+- Action CustomScriptCode
+  - param String set udg_ExitKelthuzadLich = hero_create_global(HERO_ID_KEL_THUZAD, USER_PLAYER, GetRectCenterX(gg_rct_ExitSpawnKelThuzadGhost), GetRectCenterY(gg_rct_ExitSpawnKelThuzadGhost), 180.0)
+- Action IfThenElseMultiple
+  - Condition OperatorCompareUnit
+    - param Variable ExitKelthuzadLich
+    - param Preset OperatorEqual
+    - param Preset UnitNull
+  - 1 (then)
+    - Action CreateNUnitsAtLoc
+      - param String 1
+      - param String Uktl
+      - param Preset Player03
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_ExitSpawnKelThuzadGhost
+      - param String 180.00
+    - Action SetVariable
+      - param Variable ExitKelthuzadLich
+      - param Function GetLastCreatedUnit
+        - Function GetLastCreatedUnit
+  - 2 (else)
+    - Action DoNothing
 - Action SetSoundPositionLocBJ
   - param Variable gg_snd_DarkSummoningTarget1
   - param Function GetRectCenter
@@ -6657,10 +6663,6 @@ version = TFT
   - param String 0
 - Action PlaySoundBJ
   - param Variable gg_snd_DarkSummoningTarget1
-- Action SetVariable
-  - param Variable ExitKelthuzadLich
-  - param Function GetLastCreatedUnit
-    - Function GetLastCreatedUnit
 - Action PauseUnitBJ
   - param Preset PauseUnpauseOptionUnpause
   - param Variable ExitKelthuzadLich
@@ -6794,10 +6796,6 @@ version = TFT
 
 ```
 ### Functions
-- Action SetPlayerTechResearchedSwap
-  - param String Ruac
-  - param String 1
-  - param Preset Player03
 - Action CinematicFadeBJ
   - param Preset FadeTypeOptionFadeOut
   - param String 0.40
@@ -7263,147 +7261,6 @@ version = TFT
   - param Variable gg_trg_Level_Victory
 
 
-## Level Enabling
-- enabled: True
-- category: [16] Level Changing
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Action SetMissionAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset MissionIndexU08
-- Action SetMissionAvailableBJ
-  - param Preset EnableDisableEnable
-  - param Preset MissionIndexU09
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareItemCode
-      - param Function GetItemTypeId
-        - Function GetItemTypeId
-          - param Function UnitItemInSlotBJ
-            - Function UnitItemInSlotBJ
-              - param Variable Arthas
-              - param String 1
-      - param Preset OperatorEqualENE
-      - param String ktrm
-  - param Function DoNothing
-    - Action RemoveItem
-      - param Function UnitItemInSlotBJ
-        - Function UnitItemInSlotBJ
-          - param Variable Arthas
-          - param String 1
-  - param Function DoNothing
-    - Action DoNothing
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareItemCode
-      - param Function GetItemTypeId
-        - Function GetItemTypeId
-          - param Function UnitItemInSlotBJ
-            - Function UnitItemInSlotBJ
-              - param Variable Arthas
-              - param String 2
-      - param Preset OperatorEqualENE
-      - param String ktrm
-  - param Function DoNothing
-    - Action RemoveItem
-      - param Function UnitItemInSlotBJ
-        - Function UnitItemInSlotBJ
-          - param Variable Arthas
-          - param String 2
-  - param Function DoNothing
-    - Action DoNothing
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareItemCode
-      - param Function GetItemTypeId
-        - Function GetItemTypeId
-          - param Function UnitItemInSlotBJ
-            - Function UnitItemInSlotBJ
-              - param Variable Arthas
-              - param String 3
-      - param Preset OperatorEqualENE
-      - param String ktrm
-  - param Function DoNothing
-    - Action RemoveItem
-      - param Function UnitItemInSlotBJ
-        - Function UnitItemInSlotBJ
-          - param Variable Arthas
-          - param String 3
-  - param Function DoNothing
-    - Action DoNothing
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareItemCode
-      - param Function GetItemTypeId
-        - Function GetItemTypeId
-          - param Function UnitItemInSlotBJ
-            - Function UnitItemInSlotBJ
-              - param Variable Arthas
-              - param String 4
-      - param Preset OperatorEqualENE
-      - param String ktrm
-  - param Function DoNothing
-    - Action RemoveItem
-      - param Function UnitItemInSlotBJ
-        - Function UnitItemInSlotBJ
-          - param Variable Arthas
-          - param String 4
-  - param Function DoNothing
-    - Action DoNothing
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareItemCode
-      - param Function GetItemTypeId
-        - Function GetItemTypeId
-          - param Function UnitItemInSlotBJ
-            - Function UnitItemInSlotBJ
-              - param Variable Arthas
-              - param String 5
-      - param Preset OperatorEqualENE
-      - param String ktrm
-  - param Function DoNothing
-    - Action RemoveItem
-      - param Function UnitItemInSlotBJ
-        - Function UnitItemInSlotBJ
-          - param Variable Arthas
-          - param String 5
-  - param Function DoNothing
-    - Action DoNothing
-- Action IfThenElse
-  - param Function 
-    - Condition OperatorCompareItemCode
-      - param Function GetItemTypeId
-        - Function GetItemTypeId
-          - param Function UnitItemInSlotBJ
-            - Function UnitItemInSlotBJ
-              - param Variable Arthas
-              - param String 6
-      - param Preset OperatorEqualENE
-      - param String ktrm
-  - param Function DoNothing
-    - Action RemoveItem
-      - param Function UnitItemInSlotBJ
-        - Function UnitItemInSlotBJ
-          - param Variable Arthas
-          - param String 6
-  - param Function DoNothing
-    - Action DoNothing
-- Action StoreUnitBJ
-  - param Variable Arthas
-  - param String Arthas
-  - param String Undead06
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-- Action SaveGameCacheBJ
-  - param Function GetLastCreatedGameCacheBJ
-    - Function GetLastCreatedGameCacheBJ
-
-
 ## Level Victory
 - enabled: True
 - category: [16] Level Changing
@@ -7415,7 +7272,7 @@ version = TFT
 ```
 ### Functions
 - Action SetNextLevelBJ
-  - param String Maps\Campaign\Undead05Interlude.w3m
+  - param String CampaignSelect.w3x
 - Action CustomVictoryBJ
   - param Preset Player03
   - param Preset UseSkipOptionUse
@@ -7695,8 +7552,8 @@ version = TFT
 
 ```
 ### Functions
-- Action TriggerExecute
-  - param Variable gg_trg_Level_Enabling
+- Action CustomScriptCode
+  - param String call status_check_location(0)
 - Action TriggerExecute
   - param Variable gg_trg_Level_Victory
 - Event TriggerRegisterPlayerEventVictory
