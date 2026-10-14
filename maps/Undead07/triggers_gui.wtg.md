@@ -1,8 +1,9 @@
-version = ROC
+version = TFT
 
 # Categories
 | ID  | Name | is a comment |
 | --- | ---- | ------------ |
+| 30 | Archipelago | False |
 | 0 | Initialization | False |
 | 19 | Leaderboards | False |
 | 16 | ComputerResources | False |
@@ -79,6 +80,102 @@ version = ROC
 | CinematicGroup | group | . | . |
 
 # Triggers
+## fileio
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## map_config
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## status
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## heroes
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## item_locations
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## debug
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## zoom
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## irregulars
+- enabled: True
+- category: [30] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
 ## Melee Initialization
 - enabled: True
 - category: [0] Initialization

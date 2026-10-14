@@ -1,0 +1,115 @@
+# Warcraft 3 Map Objects File (.w3o)
+# See w3o.py for type definitions
+version = 2
+has_levels = true
+
+[blizzard_objects]
+
+
+[map_objects.RP10]
+parent_id = 'Rhde'  # Defend
+entity_id = 'RP10'
+
+[[map_objects.RP10.modifications]]
+modification_id = 'gnam'  # Profile.Name
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Find Ghoul"
+object_id = 'null'
+
+[map_objects.RP11]
+parent_id = 'Rhde'  # Defend
+entity_id = 'RP11'
+
+[[map_objects.RP11.modifications]]
+modification_id = 'gnam'  # Profile.Name
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Find Crypt Fiend"
+object_id = 'null'
+
+[map_objects.RP12]
+parent_id = 'Rhde'  # Defend
+entity_id = 'RP12'
+
+[[map_objects.RP12.modifications]]
+modification_id = 'gnam'  # Profile.Name
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Find Skeleton Archer"
+object_id = 'null'
+
+[map_objects.RP13]
+parent_id = 'Rhde'  # Defend
+entity_id = 'RP13'
+
+[[map_objects.RP13.modifications]]
+modification_id = 'gnam'  # Profile.Name
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Find Necromancer"
+object_id = 'null'
+
+[map_objects.RP14]
+parent_id = 'Rhde'  # Defend
+entity_id = 'RP14'
+
+[[map_objects.RP14.modifications]]
+modification_id = 'gnam'  # Profile.Name
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Find Banshee"
+object_id = 'null'
+
+[map_objects.RP15]
+parent_id = 'Rhde'  # Defend
+entity_id = 'RP15'
+
+[[map_objects.RP15.modifications]]
+modification_id = 'gnam'  # Profile.Name
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Find Meat Wagon"
+object_id = 'null'
+
+[map_objects.RP16]
+parent_id = 'Rhde'  # Defend
+entity_id = 'RP16'
+
+[[map_objects.RP16.modifications]]
+modification_id = 'gnam'  # Profile.Name
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Find Abomination"
+object_id = 'null'
+
+[map_objects.RP17]
+parent_id = 'Rhde'  # Defend
+entity_id = 'RP17'
+
+[[map_objects.RP17.modifications]]
+modification_id = 'gnam'  # Profile.Name
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Find Obsidian Statue"
+object_id = 'null'
+
+[map_objects.RP18]
+parent_id = 'Rhde'  # Defend
+entity_id = 'RP18'
+
+[[map_objects.RP18.modifications]]
+modification_id = 'gnam'  # Profile.Name
+data_type = "String"
+variation_level = 1
+table_column = 0
+value = "Find Shade"
+object_id = 'null'
