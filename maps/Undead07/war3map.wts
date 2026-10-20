@@ -4,6 +4,7 @@ Antonidas
 }
 
 STRING 10
+// Sound\Dialogue\UndeadCampaign\Undead07\U07Antonidas13.mp3
 {
 It pains me to even look at you, Arthas.
 }
@@ -44,6 +45,7 @@ The Siege of Dalaran
 }
 
 STRING 19
+// Sound\Dialogue\UndeadCampaign\Undead07\U07Arthas14.mp3
 {
 I'll be happy to end your torment, old man. I told you that your magics could not stop me.  
 }
@@ -74,6 +76,7 @@ Each of the three Archmagi who power the city's defensive shield have hidden som
 }
 
 STRING 29
+// Sound\Dialogue\UndeadCampaign\Undead07\U07Arthas15.mp3
 {
 The spellbook is all yours, lich. Let's take it and leave before the wizards amass for their final attack. 
 }
@@ -84,6 +87,7 @@ Kel'Thuzad
 }
 
 STRING 31
+// Sound\Dialogue\UndeadCampaign\Undead07\U07KelThuzad16.mp3
 {
 Indeed. I will begin summoning Lord Archimonde at sunset.	
 }
@@ -99,6 +103,7 @@ Arthas
 }
 
 STRING 35
+// Sound\Dialogue\UndeadCampaign\Undead07\U07Arthas01.mp3
 {
 Wizards of the Kirin Tor! I am Arthas, first of the Lich King's death knights! I demand that you open your gates and surrender to the might of the Scourge!
 }
@@ -109,6 +114,7 @@ Antonidas
 }
 
 STRING 37
+// Sound\Dialogue\UndeadCampaign\Undead07\U07Antonidas02.mp3
 {
 Greetings, Prince Arthas. How fares your noble father?
 }
@@ -119,6 +125,7 @@ Arthas
 }
 
 STRING 39
+// Sound\Dialogue\UndeadCampaign\Undead07\U07Arthas03.mp3
 {
 Lord Antonidas. There's no need to be snide.
 }
@@ -134,6 +141,7 @@ Antonidas
 }
 
 STRING 45
+// Sound\Dialogue\UndeadCampaign\Undead07\U07Antonidas04.mp3
 {
 We've prepared for your coming, Arthas. My brethren and I have erected auras that will destroy any undead that pass through them.	
 }
@@ -144,6 +152,7 @@ Arthas
 }
 
 STRING 47
+// Sound\Dialogue\UndeadCampaign\Undead07\U07Arthas05.mp3
 {
 Your petty magics will not stop me, Antonidas.
 }
@@ -154,6 +163,7 @@ Antonidas
 }
 
 STRING 49
+// Sound\Dialogue\UndeadCampaign\Undead07\U07Antonidas06.mp3
 {
 Pull your troops back, or we will be forced to unleash our full powers against you! Make your choice, death knight.	
 }
@@ -169,6 +179,7 @@ Kel'Thuzad
 }
 
 STRING 53
+// Sound\Dialogue\UndeadCampaign\Undead07\U07KelThuzad07.mp3
 {
 I sense that three separate wizards are maintaining these auras. If you find and kill them, the auras will disperse.	
 }
@@ -212,6 +223,7 @@ Kel'Thuzad
 }
 
 STRING 121
+// Sound\Dialogue\UndeadCampaign\Undead07\U07KelThuzad09.mp3
 {
 The Kirin Tor keeps these creatures caged for study. If they were to be released, they would cause our enemies a great deal of pain!
 }
@@ -267,11 +279,6 @@ STRING 136
 {
 |cffffcc00MAIN QUEST COMPLETED|r
 Three Archmagi
-}
-
-STRING 137
-{
-Cage
 }
 
 STRING 160
