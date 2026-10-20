@@ -955,7 +955,7 @@ waygate_destination = -1
 entity_id = 30
 
 [[units]]
-type_id = 'ugho'  # Ghoul
+type_id = 'uA00'
 variation = 0
 x = 380.1024169921875
 y = -8109.517578125
@@ -1170,7 +1170,7 @@ waygate_destination = -1
 entity_id = 37
 
 [[units]]
-type_id = 'ugho'  # Ghoul
+type_id = 'uA00'
 variation = 0
 x = 1504.233154296875
 y = -8133.48583984375
@@ -2170,8 +2170,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # rin1 = Mantle of Intelligence +3
-        { item_id = "rin1", chance_percent = 100 }
+        { item_id = "I016", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 0
@@ -7044,8 +7043,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # hlst = Health Stone
-        { item_id = "hlst", chance_percent = 100 }
+        { item_id = "I011", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -7101,8 +7099,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # pams = Anti-magic Potion
-        { item_id = "pams", chance_percent = 100 }
+        { item_id = "I012", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -7618,7 +7615,7 @@ level = 1
 item_class = 0
 
 [[units]]
-type_id = 'belv'  # Boots of Quel'Thalas +6
+type_id = 'I018'
 variation = 0
 x = -3440.760498046875
 y = 2609.11083984375

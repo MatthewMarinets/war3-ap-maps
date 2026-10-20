@@ -1841,7 +1841,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Destroy Purple Base (Keep)"
+value = "Destroy Light Blue Base (Keep)"
 object_id = 'null'
 
 [[map_objects.I02a.modifications]]
@@ -1849,7 +1849,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Destroy Purple Base (Keep)"
+value = "Purchase Destroy Light Blue Base (Keep)"
 object_id = 'null'
 
 [[map_objects.I02a.modifications]]
@@ -1857,7 +1857,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Destroy Purple Base (Keep)\" location."
+value = "Collects the \"Destroy Light Blue Base (Keep)\" location."
 object_id = 'null'
 
 [[map_objects.I02a.modifications]]
@@ -1865,7 +1865,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Destroy Purple Base (Keep)\" location."
+value = "Collects the \"Destroy Light Blue Base (Keep)\" location."
 object_id = 'null'
 
 [[map_objects.I02a.modifications]]
@@ -1909,7 +1909,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Destroy Yellow Base (Castle)"
+value = "Destroy Blue Base (Castle)"
 object_id = 'null'
 
 [[map_objects.I02b.modifications]]
@@ -1917,7 +1917,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Destroy Yellow Base (Castle)"
+value = "Purchase Destroy Blue Base (Castle)"
 object_id = 'null'
 
 [[map_objects.I02b.modifications]]
@@ -1925,7 +1925,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Destroy Yellow Base (Castle)\" location."
+value = "Collects the \"Destroy Blue Base (Castle)\" location."
 object_id = 'null'
 
 [[map_objects.I02b.modifications]]
@@ -1933,7 +1933,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Destroy Yellow Base (Castle)\" location."
+value = "Collects the \"Destroy Blue Base (Castle)\" location."
 object_id = 'null'
 
 [[map_objects.I02b.modifications]]
@@ -1977,7 +1977,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Destroy Orange Base (Castle)"
+value = "Destroy Gray Base (Castle)"
 object_id = 'null'
 
 [[map_objects.I02c.modifications]]
@@ -1985,7 +1985,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Destroy Orange Base (Castle)"
+value = "Purchase Destroy Gray Base (Castle)"
 object_id = 'null'
 
 [[map_objects.I02c.modifications]]
@@ -1993,7 +1993,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Destroy Orange Base (Castle)\" location."
+value = "Collects the \"Destroy Gray Base (Castle)\" location."
 object_id = 'null'
 
 [[map_objects.I02c.modifications]]
@@ -2001,7 +2001,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Destroy Orange Base (Castle)\" location."
+value = "Collects the \"Destroy Gray Base (Castle)\" location."
 object_id = 'null'
 
 [[map_objects.I02c.modifications]]
@@ -2181,7 +2181,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Slay Yellow Archmage"
+value = "Slay Blue Base Archmage"
 object_id = 'null'
 
 [[map_objects.I02f.modifications]]
@@ -2189,7 +2189,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Slay Yellow Archmage"
+value = "Purchase Slay Blue Base Archmage"
 object_id = 'null'
 
 [[map_objects.I02f.modifications]]
@@ -2197,7 +2197,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Slay Yellow Archmage\" location."
+value = "Collects the \"Slay Blue Base Archmage\" location."
 object_id = 'null'
 
 [[map_objects.I02f.modifications]]
@@ -2205,7 +2205,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Slay Yellow Archmage\" location."
+value = "Collects the \"Slay Blue Base Archmage\" location."
 object_id = 'null'
 
 [[map_objects.I02f.modifications]]

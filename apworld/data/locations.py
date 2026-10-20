@@ -373,12 +373,12 @@ class Wc3Location(enum.IntEnum):
     UD7_SOUTH_CAGE_RESCUE =         207023, "South Cage Rescue",            Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.RESCUE
     UD7_WEST_CAGE_RESCUE =          207024, "West Cage Rescue",             Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.RESCUE
     UD7_NORTHEAST_CAGE_RESCUE =     207025, "Northeast Cage Rescue",        Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.RESCUE
-    UD7_DESTROY_PURPLE_BASE =       207026, "Destroy Purple Base (Keep)",   Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.BASE
-    UD7_DESTROY_YELLOW_BASE =       207027, "Destroy Yellow Base (Castle)", Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.BASE
-    UD7_DESTROY_ORANGE_BASE =       207028, "Destroy Orange Base (Castle)", Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.HARD_BASE
+    UD7_DESTROY_LIGHT_BLUE_BASE =   207026, "Destroy Light Blue Base (Keep)", Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.BASE
+    UD7_DESTROY_BLUE_BASE =         207027, "Destroy Blue Base (Castle)",   Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.BASE
+    UD7_DESTROY_GRAY_BASE =         207028, "Destroy Gray Base (Castle)",   Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.HARD_BASE
     UD7_SLAY_SHEEP_ARCHMAGE =       207029, "Slay Sheep Archmage",          Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.HERO
     UD7_SLAY_WORKSHOP_ARCHMAGE =    207030, "Slay Workshop Archmage",       Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.HERO
-    UD7_SLAY_YELLOW_ARCHMAGE =      207031, "Slay Yellow Archmage",         Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.HERO
+    UD7_SLAY_BLUE_BASE_ARCHMAGE =   207031, "Slay Blue Base Archmage",      Wc3Mission.U7_THE_SIEGE_OF_DALARAN, Wc3LocationType.HERO
 
     # Quests:
     # (Main) Archimonde
