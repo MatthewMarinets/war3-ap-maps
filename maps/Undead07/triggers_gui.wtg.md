@@ -231,7 +231,7 @@ version = TFT
 - Action IfThenElse
   - param Function 
     - Condition OperatorCompareUnit
-      - param Variable Arthas
+      - param Variable KelThuzad
       - param Preset OperatorNotEqualENE
       - param Preset UnitNull
   - param Function DoNothing
