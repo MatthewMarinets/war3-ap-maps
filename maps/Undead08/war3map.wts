@@ -44,6 +44,7 @@ Arthas
 }
 
 STRING 17
+// Sound\Dialogue\UndeadCampaign\Undead08\U08Arthas01.mp3
 {
 The circle of power has been prepared per your instructions, lich. Are you ready to begin the summoning?
 }
@@ -59,6 +60,7 @@ Kel'Thuzad
 }
 
 STRING 21
+// Sound\Dialogue\UndeadCampaign\Undead08\U08KelThuzad02.mp3
 {
 Nearly. I've been reading through Medivh's spellbook. His knowledge of demons alone is staggering. I suspect that he was far more powerful than anyone ever realized.
 }
@@ -99,6 +101,7 @@ Tichondrius
 }
 
 STRING 40
+// Sound\Dialogue\UndeadCampaign\Undead08\U08Tichondrius03.mp3
 {
 Not powerful enough to escape death, that is for certain. Suffice to say, the work he began, we will finish... today. Let the summoning commence!  
 }
@@ -114,6 +117,7 @@ Kel'Thuzad
 }
 
 STRING 77
+// Sound\Dialogue\UndeadCampaign\Undead08\U08KelThuzad18.mp3
 {
 Come forth, Lord Archimonde! Enter this world and let us bask in your power!
 }
@@ -124,6 +128,7 @@ Archimonde
 }
 
 STRING 79
+// Sound\Dialogue\UndeadCampaign\Undead08\U08Archimonde19.mp3
 {
 Tremble, mortals, and despair! Doom has come to this world!
 }
@@ -134,6 +139,7 @@ Archimonde
 }
 
 STRING 81
+// Sound\Dialogue\UndeadCampaign\Undead08\U08Archimonde20.mp3
 {
 You have done well, little lich. My plan worked perfectly.
 }
@@ -144,6 +150,7 @@ Tichondrius
 }
 
 STRING 87
+// Sound\Dialogue\UndeadCampaign\Undead08\U08Tichondrius21.mp3
 {
 Lord Archimonde, all the preparations have been made. 
 }
@@ -154,6 +161,7 @@ Archimonde
 }
 
 STRING 89
+// Sound\Dialogue\UndeadCampaign\Undead08\U08Archimonde22.mp3
 {
 Very well, Tichondrius. Since the Lich King is of no further use to me, you dreadlords will now command the Scourge.
 }
@@ -164,6 +172,7 @@ Tichondrius
 }
 
 STRING 91
+// Sound\Dialogue\UndeadCampaign\Undead08\U08Tichondrius23.mp3
 {
 As you wish, Lord Archimonde.
 }
@@ -174,6 +183,7 @@ Archimonde
 }
 
 STRING 93
+// Sound\Dialogue\UndeadCampaign\Undead08\U08Archimonde24.mp3
 {
 Soon, I will order the invasion to begin. But first, I will make an example of these paltry wizards... by crushing their city into the ashes of history.
 }
@@ -184,6 +194,7 @@ Arthas
 }
 
 STRING 97
+// Sound\Dialogue\UndeadCampaign\Undead08\U08Arthas25.mp3
 {
 This has got to be a joke! What happens to us now?
 }
@@ -194,6 +205,7 @@ Kel'Thuzad
 }
 
 STRING 99
+// Sound\Dialogue\UndeadCampaign\Undead08\U08KelThuzad26.mp3
 {
 Be patient, young death knight. The Lich King foresaw this as well. You may yet have a part to play in his grand design.
 }
@@ -235,6 +247,7 @@ Kel'Thuzad
 }
 
 STRING 119
+// Sound\Dialogue\UndeadCampaign\Undead08\U08KelThuzad07.mp3
 {
 The Legion's fury scorches the sky! The barriers between the worlds are weakening! 
 }
@@ -245,6 +258,7 @@ Kel'Thuzad
 }
 
 STRING 121
+// Sound\Dialogue\UndeadCampaign\Undead08\U08KelThuzad08.mp3
 {
 The Legion has sent hellhounds to aid us! The beasts are yours to command, death knight!
 }
@@ -255,6 +269,7 @@ Kel'Thuzad
 }
 
 STRING 123
+// Sound\Dialogue\UndeadCampaign\Undead08\U08KelThuzad08.mp3
 {
 The Legion has sent hellhounds to aid us! The beasts are yours to command, death knight!
 }
@@ -265,6 +280,7 @@ Kel'Thuzad
 }
 
 STRING 125
+// Sound\Dialogue\UndeadCampaign\Undead08\U08KelThuzad08.mp3
 {
 The Legion has sent hellhounds to aid us! The beasts are yours to command, death knight!
 }
@@ -275,6 +291,7 @@ Kel'Thuzad
 }
 
 STRING 127
+// Sound\Dialogue\UndeadCampaign\Undead08\U08KelThuzad09.mp3
 {
 At last! The mighty infernals have been sent to aid us! Rally them quickly, death knight! They are yours to command!
 }
@@ -310,6 +327,7 @@ Necromancer
 }
 
 STRING 146
+// Sound\Dialogue\UndeadCampaign\Undead08\U08Necromancer10.mp3
 {
 Lord Arthas, our scouts have found a cache of goblin land mines!
 }

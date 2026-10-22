@@ -3,7 +3,113 @@
 version = 2
 has_levels = false
 
-[blizzard_objects]
+[blizzard_objects.tkno]
+parent_id = 'tkno'  # Tome of Power
+entity_id = 'null'
+
+[[blizzard_objects.tkno.modifications]]
+modification_id = 'istr'  # ItemData.Stock Replenish Interval
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 1700
+object_id = 'null'
+
+[blizzard_objects.bgst]
+parent_id = 'bgst'  # Belt of Giant Strength +6
+entity_id = 'null'
+
+[[blizzard_objects.bgst.modifications]]
+modification_id = 'istr'  # ItemData.Stock Replenish Interval
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 900
+object_id = 'null'
+
+[blizzard_objects.phea]
+parent_id = 'phea'  # Potion of Healing
+entity_id = 'null'
+
+[[blizzard_objects.phea.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.pman]
+parent_id = 'pman'  # Potion of Mana
+entity_id = 'null'
+
+[[blizzard_objects.pman.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.pinv]
+parent_id = 'pinv'  # Potion of Invisibility
+entity_id = 'null'
+
+[[blizzard_objects.pinv.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.shea]
+parent_id = 'shea'  # Scroll of Healing
+entity_id = 'null'
+
+[[blizzard_objects.shea.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.sman]
+parent_id = 'sman'  # Scroll of Mana
+entity_id = 'null'
+
+[[blizzard_objects.sman.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.spro]
+parent_id = 'spro'  # Scroll of Protection
+entity_id = 'null'
+
+[[blizzard_objects.spro.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
+
+[blizzard_objects.stwp]
+parent_id = 'stwp'  # Scroll of Town Portal
+entity_id = 'null'
+
+[[blizzard_objects.stwp.modifications]]
+modification_id = 'isst'  # ItemData.Stock Start Delay
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 0
+object_id = 'null'
 
 
 [map_objects.I010]

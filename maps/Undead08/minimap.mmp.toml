@@ -5,7 +5,7 @@ file_format_version = 0
 
 [[icons]]
 icon_type = "House"
-x = 93
+x = 94
 y = 240
 colour_blue = 255
 colour_green = 255
@@ -14,7 +14,7 @@ colour_alpha = 255
 
 [[icons]]
 icon_type = "House"
-x = 11
+x = 16
 y = 191
 colour_blue = 255
 colour_green = 255
@@ -23,7 +23,7 @@ colour_alpha = 255
 
 [[icons]]
 icon_type = "GoldMine"
-x = 177
+x = 175
 y = 11
 colour_blue = 255
 colour_green = 255
@@ -32,7 +32,7 @@ colour_alpha = 255
 
 [[icons]]
 icon_type = "House"
-x = 220
+x = 216
 y = 106
 colour_blue = 255
 colour_green = 255
@@ -41,7 +41,7 @@ colour_alpha = 255
 
 [[icons]]
 icon_type = "House"
-x = 35
+x = 39
 y = 66
 colour_blue = 255
 colour_green = 255
@@ -50,7 +50,7 @@ colour_alpha = 255
 
 [[icons]]
 icon_type = "GoldMine"
-x = 248
+x = 244
 y = 154
 colour_blue = 255
 colour_green = 255
@@ -59,7 +59,7 @@ colour_alpha = 255
 
 [[icons]]
 icon_type = "House"
-x = 207
+x = 204
 y = 218
 colour_blue = 255
 colour_green = 255
@@ -68,7 +68,7 @@ colour_alpha = 255
 
 [[icons]]
 icon_type = "GoldMine"
-x = 36
+x = 40
 y = 78
 colour_blue = 255
 colour_green = 255
@@ -77,7 +77,7 @@ colour_alpha = 255
 
 [[icons]]
 icon_type = "GoldMine"
-x = 47
+x = 50
 y = 227
 colour_blue = 255
 colour_green = 255
@@ -95,7 +95,7 @@ colour_alpha = 255
 
 [[icons]]
 icon_type = "GoldMine"
-x = 192
+x = 189
 y = 240
 colour_blue = 255
 colour_green = 255
@@ -104,7 +104,7 @@ colour_alpha = 255
 
 [[icons]]
 icon_type = "PlayerStart"
-x = 176
+x = 174
 y = 26
 colour_blue = 255
 colour_green = 66
@@ -113,7 +113,7 @@ colour_alpha = 255
 
 [[icons]]
 icon_type = "PlayerStart"
-x = 47
+x = 50
 y = 87
 colour_blue = 0
 colour_green = 192
@@ -122,7 +122,7 @@ colour_alpha = 255
 
 [[icons]]
 icon_type = "PlayerStart"
-x = 232
+x = 228
 y = 154
 colour_blue = 3
 colour_green = 3
@@ -131,7 +131,7 @@ colour_alpha = 255
 
 [[icons]]
 icon_type = "PlayerStart"
-x = 37
+x = 41
 y = 96
 colour_blue = 185
 colour_green = 230
@@ -140,7 +140,7 @@ colour_alpha = 255
 
 [[icons]]
 icon_type = "PlayerStart"
-x = 171
+x = 170
 y = 80
 colour_blue = 176
 colour_green = 91
