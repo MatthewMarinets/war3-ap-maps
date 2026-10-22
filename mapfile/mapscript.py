@@ -326,9 +326,11 @@ def generate_sound_setup(sounds: w3s.War3SoundInfo) -> list[str]:
         else:
             result.append(f'    call SetSoundDuration({sound.name}, {sound_duration})')
         if sound.max_distance != w3s.UNSET_FLOAT or sound.min_distance != w3s.UNSET_FLOAT:
-            max_distance = 800.0 if sound.max_distance == w3s.UNSET_FLOAT else sound.max_distance
+            max_distance = 10000.0 if sound.max_distance == w3s.UNSET_FLOAT else sound.max_distance
             min_distance = 600.0 if sound.min_distance == w3s.UNSET_FLOAT else sound.min_distance
             result.append(f'    call SetSoundDistances({sound.name}, {min_distance}, {max_distance})')
+        if sound.distance_cutoff != w3s.UNSET_FLOAT:
+            result.append(f'    call SetSoundDistanceCutoff({sound.name}, {sound.distance_cutoff})')
         if sound.volume > 0:
             result.append(f'    call SetSoundVolume({sound.name}, {sound.volume})')
         if sound.pitch != 1.0 and sound.pitch != w3s.UNSET_FLOAT:
