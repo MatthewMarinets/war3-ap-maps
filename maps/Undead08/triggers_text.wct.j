@@ -145,13 +145,14 @@ function InitTrig_map_config takes nothing returns nothing
     set location_names[20] = "Slay West Kirin Tor Archmage"
     set location_names[21] = "Slay Gate Archmage"
     set location_names[22] = "Slay Vault Archmage"
-    set location_names[23] = "Destroy Red Castle"
-    set location_names[24] = "Destroy Teal Castle"
+    set location_names[23] = "Slay Sheep Archmage"
+    set location_names[24] = "Slay North Base Archmage"
     set location_names[25] = "Destroy Blue Castle"
-    set location_names[26] = "Goblin Land Mines"
-    set location_names[27] = "Goblin Laboratory"
-    set location_names[28] = "Goblin Merchant"
-    set location_names[30] = "Slay Sheep Archmage"
+    set location_names[26] = "Destroy Light Blue Castle"
+    set location_names[27] = "Destroy Gray Castle"
+    set location_names[28] = "Goblin Land Mines"
+    set location_names[29] = "Goblin Laboratory"
+    set location_names[30] = "Goblin Merchant"
 endfunction
 
 //\\// Trigger #2

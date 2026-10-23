@@ -392,13 +392,14 @@ class Wc3Location(enum.IntEnum):
     UD8_SLAY_WEST_BASE_ARCHMAGE =  208020, "Slay West Kirin Tor Archmage", Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.HERO
     UD8_SLAY_GATE_ARCHMAGE =       208021, "Slay Gate Archmage",           Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.HERO
     UD8_SLAY_VAULT_ARCHMAGE =      208022, "Slay Vault Archmage",          Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.HARD_HERO
-    UD8_DESTROY_RED_BASE =         208023, "Destroy Red Castle",           Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.HARD_BASE
-    UD8_DESTROY_TEAL_BASE =        208024, "Destroy Teal Castle",          Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.HARD_BASE
-    UD8_DESTROY_BLUE_BASE =        208025, "Destroy Blue Castle",          Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.HARD_BASE
-    UD8_GOBLIN_LAND_MINES =        208026, "Goblin Land Mines",            Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.QUEST_ITEM, "Goblin Land Mines"
-    UD8_GOBLIN_LABORATORY =        208027, "Goblin Laboratory",            Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.SHOP
-    UD8_GOBLIN_MERCHANT =          208028, "Goblin Merchant",              Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.SHOP
-    UD8_SLAY_SHEEP_ARCHMAGE =      208030, "Slay Sheep Archmage",          Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.HERO
+    UD8_SLAY_SHEEP_ARCHMAGE =      208023, "Slay Sheep Archmage",          Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.HERO
+    UD8_SLAY_NORTH_BASE_ARCHMAGE = 208024, "Slay North Base Archmage",     Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.HERO
+    UD8_DESTROY_BLUE_BASE =        208025, "Destroy Blue Castle",          Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.HARD_BASE  # Red in the editor
+    UD8_DESTROY_LIGHT_BLUE_BASE =  208026, "Destroy Light Blue Castle",    Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.HARD_BASE  # Teal in the editor
+    UD8_DESTROY_GRAY_BASE =        208027, "Destroy Gray Castle",          Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.HARD_BASE  # Blue in the editor
+    UD8_GOBLIN_LAND_MINES =        208028, "Goblin Land Mines",            Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.QUEST_ITEM, "Goblin Land Mines"
+    UD8_GOBLIN_LABORATORY =        208029, "Goblin Laboratory",            Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.SHOP
+    UD8_GOBLIN_MERCHANT =          208030, "Goblin Merchant",              Wc3Mission.U8_UNDER_THE_BURNING_SKY, Wc3LocationType.SHOP
 
     # Quests:
     # (main) Rally the Horde
