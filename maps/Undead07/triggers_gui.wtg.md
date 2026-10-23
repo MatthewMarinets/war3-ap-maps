@@ -227,7 +227,7 @@ version = TFT
 - Action CommentString
   - param String Load the hero data
 - Action CustomScriptCode
-  - param String set udg_Arthas = hero_create(1, USER_PLAYER, GetRectCenterX(gg_rct_KelThuzadStart), GetRectCenterY(gg_rct_KelThuzadStart), 90.0)
+  - param String set udg_KelThuzad = hero_create(1, USER_PLAYER, GetRectCenterX(gg_rct_KelThuzadStart), GetRectCenterY(gg_rct_KelThuzadStart), 90.0)
 - Action IfThenElse
   - param Function 
     - Condition OperatorCompareUnit
