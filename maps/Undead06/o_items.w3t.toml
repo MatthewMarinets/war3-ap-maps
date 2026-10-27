@@ -93,7 +93,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Victory"
+value = "Purchase Victory location"
 object_id = 'null'
 
 [[map_objects.I010.modifications]]
@@ -161,7 +161,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Haomarush (Teal) Item"
+value = "Purchase Haomarush (Teal) Item location"
 object_id = 'null'
 
 [[map_objects.I011.modifications]]
@@ -229,7 +229,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Khanzo (Blue) Item"
+value = "Purchase Khanzo (Blue) Item location"
 object_id = 'null'
 
 [[map_objects.I012.modifications]]
@@ -297,7 +297,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Genjuros (Brown) Item"
+value = "Purchase Genjuros (Brown) Item location"
 object_id = 'null'
 
 [[map_objects.I013.modifications]]
@@ -365,7 +365,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Throk'Feroth (Orange) Item"
+value = "Purchase Throk'Feroth (Orange) Item location"
 object_id = 'null'
 
 [[map_objects.I014.modifications]]
@@ -433,7 +433,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Mazrigos (Light Blue) Item"
+value = "Purchase Mazrigos (Light Blue) Item location"
 object_id = 'null'
 
 [[map_objects.I015.modifications]]
@@ -501,7 +501,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Jubei'Thos (Red) Item"
+value = "Purchase Jubei'Thos (Red) Item location"
 object_id = 'null'
 
 [[map_objects.I016.modifications]]
@@ -569,7 +569,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase East Red Dragon Item"
+value = "Purchase East Red Dragon Item location"
 object_id = 'null'
 
 [[map_objects.I017.modifications]]
@@ -637,7 +637,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase West Red Dragon Item"
+value = "Purchase West Red Dragon Item location"
 object_id = 'null'
 
 [[map_objects.I018.modifications]]
@@ -705,7 +705,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Troll Cage Item"
+value = "Purchase Troll Cage Item location"
 object_id = 'null'
 
 [[map_objects.I019.modifications]]
@@ -773,7 +773,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Ice Troll High Priest Item"
+value = "Purchase Ice Troll High Priest Item location"
 object_id = 'null'
 
 [[map_objects.I01a.modifications]]
@@ -841,7 +841,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Ice Troll Berserker Item"
+value = "Purchase Ice Troll Berserker Item location"
 object_id = 'null'
 
 [[map_objects.I01b.modifications]]
@@ -909,7 +909,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Ice Troll Warlord Item"
+value = "Purchase Ice Troll Warlord Item location"
 object_id = 'null'
 
 [[map_objects.I01c.modifications]]
@@ -977,7 +977,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Murloc Nightcrawler Item"
+value = "Purchase Murloc Nightcrawler Item location"
 object_id = 'null'
 
 [[map_objects.I01d.modifications]]
@@ -1045,7 +1045,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 14"
+value = "Purchase Archipelago Item 14 location"
 object_id = 'null'
 
 [[map_objects.I01e.modifications]]
@@ -1113,7 +1113,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 15"
+value = "Purchase Archipelago Item 15 location"
 object_id = 'null'
 
 [[map_objects.I01f.modifications]]
@@ -1181,7 +1181,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 16"
+value = "Purchase Archipelago Item 16 location"
 object_id = 'null'
 
 [[map_objects.I020.modifications]]
@@ -1249,7 +1249,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 17"
+value = "Purchase Archipelago Item 17 location"
 object_id = 'null'
 
 [[map_objects.I021.modifications]]
@@ -1317,7 +1317,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 18"
+value = "Purchase Archipelago Item 18 location"
 object_id = 'null'
 
 [[map_objects.I022.modifications]]
@@ -1385,7 +1385,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 19"
+value = "Purchase Archipelago Item 19 location"
 object_id = 'null'
 
 [[map_objects.I023.modifications]]
@@ -1453,7 +1453,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Destroy Blue Base (Great Hall)"
+value = "Purchase Destroy Blue Base (Great Hall) location"
 object_id = 'null'
 
 [[map_objects.I024.modifications]]
@@ -1521,7 +1521,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Destroy Brown Base (Stronghold)"
+value = "Purchase Destroy Brown Base (Stronghold) location"
 object_id = 'null'
 
 [[map_objects.I025.modifications]]
@@ -1589,7 +1589,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Destroy Orange Base (Stronghold)"
+value = "Purchase Destroy Orange Base (Stronghold) location"
 object_id = 'null'
 
 [[map_objects.I026.modifications]]
@@ -1657,7 +1657,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Destroy Light Blue Base (Fortress)"
+value = "Purchase Destroy Light Blue Base (Fortress) location"
 object_id = 'null'
 
 [[map_objects.I027.modifications]]
@@ -1725,7 +1725,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Destroy Red Base (Fortress)"
+value = "Purchase Destroy Red Base (Fortress) location"
 object_id = 'null'
 
 [[map_objects.I028.modifications]]
@@ -1793,7 +1793,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Slay Haomarush (Teal)"
+value = "Purchase Slay Haomarush (Teal) location"
 object_id = 'null'
 
 [[map_objects.I029.modifications]]
@@ -1861,7 +1861,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Slay Khanzo (Blue)"
+value = "Purchase Slay Khanzo (Blue) location"
 object_id = 'null'
 
 [[map_objects.I02a.modifications]]
@@ -1929,7 +1929,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Slay Genjuros (Brown)"
+value = "Purchase Slay Genjuros (Brown) location"
 object_id = 'null'
 
 [[map_objects.I02b.modifications]]
@@ -1997,7 +1997,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Slay Throk'Feroth (Orange)"
+value = "Purchase Slay Throk'Feroth (Orange) location"
 object_id = 'null'
 
 [[map_objects.I02c.modifications]]
@@ -2065,7 +2065,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Slay Mazrigos (Light Blue)"
+value = "Purchase Slay Mazrigos (Light Blue) location"
 object_id = 'null'
 
 [[map_objects.I02d.modifications]]
@@ -2133,7 +2133,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Slay Jubei'Thos (Red)"
+value = "Purchase Slay Jubei'Thos (Red) location"
 object_id = 'null'
 
 [[map_objects.I02e.modifications]]
@@ -2201,7 +2201,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Goblin Merchant"
+value = "Purchase Goblin Merchant location"
 object_id = 'null'
 
 [[map_objects.I02f.modifications]]

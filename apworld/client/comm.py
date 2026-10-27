@@ -356,7 +356,7 @@ def update_messages(game_status: GameStatus, packet_status: PacketStatus) -> Non
 
 def update_locations(game_status: GameStatus, status: MissionStatus) -> None:
     packet_status = status.packet_status[PacketType.LOCATIONS]
-    if packet_status.last_received != packet_status.last_sent:
+    if packet_status.last_received != packet_status.last_sent and packet_status.last_received != -1:
         # Don't want to obliterate any location removal data after we've already cleared it locally
         game_status.pending_update |= PacketType.LOCATIONS
         return

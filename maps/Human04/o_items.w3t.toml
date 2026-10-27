@@ -69,7 +69,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Victory"
+value = "Purchase Victory location"
 object_id = 'null'
 
 [[map_objects.I010.modifications]]
@@ -137,7 +137,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Rock Golem Item"
+value = "Purchase Rock Golem Item location"
 object_id = 'null'
 
 [[map_objects.I011.modifications]]
@@ -205,7 +205,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Troll Item"
+value = "Purchase Troll Item location"
 object_id = 'null'
 
 [[map_objects.I012.modifications]]
@@ -273,7 +273,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Timmy Item"
+value = "Purchase Timmy Item location"
 object_id = 'null'
 
 [[map_objects.I013.modifications]]
@@ -341,7 +341,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Gnoll Hut Item"
+value = "Purchase Gnoll Hut Item location"
 object_id = 'null'
 
 [[map_objects.I014.modifications]]
@@ -409,7 +409,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Murloc Nightcrawler Item"
+value = "Purchase Murloc Nightcrawler Item location"
 object_id = 'null'
 
 [[map_objects.I015.modifications]]
@@ -477,7 +477,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Enforcer Item"
+value = "Purchase Enforcer Item location"
 object_id = 'null'
 
 [[map_objects.I016.modifications]]
@@ -545,7 +545,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Troll Hut Item"
+value = "Purchase Troll Hut Item location"
 object_id = 'null'
 
 [[map_objects.I017.modifications]]
@@ -613,7 +613,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Center Goblin Merchant"
+value = "Purchase Center Goblin Merchant location"
 object_id = 'null'
 
 [[map_objects.I018.modifications]]
@@ -681,7 +681,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase North Goblin Merchant"
+value = "Purchase North Goblin Merchant location"
 object_id = 'null'
 
 [[map_objects.I019.modifications]]
@@ -749,7 +749,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 10"
+value = "Purchase Archipelago Item 10 location"
 object_id = 'null'
 
 [[map_objects.I01a.modifications]]
@@ -817,7 +817,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 11"
+value = "Purchase Archipelago Item 11 location"
 object_id = 'null'
 
 [[map_objects.I01b.modifications]]
@@ -885,7 +885,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 12"
+value = "Purchase Archipelago Item 12 location"
 object_id = 'null'
 
 [[map_objects.I01c.modifications]]
@@ -953,7 +953,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 13"
+value = "Purchase Archipelago Item 13 location"
 object_id = 'null'
 
 [[map_objects.I01d.modifications]]
@@ -1021,7 +1021,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 14"
+value = "Purchase Archipelago Item 14 location"
 object_id = 'null'
 
 [[map_objects.I01e.modifications]]
@@ -1089,7 +1089,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 15"
+value = "Purchase Archipelago Item 15 location"
 object_id = 'null'
 
 [[map_objects.I01f.modifications]]
@@ -1157,7 +1157,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 16"
+value = "Purchase Archipelago Item 16 location"
 object_id = 'null'
 
 [[map_objects.I020.modifications]]
@@ -1225,7 +1225,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 17"
+value = "Purchase Archipelago Item 17 location"
 object_id = 'null'
 
 [[map_objects.I021.modifications]]
@@ -1293,7 +1293,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 18"
+value = "Purchase Archipelago Item 18 location"
 object_id = 'null'
 
 [[map_objects.I022.modifications]]
@@ -1361,7 +1361,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 19"
+value = "Purchase Archipelago Item 19 location"
 object_id = 'null'
 
 [[map_objects.I023.modifications]]
@@ -1429,7 +1429,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Destroy the Undead Base"
+value = "Purchase Destroy the Undead Base location"
 object_id = 'null'
 
 [[map_objects.I024.modifications]]
@@ -1497,7 +1497,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Investigate Andorhal"
+value = "Purchase Investigate Andorhal location"
 object_id = 'null'
 
 [[map_objects.I025.modifications]]
@@ -1565,7 +1565,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 22"
+value = "Purchase Archipelago Item 22 location"
 object_id = 'null'
 
 [[map_objects.I026.modifications]]
@@ -1633,7 +1633,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 23"
+value = "Purchase Archipelago Item 23 location"
 object_id = 'null'
 
 [[map_objects.I027.modifications]]
@@ -1701,7 +1701,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 24"
+value = "Purchase Archipelago Item 24 location"
 object_id = 'null'
 
 [[map_objects.I028.modifications]]
@@ -1769,7 +1769,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 25"
+value = "Purchase Archipelago Item 25 location"
 object_id = 'null'
 
 [[map_objects.I029.modifications]]
@@ -1837,7 +1837,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 26"
+value = "Purchase Archipelago Item 26 location"
 object_id = 'null'
 
 [[map_objects.I02a.modifications]]
@@ -1905,7 +1905,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 27"
+value = "Purchase Archipelago Item 27 location"
 object_id = 'null'
 
 [[map_objects.I02b.modifications]]
@@ -1973,7 +1973,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 28"
+value = "Purchase Archipelago Item 28 location"
 object_id = 'null'
 
 [[map_objects.I02c.modifications]]
@@ -2041,7 +2041,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 29"
+value = "Purchase Archipelago Item 29 location"
 object_id = 'null'
 
 [[map_objects.I02d.modifications]]
@@ -2109,7 +2109,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 30"
+value = "Purchase Archipelago Item 30 location"
 object_id = 'null'
 
 [[map_objects.I02e.modifications]]
@@ -2177,7 +2177,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 31"
+value = "Purchase Archipelago Item 31 location"
 object_id = 'null'
 
 [[map_objects.I02f.modifications]]

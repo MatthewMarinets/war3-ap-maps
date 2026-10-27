@@ -108,7 +108,7 @@ def add_ap_items(w3t_file: str, mission: missions.Wc3Mission | None) -> None:
                 location_name = location.location_name
         entities.set_entity(item_id, 'lmbr', fields={
             editor_ids.FIELD_ITEM_NAME: location_name,
-            editor_ids.FIELD_ITEM_TOOLTIP_BASIC: f'Purchase {location_name}',
+            editor_ids.FIELD_ITEM_TOOLTIP_BASIC: f'Purchase {location_name} location',
             editor_ids.FIELD_ITEM_TOOLTIP_EXTENDED: f'Collects the "{location_name}" location.',
             editor_ids.FIELD_ITEM_DESCRIPTION: f'Collects the "{location_name}" location.',
             editor_ids.FIELD_ITEM_INTERFACE_ICON: r'ReplaceableTextures\CommandButtons\BTNSelectHeroOn.blp',

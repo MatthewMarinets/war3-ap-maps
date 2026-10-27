@@ -1652,7 +1652,9 @@ function status_check_location takes integer location_id returns nothing
         return
     endif
     if location_names[location_id] != null then
-        call print("Got an |cffee1166Archipelago location|r (" + location_names[location_id] + ")")
+        if locations_checked[location_id] then
+            call print("Got a already-collected |cffee1166Archipelago location|r (" + location_names[location_id] + ")")
+        endif
     endif
     set locations_checked[location_id]=true
     call status_send()
