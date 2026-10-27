@@ -2958,6 +2958,13 @@ endfunction
 //===========================================================================
 // Trigger: Slay sheep Archmage
 //===========================================================================
+function Trig_Slay_sheep_Archmage_Conditions takes nothing returns boolean
+    if ( not ( udg_GameOver == false ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_Slay_sheep_Archmage_Actions takes nothing returns nothing
     call DisableTrigger(GetTriggeringTrigger())
     call status_check_location(24)
@@ -2967,12 +2974,20 @@ endfunction
 function InitTrig_Slay_sheep_Archmage takes nothing returns nothing
     set gg_trg_Slay_sheep_Archmage=CreateTrigger()
     call TriggerRegisterUnitEvent(gg_trg_Slay_sheep_Archmage, gg_unit_Hamg_0205, EVENT_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_Slay_sheep_Archmage, Condition(function Trig_Slay_sheep_Archmage_Conditions))
     call TriggerAddAction(gg_trg_Slay_sheep_Archmage, function Trig_Slay_sheep_Archmage_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: Slay vault Archmage
 //===========================================================================
+function Trig_Slay_vault_Archmage_Conditions takes nothing returns boolean
+    if ( not ( udg_GameOver == false ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_Slay_vault_Archmage_Actions takes nothing returns nothing
     call DisableTrigger(GetTriggeringTrigger())
     call status_check_location(23)
@@ -2982,12 +2997,20 @@ endfunction
 function InitTrig_Slay_vault_Archmage takes nothing returns nothing
     set gg_trg_Slay_vault_Archmage=CreateTrigger()
     call TriggerRegisterUnitEvent(gg_trg_Slay_vault_Archmage, gg_unit_Hamg_0189, EVENT_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_Slay_vault_Archmage, Condition(function Trig_Slay_vault_Archmage_Conditions))
     call TriggerAddAction(gg_trg_Slay_vault_Archmage, function Trig_Slay_vault_Archmage_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: Slay west base Archmage
 //===========================================================================
+function Trig_Slay_west_base_Archmage_Conditions takes nothing returns boolean
+    if ( not ( udg_GameOver == false ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_Slay_west_base_Archmage_Actions takes nothing returns nothing
     call DisableTrigger(GetTriggeringTrigger())
     call status_check_location(20)
@@ -2997,12 +3020,20 @@ endfunction
 function InitTrig_Slay_west_base_Archmage takes nothing returns nothing
     set gg_trg_Slay_west_base_Archmage=CreateTrigger()
     call TriggerRegisterUnitEvent(gg_trg_Slay_west_base_Archmage, gg_unit_Hamg_0202, EVENT_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_Slay_west_base_Archmage, Condition(function Trig_Slay_west_base_Archmage_Conditions))
     call TriggerAddAction(gg_trg_Slay_west_base_Archmage, function Trig_Slay_west_base_Archmage_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: Slay north base Archmage
 //===========================================================================
+function Trig_Slay_north_base_Archmage_Conditions takes nothing returns boolean
+    if ( not ( udg_GameOver == false ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_Slay_north_base_Archmage_Actions takes nothing returns nothing
     call DisableTrigger(GetTriggeringTrigger())
     call status_check_location(21)
@@ -3012,12 +3043,20 @@ endfunction
 function InitTrig_Slay_north_base_Archmage takes nothing returns nothing
     set gg_trg_Slay_north_base_Archmage=CreateTrigger()
     call TriggerRegisterUnitEvent(gg_trg_Slay_north_base_Archmage, gg_unit_Hamg_0201, EVENT_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_Slay_north_base_Archmage, Condition(function Trig_Slay_north_base_Archmage_Conditions))
     call TriggerAddAction(gg_trg_Slay_north_base_Archmage, function Trig_Slay_north_base_Archmage_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: Slay east base Archmage
 //===========================================================================
+function Trig_Slay_east_base_Archmage_Conditions takes nothing returns boolean
+    if ( not ( udg_GameOver == false ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_Slay_east_base_Archmage_Actions takes nothing returns nothing
     call DisableTrigger(GetTriggeringTrigger())
     call status_check_location(22)
@@ -3027,12 +3066,20 @@ endfunction
 function InitTrig_Slay_east_base_Archmage takes nothing returns nothing
     set gg_trg_Slay_east_base_Archmage=CreateTrigger()
     call TriggerRegisterUnitEvent(gg_trg_Slay_east_base_Archmage, gg_unit_Hamg_0200, EVENT_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_Slay_east_base_Archmage, Condition(function Trig_Slay_east_base_Archmage_Conditions))
     call TriggerAddAction(gg_trg_Slay_east_base_Archmage, function Trig_Slay_east_base_Archmage_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: West Base Location
 //===========================================================================
+function Trig_West_Base_Location_Conditions takes nothing returns boolean
+    if ( not ( udg_GameOver == false ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_West_Base_Location_Actions takes nothing returns nothing
     call DisableTrigger(GetTriggeringTrigger())
     call status_check_location(26)
@@ -3042,12 +3089,20 @@ endfunction
 function InitTrig_West_Base_Location takes nothing returns nothing
     set gg_trg_West_Base_Location=CreateTrigger()
     call TriggerRegisterUnitEvent(gg_trg_West_Base_Location, gg_unit_hcas_0008, EVENT_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_West_Base_Location, Condition(function Trig_West_Base_Location_Conditions))
     call TriggerAddAction(gg_trg_West_Base_Location, function Trig_West_Base_Location_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: North Base Location
 //===========================================================================
+function Trig_North_Base_Location_Conditions takes nothing returns boolean
+    if ( not ( udg_GameOver == false ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_North_Base_Location_Actions takes nothing returns nothing
     call DisableTrigger(GetTriggeringTrigger())
     call status_check_location(27)
@@ -3057,12 +3112,20 @@ endfunction
 function InitTrig_North_Base_Location takes nothing returns nothing
     set gg_trg_North_Base_Location=CreateTrigger()
     call TriggerRegisterUnitEvent(gg_trg_North_Base_Location, gg_unit_hcas_0080, EVENT_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_North_Base_Location, Condition(function Trig_North_Base_Location_Conditions))
     call TriggerAddAction(gg_trg_North_Base_Location, function Trig_North_Base_Location_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: East Base Location
 //===========================================================================
+function Trig_East_Base_Location_Conditions takes nothing returns boolean
+    if ( not ( udg_GameOver == false ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_East_Base_Location_Actions takes nothing returns nothing
     call DisableTrigger(GetTriggeringTrigger())
     call status_check_location(25)
@@ -3072,6 +3135,7 @@ endfunction
 function InitTrig_East_Base_Location takes nothing returns nothing
     set gg_trg_East_Base_Location=CreateTrigger()
     call TriggerRegisterUnitEvent(gg_trg_East_Base_Location, gg_unit_hcas_0081, EVENT_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_East_Base_Location, Condition(function Trig_East_Base_Location_Conditions))
     call TriggerAddAction(gg_trg_East_Base_Location, function Trig_East_Base_Location_Actions)
 endfunction
 

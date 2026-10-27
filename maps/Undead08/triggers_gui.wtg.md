@@ -276,6 +276,10 @@ version = TFT
 - Event TriggerRegisterUnitEvent
   - param Variable gg_unit_Hamg_0205
   - param Preset UnitEventDeath
+- Condition OperatorCompareBoolean
+  - param Variable GameOver
+  - param Preset OperatorEqualENE
+  - param String false
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
@@ -296,6 +300,10 @@ version = TFT
 - Event TriggerRegisterUnitEvent
   - param Variable gg_unit_Hamg_0189
   - param Preset UnitEventDeath
+- Condition OperatorCompareBoolean
+  - param Variable GameOver
+  - param Preset OperatorEqualENE
+  - param String false
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
@@ -316,6 +324,10 @@ version = TFT
 - Event TriggerRegisterUnitEvent
   - param Variable gg_unit_Hamg_0202
   - param Preset UnitEventDeath
+- Condition OperatorCompareBoolean
+  - param Variable GameOver
+  - param Preset OperatorEqualENE
+  - param String false
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
@@ -336,6 +348,10 @@ version = TFT
 - Event TriggerRegisterUnitEvent
   - param Variable gg_unit_Hamg_0201
   - param Preset UnitEventDeath
+- Condition OperatorCompareBoolean
+  - param Variable GameOver
+  - param Preset OperatorEqualENE
+  - param String false
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
@@ -356,6 +372,10 @@ version = TFT
 - Event TriggerRegisterUnitEvent
   - param Variable gg_unit_Hamg_0200
   - param Preset UnitEventDeath
+- Condition OperatorCompareBoolean
+  - param Variable GameOver
+  - param Preset OperatorEqualENE
+  - param String false
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
@@ -376,6 +396,10 @@ version = TFT
 - Event TriggerRegisterUnitEvent
   - param Variable gg_unit_hcas_0008
   - param Preset UnitEventDeath
+- Condition OperatorCompareBoolean
+  - param Variable GameOver
+  - param Preset OperatorEqualENE
+  - param String false
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
@@ -396,6 +420,10 @@ version = TFT
 - Event TriggerRegisterUnitEvent
   - param Variable gg_unit_hcas_0080
   - param Preset UnitEventDeath
+- Condition OperatorCompareBoolean
+  - param Variable GameOver
+  - param Preset OperatorEqualENE
+  - param String false
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
@@ -416,6 +444,10 @@ version = TFT
 - Event TriggerRegisterUnitEvent
   - param Variable gg_unit_hcas_0081
   - param Preset UnitEventDeath
+- Condition OperatorCompareBoolean
+  - param Variable GameOver
+  - param Preset OperatorEqualENE
+  - param String false
 - Action DisableTrigger
   - param Function GetTriggeringTrigger
     - Function GetTriggeringTrigger
