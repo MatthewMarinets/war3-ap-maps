@@ -56,10 +56,16 @@ def to_toml(
             result.append(f'{key} = {"\n".join(lines)}')
         elif is_array:
             for val in value:
-                list_results.append(f'\n[[{".".join(array_nesting + (key,))}]]')
+                interior = ".".join(array_nesting + (key,))
+                if ";" in interior:
+                    interior = f'"{interior}"'
+                list_results.append(f'\n[[{interior}]]')
                 list_results.append(to_toml(val, array_nesting=array_nesting + (key,), quote_style=quote_style))
         elif isinstance(value, dict):
-            list_results.append(f'\n[{".".join(array_nesting + (key,))}]')
+            interior = ".".join(array_nesting + (key,))
+            if ";" in interior:
+                interior = f'"{interior}"'
+            list_results.append(f'\n[{interior}]')
             list_results.append(to_toml(value, array_nesting=array_nesting + (key,), quote_style=quote_style))
         else:
             result.append(f'{key} = {value}')
