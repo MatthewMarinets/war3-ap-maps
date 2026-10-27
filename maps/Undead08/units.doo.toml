@@ -1022,8 +1022,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # tst2 = Tome of Strength +2
-        { item_id = "tst2", chance_percent = 100 }
+        { item_id = "I015", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -1060,8 +1059,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # rde4 = Ring of Protection +5
-        { item_id = "rde4", chance_percent = 100 }
+        { item_id = "I014", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -5464,8 +5462,7 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # shea = Scroll of Healing
-        { item_id = "shea", chance_percent = 100 }
+        { item_id = "I013", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500
@@ -6756,12 +6753,10 @@ mana_points = -1
 random_item_table_id = -1
 item_drops = [
     [
-        # ccmd = Scepter of Mastery
-        { item_id = "ccmd", chance_percent = 100 }
+        { item_id = "I011", chance_percent = 100 }
     ],
     [
-        # mcou = Medallion of Courage
-        { item_id = "mcou", chance_percent = 100 }
+        { item_id = "I012", chance_percent = 100 }
     ]
 ]
 goldmine_gold_amount = 12500

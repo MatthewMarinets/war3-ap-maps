@@ -529,7 +529,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 6"
+value = "Goblin Land Mines 1"
 object_id = 'null'
 
 [[map_objects.I016.modifications]]
@@ -537,7 +537,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 6"
+value = "Purchase Goblin Land Mines 1"
 object_id = 'null'
 
 [[map_objects.I016.modifications]]
@@ -545,7 +545,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 6\" location."
+value = "Collects the \"Goblin Land Mines 1\" location."
 object_id = 'null'
 
 [[map_objects.I016.modifications]]
@@ -553,7 +553,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 6\" location."
+value = "Collects the \"Goblin Land Mines 1\" location."
 object_id = 'null'
 
 [[map_objects.I016.modifications]]
@@ -597,7 +597,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 7"
+value = "Goblin Land Mines 2"
 object_id = 'null'
 
 [[map_objects.I017.modifications]]
@@ -605,7 +605,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 7"
+value = "Purchase Goblin Land Mines 2"
 object_id = 'null'
 
 [[map_objects.I017.modifications]]
@@ -613,7 +613,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 7\" location."
+value = "Collects the \"Goblin Land Mines 2\" location."
 object_id = 'null'
 
 [[map_objects.I017.modifications]]
@@ -621,7 +621,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 7\" location."
+value = "Collects the \"Goblin Land Mines 2\" location."
 object_id = 'null'
 
 [[map_objects.I017.modifications]]
@@ -665,7 +665,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 8"
+value = "Goblin Land Mines 3"
 object_id = 'null'
 
 [[map_objects.I018.modifications]]
@@ -673,7 +673,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 8"
+value = "Purchase Goblin Land Mines 3"
 object_id = 'null'
 
 [[map_objects.I018.modifications]]
@@ -681,7 +681,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 8\" location."
+value = "Collects the \"Goblin Land Mines 3\" location."
 object_id = 'null'
 
 [[map_objects.I018.modifications]]
@@ -689,7 +689,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 8\" location."
+value = "Collects the \"Goblin Land Mines 3\" location."
 object_id = 'null'
 
 [[map_objects.I018.modifications]]
@@ -733,7 +733,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Archipelago Item 9"
+value = "Goblin Land Mines 4"
 object_id = 'null'
 
 [[map_objects.I019.modifications]]
@@ -741,7 +741,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Archipelago Item 9"
+value = "Purchase Goblin Land Mines 4"
 object_id = 'null'
 
 [[map_objects.I019.modifications]]
@@ -749,7 +749,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 9\" location."
+value = "Collects the \"Goblin Land Mines 4\" location."
 object_id = 'null'
 
 [[map_objects.I019.modifications]]
@@ -757,7 +757,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Archipelago Item 9\" location."
+value = "Collects the \"Goblin Land Mines 4\" location."
 object_id = 'null'
 
 [[map_objects.I019.modifications]]
@@ -1481,7 +1481,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Slay West Kirin Tor Archmage"
+value = "Slay West Base Archmage"
 object_id = 'null'
 
 [[map_objects.I024.modifications]]
@@ -1489,7 +1489,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Slay West Kirin Tor Archmage"
+value = "Purchase Slay West Base Archmage"
 object_id = 'null'
 
 [[map_objects.I024.modifications]]
@@ -1497,7 +1497,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Slay West Kirin Tor Archmage\" location."
+value = "Collects the \"Slay West Base Archmage\" location."
 object_id = 'null'
 
 [[map_objects.I024.modifications]]
@@ -1505,7 +1505,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Slay West Kirin Tor Archmage\" location."
+value = "Collects the \"Slay West Base Archmage\" location."
 object_id = 'null'
 
 [[map_objects.I024.modifications]]
@@ -1549,7 +1549,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Slay Gate Archmage"
+value = "Slay North Base Archmage"
 object_id = 'null'
 
 [[map_objects.I025.modifications]]
@@ -1557,7 +1557,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Slay Gate Archmage"
+value = "Purchase Slay North Base Archmage"
 object_id = 'null'
 
 [[map_objects.I025.modifications]]
@@ -1565,7 +1565,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Slay Gate Archmage\" location."
+value = "Collects the \"Slay North Base Archmage\" location."
 object_id = 'null'
 
 [[map_objects.I025.modifications]]
@@ -1573,7 +1573,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Slay Gate Archmage\" location."
+value = "Collects the \"Slay North Base Archmage\" location."
 object_id = 'null'
 
 [[map_objects.I025.modifications]]
@@ -1617,7 +1617,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Slay Vault Archmage"
+value = "Slay East Base Archmage"
 object_id = 'null'
 
 [[map_objects.I026.modifications]]
@@ -1625,7 +1625,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Slay Vault Archmage"
+value = "Purchase Slay East Base Archmage"
 object_id = 'null'
 
 [[map_objects.I026.modifications]]
@@ -1633,7 +1633,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Slay Vault Archmage\" location."
+value = "Collects the \"Slay East Base Archmage\" location."
 object_id = 'null'
 
 [[map_objects.I026.modifications]]
@@ -1641,7 +1641,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Slay Vault Archmage\" location."
+value = "Collects the \"Slay East Base Archmage\" location."
 object_id = 'null'
 
 [[map_objects.I026.modifications]]
@@ -1685,7 +1685,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Slay Sheep Archmage"
+value = "Slay Vault Archmage"
 object_id = 'null'
 
 [[map_objects.I027.modifications]]
@@ -1693,7 +1693,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Slay Sheep Archmage"
+value = "Purchase Slay Vault Archmage"
 object_id = 'null'
 
 [[map_objects.I027.modifications]]
@@ -1701,7 +1701,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Slay Sheep Archmage\" location."
+value = "Collects the \"Slay Vault Archmage\" location."
 object_id = 'null'
 
 [[map_objects.I027.modifications]]
@@ -1709,7 +1709,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Slay Sheep Archmage\" location."
+value = "Collects the \"Slay Vault Archmage\" location."
 object_id = 'null'
 
 [[map_objects.I027.modifications]]
@@ -1753,7 +1753,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Slay North Base Archmage"
+value = "Slay Sheep Archmage"
 object_id = 'null'
 
 [[map_objects.I028.modifications]]
@@ -1761,7 +1761,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Slay North Base Archmage"
+value = "Purchase Slay Sheep Archmage"
 object_id = 'null'
 
 [[map_objects.I028.modifications]]
@@ -1769,7 +1769,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Slay North Base Archmage\" location."
+value = "Collects the \"Slay Sheep Archmage\" location."
 object_id = 'null'
 
 [[map_objects.I028.modifications]]
@@ -1777,7 +1777,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Slay North Base Archmage\" location."
+value = "Collects the \"Slay Sheep Archmage\" location."
 object_id = 'null'
 
 [[map_objects.I028.modifications]]
@@ -2025,7 +2025,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Goblin Land Mines"
+value = "Archipelago Item 28"
 object_id = 'null'
 
 [[map_objects.I02c.modifications]]
@@ -2033,7 +2033,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Goblin Land Mines"
+value = "Purchase Archipelago Item 28"
 object_id = 'null'
 
 [[map_objects.I02c.modifications]]
@@ -2041,7 +2041,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Goblin Land Mines\" location."
+value = "Collects the \"Archipelago Item 28\" location."
 object_id = 'null'
 
 [[map_objects.I02c.modifications]]
@@ -2049,7 +2049,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Goblin Land Mines\" location."
+value = "Collects the \"Archipelago Item 28\" location."
 object_id = 'null'
 
 [[map_objects.I02c.modifications]]
