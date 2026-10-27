@@ -252,13 +252,13 @@ version = TFT
 - Action CustomScriptCode
   - param String set udg_KelThuzad = CreateUnit(USER_PLAYER, 'Uktl', GetRectCenterX(gg_rct_Kel_Thuzad), GetRectCenterY(gg_rct_Kel_Thuzad), 9.19)
 - Action CustomScriptCode
-  - param String set hero_abil_1[0] = 'AUfn'
+  - param String set hero_abil_1[1] = 'AUfn'
 - Action CustomScriptCode
-  - param String set hero_abil_2[0] = 'AUfu'
+  - param String set hero_abil_2[1] = 'AUfu'
 - Action CustomScriptCode
-  - param String set hero_abil_3[0] = 'AUdr'
+  - param String set hero_abil_3[1] = 'AUdr'
 - Action CustomScriptCode
-  - param String set hero_abil_4[0] = 'AUdd'
+  - param String set hero_abil_4[1] = 'AUdd'
 
 
 ## AP mercenaries
