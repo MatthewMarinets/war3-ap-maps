@@ -615,6 +615,46 @@ table_column = 0
 value = 0
 object_id = 'null'
 
+[blizzard_objects.ngnb]
+parent_id = 'ngnb'  # Gnoll Brute
+entity_id = 'null'
+
+[[blizzard_objects.ngnb.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 40
+object_id = 'null'
+
+[[blizzard_objects.ngnb.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 3
+object_id = 'null'
+
+[blizzard_objects.ngnv]
+parent_id = 'ngnv'  # Gnoll Overseer
+entity_id = 'null'
+
+[[blizzard_objects.ngnv.modifications]]
+modification_id = 'ubba'  # UnitBalance.Gold Bounty Awarded - Base
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 70
+object_id = 'null'
+
+[[blizzard_objects.ngnv.modifications]]
+modification_id = 'ubdi'  # UnitBalance.Gold Bounty Awarded - Number of Dice
+data_type = "Integer"
+variation_level = 0
+table_column = 0
+value = 5
+object_id = 'null'
+
 
 [map_objects.nC00]
 parent_id = 'nvlw'  # Villager
