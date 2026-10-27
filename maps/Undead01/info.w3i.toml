@@ -42,6 +42,7 @@ tft_water_tint_red = 0
 tft_water_tint_green = 0
 tft_water_tint_blue = 0
 tft_water_tint_alpha = 0
+upgrades = []
 random_entities = []
 random_items = []
 

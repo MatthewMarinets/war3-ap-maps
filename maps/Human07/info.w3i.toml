@@ -46,7 +46,6 @@ random_entities = []
 random_items = []
 
 [[players]]
-
 player_id = 1
 player_type = "User"
 player_faction = "Human"
@@ -57,7 +56,6 @@ ally_low_priorities_flags = 0x0
 ally_high_priorities_flags = 0x0
 
 [[players]]
-
 player_id = 3
 player_type = "Computer"
 player_faction = "Undead"
@@ -68,7 +66,6 @@ ally_low_priorities_flags = 0x0
 ally_high_priorities_flags = 0x0
 
 [[players]]
-
 player_id = 6
 player_type = "Computer"
 player_faction = "Undead"
@@ -79,7 +76,6 @@ ally_low_priorities_flags = 0x7341
 ally_high_priorities_flags = 0x0
 
 [[players]]
-
 player_id = 7
 player_type = "Computer"
 player_faction = "Human"
@@ -90,7 +86,6 @@ ally_low_priorities_flags = 0x6e656946
 ally_high_priorities_flags = 0x44
 
 [[players]]
-
 player_id = 8
 player_type = "Computer"
 player_faction = "Human"
@@ -101,7 +96,6 @@ ally_low_priorities_flags = 0x6e656946
 ally_high_priorities_flags = 0x44
 
 [[players]]
-
 player_id = 9
 player_type = "Neutral"
 player_faction = "Human"
@@ -112,123 +106,100 @@ ally_low_priorities_flags = 0x0
 ally_high_priorities_flags = 0x0
 
 [[forces]]
-
 force_flags = "None"
 player_mask_flags = 0xfffffe37
 name = 'TRIGSTR_167'
 
 [[forces]]
-
 force_flags = "None"
 player_mask_flags = 0x180
 name = 'TRIGSTR_172'
 
 [[forces]]
-
 force_flags = "Allied|ShareVision"
 player_mask_flags = 0x48
 name = 'TRIGSTR_169'
 
 [[upgrades]]
-
 player_flags = 0x180
 upgrade_id = 'Rhgb'  # Flying Machine Bombs
 level = 0
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x182
 upgrade_id = 'Rhhb'  # Storm Hammers
 level = 0
 availability = "Unavailable"
 
 [[technologies]]
-
 player_flags = 0x182
 tech_id = 'Hpal'  # Paladin
 
 [[technologies]]
-
 player_flags = 0x182
 tech_id = 'Hamg'  # Archmage
 
 [[technologies]]
-
 player_flags = 0x182
 tech_id = 'Hmkg'  # Mountain King
 
 [[technologies]]
-
 player_flags = 0x102
 tech_id = 'hgry'  # Gryphon Rider
 
 [[technologies]]
-
 player_flags = 0x102
 tech_id = 'hgra'  # Gryphon Aviary
 
 [[technologies]]
-
 player_flags = 0x48
 tech_id = 'ufro'  # Frost Wyrm
 
 [[technologies]]
-
 player_flags = 0x48
 tech_id = 'uban'  # Banshee
 
 [[technologies]]
-
 player_flags = 0x8
 tech_id = 'ugar'  # Gargoyle
 
 [[technologies]]
-
 player_flags = 0x8
 tech_id = 'umtw'  # Meat Wagon
 
 [[technologies]]
-
 player_flags = 0x8
 tech_id = 'unec'  # Necromancer
 
 [[technologies]]
-
 player_flags = 0x40
 tech_id = 'Udea'  # Death Knight
 
 [[technologies]]
-
 player_flags = 0x40
 tech_id = 'Ulic'  # Lich
 
 [[technologies]]
-
 player_flags = 0x40
 tech_id = 'Udre'  # Dreadlord
 
 [[technologies]]
-
 player_flags = 0x2
 tech_id = 'hmtt'  # Siege Engine
 
 [[technologies]]
-
 player_flags = 0xf
 tech_id = 'Hblm'  # Blood Mage
 
 [[technologies]]
-
 player_flags = 0xf
 tech_id = 'Oshd'  # Shadow Hunter
 
 [[technologies]]
-
 player_flags = 0xf
 tech_id = 'Ucrl'  # Crypt Lord
 
 [[technologies]]
-
 player_flags = 0xf
 tech_id = 'Ewar'  # Warden

@@ -8,7 +8,6 @@ doodads = []
 immobile_doodads = []
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = -3776.0
@@ -37,13 +36,11 @@ waygate_destination = -1
 entity_id = 4
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Huth'  # Paladin
 variation = 0
 x = -3819.53857421875
@@ -72,31 +69,26 @@ waygate_destination = -1
 entity_id = 2
 
 [[units.modified_abilities]]
-
 abil_id = 'AHhb'  # Holy Light
 autocast_active = false
 abil_level = 1
 
 [[units.modified_abilities]]
-
 abil_id = 'AHds'  # Divine Shield
 autocast_active = false
 abil_level = 3
 
 [[units.modified_abilities]]
-
 abil_id = 'AHre'  # Resurrection
 autocast_active = false
 abil_level = 1
 
 [[units.modified_abilities]]
-
 abil_id = 'AHad'  # Devotion Aura
 autocast_active = false
 abil_level = 3
 
 [[units]]
-
 type_id = 'hwtw'  # Scout Tower
 variation = 0
 x = -3648.0
@@ -126,7 +118,6 @@ waygate_destination = -1
 entity_id = 8
 
 [[units]]
-
 type_id = 'nC03'
 variation = 0
 x = 4254.79345703125
@@ -155,13 +146,11 @@ waygate_destination = -1
 entity_id = 108
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'npig'  # Pig
 variation = 0
 x = 2750.3994140625
@@ -191,7 +180,6 @@ waygate_destination = -1
 entity_id = 94
 
 [[units]]
-
 type_id = 'nmrl'  # Murloc Tiderunner
 variation = 0
 x = -4453.3466796875
@@ -221,7 +209,6 @@ waygate_destination = -1
 entity_id = 19
 
 [[units]]
-
 type_id = 'nC03'
 variation = 0
 x = 4391.818359375
@@ -250,13 +237,11 @@ waygate_destination = -1
 entity_id = 109
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'orai'  # Raider
 variation = 0
 x = -1237.6490478515625
@@ -286,7 +271,6 @@ waygate_destination = -1
 entity_id = 43
 
 [[units]]
-
 type_id = 'ohun'  # Troll Headhunter
 variation = 0
 x = -922.971435546875
@@ -316,7 +300,6 @@ waygate_destination = -1
 entity_id = 29
 
 [[units]]
-
 type_id = 'orai'  # Raider
 variation = 0
 x = 1451.2655029296875
@@ -345,13 +328,11 @@ waygate_destination = -1
 entity_id = 39
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = -5888.0
@@ -381,7 +362,6 @@ waygate_destination = -1
 entity_id = 67
 
 [[units]]
-
 type_id = 'ogru'  # Grunt
 variation = 0
 x = -1113.046875
@@ -411,7 +391,6 @@ waygate_destination = -1
 entity_id = 30
 
 [[units]]
-
 type_id = 'nvlw'  # Villager
 variation = 0
 x = 3353.85107421875
@@ -441,7 +420,6 @@ waygate_destination = -1
 entity_id = 54
 
 [[units]]
-
 type_id = 'halt'  # Altar of Kings
 variation = 0
 x = -2912.0
@@ -470,13 +448,11 @@ waygate_destination = -1
 entity_id = 34
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'ngnw'  # Gnoll Warden
 variation = 0
 x = 733.587890625
@@ -509,13 +485,11 @@ waygate_destination = -1
 entity_id = 74
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'hA00'
 variation = 0
 x = 184.0004119873047
@@ -544,13 +518,11 @@ waygate_destination = -1
 entity_id = 22
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'ohun'  # Troll Headhunter
 variation = 0
 x = 1597.328369140625
@@ -579,13 +551,11 @@ waygate_destination = -1
 entity_id = 38
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'npgf'  # Pig Farm
 variation = 0
 x = -224.0
@@ -614,13 +584,11 @@ waygate_destination = -1
 entity_id = 28
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nmrl'  # Murloc Tiderunner
 variation = 0
 x = -3537.364013671875
@@ -650,7 +618,6 @@ waygate_destination = -1
 entity_id = 151
 
 [[units]]
-
 type_id = 'hlum'  # Lumber Mill
 variation = 0
 x = -4384.0
@@ -680,7 +647,6 @@ waygate_destination = -1
 entity_id = 10
 
 [[units]]
-
 type_id = 'ohun'  # Troll Headhunter
 variation = 0
 x = -1374.744873046875
@@ -710,7 +676,6 @@ waygate_destination = -1
 entity_id = 25
 
 [[units]]
-
 type_id = 'htow'  # Town Hall
 variation = 0
 x = -3776.0
@@ -740,7 +705,6 @@ waygate_destination = -1
 entity_id = 3
 
 [[units]]
-
 type_id = 'hwtw'  # Scout Tower
 variation = 0
 x = -2240.0
@@ -770,7 +734,6 @@ waygate_destination = -1
 entity_id = 143
 
 [[units]]
-
 type_id = 'nmrr'  # Murloc Huntsman
 variation = 0
 x = -4438.59814453125
@@ -804,7 +767,6 @@ waygate_destination = -1
 entity_id = 148
 
 [[units]]
-
 type_id = 'nmrl'  # Murloc Tiderunner
 variation = 0
 x = -4587.9931640625
@@ -834,7 +796,6 @@ waygate_destination = -1
 entity_id = 149
 
 [[units]]
-
 type_id = 'hwtw'  # Scout Tower
 variation = 0
 x = -4352.0
@@ -864,7 +825,6 @@ waygate_destination = -1
 entity_id = 142
 
 [[units]]
-
 type_id = 'nmrl'  # Murloc Tiderunner
 variation = 0
 x = 4982.81787109375
@@ -893,13 +853,11 @@ waygate_destination = -1
 entity_id = 72
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'hpea'  # Peasant
 variation = 0
 x = -3537.901123046875
@@ -929,7 +887,6 @@ waygate_destination = -1
 entity_id = 45
 
 [[units]]
-
 type_id = 'ogru'  # Grunt
 variation = 0
 x = -859.3425903320312
@@ -959,7 +916,6 @@ waygate_destination = -1
 entity_id = 90
 
 [[units]]
-
 type_id = 'ngno'  # Gnoll
 variation = 0
 x = -4688.24560546875
@@ -989,7 +945,6 @@ waygate_destination = -1
 entity_id = 47
 
 [[units]]
-
 type_id = 'obar'  # Barracks
 variation = 0
 x = -832.0
@@ -1019,7 +974,6 @@ waygate_destination = -1
 entity_id = 118
 
 [[units]]
-
 type_id = 'hwtw'  # Scout Tower
 variation = 0
 x = -1728.0
@@ -1049,7 +1003,6 @@ waygate_destination = -1
 entity_id = 24
 
 [[units]]
-
 type_id = 'npig'  # Pig
 variation = 0
 x = 2522.144287109375
@@ -1079,7 +1032,6 @@ waygate_destination = -1
 entity_id = 93
 
 [[units]]
-
 type_id = 'npig'  # Pig
 variation = 0
 x = 2545.4541015625
@@ -1109,7 +1061,6 @@ waygate_destination = -1
 entity_id = 92
 
 [[units]]
-
 type_id = 'ngol'  # Gold Mine
 variation = 0
 x = -4736.0
@@ -1139,7 +1090,6 @@ waygate_destination = -1
 entity_id = 9
 
 [[units]]
-
 type_id = 'hpea'  # Peasant
 variation = 0
 x = -3862.1904296875
@@ -1169,7 +1119,6 @@ waygate_destination = -1
 entity_id = 44
 
 [[units]]
-
 type_id = 'nomg'  # Ogre Magi
 variation = 0
 x = -5430.07275390625
@@ -1202,13 +1151,11 @@ waygate_destination = -1
 entity_id = 57
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nmrl'  # Murloc Tiderunner
 variation = 0
 x = -4172.4892578125
@@ -1238,7 +1185,6 @@ waygate_destination = -1
 entity_id = 18
 
 [[units]]
-
 type_id = 'ngna'  # Gnoll Poacher
 variation = 0
 x = -4811.6552734375
@@ -1272,7 +1218,6 @@ waygate_destination = -1
 entity_id = 51
 
 [[units]]
-
 type_id = 'hrif'  # Rifleman
 variation = 0
 x = 71.45368957519531
@@ -1301,13 +1246,11 @@ waygate_destination = -1
 entity_id = 17
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'hA00'
 variation = 0
 x = -252.7581329345703
@@ -1336,13 +1279,11 @@ waygate_destination = -1
 entity_id = 15
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'ohun'  # Troll Headhunter
 variation = 0
 x = -449.5839538574219
@@ -1371,13 +1312,11 @@ waygate_destination = -1
 entity_id = 63
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nC03'
 variation = 0
 x = 4149.8857421875
@@ -1406,13 +1345,11 @@ waygate_destination = -1
 entity_id = 104
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'hrif'  # Rifleman
 variation = 0
 x = -226.2372283935547
@@ -1441,13 +1378,11 @@ waygate_destination = -1
 entity_id = 14
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nmh1'  # Murloc Hut
 variation = 0
 x = -4256.0
@@ -1481,7 +1416,6 @@ waygate_destination = -1
 entity_id = 99
 
 [[units]]
-
 type_id = 'ngnh'  # Gnoll Hut
 variation = 0
 x = -4960.0
@@ -1511,7 +1445,6 @@ waygate_destination = -1
 entity_id = 7
 
 [[units]]
-
 type_id = 'orai'  # Raider
 variation = 0
 x = 405.4758605957031
@@ -1541,7 +1474,6 @@ waygate_destination = -1
 entity_id = 78
 
 [[units]]
-
 type_id = 'orai'  # Raider
 variation = 0
 x = -1774.662841796875
@@ -1571,7 +1503,6 @@ waygate_destination = -1
 entity_id = 77
 
 [[units]]
-
 type_id = 'ngnh'  # Gnoll Hut
 variation = 0
 x = -5216.0
@@ -1601,7 +1532,6 @@ waygate_destination = -1
 entity_id = 6
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = -5888.0
@@ -1631,7 +1561,6 @@ waygate_destination = -1
 entity_id = 97
 
 [[units]]
-
 type_id = 'nmrl'  # Murloc Tiderunner
 variation = 0
 x = -3242.2236328125
@@ -1661,7 +1590,6 @@ waygate_destination = -1
 entity_id = 1
 
 [[units]]
-
 type_id = 'npgf'  # Pig Farm
 variation = 0
 x = 224.0
@@ -1690,13 +1618,11 @@ waygate_destination = -1
 entity_id = 32
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'Obla'  # Blademaster
 variation = 0
 x = 3099.68994140625
@@ -1724,37 +1650,31 @@ waygate_destination = -1
 entity_id = 71
 
 [[units.modified_abilities]]
-
 abil_id = 'AOwk'  # Wind Walk
 autocast_active = false
 abil_level = 0
 
 [[units.modified_abilities]]
-
 abil_id = 'AOmi'  # Mirror Image
 autocast_active = false
 abil_level = 1
 
 [[units.modified_abilities]]
-
 abil_id = 'AOcr'  # Critical Strike
 autocast_active = false
 abil_level = 1
 
 [[units.modified_abilities]]
-
 abil_id = 'AOww'  # Bladestorm
 autocast_active = false
 abil_level = 0
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = -768.0
@@ -1783,13 +1703,11 @@ waygate_destination = -1
 entity_id = 60
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 3308.80419921875
@@ -1819,7 +1737,6 @@ waygate_destination = -1
 entity_id = 80
 
 [[units]]
-
 type_id = 'ohun'  # Troll Headhunter
 variation = 0
 x = -1118.2493896484375
@@ -1849,7 +1766,6 @@ waygate_destination = -1
 entity_id = 65
 
 [[units]]
-
 type_id = 'hC02'
 variation = 0
 x = -98.62516021728516
@@ -1878,13 +1794,11 @@ waygate_destination = -1
 entity_id = 49
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'npgf'  # Pig Farm
 variation = 0
 x = -1248.0
@@ -1913,13 +1827,11 @@ waygate_destination = -1
 entity_id = 33
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'hbla'  # Blacksmith
 variation = 0
 x = 0.0
@@ -1948,13 +1860,11 @@ waygate_destination = -1
 entity_id = 12
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nmrl'  # Murloc Tiderunner
 variation = 0
 x = 4747.2734375
@@ -1983,13 +1893,11 @@ waygate_destination = -1
 entity_id = 73
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'obea'  # Beastiary
 variation = 0
 x = -1280.0
@@ -2019,7 +1927,6 @@ waygate_destination = -1
 entity_id = 117
 
 [[units]]
-
 type_id = 'nser'  # Searinox
 variation = 0
 x = 2612.272216796875
@@ -2049,7 +1956,6 @@ waygate_destination = -1
 entity_id = 48
 
 [[units]]
-
 type_id = 'nmrl'  # Murloc Tiderunner
 variation = 0
 x = -4256.10791015625
@@ -2079,7 +1985,6 @@ waygate_destination = -1
 entity_id = 16
 
 [[units]]
-
 type_id = 'hfoo'  # Footman
 variation = 0
 x = 3252.4345703125
@@ -2108,13 +2013,11 @@ waygate_destination = -1
 entity_id = 96
 
 [[units.modified_abilities]]
-
 abil_id = 'Adef'  # Defend
 autocast_active = false
 abil_level = 0
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = -4173.33544921875
@@ -2144,7 +2047,6 @@ waygate_destination = -1
 entity_id = 26
 
 [[units]]
-
 type_id = 'nmh1'  # Murloc Hut
 variation = 0
 x = -4768.0
@@ -2174,7 +2076,6 @@ waygate_destination = -1
 entity_id = 100
 
 [[units]]
-
 type_id = 'nmh0'  # Murloc Hut
 variation = 0
 x = -4384.0
@@ -2204,7 +2105,6 @@ waygate_destination = -1
 entity_id = 106
 
 [[units]]
-
 type_id = 'npgf'  # Pig Farm
 variation = 0
 x = -2016.0
@@ -2233,13 +2133,11 @@ waygate_destination = -1
 entity_id = 31
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nmh0'  # Murloc Hut
 variation = 0
 x = -4000.0
@@ -2269,7 +2167,6 @@ waygate_destination = -1
 entity_id = 101
 
 [[units]]
-
 type_id = 'npig'  # Pig
 variation = 0
 x = -403.9435119628906
@@ -2299,7 +2196,6 @@ waygate_destination = -1
 entity_id = 69
 
 [[units]]
-
 type_id = 'npig'  # Pig
 variation = 0
 x = -725.2316284179688
@@ -2329,7 +2225,6 @@ waygate_destination = -1
 entity_id = 70
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = -5888.0
@@ -2359,7 +2254,6 @@ waygate_destination = -1
 entity_id = 105
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = -4694.81298828125
@@ -2389,7 +2283,6 @@ waygate_destination = -1
 entity_id = 27
 
 [[units]]
-
 type_id = 'nC03'
 variation = 0
 x = 4287.63916015625
@@ -2418,13 +2311,11 @@ waygate_destination = -1
 entity_id = 107
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ngno'  # Gnoll
 variation = 0
 x = -4808.78759765625
@@ -2454,7 +2345,6 @@ waygate_destination = -1
 entity_id = 50
 
 [[units]]
-
 type_id = 'ngno'  # Gnoll
 variation = 0
 x = 2995.936767578125
@@ -2488,7 +2378,6 @@ waygate_destination = -1
 entity_id = 5
 
 [[units]]
-
 type_id = 'ngna'  # Gnoll Poacher
 variation = 0
 x = 3104.028076171875
@@ -2518,7 +2407,6 @@ waygate_destination = -1
 entity_id = 13
 
 [[units]]
-
 type_id = 'ngna'  # Gnoll Poacher
 variation = 0
 x = 2969.572265625
@@ -2548,7 +2436,6 @@ waygate_destination = -1
 entity_id = 23
 
 [[units]]
-
 type_id = 'ogru'  # Grunt
 variation = 0
 x = 2032.100341796875
@@ -2577,13 +2464,11 @@ waygate_destination = -1
 entity_id = 35
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'ogru'  # Grunt
 variation = 0
 x = 2250.63623046875
@@ -2612,13 +2497,11 @@ waygate_destination = -1
 entity_id = 36
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'ohun'  # Troll Headhunter
 variation = 0
 x = 1267.57568359375
@@ -2647,13 +2530,11 @@ waygate_destination = -1
 entity_id = 37
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = -4288.0
@@ -2682,13 +2563,11 @@ waygate_destination = -1
 entity_id = 0
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = -4288.0
@@ -2717,13 +2596,11 @@ waygate_destination = -1
 entity_id = 11
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = -3712.0
@@ -2752,13 +2629,11 @@ waygate_destination = -1
 entity_id = 40
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'ngnh'  # Gnoll Hut
 variation = 0
 x = -5216.0
@@ -2787,13 +2662,11 @@ waygate_destination = -1
 entity_id = 52
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'ngt2'  # Gnoll Hut
 variation = 0
 x = -5664.0
@@ -2822,13 +2695,11 @@ waygate_destination = -1
 entity_id = 53
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'ngt2'  # Gnoll Hut
 variation = 0
 x = -5984.0
@@ -2857,13 +2728,11 @@ waygate_destination = -1
 entity_id = 55
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'ngnh'  # Gnoll Hut
 variation = 0
 x = -4960.0
@@ -2892,13 +2761,11 @@ waygate_destination = -1
 entity_id = 56
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nogr'  # Ogre Warrior
 variation = 0
 x = -5748.49365234375
@@ -2927,13 +2794,11 @@ waygate_destination = -1
 entity_id = 46
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nogr'  # Ogre Warrior
 variation = 0
 x = -5235.16943359375
@@ -2962,13 +2827,11 @@ waygate_destination = -1
 entity_id = 58
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'ofor'  # War Mill
 variation = 0
 x = -672.0
@@ -2997,13 +2860,11 @@ waygate_destination = -1
 entity_id = 59
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = -4032.0
@@ -3032,13 +2893,11 @@ waygate_destination = -1
 entity_id = 41
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'ngnh'  # Gnoll Hut
 variation = 0
 x = 3168.0
@@ -3067,13 +2926,11 @@ waygate_destination = -1
 entity_id = 61
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'ngt2'  # Gnoll Hut
 variation = 0
 x = 3424.0
@@ -3102,13 +2959,11 @@ waygate_destination = -1
 entity_id = 62
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nmrm'  # Murloc Nightcrawler
 variation = 0
 x = 5343.53662109375
@@ -3137,13 +2992,11 @@ waygate_destination = -1
 entity_id = 64
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nmrl'  # Murloc Tiderunner
 variation = 0
 x = 4952.28564453125
@@ -3172,13 +3025,11 @@ waygate_destination = -1
 entity_id = 66
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nmrl'  # Murloc Tiderunner
 variation = 0
 x = 4976.0400390625
@@ -3207,13 +3058,11 @@ waygate_destination = -1
 entity_id = 68
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'hpea'  # Peasant
 variation = 0
 x = -4268.42529296875
@@ -3242,7 +3091,6 @@ waygate_destination = -1
 entity_id = 20
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0

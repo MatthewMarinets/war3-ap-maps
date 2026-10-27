@@ -1582,7 +1582,7 @@ Run from Map Init
   - param Preset OperatorEqualENE
   - param String false
 - Action CustomScriptCode
-  - param string call status_check_location(0)
+  - param String call status_check_location(0)
 - Action SetVariable
   - param Variable GameOver
   - param String true
@@ -2801,7 +2801,7 @@ Run from 'Opening03' and 'OpeningCancelled'
   - param Function GetPlayersAll
     - Function GetPlayersAll
 - Action CustomScriptCode
-  - param string call status_check_location(0)
+  - param String call status_check_location(0)
 - Action SetSkyModel
   - param Preset SkyModelSky02
 - Action SetTerrainFogExBJ

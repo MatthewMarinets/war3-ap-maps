@@ -8,7 +8,6 @@ doodads = []
 immobile_doodads = []
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = 3456.0
@@ -37,13 +36,11 @@ waygate_destination = -1
 entity_id = 154
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -6253.63818359375
@@ -73,7 +70,6 @@ waygate_destination = -1
 entity_id = 152
 
 [[units]]
-
 type_id = 'hfoo'  # Footman
 variation = 0
 x = 4277.46337890625
@@ -103,7 +99,6 @@ waygate_destination = -1
 entity_id = 62
 
 [[units]]
-
 type_id = 'hA00'
 variation = 0
 x = 4504.82421875
@@ -133,7 +128,6 @@ waygate_destination = -1
 entity_id = 3
 
 [[units]]
-
 type_id = 'hA00'
 variation = 0
 x = 4493.1806640625
@@ -163,7 +157,6 @@ waygate_destination = -1
 entity_id = 4
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = -1315.4993896484375
@@ -193,7 +186,6 @@ waygate_destination = -1
 entity_id = 68
 
 [[units]]
-
 type_id = 'nmrl'  # Murloc Tiderunner
 variation = 0
 x = 5999.95166015625
@@ -223,7 +215,6 @@ waygate_destination = -1
 entity_id = 13
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -4212.76318359375
@@ -253,7 +244,6 @@ waygate_destination = -1
 entity_id = 131
 
 [[units]]
-
 type_id = 'nogr'  # Ogre Warrior
 variation = 0
 x = 6479.69580078125
@@ -283,7 +273,6 @@ waygate_destination = -1
 entity_id = 8
 
 [[units]]
-
 type_id = 'nogr'  # Ogre Warrior
 variation = 0
 x = 6613.1796875
@@ -313,7 +302,6 @@ waygate_destination = -1
 entity_id = 9
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = -6848.0
@@ -342,13 +330,11 @@ waygate_destination = -1
 entity_id = 136
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nogr'  # Ogre Warrior
 variation = 0
 x = 6173.3173828125
@@ -378,7 +364,6 @@ waygate_destination = -1
 entity_id = 12
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -1030.8525390625
@@ -408,7 +393,6 @@ waygate_destination = -1
 entity_id = 50
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 5577.9951171875
@@ -438,7 +422,6 @@ waygate_destination = -1
 entity_id = 22
 
 [[units]]
-
 type_id = 'nC09'
 variation = 0
 x = 2204.12451171875
@@ -467,13 +450,11 @@ waygate_destination = -1
 entity_id = 1
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nC08'
 variation = 0
 x = 2207.743408203125
@@ -502,13 +483,11 @@ waygate_destination = -1
 entity_id = 155
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'uaco'  # Acolyte
 variation = 0
 x = -5913.6396484375
@@ -537,13 +516,11 @@ waygate_destination = -1
 entity_id = 100
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nmrr'  # Murloc Huntsman
 variation = 0
 x = 5354.34814453125
@@ -573,7 +550,6 @@ waygate_destination = -1
 entity_id = 17
 
 [[units]]
-
 type_id = 'nmrl'  # Murloc Tiderunner
 variation = 0
 x = 4787.06005859375
@@ -603,7 +579,6 @@ waygate_destination = -1
 entity_id = 18
 
 [[units]]
-
 type_id = 'nmrl'  # Murloc Tiderunner
 variation = 0
 x = 4871.76025390625
@@ -633,7 +608,6 @@ waygate_destination = -1
 entity_id = 19
 
 [[units]]
-
 type_id = 'nC04'
 variation = 0
 x = 2106.084228515625
@@ -662,13 +636,11 @@ waygate_destination = -1
 entity_id = 118
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -5178.44140625
@@ -698,7 +670,6 @@ waygate_destination = -1
 entity_id = 117
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 588.601806640625
@@ -728,7 +699,6 @@ waygate_destination = -1
 entity_id = 124
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = -3264.0
@@ -758,7 +728,6 @@ waygate_destination = -1
 entity_id = 7
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 948.8572998046875
@@ -788,7 +757,6 @@ waygate_destination = -1
 entity_id = 123
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -7074.3798828125
@@ -818,7 +786,6 @@ waygate_destination = -1
 entity_id = 31
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -1336.645263671875
@@ -848,7 +815,6 @@ waygate_destination = -1
 entity_id = 67
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -1409.8775634765625
@@ -878,7 +844,6 @@ waygate_destination = -1
 entity_id = 59
 
 [[units]]
-
 type_id = 'nban'  # Bandit
 variation = 0
 x = 5788.09521484375
@@ -908,7 +873,6 @@ waygate_destination = -1
 entity_id = 115
 
 [[units]]
-
 type_id = 'hfoo'  # Footman
 variation = 0
 x = 185.4927978515625
@@ -938,7 +902,6 @@ waygate_destination = -1
 entity_id = 5
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 5435.734375
@@ -968,7 +931,6 @@ waygate_destination = -1
 entity_id = 24
 
 [[units]]
-
 type_id = 'nvlk'  # Child
 variation = 0
 x = 3071.870849609375
@@ -998,7 +960,6 @@ waygate_destination = -1
 entity_id = 26
 
 [[units]]
-
 type_id = 'nC10'
 variation = 0
 x = 5557.95458984375
@@ -1027,13 +988,11 @@ waygate_destination = -1
 entity_id = 121
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 6057.44287109375
@@ -1063,7 +1022,6 @@ waygate_destination = -1
 entity_id = 33
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 6205.97509765625
@@ -1093,7 +1051,6 @@ waygate_destination = -1
 entity_id = 34
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -3414.4775390625
@@ -1123,7 +1080,6 @@ waygate_destination = -1
 entity_id = 89
 
 [[units]]
-
 type_id = 'nenf'  # Enforcer
 variation = 0
 x = 1791.2535400390625
@@ -1152,13 +1108,11 @@ waygate_destination = -1
 entity_id = 102
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -3898.90673828125
@@ -1188,7 +1142,6 @@ waygate_destination = -1
 entity_id = 129
 
 [[units]]
-
 type_id = 'ngni'  # Infected Granary
 variation = 0
 x = -3168.0
@@ -1217,13 +1170,11 @@ waygate_destination = -1
 entity_id = 80
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'I015'
 variation = 0
 x = -4931.98876953125
@@ -1253,7 +1204,6 @@ waygate_destination = -1
 entity_id = 61
 
 [[units]]
-
 type_id = 'nmrl'  # Murloc Tiderunner
 variation = 0
 x = 5816.130859375
@@ -1283,7 +1233,6 @@ waygate_destination = -1
 entity_id = 16
 
 [[units]]
-
 type_id = 'nvlk'  # Child
 variation = 0
 x = 3028.762939453125
@@ -1313,7 +1262,6 @@ waygate_destination = -1
 entity_id = 25
 
 [[units]]
-
 type_id = 'hfoo'  # Footman
 variation = 0
 x = 135.8601837158203
@@ -1343,7 +1291,6 @@ waygate_destination = -1
 entity_id = 42
 
 [[units]]
-
 type_id = 'hfoo'  # Footman
 variation = 0
 x = 174.33570861816406
@@ -1373,7 +1320,6 @@ waygate_destination = -1
 entity_id = 43
 
 [[units]]
-
 type_id = 'nban'  # Bandit
 variation = 0
 x = 6450.2607421875
@@ -1403,7 +1349,6 @@ waygate_destination = -1
 entity_id = 44
 
 [[units]]
-
 type_id = 'nban'  # Bandit
 variation = 0
 x = 6311.63037109375
@@ -1433,7 +1378,6 @@ waygate_destination = -1
 entity_id = 45
 
 [[units]]
-
 type_id = 'nban'  # Bandit
 variation = 0
 x = 6357.30810546875
@@ -1463,7 +1407,6 @@ waygate_destination = -1
 entity_id = 46
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 5968.13818359375
@@ -1493,7 +1436,6 @@ waygate_destination = -1
 entity_id = 47
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 5695.517578125
@@ -1523,7 +1465,6 @@ waygate_destination = -1
 entity_id = 48
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 6025.3125
@@ -1553,7 +1494,6 @@ waygate_destination = -1
 entity_id = 49
 
 [[units]]
-
 type_id = 'nC11'
 variation = 0
 x = 6723.43798828125
@@ -1582,13 +1522,11 @@ waygate_destination = -1
 entity_id = 32
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -1942.8304443359375
@@ -1618,7 +1556,6 @@ waygate_destination = -1
 entity_id = 56
 
 [[units]]
-
 type_id = 'nfoh'  # Fountain of Health
 variation = 0
 x = -6784.0
@@ -1647,13 +1584,11 @@ waygate_destination = -1
 entity_id = 0
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -2051.30419921875
@@ -1683,7 +1618,6 @@ waygate_destination = -1
 entity_id = 51
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = -4416.0
@@ -1713,7 +1647,6 @@ waygate_destination = -1
 entity_id = 54
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -1067.0250244140625
@@ -1743,7 +1676,6 @@ waygate_destination = -1
 entity_id = 60
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -1905.1494140625
@@ -1773,7 +1705,6 @@ waygate_destination = -1
 entity_id = 58
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -988.1189575195312
@@ -1803,7 +1734,6 @@ waygate_destination = -1
 entity_id = 52
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 622.3572998046875
@@ -1833,7 +1763,6 @@ waygate_destination = -1
 entity_id = 120
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -2027.9853515625
@@ -1863,7 +1792,6 @@ waygate_destination = -1
 entity_id = 105
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -1043.1456298828125
@@ -1893,7 +1821,6 @@ waygate_destination = -1
 entity_id = 57
 
 [[units]]
-
 type_id = 'unec'  # Necromancer
 variation = 0
 x = -1959.270263671875
@@ -1923,7 +1850,6 @@ waygate_destination = -1
 entity_id = 135
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = -1920.0
@@ -1952,13 +1878,11 @@ waygate_destination = -1
 entity_id = 41
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nmrl'  # Murloc Tiderunner
 variation = 0
 x = 5412.89990234375
@@ -1988,7 +1912,6 @@ waygate_destination = -1
 entity_id = 14
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 1530.6842041015625
@@ -2018,7 +1941,6 @@ waygate_destination = -1
 entity_id = 10
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 502.6480407714844
@@ -2048,7 +1970,6 @@ waygate_destination = -1
 entity_id = 119
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -1450.2646484375
@@ -2078,7 +1999,6 @@ waygate_destination = -1
 entity_id = 66
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -6664.60791015625
@@ -2108,7 +2028,6 @@ waygate_destination = -1
 entity_id = 53
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -5503.57861328125
@@ -2138,7 +2057,6 @@ waygate_destination = -1
 entity_id = 37
 
 [[units]]
-
 type_id = 'nC07'
 variation = 0
 x = 6756.3818359375
@@ -2167,13 +2085,11 @@ waygate_destination = -1
 entity_id = 79
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nC05'
 variation = 0
 x = 6683.4990234375
@@ -2202,13 +2118,11 @@ waygate_destination = -1
 entity_id = 78
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -1174.8966064453125
@@ -2237,13 +2151,11 @@ waygate_destination = -1
 entity_id = 77
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'hmpr'  # Priest
 variation = 0
 x = -2373.787841796875
@@ -2273,7 +2185,6 @@ waygate_destination = -1
 entity_id = 72
 
 [[units]]
-
 type_id = 'hmpr'  # Priest
 variation = 0
 x = -2468.98486328125
@@ -2303,7 +2214,6 @@ waygate_destination = -1
 entity_id = 73
 
 [[units]]
-
 type_id = 'nC02'
 variation = 0
 x = 885.11328125
@@ -2332,13 +2242,11 @@ waygate_destination = -1
 entity_id = 39
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'uktn'  # Kel'Thuzad
 variation = 0
 x = -5555.291015625
@@ -2367,13 +2275,11 @@ waygate_destination = -1
 entity_id = 109
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = 6004.60986328125
@@ -2406,13 +2312,11 @@ waygate_destination = -1
 entity_id = 81
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'hwtw'  # Scout Tower
 variation = 0
 x = 896.0
@@ -2441,13 +2345,11 @@ waygate_destination = -1
 entity_id = 64
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -2380.52587890625
@@ -2477,7 +2379,6 @@ waygate_destination = -1
 entity_id = 104
 
 [[units]]
-
 type_id = 'nrog'  # Rogue
 variation = 0
 x = 1563.7783203125
@@ -2506,13 +2407,11 @@ waygate_destination = -1
 entity_id = 127
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = 1431.19189453125
@@ -2541,13 +2440,11 @@ waygate_destination = -1
 entity_id = 134
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = 5293.7890625
@@ -2577,7 +2474,6 @@ waygate_destination = -1
 entity_id = 114
 
 [[units]]
-
 type_id = 'nban'  # Bandit
 variation = 0
 x = 5745.9873046875
@@ -2607,7 +2503,6 @@ waygate_destination = -1
 entity_id = 126
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = 5229.41015625
@@ -2637,7 +2532,6 @@ waygate_destination = -1
 entity_id = 113
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -3438.04736328125
@@ -2667,7 +2561,6 @@ waygate_destination = -1
 entity_id = 91
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 5262.28857421875
@@ -2697,7 +2590,6 @@ waygate_destination = -1
 entity_id = 125
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -6379.2900390625
@@ -2727,7 +2619,6 @@ waygate_destination = -1
 entity_id = 86
 
 [[units]]
-
 type_id = 'nC03'
 variation = 0
 x = 6600.26220703125
@@ -2756,13 +2647,11 @@ waygate_destination = -1
 entity_id = 92
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 5663.62744140625
@@ -2792,7 +2681,6 @@ waygate_destination = -1
 entity_id = 116
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -6397.3271484375
@@ -2822,7 +2710,6 @@ waygate_destination = -1
 entity_id = 90
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -6086.7021484375
@@ -2852,7 +2739,6 @@ waygate_destination = -1
 entity_id = 106
 
 [[units]]
-
 type_id = 'nban'  # Bandit
 variation = 0
 x = 1875.9796142578125
@@ -2881,13 +2767,11 @@ waygate_destination = -1
 entity_id = 88
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -6222.2919921875
@@ -2921,7 +2805,6 @@ waygate_destination = -1
 entity_id = 128
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -6375.91552734375
@@ -2951,7 +2834,6 @@ waygate_destination = -1
 entity_id = 84
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -6455.66259765625
@@ -2981,7 +2863,6 @@ waygate_destination = -1
 entity_id = 94
 
 [[units]]
-
 type_id = 'nmrl'  # Murloc Tiderunner
 variation = 0
 x = 3898.934814453125
@@ -3011,7 +2892,6 @@ waygate_destination = -1
 entity_id = 23
 
 [[units]]
-
 type_id = 'nC00'
 variation = 0
 x = 3726.264892578125
@@ -3040,13 +2920,11 @@ waygate_destination = -1
 entity_id = 93
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -3223.8857421875
@@ -3076,7 +2954,6 @@ waygate_destination = -1
 entity_id = 97
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -2621.6162109375
@@ -3106,7 +2983,6 @@ waygate_destination = -1
 entity_id = 98
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -5164.61181640625
@@ -3136,7 +3012,6 @@ waygate_destination = -1
 entity_id = 29
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = -2497.623046875
@@ -3166,7 +3041,6 @@ waygate_destination = -1
 entity_id = 99
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -6806.01318359375
@@ -3196,7 +3070,6 @@ waygate_destination = -1
 entity_id = 15
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -4609.08544921875
@@ -3226,7 +3099,6 @@ waygate_destination = -1
 entity_id = 112
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = 5148.224609375
@@ -3256,7 +3128,6 @@ waygate_destination = -1
 entity_id = 21
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = 5228.06689453125
@@ -3286,7 +3157,6 @@ waygate_destination = -1
 entity_id = 35
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = 5175.26123046875
@@ -3316,7 +3186,6 @@ waygate_destination = -1
 entity_id = 36
 
 [[units]]
-
 type_id = 'uaco'  # Acolyte
 variation = 0
 x = -5227.0224609375
@@ -3345,13 +3214,11 @@ waygate_destination = -1
 entity_id = 95
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = 5300.0556640625
@@ -3381,7 +3248,6 @@ waygate_destination = -1
 entity_id = 107
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = 5261.85009765625
@@ -3411,7 +3277,6 @@ waygate_destination = -1
 entity_id = 108
 
 [[units]]
-
 type_id = 'nten'  # Tent
 variation = 0
 x = 1952.0
@@ -3444,13 +3309,11 @@ waygate_destination = -1
 entity_id = 76
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ngwr'  # Grain Warehouse
 variation = 0
 x = -6240.0
@@ -3479,13 +3342,11 @@ waygate_destination = -1
 entity_id = 74
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = 5262.86865234375
@@ -3515,7 +3376,6 @@ waygate_destination = -1
 entity_id = 111
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = -2217.535888671875
@@ -3545,7 +3405,6 @@ waygate_destination = -1
 entity_id = 85
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -1437.7645263671875
@@ -3575,7 +3434,6 @@ waygate_destination = -1
 entity_id = 65
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -2151.340087890625
@@ -3605,7 +3463,6 @@ waygate_destination = -1
 entity_id = 69
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -4848.64306640625
@@ -3635,7 +3492,6 @@ waygate_destination = -1
 entity_id = 70
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -5261.1748046875
@@ -3665,7 +3521,6 @@ waygate_destination = -1
 entity_id = 71
 
 [[units]]
-
 type_id = 'nmh1'  # Murloc Hut
 variation = 0
 x = 5472.0
@@ -3698,13 +3553,11 @@ waygate_destination = -1
 entity_id = 63
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -4274.28759765625
@@ -3734,7 +3587,6 @@ waygate_destination = -1
 entity_id = 82
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -5468.83837890625
@@ -3764,7 +3616,6 @@ waygate_destination = -1
 entity_id = 83
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -6527.267578125
@@ -3794,7 +3645,6 @@ waygate_destination = -1
 entity_id = 20
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -6076.63427734375
@@ -3824,7 +3674,6 @@ waygate_destination = -1
 entity_id = 87
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -6052.244140625
@@ -3854,7 +3703,6 @@ waygate_destination = -1
 entity_id = 96
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -6827.2783203125
@@ -3884,7 +3732,6 @@ waygate_destination = -1
 entity_id = 101
 
 [[units]]
-
 type_id = 'nC01'
 variation = 0
 x = 2980.31591796875
@@ -3913,13 +3760,11 @@ waygate_destination = -1
 entity_id = 2
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -5352.64599609375
@@ -3949,7 +3794,6 @@ waygate_destination = -1
 entity_id = 103
 
 [[units]]
-
 type_id = 'nogm'  # Ogre Mauler
 variation = 0
 x = 6380.38330078125
@@ -3983,7 +3827,6 @@ waygate_destination = -1
 entity_id = 6
 
 [[units]]
-
 type_id = 'uabo'  # Abomination
 variation = 0
 x = -5911.0732421875
@@ -4012,13 +3855,11 @@ waygate_destination = -1
 entity_id = 110
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = 1467.5391845703125
@@ -4047,13 +3888,11 @@ waygate_destination = -1
 entity_id = 138
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'uaco'  # Acolyte
 variation = 0
 x = -5724.15771484375
@@ -4082,13 +3921,11 @@ waygate_destination = -1
 entity_id = 38
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'uaco'  # Acolyte
 variation = 0
 x = -5242.24951171875
@@ -4117,13 +3954,11 @@ waygate_destination = -1
 entity_id = 40
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nC06'
 variation = 0
 x = 6817.0556640625
@@ -4152,13 +3987,11 @@ waygate_destination = -1
 entity_id = 75
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -6550.453125
@@ -4188,7 +4021,6 @@ waygate_destination = -1
 entity_id = 28
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -5253.2841796875
@@ -4218,7 +4050,6 @@ waygate_destination = -1
 entity_id = 153
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -6790.23876953125
@@ -4248,7 +4079,6 @@ waygate_destination = -1
 entity_id = 55
 
 [[units]]
-
 type_id = 'I013'
 variation = 0
 x = -6678.3681640625
@@ -4277,13 +4107,11 @@ waygate_destination = -1
 entity_id = 30
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -5849.44091796875
@@ -4313,7 +4141,6 @@ waygate_destination = -1
 entity_id = 133
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -1798.82421875
@@ -4343,7 +4170,6 @@ waygate_destination = -1
 entity_id = 27
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -2521.36767578125
@@ -4373,7 +4199,6 @@ waygate_destination = -1
 entity_id = 137
 
 [[units]]
-
 type_id = 'unec'  # Necromancer
 variation = 0
 x = -2510.763427734375
@@ -4403,7 +4228,6 @@ waygate_destination = -1
 entity_id = 139
 
 [[units]]
-
 type_id = 'nban'  # Bandit
 variation = 0
 x = 6197.18798828125
@@ -4433,7 +4257,6 @@ waygate_destination = -1
 entity_id = 140
 
 [[units]]
-
 type_id = 'nban'  # Bandit
 variation = 0
 x = 6182.52587890625
@@ -4463,7 +4286,6 @@ waygate_destination = -1
 entity_id = 141
 
 [[units]]
-
 type_id = 'nmrl'  # Murloc Tiderunner
 variation = 0
 x = 5203.94287109375
@@ -4493,7 +4315,6 @@ waygate_destination = -1
 entity_id = 142
 
 [[units]]
-
 type_id = 'nrog'  # Rogue
 variation = 0
 x = 1748.8201904296875
@@ -4522,13 +4343,11 @@ waygate_destination = -1
 entity_id = 143
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -1306.041259765625
@@ -4558,7 +4377,6 @@ waygate_destination = -1
 entity_id = 144
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -1452.0849609375
@@ -4588,7 +4406,6 @@ waygate_destination = -1
 entity_id = 145
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -1683.6632080078125
@@ -4618,7 +4435,6 @@ waygate_destination = -1
 entity_id = 146
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -5577.71630859375
@@ -4648,7 +4464,6 @@ waygate_destination = -1
 entity_id = 147
 
 [[units]]
-
 type_id = 'uske'  # Skeleton Warrior
 variation = 0
 x = -4742.09228515625
@@ -4678,7 +4493,6 @@ waygate_destination = -1
 entity_id = 148
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -4046.43212890625
@@ -4708,7 +4522,6 @@ waygate_destination = -1
 entity_id = 149
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -6573.2099609375
@@ -4738,7 +4551,6 @@ waygate_destination = -1
 entity_id = 150
 
 [[units]]
-
 type_id = 'nska'  # Skeleton Archer
 variation = 0
 x = -6336.25244140625

@@ -47,7 +47,6 @@ random_entities = []
 random_items = []
 
 [[players]]
-
 player_id = 1
 player_type = "User"
 player_faction = "Human"
@@ -58,7 +57,6 @@ ally_low_priorities_flags = 0x0
 ally_high_priorities_flags = 0x0
 
 [[players]]
-
 player_id = 2
 player_type = "Computer"
 player_faction = "Undead"
@@ -69,7 +67,6 @@ ally_low_priorities_flags = 0x0
 ally_high_priorities_flags = 0x45aa0000
 
 [[players]]
-
 player_id = 3
 player_type = "Computer"
 player_faction = "Undead"
@@ -80,7 +77,6 @@ ally_low_priorities_flags = 0x0
 ally_high_priorities_flags = 0x45aa0000
 
 [[players]]
-
 player_id = 4
 player_type = "Computer"
 player_faction = "Undead"
@@ -91,7 +87,6 @@ ally_low_priorities_flags = 0x0
 ally_high_priorities_flags = 0x45aa0000
 
 [[players]]
-
 player_id = 6
 player_type = "Computer"
 player_faction = "Undead"
@@ -102,48 +97,39 @@ ally_low_priorities_flags = 0x0
 ally_high_priorities_flags = 0x0
 
 [[forces]]
-
 force_flags = "None"
 player_mask_flags = 0xffffffa3
 name = 'TRIGSTR_216'
 
 [[forces]]
-
 force_flags = "Allied"
 player_mask_flags = 0x5c
 name = 'TRIGSTR_217'
 
 [[technologies]]
-
 player_flags = 0x2
 tech_id = 'Hamg'  # Archmage
 
 [[technologies]]
-
 player_flags = 0x2
 tech_id = 'Hpal'  # Paladin
 
 [[technologies]]
-
 player_flags = 0x2
 tech_id = 'Hmkg'  # Mountain King
 
 [[technologies]]
-
 player_flags = 0xf
 tech_id = 'Hblm'  # Blood Mage
 
 [[technologies]]
-
 player_flags = 0xf
 tech_id = 'Oshd'  # Shadow Hunter
 
 [[technologies]]
-
 player_flags = 0xf
 tech_id = 'Ucrl'  # Crypt Lord
 
 [[technologies]]
-
 player_flags = 0xf
 tech_id = 'Ewar'  # Warden

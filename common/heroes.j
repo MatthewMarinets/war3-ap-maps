@@ -145,7 +145,7 @@ function hero_configure takes unit hero, integer slot returns nothing
     endloop
     // max level
     set val = GetPlayerTechMaxAllowed(p, 'nder')
-    if val > 0 then
+    if slot >= 0 and val > 0 then
         set HERO_MAX_LEVEL[slot] = val
         call hero_apply_max_level(hero, val)
     endif
@@ -193,6 +193,7 @@ function hero_create_global takes integer global_slot, player for_player, real x
         return null
     endif
     set hero = CreateUnit(for_player, GetPlayerTechMaxAllowed(Player(0), 'npng'), x, y, facing)
+    call hero_configure(hero, -1)
     return hero
 endfunction
 

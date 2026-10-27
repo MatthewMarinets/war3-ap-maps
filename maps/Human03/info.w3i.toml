@@ -46,7 +46,6 @@ random_entities = []
 random_items = []
 
 [[players]]
-
 player_id = 1
 player_type = "User"
 player_faction = "Human"
@@ -57,7 +56,6 @@ ally_low_priorities_flags = 0x0
 ally_high_priorities_flags = 0x0
 
 [[players]]
-
 player_id = 2
 player_type = "Neutral"
 player_faction = "Human"
@@ -68,7 +66,6 @@ ally_low_priorities_flags = 0x0
 ally_high_priorities_flags = 0xc4a00000
 
 [[players]]
-
 player_id = 3
 player_type = "Computer"
 player_faction = "Human"
@@ -79,7 +76,6 @@ ally_low_priorities_flags = 0x0
 ally_high_priorities_flags = 0x2
 
 [[players]]
-
 player_id = 6
 player_type = "Computer"
 player_faction = "Undead"
@@ -90,7 +86,6 @@ ally_low_priorities_flags = 0x0
 ally_high_priorities_flags = 0x0
 
 [[players]]
-
 player_id = 9
 player_type = "Neutral"
 player_faction = "Human"
@@ -101,60 +96,50 @@ ally_low_priorities_flags = 0x0
 ally_high_priorities_flags = 0x0
 
 [[forces]]
-
 force_flags = "None"
 player_mask_flags = 0xffffffbb
 name = 'TRIGSTR_526'
 
 [[forces]]
-
 force_flags = "None"
 player_mask_flags = 0x40
 name = 'TRIGSTR_674'
 
 [[forces]]
-
 force_flags = "None"
 player_mask_flags = 0x4
 name = 'TRIGSTR_044'
 
 [[upgrades]]
-
 player_flags = 0x200
 upgrade_id = 'Rhde'  # Defend
 level = 0
 availability = "Researched"
 
 [[upgrades]]
-
 player_flags = 0xa
 upgrade_id = 'Rhfl'  # Flare
 level = 0
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x8
 upgrade_id = 'Rhpt'  # Priest Adept Training,Priest Master Training
 level = 1
 availability = "Unavailable"
 
 [[technologies]]
-
 player_flags = 0xf
 tech_id = 'Hblm'  # Blood Mage
 
 [[technologies]]
-
 player_flags = 0xf
 tech_id = 'Oshd'  # Shadow Hunter
 
 [[technologies]]
-
 player_flags = 0xf
 tech_id = 'Ucrl'  # Crypt Lord
 
 [[technologies]]
-
 player_flags = 0xf
 tech_id = 'Ewar'  # Warden

@@ -46,7 +46,6 @@ random_entities = []
 random_items = []
 
 [[players]]
-
 player_id = 0
 player_type = "Neutral"
 player_faction = "Human"
@@ -57,7 +56,6 @@ ally_low_priorities_flags = 0x0
 ally_high_priorities_flags = 0x0
 
 [[players]]
-
 player_id = 1
 player_type = "User"
 player_faction = "Human"
@@ -68,7 +66,6 @@ ally_low_priorities_flags = 0x0
 ally_high_priorities_flags = 0x0
 
 [[players]]
-
 player_id = 5
 player_type = "Computer"
 player_faction = "Orc"
@@ -79,7 +76,6 @@ ally_low_priorities_flags = 0x0
 ally_high_priorities_flags = 0x0
 
 [[players]]
-
 player_id = 6
 player_type = "Computer"
 player_faction = "Undead"
@@ -90,7 +86,6 @@ ally_low_priorities_flags = 0x0
 ally_high_priorities_flags = 0x0
 
 [[players]]
-
 player_id = 7
 player_type = "Neutral"
 player_faction = "Human"
@@ -101,264 +96,221 @@ ally_low_priorities_flags = 0x0
 ally_high_priorities_flags = 0x0
 
 [[forces]]
-
 force_flags = "None"
 player_mask_flags = 0xffffff9e
 name = 'TRIGSTR_135'
 
 [[forces]]
-
 force_flags = "None"
 player_mask_flags = 0x61
 name = 'TRIGSTR_036'
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhme'  # Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords
 level = 1
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhme'  # Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords
 level = 2
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhra'  # Black Gunpowder,Refined Gunpowder,Imbued Gunpowder
 level = 2
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhra'  # Black Gunpowder,Refined Gunpowder,Imbued Gunpowder
 level = 1
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhaa'
 level = 1
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhaa'
 level = 2
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhar'  # Iron Plating,Steel Plating,Mithril Plating
 level = 1
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhar'  # Iron Plating,Steel Plating,Mithril Plating
 level = 2
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhmi'
 level = 1
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhac'  # Improved Masonry,Advanced Masonry,Imbued Masonry
 level = 1
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhac'  # Improved Masonry,Advanced Masonry,Imbued Masonry
 level = 2
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhss'  # Control Magic
 level = 1
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhan'  # Animal War Training
 level = 0
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhpt'  # Priest Adept Training,Priest Master Training
 level = 1
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhst'  # Sorceress Adept Training,Sorceress Master Training
 level = 0
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhst'  # Sorceress Adept Training,Sorceress Master Training
 level = 1
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhla'  # Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor
 level = 1
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhla'  # Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor
 level = 2
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhlh'  # Improved Lumber Harvesting,Advanced Lumber Harvesting
 level = 1
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhse'  # Magic Sentry
 level = 0
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhsr'
 level = 0
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhfl'  # Flare
 level = 0
 availability = "Unavailable"
 
 [[upgrades]]
-
 player_flags = 0x2
 upgrade_id = 'Rhgb'  # Flying Machine Bombs
 level = 0
 availability = "Unavailable"
 
 [[technologies]]
-
 player_flags = 0x2
 tech_id = 'Stpr'
 
 [[technologies]]
-
 player_flags = 0x2
 tech_id = 'Stpm'
 
 [[technologies]]
-
 player_flags = 0x2
 tech_id = 'hkni'  # Knight
 
 [[technologies]]
-
 player_flags = 0x2
 tech_id = 'hgyr'  # Flying Machine
 
 [[technologies]]
-
 player_flags = 0x2
 tech_id = 'hgry'  # Gryphon Rider
 
 [[technologies]]
-
 player_flags = 0x2
 tech_id = 'hsor'  # Sorceress
 
 [[technologies]]
-
 player_flags = 0x2
 tech_id = 'Hamg'  # Archmage
 
 [[technologies]]
-
 player_flags = 0x2
 tech_id = 'Hmkg'  # Mountain King
 
 [[technologies]]
-
 player_flags = 0x2
 tech_id = 'Hpal'  # Paladin
 
 [[technologies]]
-
 player_flags = 0x2
 tech_id = 'hcas'  # Castle
 
 [[technologies]]
-
 player_flags = 0x2
 tech_id = 'hgra'  # Gryphon Aviary
 
 [[technologies]]
-
 player_flags = 0x2
 tech_id = 'hctw'  # Cannon Tower
 
 [[technologies]]
-
 player_flags = 0x2
 tech_id = 'hmtt'  # Siege Engine
 
 [[technologies]]
-
 player_flags = 0x2
 tech_id = 'hstt'
 
 [[technologies]]
-
 player_flags = 0xf
 tech_id = 'Hblm'  # Blood Mage
 
 [[technologies]]
-
 player_flags = 0xf
 tech_id = 'Oshd'  # Shadow Hunter
 
 [[technologies]]
-
 player_flags = 0xf
 tech_id = 'Ucrl'  # Crypt Lord
 
 [[technologies]]
-
 player_flags = 0xf
 tech_id = 'Ewar'  # Warden

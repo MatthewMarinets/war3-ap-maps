@@ -8,7 +8,6 @@ doodads = []
 immobile_doodads = []
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = 4864.0
@@ -38,7 +37,6 @@ waygate_destination = -1
 entity_id = 29
 
 [[units]]
-
 type_id = 'hfoo'  # Footman
 variation = 0
 x = -2310.612060546875
@@ -68,7 +66,6 @@ waygate_destination = -1
 entity_id = 1
 
 [[units]]
-
 type_id = 'hfoo'  # Footman
 variation = 0
 x = -2316.2421875
@@ -98,7 +95,6 @@ waygate_destination = -1
 entity_id = 2
 
 [[units]]
-
 type_id = 'hfoo'  # Footman
 variation = 0
 x = -2438.69091796875
@@ -128,7 +124,6 @@ waygate_destination = -1
 entity_id = 3
 
 [[units]]
-
 type_id = 'hfoo'  # Footman
 variation = 0
 x = -2536.990234375
@@ -158,7 +153,6 @@ waygate_destination = -1
 entity_id = 4
 
 [[units]]
-
 type_id = 'hC01'
 variation = 0
 x = -2105.752197265625
@@ -187,13 +181,11 @@ waygate_destination = -1
 entity_id = 32
 
 [[units.modified_abilities]]
-
 abil_id = 'Adef'  # Defend
 autocast_active = false
 abil_level = 0
 
 [[units]]
-
 type_id = 'hC01'
 variation = 0
 x = -2045.012939453125
@@ -222,13 +214,11 @@ waygate_destination = -1
 entity_id = 33
 
 [[units.modified_abilities]]
-
 abil_id = 'Adef'  # Defend
 autocast_active = false
 abil_level = 0
 
 [[units]]
-
 type_id = 'hfoo'  # Footman
 variation = 0
 x = -2255.28759765625
@@ -258,7 +248,6 @@ waygate_destination = -1
 entity_id = 5
 
 [[units]]
-
 type_id = 'hfoo'  # Footman
 variation = 0
 x = -2352.219482421875
@@ -288,7 +277,6 @@ waygate_destination = -1
 entity_id = 6
 
 [[units]]
-
 type_id = 'Huth'  # Paladin
 variation = 0
 x = -2538.860107421875
@@ -317,31 +305,26 @@ waygate_destination = -1
 entity_id = 24
 
 [[units.modified_abilities]]
-
 abil_id = 'AHhb'  # Holy Light
 autocast_active = false
 abil_level = 0
 
 [[units.modified_abilities]]
-
 abil_id = 'AHds'  # Divine Shield
 autocast_active = false
 abil_level = 0
 
 [[units.modified_abilities]]
-
 abil_id = 'AHre'  # Resurrection
 autocast_active = false
 abil_level = 0
 
 [[units.modified_abilities]]
-
 abil_id = 'AHad'  # Devotion Aura
 autocast_active = false
 abil_level = 0
 
 [[units]]
-
 type_id = 'nban'  # Bandit
 variation = 0
 x = 3483.616943359375
@@ -371,7 +354,6 @@ waygate_destination = -1
 entity_id = 10
 
 [[units]]
-
 type_id = 'nban'  # Bandit
 variation = 0
 x = 3218.641357421875
@@ -401,7 +383,6 @@ waygate_destination = -1
 entity_id = 11
 
 [[units]]
-
 type_id = 'nban'  # Bandit
 variation = 0
 x = 3061.78125
@@ -434,7 +415,6 @@ waygate_destination = -1
 entity_id = 12
 
 [[units]]
-
 type_id = 'nvlw'  # Villager
 variation = 0
 x = 632.043701171875
@@ -463,13 +443,11 @@ waygate_destination = -1
 entity_id = 147
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ogru'  # Grunt
 variation = 0
 x = 787.0372314453125
@@ -498,13 +476,11 @@ waygate_destination = -1
 entity_id = 145
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nban'  # Bandit
 variation = 0
 x = -409.19171142578125
@@ -533,13 +509,11 @@ waygate_destination = -1
 entity_id = 95
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = -2506.298095703125
@@ -569,7 +543,6 @@ waygate_destination = -1
 entity_id = 102
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = -2684.890380859375
@@ -599,7 +572,6 @@ waygate_destination = -1
 entity_id = 77
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = 3630.2197265625
@@ -628,13 +600,11 @@ waygate_destination = -1
 entity_id = 134
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nban'  # Bandit
 variation = 0
 x = 352.2621765136719
@@ -664,7 +634,6 @@ waygate_destination = -1
 entity_id = 109
 
 [[units]]
-
 type_id = 'nC23'
 variation = 0
 x = -2969.908447265625
@@ -693,13 +662,11 @@ waygate_destination = -1
 entity_id = 68
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = -2689.841796875
@@ -729,7 +696,6 @@ waygate_destination = -1
 entity_id = 76
 
 [[units]]
-
 type_id = 'nban'  # Bandit
 variation = 0
 x = -336.0862731933594
@@ -758,13 +724,11 @@ waygate_destination = -1
 entity_id = 92
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nban'  # Bandit
 variation = 0
 x = 455.0100402832031
@@ -794,7 +758,6 @@ waygate_destination = -1
 entity_id = 168
 
 [[units]]
-
 type_id = 'nC26'
 variation = 0
 x = 1677.020751953125
@@ -823,13 +786,11 @@ waygate_destination = -1
 entity_id = 166
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nban'  # Bandit
 variation = 0
 x = 508.4501037597656
@@ -863,7 +824,6 @@ waygate_destination = -1
 entity_id = 79
 
 [[units]]
-
 type_id = 'nC04'
 variation = 0
 x = 609.6526489257812
@@ -893,7 +853,6 @@ waygate_destination = -1
 entity_id = 106
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = -2880.0
@@ -923,7 +882,6 @@ waygate_destination = -1
 entity_id = 66
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = 4864.0
@@ -953,7 +911,6 @@ waygate_destination = -1
 entity_id = 28
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = -3159.12744140625
@@ -983,7 +940,6 @@ waygate_destination = -1
 entity_id = 0
 
 [[units]]
-
 type_id = 'npig'  # Pig
 variation = 0
 x = -2023.665771484375
@@ -1013,7 +969,6 @@ waygate_destination = -1
 entity_id = 30
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = -3824.44775390625
@@ -1043,7 +998,6 @@ waygate_destination = -1
 entity_id = 31
 
 [[units]]
-
 type_id = 'ngnh'  # Gnoll Hut
 variation = 0
 x = -672.0
@@ -1073,7 +1027,6 @@ waygate_destination = -1
 entity_id = 60
 
 [[units]]
-
 type_id = 'ngna'  # Gnoll Poacher
 variation = 0
 x = 499.5075988769531
@@ -1103,7 +1056,6 @@ waygate_destination = -1
 entity_id = 39
 
 [[units]]
-
 type_id = 'ngno'  # Gnoll
 variation = 0
 x = 423.5107116699219
@@ -1133,7 +1085,6 @@ waygate_destination = -1
 entity_id = 38
 
 [[units]]
-
 type_id = 'ncba'  # City Building
 variation = 0
 x = 1184.0
@@ -1162,13 +1113,11 @@ waygate_destination = -1
 entity_id = 135
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nban'  # Bandit
 variation = 0
 x = 262.6894836425781
@@ -1198,7 +1147,6 @@ waygate_destination = -1
 entity_id = 167
 
 [[units]]
-
 type_id = 'nban'  # Bandit
 variation = 0
 x = -348.8998718261719
@@ -1231,13 +1179,11 @@ waygate_destination = -1
 entity_id = 94
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nC22'
 variation = 0
 x = -2916.2060546875
@@ -1266,13 +1212,11 @@ waygate_destination = -1
 entity_id = 162
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = 4864.0
@@ -1302,7 +1246,6 @@ waygate_destination = -1
 entity_id = 80
 
 [[units]]
-
 type_id = 'ogru'  # Grunt
 variation = 0
 x = 297.55279541015625
@@ -1331,13 +1274,11 @@ waygate_destination = -1
 entity_id = 144
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'hfoo'  # Footman
 variation = 0
 x = 242.75491333007812
@@ -1367,7 +1308,6 @@ waygate_destination = -1
 entity_id = 41
 
 [[units]]
-
 type_id = 'hA00'
 variation = 0
 x = 379.60693359375
@@ -1397,7 +1337,6 @@ waygate_destination = -1
 entity_id = 42
 
 [[units]]
-
 type_id = 'hA00'
 variation = 0
 x = 106.95775604248047
@@ -1427,7 +1366,6 @@ waygate_destination = -1
 entity_id = 43
 
 [[units]]
-
 type_id = 'hA00'
 variation = 0
 x = -4102.3291015625
@@ -1457,7 +1395,6 @@ waygate_destination = -1
 entity_id = 54
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = -3712.0
@@ -1486,13 +1423,11 @@ waygate_destination = -1
 entity_id = 142
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncb0'  # City Building
 variation = 0
 x = 1888.0
@@ -1521,13 +1456,11 @@ waygate_destination = -1
 entity_id = 139
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncbb'  # City Building
 variation = 0
 x = 1248.0
@@ -1556,13 +1489,11 @@ waygate_destination = -1
 entity_id = 136
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncb3'  # City Building
 variation = 0
 x = 3168.0
@@ -1591,13 +1522,11 @@ waygate_destination = -1
 entity_id = 140
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'oC16'
 variation = 0
 x = 63.050262451171875
@@ -1626,13 +1555,11 @@ waygate_destination = -1
 entity_id = 157
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncbb'  # City Building
 variation = 0
 x = 3232.0
@@ -1661,13 +1588,11 @@ waygate_destination = -1
 entity_id = 141
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncb2'  # City Building
 variation = 0
 x = -96.0
@@ -1696,13 +1621,11 @@ waygate_destination = -1
 entity_id = 137
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'hA00'
 variation = 0
 x = -3850.876708984375
@@ -1732,7 +1655,6 @@ waygate_destination = -1
 entity_id = 53
 
 [[units]]
-
 type_id = 'hhou'  # Farm
 variation = 0
 x = -3648.0
@@ -1762,7 +1684,6 @@ waygate_destination = -1
 entity_id = 44
 
 [[units]]
-
 type_id = 'hhou'  # Farm
 variation = 0
 x = -3776.0
@@ -1792,7 +1713,6 @@ waygate_destination = -1
 entity_id = 55
 
 [[units]]
-
 type_id = 'ngnh'  # Gnoll Hut
 variation = 0
 x = 544.0
@@ -1822,7 +1742,6 @@ waygate_destination = -1
 entity_id = 35
 
 [[units]]
-
 type_id = 'ngno'  # Gnoll
 variation = 0
 x = 301.2674255371094
@@ -1856,7 +1775,6 @@ waygate_destination = -1
 entity_id = 37
 
 [[units]]
-
 type_id = 'hhou'  # Farm
 variation = 0
 x = -2240.0
@@ -1886,7 +1804,6 @@ waygate_destination = -1
 entity_id = 58
 
 [[units]]
-
 type_id = 'nten'  # Tent
 variation = 0
 x = -2400.0
@@ -1916,7 +1833,6 @@ waygate_destination = -1
 entity_id = 101
 
 [[units]]
-
 type_id = 'nten'  # Tent
 variation = 0
 x = 3552.0
@@ -1946,7 +1862,6 @@ waygate_destination = -1
 entity_id = 91
 
 [[units]]
-
 type_id = 'nten'  # Tent
 variation = 0
 x = -2528.0
@@ -1976,7 +1891,6 @@ waygate_destination = -1
 entity_id = 100
 
 [[units]]
-
 type_id = 'nC03'
 variation = 0
 x = -3960.665283203125
@@ -2006,7 +1920,6 @@ waygate_destination = -1
 entity_id = 63
 
 [[units]]
-
 type_id = 'nC02'
 variation = 0
 x = -3498.598876953125
@@ -2036,7 +1949,6 @@ waygate_destination = -1
 entity_id = 98
 
 [[units]]
-
 type_id = 'nC08'
 variation = 0
 x = -1636.8607177734375
@@ -2066,7 +1978,6 @@ waygate_destination = -1
 entity_id = 78
 
 [[units]]
-
 type_id = 'nC09'
 variation = 0
 x = -2353.67724609375
@@ -2096,7 +2007,6 @@ waygate_destination = -1
 entity_id = 61
 
 [[units]]
-
 type_id = 'nC24'
 variation = 0
 x = -2890.59765625
@@ -2125,13 +2035,11 @@ waygate_destination = -1
 entity_id = 67
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nten'  # Tent
 variation = 0
 x = -2720.0
@@ -2161,7 +2069,6 @@ waygate_destination = -1
 entity_id = 99
 
 [[units]]
-
 type_id = 'nten'  # Tent
 variation = 0
 x = -3232.0
@@ -2191,7 +2098,6 @@ waygate_destination = -1
 entity_id = 82
 
 [[units]]
-
 type_id = 'nten'  # Tent
 variation = 0
 x = -3360.0
@@ -2221,7 +2127,6 @@ waygate_destination = -1
 entity_id = 81
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = 3801.367431640625
@@ -2250,13 +2155,11 @@ waygate_destination = -1
 entity_id = 133
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'hhdl'  # Riderless Horse
 variation = 0
 x = -3939.08154296875
@@ -2286,7 +2189,6 @@ waygate_destination = -1
 entity_id = 57
 
 [[units]]
-
 type_id = 'hhdl'  # Riderless Horse
 variation = 0
 x = -3964.525390625
@@ -2316,7 +2218,6 @@ waygate_destination = -1
 entity_id = 56
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = -2728.0595703125
@@ -2346,7 +2247,6 @@ waygate_destination = -1
 entity_id = 73
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = -2642.826904296875
@@ -2376,7 +2276,6 @@ waygate_destination = -1
 entity_id = 74
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = -2643.257080078125
@@ -2406,7 +2305,6 @@ waygate_destination = -1
 entity_id = 75
 
 [[units]]
-
 type_id = 'ncb6'  # City Building
 variation = 0
 x = -4256.0
@@ -2435,13 +2333,11 @@ waygate_destination = -1
 entity_id = 114
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = 4864.0
@@ -2471,7 +2367,6 @@ waygate_destination = -1
 entity_id = 15
 
 [[units]]
-
 type_id = 'nC10'
 variation = 0
 x = -3482.437255859375
@@ -2501,7 +2396,6 @@ waygate_destination = -1
 entity_id = 65
 
 [[units]]
-
 type_id = 'ogru'  # Grunt
 variation = 0
 x = 791.1429443359375
@@ -2530,13 +2424,11 @@ waygate_destination = -1
 entity_id = 146
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nvlw'  # Villager
 variation = 0
 x = 621.99951171875
@@ -2565,13 +2457,11 @@ waygate_destination = -1
 entity_id = 151
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nC14'
 variation = 0
 x = -4512.4736328125
@@ -2600,13 +2490,11 @@ waygate_destination = -1
 entity_id = 96
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nvlw'  # Villager
 variation = 0
 x = 564.6771240234375
@@ -2635,13 +2523,11 @@ waygate_destination = -1
 entity_id = 152
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 590.1126098632812
@@ -2670,13 +2556,11 @@ waygate_destination = -1
 entity_id = 149
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nC13'
 variation = 0
 x = -4410.8203125
@@ -2705,13 +2589,11 @@ waygate_destination = -1
 entity_id = 159
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncb3'  # City Building
 variation = 0
 x = 1568.0
@@ -2740,13 +2622,11 @@ waygate_destination = -1
 entity_id = 138
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 611.5569458007812
@@ -2775,13 +2655,11 @@ waygate_destination = -1
 entity_id = 150
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 620.4074096679688
@@ -2810,13 +2688,11 @@ waygate_destination = -1
 entity_id = 148
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nten'  # Tent
 variation = 0
 x = 3360.0
@@ -2846,7 +2722,6 @@ waygate_destination = -1
 entity_id = 87
 
 [[units]]
-
 type_id = 'nten'  # Tent
 variation = 0
 x = 4192.0
@@ -2876,7 +2751,6 @@ waygate_destination = -1
 entity_id = 89
 
 [[units]]
-
 type_id = 'nten'  # Tent
 variation = 0
 x = 3424.0
@@ -2906,7 +2780,6 @@ waygate_destination = -1
 entity_id = 90
 
 [[units]]
-
 type_id = 'ngnh'  # Gnoll Hut
 variation = 0
 x = 352.0
@@ -2936,7 +2809,6 @@ waygate_destination = -1
 entity_id = 9
 
 [[units]]
-
 type_id = 'hwtw'  # Scout Tower
 variation = 0
 x = -3008.0
@@ -2966,7 +2838,6 @@ waygate_destination = -1
 entity_id = 7
 
 [[units]]
-
 type_id = 'hwtw'  # Scout Tower
 variation = 0
 x = -3456.0
@@ -2996,7 +2867,6 @@ waygate_destination = -1
 entity_id = 8
 
 [[units]]
-
 type_id = 'hhdl'  # Riderless Horse
 variation = 0
 x = -4101.9345703125
@@ -3026,7 +2896,6 @@ waygate_destination = -1
 entity_id = 34
 
 [[units]]
-
 type_id = 'hhou'  # Farm
 variation = 0
 x = -2752.0
@@ -3056,7 +2925,6 @@ waygate_destination = -1
 entity_id = 59
 
 [[units]]
-
 type_id = 'nC07'
 variation = 0
 x = -2947.6484375
@@ -3086,7 +2954,6 @@ waygate_destination = -1
 entity_id = 93
 
 [[units]]
-
 type_id = 'nC21'
 variation = 0
 x = -2901.26708984375
@@ -3115,13 +2982,11 @@ waygate_destination = -1
 entity_id = 160
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nC18'
 variation = 0
 x = -3584.260009765625
@@ -3150,13 +3015,11 @@ waygate_destination = -1
 entity_id = 163
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nC20'
 variation = 0
 x = -3021.044677734375
@@ -3185,13 +3048,11 @@ waygate_destination = -1
 entity_id = 161
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nC06'
 variation = 0
 x = 284.51336669921875
@@ -3221,7 +3082,6 @@ waygate_destination = -1
 entity_id = 110
 
 [[units]]
-
 type_id = 'nC05'
 variation = 0
 x = 356.1031799316406
@@ -3251,7 +3111,6 @@ waygate_destination = -1
 entity_id = 112
 
 [[units]]
-
 type_id = 'nbrg'  # Brigand
 variation = 0
 x = 3555.90966796875
@@ -3280,13 +3139,11 @@ waygate_destination = -1
 entity_id = 71
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nbrg'  # Brigand
 variation = 0
 x = 3509.71044921875
@@ -3315,13 +3172,11 @@ waygate_destination = -1
 entity_id = 70
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nC11'
 variation = 0
 x = -794.1502075195312
@@ -3350,13 +3205,11 @@ waygate_destination = -1
 entity_id = 158
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nban'  # Bandit
 variation = 0
 x = -1245.078369140625
@@ -3385,13 +3238,11 @@ waygate_destination = -1
 entity_id = 17
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncba'  # City Building
 variation = 0
 x = 1632.0
@@ -3420,13 +3271,11 @@ waygate_destination = -1
 entity_id = 16
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncbb'  # City Building
 variation = 0
 x = 2464.0
@@ -3455,13 +3304,11 @@ waygate_destination = -1
 entity_id = 25
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncb5'  # City Building
 variation = 0
 x = 1312.0
@@ -3490,13 +3337,11 @@ waygate_destination = -1
 entity_id = 27
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncb3'  # City Building
 variation = 0
 x = 1632.0
@@ -3525,13 +3370,11 @@ waygate_destination = -1
 entity_id = 88
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncba'  # City Building
 variation = 0
 x = 3040.0
@@ -3560,13 +3403,11 @@ waygate_destination = -1
 entity_id = 111
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncb5'  # City Building
 variation = 0
 x = 2464.0
@@ -3595,13 +3436,11 @@ waygate_destination = -1
 entity_id = 104
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncb8'  # City Building
 variation = 0
 x = 2912.0
@@ -3630,13 +3469,11 @@ waygate_destination = -1
 entity_id = 105
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncbb'  # City Building
 variation = 0
 x = 992.0
@@ -3665,13 +3502,11 @@ waygate_destination = -1
 entity_id = 97
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncb3'  # City Building
 variation = 0
 x = 1312.0
@@ -3700,13 +3535,11 @@ waygate_destination = -1
 entity_id = 113
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncbb'  # City Building
 variation = 0
 x = 1184.0
@@ -3735,13 +3568,11 @@ waygate_destination = -1
 entity_id = 115
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncba'  # City Building
 variation = 0
 x = 800.0
@@ -3770,13 +3601,11 @@ waygate_destination = -1
 entity_id = 116
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncb6'  # City Building
 variation = 0
 x = 480.0
@@ -3805,13 +3634,11 @@ waygate_destination = -1
 entity_id = 117
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncb7'  # City Building
 variation = 0
 x = 160.0
@@ -3840,13 +3667,11 @@ waygate_destination = -1
 entity_id = 118
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncba'  # City Building
 variation = 0
 x = 1696.0
@@ -3875,13 +3700,11 @@ waygate_destination = -1
 entity_id = 119
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncba'  # City Building
 variation = 0
 x = 2784.0
@@ -3910,13 +3733,11 @@ waygate_destination = -1
 entity_id = 120
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncb3'  # City Building
 variation = 0
 x = 736.0
@@ -3945,13 +3766,11 @@ waygate_destination = -1
 entity_id = 121
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncb7'  # City Building
 variation = 0
 x = 96.0
@@ -3980,13 +3799,11 @@ waygate_destination = -1
 entity_id = 122
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncb3'  # City Building
 variation = 0
 x = 3104.0
@@ -4015,13 +3832,11 @@ waygate_destination = -1
 entity_id = 123
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nC27'
 variation = 0
 x = 1941.213623046875
@@ -4050,13 +3865,11 @@ waygate_destination = -1
 entity_id = 165
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nC25'
 variation = 0
 x = 2396.7451171875
@@ -4085,13 +3898,11 @@ waygate_destination = -1
 entity_id = 164
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'ncb3'  # City Building
 variation = 0
 x = 2784.0
@@ -4120,13 +3931,11 @@ waygate_destination = -1
 entity_id = 126
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncb5'  # City Building
 variation = 0
 x = 3104.0
@@ -4155,13 +3964,11 @@ waygate_destination = -1
 entity_id = 127
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncbb'  # City Building
 variation = 0
 x = 3808.0
@@ -4190,13 +3997,11 @@ waygate_destination = -1
 entity_id = 128
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = 3832.20654296875
@@ -4225,13 +4030,11 @@ waygate_destination = -1
 entity_id = 129
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = 3721.840087890625
@@ -4260,13 +4063,11 @@ waygate_destination = -1
 entity_id = 130
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = 3652.1435546875
@@ -4295,13 +4096,11 @@ waygate_destination = -1
 entity_id = 131
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nshe'  # Sheep
 variation = 0
 x = 3522.552490234375
@@ -4330,13 +4129,11 @@ waygate_destination = -1
 entity_id = 132
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncb5'  # City Building
 variation = 0
 x = 3616.0
@@ -4365,13 +4162,11 @@ waygate_destination = -1
 entity_id = 13
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncba'  # City Building
 variation = 0
 x = 3616.0
@@ -4400,13 +4195,11 @@ waygate_destination = -1
 entity_id = 14
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncb3'  # City Building
 variation = 0
 x = 3552.0
@@ -4435,13 +4228,11 @@ waygate_destination = -1
 entity_id = 18
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncb5'  # City Building
 variation = 0
 x = 3936.0
@@ -4470,13 +4261,11 @@ waygate_destination = -1
 entity_id = 19
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ncb3'  # City Building
 variation = 0
 x = 4128.0
@@ -4505,13 +4294,11 @@ waygate_destination = -1
 entity_id = 20
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nbrg'  # Brigand
 variation = 0
 x = 4013.249755859375
@@ -4540,13 +4327,11 @@ waygate_destination = -1
 entity_id = 64
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 715.9049682617188
@@ -4575,13 +4360,11 @@ waygate_destination = -1
 entity_id = 22
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 2582.23193359375
@@ -4610,13 +4393,11 @@ waygate_destination = -1
 entity_id = 26
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nvlw'  # Villager
 variation = 0
 x = 2156.577392578125
@@ -4645,13 +4426,11 @@ waygate_destination = -1
 entity_id = 36
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nvlw'  # Villager
 variation = 0
 x = 2820.197265625
@@ -4680,13 +4459,11 @@ waygate_destination = -1
 entity_id = 40
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 2225.1162109375
@@ -4715,13 +4492,11 @@ waygate_destination = -1
 entity_id = 45
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nvlw'  # Villager
 variation = 0
 x = 2573.44677734375
@@ -4750,13 +4525,11 @@ waygate_destination = -1
 entity_id = 51
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nvlk'  # Child
 variation = 0
 x = 2759.80029296875
@@ -4785,13 +4558,11 @@ waygate_destination = -1
 entity_id = 47
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nvlk'  # Child
 variation = 0
 x = 2697.607421875
@@ -4820,13 +4591,11 @@ waygate_destination = -1
 entity_id = 48
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nvlk'  # Child
 variation = 0
 x = 1119.55908203125
@@ -4855,13 +4624,11 @@ waygate_destination = -1
 entity_id = 49
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nvlw'  # Villager
 variation = 0
 x = 1217.940673828125
@@ -4890,13 +4657,11 @@ waygate_destination = -1
 entity_id = 85
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nvlw'  # Villager
 variation = 0
 x = 1566.80419921875
@@ -4925,13 +4690,11 @@ waygate_destination = -1
 entity_id = 86
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nvlk'  # Child
 variation = 0
 x = 982.9790649414062
@@ -4960,13 +4723,11 @@ waygate_destination = -1
 entity_id = 50
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'orai'  # Raider
 variation = 0
 x = 3057.841552734375
@@ -4995,13 +4756,11 @@ waygate_destination = -1
 entity_id = 46
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 2906.804931640625
@@ -5030,13 +4789,11 @@ waygate_destination = -1
 entity_id = 52
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ogru'  # Grunt
 variation = 0
 x = 3158.61279296875
@@ -5065,13 +4822,11 @@ waygate_destination = -1
 entity_id = 83
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nvil'  # Villager
 variation = 0
 x = 2607.791259765625
@@ -5100,13 +4855,11 @@ waygate_destination = -1
 entity_id = 84
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'npig'  # Pig
 variation = 0
 x = -2338.11474609375
@@ -5136,7 +4889,6 @@ waygate_destination = -1
 entity_id = 143
 
 [[units]]
-
 type_id = 'npig'  # Pig
 variation = 0
 x = -2052.735107421875
@@ -5166,7 +4918,6 @@ waygate_destination = -1
 entity_id = 153
 
 [[units]]
-
 type_id = 'npig'  # Pig
 variation = 0
 x = -750.5982666015625
@@ -5196,7 +4947,6 @@ waygate_destination = -1
 entity_id = 154
 
 [[units]]
-
 type_id = 'nC17'
 variation = 0
 x = -3614.390380859375
@@ -5225,13 +4975,11 @@ waygate_destination = -1
 entity_id = 155
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nC19'
 variation = 0
 x = -3038.4033203125
@@ -5260,13 +5008,11 @@ waygate_destination = -1
 entity_id = 156
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ogru'  # Grunt
 variation = 0
 x = 177.076416015625
@@ -5295,7 +5041,6 @@ waygate_destination = -1
 entity_id = 69
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0

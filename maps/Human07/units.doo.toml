@@ -8,7 +8,6 @@ doodads = []
 immobile_doodads = []
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = -3072.0
@@ -37,13 +36,11 @@ waygate_destination = -1
 entity_id = 51
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = 4992.0
@@ -73,7 +70,6 @@ waygate_destination = -1
 entity_id = 131
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = -3712.0
@@ -102,13 +98,11 @@ waygate_destination = -1
 entity_id = 25
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'hpea'  # Peasant
 variation = 0
 x = -4141.6640625
@@ -138,7 +132,6 @@ waygate_destination = -1
 entity_id = 89
 
 [[units]]
-
 type_id = 'ngol'  # Gold Mine
 variation = 0
 x = 5248.0
@@ -168,7 +161,6 @@ waygate_destination = -1
 entity_id = 4
 
 [[units]]
-
 type_id = 'hgtw'  # Guard Tower
 variation = 0
 x = 4160.0
@@ -198,7 +190,6 @@ waygate_destination = -1
 entity_id = 5
 
 [[units]]
-
 type_id = 'hgtw'  # Guard Tower
 variation = 0
 x = 4544.0
@@ -228,7 +219,6 @@ waygate_destination = -1
 entity_id = 6
 
 [[units]]
-
 type_id = 'hhou'  # Farm
 variation = 0
 x = 4928.0
@@ -258,7 +248,6 @@ waygate_destination = -1
 entity_id = 7
 
 [[units]]
-
 type_id = 'hhou'  # Farm
 variation = 0
 x = 4544.0
@@ -288,7 +277,6 @@ waygate_destination = -1
 entity_id = 8
 
 [[units]]
-
 type_id = 'uzg1'  # Spirit Tower
 variation = 0
 x = 3872.0
@@ -317,13 +305,11 @@ waygate_destination = -1
 entity_id = 35
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'hbla'  # Blacksmith
 variation = 0
 x = 4224.0
@@ -353,7 +339,6 @@ waygate_destination = -1
 entity_id = 10
 
 [[units]]
-
 type_id = 'hmtm'  # Mortar Team
 variation = 0
 x = 4830.5458984375
@@ -383,7 +368,6 @@ waygate_destination = -1
 entity_id = 11
 
 [[units]]
-
 type_id = 'hmtm'  # Mortar Team
 variation = 0
 x = 4417.06689453125
@@ -413,7 +397,6 @@ waygate_destination = -1
 entity_id = 12
 
 [[units]]
-
 type_id = 'hrif'  # Rifleman
 variation = 0
 x = 4376.6669921875
@@ -443,7 +426,6 @@ waygate_destination = -1
 entity_id = 13
 
 [[units]]
-
 type_id = 'hrif'  # Rifleman
 variation = 0
 x = 4662.49951171875
@@ -473,7 +455,6 @@ waygate_destination = -1
 entity_id = 14
 
 [[units]]
-
 type_id = 'hrif'  # Rifleman
 variation = 0
 x = 4582.48583984375
@@ -503,7 +484,6 @@ waygate_destination = -1
 entity_id = 15
 
 [[units]]
-
 type_id = 'hgyr'  # Flying Machine
 variation = 0
 x = 4728.64013671875
@@ -533,7 +513,6 @@ waygate_destination = -1
 entity_id = 16
 
 [[units]]
-
 type_id = 'hgyr'  # Flying Machine
 variation = 0
 x = 4901.83984375
@@ -563,7 +542,6 @@ waygate_destination = -1
 entity_id = 17
 
 [[units]]
-
 type_id = 'uabo'  # Abomination
 variation = 0
 x = -3934.55712890625
@@ -593,7 +571,6 @@ waygate_destination = -1
 entity_id = 102
 
 [[units]]
-
 type_id = 'nwwf'  # Frost Wolf
 variation = 0
 x = 15.43783950805664
@@ -622,13 +599,11 @@ waygate_destination = -1
 entity_id = 122
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nitr'  # Ice Troll
 variation = 0
 x = 2815.81787109375
@@ -657,13 +632,11 @@ waygate_destination = -1
 entity_id = 119
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nitr'  # Ice Troll
 variation = 0
 x = 3198.22705078125
@@ -692,13 +665,11 @@ waygate_destination = -1
 entity_id = 118
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ugar'  # Gargoyle
 variation = 0
 x = -3846.24951171875
@@ -728,7 +699,6 @@ waygate_destination = -1
 entity_id = 69
 
 [[units]]
-
 type_id = 'ugar'  # Gargoyle
 variation = 0
 x = -4733.63037109375
@@ -758,7 +728,6 @@ waygate_destination = -1
 entity_id = 68
 
 [[units]]
-
 type_id = 'harm'  # Workshop
 variation = 0
 x = 5184.0
@@ -788,7 +757,6 @@ waygate_destination = -1
 entity_id = 9
 
 [[units]]
-
 type_id = 'hpea'  # Peasant
 variation = 0
 x = 5187.3662109375
@@ -817,13 +785,11 @@ waygate_destination = -1
 entity_id = 133
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nits'  # Ice Troll Berserker
 variation = 0
 x = 4557.3935546875
@@ -852,13 +818,11 @@ waygate_destination = -1
 entity_id = 103
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nitt'  # Ice Troll Trapper
 variation = 0
 x = 4396.9560546875
@@ -887,13 +851,11 @@ waygate_destination = -1
 entity_id = 143
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'ucry'  # Crypt Fiend
 variation = 0
 x = 2391.049560546875
@@ -923,7 +885,6 @@ waygate_destination = -1
 entity_id = 28
 
 [[units]]
-
 type_id = 'uzg1'  # Spirit Tower
 variation = 0
 x = 2272.0
@@ -953,7 +914,6 @@ waygate_destination = -1
 entity_id = 34
 
 [[units]]
-
 type_id = 'uzg1'  # Spirit Tower
 variation = 0
 x = 2528.0
@@ -983,7 +943,6 @@ waygate_destination = -1
 entity_id = 33
 
 [[units]]
-
 type_id = 'usep'  # Crypt
 variation = 0
 x = 3264.0
@@ -1013,7 +972,6 @@ waygate_destination = -1
 entity_id = 31
 
 [[units]]
-
 type_id = 'uzg1'  # Spirit Tower
 variation = 0
 x = -4000.0
@@ -1042,13 +1000,11 @@ waygate_destination = -1
 entity_id = 24
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'hhou'  # Farm
 variation = 0
 x = 4416.0
@@ -1077,13 +1033,11 @@ waygate_destination = -1
 entity_id = 135
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nth0'  # Ice Troll Hut
 variation = 0
 x = 4928.0
@@ -1112,13 +1066,11 @@ waygate_destination = -1
 entity_id = 142
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'hmtt'  # Siege Engine
 variation = 0
 x = 4869.11181640625
@@ -1147,13 +1099,11 @@ waygate_destination = -1
 entity_id = 26
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'hpea'  # Peasant
 variation = 0
 x = -4086.4384765625
@@ -1183,7 +1133,6 @@ waygate_destination = -1
 entity_id = 88
 
 [[units]]
-
 type_id = 'hpea'  # Peasant
 variation = 0
 x = -3888.8671875
@@ -1213,7 +1162,6 @@ waygate_destination = -1
 entity_id = 87
 
 [[units]]
-
 type_id = 'ugho'  # Ghoul
 variation = 0
 x = 3689.669921875
@@ -1243,7 +1191,6 @@ waygate_destination = -1
 entity_id = 37
 
 [[units]]
-
 type_id = 'ucry'  # Crypt Fiend
 variation = 0
 x = 3609.8505859375
@@ -1272,13 +1219,11 @@ waygate_destination = -1
 entity_id = 130
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ugho'  # Ghoul
 variation = 0
 x = 2966.321044921875
@@ -1307,13 +1252,11 @@ waygate_destination = -1
 entity_id = 128
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nsea'  # Seal
 variation = 0
 x = -3070.2197265625
@@ -1343,7 +1286,6 @@ waygate_destination = -1
 entity_id = 113
 
 [[units]]
-
 type_id = 'uzg1'  # Spirit Tower
 variation = 0
 x = -2400.0
@@ -1373,7 +1315,6 @@ waygate_destination = -1
 entity_id = 30
 
 [[units]]
-
 type_id = 'uzig'  # Ziggurat
 variation = 0
 x = -4704.0
@@ -1402,13 +1343,11 @@ waygate_destination = -1
 entity_id = 29
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'uzg1'  # Spirit Tower
 variation = 0
 x = -3104.0
@@ -1438,7 +1377,6 @@ waygate_destination = -1
 entity_id = 43
 
 [[units]]
-
 type_id = 'nitr'  # Ice Troll
 variation = 0
 x = 2316.875
@@ -1467,13 +1405,11 @@ waygate_destination = -1
 entity_id = 138
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nth1'  # Ice Troll Hut
 variation = 0
 x = 4448.0
@@ -1502,13 +1438,11 @@ waygate_destination = -1
 entity_id = 105
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'uzg1'  # Spirit Tower
 variation = 0
 x = -4960.0
@@ -1538,7 +1472,6 @@ waygate_destination = -1
 entity_id = 46
 
 [[units]]
-
 type_id = 'uzig'  # Ziggurat
 variation = 0
 x = -3168.0
@@ -1567,13 +1500,11 @@ waygate_destination = -1
 entity_id = 18
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'usep'  # Crypt
 variation = 0
 x = -2560.0
@@ -1603,7 +1534,6 @@ waygate_destination = -1
 entity_id = 48
 
 [[units]]
-
 type_id = 'usep'  # Crypt
 variation = 0
 x = -4224.0
@@ -1633,7 +1563,6 @@ waygate_destination = -1
 entity_id = 49
 
 [[units]]
-
 type_id = 'nith'  # Ice Troll High Priest
 variation = 0
 x = 2828.220947265625
@@ -1662,13 +1591,11 @@ waygate_destination = -1
 entity_id = 137
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nth1'  # Ice Troll Hut
 variation = 0
 x = 3040.0
@@ -1697,13 +1624,11 @@ waygate_destination = -1
 entity_id = 141
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'utod'  # Temple of the Damned
 variation = 0
 x = -3328.0
@@ -1733,7 +1658,6 @@ waygate_destination = -1
 entity_id = 52
 
 [[units]]
-
 type_id = 'uslh'  # Slaughterhouse
 variation = 0
 x = -2880.0
@@ -1763,7 +1687,6 @@ waygate_destination = -1
 entity_id = 53
 
 [[units]]
-
 type_id = 'uaod'  # Altar of Darkness
 variation = 0
 x = -4448.0
@@ -1793,7 +1716,6 @@ waygate_destination = -1
 entity_id = 54
 
 [[units]]
-
 type_id = 'ugho'  # Ghoul
 variation = 0
 x = -2243.2421875
@@ -1823,7 +1745,6 @@ waygate_destination = -1
 entity_id = 55
 
 [[units]]
-
 type_id = 'nth0'  # Ice Troll Hut
 variation = 0
 x = 2688.0
@@ -1852,13 +1773,11 @@ waygate_destination = -1
 entity_id = 76
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ugho'  # Ghoul
 variation = 0
 x = -4412.99755859375
@@ -1888,7 +1807,6 @@ waygate_destination = -1
 entity_id = 57
 
 [[units]]
-
 type_id = 'unec'  # Necromancer
 variation = 0
 x = -3982.61181640625
@@ -1917,13 +1835,11 @@ waygate_destination = -1
 entity_id = 101
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'ugho'  # Ghoul
 variation = 0
 x = -4566.06689453125
@@ -1953,7 +1869,6 @@ waygate_destination = -1
 entity_id = 59
 
 [[units]]
-
 type_id = 'ugho'  # Ghoul
 variation = 0
 x = -4725.49951171875
@@ -1983,7 +1898,6 @@ waygate_destination = -1
 entity_id = 60
 
 [[units]]
-
 type_id = 'ugho'  # Ghoul
 variation = 0
 x = -3898.950439453125
@@ -2013,7 +1927,6 @@ waygate_destination = -1
 entity_id = 61
 
 [[units]]
-
 type_id = 'ugho'  # Ghoul
 variation = 0
 x = -3688.326171875
@@ -2043,7 +1956,6 @@ waygate_destination = -1
 entity_id = 62
 
 [[units]]
-
 type_id = 'nits'  # Ice Troll Berserker
 variation = 0
 x = 2751.00927734375
@@ -2072,13 +1984,11 @@ waygate_destination = -1
 entity_id = 123
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'unec'  # Necromancer
 variation = 0
 x = -3251.1884765625
@@ -2108,7 +2018,6 @@ waygate_destination = -1
 entity_id = 64
 
 [[units]]
-
 type_id = 'unec'  # Necromancer
 variation = 0
 x = -4230.75537109375
@@ -2138,7 +2047,6 @@ waygate_destination = -1
 entity_id = 65
 
 [[units]]
-
 type_id = 'ugar'  # Gargoyle
 variation = 0
 x = -2707.129638671875
@@ -2168,7 +2076,6 @@ waygate_destination = -1
 entity_id = 66
 
 [[units]]
-
 type_id = 'ugar'  # Gargoyle
 variation = 0
 x = -3354.202392578125
@@ -2198,7 +2105,6 @@ waygate_destination = -1
 entity_id = 67
 
 [[units]]
-
 type_id = 'usap'  # Sacrificial Pit
 variation = 0
 x = -3968.0
@@ -2227,13 +2133,11 @@ waygate_destination = -1
 entity_id = 50
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'ugrv'  # Graveyard
 variation = 0
 x = -3584.0
@@ -2263,7 +2167,6 @@ waygate_destination = -1
 entity_id = 42
 
 [[units]]
-
 type_id = 'hhou'  # Farm
 variation = 0
 x = 4800.0
@@ -2293,7 +2196,6 @@ waygate_destination = -1
 entity_id = 1
 
 [[units]]
-
 type_id = 'nitr'  # Ice Troll
 variation = 0
 x = 3287.19140625
@@ -2322,13 +2224,11 @@ waygate_destination = -1
 entity_id = 140
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ugol'  # Haunted Gold Mine
 variation = 0
 x = -4288.0
@@ -2358,7 +2258,6 @@ waygate_destination = -1
 entity_id = 3
 
 [[units]]
-
 type_id = 'nnws'  # Nerubian Spider Lord
 variation = 0
 x = 779.8611450195312
@@ -2387,13 +2286,11 @@ waygate_destination = -1
 entity_id = 93
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nwen'  # Wendigo
 variation = 0
 x = -472.41064453125
@@ -2423,7 +2320,6 @@ waygate_destination = -1
 entity_id = 120
 
 [[units]]
-
 type_id = 'nnwq'  # Nerubian Queen
 variation = 0
 x = 363.7241516113281
@@ -2455,19 +2351,16 @@ waygate_destination = -1
 entity_id = 90
 
 [[units.modified_abilities]]
-
 abil_id = 'ACrd'  # Raise Dead
 autocast_active = false
 abil_level = 0
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nwen'  # Wendigo
 variation = 0
 x = -167.09336853027344
@@ -2496,13 +2389,11 @@ waygate_destination = -1
 entity_id = 121
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'hmpr'  # Priest
 variation = 0
 x = -3795.13232421875
@@ -2532,7 +2423,6 @@ waygate_destination = -1
 entity_id = 19
 
 [[units]]
-
 type_id = 'hfoo'  # Footman
 variation = 0
 x = -3791.27099609375
@@ -2562,7 +2452,6 @@ waygate_destination = -1
 entity_id = 20
 
 [[units]]
-
 type_id = 'hA00'
 variation = 0
 x = -3665.487060546875
@@ -2592,7 +2481,6 @@ waygate_destination = -1
 entity_id = 22
 
 [[units]]
-
 type_id = 'nsea'  # Seal
 variation = 0
 x = -2893.17724609375
@@ -2622,7 +2510,6 @@ waygate_destination = -1
 entity_id = 114
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = -3776.0
@@ -2651,13 +2538,11 @@ waygate_destination = -1
 entity_id = 47
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nwwf'  # Frost Wolf
 variation = 0
 x = 35.502769470214844
@@ -2686,13 +2571,11 @@ waygate_destination = -1
 entity_id = 106
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'uzig'  # Ziggurat
 variation = 0
 x = -2016.0
@@ -2721,13 +2604,11 @@ waygate_destination = -1
 entity_id = 32
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nitw'  # Ice Troll Warlord
 variation = 0
 x = 4746.76513671875
@@ -2760,13 +2641,11 @@ waygate_destination = -1
 entity_id = 145
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nitw'  # Ice Troll Warlord
 variation = 0
 x = 2718.8359375
@@ -2799,13 +2678,11 @@ waygate_destination = -1
 entity_id = 107
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'hA00'
 variation = 0
 x = -3904.272705078125
@@ -2835,7 +2712,6 @@ waygate_destination = -1
 entity_id = 110
 
 [[units]]
-
 type_id = 'nspd'  # Spiderling
 variation = 0
 x = 615.7899780273438
@@ -2864,13 +2740,11 @@ waygate_destination = -1
 entity_id = 139
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nitt'  # Ice Troll Trapper
 variation = 0
 x = 4810.00634765625
@@ -2899,13 +2773,11 @@ waygate_destination = -1
 entity_id = 144
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'hkee'  # Keep
 variation = 0
 x = 5056.0
@@ -2934,13 +2806,11 @@ waygate_destination = -1
 entity_id = 129
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ucry'  # Crypt Fiend
 variation = 0
 x = 2610.373291015625
@@ -2970,7 +2840,6 @@ waygate_destination = -1
 entity_id = 91
 
 [[units]]
-
 type_id = 'ugho'  # Ghoul
 variation = 0
 x = 2259.954345703125
@@ -3000,7 +2869,6 @@ waygate_destination = -1
 entity_id = 92
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = 1536.0
@@ -3029,13 +2897,11 @@ waygate_destination = -1
 entity_id = 136
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ugho'  # Ghoul
 variation = 0
 x = 2447.5419921875
@@ -3064,13 +2930,11 @@ waygate_destination = -1
 entity_id = 83
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ugrv'  # Graveyard
 variation = 0
 x = 3904.0
@@ -3100,7 +2964,6 @@ waygate_destination = -1
 entity_id = 21
 
 [[units]]
-
 type_id = 'nnwa'  # Nerubian Warrior
 variation = 0
 x = 297.201416015625
@@ -3129,13 +2992,11 @@ waygate_destination = -1
 entity_id = 104
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nitp'  # Ice Troll Priest
 variation = 0
 x = 2532.91162109375
@@ -3164,13 +3025,11 @@ waygate_destination = -1
 entity_id = 109
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'uaco'  # Acolyte
 variation = 0
 x = -4127.30859375
@@ -3199,13 +3058,11 @@ waygate_destination = -1
 entity_id = 63
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nitr'  # Ice Troll
 variation = 0
 x = 2048.680419921875
@@ -3234,13 +3091,11 @@ waygate_destination = -1
 entity_id = 116
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'Ulic'  # Lich
 variation = 0
 x = -3737.944091796875
@@ -3270,7 +3125,6 @@ waygate_destination = -1
 entity_id = 100
 
 [[units]]
-
 type_id = 'unpl'  # Necropolis
 variation = 0
 x = 2880.0
@@ -3299,13 +3153,11 @@ waygate_destination = -1
 entity_id = 36
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'hpea'  # Peasant
 variation = 0
 x = 5073.41162109375
@@ -3334,13 +3186,11 @@ waygate_destination = -1
 entity_id = 132
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'ngol'  # Gold Mine
 variation = 0
 x = 5248.0
@@ -3369,13 +3219,11 @@ waygate_destination = -1
 entity_id = 95
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'hbar'  # Barracks
 variation = 0
 x = 4672.0
@@ -3404,13 +3252,11 @@ waygate_destination = -1
 entity_id = 134
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nitp'  # Ice Troll Priest
 variation = 0
 x = 2836.861328125
@@ -3439,13 +3285,11 @@ waygate_destination = -1
 entity_id = 111
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'unp2'  # Black Citadel
 variation = 0
 x = -3456.0
@@ -3474,13 +3318,11 @@ waygate_destination = -1
 entity_id = 27
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nitr'  # Ice Troll
 variation = 0
 x = 2300.87109375
@@ -3509,13 +3351,11 @@ waygate_destination = -1
 entity_id = 117
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'uaco'  # Acolyte
 variation = 0
 x = -4108.5322265625
@@ -3544,13 +3384,11 @@ waygate_destination = -1
 entity_id = 73
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = 2432.0
@@ -3579,13 +3417,11 @@ waygate_destination = -1
 entity_id = 0
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'uaco'  # Acolyte
 variation = 0
 x = -4201.10498046875
@@ -3614,13 +3450,11 @@ waygate_destination = -1
 entity_id = 56
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nwna'  # Ancient Wendigo
 variation = 0
 x = -370.25933837890625
@@ -3654,7 +3488,6 @@ waygate_destination = -1
 entity_id = 99
 
 [[units]]
-
 type_id = 'nsea'  # Seal
 variation = 0
 x = -2696.550048828125
@@ -3684,7 +3517,6 @@ waygate_destination = -1
 entity_id = 112
 
 [[units]]
-
 type_id = 'hfoo'  # Footman
 variation = 0
 x = -3620.4658203125
@@ -3714,7 +3546,6 @@ waygate_destination = -1
 entity_id = 23
 
 [[units]]
-
 type_id = 'uaco'  # Acolyte
 variation = 0
 x = -4042.10546875
@@ -3743,13 +3574,11 @@ waygate_destination = -1
 entity_id = 72
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'uaco'  # Acolyte
 variation = 0
 x = -4064.26611328125
@@ -3778,13 +3607,11 @@ waygate_destination = -1
 entity_id = 70
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nwwf'  # Frost Wolf
 variation = 0
 x = -2339.523193359375
@@ -3813,13 +3640,11 @@ waygate_destination = -1
 entity_id = 98
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nwwf'  # Frost Wolf
 variation = 0
 x = -3081.99853515625
@@ -3848,13 +3673,11 @@ waygate_destination = -1
 entity_id = 97
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nwwg'  # Giant Frost Wolf
 variation = 0
 x = -3120.068359375
@@ -3883,13 +3706,11 @@ waygate_destination = -1
 entity_id = 96
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nwwd'  # Dire Frost Wolf
 variation = 0
 x = 24.461471557617188
@@ -3922,13 +3743,11 @@ waygate_destination = -1
 entity_id = 40
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nwwg'  # Giant Frost Wolf
 variation = 0
 x = -19.08620834350586
@@ -3957,13 +3776,11 @@ waygate_destination = -1
 entity_id = 41
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'nwwf'  # Frost Wolf
 variation = 0
 x = 221.42300415039062
@@ -3992,13 +3809,11 @@ waygate_destination = -1
 entity_id = 74
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 0
 item_class = 0
 
 [[units]]
-
 type_id = 'hgtw'  # Guard Tower
 variation = 0
 x = 3776.0
@@ -4027,13 +3842,11 @@ waygate_destination = -1
 entity_id = 58
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'hbar'  # Barracks
 variation = 0
 x = 3392.0
@@ -4062,13 +3875,11 @@ waygate_destination = -1
 entity_id = 71
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'hrif'  # Rifleman
 variation = 0
 x = 3873.516845703125
@@ -4097,13 +3908,11 @@ waygate_destination = -1
 entity_id = 39
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'hrif'  # Rifleman
 variation = 0
 x = 4115.85791015625
@@ -4132,13 +3941,11 @@ waygate_destination = -1
 entity_id = 44
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'hrif'  # Rifleman
 variation = 0
 x = 3719.930908203125
@@ -4167,13 +3974,11 @@ waygate_destination = -1
 entity_id = 45
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nsea'  # Seal
 variation = 0
 x = -4448.58251953125
@@ -4203,7 +4008,6 @@ waygate_destination = -1
 entity_id = 2
 
 [[units]]
-
 type_id = 'hgyr'  # Flying Machine
 variation = 0
 x = 3176.887451171875
@@ -4232,7 +4036,6 @@ waygate_destination = -1
 entity_id = 75
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0

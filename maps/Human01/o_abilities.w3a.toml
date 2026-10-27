@@ -1024,6 +1024,14 @@ table_column = 0
 value = "CaptainWhat"
 object_id = 'null'
 
+[[map_objects.AP0a.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Captain)"
+object_id = 'null'
+
 [map_objects.AP0b]
 parent_id = 'Amrf'  # Crow Form
 entity_id = 'AP0b'
@@ -1066,6 +1074,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = "FootmanReady"
+object_id = 'null'
+
+[[map_objects.AP0b.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Footman)"
 object_id = 'null'
 
 [map_objects.AP0c]
@@ -1112,6 +1128,14 @@ table_column = 0
 value = "RiflemanReady"
 object_id = 'null'
 
+[[map_objects.AP0c.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Rifleman)"
+object_id = 'null'
+
 [map_objects.AP0d]
 parent_id = 'Amrf'  # Crow Form
 entity_id = 'AP0d'
@@ -1154,6 +1178,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = "ArcherReady"
+object_id = 'null'
+
+[[map_objects.AP0d.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Archer)"
 object_id = 'null'
 
 [map_objects.AP0e]
@@ -1200,6 +1232,14 @@ table_column = 0
 value = "KnightReady"
 object_id = 'null'
 
+[[map_objects.AP0e.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Knight)"
+object_id = 'null'
+
 [map_objects.AP0f]
 parent_id = 'Amrf'  # Crow Form
 entity_id = 'AP0f'
@@ -1244,6 +1284,14 @@ table_column = 0
 value = "PriestReady"
 object_id = 'null'
 
+[[map_objects.AP0f.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Priest)"
+object_id = 'null'
+
 [map_objects.AP0g]
 parent_id = 'Amrf'  # Crow Form
 entity_id = 'AP0g'
@@ -1286,6 +1334,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = "SorceressReady"
+object_id = 'null'
+
+[[map_objects.AP0g.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Sorceress)"
 object_id = 'null'
 
 [map_objects.AP0h]
@@ -1404,6 +1460,14 @@ table_column = 6
 value = "animatedead"
 object_id = 'null'
 
+[[map_objects.AP0h.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Spell Breaker)"
+object_id = 'null'
+
 [map_objects.AP0i]
 parent_id = 'Amrf'  # Crow Form
 entity_id = 'AP0i'
@@ -1446,6 +1510,14 @@ data_type = "String"
 variation_level = 0
 table_column = 0
 value = "MortarTeamReady"
+object_id = 'null'
+
+[[map_objects.AP0i.modifications]]
+modification_id = 'ansf'  # Profile.Editor Suffix
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "(Mortar Team)"
 object_id = 'null'
 
 [map_objects.APPh]

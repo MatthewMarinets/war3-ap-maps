@@ -3294,7 +3294,7 @@ Disables previous defeat condition.
       - param Variable gg_rct_TichondriusGroup
       - param Function 
         - Condition GetBooleanOr
-          - param Function
+          - param Function 
             - Condition OperatorCompareUnitCode
               - param Function GetUnitTypeId
                 - Function GetUnitTypeId
@@ -3302,7 +3302,7 @@ Disables previous defeat condition.
                     - Function GetFilterUnit
               - param Preset OperatorEqualENE
               - param String ugho
-          - param Function
+          - param Function 
             - Condition OperatorCompareUnitCode
               - param Function GetUnitTypeId
                 - Function GetUnitTypeId
