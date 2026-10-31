@@ -597,14 +597,14 @@ class LineReader:
             else:
                 index += 1
 
-    def eof(self) -> str:
+    def eof(self) -> bool:
         return not self.lines or END_TRANSMISSION in self.lines[0]
 
     def read_string(self) -> str:
         line = self.lines.pop(0)
         return line_contents(line, self.filename)
 
-    def read_int(self) -> str:
+    def read_int(self) -> int:
         return int(self.read_string())
 
 
