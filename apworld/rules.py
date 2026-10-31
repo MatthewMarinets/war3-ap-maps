@@ -329,7 +329,7 @@ def get_location_to_rules(world: 'Wc3World') -> dict[Wc3Location | int, Callable
 
         Wc3Location.UD2_SLAY_UTHER: logic.undead_has_military_unit,
         Wc3Location.UD2_UTHER_ITEM: logic.undead_has_military_unit,
-        Wc3Location.UD2_ESTABLISH_A_BASE: logic.undead_has_military_unit,
+        Wc3Location.UD2_ESTABLISH_BASE: logic.undead_has_military_unit,
         Wc3Location.UD2_VICTORY: logic.undead_has_military_unit,
     }
     return location_to_rule

@@ -8603,7 +8603,7 @@ Sends AI signal.
   - param Preset QuestMessageTypeCompleted
   - param String TRIGSTR_661
 - Action CustomScriptCode
-  - param String call status_check_location(29)
+  - param String call status_check_location(21)
 - Action TriggerSleepAction
   - param Preset RealQueueDelayQuest
 - Action ConditionalTriggerExecute
