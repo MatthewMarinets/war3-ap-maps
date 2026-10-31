@@ -21,7 +21,7 @@ def _randomize_empty_hero_names(world: 'Wc3World') -> None:
         if not field.name.endswith('_name'):
             continue
         option_class = getattr(world.options, field.name)
-        if not option_class.value:
+        if not option_class.value or option_class.value == "random":
             option_class.value = world.random.choice(heroes.ALL_HERO_NAMES)
 
 
