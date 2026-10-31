@@ -40,10 +40,41 @@ def _connect_region(
     connection.connect(target)
 
 
-def grid_start_and_side_length(num_missions: int) -> tuple[int, int]:
+def grid_square_start_and_side_length(num_missions: int) -> tuple[int, int]:
     side_length = math.ceil(math.sqrt(num_missions))
     start_index = 5 - math.ceil(side_length / 2)
     return start_index, side_length
+
+
+def grid_get_factors(operand: int) -> tuple[int, int]:
+    """Factorize `operand` into two multiplicands that have minimized difference (ie prefer 3x4 over 1x12)"""
+    assert operand > 0
+    for divisor in range(math.floor(math.sqrt(operand)), 1, -1):
+        quotient = operand // divisor
+        if quotient * divisor == operand:
+            return divisor, quotient
+    return 1, operand
+
+
+def grid_rectangle_start_side_lengths_and_removals(num_missions: int) -> tuple[int, int, int, int, int]:
+    if num_missions > 9:
+        max_removals = 4
+    else:
+        max_removals = 2
+    dimension_candidates = [
+        (*grid_get_factors(num_missions + removals), removals)
+        for removals in range(max_removals, -1, -1)
+    ]
+    # filter options that don't fit in the grid
+    dimension_candidates = [
+        candidate for candidate in dimension_candidates
+        if candidate[0] <= 10 and candidate[1] <= 10
+    ]
+    assert dimension_candidates
+    height, width, removals = min(dimension_candidates, key=lambda x: x[0] + x[1])
+    start_x = 5 - ((width + 1) // 2)
+    start_y = 5 - ((height + 1) // 2)
+    return start_x, start_y, width, height, removals
 
 
 def _resolve_requirements(requirement: mission_orders.Requirement | None) -> mission_orders.Requirement | None:
@@ -137,42 +168,137 @@ def _requirement_to_callable(
 
 def configure_mission_order(world: 'Wc3World') -> None:
     assert not world.g.mission_order
-    # Always linear for now
+    GRID_MAX_COORD = 9
+    GRID_MID_COORD = 5
+    excluded_missions = {
+        mission for mission in missions.Wc3Mission
+        if mission.short_name in world.options.excluded_missions.value
+    }
     mission_order_spec: Iterable[mission_orders.MissionSlot]
-    if world.options.included_campaigns.value == {missions.Wc3Campaign.HUMAN_1.title_faction}:
-        mission_order_spec = mission_orders.H1_SOLO_CAMPAIGN
-    elif world.options.included_campaigns.value == {missions.Wc3Campaign.UNDEAD_1.title_faction}:
-        mission_order_spec = mission_orders.U1_SOLO_CAMPAIGN
-    elif world.options.included_campaigns.value == {missions.Wc3Campaign.ORC_1.title_faction}:
-        mission_order_spec = mission_orders.O1_SOLO_CAMPAIGN
-    else:
-        # Make a little centered grid
-        included_missions = [
-            mission
-            for mission in missions.Wc3Mission
+    if (world.options.mission_order.value == options.MissionOrder.option_vanilla
+        or (world.options.mission_order.value == options.MissionOrder.option_parallel_vanilla
+            and len(world.options.included_campaigns.value) == 1
+        )
+    ):
+        mission_list = [
+            mission for mission in missions.Wc3Mission
             if mission.campaign.title_faction in world.options.included_campaigns.value
+            and mission not in excluded_missions
         ]
-        start_index, side_length = grid_start_and_side_length(len(included_missions))
-        world.random.shuffle(included_missions)
-        mission_order_spec = [mission_orders.MissionSlot(
-            start_index,
-            start_index,
-            mission_pool=(included_missions[0],),
-        )]
-        last_index = (start_index, start_index)
-        for index, included_mission in enumerate(included_missions):
-            grid_pos_y, grid_pos_x = divmod(index, side_length)
-            mission_order_spec.append(mission_orders.MissionSlot(
-                start_index + grid_pos_x,
-                start_index + grid_pos_y,
-                (included_mission,),
-                requires=mission_orders.Requirement(slots=[last_index], amount=1)
-            ))
-            last_index = (start_index + grid_pos_x, start_index + grid_pos_y)
+        mission_slot_ids = mission_orders.SPIRAL_ORDER
+        if len(mission_list) > len(mission_slot_ids):
+            # Make a little centered grid
+            start_index, side_length = grid_square_start_and_side_length(len(mission_list))
+            mission_slot_ids = tuple(
+                (start_index + x, start_index + y)
+                for y in range(side_length)
+                for x in range(side_length)
+            )
+        mission_order_spec = []
+        for mission, mission_slot_id in zip(mission_list, mission_slot_ids):
+            mission_slot = mission_orders.MissionSlot(*mission_slot_id, (mission,))
+            if mission_order_spec:
+                mission_slot.requires = mission_orders.Requirement([(mission_order_spec[-1].x, mission_order_spec[-1].y)])
+            mission_order_spec.append(mission_slot)
         mission_order_spec[-1].flags |= mission_orders.FLAG_GOAL
+    elif world.options.mission_order.value == options.MissionOrder.option_parallel_vanilla:
+        num_campaigns = len(world.options.included_campaigns.value)
+        min_y = GRID_MID_COORD - (num_campaigns // 2)
+        mission_order_spec = []
+        y = min_y
+        for campaign in missions.Wc3Campaign:
+            if campaign.title_faction not in world.options.included_campaigns.value:
+                continue
+            campaign_spec: list[mission_orders.MissionSlot] = []
+            mission_list = [
+                mission for mission in missions.Wc3Mission
+                if mission.campaign == campaign
+                and mission not in excluded_missions
+            ]
+            x = GRID_MID_COORD - ((len(mission_list) + 1) // 2)
+            if x < 0:
+                x = 0
+            for mission in mission_list:
+                mission_slot = mission_orders.MissionSlot(x, y, (mission,))
+                if campaign_spec:
+                    mission_slot.requires = mission_orders.Requirement([(campaign_spec[-1].x, campaign_spec[-1].y)])
+                x += 1
+                if x > GRID_MAX_COORD:
+                    x = 0
+                    y += 1
+            campaign_spec[-1].flags |= mission_orders.FLAG_GOAL
+            mission_order_spec.extend(campaign_spec)
+            y += 1
+    elif world.options.mission_order.value == options.MissionOrder.option_parallel_shuffled:
+        num_campaigns = len(world.options.included_campaigns.value)
+        min_y = GRID_MID_COORD - (num_campaigns // 2)
+        mission_list = [
+            mission for mission in missions.Wc3Mission
+            if mission.campaign.title_faction in world.options.included_campaigns.value
+            and mission not in excluded_missions
+        ]
+        world.random.shuffle(mission_list)
+        width, num_extras = divmod(len(mission_list), num_campaigns)
+        min_x = GRID_MID_COORD - ((width + 1) // 2)
+        mission_list_index = 0
+        mission_order_spec = []
+        for campaign_index in range(num_campaigns):
+            y = min_y + campaign_index
+            campaign_spec = []
+            for mission_index in range(width + (campaign_index < num_extras)):
+                x = min_x + mission_index
+                mission_slot = mission_orders.MissionSlot(x, y, (mission_list[mission_list_index],))
+                mission_list_index += 1
+                if campaign_spec:
+                    mission_slot.requires = mission_orders.Requirement([(campaign_spec[-1].x, campaign_spec[-1].y)])
+                campaign_spec.append(mission_slot)
+            campaign_spec[-1].flags |= mission_orders.FLAG_GOAL
+            mission_order_spec.extend(campaign_spec)
+    elif world.options.mission_order.value == options.MissionOrder.option_grid:
+        mission_list = [
+            mission for mission in missions.Wc3Mission
+            if mission.campaign.title_faction in world.options.included_campaigns.value
+            and mission not in excluded_missions
+        ]
+        start_x, start_y, width, height, removals = grid_rectangle_start_side_lengths_and_removals(len(mission_list))
+        top_removals = removals // 2
+        bottom_removals = (removals + 1) // 2
+        world.random.shuffle(mission_list)
+        mission_order_spec = []
+        used_coords: set[tuple[int, int]] = set()
+        x = 0
+        y = 0
+        for mission in mission_list:
+            mission_slot = mission_orders.MissionSlot(x + start_x, y + start_y, (mission,))
+            mission_order_spec.append(mission_slot)
+            used_coords.add((x + start_x, y + start_y))
+            x += 1
+            if (x >= width
+                or (y == 0 and x >= (width - top_removals))
+            ):
+                x = 0
+                y += 1
+                if y == height - 1:
+                    x += bottom_removals
+        # requirements
+        adjacents = ((-1, 0), (0, -1), (0, 1), (1, 0),)
+        for mission_slot in mission_order_spec[1:]:
+            sub_requirements: list[mission_orders.Requirement] = []
+            for adjacent in adjacents:
+                adjacent_coord = (mission_slot.x + adjacent[0], mission_slot.y + adjacent[1])
+                if adjacent_coord in used_coords:
+                    sub_requirements.append(mission_orders.Requirement([adjacent_coord]))
+            mission_slot.requires = mission_orders.Requirement(groups=sub_requirements, amount=1)
+        mission_order_spec[-1].flags |= mission_orders.FLAG_GOAL
+
     for slot in mission_order_spec:
-        # todo(mm): Mission pool resolution
-        mission = slot.mission_pool[0]
+        assert slot.x >= 0 and slot.x <= GRID_MAX_COORD, slot
+        assert slot.y >= 0 and slot.y <= GRID_MAX_COORD, slot
+        if len(slot.mission_pool) == 1:
+            mission = slot.mission_pool[0]
+        else:
+            # todo(mm): Mission pool resolution
+            raise NotImplementedError
         world.g.mission_order[slot.x, slot.y] = FinalizedMissionSlot(
             mission=mission,
             flags=slot.flags,

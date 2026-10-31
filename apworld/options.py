@@ -48,7 +48,10 @@ class IncludedCampaigns(baseoptions.OptionSet):
     #     for campaign in missions.Wc3Campaign
     #     if campaign not in (missions.Wc3Campaign.GENERAL, missions.Wc3Campaign.PROLOGUE)
     # )
-    valid_keys = (missions.Wc3Campaign.HUMAN_1.title_faction,)
+    valid_keys = (
+        missions.Wc3Campaign.HUMAN_1.title_faction,
+        missions.Wc3Campaign.UNDEAD_1.title_faction,
+    )
     default = frozenset(valid_keys)
     key_map = {
         "human": missions.Wc3Campaign.HUMAN_1.title_faction,
@@ -56,10 +59,11 @@ class IncludedCampaigns(baseoptions.OptionSet):
         "h": missions.Wc3Campaign.HUMAN_1.title_faction,
         "h1": missions.Wc3Campaign.HUMAN_1.title_faction,
         missions.Wc3Campaign.HUMAN_1.campaign_name.lower(): missions.Wc3Campaign.HUMAN_1.title_faction,
-        # "undead": missions.Wc3Campaign.UNDEAD_1.title_faction,
-        # "undead 1": missions.Wc3Campaign.UNDEAD_1.title_faction,
-        # "u": missions.Wc3Campaign.UNDEAD_1.title_faction,
-        # "u1": missions.Wc3Campaign.UNDEAD_1.title_faction,
+        "undead": missions.Wc3Campaign.UNDEAD_1.title_faction,
+        "undead 1": missions.Wc3Campaign.UNDEAD_1.title_faction,
+        "u": missions.Wc3Campaign.UNDEAD_1.title_faction,
+        "u1": missions.Wc3Campaign.UNDEAD_1.title_faction,
+        missions.Wc3Campaign.UNDEAD_1.campaign_name.lower(): missions.Wc3Campaign.UNDEAD_1.title_faction,
         # "orc": missions.Wc3Campaign.UNDEAD_1.title_faction,
         # "orc 1": missions.Wc3Campaign.ORC_1.title_faction,
         # "o": missions.Wc3Campaign.ORC_1.title_faction,
@@ -81,6 +85,32 @@ class IncludedCampaigns(baseoptions.OptionSet):
         resolve_set_option(self, self.key_map)
         if not self.value:
             self.value = set(self.default)
+
+
+class MissionOrder(baseoptions.Choice):
+    """
+    Controls the unlock order of missions.
+
+    Vanilla:           Missions unlock linearly one after another in vanilla order. Campaigns unlock sequentially.
+    Parallel Vanilla:  All campaigns' first missions start unlocked. Missions within campaigns progress in vanilla order.
+    Parallel Shuffled: Missions are randomly shuffled across 2 tracks. Beat a mission on a track to unlock the next.
+    Grid:              Missions are randomly arranged in a grid, where beating one unlocks adjacent grid cells.
+    """
+    option_vanilla = 1
+    option_parallel_vanilla = 2
+    option_parallel_shuffled = 3
+    option_grid = 4
+
+    default = option_vanilla
+
+
+class ExcludedMissions(baseoptions.OptionSet):
+    """
+    Excludes certain missions from appearing in the mission order.
+    Use shortform format, like "H5" for the fifth human mission, or "Ux6" for the sixth expansion undead mission.
+    """
+    valid_keys = frozenset(mission.short_name for mission in missions.Wc3Mission)
+    default = frozenset()
 
 
 class VictoryCache(baseoptions.Range):
@@ -504,10 +534,13 @@ class LordGarithosName(OptionHeroName):
 @dataclass
 class Wc3Options(baseoptions.PerGameCommonOptions):
     included_campaigns: IncludedCampaigns
+    mission_order: MissionOrder
+    excluded_missions: ExcludedMissions
     victory_cache: VictoryCache
     bonus_mercenary_camps: BonusMercenaryCamps
     mercenary_allocation: MercenaryAllocation
     mercenaries_per_camp: MercenariesPerCamp
+
     paladin_arthas_hero: PaladinArthasHero
     paladin_arthas_name: PaladinArthasName
     jaina_hero: JainaHero

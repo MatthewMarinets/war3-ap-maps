@@ -36,7 +36,7 @@ class MissionSlot:
 # 7.........
 # 8.........
 # 9.........
-CIRCLE_ORDER_0 = (
+CIRCLE_ORDER_0: tuple[tuple[int, int], ...] = (
     (5, 4),
     (5, 5),
     (4, 5),
@@ -53,7 +53,7 @@ CIRCLE_ORDER_0 = (
 # 7.........
 # 8.........
 # 9.........
-CIRCLE_ORDER_1 = (
+CIRCLE_ORDER_1: tuple[tuple[int, int], ...] = (
     (4, 3),
     (5, 3),
     (6, 4),
@@ -74,7 +74,7 @@ CIRCLE_ORDER_1 = (
 # 7...98....
 # 8.........
 # 9.........
-CIRCLE_ORDER_2 = (
+CIRCLE_ORDER_2: tuple[tuple[int, int], ...] = (
     (3, 3),
     (4, 2),
     (5, 2),
@@ -87,6 +87,42 @@ CIRCLE_ORDER_2 = (
     (3, 6),
     (2, 5),
     (2, 4),
+)
+
+
+# 0123456789
+# 1...23....
+# 2..1..4...
+# 3.G....5..
+# 4F......6.
+# 5E......7.
+# 6.D....8..
+# 7..C..9...
+# 8...BA....
+# 9.........
+CIRCLE_ORDER_3: tuple[tuple[int, int], ...] = (
+    (3, 2),
+    (4, 1),
+    (5, 1),
+    (6, 2),
+    (7, 3),
+    (8, 4),
+    (8, 5),
+    (7, 6),
+    (6, 7),
+    (5, 8),
+    (4, 8),
+    (3, 7),
+    (2, 6),
+    (1, 5),
+    (1, 4),
+    (2, 3),
+)
+
+SPIRAL_ORDER = (
+    CIRCLE_ORDER_1
+    + CIRCLE_ORDER_2
+    + CIRCLE_ORDER_3
 )
 
 
@@ -168,5 +204,27 @@ O1_SOLO_CAMPAIGN = (
     MissionSlot(*CIRCLE_ORDER_1[7], (missions.Wc3Mission.O8_BY_DEMONS_BE_DRIVEN,),
         requires=Requirement([CIRCLE_ORDER_1[6]]),
         flags=FLAG_GOAL,
+    ),
+)
+
+N1_SOLO_CAMPAIGN = (
+    MissionSlot(*CIRCLE_ORDER_1[0], (missions.Wc3Mission.N1_ENEMIES_AT_THE_GATE,)),
+    MissionSlot(*CIRCLE_ORDER_1[1], (missions.Wc3Mission.N2_DAUGHTERS_OF_THE_MOON,),
+        requires=Requirement([CIRCLE_ORDER_1[0]]),
+    ),
+    MissionSlot(*CIRCLE_ORDER_1[2], (missions.Wc3Mission.N3_THE_AWAKENING_OF_STORMRAGE,),
+        requires=Requirement([CIRCLE_ORDER_1[1]]),
+    ),
+    MissionSlot(*CIRCLE_ORDER_1[3], (missions.Wc3Mission.N4_THE_DRUIDS_ARISE,),
+        requires=Requirement([CIRCLE_ORDER_1[2]]),
+    ),
+    MissionSlot(*CIRCLE_ORDER_1[4], (missions.Wc3Mission.N5_BROTHERS_IN_BLOOD,),
+        requires=Requirement([CIRCLE_ORDER_1[3]]),
+    ),
+    MissionSlot(*CIRCLE_ORDER_1[5], (missions.Wc3Mission.N6_A_DESTINY_OF_FLAME_AND_SORROW,),
+        requires=Requirement([CIRCLE_ORDER_1[4]]),
+    ),
+    MissionSlot(*CIRCLE_ORDER_1[6], (missions.Wc3Mission.N7_TWILIGHT_OF_THE_GODS,),
+        requires=Requirement([CIRCLE_ORDER_1[5]]),
     ),
 )
