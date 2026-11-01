@@ -212,35 +212,79 @@ MISSION_TO_NUM_VANILLA_MERC_CAMPS = {
 }
 
 MISSION_TO_PRESET_MERCENARIES: dict[Wc3Mission, dict[int, Wc3Item]] = {
+    # Lordaeron: forest trolls, gnolls, ogres
+    # H1: nobuild
     Wc3Mission.H2_BLACKROCK_AND_ROLL: {
         0: Wc3Item.MERC_FOREST_TROLL_BERSERKER,
         1: Wc3Item.MERC_FOREST_TROLL_SHADOW_PRIEST,
-        2: Wc3Item.MERC_MURLOC_HUNTSMAN,
+        2: Wc3Item.MERC_OGRE_MAGI,
         3: Wc3Item.MERC_GNOLL_BRUTE,
     },
+    # H3: nobuild
     Wc3Mission.H4_THE_CULT_OF_THE_DAMNED: {
         0: Wc3Item.MERC_FOREST_TROLL_SHADOW_PRIEST,
-        1: Wc3Item.MERC_MURLOC_NIGHTCRAWLER,
-        2: Wc3Item.MERC_MUD_GOLEM,
+        1: Wc3Item.MERC_MUD_GOLEM,
+        2: Wc3Item.MERC_GNOLL_WARDEN,
         3: Wc3Item.MERC_GNOLL_ASSASSIN,
     },
+    # Village/cityscape: add bandits
     Wc3Mission.H5_MARCH_OF_THE_SCOURGE: {
-        0: Wc3Item.MERC_ROGUE,
-        1: Wc3Item.MERC_BRIGAND,
-        2: Wc3Item.MERC_MURLOC_FLESHEATER,
+        0: Wc3Item.MERC_FOREST_TROLL_BERSERKER,
+        1: Wc3Item.MERC_ASSASSIN,
+        2: Wc3Item.MERC_GNOLL_BRUTE,
         3: Wc3Item.MERC_OGRE_MAGI,
     },
     Wc3Mission.H6_THE_CULLING: {
         0: Wc3Item.MERC_ENFORCER,
         1: Wc3Item.MERC_ASSASSIN,
-        2: Wc3Item.MERC_ROGUE_WIZARD,
-        3: Wc3Item.MERC_ROCK_GOLEM,
+        2: Wc3Item.MERC_GNOLL_WARDEN,
+        3: Wc3Item.MERC_MUD_GOLEM,
     },
     Wc3Mission.H7_THE_SHORES_OF_NORTHREND: {
-        0: Wc3Item.MERC_ICE_TROLL_BERSERKER,
-        1: Wc3Item.MERC_NERUBIAN_WEBSPINNER,
+        0: Wc3Item.MERC_NERUBIAN_WARRIOR,
+        1: Wc3Item.MERC_ICE_TROLL_BERSERKER,
         2: Wc3Item.MERC_WENDIGO_SHAMAN,
-        3: Wc3Item.MERC_GIANT_FROST_WOLF,
+        3: Wc3Item.MERC_NERUBIAN_WEBSPINNER,
+    },
+    # H8: Vanilla camps
+    # H9: Vanilla camps
+    # U1: Nobuild
+    Wc3Mission.U2_DIGGING_UP_THE_DEAD: {
+        0: Wc3Item.MERC_GNOLL_ASSASSIN,
+        1: Wc3Item.MERC_ENFORCER,
+        2: Wc3Item.MERC_ASSASSIN,
+        3: Wc3Item.MERC_ROGUE_WIZARD,
+    },
+    Wc3Mission.U3_INTO_THE_REALM_ETERNAL: {
+        0: Wc3Item.MERC_FOREST_TROLL_BERSERKER,
+        1: Wc3Item.MERC_GNOLL_WARDEN,
+        2: Wc3Item.MERC_FOREST_TROLL_SHADOW_PRIEST,
+        3: Wc3Item.MERC_GNOLL_OVERSEER,
+    },
+    Wc3Mission.U4_KEY_OF_THE_THREE_MOONS: {
+        0: Wc3Item.MERC_FOREST_TROLL_SHADOW_PRIEST,
+        1: Wc3Item.MERC_GNOLL_ASSASSIN,
+        2: Wc3Item.MERC_OGRE_MAULER,
+        3: Wc3Item.MERC_ROCK_GOLEM,
+    },
+    # U5: Vanilla camps
+    Wc3Mission.U6_BLACKROCK_AND_ROLL_TOO: {
+        0: Wc3Item.MERC_OGRE_MAGI,
+        1: Wc3Item.MERC_FOREST_TROLL_BERSERKER,
+        2: Wc3Item.MERC_FOREST_TROLL_SHADOW_PRIEST,
+        3: Wc3Item.MERC_GNOLL_WARDEN,
+    },
+    Wc3Mission.U7_THE_SIEGE_OF_DALARAN: {
+        0: Wc3Item.MERC_ENFORCER,
+        1: Wc3Item.MERC_ROGUE_WIZARD,
+        2: Wc3Item.MERC_OGRE_MAGI,
+        3: Wc3Item.MERC_ROCK_GOLEM,
+    },
+    Wc3Mission.U8_UNDER_THE_BURNING_SKY: {
+        0: Wc3Item.MERC_FOREST_TROLL_SHADOW_PRIEST,
+        1: Wc3Item.MERC_ROGUE_WIZARD,
+        2: Wc3Item.MERC_OGRE_MAGI,
+        3: Wc3Item.MERC_ASSASSIN,
     },
 }
 

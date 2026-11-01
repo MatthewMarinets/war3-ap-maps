@@ -403,15 +403,30 @@ def _regions_assign_mercs(world: 'Wc3World') -> None:
     if (world.options.mercenary_allocation.value == options.MercenaryAllocation.option_vanilla_plus
         or world.options.mercenary_allocation.value == options.MercenaryAllocation.option_full_random
     ):
+        pool = items.CATEGORY_TO_ITEMS[items.Mercenary]
+        world.random.shuffle(pool)
+        mission_to_num_camps: dict[missions.Wc3Mission, int] = {}
         for mission in world.g.missions:
             num_camps = _get_num_mercenary_camps(mission, world.options.bonus_mercenary_camps.value)
             if num_camps < 1:
                 continue
+            mission_to_num_camps[mission] = num_camps
+        # Narrow the pool based on the total number of camps
+        if world.options.mercenary_allocation.value == options.MercenaryAllocation.option_vanilla_plus:
+            NARROW_FACTOR = 7
+            CLAMP_THRESHOLD = 3
+        else:
+            NARROW_FACTOR = 3
+            CLAMP_THRESHOLD = 0
+        pool_size = sum(mission_to_num_camps.values())*mercs_per_camp // NARROW_FACTOR
+        max_camp_count = max(mission_to_num_camps.values())
+        if pool_size + CLAMP_THRESHOLD < mercs_per_camp * max_camp_count:
+            pool_size = mercs_per_camp * max_camp_count
+        pool = pool[:pool_size]
+        for mission, num_camps in mission_to_num_camps.items():
             mission_mercs = world.g.mercenary_allocation.setdefault(mission, {})
-            camp = 0
-            while camp < num_camps:
-                _assign_random_mercs_to_camp(world, mission_mercs, camp, mercs_per_camp)
-                camp += 1
+            for camp in range(num_camps):
+                _assign_random_mercs_to_camp(world, pool, mission_mercs, camp, mercs_per_camp)
     if world.options.mercenary_allocation.value == options.MercenaryAllocation.option_species:
         species_pool = list(tables.CREEP_SPECIES_TO_ITEMS)
         world.random.shuffle(species_pool)
@@ -447,12 +462,16 @@ def _regions_assign_mercs(world: 'Wc3World') -> None:
 
 
 def _assign_random_mercs_to_camp(
-    world: 'Wc3World', mercs: dict[int, items.Wc3Item], camp: int, target_count: int
+    world: 'Wc3World',
+    pool: list[items.Wc3Item],
+    mercs: dict[int, items.Wc3Item],
+    camp: int,
+    target_count: int
 ) -> None:
     MAX_PER_CAMP = tables.MAXIMUM_MERCENARIES_PER_CAMP
-    merc_pool = list(items.CATEGORY_TO_ITEMS[items.Mercenary])
+    merc_pool = list(pool)
     for index in range(MAX_PER_CAMP*camp, MAX_PER_CAMP*(camp+1)):
-        if index in mercs:
+        if index in mercs and mercs[index] in merc_pool:
             merc_pool.remove(mercs[index])
     world.random.shuffle(merc_pool)
     draw_index = 0

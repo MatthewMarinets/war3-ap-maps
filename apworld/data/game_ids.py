@@ -1146,11 +1146,11 @@ class GameID(enum.StrEnum):
     STORM_WYRM = 'nstw'
 
     MAKRURA_PRAWN = 'nlpr'
-    MARKRURA_POOLDWELLER = 'nlpd'
-    MARKRURA_TIDECALLER = 'nltc'
-    MARKRURA_DEEPSEER = 'nlds'
-    MARKRURA_SNAPPER = 'nlsn'
-    MARKRURA_TIDAL_LORD = 'nlkl'
+    MAKRURA_POOLDWELLER = 'nlpd'
+    MAKRURA_TIDECALLER = 'nltc'
+    MAKRURA_DEEPSEER = 'nlds'
+    MAKRURA_SNAPPER = 'nlsn'
+    MAKRURA_TIDAL_LORD = 'nlkl'
     SUMMONED_PRAWN = 'nlps'
 
     APPRENTICE_WIZARD = 'nwiz'

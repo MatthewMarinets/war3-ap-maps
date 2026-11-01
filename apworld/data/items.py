@@ -469,6 +469,17 @@ class Wc3Item(enum.IntEnum):
 
     # MERC_BLUE_DRAGONSPAWN_APPRENTICE = 3020, "Blue Dragonspawn Apprentice (Mercenary)", Mercenary(GameID.BLUE_DRAGONSPAWN_APPRENTICE, CreepSpecies.Blue_Dragonspawn)
 
+    MERC_FACELESS_ONE_TRICKSTER      = 3130, "Faceless One Trickster (Mercenary)", Mercenary(GameID.FACELESS_ONE_TRICKSTER, CreepSpecies.Faceless_Ones)
+    MERC_FACELESS_ONE_TERROR         = 3131, "Faceless One Terror (Mercenary)", Mercenary(GameID.FACELESS_ONE_TERROR, CreepSpecies.Faceless_Ones)
+    MERC_FACELESS_ONE_DEATHBRINGER   = 3132, "Faceless One Deathbringer (Mercenary)", Mercenary(GameID.FACELESS_ONE_DEATHBRINGER, CreepSpecies.Faceless_Ones)
+
+    MERC_FURBOLG                     = 3160, "Furbolg (Mercenary)", Mercenary(GameID.FURBOLG, CreepSpecies.Furbolgs)
+    MERC_FURBOLG_SHAMAN              = 3161, "Furbolg Shaman (Mercenary)", Mercenary(GameID.FURBOLG_SHAMAN, CreepSpecies.Furbolgs)
+    MERC_FURBOLG_TRACKER             = 3162, "Furbolg Tracker (Mercenary)", Mercenary(GameID.FURBOLG_TRACKER, CreepSpecies.Furbolgs)
+    MERC_FURBOLG_CHAMPION            = 3163, "Furbolg Champion (Mercenary)", Mercenary(GameID.FURBOLG_CHAMPION, CreepSpecies.Furbolgs)
+    MERC_FURBOLG_ELDER_SHAMAN        = 3164, "Furbolg Elder Shaman (Mercenary)", Mercenary(GameID.FURBOLG_ELDER_SHAMAN, CreepSpecies.Furbolgs)
+    MERC_FURBOLG_URSA_WARRIOR        = 3165, "Furbolg Ursa Warrior (Mercenary)", Mercenary(GameID.FURBOLG_URSA_WARRIOR, CreepSpecies.Furbolgs)
+
     MERC_GNOLL                       = 3180, "Gnoll (Mercenary)", Mercenary(GameID.GNOLL, CreepSpecies.Gnolls)
     MERC_GNOLL_POACHER               = 3181, "Gnoll Poacher (Mercenary)", Mercenary(GameID.GNOLL_POACHER, CreepSpecies.Gnolls)
     MERC_GNOLL_ASSASSIN              = 3182, "Gnoll Assassin (Mercenary)", Mercenary(GameID.GNOLL_ASSASSIN, CreepSpecies.Gnolls)
@@ -479,6 +490,27 @@ class Wc3Item(enum.IntEnum):
     MERC_MUD_GOLEM                   = 3190, "Mud Golem (Mercenary)", Mercenary(GameID.MUD_GOLEM, CreepSpecies.Golems)
     MERC_ROCK_GOLEM                  = 3191, "Rock Golem (Mercenary)", Mercenary(GameID.ROCK_GOLEM, CreepSpecies.Golems)
     MERC_GRANITE_GOLEM               = 3192, "Granite Golem (Mercenary)", Mercenary(GameID.GRANITE_GOLEM, CreepSpecies.Golems)
+
+    MERC_HYDRA_HATCHLING             = 3220, "Hydra Hatchling (Mercenary)", Mercenary(GameID.HYDRA_HATCHLING, CreepSpecies.Hydras)
+    MERC_HYDRA                       = 3221, "Hydra (Mercenary)", Mercenary(GameID.HYDRA, CreepSpecies.Hydras)
+    MERC_ELDER_HYDRA                 = 3222, "Elder Hydra (Mercenary)", Mercenary(GameID.ELDER_HYDRA, CreepSpecies.Hydras)
+    MERC_ANCIENT_HYDRA               = 3223, "Ancient Hydra (Mercenary)", Mercenary(GameID.ANCIENT_HYDRA, CreepSpecies.Hydras)
+
+    MERC_KOBOLD                      = 3250, "Kobold (Mercenary)", Mercenary(GameID.KOBOLD, CreepSpecies.Kobolds)
+    MERC_KOBOLD_GEOMANCER            = 3251, "Kobold Geomancer (Mercenary)", Mercenary(GameID.KOBOLD_GEOMANCER, CreepSpecies.Kobolds)
+    MERC_KOBOLD_TUNNELER             = 3252, "Kobold Tunneler (Mercenary)", Mercenary(GameID.KOBOLD_TUNNELER, CreepSpecies.Kobolds)
+    MERC_KOBOLD_TASKMASTER           = 3253, "Kobold Taskmaster (Mercenary)", Mercenary(GameID.KOBOLD_TASKMASTER, CreepSpecies.Kobolds)
+
+    MERC_LIGHTNING_LIZARD            = 3260, "Lightning Lizard (Mercenary)", Mercenary(GameID.LIGHTNING_LIZARD, CreepSpecies.Lizards)
+    MERC_THUNDER_LIZARD              = 3261, "Thunder Lizard (Mercenary)", Mercenary(GameID.THUNDER_LIZARD, CreepSpecies.Lizards)
+    MERC_STORM_WYRM                  = 3262, "Storm Wyrm (Mercenary)", Mercenary(GameID.STORM_WYRM, CreepSpecies.Lizards)
+
+    MERC_MAKRURA_PRAWN               = 3270, "Makrura Prawn (Mercenary)", Mercenary(GameID.MAKRURA_PRAWN, CreepSpecies.Makrura)
+    MERC_MAKRURA_POOLDWELLER         = 3271, "Makrura Pooldweller (Mercenary)", Mercenary(GameID.MAKRURA_POOLDWELLER, CreepSpecies.Makrura)
+    MERC_MAKRURA_TIDECALLER          = 3272, "Makrura Tidecaller (Mercenary)", Mercenary(GameID.MAKRURA_TIDECALLER, CreepSpecies.Makrura)
+    MERC_MAKRURA_DEEPSEER            = 3273, "Makrura Deepseer (Mercenary)", Mercenary(GameID.MAKRURA_DEEPSEER, CreepSpecies.Makrura)
+    MERC_MAKRURA_SNAPPER             = 3274, "Makrura Snapper (Mercenary)", Mercenary(GameID.MAKRURA_SNAPPER, CreepSpecies.Makrura)
+    MERC_MAKRURA_TIDAL_LORD          = 3275, "Makrura Tidal Lord (Mercenary)", Mercenary(GameID.MAKRURA_TIDAL_LORD, CreepSpecies.Makrura)
 
     MERC_MURLOC_TIDERUNNER           = 3310, "Murloc Tiderunner (Mercenary)", Mercenary(GameID.MURLOC_TIDERUNNER, CreepSpecies.Murlocs)
     MERC_MURLOC_HUNTSMAN             = 3311, "Murloc Huntsman (Mercenary)", Mercenary(GameID.MURLOC_HUNTSMAN, CreepSpecies.Murlocs)
@@ -520,6 +552,14 @@ class Wc3Item(enum.IntEnum):
     MERC_FOREST_TROLL_BERSERKER      = 3533, "Forest Troll Berserker (Mercenary)", Mercenary(GameID.FOREST_TROLL_BERSERKER, CreepSpecies.Forest_Trolls)
     MERC_FOREST_TROLL_HIGH_PRIEST    = 3534, "Forest Troll High Priest (Mercenary)", Mercenary(GameID.FOREST_TROLL_HIGH_PRIEST, CreepSpecies.Forest_Trolls)
     MERC_FOREST_TROLL_WARLORD        = 3535, "Forest Troll Warlord (Mercenary)", Mercenary(GameID.FOREST_TROLL_WARLORD, CreepSpecies.Forest_Trolls)
+
+    MERC_TUSKARR_FIGHTER             = 2540, "Tuskarr Fighter (Mercenary)", Mercenary(GameID.TUSKARR_FIGHTER, CreepSpecies.Tuskarr)
+    MERC_TUSKARR_SPEARMAN            = 2540, "Tuskarr Spearman (Mercenary)", Mercenary(GameID.TUSKARR_SPEARMAN, CreepSpecies.Tuskarr)
+    MERC_TUSKARR_HEALER              = 2540, "Tuskarr Healer (Mercenary)", Mercenary(GameID.TUSKARR_HEALER, CreepSpecies.Tuskarr)
+    MERC_TUSKARR_TRAPPER             = 2540, "Tuskarr Trapper (Mercenary)", Mercenary(GameID.TUSKARR_TRAPPER, CreepSpecies.Tuskarr)
+    MERC_TUSKARR_WARRIOR             = 2540, "Tuskarr Warrior (Mercenary)", Mercenary(GameID.TUSKARR_WARRIOR, CreepSpecies.Tuskarr)
+    MERC_TUSKARR_SORCERER            = 2540, "Tuskarr Sorcerer (Mercenary)", Mercenary(GameID.TUSKARR_SORCERER, CreepSpecies.Tuskarr)
+    MERC_TUSKARR_CHIEFTAIN           = 2540, "Tuskarr Chieftain (Mercenary)", Mercenary(GameID.TUSKARR_CHIEFTAIN, CreepSpecies.Tuskarr)
 
     MERC_WENDIGO                     = 3570, "Wendigo (Mercenary)", Mercenary(GameID.WENDIGO, CreepSpecies.Wendigo)
     MERC_ELDER_WENDIGO               = 3571, "Elder Wendigo (Mercenary)", Mercenary(GameID.ELDER_WENDIGO, CreepSpecies.Wendigo)
