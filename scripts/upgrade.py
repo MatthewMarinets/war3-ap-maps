@@ -60,23 +60,24 @@ MAP_VARS = {
 }
 
 
-def update_war3_info(w3i_file: str) -> None:
+def update_war3_info(w3i_file: str, is_roc: bool) -> None:
     war3_info = w3i.from_text_file(w3i_file)
     war3_info.version = w3i.W3iVersions.TFT
     war3_info.flags |= w3i.MapFlags.REQUIRES_EXPANSION
     war3_info.map_game_data_set = 1  # Fixed balance, on 1.07
     war3_info.tft_weather = 'null'
 
-    existing_tech_entries = [tech.tech_id for tech in war3_info.technologies]
-    update_techs = (
-        'Hblm',  # Blood Mage
-        'Oshd',  # Shadow Hunter
-        'Ucrl',  # Crypt Lord
-        'Ewar',  # Warden
-    )
-    for update_tech in update_techs:
-        if update_tech not in existing_tech_entries:
-            war3_info.technologies.append(w3i.TechnologyInfo(0xf, update_tech))
+    if is_roc:
+        existing_tech_entries = [tech.tech_id for tech in war3_info.technologies]
+        update_techs = (
+            'Hblm',  # Blood Mage
+            'Oshd',  # Shadow Hunter
+            'Ucrl',  # Crypt Lord
+            'Ewar',  # Warden
+        )
+        for update_tech in update_techs:
+            if update_tech not in existing_tech_entries:
+                war3_info.technologies.append(w3i.TechnologyInfo(0xf, update_tech))
 
     new_text = w3i.as_text(war3_info)
     with open(w3i_file, 'w') as fp:
@@ -453,8 +454,14 @@ def main(map_dir: str) -> int:
         return 1
     print(f'Processing {map_dir}')
     mission = helpers.get_mission(os.path.basename(map_dir))
+    is_roc = mission.campaign in (
+        missions.Wc3Campaign.HUMAN_1,
+        missions.Wc3Campaign.UNDEAD_1,
+        missions.Wc3Campaign.ORC_1,
+        missions.Wc3Campaign.NIGHT_ELF_1,
+    )
 
-    update_war3_info(f'{map_dir}/info.w3i.toml')
+    update_war3_info(f'{map_dir}/info.w3i.toml', is_roc)
     update_doo(f'{map_dir}/doodads.doo.toml')
     update_doo(f'{map_dir}/units.doo.toml')
     add_ap_items(f'{map_dir}/o_items.w3t.toml', mission)
