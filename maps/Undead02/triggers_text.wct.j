@@ -157,7 +157,6 @@ function InitTrig_map_config takes nothing returns nothing
     set location_names[26] = "Feast on Souls"
     set location_names[27] = "Pandaren Relaxation Area"
     set location_names[28] = "Secret Society of Sasquatch"
-    set location_names[29] = "Establish a Base"
 endfunction
 
 //\\// Trigger #2
