@@ -283,12 +283,12 @@ def configure_mission_order(world: 'Wc3World') -> None:
         # requirements
         adjacents = ((-1, 0), (0, -1), (0, 1), (1, 0),)
         for mission_slot in mission_order_spec[1:]:
-            sub_requirements: list[mission_orders.Requirement] = []
+            sub_requirements: list[tuple[int, int]] = []
             for adjacent in adjacents:
                 adjacent_coord = (mission_slot.x + adjacent[0], mission_slot.y + adjacent[1])
                 if adjacent_coord in used_coords:
-                    sub_requirements.append(mission_orders.Requirement([adjacent_coord]))
-            mission_slot.requires = mission_orders.Requirement(groups=sub_requirements, amount=1)
+                    sub_requirements.append(adjacent_coord)
+            mission_slot.requires = mission_orders.Requirement(slots=sub_requirements, amount=1)
         mission_order_spec[-1].flags |= mission_orders.FLAG_GOAL
 
     for slot in mission_order_spec:
