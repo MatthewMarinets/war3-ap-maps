@@ -28,6 +28,14 @@ def build_mod() -> None:
         'Human07',
         'Human08',
         'Human09',
+        'Undead01',
+        'Undead02',
+        'Undead03',
+        'Undead04',
+        'Undead05',
+        'Undead06',
+        'Undead07',
+        'Undead08',
     )
 
     # Pack all the maps

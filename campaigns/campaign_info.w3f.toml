@@ -25,74 +25,112 @@ fog_alpha = 255
 ui_race_index = 0
 
 [[map_titles]]
-
 starts_visible = true
-chapter_title = 'TRIGSTR_001'
+chapter_title = 'Overworld'
 map_title = 'TRIGSTR_006'
 path = 'CampaignSelect.w3x'
 
 [[map_titles]]
-
 starts_visible = false
-chapter_title = 'TRIGSTR_007'
+chapter_title = 'H1'
 map_title = 'TRIGSTR_008'
 path = 'Human01.w3x'
 
 [[map_titles]]
-
 starts_visible = false
-chapter_title = 'TRIGSTR_009'
+chapter_title = 'H2'
 map_title = 'TRIGSTR_010'
 path = 'Human02.w3x'
 
 [[map_titles]]
-
 starts_visible = false
-chapter_title = 'TRIGSTR_011'
+chapter_title = 'H3'
 map_title = 'TRIGSTR_012'
 path = 'Human03.w3x'
 
 [[map_titles]]
-
 starts_visible = false
-chapter_title = 'TRIGSTR_013'
+chapter_title = 'H4'
 map_title = 'TRIGSTR_014'
 path = 'Human04.w3x'
 
 [[map_titles]]
-
 starts_visible = false
-chapter_title = 'TRIGSTR_015'
+chapter_title = 'H5'
 map_title = 'TRIGSTR_016'
 path = 'Human05.w3x'
 
 [[map_titles]]
-
 starts_visible = false
-chapter_title = 'TRIGSTR_017'
+chapter_title = 'H6'
 map_title = 'TRIGSTR_018'
 path = 'Human06.w3x'
 
 [[map_titles]]
-
 starts_visible = false
-chapter_title = 'TRIGSTR_019'
+chapter_title = 'H7'
 map_title = 'TRIGSTR_020'
 path = 'Human07.w3x'
 
 [[map_titles]]
-
 starts_visible = false
-chapter_title = 'TRIGSTR_021'
+chapter_title = 'H8'
 map_title = 'TRIGSTR_022'
 path = 'Human08.w3x'
 
 [[map_titles]]
-
 starts_visible = false
-chapter_title = 'TRIGSTR_023'
+chapter_title = 'H9'
 map_title = 'TRIGSTR_024'
 path = 'Human09.w3x'
+
+[[map_titles]]
+starts_visible = false
+chapter_title = 'U1'
+map_title = 'Trudging Through the Ashes'
+path = 'Undead01.w3x'
+
+[[map_titles]]
+starts_visible = false
+chapter_title = 'U2'
+map_title = 'Digging up the Dead'
+path = 'Undead02.w3x'
+
+[[map_titles]]
+starts_visible = false
+chapter_title = 'U3'
+map_title = 'Into the Realm Eternal'
+path = 'Undead03.w3x'
+
+[[map_titles]]
+starts_visible = false
+chapter_title = 'U4'
+map_title = 'Key of the Three Moons'
+path = 'Undead04.w3x'
+
+[[map_titles]]
+starts_visible = false
+chapter_title = 'U5'
+map_title = 'The Fall of Silvermoon'
+path = 'Undead05.w3x'
+
+[[map_titles]]
+starts_visible = false
+chapter_title = 'U6'
+map_title = 'Blackrock & Roll, Too!'
+path = 'Undead06.w3x'
+
+[[map_titles]]
+starts_visible = false
+chapter_title = 'U7'
+map_title = 'The Siege of Dalaran'
+path = 'Undead07.w3x'
+
+[[map_titles]]
+starts_visible = false
+chapter_title = 'U8'
+map_title = 'Under the Burning Sky'
+path = 'Undead08.w3x'
 
 [[map_paths]]
 path = 'CampaignSelect.w3x'
@@ -123,3 +161,27 @@ path = 'Human08.w3x'
 
 [[map_paths]]
 path = 'Human09.w3x'
+
+[[map_paths]]
+path = 'Undead01.w3x'
+
+[[map_paths]]
+path = 'Undead02.w3x'
+
+[[map_paths]]
+path = 'Undead03.w3x'
+
+[[map_paths]]
+path = 'Undead04.w3x'
+
+[[map_paths]]
+path = 'Undead05.w3x'
+
+[[map_paths]]
+path = 'Undead06.w3x'
+
+[[map_paths]]
+path = 'Undead07.w3x'
+
+[[map_paths]]
+path = 'Undead08.w3x'
