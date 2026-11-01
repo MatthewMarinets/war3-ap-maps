@@ -139,7 +139,7 @@ version = TFT
       - param Variable gg_unit_haro_0007
   - param String 2048.00
 - Action CreateTextTagLocBJ
-  - param String TRIGSTR_025
+  - param String TRIGSTR_033
   - param Function GetRectCenter
     - Function GetRectCenter
       - param Variable gg_rct_under_construction
@@ -151,10 +151,10 @@ version = TFT
   - param String 100.00
 - Action SetPlayerName
   - param Preset Player01
-  - param String TRIGSTR_026
+  - param String TRIGSTR_034
 - Action SetPlayerName
   - param Preset Player01
-  - param String TRIGSTR_027
+  - param String TRIGSTR_035
 - Action SetVariable
   - param Variable adventurer
   - param Variable gg_unit_e000_0000

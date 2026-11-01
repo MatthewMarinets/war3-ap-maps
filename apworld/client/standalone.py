@@ -16,7 +16,7 @@ from .comm import (
     status_loop,
     InventoryItem,
     MissionSlotInfo,
-    MissionAvailability
+    MAX_MISSION_GRID_SIDE_LENGTH
 )
 from ..data import heroes, game_ids, locations, missions, tables
 from ..data.game_ids import Tech, GameID
@@ -401,17 +401,29 @@ class EchoClientInterface:
                 location_status[k] = -1
 
 
+def mission_coord_to_index(x: int, y: int) -> int:
+    return x + y * MAX_MISSION_GRID_SIDE_LENGTH
+
+
 def init_test_data(game_status: GameStatus) -> None:
     from ..data import mission_orders
+    mission_slots = mission_orders.H1_SOLO_CAMPAIGN
     game_status.mission_order = {
         (mission_slot.x, mission_slot.y): MissionSlotInfo(mission_slot.mission_pool[0])
-        for mission_slot in mission_orders.H1_SOLO_CAMPAIGN
+        for mission_slot in mission_slots
     }
+    game_status.mission_order_paths = [
+        (mission_coord_to_index(slot.x, slot.y), mission_coord_to_index(next_slot.x, next_slot.y))
+        for slot, next_slot in zip(mission_slots, mission_slots[1:])
+    ]
+    game_status.mission_order_markers = [
+        mission_coord_to_index(mission_slots[-1].x, mission_slots[-1].y)
+    ]
     # game_status.mission_order[4, 3].availability = MissionAvailability.BEATEN
     # game_status.mission_order[5, 6].availability = MissionAvailability.LOCKED
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].hero = heroes.HeroChoice.ALCHEMIST
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].reset_abils()
-    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].xp = 3000
+    game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].xp = 2000
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].max_level = 8
     # game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].abilities[GameID.BLOOD_MAGE_SIPHON_MANA] = 1
     game_status.hero_data[heroes.HeroSlot.PALADIN_ARTHAS].items[2] = InventoryItem(GameID.BRACER_OF_AGILITY)
@@ -430,7 +442,11 @@ def init_test_data(game_status: GameStatus) -> None:
     game_status.hero_data[heroes.HeroSlot.DEATH_KNIGHT_ARTHAS].max_level = 8
     game_status.hero_data[heroes.HeroSlot.DEATH_KNIGHT_ARTHAS].items[2] = InventoryItem(GameID.CROWN_OF_THE_DEATHLORD)
     game_status.hero_data[heroes.HeroSlot.KEL_THUZAD].hero = heroes.HeroChoice.DEMON_HUNTER
+    game_status.hero_data[heroes.HeroSlot.KEL_THUZAD].name = "Summoning in progress"
     game_status.hero_data[heroes.HeroSlot.KEL_THUZAD].reset_abils()
+    game_status.hero_data[heroes.HeroSlot.KEL_THUZAD].xp = 1000
+    game_status.hero_data[heroes.HeroSlot.KEL_THUZAD].max_level = 9
+    game_status.hero_data[heroes.HeroSlot.KEL_THUZAD].items[2] = InventoryItem(GameID.GAUNTLETS_OF_OGRE_STRENGTH_3)
     game_status.settings.extra_merc_camps = 1
 
 

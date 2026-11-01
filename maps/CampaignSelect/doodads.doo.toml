@@ -8,7 +8,6 @@ units = []
 immobile_doodads = []
 
 [[doodads]]
-
 type_id = 'YSaw'  # Archway
 variation = 0
 x = -480.0
@@ -25,7 +24,6 @@ entity_id = 0
 item_drops = []
 
 [[doodads]]
-
 type_id = 'YPfs'  # Flower Bed Straight
 variation = 0
 x = 3840.0
@@ -42,7 +40,6 @@ entity_id = 1
 item_drops = []
 
 [[doodads]]
-
 type_id = 'YPfs'  # Flower Bed Straight
 variation = 0
 x = 3328.0
@@ -59,7 +56,6 @@ entity_id = 2
 item_drops = []
 
 [[doodads]]
-
 type_id = 'YPfs'  # Flower Bed Straight
 variation = 0
 x = 2816.0
@@ -76,7 +72,6 @@ entity_id = 3
 item_drops = []
 
 [[doodads]]
-
 type_id = 'YPfs'  # Flower Bed Straight
 variation = 0
 x = 2304.0
@@ -93,7 +88,6 @@ entity_id = 4
 item_drops = []
 
 [[doodads]]
-
 type_id = 'YPfs'  # Flower Bed Straight
 variation = 0
 x = 1792.0
@@ -110,7 +104,6 @@ entity_id = 5
 item_drops = []
 
 [[doodads]]
-
 type_id = 'YPfs'  # Flower Bed Straight
 variation = 0
 x = 1280.0
@@ -127,7 +120,6 @@ entity_id = 6
 item_drops = []
 
 [[doodads]]
-
 type_id = 'YPfs'  # Flower Bed Straight
 variation = 0
 x = 768.0
@@ -144,7 +136,6 @@ entity_id = 7
 item_drops = []
 
 [[doodads]]
-
 type_id = 'YPfs'  # Flower Bed Straight
 variation = 0
 x = 256.0
@@ -161,7 +152,6 @@ entity_id = 8
 item_drops = []
 
 [[doodads]]
-
 type_id = 'YPfs'  # Flower Bed Straight
 variation = 0
 x = -256.0
@@ -178,7 +168,6 @@ entity_id = 9
 item_drops = []
 
 [[doodads]]
-
 type_id = 'YSc4'  # Column Semi Circle
 variation = 0
 x = 3776.0
@@ -195,7 +184,6 @@ entity_id = 11
 item_drops = []
 
 [[doodads]]
-
 type_id = 'ZPfw'  # Flowers
 variation = 2
 x = 4223.318359375
@@ -212,7 +200,6 @@ entity_id = 21
 item_drops = []
 
 [[doodads]]
-
 type_id = 'ZPfw'  # Flowers
 variation = 1
 x = 4217.36181640625
@@ -229,7 +216,6 @@ entity_id = 12
 item_drops = []
 
 [[doodads]]
-
 type_id = 'ZPfw'  # Flowers
 variation = 3
 x = 4218.20166015625
@@ -246,7 +232,6 @@ entity_id = 20
 item_drops = []
 
 [[doodads]]
-
 type_id = 'ZPfw'  # Flowers
 variation = 4
 x = 4102.53857421875
@@ -263,7 +248,6 @@ entity_id = 14
 item_drops = []
 
 [[doodads]]
-
 type_id = 'ZPfw'  # Flowers
 variation = 4
 x = 4355.072265625
@@ -280,7 +264,6 @@ entity_id = 15
 item_drops = []
 
 [[doodads]]
-
 type_id = 'ZPfw'  # Flowers
 variation = 4
 x = 4489.44384765625
@@ -297,7 +280,6 @@ entity_id = 16
 item_drops = []
 
 [[doodads]]
-
 type_id = 'ZPfw'  # Flowers
 variation = 2
 x = 4490.17041015625
@@ -314,7 +296,6 @@ entity_id = 17
 item_drops = []
 
 [[doodads]]
-
 type_id = 'ZPfw'  # Flowers
 variation = 2
 x = 4353.6298828125
@@ -331,7 +312,6 @@ entity_id = 18
 item_drops = []
 
 [[doodads]]
-
 type_id = 'ZPfw'  # Flowers
 variation = 3
 x = 4351.130859375
@@ -348,7 +328,6 @@ entity_id = 22
 item_drops = []
 
 [[doodads]]
-
 type_id = 'ZPfw'  # Flowers
 variation = 2
 x = 4097.220703125
@@ -365,7 +344,6 @@ entity_id = 13
 item_drops = []
 
 [[doodads]]
-
 type_id = 'ZPfw'  # Flowers
 variation = 1
 x = 4346.52880859375
@@ -382,7 +360,6 @@ entity_id = 10
 item_drops = []
 
 [[doodads]]
-
 type_id = 'ZPfw'  # Flowers
 variation = 1
 x = 4491.7822265625
@@ -399,7 +376,6 @@ entity_id = 19
 item_drops = []
 
 [[doodads]]
-
 type_id = 'YOts'  # Sign Tavern
 variation = 0
 x = -2400.0
@@ -416,7 +392,6 @@ entity_id = 23
 item_drops = []
 
 [[doodads]]
-
 type_id = 'YOts'  # Sign Tavern
 variation = 0
 x = -2336.0
@@ -433,7 +408,6 @@ entity_id = 24
 item_drops = []
 
 [[doodads]]
-
 type_id = 'YOts'  # Sign Tavern
 variation = 0
 x = -672.0
@@ -450,7 +424,6 @@ entity_id = 25
 item_drops = []
 
 [[doodads]]
-
 type_id = 'YOts'  # Sign Tavern
 variation = 0
 x = -480.0
@@ -467,7 +440,6 @@ entity_id = 26
 item_drops = []
 
 [[doodads]]
-
 type_id = 'LOss'  # Skulls on Sticks
 variation = 1
 x = -2656.0
@@ -484,7 +456,6 @@ entity_id = 27
 item_drops = []
 
 [[doodads]]
-
 type_id = 'LOtz'  # Torch Glowing
 variation = 0
 x = -2301.17724609375
@@ -501,7 +472,6 @@ entity_id = 28
 item_drops = []
 
 [[doodads]]
-
 type_id = 'LOtz'  # Torch Glowing
 variation = 0
 x = -795.5971069335938
@@ -518,7 +488,6 @@ entity_id = 29
 item_drops = []
 
 [[doodads]]
-
 type_id = 'LOwb'  # Wheelbarrow
 variation = 0
 x = -2336.0
@@ -535,7 +504,6 @@ entity_id = 30
 item_drops = []
 
 [[doodads]]
-
 type_id = 'LOwb'  # Wheelbarrow
 variation = 0
 x = -2368.0
@@ -552,7 +520,6 @@ entity_id = 31
 item_drops = []
 
 [[doodads]]
-
 type_id = 'LOsp'  # Post Sign
 variation = 0
 x = -2232.82763671875
@@ -569,7 +536,6 @@ entity_id = 32
 item_drops = []
 
 [[doodads]]
-
 type_id = 'LOt1'  # Trash
 variation = 0
 x = -896.0
@@ -586,7 +552,6 @@ entity_id = 33
 item_drops = []
 
 [[doodads]]
-
 type_id = 'LOt1'  # Trash
 variation = 0
 x = -1024.0

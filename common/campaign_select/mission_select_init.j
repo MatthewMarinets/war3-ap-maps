@@ -13,6 +13,8 @@ real switch_radius
 real switch_spacing
 region array mission_select_regions[100]
 destructable array switches[100]
+lightning array paths[100]
+effect array effects[100]
 trigger grant_resources_t
 trigger press_switch_t
 trigger release_switch_t
@@ -145,6 +147,10 @@ function init_mission_board takes nothing returns nothing
     local rect offset_region = gg_rct_mission10
     local integer i = 0
     local integer j = 0
+    local integer num_paths = GetPlayerTechMaxAllowed(p, 'path')
+    local integer num_effects = GetPlayerTechMaxAllowed(p, 'fxfx')
+    local integer path_start
+    local integer path_end
     local real offsetx = 0.0
     local real offsety = 0.0
     local real label_offset_x
@@ -242,6 +248,39 @@ function init_mission_board takes nothing returns nothing
             set j = j + 1
         endloop
         set i = i + 1
+    endloop
+    // paths
+    set i = 0
+    loop
+        exitwhen i >= num_paths
+        exitwhen i >= 100
+        // flip path direction as drain life moves from target to source
+        set path_start = GetPlayerTechMaxAllowed(p, 600 + i)
+        set path_end = GetPlayerTechMaxAllowed(p, 500 + i)
+        set offsety = (path_start / mission_grid_side_length) * switch_spacing
+        set offsetx = (path_start * switch_spacing) - offsety * mission_grid_side_length
+        set label_offset_y = (path_end / mission_grid_side_length) * switch_spacing
+        set label_offset_x = (path_end * switch_spacing) - label_offset_y * mission_grid_side_length
+        if paths[i] == null then
+            set paths[i] = AddLightningEx("DRAB", true, GetRectCenterX(first_region) + offsetx, GetRectCenterY(first_region) - offsety, 20.0, GetRectCenterX(first_region) + label_offset_x, GetRectCenterY(first_region) - label_offset_y, 20.0)
+        else
+            call MoveLightningEx(paths[i], true, GetRectCenterX(first_region) + offsetx, GetRectCenterY(first_region) - offsety, 20.0, GetRectCenterX(first_region) + label_offset_x, GetRectCenterY(first_region) - label_offset_y, 20.0)
+        endif
+        set i = i + 1
+    endloop
+    set i = 0
+    loop
+        exitwhen i >= num_effects
+        exitwhen i >= 100
+        set path_start = GetPlayerTechMaxAllowed(p, 700 + i)
+        set offsety = (path_start / mission_grid_side_length) * switch_spacing
+        set offsetx = (path_start * switch_spacing) - offsety * mission_grid_side_length
+        if effects[i] == null then
+            set effects[i] = AddSpecialEffect("Abilities\\Spells\\Other\\Drain\\DrainTarget.mdl", GetRectCenterX(first_region) + offsetx, GetRectCenterY(first_region) - offsety)
+        else
+            call BlzSetSpecialEffectX(effects[i], GetRectCenterX(first_region) + offsetx)
+            call BlzSetSpecialEffectY(effects[i], GetRectCenterY(first_region) - offsety)
+        endif
     endloop
 endfunction
 

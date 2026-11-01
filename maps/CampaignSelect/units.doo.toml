@@ -8,7 +8,6 @@ doodads = []
 immobile_doodads = []
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 0
 x = 1536.0
@@ -37,13 +36,11 @@ waygate_destination = -1
 entity_id = 3
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Eill'  # Demon Hunter
 variation = 0
 x = -1669.357666015625
@@ -72,13 +69,11 @@ waygate_destination = -1
 entity_id = 19
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'e000'
 variation = 0
 x = 1536.0
@@ -107,13 +102,11 @@ waygate_destination = -1
 entity_id = 0
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'haro'  # Arcane Observatory
 variation = 0
 x = -1024.0
@@ -142,13 +135,11 @@ waygate_destination = -1
 entity_id = 7
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'nmrk'  # Marketplace
 variation = 0
 x = -3904.0
@@ -177,13 +168,11 @@ waygate_destination = -1
 entity_id = 4
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'n000'
 variation = 0
 x = -4416.0
@@ -212,13 +201,11 @@ waygate_destination = -1
 entity_id = 6
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Hart'  # Paladin
 variation = 0
 x = -4323.470703125
@@ -247,13 +234,11 @@ waygate_destination = -1
 entity_id = 2
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Hmbr'  # Mountain King
 variation = 0
 x = -4118.6220703125
@@ -282,13 +267,11 @@ waygate_destination = -1
 entity_id = 5
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Hjai'  # Archmage
 variation = 0
 x = -4234.162109375
@@ -317,13 +300,11 @@ waygate_destination = -1
 entity_id = 8
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Uear'  # Death Knight
 variation = 0
 x = -3784.064453125
@@ -352,13 +333,11 @@ waygate_destination = -1
 entity_id = 9
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Uktl'  # Lich
 variation = 0
 x = -3653.92626953125
@@ -387,13 +366,11 @@ waygate_destination = -1
 entity_id = 10
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Othr'  # Far Seer
 variation = 0
 x = -3272.588623046875
@@ -422,13 +399,11 @@ waygate_destination = -1
 entity_id = 11
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Ocbh'  # Tauren Chieftain
 variation = 0
 x = -3168.8232421875
@@ -457,13 +432,11 @@ waygate_destination = -1
 entity_id = 12
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Ogrh'  # Blademaster
 variation = 0
 x = -2704.147705078125
@@ -492,13 +465,11 @@ waygate_destination = -1
 entity_id = 13
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Etyr'  # Priestess of the Moon
 variation = 0
 x = -2264.121337890625
@@ -527,13 +498,11 @@ waygate_destination = -1
 entity_id = 14
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Efur'  # Keeper of the Grove
 variation = 0
 x = -2125.900634765625
@@ -562,13 +531,11 @@ waygate_destination = -1
 entity_id = 15
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Ewrd'  # Warden
 variation = 0
 x = -3710.60205078125
@@ -597,13 +564,11 @@ waygate_destination = -1
 entity_id = 16
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Etyr'  # Priestess of the Moon
 variation = 0
 x = -3621.752685546875
@@ -632,13 +597,11 @@ waygate_destination = -1
 entity_id = 17
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Emfr'  # Keeper of the Grove
 variation = 0
 x = -3823.3779296875
@@ -667,13 +630,11 @@ waygate_destination = -1
 entity_id = 18
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Eevi'  # Demon Hunter
 variation = 0
 x = -3225.39599609375
@@ -702,13 +663,11 @@ waygate_destination = -1
 entity_id = 1
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Hkal'  # Blood Mage
 variation = 0
 x = -3323.68310546875
@@ -737,13 +696,11 @@ waygate_destination = -1
 entity_id = 20
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Hvsh'  # Naga Sea Witch
 variation = 0
 x = -3101.76953125
@@ -772,13 +729,11 @@ waygate_destination = -1
 entity_id = 21
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Uear'  # Death Knight
 variation = 0
 x = -2712.84912109375
@@ -807,13 +762,11 @@ waygate_destination = -1
 entity_id = 22
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Uktl'  # Lich
 variation = 0
 x = -2794.916748046875
@@ -842,13 +795,11 @@ waygate_destination = -1
 entity_id = 23
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Uanb'  # Crypt Lord
 variation = 0
 x = -2618.40625
@@ -877,13 +828,11 @@ waygate_destination = -1
 entity_id = 24
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Usyl'  # Dark Ranger
 variation = 0
 x = -2235.521728515625
@@ -912,13 +861,11 @@ waygate_destination = -1
 entity_id = 25
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Uvar'  # Dreadlord
 variation = 0
 x = -2108.143310546875
@@ -947,13 +894,11 @@ waygate_destination = -1
 entity_id = 26
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'Naka'  # Elder Sage
 variation = 0
 x = -3219.50634765625
@@ -982,13 +927,11 @@ waygate_destination = -1
 entity_id = 27
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 1
 x = -4224.0
@@ -1017,13 +960,11 @@ waygate_destination = -1
 entity_id = 28
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0
 
 [[units]]
-
 type_id = 'sloc'  # Start Location
 variation = 2
 x = 1344.0
@@ -1052,7 +993,6 @@ waygate_destination = -1
 entity_id = 30
 
 [units.random_unit_info]
-
 random_type = 'class'
 level = 1
 item_class = 0

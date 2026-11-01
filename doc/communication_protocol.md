@@ -292,10 +292,15 @@ Encoded IDs are two-character stringified integers. Ex: " 0 710" says locations 
 | MaxTech(Player(0), 'nech')  | Message ID; echoed back in status.txt             |
 | MaxTech(Player(0), 'size')  | Mission order grid side length                    |
 | MaxTech(Player(0), 'ndog')  | 1 if the mission order is won                     |
+| MaxTech(Player(0), 'path')  | The number of paths to draw on the mission board  |
+| MaxTech(Player(0), 'fxfx')  | The number of effects on the mission board        |
 | MaxTech(Player(0), 100~199) | Mission IDs for missions in slots 0~100           |
 | MaxTech(Player(0), 200~299) | Mission slot enablement state                     |
 | MaxTech(Player(0), 300~399) | Locations maximum per mission                     |
 | MaxTech(Player(0), 400~499) | Locations completed per mission                   |
+| MaxTech(Player(0), 500~599) | Path start points                                 |
+| MaxTech(Player(0), 600~699) | Path end points                                   |
+| MaxTech(Player(0), 700~799) | Effect location                                   |
 
 #### Enablement states
 | Value | Meaning               |

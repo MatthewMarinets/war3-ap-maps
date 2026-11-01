@@ -64,6 +64,7 @@ constant integer MISSION_ID = 0
 integer NUM_HEROES = 0
 constant player USER_PLAYER = Player(0)
 integer array hero_global_slots
+string array location_names
 constant integer item_channel_1 = -1
 constant integer item_channel_2 = -1
 constant integer item_channel_2_hero_slot = -1
@@ -229,7 +230,7 @@ function captains_set_ability_usable takes player p returns nothing
         set available = 0
     endif
     call SetPlayerTechResearched(p, 'RP00', available)
-    // General irregular unlocks
+    // Irregular upgrades - human
     call SetPlayerTechResearched(p, 'RP01', B2I(GetPlayerTechMaxAllowed(p, 'hfoo') != 0))
     call SetPlayerTechResearched(p, 'RP02', B2I(GetPlayerTechMaxAllowed(p, 'hrif') != 0))
     call SetPlayerTechResearched(p, 'RP03', B2I(GetPlayerTechMaxAllowed(p, 'nhea') != 0))
@@ -238,6 +239,16 @@ function captains_set_ability_usable takes player p returns nothing
     call SetPlayerTechResearched(p, 'RP06', B2I(GetPlayerTechMaxAllowed(p, 'hsor') != 0))
     call SetPlayerTechResearched(p, 'RP07', B2I(GetPlayerTechMaxAllowed(p, 'hspt') != 0))
     call SetPlayerTechResearched(p, 'RP08', B2I(GetPlayerTechMaxAllowed(p, 'hmtm') != 0))
+    // Irregular upgrades - undead
+    call SetPlayerTechResearched(p, 'RP10', B2I(GetPlayerTechMaxAllowed(p, 'ugho') != 0))
+    call SetPlayerTechResearched(p, 'RP11', B2I(GetPlayerTechMaxAllowed(p, 'ucry') != 0))
+    call SetPlayerTechResearched(p, 'RP12', B2I(GetPlayerTechMaxAllowed(p, 'nska') != 0))
+    call SetPlayerTechResearched(p, 'RP13', B2I(GetPlayerTechMaxAllowed(p, 'unec') != 0))
+    call SetPlayerTechResearched(p, 'RP14', B2I(GetPlayerTechMaxAllowed(p, 'uban') != 0))
+    call SetPlayerTechResearched(p, 'RP15', B2I(GetPlayerTechMaxAllowed(p, 'umtw') != 0))
+    call SetPlayerTechResearched(p, 'RP16', B2I(GetPlayerTechMaxAllowed(p, 'uabo') != 0))
+    call SetPlayerTechResearched(p, 'RP17', B2I(GetPlayerTechMaxAllowed(p, 'uobs') != 0))
+    call SetPlayerTechResearched(p, 'RP18', B2I(GetPlayerTechMaxAllowed(p, 'ushd') != 0))
 endfunction
 
 function status_load_unlocks_for_player takes integer target_player returns nothing
@@ -301,8 +312,13 @@ endfunction
 
 function status_check_location takes integer location_id returns nothing
     if location_id >= MAX_LOCATIONS then
-        call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cffff2222Error: Attempted to check invalid location ID: " + I2S(location_id) + "|r")
+        call print("|cffff2222Error: Attempted to check invalid location ID: " + I2S(location_id) + "|r")
         return
+    endif
+    if location_names[location_id] != null then
+        if locations_checked[location_id] then
+            call print("Got a already-collected |cffee1166Archipelago location|r (" + location_names[location_id] + ")")
+        endif
     endif
     set locations_checked[location_id] = true
     call status_send()
@@ -443,8 +459,11 @@ function status_load_missions takes nothing returns nothing
     local integer i = 100
     local player p = Player(0)
     call SetPlayerTechMaxAllowed(p, 'ndog', 0)
+    call SetPlayerTechMaxAllowed(p, 'size', 0)
+    call SetPlayerTechMaxAllowed(p, 'path', 0)
+    call SetPlayerTechMaxAllowed(p, 'fxfx', 0)
     loop
-        exitwhen i >= 500
+        exitwhen i >= 800
         call SetPlayerTechMaxAllowed(p, i, 0)
         set i = i + 1
     endloop
@@ -1069,20 +1088,25 @@ endglobals
 function start_victory_actions takes nothing returns nothing
     local integer i = 0
     local weathereffect we
+    local effect e
     set arena_min_x = GetRectMinX(gg_rct_mission_select_vision) + 512
     set arena_max_x = GetRectMaxX(gg_rct_mission_select_vision) - 512
     set arena_min_y = GetRectMinY(gg_rct_mission_select_vision) + 512
     set arena_max_y = GetRectMaxY(gg_rct_mission_select_vision) - 512
     set we = AddWeatherEffect(gg_rct_mission_select_vision, 'LRma')
     call EnableWeatherEffect(we, true)
-    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 0, 2432)
-    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", -128, 2304)
-    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3072, 2432)
-    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3200, 2304)
-    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", -128, -768)
-    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 0, -896)
-    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3200, -768)
-    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3072, -896)
+    set e = AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 0, 2432)
+    set e = AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", -128, 2304)
+    set e = AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3072, 2432)
+    call BlzSetSpecialEffectRoll(e, Deg2Rad(180.0))
+    set e = AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3200, 2304)
+    call BlzSetSpecialEffectRoll(e, Deg2Rad(180.0))
+    set e = AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", -128, -768)
+    set e = AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 0, -896)
+    set e = AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3200, -768)
+    call BlzSetSpecialEffectRoll(e, Deg2Rad(180.0))
+    set e = AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3072, -896)
+    call BlzSetSpecialEffectRoll(e, Deg2Rad(180.0))
     // torches
     loop
         exitwhen i >= 5
@@ -1189,6 +1213,8 @@ real switch_radius
 real switch_spacing
 region array mission_select_regions[100]
 destructable array switches[100]
+lightning array paths[100]
+effect array effects[100]
 trigger grant_resources_t
 trigger press_switch_t
 trigger release_switch_t
@@ -1321,6 +1347,10 @@ function init_mission_board takes nothing returns nothing
     local rect offset_region = gg_rct_mission10
     local integer i = 0
     local integer j = 0
+    local integer num_paths = GetPlayerTechMaxAllowed(p, 'path')
+    local integer num_effects = GetPlayerTechMaxAllowed(p, 'fxfx')
+    local integer path_start
+    local integer path_end
     local real offsetx = 0.0
     local real offsety = 0.0
     local real label_offset_x
@@ -1418,6 +1448,39 @@ function init_mission_board takes nothing returns nothing
             set j = j + 1
         endloop
         set i = i + 1
+    endloop
+    // paths
+    set i = 0
+    loop
+        exitwhen i >= num_paths
+        exitwhen i >= 100
+        // flip path direction as drain life moves from target to source
+        set path_start = GetPlayerTechMaxAllowed(p, 600 + i)
+        set path_end = GetPlayerTechMaxAllowed(p, 500 + i)
+        set offsety = (path_start / mission_grid_side_length) * switch_spacing
+        set offsetx = (path_start * switch_spacing) - offsety * mission_grid_side_length
+        set label_offset_y = (path_end / mission_grid_side_length) * switch_spacing
+        set label_offset_x = (path_end * switch_spacing) - label_offset_y * mission_grid_side_length
+        if paths[i] == null then
+            set paths[i] = AddLightningEx("DRAB", true, GetRectCenterX(first_region) + offsetx, GetRectCenterY(first_region) - offsety, 20.0, GetRectCenterX(first_region) + label_offset_x, GetRectCenterY(first_region) - label_offset_y, 20.0)
+        else
+            call MoveLightningEx(paths[i], true, GetRectCenterX(first_region) + offsetx, GetRectCenterY(first_region) - offsety, 20.0, GetRectCenterX(first_region) + label_offset_x, GetRectCenterY(first_region) - label_offset_y, 20.0)
+        endif
+        set i = i + 1
+    endloop
+    set i = 0
+    loop
+        exitwhen i >= num_effects
+        exitwhen i >= 100
+        set path_start = GetPlayerTechMaxAllowed(p, 700 + i)
+        set offsety = (path_start / mission_grid_side_length) * switch_spacing
+        set offsetx = (path_start * switch_spacing) - offsety * mission_grid_side_length
+        if effects[i] == null then
+            set effects[i] = AddSpecialEffect("Abilities\\Spells\\Other\\Drain\\DrainTarget.mdl", GetRectCenterX(first_region) + offsetx, GetRectCenterY(first_region) - offsety)
+        else
+            call BlzSetSpecialEffectX(effects[i], GetRectCenterX(first_region) + offsetx)
+            call BlzSetSpecialEffectY(effects[i], GetRectCenterY(first_region) - offsety)
+        endif
     endloop
 endfunction
 

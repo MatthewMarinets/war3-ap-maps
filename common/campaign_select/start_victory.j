@@ -14,20 +14,25 @@ endglobals
 function start_victory_actions takes nothing returns nothing
     local integer i = 0
     local weathereffect we
+    local effect e
     set arena_min_x = GetRectMinX(gg_rct_mission_select_vision) + 512
     set arena_max_x = GetRectMaxX(gg_rct_mission_select_vision) - 512
     set arena_min_y = GetRectMinY(gg_rct_mission_select_vision) + 512
     set arena_max_y = GetRectMaxY(gg_rct_mission_select_vision) - 512
     set we = AddWeatherEffect(gg_rct_mission_select_vision, 'LRma')
     call EnableWeatherEffect(we, true)
-    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 0, 2432)
-    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", -128, 2304)
-    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3072, 2432)
-    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3200, 2304)
-    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", -128, -768)
-    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 0, -896)
-    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3200, -768)
-    call AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3072, -896)
+    set e = AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 0, 2432)
+    set e = AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", -128, 2304)
+    set e = AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3072, 2432)
+    call BlzSetSpecialEffectRoll(e, Deg2Rad(180.0))
+    set e = AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3200, 2304)
+    call BlzSetSpecialEffectRoll(e, Deg2Rad(180.0))
+    set e = AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", -128, -768)
+    set e = AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 0, -896)
+    set e = AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3200, -768)
+    call BlzSetSpecialEffectRoll(e, Deg2Rad(180.0))
+    set e = AddSpecialEffect("Units\\NightElf\\Owl\\Owl.mdl", 3072, -896)
+    call BlzSetSpecialEffectRoll(e, Deg2Rad(180.0))
     // torches
     loop
         exitwhen i >= 5

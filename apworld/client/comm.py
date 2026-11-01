@@ -251,6 +251,8 @@ class GameStatus:
     )
     settings: Wc3GameSettings = field(default_factory=Wc3GameSettings)
     mission_order: dict[tuple[int, int], MissionSlotInfo] = field(default_factory=dict)
+    mission_order_paths: list[tuple[int, int]] = field(default_factory=list)
+    mission_order_markers: list[int] = field(default_factory=list)
 
 
 @dataclass(slots=True)
@@ -556,6 +558,13 @@ def update_missions(
                             fp.write(send_int(max_locations, 300+offset))
                         if checked_locations:
                             fp.write(send_int(checked_locations, 400+offset))
+        fp.write(send_int(len(game_status.mission_order_paths), 'path'))
+        for index, (path_from, path_to) in enumerate(game_status.mission_order_paths):
+            fp.write(send_int(path_from, 500 + index))
+            fp.write(send_int(path_to, 600 + index))
+        fp.write(send_int(len(game_status.mission_order_markers), 'fxfx'))
+        for index, cell in enumerate(game_status.mission_order_markers):
+            fp.write(send_int(cell, 700 + index))
         fp.write(ENDFUNCTION)
 
 

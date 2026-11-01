@@ -48,7 +48,6 @@ random_entities = []
 random_items = []
 
 [[players]]
-
 player_id = 0
 player_type = "User"
 player_faction = "Human"
@@ -59,7 +58,6 @@ ally_low_priorities_flags = 0x0
 ally_high_priorities_flags = 0x0
 
 [[players]]
-
 player_id = 1
 player_type = "Neutral"
 player_faction = "Human"
@@ -70,7 +68,6 @@ ally_low_priorities_flags = 0x0
 ally_high_priorities_flags = 0x0
 
 [[players]]
-
 player_id = 2
 player_type = "Neutral"
 player_faction = "Undead"
@@ -81,7 +78,6 @@ ally_low_priorities_flags = 0xff0000ff
 ally_high_priorities_flags = 0xffff00ff
 
 [[forces]]
-
 force_flags = "None"
 player_mask_flags = 0xffffffff
 name = 'TRIGSTR_002'

@@ -2544,6 +2544,23 @@ ABIL_TO_CANCEL_ORDER_ID = {
     ABIL_SUBMERGE_SNAP_DRAGON: 'unsubmerge',
 }
 
+LIGHTNING_NAMES = [
+    "CLPB",  # Chain lightning primary
+    "CLSB",  # Chain lightning secondary
+    "DRAB",  # Drain
+    "DRAL",  # Drain Life
+    "DRAM",  # Drain Mana
+    "AFOD",  # Finger of Death
+    "FORK",  # Forked Lightning
+    "HWPB",  # Healing Wave primary
+    "HWSB",  # Healing Wave secondary
+    "CHIM",  # Lightning Attack
+    "LEAS",  # Magic Leash
+    "MBUR",  # Mana Burn
+    "MFPB",  # Mana Flare
+    "SPLK",  # Spirit Link
+]
+
 # Base Order IDs
 BASE_ORDER_IDS = [
     'absorb',

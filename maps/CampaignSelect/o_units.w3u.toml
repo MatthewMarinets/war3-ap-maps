@@ -3,11 +3,11 @@
 version = 2
 has_levels = false
 
-[blizzard_objects]
-[[blizzard_objects.entities]]
+[blizzard_objects.hcth]
 parent_id = 'hcth'  # Captain
 entity_id = 'null'
-[[blizzard_objects.entities.modifications]]
+
+[[blizzard_objects.hcth.modifications]]
 modification_id = 'ua1b'  # UnitWeapons.Attack 1 - Damage Base
 data_type = "Integer"
 variation_level = 0
@@ -15,11 +15,12 @@ table_column = 0
 value = 190
 object_id = 'hcth'  # Captain
 
-[map_objects]
-[[map_objects.entities]]
+
+[map_objects.e000]
 parent_id = 'ewsp'  # Wisp
 entity_id = 'e000'
-[[map_objects.entities.modifications]]
+
+[[map_objects.e000.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -27,7 +28,7 @@ table_column = 0
 value = "Randomizer Spirit"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.e000.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -35,7 +36,7 @@ table_column = 0
 value = "A000,Avul"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.e000.modifications]]
 modification_id = 'ubui'  # Profile.Structures Built
 data_type = "String"
 variation_level = 0
@@ -43,7 +44,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.e000.modifications]]
 modification_id = 'umvs'  # UnitBalance.Speed Base
 data_type = "Integer"
 variation_level = 0
@@ -51,7 +52,7 @@ table_column = 0
 value = 522
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.e000.modifications]]
 modification_id = 'ucol'  # UnitBalance.Collision Size
 data_type = "Unreal"
 variation_level = 0
@@ -59,7 +60,7 @@ table_column = 0
 value = 10.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.e000.modifications]]
 modification_id = 'umvr'  # UnitData.Turn Rate
 data_type = "Unreal"
 variation_level = 0
@@ -67,10 +68,11 @@ table_column = 0
 value = 3.0
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.n000]
 parent_id = 'nmrk'  # Marketplace
 entity_id = 'n000'
-[[map_objects.entities.modifications]]
+
+[[map_objects.n000.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -78,7 +80,7 @@ table_column = 0
 value = "Consumables"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.n000.modifications]]
 modification_id = 'umdl'  # UnitUI.Model File
 data_type = "String"
 variation_level = 0
@@ -86,10 +88,11 @@ table_column = 0
 value = "buildings\\other\\FruitStand\\FruitStand.mdl"
 object_id = 'null'
 
-[[map_objects.entities]]
+[map_objects.e001]
 parent_id = 'ewsp'  # Wisp
 entity_id = 'e001'
-[[map_objects.entities.modifications]]
+
+[[map_objects.e001.modifications]]
 modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
@@ -97,7 +100,7 @@ table_column = 0
 value = "Disco Ball"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.e001.modifications]]
 modification_id = 'uabi'  # UnitAbilities.Normal
 data_type = "String"
 variation_level = 0
@@ -105,7 +108,7 @@ table_column = 0
 value = "A000,Avul"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.e001.modifications]]
 modification_id = 'ubui'  # Profile.Structures Built
 data_type = "String"
 variation_level = 0
@@ -113,7 +116,7 @@ table_column = 0
 value = ""
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.e001.modifications]]
 modification_id = 'umvs'  # UnitBalance.Speed Base
 data_type = "Integer"
 variation_level = 0
@@ -121,7 +124,7 @@ table_column = 0
 value = 300
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.e001.modifications]]
 modification_id = 'ucol'  # UnitBalance.Collision Size
 data_type = "Unreal"
 variation_level = 0
@@ -129,7 +132,7 @@ table_column = 0
 value = 1.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.e001.modifications]]
 modification_id = 'uslz'  # UnitUI.Selection Circle - Height
 data_type = "Float"
 variation_level = 0
@@ -137,7 +140,7 @@ table_column = 0
 value = 300.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.e001.modifications]]
 modification_id = 'umvh'  # UnitData.Height
 data_type = "Unreal"
 variation_level = 0
@@ -145,7 +148,7 @@ table_column = 0
 value = 300.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.e001.modifications]]
 modification_id = 'umvr'  # UnitData.Turn Rate
 data_type = "Unreal"
 variation_level = 0
@@ -153,7 +156,7 @@ table_column = 0
 value = 3.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.e001.modifications]]
 modification_id = 'umvt'  # UnitData.Type
 data_type = "String"
 variation_level = 0
@@ -161,7 +164,7 @@ table_column = 0
 value = "fly"
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.e001.modifications]]
 modification_id = 'usca'  # UnitUI.Scaling Value
 data_type = "Float"
 variation_level = 0
@@ -169,7 +172,7 @@ table_column = 0
 value = 1.2999999523162842
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.e001.modifications]]
 modification_id = 'ussc'  # UnitUI.Selection Scale
 data_type = "Float"
 variation_level = 0
@@ -177,7 +180,7 @@ table_column = 0
 value = 0.10000000149011612
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.e001.modifications]]
 modification_id = 'uept'  # UnitUI.Elevation - Sample Points
 data_type = "Integer"
 variation_level = 0
@@ -185,7 +188,7 @@ table_column = 0
 value = 4
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.e001.modifications]]
 modification_id = 'uerd'  # UnitUI.Elevation - Sample Radius
 data_type = "Float"
 variation_level = 0
@@ -193,7 +196,7 @@ table_column = 0
 value = 160.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.e001.modifications]]
 modification_id = 'umxp'  # UnitUI.Maximum Pitch Angle (degrees)
 data_type = "Float"
 variation_level = 0
@@ -201,7 +204,7 @@ table_column = 0
 value = 0.0
 object_id = 'null'
 
-[[map_objects.entities.modifications]]
+[[map_objects.e001.modifications]]
 modification_id = 'umxr'  # UnitUI.Maximum Roll Angle (degrees)
 data_type = "Float"
 variation_level = 0

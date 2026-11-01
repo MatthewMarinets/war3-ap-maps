@@ -4,7 +4,6 @@
 version = 5
 
 [[regions]]
-
 left = 288.0
 bottom = 1824.0
 right = 480.0
@@ -18,7 +17,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 544.0
 bottom = 1824.0
 right = 736.0
@@ -32,7 +30,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -320.0
 bottom = -1120.0
 right = 3392.0
@@ -46,7 +43,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -2592.0
 bottom = 2592.0
 right = -2496.0
