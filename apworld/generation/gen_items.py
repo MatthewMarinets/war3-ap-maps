@@ -65,7 +65,7 @@ def create_items(world: 'Wc3World') -> None:
                 for _ in range(item_type.type.quantity):
                     world.g.items.append(_new_item(world, item_type))
         elif isinstance(item_type.type, items.ShopItem):
-            if item_type.type.race in world.g.included_races:
+            if item_type.type.race & world.g.included_races:
                 tentative_items.append(_new_item(world, item_type))
         elif isinstance(item_type.type, items.PickupItem):
             if item_type.type.channel in world.g.item_channels:
