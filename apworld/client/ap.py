@@ -158,6 +158,11 @@ class Wc3CommandProcessor(ClientCommandProcessor):
         logger.info(current)
         return
 
+    def _cmd_printout(self) -> None:
+        logger.info("Missing:")
+        for missing in sorted(self.ctx.missing_locations):
+            logger.info(missing)
+
     def _cmd_save(self) -> None:
         """Save the hero state to a local file"""
         save_hero_state(self.ctx.comm_ctx.game_status)
@@ -456,18 +461,18 @@ class Wc3Context(CommonContext):
         ]))
 
     def check_set_mission_beaten(self, slot: comm.MissionSlotInfo) -> None:
-        if locations.MISSION_TO_VICTORY_LOCATION[slot.mission] in self.locations_checked:
+        if locations.MISSION_TO_VICTORY_LOCATION[slot.mission] in self.checked_locations:
             slot.availability = comm.MissionAvailability.BEATEN
 
     def fetch_locations_collected(self, location_status: dict[int, int], new_mission_id: int) -> None:
         for k in location_status:
             location_id = global_location_id(new_mission_id, k)
-            if location_id in self.locations_checked:
-                location_status[k] = 1
-            elif location_id not in self.missing_locations:
-                location_status[k] = -1
+            if location_id in self.checked_locations:
+                location_status[k] = comm.LOCATION_COLLECTED
+            elif location_id in self.missing_locations:
+                location_status[k] = comm.LOCATION_AVAILABLE
             else:
-                location_status[k] = 0
+                location_status[k] = comm.LOCATION_UNDEFINED
 
     def run_gui(self) -> None:
         from .gui import start_gui

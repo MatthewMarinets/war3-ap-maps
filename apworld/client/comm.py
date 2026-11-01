@@ -37,6 +37,11 @@ MAX_UPDATE_ID = 100000  # Should match status.j
 MISSION_SELECT_MISSION_ID = 0  # Should match CampaignSelect/map_info.j
 MAX_MISSION_GRID_SIDE_LENGTH = 10  # Should match CampaignSelect/mission_select_init.j
 
+LOCATION_COLLECTED = 1
+LOCATION_AVAILABLE = 0
+LOCATION_UNDEFINED = -1
+LOCATION_UNSEND = -2
+
 HERO_INVENTORY_SIZE = 6
 
 COMM_VERSION = (2, 0)
@@ -67,7 +72,7 @@ class DefaultClientInterface:
 
     def fetch_locations_collected(self, location_status: dict[int, int], new_mission_id: int) -> None:
         for k in location_status:
-            location_status[k] = 0
+            location_status[k] = LOCATION_AVAILABLE
 
 
 @dataclass(slots=True)
@@ -549,10 +554,10 @@ def update_missions(
                         max_locations = 0
                         checked_locations = 0
                         for location_id in mission_locations.values():
-                            if location_id == -1:
+                            if location_id == LOCATION_UNDEFINED:
                                 continue
                             max_locations += 1
-                            if location_id == 1:
+                            if location_id == LOCATION_COLLECTED:
                                 checked_locations += 1
                         if max_locations:
                             fp.write(send_int(max_locations, 300+offset))

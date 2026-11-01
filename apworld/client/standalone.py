@@ -16,8 +16,8 @@ from .comm import (
     status_loop,
     InventoryItem,
     MissionSlotInfo,
-    MAX_MISSION_GRID_SIDE_LENGTH
 )
+from . import comm
 from ..data import heroes, game_ids, locations, missions, tables
 from ..data.game_ids import Tech, GameID
 
@@ -199,7 +199,7 @@ def handle_send_merc(ctx: AsyncContext, unit_id: GameID) -> None:
 def handle_send_check(ctx: AsyncContext, *args: str) -> None:
     for arg in args:
         if arg.isnumeric():
-            ctx.mission_status.locations_collected[int(arg)] = 1
+            ctx.mission_status.locations_collected[int(arg)] = comm.LOCATION_COLLECTED
     print_location_status(ctx)
     ctx.game_status.pending_update |= PacketType.LOCATIONS
 
@@ -207,7 +207,7 @@ def handle_send_check(ctx: AsyncContext, *args: str) -> None:
 def handle_unsend_check(ctx: AsyncContext, *args: str) -> None:
     for arg in args:
         if arg.isnumeric():
-            ctx.mission_status.locations_collected[int(arg)] = -2
+            ctx.mission_status.locations_collected[int(arg)] = comm.LOCATION_UNSEND
     print_location_status(ctx)
     ctx.game_status.pending_update |= PacketType.LOCATIONS
 
@@ -396,13 +396,13 @@ class EchoClientInterface:
         for k in location_status:
             global_id = locations.global_location_id(new_mission_id, k)
             if locations.ID_TO_LOCATION.get(global_id) is not None:
-                location_status[k] = 0
+                location_status[k] = comm.LOCATION_AVAILABLE
             else:
-                location_status[k] = -1
+                location_status[k] = comm.LOCATION_UNDEFINED
 
 
 def mission_coord_to_index(x: int, y: int) -> int:
-    return x + y * MAX_MISSION_GRID_SIDE_LENGTH
+    return x + y * comm.MAX_MISSION_GRID_SIDE_LENGTH
 
 
 def init_test_data(game_status: GameStatus) -> None:
