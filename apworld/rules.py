@@ -344,7 +344,6 @@ def get_location_to_rules(world: 'Wc3World') -> dict[Wc3Location | int, Callable
         Wc3Location.UD2_ESTABLISH_BASE: logic.undead_has_military_unit,
         Wc3Location.UD2_VICTORY: logic.undead_has_military_unit,
 
-        Wc3Location.UD3_DESTROY_ORANGE_BASE: logic.undead_military_unit_or_4_arthas_levels,
         Wc3Location.UD3_DESTROY_BLUE_BASE: logic.undead_military_unit_or_4_arthas_levels,
         Wc3Location.UD3_DESTROY_YELLOW_BASE: logic.undead_military_unit_or_4_arthas_levels,
         Wc3Location.UD3_DESTROY_TEAL_BASE: logic.undead_military_unit_or_4_arthas_levels,

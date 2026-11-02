@@ -292,26 +292,6 @@ version = TFT
   - param String call status_check_location(21)
 
 
-## Orange Base Location
-- enabled: True
-- category: [20] Archipelago
-- starts off: False
-- is custom text: False
-- run on map init: False
-```description
-
-```
-### Functions
-- Event TriggerRegisterUnitEvent
-  - param Variable gg_unit_hlum_0020
-  - param Preset UnitEventDeath
-- Action DisableTrigger
-  - param Function GetTriggeringTrigger
-    - Function GetTriggeringTrigger
-- Action CustomScriptCode
-  - param String call status_check_location(22)
-
-
 ## Teal Base Location
 - enabled: True
 - category: [20] Archipelago
