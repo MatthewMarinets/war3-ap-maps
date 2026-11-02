@@ -777,9 +777,9 @@ version = TFT
 - Action SetUnitInvulnerable
   - param Variable Arthas
   - param Preset InvulnerabilityInvulnerable
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableDisable
-  - param Variable Arthas
+- Action SetPlayerHandicapXPBJ
+  - param Variable AAAP_Undead
+  - param String 0.0
 - Action SetHeroLevel
   - param Variable Sylvanas
   - param String 5
@@ -2199,9 +2199,9 @@ version = TFT
       - param Function GetEnumUnit
         - Function GetEnumUnit
       - param Preset InvulnerabilityVulnerable
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableEnable
-  - param Variable Arthas
+- Action SetPlayerHandicapXPBJ
+  - param Variable AAAP_Undead
+  - param String 40.00
 - Action ConditionalTriggerExecute
   - param Variable gg_trg_SylvanasReturnsHome
 - Action SetUnitManaPercentBJ
@@ -2595,9 +2595,9 @@ version = TFT
   - param Preset OnOffOn
 - Action SetSkyModel
   - param Preset SkyModelNone
-- Action SuspendHeroXPBJ
-  - param Preset EnableDisableEnable
-  - param Variable Arthas
+- Action SetPlayerHandicapXPBJ
+  - param Variable AAAP_Undead
+  - param String 40.00
 - Action CommentString
   - param String Visibility Settings
 - Action CreateFogModifierRadiusLocBJ

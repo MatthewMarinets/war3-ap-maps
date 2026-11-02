@@ -128,6 +128,11 @@ STRING 35
 Finally...
 }
 
+STRING 39
+{
+Sylvanas Windrunner
+}
+
 STRING 40
 // Sound\Dialogue\UndeadCampaign\Undead04A\U04ASylvanas01.mp3
 {
@@ -136,7 +141,7 @@ You've won through this gate, butcher, but you won't get through the second. The
 
 STRING 43
 {
-|cff32CD32HINT|r - Acolytes can Unsummon Undead buildings to recover gold and lumber. This is very useful when moving to a new base. 
+|cff32CD32HINT|r - Acolytes can Unsummon Undead buildings to recover gold and lumber. This is very useful when moving to a new base.
 }
 
 STRING 45
@@ -258,7 +263,7 @@ Gates of Silvermoon
 
 STRING 120
 {
-Now that the Key of the Three Moons has been completed, you must bring it to the heavily guarded Elfgate and unleash its ancient power.  
+Now that the Key of the Three Moons has been completed, you must bring it to the heavily guarded Elfgate and unleash its ancient power.
 }
 
 STRING 121
@@ -378,7 +383,7 @@ Defeat!
 
 STRING 447
 {
-|cff87CEEBNEW UNIT ACQUIRED|r  
+|cff87CEEBNEW UNIT ACQUIRED|r
 Goblin Zeppelin - A flying unit that can transport your troops across rivers and can be purchased from the Goblin Laboratory.
 }
 

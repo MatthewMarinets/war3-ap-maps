@@ -3150,7 +3150,7 @@ function Trig_Initialization_Actions takes nothing returns nothing
     // Init Unit Properties
     call ConditionalTriggerExecute(gg_trg_AP_Load_Arthas)
     call SetUnitInvulnerable(udg_Arthas, true)
-    call SuspendHeroXPBJ(false, udg_Arthas)
+    call SetPlayerHandicapXPBJ(udg_AAAP_Undead, 0.0)
     call SetHeroLevelBJ(udg_Sylvanas, 5, false)
     call SuspendHeroXPBJ(false, udg_Sylvanas)
     call SelectHeroSkill(udg_Sylvanas, 'AHca')
@@ -3774,7 +3774,7 @@ function Trig_Intro_Cinematic_Actions takes nothing returns nothing
     call ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), udg_P_HighElves02), function Trig_Intro_Cinematic_Func207002)
     call ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), udg_P_HighElves03), function Trig_Intro_Cinematic_Func208002)
     call ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), udg_AAAP_Undead), function Trig_Intro_Cinematic_Func209002)
-    call SuspendHeroXPBJ(true, udg_Arthas)
+    call SetPlayerHandicapXPBJ(udg_AAAP_Undead, 40.00)
     call ConditionalTriggerExecute(gg_trg_SylvanasReturnsHome)
     call SetUnitManaPercentBJ(udg_Arthas, 100)
     call SelectUnitSingle(udg_Arthas)
@@ -3929,7 +3929,7 @@ function Trig_IntroCancel_Actions takes nothing returns nothing
     call CinematicModeBJ(false, udg_AAAPG_Undead)
     call UseTimeOfDayBJ(true)
     call SetSkyModel(null)
-    call SuspendHeroXPBJ(true, udg_Arthas)
+    call SetPlayerHandicapXPBJ(udg_AAAP_Undead, 40.00)
     // Visibility Settings
     call CreateFogModifierRadiusLocBJ(true, udg_AAAP_Undead, FOG_OF_WAR_VISIBLE, GetRectCenter(gg_rct_BridgeCollapse), 768.00)
     call DestroyFogModifier(GetLastCreatedFogModifier())
