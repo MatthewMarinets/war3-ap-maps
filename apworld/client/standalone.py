@@ -399,6 +399,7 @@ class EchoClientInterface:
                 location_status[k] = comm.LOCATION_AVAILABLE
             else:
                 location_status[k] = comm.LOCATION_UNDEFINED
+        # location_status[1] = comm.LOCATION_COLLECTED
 
 
 def mission_coord_to_index(x: int, y: int) -> int:

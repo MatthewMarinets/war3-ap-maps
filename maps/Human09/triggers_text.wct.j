@@ -183,6 +183,8 @@ trigger t_captain_promoted
 trigger t_apply_mercenaries
 trigger t_create_mercenary_camps
 trigger t_init_mission_board
+quest location_tracker
+questitem array location_tracker_items
 endglobals
 
 function status_send takes nothing returns nothing
@@ -339,9 +341,11 @@ function status_load_locations takes nothing returns nothing
         exitwhen loc_id >= MAX_LOCATIONS
         if GetPlayerTechMaxAllowed(p, 2000+loc_id) == 1 then
             set locations_checked[loc_id] = true
+            call QuestItemSetCompleted(location_tracker_items[loc_id], true)
         endif
         if GetPlayerTechMaxAllowed(p, 3000+loc_id) == 1 then
             set locations_checked[loc_id] = false
+            call QuestItemSetCompleted(location_tracker_items[loc_id], false)
         endif
         set loc_id = loc_id + 1
     endloop
@@ -359,6 +363,7 @@ function status_check_location takes integer location_id returns nothing
         endif
     endif
     set locations_checked[location_id] = true
+    call QuestItemSetCompleted(location_tracker_items[location_id], true)
     call status_send()
 endfunction
 
@@ -497,8 +502,11 @@ function status_load_missions takes nothing returns nothing
     local integer i = 100
     local player p = Player(0)
     call SetPlayerTechMaxAllowed(p, 'ndog', 0)
+    call SetPlayerTechMaxAllowed(p, 'size', 0)
+    call SetPlayerTechMaxAllowed(p, 'path', 0)
+    call SetPlayerTechMaxAllowed(p, 'fxfx', 0)
     loop
-        exitwhen i >= 500
+        exitwhen i >= 800
         call SetPlayerTechMaxAllowed(p, i, 0)
         set i = i + 1
     endloop
@@ -627,6 +635,21 @@ function InitTrig_status takes nothing returns nothing
     set t_apply_mercenaries = CreateTrigger()
     // Missions
     set t_init_mission_board = CreateTrigger()
+    // Tracker
+    set location_tracker = CreateQuest()
+    call QuestSetTitle(location_tracker, "Locations")
+    call QuestSetIconPath(location_tracker, "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp")
+    call QuestSetRequired(location_tracker, false)
+    call QuestSetDiscovered(location_tracker, true)
+    set i = 0
+    loop
+        exitwhen i >= MAX_LOCATIONS
+        if location_names[i] != null then
+            set location_tracker_items[i] = QuestCreateItem(location_tracker)
+            call QuestItemSetDescription(location_tracker_items[i], location_names[i])
+        endif
+        set i = i + 1
+    endloop
 endfunction
 
 //\\// Trigger #3
