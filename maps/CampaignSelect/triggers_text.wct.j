@@ -1481,6 +1481,7 @@ function init_mission_board takes nothing returns nothing
             call BlzSetSpecialEffectX(effects[i], GetRectCenterX(first_region) + offsetx)
             call BlzSetSpecialEffectY(effects[i], GetRectCenterY(first_region) - offsety)
         endif
+        set i = i + 1
     endloop
 endfunction
 
