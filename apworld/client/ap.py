@@ -262,7 +262,12 @@ class Wc3Context(CommonContext):
         load_hero_state(self.comm_ctx.game_status)
 
         # Mission Order
+        def mission_coord_to_index(x: int, y: int) -> int:
+            return x + y * comm.MAX_MISSION_GRID_SIDE_LENGTH
+
         self.comm_ctx.game_status.mission_order.clear()
+        self.comm_ctx.game_status.mission_order_markers.clear()
+        self.comm_ctx.game_status.mission_order_paths.clear()
         self.mission_to_requirement.clear()
         self.goal_locations.clear()
         self.item_unlock_effects.clear()
@@ -270,6 +275,7 @@ class Wc3Context(CommonContext):
         self.held_items.clear()
         self.completed_missions.clear()
         self.mission_to_slot.clear()
+        single_requirements: list[tuple[missions.Wc3Mission, int]] = []
         mission_ids: list[int] = []
         for position_tuple, mission_slot_data in slot_data["mission_order"].items():
             parts = position_tuple.split(",")
@@ -294,6 +300,7 @@ class Wc3Context(CommonContext):
             flags = mission_slot_data.get("flags", 0)
             if mission_orders.FLAG_GOAL & flags:
                 self.goal_locations[locations.MISSION_TO_VICTORY_LOCATION[mission]] = 0
+                self.comm_ctx.game_status.mission_order_markers.append(mission_coord_to_index(x, y))
             if "requirements" in mission_slot_data:
                 requirement = slot_data_to_requirement(position_tuple, mission_slot_data["requirements"])
                 if requirement is not None:
@@ -306,6 +313,14 @@ class Wc3Context(CommonContext):
                         self.mission_unlock_effects.setdefault(affecting_mission, []).append((x, y))
                     for affecting_item in affecting_items:
                         self.item_unlock_effects.setdefault(affecting_item, []).append((x, y))
+                    if len(requirement.missions_) == 1:
+                        single_requirements.append((requirement.missions_[0], mission_coord_to_index(x, y)))
+        for from_mission, to_index in single_requirements:
+            from_slot = self.mission_to_slot.get(from_mission)
+            if from_slot is None:
+                continue
+            from_index = mission_coord_to_index(*from_slot)
+            self.comm_ctx.game_status.mission_order_paths.append((from_index, to_index))
 
         # Request mission completion state
         async_start(self.send_msgs([{
