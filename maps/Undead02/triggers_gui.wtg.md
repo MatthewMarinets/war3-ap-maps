@@ -2250,6 +2250,8 @@ After running this, set the unit facing for Arthas.
         - Function GetEnumUnit
 - Action RemoveUnit
   - param Variable KelThuzad
+- Action ResetUnitLookAt
+  - param Variable Arthas
 - Action ResetTerrainFogBJ
 - Action EnableTrigger
   - param Variable gg_trg_ReachTichondriusWithRemainsCinSkip

@@ -4372,6 +4372,7 @@ function Trig_Arthas_Picks_Up_KelThuzad_Cinematic_Skip_Actions takes nothing ret
     set udg_KelThuzad1CinSkip=true
     call ForGroupBJ(GetUnitsOfPlayerAll(udg_PALADIN1), function Trig_Arthas_Picks_Up_KelThuzad_Cinematic_Skip_Func003002)
     call RemoveUnit(udg_KelThuzad)
+    call ResetUnitLookAt(udg_Arthas)
     call ResetTerrainFogBJ()
     call EnableTrigger(gg_trg_ReachTichondriusWithRemainsCinSkip)
     call ConditionalTriggerExecute(gg_trg_ReachTichondriusWithRemainsCinSkip)
