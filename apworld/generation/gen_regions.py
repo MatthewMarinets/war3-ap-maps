@@ -222,6 +222,7 @@ def configure_mission_order(world: 'Wc3World') -> None:
                 mission_slot = mission_orders.MissionSlot(x, y, (mission,))
                 if campaign_spec:
                     mission_slot.requires = mission_orders.Requirement([(campaign_spec[-1].x, campaign_spec[-1].y)])
+                campaign_spec.append(mission_slot)
                 x += 1
                 if x > GRID_MAX_COORD:
                     x = 0
