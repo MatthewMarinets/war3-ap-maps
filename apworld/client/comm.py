@@ -375,9 +375,9 @@ def update_locations(game_status: GameStatus, status: MissionStatus) -> None:
         fp.write(send_int(packet_status.last_sent, 'nech'))
         for loc_id in range(MAX_LOCATIONS):
             location_state = status.locations_collected.get(loc_id, 0)
-            if location_state > 0:
+            if location_state == LOCATION_COLLECTED or location_state == LOCATION_UNDEFINED:
                 fp.write(send_int(1, 2000+loc_id))
-            elif location_state < -1:
+            elif location_state == LOCATION_UNSEND:
                 fp.write(send_int(1, 3000+loc_id))
         fp.write(ENDFUNCTION)
 

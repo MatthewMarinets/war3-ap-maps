@@ -345,6 +345,10 @@ def create_regions(world: 'Wc3World') -> None:
 
         # Locations
         for location in locations.MISSION_TO_LOCATIONS[mission]:
+            if (location.global_name() in world.options.exclude_locations.value
+                and not (location.type & locations.Wc3LocationType.VICTORY)
+            ):
+                continue
             new_location = Location(world.player, location.global_name(), location.id, new_region)
             new_region.locations.append(new_location)
             world.g.locations.append(new_location)
