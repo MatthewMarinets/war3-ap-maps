@@ -226,6 +226,18 @@ class Wc3Logic:
             Wc3Item.FROST_WYRM,
         ))
 
+    def undead_military_unit_or_4_arthas_levels(self, state: 'CollectionState') -> bool:
+        return (
+            self.undead_has_military_unit(state)
+            or self.has(state, Wc3Item.FALLEN_ARTHAS_LEVEL, 4)
+        )
+
+    def undead_military_unit_and_4_arthas_levels(self, state: 'CollectionState') -> bool:
+        return (
+            self.undead_has_military_unit(state)
+            and self.has(state, Wc3Item.FALLEN_ARTHAS_LEVEL, 4)
+        )
+
     def orc_has_healing(self, state: 'CollectionState') -> bool:
         return (
             self.has_any(state, (Wc3Item.SHOP_ITEM_HEALING_SALVE,))
@@ -331,6 +343,52 @@ def get_location_to_rules(world: 'Wc3World') -> dict[Wc3Location | int, Callable
         Wc3Location.UD2_UTHER_ITEM: logic.undead_has_military_unit,
         Wc3Location.UD2_ESTABLISH_BASE: logic.undead_has_military_unit,
         Wc3Location.UD2_VICTORY: logic.undead_has_military_unit,
+
+        Wc3Location.UD3_DESTROY_ORANGE_BASE: logic.undead_military_unit_or_4_arthas_levels,
+        Wc3Location.UD3_DESTROY_BLUE_BASE: logic.undead_military_unit_or_4_arthas_levels,
+        Wc3Location.UD3_DESTROY_YELLOW_BASE: logic.undead_military_unit_or_4_arthas_levels,
+        Wc3Location.UD3_DESTROY_TEAL_BASE: logic.undead_military_unit_or_4_arthas_levels,
+        Wc3Location.UD3_DESTROY_BLUE_BASE: logic.undead_military_unit_or_4_arthas_levels,
+        Wc3Location.UD3_SOUTH_GNOLL_OVERSEER_ITEM: logic.undead_military_unit_or_4_arthas_levels,
+        Wc3Location.UD3_ROCK_GOLEM_ITEM: logic.undead_military_unit_or_4_arthas_levels,
+        Wc3Location.UD3_VICTORY: logic.undead_military_unit_or_4_arthas_levels,
+
+        Wc3Location.UD4_NORTHWEST_ALTAR: logic.undead_has_military_unit,
+        Wc3Location.UD4_NORTHWEST_BASE: logic.undead_has_military_unit,
+        Wc3Location.UD4_NORTH_ALTAR: logic.undead_has_military_unit,
+        Wc3Location.UD4_NORTH_BASE: logic.undead_has_military_unit,
+        Wc3Location.UD4_SOUTHEAST_ALTAR: logic.undead_has_military_unit,
+        Wc3Location.UD4_VICTORY: logic.undead_has_military_unit,
+
+        Wc3Location.UD5_SYLVANAS_BASE_ITEM: logic.undead_has_military_unit,
+        Wc3Location.UD5_DESTROY_SYLVANAS_CASTLE: logic.undead_has_military_unit,
+        Wc3Location.UD5_EAST_SILVERMOON_CASTLE: logic.undead_has_military_unit,
+        Wc3Location.UD5_WEST_SILVERMOON_CASTLE: logic.undead_has_military_unit,
+        Wc3Location.UD5_VICTORY: logic.undead_has_military_unit,
+
+        Wc3Location.UD6_SLAY_JUBEITHOS: logic.undead_has_military_unit,
+        Wc3Location.UD6_DESTROY_RED_BASE: logic.undead_has_military_unit,
+        Wc3Location.UD6_DESTROY_BLUE_BASE: logic.undead_has_military_unit,
+        Wc3Location.UD6_DESTROY_BROWN_BASE: logic.undead_has_military_unit,
+        Wc3Location.UD6_DESTROY_LIGHT_BLUE_BASE: logic.undead_has_military_unit,
+        Wc3Location.UD6_DESTROY_ORANGE_BASE: logic.undead_has_military_unit,
+        Wc3Location.UD6_VICTORY: logic.undead_has_military_unit,
+
+        Wc3Location.UD7_VICTORY: logic.undead_military_unit_and_4_arthas_levels,
+        Wc3Location.UD7_DESTROY_GRAY_BASE: logic.undead_military_unit_and_4_arthas_levels,
+        Wc3Location.UD7_DESTROY_LIGHT_BLUE_BASE: logic.undead_has_military_unit,
+        Wc3Location.UD7_DESTROY_BLUE_BASE: logic.undead_has_military_unit,
+        Wc3Location.UD7_SLAY_SECOND_ARCHMAGE: logic.undead_has_military_unit,
+        Wc3Location.UD7_MAGIC_VAULT_ITEM_1: logic.undead_has_military_unit,
+        Wc3Location.UD7_MAGIC_VAULT_ITEM_2: logic.undead_has_military_unit,
+        Wc3Location.UD7_NORTHEAST_CAGE_RESCUE: logic.undead_has_military_unit,
+
+        Wc3Location.UD8_VICTORY: logic.undead_military_unit_and_4_arthas_levels,
+        Wc3Location.UD8_DESTROY_BLUE_BASE: logic.undead_military_unit_and_4_arthas_levels,
+        Wc3Location.UD8_DESTROY_GRAY_BASE: logic.undead_military_unit_and_4_arthas_levels,
+        Wc3Location.UD8_DESTROY_LIGHT_BLUE_BASE: logic.undead_military_unit_and_4_arthas_levels,
+        Wc3Location.UD8_MAGIC_VAULT_ITEM_1: logic.undead_has_military_unit,
+        Wc3Location.UD8_MAGIC_VAULT_ITEM_2: logic.undead_has_military_unit,
     }
     return location_to_rule
 
