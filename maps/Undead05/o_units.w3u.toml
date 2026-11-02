@@ -895,6 +895,18 @@ table_column = 0
 value = 5
 object_id = 'null'
 
+[blizzard_objects.uswb]
+parent_id = 'uswb'  # Sylvanas Windrunner
+entity_id = 'null'
+
+[[blizzard_objects.uswb.modifications]]
+modification_id = 'usnd'  # UnitUI.Unit Sound Set
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "EvilSylvanas"
+object_id = 'uswb'  # Sylvanas Windrunner
+
 
 [map_objects.hC00]
 parent_id = 'hpea'  # Peasant
