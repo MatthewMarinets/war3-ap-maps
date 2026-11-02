@@ -1095,3 +1095,19 @@ variation_level = 0
 table_column = 0
 value = 255
 object_id = 'null'
+
+[[map_objects.uA00.modifications]]
+modification_id = 'uhpr'  # UnitBalance.Hit Points Regeneration Rate
+data_type = "Unreal"
+variation_level = 0
+table_column = 0
+value = 2.0
+object_id = 'null'
+
+[[map_objects.uA00.modifications]]
+modification_id = 'uhrt'  # UnitBalance.Hit Points Regeneration Type
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "blight"
+object_id = 'null'

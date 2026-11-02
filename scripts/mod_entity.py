@@ -164,7 +164,7 @@ MODIFICATION_TYPES: dict[LiteralString, DataType] = {
     eid.FIELD_UNIT_STATS_GOLD_COST: DataType.Integer,
     eid.FIELD_UNIT_STATS_HIT_POINTS_MAXIMUM: DataType.Integer,
     eid.FIELD_UNIT_STATS_HIT_POINTS_REGENERATION_RATE: DataType.Unreal,
-    eid.FIELD_UNIT_STATS_HIT_POINTS_REGENERATION_TYPE: DataType.Integer,  # regenType
+    eid.FIELD_UNIT_STATS_HIT_POINTS_REGENERATION_TYPE: DataType.String,  # regenType
     eid.FIELD_UNIT_STATS_IS_BUILDING: DataType.Integer,  # bool
     eid.FIELD_UNIT_STATS_LEVEL: DataType.Integer,
     eid.FIELD_UNIT_STATS_LUMBER_BOUNTY_BASE: DataType.Integer,

@@ -311,6 +311,8 @@ def update_units(units_file: str, race: Wc3Race) -> None:
             editor_ids.FIELD_UNIT_ABILITIES_NORMAL: cid.ABIL_IRREGULAR_SPELLBOOK_UNDEAD,
             editor_ids.FIELD_UNIT_STATS_MANA_MAXIMUM: 1,
             editor_ids.FIELD_UNIT_SOUND_SET: 'Acolyte',
+            editor_ids.FIELD_UNIT_STATS_HIT_POINTS_REGENERATION_RATE: 2.0,
+            editor_ids.FIELD_UNIT_STATS_HIT_POINTS_REGENERATION_TYPE: 'blight',
             # Zombie has baseline tint
             editor_ids.FIELD_UNIT_UI_TINT_GREEN: 255,
             editor_ids.FIELD_UNIT_UI_TINT_BLUE: 255,
