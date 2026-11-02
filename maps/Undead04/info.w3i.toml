@@ -126,18 +126,6 @@ player_mask_flags = 0xf04
 name = 'TRIGSTR_519'
 
 [[upgrades]]
-player_flags = 0x48
-upgrade_id = 'Ruac'  # Cannibalize
-level = 0
-availability = "Researched"
-
-[[upgrades]]
-player_flags = 0x8
-upgrade_id = 'Ruwb'  # Web
-level = 0
-availability = "Researched"
-
-[[upgrades]]
 player_flags = 0x8
 upgrade_id = 'Ruba'  # Banshee Adept Training,Banshee Master Training
 level = 0
