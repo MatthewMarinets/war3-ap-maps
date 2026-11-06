@@ -4,46 +4,18 @@
 - [x] Human03
 - [x] Human04
 - [x] Human05
-  - [x] Opening cinematic: fake Jaina teleporting away
 - [x] Human06
-  - [x] Eliminate gamecache usage
-  - [x] Redirect starting next mission
-  - [x] Hero init
-  - [x] Remove hero level cap triggers
-  - [x] Replace items -> AP items
-  - [x] Location sending functions
-  - [x] Purge any unlock tech functions
-  - [x] Creep bounty
-- [ ] Human07
-  - [x] Eliminate gamecache usage
-  - [x] Redirect starting next mission
-  - [x] Hero init
-  - [x] Remove hero level cap triggers
-  - [x] Special considerations for first hero appearances
-  - [x] Replace items -> AP items
-  - [x] Location sending functions
-  - [x] Purge any unlock tech functions
-  - [x] Creep bounty
+- [x] Human07
 - [x] Human08
-  - [x] Eliminate gamecache usage
-  - [x] Redirect starting next mission
-  - [x] Hero init
-  - [x] Remove hero level cap triggers
-  - [x] Replace items -> AP items
-  - [x] Location sending functions
-  - [x] Purge any unlock tech functions
-  - [x] Creep bounty
-  - [x] Figure out mercenary camps
-- [ ] Human09
-  - [x] Eliminate gamecache usage
-  - [x] Redirect starting next mission
-  - [x] Hero init
-  - [n/a] Remove hero level cap triggers
-  - [x] Replace items -> AP items
-  - [x] Location sending functions
-  - [x] Creep bounty
-  - [x] Figure out mercenary camps
-  - [ ] Evil Arthas
+- [x] Human09
+- [x] Undead01
+- [x] Undead02
+- [x] Undead03
+- [x] Undead04
+- [x] Undead05
+- [x] Undead06
+- [x] Undead07
+- [x] Undead08
 
 ### Item check conditions boilerplate
 ```markdown
@@ -63,29 +35,94 @@
 - [x] comm: Global <--> local location conversion
 - [x] All heroes should cost 0 food
 - [ ] Begin converting missions
+  - [ ] upgrade roc
+  - [ ] Save in editor
+  - [ ] mapscript
   - [ ] Eliminate gamecache usage
-  - [ ] Redirect starting next mission
+  - [ ] Redirect starting next mission to CampaignSelect.w3x
   - [ ] Hero init
-  - [ ] Remove hero level cap triggers
+  - [ ] Remove hero level cap triggers (SuspendHeroXPBJ)
   - [ ] Special considerations for first hero appearances
-  - [ ] Replace items -> AP items
+  - [ ] Replace items -> AP items (CreateItemLoc)
   - [ ] Location sending functions
-  - [ ] Purge any unlock tech functions
+  - [ ] Purge any unlock tech functions -- SetPlayerUnitAvailableBJ, SetPlayerTechMaxAllowed
   - [ ] Creep bounty
+  - [ ] Mercenary camps
+  - [ ] irregulars
 
-- [x] mission unlocks don't work
-- [x] client: debug text on colours
-- [x] Beaten display doesn't work
-- [x] Knight didn't unlock barracks
-- [ ] Hero items and abils didn't persist across resets
-- [x] level select: debug text when generating buttons
-- [x] all maps: Update status.j with missions
-- [x] level select: button update on secondary mission packets
-- [x] upgrade scripts: change Akama ultimate abil
-- [x] upgrade scripts: Rokhan voicelines instead of Shadow Hunter voicelines
-- [ ] upgrade scripts: Sylvanas ranger movement voicelines are broken
-- [x] H2: Feranor gave check without Searinox item
-- [x] Irregulars submenu missing a hotkey
+- [x] Don't copy messages on getting locations
+- [ ] Item stash / item recovery
+- [x] Location tracker in missions
+- [x] Arcane Vault items don't roll
+- [x] Mercenary distribution redux
+- [x] mission orders
+
+#### Map conversion tips
+Case: Goblin Merchant locations
+* Remember to update the goblin merchant abilities to include `Asid`
+```toml
+
+[blizzard_objects.ngme]
+parent_id = 'ngme'  # Goblin Merchant
+entity_id = 'null'
+
+[[blizzard_objects.ngme.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Asid,Aneu,Avul,Apit"
+object_id = 'null'
+```
+
+Case: Mercenary camp locations
+* Remember to add `Asid` for the location purchase, and `Asud` for the mercenary camp system
+* Remember to remove base units sold for the mercenary camp system
+```toml
+[blizzard_objects.nmrd]
+parent_id = 'nmrd'  # Mercenary Camp
+entity_id = 'null'
+
+[[blizzard_objects.nmrd.modifications]]
+modification_id = 'uabi'  # UnitAbilities.Normal
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Asud,Asid,Ane2,Avul"
+object_id = 'nmrd'  # Mercenary Camp
+
+[[blizzard_objects.nmrd.modifications]]
+modification_id = 'useu'  # Profile.Units Sold
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = ""
+object_id = 'nmrd'  # Mercenary Camp
+```
+
+Case:
+`TriggerRegisterUnitEvent` with a literal unit that is now made by trigger (check player and variable)
+```md
+- Event TriggerRegisterPlayerUnitEventSimple
+  - param Preset Player01
+  - param Preset PlayerUnitEventDeath
+- Condition OperatorCompareUnit
+  - param Function GetTriggerUnit
+    - Function GetTriggerUnit
+  - param Preset OperatorEqualENE
+  - param Variable Arthas
+```
+
+Case:
+`TriggerRegisterUnitInRangeSimple` with a literal unit
+* There seems to be no per-player equivalent; register the event programmatically after the hero is created
+```md
+<!-- python3 -m scripts.insert_trigger u1 "AP Load Arthas" "Post hero init" -->
+- Action CustomScriptCode
+  - param String call TriggerRegisterUnitInRangeSimple(gg_trg_Acolyte_Touched, 256.00, udg_Arthas)
+- Action CustomScriptCode
+  - param String call TriggerRegisterUnitInRangeSimple(gg_trg_Unit_Scared, 256.00, udg_Arthas)
+```
 
 ### Longer term
 - [ ] No-builds: unlock tech for usage based on max allowed
