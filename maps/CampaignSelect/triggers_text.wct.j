@@ -1172,6 +1172,7 @@ endfunction
 function adventurer_lightning takes nothing returns nothing
     // local effect e1 = AddSpecialEffect("Doodads\\Cinematic\\Lightningbolt\\Lightningbolt.mdl", GetUnitX(udg_adventurer), GetUnitY(udg_adventurer))
     local effect e2 = AddSpecialEffect("Abilities\\Spells\\Items\\AIfb\\AIfbTarget.mdl", GetUnitX(udg_adventurer), GetUnitY(udg_adventurer))
+    call BlzSetSpecialEffectHeight(e2, 10.0)
     call TriggerSleepAction(2)
     // call DestroyEffect(e1)
     call DestroyEffect(e2)
