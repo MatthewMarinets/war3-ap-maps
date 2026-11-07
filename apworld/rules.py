@@ -226,6 +226,37 @@ class Wc3Logic:
             Wc3Item.FROST_WYRM,
         ))
 
+    def undead_has_anti_golem(self, state: 'CollectionState') -> bool:
+        return (
+            self.has_any(state, (
+                Wc3Item.GHOUL,
+                Wc3Item.CRYPT_FIEND,
+                Wc3Item.GARGOYLE,
+                Wc3Item.MEAT_WAGON,
+                Wc3Item.ABOMINATION,
+                Wc3Item.SPIRIT_TOWER,
+                Wc3Item.NERUBIAN_TOWER,
+            ))
+            or (
+                # Skeletons
+                self.has(state, Wc3Item.NECROMANCER)
+                and self.has_any(state, (
+                    Wc3Item.UNDEAD_UNHOLY_STRENGTH,
+                    Wc3Item.UNDEAD_UNHOLY_ARMOR,
+                    Wc3Item.UNDEAD_CREATURE_STRENGTH,
+                    Wc3Item.UNDEAD_CREATURE_CARAPACE,
+                ))
+            )
+            or (
+                # High-level Arthas with Anti-magic shell
+                self.has(state, Wc3Item.FALLEN_ARTHAS_LEVEL, 5)
+                and self.has_all(state, (
+                    Wc3Item.BANSHEE,
+                    Wc3Item.BANSHEE_TRAINING,
+                ))
+            )
+        )
+
     def undead_military_unit_or_4_arthas_levels(self, state: 'CollectionState') -> bool:
         return (
             self.undead_has_military_unit(state)
@@ -339,6 +370,7 @@ def get_location_to_rules(world: 'Wc3World') -> dict[Wc3Location | int, Callable
 
         Wc3Location.HU9_VICTORY: logic.human_9_victory,
 
+        Wc3Location.UD2_GRANITE_GOLEM_ITEM: logic.undead_has_anti_golem,
         Wc3Location.UD2_SLAY_UTHER: logic.undead_has_military_unit,
         Wc3Location.UD2_UTHER_ITEM: logic.undead_has_military_unit,
         Wc3Location.UD2_ESTABLISH_BASE: logic.undead_has_military_unit,
