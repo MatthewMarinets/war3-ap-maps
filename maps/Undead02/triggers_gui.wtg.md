@@ -3075,6 +3075,18 @@ Disables previous defeat condition.
       - param Function GetRectCenter
         - Function GetRectCenter
           - param Variable gg_rct_Ticho_Ghouls_Start_THen_Move
+- Action ForGroup
+  - param Function GetUnitsOfPlayerAndTypeId
+    - Function GetUnitsOfPlayerAndTypeId
+      - param Variable ThePlayer
+      - param String uA00
+  - param Function DoNothing
+    - Action SetUnitPositionLoc
+      - param Function GetEnumUnit
+        - Function GetEnumUnit
+      - param Function GetRectCenter
+        - Function GetRectCenter
+          - param Variable gg_rct_Ticho_Ghouls_Start_THen_Move
 - Action GroupPointOrderLoc
   - param Function GetUnitsInRectAll
     - Function GetUnitsInRectAll
