@@ -208,8 +208,28 @@ level = 0
 availability = "Unavailable"
 
 [[technologies]]
-player_flags = 0x8
-tech_id = 'unp2'  # Black Citadel
+player_flags = 0xf
+tech_id = 'Udea'  # Death Knight
+
+[[technologies]]
+player_flags = 0xf
+tech_id = 'Ulic'  # Lich
+
+[[technologies]]
+player_flags = 0xf
+tech_id = 'Udre'  # Dreadlord
+
+[[technologies]]
+player_flags = 0xf
+tech_id = 'Hpal'  # Paladin
+
+[[technologies]]
+player_flags = 0xf
+tech_id = 'Hamg'  # Archmage
+
+[[technologies]]
+player_flags = 0xf
+tech_id = 'Hmkg'  # Mountain King
 
 [[technologies]]
 player_flags = 0xf

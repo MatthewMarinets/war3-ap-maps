@@ -7359,6 +7359,12 @@ endfunction
 //***************************************************************************
 
 function InitTechTree_Player1 takes nothing returns nothing
+    call SetPlayerTechMaxAllowed(Player(1), 'Udea', 0)
+    call SetPlayerTechMaxAllowed(Player(1), 'Ulic', 0)
+    call SetPlayerTechMaxAllowed(Player(1), 'Udre', 0)
+    call SetPlayerTechMaxAllowed(Player(1), 'Hpal', 0)
+    call SetPlayerTechMaxAllowed(Player(1), 'Hamg', 0)
+    call SetPlayerTechMaxAllowed(Player(1), 'Hmkg', 0)
     call SetPlayerTechMaxAllowed(Player(1), 'Hblm', 0)
     call SetPlayerTechMaxAllowed(Player(1), 'Oshd', 0)
     call SetPlayerTechMaxAllowed(Player(1), 'Ucrl', 0)
@@ -7366,6 +7372,12 @@ function InitTechTree_Player1 takes nothing returns nothing
 endfunction
 
 function InitTechTree_Player2 takes nothing returns nothing
+    call SetPlayerTechMaxAllowed(Player(2), 'Udea', 0)
+    call SetPlayerTechMaxAllowed(Player(2), 'Ulic', 0)
+    call SetPlayerTechMaxAllowed(Player(2), 'Udre', 0)
+    call SetPlayerTechMaxAllowed(Player(2), 'Hpal', 0)
+    call SetPlayerTechMaxAllowed(Player(2), 'Hamg', 0)
+    call SetPlayerTechMaxAllowed(Player(2), 'Hmkg', 0)
     call SetPlayerTechMaxAllowed(Player(2), 'Hblm', 0)
     call SetPlayerTechMaxAllowed(Player(2), 'Oshd', 0)
     call SetPlayerTechMaxAllowed(Player(2), 'Ucrl', 0)
@@ -7373,7 +7385,12 @@ function InitTechTree_Player2 takes nothing returns nothing
 endfunction
 
 function InitTechTree_Player3 takes nothing returns nothing
-    call SetPlayerTechMaxAllowed(Player(3), 'unp2', 0)
+    call SetPlayerTechMaxAllowed(Player(3), 'Udea', 0)
+    call SetPlayerTechMaxAllowed(Player(3), 'Ulic', 0)
+    call SetPlayerTechMaxAllowed(Player(3), 'Udre', 0)
+    call SetPlayerTechMaxAllowed(Player(3), 'Hpal', 0)
+    call SetPlayerTechMaxAllowed(Player(3), 'Hamg', 0)
+    call SetPlayerTechMaxAllowed(Player(3), 'Hmkg', 0)
     call SetPlayerTechMaxAllowed(Player(3), 'Hblm', 0)
     call SetPlayerTechMaxAllowed(Player(3), 'Oshd', 0)
     call SetPlayerTechMaxAllowed(Player(3), 'Ucrl', 0)

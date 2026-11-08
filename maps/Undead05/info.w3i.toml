@@ -204,32 +204,16 @@ player_flags = 0x8
 tech_id = 'Udre'  # Dreadlord
 
 [[technologies]]
-player_flags = 0x8
-tech_id = 'ubon'  # Boneyard
-
-[[technologies]]
-player_flags = 0x207
+player_flags = 0x20f
 tech_id = 'Hpal'  # Paladin
 
 [[technologies]]
-player_flags = 0x207
+player_flags = 0x20f
 tech_id = 'Hamg'  # Archmage
 
 [[technologies]]
-player_flags = 0x207
+player_flags = 0x20f
 tech_id = 'Hmkg'  # Mountain King
-
-[[technologies]]
-player_flags = 0x8
-tech_id = 'uban'  # Banshee
-
-[[technologies]]
-player_flags = 0x8
-tech_id = 'uabo'  # Abomination
-
-[[technologies]]
-player_flags = 0x8
-tech_id = 'usap'  # Sacrificial Pit
 
 [[technologies]]
 player_flags = 0xf
