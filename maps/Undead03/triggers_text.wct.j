@@ -146,7 +146,6 @@ function InitTrig_map_config takes nothing returns nothing
     set location_names[7] = "Rock Golem Item"
     set location_names[20] = "Slay Sylvanas"
     set location_names[21] = "Destroy North Town Hall"
-    set location_names[22] = "Destroy Northeast Lumber Mill"
     set location_names[23] = "Destroy East Town Hall"
     set location_names[24] = "Destroy West Town Hall"
     set location_names[25] = "Destroy Blue Castle"

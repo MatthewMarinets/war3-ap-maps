@@ -1569,7 +1569,7 @@ modification_id = 'unam'  # Profile.Name
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Destroy Northeast Lumber Mill"
+value = "Archipelago Item 22"
 object_id = 'null'
 
 [[map_objects.I026.modifications]]
@@ -1577,7 +1577,7 @@ modification_id = 'utip'  # Profile.Tooltip - Basic
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Purchase Destroy Northeast Lumber Mill location"
+value = "Purchase Archipelago Item 22 location"
 object_id = 'null'
 
 [[map_objects.I026.modifications]]
@@ -1585,7 +1585,7 @@ modification_id = 'utub'  # Profile.Tooltip - Extended
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Destroy Northeast Lumber Mill\" location."
+value = "Collects the \"Archipelago Item 22\" location."
 object_id = 'null'
 
 [[map_objects.I026.modifications]]
@@ -1593,7 +1593,7 @@ modification_id = 'ides'  # Profile.Description
 data_type = "String"
 variation_level = 0
 table_column = 0
-value = "Collects the \"Destroy Northeast Lumber Mill\" location."
+value = "Collects the \"Archipelago Item 22\" location."
 object_id = 'null'
 
 [[map_objects.I026.modifications]]
