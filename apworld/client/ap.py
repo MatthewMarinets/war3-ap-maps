@@ -25,6 +25,9 @@ from ..generation import gen_slot_data
 from . import comm
 
 
+APWORLD_VERSION = 1
+
+
 @dataclass(slots=True)
 class MissionRequirement:
     missions_: list[missions.Wc3Mission] = field(default_factory=list)
@@ -103,6 +106,10 @@ def requirement_to_item_mission_requirements(
 
 class Wc3CommandProcessor(ClientCommandProcessor):
     ctx: 'Wc3Context'
+
+    def _cmd_version(self) -> None:
+        """Prints the wc3 apworld version number"""
+        logger.info(f"apworld version: {APWORLD_VERSION}")
 
     def _cmd_setup(self) -> None:
         """Sets up the registry to play on 1.29 or older. Windows-only"""
