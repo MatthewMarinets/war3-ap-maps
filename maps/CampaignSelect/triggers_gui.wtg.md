@@ -11,6 +11,7 @@ version = TFT
 | Name | Type | Array Size | Initial Value |
 | ---- | ---- | ---------- | ------------- |
 | adventurer | unit | . | UnitNull |
+| BUILD_VERSION | integer | . | 1 |
 
 # Triggers
 ## fileio
@@ -76,6 +77,18 @@ version = TFT
 ## zoom
 - enabled: True
 - category: [0] Archipelago
+- starts off: False
+- is custom text: True
+- run on map init: False
+```description
+
+```
+### Functions
+
+
+## version
+- enabled: True
+- category: [1] Mission Select
 - starts off: False
 - is custom text: True
 - run on map init: False

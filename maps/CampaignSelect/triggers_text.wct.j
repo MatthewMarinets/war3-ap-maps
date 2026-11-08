@@ -1,5 +1,5 @@
 // version: 1
-// Triggers: 10
+// Triggers: 11
 //\\// Trigger #0
 // This file defines file IO functions for the JASS side of things
 // Based off the FileIO module created by Nestharus, see:
@@ -1072,6 +1072,19 @@ endfunction
 
 
 //\\// Trigger #6
+function Trig_version_Actions takes nothing returns nothing
+    call print("build version: " + I2S(udg_BUILD_VERSION))
+endfunction
+
+//===========================================================================
+function InitTrig_version takes nothing returns nothing
+    set gg_trg_version = CreateTrigger()
+    call TriggerRegisterPlayerChatEvent(gg_trg_version, USER_PLAYER, "-version", false)
+    call TriggerAddAction(gg_trg_version, function Trig_version_Actions)
+endfunction
+
+
+//\\// Trigger #7
 globals
 unit array disco_balls
 trigger recolour_disco_balls_t
@@ -1198,7 +1211,7 @@ function InitTrig_start_victory takes nothing returns nothing
 endfunction
 
 
-//\\// Trigger #7
+//\\// Trigger #8
 
 globals
 constant integer MAX_MISSION_GRID_SIDE_LENGTH = 10
@@ -1238,6 +1251,7 @@ function grant_resources takes nothing returns nothing
             call SetPlayerState(USER_PLAYER, PLAYER_STATE_RESOURCE_GOLD, current_gold + 123)
         endif
     endif
+    call SetPlayerState(USER_PLAYER, PLAYER_STATE_RESOURCE_LUMBER, udg_BUILD_VERSION)
 endfunction
 
 //===========================================================================
@@ -1573,7 +1587,7 @@ function InitTrig_mission_select_init takes nothing returns nothing
 endfunction
 
 
-//\\// Trigger #9
+//\\// Trigger #10
 
 //===========================================================================
 function InitTrig_markets_init takes nothing returns nothing
