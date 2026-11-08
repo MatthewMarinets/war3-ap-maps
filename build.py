@@ -6,6 +6,7 @@ import glob
 import zipfile
 import os
 import multiprocessing as mp
+import tomllib
 # import threading
 
 from mapfile import pack, common, mpq
@@ -87,10 +88,14 @@ def zip_apworld() -> None:
 
 
 def main(mod: bool, apworld: bool) -> None:
+    with open('build_version.toml', 'rb') as fp:
+        versions = tomllib.load(fp)
     if mod:
         build_mod()
+        print(f'Mod version: {versions["mod_version"]}')
     if apworld:
         zip_apworld()
+        print(f'apworld version: {versions["apworld_version"]}')
 
 
 if __name__ == '__main__':
