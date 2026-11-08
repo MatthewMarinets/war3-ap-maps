@@ -15,6 +15,14 @@ table_column = 0
 value = "hhes,nhea,ebal"
 object_id = 'null'
 
+[[blizzard_objects.nheb.modifications]]
+modification_id = 'upap'  # UnitBalance.Placement Requires
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "unbuildable"
+object_id = 'nheb'  # High Elven Barracks
+
 [blizzard_objects.hpea]
 parent_id = 'hpea'  # Peasant
 entity_id = 'null'
@@ -1042,6 +1050,46 @@ variation_level = 0
 table_column = 0
 value = 6
 object_id = 'null'
+
+[blizzard_objects.nefm]
+parent_id = 'nefm'  # High Elven Farm
+entity_id = 'null'
+
+[[blizzard_objects.nefm.modifications]]
+modification_id = 'upap'  # UnitBalance.Placement Requires
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "unbuildable"
+object_id = 'nefm'  # High Elven Farm
+
+[[blizzard_objects.nefm.modifications]]
+modification_id = 'uhot'  # Profile.Hotkey
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "F"
+object_id = 'nefm'  # High Elven Farm
+
+[[blizzard_objects.nefm.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Build High Elven Farm [|cffffcc00F|r]"
+object_id = 'nefm'  # High Elven Farm
+
+[blizzard_objects.negt]
+parent_id = 'negt'  # High Elven Guard Tower
+entity_id = 'null'
+
+[[blizzard_objects.negt.modifications]]
+modification_id = 'upap'  # UnitBalance.Placement Requires
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "unbuildable"
+object_id = 'negt'  # High Elven Guard Tower
 
 
 [map_objects.uA00]
