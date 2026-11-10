@@ -15,6 +15,30 @@ table_column = 0
 value = 10
 object_id = 'null'
 
+[[blizzard_objects.nefm.modifications]]
+modification_id = 'upap'  # UnitBalance.Placement Requires
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "unbuildable"
+object_id = 'nefm'  # High Elven Farm
+
+[[blizzard_objects.nefm.modifications]]
+modification_id = 'uhot'  # Profile.Hotkey
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "F"
+object_id = 'nefm'  # High Elven Farm
+
+[[blizzard_objects.nefm.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Build High Elven Farm [|cffffcc00F|r]"
+object_id = 'nefm'  # High Elven Farm
+
 [blizzard_objects.nheb]
 parent_id = 'nheb'  # High Elven Barracks
 entity_id = 'null'
@@ -26,6 +50,70 @@ variation_level = 0
 table_column = 0
 value = "hhes,nhea,ebal,nzep"
 object_id = 'null'
+
+[[blizzard_objects.nheb.modifications]]
+modification_id = 'upap'  # UnitBalance.Placement Requires
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "unbuildable"
+object_id = 'null'
+
+[blizzard_objects.negm]
+parent_id = 'negm'  # Sky-Fury Tower
+entity_id = 'null'
+
+[[blizzard_objects.negm.modifications]]
+modification_id = 'upap'  # UnitBalance.Placement Requires
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "unbuildable"
+object_id = 'negm'  # Sky-Fury Tower
+
+[[blizzard_objects.negm.modifications]]
+modification_id = 'uhot'  # Profile.Hotkey
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "S"
+object_id = 'negm'  # Sky-Fury Tower
+
+[[blizzard_objects.negm.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Build Sky-Fury Tower [|cffffcc00S|r]"
+object_id = 'negm'  # Sky-Fury Tower
+
+[blizzard_objects.negf]
+parent_id = 'negf'  # Earth-Fury Tower
+entity_id = 'null'
+
+[[blizzard_objects.negf.modifications]]
+modification_id = 'upap'  # UnitBalance.Placement Requires
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "unbuildable"
+object_id = 'negf'  # Earth-Fury Tower
+
+[[blizzard_objects.negf.modifications]]
+modification_id = 'uhot'  # Profile.Hotkey
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "T"
+object_id = 'negf'  # Earth-Fury Tower
+
+[[blizzard_objects.negf.modifications]]
+modification_id = 'utip'  # Profile.Tooltip - Basic
+data_type = "String"
+variation_level = 0
+table_column = 0
+value = "Build Earth-Fury Tower [|cffffcc00T|r]"
+object_id = 'negf'  # Earth-Fury Tower
 
 [blizzard_objects.hars]
 parent_id = 'hars'  # Arcane Sanctum
