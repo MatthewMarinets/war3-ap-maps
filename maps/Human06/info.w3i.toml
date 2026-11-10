@@ -219,6 +219,18 @@ tech_id = 'hmtt'  # Siege Engine
 
 [[technologies]]
 player_flags = 0xf
+tech_id = 'Udea'  # Death Knight
+
+[[technologies]]
+player_flags = 0xf
+tech_id = 'Ulic'  # Lich
+
+[[technologies]]
+player_flags = 0xf
+tech_id = 'Udre'  # Dreadlord
+
+[[technologies]]
+player_flags = 0xf
 tech_id = 'Hblm'  # Blood Mage
 
 [[technologies]]

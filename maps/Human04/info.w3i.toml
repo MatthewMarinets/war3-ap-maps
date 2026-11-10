@@ -245,14 +245,6 @@ availability = "Unavailable"
 
 [[technologies]]
 player_flags = 0x2
-tech_id = 'Stpr'
-
-[[technologies]]
-player_flags = 0x2
-tech_id = 'Stpm'
-
-[[technologies]]
-player_flags = 0x2
 tech_id = 'hkni'  # Knight
 
 [[technologies]]
@@ -298,6 +290,18 @@ tech_id = 'hmtt'  # Siege Engine
 [[technologies]]
 player_flags = 0x2
 tech_id = 'hstt'
+
+[[technologies]]
+player_flags = 0xf
+tech_id = 'Udea'  # Death Knight
+
+[[technologies]]
+player_flags = 0xf
+tech_id = 'Ulic'  # Lich
+
+[[technologies]]
+player_flags = 0xf
+tech_id = 'Udre'  # Dreadlord
 
 [[technologies]]
 player_flags = 0xf
