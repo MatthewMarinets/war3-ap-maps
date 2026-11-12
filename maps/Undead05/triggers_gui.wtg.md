@@ -4704,6 +4704,10 @@ version = TFT
 
 ```
 ### Functions
+- Action CustomScriptCode
+  - param String local boolean stone_form_researched = false
+- Action CustomScriptCode
+  - param String local boolean stone_form_allowed = false
 - Action IfThenElse
   - param Function 
     - Condition OperatorCompareBoolean
@@ -4726,7 +4730,7 @@ version = TFT
   - param Function DoNothing
     - Action DoNothing
 - Action TriggerSleepAction
-  - param String 4.00
+  - param String 3.75
 - Action IfThenElse
   - param Function 
     - Condition OperatorCompareBoolean
@@ -4739,6 +4743,28 @@ version = TFT
     - Action DoNothing
 - Action TriggerExecute
   - param Variable gg_trg_GargoyleFakeRunnerVisibilty
+- Action CustomScriptCode
+  - param String if GetPlayerTechMaxAllowed(USER_PLAYER, 'Rusf') != 0 then
+- Action CustomScriptCode
+  - param String set stone_form_allowed = true
+- Action CustomScriptCode
+  - param String else
+- Action CustomScriptCode
+  - param String call SetPlayerTechMaxAllowed(USER_PLAYER, 'Rusf', -1)
+- Action CustomScriptCode
+  - param String endif
+- Action CustomScriptCode
+  - param String if GetPlayerTechResearched(USER_PLAYER, 'Rusf', true) then
+- Action CustomScriptCode
+  - param String set stone_form_researched = true
+- Action CustomScriptCode
+  - param String else
+- Action CustomScriptCode
+  - param String call SetPlayerTechResearched(USER_PLAYER, 'Rusf', 1)
+- Action CustomScriptCode
+  - param String endif
+- Action TriggerSleepAction
+  - param String 0.25
 - Action ForGroup
   - param Variable GargoyleGroup
   - param Function DoNothing
@@ -4762,6 +4788,18 @@ version = TFT
           - param Variable gg_snd_U05AArthas14
       - param Preset OperatorSubtract
       - param String 4.00
+- Action CustomScriptCode
+  - param String if not stone_form_researched then
+- Action CustomScriptCode
+  - param String call SetPlayerTechResearched(USER_PLAYER, 'Rusf', 0)
+- Action CustomScriptCode
+  - param String endif
+- Action CustomScriptCode
+  - param String if not stone_form_allowed then
+- Action CustomScriptCode
+  - param String call SetPlayerTechMaxAllowed(USER_PLAYER, 'Rusf', 0)
+- Action CustomScriptCode
+  - param String endif
 - Action IfThenElse
   - param Function 
     - Condition OperatorCompareBoolean
