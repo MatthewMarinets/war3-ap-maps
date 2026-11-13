@@ -10,3 +10,6 @@
 
 ## apworld Release ID 2
 * Fixed shop items not unlocking shops
+
+## Mod Release ID 4
+* U5: Fixed an issue where cinematic gargoyles would get stuck in stone form
