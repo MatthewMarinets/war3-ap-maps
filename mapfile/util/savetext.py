@@ -10,6 +10,12 @@ def escape(value: str) -> str:
     return value.replace('\\', '\\\\').replace('\n', '\\n').replace('"', '\\"')
 
 
+def escape_table_component(value: str) -> str:
+    if ';' in value or '.' in value:
+        return f'"{value}"'
+    return value
+
+
 def to_toml(
     data: dict[str, Any],
     notes: Iterable[str] = (),
@@ -56,15 +62,11 @@ def to_toml(
             result.append(f'{key} = {"\n".join(lines)}')
         elif is_array:
             for val in value:
-                interior = ".".join(array_nesting + (key,))
-                if ";" in interior:
-                    interior = f'"{interior}"'
+                interior = ".".join(map(escape_table_component, array_nesting + (key,)))
                 list_results.append(f'\n[[{interior}]]')
                 list_results.append(to_toml(val, array_nesting=array_nesting + (key,), quote_style=quote_style))
         elif isinstance(value, dict):
-            interior = ".".join(array_nesting + (key,))
-            if ";" in interior:
-                interior = f'"{interior}"'
+            interior = ".".join(map(escape_table_component, array_nesting + (key,)))
             list_results.append(f'\n[{interior}]')
             list_results.append(to_toml(value, array_nesting=array_nesting + (key,), quote_style=quote_style))
         else:
