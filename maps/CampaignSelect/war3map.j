@@ -176,7 +176,7 @@ endglobals
 
 function InitGlobals takes nothing returns nothing
     set udg_adventurer=null
-    set udg_BUILD_VERSION=5
+    set udg_BUILD_VERSION=6
 endfunction
 
 //***************************************************************************

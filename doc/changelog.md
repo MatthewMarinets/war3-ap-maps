@@ -16,3 +16,6 @@
 
 ## Mod Release 5
 * U7: Fixed Crypt Lord buildable from altar
+
+## Mod Release 6
+* H9: Fixing Arthas not getting corrupted
