@@ -77,7 +77,7 @@ def update_war3_info(w3i_file: str, is_roc: bool) -> None:
         )
         for update_tech in update_techs:
             if update_tech not in existing_tech_entries:
-                war3_info.technologies.append(w3i.TechnologyInfo(0xf, update_tech))
+                war3_info.technologies.append(w3i.TechnologyInfo(0xff, update_tech))
 
     new_text = w3i.as_text(war3_info)
     with open(w3i_file, 'w') as fp:
