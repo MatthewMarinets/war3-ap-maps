@@ -11,7 +11,7 @@ version = TFT
 | Name | Type | Array Size | Initial Value |
 | ---- | ---- | ---------- | ------------- |
 | adventurer | unit | . | UnitNull |
-| BUILD_VERSION | integer | . | 4 |
+| BUILD_VERSION | integer | . | 5 |
 
 # Triggers
 ## fileio
