@@ -19,3 +19,6 @@
 
 ## Mod Release 6
 * H9: Fixing Arthas not getting corrupted
+
+## apworld Release 3
+* Reading wc3.config file to allow configuring the wine prefix's documents folder with `documents = path/to/dir`

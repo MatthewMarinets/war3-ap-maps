@@ -25,7 +25,7 @@ from ..generation import gen_slot_data
 from . import comm
 
 
-APWORLD_VERSION = 2
+APWORLD_VERSION = 3
 
 
 @dataclass(slots=True)
