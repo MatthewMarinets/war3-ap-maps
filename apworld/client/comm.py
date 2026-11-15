@@ -12,11 +12,35 @@ from .. import logger
 from ..data import heroes, missions, tables, items
 
 
+def parse_config_file(config_path: str) -> dict[str, str]:
+    try:
+        with open(config_path, 'r', encoding='utf-8') as fp:
+            contents = fp.read()
+    except UnicodeDecodeError as ex:
+        logger.error(f'config file {config_path} contained invalid utf-8: {ex}')
+        return {}
+    result = {}
+    for line in contents.split('\n'):
+        if '=' not in line:
+            continue
+        left, right = line.split('=', 1)
+        result[left.strip().lower()] = right.strip()
+    return result
+
+
 if sys.platform == 'win32':
     from . import windows_helpers
     DOCUMENTS_DIR = windows_helpers.win32_get_documents_folder()
 else:
-    DOCUMENTS_DIR = os.path.expanduser('~/Documents')
+    CONFIG_PATH = 'wc3.config'
+    config = {}
+    if os.path.exists(CONFIG_PATH):
+        config = parse_config_file(CONFIG_PATH)
+    if "documents" in config:
+        DOCUMENTS_DIR = os.path.expanduser(config["documents"])
+        logger.info(f"Loaded Documents path from config file: {DOCUMENTS_DIR}")
+    else:
+        DOCUMENTS_DIR = os.path.expanduser('~/Documents')
 PRELOADER_DIR = f'{DOCUMENTS_DIR}/Warcraft III/CustomMapData'
 STATUS_FILE = f'{PRELOADER_DIR}/status.txt'
 PING_FILE = f'{PRELOADER_DIR}/ping.txt'
