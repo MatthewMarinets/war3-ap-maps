@@ -22,3 +22,6 @@
 
 ## apworld Release 3
 * Reading wc3.config file to allow configuring the wine prefix's documents folder with `documents = path/to/dir`
+
+## apworld Release 4
+* U4: Updating logic to require anti-air
