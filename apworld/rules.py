@@ -159,6 +159,7 @@ class Wc3Logic:
                 Wc3Item.DRAGONHAWK_RIDER,
                 Wc3Item.GUARD_TOWER,
                 Wc3Item.ARCANE_TOWER,
+                Wc3Item.SHOP_ITEM_ORB_OF_FIRE,
             ))
             or self.has_all(state, (Wc3Item.SIEGE_ENGINE, Wc3Item.SIEGE_ENGINE_BARRAGE))
         )
@@ -225,6 +226,26 @@ class Wc3Logic:
             Wc3Item.OBSIDIAN_STATUE,
             Wc3Item.FROST_WYRM,
         ))
+
+    def undead_any_anti_air(self, state: 'CollectionState') -> bool:
+        return (
+            self.has_any(state, (
+                Wc3Item.GARGOYLE,
+                Wc3Item.SPIRIT_TOWER,
+                Wc3Item.NECROMANCER,
+                Wc3Item.BANSHEE,
+                Wc3Item.OBSIDIAN_STATUE,
+                Wc3Item.FROST_WYRM,
+                Wc3Item.SHOP_ITEM_ORB_OF_CORRUPTION,
+            ))
+            or self.has_all(state, (Wc3Item.CRYPT_FIEND, Wc3Item.CRYPT_FIEND_WEB))
+        )
+
+    def undead_any_anti_air_or_aa_arthas(self, state: 'CollectionState') -> bool:
+        return (
+            self.undead_any_anti_air(state)
+            or self.options.death_knight_arthas_hero.value in HEROES_ANTI_AIR
+        )
 
     def undead_has_anti_golem(self, state: 'CollectionState') -> bool:
         return (
@@ -340,6 +361,12 @@ class Wc3Logic:
             and self.human_has_ground_attacker(state)
         )
 
+    def undead_4_unit_and_anti_air(self, state: 'CollectionState') -> bool:
+        return (
+            self.undead_any_anti_air_or_aa_arthas(state)
+            and self.undead_has_military_unit(state)
+        )
+
 
 def get_location_to_rules(world: 'Wc3World') -> dict[Wc3Location | int, Callable[['CollectionState'], bool]]:
     logic = Wc3Logic(world)
@@ -384,12 +411,12 @@ def get_location_to_rules(world: 'Wc3World') -> dict[Wc3Location | int, Callable
         Wc3Location.UD3_ROCK_GOLEM_ITEM: logic.undead_military_unit_or_4_arthas_levels,
         Wc3Location.UD3_VICTORY: logic.undead_military_unit_or_4_arthas_levels,
 
-        Wc3Location.UD4_NORTHWEST_ALTAR: logic.undead_has_military_unit,
-        Wc3Location.UD4_NORTHWEST_BASE: logic.undead_has_military_unit,
-        Wc3Location.UD4_NORTH_ALTAR: logic.undead_has_military_unit,
-        Wc3Location.UD4_NORTH_BASE: logic.undead_has_military_unit,
+        Wc3Location.UD4_NORTHWEST_ALTAR: logic.undead_4_unit_and_anti_air,
+        Wc3Location.UD4_NORTHWEST_BASE: logic.undead_4_unit_and_anti_air,
+        Wc3Location.UD4_NORTH_ALTAR: logic.undead_4_unit_and_anti_air,
+        Wc3Location.UD4_NORTH_BASE: logic.undead_4_unit_and_anti_air,
         Wc3Location.UD4_SOUTHEAST_ALTAR: logic.undead_has_military_unit,
-        Wc3Location.UD4_VICTORY: logic.undead_has_military_unit,
+        Wc3Location.UD4_VICTORY: logic.undead_4_unit_and_anti_air,
 
         Wc3Location.UD5_SYLVANAS_BASE_ITEM: logic.undead_has_military_unit,
         Wc3Location.UD5_DESTROY_SYLVANAS_CASTLE: logic.undead_has_military_unit,

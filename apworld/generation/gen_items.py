@@ -23,10 +23,18 @@ ITEM_TYPE_TO_CLASSIFICATION = {
     items.Resources: ItemClassification.filler,
     items.Mercenary: ItemClassification.useful,
 }
+ITEM_CLASSIFICATION_OVERRIDES = {
+    items.Wc3Item.SHOP_ITEM_ORB_OF_FIRE: ItemClassification.progression,
+    items.Wc3Item.SHOP_ITEM_ORB_OF_CORRUPTION: ItemClassification.progression,
+    items.Wc3Item.SHOP_ITEM_ORB_OF_LIGHTNING: ItemClassification.progression,
+    items.Wc3Item.SHOP_ITEM_ORB_OF_VENOM: ItemClassification.progression,
+}
 
 
 def _new_item(world: 'Wc3World', item_type: items.Wc3Item) -> Item:
-    if isinstance(item_type.type, items.PickupItem) and item_type.type.charged:
+    if item_type in ITEM_CLASSIFICATION_OVERRIDES:
+        classification = ITEM_CLASSIFICATION_OVERRIDES[item_type]
+    elif isinstance(item_type.type, items.PickupItem) and item_type.type.charged:
         classification = ItemClassification.filler
     else:
         classification = ITEM_TYPE_TO_CLASSIFICATION[item_type.type.__class__]
