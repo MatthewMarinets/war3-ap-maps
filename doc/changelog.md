@@ -25,3 +25,10 @@
 
 ## apworld Release 4
 * U4: Updating logic to require anti-air
+
+## apworld Release 5
+* Tech: Making town halls starting tech
+* Tech: Fixing an issue where shop items wouldn't unlock town hall tiers or graveyard
+
+## mod Release 7
+* H6: Fixing an issue where the get ahead locations would print out as already received on every zombie killed
