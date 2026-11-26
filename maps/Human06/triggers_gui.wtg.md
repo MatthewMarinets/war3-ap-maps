@@ -99,6 +99,7 @@ version = TFT
 | GameOver | boolean | . | false |
 | MaySendCommands | boolean | . | true |
 | TimerMaySendCommands | timer | . | . |
+| GetAheadLocationsSent | integer | . | . |
 
 # Triggers
 ## fileio
@@ -333,25 +334,36 @@ version = TFT
         - param Preset OperatorSubtract
         - param Variable MalganisConversions
     - param Preset OperatorGreaterEq
+    - param String 50.00
+  - Condition OperatorCompareInteger
+    - param Variable GetAheadLocationsSent
+    - param Preset OperatorLess
+    - param String 1
+  - 1 (then)
+    - Action CustomScriptCode
+      - param String call status_check_location(23)
+    - Action SetVariable
+      - param Variable GetAheadLocationsSent
+      - param String 1
+- Action IfThenElseMultiple
+  - Condition OperatorCompareReal
+    - param Function OperatorReal
+      - Function OperatorReal
+        - param Variable ArthasDenials
+        - param Preset OperatorSubtract
+        - param Variable MalganisConversions
+    - param Preset OperatorGreaterEq
     - param String 80.00
+  - Condition OperatorCompareInteger
+    - param Variable GetAheadLocationsSent
+    - param Preset OperatorLess
+    - param String 2
   - 1 (then)
     - Action CustomScriptCode
       - param String call status_check_location(24)
-  - 2 (else)
-    - Action IfThenElseMultiple
-      - Condition OperatorCompareReal
-        - param Function OperatorReal
-          - Function OperatorReal
-            - param Variable ArthasDenials
-            - param Preset OperatorSubtract
-            - param Variable MalganisConversions
-        - param Preset OperatorGreaterEq
-        - param String 50.00
-      - 1 (then)
-        - Action CustomScriptCode
-          - param String call status_check_location(23)
-      - 2 (else)
-        - Action DoNothing
+    - Action SetVariable
+      - param Variable GetAheadLocationsSent
+      - param String 2
 
 
 ## Initialize Initializations

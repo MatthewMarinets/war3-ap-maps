@@ -4,7 +4,6 @@
 version = 1
 
 [[sounds]]
-
 name = 'gg_snd_H06Arthas01'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Arthas01.mp3'
 effects = 'DefaultEAXON'
@@ -21,7 +20,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06Arthas03'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Arthas03.mp3'
 effects = ''
@@ -38,7 +36,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06Arthas04'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Arthas04.mp3'
 effects = ''
@@ -55,7 +52,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06Arthas06'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Arthas06.mp3'
 effects = ''
@@ -72,7 +68,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06Arthas08'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Arthas08.mp3'
 effects = ''
@@ -89,7 +84,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06Arthas10'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Arthas10.mp3'
 effects = ''
@@ -106,7 +100,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06Arthas12'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Arthas12.mp3'
 effects = ''
@@ -123,7 +116,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06Arthas14'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Arthas14.mp3'
 effects = ''
@@ -140,7 +132,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06Arthas16'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Arthas16.mp3'
 effects = ''
@@ -157,7 +148,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06Arthas30'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Arthas30.mp3'
 effects = ''
@@ -174,7 +164,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06Arthas33'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Arthas33.mp3'
 effects = ''
@@ -191,7 +180,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06Arthas43'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Arthas43.mp3'
 effects = ''
@@ -208,7 +196,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06Arthas46'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Arthas46.mp3'
 effects = ''
@@ -225,7 +212,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06Jaina13'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Jaina13.mp3'
 effects = ''
@@ -242,7 +228,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06Jaina17'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Jaina17.mp3'
 effects = ''
@@ -259,7 +244,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06MalGanis31'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06MalGanis31.mp3'
 effects = ''
@@ -276,7 +260,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06MalGanis32'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06MalGanis32.mp3'
 effects = ''
@@ -293,7 +276,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06MalGanis41'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06MalGanis41.mp3'
 effects = ''
@@ -310,7 +292,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06MalGanis42'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06MalGanis42.mp3'
 effects = ''
@@ -327,7 +308,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06MalGanis44'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06MalGanis44.mp3'
 effects = ''
@@ -344,7 +324,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06MalGanis45'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06MalGanis45.mp3'
 effects = ''
@@ -361,7 +340,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06Uther02'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Uther02.mp3'
 effects = ''
@@ -378,7 +356,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06Uther05'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Uther05.mp3'
 effects = ''
@@ -395,7 +372,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06Uther07'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Uther07.mp3'
 effects = ''
@@ -412,7 +388,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06Uther09'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Uther09.mp3'
 effects = ''
@@ -429,7 +404,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06Uther11'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Uther11.mp3'
 effects = ''
@@ -446,7 +420,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06Uther15'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06Uther15.mp3'
 effects = ''
@@ -463,7 +436,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06VillagerF24'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06VillagerF24.mp3'
 effects = ''
@@ -480,7 +452,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06VillagerF57'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06VillagerF57.mp3'
 effects = ''
@@ -497,7 +468,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06VillagerF58'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06VillagerF58.mp3'
 effects = ''
@@ -514,7 +484,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06VillagerF59'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06VillagerF59.mp3'
 effects = ''
@@ -531,7 +500,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06VillagerF61'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06VillagerF61.mp3'
 effects = ''
@@ -548,7 +516,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06VillagerM23'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06VillagerM23.mp3'
 effects = ''
@@ -565,7 +532,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06VillagerM25'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06VillagerM25.mp3'
 effects = ''
@@ -582,7 +548,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06VillagerM26'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06VillagerM26.mp3'
 effects = ''
@@ -599,7 +564,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06VillagerM27'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06VillagerM27.mp3'
 effects = ''
@@ -616,7 +580,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_H06VillagerM28'
 file = 'Sound\Dialogue\HumanCampaign\Human06\H06VillagerM28.mp3'
 effects = ''
@@ -633,7 +596,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_HumanDefeat'
 file = 'Sound\Music\mp3Music\HumanDefeat.mp3'
 effects = ''
@@ -650,7 +612,6 @@ distance_cutoff = 0.0
 unknown4 = 0
 
 [[sounds]]
-
 name = 'gg_snd_DoorSlam1'
 file = 'Sound\Ambient\DoodadEffects\DoorSlam1.wav'
 effects = 'DefaultEAXON'
@@ -667,7 +628,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_DoorSlam101'
 file = 'Sound\Ambient\DoodadEffects\DoorSlam1.wav'
 effects = 'DefaultEAXON'
@@ -684,7 +644,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_HorseLoop3'
 file = 'Units\Human\Knight\HorseLoop3.wav'
 effects = 'DefaultEAXON'
@@ -701,7 +660,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_HorseLoop2'
 file = 'Units\Human\Knight\HorseLoop2.wav'
 effects = 'DefaultEAXON'
@@ -718,7 +676,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_KnightNoRiderWhat3'
 file = 'Units\Human\KnightNoRider\KnightNoRiderWhat3.wav'
 effects = 'DefaultEAXON'
@@ -735,7 +692,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_KnightNoRiderYesAttack1'
 file = 'Units\Human\KnightNoRider\KnightNoRiderYesAttack1.wav'
 effects = 'DefaultEAXON'
@@ -752,7 +708,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_KnightNoRiderWhat2'
 file = 'Units\Human\KnightNoRider\KnightNoRiderWhat2.wav'
 effects = 'DefaultEAXON'
@@ -769,7 +724,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_KnightNoRiderYesAttack2'
 file = 'Units\Human\KnightNoRider\KnightNoRiderYesAttack2.wav'
 effects = 'DefaultEAXON'
@@ -786,7 +740,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_CityScapeCathedralLoop1'
 file = 'Sound\Ambient\DoodadEffects\CityScapeCathedralLoop1.wav'
 effects = 'DoodadsEAX'
@@ -803,7 +756,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_CityBuildingDeath1'
 file = 'Sound\Buildings\Death\CityBuildingDeath1.wav'
 effects = 'DefaultEAXON'
@@ -820,7 +772,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_DarkSummoningTarget1'
 file = 'Abilities\Spells\Undead\DarkSummoning\DarkSummoningTarget1.wav'
 effects = 'SpellsEAX'
@@ -837,7 +788,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_MassTeleportTarget'
 file = 'Abilities\Spells\Human\MassTeleport\MassTeleportTarget.wav'
 effects = 'SpellsEAX'
@@ -854,7 +804,6 @@ distance_cutoff = 4294967296.0
 unknown4 = -1
 
 [[sounds]]
-
 name = 'gg_snd_WaterStreamLoop1'
 file = 'Sound\Ambient\DoodadEffects\WaterStreamLoop1.wav'
 effects = 'DoodadsEAX'

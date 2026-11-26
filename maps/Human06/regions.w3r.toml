@@ -4,7 +4,6 @@
 version = 5
 
 [[regions]]
-
 left = -4608.0
 bottom = -7744.0
 right = -3712.0
@@ -18,7 +17,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 9632.0
 bottom = 4768.0
 right = 12992.0
@@ -32,7 +30,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 3264.0
 bottom = -7776.0
 right = 3872.0
@@ -46,7 +43,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -3712.0
 bottom = 5696.0
 right = -3264.0
@@ -60,7 +56,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -1120.0
 bottom = -4576.0
 right = -576.0
@@ -74,7 +69,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 9632.0
 bottom = -8000.0
 right = 10208.0
@@ -88,7 +82,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 2784.0
 bottom = -288.0
 right = 3296.0
@@ -102,7 +95,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -5536.0
 bottom = 4160.0
 right = -736.0
@@ -116,7 +108,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 896.0
 bottom = -2048.0
 right = 7072.0
@@ -130,7 +121,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 5696.0
 bottom = -8640.0
 right = 12320.0
@@ -144,7 +134,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -3168.0
 bottom = -6560.0
 right = 896.0
@@ -158,7 +147,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 2176.0
 bottom = -8448.0
 right = 4800.0
@@ -172,7 +160,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 10752.0
 bottom = 5504.0
 right = 10880.0
@@ -186,7 +173,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 10560.0
 bottom = 6112.0
 right = 10720.0
@@ -200,7 +186,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 9664.0
 bottom = 8288.0
 right = 9888.0
@@ -214,7 +199,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 10144.0
 bottom = 8288.0
 right = 10368.0
@@ -228,7 +212,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 9760.0
 bottom = 8288.0
 right = 9888.0
@@ -242,7 +225,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 10144.0
 bottom = 8288.0
 right = 10272.0
@@ -256,7 +238,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 9792.0
 bottom = 6080.0
 right = 9920.0
@@ -270,7 +251,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -4384.0
 bottom = -7296.0
 right = -4000.0
@@ -284,7 +264,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -4352.0
 bottom = -6944.0
 right = -4128.0
@@ -298,7 +277,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 5472.0
 bottom = -608.0
 right = 5664.0
@@ -312,7 +290,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 8160.0
 bottom = -576.0
 right = 9792.0
@@ -326,7 +303,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -1472.0
 bottom = 1536.0
 right = 960.0
@@ -340,7 +316,6 @@ colour_g = 0
 colour_r = 0
 
 [[regions]]
-
 left = 8768.0
 bottom = -320.0
 right = 9280.0
@@ -354,7 +329,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 1536.0
 bottom = 1312.0
 right = 2272.0
@@ -368,7 +342,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -2560.0
 bottom = 1248.0
 right = -1856.0
@@ -382,7 +355,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 9664.0
 bottom = 7360.0
 right = 10720.0
@@ -396,7 +368,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 11968.0
 bottom = 352.0
 right = 12576.0
@@ -410,7 +381,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 5056.0
 bottom = 7424.0
 right = 5728.0
@@ -424,7 +394,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -1888.0
 bottom = -2560.0
 right = -1760.0
@@ -438,7 +407,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -2112.0
 bottom = -3264.0
 right = -1952.0
@@ -452,7 +420,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -1984.0
 bottom = -1568.0
 right = -1728.0
@@ -466,7 +433,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 10272.0
 bottom = 6240.0
 right = 10560.0
@@ -480,7 +446,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 10720.0
 bottom = 6240.0
 right = 11008.0
@@ -494,7 +459,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 10560.0
 bottom = 5888.0
 right = 10688.0
@@ -508,7 +472,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 8288.0
 bottom = 6208.0
 right = 8480.0
@@ -522,7 +485,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 8288.0
 bottom = 4416.0
 right = 8640.0
@@ -536,7 +498,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 10912.0
 bottom = 3488.0
 right = 11040.0
@@ -550,7 +511,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -6144.0
 bottom = -5856.0
 right = 14304.0
@@ -564,7 +524,6 @@ colour_g = 255
 colour_r = 255
 
 [[regions]]
-
 left = -3232.0
 bottom = -6656.0
 right = 1184.0
@@ -578,7 +537,6 @@ colour_g = 255
 colour_r = 255
 
 [[regions]]
-
 left = 704.0
 bottom = -9888.0
 right = 14304.0
@@ -592,7 +550,6 @@ colour_g = 255
 colour_r = 255
 
 [[regions]]
-
 left = 9376.0
 bottom = 7584.0
 right = 9792.0
@@ -606,7 +563,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 9824.0
 bottom = 7648.0
 right = 10272.0
@@ -620,7 +576,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -6080.0
 bottom = -9920.0
 right = 768.0
@@ -634,7 +589,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 736.0
 bottom = -9952.0
 right = 7808.0
@@ -648,7 +602,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 7744.0
 bottom = -9920.0
 right = 14304.0
@@ -662,7 +615,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 8064.0
 bottom = 1184.0
 right = 14304.0
@@ -676,7 +628,6 @@ colour_g = 0
 colour_r = 255
 
 [[regions]]
-
 left = 10976.0
 bottom = 5856.0
 right = 11136.0
@@ -690,7 +641,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -4256.0
 bottom = -7520.0
 right = -4160.0
@@ -704,7 +654,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -4416.0
 bottom = -7520.0
 right = -4320.0
@@ -718,7 +667,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 3744.0
 bottom = -4544.0
 right = 4320.0
@@ -732,7 +680,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -2720.0
 bottom = -5696.0
 right = -2144.0
@@ -746,7 +693,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 8192.0
 bottom = -6720.0
 right = 8768.0
@@ -760,7 +706,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -4448.0
 bottom = 3744.0
 right = -3872.0
@@ -774,7 +719,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 5952.0
 bottom = -192.0
 right = 6144.0
@@ -788,7 +732,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 2432.0
 bottom = 224.0
 right = 2848.0
@@ -802,7 +745,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -512.0
 bottom = 2432.0
 right = 704.0
@@ -816,7 +758,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 11264.0
 bottom = 5760.0
 right = 11648.0
@@ -830,7 +771,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 11488.0
 bottom = 4992.0
 right = 11872.0
@@ -844,7 +784,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = 3392.0
 bottom = -736.0
 right = 3520.0
@@ -858,7 +797,6 @@ colour_g = 128
 colour_r = 128
 
 [[regions]]
-
 left = -2464.0
 bottom = -1856.0
 right = -1216.0
@@ -872,7 +810,6 @@ colour_g = 0
 colour_r = 255
 
 [[regions]]
-
 left = -1472.0
 bottom = -160.0
 right = -256.0
@@ -886,7 +823,6 @@ colour_g = 0
 colour_r = 255
 
 [[regions]]
-
 left = -1952.0
 bottom = 1344.0
 right = -768.0
@@ -900,7 +836,6 @@ colour_g = 0
 colour_r = 255
 
 [[regions]]
-
 left = -1696.0
 bottom = 2528.0
 right = -736.0
@@ -914,7 +849,6 @@ colour_g = 0
 colour_r = 255
 
 [[regions]]
-
 left = 736.0
 bottom = -5184.0
 right = 2144.0
@@ -928,7 +862,6 @@ colour_g = 0
 colour_r = 255
 
 [[regions]]
-
 left = 992.0
 bottom = -8000.0
 right = 2048.0
@@ -942,7 +875,6 @@ colour_g = 0
 colour_r = 255
 
 [[regions]]
-
 left = 768.0
 bottom = 1472.0
 right = 1824.0
@@ -956,7 +888,6 @@ colour_g = 0
 colour_r = 255
 
 [[regions]]
-
 left = 64.0
 bottom = -128.0
 right = 1248.0
