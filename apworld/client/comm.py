@@ -7,7 +7,8 @@ import sys
 from dataclasses import dataclass, field
 import time
 
-from ..data.game_ids import Tech, TECH_REQUIREMENTS, GameID, HERO_ABILITIES, int_to_id, RESEARCHES
+from ..data.game_ids import Tech, GameID
+from ..data import game_ids
 from .. import logger
 from ..data import heroes, missions, tables, items
 
@@ -107,6 +108,7 @@ class Wc3GameSettings:
 class Wc3Inventory:
     def __init__(self) -> None:
         self.tech: dict[GameID | Tech, int] = {t: 0 for t in Tech}
+        self.tech.update(game_ids.STARTING_TECH)
         for item in items.CATEGORY_TO_ITEMS[items.Resources]:
             assert isinstance(item.type, items.Resources)
             self.tech[item.type.game_id] = 0
@@ -121,9 +123,9 @@ class Wc3Inventory:
         while queue:
             new_id = queue.pop()
             if self.tech[new_id] == 0:
-                queue.extend(TECH_REQUIREMENTS[0].get(new_id, ()))
+                queue.extend(game_ids.TECH_REQUIREMENTS[0].get(new_id, ()))
             elif self.tech[new_id] > 0 and self.tech[new_id] < 3:
-                reqs = TECH_REQUIREMENTS[self.tech[new_id]].get(new_id)
+                reqs = game_ids.TECH_REQUIREMENTS[self.tech[new_id]].get(new_id)
                 if reqs is not None:
                     queue.extend(reqs)
             if amount == -1:
@@ -196,7 +198,7 @@ class HeroStatus:
 
     def reset_abils(self) -> None:
         self.abilities.clear()
-        for abil_id in HERO_ABILITIES[self.hero.game_id]:
+        for abil_id in game_ids.HERO_ABILITIES[self.hero.game_id]:
             self.abilities[abil_id] = 0
 
 
@@ -349,7 +351,7 @@ def update_unlocks(game_status: GameStatus, mission_status: MissionStatus) -> No
             fp.write(set_tech(tech_id, 'p', unlock_level))
         if flags & (missions.MissionFlag.NO_BUILD | missions.MissionFlag.SEMI_BUILD):
             for tech_id, unlock_level in game_status.inventory.tech.items():
-                if tech_id in RESEARCHES:
+                if tech_id in game_ids.RESEARCHES:
                     fp.write(set_tech_researched(tech_id, 'p', unlock_level))
         fp.write(ENDFUNCTION)
 
@@ -776,7 +778,7 @@ def read_hero_status(slot: int, game_status: GameStatus) -> None:
     for abil_id in hero_data.abilities:
         hero_data.abilities[abil_id] = reader.read_int()
     for item_slot in range(6):
-        hero_data.items[item_slot].item_id = int_to_id(reader.read_int())
+        hero_data.items[item_slot].item_id = game_ids.int_to_id(reader.read_int())
         hero_data.items[item_slot].charges = reader.read_int()
 
 

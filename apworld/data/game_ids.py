@@ -1728,6 +1728,14 @@ class Tech(enum.StrEnum):
     CAPTAIN = GameID.CAPTAIN
 
 
+STARTING_TECH = {
+    Tech.TOWN_HALL: -1,
+    Tech.NECROPOLIS: -1,
+    Tech.GREAT_HALL: -1,
+    Tech.TREE_OF_LIFE: -1,
+}
+
+
 RESEARCHES = {
     GameID.HUMAN_BACKPACK,
     GameID.HUMAN_MAGIC_SENTRY,
